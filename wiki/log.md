@@ -178,3 +178,14 @@ Append-only chronological record. New entries should use:
 - Regenerated `results/gorlach-2023-fig3b-tdse-fullfreq-20260606/`; the
   `mean_intensity` and `normalized_intensity` columns remain the data-bearing
   spectra, while `display_intensity` is the vertically offset plotting column.
+
+## [2026-06-06] simulation | Fig 3b Shared Normalization Fine Grid
+
+- Changed the Fig. 3b runner to use one shared all-driver-state normalization
+  benchmark instead of normalizing coherent, Fock, thermal, and BSV spectra
+  independently.
+- Generated
+  `results/gorlach-2023-fig3b-tdse-sharednorm-e006-finegrid-20260606/` with
+  `E0 = 0.06` a.u., 50,000 stochastic shots, 11 TDSE amplitude bins, a
+  `[-80, 80]` bohr grid with 1,024 points, `dt = 0.06` a.u., and the same
+  5/15/5-cycle pulse and absorber parameters.

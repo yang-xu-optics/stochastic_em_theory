@@ -13,7 +13,7 @@ source_model:
     / mean(|alpha|^2))
   coherent_response: tdse_dipole_acceleration
 code_entrypoint: stochastic_em_theory.fig3b.run_gorlach_2023_fig3b_proxy
-git_commit: aefae249f6f49c61bc669447546df9ce301348ad
+git_commit: 402f8ed5fbfa73ee1115b4bb524f50ff699d4ce6
 parameter_file: parameters.yaml
 random_seeds:
 - 20230603
@@ -86,8 +86,9 @@ source_refs:
   driven by quantum light.pdf'
 - 'Wiki source summary: wiki/sources/gorlach-2023-hhg-driven-quantum-light-supplement.md'
 notes: Single-mode Husimi-Q coherent-response sampling with a local TDSE dipole-acceleration
-  spectrum library for a closer Gorlach et al. 2023 Fig. 3b reproduction; still not
-  the authors' exact source-data reconstruction.
+  spectrum library and a shared all-driver-state normalization benchmark for a closer
+  Gorlach et al. 2023 Fig. 3b reproduction; still not the authors' exact source-data
+  reconstruction.
 outputs:
   spectra_csv: gorlach_2023_fig3b_proxy_spectra.csv
   summary_json: gorlach_2023_fig3b_proxy_summary.json
