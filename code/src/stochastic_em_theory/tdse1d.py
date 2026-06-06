@@ -22,7 +22,7 @@ class SoftCoreGrid:
             raise ValueError("points must be at least 8")
         if x_max <= x_min:
             raise ValueError("x_max must be greater than x_min")
-        x = np.linspace(x_min, x_max, points, dtype=np.float64)
+        x = np.linspace(x_min, x_max, points, endpoint=False, dtype=np.float64)
         dx = float(x[1] - x[0])
         k = 2.0 * np.pi * np.fft.fftfreq(points, d=dx)
         return cls(x=x, k=k.astype(np.float64), dx=dx)
@@ -41,6 +41,8 @@ def gaussian_wavepacket(x: FloatArray, *, width: float) -> ComplexArray:
 
 
 def normalize_wavefunction(psi: ComplexArray, dx: float) -> ComplexArray:
+    if dx <= 0:
+        raise ValueError("dx must be positive")
     norm = np.sqrt(float(np.sum(np.abs(psi) ** 2) * dx))
     if norm <= 0:
         raise ValueError("wavefunction norm must be positive")
