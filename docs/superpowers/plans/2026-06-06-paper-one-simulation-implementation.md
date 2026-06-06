@@ -250,7 +250,8 @@ Modify the `## Simulations` section of `wiki/index.md` so it contains this extra
 ```markdown
 - [[simulations/paper-one-correspondence-hhg-simulation-spec]]: paper-one
   simulation specification for squeezed-field validation, mode-filtered
-  `g^(2)`, and HHG intensity observables.
+  `g^(2)`, HHG intensity observables, ATI photon-statistics validation, and
+  squeezed emitted-mode boundary modeling.
 ```
 
 - [ ] **Step 3: Append the planning entry to the wiki log**
@@ -729,11 +730,15 @@ def test_single_mode_validation_writes_csv_summary_and_manifest(tmp_path) -> Non
     summary = json.loads(result.summary_path.read_text())
     assert summary["rows"] == 2
     assert summary["claim_level"] == "exact_input_correspondence"
+    assert summary["mechanism"] == "bsv_pump_ensemble"
+    assert summary["source_model"] == "single_mode"
 
     manifest = yaml.safe_load(result.manifest_path.read_text())
     assert manifest["random_seeds"] == [123]
     assert manifest["observable"] == "single_mode_squeezed_vacuum_g2"
     assert manifest["claim_level"] == "exact_input_correspondence"
+    assert manifest["mechanism"] == "bsv_pump_ensemble"
+    assert manifest["source_model"] == "single_mode"
 ```
 
 - [ ] **Step 2: Run the test and verify it fails**
@@ -885,6 +890,8 @@ def run_single_mode_validation(
         {
             "rows": len(rows),
             "claim_level": "exact_input_correspondence",
+            "mechanism": "bsv_pump_ensemble",
+            "source_model": "single_mode",
             "max_abs_g2_error": max(abs(float(row["g2_corrected"]) - float(row["analytic_g2"])) for row in rows),
         },
     )
@@ -894,6 +901,8 @@ def run_single_mode_validation(
             "run_id": output_dir.name,
             "created": date.today().isoformat(),
             "claim_level": "exact_input_correspondence",
+            "mechanism": "bsv_pump_ensemble",
+            "source_model": "single_mode",
             "code_entrypoint": "stochastic_em_theory.validation.run_single_mode_validation",
             "git_commit": current_git_commit(Path(__file__).resolve().parents[3]),
             "parameter_file": None,
@@ -1002,6 +1011,7 @@ Create `code/tests/test_multimode_validation.py`:
 import csv
 
 import numpy as np
+import yaml
 
 from stochastic_em_theory.fields import sample_multimode_wigner
 from stochastic_em_theory.observables import analytic_equal_mode_g2, estimate_total_photon_moments
@@ -1039,6 +1049,10 @@ def test_multimode_validation_writes_mode_count_csv(tmp_path) -> None:
 
     assert [int(row["modes"]) for row in rows] == [1, 2, 5]
     assert float(rows[0]["analytic_g2"]) > float(rows[-1]["analytic_g2"])
+
+    manifest = yaml.safe_load(result.manifest_path.read_text())
+    assert manifest["mechanism"] == "bsv_pump_ensemble"
+    assert manifest["source_model"] == "equal_mode"
 ```
 
 - [ ] **Step 2: Run the tests and verify they fail**
@@ -1194,6 +1208,8 @@ def run_multimode_validation(
         {
             "rows": len(rows),
             "claim_level": "exact_input_correspondence",
+            "mechanism": "bsv_pump_ensemble",
+            "source_model": "equal_mode",
             "max_abs_g2_error": max(abs(float(row["g2_corrected"]) - float(row["analytic_g2"])) for row in rows),
         },
     )
@@ -1203,6 +1219,8 @@ def run_multimode_validation(
             "run_id": output_dir.name,
             "created": date.today().isoformat(),
             "claim_level": "exact_input_correspondence",
+            "mechanism": "bsv_pump_ensemble",
+            "source_model": "equal_mode",
             "code_entrypoint": "stochastic_em_theory.validation.run_multimode_validation",
             "git_commit": current_git_commit(Path(__file__).resolve().parents[3]),
             "parameter_file": None,
@@ -1974,6 +1992,7 @@ Create `code/tests/test_ionization_and_records.py`:
 import numpy as np
 
 from stochastic_em_theory.ionization import adk_like_rate_au, keldysh_parameter
+from stochastic_em_theory.mechanisms import MechanismFamily
 from stochastic_em_theory.shot_records import HHGShotRecord, shot_records_to_rows
 
 
@@ -1998,6 +2017,7 @@ def test_shot_records_convert_to_csv_rows() -> None:
             shot_index=0,
             source_model_kind="single_mode",
             source_model_label="paper_one",
+            mechanism=MechanismFamily.BSV_PUMP_ENSEMBLE.value,
             driver_x=0.1,
             driver_p=-0.2,
             driver_intensity=0.05,
@@ -2012,6 +2032,7 @@ def test_shot_records_convert_to_csv_rows() -> None:
     rows = shot_records_to_rows(records)
 
     assert rows[0]["source_model_kind"] == "single_mode"
+    assert rows[0]["mechanism"] == "bsv_pump_ensemble"
     assert np.isclose(float(rows[0]["cutoff_order"]), 21.0)
 ```
 
@@ -2077,6 +2098,7 @@ class HHGShotRecord:
     shot_index: int
     source_model_kind: str
     source_model_label: str
+    mechanism: str
     driver_x: float
     driver_p: float
     driver_intensity: float
@@ -2109,6 +2131,529 @@ Run:
 ```bash
 git add code/src/stochastic_em_theory/ionization.py code/src/stochastic_em_theory/shot_records.py code/tests/test_ionization_and_records.py
 git commit -m "feat: add ionization proxies and shot records"
+```
+
+Expected: commit succeeds.
+
+---
+
+### Task 7B: Add ATI Photon-Statistics Benchmark
+
+**Files:**
+- Create: `code/src/stochastic_em_theory/ati.py`
+- Create: `code/tests/test_ati_statistics.py`
+
+- [ ] **Step 1: Write failing tests for coherent, thermal, and BSV ATI statistics**
+
+Create `code/tests/test_ati_statistics.py`:
+
+```python
+import csv
+
+import numpy as np
+import yaml
+
+from stochastic_em_theory.ati import PhotonStatisticsKind, estimate_intensity_g2, run_ati_statistics_benchmark, sample_matched_intensities
+from stochastic_em_theory.mechanisms import MechanismFamily
+
+
+def test_matched_intensity_samples_reproduce_g2_hierarchy() -> None:
+    rng = np.random.default_rng(2026)
+    shots = 240_000
+    mean_intensity = 1.0
+
+    coherent = sample_matched_intensities(
+        kind=PhotonStatisticsKind.COHERENT,
+        mean_intensity=mean_intensity,
+        shots=shots,
+        rng=rng,
+    )
+    thermal = sample_matched_intensities(
+        kind=PhotonStatisticsKind.THERMAL,
+        mean_intensity=mean_intensity,
+        shots=shots,
+        rng=rng,
+    )
+    bsv = sample_matched_intensities(
+        kind=PhotonStatisticsKind.BSV,
+        mean_intensity=mean_intensity,
+        shots=shots,
+        rng=rng,
+    )
+
+    assert np.isclose(estimate_intensity_g2(coherent), 1.0, rtol=0.01)
+    assert np.isclose(estimate_intensity_g2(thermal), 2.0, rtol=0.04)
+    assert np.isclose(estimate_intensity_g2(bsv), 3.0, rtol=0.06)
+
+
+def test_ati_statistics_benchmark_writes_manifest_and_rows(tmp_path) -> None:
+    result = run_ati_statistics_benchmark(
+        mean_field_amplitude_au=0.035,
+        ionization_potential_au=0.7924,
+        shots=80_000,
+        seed=44,
+        output_dir=tmp_path,
+    )
+
+    with result.csv_path.open(newline="") as handle:
+        rows = list(csv.DictReader(handle))
+
+    assert [row["statistics"] for row in rows] == ["coherent", "thermal", "bsv"]
+    assert float(rows[0]["estimated_g2"]) < float(rows[1]["estimated_g2"]) < float(rows[2]["estimated_g2"])
+    assert all(row["mechanism"] == MechanismFamily.ATI_PHOTON_STATISTICS.value for row in rows)
+
+    manifest = yaml.safe_load(result.manifest_path.read_text())
+    assert manifest["mechanism"] == MechanismFamily.ATI_PHOTON_STATISTICS.value
+    assert manifest["random_seeds"] == [44]
+```
+
+- [ ] **Step 2: Run ATI tests and verify they fail**
+
+Run:
+
+```bash
+cd code
+python -m pytest tests/test_ati_statistics.py -q
+```
+
+Expected: FAIL with `ModuleNotFoundError` for `stochastic_em_theory.ati`.
+
+- [ ] **Step 3: Implement the ATI photon-statistics benchmark**
+
+Create `code/src/stochastic_em_theory/ati.py`:
+
+```python
+from __future__ import annotations
+
+from datetime import date
+from enum import Enum
+from pathlib import Path
+
+import numpy as np
+from numpy.typing import NDArray
+
+from stochastic_em_theory.ionization import adk_like_rate_au
+from stochastic_em_theory.io import RunArtifacts, current_git_commit, ensure_output_dir, write_csv, write_json, write_manifest
+from stochastic_em_theory.mechanisms import MechanismFamily
+
+
+FloatArray = NDArray[np.float64]
+
+
+class PhotonStatisticsKind(str, Enum):
+    COHERENT = "coherent"
+    THERMAL = "thermal"
+    BSV = "bsv"
+
+
+def sample_matched_intensities(
+    *,
+    kind: PhotonStatisticsKind | str,
+    mean_intensity: float,
+    shots: int,
+    rng: np.random.Generator | None = None,
+) -> FloatArray:
+    if mean_intensity <= 0:
+        raise ValueError("mean_intensity must be positive")
+    if shots <= 0:
+        raise ValueError("shots must be positive")
+
+    generator = np.random.default_rng() if rng is None else rng
+    statistics = PhotonStatisticsKind(kind)
+    if statistics is PhotonStatisticsKind.COHERENT:
+        samples = np.full(shots, mean_intensity, dtype=np.float64)
+    elif statistics is PhotonStatisticsKind.THERMAL:
+        samples = generator.exponential(scale=mean_intensity, size=shots)
+    elif statistics is PhotonStatisticsKind.BSV:
+        samples = generator.gamma(shape=0.5, scale=2.0 * mean_intensity, size=shots)
+    else:
+        raise ValueError(f"unsupported photon statistics {kind}")
+    return samples.astype(np.float64)
+
+
+def estimate_intensity_g2(intensity: FloatArray) -> float:
+    if intensity.ndim != 1 or intensity.size == 0:
+        raise ValueError("intensity must be a non-empty one-dimensional array")
+    mean_intensity = float(np.mean(intensity))
+    if mean_intensity <= 0:
+        raise ValueError("mean intensity must be positive")
+    return float(np.mean(intensity**2) / mean_intensity**2)
+
+
+def _electron_number_bunching_proxy(rates: FloatArray) -> float:
+    mean_rate = float(np.mean(rates))
+    if mean_rate <= 0:
+        raise ValueError("mean ionization-rate proxy must be positive")
+    return float(np.mean(rates**2) / mean_rate**2)
+
+
+def run_ati_statistics_benchmark(
+    *,
+    mean_field_amplitude_au: float,
+    ionization_potential_au: float,
+    shots: int,
+    seed: int,
+    output_dir: Path,
+) -> RunArtifacts:
+    if mean_field_amplitude_au <= 0:
+        raise ValueError("mean_field_amplitude_au must be positive")
+    if ionization_potential_au <= 0:
+        raise ValueError("ionization_potential_au must be positive")
+    if shots <= 0:
+        raise ValueError("shots must be positive")
+
+    output_dir = ensure_output_dir(output_dir)
+    rng = np.random.default_rng(seed)
+    mean_intensity = mean_field_amplitude_au**2
+    rows: list[dict[str, float | int | str]] = []
+
+    for statistics in (PhotonStatisticsKind.COHERENT, PhotonStatisticsKind.THERMAL, PhotonStatisticsKind.BSV):
+        intensity = sample_matched_intensities(
+            kind=statistics,
+            mean_intensity=mean_intensity,
+            shots=shots,
+            rng=rng,
+        )
+        field_amplitudes = np.sqrt(np.maximum(intensity, 1.0e-30))
+        rates = np.asarray(
+            [
+                adk_like_rate_au(
+                    field_amplitude_au=float(field_amplitude),
+                    ionization_potential_au=ionization_potential_au,
+                )
+                for field_amplitude in field_amplitudes
+            ],
+            dtype=np.float64,
+        )
+        rows.append(
+            {
+                "statistics": statistics.value,
+                "shots": int(shots),
+                "mean_intensity": float(np.mean(intensity)),
+                "estimated_g2": estimate_intensity_g2(intensity),
+                "mean_ionization_rate_proxy": float(np.mean(rates)),
+                "electron_number_bunching_proxy": _electron_number_bunching_proxy(rates),
+                "mechanism": MechanismFamily.ATI_PHOTON_STATISTICS.value,
+            }
+        )
+
+    csv_path = output_dir / "ati_statistics.csv"
+    summary_path = output_dir / "ati_statistics_summary.json"
+    manifest_path = output_dir / "manifest.yaml"
+    write_csv(
+        csv_path,
+        rows,
+        [
+            "statistics",
+            "shots",
+            "mean_intensity",
+            "estimated_g2",
+            "mean_ionization_rate_proxy",
+            "electron_number_bunching_proxy",
+            "mechanism",
+        ],
+    )
+    write_json(
+        summary_path,
+        {
+            "rows": len(rows),
+            "mechanism": MechanismFamily.ATI_PHOTON_STATISTICS.value,
+            "statistics_order": [row["statistics"] for row in rows],
+            "g2_order": [row["estimated_g2"] for row in rows],
+        },
+    )
+    write_manifest(
+        manifest_path,
+        {
+            "run_id": output_dir.name,
+            "created": date.today().isoformat(),
+            "claim_level": "validated_stochastic_simulation",
+            "mechanism": MechanismFamily.ATI_PHOTON_STATISTICS.value,
+            "source_model": "matched_coherent_thermal_bsv_intensity_statistics",
+            "code_entrypoint": "stochastic_em_theory.ati.run_ati_statistics_benchmark",
+            "git_commit": current_git_commit(Path(__file__).resolve().parents[3]),
+            "parameter_file": None,
+            "random_seeds": [seed],
+            "observable": "ati_ionization_rate_proxy_and_electron_number_bunching",
+            "units": "atomic units for field amplitude and ionization potential",
+            "notes": "Diagonal coherent-component averaging proxy inspired by Lyu 2025; not a quantitative qSFA momentum solver.",
+        },
+    )
+    return RunArtifacts(output_dir=output_dir, csv_path=csv_path, summary_path=summary_path, manifest_path=manifest_path)
+```
+
+- [ ] **Step 4: Run ATI tests**
+
+Run:
+
+```bash
+cd code
+python -m pytest tests/test_ati_statistics.py -q
+```
+
+Expected: `2 passed`.
+
+- [ ] **Step 5: Commit**
+
+Run:
+
+```bash
+git add code/src/stochastic_em_theory/ati.py code/tests/test_ati_statistics.py
+git commit -m "feat: add ati photon statistics benchmark"
+```
+
+Expected: commit succeeds.
+
+---
+
+### Task 7C: Add Squeezed Emission-Mode Environment Boundary Model
+
+**Files:**
+- Create: `code/src/stochastic_em_theory/emission_environment.py`
+- Create: `code/tests/test_emission_environment.py`
+
+- [ ] **Step 1: Write failing tests for Wang-style emitted-mode modulation**
+
+Create `code/tests/test_emission_environment.py`:
+
+```python
+import csv
+
+import numpy as np
+import yaml
+
+from stochastic_em_theory.emission_environment import modulated_harmonic_amplitude, mu_factor, run_emission_environment_scan
+from stochastic_em_theory.mechanisms import MechanismFamily
+
+
+def test_mu_factor_reduces_to_one_without_squeezing() -> None:
+    time_au = np.linspace(0.0, 10.0, 128)
+
+    mu = mu_factor(time_au=time_au, omega_au=0.5, r=0.0, theta=1.7)
+
+    assert np.allclose(mu, np.ones_like(mu))
+
+
+def test_modulated_amplitude_matches_unmodulated_limit() -> None:
+    omega_au = 0.4
+    time_au = np.linspace(0.0, 20.0 * np.pi / omega_au, 4096, endpoint=False)
+    dipole_au = np.cos(omega_au * time_au)
+
+    baseline = modulated_harmonic_amplitude(
+        time_au=time_au,
+        dipole_au=dipole_au,
+        harmonic_frequency_au=omega_au,
+        r=0.0,
+        theta=0.0,
+    )
+    squeezed = modulated_harmonic_amplitude(
+        time_au=time_au,
+        dipole_au=dipole_au,
+        harmonic_frequency_au=omega_au,
+        r=0.6,
+        theta=0.0,
+    )
+
+    assert abs(baseline) > 0.0
+    assert abs(squeezed) > abs(baseline)
+
+
+def test_emission_environment_scan_writes_manifest_and_angle_dependence(tmp_path) -> None:
+    result = run_emission_environment_scan(
+        harmonic_order=9,
+        fundamental_omega_au=0.057,
+        r=0.5,
+        theta_values=[0.0, np.pi],
+        output_dir=tmp_path,
+    )
+
+    with result.csv_path.open(newline="") as handle:
+        rows = list(csv.DictReader(handle))
+
+    assert len(rows) == 2
+    assert rows[0]["mechanism"] == MechanismFamily.SQUEEZED_EMISSION_MODE_ENVIRONMENT.value
+    assert float(rows[0]["relative_intensity"]) > float(rows[1]["relative_intensity"])
+
+    manifest = yaml.safe_load(result.manifest_path.read_text())
+    assert manifest["mechanism"] == MechanismFamily.SQUEEZED_EMISSION_MODE_ENVIRONMENT.value
+```
+
+- [ ] **Step 2: Run emission-environment tests and verify they fail**
+
+Run:
+
+```bash
+cd code
+python -m pytest tests/test_emission_environment.py -q
+```
+
+Expected: FAIL with `ModuleNotFoundError` for `stochastic_em_theory.emission_environment`.
+
+- [ ] **Step 3: Implement the emitted-mode environment model**
+
+Create `code/src/stochastic_em_theory/emission_environment.py`:
+
+```python
+from __future__ import annotations
+
+from datetime import date
+from pathlib import Path
+
+import numpy as np
+from numpy.typing import NDArray
+
+from stochastic_em_theory.io import RunArtifacts, current_git_commit, ensure_output_dir, write_csv, write_json, write_manifest
+from stochastic_em_theory.mechanisms import MechanismFamily
+
+
+FloatArray = NDArray[np.float64]
+ComplexArray = NDArray[np.complex128]
+
+
+def mu_factor(*, time_au: FloatArray, omega_au: float, r: float, theta: float) -> ComplexArray:
+    if time_au.ndim != 1 or time_au.size == 0:
+        raise ValueError("time_au must be a non-empty one-dimensional array")
+    if omega_au <= 0:
+        raise ValueError("omega_au must be positive")
+    if r < 0:
+        raise ValueError("r must be non-negative")
+    return (
+        np.cosh(r)
+        + np.sinh(r) * np.exp(-1j * (2.0 * omega_au * time_au - theta))
+    ).astype(np.complex128)
+
+
+def modulated_harmonic_amplitude(
+    *,
+    time_au: FloatArray,
+    dipole_au: FloatArray,
+    harmonic_frequency_au: float,
+    r: float,
+    theta: float,
+) -> complex:
+    if time_au.shape != dipole_au.shape:
+        raise ValueError("time_au and dipole_au must have matching shape")
+    if harmonic_frequency_au <= 0:
+        raise ValueError("harmonic_frequency_au must be positive")
+    modulation = mu_factor(time_au=time_au, omega_au=harmonic_frequency_au, r=r, theta=theta)
+    integrand = modulation * dipole_au * np.exp(1j * harmonic_frequency_au * time_au)
+    return complex(np.trapezoid(integrand, x=time_au))
+
+
+def run_emission_environment_scan(
+    *,
+    harmonic_order: int,
+    fundamental_omega_au: float,
+    r: float,
+    theta_values: list[float],
+    output_dir: Path,
+    cycles: int = 12,
+    samples_per_cycle: int = 512,
+) -> RunArtifacts:
+    if harmonic_order <= 0:
+        raise ValueError("harmonic_order must be positive")
+    if fundamental_omega_au <= 0:
+        raise ValueError("fundamental_omega_au must be positive")
+    if r < 0:
+        raise ValueError("r must be non-negative")
+    if not theta_values:
+        raise ValueError("theta_values must contain at least one angle")
+    if cycles <= 0:
+        raise ValueError("cycles must be positive")
+    if samples_per_cycle < 32:
+        raise ValueError("samples_per_cycle must be at least 32")
+
+    output_dir = ensure_output_dir(output_dir)
+    harmonic_frequency = harmonic_order * fundamental_omega_au
+    period = 2.0 * np.pi / harmonic_frequency
+    sample_count = cycles * samples_per_cycle
+    time_au = np.linspace(0.0, cycles * period, sample_count, endpoint=False, dtype=np.float64)
+    dipole_au = np.cos(harmonic_frequency * time_au).astype(np.float64)
+    reference = modulated_harmonic_amplitude(
+        time_au=time_au,
+        dipole_au=dipole_au,
+        harmonic_frequency_au=harmonic_frequency,
+        r=0.0,
+        theta=0.0,
+    )
+    reference_intensity = max(abs(reference) ** 2, 1.0e-30)
+
+    rows: list[dict[str, float | int | str]] = []
+    for theta in theta_values:
+        amplitude = modulated_harmonic_amplitude(
+            time_au=time_au,
+            dipole_au=dipole_au,
+            harmonic_frequency_au=harmonic_frequency,
+            r=r,
+            theta=float(theta),
+        )
+        rows.append(
+            {
+                "harmonic_order": int(harmonic_order),
+                "r": float(r),
+                "theta": float(theta),
+                "amplitude_real": float(np.real(amplitude)),
+                "amplitude_imag": float(np.imag(amplitude)),
+                "relative_intensity": float(abs(amplitude) ** 2 / reference_intensity),
+                "mechanism": MechanismFamily.SQUEEZED_EMISSION_MODE_ENVIRONMENT.value,
+            }
+        )
+
+    csv_path = output_dir / "emission_environment_scan.csv"
+    summary_path = output_dir / "emission_environment_summary.json"
+    manifest_path = output_dir / "manifest.yaml"
+    write_csv(
+        csv_path,
+        rows,
+        ["harmonic_order", "r", "theta", "amplitude_real", "amplitude_imag", "relative_intensity", "mechanism"],
+    )
+    write_json(
+        summary_path,
+        {
+            "rows": len(rows),
+            "mechanism": MechanismFamily.SQUEEZED_EMISSION_MODE_ENVIRONMENT.value,
+            "max_relative_intensity": max(float(row["relative_intensity"]) for row in rows),
+            "min_relative_intensity": min(float(row["relative_intensity"]) for row in rows),
+        },
+    )
+    write_manifest(
+        manifest_path,
+        {
+            "run_id": output_dir.name,
+            "created": date.today().isoformat(),
+            "claim_level": "hhg_intensity_prediction",
+            "mechanism": MechanismFamily.SQUEEZED_EMISSION_MODE_ENVIRONMENT.value,
+            "source_model": "selected_harmonic_emission_mode",
+            "code_entrypoint": "stochastic_em_theory.emission_environment.run_emission_environment_scan",
+            "git_commit": current_git_commit(Path(__file__).resolve().parents[3]),
+            "parameter_file": None,
+            "random_seeds": [],
+            "observable": "selected_harmonic_mu_k_modulation",
+            "units": "atomic units for time and angular frequency; relative intensity dimensionless",
+            "notes": "Boundary toy model for Wang 2024 emitted-mode squeezed-vacuum modulation, separate from BSV pump sampling.",
+        },
+    )
+    return RunArtifacts(output_dir=output_dir, csv_path=csv_path, summary_path=summary_path, manifest_path=manifest_path)
+```
+
+- [ ] **Step 4: Run emission-environment tests**
+
+Run:
+
+```bash
+cd code
+python -m pytest tests/test_emission_environment.py -q
+```
+
+Expected: `3 passed`.
+
+- [ ] **Step 5: Commit**
+
+Run:
+
+```bash
+git add code/src/stochastic_em_theory/emission_environment.py code/tests/test_emission_environment.py
+git commit -m "feat: add squeezed emission mode boundary model"
 ```
 
 Expected: commit succeeds.
@@ -2325,6 +2870,7 @@ import yaml
 
 from stochastic_em_theory.claim_ladder import ClaimLevel
 from stochastic_em_theory.ensemble import run_proxy_hhg_ensemble
+from stochastic_em_theory.mechanisms import MechanismFamily
 
 
 def test_proxy_hhg_ensemble_writes_labeled_outputs(tmp_path) -> None:
@@ -2350,9 +2896,11 @@ def test_proxy_hhg_ensemble_writes_labeled_outputs(tmp_path) -> None:
     assert len(rows) == 11
     assert all(float(row["mean_intensity"]) >= 0.0 for row in rows)
     assert all(row["claim_level"] == ClaimLevel.HHG_INTENSITY_PREDICTION.value for row in rows)
+    assert all(row["mechanism"] == MechanismFamily.BSV_PUMP_ENSEMBLE.value for row in rows)
 
     manifest = yaml.safe_load(result.manifest_path.read_text())
     assert manifest["claim_level"] == ClaimLevel.HHG_INTENSITY_PREDICTION.value
+    assert manifest["mechanism"] == MechanismFamily.BSV_PUMP_ENSEMBLE.value
     assert manifest["random_seeds"] == [42]
 ```
 
@@ -2401,6 +2949,7 @@ from stochastic_em_theory.claim_ladder import ClaimLevel
 from stochastic_em_theory.fields import sample_single_mode_husimi_q
 from stochastic_em_theory.hhg_proxy import proxy_hhg_spectrum
 from stochastic_em_theory.io import RunArtifacts, current_git_commit, ensure_output_dir, write_csv, write_json, write_manifest
+from stochastic_em_theory.mechanisms import MechanismFamily
 
 
 def _conditional_means(values: np.ndarray, spectra: np.ndarray) -> dict[str, np.ndarray]:
@@ -2478,6 +3027,7 @@ def run_proxy_hhg_ensemble(
                 "conditional_middle": float(conditional["middle"][index]),
                 "conditional_high": float(conditional["high"][index]),
                 "claim_level": ClaimLevel.HHG_INTENSITY_PREDICTION.value,
+                "mechanism": MechanismFamily.BSV_PUMP_ENSEMBLE.value,
             }
         )
 
@@ -2495,6 +3045,7 @@ def run_proxy_hhg_ensemble(
             "conditional_middle",
             "conditional_high",
             "claim_level",
+            "mechanism",
         ],
     )
     write_json(
@@ -2502,6 +3053,7 @@ def run_proxy_hhg_ensemble(
         {
             "rows": len(rows),
             "claim_level": ClaimLevel.HHG_INTENSITY_PREDICTION.value,
+            "mechanism": MechanismFamily.BSV_PUMP_ENSEMBLE.value,
             "mean_cutoff_order": float(np.mean(cutoff_orders)),
             "std_cutoff_order": float(np.std(cutoff_orders, ddof=1)) if shots > 1 else 0.0,
         },
@@ -2512,6 +3064,7 @@ def run_proxy_hhg_ensemble(
             "run_id": output_dir.name,
             "created": date.today().isoformat(),
             "claim_level": ClaimLevel.HHG_INTENSITY_PREDICTION.value,
+            "mechanism": MechanismFamily.BSV_PUMP_ENSEMBLE.value,
             "code_entrypoint": "stochastic_em_theory.ensemble.run_proxy_hhg_ensemble",
             "git_commit": current_git_commit(Path(__file__).resolve().parents[3]),
             "parameter_file": None,
@@ -2618,6 +3171,7 @@ import yaml
 
 from stochastic_em_theory.claim_ladder import ClaimLevel
 from stochastic_em_theory.ensemble import run_proxy_hhg_ensemble
+from stochastic_em_theory.mechanisms import MechanismFamily
 from stochastic_em_theory.source_models import single_mode_source
 
 
@@ -2648,6 +3202,7 @@ def test_proxy_hhg_ensemble_writes_labeled_outputs_and_shot_records(tmp_path) ->
     assert len(rows) == 11
     assert all(float(row["mean_intensity"]) >= 0.0 for row in rows)
     assert all(row["claim_level"] == ClaimLevel.HHG_INTENSITY_PREDICTION.value for row in rows)
+    assert all(row["mechanism"] == MechanismFamily.BSV_PUMP_ENSEMBLE.value for row in rows)
 
     with shot_records_path.open(newline="") as handle:
         shot_rows = list(csv.DictReader(handle))
@@ -2655,10 +3210,12 @@ def test_proxy_hhg_ensemble_writes_labeled_outputs_and_shot_records(tmp_path) ->
     assert len(shot_rows) == 64
     assert shot_rows[0]["source_model_kind"] == "single_mode"
     assert shot_rows[0]["source_model_label"] == "test_single_mode"
+    assert shot_rows[0]["mechanism"] == MechanismFamily.BSV_PUMP_ENSEMBLE.value
     assert float(shot_rows[0]["ionization_rate_proxy"]) >= 0.0
 
     manifest = yaml.safe_load(result.manifest_path.read_text())
     assert manifest["claim_level"] == ClaimLevel.HHG_INTENSITY_PREDICTION.value
+    assert manifest["mechanism"] == MechanismFamily.BSV_PUMP_ENSEMBLE.value
     assert manifest["random_seeds"] == [42]
     assert manifest["source_model"]["kind"] == "single_mode"
     assert manifest["source_model"]["label"] == "test_single_mode"
@@ -2692,6 +3249,7 @@ from stochastic_em_theory.fields import sample_single_mode_husimi_q
 from stochastic_em_theory.hhg_proxy import proxy_hhg_spectrum
 from stochastic_em_theory.ionization import adk_like_rate_au
 from stochastic_em_theory.io import RunArtifacts, current_git_commit, ensure_output_dir, write_csv, write_json, write_manifest
+from stochastic_em_theory.mechanisms import MechanismFamily
 from stochastic_em_theory.shot_records import HHGShotRecord, shot_records_to_rows
 from stochastic_em_theory.source_models import SourceModelSpec, single_mode_source
 
@@ -2772,6 +3330,7 @@ def run_proxy_hhg_ensemble(
                 shot_index=shot_index,
                 source_model_kind=source_model.kind.value,
                 source_model_label=source_model.label,
+                mechanism=MechanismFamily.BSV_PUMP_ENSEMBLE.value,
                 driver_x=float(np.sqrt(2.0) * np.real(alpha_value)),
                 driver_p=float(np.sqrt(2.0) * np.imag(alpha_value)),
                 driver_intensity=float(intensity_value),
@@ -2805,6 +3364,7 @@ def run_proxy_hhg_ensemble(
                 "conditional_middle": float(conditional["middle"][index]),
                 "conditional_high": float(conditional["high"][index]),
                 "claim_level": ClaimLevel.HHG_INTENSITY_PREDICTION.value,
+                "mechanism": MechanismFamily.BSV_PUMP_ENSEMBLE.value,
             }
         )
 
@@ -2823,6 +3383,7 @@ def run_proxy_hhg_ensemble(
             "conditional_middle",
             "conditional_high",
             "claim_level",
+            "mechanism",
         ],
     )
     write_csv(
@@ -2832,6 +3393,7 @@ def run_proxy_hhg_ensemble(
             "shot_index",
             "source_model_kind",
             "source_model_label",
+            "mechanism",
             "driver_x",
             "driver_p",
             "driver_intensity",
@@ -2848,6 +3410,7 @@ def run_proxy_hhg_ensemble(
             "rows": len(rows),
             "shots": len(shot_records),
             "claim_level": ClaimLevel.HHG_INTENSITY_PREDICTION.value,
+            "mechanism": MechanismFamily.BSV_PUMP_ENSEMBLE.value,
             "source_model": _source_model_manifest(source_model),
             "mean_cutoff_order": float(np.mean(cutoff_orders)),
             "std_cutoff_order": float(np.std(cutoff_orders, ddof=1)) if shots > 1 else 0.0,
@@ -2860,6 +3423,7 @@ def run_proxy_hhg_ensemble(
             "run_id": output_dir.name,
             "created": date.today().isoformat(),
             "claim_level": ClaimLevel.HHG_INTENSITY_PREDICTION.value,
+            "mechanism": MechanismFamily.BSV_PUMP_ENSEMBLE.value,
             "source_model": _source_model_manifest(source_model),
             "code_entrypoint": "stochastic_em_theory.ensemble.run_proxy_hhg_ensemble",
             "git_commit": current_git_commit(Path(__file__).resolve().parents[3]),
@@ -2929,6 +3493,8 @@ def test_paper_one_smoke_script_creates_expected_outputs(tmp_path) -> None:
     assert (tmp_path / "runs" / "paper-one-smoke-multimode" / "multimode_g2.csv").exists()
     assert (tmp_path / "runs" / "paper-one-smoke-hhg" / "proxy_hhg_spectrum.csv").exists()
     assert (tmp_path / "runs" / "paper-one-smoke-hhg" / "shot_records.csv").exists()
+    assert (tmp_path / "runs" / "paper-one-smoke-ati" / "ati_statistics.csv").exists()
+    assert (tmp_path / "runs" / "paper-one-smoke-emission" / "emission_environment_scan.csv").exists()
     assert (tmp_path / "figures" / "single_mode_g2.png").exists()
     assert (tmp_path / "figures" / "multimode_g2.png").exists()
     assert (tmp_path / "figures" / "proxy_hhg_spectrum.png").exists()
@@ -2980,6 +3546,8 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
+from stochastic_em_theory.ati import run_ati_statistics_benchmark
+from stochastic_em_theory.emission_environment import run_emission_environment_scan
 from stochastic_em_theory.ensemble import run_proxy_hhg_ensemble
 from stochastic_em_theory.plotting import plot_multimode_g2, plot_proxy_hhg_spectrum, plot_single_mode_g2
 from stochastic_em_theory.validation import run_multimode_validation, run_single_mode_validation
@@ -3024,6 +3592,20 @@ def main() -> int:
         max_order=31,
         output_dir=runs_root / "paper-one-smoke-hhg",
     )
+    ati = run_ati_statistics_benchmark(
+        mean_field_amplitude_au=0.035,
+        ionization_potential_au=0.7924,
+        shots=max(64, min(args.shots, 5000)),
+        seed=1004,
+        output_dir=runs_root / "paper-one-smoke-ati",
+    )
+    emission = run_emission_environment_scan(
+        harmonic_order=9,
+        fundamental_omega_au=0.057,
+        r=0.5,
+        theta_values=[0.0, 1.5707963267948966, 3.141592653589793],
+        output_dir=runs_root / "paper-one-smoke-emission",
+    )
 
     plot_single_mode_g2(csv_path=single.csv_path, output_path=figures_root / "single_mode_g2.png")
     plot_multimode_g2(csv_path=multi.csv_path, output_path=figures_root / "multimode_g2.png")
@@ -3032,6 +3614,8 @@ def main() -> int:
     print(output_root / "runs" / "paper-one-smoke-single")
     print(output_root / "runs" / "paper-one-smoke-multimode")
     print(output_root / "runs" / "paper-one-smoke-hhg")
+    print(ati.output_dir)
+    print(emission.output_dir)
     print(output_root / "figures")
     return 0
 
@@ -3067,6 +3651,8 @@ results/tmp/paper-one-smoke/runs/paper-one-smoke-single/single_mode_g2.csv
 results/tmp/paper-one-smoke/runs/paper-one-smoke-multimode/multimode_g2.csv
 results/tmp/paper-one-smoke/runs/paper-one-smoke-hhg/proxy_hhg_spectrum.csv
 results/tmp/paper-one-smoke/runs/paper-one-smoke-hhg/shot_records.csv
+results/tmp/paper-one-smoke/runs/paper-one-smoke-ati/ati_statistics.csv
+results/tmp/paper-one-smoke/runs/paper-one-smoke-emission/emission_environment_scan.csv
 results/tmp/paper-one-smoke/figures/single_mode_g2.png
 results/tmp/paper-one-smoke/figures/multimode_g2.png
 results/tmp/paper-one-smoke/figures/proxy_hhg_spectrum.png
@@ -3115,7 +3701,7 @@ Expected:
 
 ```text
 pytest exits with status 0
-single-mode, multimode, proxy-HHG, shot-record, and figure outputs exist under results/tmp/paper-one-final-smoke
+single-mode, multimode, proxy-HHG, shot-record, ATI statistics, squeezed-emission-mode scan, and figure outputs exist under results/tmp/paper-one-final-smoke
 ```
 
 - [ ] **Step 2: Append the simulation implementation log entry**
@@ -3131,9 +3717,13 @@ Append this entry to `wiki/log.md`:
   `g^(2)` correction and naive-estimator comparison.
 - Added mode-filtered equal-mode squeezed-vacuum validation.
 - Added BSV source-model metadata and HHG intensity-level ensemble pipeline
-  with explicit claim-ladder labels.
+  with explicit claim-ladder and mechanism-family labels.
 - Added per-shot driver, ionization-proxy, cutoff-proxy, and harmonic-phase
   records for later bunching, cutoff-fluctuation, and symmetry diagnostics.
+- Added coherent, thermal, and BSV ATI/photon-statistics validation with
+  ionization-rate and electron-number bunching proxies.
+- Added the Wang-style squeezed emitted-mode environment boundary model as a
+  selected-harmonic mechanism separate from BSV pump sampling.
 - Verified the package with `python -m pytest -q` and the paper-one smoke run
   writing temporary outputs under `results/tmp/paper-one-final-smoke`.
 ```
@@ -3163,6 +3753,6 @@ Expected: commit succeeds.
 
 ## Self-Review Notes
 
-- Spec coverage: Task 1 covers the required simulation spec. Tasks 3-5 cover exact squeezed-input correspondence, ordering correction, and mode-filtered validation. Task 5A adds the BSV source-model ladder required by the 52-source ingest. Tasks 6 and 10 cover paper-one validation figures. Tasks 7-9 cover the HHG intensity-level demonstration and claim labels. Task 7A and Task 9A add ionization proxies, source metadata, and per-shot records for cutoff, bunching, and symmetry diagnostics. Task 8 creates the tested bridge toward the source-backed 1D soft-core gas baseline.
-- Scope control: THz, non-Gaussian output certification, macroscopic propagation, and emitted harmonic quantum-state reconstruction remain outside this implementation plan.
-- Type consistency: all later tasks use the same names introduced earlier: `RunArtifacts`, `SourceModelSpec`, `sample_single_mode_wigner`, `sample_single_mode_husimi_q`, `sample_multimode_wigner`, `estimate_single_mode_moments`, `estimate_total_photon_moments`, `run_single_mode_validation`, `run_multimode_validation`, `HHGShotRecord`, and `run_proxy_hhg_ensemble`.
+- Spec coverage: Task 1 covers the required simulation spec. Tasks 3-5 cover exact squeezed-input correspondence, ordering correction, and mode-filtered validation. Task 5A adds the BSV source-model ladder required by the 54-source ingest. Task 5B adds mechanism-family labels. Tasks 6 and 10 cover paper-one validation figures. Tasks 7-9 cover the HHG intensity-level demonstration and claim labels. Task 7A and Task 9A add ionization proxies, source metadata, mechanism metadata, and per-shot records for cutoff, bunching, and symmetry diagnostics. Task 7B adds the Lyu-inspired ATI/photon-statistics validation branch. Task 7C adds the Wang-inspired squeezed emitted-mode environment boundary branch. Task 8 creates the tested bridge toward the source-backed 1D soft-core gas baseline.
+- Scope control: THz, non-Gaussian output certification, macroscopic propagation, emitted harmonic quantum-state reconstruction, and quantitative qSFA momentum spectra remain outside this implementation plan.
+- Type consistency: all later tasks use the same names introduced earlier: `RunArtifacts`, `SourceModelSpec`, `MechanismFamily`, `sample_single_mode_wigner`, `sample_single_mode_husimi_q`, `sample_multimode_wigner`, `estimate_single_mode_moments`, `estimate_total_photon_moments`, `run_single_mode_validation`, `run_multimode_validation`, `HHGShotRecord`, `run_ati_statistics_benchmark`, `run_emission_environment_scan`, and `run_proxy_hhg_ensemble`.
