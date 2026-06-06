@@ -1,12 +1,12 @@
 ---
 title: HHG Gas Model
 type: model
-status: seed
+status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [hhg, gas, strong-field, squeezed-vacuum]
-source_count: 0
-confidence: low
+source_count: 8
+confidence: high
 related:
   - ../overview
   - ../theory/stochastic-quantum-optics-correspondence
@@ -47,6 +47,62 @@ adding propagation.
 - Which correlations survive ensemble averaging and which are accessible only
   shot by shot?
 
+## Source-Backed Representation Path
+
+The strongest starting point is coherent-response phase-space averaging:
+
+```text
+S_HHG^BSV(omega) =
+  integral d^2 alpha Q_BSV(alpha) S_HHG^coh(omega; alpha)
+```
+
+This structure appears in the Gorlach 2023 supplement, Rasputnyi 2024, and
+Heimerl 2025 strong-field analysis. For the gas model, the plan is:
+
+1. Compute `S_HHG^coh(omega; alpha)` with a classical or semiclassical gas
+   response for fixed coherent amplitude and phase.
+2. Sample `alpha` from the chosen BSV phase-space distribution.
+3. Report both the unconditional ensemble spectrum and conditional spectra
+   binned by sampled intensity or photon number.
+
+## Gas Baseline From Gorlach 2023 Supplement
+
+A reproducible first single-atom calculation can use the 1D soft-core neon-like
+setup in the supplement:
+
+```text
+x_min = -100 bohr
+x_max = 100 bohr
+dx = 0.06 bohr
+dt = 0.02 atomic units
+V(r) = -(r^2 + a^2)^(-1/2)
+a = 0.8160 bohr
+I_p = 0.7924 hartree
+a(t) = -<psi | grad V(r) + E(t) | psi>
+```
+
+The harmonic spectrum is obtained from the Fourier transform of the dipole
+acceleration. This is a local single-atom baseline; macroscopic propagation,
+phase matching, and ionization depletion come later.
+
+## Conditional Versus Unconditional Observables
+
+Heimerl 2025 shows that BSV-driven strong-field spectra can look very different
+after shot averaging versus photon-number post-selection. For this project,
+every HHG result should label which object is shown:
+
+- `mean spectrum`: average over all sampled BSV shots,
+- `conditional spectrum`: average over a bin of sampled intensity/photon
+  number,
+- `shot distribution`: histogram or quantiles over individual realizations.
+
+## Quantum Output-State Boundary
+
+Gorlach 2020 and Tzur et al. show that generated harmonic quantum states can
+carry nonclassical statistics. An intensity-only stochastic simulation should
+not claim to predict emitted harmonic squeezing unless it includes the
+appropriate phase-space mapping and measurement model.
+
 ## Proposed Observables
 
 - Ensemble mean HHG spectrum.
@@ -63,3 +119,10 @@ not guarantee that a sampled-field classical model captures all quantum optical
 features of the generated harmonics. The manuscript should state the model
 boundary clearly.
 
+Additional source-backed risks:
+
+- Rare BSV intensity outliers may dominate the ensemble mean and require many
+  Monte Carlo samples.
+- A single-mode BSV distribution is only justified with source and detection
+  mode selection.
+- Strong coherent-plus-BSV experiments are not identical to pure BSV driving.

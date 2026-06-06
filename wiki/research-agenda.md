@@ -1,12 +1,12 @@
 ---
 title: Research Agenda
 type: synthesis
-status: seed
+status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [agenda, planning]
-source_count: 0
-confidence: low
+source_count: 13
+confidence: high
 related:
   - overview
   - theory/squeezed-vacuum-g2-proof-plan
@@ -58,12 +58,43 @@ related:
 - Numerical cost: rare high-field events in bright squeezed vacuum may dominate
   nonlinear observables and require many trajectories.
 
+## Source-Backed Decisions
+
+- D1: The first proof target remains single-mode `g^(2)(0) = 3 + 1/<n>`, but
+  the broadband extension must specify temporal mode, dispersion compensation,
+  and distinguishability. See
+  [[sources/raymer-landes-2022-broadband-squeezed-vacuum-tpa]].
+- D2: A stochastic EM comparison is strongest when the observable is expressed
+  as a matched quantum/stochastic correlation function and vacuum terms are
+  handled explicitly. See
+  [[sources/raymer-landes-2023-classical-model-broadband-squeezed-vacuum]].
+- D3: BSV-driven HHG and strong-field spectra should be reported both as
+  unconditional ensemble averages and as conditional/post-selected observables.
+  See [[sources/heimerl-2025-quantum-light-metal-needle-tips]].
+- D4: For HHG intensity spectra, begin with coherent-response phase-space
+  averaging; for generated harmonic quantum states, keep the claim separate and
+  use the Positive P/Husimi reconstruction literature.
+- D5: Pure zero-mean BSV plasma or OR emission may vanish at the field level by
+  symmetry. Simulations should include a symmetry-breaking scan rather than
+  assume a nonzero mean THz waveform.
+
+## Current Source Gaps
+
+- A dedicated source or derivation for optical rectification driven directly by
+  squeezed vacuum.
+- A foundational stochastic electrodynamics source beyond the Raymer/Landes
+  stochastic-field construction.
+- A gas-phase BSV HHG experiment analogous to the solid and metal-tip sources.
+- A clear manuscript convention for whether "classical stochastic EM" means
+  Wigner sampling, Husimi sampling, Positive P sampling, or SED-like
+  zero-point fields in each section.
+
 ## Next Actions
 
-1. Ingest foundational quantum optics sources for squeezed vacuum correlations.
-2. Ingest sources on stochastic electrodynamics and Wigner/phase-space sampling.
-3. Turn [[theory/squeezed-vacuum-g2-proof-plan]] into a complete derivation.
-4. Implement a single-mode squeezed-vacuum sampler and Monte Carlo validation.
-5. Decide the first HHG model fidelity level: classical trajectory,
+1. Turn [[theory/squeezed-vacuum-g2-proof-plan]] into a complete derivation and
+   simulation spec.
+2. Implement a single-mode squeezed-vacuum sampler and Monte Carlo validation.
+3. Add a broadband BSV validation matching Raymer/Landes assumptions.
+4. Decide the first HHG model fidelity level: classical trajectory,
    Lewenstein-like semiclassical response, or propagation-first source model.
-
+5. Build a minimal two-color plasma THz model before testing pure BSV symmetry.

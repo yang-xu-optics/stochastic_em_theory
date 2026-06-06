@@ -1,12 +1,12 @@
 ---
 title: Simulation Roadmap
 type: simulation
-status: seed
+status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [simulation, roadmap, validation]
-source_count: 0
-confidence: low
+source_count: 13
+confidence: high
 related:
   - ../theory/squeezed-vacuum-g2-proof-plan
   - ../models/hhg-gas-model
@@ -40,6 +40,37 @@ Expected result for single-mode pure squeezed vacuum:
 g^{(2)}(0) = 3 + 1/<n>
 ```
 
+### Stage 1A: Single-Mode Wigner Validation
+
+- Sample `alpha` from the squeezed-vacuum Wigner Gaussian.
+- Estimate symmetric moments.
+- Convert to normal ordering:
+
+```text
+<a^\dagger a> = <|alpha|^2>_W - 1/2
+<a^\dagger a^\dagger a a> =
+  <|alpha|^4>_W - 2 <|alpha|^2>_W + 1/2
+```
+
+- Validate `g^(2)(0)` versus `3 + 1/<n>`.
+
+### Stage 1B: Broadband Raymer/Landes Validation
+
+- Implement the broadband Bogoliubov transform:
+
+```text
+b(omega) = f(omega) a(omega) + g(omega) a^\dagger(2 omega_0 - omega)
+```
+
+- Add temporal gating and optional dispersion compensation.
+- Validate the compensated formula:
+
+```text
+g^(2)(0) = (2 + xi) + 1/nbar
+```
+
+- Use `xi = 1` only for the indistinguishable collinear case.
+
 ## Stage 2: Time-Domain Bright Squeezed Vacuum
 
 Construct stochastic waveforms with spectral and temporal mode structure.
@@ -51,6 +82,7 @@ Validation observables:
 - intensity distribution,
 - mode-resolved photon-number statistics,
 - dependence on squeezing phase and bandwidth.
+- effective Schmidt-mode count if multimode BSV is modeled.
 
 ## Stage 3: HHG in Gas
 
@@ -64,6 +96,16 @@ Outputs:
 - shot-to-shot variance,
 - comparison against coherent and thermal baselines.
 
+Implementation targets:
+
+1. Reproduce the 1D soft-core gas baseline from the Gorlach 2023 supplement.
+2. Generate coherent-response spectra over a grid of amplitudes and phases.
+3. Integrate over BSV Husimi samples.
+4. Report mean spectra, conditional spectra, cutoff distributions, and Monte
+   Carlo uncertainty.
+5. Keep generated harmonic quantum-state claims out of this stage unless a
+   Positive P/Husimi output-state reconstruction is added.
+
 ## Stage 4: THz Optical Rectification
 
 Start with a local `chi^(2)` polarization model and THz filtering. Add
@@ -76,6 +118,10 @@ Outputs:
 - shot-to-shot waveform distribution,
 - dependence on squeezing phase and detection bandwidth.
 
+Current status: source gap. The simulation can be implemented as a proposed
+stochastic nonlinear-polarization calculation, but a dedicated squeezed-vacuum
+OR source or derivation is needed before manuscript claims are made.
+
 ## Stage 5: THz Plasma Emission
 
 Start with a local photocurrent model. Treat symmetry as a first-class test.
@@ -87,6 +133,32 @@ Outputs:
 - ensemble mean and variance,
 - conditional statistics for high-field events,
 - symmetry-breaking parameter scans.
+
+Implementation targets:
+
+1. Reproduce a classical one-color/two-color photocurrent baseline.
+2. Add coherent-plus-BSV sampling following Wang 2026.
+3. Compute:
+
+```text
+<E_THz(t)>_ensemble
+<|E_THz(omega)|^2>_ensemble
+```
+
+4. Scan two-color phase, BSV squeezing angle, BSV mean intensity, and
+   post-selection bins.
+5. Test pure zero-mean BSV as a symmetry experiment and record whether the
+   ensemble-averaged field vanishes.
+
+## Cross-Cutting Numerical Rules
+
+- Store every random seed used for source-term ensembles.
+- Report convergence versus sample count because rare BSV outliers can dominate
+  nonlinear observables.
+- For every plotted quantity, label whether the average is over field
+  amplitudes before or after spectral magnitude is taken.
+- Keep coherent, thermal, and BSV baselines matched by mean energy and stated
+  mode definition.
 
 ## Suggested Code Layout
 
@@ -119,4 +191,3 @@ random_seeds:
 observable:
 notes:
 ```
-

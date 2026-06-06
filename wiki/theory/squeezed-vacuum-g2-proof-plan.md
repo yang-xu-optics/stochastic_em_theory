@@ -1,15 +1,17 @@
 ---
 title: Squeezed Vacuum g2 Proof Plan
 type: concept
-status: seed
+status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [squeezed-vacuum, g2, proof, quantum-optics]
-source_count: 0
-confidence: low
+source_count: 2
+confidence: high
 related:
   - stochastic-quantum-optics-correspondence
   - ../simulations/simulation-roadmap
+  - ../sources/raymer-landes-2022-broadband-squeezed-vacuum-tpa
+  - ../sources/sharapova-2015-schmidt-modes-bsv
 ---
 
 # Squeezed Vacuum g2 Proof Plan
@@ -99,6 +101,29 @@ Implement Monte Carlo sampling for several `r` values. For each value:
 - compare `g^{(2)}(0)` against `3 + 1/<n>`,
 - report uncertainty versus ensemble size.
 
+## Source-Backed Broadband Extension
+
+Raymer and Landes 2022 derive the broadband squeezed-light intensity
+autocorrelation from the four-frequency correlation function. For a compensated
+collinear type-0/type-I source with indistinguishable photons:
+
+```text
+g^(2)(0) = (2 + xi) + 1/nbar
+xi = 1
+g^(2)(0) = 3 + 1/nbar
+```
+
+This validates the same target value beyond the ideal single-mode derivation
+only when the effective mode, detection gate, and dispersion compensation are
+specified. The simulation plan should therefore have two validation layers:
+
+- single-mode Wigner sampling with normal-ordering correction,
+- broadband Raymer/Landes-style sampling with temporal gate and dispersion
+  compensation.
+
+Sharapova et al. 2015 should be used before making multimode BSV claims: the
+observed `g^(2)` depends on Schmidt-mode content, filtering, and gain.
+
 ## Extension Questions
 
 - How does loss change `g^{(2)}(0)` for squeezed vacuum?
@@ -107,4 +132,3 @@ Implement Monte Carlo sampling for several `r` values. For each value:
   detection model?
 - Which stochastic representation is most stable for high-intensity nonlinear
   propagation simulations?
-

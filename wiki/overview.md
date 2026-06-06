@@ -1,12 +1,12 @@
 ---
 title: Project Overview
 type: synthesis
-status: seed
+status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [overview, thesis]
-source_count: 0
-confidence: low
+source_count: 13
+confidence: high
 related:
   - research-agenda
   - theory/stochastic-quantum-optics-correspondence
@@ -48,7 +48,24 @@ nonlinear source terms for:
 
 ## Current Source Status
 
-This is a seed synthesis. No raw sources have been ingested yet. Claims should
-be treated as planning assumptions until linked to derivations, sources, or
-simulation results.
+The first source ingest is complete. The strongest source-backed architecture
+now looks like this:
 
+- Use Raymer and Landes as the correspondence spine for squeezed-vacuum
+  `g^(2)(0)`, four-frequency correlations, and stochastic-field vacuum
+  subtraction.
+- Use Sharapova et al. as the multimode BSV guardrail: single-mode claims need
+  an explicit filtering or detection-mode assumption.
+- Use Gorlach 2023, Rasputnyi 2024, Heimerl 2025, and related HHG sources for
+  the ensemble-of-coherent-responses strategy:
+
+```text
+observable_BSV = integral phase_space_weight * observable_coh
+```
+
+- Use Schuh 2013, Sun 2022, and Wang 2026 for THz plasma emission, with
+  symmetry breaking treated as a central requirement.
+
+The optical rectification branch is still the least directly sourced. It has
+support by analogy to stochastic SFG and by the THz mechanism review, but it
+needs a dedicated squeezed-vacuum OR source or an explicit derivation.

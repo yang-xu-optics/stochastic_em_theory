@@ -1,15 +1,17 @@
 ---
 title: Stochastic Quantum Optics Correspondence
 type: concept
-status: seed
+status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [theory, stochastic-fields, quantum-optics, ordering]
-source_count: 0
-confidence: low
+source_count: 4
+confidence: high
 related:
   - squeezed-vacuum-g2-proof-plan
   - ../overview
+  - ../sources/raymer-landes-2022-broadband-squeezed-vacuum-tpa
+  - ../sources/raymer-landes-2023-classical-model-broadband-squeezed-vacuum
 ---
 
 # Stochastic Quantum Optics Correspondence
@@ -57,10 +59,33 @@ For every stochastic/quantum comparison, record:
 - ensemble size and convergence tolerance,
 - whether the observable is symmetric, normal, or time ordered.
 
+## Source-Backed Guardrails
+
+- Raymer and Landes 2022 identify the four-frequency normally ordered
+  correlation as the decisive object for nonlinear absorption by broadband
+  squeezed vacuum. A stochastic calculation should match that object, not just
+  the visual shape of sampled fields.
+- Raymer and Landes 2023 show exact agreement for considered TPA/SFG
+  predictions only after subtracting the vacuum-only `g = 0` contribution in
+  the stochastic-field model. In this project, that step should be called
+  "vacuum subtraction" or "renormalization" and treated as an assumption to be
+  justified.
+- The stochastic zero-point spectral density used there is:
+
+```text
+P_SF(omega) = 1/2
+```
+
+- Sharapova et al. 2015 make the multimode warning concrete: BSV correlations
+  depend on the Schmidt-mode basis and gain-dependent mode weights. A
+  single-mode proof is a validation case, not a full BSV characterization.
+- Gorlach/Tzur-style HHG papers often use Positive P or Husimi Q coherent-state
+  decompositions. Those are phase-space representations of a quantum state,
+  not a blanket statement that all output observables are classical.
+
 ## Boundary of the Claim
 
 Matching squeezed-vacuum diagnostics does not by itself prove that every
 strong-field nonlinear process has a fully classical stochastic equivalent. It
 establishes a controlled input-field representation and an observable-matching
 protocol. Later HHG and THz claims need their own assumptions and validation.
-

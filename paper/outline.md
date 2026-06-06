@@ -26,6 +26,8 @@ generation and THz emission driven by squeezed vacuum.
 - Specify Wigner or other chosen representation.
 - State operator-ordering rules.
 - Link to [[wiki/theory/stochastic-quantum-optics-correspondence]].
+- Anchor sources: Raymer/Landes 2023 for stochastic vacuum subtraction;
+  Sharapova 2015 for multimode BSV cautions.
 
 ## 3. Squeezed Vacuum Characterization
 
@@ -34,6 +36,8 @@ generation and THz emission driven by squeezed vacuum.
 - Proof target: `g^{(2)}(0) = 3 + 1/<n>` for single-mode pure squeezed vacuum.
 - Numerical Monte Carlo validation.
 - Link to [[wiki/theory/squeezed-vacuum-g2-proof-plan]].
+- Anchor source: Raymer/Landes 2022 for broadband `g^(2)(0)` and dispersion
+  compensation.
 
 ## 4. HHG Driven by Bright Squeezed Vacuum
 
@@ -41,18 +45,25 @@ generation and THz emission driven by squeezed vacuum.
 - Present stochastic ensemble HHG source calculation.
 - Compare coherent, noisy, and squeezed drives.
 - Analyze spectra, cutoff statistics, and shot-to-shot variance.
+- Anchor sources: Gorlach 2023 supplement for 1D gas baseline; Rasputnyi 2024
+  and Heimerl 2025 for coherent-response averaging and conditional spectra;
+  Tzur et al. and Even Tzur 2025 for output-state extensions.
 
 ## 5. THz Optical Rectification
 
 - Define nonlinear polarization model.
 - Study ensemble-averaged THz field and intensity.
 - Identify role of squeezing phase, bandwidth, and medium symmetry.
+- Status: source gap for direct squeezed-vacuum `chi^(2)` OR. Treat this as a
+  derivation-led section unless a dedicated source is added.
 
 ## 6. THz Plasma Emission
 
 - Define ionization-current model.
 - Analyze symmetry requirements for nonzero THz emission.
 - Compare unconditional and conditional ensemble observables.
+- Anchor sources: Schuh 2013 for microscopic gas current, Sun 2022 for plasma
+  THz mechanism taxonomy, Wang 2026 for coherent-plus-BSV plasma THz sampling.
 
 ## 7. Discussion
 
@@ -76,3 +87,9 @@ generation and THz emission driven by squeezed vacuum.
 4. HHG spectra and cutoff distribution under squeezed drive.
 5. THz optical rectification waveform/spectrum statistics.
 6. THz plasma emission symmetry-breaking scan.
+
+## Source-Backed Figure Additions
+
+7. Broadband `g^(2)(0)` validation with and without dispersion compensation.
+8. HHG conditional versus unconditional spectra under BSV sampling.
+9. Plasma THz coherent-plus-BSV squeezing-angle scan.
