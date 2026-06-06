@@ -2,9 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Build the reproducible simulation layer for the correspondence-first HHG paper: squeezed-field sampling, ordering-corrected validation, source-model-aware mode validation, paper-one figures, per-shot HHG records, and an HHG intensity-observable pipeline.
+**Goal:** Build the reproducible simulation layer for the correspondence-first HHG paper: squeezed-field sampling, ordering-corrected validation, source-model-aware mode validation, ATI/photon-statistics validation, squeezed-emission-mode boundary modeling, paper-one figures, per-shot HHG records, and an HHG intensity-observable pipeline.
 
-**Architecture:** Implement a small Python package under `code/src/stochastic_em_theory/` with focused modules for field sampling, BSV source-model metadata, observable estimators, validation runs, plotting, HHG response models, per-shot records, ionization/cutoff proxies, and result manifests. Keep source code deterministic and testable; write generated outputs under `results/runs/` and `results/figures/` with manifests that identify source-model family, claim-ladder level, and random seeds.
+**Architecture:** Implement a small Python package under `code/src/stochastic_em_theory/` with focused modules for field sampling, BSV source-model metadata, observable estimators, validation runs, plotting, HHG response models, ATI statistics, squeezed emitted-mode modulation, per-shot records, ionization/cutoff proxies, and result manifests. Keep source code deterministic and testable; write generated outputs under `results/runs/` and `results/figures/` with manifests that identify mechanism family, source-model family, claim-ladder level, and random seeds.
 
 **Tech Stack:** Python 3.11+, NumPy, SciPy, Matplotlib, PyYAML, pytest.
 
@@ -19,6 +19,8 @@ This plan implements the simulation layer for paper one. It does not write the m
 - figures that expose the ordering correction and mode-count effects,
 - a lightweight HHG intensity-observable pipeline with per-shot records,
 - ionization/tunneling and cutoff proxies that support the new HHG literature targets,
+- an ATI/photon-statistics benchmark for coherent, thermal, and BSV ensembles,
+- a squeezed-emission-mode toy model for Wang 2024's selected-harmonic mechanism,
 - tested utilities for the later 1D soft-core gas baseline.
 
 ## File Structure
@@ -30,12 +32,15 @@ This plan implements the simulation layer for paper one. It does not write the m
 - `code/src/stochastic_em_theory/__init__.py`: package version.
 - `code/src/stochastic_em_theory/fields.py`: Wigner and Husimi squeezed-field samplers.
 - `code/src/stochastic_em_theory/source_models.py`: explicit BSV source-model catalog and mode weights.
+- `code/src/stochastic_em_theory/mechanisms.py`: explicit mechanism-family labels.
 - `code/src/stochastic_em_theory/observables.py`: analytic targets and ordering-corrected estimators.
 - `code/src/stochastic_em_theory/io.py`: run directory, CSV, JSON, and YAML manifest helpers.
 - `code/src/stochastic_em_theory/validation.py`: single-mode and mode-filtered validation runners.
 - `code/src/stochastic_em_theory/plotting.py`: deterministic figure builders for validation and HHG outputs.
 - `code/src/stochastic_em_theory/hhg_proxy.py`: fast HHG intensity proxy for ensemble-pipeline development.
 - `code/src/stochastic_em_theory/ionization.py`: Keldysh and ADK-like ionization/tunneling proxies.
+- `code/src/stochastic_em_theory/ati.py`: ATI/photon-statistics benchmark for coherent, thermal, and BSV ensembles.
+- `code/src/stochastic_em_theory/emission_environment.py`: squeezed emitted-mode `mu_k(t)` toy model.
 - `code/src/stochastic_em_theory/tdse1d.py`: tested 1D split-operator utilities for the soft-core gas baseline.
 - `code/src/stochastic_em_theory/claim_ladder.py`: explicit result claim-level labels.
 - `code/src/stochastic_em_theory/shot_records.py`: per-shot driver and HHG diagnostic records.
@@ -65,7 +70,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [paper-one, squeezed-vacuum, validation, hhg]
-source_count: 52
+source_count: 54
 confidence: high
 related:
   - ../theory/stochastic-quantum-optics-correspondence
@@ -87,7 +92,9 @@ Produce reproducible simulations for the correspondence-first HHG paper:
 4. record the BSV source-model family used to generate each ensemble,
 5. drive HHG intensity-level observables with the validated stochastic ensemble,
 6. retain per-shot HHG metadata for ionization, cutoff, bunching, and symmetry diagnostics,
-7. label every output with the claim-ladder level it supports.
+7. add a pre-HHG ATI/photon-statistics validation branch for coherent, thermal, and BSV ensembles,
+8. add a separate squeezed-emission-mode boundary model for selected harmonic channels,
+9. label every output with the mechanism family and claim-ladder level it supports.
 
 ## Units
 
@@ -164,6 +171,51 @@ Supported paper-one observables:
   harmonic amplitudes, and harmonic phases,
 - convergence versus ensemble size.
 
+## Stage D: ATI/Photon-Statistics Validation
+
+Before full HHG recombination modeling, validate the upstream ionization step
+using coherent, thermal, and BSV photon-statistics ensembles. This branch is
+inspired by Lyu 2025 and uses diagonal coherent-component averaging:
+
+```text
+W(p) = integral dE_alpha P(E_alpha) |M_alpha(p)|^2
+```
+
+The first implementation uses ionization-rate and electron-number proxies, not
+a quantitative qSFA momentum solver.
+
+Outputs:
+
+- CSV comparing coherent, thermal, and BSV sampled ensembles at matched mean
+  intensity.
+- Estimated `g2` hierarchy:
+
+```text
+g2_coherent = 1
+g2_thermal = 2
+g2_BSV = 3
+```
+
+- Ionization-yield enhancement and electron-number bunching proxies.
+- Manifest with mechanism family `ati_photon_statistics`.
+
+## Stage E: Squeezed Emission-Mode Environment Boundary Model
+
+Model Wang 2024 as a separate mechanism from BSV pump sampling. For a selected
+harmonic mode, use:
+
+```text
+mu_k(t) = cosh(r_k) + sinh(r_k) exp[-i(2 omega_k t - theta_k)]
+```
+
+and compare the targeted-channel amplitude with and without `mu_k(t)`.
+
+Outputs:
+
+- CSV over squeezing angle for one selected harmonic order.
+- Figure or summary showing modulation of the targeted harmonic amplitude.
+- Manifest with mechanism family `squeezed_emission_mode_environment`.
+
 Unsupported paper-one claims:
 
 - emitted harmonic Wigner negativity,
@@ -179,6 +231,7 @@ Each run writes:
 run_id: YYYYMMDD-short-name
 created: YYYY-MM-DD
 claim_level: exact_input_correspondence | hhg_intensity_prediction
+mechanism:
 source_model:
 code_entrypoint:
 git_commit:
@@ -212,6 +265,7 @@ Append this entry to `wiki/log.md`:
   implementation-facing simulation spec for the correspondence-first HHG paper.
 - Scoped paper-one simulations to exact input-field validation, mode-filtered
   `g^(2)`, source-model-aware BSV ensembles, HHG intensity-level observables,
+  ATI/photon-statistics validation, squeezed-emission-mode boundary modeling,
   per-shot metadata records, and explicit claim-ladder labels.
 - Kept non-Gaussian output certification, THz models, and macroscopic HHG
   propagation outside the first simulation implementation.

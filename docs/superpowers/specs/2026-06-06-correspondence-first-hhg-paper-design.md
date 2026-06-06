@@ -2,7 +2,7 @@
 
 Date: 2026-06-06
 
-Updated: 2026-06-06 after the 52-source literature-search ingest.
+Updated: 2026-06-06 after the 54-source literature-search and APS ingest.
 
 ## Purpose
 
@@ -21,6 +21,14 @@ cutoff fluctuations, photon bunching, symmetry leakage, and displaced or
 squeezed harmonic output. The first paper should still avoid certifying
 non-Gaussian output states, but its simulation layer should retain enough
 per-shot information to support those future diagnostics.
+
+The two later-added APS papers sharpen an important distinction. Lyu et al.
+2025 supports a pre-HHG ATI/ionization validation track based on incoherent
+coherent-component averaging over photon statistics. Wang et al. 2024 is not a
+BSV pump paper; it models squeezed vacuum as the quantum environment of a
+selected emitted harmonic mode through a `mu_k(t)` factor. Paper one should
+compare these as separate mechanisms rather than merging them into one
+"squeezed HHG" bucket.
 
 ## Core Thesis
 
@@ -44,6 +52,17 @@ vacuum. The new literature search requires a sharper source-model ladder:
 
 The first implementation should build hooks for this ladder even if it only
 quantitatively validates the first two or three levels.
+
+The HHG application should now use a three-path mechanism map:
+
+1. stochastic or BSV pump sampling that changes the drive field realization,
+2. ATI/ionization validation that tests photon-statistics effects before
+   recombination,
+3. squeezed emitted-mode environment modulation for selected harmonic channels.
+
+Only the first two belong in the main simulation pipeline for paper one. The
+third is a compact toy or boundary model unless a full quantized emitted-field
+calculation is added.
 
 ## Claim Ladder
 
@@ -70,8 +89,8 @@ The manuscript should organize all claims by level:
    The validated ensemble drives a gas HHG response model. Supported observables
    include ensemble-averaged spectra, conditional spectra, ionization or
    tunneling yield distributions, cutoff distributions, shot-to-shot variance,
-   rare-event statistics, symmetry-leakage channels where the model supports
-   them, and Monte Carlo uncertainty.
+   ATI/electron-number statistics, rare-event statistics, symmetry-leakage
+   channels where the model supports them, and Monte Carlo uncertainty.
 
 4. Gaussian quantum-output diagnostics
 
@@ -124,9 +143,11 @@ The manuscript should organize all claims by level:
    target is a single-atom or local gas response before macroscopic propagation,
    with the fast HHG proxy used only as a pipeline smoke test. Report
    intensity-level observables: mean spectra, conditional spectra,
-   ionization/tunneling yield distributions, cutoff distributions, shot
-   variance, rare-event tails, symmetry-leakage proxies when available, and
-   convergence.
+   ionization/tunneling yield distributions, ATI/electron-number statistics,
+   cutoff distributions, shot variance, rare-event tails, symmetry-leakage
+   proxies when available, and convergence. Add a short boundary subsection on
+   squeezed emitted-mode environments using Wang 2024's `mu_k(t)` modulation,
+   explicitly separate from BSV pump sampling.
 
 6. Discussion and outlook
 
@@ -163,6 +184,21 @@ The manuscript should organize all claims by level:
   stores per-shot driver quadratures, intensity, phase, ionization proxy,
   cutoff proxy, harmonic amplitudes, and harmonic phases before aggregation.
 
+- ATI validation component
+
+  Tests coherent, thermal, and BSV photon-statistics ensembles before HHG
+  recombination. It records ionization yield, electron-number statistics, and
+  any momentum or energy distribution proxy needed to check the diagonal
+  coherent-component averaging approximation.
+
+- Emission-mode environment component
+
+  Implements a boundary toy model in which a selected harmonic channel is
+  multiplied by Wang 2024's squeezed-vacuum factor
+  `mu_k(t) = cosh(r_k) + sinh(r_k) exp[-i(2 omega_k t - theta_k)]`. This
+  component must be labeled as emitted-mode vacuum modulation, not BSV pump
+  sampling.
+
 - Claim-boundary component
 
   Uses `wiki/theory/non-gaussian-output-novelty.md` to classify each result as
@@ -178,9 +214,12 @@ The manuscript should organize all claims by level:
 4. Pass validated samples to the HHG response model.
 5. Store per-shot records before aggregation.
 6. Aggregate mean spectra, conditional spectra, ionization/tunneling yields,
-   cutoff distributions, phase/symmetry proxies, and uncertainty estimates.
-7. Label every result with its source-model family and claim-ladder level
-   before it enters the paper.
+   ATI/electron-number statistics, cutoff distributions, phase/symmetry
+   proxies, and uncertainty estimates.
+7. For selected harmonic-channel environment tests, apply the `mu_k(t)`
+   modulation as a separate branch.
+8. Label every result with its mechanism family, source-model family, and
+   claim-ladder level before it enters the paper.
 
 ## Figure Plan
 
@@ -198,9 +237,14 @@ The manuscript should organize all claims by level:
 7. HHG per-shot observable map: driver quadratures, intensity, phase,
    ionization/tunneling yield, cutoff proxy, harmonic amplitudes, and harmonic
    phases.
-8. HHG results: mean spectra plus conditional spectra, cutoff distributions,
+8. ATI validation figure: coherent, thermal, and BSV sampled ensembles,
+   ionization yield enhancement, electron-number bunching, and diagonal
+   averaging caveat.
+9. Squeezed emitted-mode environment toy: `mu_k(t)` angle dependence for one
+   selected harmonic channel, clearly separated from BSV pump sampling.
+10. HHG results: mean spectra plus conditional spectra, cutoff distributions,
    ionization/tunneling yield distributions, or symmetry-leakage proxies.
-9. Boundary and outlook map linking HHG to future non-Gaussian witnesses and
+11. Boundary and outlook map linking HHG to future non-Gaussian witnesses and
    THz/plasma extensions.
 
 ## Success Criteria
@@ -216,6 +260,10 @@ The manuscript should organize all claims by level:
 - The HHG demonstration uses the validated ensemble, stores per-shot metadata,
   and reports only supported intensity-level, ionization/tunneling, cutoff, or
   symmetry-proxy observables.
+- The ATI validation branch compares coherent, thermal, and BSV statistics at
+  matched field scale before full HHG claims are made.
+- The squeezed emitted-mode environment branch is labeled as a selected
+  harmonic-mode effect and is not conflated with stochastic BSV pump sampling.
 - The non-Gaussian discussion identifies the next witness or output model
   needed to go beyond positive stochastic sampling.
 
@@ -234,6 +282,11 @@ The manuscript should organize all claims by level:
   HHG and strong-field target observables: photon bunching, harmonic squeezing,
   optical coherence, tunneling and ionization, cutoff fluctuations, attosecond
   synthesis, and fluctuation-induced symmetry breaking.
+- Wang et al. 2024 anchors a separate squeezed-emitted-mode environment model
+  through `mu_k(t)` modulation of a selected harmonic channel.
+- Lyu et al. 2025 anchors the ATI/ionization validation branch through qSFA
+  coherent-component averaging over coherent, thermal, and BSV photon
+  statistics.
 - Yanagimoto 2022/2024 and Jankowski 2024 anchor the non-Gaussian claim ladder.
 - Florez 2020, Yanagimoto 2021, Kulkarni 2022, Vendromin 2024/2025, and
   Rasputnyi 2025 support the boundary between stochastic Gaussian source
@@ -249,6 +302,12 @@ The manuscript should organize all claims by level:
   `g^(2)` or photon-number claim.
 - Source-model ambiguity: require a stated BSV source family and mode-weight
   convention for every stochastic ensemble.
+- Mechanism ambiguity: require every HHG result to state whether the quantum
+  light acts as a pump ensemble, an ATI/ionization photon-statistics ensemble,
+  or an emitted-mode squeezed-vacuum environment.
+- qSFA diagonal approximation risk: before importing ATI-style averaging into
+  HHG, state the diagonal coherent-component approximation and its high-field
+  or large-amplitude regime.
 - Overclaiming classicality: use the claim ladder for every manuscript result.
 - Rare-event numerical instability: report convergence versus ensemble size
   and conditional bins, and store per-shot records so outliers can be audited.
@@ -269,6 +328,8 @@ The manuscript should organize all claims by level:
 - Plasma THz simulations beyond a concise future-work roadmap.
 - Quantitative claims from first-pass 2026 source summaries before
   equation-level follow-up.
+- Treating squeezed emitted-mode vacuum modulation as evidence for BSV pump
+  sampling without a separate emitted-field model.
 
 ## Review Gate
 
@@ -277,5 +338,6 @@ After this design is approved, the next step is an implementation plan for:
 1. completing the derivation page,
 2. specifying the sampler validation,
 3. implementing the BSV source-model ladder and per-shot records,
-4. choosing the first HHG model fidelity level,
-5. defining paper-one figures and result manifests.
+4. adding ATI/ionization validation and squeezed-emission-mode boundary tasks,
+5. choosing the first HHG model fidelity level,
+6. defining paper-one figures and result manifests.
