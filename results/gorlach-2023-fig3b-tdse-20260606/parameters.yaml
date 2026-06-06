@@ -1,0 +1,44 @@
+shots: 50000
+seed: 20230603
+base_field_amplitude_au: 0.08
+omega_au: 0.057
+ionization_potential_au: 0.7924
+max_order: 151
+mean_photon_number: 100.0
+fock_n: 100
+bsv_r: 2.0
+bsv_phase: 0.0
+nonlinearity_power: 6.0
+spectrum_model: tdse_dipole_acceleration
+tdse_amplitude_bins: 9
+tdse:
+  amplitude_bins: 9
+  x_min: -80.0
+  x_max: 80.0
+  grid_points: 768
+  softening: 0.816
+  dt_au: 0.1
+  ramp_cycles: 1.5
+  flat_cycles: 3.0
+  ground_state_iterations: 180
+  ground_state_dt_au: 0.08
+  carrier_phase: 0.0
+  spectrum_model: tdse_dipole_acceleration
+  amplitude_bin_count: 9
+  field_amplitude_min_au: 0.00013629135235749222
+  field_amplitude_max_au: 0.34072957092969647
+  field_amplitude_values_au:
+  - 0.00013629135235749222
+  - 0.058008944085439496
+  - 0.07660408478189142
+  - 0.080514613071587
+  - 0.08405320148428391
+  - 0.09064285460882089
+  - 0.11817807922923572
+  - 0.16008994072573615
+  - 0.34072957092969647
+  time_steps: 6615
+  dx_au: 0.2083333333333286
+driver_sampling: single_mode_husimi_q_fig3b
+field_normalization: field_amplitude = base_field_amplitude_au * sqrt(|alpha|^2 /
+  mean(|alpha|^2))

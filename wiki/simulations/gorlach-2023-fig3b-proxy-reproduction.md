@@ -129,6 +129,7 @@ Under a dated result directory:
 gorlach_2023_fig3b_proxy_spectra.csv
 gorlach_2023_fig3b_proxy_summary.json
 gorlach_2023_fig3b_proxy.png
+parameters.yaml
 manifest.yaml
 ```
 
@@ -136,3 +137,8 @@ The manifest must record the source URLs, raw local source path, random seed,
 shots, driver-state parameters, field normalization, code entry point, commit
 hash if available, TDSE grid and pulse parameters, amplitude-library metadata,
 and the approximation caveat.
+
+The first upgraded local run is stored at
+`results/gorlach-2023-fig3b-tdse-20260606/`. It uses 50,000 stochastic shots,
+9 TDSE amplitude bins, a `[-80, 80]` bohr grid with 768 points, `dt = 0.10`
+a.u., and a 1.5-cycle ramp / 3-cycle flat-top / 1.5-cycle ramp pulse.

@@ -12,7 +12,7 @@ DEFAULT_OUTPUT_DIR = REPO_ROOT / "results" / "gorlach-2023-fig3b-proxy"
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Reproduce Gorlach et al. 2023 Fig. 3b with the local stochastic-field HHG proxy."
+        description="Reproduce Gorlach et al. 2023 Fig. 3b with stochastic-field sampling and a TDSE or proxy coherent response."
     )
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--shots", type=int, default=50_000)
@@ -26,6 +26,18 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--bsv-r", type=float, default=2.0)
     parser.add_argument("--bsv-phase", type=float, default=0.0)
     parser.add_argument("--nonlinearity-power", type=float, default=6.0)
+    parser.add_argument("--spectrum-model", choices=["tdse", "proxy"], default="tdse")
+    parser.add_argument("--tdse-amplitude-bins", type=int, default=7)
+    parser.add_argument("--tdse-x-min", type=float, default=-60.0)
+    parser.add_argument("--tdse-x-max", type=float, default=60.0)
+    parser.add_argument("--tdse-grid-points", type=int, default=512)
+    parser.add_argument("--tdse-softening", type=float, default=0.8160)
+    parser.add_argument("--tdse-dt-au", type=float, default=0.12)
+    parser.add_argument("--tdse-ramp-cycles", type=float, default=1.0)
+    parser.add_argument("--tdse-flat-cycles", type=float, default=2.0)
+    parser.add_argument("--tdse-ground-state-iterations", type=int, default=120)
+    parser.add_argument("--tdse-ground-state-dt-au", type=float, default=0.08)
+    parser.add_argument("--tdse-carrier-phase", type=float, default=0.0)
     return parser
 
 
@@ -44,6 +56,18 @@ def main() -> int:
         bsv_r=args.bsv_r,
         bsv_phase=args.bsv_phase,
         nonlinearity_power=args.nonlinearity_power,
+        spectrum_model=args.spectrum_model,
+        tdse_amplitude_bins=args.tdse_amplitude_bins,
+        tdse_x_min=args.tdse_x_min,
+        tdse_x_max=args.tdse_x_max,
+        tdse_grid_points=args.tdse_grid_points,
+        tdse_softening=args.tdse_softening,
+        tdse_dt_au=args.tdse_dt_au,
+        tdse_ramp_cycles=args.tdse_ramp_cycles,
+        tdse_flat_cycles=args.tdse_flat_cycles,
+        tdse_ground_state_iterations=args.tdse_ground_state_iterations,
+        tdse_ground_state_dt_au=args.tdse_ground_state_dt_au,
+        tdse_carrier_phase=args.tdse_carrier_phase,
     )
     print(artifacts.csv_path)
     print(artifacts.summary_path)

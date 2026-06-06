@@ -4,12 +4,28 @@ import json
 import numpy as np
 import yaml
 
-from stochastic_em_theory.fig3b import Fig3BDriverState, run_gorlach_2023_fig3b_proxy, sample_fig3b_driver_alpha
+from stochastic_em_theory.fig3b import (
+    Fig3BDriverState,
+    _tdse_library_field_amplitudes,
+    run_gorlach_2023_fig3b_proxy,
+    sample_fig3b_driver_alpha,
+)
 
 
 def _normalized_intensity_cv(alpha: np.ndarray) -> float:
     intensity = np.abs(alpha) ** 2
     return float(np.std(intensity / np.mean(intensity)))
+
+
+def test_tdse_library_amplitudes_focus_high_field_tail() -> None:
+    field_amplitudes = np.linspace(0.0, 1.0, 101)
+
+    library = _tdse_library_field_amplitudes(field_amplitudes_au=field_amplitudes, bins=5)
+
+    assert np.isclose(library[0], 0.0)
+    assert np.isclose(library[-1], 1.0)
+    assert library[1] > 0.25
+    assert library[-2] > 0.9
 
 
 def test_fig3b_husimi_samplers_have_expected_intensity_fluctuation_hierarchy() -> None:
@@ -24,7 +40,6 @@ def test_fig3b_husimi_samplers_have_expected_intensity_fluctuation_hierarchy() -
         fock_n=100,
         bsv_r=2.0,
         bsv_phase=0.0,
-        spectrum_model="proxy",
     )
     fock = sample_fig3b_driver_alpha(
         Fig3BDriverState.FOCK,
@@ -34,7 +49,6 @@ def test_fig3b_husimi_samplers_have_expected_intensity_fluctuation_hierarchy() -
         fock_n=100,
         bsv_r=2.0,
         bsv_phase=0.0,
-        spectrum_model="proxy",
     )
     thermal = sample_fig3b_driver_alpha(
         Fig3BDriverState.THERMAL,
@@ -74,6 +88,7 @@ def test_gorlach_fig3b_proxy_runner_writes_four_state_outputs(tmp_path) -> None:
         fock_n=100,
         bsv_r=2.0,
         bsv_phase=0.0,
+        spectrum_model="proxy",
     )
 
     figure_path = tmp_path / "gorlach_2023_fig3b_proxy.png"
@@ -83,6 +98,7 @@ def test_gorlach_fig3b_proxy_runner_writes_four_state_outputs(tmp_path) -> None:
     assert artifacts.csv_path.exists()
     assert artifacts.summary_path.exists()
     assert artifacts.manifest_path.exists()
+    assert (tmp_path / "parameters.yaml").exists()
     assert figure_path.exists()
     assert figure_path.stat().st_size > 1000
 
@@ -108,6 +124,7 @@ def test_gorlach_fig3b_proxy_runner_writes_four_state_outputs(tmp_path) -> None:
 
     manifest = yaml.safe_load(artifacts.manifest_path.read_text())
     assert manifest["code_entrypoint"] == "stochastic_em_theory.fig3b.run_gorlach_2023_fig3b_proxy"
+    assert manifest["parameter_file"] == "parameters.yaml"
     assert manifest["random_seeds"] == [7]
     assert "Nature Fig. 3b" in manifest["source_refs"][0]
 
@@ -155,3 +172,6 @@ def test_gorlach_fig3b_tdse_runner_records_dipole_acceleration_model(tmp_path) -
     assert manifest["mechanism"] == "quantum_light_hhg_tdse_dipole_acceleration"
     assert manifest["observable"] == "ensemble_mean_tdse_hhg_spectrum_by_driver_state"
     assert manifest["parameters"]["tdse"]["grid_points"] == 128
+    assert manifest["parameter_file"] == "parameters.yaml"
+    parameter_file = yaml.safe_load((tmp_path / "parameters.yaml").read_text())
+    assert parameter_file["spectrum_model"] == "tdse_dipole_acceleration"

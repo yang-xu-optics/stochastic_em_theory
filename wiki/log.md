@@ -155,3 +155,6 @@ Append-only chronological record. New entries should use:
 - Downloaded the public Fig. 3 source-data archive under
   `raw/assets/gorlach-2023-fig3-source-data/` for reference and future
   source-data comparison.
+- Generated `results/gorlach-2023-fig3b-tdse-20260606/` with 50,000 stochastic
+  shots, 9 TDSE amplitude bins, a manifest, a parameter file, CSV spectra, and
+  a Fig. 3b-style PNG.
