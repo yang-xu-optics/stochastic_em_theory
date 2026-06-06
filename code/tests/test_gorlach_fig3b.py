@@ -6,6 +6,7 @@ import yaml
 
 from stochastic_em_theory.fig3b import (
     Fig3BDriverState,
+    STATE_STYLES,
     _tdse_library_field_amplitudes,
     run_gorlach_2023_fig3b_proxy,
     sample_fig3b_driver_alpha,
@@ -26,6 +27,14 @@ def test_tdse_library_amplitudes_focus_high_field_tail() -> None:
     assert np.isclose(library[-1], 1.0)
     assert library[1] > 0.25
     assert library[-2] > 0.9
+
+
+def test_fig3b_display_offsets_are_widely_separated_for_log_plot() -> None:
+    offsets = [STATE_STYLES[state].display_offset for state in Fig3BDriverState]
+
+    assert offsets == sorted(offsets)
+    assert offsets[0] == 1.0
+    assert all(upper / lower >= 100.0 for lower, upper in zip(offsets, offsets[1:]))
 
 
 def test_fig3b_husimi_samplers_have_expected_intensity_fluctuation_hierarchy() -> None:

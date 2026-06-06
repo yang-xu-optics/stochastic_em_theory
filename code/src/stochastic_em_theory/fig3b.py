@@ -51,9 +51,9 @@ class Fig3BStateStyle:
 
 STATE_STYLES: dict[Fig3BDriverState, Fig3BStateStyle] = {
     Fig3BDriverState.COHERENT: Fig3BStateStyle("Coherent", "#e41a1c", 1.0),
-    Fig3BDriverState.FOCK: Fig3BStateStyle("Fock", "#377eb8", 6.0),
-    Fig3BDriverState.THERMAL: Fig3BStateStyle("Thermal", "#ff7f00", 30.0),
-    Fig3BDriverState.BSV: Fig3BStateStyle("BSV", "#4daf4a", 150.0),
+    Fig3BDriverState.FOCK: Fig3BStateStyle("Fock", "#377eb8", 1.0e3),
+    Fig3BDriverState.THERMAL: Fig3BStateStyle("Thermal", "#ff7f00", 1.0e6),
+    Fig3BDriverState.BSV: Fig3BStateStyle("BSV", "#4daf4a", 1.0e9),
 }
 
 
