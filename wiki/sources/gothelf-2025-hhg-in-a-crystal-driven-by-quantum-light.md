@@ -1,0 +1,67 @@
+---
+title: High-Harmonic Generation in a Crystal Driven by Quantum Light
+type: source-summary
+status: draft
+created: 2026-06-06
+updated: 2026-06-06
+tags: [source, hhg, quantum-light, solid-state]
+source_count: 1
+confidence: medium
+related:
+  - ../models/hhg-gas-model
+  - ../theory/non-gaussian-output-novelty
+---
+
+# High-Harmonic Generation in a Crystal Driven by Quantum Light
+
+## Bibliographic Metadata
+
+- Authors: Rasmus Vesterager Gothelf, Christian Saugbjerg Lange, Lars Bojer Madsen.
+- Year: 2025.
+- Venue: ArXiv.org.
+- DOI/arXiv: 10.48550/arxiv.2502.11803.
+- Raw source: [Gothelf et al. - 2025 - High-Harmonic Generation in a Crystal Driven by Quantum Light.pdf](<../../raw/sources/Gothelf et al. - 2025 - High-Harmonic Generation in a Crystal Driven by Quantum Light.pdf>)
+- Search source: search_manifest.
+- Ingest date: 2026-06-06.
+
+## Core Result
+
+Extends quantum-light-driven HHG ideas into solids, useful for comparison even
+though the gas-HHG model in this project has different propagation and
+material assumptions.
+
+## Abstract Signal
+
+We study intraband high-harmonic generation (HHG) in a crystal driven by
+quantum light. Previous theoretical studies have developed a framework based
+on coherent state expansions in terms of P distributions to consider
+nonclassical driving fields for HHG in atoms. Here, we adapt this framework to
+the context of solids and consider an intraband model of ZnO. We investigate
+the effect of the quantum optical nature of t
+
+## Relevance To This Project
+
+Supports the HHG branch by identifying which pump-state or output-state
+observables should be tracked beyond an averaged harmonic spectrum. Use as a
+comparison class for quantum-light HHG; do not transfer solid-state selection
+rules directly to gas without rederiving assumptions.
+
+## Simulation Or Manuscript Hooks
+
+- Add to the literature map for squeezed/quantum-light-driven HHG, BSV source
+  characterization, or non-Gaussian nonlinear-output mechanisms as tagged
+  above.
+- Use the source to decide which stochastic ensemble variables must be sampled:
+  quadratures, intensity, phase, mode weights, conditioning records, or emitted
+  harmonic quadratures.
+- If the paper is used in the manuscript, extract its governing equations and
+  detection assumptions into the relevant theory/model page before citing it as
+  quantitative support.
+
+## Limitations And Cautions
+
+- Solid-state HHG assumptions do not directly apply to gas HHG or plasma THz
+emission.
+- This is a first-pass ingest from the downloaded source and metadata; extract
+equations before using it as a primary derivation source.
+

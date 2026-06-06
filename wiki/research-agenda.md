@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [agenda, planning]
-source_count: 17
+source_count: 52
 confidence: high
 related:
   - overview
@@ -88,12 +88,20 @@ related:
   [[theory/non-gaussian-output-novelty]] to separate higher-order classical
   statistics, Gaussian quantum squeezing, and genuine non-Gaussian quantum
   output.
+- D7: The 2026-06-06 literature search found many new HHG/strong-field
+  quantum-light papers but no direct squeezed-vacuum optical-rectification
+  source. Treat HHG as the best-sourced first nonlinear application, and treat
+  THz OR as a derivation-led extension until a dedicated source is found.
+- D8: Non-Gaussian novelty is now better supported on the pump/output side:
+  pump-depleted PDC, Kerr-propagated BSV, displaced/squeezed HHG output,
+  cutoff fluctuations, and heralded BSV-matter states all give concrete witness
+  targets.
 
 ## Current Source Gaps
 
 - A dedicated source or derivation for optical rectification driven directly by
-  squeezed vacuum. Ravi 2014 covers classical tilted-pulse-front OR, not
-  quantum-light OR.
+  squeezed vacuum. The new literature search did not close this gap; Ravi 2014
+  covers classical tilted-pulse-front OR, not quantum-light OR.
 - A foundational stochastic electrodynamics source beyond the Raymer/Landes
   stochastic-field construction.
 - A gas-phase BSV HHG experiment analogous to the solid and metal-tip sources.
@@ -112,3 +120,7 @@ related:
 5. Build a minimal two-color plasma THz model before testing pure BSV symmetry.
 6. Add a non-Gaussian diagnostics spec: cumulants, mode selection, conditional
    bins, and candidate phase-space witnesses.
+7. Prioritize an HHG pilot before THz OR because the HHG literature now offers
+   specific stochastic-driver observables: bunching, symmetry leakage, cutoff
+   fluctuations, ionization/tunneling distributions, and harmonic quadrature
+   reconstruction.

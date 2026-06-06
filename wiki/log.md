@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [log]
-source_count: 17
+source_count: 52
 confidence: high
 related: [overview]
 ---
@@ -66,3 +66,28 @@ Append-only chronological record. New entries should use:
   conditional states.
 - Updated HHG, THz OR, THz plasma, simulation roadmap, research agenda, index,
   overview, and paper outline with non-Gaussian observables and cautions.
+
+## [2026-06-06] ingest | Literature Search Batch For Squeezed HHG And THz Project
+
+- Used the project-local paper-lookup, literature-review, and paperzilla skill
+  instructions. Paperzilla's `pz` CLI and `parallel-cli` were not installed, so
+  Paperzilla/feed recommendations were unavailable and the literature-review
+  search workflow was executed manually through APIs.
+- Queried OpenAlex, Crossref, and arXiv across focused clusters for BSV/quantum
+  light HHG, strong-field ionization/tunneling, squeezed-vacuum propagation,
+  stochastic SPDC/PDC, pump depletion, and non-Gaussian ultrafast nonlinear
+  optics. Semantic Scholar was attempted but returned HTTP 429 without an API
+  key.
+- Downloaded 35 new non-duplicate PDFs into `raw/sources/`; extracted text for
+  all 35 into `results/literature-search-2026-06-06/extracted_text/`; created
+  35 first-pass source-summary pages under `wiki/sources/`.
+- Recorded search/download manifests under
+  `results/literature-search-2026-06-06/`.
+- Two relevant APS-only papers were found but not downloaded because the
+  command-line PDF links were Cloudflare-blocked:
+  "High harmonic generation from an atom in a squeezed-vacuum environment" and
+  "Effect of photon quantum statistics on electrons in above-threshold
+  ionization".
+- Updated the wiki index, overview, stochastic/quantum correspondence page,
+  `g^(2)` proof plan, HHG model, THz OR model, non-Gaussian novelty map,
+  simulation roadmap, research agenda, and manuscript outline.

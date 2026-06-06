@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [overview, thesis]
-source_count: 17
+source_count: 52
 confidence: high
 related:
   - research-agenda
@@ -70,6 +70,14 @@ observable_BSV = integral phase_space_weight * observable_coh
   identify whether HHG or THz generation creates only non-Gaussian classical
   shot distributions or genuinely non-Gaussian quantum output states.
 
+The 2026-06-06 literature search expanded the HHG and strong-field branch
+substantially: photon bunching, harmonic squeezing, displaced squeezed output,
+attosecond synthesis, symmetry breaking, cutoff fluctuations, tunneling, and
+ionization under quantum-light driving are now source-backed targets. The same
+search strengthened the non-Gaussian branch through pump-depleted PDC,
+Kerr-propagated BSV, and MPS/Gaussian-interaction-frame simulation methods.
+
 The optical rectification branch now has a strong classical propagation source,
 but still needs a dedicated squeezed-vacuum OR source or an explicit derivation
-for stochastic/quantum-light pump statistics.
+for stochastic/quantum-light pump statistics. The new search did not close that
+gap.

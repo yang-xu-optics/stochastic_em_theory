@@ -22,7 +22,7 @@ related:
 - Venue: Advances in Optics and Photonics 16, 347-537.
 - Title: Ultrafast second-order nonlinear photonics-from classical physics to
   non-Gaussian quantum dynamics: a tutorial.
-- Raw source: [Jankowski 2024 raw PDF](<../../raw/sources/Jankowski%20et%20al.%20-%202024%20-%20Ultrafast%20second-order%20nonlinear%20photonics%E2%80%94from%20cl.pdf>)
+- Raw source: [Jankowski 2024 raw PDF](<../../raw/sources/Jankowski et al. - 2024 - Ultrafast second-order nonlinear photonics—from cl.pdf>)
 - Ingest date: 2026-06-06.
 
 ## Core Result
@@ -78,4 +78,3 @@ question. For HHG and plasma THz, it provides the broader conceptual hierarchy:
 mean spectra are classical-like, covariance and squeezing are Gaussian quantum
 features, and higher-order cumulants/Wigner negativity are the high-impact
 non-Gaussian frontier.
-

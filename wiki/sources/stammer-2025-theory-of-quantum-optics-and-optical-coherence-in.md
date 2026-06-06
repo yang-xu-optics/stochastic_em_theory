@@ -1,0 +1,62 @@
+---
+title: Theory of quantum optics and optical coherence in high harmonic generation
+type: source-summary
+status: draft
+created: 2026-06-06
+updated: 2026-06-06
+tags: [source, hhg, quantum-light]
+source_count: 1
+confidence: medium
+related:
+  - ../models/hhg-gas-model
+  - ../theory/non-gaussian-output-novelty
+---
+
+# Theory of quantum optics and optical coherence in high harmonic generation
+
+## Bibliographic Metadata
+
+- Authors: Philipp Stammer, Javier Rivera-Dean, Maciej Lewenstein.
+- Year: 2025.
+- Venue: arXiv.
+- DOI/arXiv: 10.48550/arXiv.2504.13287.
+- Raw source: [Stammer et al. - 2025 - Theory of quantum optics and optical coherence in high harmonic generation.pdf](<../../raw/sources/Stammer et al. - 2025 - Theory of quantum optics and optical coherence in high harmonic generation.pdf>)
+- Search source: manual_arxiv_recovery.
+- Ingest date: 2026-06-06.
+
+## Core Result
+
+Develops coherence-function language for HHG, connecting quantum-optical
+correlation functions to the strong-field emission process.
+
+## Abstract Signal
+
+Optical coherence encodes information about the correlations of the
+electromagnetic field. In combination with quantum optical approaches, it
+allows for the study of the correlations between photons. Since the pioneering
+papers of Glauber, studies of optical coherence have facilitated many
+fundamental insights into non-classical signatures of light emission
+processes, with wide applicability in modern quantum technol
+
+## Relevance To This Project
+
+Supports the HHG branch by identifying which pump-state or output-state
+observables should be tracked beyond an averaged harmonic spectrum.
+
+## Simulation Or Manuscript Hooks
+
+- Add to the literature map for squeezed/quantum-light-driven HHG, BSV source
+  characterization, or non-Gaussian nonlinear-output mechanisms as tagged
+  above.
+- Use the source to decide which stochastic ensemble variables must be sampled:
+  quadratures, intensity, phase, mode weights, conditioning records, or emitted
+  harmonic quadratures.
+- If the paper is used in the manuscript, extract its governing equations and
+  detection assumptions into the relevant theory/model page before citing it as
+  quantitative support.
+
+## Limitations And Cautions
+
+- This is a first-pass ingest from the downloaded source and metadata; extract
+equations before using it as a primary derivation source.
+

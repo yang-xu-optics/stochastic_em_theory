@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [theory, stochastic-fields, quantum-optics, ordering]
-source_count: 7
+source_count: 9
 confidence: high
 related:
   - squeezed-vacuum-g2-proof-plan
@@ -13,6 +13,8 @@ related:
   - ../overview
   - ../sources/raymer-landes-2022-broadband-squeezed-vacuum-tpa
   - ../sources/raymer-landes-2023-classical-model-broadband-squeezed-vacuum
+  - ../sources/kulkarni-2022-a-classical-model-of-spontaneous-pdc
+  - ../sources/sharapova-2020-properties-of-bsv-at-increasing-brightness
 ---
 
 # Stochastic Quantum Optics Correspondence
@@ -80,6 +82,14 @@ P_SF(omega) = 1/2
 - Sharapova et al. 2015 make the multimode warning concrete: BSV correlations
   depend on the Schmidt-mode basis and gain-dependent mode weights. A
   single-mode proof is a validation case, not a full BSV characterization.
+- Agafonov/Iskhakov/Perez/Sharapova BSV source papers extend that warning:
+  realistic BSV can be two-color, superbunched, spatially engineered, spectrally
+  tailored, and gain-dependent. The stochastic sampler needs an explicit source
+  model before using a single analytic distribution as "the" BSV ensemble.
+- Kulkarni 2022 gives a neighboring example of classical stochastic vacuum
+  seeding for SPDC. It is useful support for the correspondence strategy, but
+  the observable and subtraction/ordering conventions still have to be matched
+  case by case.
 - Gorlach/Tzur-style HHG papers often use Positive P or Husimi Q coherent-state
   decompositions. Those are phase-space representations of a quantum state,
   not a blanket statement that all output observables are classical.

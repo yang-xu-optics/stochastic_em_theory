@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [simulation, roadmap, validation]
-source_count: 17
+source_count: 52
 confidence: high
 related:
   - ../theory/squeezed-vacuum-g2-proof-plan
@@ -85,6 +85,14 @@ Validation observables:
 - dependence on squeezing phase and bandwidth.
 - effective Schmidt-mode count if multimode BSV is modeled.
 
+New source-engineering checks from the literature search:
+
+- two-color/twin-beam BSV correlations,
+- superbunched intensity statistics at high gain,
+- nearly single-spatial-mode limits,
+- nonlinear-interferometer spectral tailoring,
+- gain-dependent Schmidt-mode weights at increasing brightness.
+
 ## Stage 3: HHG in Gas
 
 Start with a single-atom or local response model. Add propagation only after
@@ -104,7 +112,11 @@ Implementation targets:
 3. Integrate over BSV Husimi samples.
 4. Report mean spectra, conditional spectra, cutoff distributions, and Monte
    Carlo uncertainty.
-5. Keep generated harmonic quantum-state claims out of this stage unless a
+5. Store per-shot driver quadratures, intensity, phase, ionization yield,
+   cutoff proxy, harmonic phases, and selected harmonic amplitudes so photon
+   bunching, displaced/squeezed output, phase locking, and symmetry-breaking
+   diagnostics can be added without rerunning the ensemble.
+6. Keep generated harmonic quantum-state claims out of this stage unless a
    Positive P/Husimi output-state reconstruction is added.
 
 ## Stage 4: THz Optical Rectification
@@ -218,6 +230,9 @@ Implementation rules:
   the mechanism that creates non-Gaussianity.
 - Do not certify quantum non-Gaussianity from a positive stochastic ensemble
   alone.
+- Use pump-depleted PDC, Kerr-propagated BSV, and MPS/Gaussian-interaction-frame
+  calculations as cross-checks when the stochastic sampler is pushed outside a
+  Gaussian undepleted-pump regime.
 
 ## Cross-Cutting Numerical Rules
 

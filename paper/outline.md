@@ -48,6 +48,11 @@ generation and THz emission driven by squeezed vacuum.
 - Anchor sources: Gorlach 2023 supplement for 1D gas baseline; Rasputnyi 2024
   and Heimerl 2025 for coherent-response averaging and conditional spectra;
   Tzur et al. and Even Tzur 2025 for output-state extensions.
+- Literature-search additions: Lemieux 2024 for photon bunching, Stammer 2024
+  and Rivera-Dean 2024 for squeezed/entangled HHG output, Wang 2024 for
+  attosecond synthesis in intense squeezed light, Stammer 2025 for optical
+  coherence, and the 2025-2026 BSV/quantum-light papers for symmetry leakage,
+  cutoff fluctuations, tunneling, and ionization validation targets.
 - Novelty branch: identify whether selected harmonic channels can develop
   higher cumulants, conditional non-Gaussian states, or Wigner-negativity
   witnesses.
@@ -63,6 +68,7 @@ generation and THz emission driven by squeezed vacuum.
   nonlinear optics to non-Gaussian quantum dynamics.
 - Status: source gap remains for direct squeezed-vacuum `chi^(2)` OR. Treat the
   stochastic extension as derivation-led unless a dedicated source is added.
+  The 2026-06-06 search did not find a direct squeezed-vacuum OR paper.
 
 ## 6. THz Plasma Emission
 
@@ -109,3 +115,6 @@ generation and THz emission driven by squeezed vacuum.
     cascading-limited propagation.
 11. Non-Gaussian diagnostic ladder: higher cumulants, conditional output
     states, and candidate witness for one HHG or THz channel.
+12. HHG quantum-light observable map: photon bunching, harmonic squeezing,
+    phase locking, symmetry leakage, cutoff fluctuations, and ionization
+    conditioning.

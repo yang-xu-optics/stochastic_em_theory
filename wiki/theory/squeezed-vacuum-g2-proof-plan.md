@@ -5,13 +5,17 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [squeezed-vacuum, g2, proof, quantum-optics]
-source_count: 2
+source_count: 7
 confidence: high
 related:
   - stochastic-quantum-optics-correspondence
   - ../simulations/simulation-roadmap
   - ../sources/raymer-landes-2022-broadband-squeezed-vacuum-tpa
   - ../sources/sharapova-2015-schmidt-modes-bsv
+  - ../sources/agafonov-2009-two-color-bsv
+  - ../sources/iskhakov-2012-super-bunched-bsv-state
+  - ../sources/perez-2014-spatially-single-mode-source-of-bsv
+  - ../sources/sharapova-2020-properties-of-bsv-at-increasing-brightness
 ---
 
 # Squeezed Vacuum g2 Proof Plan
@@ -123,6 +127,12 @@ specified. The simulation plan should therefore have two validation layers:
 
 Sharapova et al. 2015 should be used before making multimode BSV claims: the
 observed `g^(2)` depends on Schmidt-mode content, filtering, and gain.
+The new BSV characterization sources add experimental handles for this layer:
+two-color BSV, superbunching, spatial single-mode engineering, nonlinear
+interferometer spectral tailoring, and gain-dependent brightness all change the
+effective mode count seen by a detector. The proof should therefore present
+`3 + 1/<n>` as the single-mode validation target, then move immediately to a
+detector-defined multimode estimator rather than quoting a universal BSV value.
 
 ## Extension Questions
 

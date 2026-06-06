@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [hhg, gas, strong-field, squeezed-vacuum]
-source_count: 11
+source_count: 34
 confidence: high
 related:
   - ../overview
@@ -97,6 +97,14 @@ every HHG result should label which object is shown:
   number,
 - `shot distribution`: histogram or quantiles over individual realizations.
 
+The 2026 search batch expands this rule. BSV and quantum-light strong-field
+papers now give adjacent validation targets for ionization/tunneling rates,
+asymmetry under bichromatic fields, cutoff fluctuations, photon bunching, and
+symmetry-breaking selection-rule changes. A useful gas-HHG simulation should
+therefore store per-shot driver quadratures, instantaneous intensity, ionization
+yield, cutoff proxy, harmonic phases, and selected harmonic photon statistics
+before taking ensemble means.
+
 ## Quantum Output-State Boundary
 
 Gorlach 2020 and Tzur et al. show that generated harmonic quantum states can
@@ -127,6 +135,12 @@ model that includes emitted-state reconstruction or an operational witness.
 - Ensemble mean HHG spectrum.
 - Spectrum variance and confidence intervals.
 - Distribution of cutoff energies.
+- Harmonic phase locking and attosecond pulse width after selecting a harmonic
+  comb.
+- Selection-rule leakage or symmetry-breaking channels under sampled quantum
+  fields.
+- Ionization/tunneling yield distributions as an upstream validation of the
+  same stochastic driver.
 - Correlation between drive intensity spikes and harmonic yield.
 - Comparison against coherent-state and thermal/noise baselines with matched
   mean energy.

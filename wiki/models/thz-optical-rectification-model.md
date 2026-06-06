@@ -92,6 +92,11 @@ model. The stochastic extension still needs a derivation of which sampled-field
 correlation drives `P_THz`, how normally ordered observables map to stochastic
 moments, and whether vacuum-only terms must be subtracted.
 
+The 2026-06-06 literature search did not find a direct squeezed-vacuum OR
+paper. Generic THz/OR sources appeared, but they did not address the quantum
+pump statistics central to this project, so they were not downloaded into the
+source set.
+
 ## Non-Gaussian Novelty Path
 
 Jankowski 2024 supplies the conceptual bridge from classical `chi^(2)`

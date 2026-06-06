@@ -23,7 +23,7 @@ related:
 - Venue: Optica 11, 896-918.
 - Title: Mesoscopic ultrafast nonlinear optics-the emergence of multimode
   quantum non-Gaussian physics.
-- Raw source: [Yanagimoto 2024 raw PDF](<../../raw/sources/Yanagimoto%20et%20al.%20-%202024%20-%20Mesoscopic%20ultrafast%20nonlinear%20optics%E2%80%94The%20emergenc.pdf>)
+- Raw source: [Yanagimoto 2024 raw PDF](<../../raw/sources/Yanagimoto et al. - 2024 - Mesoscopic ultrafast nonlinear optics—The emergenc.pdf>)
 - Ingest date: 2026-06-06.
 
 ## Core Result
@@ -78,4 +78,3 @@ generation driven by squeezed pump light could be positioned as
 nonclassical-light-driven nonlinear dynamics, where the key question is whether
 the generated harmonics/THz field, the residual pump, or conditional
 postselected states develop non-Gaussian structure.
-
