@@ -1,0 +1,38 @@
+import csv
+
+import yaml
+
+from stochastic_em_theory.claim_ladder import ClaimLevel
+from stochastic_em_theory.ensemble import run_proxy_hhg_ensemble
+from stochastic_em_theory.mechanisms import MechanismFamily
+
+
+def test_proxy_hhg_ensemble_writes_labeled_outputs(tmp_path) -> None:
+    result = run_proxy_hhg_ensemble(
+        r=0.8,
+        phase=0.0,
+        shots=64,
+        seed=42,
+        base_field_amplitude_au=0.035,
+        omega_au=0.057,
+        ionization_potential_au=0.7924,
+        max_order=21,
+        output_dir=tmp_path,
+    )
+
+    assert result.csv_path.exists()
+    assert result.summary_path.exists()
+    assert result.manifest_path.exists()
+
+    with result.csv_path.open(newline="") as handle:
+        rows = list(csv.DictReader(handle))
+
+    assert len(rows) == 11
+    assert all(float(row["mean_intensity"]) >= 0.0 for row in rows)
+    assert all(row["claim_level"] == ClaimLevel.HHG_INTENSITY_PREDICTION.value for row in rows)
+    assert all(row["mechanism"] == MechanismFamily.BSV_PUMP_ENSEMBLE.value for row in rows)
+
+    manifest = yaml.safe_load(result.manifest_path.read_text())
+    assert manifest["claim_level"] == ClaimLevel.HHG_INTENSITY_PREDICTION.value
+    assert manifest["mechanism"] == MechanismFamily.BSV_PUMP_ENSEMBLE.value
+    assert manifest["random_seeds"] == [42]
