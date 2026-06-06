@@ -189,3 +189,11 @@ Append-only chronological record. New entries should use:
   `E0 = 0.06` a.u., 50,000 stochastic shots, 11 TDSE amplitude bins, a
   `[-80, 80]` bohr grid with 1,024 points, `dt = 0.06` a.u., and the same
   5/15/5-cycle pulse and absorber parameters.
+
+## [2026-06-06] simulation | Fig 3b Harmonic Yield Display
+
+- Replaced the main Fig. 3b PNG display with an odd-harmonic peak-yield plot
+  derived from the raw TDSE FFT grid.
+- Added `gorlach_2023_fig3b_harmonic_yields.csv` with local off-harmonic
+  background subtraction and a shared normalized display floor of `3e-3`.
+- Kept `gorlach_2023_fig3b_proxy_spectra.csv` as the raw FFT-bin diagnostic.

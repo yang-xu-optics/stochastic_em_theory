@@ -83,6 +83,13 @@ benchmark is the maximum ensemble-mean spectrum across all driver states over
 the configured normalization harmonic-order range. This avoids hiding absolute
 yield differences by renormalizing each source state independently.
 
+The main PNG is a display product, not the raw FFT diagnostic. It extracts odd
+harmonic peak yields from the raw TDSE frequency grid, subtracts a local
+off-harmonic background from neighboring sideband windows, and masks points
+below a shared normalized display floor of `3e-3`. The raw FFT-bin spectrum is
+kept in `gorlach_2023_fig3b_proxy_spectra.csv`; the plotted harmonic-yield
+table is stored separately in `gorlach_2023_fig3b_harmonic_yields.csv`.
+
 ## Model Equations And Units
 
 For each coherent component, solve the 1D soft-core TDSE in atomic units:
@@ -152,6 +159,7 @@ Under a dated result directory:
 
 ```text
 gorlach_2023_fig3b_proxy_spectra.csv
+gorlach_2023_fig3b_harmonic_yields.csv
 gorlach_2023_fig3b_proxy_summary.json
 gorlach_2023_fig3b_proxy.png
 parameters.yaml
@@ -175,4 +183,5 @@ The lower-field finer-grid rerun is stored at
 the shared all-driver-state normalization benchmark, `E0 = 0.06` a.u.,
 50,000 stochastic shots, 11 TDSE amplitude bins, a `[-80, 80]` bohr grid with
 1,024 points, `dt = 0.06` a.u., the same 5-cycle ramp / 15-cycle flat-top /
-5-cycle ramp pulse, and the same complex absorber parameters.
+5-cycle ramp pulse, the same complex absorber parameters, and the harmonic-yield
+display processing described above.

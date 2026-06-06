@@ -59,7 +59,7 @@ display_processing:
   window_half_width: 0.35
   background_inner_width: 0.55
   background_outer_width: 0.95
-  display_floor: 1.0e-12
+  display_min_normalized: 0.003
 driver_sampling: single_mode_husimi_q_fig3b
 field_normalization: field_amplitude = base_field_amplitude_au * sqrt(|alpha|^2 /
   mean(|alpha|^2))

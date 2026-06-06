@@ -13,7 +13,7 @@ source_model:
     / mean(|alpha|^2))
   coherent_response: tdse_dipole_acceleration
 code_entrypoint: stochastic_em_theory.fig3b.run_gorlach_2023_fig3b_proxy
-git_commit: 135fb6dc4b5aa91f5fd033a97fe6047bcbac9d5d
+git_commit: 84894634ed654c729722dd79e26e253dfa412579
 parameter_file: parameters.yaml
 random_seeds:
 - 20230603
@@ -81,7 +81,7 @@ parameters:
     window_half_width: 0.35
     background_inner_width: 0.55
     background_outer_width: 0.95
-    display_floor: 1.0e-12
+    display_min_normalized: 0.003
   driver_sampling: single_mode_husimi_q_fig3b
   field_normalization: field_amplitude = base_field_amplitude_au * sqrt(|alpha|^2
     / mean(|alpha|^2))
@@ -95,8 +95,8 @@ source_refs:
 notes: Single-mode Husimi-Q coherent-response sampling with a local TDSE dipole-acceleration
   spectrum library and a shared all-driver-state normalization benchmark for a closer
   Gorlach et al. 2023 Fig. 3b reproduction. The main PNG plots odd-harmonic peak yields
-  after local off-harmonic background subtraction; still not the authors' exact source-data
-  reconstruction.
+  after local off-harmonic background subtraction and applies a shared normalized
+  display floor; still not the authors' exact source-data reconstruction.
 outputs:
   spectra_csv: gorlach_2023_fig3b_proxy_spectra.csv
   harmonic_yields_csv: gorlach_2023_fig3b_harmonic_yields.csv
