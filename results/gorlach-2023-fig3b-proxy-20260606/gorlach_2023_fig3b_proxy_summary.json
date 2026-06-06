@@ -1,0 +1,74 @@
+{
+  "claim_level": "hhg_intensity_prediction",
+  "driver_states": [
+    "coherent",
+    "fock",
+    "thermal",
+    "bsv"
+  ],
+  "mechanism": "quantum_light_hhg_spectra_proxy",
+  "notes": "Single-mode Husimi-Q coherent-response HHG proxy for the qualitative coherent/Fock/thermal/BSV ordering in Gorlach et al. 2023 Fig. 3b; not a TDSE reproduction of the published source-data curves.",
+  "parameters": {
+    "base_field_amplitude_au": 0.08,
+    "bsv_phase": 0.0,
+    "bsv_r": 2.0,
+    "driver_sampling": "single_mode_husimi_q_fig3b",
+    "field_normalization": "field_amplitude = base_field_amplitude_au * sqrt(|alpha|^2 / mean(|alpha|^2))",
+    "fock_n": 100,
+    "ionization_potential_au": 0.7924,
+    "max_order": 151,
+    "mean_photon_number": 100.0,
+    "nonlinearity_power": 6.0,
+    "omega_au": 0.057,
+    "seed": 20230603,
+    "shots": 50000
+  },
+  "source_refs": [
+    "Nature Fig. 3b image and source-data link: https://www.nature.com/articles/s41567-023-02127-y",
+    "Public source data archive: https://static-content.springer.com/esm/art%3A10.1038%2Fs41567-023-02127-y/MediaObjects/41567_2023_2127_MOESM2_ESM.zip",
+    "Local supplement: raw/sources/Gorlach et al. - 2023 - High-harmonic generation driven by quantum light.pdf",
+    "Wiki source summary: wiki/sources/gorlach-2023-hhg-driven-quantum-light-supplement.md"
+  ],
+  "state_summaries": {
+    "bsv": {
+      "cutoff_order_p95": 117.86828793071625,
+      "cutoff_order_p99": 194.05511146744016,
+      "display_offset": 150.0,
+      "mean_alpha_abs2": 14.284071388284998,
+      "mean_cutoff_order": 41.28939862737791,
+      "mean_field_amplitude_au": 0.06495231073777746,
+      "normalized_intensity_cv": 1.3846100926976097,
+      "std_cutoff_order": 37.92158784964662
+    },
+    "coherent": {
+      "cutoff_order_p95": 47.77957191575019,
+      "cutoff_order_p99": 50.84650876656194,
+      "display_offset": 1.0,
+      "mean_alpha_abs2": 100.9466781791795,
+      "mean_cutoff_order": 41.28939862737793,
+      "mean_field_amplitude_au": 0.0798031248917306,
+      "normalized_intensity_cv": 0.14006282952053878,
+      "std_cutoff_order": 3.836029306839068
+    },
+    "fock": {
+      "cutoff_order_p95": 45.92413792684285,
+      "cutoff_order_p99": 47.93786466616268,
+      "display_offset": 6.0,
+      "mean_alpha_abs2": 100.93516403969235,
+      "mean_cutoff_order": 41.28939862737793,
+      "mean_field_amplitude_au": 0.0799010272325746,
+      "normalized_intensity_cv": 0.09949880955604297,
+      "std_cutoff_order": 2.725065249353758
+    },
+    "thermal": {
+      "cutoff_order_p95": 96.6107720763252,
+      "cutoff_order_p99": 140.47397802195246,
+      "display_offset": 30.0,
+      "mean_alpha_abs2": 100.85170576015847,
+      "mean_cutoff_order": 41.28939862737793,
+      "mean_field_amplitude_au": 0.07086373672239772,
+      "normalized_intensity_cv": 1.0032529856219892,
+      "std_cutoff_order": 27.47701062583061
+    }
+  }
+}

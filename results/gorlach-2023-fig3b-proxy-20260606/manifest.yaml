@@ -1,0 +1,48 @@
+run_id: gorlach-2023-fig3b-proxy-20260606
+created: '2026-06-06'
+claim_level: hhg_intensity_prediction
+mechanism: quantum_light_hhg_spectra_proxy
+source_model:
+  representation: Husimi-Q coherent-state sampling
+  driver_states:
+  - coherent
+  - fock
+  - thermal
+  - bsv
+  field_normalization: field_amplitude = base_field_amplitude_au * sqrt(|alpha|^2
+    / mean(|alpha|^2))
+code_entrypoint: stochastic_em_theory.fig3b.run_gorlach_2023_fig3b_proxy
+git_commit: 7af4b55ea4d463d00d3113b2cbd2337e1912a7f0
+parameter_file: null
+random_seeds:
+- 20230603
+observable: ensemble_mean_proxy_hhg_spectrum_by_driver_state
+units: atomic units for fields and energies; dimensionless harmonic order
+parameters:
+  shots: 50000
+  seed: 20230603
+  base_field_amplitude_au: 0.08
+  omega_au: 0.057
+  ionization_potential_au: 0.7924
+  max_order: 151
+  mean_photon_number: 100.0
+  fock_n: 100
+  bsv_r: 2.0
+  bsv_phase: 0.0
+  nonlinearity_power: 6.0
+  driver_sampling: single_mode_husimi_q_fig3b
+  field_normalization: field_amplitude = base_field_amplitude_au * sqrt(|alpha|^2
+    / mean(|alpha|^2))
+source_refs:
+- 'Nature Fig. 3b image and source-data link: https://www.nature.com/articles/s41567-023-02127-y'
+- 'Public source data archive: https://static-content.springer.com/esm/art%3A10.1038%2Fs41567-023-02127-y/MediaObjects/41567_2023_2127_MOESM2_ESM.zip'
+- 'Local supplement: raw/sources/Gorlach et al. - 2023 - High-harmonic generation
+  driven by quantum light.pdf'
+- 'Wiki source summary: wiki/sources/gorlach-2023-hhg-driven-quantum-light-supplement.md'
+notes: Single-mode Husimi-Q coherent-response HHG proxy for the qualitative coherent/Fock/thermal/BSV
+  ordering in Gorlach et al. 2023 Fig. 3b; not a TDSE reproduction of the published
+  source-data curves.
+outputs:
+  spectra_csv: gorlach_2023_fig3b_proxy_spectra.csv
+  summary_json: gorlach_2023_fig3b_proxy_summary.json
+  figure_png: gorlach_2023_fig3b_proxy.png

@@ -101,8 +101,8 @@ def test_gorlach_fig3b_proxy_runner_writes_four_state_outputs(tmp_path) -> None:
     assert summary["driver_states"] == states
     assert summary["parameters"]["shots"] == 512
     assert summary["parameters"]["driver_sampling"] == "single_mode_husimi_q_fig3b"
-    assert summary["state_summaries"]["bsv"]["mean_cutoff_order"] > summary["state_summaries"]["thermal"]["mean_cutoff_order"]
-    assert summary["state_summaries"]["thermal"]["mean_cutoff_order"] > summary["state_summaries"]["coherent"]["mean_cutoff_order"]
+    assert summary["state_summaries"]["bsv"]["cutoff_order_p99"] > summary["state_summaries"]["thermal"]["cutoff_order_p99"]
+    assert summary["state_summaries"]["thermal"]["cutoff_order_p99"] > summary["state_summaries"]["coherent"]["cutoff_order_p99"]
 
     manifest = yaml.safe_load(artifacts.manifest_path.read_text())
     assert manifest["code_entrypoint"] == "stochastic_em_theory.fig3b.run_gorlach_2023_fig3b_proxy"
