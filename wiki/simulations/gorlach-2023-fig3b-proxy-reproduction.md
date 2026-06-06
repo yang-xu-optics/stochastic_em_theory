@@ -83,12 +83,15 @@ benchmark is the maximum ensemble-mean spectrum across all driver states over
 the configured normalization harmonic-order range. This avoids hiding absolute
 yield differences by renormalizing each source state independently.
 
-The main PNG is a display product, not the raw FFT diagnostic. It extracts odd
-harmonic peak yields from the raw TDSE frequency grid, subtracts a local
-off-harmonic background from neighboring sideband windows, and masks points
-below a shared normalized display floor of `3e-3`. The raw FFT-bin spectrum is
-kept in `gorlach_2023_fig3b_proxy_spectra.csv`; the plotted harmonic-yield
-table is stored separately in `gorlach_2023_fig3b_harmonic_yields.csv`.
+The main PNG is a display product, not the raw FFT diagnostic. It preserves the
+raw-bin frequency grid only within narrow windows around odd harmonics,
+subtracts a local off-harmonic background from neighboring sideband windows,
+and masks points below a shared normalized display floor of `1e-3`. This keeps
+small harmonic peaks visible while suppressing the raw numerical floor so the
+cutoff remains legible. The raw FFT-bin spectrum is kept in
+`gorlach_2023_fig3b_proxy_spectra.csv`; a one-row-per-harmonic companion table
+is stored in `gorlach_2023_fig3b_harmonic_yields.csv`; the plotted cleaned
+peak-window table is stored in `gorlach_2023_fig3b_display_spectrum.csv`.
 
 ## Model Equations And Units
 
@@ -160,6 +163,7 @@ Under a dated result directory:
 ```text
 gorlach_2023_fig3b_proxy_spectra.csv
 gorlach_2023_fig3b_harmonic_yields.csv
+gorlach_2023_fig3b_display_spectrum.csv
 gorlach_2023_fig3b_proxy_summary.json
 gorlach_2023_fig3b_proxy.png
 parameters.yaml

@@ -197,3 +197,13 @@ Append-only chronological record. New entries should use:
 - Added `gorlach_2023_fig3b_harmonic_yields.csv` with local off-harmonic
   background subtraction and a shared normalized display floor of `3e-3`.
 - Kept `gorlach_2023_fig3b_proxy_spectra.csv` as the raw FFT-bin diagnostic.
+
+## [2026-06-06] simulation | Fig 3b Cleaned Peak-Window Display
+
+- Changed the main Fig. 3b PNG from one point per odd harmonic to a cleaned
+  raw-bin peak-window spectrum, preserving small peak shapes around each odd
+  harmonic while masking the background floor.
+- Added `gorlach_2023_fig3b_display_spectrum.csv` with local background
+  subtraction, nearest-odd-harmonic annotations, and a shared normalized display
+  floor of `1e-3`.
+- Kept the harmonic-yield CSV as a companion summary table.

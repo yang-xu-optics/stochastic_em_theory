@@ -1,5 +1,6 @@
 {
   "claim_level": "hhg_intensity_prediction",
+  "display_spectrum_row_count": 14600,
   "driver_states": [
     "coherent",
     "fock",
@@ -8,7 +9,7 @@
   ],
   "harmonic_yield_row_count": 296,
   "mechanism": "quantum_light_hhg_tdse_dipole_acceleration",
-  "notes": "Single-mode Husimi-Q coherent-response sampling with a local TDSE dipole-acceleration spectrum library and a shared all-driver-state normalization benchmark for a closer Gorlach et al. 2023 Fig. 3b reproduction. The main PNG plots odd-harmonic peak yields after local off-harmonic background subtraction and applies a shared normalized display floor; still not the authors' exact source-data reconstruction.",
+  "notes": "Single-mode Husimi-Q coherent-response sampling with a local TDSE dipole-acceleration spectrum library and a shared all-driver-state normalization benchmark for a closer Gorlach et al. 2023 Fig. 3b reproduction. The main PNG plots a cleaned raw-bin peak-window spectrum after local off-harmonic background subtraction and applies a shared normalized display floor; still not the authors' exact source-data reconstruction.",
   "parameters": {
     "base_field_amplitude_au": 0.06,
     "bsv_phase": 0.0,
@@ -16,10 +17,12 @@
     "display_processing": {
       "background_inner_width": 0.55,
       "background_outer_width": 0.95,
-      "display_min_normalized": 0.003,
-      "frequency_grid": "odd_harmonic_window_yield_grid",
-      "mode": "odd_harmonic_peak_minus_local_background",
-      "window_half_width": 0.35
+      "display_min_normalized": 0.001,
+      "frequency_grid": "background_subtracted_raw_peak_window_grid",
+      "harmonic_yield_display_min_normalized": 0.003,
+      "harmonic_yield_frequency_grid": "odd_harmonic_window_yield_grid",
+      "mode": "raw_peak_window_minus_local_background",
+      "peak_window_half_width": 0.35
     },
     "driver_sampling": "single_mode_husimi_q_fig3b",
     "field_normalization": "field_amplitude = base_field_amplitude_au * sqrt(|alpha|^2 / mean(|alpha|^2))",

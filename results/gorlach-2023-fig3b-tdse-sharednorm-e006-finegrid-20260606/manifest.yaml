@@ -13,7 +13,7 @@ source_model:
     / mean(|alpha|^2))
   coherent_response: tdse_dipole_acceleration
 code_entrypoint: stochastic_em_theory.fig3b.run_gorlach_2023_fig3b_proxy
-git_commit: 84894634ed654c729722dd79e26e253dfa412579
+git_commit: 2460cbbda4736dc30c571cb1342a78de3489ba37
 parameter_file: parameters.yaml
 random_seeds:
 - 20230603
@@ -76,12 +76,14 @@ parameters:
     time_steps: 45931
     dx_au: 0.15625
   display_processing:
-    frequency_grid: odd_harmonic_window_yield_grid
-    mode: odd_harmonic_peak_minus_local_background
-    window_half_width: 0.35
+    frequency_grid: background_subtracted_raw_peak_window_grid
+    mode: raw_peak_window_minus_local_background
+    peak_window_half_width: 0.35
     background_inner_width: 0.55
     background_outer_width: 0.95
-    display_min_normalized: 0.003
+    display_min_normalized: 0.001
+    harmonic_yield_frequency_grid: odd_harmonic_window_yield_grid
+    harmonic_yield_display_min_normalized: 0.003
   driver_sampling: single_mode_husimi_q_fig3b
   field_normalization: field_amplitude = base_field_amplitude_au * sqrt(|alpha|^2
     / mean(|alpha|^2))
@@ -94,12 +96,13 @@ source_refs:
 - 'Wiki source summary: wiki/sources/gorlach-2023-hhg-driven-quantum-light-supplement.md'
 notes: Single-mode Husimi-Q coherent-response sampling with a local TDSE dipole-acceleration
   spectrum library and a shared all-driver-state normalization benchmark for a closer
-  Gorlach et al. 2023 Fig. 3b reproduction. The main PNG plots odd-harmonic peak yields
-  after local off-harmonic background subtraction and applies a shared normalized
+  Gorlach et al. 2023 Fig. 3b reproduction. The main PNG plots a cleaned raw-bin peak-window
+  spectrum after local off-harmonic background subtraction and applies a shared normalized
   display floor; still not the authors' exact source-data reconstruction.
 outputs:
   spectra_csv: gorlach_2023_fig3b_proxy_spectra.csv
   harmonic_yields_csv: gorlach_2023_fig3b_harmonic_yields.csv
+  display_spectrum_csv: gorlach_2023_fig3b_display_spectrum.csv
   summary_json: gorlach_2023_fig3b_proxy_summary.json
   figure_png: gorlach_2023_fig3b_proxy.png
   parameter_yaml: parameters.yaml
