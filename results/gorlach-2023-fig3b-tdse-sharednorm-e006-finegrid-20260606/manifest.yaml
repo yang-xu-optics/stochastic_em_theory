@@ -13,7 +13,7 @@ source_model:
     / mean(|alpha|^2))
   coherent_response: tdse_dipole_acceleration
 code_entrypoint: stochastic_em_theory.fig3b.run_gorlach_2023_fig3b_proxy
-git_commit: 402f8ed5fbfa73ee1115b4bb524f50ff699d4ce6
+git_commit: 135fb6dc4b5aa91f5fd033a97fe6047bcbac9d5d
 parameter_file: parameters.yaml
 random_seeds:
 - 20230603
@@ -75,6 +75,13 @@ parameters:
     harmonic_order_spacing: 0.03999888280921127
     time_steps: 45931
     dx_au: 0.15625
+  display_processing:
+    frequency_grid: odd_harmonic_window_yield_grid
+    mode: odd_harmonic_peak_minus_local_background
+    window_half_width: 0.35
+    background_inner_width: 0.55
+    background_outer_width: 0.95
+    display_floor: 1.0e-12
   driver_sampling: single_mode_husimi_q_fig3b
   field_normalization: field_amplitude = base_field_amplitude_au * sqrt(|alpha|^2
     / mean(|alpha|^2))
@@ -87,10 +94,12 @@ source_refs:
 - 'Wiki source summary: wiki/sources/gorlach-2023-hhg-driven-quantum-light-supplement.md'
 notes: Single-mode Husimi-Q coherent-response sampling with a local TDSE dipole-acceleration
   spectrum library and a shared all-driver-state normalization benchmark for a closer
-  Gorlach et al. 2023 Fig. 3b reproduction; still not the authors' exact source-data
+  Gorlach et al. 2023 Fig. 3b reproduction. The main PNG plots odd-harmonic peak yields
+  after local off-harmonic background subtraction; still not the authors' exact source-data
   reconstruction.
 outputs:
   spectra_csv: gorlach_2023_fig3b_proxy_spectra.csv
+  harmonic_yields_csv: gorlach_2023_fig3b_harmonic_yields.csv
   summary_json: gorlach_2023_fig3b_proxy_summary.json
   figure_png: gorlach_2023_fig3b_proxy.png
   parameter_yaml: parameters.yaml

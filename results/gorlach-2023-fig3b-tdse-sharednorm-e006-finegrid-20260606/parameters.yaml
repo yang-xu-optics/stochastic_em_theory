@@ -53,6 +53,13 @@ tdse:
   harmonic_order_spacing: 0.03999888280921127
   time_steps: 45931
   dx_au: 0.15625
+display_processing:
+  frequency_grid: odd_harmonic_window_yield_grid
+  mode: odd_harmonic_peak_minus_local_background
+  window_half_width: 0.35
+  background_inner_width: 0.55
+  background_outer_width: 0.95
+  display_floor: 1.0e-12
 driver_sampling: single_mode_husimi_q_fig3b
 field_normalization: field_amplitude = base_field_amplitude_au * sqrt(|alpha|^2 /
   mean(|alpha|^2))
