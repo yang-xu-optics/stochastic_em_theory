@@ -12,7 +12,7 @@ from stochastic_em_theory.ionization import adk_like_rate_au
 from stochastic_em_theory.io import RunArtifacts, current_git_commit, ensure_output_dir, write_csv, write_json, write_manifest
 from stochastic_em_theory.mechanisms import MechanismFamily
 from stochastic_em_theory.shot_records import HHGShotRecord, shot_records_to_rows
-from stochastic_em_theory.source_models import SourceModelSpec, single_mode_source
+from stochastic_em_theory.source_models import SourceModelKind, SourceModelSpec, single_mode_source
 
 
 FIELD_NORMALIZATION = "field_amplitude = base_field_amplitude_au * sqrt(|alpha|^2 / mean(|alpha|^2))"
@@ -71,6 +71,8 @@ def run_proxy_hhg_ensemble(
 
     output_dir = ensure_output_dir(output_dir)
     source_model = source_model if source_model is not None else single_mode_source(r=r, label="default_single_mode")
+    if source_model.kind is not SourceModelKind.SINGLE_MODE:
+        raise ValueError("run_proxy_hhg_ensemble currently supports only single_mode source models")
     rng = np.random.default_rng(seed)
     alpha = sample_single_mode_husimi_q(r=r, phase=phase, shots=shots, rng=rng)
     sampled_intensity = np.abs(alpha) ** 2
@@ -216,7 +218,10 @@ def run_proxy_hhg_ensemble(
             "random_seeds": [seed],
             "observable": "proxy_hhg_intensity_spectrum_with_shot_records",
             "units": "atomic units for fields and energies; dimensionless harmonic order",
-            "notes": "Fast cutoff-weighted HHG proxy used for ensemble-pipeline development, not TDSE publication result.",
+            "notes": (
+                "Fast cutoff-weighted HHG proxy with single-mode Husimi-Q driver sampling; "
+                "used for ensemble-pipeline development, not TDSE publication result."
+            ),
         },
     )
     return RunArtifacts(output_dir=output_dir, csv_path=csv_path, summary_path=summary_path, manifest_path=manifest_path)

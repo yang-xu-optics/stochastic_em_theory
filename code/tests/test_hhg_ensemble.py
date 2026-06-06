@@ -1,12 +1,13 @@
 import csv
 import json
 
+import pytest
 import yaml
 
 from stochastic_em_theory.claim_ladder import ClaimLevel
 from stochastic_em_theory.ensemble import run_proxy_hhg_ensemble
 from stochastic_em_theory.mechanisms import MechanismFamily
-from stochastic_em_theory.source_models import single_mode_source
+from stochastic_em_theory.source_models import equal_mode_source, single_mode_source
 
 
 def test_proxy_hhg_ensemble_writes_labeled_outputs_and_shot_records(tmp_path) -> None:
@@ -39,9 +40,25 @@ def test_proxy_hhg_ensemble_writes_labeled_outputs_and_shot_records(tmp_path) ->
     assert all(row["mechanism"] == MechanismFamily.BSV_PUMP_ENSEMBLE.value for row in rows)
 
     with shot_records_path.open(newline="") as handle:
-        shot_rows = list(csv.DictReader(handle))
+        shot_reader = csv.DictReader(handle)
+        shot_rows = list(shot_reader)
 
+    assert shot_reader.fieldnames == [
+        "shot_index",
+        "source_model_kind",
+        "source_model_label",
+        "mechanism",
+        "driver_x",
+        "driver_p",
+        "driver_intensity",
+        "driver_phase",
+        "field_amplitude_au",
+        "ionization_rate_proxy",
+        "cutoff_order",
+        "harmonic_phase_proxy",
+    ]
     assert len(shot_rows) == 64
+    assert [int(row["shot_index"]) for row in shot_rows] == list(range(64))
     assert shot_rows[0]["source_model_kind"] == "single_mode"
     assert shot_rows[0]["source_model_label"] == "test_single_mode"
     assert shot_rows[0]["mechanism"] == MechanismFamily.BSV_PUMP_ENSEMBLE.value
@@ -75,3 +92,21 @@ def test_proxy_hhg_ensemble_writes_labeled_outputs_and_shot_records(tmp_path) ->
     assert manifest["source_model"]["kind"] == "single_mode"
     assert manifest["source_model"]["label"] == "test_single_mode"
     assert manifest["parameters"] == expected_parameters
+
+
+def test_proxy_hhg_ensemble_rejects_non_single_mode_source_model(tmp_path) -> None:
+    source_model = equal_mode_source(r=0.8, modes=2)
+
+    with pytest.raises(ValueError, match="single_mode"):
+        run_proxy_hhg_ensemble(
+            r=0.8,
+            phase=0.0,
+            shots=64,
+            seed=42,
+            base_field_amplitude_au=0.035,
+            omega_au=0.057,
+            ionization_potential_au=0.7924,
+            max_order=21,
+            output_dir=tmp_path,
+            source_model=source_model,
+        )
