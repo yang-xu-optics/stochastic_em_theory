@@ -12,9 +12,13 @@ from stochastic_em_theory.io import RunArtifacts, current_git_commit, ensure_out
 from stochastic_em_theory.mechanisms import MechanismFamily
 
 
-def _conditional_means(values: np.ndarray, spectra: np.ndarray) -> dict[str, np.ndarray]:
+FIELD_NORMALIZATION = "field_amplitude = base_field_amplitude_au * sqrt(|alpha|^2 / mean(|alpha|^2))"
+
+
+def _conditional_statistics(values: np.ndarray, spectra: np.ndarray) -> tuple[dict[str, np.ndarray], dict[str, int]]:
     quantiles = np.quantile(values, [0.0, 1.0 / 3.0, 2.0 / 3.0, 1.0])
     bins: dict[str, np.ndarray] = {}
+    counts: dict[str, int] = {}
     labels = ["low", "middle", "high"]
     for index, label in enumerate(labels):
         left = quantiles[index]
@@ -23,11 +27,12 @@ def _conditional_means(values: np.ndarray, spectra: np.ndarray) -> dict[str, np.
             mask = (values >= left) & (values <= right)
         else:
             mask = (values >= left) & (values < right)
+        counts[label] = int(np.count_nonzero(mask))
         if not np.any(mask):
             bins[label] = np.zeros(spectra.shape[1], dtype=np.float64)
         else:
             bins[label] = np.mean(spectra[mask], axis=0)
-    return bins
+    return bins, counts
 
 
 def run_proxy_hhg_ensemble(
@@ -72,9 +77,21 @@ def run_proxy_hhg_ensemble(
         raise ValueError("no spectra were generated")
 
     spectra_array = np.vstack(spectra)
-    conditional = _conditional_means(sampled_intensity, spectra_array)
+    conditional, conditional_bin_counts = _conditional_statistics(sampled_intensity, spectra_array)
     mean_spectrum = np.mean(spectra_array, axis=0)
     std_spectrum = np.std(spectra_array, axis=0, ddof=1) if shots > 1 else np.zeros_like(mean_spectrum)
+    parameters = {
+        "r": float(r),
+        "phase": float(phase),
+        "shots": int(shots),
+        "seed": int(seed),
+        "base_field_amplitude_au": float(base_field_amplitude_au),
+        "omega_au": float(omega_au),
+        "ionization_potential_au": float(ionization_potential_au),
+        "max_order": int(max_order),
+        "driver_sampling": "single_mode_husimi_q",
+        "field_normalization": FIELD_NORMALIZATION,
+    }
 
     rows = []
     for index, order in enumerate(orders):
@@ -114,6 +131,8 @@ def run_proxy_hhg_ensemble(
             "rows": len(rows),
             "claim_level": ClaimLevel.HHG_INTENSITY_PREDICTION.value,
             "mechanism": MechanismFamily.BSV_PUMP_ENSEMBLE.value,
+            "parameters": parameters,
+            "conditional_bin_counts": conditional_bin_counts,
             "mean_cutoff_order": float(np.mean(cutoff_orders)),
             "std_cutoff_order": float(np.std(cutoff_orders, ddof=1)) if shots > 1 else 0.0,
         },
@@ -128,6 +147,7 @@ def run_proxy_hhg_ensemble(
             "code_entrypoint": "stochastic_em_theory.ensemble.run_proxy_hhg_ensemble",
             "git_commit": current_git_commit(Path(__file__).resolve().parents[3]),
             "parameter_file": None,
+            "parameters": parameters,
             "random_seeds": [seed],
             "observable": "proxy_hhg_intensity_spectrum",
             "units": "atomic units for fields and energies; dimensionless harmonic order",

@@ -1,4 +1,5 @@
 import csv
+import json
 
 import yaml
 
@@ -32,7 +33,27 @@ def test_proxy_hhg_ensemble_writes_labeled_outputs(tmp_path) -> None:
     assert all(row["claim_level"] == ClaimLevel.HHG_INTENSITY_PREDICTION.value for row in rows)
     assert all(row["mechanism"] == MechanismFamily.BSV_PUMP_ENSEMBLE.value for row in rows)
 
+    expected_parameters = {
+        "r": 0.8,
+        "phase": 0.0,
+        "shots": 64,
+        "seed": 42,
+        "base_field_amplitude_au": 0.035,
+        "omega_au": 0.057,
+        "ionization_potential_au": 0.7924,
+        "max_order": 21,
+        "driver_sampling": "single_mode_husimi_q",
+        "field_normalization": "field_amplitude = base_field_amplitude_au * sqrt(|alpha|^2 / mean(|alpha|^2))",
+    }
+
+    summary = json.loads(result.summary_path.read_text())
+    assert summary["parameters"] == expected_parameters
+    assert set(summary["conditional_bin_counts"]) == {"low", "middle", "high"}
+    assert sum(summary["conditional_bin_counts"].values()) == 64
+    assert all(count > 0 for count in summary["conditional_bin_counts"].values())
+
     manifest = yaml.safe_load(result.manifest_path.read_text())
     assert manifest["claim_level"] == ClaimLevel.HHG_INTENSITY_PREDICTION.value
     assert manifest["mechanism"] == MechanismFamily.BSV_PUMP_ENSEMBLE.value
     assert manifest["random_seeds"] == [42]
+    assert manifest["parameters"] == expected_parameters
