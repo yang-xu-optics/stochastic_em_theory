@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
+from stochastic_em_theory.plotting import plot_multimode_g2, plot_single_mode_g2
 from stochastic_em_theory.validation import run_multimode_validation, run_single_mode_validation
 
 
@@ -22,6 +23,14 @@ def build_parser() -> argparse.ArgumentParser:
     multimode.add_argument("--shots", type=int, required=True)
     multimode.add_argument("--seed", type=int, required=True)
     multimode.add_argument("--output-dir", type=Path, required=True)
+
+    plot_single = subparsers.add_parser("plot-single-mode", help="plot single-mode g2 validation CSV")
+    plot_single.add_argument("--csv-path", type=Path, required=True)
+    plot_single.add_argument("--output-path", type=Path, required=True)
+
+    plot_multi = subparsers.add_parser("plot-multimode", help="plot multimode g2 validation CSV")
+    plot_multi.add_argument("--csv-path", type=Path, required=True)
+    plot_multi.add_argument("--output-path", type=Path, required=True)
 
     return parser
 
@@ -46,6 +55,12 @@ def main(argv: list[str] | None = None) -> int:
             output_dir=args.output_dir,
         )
         print(artifacts.output_dir)
+        return 0
+    if args.command == "plot-single-mode":
+        print(plot_single_mode_g2(csv_path=args.csv_path, output_path=args.output_path))
+        return 0
+    if args.command == "plot-multimode":
+        print(plot_multimode_g2(csv_path=args.csv_path, output_path=args.output_path))
         return 0
     raise ValueError(f"unknown command {args.command}")
 
