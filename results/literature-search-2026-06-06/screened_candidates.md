@@ -2,6 +2,8 @@
 
 Date: 2026-06-06
 
+Databases: OpenAlex, Semantic Scholar, arXiv. Paperzilla CLI was not installed locally.
+
 ## Included PDF Candidates
 
 
@@ -13,49 +15,93 @@ Date: 2026-06-06
 
 ## API Errors
 
-- openalex hhg-bsv: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- semantic hhg-bsv: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- openalex hhg-quantum-light: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- semantic hhg-quantum-light: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- openalex hhg-squeezed: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- semantic hhg-squeezed: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- openalex strong-field-bsv: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- semantic strong-field-bsv: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- openalex thz-bsv: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- semantic thz-bsv: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- openalex thz-plasma-quantum: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- semantic thz-plasma-quantum: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- openalex thz-optical-rectification-squeezed: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- semantic thz-optical-rectification-squeezed: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- openalex or-quantum: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- semantic or-quantum: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- openalex stochastic-squeezed: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- semantic stochastic-squeezed: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- openalex classical-bsv: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- semantic classical-bsv: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- openalex broadband-bsv-nonlinear: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- semantic broadband-bsv-nonlinear: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- openalex g2-bsv: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- semantic g2-bsv: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- openalex nongaussian-pulsed: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- semantic nongaussian-pulsed: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- openalex pump-depletion-pdc: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- semantic pump-depletion-pdc: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- openalex gaussian-interaction-frame: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- semantic gaussian-interaction-frame: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- openalex mps-ultrafast-quantum-nonlinear: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- semantic mps-ultrafast-quantum-nonlinear: URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))
-- arxiv hhg-bsv: InvalidURL("URL can't contain control characters. '/api/query?search_query=all:bright+squeezed+vacuum AND all:high+harmonic+generation&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')")
-- arxiv hhg-quantum-light: InvalidURL("URL can't contain control characters. '/api/query?search_query=all:quantum+light AND all:high+harmonic+generation&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')")
-- arxiv hhg-squeezed: InvalidURL("URL can't contain control characters. '/api/query?search_query=all:squeezed AND all:high+harmonic+generation&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')")
-- arxiv strong-field-bsv: InvalidURL("URL can't contain control characters. '/api/query?search_query=all:bright+squeezed+vacuum AND all:strong-field&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')")
-- arxiv thz-bsv: InvalidURL("URL can't contain control characters. '/api/query?search_query=all:bright+squeezed+vacuum AND all:terahertz&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')")
-- arxiv thz-plasma-quantum: InvalidURL("URL can't contain control characters. '/api/query?search_query=all:quantum AND all:terahertz AND all:laser-induced+plasma&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')")
-- arxiv thz-optical-rectification-squeezed: InvalidURL("URL can't contain control characters. '/api/query?search_query=all:squeezed+vacuum AND all:optical+rectification&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')")
-- arxiv stochastic-squeezed: InvalidURL("URL can't contain control characters. '/api/query?search_query=all:stochastic AND all:squeezed+vacuum AND all:optics&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')")
-- arxiv classical-bsv: InvalidURL("URL can't contain control characters. '/api/query?search_query=all:classical+model AND all:broadband+squeezed+vacuum&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')")
-- arxiv broadband-bsv-nonlinear: InvalidURL("URL can't contain control characters. '/api/query?search_query=all:broadband+squeezed+vacuum AND all:nonlinear+optics&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')")
-- arxiv nongaussian-pulsed: InvalidURL("URL can't contain control characters. '/api/query?search_query=all:non-Gaussian AND all:pulsed+squeezing&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')")
-- arxiv pump-depletion-pdc: InvalidURL("URL can't contain control characters. '/api/query?search_query=all:pump+depletion AND all:parametric+down-conversion AND all:non-Gaussian&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')")
-- arxiv gaussian-interaction-frame: InvalidURL("URL can't contain control characters. '/api/query?search_query=all:Gaussian+interaction+frame AND all:nonlinear+optics&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')")
-- arxiv mps-ultrafast-quantum-nonlinear: InvalidURL("URL can't contain control characters. '/api/query?search_query=all:matrix+product+states AND all:ultrafast AND all:quantum+nonlinear+optics&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')")
+- openalex hhg-bsv: curl: (56) The requested URL returned error: 400
+
+- semantic hhg-bsv: curl: (56) The requested URL returned error: 429
+
+- openalex hhg-quantum-light: curl: (56) The requested URL returned error: 400
+
+- semantic hhg-quantum-light: curl: (56) The requested URL returned error: 429
+
+- openalex hhg-squeezed: curl: (56) The requested URL returned error: 400
+
+- semantic hhg-squeezed: curl: (56) The requested URL returned error: 429
+
+- openalex strong-field-bsv: curl: (56) The requested URL returned error: 400
+
+- semantic strong-field-bsv: curl: (56) The requested URL returned error: 429
+
+- openalex thz-bsv: curl: (56) The requested URL returned error: 400
+
+- semantic thz-bsv: curl: (56) The requested URL returned error: 429
+
+- openalex thz-plasma-quantum: curl: (56) The requested URL returned error: 400
+
+- openalex thz-optical-rectification-squeezed: curl: (56) The requested URL returned error: 400
+
+- semantic thz-optical-rectification-squeezed: curl: (56) The requested URL returned error: 429
+
+- openalex or-quantum: curl: (56) The requested URL returned error: 400
+
+- semantic or-quantum: curl: (56) The requested URL returned error: 429
+
+- openalex stochastic-squeezed: curl: (56) The requested URL returned error: 400
+
+- semantic stochastic-squeezed: curl: (56) The requested URL returned error: 429
+
+- openalex classical-bsv: curl: (56) The requested URL returned error: 400
+
+- semantic classical-bsv: curl: (56) The requested URL returned error: 429
+
+- openalex broadband-bsv-nonlinear: curl: (56) The requested URL returned error: 400
+
+- semantic broadband-bsv-nonlinear: curl: (56) The requested URL returned error: 429
+
+- openalex g2-bsv: curl: (56) The requested URL returned error: 400
+
+- semantic g2-bsv: curl: (56) The requested URL returned error: 429
+
+- openalex nongaussian-pulsed: curl: (56) The requested URL returned error: 400
+
+- semantic nongaussian-pulsed: curl: (56) The requested URL returned error: 429
+
+- openalex pump-depletion-pdc: curl: (56) The requested URL returned error: 400
+
+- semantic pump-depletion-pdc: curl: (56) The requested URL returned error: 429
+
+- openalex gaussian-interaction-frame: curl: (56) The requested URL returned error: 400
+
+- semantic gaussian-interaction-frame: curl: (56) The requested URL returned error: 429
+
+- openalex mps-ultrafast-quantum-nonlinear: curl: (56) The requested URL returned error: 400
+
+- semantic mps-ultrafast-quantum-nonlinear: curl: (56) The requested URL returned error: 429
+
+- arxiv hhg-bsv: curl: (3) URL rejected: Malformed input to a URL function
+
+- arxiv hhg-quantum-light: curl: (3) URL rejected: Malformed input to a URL function
+
+- arxiv hhg-squeezed: curl: (3) URL rejected: Malformed input to a URL function
+
+- arxiv strong-field-bsv: curl: (3) URL rejected: Malformed input to a URL function
+
+- arxiv thz-bsv: curl: (3) URL rejected: Malformed input to a URL function
+
+- arxiv thz-plasma-quantum: curl: (3) URL rejected: Malformed input to a URL function
+
+- arxiv thz-optical-rectification-squeezed: curl: (3) URL rejected: Malformed input to a URL function
+
+- arxiv stochastic-squeezed: curl: (3) URL rejected: Malformed input to a URL function
+
+- arxiv classical-bsv: curl: (3) URL rejected: Malformed input to a URL function
+
+- arxiv broadband-bsv-nonlinear: curl: (3) URL rejected: Malformed input to a URL function
+
+- arxiv nongaussian-pulsed: curl: (3) URL rejected: Malformed input to a URL function
+
+- arxiv pump-depletion-pdc: curl: (3) URL rejected: Malformed input to a URL function
+
+- arxiv gaussian-interaction-frame: curl: (3) URL rejected: Malformed input to a URL function
+
+- arxiv mps-ultrafast-quantum-nonlinear: curl: (3) URL rejected: Malformed input to a URL function
+
