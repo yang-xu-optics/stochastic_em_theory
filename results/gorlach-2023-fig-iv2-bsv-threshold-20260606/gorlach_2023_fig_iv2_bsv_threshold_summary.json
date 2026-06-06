@@ -1,0 +1,105 @@
+{
+  "case_summaries": {
+    "BSV - 1e13 W/cm^2": {
+      "cutoff_order_p95": 18.613676776582036,
+      "cutoff_order_p99": 22.00238858521466,
+      "intensity_w_cm2": 10000000000000.0,
+      "mean_cutoff_order": 15.126023203404115,
+      "mean_peak_field_amplitude_au": 0.016880323915389028,
+      "normalization_benchmark_intensity": 3.2989801366705787,
+      "sampled_intensity_g2": 2.9907608109560786,
+      "sampled_mean_intensity_au": 0.0002860896089691085,
+      "std_cutoff_order": 1.7273910791613702,
+      "tdse_library_field_amplitude_max_au": 0.11079987270298704,
+      "tdse_library_field_amplitude_min_au": 1.6079090899617815e-08
+    },
+    "BSV - 2e13 W/cm^2": {
+      "cutoff_order_p95": 23.430389465091444,
+      "cutoff_order_p99": 30.495271637492333,
+      "intensity_w_cm2": 20000000000000.0,
+      "mean_cutoff_order": 16.372021878116353,
+      "mean_peak_field_amplitude_au": 0.023872383018394068,
+      "normalization_benchmark_intensity": 3.2989801366705787,
+      "sampled_intensity_g2": 3.032556670062863,
+      "sampled_mean_intensity_au": 0.0005772570948567848,
+      "std_cutoff_order": 3.521840292262927,
+      "tdse_library_field_amplitude_max_au": 0.11079987270298704,
+      "tdse_library_field_amplitude_min_au": 1.6079090899617815e-08
+    }
+  },
+  "claim_level": "hhg_intensity_prediction",
+  "intensities_w_cm2": [
+    10000000000000.0,
+    20000000000000.0
+  ],
+  "mechanism": "quantum_light_hhg_bsv_threshold_tdse_dipole_acceleration",
+  "notes": "Local BSV threshold reproduction for the model Ne atom in supplementary Fig. IV.2. The BSV driver is represented by a random-phase single-mode intensity distribution with g2 approximately 3, and each coherent component is evaluated with the selected response model before incoherent ensemble averaging. The TDSE path uses the local imaginary-time ground state rather than the supplement's Hamiltonian diagonalization and records the actual grid in the manifest.",
+  "parameters": {
+    "atomic_intensity_w_cm2": 3.50944506e+16,
+    "display_floor": 0.01,
+    "display_scale": 100000.0,
+    "driver_sampling": "single_mode_bsv_random_phase_gamma_intensity",
+    "frequency_grid": "raw_fft_harmonic_order_grid",
+    "intensities_w_cm2": [
+      10000000000000.0,
+      20000000000000.0
+    ],
+    "ionization_potential_au": 0.7924,
+    "max_order": 40,
+    "nonlinearity_power": 6.0,
+    "normalization_benchmark_intensity": 3.2989801366705787,
+    "normalization_scope": "shared_fig_iv2_intensity_cases",
+    "omega_au": 0.057,
+    "seed": 20230604,
+    "shots": 50000,
+    "spectrum_model": "tdse_dipole_acceleration",
+    "tdse": {
+      "absorber_start_au": 75.0,
+      "absorber_strength": 0.0005,
+      "amplitude_bin_count": 13,
+      "amplitude_bins": 13,
+      "carrier_phase": 0.0,
+      "dt_au": 0.05,
+      "dx_au": 0.09765625,
+      "field_amplitude_max_au": 0.11079987270298704,
+      "field_amplitude_min_au": 1.6079090899617815e-08,
+      "field_amplitude_values_au": [
+        1.6079090899617815e-08,
+        0.003978264986487829,
+        0.007796350044638734,
+        0.01155023767800461,
+        0.01523193039568886,
+        0.019150551961642785,
+        0.02328494160047384,
+        0.02781463684676889,
+        0.032908553388225084,
+        0.03901705065051656,
+        0.04715672535418099,
+        0.05977008526195914,
+        0.11079987270298704
+      ],
+      "flat_cycles": 15.0,
+      "frequency_grid": "raw_fft_harmonic_order_grid",
+      "grid_points": 2048,
+      "ground_state_dt_au": 0.08,
+      "ground_state_iterations": 260,
+      "harmonic_order_points": 1001,
+      "harmonic_order_spacing": 0.039999027950937016,
+      "max_harmonic_order": 40.0,
+      "min_harmonic_order": 0.0,
+      "normalization_min_harmonic_order": 1.0,
+      "ramp_cycles": 5.0,
+      "softening": 0.816,
+      "spectrum_model": "tdse_dipole_acceleration",
+      "time_steps": 55117,
+      "x_max": 100.0,
+      "x_min": -100.0
+    },
+    "tdse_amplitude_bins": 13
+  },
+  "source_refs": [
+    "Gorlach et al. 2023 supplementary Fig. IV.2: raw/sources/Gorlach et al. - 2023 - High-harmonic generation driven by quantum light.pdf",
+    "Wiki source summary: wiki/sources/gorlach-2023-hhg-driven-quantum-light-supplement.md",
+    "Simulation spec: wiki/simulations/gorlach-2023-fig-iv2-bsv-threshold.md"
+  ]
+}

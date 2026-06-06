@@ -1,0 +1,101 @@
+run_id: gorlach-2023-fig-iv2-bsv-threshold-20260606
+created: '2026-06-06'
+claim_level: hhg_intensity_prediction
+mechanism: quantum_light_hhg_bsv_threshold_tdse_dipole_acceleration
+source_model:
+  representation: single-mode BSV random-phase intensity distribution
+  driver_sampling: single_mode_bsv_random_phase_gamma_intensity
+  intensity_distribution: Gamma(shape=1/2, scale=2*mean_intensity_au)
+  coherent_response: tdse_dipole_acceleration
+atom_model:
+  species: model Ne atom
+  dimension: 1D
+  potential: V(x) = -1/sqrt(x^2 + a^2)
+  softening_au: 0.816
+  ionization_potential_au: 0.7924
+  initial_state: field-free ground state from local imaginary-time split-operator
+    propagation
+code_entrypoint: stochastic_em_theory.fig_iv2.run_gorlach_2023_fig_iv2_bsv_threshold
+git_commit: 3842a5013b9774cc6a55ebe288556c1dd58bdc94
+parameter_file: parameters.yaml
+random_seeds:
+- 20230604
+observable: ensemble_mean_bsv_tdse_hhg_threshold_spectrum
+units: atomic units for fields and energies; W/cm^2 for reported mean peak intensity;
+  dimensionless harmonic order
+parameters:
+  intensities_w_cm2:
+  - 10000000000000.0
+  - 20000000000000.0
+  shots: 50000
+  seed: 20230604
+  omega_au: 0.057
+  ionization_potential_au: 0.7924
+  max_order: 40
+  nonlinearity_power: 6.0
+  spectrum_model: tdse_dipole_acceleration
+  frequency_grid: raw_fft_harmonic_order_grid
+  driver_sampling: single_mode_bsv_random_phase_gamma_intensity
+  normalization_scope: shared_fig_iv2_intensity_cases
+  normalization_benchmark_intensity: 3.2989801366705787
+  atomic_intensity_w_cm2: 3.50944506e+16
+  display_scale: 100000.0
+  display_floor: 0.01
+  tdse_amplitude_bins: 13
+  tdse:
+    amplitude_bins: 13
+    x_min: -100.0
+    x_max: 100.0
+    grid_points: 2048
+    softening: 0.816
+    dt_au: 0.05
+    ramp_cycles: 5.0
+    flat_cycles: 15.0
+    ground_state_iterations: 260
+    ground_state_dt_au: 0.08
+    carrier_phase: 0.0
+    min_harmonic_order: 0.0
+    normalization_min_harmonic_order: 1.0
+    absorber_start_au: 75.0
+    absorber_strength: 0.0005
+    spectrum_model: tdse_dipole_acceleration
+    frequency_grid: raw_fft_harmonic_order_grid
+    amplitude_bin_count: 13
+    field_amplitude_min_au: 1.6079090899617815e-08
+    field_amplitude_max_au: 0.11079987270298704
+    field_amplitude_values_au:
+    - 1.6079090899617815e-08
+    - 0.003978264986487829
+    - 0.007796350044638734
+    - 0.01155023767800461
+    - 0.01523193039568886
+    - 0.019150551961642785
+    - 0.02328494160047384
+    - 0.02781463684676889
+    - 0.032908553388225084
+    - 0.03901705065051656
+    - 0.04715672535418099
+    - 0.05977008526195914
+    - 0.11079987270298704
+    max_harmonic_order: 40.0
+    harmonic_order_points: 1001
+    harmonic_order_spacing: 0.039999027950937016
+    time_steps: 55117
+    dx_au: 0.09765625
+source_refs:
+- 'Gorlach et al. 2023 supplementary Fig. IV.2: raw/sources/Gorlach et al. - 2023
+  - High-harmonic generation driven by quantum light.pdf'
+- 'Wiki source summary: wiki/sources/gorlach-2023-hhg-driven-quantum-light-supplement.md'
+- 'Simulation spec: wiki/simulations/gorlach-2023-fig-iv2-bsv-threshold.md'
+notes: Local BSV threshold reproduction for the model Ne atom in supplementary Fig.
+  IV.2. The BSV driver is represented by a random-phase single-mode intensity distribution
+  with g2 approximately 3, and each coherent component is evaluated with the selected
+  response model before incoherent ensemble averaging. The TDSE path uses the local
+  imaginary-time ground state rather than the supplement's Hamiltonian diagonalization
+  and records the actual grid in the manifest.
+outputs:
+  spectra_csv: gorlach_2023_fig_iv2_bsv_threshold_spectra.csv
+  display_spectrum_csv: gorlach_2023_fig_iv2_bsv_threshold_display.csv
+  summary_json: gorlach_2023_fig_iv2_bsv_threshold_summary.json
+  figure_png: gorlach_2023_fig_iv2_bsv_threshold.png
+  parameter_yaml: parameters.yaml
