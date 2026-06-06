@@ -5,9 +5,11 @@ import numpy as np
 import yaml
 
 from stochastic_em_theory.fig3b import (
+    CLEANED_PEAK_FREQUENCY_GRID,
     Fig3BDriverState,
     HARMONIC_YIELD_FREQUENCY_GRID,
     STATE_STYLES,
+    _cleaned_peak_rows_from_spectrum_rows,
     _harmonic_yield_rows_from_spectrum_rows,
     _tdse_library_field_amplitudes,
     run_gorlach_2023_fig3b_proxy,
@@ -132,6 +134,54 @@ def test_harmonic_yield_rows_extract_peak_and_subtract_local_background() -> Non
     assert harmonic_rows[0]["display_intensity"] == harmonic_rows[0]["normalized_intensity"]
 
 
+def test_cleaned_peak_rows_preserve_raw_peak_shape_and_mask_background() -> None:
+    rows = []
+    for order, intensity in [
+        (4.1, 0.1),
+        (4.8, 0.2),
+        (5.0, 10.0),
+        (5.2, 0.3),
+        (5.9, 0.1),
+        (6.1, 0.2),
+        (6.8, 0.4),
+        (7.0, 4.0),
+        (7.2, 0.5),
+        (7.9, 0.2),
+    ]:
+        rows.append(
+            {
+                "driver_state": "coherent",
+                "harmonic_order": order,
+                "mean_intensity": intensity,
+                "std_intensity": 0.0,
+                "normalized_intensity": intensity / 10.0,
+                "display_intensity": intensity / 10.0,
+                "display_offset": 1.0,
+                "mean_cutoff_order": 5.0,
+                "normalized_intensity_cv": 0.1,
+                "spectrum_model": "tdse_dipole_acceleration",
+                "frequency_grid": "raw_fft_harmonic_order_grid",
+                "tdse_amplitude_bin_count": 3,
+                "tdse_library_field_amplitude_min_au": 0.0,
+                "tdse_library_field_amplitude_max_au": 0.1,
+                "claim_level": "hhg_intensity_prediction",
+                "mechanism": "quantum_light_hhg_tdse_dipole_acceleration",
+            }
+        )
+
+    display_rows = _cleaned_peak_rows_from_spectrum_rows(rows, display_min_normalized=0.005)
+
+    assert len(display_rows) == len(rows)
+    assert {row["frequency_grid"] for row in display_rows} == {CLEANED_PEAK_FREQUENCY_GRID}
+    row_by_order = {row["harmonic_order"]: row for row in display_rows}
+    assert np.isclose(row_by_order[4.8]["normalized_intensity"], 0.01)
+    assert np.isclose(row_by_order[5.0]["normalized_intensity"], 0.99)
+    assert np.isclose(row_by_order[5.2]["normalized_intensity"], 0.02)
+    assert np.isnan(row_by_order[4.1]["display_intensity"])
+    assert np.isnan(row_by_order[5.9]["display_intensity"])
+    assert row_by_order[5.0]["display_intensity"] == row_by_order[5.0]["normalized_intensity"]
+
+
 def test_gorlach_fig3b_proxy_runner_writes_four_state_outputs(tmp_path) -> None:
     artifacts = run_gorlach_2023_fig3b_proxy(
         output_dir=tmp_path,
@@ -157,6 +207,7 @@ def test_gorlach_fig3b_proxy_runner_writes_four_state_outputs(tmp_path) -> None:
     assert artifacts.manifest_path.exists()
     assert (tmp_path / "parameters.yaml").exists()
     assert (tmp_path / "gorlach_2023_fig3b_harmonic_yields.csv").exists()
+    assert (tmp_path / "gorlach_2023_fig3b_display_spectrum.csv").exists()
     assert figure_path.exists()
     assert figure_path.stat().st_size > 1000
 
@@ -185,6 +236,7 @@ def test_gorlach_fig3b_proxy_runner_writes_four_state_outputs(tmp_path) -> None:
     assert manifest["parameter_file"] == "parameters.yaml"
     assert manifest["random_seeds"] == [7]
     assert manifest["outputs"]["harmonic_yields_csv"] == "gorlach_2023_fig3b_harmonic_yields.csv"
+    assert manifest["outputs"]["display_spectrum_csv"] == "gorlach_2023_fig3b_display_spectrum.csv"
     assert "Nature Fig. 3b" in manifest["source_refs"][0]
 
 
@@ -277,6 +329,9 @@ def test_gorlach_fig3b_tdse_runner_records_dipole_acceleration_model(tmp_path) -
     parameter_file = yaml.safe_load((tmp_path / "parameters.yaml").read_text())
     assert parameter_file["spectrum_model"] == "tdse_dipole_acceleration"
     harmonic_rows = list(csv.DictReader((tmp_path / "gorlach_2023_fig3b_harmonic_yields.csv").open(newline="")))
+    display_rows = list(csv.DictReader((tmp_path / "gorlach_2023_fig3b_display_spectrum.csv").open(newline="")))
     assert {row["driver_state"] for row in harmonic_rows} == {state.value for state in Fig3BDriverState}
     assert all(row["frequency_grid"] == HARMONIC_YIELD_FREQUENCY_GRID for row in harmonic_rows)
     assert len(harmonic_rows) < len(rows)
+    assert len(display_rows) == len(rows)
+    assert all(row["frequency_grid"] == CLEANED_PEAK_FREQUENCY_GRID for row in display_rows)
