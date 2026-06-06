@@ -48,6 +48,9 @@ generation and THz emission driven by squeezed vacuum.
 - Anchor sources: Gorlach 2023 supplement for 1D gas baseline; Rasputnyi 2024
   and Heimerl 2025 for coherent-response averaging and conditional spectra;
   Tzur et al. and Even Tzur 2025 for output-state extensions.
+- Novelty branch: identify whether selected harmonic channels can develop
+  higher cumulants, conditional non-Gaussian states, or Wigner-negativity
+  witnesses.
 
 ## 5. THz Optical Rectification
 
@@ -56,6 +59,8 @@ generation and THz emission driven by squeezed vacuum.
 - Identify role of squeezing phase, bandwidth, and medium symmetry.
 - Anchor source: Ravi 2014 for classical tilted-pulse-front OR propagation,
   cascading, and 2D depletion limits.
+- Anchor source: Jankowski 2024 for the bridge from classical `chi^(2)`
+  nonlinear optics to non-Gaussian quantum dynamics.
 - Status: source gap remains for direct squeezed-vacuum `chi^(2)` OR. Treat the
   stochastic extension as derivation-led unless a dedicated source is added.
 
@@ -66,12 +71,17 @@ generation and THz emission driven by squeezed vacuum.
 - Compare unconditional and conditional ensemble observables.
 - Anchor sources: Schuh 2013 for microscopic gas current, Sun 2022 for plasma
   THz mechanism taxonomy, Wang 2026 for coherent-plus-BSV plasma THz sampling.
+- Novelty branch: test whether plasma THz statistics are merely bunched or
+  thermal-like, or whether conditional/nonlinear ionization dynamics produce
+  genuine non-Gaussian witnesses.
 
 ## 7. Discussion
 
 - What the stochastic theory does and does not prove.
 - Relation to quantum optics, semiclassical nonlinear optics, and strong-field
   physics.
+- Distinguish non-Gaussian classical shot distributions from non-Gaussian
+  quantum states.
 - Experimental observables and possible tests.
 
 ## 8. Conclusion
@@ -97,3 +107,5 @@ generation and THz emission driven by squeezed vacuum.
 9. Plasma THz coherent-plus-BSV squeezing-angle scan.
 10. Classical OR benchmark showing undepleted prediction versus depleted
     cascading-limited propagation.
+11. Non-Gaussian diagnostic ladder: higher cumulants, conditional output
+    states, and candidate witness for one HHG or THz channel.

@@ -5,10 +5,11 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [theory, stochastic-fields, quantum-optics, ordering]
-source_count: 4
+source_count: 7
 confidence: high
 related:
   - squeezed-vacuum-g2-proof-plan
+  - non-gaussian-output-novelty
   - ../overview
   - ../sources/raymer-landes-2022-broadband-squeezed-vacuum-tpa
   - ../sources/raymer-landes-2023-classical-model-broadband-squeezed-vacuum
@@ -82,6 +83,11 @@ P_SF(omega) = 1/2
 - Gorlach/Tzur-style HHG papers often use Positive P or Husimi Q coherent-state
   decompositions. Those are phase-space representations of a quantum state,
   not a blanket statement that all output observables are classical.
+- Yanagimoto/Jankowski-style mesoscopic nonlinear optics adds a stricter
+  boundary: a positive stochastic ensemble can guide Gaussian and intensity
+  observables, but Wigner-negative or otherwise quantum non-Gaussian output
+  states require a higher-order quantum model, witness, or measurement
+  protocol.
 
 ## Boundary of the Claim
 

@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [overview, thesis]
-source_count: 14
+source_count: 17
 confidence: high
 related:
   - research-agenda
@@ -66,6 +66,9 @@ observable_BSV = integral phase_space_weight * observable_coh
 - Use Ravi 2014 for classical tilted-pulse-front optical rectification and use
   Schuh 2013, Sun 2022, and Wang 2026 for THz plasma emission, with symmetry
   breaking treated as a central requirement.
+- Use Yanagimoto 2022/2024 and Jankowski 2024 to frame high-impact novelty:
+  identify whether HHG or THz generation creates only non-Gaussian classical
+  shot distributions or genuinely non-Gaussian quantum output states.
 
 The optical rectification branch now has a strong classical propagation source,
 but still needs a dedicated squeezed-vacuum OR source or an explicit derivation

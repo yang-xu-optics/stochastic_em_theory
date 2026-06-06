@@ -5,14 +5,16 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [thz, optical-rectification, nonlinear-optics, squeezed-vacuum]
-source_count: 3
+source_count: 6
 confidence: high
 related:
   - ../overview
+  - ../theory/non-gaussian-output-novelty
   - ../simulations/simulation-roadmap
   - ../sources/raymer-landes-2023-classical-model-broadband-squeezed-vacuum
   - ../sources/sun-2022-thz-laser-induced-plasma
   - ../sources/ravi-2014-thz-generation-optical-rectification
+  - ../sources/jankowski-2024-ultrafast-chi2-nonlinear-photonics
 ---
 
 # THz Optical Rectification Model
@@ -89,6 +91,24 @@ rectification. Ravi 2014 supplies the deterministic classical OR propagation
 model. The stochastic extension still needs a derivation of which sampled-field
 correlation drives `P_THz`, how normally ordered observables map to stochastic
 moments, and whether vacuum-only terms must be subtracted.
+
+## Non-Gaussian Novelty Path
+
+Jankowski 2024 supplies the conceptual bridge from classical `chi^(2)`
+frequency conversion to mesoscopic non-Gaussian quantum dynamics. For OR, there
+are three distinct novelty levels:
+
+- classical stochastic OR: non-Gaussian shot-to-shot THz energy or waveform
+  distributions caused by nonlinear filtering of BSV fluctuations,
+- Gaussian quantum OR: squeezed or correlated THz quadratures with a Gaussian
+  covariance model,
+- non-Gaussian quantum OR: higher cumulants, Wigner-negativity witnesses, or
+  conditional THz/residual-pump states caused by pump depletion, cascading, or
+  measurement-like conditioning.
+
+The first level is reachable with the current stochastic source model. The last
+level requires a quantum OR model or witness beyond positive stochastic
+sampling.
 
 ## First Simulation Target
 

@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [log]
-source_count: 14
+source_count: 17
 confidence: high
 related: [overview]
 ---
@@ -53,3 +53,16 @@ Append-only chronological record. New entries should use:
   baseline, while keeping squeezed-vacuum-driven OR as an open derivation
   problem involving ensemble averaging, operator ordering, and possible vacuum
   subtraction.
+
+## [2026-06-06] ingest | Non-Gaussian Mesoscopic Nonlinear Optics Papers
+
+- Ingested three newly added papers by Yanagimoto et al. 2022, Jankowski et al.
+  2024, and Yanagimoto et al. 2024.
+- Created [[sources/yanagimoto-2022-nongaussian-pulsed-squeezing]],
+  [[sources/jankowski-2024-ultrafast-chi2-nonlinear-photonics]], and
+  [[sources/yanagimoto-2024-mesoscopic-ultrafast-nonlinear-optics]].
+- Added [[theory/non-gaussian-output-novelty]] to distinguish classical
+  non-Gaussian shot distributions from genuine quantum non-Gaussian emitted or
+  conditional states.
+- Updated HHG, THz OR, THz plasma, simulation roadmap, research agenda, index,
+  overview, and paper outline with non-Gaussian observables and cautions.

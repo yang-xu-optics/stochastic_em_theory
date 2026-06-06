@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [index]
-source_count: 14
+source_count: 17
 confidence: high
 related: []
 ---
@@ -29,6 +29,8 @@ before answering project questions or changing wiki pages.
   optics.
 - [[theory/squeezed-vacuum-g2-proof-plan]]: derivation plan for reproducing the
   squeezed-vacuum `g^{(2)}(0)` value.
+- [[theory/non-gaussian-output-novelty]]: source-backed novelty map for what
+  could become non-Gaussian in HHG or THz generation.
 
 ## Physical Models
 
@@ -59,6 +61,18 @@ before answering project questions or changing wiki pages.
   stochastic-field TPA/SFG model with vacuum subtraction.
 - [[sources/sharapova-2015-schmidt-modes-bsv]]: multimode BSV and gain-dependent
   Schmidt modes.
+
+### Non-Gaussian Quantum Nonlinear Optics
+
+- [[sources/yanagimoto-2022-nongaussian-pulsed-squeezing]]: pump-depleted
+  pulsed squeezing, Gaussian interaction frames, Wigner negativity, and
+  signal-pump entanglement.
+- [[sources/jankowski-2024-ultrafast-chi2-nonlinear-photonics]]: tutorial
+  bridge from classical `chi^(2)` nonlinear optics to mesoscopic
+  non-Gaussian quantum dynamics.
+- [[sources/yanagimoto-2024-mesoscopic-ultrafast-nonlinear-optics]]: review of
+  multimode mesoscopic non-Gaussian physics, quantum-light-driven dynamics,
+  and non-Gaussian measurement/sensing.
 
 ### HHG And Strong-Field Quantum Light
 

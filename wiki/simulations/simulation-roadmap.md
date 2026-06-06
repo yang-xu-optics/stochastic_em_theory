@@ -5,10 +5,11 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [simulation, roadmap, validation]
-source_count: 14
+source_count: 17
 confidence: high
 related:
   - ../theory/squeezed-vacuum-g2-proof-plan
+  - ../theory/non-gaussian-output-novelty
   - ../models/hhg-gas-model
   - ../models/thz-optical-rectification-model
   - ../models/thz-plasma-emission-model
@@ -178,6 +179,45 @@ Implementation targets:
    post-selection bins.
 5. Test pure zero-mean BSV as a symmetry experiment and record whether the
    ensemble-averaged field vanishes.
+
+## Stage 6: Non-Gaussian Output Diagnostics
+
+This stage is claim-gating for the high-impact novelty direction. It should be
+started after the HHG or THz source model identifies promising modes or
+conditional bins.
+
+Diagnostic ladder:
+
+1. Classical stochastic diagnostics:
+
+```text
+skewness, kurtosis, higher energy cumulants, conditional histograms
+```
+
+2. Gaussian quantum diagnostics:
+
+```text
+mode covariance matrix, squeezing, purity proxy, Gaussian entanglement
+```
+
+3. Non-Gaussian quantum diagnostics:
+
+```text
+higher-order cumulants beyond covariance
+non-Gaussian witnesses
+mode-selective Husimi or Wigner reconstruction
+Wigner negativity if the model supports it
+```
+
+Implementation rules:
+
+- Define the mode before computing any cumulant or witness.
+- Label whether the non-Gaussian object is the pump, emitted HHG/THz mode,
+  joint pump-output state, or a conditional postselected state.
+- Track pump depletion/backaction when possible; frozen-pump models can erase
+  the mechanism that creates non-Gaussianity.
+- Do not certify quantum non-Gaussianity from a positive stochastic ensemble
+  alone.
 
 ## Cross-Cutting Numerical Rules
 

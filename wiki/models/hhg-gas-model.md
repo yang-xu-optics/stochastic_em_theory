@@ -5,11 +5,12 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [hhg, gas, strong-field, squeezed-vacuum]
-source_count: 8
+source_count: 11
 confidence: high
 related:
   - ../overview
   - ../theory/stochastic-quantum-optics-correspondence
+  - ../theory/non-gaussian-output-novelty
   - ../simulations/simulation-roadmap
 ---
 
@@ -103,6 +104,24 @@ carry nonclassical statistics. An intensity-only stochastic simulation should
 not claim to predict emitted harmonic squeezing unless it includes the
 appropriate phase-space mapping and measurement model.
 
+## Non-Gaussian Novelty Path
+
+Yanagimoto 2022/2024 and Jankowski 2024 sharpen the output-state question.
+The high-impact HHG novelty should not be phrased as "the spectrum is
+non-Gaussian" without specifying the quantum object. Candidate HHG claims are:
+
+- emitted harmonic modes develop higher-order cumulants beyond Gaussian
+  covariance,
+- selected harmonic supermodes have Wigner negativity or a non-Gaussian
+  witness,
+- conditioning on electron yield, pump photon number, or a harmonic channel
+  prepares a non-Gaussian residual pump or harmonic state,
+- pump-output entanglement degrades or reshapes harmonic squeezing.
+
+The near-term route is to use stochastic HHG simulations to identify candidate
+modes and conditional bins, then reserve quantum non-Gaussian claims for a
+model that includes emitted-state reconstruction or an operational witness.
+
 ## Proposed Observables
 
 - Ensemble mean HHG spectrum.
@@ -111,6 +130,9 @@ appropriate phase-space mapping and measurement model.
 - Correlation between drive intensity spikes and harmonic yield.
 - Comparison against coherent-state and thermal/noise baselines with matched
   mean energy.
+- Higher-order cumulants and `g^(n)` of selected harmonic channels.
+- Conditional harmonic phase-space proxies or reconstructed Husimi/Wigner
+  distributions where the measurement model supports them.
 
 ## Open Modeling Risks
 
@@ -126,3 +148,5 @@ Additional source-backed risks:
 - A single-mode BSV distribution is only justified with source and detection
   mode selection.
 - Strong coherent-plus-BSV experiments are not identical to pure BSV driving.
+- A positive stochastic field ensemble cannot by itself certify Wigner-negative
+  emitted harmonics.

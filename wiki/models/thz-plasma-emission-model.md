@@ -5,10 +5,11 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [thz, plasma, photocurrent, ionization, squeezed-vacuum]
-source_count: 3
+source_count: 6
 confidence: high
 related:
   - ../overview
+  - ../theory/non-gaussian-output-novelty
   - ../simulations/simulation-roadmap
   - ../sources/schuh-2013-thz-ionization-gases
   - ../sources/sun-2022-thz-laser-induced-plasma
@@ -79,6 +80,27 @@ coherent 800 nm field plus a weak 400 nm BSV field. That coherent field should
 be treated as the first reproducible setting before testing pure BSV plasma
 emission.
 
+## Non-Gaussian Novelty Path
+
+Wang 2026 predicts bunched, thermal-like THz output in a coherent-plus-BSV
+plasma setting. The new mesoscopic non-Gaussian sources suggest a sharper
+follow-up question: when does plasma THz emission move beyond thermal-like
+Gaussian or Bose-Einstein statistics?
+
+Candidate mechanisms:
+
+- ionization gating acts as a nonlinear measurement of the squeezed pump,
+- conditioning on ionization bursts or THz energy prepares non-Gaussian output
+  ensembles,
+- pump-output or electron-field entanglement creates higher cumulants not
+  reducible to covariance,
+- strong BSV-induced current bursts produce mode-selective non-Gaussian THz
+  quadrature statistics.
+
+For now, treat these as hypotheses. A stochastic current model can identify
+candidate regimes, but a quantum emitted-field model or witness is needed to
+claim genuine non-Gaussian THz light.
+
 ## Proposed Observables
 
 - Ensemble-averaged THz field.
@@ -88,6 +110,8 @@ emission.
 - Dependence on squeezing phase and displacement.
 - Two-color phase and squeezing-angle scans.
 - Conditional spectra binned by sampled BSV amplitude.
+- Higher-order cumulants of THz energy and selected THz mode quadratures.
+- Non-Gaussianity witnesses if an emitted-field measurement model is added.
 
 ## First Simulation Target
 

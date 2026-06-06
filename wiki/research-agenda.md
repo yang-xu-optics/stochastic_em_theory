@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [agenda, planning]
-source_count: 14
+source_count: 17
 confidence: high
 related:
   - overview
@@ -31,6 +31,9 @@ related:
    ensemble averaging over a zero-mean squeezed field?
 6. For plasma THz emission, what symmetry-breaking ingredient is needed to
    produce nonzero emitted THz fields from stochastic squeezed-vacuum drive?
+7. What, exactly, can become non-Gaussian in HHG or THz generation: the emitted
+   field, the residual pump, a conditional postselected state, or only the
+   classical shot distribution?
 
 ## Deliverables
 
@@ -42,6 +45,8 @@ related:
 - HHG spectra driven by coherent, thermal/noisy, and squeezed ensembles.
 - THz spectra from optical rectification driven by matched ensembles.
 - THz plasma spectra with clear symmetry assumptions.
+- A non-Gaussian novelty map with candidate witnesses, cumulants, and
+  conditioning protocols for HHG and THz output.
 - A manuscript outline with figure-to-claim mapping.
 
 ## Initial Risk Register
@@ -57,6 +62,8 @@ related:
   quantum electrodynamics.
 - Numerical cost: rare high-field events in bright squeezed vacuum may dominate
   nonlinear observables and require many trajectories.
+- Non-Gaussian overclaiming: heavy-tailed stochastic spectra are not equivalent
+  to Wigner-negative or otherwise quantum non-Gaussian output states.
 
 ## Source-Backed Decisions
 
@@ -77,6 +84,10 @@ related:
 - D5: Pure zero-mean BSV plasma or OR emission may vanish at the field level by
   symmetry. Simulations should include a symmetry-breaking scan rather than
   assume a nonzero mean THz waveform.
+- D6: Non-Gaussian novelty must be tied to a specific object and witness. Use
+  [[theory/non-gaussian-output-novelty]] to separate higher-order classical
+  statistics, Gaussian quantum squeezing, and genuine non-Gaussian quantum
+  output.
 
 ## Current Source Gaps
 
@@ -99,3 +110,5 @@ related:
 4. Decide the first HHG model fidelity level: classical trajectory,
    Lewenstein-like semiclassical response, or propagation-first source model.
 5. Build a minimal two-color plasma THz model before testing pure BSV symmetry.
+6. Add a non-Gaussian diagnostics spec: cumulants, mode selection, conditional
+   bins, and candidate phase-space witnesses.
