@@ -138,6 +138,40 @@ def test_gorlach_fig3b_proxy_runner_writes_four_state_outputs(tmp_path) -> None:
     assert "Nature Fig. 3b" in manifest["source_refs"][0]
 
 
+def test_gorlach_fig3b_uses_shared_normalization_across_driver_states(tmp_path) -> None:
+    artifacts = run_gorlach_2023_fig3b_proxy(
+        output_dir=tmp_path,
+        shots=512,
+        seed=8,
+        base_field_amplitude_au=0.08,
+        omega_au=0.057,
+        ionization_potential_au=0.7924,
+        max_order=31,
+        mean_photon_number=100.0,
+        fock_n=100,
+        bsv_r=2.0,
+        bsv_phase=0.0,
+        spectrum_model="proxy",
+    )
+
+    with artifacts.csv_path.open(newline="") as handle:
+        rows = list(csv.DictReader(handle))
+
+    max_normalized_by_state = {
+        state.value: max(float(row["normalized_intensity"]) for row in rows if row["driver_state"] == state.value)
+        for state in Fig3BDriverState
+    }
+    assert np.isclose(max(max_normalized_by_state.values()), 1.0)
+    assert min(max_normalized_by_state.values()) < 0.2
+
+    summary = json.loads(artifacts.summary_path.read_text())
+    assert summary["parameters"]["normalization_scope"] == "shared_all_driver_states"
+    assert summary["parameters"]["normalization_benchmark_intensity"] > 0.0
+    assert summary["state_summaries"]["coherent"]["normalization_benchmark_intensity"] == summary["parameters"][
+        "normalization_benchmark_intensity"
+    ]
+
+
 def test_gorlach_fig3b_tdse_runner_records_dipole_acceleration_model(tmp_path) -> None:
     artifacts = run_gorlach_2023_fig3b_proxy(
         output_dir=tmp_path,

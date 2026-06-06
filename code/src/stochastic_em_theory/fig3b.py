@@ -49,6 +49,15 @@ class Fig3BStateStyle:
     display_offset: float
 
 
+@dataclass(frozen=True)
+class Fig3BStateSpectrum:
+    sampled_intensity: np.ndarray
+    field_amplitudes_au: np.ndarray
+    cutoff_orders: np.ndarray
+    mean_spectrum: np.ndarray
+    std_spectrum: np.ndarray
+
+
 STATE_STYLES: dict[Fig3BDriverState, Fig3BStateStyle] = {
     Fig3BDriverState.COHERENT: Fig3BStateStyle("Coherent", "#e41a1c", 1.0),
     Fig3BDriverState.FOCK: Fig3BStateStyle("Fock", "#377eb8", 1.0e3),
@@ -403,6 +412,7 @@ def run_gorlach_2023_fig3b_proxy(
     rows: list[dict[str, object]] = []
     state_summaries: dict[str, dict[str, float]] = {}
     sampled_by_state: dict[Fig3BDriverState, tuple[np.ndarray, np.ndarray, np.ndarray]] = {}
+    spectra_by_state: dict[Fig3BDriverState, Fig3BStateSpectrum] = {}
     all_field_amplitudes: list[np.ndarray] = []
 
     for state in Fig3BDriverState:
@@ -469,6 +479,9 @@ def run_gorlach_2023_fig3b_proxy(
     else:
         orders = odd_harmonic_orders(max_order=max_order)
 
+    normalization_values_by_state: list[np.ndarray] = []
+    normalization_scope = "shared_all_driver_states"
+
     for state in Fig3BDriverState:
         alpha, sampled_intensity, field_amplitudes = sampled_by_state[state]
         cutoff_orders = _cutoff_orders_from_field(
@@ -485,18 +498,36 @@ def run_gorlach_2023_fig3b_proxy(
                 library_spectra=tdse_library_spectra,
             )
         else:
-            orders, spectra, cutoff_orders = _proxy_spectra_matrix(
+            state_orders, spectra, cutoff_orders = _proxy_spectra_matrix(
                 field_amplitudes_au=field_amplitudes,
                 omega_au=omega_au,
                 ionization_potential_au=ionization_potential_au,
                 max_order=max_order,
                 nonlinearity_power=nonlinearity_power,
             )
+            if not np.allclose(orders, state_orders, rtol=0.0, atol=1.0e-12):
+                raise ValueError("proxy spectra returned inconsistent harmonic-order grids")
         mean_spectrum = np.mean(spectra, axis=0)
         std_spectrum = np.std(spectra, axis=0, ddof=1) if shots > 1 else np.zeros_like(mean_spectrum)
         normalization_mask = orders >= normalization_min_harmonic_order
-        normalization_values = mean_spectrum[normalization_mask] if np.any(normalization_mask) else mean_spectrum
-        normalization = max(float(np.max(normalization_values)), 1.0e-300)
+        normalization_values_by_state.append(mean_spectrum[normalization_mask] if np.any(normalization_mask) else mean_spectrum)
+        spectra_by_state[state] = Fig3BStateSpectrum(
+            sampled_intensity=sampled_intensity,
+            field_amplitudes_au=field_amplitudes,
+            cutoff_orders=cutoff_orders,
+            mean_spectrum=mean_spectrum,
+            std_spectrum=std_spectrum,
+        )
+
+    normalization = max(float(np.max(np.concatenate(normalization_values_by_state))), 1.0e-300)
+
+    for state in Fig3BDriverState:
+        state_spectrum = spectra_by_state[state]
+        sampled_intensity = state_spectrum.sampled_intensity
+        field_amplitudes = state_spectrum.field_amplitudes_au
+        cutoff_orders = state_spectrum.cutoff_orders
+        mean_spectrum = state_spectrum.mean_spectrum
+        std_spectrum = state_spectrum.std_spectrum
         style = STATE_STYLES[state]
         tdse_bin_count = int(tdse_library_metadata["amplitude_bin_count"])
         tdse_library_min = float(tdse_library_metadata["field_amplitude_min_au"])
@@ -511,6 +542,7 @@ def run_gorlach_2023_fig3b_proxy(
             "cutoff_order_p95": float(np.quantile(cutoff_orders, 0.95)),
             "cutoff_order_p99": float(np.quantile(cutoff_orders, 0.99)),
             "display_offset": float(style.display_offset),
+            "normalization_benchmark_intensity": float(normalization),
             "tdse_library_field_amplitude_min_au": tdse_library_min,
             "tdse_library_field_amplitude_max_au": tdse_library_max,
         }
@@ -576,6 +608,8 @@ def run_gorlach_2023_fig3b_proxy(
         "spectrum_model": spectrum_model_name,
         "frequency_grid": frequency_grid,
         "normalization_min_harmonic_order": float(normalization_min_harmonic_order),
+        "normalization_scope": normalization_scope,
+        "normalization_benchmark_intensity": float(normalization),
         "tdse_amplitude_bins": int(tdse_amplitude_bins),
         "tdse": tdse_parameters | tdse_library_metadata,
         "driver_sampling": DRIVER_SAMPLING,

@@ -78,6 +78,11 @@ not be interpreted as absolute emitted energy differences. The current plot
 uses decade-scale offsets for readability: coherent `1`, Fock `1e3`, thermal
 `1e6`, and BSV `1e9`.
 
+All four driver-state curves must share a single normalization benchmark. The
+benchmark is the maximum ensemble-mean spectrum across all driver states over
+the configured normalization harmonic-order range. This avoids hiding absolute
+yield differences by renormalizing each source state independently.
+
 ## Model Equations And Units
 
 For each coherent component, solve the 1D soft-core TDSE in atomic units:
@@ -164,3 +169,10 @@ stochastic shots, 11 TDSE amplitude bins, a `[-80, 80]` bohr grid with 768
 points, `dt = 0.08` a.u., a 5-cycle ramp / 15-cycle flat-top / 5-cycle ramp
 pulse, a complex absorber starting at 75 bohr, 3,650 harmonic-order FFT
 points per driver state, and decade-separated display offsets.
+
+The lower-field finer-grid rerun is stored at
+`results/gorlach-2023-fig3b-tdse-sharednorm-e006-finegrid-20260606/`. It uses
+the shared all-driver-state normalization benchmark, `E0 = 0.06` a.u.,
+50,000 stochastic shots, 11 TDSE amplitude bins, a `[-80, 80]` bohr grid with
+1,024 points, `dt = 0.06` a.u., the same 5-cycle ramp / 15-cycle flat-top /
+5-cycle ramp pulse, and the same complex absorber parameters.
