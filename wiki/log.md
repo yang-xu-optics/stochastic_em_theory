@@ -207,3 +207,19 @@ Append-only chronological record. New entries should use:
   subtraction, nearest-odd-harmonic annotations, and a shared normalized display
   floor of `1e-3`.
 - Kept the harmonic-yield CSV as a companion summary table.
+
+## [2026-06-06] simulation | Gorlach 2023 Fig IV.2 BSV Threshold
+
+- Added [[simulations/gorlach-2023-fig-iv2-bsv-threshold]] for the
+  supplementary Fig. IV.2 BSV intensity-threshold reproduction.
+- Implemented a BSV random-phase gamma intensity sampler with
+  `I_alpha / <I> ~ Gamma(1/2, 2)` and a shared normalization across the
+  `1e13` and `2e13 W/cm^2` cases.
+- Generated
+  `results/gorlach-2023-fig-iv2-bsv-threshold-20260606/` with 50,000 BSV
+  shots, 13 TDSE amplitude-library points, a `[-100, 100]` bohr grid with
+  2,048 points, `dt = 0.05 a.u.`, a 5/15/5-cycle pulse, and the source-backed
+  absorber at 75 bohr.
+- The sampled BSV diagnostics were `g2 = 2.9908` and cutoff p99 `22.00` for
+  `1e13 W/cm^2`, versus `g2 = 3.0326` and cutoff p99 `30.50` for
+  `2e13 W/cm^2`.

@@ -128,3 +128,42 @@ Each result directory must contain:
 - parameter YAML,
 - manifest YAML with source references, commit hash, seed, and caveats,
 - Fig. IV.2-style PNG with two log-scale panels.
+
+## First Local TDSE Run
+
+Result directory:
+
+```text
+results/gorlach-2023-fig-iv2-bsv-threshold-20260606/
+```
+
+Run parameters:
+
+```text
+shots = 50000
+seed = 20230604
+intensities = [1e13, 2e13] W/cm^2
+TDSE library amplitudes = 13
+x_min = -100 bohr
+x_max = 100 bohr
+grid_points = 2048
+dx = 0.09765625 bohr
+dt = 0.05 a.u.
+pulse = 5-cycle rise, 15-cycle plateau, 5-cycle fall
+absorber_start = 75 bohr
+absorber_strength = 5e-4
+```
+
+Key diagnostics:
+
+```text
+BSV 1e13 W/cm^2: sampled g2 = 2.9908, cutoff p99 = 22.00
+BSV 2e13 W/cm^2: sampled g2 = 3.0326, cutoff p99 = 30.50
+```
+
+The local run reproduces the qualitative threshold effect: at `2e13 W/cm^2`
+the high-order spectrum retains a pronounced plateau and visible peaks through
+the 30th harmonic region, while at `1e13 W/cm^2` the high-order yield collapses
+toward the display floor. The result is still not an exact source-grid
+reproduction because `dx = 0.09765625 bohr` and the ground state is obtained by
+imaginary-time propagation rather than Hamiltonian diagonalization.
