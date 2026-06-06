@@ -134,3 +134,12 @@ Append-only chronological record. New entries should use:
   selected-harmonic mechanism separate from BSV pump sampling.
 - Verified the package with `python -m pytest -q` and the paper-one smoke run
   writing temporary outputs under `results/tmp/paper-one-final-smoke`.
+
+## [2026-06-06] simulation | Gorlach 2023 Fig 3b Proxy Reproduction
+
+- Added [[simulations/gorlach-2023-fig3b-proxy-reproduction]] to scope a
+  stochastic-field proxy reproduction of Gorlach et al. 2023 Fig. 3b.
+- Targeted coherent, Fock, thermal, and BSV driver spectra through
+  single-mode Husimi-Q coherent-response sampling at matched mean intensity.
+- Marked the result as a proxy benchmark against the published TDSE spectra,
+  not an exact source-data or TDSE reproduction.

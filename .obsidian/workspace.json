@@ -183,6 +183,9 @@
   },
   "active": "8ad97e7375a24d50",
   "lastOpenFiles": [
+    "code/tests/__pycache__/test_gorlach_fig3b.cpython-311-pytest-9.0.3.pyc",
+    "code/tests/test_gorlach_fig3b.py",
+    "wiki/simulations/gorlach-2023-fig3b-proxy-reproduction.md",
     "results/tmp/paper-one-review-smoke/figures/proxy_hhg_spectrum.png",
     "results/tmp/paper-one-review-smoke/figures/multimode_g2.png",
     "results/tmp/paper-one-review-smoke/figures/single_mode_g2.png",
@@ -195,7 +198,6 @@
     "results/tmp/paper-one-review-smoke/runs/paper-one-smoke-ati/ati_statistics.csv",
     "results/tmp/paper-one-review-smoke/runs/paper-one-smoke-ati",
     "results/tmp/paper-one-review-smoke/runs/paper-one-smoke-hhg/manifest.yaml",
-    "results/tmp/paper-one-review-smoke/runs/paper-one-smoke-hhg/proxy_hhg_summary.json",
     "results/tmp/paper-one-final-smoke/figures/proxy_hhg_spectrum.png",
     "results/tmp/paper-one-final-smoke/figures/multimode_g2.png",
     "results/tmp/paper-one-final-smoke/figures/single_mode_g2.png",
@@ -225,7 +227,6 @@
     "wiki/sources/singh-2026-interferometrically-enhanced-asymmetry-in-strong-field-ionization-with.md",
     "wiki/sources/imai-2026-heralded-ultrafast-generation-of-macroscopic-quantum-states-in.md",
     "wiki/sources/stammer-2026-fluctuation-induced-symmetry-breaking-in-hhg-for-bicircular.md",
-    "wiki/sources/lange-2026-edge-states-and-quantum-optical-hhg-from-topological.md",
-    "wiki/sources/kim-2025-tunneling-driven-by-quantum-light-described-via-field.md"
+    "wiki/sources/lange-2026-edge-states-and-quantum-optical-hhg-from-topological.md"
   ]
 }
