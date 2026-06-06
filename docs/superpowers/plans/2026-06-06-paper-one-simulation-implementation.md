@@ -2,9 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Build the reproducible simulation layer for the correspondence-first HHG paper: squeezed-field sampling, ordering-corrected validation, mode-filtered validation, paper-one figures, and an HHG intensity-observable pipeline.
+**Goal:** Build the reproducible simulation layer for the correspondence-first HHG paper: squeezed-field sampling, ordering-corrected validation, source-model-aware mode validation, paper-one figures, per-shot HHG records, and an HHG intensity-observable pipeline.
 
-**Architecture:** Implement a small Python package under `code/src/stochastic_em_theory/` with focused modules for field sampling, observable estimators, validation runs, plotting, HHG response models, and result manifests. Keep source code deterministic and testable; write generated outputs under `results/runs/` and `results/figures/` with manifests that identify claim-ladder level and random seeds.
+**Architecture:** Implement a small Python package under `code/src/stochastic_em_theory/` with focused modules for field sampling, BSV source-model metadata, observable estimators, validation runs, plotting, HHG response models, per-shot records, ionization/cutoff proxies, and result manifests. Keep source code deterministic and testable; write generated outputs under `results/runs/` and `results/figures/` with manifests that identify source-model family, claim-ladder level, and random seeds.
 
 **Tech Stack:** Python 3.11+, NumPy, SciPy, Matplotlib, PyYAML, pytest.
 
@@ -15,9 +15,10 @@
 This plan implements the simulation layer for paper one. It does not write the manuscript, certify non-Gaussian quantum output states, implement THz models, or implement macroscopic HHG propagation. It creates working, testable software for:
 
 - exact single-mode squeezed-vacuum input validation,
-- mode-filtered squeezed-vacuum validation,
+- source-model-aware mode-filtered squeezed-vacuum validation,
 - figures that expose the ordering correction and mode-count effects,
-- a lightweight HHG intensity-observable pipeline,
+- a lightweight HHG intensity-observable pipeline with per-shot records,
+- ionization/tunneling and cutoff proxies that support the new HHG literature targets,
 - tested utilities for the later 1D soft-core gas baseline.
 
 ## File Structure
@@ -28,13 +29,16 @@ This plan implements the simulation layer for paper one. It does not write the m
 - `code/pyproject.toml`: package metadata and test dependencies.
 - `code/src/stochastic_em_theory/__init__.py`: package version.
 - `code/src/stochastic_em_theory/fields.py`: Wigner and Husimi squeezed-field samplers.
+- `code/src/stochastic_em_theory/source_models.py`: explicit BSV source-model catalog and mode weights.
 - `code/src/stochastic_em_theory/observables.py`: analytic targets and ordering-corrected estimators.
 - `code/src/stochastic_em_theory/io.py`: run directory, CSV, JSON, and YAML manifest helpers.
 - `code/src/stochastic_em_theory/validation.py`: single-mode and mode-filtered validation runners.
 - `code/src/stochastic_em_theory/plotting.py`: deterministic figure builders for validation and HHG outputs.
 - `code/src/stochastic_em_theory/hhg_proxy.py`: fast HHG intensity proxy for ensemble-pipeline development.
+- `code/src/stochastic_em_theory/ionization.py`: Keldysh and ADK-like ionization/tunneling proxies.
 - `code/src/stochastic_em_theory/tdse1d.py`: tested 1D split-operator utilities for the soft-core gas baseline.
 - `code/src/stochastic_em_theory/claim_ladder.py`: explicit result claim-level labels.
+- `code/src/stochastic_em_theory/shot_records.py`: per-shot driver and HHG diagnostic records.
 - `code/src/stochastic_em_theory/ensemble.py`: HHG ensemble runner and conditional binning.
 - `code/src/stochastic_em_theory/cli.py`: command-line entry points.
 - `code/scripts/run_paper_one_smoke.py`: small end-to-end run that creates validation data and figures.
@@ -61,7 +65,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [paper-one, squeezed-vacuum, validation, hhg]
-source_count: 17
+source_count: 52
 confidence: high
 related:
   - ../theory/stochastic-quantum-optics-correspondence
@@ -80,8 +84,10 @@ Produce reproducible simulations for the correspondence-first HHG paper:
 1. validate squeezed-vacuum stochastic sampling against exact input-field quantum optics diagnostics,
 2. show why Wigner-to-normal ordering corrections are required for photon-counting `g^(2)(0)`,
 3. add a mode-filtered validation that makes mode definition explicit,
-4. drive HHG intensity-level observables with the validated stochastic ensemble,
-5. label every output with the claim-ladder level it supports.
+4. record the BSV source-model family used to generate each ensemble,
+5. drive HHG intensity-level observables with the validated stochastic ensemble,
+6. retain per-shot HHG metadata for ionization, cutoff, bunching, and symmetry diagnostics,
+7. label every output with the claim-ladder level it supports.
 
 ## Units
 
@@ -126,22 +132,36 @@ Use independent equal squeezed modes as a controlled mode-filtered validation. F
 g_total^(2)(0) = 1 + 2/M + 1/(M n)
 ```
 
+Record the source-model family for each run:
+
+```text
+single_mode
+equal_mode
+schmidt_mode
+two_color_twin_beam
+propagated_nongaussian_frontier
+```
+
 Outputs:
 
 - CSV with `M`, per-mode `r`, analytic total `g2`, estimated total `g2`, and standard error.
 - Figure showing the transition from single-mode superbunching toward the multimode limit.
 - Manifest with claim level `exact_input_correspondence`.
+- Source-model summary with effective mode count and source references.
 
 ## Stage C: HHG Intensity Pipeline
 
-Use the validated ensemble to drive intensity-level HHG observables. The first implementation uses a fast cutoff-weighted HHG proxy to test ensemble averaging, conditional spectra, result manifests, and figure generation. The 1D soft-core split-operator utilities are implemented and tested as the next fidelity upgrade.
+Use the validated ensemble to drive intensity-level HHG observables. The first implementation uses a fast cutoff-weighted HHG proxy to test ensemble averaging, conditional spectra, per-shot records, result manifests, and figure generation. The 1D soft-core split-operator utilities are implemented and tested as the first physics-fidelity upgrade.
 
 Supported paper-one observables:
 
 - ensemble mean HHG spectrum,
 - conditional spectra binned by sampled drive intensity,
+- ionization/tunneling proxy distributions,
 - cutoff distribution,
 - shot-to-shot variance,
+- per-shot driver quadratures, intensity, phase, ionization proxy, cutoff proxy,
+  harmonic amplitudes, and harmonic phases,
 - convergence versus ensemble size.
 
 Unsupported paper-one claims:
@@ -159,6 +179,7 @@ Each run writes:
 run_id: YYYYMMDD-short-name
 created: YYYY-MM-DD
 claim_level: exact_input_correspondence | hhg_intensity_prediction
+source_model:
 code_entrypoint:
 git_commit:
 parameter_file:
@@ -190,7 +211,8 @@ Append this entry to `wiki/log.md`:
 - Added [[simulations/paper-one-correspondence-hhg-simulation-spec]] as the
   implementation-facing simulation spec for the correspondence-first HHG paper.
 - Scoped paper-one simulations to exact input-field validation, mode-filtered
-  `g^(2)`, HHG intensity-level observables, and explicit claim-ladder labels.
+  `g^(2)`, source-model-aware BSV ensembles, HHG intensity-level observables,
+  per-shot metadata records, and explicit claim-ladder labels.
 - Kept non-Gaussian output certification, THz models, and macroscopic HHG
   propagation outside the first simulation implementation.
 ```
@@ -1208,6 +1230,227 @@ Expected: commit succeeds.
 
 ---
 
+### Task 5A: Add The BSV Source-Model Catalog
+
+**Files:**
+- Create: `code/src/stochastic_em_theory/source_models.py`
+- Create: `code/tests/test_source_models.py`
+
+- [ ] **Step 1: Write failing tests for source-model metadata**
+
+Create `code/tests/test_source_models.py`:
+
+```python
+import numpy as np
+
+from stochastic_em_theory.source_models import (
+    SourceModelKind,
+    effective_mode_count,
+    equal_mode_source,
+    schmidt_mode_source,
+    single_mode_source,
+    two_color_twin_beam_source,
+)
+
+
+def test_single_mode_source_has_unit_effective_mode_count() -> None:
+    source = single_mode_source(r=0.8)
+
+    assert source.kind == SourceModelKind.SINGLE_MODE
+    assert np.isclose(effective_mode_count(source), 1.0)
+    assert source.mode_weights[0].label == "mode_0"
+
+
+def test_equal_mode_source_has_expected_effective_mode_count() -> None:
+    source = equal_mode_source(r=0.7, modes=4)
+
+    assert source.kind == SourceModelKind.EQUAL_MODE
+    assert np.isclose(effective_mode_count(source), 4.0)
+    assert len(source.mode_weights) == 4
+
+
+def test_schmidt_mode_source_normalizes_brightness_weights() -> None:
+    source = schmidt_mode_source(gain=1.2, eigenvalues=[0.7, 0.2, 0.1])
+
+    assert source.kind == SourceModelKind.SCHMIDT_MODE
+    assert np.isclose(sum(mode.weight for mode in source.mode_weights), 1.0)
+    assert effective_mode_count(source) < 3.0
+
+
+def test_two_color_source_records_signal_and_idler_modes() -> None:
+    source = two_color_twin_beam_source(r=0.9, signal_label="signal", idler_label="idler")
+
+    assert source.kind == SourceModelKind.TWO_COLOR_TWIN_BEAM
+    assert [mode.label for mode in source.mode_weights] == ["signal", "idler"]
+    assert np.isclose(sum(mode.weight for mode in source.mode_weights), 1.0)
+```
+
+- [ ] **Step 2: Run source-model tests and verify they fail**
+
+Run:
+
+```bash
+cd code
+python -m pytest tests/test_source_models.py -q
+```
+
+Expected: FAIL with `ModuleNotFoundError` for `stochastic_em_theory.source_models`.
+
+- [ ] **Step 3: Implement the source-model catalog**
+
+Create `code/src/stochastic_em_theory/source_models.py`:
+
+```python
+from __future__ import annotations
+
+from dataclasses import dataclass
+from enum import Enum
+
+import numpy as np
+
+
+class SourceModelKind(str, Enum):
+    SINGLE_MODE = "single_mode"
+    EQUAL_MODE = "equal_mode"
+    SCHMIDT_MODE = "schmidt_mode"
+    TWO_COLOR_TWIN_BEAM = "two_color_twin_beam"
+    PROPAGATED_NONGAUSSIAN_FRONTIER = "propagated_nongaussian_frontier"
+
+
+@dataclass(frozen=True)
+class SourceModeWeight:
+    label: str
+    nbar: float
+    weight: float
+
+
+@dataclass(frozen=True)
+class SourceModelSpec:
+    kind: SourceModelKind
+    label: str
+    mode_weights: tuple[SourceModeWeight, ...]
+    source_refs: tuple[str, ...]
+    notes: str
+
+
+def _nbar_from_r(r: float) -> float:
+    if r < 0:
+        raise ValueError("r must be non-negative")
+    return float(np.sinh(r) ** 2)
+
+
+def _normalize_brightness(labels: list[str], nbars: list[float]) -> tuple[SourceModeWeight, ...]:
+    if not labels:
+        raise ValueError("at least one mode is required")
+    if len(labels) != len(nbars):
+        raise ValueError("labels and nbars must have the same length")
+    if any(nbar < 0 for nbar in nbars):
+        raise ValueError("mode brightness values must be non-negative")
+    total = float(sum(nbars))
+    if total <= 0:
+        weights = [1.0 / len(nbars)] * len(nbars)
+    else:
+        weights = [nbar / total for nbar in nbars]
+    return tuple(
+        SourceModeWeight(label=label, nbar=float(nbar), weight=float(weight))
+        for label, nbar, weight in zip(labels, nbars, weights, strict=True)
+    )
+
+
+def single_mode_source(*, r: float, label: str = "single_mode") -> SourceModelSpec:
+    nbar = _nbar_from_r(r)
+    return SourceModelSpec(
+        kind=SourceModelKind.SINGLE_MODE,
+        label=label,
+        mode_weights=_normalize_brightness(["mode_0"], [nbar]),
+        source_refs=("Raymer/Landes 2022", "Perez 2014"),
+        notes="Ideal single detected mode used for exact input-correspondence validation.",
+    )
+
+
+def equal_mode_source(*, r: float, modes: int, label: str = "equal_mode") -> SourceModelSpec:
+    if modes <= 0:
+        raise ValueError("modes must be positive")
+    nbar = _nbar_from_r(r)
+    labels = [f"mode_{index}" for index in range(modes)]
+    return SourceModelSpec(
+        kind=SourceModelKind.EQUAL_MODE,
+        label=label,
+        mode_weights=_normalize_brightness(labels, [nbar] * modes),
+        source_refs=("Sharapova 2015", "Sharapova 2020"),
+        notes="Controlled equal-mode model used to test detection-mode dependence.",
+    )
+
+
+def schmidt_mode_source(*, gain: float, eigenvalues: list[float], label: str = "schmidt_mode") -> SourceModelSpec:
+    if gain < 0:
+        raise ValueError("gain must be non-negative")
+    eigenvalue_array = np.asarray(eigenvalues, dtype=np.float64)
+    if eigenvalue_array.ndim != 1 or eigenvalue_array.size == 0:
+        raise ValueError("eigenvalues must be a non-empty one-dimensional list")
+    if np.any(eigenvalue_array < 0):
+        raise ValueError("eigenvalues must be non-negative")
+    if float(np.sum(eigenvalue_array)) <= 0:
+        raise ValueError("at least one eigenvalue must be positive")
+
+    normalized = eigenvalue_array / np.sum(eigenvalue_array)
+    nbars = [float(np.sinh(gain * np.sqrt(value)) ** 2) for value in normalized]
+    labels = [f"schmidt_{index}" for index in range(len(nbars))]
+    return SourceModelSpec(
+        kind=SourceModelKind.SCHMIDT_MODE,
+        label=label,
+        mode_weights=_normalize_brightness(labels, nbars),
+        source_refs=("Sharapova 2015", "Sharapova 2020"),
+        notes="Gain-dependent Schmidt-mode brightness model for realistic BSV source studies.",
+    )
+
+
+def two_color_twin_beam_source(
+    *,
+    r: float,
+    signal_label: str = "signal",
+    idler_label: str = "idler",
+    label: str = "two_color_twin_beam",
+) -> SourceModelSpec:
+    nbar = _nbar_from_r(r)
+    return SourceModelSpec(
+        kind=SourceModelKind.TWO_COLOR_TWIN_BEAM,
+        label=label,
+        mode_weights=_normalize_brightness([signal_label, idler_label], [nbar, nbar]),
+        source_refs=("Agafonov 2009", "Iskhakov 2012"),
+        notes="Two-color or twin-beam BSV model for paired-mode source bookkeeping.",
+    )
+
+
+def effective_mode_count(source: SourceModelSpec) -> float:
+    weights = np.asarray([mode.weight for mode in source.mode_weights], dtype=np.float64)
+    return float(1.0 / np.sum(weights**2))
+```
+
+- [ ] **Step 4: Run source-model tests**
+
+Run:
+
+```bash
+cd code
+python -m pytest tests/test_source_models.py -q
+```
+
+Expected: `4 passed`.
+
+- [ ] **Step 5: Commit**
+
+Run:
+
+```bash
+git add code/src/stochastic_em_theory/source_models.py code/tests/test_source_models.py
+git commit -m "feat: add bsv source model catalog"
+```
+
+Expected: commit succeeds.
+
+---
+
 ### Task 6: Add Plotting For Validation Figures
 
 **Files:**
@@ -1572,6 +1815,162 @@ Run:
 ```bash
 git add code/src/stochastic_em_theory/hhg_proxy.py code/tests/test_hhg_proxy.py
 git commit -m "feat: add hhg intensity proxy"
+```
+
+Expected: commit succeeds.
+
+---
+
+### Task 7A: Add Ionization Proxies And Per-Shot Records
+
+**Files:**
+- Create: `code/src/stochastic_em_theory/ionization.py`
+- Create: `code/src/stochastic_em_theory/shot_records.py`
+- Create: `code/tests/test_ionization_and_records.py`
+
+- [ ] **Step 1: Write failing tests for ionization proxies and shot records**
+
+Create `code/tests/test_ionization_and_records.py`:
+
+```python
+import numpy as np
+
+from stochastic_em_theory.ionization import adk_like_rate_au, keldysh_parameter
+from stochastic_em_theory.shot_records import HHGShotRecord, shot_records_to_rows
+
+
+def test_keldysh_parameter_decreases_with_field_strength() -> None:
+    weak = keldysh_parameter(field_amplitude_au=0.03, omega_au=0.057, ionization_potential_au=0.7924)
+    strong = keldysh_parameter(field_amplitude_au=0.06, omega_au=0.057, ionization_potential_au=0.7924)
+
+    assert strong < weak
+
+
+def test_adk_like_rate_increases_with_field_strength() -> None:
+    weak = adk_like_rate_au(field_amplitude_au=0.03, ionization_potential_au=0.7924)
+    strong = adk_like_rate_au(field_amplitude_au=0.06, ionization_potential_au=0.7924)
+
+    assert strong > weak
+    assert weak > 0.0
+
+
+def test_shot_records_convert_to_csv_rows() -> None:
+    records = [
+        HHGShotRecord(
+            shot_index=0,
+            source_model_kind="single_mode",
+            source_model_label="paper_one",
+            driver_x=0.1,
+            driver_p=-0.2,
+            driver_intensity=0.05,
+            driver_phase=-1.1,
+            field_amplitude_au=0.04,
+            ionization_rate_proxy=1.0e-4,
+            cutoff_order=21.0,
+            harmonic_phase_proxy=0.3,
+        )
+    ]
+
+    rows = shot_records_to_rows(records)
+
+    assert rows[0]["source_model_kind"] == "single_mode"
+    assert np.isclose(float(rows[0]["cutoff_order"]), 21.0)
+```
+
+- [ ] **Step 2: Run tests and verify they fail**
+
+Run:
+
+```bash
+cd code
+python -m pytest tests/test_ionization_and_records.py -q
+```
+
+Expected: FAIL with `ModuleNotFoundError` for `stochastic_em_theory.ionization`.
+
+- [ ] **Step 3: Implement ionization proxy functions**
+
+Create `code/src/stochastic_em_theory/ionization.py`:
+
+```python
+from __future__ import annotations
+
+import numpy as np
+
+
+def keldysh_parameter(*, field_amplitude_au: float, omega_au: float, ionization_potential_au: float) -> float:
+    if field_amplitude_au <= 0:
+        raise ValueError("field_amplitude_au must be positive")
+    if omega_au <= 0:
+        raise ValueError("omega_au must be positive")
+    if ionization_potential_au <= 0:
+        raise ValueError("ionization_potential_au must be positive")
+    return float(omega_au * np.sqrt(2.0 * ionization_potential_au) / field_amplitude_au)
+
+
+def adk_like_rate_au(*, field_amplitude_au: float, ionization_potential_au: float) -> float:
+    """Monotone ADK-like tunneling-rate proxy for per-shot diagnostics.
+
+    This proxy is used to rank and bin shots. It is not a quantitative ADK
+    implementation and must not be cited as an ionization model.
+    """
+
+    if field_amplitude_au <= 0:
+        raise ValueError("field_amplitude_au must be positive")
+    if ionization_potential_au <= 0:
+        raise ValueError("ionization_potential_au must be positive")
+    exponent = -2.0 * (2.0 * ionization_potential_au) ** 1.5 / (3.0 * field_amplitude_au)
+    prefactor = field_amplitude_au**2
+    return float(prefactor * np.exp(exponent))
+```
+
+- [ ] **Step 4: Implement per-shot record serialization**
+
+Create `code/src/stochastic_em_theory/shot_records.py`:
+
+```python
+from __future__ import annotations
+
+from dataclasses import asdict, dataclass
+
+
+@dataclass(frozen=True)
+class HHGShotRecord:
+    shot_index: int
+    source_model_kind: str
+    source_model_label: str
+    driver_x: float
+    driver_p: float
+    driver_intensity: float
+    driver_phase: float
+    field_amplitude_au: float
+    ionization_rate_proxy: float
+    cutoff_order: float
+    harmonic_phase_proxy: float
+
+
+def shot_records_to_rows(records: list[HHGShotRecord]) -> list[dict[str, int | float | str]]:
+    return [asdict(record) for record in records]
+```
+
+- [ ] **Step 5: Run ionization and record tests**
+
+Run:
+
+```bash
+cd code
+python -m pytest tests/test_ionization_and_records.py -q
+```
+
+Expected: `3 passed`.
+
+- [ ] **Step 6: Commit**
+
+Run:
+
+```bash
+git add code/src/stochastic_em_theory/ionization.py code/src/stochastic_em_theory/shot_records.py code/tests/test_ionization_and_records.py
+git commit -m "feat: add ionization proxies and shot records"
 ```
 
 Expected: commit succeeds.
@@ -2064,6 +2463,302 @@ Expected: commit succeeds.
 
 ---
 
+### Task 9A: Upgrade HHG Ensemble Outputs With Source Metadata And Shot Records
+
+**Files:**
+- Modify: `code/src/stochastic_em_theory/ensemble.py`
+- Modify: `code/tests/test_hhg_ensemble.py`
+
+- [ ] **Step 1: Extend the HHG ensemble test for shot records**
+
+Replace `code/tests/test_hhg_ensemble.py` with:
+
+```python
+import csv
+
+import yaml
+
+from stochastic_em_theory.claim_ladder import ClaimLevel
+from stochastic_em_theory.ensemble import run_proxy_hhg_ensemble
+from stochastic_em_theory.source_models import single_mode_source
+
+
+def test_proxy_hhg_ensemble_writes_labeled_outputs_and_shot_records(tmp_path) -> None:
+    source_model = single_mode_source(r=0.8, label="test_single_mode")
+    result = run_proxy_hhg_ensemble(
+        r=0.8,
+        phase=0.0,
+        shots=64,
+        seed=42,
+        base_field_amplitude_au=0.035,
+        omega_au=0.057,
+        ionization_potential_au=0.7924,
+        max_order=21,
+        output_dir=tmp_path,
+        source_model=source_model,
+    )
+
+    shot_records_path = tmp_path / "shot_records.csv"
+    assert result.csv_path.exists()
+    assert result.summary_path.exists()
+    assert result.manifest_path.exists()
+    assert shot_records_path.exists()
+
+    with result.csv_path.open(newline="") as handle:
+        rows = list(csv.DictReader(handle))
+
+    assert len(rows) == 11
+    assert all(float(row["mean_intensity"]) >= 0.0 for row in rows)
+    assert all(row["claim_level"] == ClaimLevel.HHG_INTENSITY_PREDICTION.value for row in rows)
+
+    with shot_records_path.open(newline="") as handle:
+        shot_rows = list(csv.DictReader(handle))
+
+    assert len(shot_rows) == 64
+    assert shot_rows[0]["source_model_kind"] == "single_mode"
+    assert shot_rows[0]["source_model_label"] == "test_single_mode"
+    assert float(shot_rows[0]["ionization_rate_proxy"]) >= 0.0
+
+    manifest = yaml.safe_load(result.manifest_path.read_text())
+    assert manifest["claim_level"] == ClaimLevel.HHG_INTENSITY_PREDICTION.value
+    assert manifest["random_seeds"] == [42]
+    assert manifest["source_model"]["kind"] == "single_mode"
+    assert manifest["source_model"]["label"] == "test_single_mode"
+```
+
+- [ ] **Step 2: Run the upgraded ensemble test and verify it fails**
+
+Run:
+
+```bash
+cd code
+python -m pytest tests/test_hhg_ensemble.py -q
+```
+
+Expected: FAIL because `run_proxy_hhg_ensemble` does not accept `source_model`.
+
+- [ ] **Step 3: Replace the ensemble implementation with source-aware shot records**
+
+Replace `code/src/stochastic_em_theory/ensemble.py` with:
+
+```python
+from __future__ import annotations
+
+from datetime import date
+from pathlib import Path
+
+import numpy as np
+
+from stochastic_em_theory.claim_ladder import ClaimLevel
+from stochastic_em_theory.fields import sample_single_mode_husimi_q
+from stochastic_em_theory.hhg_proxy import proxy_hhg_spectrum
+from stochastic_em_theory.ionization import adk_like_rate_au
+from stochastic_em_theory.io import RunArtifacts, current_git_commit, ensure_output_dir, write_csv, write_json, write_manifest
+from stochastic_em_theory.shot_records import HHGShotRecord, shot_records_to_rows
+from stochastic_em_theory.source_models import SourceModelSpec, single_mode_source
+
+
+def _conditional_means(values: np.ndarray, spectra: np.ndarray) -> dict[str, np.ndarray]:
+    quantiles = np.quantile(values, [0.0, 1.0 / 3.0, 2.0 / 3.0, 1.0])
+    bins: dict[str, np.ndarray] = {}
+    labels = ["low", "middle", "high"]
+    for index, label in enumerate(labels):
+        left = quantiles[index]
+        right = quantiles[index + 1]
+        if index == len(labels) - 1:
+            mask = (values >= left) & (values <= right)
+        else:
+            mask = (values >= left) & (values < right)
+        if not np.any(mask):
+            bins[label] = np.zeros(spectra.shape[1], dtype=np.float64)
+        else:
+            bins[label] = np.mean(spectra[mask], axis=0)
+    return bins
+
+
+def _source_model_manifest(source_model: SourceModelSpec) -> dict[str, object]:
+    return {
+        "kind": source_model.kind.value,
+        "label": source_model.label,
+        "mode_weights": [
+            {"label": mode.label, "nbar": mode.nbar, "weight": mode.weight}
+            for mode in source_model.mode_weights
+        ],
+        "source_refs": list(source_model.source_refs),
+        "notes": source_model.notes,
+    }
+
+
+def run_proxy_hhg_ensemble(
+    *,
+    r: float,
+    phase: float,
+    shots: int,
+    seed: int,
+    base_field_amplitude_au: float,
+    omega_au: float,
+    ionization_potential_au: float,
+    max_order: int,
+    output_dir: Path,
+    source_model: SourceModelSpec | None = None,
+) -> RunArtifacts:
+    if shots <= 0:
+        raise ValueError("shots must be positive")
+    if base_field_amplitude_au <= 0:
+        raise ValueError("base_field_amplitude_au must be positive")
+
+    output_dir = ensure_output_dir(output_dir)
+    source_model = source_model if source_model is not None else single_mode_source(r=r, label="default_single_mode")
+    rng = np.random.default_rng(seed)
+    alpha = sample_single_mode_husimi_q(r=r, phase=phase, shots=shots, rng=rng)
+    sampled_intensity = np.abs(alpha) ** 2
+    normalized_amplitude = np.sqrt(sampled_intensity / max(float(np.mean(sampled_intensity)), 1e-12))
+    field_amplitudes = base_field_amplitude_au * normalized_amplitude
+
+    spectra = []
+    cutoff_orders = []
+    shot_records: list[HHGShotRecord] = []
+    orders = None
+    for shot_index, (field_amplitude, alpha_value, intensity_value) in enumerate(zip(field_amplitudes, alpha, sampled_intensity, strict=True)):
+        spectrum = proxy_hhg_spectrum(
+            field_amplitude_au=float(field_amplitude),
+            omega_au=omega_au,
+            ionization_potential_au=ionization_potential_au,
+            max_order=max_order,
+        )
+        orders = spectrum.orders
+        spectra.append(spectrum.intensity)
+        cutoff_orders.append(spectrum.cutoff_order)
+        shot_records.append(
+            HHGShotRecord(
+                shot_index=shot_index,
+                source_model_kind=source_model.kind.value,
+                source_model_label=source_model.label,
+                driver_x=float(np.sqrt(2.0) * np.real(alpha_value)),
+                driver_p=float(np.sqrt(2.0) * np.imag(alpha_value)),
+                driver_intensity=float(intensity_value),
+                driver_phase=float(np.angle(alpha_value)),
+                field_amplitude_au=float(field_amplitude),
+                ionization_rate_proxy=adk_like_rate_au(
+                    field_amplitude_au=max(float(field_amplitude), 1.0e-12),
+                    ionization_potential_au=ionization_potential_au,
+                ),
+                cutoff_order=float(spectrum.cutoff_order),
+                harmonic_phase_proxy=float(np.angle(alpha_value)),
+            )
+        )
+
+    if orders is None:
+        raise ValueError("no spectra were generated")
+
+    spectra_array = np.vstack(spectra)
+    conditional = _conditional_means(sampled_intensity, spectra_array)
+    mean_spectrum = np.mean(spectra_array, axis=0)
+    std_spectrum = np.std(spectra_array, axis=0, ddof=1) if shots > 1 else np.zeros_like(mean_spectrum)
+
+    rows = []
+    for index, order in enumerate(orders):
+        rows.append(
+            {
+                "harmonic_order": float(order),
+                "mean_intensity": float(mean_spectrum[index]),
+                "std_intensity": float(std_spectrum[index]),
+                "conditional_low": float(conditional["low"][index]),
+                "conditional_middle": float(conditional["middle"][index]),
+                "conditional_high": float(conditional["high"][index]),
+                "claim_level": ClaimLevel.HHG_INTENSITY_PREDICTION.value,
+            }
+        )
+
+    csv_path = output_dir / "proxy_hhg_spectrum.csv"
+    shot_records_path = output_dir / "shot_records.csv"
+    summary_path = output_dir / "proxy_hhg_summary.json"
+    manifest_path = output_dir / "manifest.yaml"
+    write_csv(
+        csv_path,
+        rows,
+        [
+            "harmonic_order",
+            "mean_intensity",
+            "std_intensity",
+            "conditional_low",
+            "conditional_middle",
+            "conditional_high",
+            "claim_level",
+        ],
+    )
+    write_csv(
+        shot_records_path,
+        shot_records_to_rows(shot_records),
+        [
+            "shot_index",
+            "source_model_kind",
+            "source_model_label",
+            "driver_x",
+            "driver_p",
+            "driver_intensity",
+            "driver_phase",
+            "field_amplitude_au",
+            "ionization_rate_proxy",
+            "cutoff_order",
+            "harmonic_phase_proxy",
+        ],
+    )
+    write_json(
+        summary_path,
+        {
+            "rows": len(rows),
+            "shots": len(shot_records),
+            "claim_level": ClaimLevel.HHG_INTENSITY_PREDICTION.value,
+            "source_model": _source_model_manifest(source_model),
+            "mean_cutoff_order": float(np.mean(cutoff_orders)),
+            "std_cutoff_order": float(np.std(cutoff_orders, ddof=1)) if shots > 1 else 0.0,
+            "mean_ionization_rate_proxy": float(np.mean([record.ionization_rate_proxy for record in shot_records])),
+        },
+    )
+    write_manifest(
+        manifest_path,
+        {
+            "run_id": output_dir.name,
+            "created": date.today().isoformat(),
+            "claim_level": ClaimLevel.HHG_INTENSITY_PREDICTION.value,
+            "source_model": _source_model_manifest(source_model),
+            "code_entrypoint": "stochastic_em_theory.ensemble.run_proxy_hhg_ensemble",
+            "git_commit": current_git_commit(Path(__file__).resolve().parents[3]),
+            "parameter_file": None,
+            "random_seeds": [seed],
+            "observable": "proxy_hhg_intensity_spectrum_with_shot_records",
+            "units": "atomic units for fields and energies; dimensionless harmonic order",
+            "notes": "Fast cutoff-weighted HHG proxy used for ensemble-pipeline development, not TDSE publication result.",
+        },
+    )
+    return RunArtifacts(output_dir=output_dir, csv_path=csv_path, summary_path=summary_path, manifest_path=manifest_path)
+```
+
+- [ ] **Step 4: Run upgraded ensemble tests**
+
+Run:
+
+```bash
+cd code
+python -m pytest tests/test_hhg_ensemble.py -q
+```
+
+Expected: `1 passed`.
+
+- [ ] **Step 5: Commit**
+
+Run:
+
+```bash
+git add code/src/stochastic_em_theory/ensemble.py code/tests/test_hhg_ensemble.py
+git commit -m "feat: add source aware hhg shot records"
+```
+
+Expected: commit succeeds.
+
+---
+
 ### Task 10: Add End-To-End Paper-One Smoke Pipeline
 
 **Files:**
@@ -2095,6 +2790,7 @@ def test_paper_one_smoke_script_creates_expected_outputs(tmp_path) -> None:
     assert (tmp_path / "runs" / "paper-one-smoke-single" / "single_mode_g2.csv").exists()
     assert (tmp_path / "runs" / "paper-one-smoke-multimode" / "multimode_g2.csv").exists()
     assert (tmp_path / "runs" / "paper-one-smoke-hhg" / "proxy_hhg_spectrum.csv").exists()
+    assert (tmp_path / "runs" / "paper-one-smoke-hhg" / "shot_records.csv").exists()
     assert (tmp_path / "figures" / "single_mode_g2.png").exists()
     assert (tmp_path / "figures" / "multimode_g2.png").exists()
     assert (tmp_path / "figures" / "proxy_hhg_spectrum.png").exists()
@@ -2232,6 +2928,7 @@ Expected: command prints four paths and creates:
 results/tmp/paper-one-smoke/runs/paper-one-smoke-single/single_mode_g2.csv
 results/tmp/paper-one-smoke/runs/paper-one-smoke-multimode/multimode_g2.csv
 results/tmp/paper-one-smoke/runs/paper-one-smoke-hhg/proxy_hhg_spectrum.csv
+results/tmp/paper-one-smoke/runs/paper-one-smoke-hhg/shot_records.csv
 results/tmp/paper-one-smoke/figures/single_mode_g2.png
 results/tmp/paper-one-smoke/figures/multimode_g2.png
 results/tmp/paper-one-smoke/figures/proxy_hhg_spectrum.png
@@ -2280,7 +2977,7 @@ Expected:
 
 ```text
 pytest exits with status 0
-single-mode, multimode, proxy-HHG, and figure outputs exist under results/tmp/paper-one-final-smoke
+single-mode, multimode, proxy-HHG, shot-record, and figure outputs exist under results/tmp/paper-one-final-smoke
 ```
 
 - [ ] **Step 2: Append the simulation implementation log entry**
@@ -2295,7 +2992,10 @@ Append this entry to `wiki/log.md`:
 - Added single-mode squeezed-vacuum Wigner validation with normally ordered
   `g^(2)` correction and naive-estimator comparison.
 - Added mode-filtered equal-mode squeezed-vacuum validation.
-- Added HHG intensity-level ensemble pipeline with explicit claim-ladder labels.
+- Added BSV source-model metadata and HHG intensity-level ensemble pipeline
+  with explicit claim-ladder labels.
+- Added per-shot driver, ionization-proxy, cutoff-proxy, and harmonic-phase
+  records for later bunching, cutoff-fluctuation, and symmetry diagnostics.
 - Verified the package with `python -m pytest -q` and the paper-one smoke run
   writing temporary outputs under `results/tmp/paper-one-final-smoke`.
 ```
@@ -2325,6 +3025,6 @@ Expected: commit succeeds.
 
 ## Self-Review Notes
 
-- Spec coverage: Task 1 covers the required simulation spec. Tasks 3-5 cover exact squeezed-input correspondence, ordering correction, and mode-filtered validation. Tasks 6 and 10 cover paper-one validation figures. Tasks 7-9 cover the HHG intensity-level demonstration and claim labels. Task 8 creates the tested bridge toward the source-backed 1D soft-core gas baseline.
+- Spec coverage: Task 1 covers the required simulation spec. Tasks 3-5 cover exact squeezed-input correspondence, ordering correction, and mode-filtered validation. Task 5A adds the BSV source-model ladder required by the 52-source ingest. Tasks 6 and 10 cover paper-one validation figures. Tasks 7-9 cover the HHG intensity-level demonstration and claim labels. Task 7A and Task 9A add ionization proxies, source metadata, and per-shot records for cutoff, bunching, and symmetry diagnostics. Task 8 creates the tested bridge toward the source-backed 1D soft-core gas baseline.
 - Scope control: THz, non-Gaussian output certification, macroscopic propagation, and emitted harmonic quantum-state reconstruction remain outside this implementation plan.
-- Type consistency: all later tasks use the same names introduced earlier: `RunArtifacts`, `sample_single_mode_wigner`, `sample_single_mode_husimi_q`, `sample_multimode_wigner`, `estimate_single_mode_moments`, `estimate_total_photon_moments`, `run_single_mode_validation`, `run_multimode_validation`, and `run_proxy_hhg_ensemble`.
+- Type consistency: all later tasks use the same names introduced earlier: `RunArtifacts`, `SourceModelSpec`, `sample_single_mode_wigner`, `sample_single_mode_husimi_q`, `sample_multimode_wigner`, `estimate_single_mode_moments`, `estimate_total_photon_moments`, `run_single_mode_validation`, `run_multimode_validation`, `HHGShotRecord`, and `run_proxy_hhg_ensemble`.
