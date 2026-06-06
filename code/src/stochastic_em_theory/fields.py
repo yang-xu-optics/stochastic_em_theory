@@ -74,3 +74,34 @@ def sample_single_mode_husimi_q(
     p = generator.normal(loc=0.0, scale=p_std, size=shots)
     rotation = np.exp(0.5j * phase)
     return (rotation * (x + 1j * p) / np.sqrt(2.0)).astype(np.complex128)
+
+
+def sample_multimode_wigner(
+    *,
+    r: float | FloatArray,
+    modes: int,
+    shots: int,
+    phase: float = 0.0,
+    rng: np.random.Generator | None = None,
+) -> ComplexArray:
+    """Sample independent squeezed Wigner modes with shape (shots, modes)."""
+
+    if modes <= 0:
+        raise ValueError("modes must be positive")
+    if shots <= 0:
+        raise ValueError("shots must be positive")
+
+    r_values = np.broadcast_to(np.asarray(r, dtype=np.float64), (modes,))
+    if np.any(r_values < 0):
+        raise ValueError("all squeezing parameters must be non-negative")
+
+    generator = _as_generator(rng)
+    samples = np.empty((shots, modes), dtype=np.complex128)
+    for mode_index, r_value in enumerate(r_values):
+        samples[:, mode_index] = sample_single_mode_wigner(
+            r=float(r_value),
+            phase=phase,
+            shots=shots,
+            rng=generator,
+        )
+    return samples

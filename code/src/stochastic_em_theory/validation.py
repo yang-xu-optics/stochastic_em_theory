@@ -5,11 +5,13 @@ from pathlib import Path
 
 import numpy as np
 
-from stochastic_em_theory.fields import sample_single_mode_wigner
+from stochastic_em_theory.fields import sample_multimode_wigner, sample_single_mode_wigner
 from stochastic_em_theory.io import RunArtifacts, current_git_commit, ensure_output_dir, write_csv, write_json, write_manifest
 from stochastic_em_theory.observables import (
+    analytic_equal_mode_g2,
     analytic_single_mode_g2,
     analytic_single_mode_n,
+    estimate_total_photon_moments,
     estimate_single_mode_moments,
 )
 
@@ -91,6 +93,76 @@ def run_single_mode_validation(
             "observable": "single_mode_squeezed_vacuum_g2",
             "units": "dimensionless oscillator units",
             "notes": "Wigner samples converted to normally ordered photon-counting observables.",
+        },
+    )
+    return RunArtifacts(output_dir=output_dir, csv_path=csv_path, summary_path=summary_path, manifest_path=manifest_path)
+
+
+def run_multimode_validation(
+    *,
+    r: float,
+    mode_counts: list[int],
+    shots: int,
+    seed: int,
+    output_dir: Path,
+) -> RunArtifacts:
+    if not mode_counts:
+        raise ValueError("mode_counts must contain at least one mode count")
+    if shots <= 0:
+        raise ValueError("shots must be positive")
+
+    output_dir = ensure_output_dir(output_dir)
+    rng = np.random.default_rng(seed)
+    rows: list[dict[str, float | int]] = []
+
+    for modes in mode_counts:
+        alpha = sample_multimode_wigner(r=r, modes=modes, shots=shots, rng=rng)
+        estimate = estimate_total_photon_moments(alpha)
+        rows.append(
+            {
+                "r": float(r),
+                "modes": int(modes),
+                "shots": int(shots),
+                "analytic_g2": analytic_equal_mode_g2(r=r, modes=modes),
+                "g2_corrected": estimate.g2_corrected,
+                "n_total_corrected": estimate.n_total_corrected,
+            }
+        )
+
+    csv_path = output_dir / "multimode_g2.csv"
+    summary_path = output_dir / "multimode_summary.json"
+    manifest_path = output_dir / "manifest.yaml"
+
+    write_csv(
+        csv_path,
+        rows,
+        ["r", "modes", "shots", "analytic_g2", "g2_corrected", "n_total_corrected"],
+    )
+    write_json(
+        summary_path,
+        {
+            "rows": len(rows),
+            "claim_level": "exact_input_correspondence",
+            "mechanism": "bsv_pump_ensemble",
+            "source_model": "equal_mode",
+            "max_abs_g2_error": max(abs(float(row["g2_corrected"]) - float(row["analytic_g2"])) for row in rows),
+        },
+    )
+    write_manifest(
+        manifest_path,
+        {
+            "run_id": output_dir.name,
+            "created": date.today().isoformat(),
+            "claim_level": "exact_input_correspondence",
+            "mechanism": "bsv_pump_ensemble",
+            "source_model": "equal_mode",
+            "code_entrypoint": "stochastic_em_theory.validation.run_multimode_validation",
+            "git_commit": current_git_commit(Path(__file__).resolve().parents[3]),
+            "parameter_file": None,
+            "random_seeds": [seed],
+            "observable": "mode_filtered_squeezed_vacuum_g2",
+            "units": "dimensionless oscillator units",
+            "notes": "Independent equal squeezed modes with normally ordered total photon-counting estimator.",
         },
     )
     return RunArtifacts(output_dir=output_dir, csv_path=csv_path, summary_path=summary_path, manifest_path=manifest_path)
