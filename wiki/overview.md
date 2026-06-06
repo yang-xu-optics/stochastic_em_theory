@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [overview, thesis]
-source_count: 52
+source_count: 54
 confidence: high
 related:
   - research-agenda
@@ -76,6 +76,10 @@ attosecond synthesis, symmetry breaking, cutoff fluctuations, tunneling, and
 ionization under quantum-light driving are now source-backed targets. The same
 search strengthened the non-Gaussian branch through pump-depleted PDC,
 Kerr-propagated BSV, and MPS/Gaussian-interaction-frame simulation methods.
+The two later-added APS papers close the previous command-line access gap and
+add two useful distinctions: squeezed vacuum can modify a selected emitted
+harmonic mode as an environment, and BSV photon statistics can reshape ATI
+ionization yield, decoherence, and electron-number statistics.
 
 The optical rectification branch now has a strong classical propagation source,
 but still needs a dedicated squeezed-vacuum OR source or an explicit derivation

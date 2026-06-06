@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [hhg, gas, strong-field, squeezed-vacuum]
-source_count: 34
+source_count: 36
 confidence: high
 related:
   - ../overview
@@ -105,6 +105,16 @@ therefore store per-shot driver quadratures, instantaneous intensity, ionization
 yield, cutoff proxy, harmonic phases, and selected harmonic photon statistics
 before taking ensemble means.
 
+Two newly added APS papers sharpen the modeling split:
+
+- Wang 2024 changes the vacuum fluctuations of a selected harmonic emission
+  mode through a squeezed-vacuum environment. In its analytic formula, the
+  usual dipole term is multiplied by
+  `mu_k(t) = cosh(r_k) + sinh(r_k) exp[-i(2 omega_k t - theta_k)]`.
+- Lyu 2025 treats ATI under coherent, thermal, and BSV photon statistics with a
+  qSFA average `W(p) = integral dE_alpha P(E_alpha) |M_alpha(p)|^2`. This is a
+  direct ionization-stage validation model for stochastic-field sampling.
+
 ## Quantum Output-State Boundary
 
 Gorlach 2020 and Tzur et al. show that generated harmonic quantum states can
@@ -141,6 +151,10 @@ model that includes emitted-state reconstruction or an operational witness.
   fields.
 - Ionization/tunneling yield distributions as an upstream validation of the
   same stochastic driver.
+- ATI interference-pattern decoherence and electron-number bunching from BSV
+  photon statistics.
+- Squeezing-parameter and squeezing-angle modulation of a selected harmonic
+  emission mode through a squeezed-vacuum environment.
 - Correlation between drive intensity spikes and harmonic yield.
 - Comparison against coherent-state and thermal/noise baselines with matched
   mean energy.

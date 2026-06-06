@@ -1,0 +1,444 @@
+                                PHYSICAL REVIEW RESEARCH 6, 033010 (2024)
+
+
+
+                 High harmonic generation from an atom in a squeezed-vacuum environment
+
+                            ShiJun Wang,1,2 ShaoGang Yu ,1 XuanYang Lai ,1,3,* and XiaoJun Liu                1,†
+1
+    State Key Laboratory of Magnetic Resonance and Atomic and Molecular Physics, Wuhan Institute of Physics and Mathematics, Innovation
+               Academy for Precision Measurement Science and Technology, Chinese Academy of Sciences, Wuhan 430071, China
+                       2
+                         School of Physical Sciences, University of Chinese Academy of Sciences, Beijing 100049, China
+                                        3
+                                          Wuhan Institute of Quantum Technology, Wuhan 430206, China
+
+                          (Received 12 June 2023; revised 25 March 2024; accepted 5 June 2024; published 1 July 2024)
+
+                   We investigate high harmonic generation (HHG) of an atom in the presence of squeezed vacuum of a single
+                harmonic mode. Based on a fully quantum time-dependent Schrödinger equation, we derive an analytical formula
+                for the harmonic amplitude. Our simulations of the HHG spectrum with this formula show that the harmonic
+                amplitude of the corresponding squeezed mode can undergo significant changes with different parameters of the
+                squeezed vacuum. Using the time-frequency analysis method, the physics underlying the effects of the vacuum
+                quantum fluctuation (VQF) on the harmonic generation is revealed, which is found to be consistent with the
+                explanation of Fermi’s golden rule. Our work establishes a profound connection between harmonic generation
+                and VQF, and may provide an unconventional approach to manipulating harmonic emission.
+
+                DOI: 10.1103/PhysRevResearch.6.033010
+
+
+
+                       I. INTRODUCTION                                  originates from the electron transition during the electron re-
+                                                                        combination with the atomic core [25,26]. However, whether
+    High harmonic generation (HHG) is an intriguing nonlin-
+                                                                        the harmonic emission is influenced by VQF of the corre-
+ear optical phenomenon that occurs during intense laser-atom
+                                                                        sponding harmonic mode remains unknown.
+interactions [1,2]. Over the past three decades, HHG has
+                                                                            In QED theory, the vacuum state of the harmonic mode
+attracted considerable attention for its wide range of appli-
+                                                                        is usually described with a coherent state characterized by a
+cations, including table-top coherent XUV generation [3,4],
+                                                                        constant fluctuation [27]. To study the effect of VQF of the
+molecular orbital imaging [5,6], and attosecond science [7,8].
+                                                                        harmonic mode on HHG, it is necessary to use a vacuum
+Usually, the study of HHG has focused primarily on the laser-
+                                                                        state with controllable fluctuations in the time domain, i.e., a
+induced dipole moment of the atom from the perspective of
+                                                                        squeezed vacuum state [28,29]. Currently, various experimen-
+classical electrodynamics [9–11]. Recently, there has been a
+                                                                        tal techniques have been developed to generate these squeezed
+growing interest in a quantized description of HHG and the
+                                                                        vacuum states, including the optical parametric amplifica-
+driving lights based on the theory of quantum electrodynamics
+                                                                        tion process involving the interaction of a frequency-doubled
+(QED) [12–21], which opens the way for generation of high-
+                                                                        continuous pump light with a second-order nonlinear crystal
+intensity quantum light states.
+                                                                        [30,31], as well as the four-wave mixing process employing
+    It is worth noting that in QED theory, photon emission
+                                                                        the third-order nonlinear effect of an atomic ensemble [32,33].
+from electronic transitions in an atom is also affected by
+                                                                        A recent experiment with the optical parametric amplification
+vacuum quantum fluctuation (VQF) of the corresponding
+                                                                        method has successfully achieved a squeezed vacuum state
+emission mode [22]. This aspect of QED has been instru-
+                                                                        with a squeezing parameter of r = 1.74 [34]. In addition,
+mental in explaining a variety of fundamental phenomena,
+                                                                        the generated squeezed vacuum state with these techniques
+such as spontaneous emission [22]. Furthermore, based on
+                                                                        is usually in the near-infrared (NIR) or mid-infrared (mid-IR)
+this effect, VQF has been shown to effectively control quan-
+                                                                        region. Recently, a quantum frequency up-conversion method
+tum processes [23]. For example, by manipulating VQF with
+                                                                        has been developed and experimentally demonstrated to gen-
+photonic crystals, the spontaneous emission rate of an atom
+                                                                        erate the squeezed vacuum in the visible region [35,36]. These
+inside the photonic crystals can be controlled [24]. Similarly,
+                                                                        advances in squeezed vacuum generation provide opportuni-
+for the HHG process, the emission of harmonic photons also
+                                                                        ties to study the influence of VQF of the harmonic mode on
+                                                                        the corresponding harmonic emission.
+                                                                            In this work, we study HHG from intense laser-atom inter-
+ *
+     Contact author: xylai@wipm.ac.cn                                   action in a squeezed vacuum of the harmonic mode. Taking
+ †
+     Contact author: xjliu@wipm.ac.cn                                   into account the practical experimental conditions, we con-
+                                                                        sider only a single-mode squeezed vacuum. Based on a fully
+Published by the American Physical Society under the terms of the       quantum time-dependent Schrödinger equation (TDSE), an
+Creative Commons Attribution 4.0 International license. Further         analytical formula of the harmonic amplitude in the pres-
+distribution of this work must maintain attribution to the author(s)    ence of the single-mode squeezed vacuum is derived. Our
+and the published article’s title, journal citation, and DOI.           simulations of the HHG spectra with this formula show that
+
+2643-1564/2024/6(3)/033010(6)                                    033010-1                       Published by the American Physical Society
+WANG, YU, LAI, AND LIU                                                                 PHYSICAL REVIEW RESEARCH 6, 033010 (2024)
+
+                                                                        the squeezing of the vacuum with the squeezing parameter
+                                                                        rk and the squeezing angle θk [27,29]. For the single-mode
+                                                                        squeezed vacuum state, if ξks = ξ for a given mode ks (includ-
+                                                                        ing k0 ), then ξk = 0 (i.e., rk = 0) for all other modes k = ks .
+                                                                            Next, we derive the harmonic amplitude from Eq. (1).
+                                                                        First, the Hamiltonian in Eq. (1) is transformed into the
+                                                                        Heisenberg picture with respect to the electromagnetic
+                                                                        field Hamiltonian Ĥ f with e−iĤ f t . This transformation leads
+    FIG. 1. Schematic view of HHG from intense laser-atom inter-        to the time dependence of the quantized electromagnetic
+action in a squeezed vacuum of a harmonic mode. The motion of           field. Second, we perform a unitary transformation to
+an electron in a strong driving laser field (red curve) is depicted     transform the harmonic modes from the squeezed vacuum
+by the green curve [25,26], and the emission of harmonics resulting     state into the coherent vacuum states: |0k , ξk  = Ŝ(ξk )|0k ,
+                                                                                               ∗ 2
+                                                                        where Ŝ(ξk ) = e(ξk âk −ξk âk )/2 is the squeezed operator of
+                                                                                                         †2
+from the electron’s transition back to the atomic core is represented
+by the blue curve. Due to the influence of the quantum fluctuation      the light fields     [27,29]. Consequently, the electric field
+of the squeezed vacuum (gray shadow) on the electron transition                      
+                                                                                                              k Ŝ(ξk ) = Êq (t ), where Êq (t )
+                                                                                                 †
+                                                                        becomes        k Ŝ(ξ k ) Ê(t )
+probability, the harmonic amplitude of the corresponding squeezed
+                                                                        represents the quantum        fluctuating       part of the vacuum field:
+mode emitted at time tr is weak but becomes strong at tr .                           √ ωk
+                                                                        Êq (t ) = −i k 2V [(cosh rk + sinh rk e−i(2ωk t−θk ) )âk† eiωk t −
+                                                                        (cosh rk + sinh rk ei(2ωk t−θk ) )âk e−iωk t ]. Third, we also perform
+the harmonic amplitude of the corresponding squeezed mode               a unitary transformation to transform the driving field into
+is changed with the quantum fluctuation of the squeezed                 the coherent vacuum state: |αk0 , ξk0  = D̂(αk0 )Ŝ(ξk0 )|0k0 ,
+                                                                                                            ∗
+                                                                        where D̂(αk0 ) = eαk0 âk0 −αk0 âk0 represents Glauber’s shift
+                                                                                                    †
+vacuum. Using the time-frequency analysis method, we re-
+veal that the effect of VQF is due to the influence of the              operator [27]. Accordingly, the driving light becomes the
+squeezed vacuum on the probability of the electron transi-              superposition of the quantum fluctuation part Êqk0 (t ) =
+tion. Thus, the corresponding harmonic amplitude is affected                √ω
+accordingly (as shown in Fig. 1). Our result is in good agree-          −i 2Vk0 [(cosh rk0 + sinh rk0 e−i(2ωk0 t−θk0 ) )âk† 0 eiωk0 t −
+ment with the explanation of Fermi’s golden rule [22]. The              (cosh rk0 + sinh rk0 ei(2ω
+                                                                                                 √ ωk
+                                                                                                     k0 t−θk0 )
+                                                                                                                )âk0 e−iωk0 t ] and the classical
+close relationship between HHG and VQF, as revealed in                  field part Ec (t ) = i 2V (αk0 e−iωk0 t − αk∗0 eiωk0 t ). Therefore,
+                                                                                                       0
+
+our work, may provide an approach to control the harmonic               Eq. (1) can be rewritten as
+generation.
+                                                                                          ∂
+   This article is organized as follows. In Sec. II, we briefly                       i      |ψ (t ) = [Ĥc − r · ÊQ (t )]|ψ (t ),         (2)
+introduce the theoretical method for HHG from intense laser-                              ∂t
+atom interaction in a squeezed vacuum of a single harmonic              where Ĥc = Ĥ0 − r · Ec (t ), corresponding to the Hamiltonian
+mode. In Sec. III, we present the simulated HHG spectra under           of an atom in the classical part Ec (t ) of the driving laser field,
+different squeezed vacuum states. Subsequently, we reveal               and ÊQ denotes quantum fluctuations of all the frequency
+the underlying physics for the influence of the squeezed vac-           modes.
+uum on HHG. Finally, our conclusions are given in Sec. IV.                  After that, we use the interaction picture with respect to
+Throughout this article, atomic units (a.u.) are used unless            Ĥc to solve the TDSE in Eq. (2). For the squeezed vacuum
+explicitly stated otherwise.                                            with small squeezing parameter, the quantum fluctuation part
+                                                                        is typically weak, and thus we can approximately solve the
+                   II. THEORETICAL METHOD                               TDSE by expanding the time-ordered exponential to the first
+                                                                        order [13]. Accordingly, the TDSE solution can be expressed
+   We start from the fully quantum TDSE based on the QED                as
+theory for a strong laser-atom interaction [27]                                   .
+                                                                         |ψ (t ) = |φi (t )|0+
+                                                                                           
+            i
+                ∂
+                   |(t ) = [Ĥ0 − r · Ê + Ĥ f ]|(t ),      (1)                ωk  t                                 
+                                                                                                                        iωk τ
+                ∂t                                                                                     μk (τ )d ji (τ )e dτ φ j (t ) |1k ,
+                                                                                    j k
+                                                                                              2V −∞
+where Ĥ0 = p2 /2 + U (r) is the Hamiltonian of the atomic                                                                                    (3)
+system with the kinetic       term p2 /2 and the Coulomb po-
+tential U (r). Ĥ f = k ωk âk† âk describes the Hamiltonian of        where |φ j (t ) is the time-dependent electron wavefunction,
+the electromagnetic field, which contains all the frequency             evolving from an eigenstate φ j of the atom under the Hamil-
+modes ωk with the creation operator âk† and the annihilation           tonian of Ĥc , d ji (τ ) = φ j (τ )|z|φi (τ ) is the dipole matrix
+operator âk , and −r · Ê is the interaction term in the dipole        elements for the linearly polarized laser field, and |1k  =
+approximation     with the quantized electromagnetic field Ê =         âk† |0 denotes the generation of one harmonic photon from
+  √ ωk                                                                 the vacuum state with a mode of k. The time-dependent term
+i k 2V      (âk − âk† ) and the normalization volume V . The
+initial state of the atom and the electromagnetic      fields is ex-    μk (t ) comes from the quantum fluctuation part with âk† :
+                                               
+pressed as |(−∞) = |φi  ⊗ |αk0 , ξk0  ⊗ k |0k , ξk . Here,                       μk (t ) ≡ cosh rk + sinh rk e−i(2ωk t−θk ) ,            (4)
+|φi  represents the ground state of the atom, |αk0 , ξk0  denotes
+the driving light, and k |0k , ξk  represents the vacuum state         which is closely related to the magnitude of VQF of a mode
+of the harmonic modes. The parameter ξk (= rk eiθk ) describes          k. It is worth noting that, when j = i in Eq. (3), dii (τ ) is the
+
+                                                                  033010-2
+HIGH HARMONIC GENERATION FROM AN ATOM IN A …                                          PHYSICAL REVIEW RESEARCH 6, 033010 (2024)
+
+conventional laser-induced dipole matrix element and the
+Fourier transform of the dipole moment dii (τ ) corresponds
+to the harmonic amplitude in the traditional HHG theory,
+whereas d ji (τ ) with j = i is the correction term. It has been
+shown [13] that the contribution of the conventional element
+dii (τ ) is typically dominant for HHG in the current exper-
+imental measurement. Therefore, for simplicity, we mainly
+focus on the contribution of the term dii (τ ) in our work.
+    Furthermore, we calculate the total energy of the emitting
+harmonics using Eq. (3) to obtain the expression for the emis-
+sion per unit frequency [13]. The corresponding harmonic
+spectrum of the emitting field is given by
+                               ∞                          2
+                     ωk4
+         P(ωk ) =                   μk (τ )dii (τ )eiωk τ dτ .   (5)
+                    6π 2 c3   −∞                                            FIG. 2. (a), (b) TDSE simulations of the HHG spectra of an atom
+                                                                       in a squeezed vacuum of the first-order harmonic mode with the
+In this work, we simulate the HHG spectra according to                 squeezing angle θk = 0.9π and the ninth-order harmonic mode with
+Eq. (5). For simplicity, a one-dimensional
+                                        √ model atom with              θk = 0.27π , respectively, as a function of the squeezing parameter
+the soft Coulomb potential U (x) = −1/ x 2 + sc is used in             rk . Considering a realistic scenario, the wavelengths of the driving
+our simulation. When the soft-core parameter sc = 1.41, the            light are 800 nm and 3600 nm, respectively. For more details, see
+ionization potential of the atom is approximately 15.8 eV,             the text. In (b), to better illustrate the change of the amplitude of the
+which matches the ground state of the Ar (argon) atom.                 ninth-order harmonic, only a part of the harmonic orders are shown.
+                                                                       (c) and (d) The amplitude of the first- and ninth-order harmonics in
+                                                                       the corresponding single-mode squeezed vacuum state with different
+              III. RESULTS AND DISCUSSION                              rk as a function of θk . In our simulation, the driving light has a peak
+                                                                       intensity of I = 1.15 × 1014 W/cm2 with a trapezoidal profile (up-
+    According to Eq. (5), we simulate the HHG spectra of an            and down-ramped over two cycles, constant over six cycles).
+atom in the presence of a squeezed vacuum of, e.g., the first-
+order harmonic mode and the ninth-order harmonic mode,
+respectively. Note that the current squeezed vacuum can only               First, we analyze the derived formula for the harmonic am-
+be generated in the mid-IR, NIR, and visible regions [35,36].          plitude in Eq. (5). Different from the conventional strong-field
+Considering the realistic scenario, when studying the effect of        theory of HHG [38,39], there is an additional term μk (t ) in the
+the first-order squeezed mode, we can use the driving light            integral, which is related to the magnitude of VQF of the mode
+with a wavelength of, e.g., 800 nm, whereas when study-                k. Thus, the corresponding harmonic amplitude is influenced
+ing the effect of the ninth-order squeezed mode, the driving           not only by the dipole moment but also by VQF. Moreover,
+light with a longer wavelength of, e.g., 3600 nm is used. In           since the term μk (t ) is the function of rk and θk according to
+Figs. 2(a) and 2(b), we show the simulated HHG spectra in the          Eq. (4), the harmonic amplitude varies with different squeezed
+first-order harmonic mode with θk = 0.9π and the ninth-order           vacuum states, as shown in Fig. 2. In contrast, for other modes
+harmonic mode with θk = 0.27π , respectively, as a function            with rk = 0, the term μk (t ) = 1, and thus Eq. (5) can be
+of squeezing parameter rk . In practice, adjusting the squeezing       simplified to the formula used in conventional HHG theory.
+parameter and squeezing angle of the single-mode squeezed                  To get a deep insight into the underlying physics for the
+vacuum can be realized by changing the pump power and                  effect of VQF on HHG, we perform the time-frequency anal-
+tuning the relative phase between seed wave and pump wave              ysis of the resulting HHG using wavelet transform [40]. The
+[34,37]. Our simulation shows that with the increase of the            corresponding expression for the transform is given by
+                                                                                          
+value of rk , the amplitude of the first-order harmonic in                                                 √
+Fig. 2(a) and the ninth-order harmonic in Fig. 2(b) is changed                A(ωk , t ) = μk (t  )dii t  ωkW [ωk (t  − t )]dt  , (6)
+significantly, whereas the amplitudes of other harmonics re-
+                                                                       where W (x) = √1τ eix e−x /2τ represents the mother wavelet
+                                                                                                    2   2
+main the same. Furthermore, in Figs. 2(c) and 2(d), we show
+the amplitude of the first- and ninth-order harmonics in the           [41]. This wavelet time-frequency profile of HHG provides
+corresponding single-mode squeezed vacuum with different               insight into the emission of harmonics resulting from the
+rk as a function of θk . It is found that the harmonic amplitude       transition of the returned electron in the time domain [40].
+also changes with the squeezing angle and the maximum                  In Figs. 3(a) and 3(b), we present the wavelet time-frequency
+amplitude of the harmonic increases with the increase of               profile of the first-order harmonic under the squeezed vac-
+rk , exceeding an order of magnitude at rk = 1.5. Therefore,           uum of the mode k0 with the squeezing parameter rk0 = 0
+our result shows that the harmonic amplitude is affected by            (solid black curve) and rk0 = 0.5 (dashed red curve) for the
+the corresponding squeezed vacuum. Note that the squeezing             squeezing angles θk0 = 0.9π and θk0 = 1.9π , respectively.
+parameter of the squeezed vacuum state we used is small,               The different curves oscillate with a period of T /2 [42], where
+which is different from that used in previous works [17,18]. In        T represents an optical cycle of the driving laser field. A closer
+the following, we will understand the impact of the squeezed           inspection reveals that for θk0 = 0.9π in Fig. 3(a), the curve
+vacuum on the harmonic emission.                                       with rk0 = 0.5 shows a noticeable time shift compared to that
+
+                                                                 033010-3
+WANG, YU, LAI, AND LIU                                                              PHYSICAL REVIEW RESEARCH 6, 033010 (2024)
+
+                                                                      the explanation provided by Fermi’s golden rule [22] that the
+                                                                      probability of electron transition P f i ∝ | f |Ĥ |i|2 ρ, where
+                                                                        f |Ĥ |i represents the matrix element between the various
+                                                                      energy eigenstates of a quantum system, and ρ is the density
+                                                                      of photonic states and quantifies the magnitude of VQF for
+                                                                      photon emission [43].
+                                                                           Similarly, we also present the wavelet time-frequency pro-
+                                                                      file of the ninth-order harmonic under the squeezed vacuum
+                                                                      of the corresponding harmonic mode with θk = 0.27π and
+                                                                      θk = 1.27π in Figs. 3(c) and 3(d), respectively. Different
+                                                                      from the first-order harmonic, the wavelet time-frequency
+                                                                      profile at rk = 0.5 is always larger than that at rk = 0 for
+                                                                      different squeezing angles. This result can also be under-
+    FIG. 3. The wavelet time-frequency profile of the harmonic of
+the corresponding squeezed mode with rk = 0 (solid black curve)
+                                                                      stood after making a transformation of Eq. (6). For the
+and rk = 0.5 (dashed red curve). The gray dashed curves with re-      ninth-order harmonic, the curve related to VQF oscillates
+spect to the right axis denote the |μk (t )| of the squeezed mode.    much faster than that of the dipole moment emission [see
+(a) and (b) present the squeezed vacuum of the first-order harmonic   the gray dashed curves in Figs. 3(c) and 3(d)]. By em-
+mode with θk = 0.9π and 1.9π , respectively. (c) and (d) present      ploying the average value method within the high-frequency
+the squeezed vacuum of the ninth-order harmonic mode with θk =        approximation, Eq. (6) can be approximated as A(ωk , t ) ∼
+                                                                                       √
+0.27π and 1.27π , respectively.                                          μ̄k dii (t  ) ωkW [ωk (t  − t )]dt  , where μ̄k is the average
+                                                                      value of the high-frequency oscillatory term μk (t ) over one
+                                                                      oscillation period. In this case, the amplitude of the harmonic
+of rk0 = 0. Conversely, for θk0 = 1.9π in Fig. 3(b), the two          emission can be approximately written as
+curves are nearly in phase, and furthermore, the maximum
+                                                                                                                              2
+amplitude increases significantly with rk0 , which is consistent                                      √
+with the TDSE simulation in Fig. 2(c).                                    |A(ωk , t )|2 ∼     dii t  ωkW [ωk (t  − t )]dt  × |μ̄k |2 .
+    The dependence of the wavelet time-frequency profiles on                                                                         (8)
+the single-mode squeezed vacuum can be understood qualita-            Different from first-order harmonic in Eq. (7), the term |μ̄k |2
+tively after making a transformation of Eq. (6). The mother           is time independent, and it can be easily seen from Eq. (4)
+wavelet W (x) in Eq. (6) has a narrow distribution around time        that the value of |μ̄k |2 exceeds unity for rk > 0. There-
+t, and the term μk0 (t ) changes relatively slowly with respect       fore, the amplitude of the ninth harmonic increases in the
+to time for the mode k0 [see the gray curve in Fig. 3(a)].            squeezed vacuum, which is consistent with the observation
+Thus, Eq. (6) can be written approximately as A(ωk0 , t ) ∼           from Figs. 3(c) and 3(d). Our explanation based on Eq. (8) is
+             √
+   dii (t  ) ωk0 W [ωk0 (t  − t )]dt  × μk0 (t ). Therefore,       also in agreement with the explanation of Fermi’s golden rule.
+                                                                         It is worth noting that in Fig. 2(d), the ninth-order harmonic
+                       2                 √                    2
+            A(ωk0 , t ) ∼      dii (t  ) ωk0 W ωk0 (t  − t ) dt    amplitude in the HHG spectrum shows a significant change
+                                                                      with the squeezing angle θk , which is different from the result
+                               2                                      shown in Figs. 3(c) and 3(d). This is ascribed to Fig. 2(d)
+                    × μk0 (t ) ,                               (7)
+                                                                      being calculated from Eq. (5), whereas Figs. 3(c) and 3(d)
+where the term in the first bracket represents the dipole mo-         are calculated from Eq. (6). In Eq. (6), there is an additional
+                                                                      term e−x /τ with a narrow temporal distribution, which makes
+                                                                                 2 2
+mentum emission of the mode k0 at time t and the term
+|μk0 (t )|2 denotes the magnitude of VQF of mode k0 . Fig. 3(a)       the integration only over small region of the time. In contrast,
+shows that at θk0 = 0.9π , there is a noticeable time shift           the integration in Eq. (5) is over all times, which physically
+between the curve of the dipole moment emission (solid black          indicates that the harmonics from different times interfere
+curve) and the curve of |μk0 (t )| (gray dashed curve). Thus,         with each other constructively or destructively. Furthermore,
+the multiplication of the two terms leads to the time shift           the value of μk (t ) in Eq. (5) is complex and is a function of
+of the curve of |A(ω, t )|2 at different rk0 . In contrast, when      the squeezing angle according to Eq. (4), leading to the final
+θk0 = 1.9π in Fig. 3(b), the curves of the two terms are in           harmonic amplitude changing with the squeezing angle. By
+phase. The multiplication of the two terms preserves the phase        using this particular relationship between the harmonic ampli-
+of the wavelet time-frequency profile and also significantly          tude and the squeezing angle, one can improve the conversion
+increases its maximum amplitude.                                      efficiency of HHG, and additionally, it is possible to fit the
+   Notably, physically, the dipole momentum emission in               time-dependent dipole moment according to Eq. (5), which is
+Eq. (7) corresponds to the transition matrix element of the           closely related to the electron wavefunction and thus encodes
+electron between two atomic states with an energy difference          rich information about electron dynamics.
+of ωk0 , and the obtained harmonic amplitude denotes the                  Finally, we propose an experimental scheme to show
+probability of the electron transition. Therefore, our results        the influence of the quantum fluctuation of a single-mode
+indicate that the electron transition probability during the          squeezed vacuum on harmonic emission. Currently, the
+electron recombination with the atomic core is influenced by          squeezed vacuum can be generated in the mid-IR, IR, and
+both the transition matrix element of the electron and VQF            visible regions [35,36]. Thus, in principle, we can con-
+of the corresponding harmonic mode. This is consistent with           trol the squeezed vacuum environment around the atom in
+
+                                                                033010-4
+HIGH HARMONIC GENERATION FROM AN ATOM IN A …                                           PHYSICAL REVIEW RESEARCH 6, 033010 (2024)
+
+experiments to affect the corresponding harmonic amplitude               fluctuation of the squeezed vacuum affects the probability of
+during the HHG process. For the first-order harmonic, the                the electron transition associated with the harmonic photon
+intensity of the driving laser field usually greatly exceeds that        emission in squeezed mode, during the rescattered electron
+of the emitted harmonic field, making it difficult to observe            recombination with the atomic core. Thus, the amplitude of
+the effect of VQF on the first-order harmonic amplitude. To              the harmonic photon is changed accordingly. This finding
+mitigate the influence of the intense driving laser field on the         is consistent with the explanation of Fermi’s golden rule.
+emitted harmonic photons and to facilitate a clearer observa-            Therefore, our work establishes a direct and fundamental
+tion of the vacuum squeezing effect on harmonic emission, we             connection between HHG and vacuum fluctuations, offering
+can use two crossing driving beams to generate noncollinear              an unconventional approach to control harmonic generation.
+HHG, as demonstrated previously [44,45]. In this case, the               Considering the universality of VQF effect on the electron
+driving light and the harmonic propagate in different direc-             transition, we expect that the effect of VQF can be applied to
+tions and thus do not overlap each other in space.                       other atomic emission processes, such as strong-field terahertz
+                                                                         radiation.
+             IV. CONCLUSIONS AND OUTLOOK
+                                                                                             ACKNOWLEDGMENTS
+   We have studied HHG from intense laser-atom interaction
+in a squeezed vacuum of a single harmonic mode. An analyt-                  This work was supported by the National Key Program
+ical formula of the harmonic amplitude in the presence of the            for S&T Research and Development (No. 2019YFA0307702),
+squeezed vacuum is derived by employing a fully quantum                  the National Natural Science Foundation of China (No.
+TDSE. The simulated HHG spectra with the formula show                    12121004, No. 12274420, and No. 11922413), and CAS
+that the harmonic amplitude of the corresponding squeezed                Project for Young Scientists in Basic Research (No. YSBR-
+mode is influenced by the squeezed vacuum. By using                      055).
+time-frequency analysis, we have elucidated that the quantum                S.J.W. and S.G.Y. contributed equally to this work.
+
+
+
+
+ [1] M. Ferray, A. L’Huillier, X. F. Li, L. A. Lompré, G. Mainfray,      [10] D. B. Milošević and F. Ehlotzky, Scattering and reaction pro-
+     and C. Manus, Multiple-harmonic conversion of 1064 nm radi-              cesses in powerful laser fields, Adv. At. Mol. Opt. Phys. 49,
+     ation in rare gases, J. Phys. B 21, L31 (1988).                          373 (2003).
+ [2] E. A. Gibson, A. Paul, N. Wagner, R. Tobey, S. Backus, I. P.        [11] C. Figueira de Morisson Faria, High-order harmonic generation
+     Christov, M. M. Murnane, and H. C. Kapteyn, High-order har-              in diatomic molecules: A quantum-orbit analysis of the interfer-
+     monic generation up to 250 eV from highly ionized argon, Phys.           ence patterns, Phys. Rev. A 76, 043407 (2007).
+     Rev. Lett. 92, 033001 (2004).                                       [12] N. Tsatrafyllis, I. K. Kominis, I. A. Gonoskov, and P. Tzallas,
+ [3] J.-F. Hergott, M. Kovacev, H. Merdji, C. Hubert, Y. Mairesse, E.         High-order harmonics measured by the photon statistics of
+     Jean, P. Breger, P. Agostini, B. Carré, and P. Salières, Extreme-        the infrared driving-field exiting the atomic medium, Nat.
+     ultraviolet high-order harmonic pulses in the microjoule range,          Commun. 8, 15170 (2017).
+     Phys. Rev. A 66, 021801(R) (2002).                                  [13] A. Gorlach, O. Neufeld, N. Rivera, O. Cohen, and I. Kaminer,
+ [4] E. Constant, D. Garzella, P. Breger, E. Mével, C. Dorrer, C.             The quantum-optical nature of high harmonic generation, Nat.
+     Le Blanc, F. Salin, and P. Agostini, Optimizing high harmonic            Commun. 11, 4598 (2020).
+     generation in absorbing gases: Model and experiment, Phys.          [14] M. Lewenstein, M. F. Ciappina, E. Pisanty, J. Rivera-Dean, P.
+     Rev. Lett. 82, 1668 (1999).                                              Stammer, T. Lamprou, and P. Tzallas, Generation of optical
+ [5] J. Itatani, J. Levesque, D. Zeidler, H. Niikura, H. Pepin,               Schrödinger cat states in intense laser-matter interactions, Nat.
+     J. C. Kieffer, P. B. Corkum, and D. M. Villeneuve, Tomo-                 Phys. 17, 1104 (2021).
+     graphic imaging of molecular orbitals, Nature (London) 432,         [15] P. Stammer, J. Rivera-Dean, T. Lamprou, E. Pisanty, M. F.
+     867 (2004).                                                              Ciappina, P. Tzallas, and M. Lewenstein, High photon num-
+ [6] O. Smirnova, Y. Mairesse, S. Patchkovskii, N. Dudovich, D.               ber entangled states and coherent state superposition from the
+     Villeneuve, P. Corkum, and M. Y. Ivanov, High harmonic in-               extreme ultraviolet to the far infrared, Phys. Rev. Lett. 128,
+     terferometry of multi-electron dynamics in molecules, Nature             123603 (2022).
+     (London) 460, 972 (2009).                                           [16] A. Pizzi, A. Gorlach, N. Rivera, A. Nunnenkamp, and I.
+ [7] P. M. Paule, E. S. Toma, P. Bregerg, G. Mullot, F. Augé, P.              Kaminer, Light emission from strongly driven many-body sys-
+     Balcou, H. G. Muller, and P. Agostini, Observation of a train            tems, Nat. Phys. 19, 551 (2023).
+     of attosecond pulses from high harmonic generation, Science         [17] M. E. Tzur, M. Birk, A. Gorlach, M. Krúger, I. Kaminer, and
+     292, 1689 (2001).                                                        O. Cohe, Photon-statistics force in ultrafast electron dynamics,
+ [8] F. Krausz and M. Ivanov, Attosecond physics, Rev. Mod. Phys.             Nat. Photon. 17, 501 (2023).
+     81, 163 (2009).                                                     [18] A. Gorlach, M. E. Tzur, M. Birk, M. Krüger, N. Rivera,
+ [9] P. Salières, B. Carré, L. Le Déroff, F. Grasbon, G. G. Paulus, H.        O. Cohen, and I. Kaminer, High-harmonic generation driven by
+     Walther, R. Kopold, W. Becker, D. B. Milošević, A. Sanpera,             quantum light, Nat. Phys. 19, 1689 (2023).
+     and M. Lewenstein, Feynman’s path-integral approach for             [19] P. Stammer, J. Rivera-Dean, A. Maxwell, T. Lamprou, A.
+     intense-laser-atom interactions, Science 292, 902 (2001).                Ordóñez, M. F. Ciappina, P. Tzallas, and M. Lewenstein,
+
+
+                                                                   033010-5
+WANG, YU, LAI, AND LIU                                                                  PHYSICAL REVIEW RESEARCH 6, 033010 (2024)
+
+     Quantum electrodynamics of intense laser-matter interactions:       [34] H. Vahlbruch, M. Mehmet, K. Danzmann, and R. Schnabel,
+     A tool for quantum state engineering, PRX Quantum 4, 010201              Detection of 15 dB squeezed states of light and their application
+     (2023).                                                                  for the absolute calibration of photoelectric quantum efficiency,
+[20] P. Stammer, J. Rivera-Dean, A. S. Maxwell, T. Lamprou, J.                Phys. Rev. Lett. 117, 110801 (2016).
+     Argello-Luengo, P. Tzallas, M. F. Ciappina, and M. Lewenstein,      [35] C. E. Vollmer, C. Baune, A. Samblowski, T. Eberle, V.
+     Entanglement and squeezing of the optical field modes in high            Handchen, J. Fiurasek, and R. Schnabel, Quantum up-
+     harmonic generation, Phys. Rev. Lett. 132, 143603 (2024).                conversion of squeezed vacuum states from 1550 to 532 nm,
+[21] A. Rasputnyi, Z. Chen, M. Birk, O. Cohen, I. Kaminer, M.                 Phys. Rev. Lett. 112, 073602 (2014).
+     Kruger, D. Seletskiy, M. Chekhova, and F. Tani, High harmonic       [36] H. Rütz, K.-H. Luo, H. Suche, and C. Silberhorn, Quantum
+     generation by bright squeezed vacuum, arXiv:2403.15337;                  frequency conversion between infrared and ultraviolet, Phys.
+     S. Lemieux, S. A. Jalil, D. Purschke, N. Boroumand, D.                   Rev. Appl. 7, 024021 (2017).
+     Villeneuve, A. Naumov, T. Brabec, and G. Vampa, Photon              [37] G. Breitenbach, S. Schiller, and J. Mlynek, Measurement of the
+     bunching in high-harmonic emission controlled by quantum                 quantum states of squeezed light, Nature (London) 387, 471
+     light, arXiv:2404.05474.                                                 (1997).
+[22] P. W. Milonni, The Quantum Vacuum: An Introduction to Quan-         [38] X. M. Tong and S.-I. Chu, Theoretical study of multiple
+     tum Electrodynamics (Academic Press, New York, 1993).                    high-order harmonic generation by intense ultrashort pulsed
+[23] F. Appugliese, J. Enkner, G. L. Paravicini-Bagliani, M. Beck,            laser fields: A new generalized pseudospectral time-dependent
+     C. Reichl, W. Wegscheider, G. Scalari, C. Ciuti, and J.                  method, Chem. Phys. 217, 119 (1997).
+     Faist, Breakdown of topological protection by cavity vacuum         [39] L. K. Jeffrey, J. S. Kenneth, and C. K. Kenneth, High-order
+     fields in the integer quantum Hall effect, Science 375, 1030             harmonic generation from atoms and ions in the high intensity
+     (2022).                                                                  regime, Phys. Rev. Lett. 68, 3535 (1992).
+[24] P. Lodahl, A. Floris van Driel, I. S. Nikolaev, A. Irman, K.        [40] X. Chu and S.-I. Chu, Optimization of high-order harmonic
+     Overgaag, D. Vanmaekelbergh, and W. L. Vos, Controlling the              generation by genetic algorithm and wavelet time-frequency
+     dynamics of spontaneous emission from quantum dots by pho-               analysis of quantum dipole emission, Phys. Rev. A 64,
+     tonic crystals, Nature (London) 430, 654 (2004).                         021403(R) (2001).
+[25] P. B. Corkum, Plasma perspective on strong field multiphoton        [41] We choose different values of τ for different harmonics to
+     ionization, Phys. Rev. Lett. 71, 1994 (1993).                            ensure that the mother wavelet function has a narrow tempo-
+[26] M. Lewenstein, P. Balcou, M. Yu. Ivanov, A. L’Huillier and               ral distribution compared to the optical period of the driving
+     P. B. Corkum, Theory of high-harmonic generation by low-                 light and the corresponding wavelet time-frequency profile is
+     frequency laser fields, Phys. Rev. A 49, 2117 (1994).                    smooth.
+[27] M. O. Scully and M. S. Zubairy, Quantum Optics (Cambridge           [42] J. Rivera-Dean, Th. Lamprou, E. Pisanty, P. Stammer, A. F.
+     University Press, New York, 1997).                                       Ordóñez, A. S. Maxwell, M. F. Ciappina, M. Lewenstein, and P.
+[28] D. F. Walls, Squeezed states of light, Nature (London) 306, 141          Tzallas, Strong laser fields and their power to generate control-
+     (1983).                                                                  lable high-photon-number coherent-state superpositions, Phys.
+[29] R. Schnabel, Squeezed states of light and their applications in          Rev. A 105, 033714 (2022).
+     laser interferometers, Phys. Rep. 684, 1 (2017).                    [43] P. Lodahl, S. Mahmoodian, and S. Stobbe, Interfacing single
+[30] L.-A. Wu, H. J. Kimble, J. L. Hall, and H. Wu, Generation                photons and single quantum dots with photonic nanostructures,
+     of squeezed states by parametric down conversion, Phys. Rev.             Rev. Mod. Phys. 87, 347 (2015).
+     Lett. 57, 2520 (1986).                                              [44] J. B. Bertrand, H. J. Wörner, H.-C. Bandulet, É. Bisson, M.
+[31] A. Furusawa, J. L. Sørensen, S. L. Braunstein, C. A. Fuchs, H. J.        Spanner, J.-C. Kieffer, D. M. Villeneuve, and P. B. Corkum,
+     Kimble, and E. S. Polzik, Unconditional quantum teleportation,           Ultrahigh-order wave mixing in noncollinear high harmonic
+     Science 282, 706 (1998).                                                 generation, Phys. Rev. Lett. 106, 023001 (2011).
+[32] R. E. Slusher, L. W. Hollberg, B. Yurke, J. C. Mertz, and J. F.     [45] D. D. Hickstein, F. J. Dollar, P. Grychtol, J. L. Ellis, R. Knut, C.
+     Valley, Observation of squeezed states generated by four-wave            Hernández-García, D. Zusin, C. Gentry, J. M. Shaw, T. Fan,
+     mixing in an optical cavity, Phys. Rev. Lett. 55, 2409 (1985).           K. M. Dorney, A. Becker, A. Jaron-Becker, H. C. Kapteyn,
+[33] S. Liu, Y. Lou, and J. Jing, Interference-induced quantum                M. M. Murnane, and C. G. Durfee, Non-collinear generation
+     squeezing enhancement in a two-beam phase-sensitive ampli-               of angularly isolated circularly polarized high harmonics, Nat.
+     fier, Phys. Rev. Lett. 123, 113602 (2019).                               Photon. 9, 743 (2015).
+
+
+
+
+                                                                   033010-6
+

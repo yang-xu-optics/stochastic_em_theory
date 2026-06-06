@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [theory, stochastic-fields, quantum-optics, ordering]
-source_count: 9
+source_count: 10
 confidence: high
 related:
   - squeezed-vacuum-g2-proof-plan
@@ -15,6 +15,7 @@ related:
   - ../sources/raymer-landes-2023-classical-model-broadband-squeezed-vacuum
   - ../sources/kulkarni-2022-a-classical-model-of-spontaneous-pdc
   - ../sources/sharapova-2020-properties-of-bsv-at-increasing-brightness
+  - ../sources/lyu-2025-photon-statistics-ati
 ---
 
 # Stochastic Quantum Optics Correspondence
@@ -90,6 +91,11 @@ P_SF(omega) = 1/2
   seeding for SPDC. It is useful support for the correspondence strategy, but
   the observable and subtraction/ordering conventions still have to be matched
   case by case.
+- Lyu 2025 gives a strong-field version of the same discipline. The qSFA
+  observable is a coherent-component average over `P(E_alpha)`, but the paper
+  explicitly derives when off-diagonal phase-space terms can be neglected.
+  Importing the formula into HHG requires restating that diagonal approximation
+  and checking its regime.
 - Gorlach/Tzur-style HHG papers often use Positive P or Husimi Q coherent-state
   decompositions. Those are phase-space representations of a quantum state,
   not a blanket statement that all output observables are classical.

@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [index]
-source_count: 52
+source_count: 54
 confidence: high
 related: []
 ---
@@ -112,6 +112,8 @@ before answering project questions or changing wiki pages.
   photon bunching in high-harmonic emission controlled by quantum light.
 - [[sources/rivera-dean-2024-squeezed-states-of-light-after-hhg-in-excited]]:
   squeezed harmonic output from excited atomic systems.
+- [[sources/wang-2024-hhg-atom-squeezed-vacuum-environment]]: HHG from an atom
+  in a squeezed-vacuum environment for a selected harmonic emission mode.
 - [[sources/wang-2024-attosecond-pulse-synthesis-from-hhg-in-intense-squeezed]]:
   attosecond pulse synthesis with intense squeezed-light-driven HHG.
 - [[sources/tzur-generation-squeezed-high-order-harmonics]]: generated harmonic
@@ -122,6 +124,8 @@ before answering project questions or changing wiki pages.
   electron emission and post-selected versus shot-averaged spectra.
 - [[sources/mao-2025-benchmarking-atomic-ionization-driven-by-strong-quantum-light]]:
   benchmarking atomic ionization theories under strong quantum light.
+- [[sources/lyu-2025-photon-statistics-ati]]: photon-statistics effects of BSV
+  and thermal light on above-threshold ionization and electron statistics.
 - [[sources/gothelf-2025-hhg-in-a-crystal-driven-by-quantum-light]]: crystal
   HHG under quantum-light driving.
 - [[sources/lange-2025-excitonic-enhancement-of-squeezed-light-in-quantum-optical]]:

@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [log]
-source_count: 52
+source_count: 54
 confidence: high
 related: [overview]
 ---
@@ -91,3 +91,18 @@ Append-only chronological record. New entries should use:
 - Updated the wiki index, overview, stochastic/quantum correspondence page,
   `g^(2)` proof plan, HHG model, THz OR model, non-Gaussian novelty map,
   simulation roadmap, research agenda, and manuscript outline.
+
+## [2026-06-06] ingest | Missing APS Quantum-Light Strong-Field Papers
+
+- Ingested the two user-added APS PDFs that were previously identified but not
+  downloadable from command-line APS links:
+  `raw/sources/PhysRevResearch.6.033010.pdf` and
+  `raw/sources/PhysRevResearch.7.L012072.pdf`.
+- Created [[sources/wang-2024-hhg-atom-squeezed-vacuum-environment]] for HHG
+  from an atom in a squeezed-vacuum environment, emphasizing that this is a
+  squeezed emitted-mode environment rather than a BSV pump ensemble.
+- Created [[sources/lyu-2025-photon-statistics-ati]] for BSV/thermal/coherent
+  photon-statistics effects in above-threshold ionization.
+- Updated the index, HHG gas model, stochastic/quantum correspondence page,
+  non-Gaussian novelty cautions, simulation roadmap, research agenda, overview,
+  and manuscript outline.

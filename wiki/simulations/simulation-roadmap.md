@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [simulation, roadmap, validation]
-source_count: 52
+source_count: 54
 confidence: high
 related:
   - ../theory/squeezed-vacuum-g2-proof-plan
@@ -116,7 +116,14 @@ Implementation targets:
    cutoff proxy, harmonic phases, and selected harmonic amplitudes so photon
    bunching, displaced/squeezed output, phase locking, and symmetry-breaking
    diagnostics can be added without rerunning the ensemble.
-6. Keep generated harmonic quantum-state claims out of this stage unless a
+6. Add a pre-HHG ATI validation test inspired by Lyu 2025: sample coherent,
+   thermal, and BSV field amplitudes, compute ionization observables for each
+   coherent component, and verify yield enhancement, ATI-pattern decoherence,
+   and electron-number statistics before modeling recombination.
+7. Add a separate squeezed-emission-mode toy model inspired by Wang 2024:
+   multiply the targeted harmonic channel by the `mu_k(t)` vacuum-fluctuation
+   factor and compare it with BSV pump sampling.
+8. Keep generated harmonic quantum-state claims out of this stage unless a
    Positive P/Husimi output-state reconstruction is added.
 
 ## Stage 4: THz Optical Rectification

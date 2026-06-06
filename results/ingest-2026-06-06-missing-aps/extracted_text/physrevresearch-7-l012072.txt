@@ -1,0 +1,504 @@
+                                   PHYSICAL REVIEW RESEARCH 7, L012072 (2025)
+           Letter
+
+
+
+
+                    Effect of photon quantum statistics on electrons in above-threshold ionization
+
+                      Zijian Lyu ,1 Fengxiao Sun ,1 Yiqi Fang ,1 Qiongyi He ,1,2,3,4 and Yunquan Liu                 1,2,3,4,*
+                     1
+                       State Key Laboratory for Mesoscopic Physics and Collaborative Innovation Center of Quantum Matter,
+                                              School of Physics, Peking University, Beijing 100871, China
+                                     2
+                                       Beijing Academy of Quantum Information Sciences, Beijing 100193, China
+                      3
+                        Collaborative Innovation Center of Extreme Optics, Shanxi University, Taiyuan, Shanxi 030006, China
+                           4
+                             Peking University Yangtze Delta Institute of Optoelectronics, Nantong, Jiangsu 226010, China
+
+                         (Received 2 April 2024; revised 1 September 2024; accepted 18 February 2025; published 18 March 2025)
+
+                   Strong field physics and quantum optics, two prosperous fields in modern science, have recently been
+                connected with each other. Here, we study the quantum effect of bright squeezed vacuum light and thermal
+                light on above-threshold ionization. With quantum strong-field approximation theory, we reveal a decoherence
+                phenomenon caused by the statistics of photons, in which above-threshold ionization could be degenerated into
+                a classical-like picture under the effect of quantum light. This represents a direct transition from the wavelike
+                nature to the particlelike behavior of photoelectrons. We also reveal the ionization enhancement effect of the
+                bunched light in photoionization from the perspective of autocorrelation function g(n) . The number distributions
+                of electrons ionized by different quantum light fields are studied, and it is shown that the photon number
+                distribution can be mapped onto the photoelectron number distribution. This finding enables the production
+                of bunched electrons with strong-field ionization with quantum light.
+
+                DOI: 10.1103/PhysRevResearch.7.L012072
+
+    Introduction. Attosecond science and strong field laser                    Squeezed states of light represent a typical form of
+physics open the door for studying nonequilibrium dynam-                   quantum optical fields. They are states satisfying minimal
+ics of atomic system in electron intrinsic timescale. There,               uncertainty, characterized by decreased fluctuations in one
+above-threshold ionization (ATI) [1,2], and high-harmonic                  quadrature and increased flucuations in the other compared to
+generation (HHG) [3,4] stand out as two pivotal processes.                 coherent or vacuum states. In quantum optics, the generalized
+The discovery of these phenomena has ushered people into                   Glauber P representation forms a correspondence between
+the realm of attosecond measurements [5] assisted by semi-                 the quantum and the classical coherence theory [20]. Based
+classical theories such as strong field approximation (SFA)                on this premise, quantum strong-field approximation (qSFA)
+which treats atoms quantum-mechanically but treats electro-                theory has been developed to describe HHG [12,13] and ATI
+magnetic fields classically [6]. In recent years, the quantum              [10] driven by quantum light. Recently, a one-dimensional
+light sources with high intensity are becoming experimentally              solution of time-dependent Schrödinger equation was used
+obtainable, making it possible to measure quantum optical                  to investigate strong-field ionization by quantum light [11].
+effects in strong field physics [7–9]. Recent studies with fully           However, to distinguish the quantum light from classical opti-
+quantized approach have revealed the existence of numerous                 cal fields, the role of autocorrelation in strong-field ionization
+novel phenomena in intense light-matter interaction, such as               has yet to be explored. Depending on whether the second-
+the modification of ionization rates [10,11] and harmonic                  order autocorrelation function g(2) > 1 or g(2) < 1, a light field
+yields [12,13], the generation of photon entangled coherent                is referred to as “bunched light” or “antibunched light.” In
+                                                                           the perturbative regime, such as low-order harmonics [21] and
+states [14,15], and squeezed optical states [16]. Quantum ef-
+                                                                           multiphoton ionziation [7], the property of bunching can en-
+fects of the light field influence the motion of electrons in
+                                                                           hance the nth order multiphoton process and the enhancement
+attosecond time scale [13,17]. These effects are all overlooked
+                                                                           factor is equal to g(n) . For the bright squeezed vacuum (BSV)
+in semiclassical theories. The quantized study of intense-light-
+                                                                           and thermal states, the enhancement factors are (2n − 1)!! and
+matter interaction serves as a bridge connecting strong field              n!, respectively. As the intensity of squeezed vacuum light
+physics and quantum optics, making strong field physics as                 increases [22], it would be interesting to explore the impact
+testing ground for foundational quantum physics and a plat-                of bunched light on the ionization rates and photoelectron
+form for quantum information [18,19].                                      momentum distribution of ATI, which is in a nonperturbative
+                                                                           regime. On the other hand, the autocorrelation function is
+                                                                           directly related with the photon number distribution of the
+ *
+     Contact author: Yunquan.liu@pku.edu.cn
+                                                                           driven light. Hence, it would also be interesting to study the
+                                                                           number distribution of generated photoelectrons in the strong-
+Published by the American Physical Society under the terms of the          field regime.
+Creative Commons Attribution 4.0 International license. Further                In this paper, we study the quantum optical nature of ATI
+distribution of this work must maintain attribution to the author(s)       of hydrogen atoms with two kinds of bunched lights, i.e.,
+and the published article’s title, journal citation, and DOI.              BSV and thermal light, which respectively represent typical
+
+2643-1564/2025/7(1)/L012072(7)                                     L012072-1                       Published by the American Physical Society
+LYU, SUN, FANG, HE, AND LIU                                                          PHYSICAL REVIEW RESEARCH 7, L012072 (2025)
+
+examples of quantum light, and compare the results with those
+obtained using coherent light. In the framework of the qSFA
+theory, we show that the bunched lights not only enhance the
+ionization rates of photoelectrons, but also alters its statistics
+of momentum. Besides, the broad photon number distribution
+in bunched lights leads to the decoherence of photoelectrons
+and smears out its interference patterns in momentum space.
+This directly manifests the particle nature of photoelectrons
+in strong-field ionization, which shows a sharp contrast to
+the wavelike properties exhibited by electrons in momentum
+space in nearly all previous studies of ATI. Moreover, we
+explore the number distribution of generated electrons and in-
+vestigate its relationship with the photon number distribution
+of intense driving light. In this way, we show that the quantum
+statistics of photons are projected on electrons through ATI.
+    Theoretical methods. We calculate the photoelectron mo-
+mentum distributions with quantum light using qSFA theory.
+Keldysh–Faisal–Reiss theory or SFA theory is one of the
+corner stones for studying strong-field physics [23–25],
+which has been extended for the study with quantum light
+[10,12,13]. Within the framework of qSFA theory, the prob-                  FIG. 1. (a) The bunching characteristics of quantum light fields
+ability amplitude of photoelectron at final momentum p is               will be transferred to photoelectrons through the ionization process.
+given by (see the Appendix)                                             For a light field with g(2) > 1, the electrons ionized by this light
+                          
+                                                                                               e > 1. (b) The distribution of g (τ ) for three
+                                                                        field will also have g(2)                              (2)
+                W (p) = dEα P(Eα )|Mα (p)|2 ,                  (1)      types of light fields. Coherent light exhibits Poissonian statistics,
+                                                                        where photons are emitted independently. The second-order corre-
+where Mα (p) represent the probability amplitude correspond-
+                                                                        lation function g(2) (0) = 1. Thermal light shows significant photon
+ing to the driving coherent light field with amplitude Eα .
+                                                                        bunching, leading to g(2) = 2. BSV exhibits even stronger photon
+P(Eα ) is the quasiprobability distribution characterizing the
+                                                                        bunching, where photons tend to appear in pairs. This lead to g(2) =
+statistics properties of the quantum optical fields. In order to        3. (c) The corresponding quasiprobability distribution of electric field
+explore the influence of the statistics of light on ATI, we be-         amplitude.
+gin by simulating the photoelectron momentum distributions
+driven by BSV, thermal, and coherent light, which respec-
+tively represent typical examples of light in quantum optics.              Besides, one can see that, for the long wavelength of driv-
+To be specific [Fig. 1(c)],                                             ing laser, the intracycle and intercycle interference [26,27] in
+                    ⎧                                                 final electron spectra becomes blurry. In the case of 1000 nm
+                    ⎪                    Eα2
+                              2 exp − 2E 2
+                          1
+                    ⎪
+                    ⎪                              (BSV state)          driving fields, these interference patterns are totally smeared
+                    ⎪
+                    ⎨
+                        2πE   0            0
+                                    2                                  out [Figs. 2(d) and 2(e)]. Such a decoherence phenomenon of
+        P(Eα ) = √ 1 exp − Eα2                  (thermal state)   (2)
+                    ⎪
+                    ⎪   πE0 2          E0                               electron wavepackets is unique for ATI in quantum light field.
+                    ⎪
+                    ⎪
+                    ⎩                                                   Interference can be considered as the fundamental property
+                      δ(E − Eα )                    (coherent).         of matter waves in quantum mechanics. It implies that as the
+As is well known, the coherent light is a classical light               degree of decoherence increases, the appearance of photoelec-
+field with a Poissonian photon number distribution, while the           trons in the final state exhibits a transition from a quantum
+thermal light exhibits super-Poissonian distribution and BSV            picture (wavelike) to a classical picture (particlelike).
+reveals an even more broad super-Poissonian distribution.                  The decoherence is associated with the broad photon
+Besides, BSV light represents a typical example of nonclas-             number distribution. This phenomenon also exists in other
+sical macroscopic state of light. In our simulation, we choose          quantum systems, such as free-electron-photon interactions
+hydrogen atoms as the target benchmark. We maintain the                 [28], Rabi oscillation [29], and Compton scattering [30]. For
+electric field strength at E0 = 0.025.                                  the BSV and thermal light, the photon number distribution per
+    Results and discussion.                                             pulse can be expressed as [Fig. 3(a)]
+    Photoelectron momentum distribution. We have calculated                                  ⎧
+photoelectron momentum distributions for photoionization of                                  ⎪
+                                                                                             ⎨ √2πN
+                                                                                                  1       − Nα
+                                                                                                         e 2N0          (BSV)
+                                                                                                    0 Nα
+Hydrogen atom with BSV, thermal, and coherent light at the                        P(Nα ) =                                           (3)
+wavelength of 500 nm and 1000 nm, as shown in Fig. 2. In                                     ⎪
+                                                                                             ⎩ 1 e− NNα0
+                                                                                               N0
+                                                                                                               (thermal  state),
+the calculation, we use a linear polarized pulse with the form
+E (t ) = Eα f (t ) sin(ωt ), with f (t ) the cosine-squared envelope    where Nα is the photon number and N0 is the average pho-
+with a full duration of six optical cycles. It turns out that their     ton number per pulse. According to N0 ∝ E02 /h̄ω, keeping
+interference patterns of ionized electrons are very different           E0 constant while decreasing the frequency is equivalent to
+(explained later), indicating that the electron momentum spec-          increasing the statistical broadness of the photon number dis-
+tra in ATI is influenced by the quantum statistics of the driving       tribution. This explains why the 1000 nm case exhibits the
+field.                                                                  maximum degree of decoherence in Fig. 2.
+
+                                                                 L012072-2
+EFFECT OF PHOTON QUANTUM STATISTICS ON …                                             PHYSICAL REVIEW RESEARCH 7, L012072 (2025)
+
+
+
+
+  FIG. 2. Photoelectron momentum distribution ionized by (a), (d) BSV; (b), (e) thermal; and (c), (f) coherent state. (a)–(c) correspond to a
+wavelength of 500 nm, while (d)–(f) correspond to a wavelength of 1000 nm. The electric field strength is fixed at E0 = 0.025 a.u.
+
+   The broad photon number distribution also influences the             where λ is the wavelength of driving field. Here we have
+motion of electrons in the intense driving field, reflected in          used the relationship Iα ∝ Eα2 . In the tunneling ionization
+the ponderomotive energy [17]. In a classical electric field,           regime, due to the AC stark effect, the final energy of ionized
+Up can be expressed as Up = E02 /4ω2 , where E0 is the peak             electron is Ek = nh̄ω − Ip − Up [31]. And thus, the position
+amplitude and ω is the frequency of electric field. In Fig. 3(a),       of the ATI peak will change accordingly. According to Eq. (1),
+we show the statistical properties of the quantum light. We             the final momentum distribution is the statistical result of
+can rewrite ponderomotive energy as Up = Eα2 /4ω2 ∝ Iα λ2 ,             the driving light; it therefore leads to the blurring of the
+
+
+
+
+   FIG. 3. (a) Photon number statistics of BSV, thermal, and coherent light. (b) Ionization probability of BSV, thermal, and coherent light.
+Photoelectron energy spectra under driving light wavelengths: (c) 500 nm (d) 1000 nm.
+
+                                                                L012072-3
+LYU, SUN, FANG, HE, AND LIU                                                       PHYSICAL REVIEW RESEARCH 7, L012072 (2025)
+
+
+momentum interference patterns. Moreover, since Up ∝ Iα λ2 ,
+for the longer wavelength, it has greater variation in the ATI
+peak. Consequently, it has larger effect of decoherence.
+    Photoelectron energy spectra. Besides, as seen in Figs. 3(c)
+and 3(d), one can observe that the ionization probability for
+the BSV and thermal state are significantly higher than that
+for coherent state. We can interpret this phenomenon from
+two perspectives. On one hand, this can be understood from
+the bunching nature of the light field. The degree of bunching
+of light is characterized by the nth order autocorrelation func-          FIG. 4. (a) The probability distribution of electron number for
+tion, which is defined as g(n) = :N n :/Nn [32,33]. Here,         driving light wavelength of 500 nm and 1000 nm. (b) The electron
+                                                                      number distribution for final energy of 0.05 a.u., 0.15 a.u., and 0.25
+:N n : = (a† )n an  is the normally ordered nth order moment
+                                                                      a.u. with driving wavelength of 500 nm. The dots are obtained from
+of the photon number. The n-order autocorrelation function
+                                                                      the ADK theory and the lines are fitted using the generalized Gamma
+of BSV and thermal light is g(n) = (2n − 1)!! and g(n) = n!,
+                                                                      distribution function. The probability has been normalized.
+respectively. Although in the nonperturbative regime, ATI
+remains a multiphoton process, which is still enhanced by
+the bunching property. Since the autocorrelation function of          depends on the experimental conditions such as the focus size
+BSV state is larger than that of the thermal state, which we          of laser beam and gas density. Here we take K2 = 1 × 107 . It
+call “superbunching” [34], the ionization yield is correspond-        is worth noting that the specific values of K1 and K2 do not
+ingly larger. On the other hand, we can comprehend this               affect the main conclusions drawn in our study. Solving the
+phenomenon from the perspective of electric field fluctuation.        inverse function of this expression, we obtain
+As shown in Eq. (2), unlike coherent state, which has a fixed                                                         
+                                                                                Nα = 16K1 /9 ∗ lambertw − π 3 Ne2 9K22 .        (5)
+electric field strength, the electric field distribution of thermal
+states follows the Gaussian distributions. Furthermore, that of       Here lambertw(·) represents the Lambert W function [39],
+BSV exhibits a broader distribution compared to the thermal           which is the inverse function of y = xex . It is worth noting
+state. Due to the fact that the ionization contributions from         that we are considering the tunneling ionization process here,
+BSV and thermal light predominantly arise from high elec-             which is a nonperturbative process and distinct from pertur-
+tric field strength [Fig. 3(b)], tunneling ionization becomes         bative ionization which obeys Ne = KNαn . Up to this point, we
+the dominant ionization mechanism under such conditions.              can obtain the number distribution of photoelectrons as
+To analyze the statistical properties of electrons, we utilize                                                    dNα
+the ionization rate given by the Ammosov-Delone-Krainov                                      Pe (Ne ) =Pα (Nα )       .                 (6)
+                                             2                                                                    dNe
+(ADK) theory [23,35–37] W (Eα ) = 2eπ ( πE3 α )1/2 exp(− 3E2 α ).
+                                                                      By applying Eqs. (5) and (6), we extract the electron number
+Here atomic units are used. By multiplying the probability
+                                                                      distribution as depicted in Fig. 4(a). We can see that, unlike
+distribution of the electric field with the ionization rates, we
+                                                                      the deterministic electron emission associated with coherent
+obtain the probability distribution for ionization rates. One can
+                                                                      light, the probability of electrons ionized by the BSV and
+clearly observe that the peak positions for the three types of
+                                                                      thermal light exhibit a heavy-tail distribution. This actually
+light are in descending order for BSV, thermal, and coherent
+                                                                      reflects that the bunching characteristics of photons are trans-
+light. The peak position of the probability density can be
+                                                                      ferred to electrons through ionization. In other words, the
+regarded as the equivalent electric field strength for each type
+                                                                      bunched and super-bunched electrons are generated with the
+of light field. With this, one can understand the phenomenon
+                                                                      thermal light and BSV light, respectively.
+of ionization enhancement by the BSV light.
+                                                                          Above, we have discussed the distribution of total number
+    Photoelectron number distribution. Next, we explore the
+                                                                      of photoelectrons. During the ATI process, we know that
+statistics of the electrons generated from ATI by different
+                                                                      electrons can absorb different numbers of photons, resulting
+forms of light, which is overlooked in semiclassical theories
+                                                                      in series energy peak (ATI peak). Therefore, one should
+[38]. The probability distribution of photoelectron Pe (Ne ) can
+                                                                      explore the number distribution of electrons with different
+be obtained from the driven field as Pe (Ne )dNe = P(Nα )dNα ,
+                                                                      final kinetic energy. Within the tunneling ionization picture,
+where Ne represents the photoelectron number. By using Nα =
+                                                                      the energy spectrum of photonelectrons can be analytically
+K1 Eα2 , we rewrite ionization rate Eq. (4) as a function of the
+                                                                      obtained as [37]
+driving photon number,
+                           √                                                                  4ω2            2    p2 γ 3
+                         2 3 K1 1/4              2K 1/2                          W (Eα ) =            exp −     −        ,              (7)
+           W (Nα ) = 3/2                exp − 11/2 ,            (4)                          π 2 pEα2       3Eα    3ω
+                         π      Nα               3Nα
+                                                                      where ω is the frequency of    √ driving field, γ = ω/Eα is
+where K1 depends on the the laser parameters. To be spe-              the Keldysh parameter, p = 2Ek is the final momentum
+cific, Nα can be expressed approximately by Nα ≈ Iα τ S/h̄ω =         of electron, and Ek is the kinetic energy. In Fig. 4(b), we
+K1 Eα2 , where τ is the duration of the laser pulse and S is the      show the analyzed number distribution of electrons with
+laser focus size. Here we take τ = 100 fs and S = 10−8 m2 ,           different energy at 1000 nm for the BSV and thermal light.
+leading to the value of K1 ≈ 1015 . Next we can express the           The dots in the figure are obtained using Eqs. (7) and (8),
+electron number as Ne = K2W (Nα ), where K2 represents the            following the same procedure as obtaining Fig. 4(a). To delve
+number of atoms interacting with the laser field and mainly           deeper into the distribution of electrons at different energies,
+
+                                                                L012072-4
+EFFECT OF PHOTON QUANTUM STATISTICS ON …                                              PHYSICAL REVIEW RESEARCH 7, L012072 (2025)
+
+we employ the generalized gamma function to fit the data                    Appendix: Framework of the quantum strong-field ap-
+obtained through the ADK tunneling formula [Eq. (8)]. The                proximation. We start from the Schrödinger equation for the
+generalized nth gamma function is given by                               evolution of the density matrix:
+             ⎧                                                                                           ∂ρ0 (t )
+                    √
+             ⎪
+             ⎪     2n                 − 21 n (2n−1)!! NNe                                          i h̄            = [Ĥ, ρ0 (t )],       (A1)
+             ⎨ √ 2n(2n−1)!!
+                      √     1−1/2n e
+                                                        0 (BSV)                                             ∂t
+               n 2π N0 Ne
+   P(Ne ) =                                                       (8)
+             ⎪
+             ⎪
+                  √
+                           − n n! NNe                                    where the Hamiltonian is given by Ĥ = ĤF + ĤA + d̂ · Ê,
+             ⎩
+                  n
+                    n!
+               nN N 1−1/n
+                          e         0           (thermal   state),                         p̂2
+                   0   e                                                 with ĤA = 2m           + V (r̂), representing the Hamiltonian of a
+where N0 represents the average electron number. Here N0                 bound electron, and d̂ is the dipole moment operator, typically
+has considered the ionization enhancement effect charac-                 defined as d̂ = −er̂. The Hamiltonian      of the †free electromag-
+terizing by g(n) [22]. As shown in Fig. 4(b), for the BSV                netic field ĤF is given by ĤF = k,σ h̄ωk (âk,σ      âkσ + 21 ). For
+light at 1000 nm, the electrons with final energies of Ek =              simplicity, we consider here the driving field in a single mode:
+0.05, 0.15, 0.25 a.u. correspond to average electron num-                ĤF = h̄ω(â† â + 21 ). The electric field operator is given by
+                                                                                                                    √
+bers of N0 = 11.0, 10.0, 8.0. The effective orders are n =               Ê = i (1) ê(â − â† ), where (1) = 2Vh̄ω0 represents the ampli-
+2.4, 2.9, 3, respectively. For thermal light, these values are           tude of the electric field and ê is the unit polarization vector
+N0 = 4.0, 1.8, 1 and n = 3.1, 3.2, 3.4, respectively. This               associated with the mode.
+conforms to the trend that higher energies correspond to                     Using the interaction picture transformation ρ0 (t ) →
+higher orders of the ionization process, resulting in the de-            e
+                                                                            iĤ t
+                                                                          − h̄F
+                                                                                          iĤF t
+                                                                                  ρ0 (t )e h̄ , we obtain the following equation:
+creasing of the average number of photoelectrons. By analogy,
+with the definition of second-order coherence g(2) for quantum                                      ∂ρ0 (t )
+                                                                                             i h̄            = [Ĥ0 (t ), ρ0 (t )],       (A2)
+light, we can define the second-order coherence g(2)  e for elec-                                     ∂t
+trons. It can be extracted through the electron number distribu-         where Ĥ0 (t ) = ĤA + d̂ · Ê(t ) and Ê(t ) = i (1) ê(âe−iωt −
+                   ( n)2 −n
+        e =1+
+tion: g(2)           n2
+                              . Here n is the standard variance σ        â† eiωt ). The initial value of the density matrix can be con-
+and n is the average electron number. For the nth-order mul-           sidered as the tensor product of the initial density matrix of
+tiphoton ionization process driven by BSV and thermal light,             the electromagnetic field and the initial density matrix of the
+  e can be obtained from Eq. (8). The results are (2n − 1)!!
+g(2)                                                                     atom: ρ0 (0) = ρF (0) ⊗ ρA (0), assuming that the initial states
+and n!, respectively. For tunneling ionization, an effective n           of the electromagnetic field and the atom are independent.
+can be used as discussed earlier. Bunched electrons are typi-            According to the Glauber-P representation in quantum optics,
+cally used in scenarios such as free-electron lasers, where they         the initial density matrix of the electromagntic field ρF (0) can
+are modulated by electromagnetic fields [40]. Here, we show              be expressed as a superposition of coherent states:
+that using the quantum nature of light to directly generate                                        
+bunched electrons, offering an approach for modulating the                              ρF (0) = d 2 αd 2 βP(α, β ∗ )|αβ|,          (A3)
+quantum optical nature of electrons through photoionization.
+    Conclusion. In conclusion, we have studied the effect of             where P(α, β ∗ ) is the Glauber-P function, which serves as a
+quantum statistics of light on above-threshold ionization. We            quasiprobability distribution that describes the quantum state
+show that the broad photon number distribution of quantum                of the field in the coherent state basis. It can be used to de-
+light leads to the decoherence of photoelectrons in momentum             scribe nonclassical light (e.g., squeezed states, photon number
+space. This enables us to modulate the transition of electrons           states). On the other hand, the atomic system is initially in the
+from wavelike to particlelike behavior by altering the quantum           ground state ρA (0) = |gg|. Thus, the initial density matrix of
+statistics of light. We show that the bunching nature of BSV             the entire system can be written as
+and thermal light enhances the photoionization with the                                  
+same average power as coherent light, which implies that it                     ρ0 (0) = d 2 αd 2 βP(α, β ∗ )|αβ| ⊗ |gg|.        (A4)
+might also generally enhance the interaction between light
+and matters. Besides, we find that unlike the classical light            Here, P(α, β ∗ ) is time independent since it does not involve
+field with a certain ionization probability, the photoelectron           the evolution of the system. Considering that the evolution
+ionization probability in quantum light exhibits a broad                 equation (2) is linear, we can express ρ0 (t ) as
+number distribution. This provides a potential opportunity                                      
+to generate free electron source with a nontrivial electron                           ρ0 (t ) = d 2 αd 2 βP(α, β ∗ )ραβ (t ),      (A5)
+number distribution by controlling the photon number
+distribution of driving light [41]. The photoelectrons can               where ραβ (t ) satisfies
+serve as nondestructive detection of the state of the light [42].
+                                                                                               ∂ραβ (t )
+The generation of bunched and superbunched photoelectrons                                   i h̄          = [Ĥ0 (t ), ραβ (t )]        (A6)
+with quantum light are also potentially the electron sources                                     ∂t
+of accelerators and free-electron lasers.                                and ραβ (0) = |αβ| ⊗ |gg|. The solution can be written as
+    Acknowledgments. This work is supported by the Na-                   ραβ (t ) = U (t )ραβ (0)U † (t ), where U (t ) is the time evolution
+                                                                                                                        t
+tional Key R&D Program (No. 2022YFA1604301 and No.                       operator, defined as U (t ) = T exp(− h̄i 0 Ĥ0 (t )dt ). Here T
+2023YFA1406803) and the National Natural Science Foun-                   represents the time-ordering operator.
+dation of China (No. 12334013, No. 92050201, and No.                        We proceed by using the coherent shift operators D(α) and
+92250306).                                                               D(β ), with coherent parameters α and β, to redefine a matrix
+
+                                                                  L012072-5
+LYU, SUN, FANG, HE, AND LIU                                                          PHYSICAL REVIEW RESEARCH 7, L012072 (2025)
+
+
+element: ρ̃αβ (t ) = D† (α)ραβ (t )D(β ). Thus yielding ρ̂αβ (t ) =     and off-diagonal contributions, respectively,
+(D† (α)U (t )D(α))|gg| ⊗ |00|(D† (β )U (t )D(β ))† . We then                       W (p) = Wdiag (p) + Woff-diag (p).       (A13)
+define |α (t ) = D† (α)U (t )D(α)|g ⊗ |0,which allows us to                             2
+express                                                                 Here Wdiag (p) = d αP(α, α ∗ )|Mα (p)|2 for α = β ∗ and
+                                                                        Woff-diag (p) = d 2 αd 2 βP(α, β ∗ )Mα (p)Mβ∗ (p) for α = β ∗ .
+                        ρ̃αβ (t ) = |α (t )β (t )|.        (A7)     The diagonal terms represent the incoherent addition of the
+                                                                        probability amplitudes and off-diagonal terms represent the
+By definition, |α/β (t ) satisfies the Schrödinger equation           interference between different coherent components.
+                     ∂|α/β (t )                                          In the main text, we considered only the diagonal terms
+              i h̄                = Hα/β (t )|α/β (t ),      (A8)     while ignoring the contribution from the off-diagonal terms.
+                        ∂t                                              Next, we will justify the validity of the this assumption. The
+where |α/β (0) = |g ⊗ |0 and Hα/β (t ) = ĤA + d̂ ·                 relationship between the Glauber-P function P(α, β ∗ ) and the
+                                                                        Huisi-Q function Q can be expressed as follows:
+Eα/β (t ) + d̂ · Ê(t ). The components Eα (t ) = α|Ê |α and
+Eβ (t ) = β|Ê |β correspond to the classical parts of the                            1         |α − β ∗ |2      α + β∗
+electric field. Assuming that there is nonentanglement                       P(α, β ∗ ) =  exp −               Q             . (A14)
+                                                                                       4π              4              2
+between the atomic system and the electromagnetic field                 The coherent state amplitude is related to the electric field as
+during the interaction process. ρ̃αβ can be decomposed as               follows:
+                ρ̃αβ (t ) = |φα (t )φβ (t )| ⊗ ρ̃light .     (A9)                   Eα (t ) = i (1) ê(αe−iωt − α ∗ eiωt ), (A15)
+                                                                                      √
+As we know, |φα/β  satisfy the semiclassical Schrödinger               where (1) = 2Vh̄ω0 represents the elementary excitation am-
+equation:                                                               plitude. We then introduce the complex amplitude of the field
+                                                                        as Eα = 2 (1) α. To proceed further, we consider the limit
+                        ∂|φα/β (t )                                    where (1) → 0 while α → ∞, such that the complex field
+                 i h̄                = Hα/β |φα/β (t ),      (A10)
+                           ∂t                                           amplitude Eα remains constant throughout this limiting pro-
+                                                                        cess. Under these circumstances, we obtain
+where     Ĥα/β = ĤA + d̂ · Eα/β    is      the     semiclassical
+Hamiltonian. In Refs. [12–14], the focus is on the high                                                  1   1           |Eα − Eβ |2
+                                                                        P(α, β ∗ )d 2 αd 2 β = lim                 exp −
+harmonic generation (HHG) of the light field, and thus                                         (1) →0   4π 4| |
+                                                                                                             (1) 2        16| (1) |2
+the electronic degrees of freedom are traced out. However,
+                                                                                                        α+β 2 2
+since we are considering the ATI process here, we retain                                       ×Q           d αd β.                  (A16)
+the electronic part and trace out the light field, obtaining the                                         2
+electron density matrix as                                                 Given that Q( α+β
+                                                                                          2
+                                                                                             ) is positive and has an integral equal
+                                                                       to unity, we can take the limit (1) → 0 separately for the
+      ρF (t ) = d 2 αd 2 βP(α, β ∗ )|φα (t )φβ (t )|.     (A11)       exponential term:
+                                                                                     1    1             |Eα − Eβ |2
+   In the ATI process, we aim to obtain the probability for a                lim                  exp −               = δ (2) (Eα − Eβ ).
+free electron with momentum p. This probability is given by
+                                                                             (1) →0 4π 4| (1) | 2        16| (1) |2
+                                                                                                                                     (A17)
+      W (p) = tr(|pp|ρF (t = ∞))                                      This indicates that the Glauber-P function becomes highly
+              
+                                                                        localized, and all its contributions converge to the diagonal
+            = d 2 αd 2 βP(α, β ∗ )Mα (p)Mβ∗ (p).              (A12)     terms in the phase space defined by Eα = Eβ . For simplicity,
+                                                                        and without loss of generality, we consider a real electric field
+Here Mα (p) = p|φα (t = ∞) represents the probability am-             Eα . Thus, we arrive at the key formula used in the main text:
+plitude for the electron to have momentum p.                                                     
+    Based on whether α is equal to β ∗ , we can decompose the                          W (p) = dEα P(Eα )|Mα (p)|2 .              (A18)
+expression for W (p) into two parts, representing the diagonal
+
+
+ [1] P. Agostini, F. Fabre, G. Mainfray, G. Petite, and N. K. Rahman,    [4] M. Ferray, A. L’Huillier, X. Li, L. Lompre, G. Mainfray, and C.
+     Free-free transitions following six-photon ionization of xenon          Manus, Multiple-harmonic conversion of 1064 nm radiation in
+     atoms, Phys. Rev. Lett. 42, 1127 (1979).                                rare gases, J. Phys. B 21, L31 (1988).
+ [2] P. Kruit, J. Kimman, H. G. Muller, and M. J. van der Wiel,          [5] M. Hentschel, R. Kienberger, C. Spielmann, G. A. Reider, N.
+     Electron spectra from multiphoton ionization of xenon at 1064,          Milosevic, T. Brabec, P. Corkum, U. Heinzmann, M. Drescher,
+     532, and 355 nm, Phys. Rev. A 28, 248 (1983).                           and F. Krausz, Attosecond metrology, Nature (London) 414,
+ [3] A. McPherson, G. Gibson, H. Jara, U. Johann, T. S. Luk, I.              509 (2001).
+     McIntyre, K. Boyer, and C. K. Rhodes, Studies of multiphoton        [6] M. Lewenstein, P. Balcou, M. Y. Ivanov, A. L’huillier, and
+     production of vacuum-ultraviolet radiation in the rare gases, J.        P. B. Corkum, Theory of high-harmonic generation by low-
+     Opt. Soc. Am. B 4, 595 (1987).                                          frequency laser fields, Phys. Rev. A 49, 2117 (1994).
+
+
+                                                                 L012072-6
+EFFECT OF PHOTON QUANTUM STATISTICS ON …                                              PHYSICAL REVIEW RESEARCH 7, L012072 (2025)
+
+ [7] J. Heimerl, A. Mikhaylov, S. Meier, H. Höllerer, I. Kaminer, M.     [24] F. H. Faisal, Multiple absorption of laser photons by atoms, J.
+     Chekhova, and P. Hommelhoff, Multiphoton electron emission               Phys. B 6, L89 (1973).
+     with non-classical light, Nat. Phys. 20, 945 (2024).                [25] H. R. Reiss, Effect of an intense electromagnetic field on a
+ [8] S. Lemieux, S. A. Jalil, D. Purschke, N. Boroumand, D.                   weakly bound system, Phys. Rev. A 22, 1786 (1980).
+     Villeneuve, A. Naumov, T. Brabec, and G. Vampa, Photon              [26] D. G. Arbó, K. L. Ishikawa, K. Schiessl, E. Persson, and J.
+     bunching in high-harmonic emission controlled by quantum                 Burgdörfer, Intracycle and intercycle interferences in above-
+     light nature photonics, arXiv:2404.05474.                                threshold ionization: The time grating, Phys. Rev. A 81,
+ [9] A. Rasputnyi, Z. Chen, M. Birk, O. Cohen, I. Kaminer, M.                 021403(R) (2010).
+     Krüger, D. Seletskiy, M. Chekhova, and F. Tani, High-harmonic       [27] D. Milošević, G. G. Paulus, and W. Becker, Ionization by
+     generation by a bright squeezed vacuum, Nat. Phys. 20, 1960              few-cycle pulses: Tracing the electron orbits, Phys. Rev. A 71,
+     (2024).                                                                  061404(R) (2005).
+[10] Y. Fang, F.-X. Sun, Q. He, and Y. Liu, Strong-Field Ionization      [28] R. Dahan, A. Gorlach, U. Haeusler, A. Karnieli, O. Eyal, P.
+     of Hydrogen Atoms with Quantum Light, Phys. Rev. Lett. 130,              Yousefi, M. Segev, A. Arie, G. Eisenstein, P. Hommelhoff et al.,
+     253201 (2023).                                                           Imprinting the quantum statistics of photons on free electrons,
+[11] S. Wang and X. Lai, High-order above-threshold ionization of             Science 373, eabj7128 (2021).
+     an atom in intense quantum light, Phys. Rev. A 108, 063101          [29] B. W. Shore and P. L. Knight, The Jaynes-Cummings Model, J.
+     (2023).                                                                  Mod. Opt. 40, 1195 (1993).
+[12] A. Gorlach, M. E. Tzur, M. Birk, M. Krüger, N. Rivera, O.           [30] M. Khalaf and I. Kaminer, Compton scattering driven by in-
+     Cohen, and I. Kaminer, High-harmonic generation driven by                tense quantum light, Sci. Adv. 9, eade0932 (2023).
+     quantum light, Nat. Phys. 19, 1689 (2023).                          [31] M. J. Nandor, M. A. Walker, L. D. Van Woerkom, and
+[13] M. Even Tzur, M. Birk, A. Gorlach, M. Krüger, I. Kaminer, and            H. G. Muller, Detailed comparison of above-threshold-
+     O. Cohen, Photon-statistics force in ultrafast electron dynamics,        ionization spectra from accurate numerical integrations and
+     Nat. Photon. 17, 501 (2023).                                             high-resolution measurements, Phys. Rev. A 60, R1771(R)
+[14] M. Lewenstein, M. F. Ciappina, E. Pisanty, J. Rivera-Dean, P.            (1999).
+     Stammer, T. Lamprou, and P. Tzallas, Generation of optical          [32] B. Mollow, Two-photon absorption and field correlation func-
+     Schrödinger cat states in intense laser–matter interactions, Nat.        tions, Phys. Rev. 175, 1555 (1968).
+     Phys. 17, 1104 (2021).                                              [33] G. Agarwal, Field-correlation effects in multiphoton absorption
+[15] P. Stammer, J. Rivera-Dean, T. Lamprou, E. Pisanty, M. F.                processes, Phys. Rev. A 1, 1445 (1970).
+     Ciappina, P. Tzallas, and M. Lewenstein, High photon num-           [34] F. Boitier, A. Godard, N. Dubreuil, P. Delaye, C. Fabre, and
+     ber entangled states and coherent state superposition from the           E. Rosencher, Photon extrabunching in ultrabright twin beams
+     extreme ultraviolet to the far infrared, Phys. Rev. Lett. 128,           measured by two-photon counting in a semiconductor, Nat.
+     123603 (2022).                                                           Commun. 2, 425 (2011).
+[16] P. Stammer, J. Rivera-Dean, A. S. Maxwell, T. Lamprou,              [35] M. V. Ammosov, N. B. Delone, and V. P. Krainov, Tunnel
+     J. Argüello-Luengo, P. Tzallas, M. F. Ciappina, and M.                   ionization of complex atoms and of atomic ions in an alternating
+     Lewenstein, Entanglement and squeezing of the optical field              electromagnetic field, Sov. Phys. JETP 64, 1191 (1986).
+     modes in high harmonic generation, Phys. Rev. Lett. 132,            [36] N. Delone and V. P. Krainov, Energy and angular electron spec-
+     143603 (2024).                                                           tra for the tunnel ionization of atoms by strong low-frequency
+[17] M. Even Tzur and O. Cohen, Motion of charged particles in                radiation, J. Opt. Soc. Am. B 8, 1207 (1991).
+     bright squeezed vacuum, Light Sci. Appl. 13, 41 (2024).             [37] V. P. Krainov, Ionization rates and energy and angular distri-
+[18] P. Stammer, J. Rivera-Dean, A. Maxwell, T. Lamprou, A.                   butions at the barrier-suppression ionization of complex atoms
+     Ordóñez, M. F. Ciappina, P. Tzallas, and M. Lewenstein, Quan-            and atomic ions, J. Opt. Soc. Am. B 14, 425 (1997).
+     tum electrodynamics of intense laser-matter interactions: A         [38] M. Li, J.-W. Geng, H. Liu, Y. Deng, C. Wu, L.-Y. Peng,
+     Tool for quantum state engineering, PRX Quantum 4, 010201                Q. Gong, and Y. Liu, Classical-quantum correspondence for
+     (2023).                                                                  above-threshold ionization, Phys. Rev. Lett. 112, 113002
+[19] D. B. Miloševć, Quantum theory of photon emission during                (2014).
+     strong-laser-field-induced ionization, Phys. Rev. A 108, 033110     [39] R. M. Corless, G. H. Gonnet, D. E. G. Hare, D. J. Jeffrey, and
+     (2023).                                                                  D. E. Knuth, On the Lambert W function, Adv. Comput. Math.
+[20] M. Scully and M. Zubairy, Quantum Optics (Cambridge Uni-                 5, 329 (1996).
+     versity Press, Cambridge, UK, 1997).                                [40] G. Margaritondo and P. Rebernik Ribic, A simplified descrip-
+[21] K. Y. Spasibko, D. A. Kopylov, V. L. Krutyanskiy, T. V.                  tion of X-ray free-electron lasers, J. Synchrotron Radiat. 18, 101
+     Murzina, G. Leuchs, and M. V. Chekhova, Multiphoton effects              (2011).
+     enhanced due to ultrafast photon-number fluctuations, Phys.         [41] M. Krüger, M. Schenk, and P. Hommelhoff, Attosecond con-
+     Rev. Lett. 119, 223603 (2017).                                           trol of electrons emitted from a nanoscale metal tip, Nature
+[22] M. Manceau, K. Y. Spasibko, G. Leuchs, R. Filip, and                     (London) 475, 78 (2011).
+     M. V. Chekhova, Indefinite-mean Pareto photon distribution          [42] Y. Pan, E. Cohen, E. Karimi, A. Gover, N. Schonenberger, T.
+     from amplified quantum noise, Phys. Rev. Lett. 123, 123606               Chlouba, K. Wang, S. Nehemia, P. Hommelhoff, I. Kaminer
+     (2019).                                                                  et al., Weak measurements and quantum-to-classical transi-
+[23] L. Keldysh, Ionization in the field of a strong electromagnetic          tions in free electron–photon interactions, Light: Science &
+     wave, Sov. Phys. JETP 20, 1307 (1965).                                   Applications 12, 267 (2023).
+
+
+                                                                  L012072-7
+

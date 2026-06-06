@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [agenda, planning]
-source_count: 52
+source_count: 54
 confidence: high
 related:
   - overview
@@ -96,6 +96,10 @@ related:
   pump-depleted PDC, Kerr-propagated BSV, displaced/squeezed HHG output,
   cutoff fluctuations, and heralded BSV-matter states all give concrete witness
   targets.
+- D9: The newly ingested APS papers split the strong-field problem into two
+  validation axes: squeezed emitted-mode vacuum fluctuations can modulate a
+  selected harmonic amplitude, while BSV/thermal photon statistics can be
+  mapped through qSFA into ATI yield and electron statistics.
 
 ## Current Source Gaps
 
@@ -124,3 +128,6 @@ related:
    specific stochastic-driver observables: bunching, symmetry leakage, cutoff
    fluctuations, ionization/tunneling distributions, and harmonic quadrature
    reconstruction.
+8. Add an ATI/ionization validation notebook before full HHG: compare coherent,
+   thermal, and BSV sampled-field ensembles against the qSFA/ADK observables in
+   Lyu 2025.

@@ -53,6 +53,9 @@ generation and THz emission driven by squeezed vacuum.
   attosecond synthesis in intense squeezed light, Stammer 2025 for optical
   coherence, and the 2025-2026 BSV/quantum-light papers for symmetry leakage,
   cutoff fluctuations, tunneling, and ionization validation targets.
+- Newly added APS papers: Wang et al. 2024 for squeezed-vacuum control of a
+  selected harmonic emission mode, and Lyu et al. 2025 for ATI ionization
+  benchmarks under coherent, thermal, and BSV photon statistics.
 - Novelty branch: identify whether selected harmonic channels can develop
   higher cumulants, conditional non-Gaussian states, or Wigner-negativity
   witnesses.

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/sources/ilin-2026-quantum-optical-signatures-of-band-topology-in-solid.md",
+                "file": "wiki/log.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ilin-2026-quantum-optical-signatures-of-band-topology-in-solid"
+              "title": "log"
             }
           }
         ]
@@ -183,6 +183,18 @@
   },
   "active": "893432ee7b2df883",
   "lastOpenFiles": [
+    "results/ingest-2026-06-06-missing-aps/README.md",
+    "wiki/sources/lyu-2025-photon-statistics-ati.md",
+    "wiki/sources/wang-2024-hhg-atom-squeezed-vacuum-environment.md",
+    "results/ingest-2026-06-06-missing-aps/extracted_text/physrevresearch-7-l012072.txt",
+    "results/ingest-2026-06-06-missing-aps/extracted_text/physrevresearch-6-033010.txt",
+    "results/ingest-2026-06-06-missing-aps/extracted_text",
+    "results/ingest-2026-06-06-missing-aps",
+    "raw/sources/PhysRevResearch.7.L012072.pdf",
+    "raw/sources/Unconfirmed 886949.crdownload",
+    "raw/sources/PhysRevResearch.6.033010.pdf",
+    "raw/sources/Unconfirmed 526910.crdownload",
+    "wiki/sources/ilin-2026-quantum-optical-signatures-of-band-topology-in-solid.md",
     "wiki/models/thz-plasma-emission-model.md",
     "wiki/models/hhg-gas-model.md",
     "wiki/simulations/simulation-roadmap.md",
@@ -194,7 +206,6 @@
     "wiki/sources/kulkarni-2022-a-classical-model-of-spontaneous-pdc.md",
     "wiki/sources/stammer-2026-symmetry-breaking-by-quantum-light-in-solid-state.md",
     "wiki/sources/liu-2026-strong-field-ionization-of-atoms-with-bsv-light.md",
-    "wiki/sources/ilin-2026-quantum-optical-signatures-of-band-topology-in-solid.md",
     "wiki/sources/jiang-2026-nonlinear-atomic-tunnelling-boosted-by-bsv.md",
     "wiki/sources/khurelbaatar-2026-nonclassical-cutoff-fluctuations-in-squeezed-light-driven-hhg.md",
     "wiki/sources/singh-2026-interferometrically-enhanced-asymmetry-in-strong-field-ionization-with.md",
@@ -207,17 +218,6 @@
     "wiki/sources/ciappina-2025-solid-state-hhg-emerging-frontiers-in-ultrafast-and.md",
     "wiki/sources/wang-2025-quantum-dial-for-hhg.md",
     "wiki/sources/rivera-dean-2025-propagation-of-intense-squeezed-vacuum-light-in-non.md",
-    "wiki/sources/theidel-2025-observation-of-a-displaced-squeezed-state-in-hhg.md",
-    "wiki/sources/vendromin-2025-nongaussian-states-via-pump-depleted-spdc.md",
-    "wiki/sources/rasputnyi-2025-kerr-induced-nongaussianity-of-ultrafast-bsv.md",
-    "results/literature-search-2026-06-06/extracted_text/wang-et-al-2024-attosecond-pulse-synthesis-from-high-order-harmonic-generation-in-intense-squeezed-light.txt",
-    "results/literature-search-2026-06-06/extracted_text/kulkarni-et-al-2022-a-classical-model-of-spontaneous-parametric-down-conversion.txt",
-    "results/literature-search-2026-06-06/extracted_text/stammer-et-al-2026-symmetry-breaking-by-quantum-light-in-solid-state-high-harmonic-generation.txt",
-    "results/literature-search-2026-06-06/extracted_text/liu-et-al-2026-strong-field-ionization-of-atoms-with-bright-squeezed-vacuum-light.txt",
-    "results/literature-search-2026-06-06/extracted_text/ilin-et-al-2026-quantum-optical-signatures-of-band-topology-in-solid-state-high-harmonics.txt",
-    "results/literature-search-2026-06-06/extracted_text/jiang-et-al-2026-nonlinear-atomic-tunnelling-boosted-by-bright-squeezed-vacuum.txt",
-    "results/literature-search-2026-06-06/extracted_text/khurelbaatar-et-al-2026-nonclassical-cutoff-fluctuations-in-squeezed-light-driven-high-harmonic-generation.txt",
-    "results/literature-search-2026-06-06/extracted_text/singh-et-al-2026-interferometrically-enhanced-asymmetry-in-strong-field-ionization-with-bright-squeezed-vacuum.txt",
-    "results/literature-search-2026-06-06/extracted_text/imai-2026-heralded-ultrafast-generation-of-macroscopic-quantum-states-in-matter-with-bright-squeezed-vacuum-light.txt"
+    "results/literature-search-2026-06-06/extracted_text/wang-et-al-2024-attosecond-pulse-synthesis-from-high-order-harmonic-generation-in-intense-squeezed-light.txt"
   ]
 }

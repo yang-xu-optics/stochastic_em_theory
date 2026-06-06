@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [non-gaussian, novelty, hhg, thz, squeezed-vacuum]
-source_count: 18
+source_count: 20
 confidence: medium
 related:
   - ../models/hhg-gas-model
@@ -24,6 +24,8 @@ related:
   - ../sources/vendromin-2025-nongaussian-states-via-pump-depleted-spdc
   - ../sources/rasputnyi-2025-kerr-induced-nongaussianity-of-ultrafast-bsv
   - ../sources/imai-2026-heralded-ultrafast-generation-of-macroscopic-quantum-states-in
+  - ../sources/wang-2024-hhg-atom-squeezed-vacuum-environment
+  - ../sources/lyu-2025-photon-statistics-ati
 ---
 
 # Non-Gaussian Output Novelty
@@ -107,6 +109,13 @@ non-Gaussian quantum feature:
   photon bunching in emitted harmonics, squeezed or displaced-squeezed harmonic
   output, nonclassical cutoff fluctuations, and fluctuation-induced symmetry
   breaking under structured or bicircular quantum light.
+- Wang 2024 adds a different mechanism: squeezed vacuum can act as the quantum
+  environment of a selected emitted harmonic mode, changing harmonic amplitude
+  through vacuum-fluctuation control rather than through pump-shot statistics.
+- Lyu 2025 shows that BSV photon statistics can transfer to ATI electron
+  statistics. This is valuable but should be described as electron/yield
+  statistics unless a quantum non-Gaussian electron or optical output witness is
+  specified.
 - A pure intensity-spectrum calculation can motivate where nonlinear gain is
   largest, but it cannot certify non-Gaussian emitted light.
 - A stronger claim would be: "BSV-driven HHG creates mode-selective
