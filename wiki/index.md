@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [index]
-source_count: 13
+source_count: 14
 confidence: high
 related: []
 ---
@@ -85,6 +85,8 @@ before answering project questions or changing wiki pages.
   mechanisms, photocurrent, and four-wave rectification.
 - [[sources/wang-2026-quantum-thz-plasma-bsv]]: coherent-plus-BSV plasma THz
   generation with Husimi sampling.
+- [[sources/ravi-2014-thz-generation-optical-rectification]]: tilted-pulse-front
+  lithium-niobate optical rectification, cascading, and 2D depleted propagation.
 
 ## Duplicate Source Note
 

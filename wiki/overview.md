@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [overview, thesis]
-source_count: 13
+source_count: 14
 confidence: high
 related:
   - research-agenda
@@ -63,9 +63,10 @@ now looks like this:
 observable_BSV = integral phase_space_weight * observable_coh
 ```
 
-- Use Schuh 2013, Sun 2022, and Wang 2026 for THz plasma emission, with
-  symmetry breaking treated as a central requirement.
+- Use Ravi 2014 for classical tilted-pulse-front optical rectification and use
+  Schuh 2013, Sun 2022, and Wang 2026 for THz plasma emission, with symmetry
+  breaking treated as a central requirement.
 
-The optical rectification branch is still the least directly sourced. It has
-support by analogy to stochastic SFG and by the THz mechanism review, but it
-needs a dedicated squeezed-vacuum OR source or an explicit derivation.
+The optical rectification branch now has a strong classical propagation source,
+but still needs a dedicated squeezed-vacuum OR source or an explicit derivation
+for stochastic/quantum-light pump statistics.

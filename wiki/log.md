@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [log]
-source_count: 13
+source_count: 14
 confidence: high
 related: [overview]
 ---
@@ -40,3 +40,16 @@ Append-only chronological record. New entries should use:
   phase-space-weighted coherent-response HHG; treat Schuh/Sun/Wang as the
   plasma THz basis; keep pure squeezed-vacuum optical rectification marked as
   a source gap until derived or sourced.
+
+## [2026-06-06] ingest | Ravi 2014 Optical Rectification Thesis
+
+- Ingested `raw/sources/900736523-MIT.pdf` as
+  [[sources/ravi-2014-thz-generation-optical-rectification]].
+- Noted that the title page identifies the file as an MIT Master of Science
+  thesis, not a doctoral thesis.
+- Updated the optical-rectification model, simulation roadmap, overview,
+  research agenda, wiki index, and manuscript outline.
+- Key decision: use Ravi 2014 as the classical tilted-pulse-front OR propagation
+  baseline, while keeping squeezed-vacuum-driven OR as an open derivation
+  problem involving ensemble averaging, operator ordering, and possible vacuum
+  subtraction.

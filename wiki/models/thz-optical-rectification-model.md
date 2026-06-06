@@ -5,13 +5,14 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [thz, optical-rectification, nonlinear-optics, squeezed-vacuum]
-source_count: 2
-confidence: medium
+source_count: 3
+confidence: high
 related:
   - ../overview
   - ../simulations/simulation-roadmap
   - ../sources/raymer-landes-2023-classical-model-broadband-squeezed-vacuum
   - ../sources/sun-2022-thz-laser-induced-plasma
+  - ../sources/ravi-2014-thz-generation-optical-rectification
 ---
 
 # THz Optical Rectification Model
@@ -43,6 +44,29 @@ filtering or propagation.
 
 ## Source-Backed Notes
 
+- Ravi 2014 gives the classical baseline for tilted-pulse-front optical
+  rectification in lithium niobate. In the simplest frequency-domain form, OR is
+  an intrapulse DFG integral:
+
+```text
+P_THz(Omega, z) =
+  epsilon_0 chi_eff^(2)
+  integral d omega A_op(omega + Omega, z) A_op^*(omega, z)
+  exp[-i Delta k(omega, Omega) z]
+```
+
+- The tilted-pulse-front phase-matching condition is:
+
+```text
+n_THz(Omega) cos(gamma) = n_g,opt(omega_0)
+```
+
+For the lithium-niobate parameters considered in the thesis, the tilt is about
+63 degrees.
+- Ravi 2014 shows why undepleted-pump OR models can overestimate conversion:
+  THz generation cascades the pump to lower optical frequencies, broadens the
+  pump spectrum, and combines with angular-dispersion GVD to break up the pump
+  spatio-temporally. This makes OR self-limiting.
 - Sun 2022 treats optical rectification as one standard THz source, but most
   plasma THz language in gases is better separated into four-wave
   rectification/mixing and photocurrent mechanisms.
@@ -61,19 +85,33 @@ noncentrosymmetric crystal.
 ## Source Gap
 
 No ingested paper directly derives squeezed-vacuum-driven `chi^(2)` optical
-rectification. Until that source or derivation is added, this branch should be
-framed as a proposed stochastic-field calculation, not as an established
-source-backed result.
+rectification. Ravi 2014 supplies the deterministic classical OR propagation
+model. The stochastic extension still needs a derivation of which sampled-field
+correlation drives `P_THz`, how normally ordered observables map to stochastic
+moments, and whether vacuum-only terms must be subtracted.
 
 ## First Simulation Target
 
-Build a 1D time-domain model:
+Build a 1D frequency-domain or time-domain model:
 
 1. sample stochastic optical waveforms,
-2. compute `E_j(t)^2`,
-3. apply a THz bandpass filter,
+2. compute the OR source term `P_THz,j` either as `E_j(t)^2` filtered to THz
+   frequencies or as the intrapulse DFG integral,
+3. propagate the THz field with absorption and phase mismatch,
 4. compare ensemble-averaged field and intensity,
-5. benchmark against a coherent pulse with the same mean energy.
+5. benchmark against a coherent pulse with the same mean energy,
+6. add pump depletion/cascading only after the undepleted stochastic source is
+   validated.
+
+## Classical Propagation Upgrade
+
+After the minimal source model works, follow Ravi 2014 in stages:
+
+- add tilted-pulse-front phase matching and angular-dispersion GVD,
+- couple the optical and THz fields to include cascading,
+- include SPM and SRS if the optical intensities justify it,
+- move from effective 1D to 2D transverse Fourier propagation,
+- track spatial chirp and beam quality, not only total conversion efficiency.
 
 ## Symmetry Note
 

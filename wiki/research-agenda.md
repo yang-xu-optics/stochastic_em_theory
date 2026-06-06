@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [agenda, planning]
-source_count: 13
+source_count: 14
 confidence: high
 related:
   - overview
@@ -81,7 +81,8 @@ related:
 ## Current Source Gaps
 
 - A dedicated source or derivation for optical rectification driven directly by
-  squeezed vacuum.
+  squeezed vacuum. Ravi 2014 covers classical tilted-pulse-front OR, not
+  quantum-light OR.
 - A foundational stochastic electrodynamics source beyond the Raymer/Landes
   stochastic-field construction.
 - A gas-phase BSV HHG experiment analogous to the solid and metal-tip sources.

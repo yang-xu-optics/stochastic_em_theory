@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-06-06
 tags: [simulation, roadmap, validation]
-source_count: 13
+source_count: 14
 confidence: high
 related:
   - ../theory/squeezed-vacuum-g2-proof-plan
@@ -118,9 +118,38 @@ Outputs:
 - shot-to-shot waveform distribution,
 - dependence on squeezing phase and detection bandwidth.
 
-Current status: source gap. The simulation can be implemented as a proposed
-stochastic nonlinear-polarization calculation, but a dedicated squeezed-vacuum
-OR source or derivation is needed before manuscript claims are made.
+Current status: classical OR propagation is now sourced by Ravi 2014, but
+squeezed-vacuum OR remains derivation-led.
+
+Implementation targets:
+
+1. Reproduce an undepleted deterministic OR calculation:
+
+```text
+P_THz(Omega) =
+  epsilon_0 chi_eff^(2)
+  integral d omega A_op(omega + Omega) A_op^*(omega)
+```
+
+2. Add tilted-pulse-front phase matching:
+
+```text
+n_THz(Omega) cos(gamma) = n_g,opt(omega_0)
+```
+
+3. Replace the deterministic optical pump with sampled stochastic waveforms and
+   compare:
+
+```text
+<P_THz(t)>_ensemble
+<|P_THz(omega)|^2>_ensemble
+```
+
+4. After the stochastic source term is validated, add Ravi-style pump depletion,
+   cascading, angular-dispersion GVD, absorption, SPM/SRS, and eventually 2D
+   transverse Fourier propagation.
+5. Report THz beam quality and spatial chirp if using the 2D model, not only
+   conversion efficiency.
 
 ## Stage 5: THz Plasma Emission
 

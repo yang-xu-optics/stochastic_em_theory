@@ -54,8 +54,10 @@ generation and THz emission driven by squeezed vacuum.
 - Define nonlinear polarization model.
 - Study ensemble-averaged THz field and intensity.
 - Identify role of squeezing phase, bandwidth, and medium symmetry.
-- Status: source gap for direct squeezed-vacuum `chi^(2)` OR. Treat this as a
-  derivation-led section unless a dedicated source is added.
+- Anchor source: Ravi 2014 for classical tilted-pulse-front OR propagation,
+  cascading, and 2D depletion limits.
+- Status: source gap remains for direct squeezed-vacuum `chi^(2)` OR. Treat the
+  stochastic extension as derivation-led unless a dedicated source is added.
 
 ## 6. THz Plasma Emission
 
@@ -93,3 +95,5 @@ generation and THz emission driven by squeezed vacuum.
 7. Broadband `g^(2)(0)` validation with and without dispersion compensation.
 8. HHG conditional versus unconditional spectra under BSV sampling.
 9. Plasma THz coherent-plus-BSV squeezing-angle scan.
+10. Classical OR benchmark showing undepleted prediction versus depleted
+    cascading-limited propagation.
