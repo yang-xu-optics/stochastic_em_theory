@@ -30,14 +30,11 @@ Shows that quantum fluctuations of the driving light can relax or modify
 symmetry-based HHG selection rules, a promising novelty target for stochastic-
 field simulations.
 
-## Abstract Signal
+## Metadata Signal
 
-Symmetries are ubiquitous in physics and play a pivotal role in light-matter
-interactions, where they determine the selection rules governing allowed
-atomic transitions and define the associated conserved quantities. For the up-
-conversion process of high harmonic generation, the symmetries of the driving
-field determine the allowed frequencies and the polarization properties of the
-resulting harmonics. As a consequen
+The metadata identifies this as a quantum-optical HHG/output-state paper. It
+should be mined for observables beyond mean spectra, especially correlations,
+quadratures, phase locking, and selection-rule changes.
 
 ## Relevance To This Project
 
@@ -59,5 +56,5 @@ observables should be tracked beyond an averaged harmonic spectrum.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 

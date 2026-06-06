@@ -28,14 +28,11 @@ related:
 Studies ionization or tunneling under quantum-light/BSV driving, providing
 adjacent strong-field tests for any stochastic-field HHG driver model.
 
-## Abstract Signal
+## Metadata Signal
 
-The recently available high-intensity quantum light pulses provide novel tools
-for controlling light-matter interactions. However, the rigor of the
-theoretical frameworks currently used to describe the interaction of strong
-quantum light with atoms and molecules remains unverified. Here, we establish
-a rigorous benchmark by solving the fully quantized time-dependent Schrodinger
-equation for an atom exposed to bright
+The metadata identifies this as a strong-field quantum-light paper. It is
+useful as an upstream validation class for BSV-driven ionization and tunneling
+before claiming gas-HHG predictions.
 
 ## Relevance To This Project
 
@@ -57,5 +54,5 @@ ionization/tunneling rates under sampled quantum-light shots.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 

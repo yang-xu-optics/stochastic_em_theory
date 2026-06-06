@@ -30,14 +30,11 @@ related:
 Studies ionization or tunneling under quantum-light/BSV driving, providing
 adjacent strong-field tests for any stochastic-field HHG driver model.
 
-## Abstract Signal
+## Metadata Signal
 
-Strong-field ionization is the cornerstone of attosecond physics, which has
-been extensively studied under coherent-state driving. Recently, the interface
-between attosecond physics and quantum optics has emerged as a new frontier.
-Yet, owing to experimental limitations, the role of the quantum nature of
-light in atomic strong-field ionization has remained unexplored. Here, we
-demonstrate strong-field ionization of x
+The metadata identifies this as a strong-field quantum-light paper. It is
+useful as an upstream validation class for BSV-driven ionization and tunneling
+before claiming gas-HHG predictions.
 
 ## Relevance To This Project
 
@@ -61,7 +58,7 @@ under sampled quantum-light shots.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 - Mode definition, loss, gain, and detection bandwidth must be specified before
-quoting g2 or higher cumulants.
+  quoting g2 or higher cumulants.
 

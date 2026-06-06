@@ -29,11 +29,11 @@ related:
 Develops a brightness-dependent Schmidt-mode description of BSV, reinforcing
 that mode weights and effective mode number evolve with gain.
 
-## Abstract Signal
+## Metadata Signal
 
-This work provides a theoretical approach to describe the spatial properties
-of bright squeezed vacuum. The model describes these using Schmidt modes and
-captures the modal structure and the effects of strong pumping.
+The metadata identifies this as a BSV source-characterization paper. Use it to
+parameterize realistic source statistics, mode structure, and detection
+assumptions rather than treating BSV as a single universal distribution.
 
 ## Relevance To This Project
 
@@ -55,7 +55,7 @@ intensity fluctuations, and realistic BSV source engineering.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 - Mode definition, loss, gain, and detection bandwidth must be specified before
-quoting g2 or higher cumulants.
+  quoting g2 or higher cumulants.
 

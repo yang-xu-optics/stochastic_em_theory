@@ -29,14 +29,11 @@ related:
 Treats HHG as a source of entanglement and squeezing among optical modes,
 supporting output-state diagnostics beyond mean harmonic spectra.
 
-## Abstract Signal
+## Metadata Signal
 
-Squeezed optical fields are a powerful resource for a variety of
-investigations in basic research and technology. However, the generation of
-intense squeezed light is challenging. Here, we show that intense squeezed
-light can be produced using strongly laser driven atoms and the so far
-unrelated process of high harmonic generation. We demonstrate that when the
-intensity of the driving field significantly depletes the
+The metadata identifies this as a quantum-optical HHG/output-state paper. It
+should be mined for observables beyond mean spectra, especially correlations,
+quadratures, phase locking, and selection-rule changes.
 
 ## Relevance To This Project
 
@@ -58,5 +55,5 @@ observables should be tracked beyond an averaged harmonic spectrum.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 

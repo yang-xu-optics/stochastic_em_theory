@@ -29,14 +29,11 @@ related:
 Shows that quantum-light control can affect photon bunching in high-harmonic
 emission, tying pump statistics to emitted-field correlations.
 
-## Abstract Signal
+## Metadata Signal
 
-Attosecond spectroscopy comprises several techniques to probe matter through
-electrons and photons. One frontier of attosecond methods is to reveal complex
-phenomena arising from quantum-mechanical correlations in the matter system,
-in the photon fields and among them. Recent theories have laid the groundwork
-for understanding how quantum-optical properties affect high-field photonics,
-such as strong-field ionization
+The metadata identifies this as a quantum-optical HHG/output-state paper. It
+should be mined for observables beyond mean spectra, especially correlations,
+quadratures, phase locking, and selection-rule changes.
 
 ## Relevance To This Project
 
@@ -58,5 +55,5 @@ observables should be tracked beyond an averaged harmonic spectrum.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 

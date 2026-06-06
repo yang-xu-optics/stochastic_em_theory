@@ -30,13 +30,11 @@ Shows engineering of BSV toward a nearly single spatial mode, a useful
 limiting case when connecting multimode BSV to single-mode squeezed-vacuum
 diagnostics.
 
-## Abstract Signal
+## Metadata Signal
 
-Bright squeezed vacuum, a macroscopic nonclassical state of light, can be
-obtained at the output of a strongly pumped non-seeded traveling-wave optical
-parametric amplifier (OPA). By constructing the OPA of two consecutive
-crystals separated by a large distance we make the squeezed vacuum spatially
-single-mode without a significant decrease in the brightness or squeezing.
+The metadata identifies this as a BSV source-characterization paper. Use it to
+parameterize realistic source statistics, mode structure, and detection
+assumptions rather than treating BSV as a single universal distribution.
 
 ## Relevance To This Project
 
@@ -58,7 +56,7 @@ intensity fluctuations, and realistic BSV source engineering.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 - Mode definition, loss, gain, and detection bandwidth must be specified before
-quoting g2 or higher cumulants.
+  quoting g2 or higher cumulants.
 

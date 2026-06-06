@@ -30,14 +30,11 @@ Measures very large intensity fluctuations and superbunching in high-gain BSV,
 giving an experimental anchor for stochastic intensity distributions and
 detector-mode dependence.
 
-## Abstract Signal
+## Metadata Signal
 
-In this paper we experimentally study the statistical properties of a bright
-squeezed vacuum state containing up to 10^13 photons per mode (10 uJ per
-pulse), produced via high gain parametric down conversion (PDC). The effects
-of bunching and superbunching of photons were observed for a single mode PDC
-radiation by second-order intensity correlation function measurements with
-analog detectors.
+The metadata identifies this as a BSV source-characterization paper. Use it to
+parameterize realistic source statistics, mode structure, and detection
+assumptions rather than treating BSV as a single universal distribution.
 
 ## Relevance To This Project
 
@@ -59,7 +56,7 @@ intensity fluctuations, and realistic BSV source engineering.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 - Mode definition, loss, gain, and detection bandwidth must be specified before
-quoting g2 or higher cumulants.
+  quoting g2 or higher cumulants.
 

@@ -30,14 +30,11 @@ Analyzes squeezed-state generation when pump depletion is retained,
 identifying a mechanism by which nominally Gaussian squeezed light can acquire
 non-Gaussian features.
 
-## Abstract Signal
+## Metadata Signal
 
-We present a multimode theory of squeezed state generation in resonant systems
-valid for arbitrary pump power and including pump depletion. The Hamiltonian
-is written in terms of asymptotic-in and -out fields from scattering theory,
-capable of describing a general interaction. As an example we consider the
-lossy generation of a highly squeezed state by an effective second-order
-interaction in a silicon nitride ring r
+The metadata places this source in the nonlinear quantum-optics methods
+cluster. It is relevant for deciding when Gaussian, undepleted, or positive
+stochastic descriptions stop being sufficient.
 
 ## Relevance To This Project
 
@@ -60,5 +57,5 @@ states.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 

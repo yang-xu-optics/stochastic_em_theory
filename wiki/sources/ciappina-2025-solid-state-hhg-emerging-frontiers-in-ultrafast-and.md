@@ -30,14 +30,11 @@ Extends quantum-light-driven HHG ideas into solids, useful for comparison even
 though the gas-HHG model in this project has different propagation and
 material assumptions.
 
-## Abstract Signal
+## Metadata Signal
 
-High-order harmonic generation (HHG) in solids has emerged as a versatile
-platform for exploring ultrafast and quantum-coherent phenomena in condensed
-matter. Recent advances reveal Berry-phase and topological effects in harmonic
-emission, strong-field control of excitons and lattice motion, the generation
-of nonclassical light states driven by quantum and squeezed fields, and the
-emergence of orbital-angular-momentu
+The metadata identifies this as a solid-state quantum-light HHG paper. It is
+best used as comparison literature; gas and THz claims still require their own
+material and propagation assumptions.
 
 ## Relevance To This Project
 
@@ -61,7 +58,7 @@ rules directly to gas without rederiving assumptions.
 ## Limitations And Cautions
 
 - Solid-state HHG assumptions do not directly apply to gas HHG or plasma THz
-emission.
+  emission.
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 

@@ -29,13 +29,11 @@ related:
 Analyzes HHG-driven attosecond pulse synthesis with intense squeezed light,
 relevant to transferring pump quantum statistics into attosecond observables.
 
-## Abstract Signal
+## Metadata Signal
 
-HHG provides broad bandwidth for attosecond pulse synthesis, but usual schemes
-phase-lock only part of the harmonic spectrum. This paper studies an atom driven
-by intense squeezed light and reports phase locking across the full spectrum in
-the model, with the synthesized pulse width depending on the squeezing
-parameter.
+The metadata identifies this as a quantum-optical HHG/output-state paper. It
+should be mined for observables beyond mean spectra, especially correlations,
+quadratures, phase locking, and selection-rule changes.
 
 ## Relevance To This Project
 
@@ -57,6 +55,6 @@ observables should be tracked beyond an averaged harmonic spectrum.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 - Mode definition, loss, gain, and detection bandwidth must be specified before
-quoting g2 or higher cumulants.
+  quoting g2 or higher cumulants.

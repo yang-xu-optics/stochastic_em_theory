@@ -30,14 +30,11 @@ Extends quantum-light-driven HHG ideas into solids, useful for comparison even
 though the gas-HHG model in this project has different propagation and
 material assumptions.
 
-## Abstract Signal
+## Metadata Signal
 
-The strong-field process of high-harmonic generation (HHG) has, in recent
-years, been treated from a quantum optical perspective in the emerging
-research area of strong-field quantum optics. These investigations show that
-HHG radiation is, in general, in a nonclassical state of light. However, the
-quantum optical treatment of HHG from topological nontrivial materials is
-missing. Here, we aim to address this gap in cu
+The metadata identifies this as a solid-state quantum-light HHG paper. It is
+best used as comparison literature; gas and THz claims still require their own
+material and propagation assumptions.
 
 ## Relevance To This Project
 
@@ -61,7 +58,7 @@ rules directly to gas without rederiving assumptions.
 ## Limitations And Cautions
 
 - Solid-state HHG assumptions do not directly apply to gas HHG or plasma THz
-emission.
+  emission.
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 

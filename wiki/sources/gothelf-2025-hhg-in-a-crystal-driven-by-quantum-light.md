@@ -30,14 +30,11 @@ Extends quantum-light-driven HHG ideas into solids, useful for comparison even
 though the gas-HHG model in this project has different propagation and
 material assumptions.
 
-## Abstract Signal
+## Metadata Signal
 
-We study intraband high-harmonic generation (HHG) in a crystal driven by
-quantum light. Previous theoretical studies have developed a framework based
-on coherent state expansions in terms of P distributions to consider
-nonclassical driving fields for HHG in atoms. Here, we adapt this framework to
-the context of solids and consider an intraband model of ZnO. We investigate
-the effect of the quantum optical nature of t
+The metadata identifies this as a solid-state quantum-light HHG paper. It is
+best used as comparison literature; gas and THz claims still require their own
+material and propagation assumptions.
 
 ## Relevance To This Project
 
@@ -61,7 +58,7 @@ rules directly to gas without rederiving assumptions.
 ## Limitations And Cautions
 
 - Solid-state HHG assumptions do not directly apply to gas HHG or plasma THz
-emission.
+  emission.
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 

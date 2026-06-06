@@ -29,14 +29,11 @@ related:
 Develops coherence-function language for HHG, connecting quantum-optical
 correlation functions to the strong-field emission process.
 
-## Abstract Signal
+## Metadata Signal
 
-Optical coherence encodes information about the correlations of the
-electromagnetic field. In combination with quantum optical approaches, it
-allows for the study of the correlations between photons. Since the pioneering
-papers of Glauber, studies of optical coherence have facilitated many
-fundamental insights into non-classical signatures of light emission
-processes, with wide applicability in modern quantum technol
+The metadata identifies this as a quantum-optical HHG/output-state paper. It
+should be mined for observables beyond mean spectra, especially correlations,
+quadratures, phase locking, and selection-rule changes.
 
 ## Relevance To This Project
 
@@ -58,5 +55,5 @@ observables should be tracked beyond an averaged harmonic spectrum.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 

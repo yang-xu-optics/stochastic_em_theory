@@ -30,14 +30,11 @@ Extends quantum-light-driven HHG ideas into solids, useful for comparison even
 though the gas-HHG model in this project has different propagation and
 material assumptions.
 
-## Abstract Signal
+## Metadata Signal
 
-The strong-field induced generation of nonclassical states of light is not
-only a subject of fundamental research but also has potential usage in quantum
-information science and technology. The emerging field of strong-field quantum
-optics has developed ways of generating nonclassical states of light from the
-process of high-harmonic generation (HHG) at much wider frequency ranges and
-intensities than is typical for
+The metadata identifies this as a solid-state quantum-light HHG paper. It is
+best used as comparison literature; gas and THz claims still require their own
+material and propagation assumptions.
 
 ## Relevance To This Project
 
@@ -61,9 +58,9 @@ rules directly to gas without rederiving assumptions.
 ## Limitations And Cautions
 
 - Solid-state HHG assumptions do not directly apply to gas HHG or plasma THz
-emission.
+  emission.
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 - Mode definition, loss, gain, and detection bandwidth must be specified before
-quoting g2 or higher cumulants.
+  quoting g2 or higher cumulants.
 

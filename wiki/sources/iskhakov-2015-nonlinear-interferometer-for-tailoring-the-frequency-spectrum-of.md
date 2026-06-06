@@ -30,14 +30,11 @@ Uses a two-crystal nonlinear-interferometer geometry to tailor the BSV
 frequency spectrum, providing a route to controlled spectral correlations and
 mode-selective simulations.
 
-## Abstract Signal
+## Metadata Signal
 
-We propose a method for tailoring the frequency spectrum of bright squeezed
-vacuum by generating it in a nonlinear interferometer, consisting of two down-
-converting nonlinear crystals separated by a dispersive medium. Due to a
-faster dispersive spreading of higher-order Schmidt modes, the spectral width
-of the radiation at the output is reduced as the length of the dispersive
-medium is increased. Preliminary results
+The metadata identifies this as a BSV source-characterization paper. Use it to
+parameterize realistic source statistics, mode structure, and detection
+assumptions rather than treating BSV as a single universal distribution.
 
 ## Relevance To This Project
 
@@ -59,7 +56,7 @@ intensity fluctuations, and realistic BSV source engineering.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 - Mode definition, loss, gain, and detection bandwidth must be specified before
-quoting g2 or higher cumulants.
+  quoting g2 or higher cumulants.
 

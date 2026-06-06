@@ -30,14 +30,11 @@ Demonstrates high-gain nondegenerate OPA generation of macroscopic two-color
 bright squeezed vacuum, useful for modeling multimode/twin-beam BSV rather
 than a single ideal squeezed mode.
 
-## Abstract Signal
+## Metadata Signal
 
-In a strongly pumped non-degenerate traveling-wave OPA, we produce two-color
-squeezed vacuum with up to millions of photons per pulse. Our approach to
-registering this macroscopic quantum state is direct detection of a large
-number of transverse and longitudinal modes, which is achieved by making the
-detection time and area much larger than the coherence time and area,
-respectively. Using this approach, we obtain a r
+The metadata identifies this as a BSV source-characterization paper. Use it to
+parameterize realistic source statistics, mode structure, and detection
+assumptions rather than treating BSV as a single universal distribution.
 
 ## Relevance To This Project
 
@@ -59,7 +56,7 @@ intensity fluctuations, and realistic BSV source engineering.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 - Mode definition, loss, gain, and detection bandwidth must be specified before
-quoting g2 or higher cumulants.
+  quoting g2 or higher cumulants.
 

@@ -30,14 +30,11 @@ related:
 Reports enhanced nonlinear atomic tunneling driven by BSV, strengthening the
 case that BSV shot statistics can change strong-field response rates.
 
-## Abstract Signal
+## Metadata Signal
 
-Nonlinear optical processes, mediated by multiphoton interactions rather than
-single-photon response, are routinely exploited to enable a range of light-
-based functionalities in devices and applications. Nonlinear effects are
-enhanced by higher-intensity fields, which is a limiting strategy owing to
-potential radiation damage. An alternative strategy relies on the fluctuation
-redistribution typical of quantum light14
+The metadata identifies this as a strong-field quantum-light paper. It is
+useful as an upstream validation class for BSV-driven ionization and tunneling
+before claiming gas-HHG predictions.
 
 ## Relevance To This Project
 
@@ -61,7 +58,7 @@ under sampled quantum-light shots.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 - Mode definition, loss, gain, and detection bandwidth must be specified before
-quoting g2 or higher cumulants.
+  quoting g2 or higher cumulants.
 

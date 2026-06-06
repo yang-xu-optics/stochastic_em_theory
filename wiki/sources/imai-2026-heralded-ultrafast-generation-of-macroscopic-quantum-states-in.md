@@ -31,14 +31,11 @@ related:
 Uses BSV plus post-interaction quadrature measurement to herald macroscopic
 matter states, relevant to conditional/non-Gaussian output claims.
 
-## Abstract Signal
+## Metadata Signal
 
-We show that bright squeezed vacuum light, combined with a single-shot
-quadrature measurement of the post-interaction light, enables the ultrafast
-generation of macroscopic quantum states in matter. Although in the weak-
-coupling regime multiphoton quantum light leaves the unconditional matter
-state as a classical mixture due to light--matter entanglement, quadrature-
-based heralding prepares the matter in a Gaussian-w
+The metadata identifies this as a conditional/measurement-based BSV proposal.
+It is relevant for postselected or heralded non-Gaussian claims, not for
+unconditional spectra alone.
 
 ## Relevance To This Project
 
@@ -62,10 +59,10 @@ conditioning, or measurement can produce genuinely non-Gaussian states.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 - Distinguish non-Gaussian classical shot distributions from true quantum non-
 Gaussian states via the chosen phase-space representation and measurement
 model.
 - Mode definition, loss, gain, and detection bandwidth must be specified before
-quoting g2 or higher cumulants.
+  quoting g2 or higher cumulants.
 

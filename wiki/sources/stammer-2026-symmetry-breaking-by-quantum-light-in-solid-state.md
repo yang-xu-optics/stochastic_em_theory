@@ -30,14 +30,11 @@ Shows that quantum fluctuations of the driving light can relax or modify
 symmetry-based HHG selection rules, a promising novelty target for stochastic-
 field simulations.
 
-## Abstract Signal
+## Metadata Signal
 
-Symmetry governs nonlinear interactions in condensed matter systems,
-particularly in high-harmonic generation (HHG), the interplay between the
-driving field and crystal symmetries dictate the properties of the emitted
-harmonics. A central open question is how quantum fluctuations of light modify
-these symmetry-imposed selection rules in solid state systems. Here, we
-address this by studying the nonlinear response of
+The metadata identifies this as a quantum-optical HHG/output-state paper. It
+should be mined for observables beyond mean spectra, especially correlations,
+quadratures, phase locking, and selection-rule changes.
 
 ## Relevance To This Project
 
@@ -61,7 +58,7 @@ rules directly to gas without rederiving assumptions.
 ## Limitations And Cautions
 
 - Solid-state HHG assumptions do not directly apply to gas HHG or plasma THz
-emission.
+  emission.
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 

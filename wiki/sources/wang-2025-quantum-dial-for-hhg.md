@@ -29,14 +29,11 @@ related:
 Proposes tuning HHG through the quantum state of the driving field,
 reinforcing the need to sample more than a deterministic classical waveform.
 
-## Abstract Signal
+## Metadata Signal
 
-High-harmonic generation (HHG) is a highly nonlinear optical process that
-typically requires an intense laser to trigger emissions at integer multiples
-of the driving field frequency. However, the strong fields required for
-conventional HHG inevitably perturb the system, limiting its use as a
-nondestructive spectroscopic probe. Recent advances in bright squeezed vacuum
-(BSV) sources have created opportunities to driv
+The metadata identifies this as a quantum-optical HHG/output-state paper. It
+should be mined for observables beyond mean spectra, especially correlations,
+quadratures, phase locking, and selection-rule changes.
 
 ## Relevance To This Project
 
@@ -58,5 +55,5 @@ observables should be tracked beyond an averaged harmonic spectrum.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 

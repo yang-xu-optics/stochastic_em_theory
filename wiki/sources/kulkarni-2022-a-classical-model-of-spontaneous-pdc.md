@@ -30,14 +30,11 @@ stochastic vacuum field, making it directly relevant to the project claim that
 some quantum-optical observables can be reproduced by carefully ordered
 stochastic fields.
 
-## Abstract Signal
+## Metadata Signal
 
-We model spontaneous parametric down-conversion (SPDC) as classical difference
-frequency generation (DFG) of the pump field and a hypothetical stochastic
-"vacuum" seed field. We analytically show that the second-order spatiotemporal
-correlations of the field generated from the DFG process replicate those of
-the signal field from SPDC. Specifically, for low gain, the model is
-consistent with the quantum calculation of
+The metadata places this source in the nonlinear quantum-optics methods
+cluster. It is relevant for deciding when Gaussian, undepleted, or positive
+stochastic descriptions stop being sufficient.
 
 ## Relevance To This Project
 
@@ -59,5 +56,5 @@ classical stochastic vacuum seeding with SPDC quantum predictions.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 

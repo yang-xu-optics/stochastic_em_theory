@@ -30,14 +30,11 @@ Studies how intense BSV propagates through nonlinear media, a needed bridge
 between source-level BSV statistics and target-level HHG or THz-driving
 fields.
 
-## Abstract Signal
+## Metadata Signal
 
-Recent developments in quantum light engineering have enabled the use of
-infrared bright squeezed vacuum (BSV) femtosecond pulses in highly nonlinear
-optics, particularly strong field physics and high-harmonic generation.
-However, theoretical studies were focused on the microscopic interaction with
-a single atom, neglecting the crucial macroscopic aspect of light propagation
-through the media. This raises a key quest
+The metadata marks this source as relevant to the project literature map. Use
+the extracted PDF text for equation-level follow-up before citing it
+quantitatively.
 
 ## Relevance To This Project
 
@@ -59,7 +56,7 @@ intensity fluctuations, and realistic BSV source engineering.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 - Mode definition, loss, gain, and detection bandwidth must be specified before
-quoting g2 or higher cumulants.
+  quoting g2 or higher cumulants.
 

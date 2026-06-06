@@ -30,14 +30,11 @@ Studies squeezed harmonic output from excited atomic systems, directly
 relevant to whether HHG can generate or transfer squeezing into new frequency
 bands.
 
-## Abstract Signal
+## Metadata Signal
 
-High-harmonic generation (HHG) has recently emerged as a promising method for
-generating nonclassical states of light with frequencies spanning from the
-infrared up to the extreme ultraviolet regime. In this work, we theoretically
-investigate the generation of squeezed states of light through HHG processes
-in atomic systems that were initially driven to their first excited state. Our
-study reveals significant single-
+The metadata identifies this as a quantum-optical HHG/output-state paper. It
+should be mined for observables beyond mean spectra, especially correlations,
+quadratures, phase locking, and selection-rule changes.
 
 ## Relevance To This Project
 
@@ -59,5 +56,5 @@ observables should be tracked beyond an averaged harmonic spectrum.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 

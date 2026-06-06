@@ -31,14 +31,11 @@ Shows experimentally that high-gain PDC can reach pump depletion at low pulse
 energies, motivating simulations beyond the undepleted-pump Gaussian
 approximation.
 
-## Abstract Signal
+## Metadata Signal
 
-We report the efficient generation of high-gain parametric down-conversion,
-including pump depletion, with pump powers as low as 100 $$W (energies
-$0.1$~$$J/pulse) and conversion efficiencies up to 33\%. In our simple
-configuration, the pump beam is tightly focused into a bulk periodically poled
-lithium niobate crystal placed in free space. We also observe a change in the
-photon number statistics for both the pump an
+The metadata places this source in the nonlinear quantum-optics methods
+cluster. It is relevant for deciding when Gaussian, undepleted, or positive
+stochastic descriptions stop being sufficient.
 
 ## Relevance To This Project
 
@@ -61,7 +58,7 @@ states.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 - Distinguish non-Gaussian classical shot distributions from true quantum non-
 Gaussian states via the chosen phase-space representation and measurement
 model.

@@ -29,14 +29,11 @@ related:
 Connects squeezed-light statistics to nonclassical HHG cutoff fluctuations,
 suggesting higher-cumulant diagnostics of emitted spectra.
 
-## Abstract Signal
+## Metadata Signal
 
-Strong-field high-harmonic generation (HHG) is conventionally described
-semiclassically, with the driving laser treated as a classical field. This
-approximation becomes insufficient in nanoscale interaction geometries, where
-extreme spatial confinement raises the vacuum-field amplitude to the ~10^-2
-level relative to the driving-field amplitude. When the quantum fluctuations
-of the driving field are redistributed bet
+The metadata identifies this as a quantum-optical HHG/output-state paper. It
+should be mined for observables beyond mean spectra, especially correlations,
+quadratures, phase locking, and selection-rule changes.
 
 ## Relevance To This Project
 
@@ -58,5 +55,5 @@ observables should be tracked beyond an averaged harmonic spectrum.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 

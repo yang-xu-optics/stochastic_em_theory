@@ -30,14 +30,11 @@ Shows that structured squeezed driving can enable HHG in geometries forbidden
 for classical drivers, highlighting selection-rule changes from quantum
 fluctuations.
 
-## Abstract Signal
+## Metadata Signal
 
-High-harmonic generation (HHG) is a nonlinear process in which a strong
-driving field interacts with a material, resulting in the frequency up-
-conversion of the driver into its high-order harmonics. This process is highly
-sensitive to the field's polarization: circular polarization, for instance,
-inhibits HHG. In this work, we demonstrate that the use of non-classical
-structured light enables HHG in this otherwise pr
+The metadata identifies this as a quantum-optical HHG/output-state paper. It
+should be mined for observables beyond mean spectra, especially correlations,
+quadratures, phase locking, and selection-rule changes.
 
 ## Relevance To This Project
 
@@ -59,7 +56,7 @@ observables should be tracked beyond an averaged harmonic spectrum.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 - Mode definition, loss, gain, and detection bandwidth must be specified before
-quoting g2 or higher cumulants.
+  quoting g2 or higher cumulants.
 

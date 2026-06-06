@@ -30,14 +30,11 @@ Extends quantum-light-driven HHG ideas into solids, useful for comparison even
 though the gas-HHG model in this project has different propagation and
 material assumptions.
 
-## Abstract Signal
+## Metadata Signal
 
-We develop a general theory of high-harmonic generation (HHG) in solid-state
-systems, based on a weak-correlation expansion of photonic and matter degrees
-of freedom. Unlike standard HHG theories, which treat light-matter dynamics
-through the Schrodinger equation, our approach employs density-matrix
-evolution, naturally capturing the mixed-state character of both the field and
-the matter - a critical aspect for descr
+The metadata identifies this as a solid-state quantum-light HHG paper. It is
+best used as comparison literature; gas and THz claims still require their own
+material and propagation assumptions.
 
 ## Relevance To This Project
 
@@ -61,7 +58,7 @@ rules directly to gas without rederiving assumptions.
 ## Limitations And Cautions
 
 - Solid-state HHG assumptions do not directly apply to gas HHG or plasma THz
-emission.
+  emission.
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 

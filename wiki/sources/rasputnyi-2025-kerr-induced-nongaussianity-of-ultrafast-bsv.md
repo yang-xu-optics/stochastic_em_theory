@@ -31,14 +31,11 @@ related:
 Identifies Kerr propagation of ultrafast BSV as a path to bright non-Gaussian
 light without relying only on weak postselected sources.
 
-## Abstract Signal
+## Metadata Signal
 
-Non-Gaussian states of light are a critical resource for fault-tolerant
-quantum computing and enhanced metrology, but are typically faint and often
-obtained via post-selection. Here, we demonstrate the deterministic generation
-of a bright non-Gaussian state by introducing a Kerr nonlinearity to a
-macroscopic state of light called bright squeezed vacuum (BSV). To
-characterize the resulting state, we use a single-shot
+The metadata places this source in the nonlinear quantum-optics methods
+cluster. It is relevant for deciding when Gaussian, undepleted, or positive
+stochastic descriptions stop being sufficient.
 
 ## Relevance To This Project
 
@@ -62,10 +59,10 @@ conditioning, or measurement can produce genuinely non-Gaussian states.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 - Distinguish non-Gaussian classical shot distributions from true quantum non-
 Gaussian states via the chosen phase-space representation and measurement
 model.
 - Mode definition, loss, gain, and detection bandwidth must be specified before
-quoting g2 or higher cumulants.
+  quoting g2 or higher cumulants.
 

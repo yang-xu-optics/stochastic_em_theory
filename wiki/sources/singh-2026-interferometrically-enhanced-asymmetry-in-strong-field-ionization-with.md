@@ -30,14 +30,11 @@ related:
 Studies ionization or tunneling under quantum-light/BSV driving, providing
 adjacent strong-field tests for any stochastic-field HHG driver model.
 
-## Abstract Signal
+## Metadata Signal
 
-We demonstrate that quantum light statistics can be used to control strong-
-field ionization at the tunneling step. Using a bichromatic linearly polarized
-field composed of a strong coherent driver and a weak bright squeezed vacuum
-(BSV), we show through simulation that photoelectron momentum distributions
-(PMDs) exhibit asymmetries that exceed those obtained with classical fields of
-comparable intensity by orders of
+The metadata identifies this as a strong-field quantum-light paper. It is
+useful as an upstream validation class for BSV-driven ionization and tunneling
+before claiming gas-HHG predictions.
 
 ## Relevance To This Project
 
@@ -63,7 +60,7 @@ sampled quantum-light shots.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 - Mode definition, loss, gain, and detection bandwidth must be specified before
-quoting g2 or higher cumulants.
+  quoting g2 or higher cumulants.
 

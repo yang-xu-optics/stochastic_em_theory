@@ -29,14 +29,11 @@ related:
 Frames HHG using quantum-information and measurement concepts, useful for
 separating matter response, emitted-field state, and detection backaction.
 
-## Abstract Signal
+## Metadata Signal
 
-Quantum information science and intense laser matter interaction are two
-apparently unrelated fields. Here, we introduce the notion of quantum
-information theory to intense laser driven processes by providing the quantum
-mechanical description of measurement protocols for high harmonic generation
-in atoms. This allows to conceive new protocols for quantum state engineering
-of light. We explicitly evaluate conditionin
+The metadata marks this source as relevant to the project literature map. Use
+the extracted PDF text for equation-level follow-up before citing it
+quantitatively.
 
 ## Relevance To This Project
 
@@ -58,5 +55,5 @@ observables should be tracked beyond an averaged harmonic spectrum.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 

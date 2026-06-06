@@ -29,14 +29,11 @@ related:
 Reports displaced squeezed-state signatures associated with HHG, motivating
 reconstruction of harmonic quadratures rather than only intensity spectra.
 
-## Abstract Signal
+## Metadata Signal
 
-High-harmonic generation (HHG) and quantum optics are historically two distant
-fields of science. HHG as a central technique to generate attosecond pulses
-via atoms, molecules, or solids has been mostly treated as a classical source
-of light. Entanglement and squeezing of HHG light would open fascinating
-perspectives in quantum technology, with the emergence of a field of basic and
-applied research: attosecond quantu
+The metadata identifies this as a quantum-optical HHG/output-state paper. It
+should be mined for observables beyond mean spectra, especially correlations,
+quadratures, phase locking, and selection-rule changes.
 
 ## Relevance To This Project
 
@@ -58,5 +55,5 @@ observables should be tracked beyond an averaged harmonic spectrum.
 ## Limitations And Cautions
 
 - This is a first-pass ingest from the downloaded source and metadata; extract
-equations before using it as a primary derivation source.
+  equations before using it as a primary derivation source.
 
