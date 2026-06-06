@@ -11,10 +11,14 @@
             "id": "893432ee7b2df883",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "wiki/sources/even-tzur-2025-attosecond-quantum-fluctuations.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "even-tzur-2025-attosecond-quantum-fluctuations"
             }
           }
         ]
@@ -179,6 +183,7 @@
   },
   "active": "8ad97e7375a24d50",
   "lastOpenFiles": [
+    "raw/sources/900736523-MIT.pdf",
     "wiki/sources/wang-2026-quantum-thz-plasma-bsv.md",
     "wiki/sources/sun-2022-thz-laser-induced-plasma.md",
     "wiki/sources/schuh-2013-thz-ionization-gases.md",
@@ -213,7 +218,6 @@
     "wiki/theory/squeezed-vacuum-g2-proof-plan.md",
     "wiki/theory/stochastic-quantum-optics-correspondence.md",
     "wiki/research-agenda.md",
-    "wiki/overview.md",
-    "wiki/log.md"
+    "wiki/overview.md"
   ]
 }
