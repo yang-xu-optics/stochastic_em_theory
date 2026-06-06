@@ -1505,6 +1505,90 @@ Expected: commit succeeds.
 
 ---
 
+### Task 5B: Add Mechanism-Family Labels
+
+**Files:**
+- Create: `code/src/stochastic_em_theory/mechanisms.py`
+- Create: `code/tests/test_mechanisms.py`
+
+- [ ] **Step 1: Write failing tests for mechanism labels**
+
+Create `code/tests/test_mechanisms.py`:
+
+```python
+from stochastic_em_theory.mechanisms import MechanismFamily, mechanism_manifest_value
+
+
+def test_mechanism_values_are_manifest_strings() -> None:
+    assert MechanismFamily.BSV_PUMP_ENSEMBLE.value == "bsv_pump_ensemble"
+    assert MechanismFamily.ATI_PHOTON_STATISTICS.value == "ati_photon_statistics"
+    assert MechanismFamily.SQUEEZED_EMISSION_MODE_ENVIRONMENT.value == "squeezed_emission_mode_environment"
+
+
+def test_mechanism_manifest_value_accepts_enum_or_string() -> None:
+    assert mechanism_manifest_value(MechanismFamily.BSV_PUMP_ENSEMBLE) == "bsv_pump_ensemble"
+    assert mechanism_manifest_value("custom_boundary_check") == "custom_boundary_check"
+```
+
+- [ ] **Step 2: Run mechanism-label tests and verify they fail**
+
+Run:
+
+```bash
+cd code
+python -m pytest tests/test_mechanisms.py -q
+```
+
+Expected: FAIL with `ModuleNotFoundError` for `stochastic_em_theory.mechanisms`.
+
+- [ ] **Step 3: Implement mechanism-family labels**
+
+Create `code/src/stochastic_em_theory/mechanisms.py`:
+
+```python
+from __future__ import annotations
+
+from enum import Enum
+
+
+class MechanismFamily(str, Enum):
+    BSV_PUMP_ENSEMBLE = "bsv_pump_ensemble"
+    ATI_PHOTON_STATISTICS = "ati_photon_statistics"
+    SQUEEZED_EMISSION_MODE_ENVIRONMENT = "squeezed_emission_mode_environment"
+
+
+def mechanism_manifest_value(mechanism: MechanismFamily | str) -> str:
+    if isinstance(mechanism, MechanismFamily):
+        return mechanism.value
+    if not mechanism:
+        raise ValueError("mechanism must be a non-empty string")
+    return mechanism
+```
+
+- [ ] **Step 4: Run mechanism-label tests**
+
+Run:
+
+```bash
+cd code
+python -m pytest tests/test_mechanisms.py -q
+```
+
+Expected: `2 passed`.
+
+- [ ] **Step 5: Commit**
+
+Run:
+
+```bash
+git add code/src/stochastic_em_theory/mechanisms.py code/tests/test_mechanisms.py
+git commit -m "feat: add mechanism family labels"
+```
+
+Expected: commit succeeds.
+
+---
+
 ### Task 6: Add Plotting For Validation Figures
 
 **Files:**
