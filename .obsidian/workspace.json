@@ -179,10 +179,16 @@
   },
   "active": "8ad97e7375a24d50",
   "lastOpenFiles": [
-    "results",
-    "code",
-    "raw/assets",
-    "raw/sources",
-    "raw"
+    "results/figures",
+    "results/runs",
+    "paper/figures",
+    "paper",
+    "code/tests",
+    "code/notebooks",
+    "code/src",
+    "wiki/simulations",
+    "wiki/models",
+    "wiki/theory",
+    "results"
   ]
 }
