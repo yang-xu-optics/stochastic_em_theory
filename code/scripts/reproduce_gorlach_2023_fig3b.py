@@ -38,6 +38,10 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--tdse-ground-state-iterations", type=int, default=120)
     parser.add_argument("--tdse-ground-state-dt-au", type=float, default=0.08)
     parser.add_argument("--tdse-carrier-phase", type=float, default=0.0)
+    parser.add_argument("--tdse-min-harmonic-order", type=float, default=1.0)
+    parser.add_argument("--tdse-normalization-min-harmonic-order", type=float, default=None)
+    parser.add_argument("--tdse-absorber-start-au", type=float, default=75.0)
+    parser.add_argument("--tdse-absorber-strength", type=float, default=5.0e-4)
     return parser
 
 
@@ -68,6 +72,10 @@ def main() -> int:
         tdse_ground_state_iterations=args.tdse_ground_state_iterations,
         tdse_ground_state_dt_au=args.tdse_ground_state_dt_au,
         tdse_carrier_phase=args.tdse_carrier_phase,
+        tdse_min_harmonic_order=args.tdse_min_harmonic_order,
+        tdse_normalization_min_harmonic_order=args.tdse_normalization_min_harmonic_order,
+        tdse_absorber_start_au=args.tdse_absorber_start_au,
+        tdse_absorber_strength=args.tdse_absorber_strength,
     )
     print(artifacts.csv_path)
     print(artifacts.summary_path)

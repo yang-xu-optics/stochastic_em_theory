@@ -25,9 +25,11 @@ PDF provides the coherent-state phase-space sampling formulation and the
 1D soft-core TDSE baseline.
 
 The current upgrade replaces the previous smooth cutoff envelope with a local
-1D TDSE dipole-acceleration coherent-response library. It remains an
-approximate local reproduction, not the authors' exact grid, code, or
-source-data reconstruction. The public source-data archive is stored locally at
+1D TDSE dipole-acceleration coherent-response library. The next fidelity fix is
+to preserve the full frequency-resolved TDSE acceleration spectrum instead of
+sampling only odd harmonic orders. It remains an approximate local
+reproduction, not the authors' exact grid, code, or source-data reconstruction.
+The public source-data archive is stored locally at
 `raw/assets/gorlach-2023-fig3-source-data/`.
 
 ## Representation And Driver Ensemble
@@ -68,18 +70,20 @@ harmonic order:
 S_state(q) = mean_shots[S_TDSE(q; E_shot)]
 ```
 
-The output CSV should include raw matched-intensity spectra and a display
-column with vertical offsets for a Fig. 3b-like plot. The display offsets are
-only for visual comparison and must not be interpreted as absolute emitted
-energy differences.
+The TDSE output CSV should include frequency-resolved rows on the FFT harmonic
+order grid, not only odd harmonic samples. The CSV should include raw
+matched-intensity spectra and a display column with vertical offsets for a
+Fig. 3b-like plot. The display offsets are only for visual comparison and must
+not be interpreted as absolute emitted energy differences.
 
 ## Model Equations And Units
 
 For each coherent component, solve the 1D soft-core TDSE in atomic units:
 
 ```text
-i d_t psi(x,t) = [-1/2 d_x^2 + V(x) + x E(t)] psi(x,t)
+i d_t psi(x,t) = [-1/2 d_x^2 + V(x) + V_ab(x) + x E(t)] psi(x,t)
 V(x) = -(x^2 + a^2)^(-1/2)
+V_ab(x) = -i 5e-4 (|x| - x0)^3 for |x| >= x0, else 0
 E(t) = E_shot f(t) sin(omega0 t + phi)
 a(t) = -<psi(t) | d_x V(x) + E(t) | psi(t)>
 S_TDSE(omega) = |FFT[a(t) w(t)]|^2
@@ -89,14 +93,28 @@ q = omega / omega0
 The Gorlach supplement used a trapezoid temporal envelope with 5-cycle ramp-up,
 15-cycle flat top, and 5-cycle ramp-down, a 1D grid from `-100` to `100` bohr,
 `dx = 0.06` bohr, `dt = 0.02` atomic units, `a = 0.8160` bohr, and
-`I_p = 0.7924` hartree. The local implementation exposes these as parameters.
-Test and smoke runs may use a smaller grid and shorter pulse; such outputs must
-record the reduced fidelity in the manifest.
+`I_p = 0.7924` hartree. It also used a complex absorbing potential beginning at
+`x0 = 75` bohr to avoid nonphysical boundary reflections. The local
+implementation exposes these as parameters. Test and smoke runs may use a
+smaller grid and shorter pulse; such outputs must record the reduced fidelity
+in the manifest.
 
 To keep stochastic averaging tractable, the runner evaluates TDSE spectra on a
 field-amplitude library and interpolates `log(S + floor)` at the sampled
 shot amplitudes. This keeps the stochastic-field ensemble intact while avoiding
 one TDSE solve per Monte Carlo shot.
+
+For the TDSE model, the interpolation target should be the raw FFT harmonic
+order grid:
+
+```text
+q_i = omega_i / omega0
+S_state(q_i) = mean_shots[S_TDSE(q_i; E_shot)]
+```
+
+Odd harmonic peak heights may be retained only as a legacy proxy output. They
+must not be the primary TDSE Fig. 3b reproduction because they erase the
+between-peak valleys and make the plot look like a smooth envelope.
 
 Default physical scales:
 
@@ -138,7 +156,9 @@ shots, driver-state parameters, field normalization, code entry point, commit
 hash if available, TDSE grid and pulse parameters, amplitude-library metadata,
 and the approximation caveat.
 
-The first upgraded local run is stored at
-`results/gorlach-2023-fig3b-tdse-20260606/`. It uses 50,000 stochastic shots,
-9 TDSE amplitude bins, a `[-80, 80]` bohr grid with 768 points, `dt = 0.10`
-a.u., and a 1.5-cycle ramp / 3-cycle flat-top / 1.5-cycle ramp pulse.
+The first full-frequency upgraded local run is stored at
+`results/gorlach-2023-fig3b-tdse-fullfreq-20260606/`. It uses 50,000
+stochastic shots, 11 TDSE amplitude bins, a `[-80, 80]` bohr grid with 768
+points, `dt = 0.08` a.u., a 5-cycle ramp / 15-cycle flat-top / 5-cycle ramp
+pulse, a complex absorber starting at 75 bohr, and 3,650 harmonic-order FFT
+points per driver state.

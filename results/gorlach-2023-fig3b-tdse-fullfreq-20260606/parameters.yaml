@@ -1,0 +1,56 @@
+shots: 50000
+seed: 20230603
+base_field_amplitude_au: 0.08
+omega_au: 0.057
+ionization_potential_au: 0.7924
+max_order: 151
+mean_photon_number: 100.0
+fock_n: 100
+bsv_r: 2.0
+bsv_phase: 0.0
+nonlinearity_power: 6.0
+spectrum_model: tdse_dipole_acceleration
+frequency_grid: raw_fft_harmonic_order_grid
+normalization_min_harmonic_order: 13.901754385964912
+tdse_amplitude_bins: 11
+tdse:
+  amplitude_bins: 11
+  x_min: -80.0
+  x_max: 80.0
+  grid_points: 768
+  softening: 0.816
+  dt_au: 0.08
+  ramp_cycles: 5.0
+  flat_cycles: 15.0
+  ground_state_iterations: 180
+  ground_state_dt_au: 0.08
+  carrier_phase: 0.0
+  min_harmonic_order: 5.0
+  normalization_min_harmonic_order: 13.901754385964912
+  absorber_start_au: 75.0
+  absorber_strength: 0.0005
+  spectrum_model: tdse_dipole_acceleration
+  frequency_grid: raw_fft_harmonic_order_grid
+  amplitude_bin_count: 11
+  field_amplitude_min_au: 0.00013629135235749222
+  field_amplitude_max_au: 0.34072957092969647
+  field_amplitude_values_au:
+  - 0.00013629135235749222
+  - 0.04869846767085722
+  - 0.07402911087082352
+  - 0.07837946795555904
+  - 0.08119729216396668
+  - 0.08405320148428391
+  - 0.08846085434656041
+  - 0.10557541640584893
+  - 0.13269253733807168
+  - 0.17227803010213888
+  - 0.34072957092969647
+  max_harmonic_order: 151.0
+  harmonic_order_points: 3650
+  harmonic_order_spacing: 0.03999801198096975
+  time_steps: 34449
+  dx_au: 0.2083333333333286
+driver_sampling: single_mode_husimi_q_fig3b
+field_normalization: field_amplitude = base_field_amplitude_au * sqrt(|alpha|^2 /
+  mean(|alpha|^2))

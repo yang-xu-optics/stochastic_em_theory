@@ -159,18 +159,26 @@ def test_gorlach_fig3b_tdse_runner_records_dipole_acceleration_model(tmp_path) -
 
     assert {row["driver_state"] for row in rows} == {state.value for state in Fig3BDriverState}
     assert all(row["spectrum_model"] == "tdse_dipole_acceleration" for row in rows)
+    assert all(row["frequency_grid"] == "raw_fft_harmonic_order_grid" for row in rows)
     assert all(row["mechanism"] == "quantum_light_hhg_tdse_dipole_acceleration" for row in rows)
     assert all(int(row["tdse_amplitude_bin_count"]) == 3 for row in rows)
+    coherent_orders = [float(row["harmonic_order"]) for row in rows if row["driver_state"] == "coherent"]
+    odd_only_orders = np.arange(1.0, 10.0, 2.0)
+    assert len(coherent_orders) > len(odd_only_orders)
+    assert any(not np.isclose(order % 2.0, 1.0) for order in coherent_orders)
 
     summary = json.loads(artifacts.summary_path.read_text())
     assert summary["parameters"]["spectrum_model"] == "tdse_dipole_acceleration"
+    assert summary["parameters"]["frequency_grid"] == "raw_fft_harmonic_order_grid"
     assert summary["parameters"]["tdse_amplitude_bins"] == 3
+    assert summary["parameters"]["tdse"]["harmonic_order_spacing"] > 0.0
     assert summary["state_summaries"]["bsv"]["tdse_library_field_amplitude_max_au"] > 0.0
     assert "TDSE dipole-acceleration" in summary["notes"]
 
     manifest = yaml.safe_load(artifacts.manifest_path.read_text())
     assert manifest["mechanism"] == "quantum_light_hhg_tdse_dipole_acceleration"
     assert manifest["observable"] == "ensemble_mean_tdse_hhg_spectrum_by_driver_state"
+    assert manifest["parameters"]["frequency_grid"] == "raw_fft_harmonic_order_grid"
     assert manifest["parameters"]["tdse"]["grid_points"] == 128
     assert manifest["parameter_file"] == "parameters.yaml"
     parameter_file = yaml.safe_load((tmp_path / "parameters.yaml").read_text())

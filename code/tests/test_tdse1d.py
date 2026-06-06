@@ -6,6 +6,7 @@ from stochastic_em_theory.tdse1d import (
     TrapezoidPulse,
     acceleration_expectation,
     acceleration_spectrum,
+    complex_absorbing_potential,
     gaussian_wavepacket,
     normalize_wavefunction,
     soft_core_potential,
@@ -51,6 +52,26 @@ def test_even_wavefunction_has_zero_acceleration_without_field() -> None:
     acceleration = acceleration_expectation(psi=psi, grid=grid, potential=potential, field_au=0.0)
 
     assert abs(acceleration) < 1e-12
+
+
+def test_complex_absorber_damps_edge_localized_wavefunction() -> None:
+    grid = SoftCoreGrid.create(x_min=-20.0, x_max=20.0, points=256)
+    potential = soft_core_potential(grid.x, softening=0.8160)
+    absorber = complex_absorbing_potential(grid.x, absorption_start_au=10.0, strength=5.0e-4)
+    psi = np.exp(-0.5 * ((grid.x - 16.0) / 1.0) ** 2).astype(np.complex128)
+    psi = normalize_wavefunction(psi, grid.dx)
+
+    damped = split_operator_step(
+        psi=psi,
+        grid=grid,
+        potential=potential.astype(np.complex128) + absorber,
+        field_au=0.0,
+        dt_au=0.5,
+    )
+
+    initial_norm = np.sum(np.abs(psi) ** 2) * grid.dx
+    damped_norm = np.sum(np.abs(damped) ** 2) * grid.dx
+    assert damped_norm < initial_norm
 
 
 def test_normalize_wavefunction_rejects_nonpositive_dx() -> None:

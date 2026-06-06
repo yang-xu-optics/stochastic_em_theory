@@ -158,3 +158,14 @@ Append-only chronological record. New entries should use:
 - Generated `results/gorlach-2023-fig3b-tdse-20260606/` with 50,000 stochastic
   shots, 9 TDSE amplitude bins, a manifest, a parameter file, CSV spectra, and
   a Fig. 3b-style PNG.
+
+## [2026-06-06] simulation | Gorlach 2023 Fig 3b Full-Frequency TDSE
+
+- Upgraded the Fig. 3b TDSE runner to preserve and ensemble-average the raw FFT
+  harmonic-order grid instead of sampling only odd harmonics.
+- Added the source-backed complex absorbing potential `V_ab` beginning at
+  75 bohr to reduce nonphysical boundary reflections in the cutoff tail.
+- Generated `results/gorlach-2023-fig3b-tdse-fullfreq-20260606/` with 50,000
+  stochastic shots, 11 TDSE amplitude bins, 3,650 harmonic-order points per
+  driver state, a manifest, parameter file, CSV spectra, and a Fig. 3b-style
+  PNG.

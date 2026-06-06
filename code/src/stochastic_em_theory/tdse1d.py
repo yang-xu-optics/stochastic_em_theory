@@ -104,6 +104,20 @@ def soft_core_potential(x: FloatArray, *, softening: float) -> FloatArray:
     return (-1.0 / np.sqrt(x**2 + softening**2)).astype(np.float64)
 
 
+def complex_absorbing_potential(
+    x: FloatArray,
+    *,
+    absorption_start_au: float,
+    strength: float = 5.0e-4,
+) -> ComplexArray:
+    if absorption_start_au <= 0:
+        raise ValueError("absorption_start_au must be positive")
+    if strength < 0:
+        raise ValueError("strength must be non-negative")
+    distance = np.maximum(np.abs(x) - absorption_start_au, 0.0)
+    return (-1j * strength * distance**3).astype(np.complex128)
+
+
 def gaussian_wavepacket(x: FloatArray, *, width: float) -> ComplexArray:
     if width <= 0:
         raise ValueError("width must be positive")
@@ -208,12 +222,24 @@ def tdse_acceleration_trace(
     ground_state_iterations: int,
     ground_state_dt_au: float,
     carrier_phase: float = 0.0,
+    absorber_start_au: float | None = 75.0,
+    absorber_strength: float = 5.0e-4,
 ) -> tuple[FloatArray, FloatArray, dict[str, Any]]:
     if field_amplitude_au < 0:
         raise ValueError("field_amplitude_au must be non-negative")
 
     grid = SoftCoreGrid.create(x_min=x_min, x_max=x_max, points=grid_points)
     potential = soft_core_potential(grid.x, softening=softening)
+    absorber = (
+        complex_absorbing_potential(
+            grid.x,
+            absorption_start_au=absorber_start_au,
+            strength=absorber_strength,
+        )
+        if absorber_start_au is not None
+        else np.zeros_like(grid.x, dtype=np.complex128)
+    )
+    propagation_potential = potential.astype(np.complex128) + absorber
     psi = imaginary_time_ground_state(
         grid=grid,
         potential=potential,
@@ -242,7 +268,7 @@ def tdse_acceleration_trace(
         psi = split_operator_step(
             psi=psi,
             grid=grid,
-            potential=potential,
+            potential=propagation_potential,
             field_au=field_au,
             dt_au=dt_au,
         )
@@ -264,6 +290,8 @@ def tdse_acceleration_trace(
         "ground_state_iterations": int(ground_state_iterations),
         "ground_state_dt_au": float(ground_state_dt_au),
         "carrier_phase": float(carrier_phase),
+        "absorber_start_au": None if absorber_start_au is None else float(absorber_start_au),
+        "absorber_strength": float(absorber_strength),
     }
     return time, acceleration.astype(np.float64), metadata
 
@@ -283,6 +311,8 @@ def tdse_harmonic_spectrum(
     ground_state_iterations: int = 160,
     ground_state_dt_au: float = 0.08,
     carrier_phase: float = 0.0,
+    absorber_start_au: float | None = 75.0,
+    absorber_strength: float = 5.0e-4,
 ) -> TDSEHarmonicSpectrum:
     if max_order < 1:
         raise ValueError("max_order must be at least 1")
@@ -302,6 +332,8 @@ def tdse_harmonic_spectrum(
         ground_state_iterations=ground_state_iterations,
         ground_state_dt_au=ground_state_dt_au,
         carrier_phase=carrier_phase,
+        absorber_start_au=absorber_start_au,
+        absorber_strength=absorber_strength,
     )
     angular_frequency, raw_power = acceleration_spectrum(acceleration, dt_au=dt_au)
     raw_orders = angular_frequency / omega_au

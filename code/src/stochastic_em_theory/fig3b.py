@@ -24,6 +24,8 @@ TDSE_MECHANISM = "quantum_light_hhg_tdse_dipole_acceleration"
 MECHANISM = PROXY_MECHANISM
 PROXY_SPECTRUM_MODEL = "smooth_cutoff_proxy"
 TDSE_SPECTRUM_MODEL = "tdse_dipole_acceleration"
+PROXY_FREQUENCY_GRID = "odd_harmonic_order_grid"
+TDSE_FREQUENCY_GRID = "raw_fft_harmonic_order_grid"
 FIELD_NORMALIZATION = "field_amplitude = base_field_amplitude_au * sqrt(|alpha|^2 / mean(|alpha|^2))"
 DRIVER_SAMPLING = "single_mode_husimi_q_fig3b"
 
@@ -220,10 +222,13 @@ def _build_tdse_library(
     ground_state_iterations: int,
     ground_state_dt_au: float,
     carrier_phase: float,
+    min_harmonic_order: float,
+    absorber_start_au: float | None,
+    absorber_strength: float,
 ) -> tuple[np.ndarray, np.ndarray, np.ndarray, dict[str, object]]:
     library_amplitudes = _tdse_library_field_amplitudes(field_amplitudes_au=field_amplitudes_au, bins=bins)
     library_spectra: list[np.ndarray] = []
-    orders: np.ndarray | None = None
+    harmonic_orders: np.ndarray | None = None
     last_metadata: dict[str, object] = {}
 
     for amplitude in library_amplitudes:
@@ -241,24 +246,37 @@ def _build_tdse_library(
             ground_state_iterations=ground_state_iterations,
             ground_state_dt_au=ground_state_dt_au,
             carrier_phase=carrier_phase,
+            absorber_start_au=absorber_start_au,
+            absorber_strength=absorber_strength,
         )
-        if orders is None:
-            orders = spectrum.orders
-        elif not np.array_equal(orders, spectrum.orders):
-            raise ValueError("TDSE spectra returned inconsistent harmonic orders")
-        library_spectra.append(spectrum.intensity)
+        raw_harmonic_orders = spectrum.angular_frequency / omega_au
+        frequency_mask = (raw_harmonic_orders >= min_harmonic_order) & (raw_harmonic_orders <= max_order)
+        selected_orders = raw_harmonic_orders[frequency_mask].astype(np.float64)
+        if selected_orders.size == 0:
+            raise ValueError("TDSE frequency grid has no points in the requested harmonic-order range")
+        if harmonic_orders is None:
+            harmonic_orders = selected_orders
+        elif not np.allclose(harmonic_orders, selected_orders, rtol=0.0, atol=1.0e-12):
+            raise ValueError("TDSE spectra returned inconsistent harmonic-order grids")
+        library_spectra.append(spectrum.raw_power[frequency_mask])
         last_metadata = spectrum.metadata
 
-    if orders is None:
+    if harmonic_orders is None:
         raise ValueError("TDSE library did not produce spectra")
 
     library_matrix = np.vstack(library_spectra).astype(np.float64)
+    spacing = float(np.median(np.diff(harmonic_orders))) if harmonic_orders.size > 1 else 0.0
     metadata = {
         "spectrum_model": TDSE_SPECTRUM_MODEL,
+        "frequency_grid": TDSE_FREQUENCY_GRID,
         "amplitude_bin_count": int(library_amplitudes.size),
         "field_amplitude_min_au": float(np.min(library_amplitudes)),
         "field_amplitude_max_au": float(np.max(library_amplitudes)),
         "field_amplitude_values_au": [float(value) for value in library_amplitudes],
+        "min_harmonic_order": float(min_harmonic_order),
+        "max_harmonic_order": float(max_order),
+        "harmonic_order_points": int(harmonic_orders.size),
+        "harmonic_order_spacing": spacing,
         "grid_points": int(grid_points),
         "x_min": float(x_min),
         "x_max": float(x_max),
@@ -269,10 +287,12 @@ def _build_tdse_library(
         "ground_state_iterations": int(ground_state_iterations),
         "ground_state_dt_au": float(ground_state_dt_au),
         "carrier_phase": float(carrier_phase),
+        "absorber_start_au": None if absorber_start_au is None else float(absorber_start_au),
+        "absorber_strength": float(absorber_strength),
         "time_steps": int(last_metadata.get("time_steps", 0)),
         "dx_au": float(last_metadata.get("dx_au", 0.0)),
     }
-    return orders.astype(np.float64), library_amplitudes, library_matrix, metadata
+    return harmonic_orders.astype(np.float64), library_amplitudes, library_matrix, metadata
 
 
 def _interpolate_tdse_spectra(
@@ -356,6 +376,10 @@ def run_gorlach_2023_fig3b_proxy(
     tdse_ground_state_iterations: int = 120,
     tdse_ground_state_dt_au: float = 0.08,
     tdse_carrier_phase: float = 0.0,
+    tdse_min_harmonic_order: float = 1.0,
+    tdse_normalization_min_harmonic_order: float | None = None,
+    tdse_absorber_start_au: float | None = 75.0,
+    tdse_absorber_strength: float = 5.0e-4,
 ) -> RunArtifacts:
     """Run a local stochastic-field reproduction of Nature Fig. 3b."""
 
@@ -366,6 +390,14 @@ def run_gorlach_2023_fig3b_proxy(
     spectrum_model_name = _spectrum_model_name(model)
     mechanism = _mechanism_name(model)
     observable = _observable_name(model)
+    frequency_grid = TDSE_FREQUENCY_GRID if model is Fig3BSpectrumModel.TDSE else PROXY_FREQUENCY_GRID
+    if tdse_min_harmonic_order < 0:
+        raise ValueError("tdse_min_harmonic_order must be non-negative")
+    normalization_min_harmonic_order = (
+        float(tdse_normalization_min_harmonic_order)
+        if tdse_normalization_min_harmonic_order is not None
+        else max(float(tdse_min_harmonic_order), float(ionization_potential_au / omega_au))
+    )
     output_dir = ensure_output_dir(output_dir)
     rng = np.random.default_rng(seed)
     rows: list[dict[str, object]] = []
@@ -408,6 +440,10 @@ def run_gorlach_2023_fig3b_proxy(
         "ground_state_iterations": int(tdse_ground_state_iterations),
         "ground_state_dt_au": float(tdse_ground_state_dt_au),
         "carrier_phase": float(tdse_carrier_phase),
+        "min_harmonic_order": float(tdse_min_harmonic_order),
+        "normalization_min_harmonic_order": float(normalization_min_harmonic_order),
+        "absorber_start_au": None if tdse_absorber_start_au is None else float(tdse_absorber_start_au),
+        "absorber_strength": float(tdse_absorber_strength),
     }
 
     if model is Fig3BSpectrumModel.TDSE:
@@ -426,6 +462,9 @@ def run_gorlach_2023_fig3b_proxy(
             ground_state_iterations=tdse_ground_state_iterations,
             ground_state_dt_au=tdse_ground_state_dt_au,
             carrier_phase=tdse_carrier_phase,
+            min_harmonic_order=tdse_min_harmonic_order,
+            absorber_start_au=tdse_absorber_start_au,
+            absorber_strength=tdse_absorber_strength,
         )
     else:
         orders = odd_harmonic_orders(max_order=max_order)
@@ -455,7 +494,9 @@ def run_gorlach_2023_fig3b_proxy(
             )
         mean_spectrum = np.mean(spectra, axis=0)
         std_spectrum = np.std(spectra, axis=0, ddof=1) if shots > 1 else np.zeros_like(mean_spectrum)
-        normalization = max(float(np.max(mean_spectrum)), 1.0e-300)
+        normalization_mask = orders >= normalization_min_harmonic_order
+        normalization_values = mean_spectrum[normalization_mask] if np.any(normalization_mask) else mean_spectrum
+        normalization = max(float(np.max(normalization_values)), 1.0e-300)
         style = STATE_STYLES[state]
         tdse_bin_count = int(tdse_library_metadata["amplitude_bin_count"])
         tdse_library_min = float(tdse_library_metadata["field_amplitude_min_au"])
@@ -488,6 +529,7 @@ def run_gorlach_2023_fig3b_proxy(
                     "mean_cutoff_order": state_summaries[state.value]["mean_cutoff_order"],
                     "normalized_intensity_cv": state_summaries[state.value]["normalized_intensity_cv"],
                     "spectrum_model": spectrum_model_name,
+                    "frequency_grid": frequency_grid,
                     "tdse_amplitude_bin_count": tdse_bin_count,
                     "tdse_library_field_amplitude_min_au": tdse_library_min,
                     "tdse_library_field_amplitude_max_au": tdse_library_max,
@@ -512,6 +554,7 @@ def run_gorlach_2023_fig3b_proxy(
         "mean_cutoff_order",
         "normalized_intensity_cv",
         "spectrum_model",
+        "frequency_grid",
         "tdse_amplitude_bin_count",
         "tdse_library_field_amplitude_min_au",
         "tdse_library_field_amplitude_max_au",
@@ -531,6 +574,8 @@ def run_gorlach_2023_fig3b_proxy(
         "bsv_phase": float(bsv_phase),
         "nonlinearity_power": float(nonlinearity_power),
         "spectrum_model": spectrum_model_name,
+        "frequency_grid": frequency_grid,
+        "normalization_min_harmonic_order": float(normalization_min_harmonic_order),
         "tdse_amplitude_bins": int(tdse_amplitude_bins),
         "tdse": tdse_parameters | tdse_library_metadata,
         "driver_sampling": DRIVER_SAMPLING,
