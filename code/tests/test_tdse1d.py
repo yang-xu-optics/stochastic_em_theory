@@ -3,12 +3,14 @@ import pytest
 
 from stochastic_em_theory.tdse1d import (
     SoftCoreGrid,
+    TrapezoidPulse,
     acceleration_expectation,
     acceleration_spectrum,
     gaussian_wavepacket,
     normalize_wavefunction,
     soft_core_potential,
     split_operator_step,
+    tdse_harmonic_spectrum,
 )
 
 
@@ -70,3 +72,44 @@ def test_acceleration_spectrum_peaks_at_known_angular_frequency() -> None:
     peak_index = np.argmax(power[1:]) + 1
 
     assert np.isclose(angular_frequency[peak_index], expected_angular_frequency)
+
+
+def test_trapezoid_pulse_has_linear_ramps_and_flat_top() -> None:
+    pulse = TrapezoidPulse(
+        omega_au=0.5,
+        field_amplitude_au=0.2,
+        ramp_cycles=1.0,
+        flat_cycles=1.0,
+        carrier_phase=0.0,
+    )
+    period = 2.0 * np.pi / 0.5
+
+    assert np.isclose(pulse.envelope(0.0), 0.0)
+    assert np.isclose(pulse.envelope(0.5 * period), 0.5)
+    assert np.isclose(pulse.envelope(1.25 * period), 1.0)
+    assert np.isclose(pulse.envelope(2.5 * period), 0.5)
+    assert np.isclose(pulse.envelope(3.0 * period), 0.0)
+
+
+def test_tdse_harmonic_spectrum_returns_odd_order_dipole_acceleration_power() -> None:
+    spectrum = tdse_harmonic_spectrum(
+        field_amplitude_au=0.025,
+        omega_au=0.4,
+        max_order=9,
+        x_min=-20.0,
+        x_max=20.0,
+        grid_points=128,
+        softening=0.8160,
+        dt_au=0.12,
+        ramp_cycles=0.5,
+        flat_cycles=0.5,
+        ground_state_iterations=30,
+        ground_state_dt_au=0.08,
+    )
+
+    assert np.array_equal(spectrum.orders, np.array([1.0, 3.0, 5.0, 7.0, 9.0]))
+    assert spectrum.intensity.shape == spectrum.orders.shape
+    assert np.all(np.isfinite(spectrum.intensity))
+    assert np.all(spectrum.intensity >= 0.0)
+    assert spectrum.intensity[0] > spectrum.intensity[-1]
+    assert spectrum.metadata["spectrum_model"] == "tdse_dipole_acceleration"

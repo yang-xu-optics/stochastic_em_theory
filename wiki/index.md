@@ -48,9 +48,10 @@ before answering project questions or changing wiki pages.
   simulation specification for squeezed-field validation, mode-filtered
   `g^(2)`, HHG intensity observables, ATI photon-statistics validation, and
   squeezed emitted-mode boundary modeling.
-- [[simulations/gorlach-2023-fig3b-proxy-reproduction]]: Fig. 3b proxy
-  reproduction spec for coherent, Fock, thermal, and BSV HHG spectra using
-  single-mode Husimi-Q coherent-response sampling.
+- [[simulations/gorlach-2023-fig3b-proxy-reproduction]]: Fig. 3b reproduction
+  spec for coherent, Fock, thermal, and BSV HHG spectra using single-mode
+  Husimi-Q coherent-response sampling with a local TDSE dipole-acceleration
+  spectrum library.
 
 ## Manuscript
 

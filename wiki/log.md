@@ -143,3 +143,15 @@ Append-only chronological record. New entries should use:
   single-mode Husimi-Q coherent-response sampling at matched mean intensity.
 - Marked the result as a proxy benchmark against the published TDSE spectra,
   not an exact source-data or TDSE reproduction.
+
+## [2026-06-06] simulation | Gorlach 2023 Fig 3b TDSE Upgrade
+
+- Upgraded [[simulations/gorlach-2023-fig3b-proxy-reproduction]] from a smooth
+  cutoff-envelope proxy toward a local 1D TDSE dipole-acceleration spectrum
+  reproduction.
+- Kept the stochastic-field part as single-mode Husimi-Q coherent-response
+  sampling, but specified a TDSE amplitude library with log-spectrum
+  interpolation for tractable Monte Carlo averaging.
+- Downloaded the public Fig. 3 source-data archive under
+  `raw/assets/gorlach-2023-fig3-source-data/` for reference and future
+  source-data comparison.

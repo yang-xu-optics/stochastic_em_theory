@@ -10,7 +10,18 @@ import pytest
 def test_gorlach_fig3b_script_creates_expected_outputs(tmp_path) -> None:
     script = Path("scripts/reproduce_gorlach_2023_fig3b.py")
     completed = subprocess.run(
-        [sys.executable, str(script), "--output-dir", str(tmp_path), "--shots", "256", "--max-order", "31"],
+        [
+            sys.executable,
+            str(script),
+            "--output-dir",
+            str(tmp_path),
+            "--shots",
+            "256",
+            "--max-order",
+            "31",
+            "--spectrum-model",
+            "proxy",
+        ],
         cwd=Path(__file__).resolve().parents[1],
         check=True,
         capture_output=True,
@@ -36,7 +47,7 @@ def test_gorlach_fig3b_script_default_output_is_repo_results_even_from_other_cwd
     env["PYTHONPATH"] = str(code_root / "src")
     try:
         completed = subprocess.run(
-            [sys.executable, str(script), "--shots", "64", "--max-order", "9"],
+            [sys.executable, str(script), "--shots", "64", "--max-order", "9", "--spectrum-model", "proxy"],
             cwd=tmp_path,
             env=env,
             check=True,

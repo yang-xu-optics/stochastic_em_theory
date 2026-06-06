@@ -24,6 +24,7 @@ def test_fig3b_husimi_samplers_have_expected_intensity_fluctuation_hierarchy() -
         fock_n=100,
         bsv_r=2.0,
         bsv_phase=0.0,
+        spectrum_model="proxy",
     )
     fock = sample_fig3b_driver_alpha(
         Fig3BDriverState.FOCK,
@@ -33,6 +34,7 @@ def test_fig3b_husimi_samplers_have_expected_intensity_fluctuation_hierarchy() -
         fock_n=100,
         bsv_r=2.0,
         bsv_phase=0.0,
+        spectrum_model="proxy",
     )
     thermal = sample_fig3b_driver_alpha(
         Fig3BDriverState.THERMAL,
@@ -108,3 +110,48 @@ def test_gorlach_fig3b_proxy_runner_writes_four_state_outputs(tmp_path) -> None:
     assert manifest["code_entrypoint"] == "stochastic_em_theory.fig3b.run_gorlach_2023_fig3b_proxy"
     assert manifest["random_seeds"] == [7]
     assert "Nature Fig. 3b" in manifest["source_refs"][0]
+
+
+def test_gorlach_fig3b_tdse_runner_records_dipole_acceleration_model(tmp_path) -> None:
+    artifacts = run_gorlach_2023_fig3b_proxy(
+        output_dir=tmp_path,
+        shots=64,
+        seed=11,
+        base_field_amplitude_au=0.025,
+        omega_au=0.4,
+        ionization_potential_au=0.7924,
+        max_order=9,
+        mean_photon_number=25.0,
+        fock_n=25,
+        bsv_r=1.0,
+        bsv_phase=0.0,
+        spectrum_model="tdse",
+        tdse_amplitude_bins=3,
+        tdse_grid_points=128,
+        tdse_x_min=-20.0,
+        tdse_x_max=20.0,
+        tdse_dt_au=0.12,
+        tdse_ramp_cycles=0.5,
+        tdse_flat_cycles=0.5,
+        tdse_ground_state_iterations=30,
+        tdse_ground_state_dt_au=0.08,
+    )
+
+    with artifacts.csv_path.open(newline="") as handle:
+        rows = list(csv.DictReader(handle))
+
+    assert {row["driver_state"] for row in rows} == {state.value for state in Fig3BDriverState}
+    assert all(row["spectrum_model"] == "tdse_dipole_acceleration" for row in rows)
+    assert all(row["mechanism"] == "quantum_light_hhg_tdse_dipole_acceleration" for row in rows)
+    assert all(int(row["tdse_amplitude_bin_count"]) == 3 for row in rows)
+
+    summary = json.loads(artifacts.summary_path.read_text())
+    assert summary["parameters"]["spectrum_model"] == "tdse_dipole_acceleration"
+    assert summary["parameters"]["tdse_amplitude_bins"] == 3
+    assert summary["state_summaries"]["bsv"]["tdse_library_field_amplitude_max_au"] > 0.0
+    assert "TDSE dipole-acceleration" in summary["notes"]
+
+    manifest = yaml.safe_load(artifacts.manifest_path.read_text())
+    assert manifest["mechanism"] == "quantum_light_hhg_tdse_dipole_acceleration"
+    assert manifest["observable"] == "ensemble_mean_tdse_hhg_spectrum_by_driver_state"
+    assert manifest["parameters"]["tdse"]["grid_points"] == 128

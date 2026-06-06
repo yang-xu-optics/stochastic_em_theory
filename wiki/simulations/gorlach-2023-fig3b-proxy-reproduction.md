@@ -1,10 +1,10 @@
 ---
-title: Gorlach 2023 Fig 3b Proxy Reproduction
+title: Gorlach 2023 Fig 3b TDSE Reproduction
 type: simulation
 status: active
 created: 2026-06-06
 updated: 2026-06-06
-tags: [hhg, quantum-light, husimi-q, fig3b, proxy]
+tags: [hhg, quantum-light, husimi-q, fig3b, tdse]
 source_count: 2
 confidence: medium
 related:
@@ -12,7 +12,7 @@ related:
   - paper-one-correspondence-hhg-simulation-spec
 ---
 
-# Gorlach 2023 Fig 3b Proxy Reproduction
+# Gorlach 2023 Fig 3b TDSE Reproduction
 
 ## Target
 
@@ -24,8 +24,11 @@ archive includes `SourceData_3b.mat` for this panel. The local supplementary
 PDF provides the coherent-state phase-space sampling formulation and the
 1D soft-core TDSE baseline.
 
-This page specifies a local stochastic-field proxy reproduction, not an exact
-TDSE reproduction of the published panel.
+The current upgrade replaces the previous smooth cutoff envelope with a local
+1D TDSE dipole-acceleration coherent-response library. It remains an
+approximate local reproduction, not the authors' exact grid, code, or
+source-data reconstruction. The public source-data archive is stored locally at
+`raw/assets/gorlach-2023-fig3-source-data/`.
 
 ## Representation And Driver Ensemble
 
@@ -58,11 +61,11 @@ relative to the matched coherent driver.
 
 ## Observable
 
-The primary observable is the ensemble-mean proxy HHG energy spectrum versus
+The primary observable is the ensemble-mean HHG energy spectrum versus
 harmonic order:
 
 ```text
-S_state(q) = mean_shots[S_proxy(q; E_shot)]
+S_state(q) = mean_shots[S_TDSE(q; E_shot)]
 ```
 
 The output CSV should include raw matched-intensity spectra and a display
@@ -72,16 +75,28 @@ energy differences.
 
 ## Model Equations And Units
 
-Use the existing fast HHG proxy:
+For each coherent component, solve the 1D soft-core TDSE in atomic units:
 
 ```text
-U_p = E_shot^2 / (4 omega0^2)
-E_cutoff = I_p + 3.17 U_p
-q_cutoff = E_cutoff / omega0
+i d_t psi(x,t) = [-1/2 d_x^2 + V(x) + x E(t)] psi(x,t)
+V(x) = -(x^2 + a^2)^(-1/2)
+E(t) = E_shot f(t) sin(omega0 t + phi)
+a(t) = -<psi(t) | d_x V(x) + E(t) | psi(t)>
+S_TDSE(omega) = |FFT[a(t) w(t)]|^2
+q = omega / omega0
 ```
 
-The proxy spectrum uses odd harmonic orders, a smooth low-order turn-on, and
-an exponential rolloff beyond `q_cutoff`.
+The Gorlach supplement used a trapezoid temporal envelope with 5-cycle ramp-up,
+15-cycle flat top, and 5-cycle ramp-down, a 1D grid from `-100` to `100` bohr,
+`dx = 0.06` bohr, `dt = 0.02` atomic units, `a = 0.8160` bohr, and
+`I_p = 0.7924` hartree. The local implementation exposes these as parameters.
+Test and smoke runs may use a smaller grid and shorter pulse; such outputs must
+record the reduced fidelity in the manifest.
+
+To keep stochastic averaging tractable, the runner evaluates TDSE spectra on a
+field-amplitude library and interpolates `log(S + floor)` at the sampled
+shot amplitudes. This keeps the stochastic-field ensemble intact while avoiding
+one TDSE solve per Monte Carlo shot.
 
 Default physical scales:
 
@@ -102,6 +117,9 @@ least `50_000` shots; tests may use smaller ensembles. Convergence checks:
 - thermal extends beyond coherent/Fock,
 - BSV extends beyond thermal for the same `E0`,
 - increasing shot count changes the normalized display curves only mildly.
+- increasing the number of TDSE amplitude bins changes log-normalized spectra
+  less than the stochastic Monte Carlo uncertainty over the plotted harmonic
+  range.
 
 ## Expected Outputs
 
@@ -116,4 +134,5 @@ manifest.yaml
 
 The manifest must record the source URLs, raw local source path, random seed,
 shots, driver-state parameters, field normalization, code entry point, commit
-hash if available, and the approximation caveat.
+hash if available, TDSE grid and pulse parameters, amplitude-library metadata,
+and the approximation caveat.
