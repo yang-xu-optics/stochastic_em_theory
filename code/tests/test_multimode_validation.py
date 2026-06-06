@@ -1,4 +1,5 @@
 import csv
+import json
 
 import numpy as np
 import yaml
@@ -39,7 +40,18 @@ def test_multimode_validation_writes_mode_count_csv(tmp_path) -> None:
 
     assert [int(row["modes"]) for row in rows] == [1, 2, 5]
     assert float(rows[0]["analytic_g2"]) > float(rows[-1]["analytic_g2"])
+    assert all(float(row["g2_corrected_standard_error"]) > 0.0 for row in rows)
+    assert all(float(row["n_total_standard_error"]) > 0.0 for row in rows)
+
+    summary = json.loads(result.summary_path.read_text())
+    assert [source["kind"] for source in summary["source_model_summary"]] == ["equal_mode", "equal_mode", "equal_mode"]
+    assert np.allclose(
+        [source["effective_mode_count"] for source in summary["source_model_summary"]],
+        [1.0, 2.0, 5.0],
+    )
+    assert all(source["source_refs"] for source in summary["source_model_summary"])
 
     manifest = yaml.safe_load(result.manifest_path.read_text())
     assert manifest["mechanism"] == "bsv_pump_ensemble"
     assert manifest["source_model"] == "equal_mode"
+    assert np.isclose(manifest["source_model_summary"][-1]["effective_mode_count"], 5.0)
