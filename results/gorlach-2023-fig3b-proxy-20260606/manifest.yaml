@@ -12,7 +12,7 @@ source_model:
   field_normalization: field_amplitude = base_field_amplitude_au * sqrt(|alpha|^2
     / mean(|alpha|^2))
 code_entrypoint: stochastic_em_theory.fig3b.run_gorlach_2023_fig3b_proxy
-git_commit: 7af4b55ea4d463d00d3113b2cbd2337e1912a7f0
+git_commit: fa26616356ae32f7ef6d77f514e53cd08be739aa
 parameter_file: null
 random_seeds:
 - 20230603
