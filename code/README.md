@@ -3,14 +3,15 @@
 Implementation code for stochastic-field samplers, validation tests, HHG
 models, and THz emission simulations belongs here.
 
-Suggested future layout:
+## Local Setup
 
-```text
-src/stochastic_em_theory/
-notebooks/
-tests/
+```bash
+cd code
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install -e ".[dev]"
+python3 -m pytest
 ```
 
-Before adding reusable code, update the relevant simulation spec in
-`../wiki/simulations/`.
-
+Generated run outputs belong under `../results/runs/`. Paper-ready figures
+belong under `../results/figures/`.
