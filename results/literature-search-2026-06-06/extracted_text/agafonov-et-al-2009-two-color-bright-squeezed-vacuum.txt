@@ -1,0 +1,335 @@
+                                                                              Two-Color Bright Squeezed Vacuum
+
+                                                                     Ivan N. Agafonov,1 Maria V. Chekhova,1, 2 and Gerd Leuchs2, 3
+                                                                      1
+                                                                       Department of Physics, M.V.Lomonosov Moscow State University,
+                                                                                   Leninskie Gory, 119992 Moscow, Russia
+                                               2
+                                                 Max Planck Institute for the Science of Light, Günther-Scharowsky-Straße 1/Bau 24, 91058 Erlangen, Germany
+                                                               3
+                                                                 University Erlangen-Nürnberg, Staudtstrasse 7/B2, 91058 Erlangen, Germany
+                                                         In a strongly pumped non-degenerate traveling-wave OPA, we produce two-color squeezed vacuum
+                                                       with up to millions of photons per pulse. Our approach to registering this macroscopic quantum
+                                                       state is direct detection of a large number of transverse and longitudinal modes, which is achieved
+                                                       by making the detection time and area much larger than the coherence time and area, respectively.
+                                                       Using this approach, we obtain a record value of twin-beam squeezing for direct detection of bright
+                                                       squeezed vacuum. This makes direct detection of macroscopic squeezed vacuum a practical tool for
+
+
+
+
+arXiv:0910.4831v4 [quant-ph] 2 Jul 2010
+                                                       quantum information applications.
+
+                                                       PACS numbers: 42.50.Lc, 42.65.Yj, 42.50.Dv
+
+
+                                             We are now witnessing a growth of interest in macro-         turbed’ properties of SV requires direct detection. The
+                                          scopic quantum systems [1]. Although the subject of             latter has been applied to bright SV rather recently [11–
+                                          macroscopic superpositions is causing scientific debates        13], with the appearance of sensitive CCD cameras and
+                                          ever since the formulation of the famous Schroedinger-          the technique of charge-integrating detection. All these
+                                          cat paradox, nowadays the interest in macroscopic quan-         pioneering works showed rather low squeezing (less than
+                                          tum systems is also motivated by applications: gravita-         3dB), which disappeared at large photon numbers (more
+                                          tional wave detection [2], quantum memory [3], super-           than 10 photons per mode). As we will show below, most
+                                          resolution [4], etc. An interesting perspective for apply-      probable reason for this behavior is not selecting enough
+                                          ing macroscopic nonclassical states of light in quantum         transverse modes. There was, however, one very early
+                                          technologies stems from the fact that such states, in prin-     paper on the direct detection of weak two-mode SV [14]
+                                          ciple, can provide stronger interactions with matter than       cleverly using multimode collection and obtaining a cer-
+                                          microscopic (single-photon and few-photon) states.              tain degree of squeezing.
+                                             An evident example of a macroscopic quantum state               Measurements based on the photocurrent subtraction
+                                          of light is two-mode bright squeezed vacuum (SV) gener-         are principally different from the ones based on coin-
+                                          ated at the output of a traveling-wave optical parametric       cidence counting (or photocurrent multiplication). In
+                                          amplifier (OPA) [5]. At weak pumping such an OPA pro-           particular, while coincidence measurement requires as
+                                          duces biphoton light, which is usually characterized in         few modes selected as possible, measurement of the
+                                          terms of Glauber’s normalized correlation functions and         difference-signal variance requires a large number of de-
+                                          studied using single-photon coincidence counting tech-          tected modes. (Alternatively, a single Schmidt mode
+                                          nique. At strong pumping, two-photon correlations be-           can be selected in both signal and idler beams [15, 16].)
+                                          come smeared by the presence of higher photon num-              Recently, 3dB of polarization squeezing was observed
+                                          bers and coincidence counting gets inefficient since nor-       via direct detection of SV by collecting a large num-
+                                          malized Glauber’s correlation functions approach unity.         ber of frequency and angular modes [17], although with
+                                          This does not mean that quantum correlations disap-             the values of gain as small as 0.3. In this work, we
+                                          pear; they just need a different type of measurement to         measure two-mode squeezing for two-color SV gener-
+                                          be revealed [6]. This other kind of measurement can be          ated via collinear nondegenerate type-I parametric down-
+                                          based on the photon-number difference. Since signal and         conversion at gain values of up to four.
+                                          idler beams are ’twins’ [7], their photon-number differ-           The effect of two-mode squeezing consists of the sup-
+                                          ence does not fluctuate, and its variance is ideally zero.      pression of fluctuations in the photon-number difference
+                                          When such beams are detected, the difference of the out-        for two light modes (beams) below the classical limit,
+                                          put photocurrents of the two detectors fluctuates only          which is given by the mean sum photon number in these
+                                          due to non-unity quantum efficiencies of the detectors,         beams. Indeed, it is easy to show that for two single-
+                                          electronic noise, or possible optical losses.                   mode beams, labeled 1, 2, with mean photon numbers
+                                                                                                          equal to N , the variance of photon-number difference is
+                                             Twin-beam squeezing for two-mode SV is being stud-
+                                          ied using optical homodyne technique for two decades                                        (2)    (2)     (2)
+                                                                                                              Var(N̂1 − N̂2 ) = N 2 (g11 + g22 − 2g12 ) + 2N,   (1)
+                                          (see, e.g., Refs [8–10]). The method is powerful since
+                                                                                                                  (2)   (2)
+                                          it provides phase information. At the same time, mix-           where g11 , g22 are normalized second-order intensity cor-
+                                          ing with local oscillator turns SV into a different state,      relation functions for beams 1 and 2, respectively, and
+                                                                                                           (2)
+                                          namely a squeezed coherent state. Obtaining the ’unper-         g12 is their second-order cross-correlation function. For
+                                                                                                                       2
+
+classical light beams, according to Cauchy-Schwarz in-
+             (2)   (2)    (2)
+equality, g11 + g22 − 2g12 ≥ 0 [18], and Var(N̂1 −
+N̂2 ) ≥ 2N . Violation of this inequality can be consid-
+ered as a sign of nonclassicality. Hence, a usual mea-
+sure for twin-beam squeezing is Noise Reduction Factor
+(NRF) [11, 19]:
+
+               NRF = Var(N1 − N2 )/2N.                (2)
+                     (2)     (2)                             FIG. 1: (Color online) Experimental setup. DBS, dichroic
+For two-mode SV, g11 = g22 = 2 (both twin beams              beamsplitter; D1 and D2, detectors; A1 and A2, apertures.
+                            (2)
+have thermal statistics), g12 = 2 + 1/N , and, according
+to Eq. (1), NRF=0.
+   Our setup was a traveling-wave OPA based on two           described in Ref. [17]. However, in comparison with the
+type-I 2-mm BBO crystals with the optic axes oriented        results of [17] we now had much larger photon numbers,
+in the same plane but symmetrically with respect to the      on the order of 106 photons per pulse, and the shot-noise
+pump direction, in order to eliminate spatial walkoff. As    level (about 103 electrons) much exceeded the electronic
+a pump, we used the third harmonic of a Nd:YAG laser         noise level (180 electrons). Still, in the results shown
+(wavelength λp = 355nm) with pulse duration 17 ps, rep-      below the electronic noise was subtracted.
+etition rate 1 kHz, and energy per pulse up to 0.2 mJ.          The most important point about direct detection of
+The fundamental and second-harmonic radiation of the         SV is that the detection time and detection area should
+laser was eliminated using a prism. The crystals were        be much larger than the coherence time and coherence
+oriented to produce frequency-nondegenerate parametric       area, respectively. In other words, the number of de-
+down-conversion (PDC) at wavelengths 635 nm (signal)         tected modes should be large, as it was shown in [16, 21].
+and 805 nm (idler). After the crystals, the pump ra-         In particular, the detection aperture size should much ex-
+diation was cut off by two dichroic mirrors with high        ceed the transverse coherence length of down-converted
+transmission (T > 97%) at the down-converted wave-           radiation. In order to study the dependence of squeezing
+lengths. The residual pump radiation was suppressed by       on the number of registered modes we made the mea-
+two Glan prisms, the first one selecting the pump polar-     surement for different sizes of the apertures. First, signal
+ization (H) before the crystals and the second one trans-    and idler aperture diameters Ds , Di were varied simulta-
+mitting the SV polarization (V). The pump power could        neously, so that their ratio satisfied the relation (set by
+be varied by rotating a waveplate before the first Glan      the transverse phase matching condition for PDC)
+prism. Signal and idler beams were then separated using                        Di /Ds = λmax /λmin ,                 (3)
+                                                                                         i     s
+a dichroic beamsplitter and focussed, by lenses with 5 cm
+focal lengths, on two charge-integrating detectors based     where λmax
+                                                                      i   , λmin
+                                                                             s   are maximal idler and minimal signal
+on Hamamatsu S3883 p-i-n diodes [17, 20]. Quantum            wavelengths selected, respectively (Fig.2a). Then, the
+efficiencies of the detectors at wavelengths 635 nm and      idler aperture had a fixed diameter and the signal aper-
+805 nm were 85% and 95%, respectively. The angular           ture diameter was varied (Fig.2b). From Fig.2a we see
+bandwidth selected was determined by the sizes of two        that, according to the predictions of [21], squeezing im-
+iris apertures (about 1 cm) placed at a distance of 36 cm    proves with the increase of the aperture diameters, i.e.,
+from the crystals. (In order to properly match frequency     with the number of angular modes selected. This can
+and angular modes in the signal and idler channels, the      be understood by recalling that squeezing is sensitive to
+apertures had different diameters, see below.) The num-      losses, so that collection of a limited number of modes
+ber of transverse modes mt was given by the squared ra-      leads to the existence of uncorrelated photons of the
+tio of the signal (idler) aperture size and the transverse   beam, which is similar to the loss of a certain amount
+coherence length of signal (idler) radiation in the plane    of photons. Ideally, to observe maximal squeezing one
+of the aperture (about 2 mm), yielding mt ≈ 25. The          should detect all frequency-angular spectrum of PDC.
+number of longitudinal modes was given by the ratio of       But, as it was shown in Ref. [16], in practice a high degree
+the pulse duration and PDC coherence time (correspond-       of squeezing can be obtained even for a limited number
+ing to the spectral bandwidth selected by the apertures,     of modes provided that it is high.
+about 13 nm), yielding ml ≈ 150. The overall detection          Fig.2b shows that the optimal squeezing is obtained
+efficiencies at wavelengths 805 nm and 635 nm, deter-        when aperture sizes are matched according to condition
+mined by 11 AR coated surfaces, 3 dichroic coatings and      (3). If the aperture sizes are not matched, squeezing
+detectors’ quantum efficiencies, were estimated to be 77%    disappears and even turns into anti-squeezing. This hap-
+and 70%, respectively, resulting in the best achievable      pens because both signal and idler beams are thermal
+NRF of 0.33. Registration of the detectors’ output sig-      ones, and they consist of strongly fluctuating ’speck-
+nals and their calibration was performed the same way as     les’. There is of course perfect correlation between the
+                                                                                                                                                                          3
+
+                                                                                                   1.2
+                   1.0
+                                                                                                             10
+
+                                                                                                   1.0   5
+
+
+
+                                                                                                          N/10
+                   0.8                                                                                           5
+
+
+                                                                                                   0.8
+                                                                                                                 0
+                   0.6                                                                                                  0        50    100
+
+
+
+                                                                                             NRF
+                                                                                                   0.6                      Power (mW)
+
+             NRF
+                   0.4
+                                                                                                   0.4
+
+                   0.2
+                                                                                                   0.2
+
+                          (a)                                                                             (a)
+                   0.0                                                                             0.0
+                                10             15        20                                              0.8                1.0       1.2     1.4    1.6   1.8     2.0
+
+                                     D (mrad)                                                                                               Gain
+                                      i
+
+
+                   10                                         10                                                    4
+                                                                                                   2.0
+                                                                                                          5
+
+
+
+                                                                                                             N/10
+                                                                                                                    2
+
+                                                                                                   1.5
+
+
+
+
+                                                                    NRF (dB)
+                                                                                                                    0
+                                                                                                                            20    25    30
+
+
+
+             NRF                                                                             NRF
+                    1                                         0                                                             Power (mW)
+                                                                                                   1.0
+
+
+                   0.4                                        -4
+                                                                                                   0.5
+
+
+                         (b)                                                                             (b)
+                   0.1                                        -10                                  0.0
+                          10              20        30                                                                  3.5                    4.0               4.5
+
+                                     D (mrad)                                                                                                Gain
+                                      i
+
+
+
+
+FIG. 2: (Color online) Dependence of NRF on the aperture                       FIG. 3: (Color online) NRF versus the gain for (a) unfocused
+angular sizes for (a) simultaneous variation of both aperture                  and (b) focused pump. Insets: output photon numbers versus
+diameters and (b) variation of only signal aperture, the idler                 the pump power.
+one remaining fixed at the position marked by red ’up’ trian-
+gle. The green ’down’ triangle shows the size given by condi-
+tion (3). Dashed line corresponds to the NRF value calculated                  However, this should have little effect if a large number
+from the specifications of the optical elements.                               of modes are collected; also, this does not explain the
+                                                                               appearance of anti-squeezing.
+                                                                                 To study the dependence of squeezing on the gain
+speckles in the two beams. If the aperture sizes are                           (Fig.3a), we measured NRF versus the pump power. The
+not matched, then in one of the beams there are ’un-                           aperture sizes were matched in accordance with Eq.(3).
+matched’ speckles whose excess intensity fluctuations are                      The gain was estimated by fitting the dependence of
+not compensated and lead to an increase in the NRF. A                          the PDC output photon number N on the pump power
+straightforward calculation shows that for two sets of k                       (shown in the inset to Fig.3a) with the formula
+independent thermal modes with equal photon numbers
+                                                                                                         N = m sinh2 Γ + N0 ,                                            (4)
+N , noise reduction factor does not depend on k and is
+only determined by the mean photon number per mode:                            where Γ is the parametric gain, scaling as square root of
+NRF = N + 1. In other words, difference-photocurrent                           the pump power, m = mt ml , and N0 is the noise (fluo-
+measurement on a large number of independent thermal                           rescence) linear in the pump, measured separately. In all
+modes will provide NRF as high as for a single thermal                         dependencies, NRF indeed grew with the increase in the
+mode. This is yet another demonstration of the huge                            gain. However, this growth was very sensitive to align-
+difference between NRF measurement and photocount                              ment. For the best alignment we could achieve, a growth
+coincidence detection where thermal beams ’poissonise’                         of NRF is only noticeable at the end of the dependence,
+if a large number of modes is collected. The discrep-                          where Γ ≈ 2 (Fig.3a).
+ancy between the experimental NRF value of 4 dB and                               To pass to higher-gain PDC, we focused the pump into
+the calculated value of 5.2 dB might be due to imperfect                       the crystals by means of a 5:1 telescope. This way we
+alignment (apertures shape deviating from round etc).                          achieved gain values of up to 4.5, where the increase of
+   It follows that for bright PDC, mismatch of the aper-                       NRF was noticeable (Fig.3b). Still, even at Γ = 4, corre-
+ture diameters will be more noticeable at large numbers                        sponding to about 700 photons per mode, squeezing was
+of photons per mode, i.e., at large gain. In fact, whether                     still observed. At high gain, the sensitivity of squeezing
+two-mode squeezing can be still observed for SV at high                        to misalignment was even more evident. For instance,
+gain is an important question. Previous works [11, 22]                         Fig.4a shows NRF as a function of the mean photon
+showed an increase of NRF at high values of the gain.                          number per mode N = sinh2 Γ for the best alignment we
+At the same time, in theory, NRF for SV should only                            could achieve (squares) and for the idler aperture (whose
+be given by losses and not depend on the gain. The                             diameter was 10.2 mm) displaced by 500 µm (circles).
+growth of NRF with the increase of parametric gain was                         Clearly, this 5% displacement of the aperture leads to a
+explained in Refs. [11, 22] by the dependence of the mode                      dramatic increase in NRF. Fig.4b shows NRF as a func-
+size on the gain, and, as a consequence, the reduction                         tion of the aperture shift measured at the gain value 3.7.
+of the selected number of modes with the gain growth.
+                                                                                                                                                  4
+
+                                                                                    tremely sensitive to the sizes and alignment of the angle-
+                     2.5      (a)
+                                                                                    selecting apertures. On the other hand, if a large number
+                     2.0
+                                                                                    of conjugated angular modes is properly selected, squeez-
+                                                                                    ing is not much sensitive to the growth of the parametric
+               NRF
+                     1.5
+
+
+                     1.0
+                                                                                    gain. In particular, we observed nearly constant amount
+                                                                                    of squeezing up to the gain Γ = 2, corresponding to 13
+                     0.5
+                                                                                    photons per mode. Squeezing, although to a smaller de-
+                        0           500           1000   1500         2000
+                                                   N                                gree, was observed up to 900 photons per mode.
+                     2.0
+                                                                                      Our result is an important step in the investigation of
+                              (b)
+
+                     1.5
+                                                                                    mesoscopic and macroscopic quantum systems. We show
+                                                                                    that difference-photocurrent measurements can replace
+               NRF
+                     1.0                                                            coincidence-based measurements in the study of macro-
+                                                                                    scopic squeezed vacuum. Pairwise correlations are still
+                     0.5
+                                                                                    evident provided that losses are sufficiently small and
+                     0.0                                                            proper mode matching is ensured.
+                       -1.5     -1.0       -0.5    0.0   0.5    1.0     1.5
+                                    A
+                                       1
+                                           displacement (mm)                          We acknowledge the financial support of the European
+                                                                                    Union under project COMPAS No. 212008 (FP7-ICT)
+FIG. 4: (Color online) The effect of aperture shift on the NRF.                     and the Russian Foundation for Basic Research, grants
+(a) Solid green squares: best alignment, red empty circles:                         #08-02-00741a and #10-02-00202a. I.N.A. acknowledges
+aperture in the idler channel shifted by 500 µm. (b) NRF                            the support of the ’Dynasty’ foundation and M.V.C., the
+versus the aperture displacement, measured at Γ = 3.7.                              support of the DFG foundation.
+
+  High sensitivity of NRF to misalignment is of the same
+origin as its sensitivity to the aperture size mismatch. In-
+deed, if the mode sets collected by the signal and idler                             [1] F. De Martini, F. Sciarrino, and C. Vitelli, Phys. Rev.
+detectors are not matched, there are uncompensated (in-                                  Lett. 100, 253601 (2008).
+dependent) intensity fluctuations in the signal and idler                            [2] K. McKenzie et al., Phys. Rev. Lett. 88, 231102 (2002).
+channels. They should lead to NRF growth, scaling lin-                               [3] J. S. Neergard-Nielsen et al., Phys. Rev. Lett. 97, 083604
+early with the mean photon number. Our calculation                                       (2006).
+shows that, provided that in each channel there are m                                [4] P. M. Anisimov and J. P. Dowling, Physics 2, 52 (2009).
+                                                                                     [5] L. Mandel and E. Wolf, Optical Coherence and Quantum
+matched PDC modes and k unmatched ones, all having                                       Optics (Cambridge University Press, Cambridge, 1995).
+the same mean photon number N , NRF is increased by                                  [6] T. Sh. Iskhakov et al., JETP Lett. 88, 660-664 (2008).
+                                            k(N + 1)                                 [7] A. Heidmann et al., Phys. Rev. Lett. 59, 2555 (1987);
+                                ∆=                   .                        (5)        T. Debuisschert et al., Quantum Opt. 1, 3 (1989).
+                                             m+k                                     [8] J. A. Levenson et al., Phys. Rev. Lett. 70, 267 (1993).
+For small displacements of a circular aperture, this                                 [9] M. Vasilyev et al., Phys. Rev. Lett. 84, 2354 (2000).
+                                                                                    [10] H. Vahlbruch et al., Phys. Rev. Lett. 100, 033602 (2008).
+should lead to a linear dependence of NRF on N , which
+                                                                                    [11] O. Jedrkiewicz et al., Phys. Rev. Lett. 93, 243601 (2004).
+we used to fit the experimental data in Fig.4a.                                     [12] M. Bondani et al., Phys. Rev. A 76, 013833 (2007).
+   It follows that observation of twin-beam squeezing in                            [13] G. Brida et al., Phys. Rev. Lett. 102, 213602 (2009).
+high-gain PDC is the more sensitive to mode matching                                [14] P. R. Tapster, J. G. Rarity, and J. S. Satchell, Phys. Rev.
+the higher the gain. This explains a linear growth of                                    A 37, 2963 (1988).
+NRF with the increase of N observed in [11]. Similar                                [15] 5. C. K. Law, I. A. Walmsley, and J. H. Eberly, Phys.
+effect is used in quantum metrology to measure spatial                                   Rev. Lett. 84, 5304 (2000); C. K. Law and J. H. Eberly,
+displacements with high precision [24], and determines                                   Phys. Rev. Lett. 92, 243601 (2004); W. Wasilewski et al.,
+                                                                                         Phys. Rev. A 73, 063819 (2006).
+the resolution of quantum imaging [25].                                             [16] G. O. Rytikov and M. V. Chekhova, JETP 107, 923
+   In conclusion, we have generated and tested via di-                                   (2008).
+rect detection two-color squeezed vacuum containing up                              [17] T. Sh. Iskhakov, M. V. Chekhova, and G. Leuchs, Phys.
+to a thousand photons per mode, and up to a million of                                   Rev. Lett. 102, 183602 (2009).
+photons per pulse. By collecting a large number of angu-                            [18] D. F. Walls and G. J. Milburn, Quantum Optics
+lar and frequency modes in both channels, considerable                                   (Springer-Verlag, Berlin, 2008, Second Edition).
+                                                                                    [19] O. Aytur, P. Kumar, Phys. Rev. Lett. 65, 1551 (1990).
+amount of two-mode squeezing (4dB) has been obtained,
+                                                                                    [20] H. Hansen et al., Optics Letters 26, 1714 (2001).
+the best result ever achieved for the direct detection of                           [21] E. Brambilla et al., Phys. Rev. A 69, 023802 (2004).
+squeezed vacuum. We have also studied the behavior                                  [22] G. Brida et al., J. Mod. Opt. 56, 201 (2009).
+of squeezing on the angular bandwidths selected in sig-                             [23] When calculating the aperture sizes we did not take into
+nal and idler channels and showed that the effect is ex-                                 account finite spectral bandwidth of PDC at fixed angle
+                                                                                                                        5
+
+     of emission.                                           [25] E. Brambilla et al., Phys. Rev. A 77, 053807 (2008).
+[24] N. Treps et al., Phys. Rev. Lett. 88, 203601 (2002).
+

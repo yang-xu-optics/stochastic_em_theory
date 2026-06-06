@@ -1,0 +1,1034 @@
+                                             Fluctuation-induced symmetry breaking in high harmonic generation for bicircular
+                                                                             quantum light
+
+                                                                         P. Stammer,1, 2, ∗ C. Granados,3, † and J. Rivera-Dean4, ‡
+                                                                     1
+                                                                       ICFO—Institut de Ciencies Fotoniques, The Barcelona Institute of
+                                                                        Science and Technology, 08860 Castelldefels (Barcelona), Spain
+                                                                      2
+                                                                        Atominstitut, Technische Universität Wien, 1020 Vienna, Austria
+                                                                            3
+                                                                              Eastern Institute of Technology, Ningbo 315200, China
+                                                                     4
+                                                                       Department of Physics and Astronomy, University College London,
+                                                                              Gower Street, London WC1E 6BT, United Kingdom
+                                                                                               (Dated: April 3, 2026)
+                                                          Symmetries are ubiquitous in physics and play a pivotal role in light-matter interactions, where
+                                                       they determine the selection rules governing allowed atomic transitions and define the associated
+                                                       conserved quantities. For the up-conversion process of high harmonic generation, the symmetries of
+
+
+
+
+arXiv:2603.24377v2 [quant-ph] 2 Apr 2026
+                                                       the driving field determine the allowed frequencies and the polarization properties of the resulting
+                                                       harmonics. As a consequence, it is possible to establish classical selection rules when the process
+                                                       is driven by coherent radiation. In this work, we show that fluctuation-induced symmetry breaking
+                                                       in the driving field leads to the appearance of otherwise forbidden harmonics. This is achieved
+                                                       by considering bicircular quantum light, and demonstrate that the enhanced quantum fluctuations
+                                                       due to squeezing in the driving field break the classical selection rules. To this end, we develop a
+                                                       quantum optical description of the dynamical symmetries in the process of high harmonic generation,
+                                                       revealing corrections to the classical selection rules. Moreover, we show that the new harmonics show
+                                                       squeezing-like signatures in their photon statistics, allowing them to be clearly distinguished from
+                                                       classical thermal fluctuations.
+
+
+                                              Symmetries are fundamental in physics due to their           identifying emission channels that are allowed or forbid-
+                                           connection to conservation laws, as established by              den by symmetry [14]. They also explain selection rules
+                                           Noether [1]. In the context of light–matter interaction,        for more complex driving fields, such as bichromatic cir-
+                                           symmetries are ubiquitous: they underlie the minimal-           cularly polarized fields [15]. Counter-rotating bicircular
+                                           coupling Hamiltonian implied by gauge invariance [2],           fields (BCF) are of particular interest, as their symme-
+                                           and govern optical transitions within Fermi’s golden            tries give rise to characteristic selection rules in isotropic
+                                           rule [3, 4]. More generally, selection rules encode symme-      media, where harmonics at orders q = 3n ± 1 are al-
+                                           try constraints on transitions between quantum states           lowed and exhibit alternating helicity, while the q = 3n
+                                           and provide direct physical insight in terms of con-            harmonics are symmetry forbidden [16, 17].
+                                           served quantities such as energy, parity, and angular mo-          Therefore, extending classical bicircular fields by in-
+                                           mentum. For instance, in electric-dipole transitions in         cluding their quantum nature is particularly attractive
+                                           isotropic media, parity must change between the initial         to understand the role of non-classical fluctuations on
+                                           and final states, while angular momentum follows the fa-        the symmetries of the light-matter interaction, and how
+                                           miliar dipole selection rules [5].                              those fluctuations allow control of the classical selection
+                                               In strong-field-driven processes, particularly high-        rules (CSR). Nonetheless, all previous studies of selection
+                                           harmonic generation (HHG), conservation of energy and           rules in HHG and their dynamical-symmetry origins have
+                                           parity implies that, for a monochromatic, linearly polar-       been restricted to classical driving fields. In this case, the
+                                           ized driving field in isotropic media, only odd harmonics       field is treated deterministically, with well-defined ampli-
+                                           q = 2n + 1 are emitted. From the perspective of the             tude, phase, and symmetry properties. Consequently, the
+                                           symmetries of the driving laser, the appearance of odd          aforementioned selection rules strictly hold. Quantum op-
+                                           harmonics and their polarization originates from invari-        tics, however, enables the inclusion of nonclassical driv-
+                                           ance under the joint operation of a temporal translation        ing fields, such as squeezed states of light [18], into the
+                                           τ̂2 = π/ω, and a spatial rotation r̂2 = π. More generally,      HHG light–matter interaction problem, thereby opening
+                                           the theory of dynamical symmetries provides a frame-            the door to explore the impact of quantum fluctuations
+                                           work to derive selection rules governing the harmonic           of the driving field on symmetry-related effects.
+                                           spectrum [6], with applications ranging from solids [7]            In this work, we demonstrate that the well-known clas-
+                                           to topological materials [8]. Within this framework, the        sical bicircular selection rules are modified in the presence
+                                           symmetries of the classical driving field are mapped onto       of nonclassical driving fields through symmetry break-
+                                           observable properties of the emitted radiation, such as         ing of the system. We show that this symmetry breaking
+                                           the allowed harmonic orders, their polarization state,          is induced by quantum fluctuations originating from the
+                                           and helicity [9–13]. Dynamical symmetries thus provide          squeezing of the fundamental BCF. Extending classical
+                                           a unified description for classifying harmonic spectra and      bicircular selection rules to include quantum light con-
+                                                                                                                              2
+
+nects naturally with recent developments in strong-field
+quantum optics [19–21], and in particular with the grow-
+ing interest in HHG driven by quantum light [22–29]. Our
+results place the concept of dynamical symmetries within
+a genuine quantum optical framework and establish how
+symmetry breaking emerges when HHG is driven by bi-
+circular quantum light (see Fig. 1 (a)).
+   Framework.– Since we are interested in driving the
+process of HHG by bicircular quantum light (BCL), we
+start by describing the classical counterpart. A bicircu-
+lar field is a bichromatic field consisting of a fundamental
+mode ω, and its second harmonic 2ω of equal amplitude
+but opposite helicity. The overlap of the left and right
+circular polarized fields results in a trefoil-shaped total
+electric field (see Fig. 1), having a rotational symmetry
+by 2π/3 in polarization. Therefore, a classical bicircular
+field is described by the electric field components in the
+polarization plane as E∥ (t) = −E0 [sin(ωt)+sin(2ωt)] and
+E⊥ (t) = E0 [cos(ωt)−cos(2ωt)], as illustrated in Fig. 1 (b)
+by the dark blue classical field average.
+   Before addressing the consequences of BQL on                  FIG. 1. (a) Schematic figure of BQL leading to symmetry
+                                                                 breaking in the field, and hence the observation of classically
+light–matter interactions, we briefly recall the selection       forbidden harmonics induced by the quantum fluctuations of
+rules for HHG driven by classical bicircular fields. In con-     the field. (b) Lissajous figures of the BQL for amplitude
+trast to single-color, linearly polarized drivers, which gen-    and phase squeezed 2ω field. The dark blue lines show the
+erate only odd, linearly polarized harmonics q = 2n + 1,         mean field value, following the dynamical symmetry, while
+n ∈ N, bicircular fields yield harmonics governed by             the shaded region indicates the field fluctuations breaking the
+symmetry-imposed selection rules                                 symmetry.
+
+                   q = 3n ± 1,     n ∈ N,                 (1)                  N
+                                                                 state |0̄⟩ =     q |0q ⟩. To ensure that in the absence of
+while the q = 3n harmonics are forbidden by the under-           squeezing, ξ = 0, the driving field exhibits the correct
+lying dynamical symmetry. The allowed harmonics pos-             dynamical symmetry of a classical bicircular field, we
+sess well-defined polarization states: the q = 3n + 1 and        have |αω | = |α2ω | . Since we can express the polariza-
+q = 3n − 1 orders carry the same helicity as the ω and           tion state in any basis, we shall decompose Eq. (2) in the
+2ω driving components, respectively. This structure can          linear basis given by the horizontal
+be understood from angular momentum conservation, ex-                                               √ and vertical polariza-
+                                                                 tion component, such that D̂R (α 2) ≡ D̂∥ (α) ⊗ D̂⊥ (iα),
+pressed in terms of the number of absorbed photons from                     √
+                                                                 and D̂L (α 2) ≡ D̂∥ (α) ⊗ D̂⊥ (−iα). Hence, the initial 2ω
+each mode, n1 (for ω) and n2 (for 2ω), which satisfy
+                                                                 field can be written as
+n2 − n1 = ±1 [16, 17]. This constraint directly reflects
+the threefold dynamical symmetry of the bicircular driv-                    |Φ2ω (t0 )⟩ = D̂2ω,∥ (α2ω )Ŝ2ω,∥ (r) 0∥
+ing field [16].                                                                                                             (3)
+   The quantum optical counterpart of the classical bicir-                               ⊗ D̂2ω,⊥ (iα2ω ) |0⊥ ⟩ .
+cular field is represented by a product of coherent states
+in the ω and 2ω mode |αω,L ⟩ ⊗ |α2ω,R ⟩, having left (L)            An example of the BQL is shown in Fig. 1 (b) by means
+and right (R) circular polarization, respectively. Here,         of the Lissajous figure of the field for amplitude and phase
+we consider the scenario of BQL in which one of the field        squeezing in the perpendicular 2ω component. In the
+components exhibits squeezing signatures. Specifically,          figures, the average field (dark blue) follows the dynami-
+we consider the case in which we drive the process of            cal symmetry by rotation of 2π/3, while the fluctuations
+HHG by the initial state with squeezing along the paral-         (shaded region) clearly break the symmetry. In the fol-
+lel 2ω-component (see Supplementary Material for alter-          lowing, we will demonstrate how this fluctuation-induced
+native configurations)                                           symmetry breaking leads to the appearance of classically
+                      √                 √                        forbidden harmonics in the HHG process.
+  |Φ(t0 )⟩ = D̂ω,L (αω 2) ⊗ [D̂2ω,R (α2ω 2)Ŝ2ω,∥ (ξ)] |0̄⟩ ,       To simulate the HHG process driven by BQL, we con-
+                                                           (2)   sider the electron initially in the ground state and solve
+where D̂ω,µ (α) and Ŝω,µ (ξ) are the displacement and           the Schrödinger equation within the strong-field approx-
+squeezing operators acting on the optical mode (ω, µ),           imation under the full quantum optical Hamiltonian in
+respectively. Furthermore, we defined the overall vacuum         the dipole coupling [30], with the electric field operator
+                                                                                                                                 3
+
+defined as
+               X X
+                       κq ϵµ âq,µ e−iωq t + â†q,µ eiωq t , (4)
+                                                         
+  Ê(t) = −i
+             µ=R,L q
+
+where ϵµ denotes the polarization vector and κq the cou-
+pling constant. Given the techniques developed in previ-
+ous work [28, 31], we can solve the dynamics in the strong
+field regime [19, 30, 32, 33], such that the final state of
+the qth harmonic mode is given by (see End Matter)
+                    Z
+         ρ̂q,µ (t) = d2 α Q(α) |χq,µ (α)⟩⟨χq,µ (α)| ,   (5)
+
+where Q(α) = π −1 |⟨α|Φ2ω,∥ (t0 )⟩|2 represents the Husimi         FIG. 2. (a), (b) HHG spectra resolved along the right- and
+function of the squeezed polarization component in the             left-circular polarization components, respectively. The black
+                                                                   dashed lines indicate the positions of the classically allowed
+driving field. The amplitude χq,µ (t) = FTq [⟨dˆµ (t; α)⟩]         harmonics for each polarization component: (a) 3n − 1 and
+is the Fourier transform of the dipole moment obtained             (b) 3n + 1. (c) Helicity as a function of the squeezing inten-
+from the solution of the semi-classical Schrödinger equa-         sity, with the dashed lines highlighting the classically allowed
+tion driven by a classical field of a coherent state |α⟩ [34].     harmonics. The atomic medium is hydrogen (Ip = 0.5 a.u.),
+With the state of the harmonics in Eq. (5) we can now              the driving frequency is ωL = 0.057 a.u., and the bicircular
+obtain all properties and observables of the harmonic ra-          coherent field amplitudes are set to E0 = 0.037 a.u.
+diation.
+   Fluctuation-induced harmonics.– First, we want to un-
+derstand how the presence of the non-classical signa-              polarization of the driving field mode in which squeezing
+tures in the BCL affects the harmonic spectrum. For                is applied (see SM for details). This behavior indicates
+the case of squeezing in the parallel component of the             that these classical forbidden harmonics originate from
+2ω field, the HHG spectrum from the BCL for differ-                the squeezed component of the field, and directly reflect
+ent squeezing intensity is shown in Fig. 2, split into the         its origin from the quantum fluctuations. Note that only
+R-circular (RCP) and L-circular (LCP) polarized har-               for the harmonics beyond the cut-off, and at very large
+monics in panel (a) and (b), respectively. The dark col-           squeezing intensities, the effective polarization of the har-
+ored harmonic peaks in both spectra indicate a vanishing           monics becomes linear.
+squeezing intensity, effectively reproducing the classical            Breaking classical selection rules.– What is the origin
+harmonic spectra from the conventional bicircular driv-            of this violation of the classical selection rules (CSR),
+ing field (also indicated by the dashed vertical lines at          and why do classically forbidden harmonics appear? We
+the classically allowed harmonics q = 3n ± 1).                     show that this behavior arises from the breaking of the
+   In striking difference, as the squeezing strength in-           underlying dynamical symmetry of the driving field. For
+creases, harmonics that are forbidden in the classical             a classical bicircular field, the relevant dynamical sym-
+case (q = 3n) emerge in the spectrum. Notably, these               metries are discrete rotations and time translations, de-
+newly generated harmonics contain both RCP and LCP                 scribed by the operators r̂n and τ̂n , corresponding to a
+components. Moreover, the classically allowed harmon-              rotation of the field polarization by 2π/n and a temporal
+ics in Eq. (1), develop additional contributions from the          shift of T /n, respectively. Here, T = 2π/ω is the period
+conjugate polarization state in the presence of squeez-            of the fundamental field. Looking at the 3-fold symmetry
+ing. This has the interesting consequence that the clas-           of the classical field in Fig. 1, we identify that the bicir-
+sically R polarized harmonics have an additional contri-           cular field is invariant under the joint symmetry opera-
+bution from the conjugate L polarization when driven by            tion of r̂3 and τ̂3 , leading to the classical selection rule of
+quantum light, and vice versa. These results demonstrate           Eq. (1), whereas the harmonics q = 3n are symmetry for-
+that quantum fluctuations not only break the underly-              bidden. While the symmetry operations r̂n and τ̂n act on
+ing dynamical symmetry, but also enable control over               the classical fields, i.e. r̂n τ̂n Eµ (r, t)ε⊥ = E(R(θn )r, t +
+the helicity and intensity of the q = 3n harmonic or-              T /n) = E(r, t + T /n)[cos(2π/n)ε⊥ + sin(2π/n)ε∥ ], where
+ders. This modification is further illustrated in Fig. 2(c),       R(θn ) is the rotation matrix by the angle θn = 2π/n.
+where we show the helicity of the harmonics as a func-                In contrast, in this work we are concerned with quan-
+tion of the squeezing strength. The harmonics obeying              tum optical fields. Consequently, we define the quantum
+Eq. (1) largely retain their original polarization, as the         optical symmetries of the field and its fluctuations by
+contribution from the opposite helicity remains small. In          using the unitaries leading to a rotation in polarization
+contrast, the classically forbidden harmonics (q = 3n) ex-                                    h                    i
+hibit a dominant RCP component, i.e. they inherit the                           R̂(θ) = exp −iθ â†R âR − â†L âL ,           (6)
+                                                                                                                                    4
+
+and the unitary for temporal translation in the R/L basis             Hence, the new selection rule is given by (see End Mat-
+                       h                     i                      ter)
+          T̂ (θ) = exp −iθ â†R âR + â†L âL ,      (7)
+                                                                                     q = n1,− + 2 (n2,+ + s n2,− ),              (11)
+corresponding to the propagation under the free-field
+Hamiltonian for a time θ = ωt. Now, we proceed to un-                 where s = 1 if there is squeezing in the driving field, and
+derstand the role of the dynamical symmetry transforma-               s = 0 in the classical case without squeezing. Further-
+tion in the quantum optical scenario by considering the               more, the number of absorbed photons is restricted by
+electric field operator from Eq. (4), instead of the clas-            the angular momentum
+sical field as previously done [9]. Therefore, we define
+                                                                                      σq = n2,+ − (s n2,− + n1,− ),              (12)
+the electric field operator after acting with the unitary
+symmetry operators                                                    which naturally opens two new absorption channels de-
+                         †        †
+         Ê(t; θ, τ ) = T̂ (ωτ )R̂ (θ)Ê(t)R̂(θ)T̂ (ωτ ).      (8)    termining by the polarization of the harmonics, σq = ±1
+                                                                      (see the SM for detailed calculations). Note that the clas-
+   With the symmetry transformed electric field operator,             sical selection rules are recovered when s = 0, and hold
+we are able to understand how the quantum bicircular                  true for isotropic HHG media such as atoms, and with
+light breaks the CSR. First, we note that the average field           the interaction in the dipole approximation. Other me-
+ ⟨Ê(t; θ, τ )⟩ = Ecl (t; θ, τ ), for the initial state of Eq. (2),   dia, such as molecules [35] or solids provide different se-
+obeys the same symmetry as the classical bicircular field             lection rules [10, 13], and higher order couplings can lead
+                              D                                   to different symmetry properties [36, 37]. Having estab-
+                     2π 2π                   E
+                                                                      lished the quantum optical formulation of the dynamical
+               Ê t;     ,          = Ê(t) = Ecl (t),          (9)
+                      3 3ω                                            symmetry for HHG, and shown its violation for quantum
+for a rotation and time-translation by 2π/3 and 2π/(3ω),              light, we now continue to investigate the photon statistics
+respectively. Thus, on average, the quantum bicircular                of these classical forbidden harmonics.
+field obeys the same dynamical symmetry as the classi-                   Fluctuation-induced photon statistics.– We have clearly
+cal bicircular field. However, the striking difference lies in        demonstrated that the appearance of forbidden harmon-
+the quantum fluctuations of the field due to the squeez-              ics originate from the violation of the classical dynam-
+ing contribution, which do not follow the classical sym-              ical symmetry in the field. However, it is important
+metry. In particular, the variance of the electric field              to establish the statistics of the emitted photons, and
+                                                     2
+(∆E)2 (t; θ, τ ) = ⟨Ê 2 (t; θ, τ )⟩ − ⟨Ê(t; θ, τ )⟩ is given by     whether they inherit the properties of the quantum driv-
+(see End Matter)                                                      ing field. To investigate this, in Fig. 3 we show the equal
+                                                                      time intensity correlation function for the generated har-
+         (∆E)2 (t; θ, τ ) = cosh(r) sinh(r)                           monics with their respective polarization (see End Matter
+                                                              (10)    and Refs. [28, 31, 38])
+                     × [4 coth(r) − cos(4ω(t + τ ))] .
+                                                                                                                            4
+                                                                                    ⟨â†2    2
+                                                                                                      R 2
+   While the average field of the quantum state in Eq. (2)               (2)           q,µ âq,µ ⟩      d α Q(α)|χq,µ (α)|
+                                                                        gq,µ (0) =                 =                       2 2
+                                                                                                                                . (13)
+preserves the symmetry, the field fluctuations generally                           ⟨âq,µ âq,µ ⟩2
+                                                                                                     R
+                                                                                                        d2 α Q(α)|χq,µ (α)|
+break the dynamical symmetry. The stronger the squeez-
+ing amplitude r = |ξ| , the larger the field fluctuations,               In panel Fig. 3 (a) we can see that the R (L) polar-
+and hence the breaking of the dynamical symmetry is                   ized harmonics have a classical Poisson distribution of
+more pronounced. This has the interesting consequence                 g (2) (0) = 1 at their classical allowed harmonic orders
+that the harmonic response to the BQL is no longer                    q = 3n − 1 (q = 3n + 1). In contrast, all harmonics which
+constrained by the symmetry of the classical mean field               appear due to breaking the classical selection rule have a
+alone, but the fluctuation-induced symmetry breaking                  photon number distribution indicating super-Poissonian
+opens additional channels for the emission of harmonic                statistics, just like that of a squeezed vacuum field with
+photons. These new harmonics, as seen in the spectra of               g (2) (0) = 3. This implies that the classically forbidden
+Fig. 2, are forbidden within the purely classical descrip-            harmonics at q = 3n have squeezed-like photon statis-
+tion. Given the quantum optical framework introduced                  tics for both R and L components. For the classically al-
+here, we can now write the origin of the fluctuation-                 lowed harmonics, the same super-Poissonian g (2) (0) = 3
+induced harmonics in terms of modified selection rules.               value is obtained when analyzed along the polarization
+For this, we express the linearly polarized squeezing con-            opposite to that in which they are generated. In con-
+tribution in the R/L-circularly polarized basis. There-               trast, when measured in their native (classically allowed)
+fore we define the number of photons absorbed from the                polarization, these harmonics recover Poissonian statis-
+ω mode, n1,− , and the coherent and squeezed 2ω photon                tics. Hence, we have seen that these fluctuation-induced
+numbers n2,+ and n2,− , respectively. The index +/− in-               harmonics show super-Poissonian statistics, originating
+dicates the R/L polarization of the driving field modes.              from the squeezing in the driving field. Now, increasing
+                                                                                                                              5
+
+                                                                  quantum optical framework for dynamical symmetries in
+                                                                  HHG driven by quantum light. We have demonstrated
+                                                                  that it is insufficient to consider only the classical mean of
+                                                                  the quantum optical field, as the intrinsic quantum fluc-
+                                                                  tuations break the underlying classical symmetry. This
+                                                                  manifests in the appearance of symmetry-forbidden har-
+                                                                  monics in the spectrum, thereby violating classical se-
+                                                                  lection rules, and leaves squeezing-like imprints in the
+                                                                  photon statistics of these symmetry-forbidden harmon-
+                                                                  ics.
+
+                                                                     By introducing the symmetry operations that act di-
+                                                                  rectly on the field operator, we generalized the concept
+                                                                  of dynamical symmetries beyond the classical descrip-
+                                                                  tion, and extend the classical selection rules to account
+FIG. 3. Equal time intensity correlation function g (2) (0) for   for the quantum fluctuations governing quantum opti-
+a squeezed driver [(a),(b)] and a thermal state [(c)]. Panel      cal HHG. Given the generality of dynamical symmetries
+(a) shows the g (2) (0) for different harmonic orders, resolved   and selection rules, the framework established here opens
+into R- and L-polarization components (red and blue, respec-      new avenues for investigating the role of symmetries in
+tively), for a squeezing intensity Isqu = 10−8 a.u. Panel (b)     the quantum optical context. It remains an open ques-
+displays g (2) (0) for two selected harmonic orders as a func-    tion how the quantum state of the symmetry-broken har-
+tion of the squeezing intensity. Panel (c) is analogous to (a),
+but for a thermal state with Ith = 10−9 a.u. The atomic
+                                                                  monics is affected by these fluctuations, which is closely
+medium is hydrogen (Ip = 0.5 a.u.), the driving frequency is      related to information theoretic approaches where con-
+ωL = 0.057 a.u., and the bicircular coherent field amplitudes     servation laws impose constraints directly on the quan-
+are set to E0 = 0.037 a.u.                                        tum state [39]. Furthermore, our work opens the door to
+                                                                  investigate the interplay between the driving field sym-
+                                                                  metries and solid state systems, which naturally include
+the squeezing intensity we show in Fig. 3 (b) the g (2) (0)       translation, rotation, and reflection symmetries [40].
+function for exemplary harmonics as the squeezing am-
+plitude increases. In particular, we show the classical al-          Acknowledgments.– ICFO-QOT group acknowl-
+lowed qR = 23 harmonic with R-polarization (solid red),           edges support from:           MCIN/AEI (PGC2018-
+which shows Poissonian distribution g (2) (0) = 1 inde-           0910.13039/501100011033,              CEX2019-000910-
+pendent of the squeezing intensity. In contrast, the clas-        S/10.13039/501100011033, Plan National STAMEENA
+sical forbidden harmonics, namely the qL = 23 with L-             PID2022-139099NB, project funded MCIN and by
+polarization (solid blue), as well as the forbidden q = 24        the “European Union NextGenerationEU/PRTR”
+(R and L, dashed), are increasing for larger squeezing.           (PRTR-C17.I1), FPI); Ministry for Digital Transforma-
+Interestingly, the symmetry forbidden harmonics q = 24            tion and of Civil Service of the Spanish Government
+scale stronger with the increased squeezing, further man-         through the QUANTUM ENIA project call - Quantum
+ifesting their origin purely from the quantum fluctuations        Spain project, and by the European Union through
+of the field.                                                     the Recovery, Transformation and Resilience Plan
+                                                                  - NextGenerationEU within the framework of the
+   However, one may wonder if the observations made
+                                                                  Digital Spain 2026 Agenda; CEX2024-001490-S [MI-
+thus far are due to genuine quantum fluctuations, or if
+                                                                  CIU/AEI/10.13039/501100011033]; Fundació Cellex;
+classical fluctuations would give similar results. There-
+                                                                  Fundació Mir-Puig; Generalitat de Catalunya (European
+fore, we also consider the case of thermal fluctuations
+                                                                  Social Fund FEDER and CERCA program; Barcelona
+instead of squeezing (see End Matter for details). While
+                                                                  Supercomputing Center MareNostrum (FI-2023-3-0024);
+the classical fluctuations of the thermal light also break
+                                                                  Funded by the European Union (HORIZON-CL4-2022-
+the symmetry of the field, the influence on the g (2) (0)
+                                                                  QUANTUM-02-SGA, PASQuanS2.1, 101113690, EU
+function remains trivial, as shown in Fig. 3 (c). Although
+                                                                  Horizon 2020 FET-OPEN OPTOlogic, Grant No 899794,
+the alternating polarization property of the harmonics
+                                                                  QU-ATTO, 101168628), EU Horizon Europe Program
+persists, the photon statistics of the symmetry forbid-
+                                                                  (No 101080086 NeQSTGrant Agreement 101080086 —
+den harmonics merely displays that of thermal fluctua-
+                                                                  NeQST).
+tions g (2) (0) = 2. Hence, the measurement of the g (2) (0)
+function allows to unambiguously deduce the presence of             J .R.-D. acknowledges funding from UK Engineering
+genuine quantum fluctuations of the symmetry forbidden            and Physical Sciences Research Council (EPSRC) Fund-
+harmonics.                                                        ing, Grant UKRI2300 - Attosecond Photoelectron Imag-
+   Conclusion.– In this work, we have established the             ing with Quantum Light.
+                                                                                                                                6
+
+                                                                        (2014).
+                                                                   [18] R. Loudon and P. L. Knight, Squeezed light, Journal of
+                                                                        modern optics 34, 709 (1987).
+  ∗
+     philipp.stammer@icfo.eu                                       [19] M. Lewenstein, M. F. Ciappina, E. Pisanty, J. Rivera-
+  †
+     cagrabu@eitech.edu.cn                                              Dean, P. Stammer, T. Lamprou, and P. Tzallas, Gener-
+   ‡
+     physics.jriveradean@proton.me; javier.dean@ucl.ac.uk               ation of optical schrödinger cat states in intense laser–
+ [1] E. Noether, Invariante variationsprobleme, in Gesam-               matter interactions, Nature Physics 17, 1104 (2021).
+     melte abhandlungen-collected papers (Springer, 1983) pp.      [20] P. Stammer, J. Rivera-Dean, P. Tzallas, M. F. Ciap-
+     231–239.                                                           pina, and M. Lewenstein, Colloquium: Quantum op-
+ [2] C. Cohen-Tannoudji, J. Dupont-Roc, and G. Grynberg,                tics of intense light–matter interaction, arXiv preprint
+     Photons and atoms: introduction to quantum electrody-              arXiv:2510.19045 (2025).
+     namics (John Wiley & Sons, 2024).                             [21] P. Stammer, J. Rivera-Dean, and M. Lewenstein, Theory
+ [3] P. A. M. Dirac, The quantum theory of the emission and             of quantum optics and optical coherence in high harmonic
+     absorption of radiation, Proceedings of the Royal Society          generation, arXiv preprint arXiv:2504.13287 (2025).
+     of London. Series A, Containing Papers of a Mathemat-         [22] A. Gorlach, M. E. Tzur, M. Birk, M. Krüger, N. Rivera,
+     ical and Physical Character 114, 243 (1927).                       O. Cohen, and I. Kaminer, High-harmonic generation
+ [4] E. Fermi, Nuclear physics: a course given by En-                   driven by quantum light, Nature Physics 19, 1689 (2023).
+     rico Fermi at the University of Chicago (University of        [23] A. Rasputnyi, Z. Chen, M. Birk, O. Cohen, I. Kaminer,
+     Chicago press, 1950).                                              M. Krüger, D. Seletskiy, M. Chekhova, and F. Tani, High-
+ [5] C. Cohen-Tannoudji, J. Dupont-Roc, and G. Grynberg,                harmonic generation by a bright squeezed vacuum, Na-
+     Atom-photon interactions: basic processes and applica-             ture Physics 20, 1960 (2024).
+     tions (John Wiley & Sons, 2024).                              [24] S. Lemieux, S. A. Jalil, D. N. Purschke, N. Boroumand,
+ [6] O. E. Alon, V. Averbukh, and N. Moiseyev, Selection                T. J. Hammond, D. Villeneuve, A. Naumov, T. Brabec,
+     rules for the high harmonic generation spectra, Physical           and G. Vampa, Photon bunching in high-harmonic emis-
+     review letters 80, 3743 (1998).                                    sion controlled by quantum light, Nature Photonics 19,
+ [7] Y.-L. He, J. Guo, F.-Y. Gao, and X.-S. Liu, Dynamical              767 (2025).
+     symmetry and valley-selective circularly polarized high-      [25] M. E. Tzur, C. Mor, N. Yaffe, M. Birk, A. Rasput-
+     harmonic generation in monolayer molybdenum disulfide,             nyi, O. Kneller, I. Nisim, I. Kaminer, M. Krüger,
+     Physical Review B 105, 024305 (2022).                              N. Dudovich, et al., Measuring and controlling the
+ [8] C. Ma, X.-B. Bian, and T.-Y. Du, Role of symmetry                  birth of quantum attosecond pulses, arXiv preprint
+     breaking in high-order harmonic generation from su-                arXiv:2502.09427 (2025).
+     schrieffer-heeger systems, Physical Review B 106, 125117      [26] R. V. Gothelf, C. S. Lange, and L. B. Madsen, High-order
+     (2022).                                                            harmonic generation in a crystal driven by quantum light,
+ [9] O. Neufeld, M. E. Tzur, O. Kfir, A. Fleischer, and O. Co-          Physical Review A 111, 063105 (2025).
+     hen, Light’s symmetry, asymmetry, and their role in non-      [27] J. Rivera-Dean, P. Stammer, M. Ciappina, and
+     linear optics and ultrafast phenomena, arXiv preprint              M. Lewenstein, Structured squeezed light allows for high-
+     arXiv:2503.19433 (2025).                                           harmonic generation in classical forbidden geometries,
+[10] N. Saito, P. Xia, F. Lu, T. Kanai, J. Itatani, and                 Physical Review Letters 135, 013801 (2025).
+     N. Ishii, Observation of selection rules for circularly po-   [28] L. Petrovic, P. Stammer, M. Lewenstein, and J. Rivera-
+     larized fields in high-harmonic generation from a crys-            Dean, Generation of circular polarized high-order har-
+     talline solid, Optica 4, 1333 (2017).                              monics from single color quantum light, arXiv preprint
+[11] C. L. Tang and H. Rabin, Selection rules for circularly            arXiv:2601.01611 (2026).
+     polarized waves in nonlinear optics, Phys. Rev. B 3, 4025     [29] Y.-B. Wang and X.-B. Bian, High-order harmonic gen-
+     (1971).                                                            eration in quantum light by a generalized von neumann
+[12] O. E. Alon, V. Averbukh, and N. Moiseyev, Selection                lattice method, Physical Review A 111, 043111 (2025).
+     rules for the high harmonic generation spectra, Phys.         [30] P. Stammer, J. Rivera-Dean, A. Maxwell, T. Lamprou,
+     Rev. Lett. 80, 3743 (1998).                                        A. Ordóñez, M. F. Ciappina, P. Tzallas, and M. Lewen-
+[13] N. Yoshikawa, T. Tamaya, and K. Tanaka, High-                      stein, Quantum electrodynamics of intense laser-matter
+     harmonic generation in graphene enhanced by elliptically           interactions: A tool for quantum state engineering, PRX
+     polarized light excitation, Science 356, 736 (2017).               Quantum 4, 010201 (2023).
+[14] G. Lerner, O. Neufeld, L. Hareli, G. Shoulga, E. Bordo,       [31] J. Rivera-Dean, L. Petrovic, M. Lewenstein, and P. Stam-
+     A. Fleischer, D. Podolsky, A. Bahabad, and O. Cohen,               mer, Attosecond quantum optical interferometry, arXiv
+     Multiscale dynamical symmetries and selection rules in             preprint arXiv:2511.01097 (2025).
+     nonlinear optics, Science Advances 9, eade0953 (2023).        [32] J. Rivera-Dean, T. Lamprou, E. Pisanty, P. Stam-
+[15] D. Baykusheva, M. S. Ahsan, N. Lin, and H. J. Wörner,             mer, A. F. Ordóñez, A. S. Maxwell, M. F. Ciappina,
+     Bicircular high-harmonic spectroscopy reveals dynamical            M. Lewenstein, and P. Tzallas, Strong laser fields and
+     symmetries of atoms and molecules, Physical review let-            their power to generate controllable high-photon-number
+     ters 116, 123001 (2016).                                           coherent-state superpositions, Physical Review A 105,
+[16] E. Pisanty, S. Sukiasyan, and M. Ivanov, Spin conserva-            033714 (2022).
+     tion in high-order-harmonic generation using bicircular       [33] P. Stammer, J. Rivera-Dean, A. S. Maxwell, T. Lam-
+     fields, Physical Review A 90, 043829 (2014).                       prou, J. Argüello-Luengo, P. Tzallas, M. F. Ciappina,
+[17] A. Fleischer, O. Kfir, T. Diskin, P. Sidorenko, and O. Co-         and M. Lewenstein, Entanglement and squeezing of the
+     hen, Spin angular momentum and tunable polarization                optical field modes in high harmonic generation, Physical
+     in high-harmonic generation, Nature Photonics 8, 543               Review Letters 132, 143603 (2024).
+                                                                 7
+
+[34] E. Pisanty, RB-SFA: High Harmonic Generation in the
+     Strong Field Approximation via Mathematica, Github:
+     https://github.com/episanty/RB-SFA (2020).
+[35] F. Ceccherini, D. Bauer, and F. Cornolti, Dynamical
+     symmetries and harmonic generation, Journal of Physics
+     B: Atomic, Molecular and Optical Physics 34, 5017
+     (2001).
+[36] M. Lysne, Y. Murakami, M. Schüler, and P. Werner,
+     High-harmonic generation in spin-orbit coupled systems,
+     Physical Review B 102, 081121 (2020).
+[37] F. Kong, C. Zhang, H. Larocque, F. Bouchard, Z. Li,
+     M. Taucer, G. Brown, S. Severino, T. Hammond,
+     E. Karimi, et al., Spin-constrained orbital-angular-
+     momentum control in high-harmonic generation, Phys-
+     ical Review Research 1, 032008 (2019).
+[38] P. Stammer, J. Rivera-Dean, M. F. Ciappina, and
+     M. Lewenstein, Weak measurement in strong laser field
+     physics, arXiv preprint arXiv:2508.09048 (2025).
+[39] P. Stammer, Information-theoretic perspective on energy
+     conservation in high harmonic generation, arXiv preprint
+     arXiv:2410.15503 (2024).
+[40] S. Ghimire and D. A. Reis, A tutorial on high-order har-
+     monic generation in atoms, molecules, and condensed
+     matter, APL Photonics 11, 021102 (2026).
+[41] J. M. Dahlström, A. L’Huillier, and J. Mauritsson, Quan-
+     tum mechanical approach to probing the birth of attosec-
+     ond pulses using a two-colour field, Journal of Physics
+     B: Atomic, Molecular and Optical Physics 44, 095602
+     (2011).
+                                                                                                                           8
+
+                                            SUPPLEMENTARY MATERIAL
+
+
+                                                     Theoretical description
+
+   In this work, we consider HHG driven by a bicircular ω − 2ω field, where the fundamental driving field and
+its second harmonic have opposite helicities and equal amplitude. In contrast to semiclassical approaches, here we
+consider the case where one of the frequency components is prepared in a squeezed state along a linearly polarized
+direction. Without loss of generality, we assume that squeezing is applied to the ∥ component of the 2ω mode, although
+the extension to squeezing of the ω mode or other combinations of {ω, 2ω} and {∥, ⊥} is straightforward. The initial
+state of the driving field is then written as
+                                                       √                   √
+                                   |Φ(t0 )⟩ = D̂ω,L (αω 2) ⊗ [D̂2ω,R (α2ω 2)Ŝ2ω,∥ (ξ)] |0̄⟩ ,                           (14)
+
+where D̂ω,µ (α) = exp αâω,µ − α∗ âω,µ and Ŝω,µ (ξ) = exp (ξâ2ω,µ − ξ ∗ â†2
+                         †                                                          
+                                                                                ω,µ )/2 are the displacement and squeezing
+operators acting on the optical mode (ω, µ), respectively, both of which act on the multimode vacuum |0̄⟩. To ensure
+that in the absence of squeezing the driving field exhibits the correct dynamical symmetry of a bicircular field, we
+impose |αω | = |α2ω |.                                            √
+   Focusing on the 2ω component and using        that D̂2ω,R (α2ω 2) ≡ D̂2ω,∥ (α2ω ) ⊗ D̂2ω,⊥ (iα2ω ), we insert the coherent
+state resolution of the identity 1∥ = π −1 d2 α |α⟩⟨α| for the parallel polarization mode, such that the 2ω component
+                                             R
+
+of the state becomes
+                                             Z
+                                           1
+                             |Φ2ω (t0 )⟩ =      d2 α c(α)D̂2ω,∥ (α) ⊗ D̂2ω,⊥ (iα2ω ) 02ω,∥ , 02ω,⊥ ,                     (15)
+                                           π
+
+with c(α) = ⟨α|D̂2ω,∥ (α2ω )Ŝ2ω,∥ (r)|0⟩. The full initial state then reads
+                               Z
+                             1
+                                   d2 α c(α) D̂ω,∥ (αω ) ⊗ D̂ω,⊥ (−iαω ) ⊗ D̂2ω,∥ (α) ⊗ D̂2ω,⊥ (iα2ω ) |0̄⟩ .
+                                                                                                   
+                 |Φ(t0 )⟩ =                                                                                             (16)
+                             π
+  The interaction with the atomic system is described in the length gauge, within the dipole and single-active-electron
+approximations, by the dipole coupling Hamiltonian
+
+                                                  Ĥ(t) = Ĥat + er̂ · Ê(t),                                            (17)
+
+where Ĥat is the atomic Hamiltonian and Ê(t) = −i q,µ κq [ϵµ âq,µ e−iωq t + h.c.] the electric field operator, with ϵµ
+                                                         P
+                                              p
+denoting the polarization vector and κq ∝ ωq /V a constant depending on the quantization volume V . This Hamil-
+tonian is written in the interaction picture with respect to the free-field Hamiltonian Ĥfield = q,µ ℏωq â†q,µ âq,µ . The
+                                                                                                    P
+
+propagator Û (t, t0 ) time-evolving the state from the initial time t0 up to the final time t ≥ t0 satisfies
+
+                                                            ∂ Û (t)
+                                                       iℏ            = Ĥ(t)Û (t),                                     (18)
+                                                               ∂t
+such that the evolved state of the joint light-matter system |Ψ(t)⟩ reads
+                      Z
+                    1
+                        d2 α c(α)Û (t, t0 ) D̂ω,∥ (αω ) ⊗ D̂ω,⊥ (−iαω ) ⊗ D̂2ω,∥ (α) ⊗ D̂2ω,⊥ (iα2ω ) |g⟩ ⊗ |0̄⟩
+                                                                                                   
+          |Ψ(t)⟩ =
+                   π
+                      Z
+                    1
+                        d2 α c(α) D̂ω,∥ (αω ) ⊗ D̂ω,⊥ (−iαω ) ⊗ D̂2ω,∥ (α) ⊗ D̂2ω,⊥ (iα2ω ) Û (t, t0 ; α) |g⟩ ⊗ |0̄⟩
+                                                                                          
+                 =                                                                                                      (19)
+                   π
+                      Z
+                    1
+                 =      d2 α c(α)D̂(α)Û (t, t0 ; α) |g⟩ ⊗ |0̄⟩ ,
+                   π
+
+where D̂(α) ≡ [D̂ω,∥ (αω ) ⊗ D̂ω,⊥ (−iαω )] ⊗ [D̂2ω,∥ (α) ⊗ D̂2ω,⊥ (iα2ω )]. Here, we have defined
+
+                                                Û (t, t0 ; α) = D̂ † (α)Û (t, t0 )D̂(α),                              (20)
+
+with the transformed propagator satisfying
+
+                                       ∂ Û (t; α) h                                     i
+                                  iℏ              = Ĥat + er̂ · Ê(t) + er̂ · Ecl (t; α) Û (t; α),                    (21)
+                                            ∂t
+                                                                                                                            9
+
+where Ecl (t; α) = ⟨0̄|D̂ † (α)Ê(t)D̂(α)|0̄⟩ is the classical electric field from the quantum state defined by displacement
+the vacuum via D̂(α).
+  Restricting to HHG processes in which the atom returns to the ground state, and working in the low-depletion
+regime such that time-dependent dipole correlations are negligible [33], we obtain [30, 32]
+                                                          O                                    
+                                   ⟨g|Û (t, t0 ; α)|g⟩ ≃   D̂ χq (t, t0 ; α) ≡ D̂ χq,µ (t, t0 ) ,                      (22)
+                                                          q
+                 Rt
+where χq,µ (t) ∝ t0 dτq [⟨dˆµ (τ ; α)⟩e−iωq τ . Here, ⟨dµ (t; α)⟩ = ⟨ψα (t)|ϵµ · d|ψ
+                                                                                 ˆ α (t)⟩ is the time-dependent dipole moment,
+with |ψα (t)⟩ the electronic state evolved through the semiclassical time-dependent Schrödinger equation (TDSE), i.e.,
+                                             ∂ |ψα (t)⟩                        
+                                        iℏ             = Ĥat + er̂ · Ecl (t; α) |ψα (t)⟩ .                              (23)
+                                                 ∂t
+Therefore, the resulting quantum optical state |Φ(t)⟩ = ⟨g|Ψ(t)⟩ becomes
+                                               Z
+                                            1
+                                                  d2 α c(α)D̂(α)D̂ χ(t, t0 ; α) |0̄⟩ ,
+                                                                               
+                                 |Φ(t)⟩ =                                                                                (24)
+                                           Nπ
+                        2
+where N 2 = |⟨g|Ψ(t)⟩| . In the following, we shall denote for notational simplicity χq (t, t0 ; α) = χq (α). Using this
+notation, we find that the individual state of the qth harmonic order obtained after tracing out all other optical modes
+reads
+                         Z       Z
+                     1                                                                    O
+          ρ̂q (t) = 2 2      d α d2 β c(α)c∗ (β) ⟨0̄|D̂ † (χ(β))D̂ † (β)D̂(α)D̂(χ(α))|0̄⟩
+                              2
+                                                                                            |χq,µ (α)⟩⟨χq,µ (β)|
+                   N π                                                                    µ
+                         Z       Z                                                                                  (25)
+                     1        2     2         ∗
+                                                              O
+                  = 2 2      d α d β c(α)c (β)w(α, β, χ)          |χq,µ (α)⟩⟨χq,µ (β)|
+                   N π                                         µ
+
+where we have defined
+
+                                   w(α, β, χ) = ⟨0̄|D̂ † χ(β) D̂ † (β)D̂(α)D̂ χ(α) |0̄⟩ .
+                                                                                 
+                                                                                                                         (26)
+  In general, the function above can be factorized into products of terms of the form
+                                                              ∗       ∗          ∗     ∗
+             ⟨0|D̂† (χ(β))D̂† (β)D̂(α)D̂(χ(α))|0⟩ = e[β χ(β)−βχ (β)]/2 e[αχ (α)−α χ(α)]/2 ⟨β + χ(β)|α + χ(α)⟩
+                                                                  ∗          ∗                                           (27)
+                                                      = e−[α−β]χ (β)+[α−β] χ(α) ⟨β|α⟩ ⟨χ(β)|χ(α)⟩ ,
+where, for harmonics q > 2, we set α = β = 0 since these modes are initially not populated. From the explicit form
+of the coherent state overlap, we observe that the dominant contribution
+                                                                           to w(α,
+                                                                                   β, χ) arises from the region where
+α ≈ β, as the modulus of this function decays exponentially as exp −|β − α|2 /2 . Already for variations |β − α| = 5,
+the suppression is of the order of 10−6 . In the present context, such variations correspond to changes in the driving
+field of only a few photons, or equivalently to electric field variations of E0 = 2κq α ∼ 10−7 a.u. By contrast, the
+strong-field response of the atom only becomes significantly modified for electric field changes of the order of 10−2
+a.u., corresponding to variations of millions of photons. Consequently, in the region where w(α, β, χ) is appreciable,
+the harmonic amplitudes satisfy χ(β) ≃ χ(α). Furthermore, in this regime the additional exponential factor contains
+terms proportional to |(α − β)χ∗ (α)| ∝ |χ(α)| and its complex conjugate. Since in the single-atom response considered
+                                                          ∗
+here |χ(α)| ≪ 1, we may therefore approximate e|(α−β)χ (α)| ≈ 1. Under these conditions, Eq. (27) simplifies to
+                                        ⟨0|D̂† (χ(β))D̂† (β)D̂(α)D̂(χ(α))|0⟩ ≃ ⟨β|α⟩ .                                   (28)
+  Introducing this in Eq. (27), we then arrive at
+                                       Z       Z
+                                    1
+                      ρ̂q,µ (t) ≃ 2 2      d2 α d2 β ⟨α|Φ(t0 )⟩ ⟨Φ(t0 )|β⟩ ⟨β|α⟩ |χq,µ (α)⟩⟨χq,µ (α)|
+                                  N π
+                                    Z
+                                  1                    2
+                                =     d2 α |⟨α|Φ(t0 )⟩| |χq,µ (α)⟩⟨χq,µ (α)|                                             (29)
+                                  π
+                                  Z
+                                = d2 α Q(α) |χq,µ (α)⟩⟨χq,µ (α)| ,
+
+                               2
+where Q(α) = π −1 |⟨α|Φ(t0 )⟩| represents the Husimi function of the squeezed field mode in the driving field.
+                                                                                                                                                  10
+
+                                Effect of classical selection rules on the electric field variance
+
+
+  Following Eq. (29), we see that when considered individually and under the strong-field conditions required for
+their generation, the harmonics are effectively described by a classical state given by a statistical mixture of coherent
+states with amplitude χq,µ (α). The mean photon number of the emitted harmonics is therefore given by
+                                                                        Z
+                                                                                                    2
+                                                    ⟨â†q,µ âq,µ ⟩ =       d2 α Q(α)|χq,µ (α)| .                                                (30)
+
+From this expression we see that the harmonic radiation is determined by the average of the atomic response to
+classical fields Ecl (t; α) sampled from the Husimi function Q(α). These atomic responses are ultimately governed by
+the semiclassical TDSE in Eq. (23) which, for isotropic atomic systems, the presence of selection rules in the HHG
+response is determined by the dynamical symmetries obeyed by the driving field [9].
+   Within the present framework, the conservation of selection rules in the presence of squeezed driving fields can
+be understood in terms of the extent to which the classical fields Ecl (t; α) within the support of Q(α) satisfy the
+corresponding dynamical symmetries. In other words, if the fluctuations of the field within Q(α) do not break the
+symmetry operations defining the dynamical symmetry group, the corresponding selection rules remain robust. Thus,
+to determine if a given non-classical driving field satisfies a certain dynamical symmetry, one must analyze whether
+the corresponding quantum state remains invariant under the relevant symmetry operations. In practice, this can
+be assessed by studying quantities such as the expectation value of the field and its second-order moments, which
+characterize the mean field and its fluctuations.
+   For a bicircular field, the relevant dynamical symmetry operators are r̂n and τ̂n , which respectively describe a
+rotation of the electromagnetic field polarization by 2π/n, and a time translation of T /n with T the fundamental
+period [9]. Specifically, for bicircular fields, we have n = 3, meaning that simultaneously applying r̂3 and τ̂3 leaves
+the field invariant. These symmetries are responsible for the well-known selection rules in the HHG process driven by
+bicircular light.
+   To extend these notions to our squeezed driving field, we need quantum optical versions of the above operators.
+For the polarization rotation, r̂3 , we can define
+                                                                   h                       i
+                                                        R̂(θ) = exp −iθ â†R âR − â†L âL ,                                                    (31)
+
+where âµ denotes the annihilation operator acting on the polarization mode µ, with µ = R(L) for the right-(left-)
+circularly polarized mode. For the time-translation operator, we have
+                                                                h                        i
+                                                    T̂ (θ) = exp −iθω â†R âR + â†L âL ,                                                      (32)
+
+which corresponds to the propagation of the quantum state under the free-field Hamiltonian.
+  To evaluate the mean field and its fluctuations, we explicitly write the electric field operator of the driving field
+modes (highlight through the subscript “d”) in the circularly polarized basis
+                                                          X X 
+                                                               ϵµ âω,µ e−iωt + ϵ∗µ â†ω,µ eiωt .
+                                                                                               
+                                              Êd (t) =                                                                                          (33)
+                                                            ω µ=R,L
+
+
+With this definition, we can examine how the above dynamical symmetry transformations act on the operator above
+
+   Êd (t; θ, τ ) = T̂ † (θ)R̂† (θ)Êd (t)T̂ (θ)R̂(θ)
+                    X                                                        X                                                  
+                                       −i(ω(t+τ )+θ)    ∗     † i(ω(t+τ )+θ)                 −i(ω(t+τ )−θ)    ∗     † i(ω(t+τ )−θ)
+                  =         ϵR âR,ω e               + ϵR,ω âR e             +   ϵL,ω âL e               + ϵL,ω âL e
+                      ω                                                                      ω
+                      X                                                                   X                                              
+               = ϵR           âR,ω e   −i(ω(t+τ )+θ)
+                                                        + â†L,ω ei(ω(t+τ )−θ)       + ϵL        âL,ω e−i(ω(t+τ )−θ) + â†R,ω ei(ω(t+τ )−θ) ,
+                          ω                                                                  ω
+                                                                                                                       (34)
+where, in going from the second to the third equality, we have used that ϵR = ϵ∗L . Furthermore, we also need the
+variance of the electric field operator, which requires evaluating the expectation value of Êd2 (t; θ, τ ). From Eq. (34),
+                                                                                                                                                                 11
+
+
+
+
+FIG. 4. Lissajous figures for two values of the electric field sampled symmetrically around the maxima of Q(α). Each panel
+shows a different driving field configuration: (a) and (b) correspond to the case where amplitude and phase squeezing are
+applied to the 2ω field, respectively, while panels (c) and (d) show the case where it is applied to the ω field instead.
+
+
+this operator can be written as
+                    X                                              X                                            
+  Êd2 (t; θ, τ ) =    âR,ω e−i(ω(t+τ )+θ) + â†L,ω ei(ω(t+τ )−θ)      âL,ω e−i(ω(t+τ )−θ) + â†R,ω ei(ω(t+τ )−θ) + h.c.
+                    ω                                                        ω
+                            X                             X                               
+              = 2Nω + 2            âR,ω e−i(ω(t+τ )+θ)              âL,ω e−i(ω(t+τ )−θ)
+                               ω                              ω
+                      X                            X                                     X                              X                             
+                 +2         â†R,ω ei(ω(t+τ )+θ)          âR,ω e   −i(ω(t+τ )+θ)
+                                                                                        +2           â†L,ω ei(ω(t+τ )−θ)          âL,ω e   −i(ω(t+τ )−θ)
+
+                        ω                             ω                                          ω                            ω
+                      X                            X                          
+                 +2         â†R,ω ei(ω(t+τ )+θ)          â†L,ω ei(ω(t+τ )−θ)    ,
+                        ω                             ω
+                                                                                                                    (35)
+where Nω denotes the total number of frequencies considered. In going from the first to the second equality, we have
+used that [âµ,ω , â†µ,ω ] = 1.
+  In our configuration, we drive the HHG process with the state given in Eq. (27), that is, a “standard” bicircular field
+in which some amount of squeezing is applied along a linearly polarized component (here ∥, although it is irrelevant
+which linear direction is chosen). Before proceeding, it is worth recalling the following transformations
+
+                        D̂(α)Ê(t)D̂(α) = Ê(t) + ⟨α|Ê(t)|α⟩ ,              Ŝ † (r)âŜ(r) = â cosh(r) − â† sinh(r),                                  (36)
+
+that is,       the applied displacement operations recover                               a       classical      bicircular        field,       Ebic (t)          ≡
+⟨αω,R , α2ω,L |Êd (t)|αω,R , α2ω,L ⟩. With this in mind, one finds
+
+                            ⟨Êd (t; θ, τ )⟩ = Ebic (t; θ, τ ) + ⟨0|Ŝ † (r)Ê(t; θ, τ )Ŝ(r)|0⟩ = Ebic (t; θ, τ ),                                       (37)
+
+so that for the classical bicircular component
+
+                                      Ebic (t; θ, τ ) = ϵR α e−i(ω(t+τ )+θ) + ei(2ω(t+τ )−θ) + c.c.,
+                                                                                           
+                                                                                                                                                          (38)
+
+from which we can see that by setting θ = 2π/3 and τ = 2π/(3ω) the field remains invariant. More explicitly, we find
+that
+
+                        Ebic t; 2π/3, 2π/(3ω) = ei2π/3 αϵR e−iωt + ei2ωt + c.c. ≡ Ebic (t),
+                                                                      
+                                                                                                                (39)
+
+which is 2π/3 rotation of the polarization axes, leaving the time dependence unchanged. Hence, on average, the field
+satisfies the dynamical symmetry.
+  However, the same cannot be said for the fluctuations. For the expectation values of the squared electric field
+operator, we find
+
+                  ⟨Ê 2 (t; θ, τ )⟩ = Ebic
+                                       2
+                                           (t) + 2Ebic (t) ⟨0|Ŝ † (r)Ê(t; θ, τ )Ŝ(r)|0⟩ + ⟨0|Ŝ † (r)Ê 2 (t; θ, τ )Ŝ(r)|0⟩
+                                                                                                                                                          (40)
+                                      2
+                                   = Ebic (t) + ⟨0|Ŝ † (r)Ê 2 (t; θ, τ )Ŝ(r)|0⟩ .
+                                                                                                                                                           12
+                            √
+Using âR/L = (â∥ ∓ iâ⊥ )/ 2, we obtain
+
+                          ⟨0|Ŝ † (r)Ê 2 (t; θ, τ )Ŝ(r)|0⟩ = 4 1 + sinh(r) sinh(r) − cosh(r) cos(4ω(t + τ )) ,
+                                                                                                            
+                                                                                                                                                          (41)
+
+which gives a field variance
+                                                                     n                                             o
+              ∆E 2 (t; θ, τ ) = ⟨Ê 2 (t; τ, θ)⟩ − ⟨Ê(t; τ, θ)⟩2 = 4 1 + sinh(r) sinh(r) − cosh(r) cos(4ω(t + τ )) ,
+                                                                                 
+                                                                                                                                                          (42)
+
+and that, as we can see, does not respect the dynamical symmetry satisfied by the mean field. Thus, while the average
+field satisfies the dynamical symmetry, the fluctuations of the field do not. Consequently, when the field fluctuations are
+large, the selection rules expected for HHG under a classical bicircular driver are no longer satisfied. These fluctuations
+play a crucial role in determining the HHG response, allowing harmonics that would otherwise be forbidden by the
+classical symmetry. As representative examples and using the Husimi function representation, Fig. 4 presents the type
+of Lissajous figures that would be obtain for electric fields located symmetrically around the maxima of Q(α), in light
+and dark colors, for different field configurations.
+   Having justified the fluctuation induced breaking of the dynamical symmetries of the driving field, we now discuss
+how this affects the harmonic generation process. From Eq. (42), we observe that the fluctuations are invariant under
+the joint operation of a temporal translation τ̂4 = π/(4ω). Taking into account the full field properties by means of
+the classical average, being invariant under r̂3 τ̂3 , and the field fluctuations, with invariance under τ̂4 , the intersection
+of the two symmetry groups reduces to the identity. As a result, no nontrivial dynamical symmetry is given for full
+driving field, implying that the HHG process is only periodic over a full optical cycle. Consequently, all harmonic
+orders of ω are, in principle, allowed, as shown in the main text.
+   The above can be seen more explicitly by considering Eq. (29), which also reflects how calculation is performed
+in practice. This state corresponds to a classical mixture of coherent states weighted by the Husimi function, which
+determines the driving field used to evaluate the harmonic spectral amplitude. More specifically, the Husimi function
+samples driving fields of the form
+
+                                                         Ecl (t; α) = Ebic (t; α) + E2ω,∥ (t),                                                            (43)
+                                                                      | {z } | {z }
+                                                                          τ 3 r3            τ 2 r2
+
+that is, a linearly polarized component added to a bicircular field, with its strength dictated by the Husimi distribution.
+As discussed above, the only remaining symmetry of this field is the trivial temporal over a full optical cycle. In the
+absence of the linearly polarized component, the spectral intensity for a bicircular field can be written as
+                                                          2π                                 4π                           Z 2π
+              X Z 2π/ω                              X  Z 3ω                               Z 3ω                             ω
+                                                                                                                                                     
+                                        −iqωt                                  −iqωt                          −iqωt                          −iqωt
+    χq,µ ∝                  dtDµ (t)e           =                  dtDµ (t)e           +          dtDµ (t)e           +          dtDµ (t)e            .   (44)
+                                                                                            2π                             4π
+              n       0                             n          0                            3ω                             3ω
+
+
+Assuming identical response across cycles, we split the integral into three intervals of duration 2π/(3ω), yielding
+                2π                             2π                                                      2π
+          X  Z 3ω                           Z 3ω
+                                                                               2π
+                                                                                                     Z 3ω
+                                                                                                                                      4π
+                                                                                                                                         
+                          dtDµ (t)e−iqωt +           dtDµ t + 2π/(3ω) e−iqωt−iq 3 +                         dtDµ t + 4π/(3ω) e−iqωt−iq 3 . (45)
+                                                                                                                           
+ χq,µ ∝
+          n       0                             0                                                     0
+
+
+Then, using the symmetry of the bicircular field
+                                              2π                                                       4π
+                    Dµ t + 2π/(3ω) = e±i 3 Dµ (t)                                  Dµ t + 4π/(3ω) = e±i 3 Dµ (t),
+                                                                                                
+                                                                          and                                                                             (46)
+
+where the ± depends on whether we are considering the left or circular polarization components, we therefore arrive
+at
+                                          2π
+                                    X Z 3ω                  h         2π        4π
+                                                                                   i
+                             χq,µ ∝          dtDµ (t)e−iqωt 1 + e±iq 3 + e±iq 3 ,                              (47)
+                                                     n     0
+
+
+where the term in brackets is maximized whenever q = 3N ± 1, with N ∈ W, while it vanishes when q = 3N ,
+recovering the standard bicircular selection rules.
+   When a non-vanishing linearly polarized 2ω component is included, the harmonic response must be evaluated using
+fields of the form in Eq. (43), with amplitudes sampled from the Husimi function. For clarity, assuming |Ebic | ≫
+                                                                                                                            13
+
+
+
+
+FIG. 5. HHG spectra obtained when applying the linearly polarized squeezing to the ω (left panels) and to the 2ω (right panels)
+field contribution. The first row displays the spectra evaluated along the RCP component, while the second row when evaluated
+along the LCP component. The black dashed vertical lines highlight the locatiton of the classically allowed harmonics. The
+atomic medium is hydrogen (Ip = 0.5 a.u.), the driving frequency is ωL = 0.057 a.u., and the bicircular component field
+amplitudes are set to E0 = 0.037 a.u.
+
+
+ E2ω,∥ , we treat the additional linear component perturbatively, such that the harmonic amplitude can be written
+as [41]
+
+                                                    X Z 2π/ω
+                                           χq,µ ∝              dtDµ (t)e−iσ(t)−iqωt ,                                     (48)
+                                                    n   0
+
+
+where Dµ (t) represents the bicircular contribution, while σ(t) is a phase induced by the weak linear component.
+Repeating the previous decomposition, we obtain
+                                   2π
+                               X Z 3ω                 h                  2π     2π           4π     4π
+                                                                                                       i
+                      χq,µ ∝            dtDµ (t)e−iqωt e−iσ(t) + e−iσ(t+ 3ω )±iq 3 + e−iσ(t+ 3ω )±iq 3 .                  (49)
+                               n   0
+
+
+In contrast to the bicircular case, the additional phase σ(t) breaks the threefold symmetry, preventing the exact
+cancellation that enforces the presence of specific harmonic orders. As a result, harmonics with q = 3N , which are
+forbidden in the perfectly symmetric case, become allowed, although their intensity remains controlled by the strength
+of the symmetry-breaking perturbation.
+   We emphasize that these results are independent of the specific mode to which the linearly polarized squeezing is
+applied, as well as of its relative phase with respect to the coherent state component. This is explicitly illustrated
+in Fig. 5, which shows the HHG spectra obtained for both phase and amplitude squeezing, applied either to the ω
+field (left panels) or to the 2ω component (right panels). Only minor differences are observed, primarily in the cutoff
+regions, where phase squeezing leads to slightly more intense harmonic orders beyond the cutoff.
+
+
+                               Selection rules via spin angular momentum conservation
+
+  The presence of specific selection rules in the harmonic generation process can also be understood from an interplay
+between the allowed harmonic frequencies and the conservation of specific quantities, such as is spin angular momentum
+(SAM) in our case [16, 17]. This perspective often provides a simple picture for understanding the polarization
+properties of the emitted harmonics.
+  For the case of a bicircular driver, composed of two circularly polarized components with different frequency, the
+harmonic generation process can be interpreted as the absorption (or stimulated emission) of photons from each field
+component while satisfying SAM conservation. Denoting the n1 and n2 the number of photons absorbed (if ni > 0)
+or stimulatedly emitted (if ni < 0) from each channel, the generated harmonic satisfies
+
+                                           Ω = (n1 + 2n2 )ω,     σ = n1 σ1 + n2 σ2 ,                                      (50)
+                                                                                                                             14
+
+where Ω is the harmonic frequency σ its SAM. In our case, we have that σ1 = −1 (LCP) and σ2 = 1 (RCP), and
+enforcing SAM conservation then leads to the well-known selection rule
+
+                                                       Ω = (3n1 ± 2)ω                                                      (51)
+
+with the emitted harmonic carrying helicity σ = ±1. All other intermediate harmonics Ω = 3n ∀n ∈ W are forbidden.
+   Following from Eq. (29), when squeezing is applied along a linearly polarized direction, the quantum optical state
+of the harmonics is given by an incoherent mixture in which the harmonic generation √     process driven by the field
+Ebic (t) + ϵ∥ |ε| cos(2ωt + ϕ) occurs with probability Q(ε/(2κ)). Since ε∥ = (εR + εL )/ 2, the total field can be
+expanded in the circularly polarized basis as
+                                                                               
+                                  Etot = Eω (t) + δE2ω (t) ϵL + E2ω (t) + δE2ω (t) ϵR ,                          (52)
+                                       √
+where δE2ω (t) = ε∥ cos(2ωt + ϕ)/ 2. We therefore see that the effect of squeezing is to introduce additional 2ω
+components with both helicities. As a consequence, new photon exchange pathways become available compared to the
+classical bicircular configuration, since photons at frequency 2ω can now be absorbed (or stimulatedly emitted) with
+either polarization handedness [16]. Denoting by n2,+ and n2,− the number of photons exchanged from the right- and
+left-handed 2ω components, respectively, the harmonic generation process satisfies
+
+                                   Ω = (2n2,+ + 2n2,− + n1 )ω,      σ = n2,+ − n2,− − n1 ,                                 (53)
+
+which leads to
+
+                                    Ω = (3n1 + 4n2,− ± 2)ω,       n2,+ = ±1 + n1 + n2,− .                                  (54)
+
+  Thus, depending on the harmonic mode, several photon-exchange channels can contribute to the generation process.
+To understand what determines the helicity of the harmonics that are absent in the classical bicircular case, i.e., the
+{3qω; q ∈ N}, we restrict our analysis to perturbative channels whose intensity scales as IΩ ∼ Eω 1 δE2ω,∥2,− (E2ω,R +
+                                                                                                2|n | 2|n    |
+
+δE2ω,∥ )2|n2,+ | . In the regime δE2ω,∥ ≪ E2ω , the dominant channels are those that minimize the power of the weak
+field component, i.e., those with the smallest possible value of n2,− or, when this is not possible, those that maximize
+n1 and n2,+ .
+   Considering the lowest values of n2,− compatible with Eq. (54), we identify two possible channels
+
+                                      ① σ = +1 =⇒ n1 = −1, n2,− = 1, n2,+ = 1,
+                                                                                                                           (55)
+                                      ② σ = −1 =⇒ n1 = −1, n2,− = 2, n2,+ = 0.
+
+We therefore find that the most probable channel for generating the 3ω photon is ①, resulting in a RCP photon. This
+behavior is confirmed in Fig. 6 (b), which shows the helicity of the first three harmonics as a function of the squeezing
+intensity. As the squeezing increases, larger values of δE2ω,∥ are sampled, enhancing the contribution of channel ②
+and therefore reducing the helicity [Fig. 6 (c) red curve].
+
+
+
+
+FIG. 6. (a),(b) Helicity of the first three harmonic orders when driven introducing linearly polarized phase squeezing along the
+(a) ω and (b) 2ω field components. (c) Helicity of the generated 3rd harmonic order as a function of the squeezing intensity.
+
+  To confirm this behavior, we consider the case where squeezing is applied onto the ω component instead. In this
+scenario, the generation of a harmonic Ω satisfies
+
+                                   Ω = (3n1,− − n1,+ ± 2)ω,       n2 = ±1 + n1,− − n1,+ ,                                  (56)
+                                                                                                                            15
+
+                                                                                                  2|n   |   2|n |
+with the intensity of the perturbative harmonics scaling as IΩ ∼ [Eω +δEω,∥ ]2|n1,− | δEω,∥1,+ E2ω 2 . The most probable
+channels are those that minimize n1,+ or, if not possible, maximize the other two contributions. Considering the lowest
+value of |n1,+ | we identify two possible channels
+
+                                   ① σ = +1 =⇒ {n1,− = 1, n1,+ = 2, n2 = 0},
+                                                                                                                          (57)
+                                   ② σ = −1 =⇒ {n1,− = −1, n1,+ = −2, n2,+ = 2}.
+
+In this case, both channels are degenerate in |n1,+ |. However, ① does not absorb photons from the strong 2ω field
+whereas ② does. Consequently, the most likely channel is ② which results in a LCP photon, as confirmed numerically
+in Fig. 6 (b). As the amount of squeezing increases, the contribution of ① becomes more significant, thereby reducing
+the net helicity [Fig. 6 (c) blue curve].
+
+
+
+
+FIG. 7. Panels (a), (c), (e) show the helicity for several high harmonic orders as a function of the squeezing intensity, with
+each panel corresponding to a different total intensity of the driving field. Panels (b), (d) (e) display the corresponding HHG
+spectra obtained for Isqu = 10−8 a.u., with the green region highlights those harmonics for which the helicity of the 3q (q ∈N
+harmonics deviates most strongly from H = 1.
+
+  While this discussion provides a rationale for the preferred helicity of the generated harmonics, it is important to
+emphasize that the exact helicity depends on how the harmonic intensity scales with the various components of the
+driving field. In the plateau region, this scaling does not necessarily follow the perturbative form considered here.
+Indeed, we find that the helicity is particularly sensitive for harmonics located in the cutoff region, as illustrated in
+Fig. 7, which displays the helicity of plateau and cutoff harmonics for different bicircular field strengths.
+
+
+                                      Photon statistics of the emitted harmonics
+
+  As shown in the main text, for the bicircular configuration studied here it appears that the fluctuation induced
+harmonic modes appear to follow the same type of photon statistics as the driving field. This occurs subject to an
+important difference: the emitted harmonics lie in classical states given by statistical mixtures of various coherent
+                                                                                              (2)
+states. In this context, we can express the zero-delay second-order autocorrelation function gq,µ (0) for a given harmonic
+mode (q, µ) as
+                                                                                          4
+                                                  ⟨â†2    2
+                                                                    R 2
+                                     (2)             q,µ âq,µ ⟩      d α Q(α)|χq,µ (α)|
+                                    gq,µ (0) =                   =                       2 2
+                                                                                              .                           (58)
+                                                 ⟨âq,µ âq,µ ⟩2
+                                                                   R
+                                                                      d2 α Q(α)|χq,µ (α)|
+
+   In the main text, we distinguish between two cases: one in which the bicircular displacement acts on an initially
+linearly polarized BSV state, and another in which it acts on a thermal state (with harmonics shown in Fig. 8). For
+these two situations, the corresponding Husimi function can be generally written
+                                                             "             #
+                                                   1             αx2   αy2
+                                       Q(α) =    √       exp −       −       ,                                 (59)
+                                               2π σx σy         2σx    2σy
+                                                                                                                                16
+
+
+
+
+FIG. 8. (a), (b) HHG spectra resolved along the R- and L-polarization components, respectively, when considering a thermal
+state as a driving field. The atomic medium is hydrogen (Ip = 0.5 a.u.), the driving frequency is ωL = 0.057 a.u., and the
+bicircular coherent field amplitudes are set to E0 = 0.037 a.u.
+
+
+
+
+FIG. 9. Scaling of the harmonic intensity of the 18th harmonic mode, which in the absence of squeezing would not appear
+under the bicircular configuration, as a function of the field strength. The exact scaling is shown in violet, while the fitting to
+Y = AE n is shown with the dashed black line. In red, the marginal of the Husimi function.
+
+
+where α = αx + iαy . For a thermal state we have that σx = σy , i.e., field fluctuations are equally distributed along all
+phase-space directions. In contrast, for a squeezed state we have σx > σy or vice versa, depending on which optical
+quadrature is squeezed.
+   Without loss of generality, let us take the squeezed quadrature to correspond to σy . In our case the applied squeezing
+is extremely large, such that σy ≪ 1 (and, due to the Heisenberg uncertainty principle, σx ≫ 1). Consequently,
+                                                                                                                      the
+Husimi function becomes extremely localized along the squeezed quadrature, such that the factor exp −αy2 /(2σy )
+rapidly decays to zero in a region where χ(α) remains essentially unperturbed. As a result, for strongly squeezed
+states we can approximate χq,µ (α) ≃ χq,µ (αx ), which allows us to rewrite Eq. (58) as
+                                                        R                         4
+                                          (2,squ)         dαx Q(αx )|χq,µ (αx )|
+                                         gq,µ (0) =  R                          2 2
+                                                                                      ,                               (60)
+                                                          d2 α Q(αx )|χq,µ (αx )|
+
+where Q(αx ) denotes the marginal of the Husimi function. For a thermal state, however, such an approximation is
+not valid and the full 2D integral must be retained.
+  Focusing first on the case of squeezed states, let us assume that the harmonic response of the fluctuation induced
+harmonics has the form χq,µ (α) = Aαxn . It then follows from Eq. (60) that [28],
+
+                                                   (2,squ)
+                                                                   √ Γ( 12 + 2n)
+                                                  gq,µ     (0) =    π 1          ,                                            (61)
+                                                                     Γ( 2 + n)2
+                                                                                                                      17
+
+valid for n ∈ N. From this expression, we find that when n = 1, gq,µ (0) = 3, which coincides with the photon
+                                                                        (squ)
+
+statistics expected for squeezed vacuum states of extremely large mean photon number. This scaling is indeed confirmed
+numerically, as shown for the 18th harmonic in Fig. 9, where the harmonic intensity is plotted as a function of the
+electric field strength. Therefore, it is the initial linear scaling of χq,µ (α) with respect to α when moving away from
+the exact bicircular configuration that enables the harmonic modes to inherit the photon statistics of the driving field,
+despite the fact that their quantum states are intrinsically different. We note, however, that for field strengths larger
+                                                                                        (squ)
+than those shown in Fig. 9 this linear scaling no longer holds. This explains why gq,µ (0) ̸= 3 in general for extremely
+large squeezing values. In that regime, the Husimi function includes field configurations that strongly break the initial
+bicircular-induced symmetry of the field.
+   It is worth highlighting that the scaling found in Fig. 9 is independent on whether phase or amplitude squeezing is
+used, since both cases break the initial symmetry of the bicircular field. We may therefore generalize the scaling to
+χq,µ (α) = A(αxn + αyn ), such that for thermal fields, Eq. (58) yields
+                                                       √
+                              (2,th)    Γ( 12 + n)2 + πΓ( 21 + 2n)  1    (2,squ)
+                                                                                     
+                             gq,µ (0) =              1      2
+                                                                   = 1 + gq,µ     (0) ,                             (62)
+                                                 2Γ( 2 + n)         2
+
+when n ∈ N. In particular, setting n = 1 gives gq,µ (0) = 2, further indicating that the fluctuation induced harmonics,
+                                                (2,th)
+
+while remaining classical, can nevertheless provide information about the photon statistics of the driving field.
+

@@ -1,0 +1,1919 @@
+                                               Structured squeezed light allows for high-harmonic generation in classical forbidden
+                                                                                    geometries
+                                                                 J. Rivera-Dean,1, ∗ P. Stammer,1, 2 M. F. Ciappina,3, 4, 5 and M. Lewenstein1, 6
+                                           1
+                                               ICFO – Institut de Ciencies Fotoniques, The Barcelona Institute of Science and Technology, 08860 Castelldefels (Barcelona)
+                                                                         2
+                                                                           Atominstitut, Technische Universität Wien, 1020 Vienna, Austria
+                                                     3
+                                                       Physics Program, Guangdong Technion–Israel Institute of Technology, Shantou, Guangdong 515063, China
+                                                            4
+                                                              Guangdong Provincial Key Laboratory of Materials and Technologies for Energy Conversion,
+                                                              Guangdong Technion – Israel Institute of Technology, Shantou, Guangdong 515063, China
+                                                                           5
+                                                                             Technion – Israel Institute of Technology, Haifa, 32000, Israel
+                                                                              6
+                                                                                ICREA, Pg. Lluís Companys 23, 08010 Barcelona, Spain
+                                                             High-harmonic generation (HHG) is a nonlinear process in which a strong driving field interacts
+                                                           with a material, resulting in the frequency up-conversion of the driver into its high-order harmonics.
+                                                           This process is highly sensitive to the field’s polarization: circular polarization, for instance, inhibits
+                                                           HHG. In this work, we demonstrate that the use of non-classical structured light enables HHG in
+
+
+
+
+arXiv:2411.11042v3 [quant-ph] 3 Jul 2025
+                                                           this otherwise prohibitive configuration for classical drivers. We consider circularly polarized light
+                                                           with non-classical fluctuations, introduced via squeezing along one polarization direction, and show
+                                                           that these non-classical features prompt the HHG process. We find that the spectral properties of
+                                                           the emitted harmonics depend on the type of squeezing applied and, by analyzing the inner electron
+                                                           dynamics, we relate the observed differences to modifications of the HHG three-step mechanism
+                                                           induced by the specific squeezing type. This approach opens new pathways for integrating quantum
+                                                           optics in HHG, providing novel means of controlling the light-matter interaction dynamics.
+
+
+                                              Introducion.—High-harmonic generation (HHG) has
+                                           emerged as a fundamental application for probing matter
+                                           on its intrinsic ultrafast timescales [1–3], enabled by the
+                                           high-intensity driving conditions and sub-femtosecond
+                                           dynamics involved in the process. HHG begins with the
+                                           interaction of a strong-laser field with a given matter sys-
+                                           tem [4–8], prompting a sequence of three steps [9–12]
+                                           in which electrons undergo tunneling ionization, propa-
+                                           gate in the continuum, and recombine with their par-
+                                           ent system. This recombination results in the release of
+                                           attosecond-duration bursts of radiation [13–15], corre-                FIG. 1. (a) Strong, circularly polarized classical field interact-
+                                           sponding to the energy accumulated by the electron in                  ing with an atom. Circular polarization prevents the electron
+                                           the laser field [9, 12]. By probing these three steps in dif-          from returning to the parent ion, disabling HHG. (b) Configu-
+                                           ferent materials [3, 16, 17], or by using this attosecond              ration investigated in this work, with one polarization compo-
+                                           radiation to investigate other systems [1, 2, 18], HHG en-             nent in a squeezed state. The additional uncertainty facilitates
+                                           ables insights into the electronic structure and ultrafast             the electron’s return to the parent ion, enabling HHG despite
+                                           dynamics of matter with sub-femtosecond resolution.                    the circular-polarization conditions.
+                                              Besides the material system, HHG is also sensitive to
+                                           the driving field parameters. By tuning the driver’s in-
+                                           tensity and frequency, one can control the spectral range              ploying non-classical states of light as HHG drivers. Be-
+                                           of the emitted radiation and the HHG efficiency [9, 11,                yond having the potential to induce non-Poissonian pho-
+                                           19, 20]. The polarization of the driving field, in partic-             ton statistics in the emitted light [32, 34], non-classical
+                                           ular, has a profound impact: for increasing driving field              drivers significantly impact the HHG dynamics and spec-
+                                           ellipticity, HHG efficiency diminishes [21–25], to the ex-             tral characteristics. In atoms driven by linearly polarized
+                                           tent that circularly-polarized light can suppress HHG al-              fields, non-classical light sources can generate radiation
+                                           together [26]. This effect can be understood within the                with extended spectral bandwidths [29]. This effect is
+                                           three-step model: in a circular-polarized field, electrons             particularly pronounced when using squeezed states of
+                                           are driven away from their atom during the propagation                 light where reduced uncertainty in one property, such as
+                                           step, preventing recombination, and thus inhibiting radi-              phase, is balanced by increased uncertainty in the con-
+                                           ation emission [10, 27, 28] [Fig. 1 (a)].                              jugate property, such as amplitude. Ref. [30] further ob-
+                                              Recent theoretical [29–32] and experimental [33, 34]                served that the photon statistics of these states can be
+                                           studies have added an extra degree of freedom by em-                   interpreted as generating an effective force on the elec-
+                                                                                                                  tron during its excursion in the continuum.
+                                                                                                                     In this Letter, we demonstrate that non-classical struc-
+                                           ∗ javier.rivera@icfo.eu
+                                                                                                                  tured light—specifically, non-classical circularly polar-
+                                                                                                                                      2
+
+                                                                    tensities of Isqu ∼ 1012 W/cm2 , two orders of magnitude
+                                                                    below the Icoh ∼ 1014 W/cm2 required for atomic HHG.
+                                                                    Due to their experimental feasibility, these values set the
+                                                                    intensity scales for the squeezed component used in this
+                                                                    work, i.e., Isqu /Icoh ∼ 10−2 . Nonetheless, we highlight
+                                                                    that, while these squeezed states were initially produced
+                                                                    via nonlinear optical processes [35, 36], recent theoreti-
+                                                                    cal [37–40] and experimental [41, 42] studies indicate that
+                                                                    HHG itself could serve as source of DSV states.
+                                                                       In cases where circular-like fields drive HHG, har-
+                                                                    monic emission is enabled by appropriately tuning the
+                                                                    frequencies of the ⊥- and ∥-field components to direct
+                                                                    the electron towards recombination [26, 43], resulting in
+                                                                    Lissajous figures with field components vanishing simul-
+                                                                    taneously for both polarizations. To determine whether
+                                                                    non-classical features can induce similar effects by mod-
+                                                                    ifying the field’s ellipticity E, we analyze its Lissajous
+FIG. 2. (a)-(c) Lissajous figures illustrating the considered       figure using statistical sampling to capture the intrinsic
+states for different squeezing conditions: (a) no squeezing,        field fluctuations. This involves identifying the outcomes
+(b) amplitude squeezing, and (c) phase squeezing. (d) Mean          {o} and associated probabilities {p(o)} for a given op-
+ellipticity and its fluctuations as a function of the squeez-       erator Ô, then numerically sampling from {o} according
+ing contribution to the intensity, Isqu . The dashed horizontal     to {p(o)}. We apply this approach to both polarization
+black line indicates E = 1 (circularly polarized light). In the     components of the electric field operator [Fig. 2 (a)-(c)],
+classical scenario, ∆E → 0 as observed when Isqu → 0.
+                                                                    Ê∥,k0 (t) and Ê⊥,k0 (t), with Êµ,k0 (t) = iϵk0 [âk0 ,µ eiωk0 t −
+                                                                    a†k0 ,µ e−iωk0 t ], where ϵk =
+                                                                                                     p
+                                                                                                        ℏωk0 /(2ϵ0 V ) and V the
+                                                                    quantization volume.
+ized light—enables HHG, a phenomenon otherwise inhib-
+                                                                       When squeezing is absent (panel (a)), the Lissajous fig-
+ited in the fully classical scenario. We investigate configu-
+                                                                    ure forms a near-perfect circle with finite width, reflect-
+rations where along one driving field polarization compo-
+                                                                    ing the coherent state’s inherent uncertainty. Introducing
+nent we have a coherent state, while along the orthogonal
+                                                                    squeezing along the ⊥-component, the circular shape de-
+component a squeezed state [Fig. 1 (b)]. These configu-
+                                                                    forms based on the squeezing type. For amplitude squeez-
+rations effectively reduce the field’s ellipticity, with char-
+                                                                    ing (panel (b)), fluctuations create a fourfold structure
+acteristics depending on the squeezed property; and en-
+                                                                    along the distribution’s diagonal axes. This arises because
+able the generation of harmonic radiation, with the emis-
+                                                                    uncertainties in phase not only induce ellipticity but also
+sion becoming more pronounced as the level of squeezing
+                                                                    cause rotations of the polarization ellipse, as phase deter-
+increases. We observe that the spectral features of the
+                                                                    mines the ellipse’s spatial orientation relative to a prede-
+outgoing radiation depend on the type of squeezing. Fi-
+                                                                    fined axis. Phase squeezing (panel (c)) instead yields an
+nally, we analyze how the photon statistics associated
+                                                                    elliptical structure without rotations since phase is more
+with these squeezed states influence the electronic trajec-
+                                                                    precisely defined. Conversely, fluctuations are enhanced
+tories, providing insights into the origin of the spectral
+                                                                    along the ε⊥ -axis, corresponding to intensity variations.
+characteristics.
+                                                                       We quantitatively assess these modifications by com-
+   Effective ellipticity induced by squeezed light.—We fo-          puting the ellipticity and its fluctuations [44]. As we con-
+cus on scenarios where the initial quantum state of                 sider fields propagating in free space where the quanti-
+the field is |Φ⟩ = |0, α1 ⟩∥ ⊗ |r, α2 ⟩⊥ [Fig. 1 (b)], with         zation volume V → ∞ (ϵk → 0) [45], we evaluate physi-
+|r, α⟩µ = D̂µ (α)Ŝµ (r) |0⟩ a displaced squeezed vac-              cal observables in the classical limit. This implies setting
+uum (DSV) state in the polarization direction µ, where              α → ∞ while keeping the field amplitude εα = 2ϵk α
+D̂µ (α) = exp[αâ†k0 ,µ − α∗ âk0 ,µ ] is the displacement oper-    constant, which is appropriate in the context of strong-
+                                                                    field physics where driving fields contain an extremely
+ator and Ŝµ (r) = exp[r∗ â2k0 ,µ −râ†2
+                                       k0 ,µ ] the squeeze opera-   large number of photons. The results are displayed in
+tor with r the squeezing parameter. Here, âk0 ,µ (â†k0 ,µ ) is    Fig. 2 (d), where the mean ellipticity is shown with the
+the annihilation (creation) operator acting on the driving          solid curve and its fluctuations with the shaded region,
+field mode (k0 , µ). We choose α2 = iα1 , ensuring that r =         both plotted against the amount of squeezing, repre-
+0 leads to circular-polarized fields. Crucially, we consider        sented in terms of Isqu , i.e., its contribution to the total
+DSV states exhibiting substantial squeezing—sufficient              field intensity; for DSV states, the intensity is given by
+                                                                                2
+to significantly perturb the HHG process [30]. Squeezed             I = ϵ2k |α| +ϵ2k sinh2 (r) ≡ Icoh +Isqu . The mean ellipticity
+states with these characteristics have recently been em-            decreases to E < 1 as Isqu increases, while fluctuations
+ployed to drive [33] or perturb [34] HHG in semiconduc-             grow, both of these quantities showing an emergence of a
+tors. Notably, Ref. [33] observed HHG using squeezing in-           non-classical induced ellipticity. Interestingly, the rate of
+                                                                                                                                        3
+
+fluctuation growth differs between phase- and amplitude-
+squeezed states, with more pronounced effects observed
+for amplitude squeezing.
+   Despite inducing an effective ellipticity in the field,
+these results show that, on average, the modifications
+do not lead to vanishing field amplitudes for both polar-
+ization components simultaneously. This suggests that,
+under the considered field configurations, observation of
+harmonic radiation despite circularly polarized condi-
+tions cannot simply be attributed to the mean field pas-
+sively guiding electrons back to the parent ion, as occurs
+with bicircular fields [26, 43]. Instead, it suggests an ac-
+tive modification of electron trajectories driven by field
+fluctuations, which can be interpreted as generating an
+effective force that steers electrons towards recombina-
+tion [30].
+   HHG driven by non-classical structured light.—To
+characterize how non-classically induced field fluc-
+tuations influences HHG, we extend the theoretical                           FIG. 3. HHG spectra computed for (a) amplitude and (b)
+approach from Refs. [29, 30] to arbitrarily polarized ini-                   phase squeezing, along the ⊥-polarization direction, respec-
+                                                                                                              (x)
+tial fields. This approach, suitable for driving fields with                 tively. Here, we set E∥ (t) = |ε̄∥ | cos(ωt) and E⊥ (t) =
+arbitrary photon statistics, represents the driver’s initial                  (y)                 (x)      (y)
+                                                                             |ε̄⊥ | sin(ωt), with |ε̄∥ | = |ε̄⊥ | = 0.053 a.u. (I = 1014
+state
+N R using      Rthe2 generalized        P -representation ρ̂k0 (t0 ) =
+          2                         ∗                                        W/cm2 ) and ω = 0.057 a.u. (λ = 800 nm). The spectra were
+    µ    d  αµ    d  β µ P (α µ , βµ  ) |αµ ⟩⟨βµ | / ⟨βµ |αµ ⟩ [46], where
+                                                                             evaluated over 5 optical cycles (∆t = 13 fs) with hydrogen
+the initial
+          N     state    of  the    total    field reads ρ̂field (t0 ) =     (Ip = 0.5 a.u.) as the atomic system. All spectra are normal-
+ρ̂k0 (t0 ) k̸=k0 ,µ |0k,µ ⟩⟨0k,µ |, with the atom initially in its           ized to their maximum value.
+ground state |g⟩.
+   Assuming that the applied field does not substantially
+deplete the atom [37, 47–49], the final state of the light-                  where i ∈ {x, y} indicates the optical quadrature along
+matter system, after tracing out the driving field modes,                                                                 (x)     (y)
+                                                                             which squeezing takes place, and ε̄⊥ = ε̄⊥ + iε̄⊥ the
+can be expressed as [44]                                                     mean amplitude and phase of the electric field along the
+            YZ              Z                                                ⊥-polarization. Here, ε̄⊥ = iε̄∥ . When Isqu → 0, cor-
+   ρ̂(t) =          d2 αµ d2 βµ P (αµ , βµ∗ ) |ϕα (t)⟩⟨ϕβ (t)|               responding to an initial coherent state in both polar-
+            µ                                                                izations, the Gaussian prefactor in Eq. (29) tends to a
+                                                                     (1)
+                                               (α)        (β)
+                                      O
+                                            |χk,µ (t)⟩⟨χk,µ (t)|,            Dirac delta, recovering the semiclassical expression for
+                                    k̸=k0 ,µ                                 the HHG spectra [11, 37, 44, 47, 48].
+                                                                                Figure 3 shows S(ω) for amplitude-squeezed (panel
+where α = (α∥ , α⊥ ). After interaction, the opti-                           (a)) and phase-squeezed states (panel (c)) for different
+cal modes that were initially in a vacuum state be-                          Isqu . Contrarily to what is found with coherent states, the
+come populated by coherent states with amplitudes                            introduction of high-enough field fluctuations through
+  (α)               Rt           (α)
+χk,µ (t) = ϵk t0 dτ ⟨g|dˆµ (τ )|g⟩ eiωk τ [47–49], where                     squeezing results in pronounced spectral features despite
+  (α)
+dˆµ (t) is the time-dependent dipole moment operator                         the circularly polarized arrangement, with characteristics
+along the µ-polarization component, in the interaction                       depending on the specific type of squeezing. These fea-
+                                    (α)
+picture with respect to Ĥsc (t) = Ĥat + dˆ∥ Eα∥ (t) +                      tures diminish as Isqu decreases, with the spectrum van-
+                                                                             ishing entirely when Isqu becomes small enough (Isqu =
+dˆ⊥ Eα⊥ (t). Here, Ĥat denotes the atomic Hamiltonian,                      5 × 10−11 a.u.), in agreement with semiclassical theo-
+Eαµ (t) = ⟨αµ |Êk0 ,µ (t)|αµ ⟩ the classical field amplitude,               ries [27].
+and |ϕα (t)⟩ the solution to the semiclassical Schrödinger                      For amplitude squeezing, the spectrum exhibits a sin-
+                                      (α)
+equation iℏ ∂ |ϕα (t)⟩/∂t = Ĥsc (t) |ϕα (t)⟩ .                              gle plateau structure for odd harmonic orders, with a
+   Using Eq. (1), we compute the HHG spectra as                              well-defined cutoff frequency that varies with Isqu . Mean-
+S(ω) = limϵk →0 ∂E(t)/∂ω [29, 48, 50], with E(t) =                           while, phase squeezing results in a double plateau struc-
+P           †
+   k,µ tr[âk,µ âk,µ ρ̂(t)]. For the fields considered in this              ture: the first cutoff appears independent of the squeez-
+work, we find [44]                                                           ing strength, whereas the second plateau extends fur-
+                                                                             ther as Isqu increases, generally exceeding the cutoff ob-
+                  ω4
+                           Z         n [ε(i)  −ε̄
+                                                  (i) 2
+                                                  ⊥
+                                                     ]
+                                (i)    − α,⊥                                 served for amplitude squeezing. In both cases the cutoff
+   S(ω) ∝ p                   dεα,⊥ e       8Isqu
+
+                 8πIsqu                                       (2)            extends beyond what is observed for linearly polarized
+                                         2             2
+                                                          o                 drivers of comparable intensities (I = 1014 W/cm2 lead-
+                           × |dεα ,⊥ (ω)| + |dεα ,∥ (ω)|    ,                ing to qc ≈ 21 for hydrogen). While such an extension
+                                                                                                                                              4
+
+is expected [29], it can be attributed to how field fluc-
+tuations induced by squeezing modify the effective field
+amplitude experienced by the electron. For amplitude
+squeezing, the electric field vector seen by the electron
+takes the form ε0 = (ε∥ , iε⊥ + ∆ε), leading to a total
+intensity Itot ∝ |ε|2 = |ε∥ |2 + |ε⊥ |2 + ∆ε2 . For phase
+squeezing, we have ε0 = (ε∥ , i(ε⊥ + ∆ε)) resulting in
+Itot ∝ |ε|2 = |ε∥ |2 + |ε⊥ |2 + ∆ε2 + 2ε⊥ ∆ε, exceeding the
+amplitude-squeezed case by 2ε⊥ ∆ε. In both cases, the
+field intensity explicitly depends on the fluctuations in-
+troduced by squeezing, explaining the cutoff extension as
+a function of Isqu .
+   Analysis of the electron dynamics.—While qualita-
+tive features in the harmonic spectra—such as cutoff
+enhancement—can be understood through how field fluc-
+tuations perturb the average driver’s intensity, specific                      FIG. 4. Real part of the ionization (bright colors) and recom-
+characteristics like multiple plateaus or varying harmonic                     bination (soft colors) times, with the electric field represented
+yields require a deeper analysis of how these fluctuations                     for both polarizations in green. Markers of the same type are
+modify the electron dynamics. In strong-field physics,                         used to associate ionization and recombination events that
+such dynamics can be accessed through the Fourier trans-                       belong to the same electron trajectory. The ⊥-field compo-
+                                                                               nent is (a) amplitude squeezed and (b) phase-squeezed with
+form of the induced electronic dipole [11, 30], given by
+                                                                               Isqu = 5×10−5 a.u. for both cases. The mean field is circularly
+⟨d̂(ω)⟩ = dt2 eiωt2 tr[d̂ρ̂(t2 )], which encapsulates the
+            R
+                                                                               polarized with strength |ε̄µ | = 0.053 a.u. (I = 1014 W/cm2 )
+three-step HHG mechanism. In the classical limit, ⟨d̂(ω)⟩                      for each polarization component.
+reduces to [44]
+
+             1
+                     Z         Z             (ε
+                                               (i)
+                                               α,⊥+iωt2
+                                                        −ε̄
+                                                           (i) 2
+                                                           ⊥
+                                                              )                qualitative agreement with that observed in Fig. 3 (a)
+                                     (i) −
+⟨d̂(ω)⟩ = p              dt2       dεα,⊥e          8Isqu
+                                                                   dεα (t2 )   (blue curve). Notably, harmonics in this region originate
+            8πIsqu                                                             when ionized electrons interact with both field polariza-
+                                                         (3)                   tion components simultaneously. This dual interaction
+where dεα (t) = ⟨ϕα (t)|d̂|ϕα (t)⟩ represents the dipole                       occurs for all trajectories in this regime, meaning elec-
+moment expectation value. Due to the highly oscilla-                           trons immediately experience both field components after
+tory nature of dεα (t), we can evaluate Eq. (3) using the                      ionization. Consequently, the squeezed component coun-
+saddle-point approximation, with the saddle-points en-                         teracts the ⊥-coherent contribution and modifies the elec-
+coding key electron dynamic features such as ionization                        tron’s energy at ionization, leading to a Isqu -dependence
+and recombination times [11, 30, 51].                                          of qc .
+   Figure 4 shows the real parts of ionization (bright col-                       For phase squeezing, the trajectories exhibit notable
+ors) and recombination times (soft colors), with markers                       differences compared to the amplitude-squeezed ones
+linking corresponding ionization-recombination events.                         [Fig. 4 (b)]. While two trajectory sets still emerge within
+Panel (a) uses an amplitude-squeezed driver along the ⊥-                       a single half-cycle, their timing differs significantly—they
+direction, while panel (b) a phase-squeezed driver, both                       occur either at maxima (minima) of the ∥-coherent (⊥-
+adding an squeezed-intensity contribution Isqu = 5×10−5                        squeezed) field component or vice versa. This distinc-
+a.u. to the coherent part. When squeezing features along                       tion critically impacts electron dynamics and dictates
+the ⊥-polarization component are absent or sufficiently                        the cutoff frequencies. The first trajectory set generates
+weak, no saddle-point solutions exist—unambiguously                            the lowest cutoff (qc ≈ 20 in qualitative agreement with
+tying the observed dynamics to the additional field fluc-                      Fig. 3 (b)), matching the first plateau in the spectrum.
+tuations induced by squeezed drivers. These squeezing-                         These trajectories primarily depend on the coherent state
+induced field fluctuations act as a competing force [30, 44]                   component of the field, making their cutoff indepen-
+against the coherent ⊥-component that typically sup-                           dent of Isqu , and therefore alike to that found with co-
+presses electron-ion recombination [10, 27].                                   herent, linearly polarized fields. Here, squeezing-induced
+   Comparing the trajectories in Fig. 4 with the HHG                           field fluctuations have the unique role of counteracting
+spectra in Fig. 3, we relate the spectral features to                          the ⊥-coherent component’s drift effect, but do not al-
+the electron dynamics induced by the different types of                        ter the electron’s energy at recombination for trajecto-
+squeezing. For amplitude squeezing [Fig. 4 (a)], we ob-                        ries leading to the cutoff frequencies, as this event occurs
+serve two sets of pairs of trajectories within a single half-                  near maxima of the ⊥-field (minima of the vector po-
+cycle of the field. Each set consists of two-well defined                      tential). Conversely, the second trajectory set leads to a
+trajectories—long (blue) and short (red)—which become                          higher cutoff (qc ≈ 60, matching qualitatively Fig. 4 (b)).
+increasingly similar at higher harmonic orders. Both sets                      For these trajectories, squeezing fluctuations modify the
+share a common cutoff frequency around qc ≈ 40, in                             electron paths, enabling recombination and actively con-
+                                                                                                                           5
+
+                                                                parable to those of the second plateau obtained with
+                                                                phase-squeezed drivers. This hybrid behavior arises be-
+                                                                cause thermal states display homogeneously distributed
+                                                                noise across both quadratures; consequently, their HHG
+                                                                spectral features combine characteristics of both ampli-
+                                                                tude and phase squeezing.
+                                                                   Conclusions.—Our results demonstrate that inject-
+                                                                ing sufficient field fluctuations—such as through non-
+                                                                classical light—fundamentally challenges long-standing
+                                                                notions in strong-field physics [52], particularly the belief
+FIG. 5. HHG spectra computed when adding squeezed (blue         that circularly polarized light cannot generate harmonic
+and red curves) and thermal (green curve) light to the ⊥-       radiation. Yet, non-classical light is not strictly required
+polarization direction. For the squeezed cases, we set Isqu =   to enable HHG; instead, strong field fluctuations, regard-
+2.5 × 10−5 a.u., while for the thermal Ith = 5 × 10−5 a.u.,     less of their origin, impose the sufficient conditions for
+as provides a comparable amount of field fluctuations. All
+                                                                harmonic generation. However, a key distinction of us-
+spectra are normalized to their maximum value.
+                                                                ing non-classical structured drivers lies in the emergence
+                                                                of non-trivial HHG spectral features [Fig. 3] compared
+                                                                to fully classical counterparts [Fig. 5], as well as distinct
+tributing to the recombination energy, as cutoff harmon-        spatial characteristics in the driving field [Fig. 2].
+ics arise near the minima of the ⊥-field (maxima of the            This latter aspect presents exciting opportunities for
+vector potential). Increasing Isqu enhances the kinetic en-     further exploration, particularly in solid-state [7, 53, 54]
+ergy converted to harmonic radiation, explaining the sec-       and molecular systems [55–57], where HHG is highly sen-
+ond cutoff’s Isqu -dependence.                                  sitive to the relative orientation between the material
+   Notably, the second set contains additional trajectory       and the driver’s polarization. This sensitivity suggests
+types beyond the standard short/long paths (red/green           that the interplay between non-classical structured light
+curves), presented with the purple and blue curves.             and strong-field physics could serve as a powerful tool
+This feature emerges only for high-enough Isqu [44], as         for controlling and probing ultrafast electron dynamics
+squeezing-enhanced field fluctuations create new trajec-        in complex systems [58, 59].
+tory possibilities that lead to electron recombination with        Acknowledgements.—ICFO-QOT                group        ac-
+the parent ion [44].                                            knowledges support from:              European Research
+   Role of field fluctuations.—While our results illustrate     Council AdG NOQIA; MCIN/AEI (PGC2018-
+how non-classical light challenges established paradigms        0910.13039/501100011033,                  CEX2019-000910-
+in strong-field physics [52], the question of whether           S/10.13039/501100011033, Plan National FIDEUA
+non-classicality is strictly necessary for HHG under cir-       PID2019-106901GB-I00, Plan National STAMEENA
+cular polarization remains open. To address this, we            PID2022-139099NB,         I00,     project     funded      by
+replace squeezed states in our scheme with displaced            MCIN/AEI/10.13039/501100011033 and by the “Eu-
+thermal states, a classical state where thermal noise           ropean Union NextGenerationEU/PRTR" (PRTR-
+increases fluctuations homogeneously in both optical            C17.I1), FPI); QUANTERA DYNAMITE PCI2022-
+quadratures. This allows understanding whether field            132919, QuantERA II Programme co-funded by
+fluctuations alone, irrespective of their classical or non-     European Union’s Horizon 2020 program under Grant
+classical origin, are sufficient to enable HHG with circular    Agreement No 101017733; Ministry for Digital Transfor-
+polarized drivers, or if the asymmetric fluctuation distri-     mation and of Civil Service of the Spanish Government
+bution from squeezing turns essential.                          through the QUANTUM ENIA project call - Quantum
+   Following an analysis analogous to Eq. (29) [44], Fig. 5     Spain project, and by the European Union through
+compares the HHG spectra of squeezed states (blue and           the Recovery, Transformation and Resilience Plan -
+red curves) with those from displaced thermal states            NextGenerationEU within the framework of the Dig-
+(green curve). To ensure a fair comparison, the total           ital Spain 2026 Agenda; Fundació Cellex; Fundació
+field fluctuations are matched by adjusting the average         Mir-Puig; Generalitat de Catalunya (European Social
+intensities of the squeezed and thermal components to           Fund FEDER and CERCA program; Barcelona Su-
+Isqu = 2.5 × 10−5 a.u. and Ith = 5 × 10−5 a.u., respec-         percomputing Center MareNostrum (FI-2023-3-0024);
+tively [44]. As observed, displaced thermal states produce      Funded by the European Union. Views and opinions
+non-negligible harmonic radiation, demonstrating that           expressed are however those of the author(s) only and do
+non-classicality is sufficient but not necessary for HHG        not necessarily reflect those of the European Union, Eu-
+to occur under circular polarized drivers; large enough         ropean Commission, European Climate, Infrastructure
+strong-field fluctuations are the critical factor. Specifi-     and Environment Executive Agency (CINEA), or any
+cally, we observe that the overall harmonic yield matches       other granting authority. Neither the European Union
+that of amplitude squeezing across the whole spectral           nor any granting authority can be held responsible
+range, but with larger cutoff frequencies—nearly com-           for them (HORIZON-CL4-2022-QUANTUM-02-SGA
+                                                                                                                                 6
+
+PASQuanS2.1, 101113690, EU Horizon 2020 FET-OPEN                       Harmonic Generation in Solids, Physical Review Letters
+OPTOlogic, Grant No 899794, QU-ATTO, 101168628),                       113, 073901 (2014).
+EU Horizon Europe Program (This project has received              [13] P. Antoine, A. L’Huillier, and M. Lewenstein, Attosec-
+funding from the European Union’s Horizon Europe                       ond Pulse Trains Using High–Order Harmonics, Physical
+research and innovation program under grant agreement                  Review Letters 77, 1234 (1996).
+                                                                  [14] M. Drescher, M. Hentschel, R. Kienberger, G. Tem-
+No 101080086 NeQSTGrant Agreement 101080086 —
+                                                                       pea, C. Spielmann, G. A. Reider, P. B. Corkum, and
+NeQST); ICFO Internal “QuantumGaudi” project;                          F. Krausz, X-ray Pulses Approaching the Attosecond
+  P. Stammer acknowledges support from: The Euro-                      Frontier, Science 291, 1923 (2001).
+pean Union’s Horizon 2020 research and innovation pro-            [15] P. M. Paul, E. S. Toma, P. Breger, G. Mullot, F. Augé,
+gramme under the Marie Skłodowska-Curie grant agree-                   P. Balcou, H. G. Muller, and P. Agostini, Observation of
+ment No 847517.                                                        a Train of Attosecond Pulses from High Harmonic Gen-
+  M. F. C. acknowledges support from: the National Key                 eration, Science 292, 1689 (2001).
+Research and Development Program of China (Grant No.              [16] J. P. Marangos, Development of high harmonic genera-
+                                                                       tion spectroscopy of organic molecules and biomolecules,
+2023YFA1407100), the Guangdong Province Science and
+                                                                       Journal of Physics B: Atomic, Molecular and Optical
+Technology Major Project (Future functional materials                  Physics 49, 132001 (2016).
+under extreme conditions - 2021B0301030005) and the               [17] A. Zong, B. R. Nebgen, S.-C. Lin, J. A. Spies, and
+Guangdong Natural Science Foundation (General Pro-                     M. Zuerch, Emerging ultrafast techniques for studying
+gram project No. 2023A1515010871).                                     quantum materials, Nature Reviews Materials 8, 224
+                                                                       (2023).
+                                                                  [18] M. F. Ciappina, J. A. Pérez-Hernández, A. S. Landsman,
+                                                                       W. A. Okell, S. Zherebtsov, B. Förg, J. Schötz, L. Seif-
+                         References                                    fert, T. Fennel, T. Shaaran, T. Zimmermann, A. Chacón,
+                                                                       R. Guichard, A. Zaïr, J. W. G. Tisch, J. P. Marangos,
+ [1] P. B. Corkum and F. Krausz, Attosecond science, Nature            T. Witting, A. Braun, S. A. Maier, L. Roso, M. Krüger,
+     Physics 3, 381 (2007).                                            P. Hommelhoff, M. F. Kling, F. Krausz, and M. Lewen-
+ [2] F. Krausz and M. Ivanov, Attosecond physics, Reviews              stein, Attosecond physics at the nanoscale, Reports on
+     of Modern Physics 81, 163 (2009).                                 Progress in Physics 80, 054401 (2017).
+ [3] E. Goulielmakis and T. Brabec, High harmonic gener-          [19] A. L’Huillier, M. Lewenstein, P. Salières, P. Balcou,
+     ation in condensed matter, Nature Photonics 16, 411               M. Y. Ivanov, J. Larsson, and C. G. Wahlström, High-
+     (2022).                                                           order Harmonic-generation cutoff, Physical Review A 48,
+ [4] N. H. Burnett, H. A. Baldis, M. C. Richardson, and G. D.          R3433 (1993).
+     Enright, Harmonic generation in CO2 laser target inter-      [20] J. J. Macklin, J. D. Kmetec, and C. L. Gordon, High-
+     action, Applied Physics Letters 31, 172 (1977).                   order harmonic generation using intense femtosecond
+ [5] A. McPherson, G. Gibson, H. Jara, U. Johann, T. S. Luk,           pulses, Physical Review Letters 70, 766 (1993).
+     I. A. McIntyre, K. Boyer, and C. K. Rhodes, Studies of       [21] K. S. Budil, P. Salières, A. L’Huillier, T. Ditmire, and
+     multiphoton production of vacuum-ultraviolet radiation            M. D. Perry, Influence of ellipticity on harmonic genera-
+     in the rare gases, JOSA B 4, 595 (1987).                          tion, Physical Review A 48, R3437 (1993).
+ [6] M. Ferray, A. L’Huillier, X. F. Li, L. A. Lompre, G. Main-   [22] P. Dietrich, N. H. Burnett, M. Ivanov, and P. B. Corkum,
+     fray, and C. Manus, Multiple-harmonic conversion of               High-harmonic generation and correlated two-electron
+     1064 nm radiation in rare gases, Journal of Physics B:            multiphoton ionization with elliptically polarized light,
+     Atomic, Molecular and Optical Physics 21, L31 (1988).             Physical Review A 50, R3585 (1994).
+ [7] S. Ghimire, A. D. DiChiara, E. Sistrunk, P. Agostini,        [23] P. B. Corkum, N. H. Burnett, and M. Y. Ivanov, Sub-
+     L. F. DiMauro, and D. A. Reis, Observation of high-order          femtosecond pulses, Optics Letters 19, 1870 (1994).
+     harmonic generation in a bulk crystal, Nature Physics 7,     [24] Y. Liang, S. Augst, M. V. Ammosov, S. Lazarescu, and
+     138 (2011).                                                       S. L. Chin, Experimental investigation of the ellipticity
+ [8] T. T. Luu, Z. Yin, A. Jain, T. Gaumnitz, Y. Per-                  dependence of high-harmonic generation and ionization
+     tot, J. Ma, and H. J. Wörner, Extreme–ultraviolet                 in argon in the multiphoton regime, Journal of Physics B:
+     high–harmonic generation in liquids, Nature Communi-              Atomic, Molecular and Optical Physics 28, 2757 (1995).
+     cations 9, 3723 (2018).                                      [25] N. H. Burnett, C. Kan, and P. B. Corkum, Ellipticity
+ [9] J. L. Krause, K. J. Schafer, and K. C. Kulander, High-            and polarization effects in harmonic generation in ioniz-
+     order harmonic generation from atoms and ions in the              ing neon, Physical Review A 51, R3418 (1995).
+     high intensity regime, Physical Review Letters 68, 3535      [26] E. Pisanty, S. Sukiasyan, and M. Ivanov, Spin conserva-
+     (1992).                                                           tion in high-order-harmonic generation using bicircular
+[10] P. B. Corkum, Plasma perspective on strong field mul-             fields, Physical Review A 90, 043829 (2014).
+     tiphoton ionization, Physical Review Letters 71, 1994        [27] P. Antoine, A. L’Huillier, M. Lewenstein, P. Salières, and
+     (1993).                                                           B. Carré, Theory of high-order harmonic generation by
+[11] M. Lewenstein, P. Balcou, M. Y. Ivanov, A. L’Huillier,            an elliptically polarized laser field, Physical Review A 53,
+     and P. B. Corkum, Theory of high-harmonic generation              1725 (1996).
+     by low-frequency laser fields, Physical Review A 49, 2117    [28] N. Dudovich, J. Levesque, O. Smirnova, D. Zeidler,
+     (1994).                                                           D. Comtois, M. Y. Ivanov, D. M. Villeneuve, and P. B.
+[12] G. Vampa, C. McDonald, G. Orlando, D. Klug,                       Corkum, Attosecond Temporal Gating with Elliptically
+     P. Corkum, and T. Brabec, Theoretical Analysis of High-           Polarized Light, Physical Review Letters 97, 253903
+                                                                                                                                7
+
+     (2006).                                                      [44] See Supplementary Material at [insert url] which,
+[29] A. Gorlach, M. E. Tzur, M. Birk, M. Krüger, N. Rivera,            apart from already cited references, includes references
+     O. Cohen, and I. Kaminer, High-harmonic generation                to Refs. [60–65].
+     driven by quantum light, Nature Physics 19, 1689 (2023).     [45] C. Cohen-Tannoudji, J. Dupont-Roc, and G. Grynberg,
+[30] M. Even Tzur, M. Birk, A. Gorlach, M. Krüger,                     Classical Electrodynamics: The Fundamental Equations
+     I. Kaminer, and O. Cohen, Photon-statistics force in              and the Dynamical Variables, in Photons and Atoms
+     ultrafast electron dynamics, Nature Photonics 17, 501             (John Wiley & Sons, Ltd, 1997) pp. 5–77.
+     (2023).                                                      [46] P. D. Drummond and C. W. Gardiner, Generalised P-
+[31] P. Stammer, Absence of quantum optical coherence in               representations in quantum optics, Journal of Physics A:
+     high harmonic generation, Physical Review Research 6,             Mathematical and General 13, 2353 (1980).
+     L032033 (2024).                                              [47] M. Lewenstein, M. F. Ciappina, E. Pisanty, J. Rivera-
+[32] M. E. Tzur, M. Birk, A. Gorlach, I. Kaminer, M. Krüger,           Dean, P. Stammer, T. Lamprou, and P. Tzallas, Gen-
+     and O. Cohen, Generation of squeezed high-order har-              eration of optical Schrödinger cat states in intense
+     monics, Physical Review Research 6, 033079 (2024).                laser–matter interactions, Nature Physics 17, 1104
+[33] A. Rasputnyi, Z. Chen, M. Birk, O. Cohen, I. Kaminer,             (2021).
+     M. Krüger, D. Seletskiy, M. Chekhova, and F. Tani, High-     [48] J. Rivera-Dean, T. Lamprou, E. Pisanty, P. Stammer,
+     harmonic generation by a bright squeezed vacuum, Na-              A. F. Ordóñez, A. S. Maxwell, M. F. Ciappina, M. Lewen-
+     ture Physics 20, 1960 (2024).                                     stein, and P. Tzallas, Strong laser fields and their power
+[34] S. Lemieux, S. A. Jalil, D. N. Purschke, N. Boroumand,            to generate controllable high-photon-number coherent-
+     T. J. Hammond, D. Villeneuve, A. Naumov, T. Brabec,               state superpositions, Physical Review A 105, 033714
+     and G. Vampa, Photon bunching in high-harmonic emis-              (2022).
+     sion controlled by quantum light, Nature Photonics           [49] P. Stammer, J. Rivera-Dean, A. Maxwell, T. Lamprou,
+     (2025).                                                           A. Ordóñez, M. F. Ciappina, P. Tzallas, and M. Lewen-
+[35] K. Y. Spasibko, D. A. Kopylov, V. L. Krutyanskiy, T. V.           stein, Quantum Electrodynamics of Intense Laser-Matter
+     Murzina, G. Leuchs, and M. V. Chekhova, Multiphoton               Interactions: A Tool for Quantum State Engineering,
+     Effects Enhanced due to Ultrafast Photon-Number Fluc-             PRX Quantum 4, 010201 (2023).
+     tuations, Physical Review Letters 119, 223603 (2017).        [50] A. Gorlach, O. Neufeld, N. Rivera, O. Cohen, and
+[36] M. Manceau, K. Y. Spasibko, G. Leuchs, R. Filip, and              I. Kaminer, The quantum-optical nature of high har-
+     M. V. Chekhova, Indefinite-Mean Pareto Photon Distri-             monic generation, Nature Communications 11, 4598
+     bution from Amplified Quantum Noise, Physical Review              (2020).
+     Letters 123, 123606 (2019).                                  [51] K. Amini, J. Biegert, F. Calegari, A. Chacón, M. F.
+[37] P. Stammer, J. Rivera-Dean, A. S. Maxwell, T. Lam-                Ciappina, A. Dauphin, D. K. Efimov, C. Figueira de
+     prou, J. Argüello-Luengo, P. Tzallas, M. F. Ciappina, and         Morisson Faria, K. Giergiel, P. Gniewek, A. S. Lands-
+     M. Lewenstein, Entanglement and Squeezing of the Opti-            man, M. Lesiuk, M. Mandrysz, A. S. Maxwell,
+     cal Field Modes in High Harmonic Generation, Physical             R. Moszyński, L. Ortmann, J. A. Pérez-Hernández,
+     Review Letters 132, 143603 (2024).                                A. Picón, E. Pisanty, J. Prauzner-Bechcicki, K. Sacha,
+[38] S. Yi, N. D. Klimkin, G. G. Brown, O. Smirnova,                   N. Suárez, A. Zaïr, J. Zakrzewski, and M. Lewenstein,
+     S. Patchkovskii, I. Babushkin, and M. Ivanov, Genera-             Symphony on strong field approximation, Reports on
+     tion of Massively Entangled Bright States of Light dur-           Progress in Physics 82, 116001 (2019).
+     ing Harmonic Generation in Resonant Media, Physical          [52] P. Stammer, On the limitations of the semi-classical pic-
+     Review X 15, 011023 (2025).                                       ture in high harmonic generation, Nature Physics 20,
+[39] J. Rivera-Dean, H. B. Crispin, P. Stammer, T. Lamprou,            1040 (2024).
+     E. Pisanty, M. Krüger, P. Tzallas, M. Lewenstein, and        [53] Y. S. You, D. A. Reis, and S. Ghimire, Anisotropic high-
+     M. F. Ciappina, Squeezed states of light after high-order         harmonic generation in bulk crystals, Nature Physics 13,
+     harmonic generation in excited atomic systems, Physical           345 (2017).
+     Review A 110, 063118 (2024).                                 [54] Y. S. You, E. Cunningham, D. A. Reis, and S. Ghimire,
+[40] C. S. Lange, T. Hansen, and L. B. Madsen, Electron-               Probing periodic potential of crystals via strong-field re-
+     correlation-induced nonclassicality of light from high-           scattering, Journal of Physics B: Atomic, Molecular and
+     order harmonic generation, Physical Review A 109,                 Optical Physics 51, 114002 (2018).
+     033110 (2024).                                               [55] O. Smirnova, Y. Mairesse, S. Patchkovskii, N. Dudovich,
+[41] D. Theidel, V. Cotte, R. Sondenheimer, V. Shiriaeva,              D. Villeneuve, P. Corkum, and M. Y. Ivanov, High
+     M. Froidevaux, V. Severin, A. Merdji-Larue, P. Mosel,             harmonic interferometry of multi-electron dynamics in
+     S. Fröhlich, K.-A. Weber, U. Morgner, M. Kovacev,                 molecules, Nature 460, 972 (2009).
+     J. Biegert, and H. Merdji, Evidence of the Quantum Op-       [56] D. Ayuso, O. Neufeld, A. F. Ordonez, P. Decleva,
+     tical Nature of High-Harmonic Generation, PRX Quan-               G. Lerner, O. Cohen, M. Ivanov, and O. Smirnova,
+     tum 5, 040319 (2024).                                             Synthetic chiral light for efficient control of chiral
+[42] D. Theidel, P. Heinzel, V. Cotte, H. Griguer, M. Weis,            light–matter interaction, Nature Photonics 13, 866
+     R. Sondenheimer, and H. Merdji, Observation of a Multi-           (2019).
+     mode Displaced Squeezed State in High-Harmonic Gen-          [57] N. Mayer, D. Ayuso, P. Decleva, M. Khokhlova,
+     eration (2024), arXiv:2411.02311.                                 E. Pisanty, M. Ivanov, and O. Smirnova, Chiral topo-
+[43] A. Fleischer, O. Kfir, T. Diskin, P. Sidorenko, and O. Co-        logical light for detection of robust enantiosensitive ob-
+     hen, Spin angular momentum and tunable polarization               servables, Nature Photonics 18, 1155 (2024).
+     in high-harmonic generation, Nature Photonics 8, 543         [58] U. Bhattacharya, T. Lamprou, A. S. Maxwell, A. Or-
+     (2014).                                                           dóñez, E. Pisanty, J. Rivera-Dean, P. Stammer,
+                                                                   8
+
+     M. F. Ciappina, M. Lewenstein, and P. Tzallas,
+     Strong–laser–field physics, non–classical light states and
+     quantum information science, Reports on Progress in
+     Physics 86, 094401 (2023).
+[59] L. Cruz-Rodriguez, D. Dey, A. Freibert, and P. Stam-
+     mer, Quantum phenomena in attosecond science, Nature
+     Reviews Physics 6, 691 (2024).
+[60] K. Husimi, Some Formal Properties of the Density Ma-
+     trix, Proceedings of the Physico-Mathematical Society of
+     Japan. 3rd Series 22, 264 (1940).
+[61] M. O. Scully and M. S. Zubairy, Quantum distribution
+     theory and partially coherent radiation, in Quantum Op-
+     tics (Cambridge University Press, Cambridge, UK, 2001)
+     Chap. 3, pp. 71–96.
+[62] B. Sundaram and P. W. Milonni, High-order harmonic
+     generation: Simplified model and relevance of single-
+     atom theories to experiment, Physical Review A 41, 6571
+     (1990).
+[63] E. Pisanty, RB-SFA: High Harmonic Generation in the
+     Strong Field Approximation via Mathematica, Github:
+     https://github.com/episanty/RB-SFA (2020).
+[64] O. Smirnova and M. Ivanov, Multielectron high harmonic
+     generation: Simple man on a complex plane, in Attosec-
+     ond and XUV Physics (John Wiley & Sons, Ltd, 2014)
+     Chap. 7, pp. 201–256.
+[65] A. Nayak, M. Dumergue, S. Kühn, S. Mondal, T. Csiz-
+     madia, N. G. Harshitha, M. Füle, M. Upadhyay Ka-
+     haly, B. Farkas, B. Major, V. Szaszkó-Bogár, P. Földi,
+     S. Majorosi, N. Tsatrafyllis, E. Skantzakis, L. Neoričić,
+     M. Shirozhan, G. Vampa, K. Varjú, P. Tzallas, G. San-
+     sone, D. Charalambidis, and S. Kahaly, Saddle point ap-
+     proaches in strong field physics and generation of attosec-
+     ond pulses, Physics Reports 833, 1 (2019).
+                                                                                                                                                 9
+
+                                                     Supplementary Material
+
+                                      I.    Analytical description of the light-matter interaction
+
+   Our analytical derivation closely follows the approach outlined in Ref. [29], which describes the interaction of
+high-intensity linearly polarized light with atomic systems, considering arbitrary photon statistics in the driving
+field. In this work, we consider the case of arbitrary driving field polarization and explicitly distinguish between the
+contributions from the horizontal (∥) and vertical (⊥) polarization components of the driving field. Atomic units are
+used throughout (ℏ = me = |e| = 1 with me and e the electronic mass and charge, respectively).
+   In general, the dynamics resulting from the interaction of light with an atomic system is given by the Liouville-von
+Neumann equation (L-vNE)
+
+                                                                          ∂ ρ̂(t) h         i
+                                                                      i          = Ĥ, ρ̂(t) ,                                                  (4)
+                                                                            ∂t
+where ρ̂(t) denotes the density matrix of the joint light-matter system. Under the dipole approximation and single-
+active electron approximation, while working in the length gauge, the Hamiltonian characterizing the interaction can
+be expressed as [49]
+
+                                                                   Ĥ = Ĥat + d̂ · Ê + Ĥfield ,                                              (5)
+
+where Ĥat denotes the atomic Hamiltonian and d̂ is the electric dipole operator. In this expression, the electric field
+operator is given by Ê = −i k,µ uµ ϵk (â†k,µ − âk,µ ), where µ ∈ {⊥, ∥} represents the polarization direction, uµ is a
+                                  P
+                                                                       p
+unit vector pointing along the polarization direction µ, and ϵk = ωk /(2V ϵ0 ) is a factor arising from the expansion
+of the electric field operator in terms of its normal modes, with V denoting the quantization volume. The operator
+âk,µ (â†k,µ ) is the annihilation (creation) operator acting on the optical mode (k, µ). Finally, the Hamiltonian for the
+electromagnetic field is given by Ĥfield = k,µ ωk â†k,µ âk,µ .
+                                               P
+
+  In the interaction picture with respect to Ĥfield , the L-vNE transforms as
+
+                                                               ∂ ρ̄ˆ(t) h                         i
+                                                           i           = Ĥat + d̂ · Ê(t), ρ̄ˆ(t) ,                                            (6)
+                                                                 ∂t
+
+where ρ̄ˆ(t) ≡ e−iĤfield t ρ̂(t)eiĤfield t . Due to this transformation, the electric field operator acquires a time-dependence,
+leading to the substitution âk,µ → âk,µ e−iωk t . For simplicity, we denote the Hamiltonian in this picture as Ĥ(t) =
+Ĥat + d̂ · Ê(t).
+   As initial conditions, we consider the electron initially occupies the ground state of the atom (|g⟩), and the field is in
+some arbitrary state described by the density matrix ρ̄ˆf (t0 ), where in our case both polarization directions are taken
+into account. To describe the generic initial state of the field, we use the positive generalized P -representation [46]
+
+                                                              α ∥ β∥                                                    |α⊥ ⟩⟨β⊥ | O
+                           Z          Z                                             Z          Z
+                                                                                                                  ∗
+            ρ̄ˆf (t0 ) =        2
+                               d α∥        d β∥ P (α∥ , β∥∗ )
+                                            2
+                                                                                ⊗        2
+                                                                                        d α⊥       d2 β⊥ P (α⊥ , β⊥ )                |0⟩⟨0| ,   (7)
+                                                              α ∥ β∥                                                    ⟨α⊥ |β⊥ ⟩
+                                                                                                                                k̸=k0 ,µ
+
+
+where we consider that the driving field mode k0 is in an arbitrary non-vacuum state, while all other modes k ̸= k0
+are in the vacuum state. Additionally, we assume that the two polarization modes of k0 are in distinct states, meaning
+P (α∥ , β∥∗ ) ̸= P (α⊥ , β⊥
+                          ∗
+                            ).
+   To solve the differential equation above, we consider the following ansatz
+                                       Z     Z     Z     Z
+                               ρ̄ˆ(t) = d2 α∥ d2 β∥ d2 α⊥ d2 β⊥ P∥ (α∥ , β∥∗ )P⊥ (α⊥ , β⊥
+                                                                                        ∗
+                                                                                          )ρ̂∥,⊥ (t),              (8)
+
+where ρ̄ˆ∥,⊥ (t) is a function of the integration variables, though we omit them here for simplicity. Substituting this
+ansatz into Eq. (6), we obtain
+
+                                                                                         ∂ ρ̄ˆ∥,⊥ (t) h
+                               Z            Z          Z             Z                                                i
+                                      2          2             2            2                                 ˆ
+                                    d α∥        d β∥       d α⊥            d β⊥       iℏ             − Ĥ(t), ρ̄∥,⊥ (t) = 0,                    (9)
+                                                                                               ∂t
+                                                                                                                                        10
+
+allowing us to solve each term in the sum independently. Consequently, we can write
+
+                                                               ∂ ρ̄ˆ∥,⊥  h                 i
+                                                           i            = Ĥ(t), ρ̄ˆ∥,⊥ (t) .                                          (10)
+                                                                  ∂t
+  At this point, we express the density matrix as
+
+                              ρ̄ˆ∥,⊥ (t) = D̂∥ (α∥ ) ⊗ D̂⊥ (α⊥ ) ρ̃ˆ∥,⊥ (t) D̂∥† (β∥ ) ⊗ D̂⊥
+                                                                                           †
+                                                                                               
+                                                                                             (β⊥ ) ,                                   (11)
+
+where D̂µ (α) = exp[αâ†k,µ − α∗ âk,µ ] is the displacement operator acting on the optical mode (k0 , µ). Substituting this
+expression in Eq. (10), we can rewrite the latter as
+
+                                              ∂ ρ̃ˆ∥,⊥ (t)
+                                          i                = Ĥα (t)ρ̄ˆ∥,⊥ (t) − ρ̄ˆ∥,⊥ (t)Ĥβ (t),                                    (12)
+                                                    ∂t
+where we have defined
+
+            Ĥα = Ĥat + dˆ∥ Eα∥ (t) + dˆ⊥ Eα⊥ (t) + d̂ · Ê(t),                Ĥβ = Ĥat + dˆ∥ Eβ∥ (t) + dˆ⊥ Eβ⊥ (t) + d̂ · Ê(t),   (13)
+
+with Eαµ (t) = tr[Êµ (t) |αµ ⟩⟨αµ |⊗|0̄⟩⟨0̄|] (same for βµ ), which represents the expected value of the electric field operator
+(along a specific polarization direction) with respect to a coherent state of amplitude αµ (βµ ) for the driving field
+mode (k0 , µ). In this context, a solution to Eq. (12) can always be written as
+
+                                                ρ̃ˆ∥,⊥ (t) = Ûα (t, t0 )ρ̃ˆ∥,⊥ (t0 )Ûβ† (t, t0 ),                                    (14)
+
+with Ûα (t) satisfying the following equation
+
+                                                                ∂ Ûα (t)
+                                                            i             = Ĥα (t)Ûα (t).                                            (15)
+                                                                   ∂t
+  After substituting Eq. (14) into our ansatz, and taking into account the intermediate transformation we have
+performed, together with the initial condition, we obtain
+                        Z       Z       Z        Z        P∥ (α∥ , β∥∗ ) P⊥ (α⊥ , β⊥
+                                                                                   ∗
+                                                                                     )
+                 ρ̂(t) = d α∥ d β∥ d α⊥ d2 β⊥
+                            2        2       2
+                                                             β∥ α∥        ⟨β  |α
+                                                                             ⊥ ⊥   ⟩                       (16)
+                                                                                    †         †      
+                                          × D̂∥ (α∥ ) ⊗ D̂⊥ (α⊥ ) |ψα (t)⟩⟨ψβ (t)| D̂∥ (β∥ ) ⊗ D̂⊥ (β⊥ ) ,
+
+where |ψα (t)⟩ satisfies the time-dependent Schrödinger equation
+                                                           ∂ |ψα (t)⟩
+                                                       i              = Ĥα (t) |ψα (t)⟩ ,                                             (17)
+                                                               ∂t
+                                                                                 (α)
+which in the interaction picture with respect to the semiclassical Hamiltonian Ĥsc (t) ≡ Ĥat + dˆ∥ Eα∥ (t) + dˆ⊥ Eα⊥ (t),
+can be written as
+                                                     ∂ ψ̄α (t)
+                                                 i             = dˆα (t) · Ê(t) ψ̄α (t) .                                             (18)
+                                                        ∂t
+                                                                                                                        (α)
+   Here, dˆα (t) is the time-dependent dipole operator in the interaction picture with respect to Ĥsc (t). In the regime
+of extremely weak depletion [37, 49], the final state can be well approximated (in the laboratory frame) as
+                                                          O h (α)           (α)
+                                                                                    i
+                                       ψ̄α (t) ≈ |ϕα (t)⟩    |χk,∥ (t)⟩ ⊗ |χk,⊥ (t)⟩ ,                                (19)
+                                                                         k
+
+where |ϕα (t)⟩ represents the solution to
+                                                          ∂ |ϕα (t)⟩     (α)
+                                                      i              = Ĥsc  (t) |ϕα (t)⟩ .                                            (20)
+                                                              ∂t
+   Equation (19) represents a product state between the electronic and quantum optical degrees of freedom, with the
+latter being excited to a set of coherent states [47–49]. Specifically, this yields a product state structure involving
+                                                                                                                                                   11
+
+various coherent states: the coherent state in mode k0 represents a depletion of the driving field mode, while those in
+modes k ̸= k0 signify excitations of the different harmonic modes. These coherent state amplitudes are given by
+                                                     Z t
+                                         (α)
+                                       χk,µ (t) = ϵk     dτ ⟨g| dˆα,µ (τ ) |g⟩ e−iωk τ ,                           (21)
+                                                                        t0
+
+while for the electronic state we have
+
+                                                                |ϕα (t)⟩ = Ûsc,α (t) |g⟩ .                                                       (22)
+
+  Therefore, the final state of the joint electron-light system is given by
+            Z       Z        Z        Z         P∥ (α∥ , β∥∗ ) P⊥ (α⊥ , β⊥
+                                                                         ∗
+                                                                           )
+    ρ̄ˆ(t) = d2 α∥ d2 β∥ d2 α⊥ d2 β⊥
+                                                   β∥ α∥        ⟨β⊥ |α⊥ ⟩
+                                                                                                                                                  (23)
+                                                                                                                 †
+                                                                             |χα,k (t)⟩⟨χβ,k (t)| D̂∥† (β∥ ) ⊗ D̂⊥
+                                                                        O                                            
+                               × |ϕα (t)⟩⟨ϕβ (t)| D̂∥ (α∥ ) ⊗ D̂⊥ (α⊥ )                                            (β⊥ ) .
+                                                                                           k
+
+                                   (α)                (α)
+where we define |χα,k (t)⟩ ≡ |χk,∥ (t)⟩ ⊗ |χk,⊥ (t)⟩ as a shorthand notation. Finally, and before proceeding further, we
+trace out the k0 degrees of freedom of the driving field. Assuming that the depletion of the fundamental mode is
+weak enough to approximate ⟨χβ,k0 (t)| [D̂∥† (β∥ ) ⊗ D̂⊥†
+                                                          (β⊥ )][D̂∥ (α∥ ) ⊗ D̂⊥ (α⊥ )] |χα,k0 (t)⟩ ≈ β∥ α∥ ⟨β⊥ |α⊥ ⟩, we can
+write the resulting state
+                 Z      Z       Z         Z                                                    O
+    ρ̄k̸=k0 (t) = d α∥ d β∥ d α⊥ d2 β⊥ P∥ (α∥ , β∥∗ )P⊥ (α⊥ , β⊥
+    ˆ               2       2        2                                    ∗
+                                                                            ) |ϕα (t)⟩⟨ϕβ (t)|     |χα,k (t)⟩⟨χβ,k (t)| , (24)
+                                                                                                               k̸=k0
+
+an expression that will become useful for the analysis performed in the next section.
+
+
+                        II.   The high-harmonic generation spectrum and the classical limit
+
+  To compute the spectrum of the emitted light, we begin by evaluating its expected energy, given by the Hamiltonian
+Ĥem = k̸=k0 ,µ ωk â†k,µ âk,µ (in the following we omit the “̸= k0 ” for clarity). This results in
+       P
+
+                           X                                     
+    E = tr ρ̄ˆk̸=k0 (t)Ĥem =        ωk tr ρ̄ˆk̸=k0 (t)â†k,µ âk,µ
+                                  k,µ
+                                             Z          Z           Z            Z
+                                                                                                                                                  (25)
+                                  X
+                              =         ωk        2
+                                                 d α∥       d β∥2
+                                                                         d α⊥2
+                                                                                     d2 β⊥ P∥ (α∥ , β∥∗ )P⊥ (α⊥ , β⊥
+                                                                                                                   ∗
+                                                                                                                     )
+                                  k,µ
+
+                                                                                          × ⟨ϕβ (t)|ϕα (t)⟩ ⟨χβ,k (t)|â†k,µ âk,µ |χα,k (t)⟩ ,
+                                 N
+and by defining |χα,k′ ̸=k (t)⟩ ≡ k′ ̸=k |χα,k′ (t)⟩, the expression above can be rewritten as
+        X Z              Z       Z        Z                               n
+                                                                             (β)       (α)       (β)        (α)
+                                                                                                                    o
+    E=      ωk d α∥ d β∥ d α⊥ d2 β⊥ P∥ (α∥ , β∥∗ )P⊥ (α⊥ , β⊥
+                   2          2    2                                   ∗
+                                                                         ) χk,∥ (t)]∗ χk,∥ (t) + χk,⊥ (t)]∗ χk,⊥ (t)
+          k                                                                                                                                       (26)
+                                                                × ⟨ϕβ (t)|ϕα (t)⟩ ⟨χβ,k′ ̸=k (t)|χα,k′ ̸=k (t)⟩ .
+
+  To proceed further, we now consider the continuous-frequency limit by replacing the summation with respect to k
+by
+                                                        Z        Z
+                                           X       V           2
+                                               →          dω ω     dΩ,                                       (27)
+                                                 (2π)3
+                                                            k
+
+where dΩ represents the infinitesimal solid angle element. After doing so, and expanding the coherent state amplitudes
+using the definition in Eq. (21)
+       Z         Z       Z       Z       Z
+               4
+                   d α∥ d β∥ d α⊥ d2 β⊥ P∥ (α∥ , β∥∗ )P⊥ (α⊥ , β⊥
+                     2       2      2                                  ∗
+                                                                         ) [dβ,∥ (ω)]∗ dα,∥ (ω) + [dβ,⊥ (ω)]∗ dα,⊥ (ω)
+                                                                            
+  E ∝ dω ω
+                                                                                                                       (28)
+                                                  × ⟨ϕβ (t)|ϕα (t)⟩ ⟨χβ,k′ ̸=k (t)|χα,k′ ̸=k (t)⟩ ,
+                                                                                                                             12
+
+where dα,µ (ω) denotes the Fourier transform of ⟨g|dˆα,µ (t)|g⟩. Therefore, the HHG spectrum S(ω) = dE/dω is given
+by
+               Z      Z      Z        Z
+             4
+                 d α∥ d β∥ d α⊥ d2 β⊥ P∥ (α∥ , β∥∗ )P⊥ (α⊥ , β⊥
+                  2       2       2                                 ∗
+                                                                      ) [dβ,∥ (ω)]∗ dα,∥ (ω) + [dβ,⊥ (ω)]∗ dα,⊥ (ω)
+                                                                       
+   S(ω) ∝ ω
+                                                                                                                    (29)
+                                             × ⟨ϕβ (t)|ϕα (t)⟩ ⟨χβ,k′ ̸=k (t)|χα,k′ ̸=k (t)⟩ .
+
+   While this expression is quite cumbersome, its evaluation can be significantly simplified when working in the
+classical limit, also referred to as small single photon field amplitude limit in Ref. [29]. In this limit, we express the
+coherent state amplitude α for mode k0 in terms of the field amplitude εα = 2ϵk0 α ≡ 2ϵα, while taking the limit of
+ϵ → 0, corresponding to V → ∞—given that we consider electromagnetic fields propagating in free space [45]—and
+α → ∞—since we are dealing with fields containing and extremely large number of photons—in such a way that εα
+remains constant. It is important to note that this limit only affects the P∥ (α∥ , β∥∗ ) and P⊥ (α⊥ , β⊥   ∗
+                                                                                                              ), as both the
+quantum state of the electron |ϕα (t)⟩ and the Fourier transform of the time-dependent dipole moment depend on the
+field strength εα .
+   With this in mind, and noting that for an arbitrary quantum state of light the Pµ (αµ , βµ∗ ) functions can be expressed
+as
+                                                           "              # 
+                                                                        2
+                                                              |α − β ∗ |      α + β∗
+                                                                                     
+                                               ∗      1
+                                     Pµ (αµ , βµ ) =    exp −              Q          ,                                 (30)
+                                                     4π           4             2
+
+where Q(·) is the Husimi function of our quantum optical state [60, 61], Eq. (29) can be rewritten as
+
+                  ω4
+                         Z          Z          Z         Z         
+                            2          2          2         2                   ∗                ∗
+       S(ω) ∝              d  ε α,∥   d  ε β,∥   d  εα,⊥   d  ε β,⊥ P∥ (εα,∥ , εβ,∥ )P⊥ (εα,⊥ , εβ,⊥ )
+                (16ϵ4 )2
+                                                                                                                          (31)
+                           × [dβ,∥ (ω)]∗ dα,∥ (ω) + [dβ,⊥ (ω)]∗ dα,⊥ (ω) ⟨ϕβ (t)|ϕα (t)⟩ ⟨χβ,k′ ̸=k (t)|χα,k′ ̸=k (t)⟩ .
+                             
+
+
+  In this case we have
+                                                            "               2# 
+                                                               εα,µ − ε∗β,µ      εα,µ + ε∗β,µ
+                                                                                              
+                                                       1
+                               Pµ (εα,µ , ε∗β,µ ) =      exp −                Q                 ,                          (32)
+                                                      4π           16ϵ2               4ϵ
+
+                                                               R
+where, without loss of generality, we assume that ϵ ∈ , as any phase associated with this quantity can always be
+absorbed into α.
+  Next, we evaluate how the classical limit affects the functions P∥ (εα,∥ , ε∗β,∥ ) and P⊥ (εα,⊥ , ε∗β,⊥ ). In our case, the
+quantum optical states we are dealing with have Husimi function with a Gaussian form—specifically coherent, squeezed
+and thermal states—which are well-behaved functions. Therefore, the limit of interest can be evaluated separately for
+the vertical and horizontal polarization components. In the following subsections, we evaluate how this limit applies
+to each case, and conclude by showing how the limit impacts the HHG spectrum depending on the initial state
+considered. More specifically, we evaluate
+
+                        ω4
+                             Z             Z             Z            Z            
+                                   2             2            2             2                    ∗                 ∗
+        S(ω) ∝ lim               d   ε α,∥     d   ε β,∥     d  ε α,⊥     d   ε β,⊥ P∥ (εα,∥ , εβ,∥ )P⊥ (εα,⊥ , εβ,⊥ )
+                ϵ→0 (16ϵ4 )2
+                                                                                                                          
+                            × [dβ,∥ (ω)]∗ dα,∥ (ω) + [dβ,⊥ (ω)]∗ dα,⊥ (ω) ⟨ϕβ (t)|ϕα (t)⟩ ⟨χβ,k′ ̸=k (t)|χα,k′ ̸=k (t)⟩ .
+                              
+                                                                                                                            (33)
+
+                   ω4
+                          Z          Z             Z             Z                 
+              =             d2
+                               ε α,∥     d 2
+                                             ε β,∥     d 2
+                                                           εα,⊥     d 2
+                                                                        ε β,⊥  lim   P∥ (εα,∥ , ε∗β,∥ )P⊥ (εα,⊥ , ε∗β,⊥ )
+                 (16ϵ4 )2                                                      ϵ→0
+                                                                                                                          
+                            × [dβ,∥ (ω)]∗ dα,∥ (ω) + [dβ,⊥ (ω)]∗ dα,⊥ (ω) ⟨ϕβ (t)|ϕα (t)⟩ ⟨χβ,k′ ̸=k (t)|χα,k′ ̸=k (t)⟩ .
+                              
+                                                                                                                            (34)
+
+  As mentioned earlier, both the dipoles and the electronic wavefunction properties depend on the field strength, and
+therefore will not be affected by the classical limit. For this reason, in the following we evaluate how this limit affects
+the behavior of the P -functions. Thus, in the next sections we evaluate
+                                                  n                                  o
+                                         L = lim P∥ (εα,∥ , ε∗β,∥ )P⊥ (εα,⊥ , ε∗β,⊥ ) .                                (35)
+                                                 ϵ→0
+                                                                                                                              13
+
+
+
+
+FIG. 6. HHG spectrum for a coherent∥ + coherent⊥ driving field, where the coherent state amplitude of the ⊥-polarization
+                                                           (y)                                            (y)
+component is modified, ranging from linear polarization (ε̄⊥ = 0 a.u., E = 0) to circular polarization (ε̄⊥ = 0.053 a.u., E = 1).
+                                        (x)               (y)              (x)
+The other field components are set to ε̄∥ = 0.053 a.u., ε̄∥ = 0 a.u. and ε̄⊥ = 0 a.u., consequently.
+
+
+                                     A.    Classical limit applied to coherent states
+
+   In general, the Husimi function of a given quantum optical state ρ̂ is given by Q(α) = (1/π) ⟨α|ρ̂|α⟩. For the case
+of a coherent state of light with amplitude ᾱ, this results in
+                                                        1     h
+                                                                     2
+                                                                       i
+                                               Q(α) = exp −|α − ᾱ| ,                                             (36)
+                                                        π
+such that the limit we are interested in becomes
+                                  (              "                   #    "                          #)
+                      (coh)           1 1           |εα,µ − ε∗β,µ |2         |εα,µ + ε∗β,µ − 2ε̄µ |2
+                     L      = lim             exp −                    exp −
+                              ϵ→0   16ϵ4 4π 2            16ϵ2                        16ϵ2
+                                  (                                                      )                                 (37)
+                                      1 1            1                               
+                                                                       2            2
+                            = lim             exp − 2 |εα,µ − ε̄µ | + |εβ,µ − ε̄µ |         ,
+                              ϵ→0   16ϵ4 4π 2       8ϵ
+
+where, in going from the first to the second equality, we have algebraically expanded and combined the two exponents.
+In this expression, we have defined ε̄µ = 2ϵᾱµ as the mean electric field amplitude of the driving field. In the following,
+                  (x)     (y)
+we denote ε̄µ = ε̄µ + iε̄µ .
+  At this point, it is important to note that Pµ (εα,µ , ε∗β,µ ) is a four-dimensional function, as both εα,µ and εβ,µ are
+complex-valued quantities. This motivates us to define σ = 4ϵ2 , allowing us to express the limit above as
+                            (                                                      )
+                                1             1                                  
+              L(coh) = lim             exp −      |εα,µ − ε̄µ |2 + |εβ,µ − ε̄µ |2     = δ(εα,µ − ε̄µ )δ(εβ,µ − ε̄µ ),   (38)
+                        ϵ→0   4π 2 σ 2       2σ
+
+where δ(·) denotes the Dirac delta function. By introducing this result into Eq. (31), and considering the coherent∥
++ coherent⊥ driving field configuration, we obtain
+                                         S(ω) ∝ ω 4 |dε̄,∥ (ω)|2 + |dε̄,⊥ (ω)|2 .
+                                                                              
+                                                                                                                (39)
+   This corresponds to the semiclassical expression for the HHG spectrum, neglecting contributions from dipole moment
+correlations [62]. For a circularly polarized laser field, both vertical and horizontal components vanish for all harmonic
+modes, resulting in the disappearance of the HHG spectrum. This is shown in Fig. 6, where the left subplot displays
+                                       (y)                  (x)               (y)              (x)
+HHG spectra for various values of ε̄⊥ while setting ε̄∥ = 0.053 a.u., ε̄∥ = 0 a.u. and ε̄⊥ = 0 a.u. for the other
+field components. In the right subplot, we examine the dependence of high-harmonic orders on the ellipticity E, with
+E = 0 representing linear polarization, and E ∈ (0, 1] denoting elliptical polarization.
+
+
+                          B.    Classical limit applied to displaced squeezed vacuum states
+
+
+  Here, we consider the case of displaced squeezed vacuum   (DSV) states, i.e., |r, ᾱ⟩ = D̂(ᾱ)Ŝ(r) |0⟩, where r denotes
+                                                                                                          C
+the squeezing parameter and Ŝ(r) = exp r∗ â2 − râ†2 is the squeezing operator. In general, r ∈ and depending on
+                                                      
+                                                                                                                               14
+
+its specific value, we would obtain squeezing along different possible directions in phase space. In our analysis, we
+                R
+restrict to r ∈ , with the specific value of r—relative to the coherent state phase—determining the different kind of
+squeezing, that is, whether in phase or amplitude. For this kind of states, the Husimi function reads
+
+                                                         2(αx − ᾱx )2   2(αy − ᾱy )2
+                                                                                      
+                                             1
+                                Q(α) =             exp −               −                ,                        (40)
+                                         π cosh(r)          1 + e2r        1 + e−2r
+where we denote α = αx + iαy .
+   When dealing with coherent states, the classical limit basically resulted in that the variance along both optical
+quadratures tend to zero. For the case of DSV states, we instead have that the variance along both optical quadratures
+behave differently depending on the value of r. This difference must be reflected in the analytical expressions through
+a dependence of the squeezing parameter on ϵ. Otherwise, if r is treated as a constant, then in the classical limit
+coherent states and DSV states would be essentially the same, which is not the case. Thus, to relate the squeezing
+parameter with the quantization volume, we compute the intensity of a DSV, with the intensity operator given by
+Iˆ = ϵ2 â† â. Note that the introduction of ϵ here is needed to provide the intensity its proper units. This results in
+                                                       2
+                                           ⟨I⟩ = ϵ2 |ᾱ| + ϵ2 sinh2 (r) ≡ Icoh + Isqu ,                                      (41)
+
+where Isqu represents the intensity contribution to the total intensity due to the squeezing. From this, we can express
+the squeezing parameter as
+                                                                p      !
+                                                                  Isqu
+                                                r = sinh−1 ±            ,                                          (42)
+                                                                  ϵ
+
+with the ± sign denoting the optical quadrature along which squeezing takes place. For the sake of clarity, in the
+following we consider r > 0 and just keep the positive sign, though we generalize the results later to r < 0 as well.
+   Before proceeding further, let us first rewrite the Husimi function as
+                                                          (x)         (x)
+                                       "                                               2 #
+         εα,µ + ε∗β,µ                                      εα,µ + [εβ,µ ]∗
+                     
+                              1                  1                                 (x)
+     Q                  =          exp −                                      − ε̄µ
+              4ϵ          π cosh r         2(1 + e2r )ϵ2            2
+                                                    (y)        (y)
+                                "                                               2 #
+                                          1          εα,µ + [εβ,µ ]∗        (y)
+                          × exp −                                      − ε̄µ                                                  (43)
+                                   2(1 + e−2r )ϵ2           2
+                                                           (x)         (x)
+                                       "                                                2 #
+                              1                  1          εα,µ + [εβ,µ ]∗         (x)
+                        =          exp − r                                      − ε̄µ
+                          π cosh r         4e cosh(r)ϵ2              2
+                                                     (y)        (y)             2 #
+                                "
+                                           1          εα,µ + [εβ,µ ]∗
+                          × exp − −r                                     − ε̄(y)
+                                                                             µ                                                (44)
+                                   4e cosh(r)ϵ2              2
+                                                 (x)       (x)                                 (y)     (y)
+                                       "                                    2 #       "                                2 #
+                             2ϵ2             1    εα,µ + [εβ,µ ]∗       (x)                 1   εα,µ + [εβ,µ ]∗     (y)
+                        = √         exp −                           − ε̄µ         exp −                         − ε̄µ       , (45)
+                          π σx σy           2σx          2                                 2σy        2
+
+where in the last equality we defined σx = 2er cosh(r)ϵ2 and σy = 2e−r cosh(r)ϵ2 . Now, taking into account the
+following mathematical relations
+                                    −1
+                                          p                            p
+                             e± sinh (x) = x2 + 1 ± x, cosh sinh−1 (x) = x2 + 1,                           (46)
+
+we can express the σx and σy as
+                                                hq          p     iq
+                                          σx = 2 Isqu + ϵ2 + Isqu     Isqu + ϵ2 ,                                            (47)
+                                                hq          p     i q
+                                          σy = 2 Isqu + ϵ2 − Isqu    Isqu + ϵ2 .                                             (48)
+
+  Thus, in the classical limit, we observe that σx → 4Isqu while σy → 0. Consequently, we formally arrive to
+                          (         "                    #           "       (x)     (x)            2 #
+             (squ)            1         |εα,µ − ε∗β,µ |2      1          1   εα,µ + [εβ,µ ]∗     (x)
+            Lr>0 = lim           exp −                     √      exp −                      − ε̄µ
+                      ϵ→0   2πσ               2σ             2πσx       2σx        2
+                                                                                                                            15
+                                            "       (y)      (y)            2 #)
+                                   1            1    εα,µ + [εβ,µ ]∗     (y)
+                            ×p           exp −                       − ε̄µ         ,                                       (49)
+                                 2πσy          2σy         2
+                                               "        (x)       (x)            2 #  (y)     (y)
+                                                         εα,µ + [εβ,µ ]∗                εα,µ + [εβ,µ ]∗
+                                                                                                                
+                               ∗        1           1                         (x)                           (y)
+                   = δ(εα,µ − εβ,µ ) √      exp −                         − ε̄µ       δ                 − ε̄µ ,            (50)
+                                       2πσx        2σx          2                             2
+
+where we defined σ = 8ϵ2 . Similarly, for the r < 0 case we observe
+                                        (x)     (x)
+                                                                                   "       (y)     (y)            2 #
+                                        εα,µ + [εβ,µ ]∗                                    εα,µ + [εβ,µ ]∗
+                                                                     2
+             (squ)                                                          1          1
+            Lr<0 = δ(εα,µ − ε∗β,µ )δ                      − ε̄µ(x)        p     exp −                          (y)
+                                                                                                           − ε̄µ       .   (51)
+                                               2                           2πσy       2σy        2
+
+  If we assume that along the ∥-polarization component we have a coherent state, while along the ⊥-polarization we
+have a squeezed state, we arrive to the following expressions for the HHG spectrum
+                                                           (x)     (x) 2
+                                                 (   "                    #                               )
+                                 ω4                      εα,⊥ − ε̄⊥
+                                      Z
+                                            (x)                                        2              2
+                                                                                                         
+                   Sr>0 (ω) ∝ √          dεα,⊥ exp −                         |dε̄,∥ (ω)| + |dε̄,⊥ (ω)|      ,  (52)
+                                 2πσx                          2σx
+                                                           (y)     (y) 2
+                                                 (   "                    #                                )
+                                 ω4                       εα,⊥ − ε̄⊥
+                                       Z
+                                             (y)                                       2              2
+                                                                                                         
+                   Sr<0 (ω) ∝ p           dεα,⊥ exp −                        |dε̄,∥ (ω)| + |dε̄,⊥ (ω)|       , (53)
+                                 2πσy                          2σy
+
+which can be understood as an average of the HHG spectrum over a marginal of the Husimi function for squeezed
+                                                            (x)    (y) (x)       (y)
+states. It is important to note that, for Eq. (52), ε̄ = (ε̄∥ + iε̄∥ , εα,⊥ + iε̄⊥ ), which depends on the integration
+variable and therefore makes the HHG spectrum change along the whole range of values considered in the integral.
+                                        (x)    (y) (x)      (y)
+Similarly, for Eq. (53) we find ε̄ = (ε̄∥ + iε̄∥ , ε̄⊥ + iεα,⊥ ). In the context of our work, Eq. (52) represents the
+spectrum for an amplitude-squeezed state, and Eq. (53) for a phase-squeezed state.
+
+
+                              C.   Classical limit applied to displaced thermal states
+
+  Displaced thermal states are defined through the following statistical mixture
+                                                  ∞
+                                                  X         nnth
+                                         ρ̂th =                   n+1
+                                                                      D̂(ᾱ) |n⟩⟨n| D̂† (ᾱ),                              (54)
+                                                  n=0
+                                                      (n th +  1)
+
+where nth denotes the thermal fluctuations. As nth → 0, this expression converges to that of a coherent state of light.
+Similar to the DSV states, but unlike coherent states, thermal states with nth > 0 do not saturate the uncertainty
+product between optical quadratures. Consequently, when evaluating the classical limit, it is necessary to first establish
+a relation between nth and ϵ. To do so, we proceed as in Sec. II B and calculate the average intensity of displaced
+thermal states
+                                                            2
+                                               ˆ = ϵ2 |ᾱ| + ϵ2 nth ≡ Icoh + Ith ,
+                                              ⟨I⟩                                                                          (55)
+
+from which we find the relation Ith = ϵ2 nth . In the classical limit, we aim to keep the intensity contribution of the
+thermal part constant.
+   For displaced thermal states, the Husimi function is given by
+                                                                  "            #
+                                                                             2
+                                                      1              |α − ᾱ|
+                                        Q(α) =               exp −               ,                                 (56)
+                                                 π(nth + 1)           nth + 1
+
+which, expressed in terms of the thermal intensity Ith and field amplitudes εα , specifically using the kernel that
+appears in the limit we want to evaluate, we have
+                                                             "                                  2
+                                                                                                  #
+                           εα,µ + ε∗β,µ          ϵ2                          εα,µ − ε∗β,µ
+                                       
+                                                                    1
+                        Q                 =              exp −                            − ε̄µ
+                                4ϵ          π(Ith + ϵ2 )       4(Ith + ϵ2 )       2
+                                                     "                            2
+                                                                                    #                          (57)
+                                             2ϵ2           1 εα,µ − ε∗β,µ
+                                          =       exp −                     − ε̄µ
+                                            πσth          2σth     2
+                                                                                                                      16
+
+where in moving from the first to the second equality, we defined σth = 2(Ith + ϵ2 ).
+  In the thermodynamics limit, σth → 2Ith . Consequently, we formally obtain
+                              (           "                       #          "                              2
+                                                                                                              #
+                                                          ∗     2                                 ∗
+                                  1           |ε α,µ −  ε β,µ |       1            1    ε α,µ − ε β,µ
+                  L(th) = lim         exp −                               exp −                       − ε̄µ
+                          ϵ→0    2πσ                 2σ             2πσth       2σth          2
+                                                      "                              2
+                                                                                       #)
+                                     ∗      1                1 εα,µ − ε∗β,µ
+                        = δ(εα,µ − εβ,µ )         exp −                        − ε̄µ       ,                        (58)
+                                          4πIth            4Ith         2
+
+such that in this case the HHG spectrum is given by
+                                  Z       (                                                   )
+                              1      2              1                2         2            2
+                                                                                               
+                    S(ω) ∝          d εα,⊥ exp −        |εα,⊥ − ε̄⊥ | |dα,∥ (ω)| + |dα,⊥ (ω)|    ,                  (59)
+                            4πIth                  4Ith
+
+where it is worth noting that in the limit Ith → 0, we recover the spectrum derived earlier for a coherent state of
+light, as expected.
+
+
+                                                    D.       Numerical analysis
+
+   To evaluate the HHG spectra presented in the main text, as well as those shown in Sec. V, we discretized the
+                             (i)
+integral(s) with respect to εα,⊥ . For each field amplitude included in the sum, the HHG spectrum was computed
+using the RB-SFA Mathematica package [63]. For squeezed states of light, we used a 1D grid of 241 field values, though
+we observed that 122 values were sufficient to achieve convergence. In the case of thermal states, we computed a total
+of 5576 harmonic spectra to build a 76 × 76 grid. The obtained spectra were saved and later processed in Python to
+compute the HHG spectra for the considered states of light.
+
+
+                                                   III.       Ellipticity analysis
+
+  In this section, we provide a detailed description of the ellipticity analysis for the initial driver used in the main
+text, consisting of a coherent state |0, α1 ⟩∥ along the ∥-polarization and a DSV |r, α2 ⟩⊥ along the ⊥-polarization. To
+achieve this, we introduce the quantum optical analogue of the Stoke parameters
+                                   Ŝ0 = ϵ2 â†⊥ â⊥ + â†∥ â∥ , Ŝ3 = iϵ2 â†∥ â⊥ − â†⊥ â∥ ,
+                                                                                              
+                                                                                                                    (60)
+where the presence of the ϵ parameter provides the proper units to the intensity. This is motivated by the requirement
+that, for a fully coherent-state driver, Ŝ0 should represent the total field intensity, which—based on the definition of
+                                                                 2
+the electric field amplitude εα = 2ϵα—is proportional to ϵ2 |α| .
+  Using these operators, we can define the ellipticity E of the driving field as
+                                                                  ⟨Ŝ3 ⟩       S3
+                                                             E=            ≡      .                                 (61)
+                                                                  ⟨Ŝ0 ⟩       S0
+  The ellipticity for the initial configuration introduced at the beginning of this section gives us
+                                               α∥∗ α⊥ − α∥ α⊥
+                                                            ∗
+                                                                                      ε̄∗∥ ε̄⊥ − ε̄∥ ε̄∗⊥
+                                   E=i        2          2                 =i         2          2             ,    (62)
+                                         |α⊥ | + α∥          + sinh2 (r)         |ε̄⊥ | + ε̄∥        + 4Isqu
+where it can be explicitly observed that squeezing indeed impacts the mean ellipticity. In the case where r = 0,
+we recover the classical-optics expression of the field ellipticity. Furthermore, we observe that achieving circularly
+polarized light requires both components to have a phase difference of π/2. However, the fluctuations in ellipticity
+are just as important as its mean value. Given that our initial state is a product state, with expected values that can
+be treated as independent random variables, we can compute the variance of E using the variance formula. Thus, we
+obtain
+                                        2                  2
+                                                                          (∆S3 )2   S32
+                                                     
+                                    ∂E           2      ∂E
+                              2
+                         (∆E) =            (∆S3 ) +             (∆S0 )2 =         +     (∆S0 )2 .                  (63)
+                                    ∂S3                 ∂S0                 S02     S04
+  In the following, we evaluate the expressions of (∆S3 )2 and (∆S0 )2 individually. These expressions are used to
+assess the ellipticity and its fluctuations in Fig. 3 of the main text.
+                                                                                                                                     17
+
+                                                          1.       Computing the variance of Ŝ0
+
+
+  To start, we express Ŝ02 in normal order
+                                        h         2                                  2 i
+                               Ŝ02 = ϵ4 â†⊥ â⊥ + 2 â†⊥ â⊥ â†∥ â∥ + â†∥ â∥
+                                                                          
+                                        h                                                                i
+                                    = ϵ4 â†2          †2 2        †
+                                                2
+                                                                           †          †         †
+                                           ⊥ ⊥â  +  â  â
+                                                       ∥ ∥  + 2 â ⊥ â ⊥   â∥ â∥ + â⊥ â⊥ + â∥ â ∥  ,                         (64)
+
+and evaluate its mean value. Let us first examine how the first term in this expression appears for a DSV state, i.e.,
+D̂(α)Ŝ(r) |0⟩. To proceed, we evaluate how this term is modified under the action of the displacement and squeezing
+operators
+                                                               ∗ 2
+                                                                           2
+            Ŝ † (r)D̂† (α)â†2  2                †      †      
+                             ⊥ â⊥ D̂(α)Ŝ(r) = Ŝ (r) â⊥ + α     â⊥ + α Ŝ(r)                                       (65)
+                                                                                  2                                  2
+                                              = â†⊥ cosh(r) − â⊥ sinh(r) + α⊥
+                                                                              ∗
+                                                                                    â⊥ cosh(r) − â†⊥ sinh(r) + α⊥ ,
+                                                                                                                  
+                                                                                                                       (66)
+and, to continue, we evaluate the action of the leftmost bracket on a vacuum state
+                                      2
+       â⊥ cosh(r) − â†⊥ sinh(r) + α⊥ |0⟩ = â⊥ cosh(r) − â†⊥ sinh(r) + α⊥ − sinh(r) |1⟩ + α⊥ |0⟩
+                                                                                                    
+                                                                                                √
+                                                                     2
+                                                                         |0⟩ − 2α⊥ sinh(r) |1⟩ + 2 sinh2 (r) |2⟩ ,
+                                                                      
+                                           = − cosh(r) sinh(r) + α⊥                                                                 (67)
+from which we obtain
+                                                                                               2
+              ⟨0| Ŝ † (r)D̂† (α)â†2
+                                                                                                         2
+                                       2                                       2
+                                   ⊥ â⊥ D̂(α)Ŝ(r) |0⟩ = − cosh(r) sinh(r) + α⊥                 + 4|α⊥ | sinh2 (r) + 2 sinh4 (r)
+                                                                          4                                ∗2
+                                                                   = |α⊥ | + cosh2 (r) sinh2 (r) − α⊥2
+                                                                                                              
+                                                                                                       + α⊥     cosh(r) sinh(r)
+                                                                             2
+                                                                     + 4|α⊥ | sinh2 (r) + 2 sinh4 (r).                              (68)
+
+  Consequently, the expected value of Ŝ02 reads
+                  h
+                      4       4                               ∗2                           2
+      ⟨Ŝ02 ⟩ = ϵ4 α∥ + |α⊥ | + cosh2 (r) sinh2 (r) − α⊥
+                                                       2
+                                                                   cosh(r) sinh(r) + 4|α⊥ | sinh2 (r) + 2 sinh4 (r)
+                                                                 
+                                                          + α⊥
+                                                                       i
+                      2    2                    2                   2
+                + 2 α∥ |α⊥ | + sinh2 (r) + |α⊥ | + sinh2 (r) + α∥ ,
+                                        
+                                                                                                                                    (69)
+
+while, on the other hand, we have
+                                    2    2           2
+                  ⟨Ŝ0 ⟩2 = ϵ4 |α⊥ | + α∥ + sinh2 (r)
+                              
+                              h                                                                  i
+                                    4      2   2                 4                    2
+                          = ϵ4 α∥ + 2 α∥ |α⊥ | + sinh2 (r) + |α⊥ | + sinh4 (r) + 2|α⊥ | sinh2 (r) ,
+                                                          
+                                                                                                                                    (70)
+
+such that we find for the variance
+                             2    h
+                                                             ∗2
+                        ∆S0 = ϵ4 cosh2 (r) sinh2 (r) − α⊥
+                                                        2
+                                                                
+                                                          + α⊥    cosh(r) sinh(r)
+                                                                                                                   2
+                                                                                                                       i            (71)
+                                                               2                               2
+                                                 + 2|α⊥ | sinh2 (r) + sinh4 (r) + |α⊥ | + sinh2 (r) + α∥                   .
+
+  Taking into account the mathematical relation cosh2 (r) = 1 + sinh2 (r), we can rewrite the previous expression as
+                                                                                              q             
+       2           2      2                                  2                    ∗2
+   ∆S0 = ϵ4 |α⊥ | + α∥ + 2 sinh2 (r) + 2 sinh4 (r) + 2|α⊥ | sinh2 (r) − α⊥    2
+                                                                                        sinh(r) 1 + sinh2 (r) , (72)
+                                                                                      
+                                                                                + α⊥
+
+which in terms of ε⊥ , ε∥ and Isqu reads
+                                             2      2         2         2
+                                                             Isqu
+                                                                                                          
+                      2        4       |ε⊥ |    ε∥     Isqu       |ε⊥ | Isqu   1 2     ∗2
+                                                                                           q
+                                                                                                    2   2
+                ∆S0        =ϵ                  +      +2 2 +2 4 +2            ∓ 4 ε⊥ + ε⊥     Isqu ϵ + Isqu ,                       (73)
+                                         4ϵ2     4ϵ2     ϵ    ϵ       4ϵ4      4ϵ
+and in the limit ϵ → 0 we arrive to
+                                                     2            1     2      1
+                                                              2
+                                                                  + |ε⊥ | Isqu ∓ ε2⊥ + ε∗2
+                                                                                           
+                                               ∆S0        = 2Isqu                       ⊥ Isqu ,                                    (74)
+                                                                   2            4
+with the ∓ depending on whether r is either positive or negative, corresponding in our scenario to amplitude and
+phase squeezing, respectively.
+                                                                                                                            18
+
+
+
+
+FIG. 7. 2D histogram of the Lissajous figures presented in Fig. 1 of the main text: (a) coherent state, (b) amplitude-squeezed
+state and (c) phase-squeezed states.
+
+
+                                                    2.      Computing the variance of Ŝ3
+
+
+  In this case, we can write for Ŝ32
+                                                2    h                                                                i
+                  Ŝ32 = −ϵ4 â†∥ â⊥ − â†⊥ â∥ = ϵ4 − â†2    2      †2 2       †             †      †           †
+                                                                                                            
+                                                              â
+                                                             ∥ ⊥   − â⊥ ∥â +  â  â
+                                                                                  ∥ ∥     â â
+                                                                                            ⊥ ⊥     + â  â
+                                                                                                        ⊥ ⊥    â â
+                                                                                                                 ∥ ∥
+                           h                                                                     i
+                       = ϵ4 − â†2    2       †2 2    †           †            †         †
+                                                                                            
+                                  ∥ â⊥ − â⊥ â∥ + â∥ â∥ + â⊥ â⊥ + 2 â∥ â∥ â⊥ â⊥ ,                                (75)
+
+an operator whose expected value reads
+                                  h
+                                       2       2                  2     2
+                      ⟨Ŝ32 ⟩ = ϵ4 α∥ + |α⊥ | + sinh2 (r) + 2 α∥ |α⊥ | + sinh2 (r)
+                                                                                      
+
+                                                                                            i                             (76)
+                                    − α∥∗2 α⊥
+                                           2                         ∗2
+                                              − cosh(r) sinh(r) − α∥2 α⊥
+                                                               
+                                                                           − cosh(r) sinh(r) ,
+
+while for the squared of the mean value we find
+                                               h                                  i
+                                                                          2     2
+                                   ⟨Ŝ3 ⟩2 = ϵ4 − α∥∗2 α⊥
+                                                        2        ∗2
+                                                          − α∥2 α⊥  + 2 α∥ |α⊥ | ,                                         (77)
+
+such that the variance reads
+                            h                                                                 i
+                     2       2     2                  2
+                 ∆S3 = ϵ4 α∥ + |α⊥ | + sinh2 (r) + 2 α∥ sinh2 (r) + α∥∗2 + α∥2 cosh(r) sinh(r) .
+                                                                              
+                                                                                                                           (78)
+
+  Finally, expressing this quantity in terms of field amplitudes and intensities, it reads
+                                             2        2               2                                   
+                           2              ε∥     |ε⊥ |    Isqu     ε∥ Isqu    1 ∗2      q
+                     ∆S3        = ϵ4            +        +      + 2         ±     ε + ε2
+                                                                                           I squ ϵ 2 + I2
+                                                                                                        squ ,              (79)
+                                           4ϵ2     4ϵ2      ϵ2        4ϵ4     4ϵ4 ∥    ∥
+
+
+and in the limit ϵ → 0 we arrive to
+                                                       2       1   2      1
+                                                                  ε∥ Isqu ± ε∗2   2
+                                                                                    
+                                                 ∆S3        =                ∥ + ε∥ Isqu .                                 (80)
+                                                                2          4
+  Figure 7 presents a 2D histogram analogue of Fig. 2 (a–c) from the main text. The histogram clearly shows that
+regions with weaker field fluctuations correspond to higher point density, whereas regions with weaker fluctuations
+appear more dense. For coherent states, the density remains constant for all combinations of (ε∥ , ε⊥ ).
+
+
+                                              IV.   Modified electronic quantum orbits
+
+  We observe that the use of photon statistics differing from those of a coherent state of light leads to HHG spectra
+that, in certain cases as discussed in the main text, result in non-vanishing HHG radiation even when employing
+                                                                                                                                                         19
+
+circularly polarized fields. From a quantum-orbit-based perspective, this suggests that non-Poissonian photon number
+statistics induce recombination events, even when considering circularly polarized light drivers. In this section,
+following a similar approach to that in Ref. [30] and incorporating the expressions derived in Section II, we explicitly
+compute the equations that describe the electronic quantum orbits as influenced by the arbitrary photon-statistics of
+the driver.
+
+
+         A.   Quantum orbits when using displaced squeezed states along one of the polarization axes
+
+   In Section II, we computed the HHG spectrum in the classical limit. However, the approach we followed is not
+only applicable to the evaluation of this observable but can also be used to obtain the reduced density matrix of the
+electronic state. Specifically, by tracing out the quantum optical degrees of freedom and considering the classical
+limit, we find the reduced density matrix of the electronic state to be
+                                                                                                 (i)            (i) 2
+                                                                                 (       "                               #                    )
+                                                                                                εα,⊥ − ε̄⊥
+                                                                 Z
+                                             1                          (i)
+                             ρ̂elec (t) = √                           dεα,⊥          exp −                                   |ϕεα (t)⟩⟨ϕεα (t)| ,    (81)
+                                            2πσi                                                          2σi
+
+where i ∈ {x, y}. To derive this expression, we focused on the case described in the main text, where the ∥-mode is
+excited by a coherent state, while the ⊥-mode by a phase- or amplitude-squeezed state.
+  The concept of quantum orbits can be rigorously defined by applying the saddle-point approximation to the Fourier
+transform of the time-dependent dipole moment’s mean value. In our case, this quantity can be expressed as
+                                                                                  (i)        (i) 2
+                                                             (         "                              #                             )
+                                                                                 εα,⊥ − ε̄⊥
+                       Z                    Z
+               1                     iΩt2           (i)
+  ⟨d̂(Ω)⟩ = √              dt2 e                  dεα,⊥          exp −                                    ⟨ϕεα (t)|d̂|ϕεα (t)⟩                       (82)
+              2πσi                                                                     2σi
+                                                                       (i)           (i) 2
+                                                  (          "                              #
+                                                                      εα,⊥ − ε̄⊥
+                       Z         Z
+             1                          (i)
+         ≈√                dt2        dεα,⊥           exp −
+            2πσi                                                             2σi
+                                      " Z              Z t2                                                                                         #)
+                                                              dt1 d p + Aεα (t2 ) e−iSεα (p,t2 ,t1 )+iΩt2 Eεα (t1 ) · d p + Aεα (t1 ) + c.c.
+                                                                        ∗
+                                                                                                                                    
+                                 × i            dp                                                                                                    ,
+                                                        t0
+                                                                                                                                                     (83)
+
+where, in going from the first to the second equality, we applied the semiclassical Strong-Field Approximation [11,
+51]. Here, Aεα (t) represents the vector potential, related to the electric field operator by Eεα (t) = − ∂Aεα (t)/∂t .
+Additionally, d(p) = ⟨p|d̂|g⟩ denotes the transition matrix element of the dipole moment operator between the
+electronic ground state |g⟩ and a continuum state |p⟩. Finally, Sεα (p, t2 , t1 ) is the semiclassical action, representing
+the phase accumulated by the electron between times t1 and t2 in the absence of interaction with the atomic core,
+and is given by
+                                                                                 Z t2
+                                                                             1                        2
+                                            Sεα (p, t2 , t1 ) =                         dτ p + Aεα (τ ) + Ip (t2 − t1 ).                             (84)
+                                                                             2    t1
+
+  The saddle-point method is a mathematical approach used to simplify the evaluation of integrals involving rapidly
+oscillating functions by approximating them as a sum over selected points, called saddle-points (see Appendix A of
+Ref. [64] and Ref. [65] for an introduction). This method is particularly useful for Eq. (83) due to the presence of
+high-harmonic modes in the semiclassical action. In this case, the saddle-points correspond to those of Sεα (p, t2 , t1 ).
+Beyond being an effective mathematical tool for evaluating the HHG spectrum, the saddle-point method provides
+valuable analytical insights into the electron dynamics, especially given that Eq. (83) can be viewed as an interference
+of different electron trajectories. Within this interpretation, saddle-points represent the electron trajectories that
+contribute most significantly to the HHG dynamics.
+  To explore how photon statistics differing from those of coherent states affect the quantum orbits, we apply the
+                                                   (i)
+saddle-point approximation to the integral over εα,⊥ by rewriting Eq. (83) as
+                       Z         Z                 Z          Z t2
+                 i                          (i)
+                                                                          h                     (QO)
+                                                                                                                                                 i
+                                                                       dt1 d∗ p + Aεα (t2 ) e−iSεα (p,t2 ,t1 ) Eεα (t1 ) · d p + Aεα (t1 ) + c.c. ,
+                                                                                                                                         
+  ⟨d̂(Ω)⟩ = √              dt2         dεα,⊥            dp
+                2πσi                                             t0
+                                                                                                                                                     (85)
+                                                                                                                               20
+
+where we define
+                                              Z t2                                                            2
+                                          1                         2                        i  (i)     (i)
+                   Sε(QO)
+                                                       
+                          (p, t2 , t1 ) =            dτ p + Aεα (τ ) + Ip (t2 − t1 ) − Ωt2 −     εα,⊥ − ε̄⊥ ,                (86)
+                      α
+                                         2     t1                                            2σi
+
+and observe that the photon statistics effectively modify the saddle-point locations, differing from those obtained in
+the semiclassical regime. In the following, we separately analyze the impact of amplitude squeezing (obtained by
+setting i = x using the field parameters considered throughout this work) and phase squeezing (obtained by setting
+i = y), as they influence the electronic quantum orbits differently. Hereupon, we express the vector potential as
+                                                                                  (x)           (y)
+                                                                                  εµ           εµ
+                         Aεα (t) = A⊥ (t)u⊥ + A∥ (t)u∥ ,          with Aµ (t) =      cos(ωt) +    sin(ωt),                   (87)
+                                                                                   ω            ω
+where here we represent with ω the driving field frequency.
+
+
+                    B.    Modified quantum orbits when considering amplitude squeezed states
+
+  In this subsection, we set i = x in Eq. (86) and compute the saddle-points of the action with respect to the five
+                                                               (x)                            (y)   (y)
+variables under consideration, i.e., θ = (t1 , t2 , p⊥ , p∥ , ε⊥ ). Note that in this setup, ε⊥ = ε̄⊥ . By setting the partial
+derivatives of Eq. (86) with respect to each of these variables to zero , we obtain the following set of saddle-point
+equations
+         (QO)
+      ∂Sεα (θ)          [p⊥,s + A⊥ (tion )]2    [p∥,s + A∥ (tion )]2
+                    =0⇒                      +                       + Ip = 0,                                               (88)
+         ∂t1   θ=θs               2                     2
+        (QO)            Z tre
+      ∂Sεα (θ)                                  
+                    =0⇒       dτ p⊥,s + A⊥ (τ ) = 0,                                                                         (89)
+        ∂p⊥    θ=θs      ti
+        (QO)            Z tre
+      ∂Sεα (θ)                                
+                    =0⇒       dτ p∥,s + A∥ (τ ) = 0,                                                                         (90)
+         ∂p∥   θ=θs      tion
+        (QO)
+      ∂Sεα (θ)            [p⊥,s + A⊥ (tre )]2   [p∥,s + A∥ (tre )]2
+                    =0⇒                       +                      + Ip = Ω,                                               (91)
+         ∂t2   θ=θs               2                     2
+        (QO)                                   (x)                (y)
+                          1 tre h             ε⊥,s
+                            Z
+      ∂Sεα (θ)                                                  ε̄⊥           i             i h (x)     (x)
+                                                                                                            i
+                    = 0 ⇒        dτ p ⊥,s  +       cos(ωτ ) +         sin(ωτ )  cos(ωτ ) −     ε    − ε̄      = 0,           (92)
+        ∂ε
+          (x)
+               θ=θs       ω tion               ω                  ω                        σx ⊥,s       ⊥
+            ⊥
+
+                                                                                                                   (x)
+where we refer to the solutions of these equations, i.e., the saddle-points, as θs = (tion , tre , p⊥,s , p∥,s , ε⊥,s ). These are
+represented in Figs. 8 and 9, showing the real and imaginary parts, respectively, within the time-span t ∈ [−π/ω, 2π/ω]
+and for the squeezing parameters discussed in the main text. Notably, within this range and with coherent state drivers
+for both polarization directions, corresponding to circular polarization, no trajectories are found.
+   The presence of non-vanishing electron trajectories can be attributed to an effective force induced by the non-
+Poissonian photon statistics of the driver, which distorts electron trajectories during propagation in the continuum.
+This concept was initially introduced in Ref. [30] for linearly polarized drivers with non-classical photon statistics.
+Here, we derive the expression for this force in the case of a coherent state in the ∥-polarization combined with an
+amplitude squeezed state in the ⊥-polarization. To accomplish this, we first seek a solution to Eq. (92), which, after
+straightforward algebraic manipulations, can be reformulated as
+                                                         (y)
+                                                                    
+                            (x)  iσx tre                ε̄⊥
+                                     R
+                          ε̄⊥ − ω tion dτ p⊥,s + ω sin(ωτ ) cos(ωτ )
+                   (x)
+                 ε⊥,s =                         R tre
+                                      1 + iσ                  2
+                                           ω 2 tion dτ cos (ωτ )
+                                              x
+                                                                                                              ,               (93)
+                                       Z tre                       Z tre          (y)        
+                           (x)     iσx                           σx                ε
+                       ≈ ε̄⊥ 1 − 2             dτ cos2 (ωτ ) − i          dτ p⊥,s + ⊥ sin(ωτ ) cos(ωτ ),
+                                    ω tion                       ω tion             ω
+
+where in transitioning from the first to the second line, we have applied a Taylor expansion to the denominator
+provided that σx /ω 2 ≪ 1 regime, valid here since the squeezing intensity is at most two orders of magnitude smaller
+                                                                                                                             21
+
+
+
+
+FIG. 8. Real part of the saddle-point solutions when considering coherent∥ + amplitude-squeezed⊥ drivers. The field frequency
+                                                           (x)               (y)          (x)            (y)
+has been set to ω = 0.057 a.u., while the amplitudes to ε̄∥ = 0.053 a.u., ε̄∥ = 0 a.u., ε̄⊥ = 0 a.u., ε̄⊥ = 0.053 a.u., and the
+squeezing intensities to Isqu = 5 × 10−6 a.u., Isqu = 1 × 10−5 a.u., and Isqu = 5 × 10−5 a.u., from left to right, respectively.
+
+
+than ω. Noting further than in our setup, the amplitude squeezed states have associated ε̄⊥,x = 0, this expression
+simplifies to
+                                                   Z tre           (y)         
+                                              σx                   ε⊥
+                                    ε⊥,x ≈ −i            dτ p⊥,s +      sin(ωτ ) cos(ωτ ).                                 (94)
+                                              ω     tion            ω
+
+  Next, we substitute this solution into Eq. (89), which describes the electron’s trajectory along the perpendicular
+direction. This yields
+              Z tre    (        (y)                         Z τ1             (y)                   )
+                               ε⊥               σx                           ε⊥
+                    dτ1 p⊥,s +      sin(ωτ ) − i 2 cos(ωτ )       dτ2 p⊥,s +      sin(ωτ2 ) cos(ωτ2 ) = 0,      (95)
+               tion             ω               ω            tion             ω
+
+where we observe the influence of the electric field of amplitude ε̄(y) along with an additional term. This extra term,
+known as the photon-statistics force [30], is what effectively bends the electron’s trajectory, enabling it to recombine
+with the parent ion. Figure 10 illustrates these trajectories for tion < −25 a.u., considering various squeezing intensities
+                                                                                                                  (x)
+and harmonic modes. From this figure, we observe that in the absence of this additional force—when setting ε⊥,s = 0—
+the electron cannot return to the origin or recombine with the parent ion. Consequently, this added force effectively
+bends the electron trajectories, facilitating recombination events.
+
+
+                        C.   Modified quantum orbits when considering phase squeezed states
+
+  In this subsection, we set i = y in Eq. (86) and apply the same approach as in the previous subsection. This
+                                                                                                 (y)           (x)   (x)
+results in the same saddle-point equations, but now with the variables θ = (t1 , t2 , p⊥ , p∥ , ε⊥ ) and with ε⊥ = ε̄⊥ .
+Consequently Eq. (92) is substituted by
+
+         (QO)                      Z tre            (x)              (y)
+      ∂Sεα      (θ)            1           h       ε⊥,s           ε̄         i            i h (y)     (y)
+                                                                                                          i
+             (y)
+                           =0⇒           dτ p⊥,s +      cos(ωτ ) + ⊥ sin(ωτ ) sin(ωτ ) −     ε⊥,s − ε̄⊥ = 0,               (96)
+         ∂ε⊥          θ=θs     ω    tion            ω               ω                    σx
+                                                                                                                         22
+
+
+
+
+FIG. 9. Imaginary part of the saddle-point solutions when considering coherent∥ + amplitude-squeezed⊥ drivers. The field
+                                                                    (x)               (y)           (x)           (y)
+frequency has been set to ω = 0.057 a.u., while the amplitudes to ε̄∥ = 0.053 a.u., ε̄∥ = 0 a.u., ε̄⊥ = 0 a.u., ε̄⊥ = 0.053
+                                                    −6                  −5                        −5
+a.u., and the squeezing intensities to Isqu = 5 × 10 a.u., Isqu = 1 × 10 a.u., and Isqu = 5 × 10 a.u., from left to right,
+respectively.
+
+
+                                                         (y)
+where the saddle-points are θs = (tion , tre , p⊥,s , p∥,s , ε⊥,s ). Solutions to these equations are shown in Figs. 11 and
+12, representing the real and imaginary components, respectively, over the time range t ∈ [−π/ω, 2π/ω] with the
+squeezing parameters discussed in the main text.
+   Notably, the trajectories obtained here significantly differ from those derived for amplitude squeezed states. Specif-
+ically, we observe ionization events occurring between tion ∈ [−6.2, 13.9] a.u.—a period in which no ionization events
+are seen for amplitude squeezed drivers. This already suggests that the dynamics influencing recombination events
+are intrinsically dependent on the type of squeezing applied. Furthermore, examining Re[tre ] as a function of the
+harmonic order reveals two distinct cutoffs that vary with the squeezing intensity, and that originate from seemingly
+different trajectories.
+   Following a similar approach as in the amplitude squeezed case, we now compute the expression for the photon-
+statistics force for phase squeezed drivers. Starting from Eq. (96) and applying the same steps, we obtain
+
+                                            iσy tre                        iσy tre
+                                                Z                            Z
+                             (y)    (y)                         2
+                            ε⊥ ≈ ε̄⊥ 1 − 2              dτ sin (ωτ ) −              dτ p⊥,s sin(ωτ ),                   (97)
+                                             ω tion                         ω tion
+                      (x)
+where we have set ε⊥ = 0. By introducing this result into the saddle-point equation describing the electronic
+trajectories along the perpendicular (⊥) direction, we derive
+     Z              (y)            (y)          Z τ2                                       Z τ2                
+                  ε̄             iε̄ σy                                  ip⊥,s σy
+       dτ2 p⊥ + ⊥ sin(ωτ2 ) − ⊥ 3 sin(ωτ2 )            dτ1 sin2 (ωτ1 ) −          sin(ωτ2 )       dτ 2 sin(ωτ2 )  = 0. (98)
+                    ω               ω             tion                     ω2                tion
+
+                                                                                               (y)
+  Unlike the case of amplitude squeezed states, where only a single term added to the (ε̄⊥ /ω) sin(ωτ2 ) component,
+we observe here the influence from two distinct forces, F1 and F2 , specifically
+                                               (y)            Z τ2
+                                            iε̄ σy
+                                      F1 = ⊥ 3 sin(ωτ2 )              dτ1 sin2 (ωτ1 )                          (99)
+                                               ω                tion
+                                                               Z τ2
+                                            ip⊥,s σy
+                                      F2 =           sin(ωτ2 )        dτ2 sin(ωτ2 ),                          (100)
+                                                ω2               tion
+                                                                                                                                 23
+
+
+
+
+FIG. 10. Representation of the electronic trajectories in real space for various harmonic modes and different squeezing intensities.
+                                                                                    (x)               (y)             (x)
+The field frequency has been set to ω = 0.057 a.u., while the amplitudes to ε̄∥ = 0.053 a.u., ε̄∥ = 0 a.u., ε̄⊥ = 0 a.u.,
+ (y)
+ε̄⊥ = 0.053 a.u., and the squeezing intensities to Isqu = 5 × 10−6 a.u., Isqu = 1 × 10−5 a.u., and Isqu = 5 × 10−5 a.u., from left
+to right, respectively.
+
+
+
+
+FIG. 11. Real part of the saddle-point solutions when considering coherent∥ + phase-squeezed⊥ drivers. The field frequency
+                                                           (x)               (y)          (x)            (y)
+has been set to ω = 0.057 a.u., while the amplitudes to ε̄∥ = 0.053 a.u., ε̄∥ = 0 a.u., ε̄⊥ = 0 a.u., ε̄⊥ = 0.053 a.u., and the
+squeezing intensities to Isqu = 5 × 10−6 a.u., Isqu = 1 × 10−5 a.u., and Isqu = 5 × 10−5 a.u., from left to right, respectively.
+                                                                                                                                 24
+
+
+
+
+FIG. 12. Imaginary part of the saddle-point solutions when considering coherent∥ + phase-squeezed⊥ drivers. The field
+                                                                    (x)               (y)           (x)           (y)
+frequency has been set to ω = 0.057 a.u., while the amplitudes to ε̄∥ = 0.053 a.u., ε̄∥ = 0 a.u., ε̄⊥ = 0 a.u., ε̄⊥ = 0.053
+                                                    −6                  −5                        −5
+a.u., and the squeezing intensities to Isqu = 5 × 10 a.u., Isqu = 1 × 10 a.u., and Isqu = 5 × 10 a.u., from left to right,
+respectively.
+
+
+
+
+FIG. 13. Representation of the electronic trajectories in real space for various harmonic modes and different squeezing intensities.
+Here, the results for tion < −13 a.u. are shown. The field frequency has been set to ω = 0.057 a.u., while the amplitudes
+     (x)                (y)            (x)              (y)
+to ε̄∥ = 0.053 a.u., ε̄∥ = 0 a.u., ε̄⊥ = 0 a.u., ε̄⊥ = 0.053 a.u., and the squeezing intensities to Isqu = 5 × 10−6 a.u.,
+             −5                         −5
+Isqu = 1 × 10 a.u., and Isqu = 5 × 10 a.u., from left to right, respectively.
+
+
+which collectively determine how the electron trajectories are modified. We have shown the joint impact of these
+                                                                                                                                 25
+
+
+
+
+FIG. 14. Representation of the electronic trajectories in real space for various harmonic modes and different squeezing intensities.
+Here, the results for tion > −13 a.u. are shown. The field frequency has been set to ω = 0.057 a.u., while the amplitudes
+     (x)                (y)            (x)              (y)
+to ε̄∥ = 0.053 a.u., ε̄∥ = 0 a.u., ε̄⊥ = 0 a.u., ε̄⊥ = 0.053 a.u., and the squeezing intensities to Isqu = 5 × 10−6 a.u.,
+             −5                         −5
+Isqu = 1 × 10 a.u., and Isqu = 5 × 10 a.u., from left to right, respectively.
+
+
+forces as a function of harmonic order in the main text. Here, to supplement those findings, we present the electron
+trajectories in real space. Unlike in the previous subsection, we include results for both tion < −13 a.u. (Fig. 13)
+and t > −13 a.u. (Fig. 14). This selection is motivated by the results shown in Fig. 8, which suggest that different
+trajectories may lead to seemingly distinct plateaus.
+   Similar to the amplitude squeezed case, Figs. 13 and 14 show that these forces tend to bend the electronic tra-
+jectories, guiding them back towards the atomic core. However, with multiple forces at play, a wider variety of
+recombination effects emerge—some of which involve more than two trajectories. This enables a potential distinc-
+tion between contributions from spatially “ultra-long” trajectories, such as the green curves in Fig. 13), and spatially
+“ultra-short” trajectories, like the red curves in Fig. 14 when Isqu = 5 × 10−5 a.u., for instance.
+
+
+                                D.    Expanded description of Figure 4 in the main text
+
+   Altogether, Fig. 15 (a) and (f) illustrate the emergence of ionization (bright colors) and recombination (soft colors)
+times when applying amplitude squeezing along the ⊥-polarization direction, for Isqu = 5 × 10−6 a.u. and Isqu =
+5 × 10−5 a.u., respectively. In both cases, ionization events occur on either side of the |ε∥ | maxima, coinciding
+with the time span where fluctuations in ε⊥ are the greatest. These ionization events give rise to two well-defined
+trajectories, long (in blue) and short (in red), which become increasingly similar as the harmonic order increases. The
+cutoff harmonics qc remains the same regardless of whether ionization occurs on the left or right of the |ε∥ | maxima,
+and increases with higher values of Isqu . Specifically, qc ≈ 33 for panel (a) while qc ≈ 40 for panel (f).
+   The dynamics change significantly when using phase squeezing, as shown in Fig. 16 (a) and (f) for Isqu = 5 × 10−6
+a.u. and Isqu = 5 × 10−5 a.u., respectively. In both cases, ionization and recombination events are observed, occurring
+at maxima of both |ε∥ | and |ε⊥ |. Notably, ionization events at the |ε⊥ | maxima, where intensity fluctuations are
+strongest, lead to a second, extended cutoff compared to ionization events at the |ε∥ | maxima. These two cutoffs
+are located at qc,1 ≈ 27 and qc,2 ≈ 39 for Isqu = 5 × 10−6 a.u., and at qc,1 ≈ 25 and qc,2 ≈ 60 for Isqu = 5 × 10−5
+a.u., respectively. For low Isqu , ionization at |ε⊥ | maxima produces well-defined short (in red) and long (in green)
+trajectories. As Isqu increases, additional trajectories emerge, either longer (in blue) or shorter (in purple) than the
+                                                                                                                                   26
+
+standard ones, revealing a more complex pattern in electron dynamics induced by the enlarged intensity fluctuations.
+                                                                                                           (i)
+  The key factor enabling electron ionization and recombination are field fluctuations, represented by εα,⊥ . Without
+these, the electron cannot return to the parent ion for harmonic generation. We illustrate this by depicting the electron
+trajectories in real space in Fig. 15 (b),(c) and (g),(h) for amplitude squeezing using q = 33, while in Fig. 16 (a),(b)
+                                                                                              (i)
+and (g),(h) for phase squeezing using q = 31. Across all cases, we observe that when εα,⊥ = 0 (dashed curves),
+recombination is not achieved, with the electron ending up the dynamics far away from the origin. However, when
+                                                 (i)
+accounting for the saddle-point solution for εα,⊥ , recombination occurs, enabling harmonic generation. From this
+                                           (i)
+trajectory perspective, the effect of εα,⊥ can be effectively understood as a force that bends electron trajectories,
+facilitating recombination [30]. The results of this analysis are presented in Fig. 15 (d),(e) and (i),(j) for amplitude
+squeezing, and in Fig. 16 (d),(e) and (i),(j) for phase squeezing, illustrating how this photon-statistics-induced force
+acts on each electronic trajectory (indicated by matching colors to those in panels (a) and (f)) as a function of the
+harmonic order.
+   Comparing these forces with the real space electron trajectories, we find that the forces are positive for trajectories
+with r⊥ < 0 and negative for r⊥ > 0. The force magnitude generally increases with Isqu , although the specific behavior
+differs on the type of squeezing. For amplitude squeezing [Fig. 15], ionization events occurring on either side of the |ε⊥ |
+maxima, experience forces of similar magnitude. For phase squeezing [Fig. 16] trajectories contributing to the highest
+cutoff experience notably stronger forces than those contributing to the first cutoff, especially for Isqu = 5 × 10−5 a.u.
+at high harmonic orders.
+
+
+
+
+FIG. 15. (a), (f) Real part of the ionization (bright colors) and recombination (soft colors) times, with the electric field
+represented for both polarizations in green; (b), (c), (g), (h) Electron trajectories in real space for the 33rd harmonic order in
+the absence (dashed curves) and presence (solid curves) of field fluctuations. The colors match with the trajectories in (a) and
+(f); (d), (e), (i), (j) Real part of the photon-statistical force. The mean field is circularly polarized with strength |ε̄µ | = 0.053
+a.u. (I = 1014 W/cm2 ).
+                                                                                                                               27
+
+
+
+
+FIG. 16. (a),(f) Real part of the ionization (bright colors) and recombination (soft colors) times, with the electric field
+represented for both polarizations in green; (b), (c), (g), (h) Electron trajectories in real space for the 31st harmonic order in
+the absence (dashed curves) and presence (solid curves) of field fluctuations. The colors match the trajectories in (a) and (f);
+(d), (e), (i), (j) Real part of the photon-statistical force.
+
+
+
+
+                                                   E.   Numerical analysis
+
+   The evaluation of saddle-point equations was entirely done in Mathematica using the RB-SFA package [63]. Specif-
+ically, we used the FindComplexRoots function which allows solving a set of complex-valued linear equations over a
+predefined grid in the complex space.
+
+
+                                   V.    The contribution of displaced thermal states
+
+   In this section, we emphasize that the distinctive features presented in this manuscript emerge from the non-
+Poissonian nature of the driving light’s photon statistics, irrespective of whether these statistics are sub- or super-
+Poissonian. However, it is ultimately the photon statistics of the driver that shape the specific spectral features of
+the resulting HHG spectrum. While the main text focused on displaced amplitude- and phase-squeezed states, which
+either exhibit sub-Poissonian and super-Poissonian characteristics, here we compare these results with those obtained
+using thermal states of light.
+   Using Eqs. (52), (53) and (59), we present the results in Fig. 17. Since the variance of the weighting probability
+distributions behave as σi = 4Isqu for squeezed states and σth = 2Ith for thermal states, we plot comparable cases by
+matching Ith = 2Isqu . As reported in the main text, for the phase squeezed states, we observe a two-plateau structure,
+                                                                                                                             28
+
+
+
+
+FIG. 17. HHG spectrum obtained for the three states of light considered along the text. Each spectra has been normalized
+                                                                                                                 (x)
+with respect to its maximum value. The field frequency has been set to ω = 0.057 a.u., while the amplitudes to ε̄∥ = 0.053
+       (y)                  (x)         (y)
+a.u., ε̄∥    = 0 a.u., ε̄⊥ = 0 a.u., ε̄⊥ = 0.053 a.u.
+
+
+where plateau intensities vary with squeezing, while amplitude squeezed states produce a single plateau followed by
+a decay at higher harmonic orders. By contrast, displaced thermal states exhibit an extended cutoff, as noted in
+Ref. [29], which increases with thermal noise level but lacks the double-plateau pattern seen in the phase squeezed
+case.
+  Notably, the persistence of harmonic radiation in circularly polarized fields is not limited to squeezed states. Rather,
+any light state with non-Poissonian photon statistics and sufficient intensity to initiate HHG processes can produce
+harmonic radiation in circularly polarized configurations. Here, we illustrated this effect by comparing the spectra of
+phase squeezed states, amplitude squeezed states, and displaced thermal states.
+
+
+                              VI.   Evaluation of the time-zero second-order autocorrelation function
+
+   To conclude with this Supplementary Material, we perform an analytical assessment to identify potential non-
+classical properties in the photon statistics of the emitted light by evaluating the time-zero second-order autocorrelation
+function, defined as
+
+                                                         (2)         ⟨(â†k,µ )2 â2k,µ ⟩
+                                                        gk,µ (0) =                          ,                             (101)
+                                                                      ⟨â†k,µ âk,µ ⟩2
+
+which allows us to distinguish between classical and non-classical light behavior based on photon statistics: for
+                                                               (2)
+Poissonian and super-Poissonian statistics (classical light), gk,µ (0) ≥ 1; for sub-Poissonian statistics (non-classical
+                (2)
+light), 0 ≤ gk,µ (0) < 1.
+  To evaluate gk,µ (0), we start by computing ⟨(â†k,µ )n ânk,µ ⟩, which represents the numerator and denominator of our
+                      (2)
+
+function when setting n = 2 for the former and n = 1 for the latter. For this general case, we obtain
+                               Z     Z     Z     Z            P∥ (α∥ , β∥∗ ) P⊥ (α⊥ , β⊥
+                                                                                       ∗ 
+                                                                                         )
+      ⟨(â†k,µ )n ânk,µ ⟩ = ϵn d2 α∥ d2 β∥ d2 α⊥ d2 β⊥                                    [d∗β,µ (ωk )]n dnα,µ (ωk )
+                                                                  β∥ α∥       ⟨β⊥ |α⊥ ⟩
+                                                                                                     Y                     (102)
+                                                                 × ⟨χβ,k0 | D̂† (β)D̂(α) |χα,k0 ⟩          ⟨χβ,k |χα,k ⟩ ,
+                                                                                                k̸=k0
+                                                                                                                               29
+
+where we denote D̂(α) = D̂∥ (α∥ ) ⊗ D̂⊥ (α⊥ ). In the following, we evaluate the matrix elements of this displacement
+operator. For the sake of clarity, we use a simplified notation
+                                  1     ∗   ∗           1    ∗              ∗
+  ⟨χβ | D̂† (β)D̂(α) |χα ⟩ = e 2 (αχα −α χα ) e 2 (β χβ −βχβ ) ⟨β + χβ |α + χα ⟩                                             (103)
+                                                                                                                   
+                               1    ∗   ∗       1   ∗        ∗        1         2         2
+                           = e 2 (αχα −α χα ) e 2 (β χβ −βχβ ) exp − |β + χβ | + |α + χα | − 2(β + χβ )∗ (α + χα )
+                                                                                                                   
+                                                                                                                             (104)
+                                                                      2
+                                                                                        
+                               1    ∗   ∗       1   ∗        ∗        1    2       2
+                           = e 2 (αχα −α χα ) e 2 (β χβ −βχβ ) exp − (|α| + |β| − 2β ∗ α
+                                                                      2
+                                                                                                                    
+                                        1        2        2
+                             × exp − |χβ | + |χα | + β ∗ χβ + βχ∗β + α∗ χα + αχα − 2β ∗ χα − 2χβ α − 2χ∗β χα
+                                                                                                                    
+                                                                                                                             (105)
+                                        2
+                           = ⟨β|α⟩ f (dα , dβ , ϵα , ϵβ ),                                                                   (106)
+
+where in the last equality we have identified a term accounting for the overlap ⟨β|α⟩, and defined
+                        1         ∗    ∗        1   ∗             ∗
+  f (dα , dβ , ϵα , ϵβ ) = e 4 (εα dα −εα dα ) e 4 (εβ dβ −εβ dβ )
+                                                                                                                             (107)
+                                                                                                                        
+                                        1            2            2
+                           × exp − 2ϵ2 |dβ | + 2|dα | + ε∗β dβ + εβ d∗β + ε∗α dα + εα d∗α − ε∗β dα − d∗β εα − 2ϵ2 d∗β dα ,
+                                                                                                                        
+                                        4
+
+where we have taken into account that χα = ϵ2 dα , with dα a shorthand notation for the Fourier transform of the
+time-dependent dipole moment, and that εα = 2ϵα. We observe than in the classical limit ϵ → 0, f (dα , dβ , ϵα , ϵβ )
+remains finite. Since |χα | ≪ 1 at the single-atom level, we approximate f (dα , dβ , ϵα , ϵβ ) → 1. This allows us to
+express Eq. (102) as
+                               Z     Z    Z      Z
+           †    n n          n
+                                 d α∥ d β∥ d α⊥ d2 β⊥ P∥ (α∥ , β∥∗ )P⊥ (α⊥ , β⊥
+                                  2    2    2                                 ∗
+                                                                                ) [d∗β,µ (ωk )]n dnα,µ (ωk ) ,
+                                                                                 
+       ⟨(âk,µ ) âk,µ ⟩ = ϵ                                                                                     (108)
+
+                                                                                                (2)
+such that in the classical limit ϵ → 0—obtained as in Sec. II—gk,µ (0) reads, for the case of coherent∥ + squeezed⊥
+drivers, as follows
+                                                             (i)   (i)     (i)               4
+                                             (2)         ∫ dεα,⊥ p(εα,⊥ , ε̄α,⊥ )|dα,µ (ωk )|
+                                            gk,µ (0) = h                                              i2 ,                   (109)
+                                                             (i)   (i)     (i)               2
+                                                         ∫ dεα,⊥ p(εα,⊥ , ε̄α,⊥ )|dα,µ (ωk )|
+
+                            (i)       (i)                   (i)       (i)
+where we note that p(εα,⊥ , ε̄α,⊥ ) ≥ 0 ∀εα,⊥ , ε̄α,⊥ . This result matches with those derived in the Supplementary
+Material of Ref. [29].
+   We can further leverage the positive-semidefinite property of the weighting function to establish tighter bounds on
+                  (2)
+the behavior of gk,µ (0). Notably, both the numerator and denominator can be computed as the expected value of
+   † n n
+(â ) â operators applied to the following effective state
+                                              Z
+                                                    (i)   (i)   (i)    (ε )    (ε )
+                                       ρ̂eff = dεα,⊥ p(εα,⊥ , ε̄α,⊥ )|χk,µα ⟩⟨χk,µα |,                           (110)
+
+which represents a statistical mixture of various coherent states. States of this form are classical states of light and,
+as such, they yield to
+                                                                                 (2)
+                                                                                gk,µ (0) ≥ 1,                                (111)
+
+where equality holds when considering only coherent states of light. Importantly, these results are independent
+of the squeezing direction i, so we conclude that the harmonics will either exhibit Poissonian or super-Poissonian
+characteristics.
+   However, it is important to note that this is just one criterion for classifying states as classical or non-classical, and
+it is not unique. Other non-classicality measures could yield different results. Indeed, we expect entanglement to arise
+after the light-matter interaction when squeezed states are used as drivers. This expectation is based on the fact that
+our initial state is a pure state, which, due to the unitarity of the interaction, remains pure post-interaction. Yet, we
+have observed that evaluating a local observable on a specific subsystem—in this case, the optical mode (k, µ)—can
+be done as if using a classical mixture of coherent states. This conversion from pure to mixed states is only possible
+                                                                                                                    30
+
+if partial information has been traced out from the optical system, possibly indicating that the post-interaction state
+is entangled.
+   This argument is only valid for initial configurations of coherent∥ + coherent⊥ or coherent∥ + squeezed⊥ configura-
+tions. For a coherent∥ + thermal⊥ configuration, however, the initial state is already a mixture, so the entanglement
+argument is not applied and a more thorough analysis is therefore needed. Finally, for a coherent∥ + coherent⊥ driver,
+         (2)
+we find gk,µ (0) = 1, consistent with Refs. [11, 48, 49].
+

@@ -1,0 +1,762 @@
+                                            Nonclassical Cutoff Fluctuations in Squeezed-Light-Driven High-Harmonic Generation
+
+                                                                     Tsendsuren Khurelbaatar,1, 2, ∗ R. T. Sang,1, 2, 3 and Igor Litvinyuk1, 2
+                                                                               1
+                                                                                 Quantum and Advanced Technologies Research Institute,
+                                                                               Griffith University, Brisbane, Queensland 4111, Australia
+                                                          2
+                                                            School of Environment and Science, Griffith University, Brisbane, Queensland 4111, Australia
+                                                                3
+                                                                  Office of the Pro Vice-Chancellor (Research, Development and Commercialisation),
+                                                                            University of Southern Queensland, Springfield 4300, Australia
+                                                                                                  (Dated: May 22, 2026)
+                                                             Strong-field high-harmonic generation (HHG) is conventionally described semiclassically, with
+                                                          the driving laser treated as a classical field. This approximation becomes insufficient in nanoscale
+                                                          interaction geometries, where extreme spatial confinement raises the vacuum-field amplitude to
+                                                          the ∼ 10−2 level relative to the driving-field amplitude. When the quantum fluctuations of the
+                                                          driving field are redistributed between conjugate quadratures by squeezing, they can be directly
+
+
+
+
+arXiv:2605.21925v1 [quant-ph] 21 May 2026
+                                                          imprinted onto macroscopic HHG observables. To model this interaction, we employ a Wigner
+                                                          phase-space approach that maps the quantum-optical driver onto a stochastic ensemble of time-
+                                                          dependent Schrödinger equation realizations. Although each realization remains classically simulable,
+                                                          the sub-vacuum quadrature covariance structure of squeezed states cannot be reproduced by any field
+                                                          admitting a non-negative Glauber–Sudarshan P-representation. Within this single-mode Gaussian
+                                                          framework, we show that amplitude squeezing suppresses the shot-to-shot variance of the HHG
+                                                          cutoff below the standard quantum limit (SQL). To leading order in the vacuum-to-driver ratio, the
+                                                          normalized cutoff variance decays exponentially with the squeezing parameter, independent of the
+                                                          absolute vacuum-field amplitude and therefore robust against uncertainties in the effective nanoscale
+                                                          mode volume. A subleading phase-noise contribution from the anti-squeezed quadrature produces a
+                                                          variance minimum near ropt ≈ 1.6, providing a concrete experimental target. These results establish
+                                                          the HHG cutoff variance ratio as a nonlinear, self-calibrating Heisenberg witness in which sub-SQL
+                                                          scaling directly reflects the redistribution of quantum uncertainty in the driving field.
+
+
+                                                              I.   INTRODUCTION                                progress, a central question remains unresolved: under
+                                                                                                               what specific conditions do quantum field statistics mani-
+                                               Attosecond science fundamentally rests on high-                 fest in macroscopic strong-field observables, and how can
+                                            harmonic generation (HHG), a strongly nonperturbative              their unique signatures be distinguished from classical
+                                            process accurately captured by the semiclassical three-            stochastic noise?
+                                            step model [1, 2]. In the conventional treatment of this              The standard reference for making this distinction is
+                                            process, the driving laser is assumed to be a deterministic        the standard quantum limit (SQL), which represents the
+                                            classical field, rendering photon statistics operationally         coherent-state shot-noise floor. The decisive criterion
+                                            irrelevant. This approximation is well-justified in free-          for nonclassicality is the non-negativity of the Glauber–
+                                            space focusing geometries, where the large quantization            Sudarshan P-representation [19, 20]. Any field with P ≥ 0
+                                            volume heavily suppresses the vacuum-field amplitude,              is strictly a statistical mixture of coherent states, meaning
+                                            rendering quantum fluctuations negligible relative to the          every marginal quadrature variance is bounded below by
+                                                                                                                                       2
+                                            amplitude of the driving field. Built upon this determinis-        the vacuum value (σX      θ
+                                                                                                                                           ≥ 1/2 for any rotated quadrature
+                                            tic foundation, HHG has successfully underpinned isolated          Xθ = X cos θ + P sin θ). Consequently, observing sub-
+                                            attosecond pulse generation [3, 4], nonsequential double           SQL fluctuations in any single quadrature serves as a
+                                            ionization [5, 6], and a broad spectrum of nonperturbative         rigorous certification of nonclassicality. To date, however,
+                                            laser–matter phenomena.                                            no strong-field observable has been identified that pro-
+                                               Recent developments in quantum light sources, how-              vides an experimentally accessible, sub-SQL operational
+                                            ever, are beginning to challenge this established paradigm.        witness.
+                                            Bright squeezed vacuum [7–9] and related nonclassical                 Here, we identify such an observable. We show that the
+                                            fields are now being used to drive strong-field processes,         HHG cutoff variance, when normalized to its coherent-
+                                            establishing strong-field quantum optics as a rapidly              state SQL value, acts as a self-calibrating Heisenberg
+                                            evolving experimental frontier [10–13]. Parallel theoret-          witness. By “Heisenberg witness,” we mean an observ-
+                                            ical work on quantum-optical driving [14–17] has pre-              able whose sub-SQL scaling certifies the redistribution
+                                            dicted phenomena that extend beyond the semiclassical              of uncertainty between conjugate quadratures imposed
+                                            framework, including the generation of Schrödinger cat-           by the Heisenberg constraint. Its leading-order scaling
+                                            states during laser–matter interactions [18]. Despite this         is dictated entirely by the squeezing parameter and re-
+                                                                                                               mains independent of the effective quantization volume
+                                                                                                               Veff , which is typically the largest source of theoretical
+                                                                                                               uncertainty in nanoscale geometries. The effect is most
+                                            ∗ t.khurelbaatar@griffith.edu.au
+                                                                                                               pronounced in nanoscale interaction volumes—such as
+                                                                                                                             2
+
+nanoplasmonic hotspots, metallic nanotips, semiconduc-                   II.     THEORETICAL FRAMEWORK
+tor nanostructures, and dielectric metasurfaces [21–25].
+In these systems, spatial confinement reduces the quan-                          A.    Squeezed coherent states
+tization volume of the driving field to the scale of the
+electron excursion, thereby elevating the vacuum-field              To capture the interplay between quantum statistics
+amplitude and allowing quantum fluctuations to reach             and strong-field dynamics, we first define the properties
+the ∼ 10−2 level relative to the driving field amplitude         of the displaced squeezed states driving the interaction,
+(as detailed in Sec. II B).                                      denoted |α, ξ⟩ = D̂(α)Ŝ(ξ) |0⟩. Following standard con-
+   An enhanced vacuum-field amplitude alone is in-               ventions [27, 28], the displacement is applied after the
+sufficient: the resulting isotropic vacuum fluctuations          squeezing operator. The complex displacement α = |α|eiϕ
+merely broaden the field distribution without producing          specifies the mean coherent amplitude and optical phase,
+quadrature-selective effects. The critical ingredient is         while the squeezing parameter ξ = reiθ determines the
+instead the constrained redistribution of these vacuum           magnitude r ≥ 0 and angle θ of the quadrature redistri-
+fluctuations between conjugate quadratures, a direct con-        bution. In our notation, r > 0 with θ = 0 represents
+sequence of the Heisenberg uncertainty relation, whereby         amplitude squeezing (AS), which suppresses fluctuations
+suppression in one quadrature necessitates enhancement           of the in-phase quadrature X below the vacuum level.
+in the other.                                                    Conversely, θ = π/2 represents phase squeezing (PS),
+   To systematically model this, we treat the problem            suppressing fluctuations of the orthogonal quadrature P .
+using a Wigner phase-space formulation, which maps                  By definition, these states saturate the Heisenberg un-
+the quantum-optical driving exactly onto a stochastic en-        certainty relation,
+semble of time-dependent Schrödinger equation (TDSE)
+realizations [26]. Because squeezed coherent states possess                                  σX σP = 12 ,                  (1)
+positive Gaussian Wigner distributions, this mapping is
+exact. This yields two major consequences. First, the real-      where σX and σP represent the standard deviations of
+izations themselves are classically simulable, meaning the       the dimensionless quadratures. Atomic units (ℏ = me =
+dynamics admit a sample-by-sample classical stochastic           e = a0 = 1) are used throughout unless otherwise stated.
+representation. Second, squeezed states possess a sub-           Squeezing effectively redistributes a fixed quantum uncer-
+vacuum quadrature covariance structure that cannot be            tainty budget between the conjugate quadratures while
+reproduced by any single-mode classical stochastic field         preserving this minimum-uncertainty product. When
+with a non-negative P-representation. Such states are            viewed in phase space, this transformation stretches the
+admissible because the Heisenberg bound σX σP ≥ 1/2              isotropic circular profile of a coherent state into an ellipse
+                                               2
+permits minimum-uncertainty states with σX        < 1/2, pro-    of equal area, as illustrated in Figs. 1(a)–(c).
+vided the conjugate quadrature variance is correspond-              For states aligned with the principal quadratures, these
+ingly enhanced. The distinguishing quantum feature,              variances scale exponentially with r. Under the AS con-
+therefore, is rooted in the covariance structure of the ad-      vention, we have
+missible field statistics rather than in the realization-level
+dynamics themselves.                                                            2
+                                                                               σX (r) = 12 e−2r ,    σP2 (r) = 12 e+2r ,   (2)
+   Based on this framework, our analysis yields three
+primary results. First, within the single-mode Gaus-             with the assignments interchanging for PS. The anti-
+sian framework, amplitude squeezing suppresses the HHG           squeezed quadrature becomes important when channeled
+cutoff variance ∆H 2 below the SQL. We find that the             through the highly nonlinear Ammosov–Delone–Krainov
+leading-order behavior of the ratio ∆H 2 /∆HSQL   2
+                                                       = e−2r    (ADK) equation [29]: even modest quadrature redistribu-
+is independent of the absolute vacuum-field amplitude.           tion is amplified, resulting in measurable modifications
+Second, we observe that the variance depends continu-            to the strong-field response.
+ously on the squeezing angle θ, mirroring the orientation
+of the Wigner ellipse in phase space. Third, we identify a
+subleading phase-noise channel driven by the conjugate           B.    Wigner phase-space mapping and vacuum-field
+quadrature variance (σP2 ∝ e+2r ). This channel produces a                            amplitude
+distinct variance minimum at ropt ≈ 1.6 within our saddle-
+point evaluation, illustrating a measurable competition
+between conjugate-quadrature noise contributions to the             To connect these quantum states to the strong-field
+same macroscopic observable. Ultimately, the robust nor-         electron response, we utilize the Wigner phase-space for-
+malization of the HHG cutoff variance ratio provides a           mulation. Because squeezed coherent states possess pos-
+Heisenberg witness that is protected against uncertainties       itive Gaussian Wigner distributions, quantum expecta-
+in Veff .                                                        tion values map exactly onto stochastic classical aver-
+                                                                 ages [26, 30, 31]. This effectively reduces the driven
+                                                                 quantum-optical strong-field problem to an ensemble of
+                                                                 independent stochastic field realizations, each appropri-
+                                                                 ately weighted by the Wigner distribution. Crucially, this
+                                                                                                                                                                                 3
+
+                                                            CS                                            AS (r = 1)                                  PS (r = 1)
+
+                                   4       (a)                                                (b)                                         (c)
+
+                                   2
+
+
+
+                  Quadrature P
+                                   0
+
+
+                                 −2
+
+                                                                     Vacuum Limit
+                                 −4                                  State Noise
+
+                                       0         2      4        6         8        10   0          2      4       6        8   10   0          2      4       6        8   10
+                                                     Quadrature X                                       Quadrature X                                Quadrature X
+
+
+                                  10       (d)                                                (e)                                         (f)
+
+                                   5
+
+
+
+             E(t) (a.u.)
+                                   0
+
+
+                                 −5
+
+
+                                 −10
+
+                                   −2            −1         0          1            2    −2         −1         0        1       2    −2         −1         0        1       2
+                                                     Time (cycles)                                      Time (cycles)                               Time (cycles)
+
+FIG. 1. Wigner phase-space representation and stochastic field realizations. Top row: Wigner distributions for
+(a) a coherent state (CS), (b) an amplitude-squeezed state (AS, r = 1), and (c) a phase-squeezed state (PS, r = 1). Teal
+points are quadrature pairs (Xi , Pi ) sampled from the corresponding Wigner distribution; solid black ellipses are the 1σ
+contours, and dashed crimson circles indicate the SQL. Bottom row: time-domain field realizations E(t) for (d) coherent,
+(e) amplitude-squeezed, and (f) phase-squeezed pulses. Thin teal lines show individual stochastic realizations; the solid black
+line is the mean field. In (f), a rare high-amplitude realization (highlighted in orange) illustrates the statistical fluctuations
+responsible for the HHG cutoff extension.
+
+
+mapping is exact rather than a semiclassical approxima-                                                        inherently obey the Heisenberg constraint. Each sampled
+tion, meaning the realization-level dynamics are classically                                                   pair defines a deterministic time-domain field realization,
+simulable. The divergence from classicality occurs only at                                                                      "               2 #
+the level of admissible covariance: any single-mode classi-                                                                                  ωt
+                                                                                                               Ei (t) = Evac exp −2 ln 2              (Xi cos ωt + Pi sin ωt) ,
+cal stochastic field satisfying P ≥ 0 must have a marginal                                                                                  2πN
+quadrature variance bounded below by 1/2 in any rotated                                                                                                                   (7)
+direction, a bound that squeezed states violate by design.                                                     where ω is the carrier frequency, N is the pulse duration in
+   When squeezing is aligned with the principal quadra-                                                        optical cycles, and the vacuum-field amplitude is defined
+tures (θ = 0 or π/2), the Wigner distribution takes the                                                        as
+form of a diagonal Gaussian,                                                                                                                 r
+                                                                                                                                                2πω
+                     1
+                              
+                                  (X − Xc )2    P2
+                                                                                                                                     Evac =         .                    (8)
+   W (X, P ) =             exp −             − 2 , (3)                                                                                          Veff
+                 2πσX σP               2
+                                     2σX       2σP                                                             Representative time-domain realizations generated from
+where Xc = |α| and Pc = 0. To accommodate arbitrary                                                            Eq. (7) are shown in Figs. 1(d)–(f). For the coherent state
+angles θ, the distribution naturally generalizes to a rotated                                                  [Fig. 1(d)], individual shots fluctuate about the mean field
+Gaussian with an off-diagonal covariance structure:                                                            at the SQL level. Amplitude squeezing [Fig. 1(e)] sup-
+                                                                                                               presses amplitude fluctuations near the field extrema,
+             2
+               (θ) = 21 cos2 θ e−2r + sin2 θ e+2r ,
+                                                  
+            σX                                             (4)                                                 while the conjugate phase quadrature is correspondingly
+             2        1    2    −2r      2    +2r
+                                                  
+            σP (θ) = 2 sin θ e      + cos θ e       ,      (5)                                                 broadened. Conversely, phase squeezing [Fig. 1(f)] stabi-
+                      1             +2r    −2r
+                                                                                                              lizes the phase but substantially broadens the amplitude
+          σXP (θ) = 2 sin θ cos θ e     −e       .         (6)
+                                                                                                               distribution. A rare high-amplitude realization (high-
+This rotated covariance formulation underlies the θ-                                                           lighted in orange) illustrates the statistical outliers re-
+dependent simulations discussed in Sec. III C. As expected,                                                    sponsible for the above-cutoff HHG extension discussed
+the cross-covariance vanishes entirely at θ = 0 and π/2.                                                       in Sec. III B.
+  By performing Monte Carlo sampling of Eq. (3), we                                                               The physical geometry of the nanostructure is encoded
+generate an ensemble of quadrature pairs (Xi , Pi ) that                                                       entirely within Veff through Eq. (8). As a representa-
+                                                                                                                                                                            4
+
+tive order-of-magnitude estimate (evaluated in SI units),
+                                                                                                              (a)                                              CS
+setting Veff ∼ (λ/300)3 at a wavelength of λ = 1500 nm                                                                                                         AS
+                                                                                                  1.0
+yields Evac ∼ 2.4 × 108 V/m. In contrast, a peak in-                                                                                                           PS
+
+
+
+
+                                                                      Ionization Contrib. P(I) £ ¡(I)
+tensity of I0 = 1014 W/cm2 produces a macroscopic
+peak field of E0 ∼ 2.7 × 1010 V/m. The resulting ra-                                              0.8
+tio Evac /E0 ∼ 10−2 is consistent with tightly confined
+nanoscale regimes currently accessible in state-of-the-art
+
+                                                                                                                                                                      ADK ¡(I)
+experimental platforms [21, 22, 24, 25]. Three indepen-                                           0.6
+dent atomic-unit-based estimates confirm that this ratio                                                                                          ADK ¡(I)
+is physically well-motivated for near-field nanoplasmonic                                         0.4
+geometries as detailed in the SM [32].
+
+                                                                                                  0.2
+  C.    Stochastic TDSE and the cutoff observable
+
+                                                                                                  0.0
+   With the stochastic field realizations defined, we eval-                                                    0.9        1.0       1.1          1.2         1.3
+uate the strong-field electron dynamics. For each real-                                                                 Normalized Intensity I=I0
+ization Ei (t) drawn from Eq. (7), we numerically solve
+the one-dimensional length-gauge TDSE for an argon                                         1.30
+model atom (Ip ≈ 15.8 eV, modeled via a soft-core poten-                                                      (b)               AS (Exact)
+tial [33, 34]). The target is driven by a linearly polarized                                                                    PS (Exact)
+                                                                                           1.25                                 Analytical (Eq. 15)
+two-cycle pulse at λ = 1500 nm with a peak intensity
+I0 = 1014 W/cm2 , placing the dynamics in the tunneling
+regime with the Keldysh parameter γ ≲ 0.5 [35]. We uti-                    ­ ®             1.20
+
+
+                                                                Norm. Yield ¡ =¡ coh
+lize a 1D atomic target to provide a controlled platform
+for testing our statistical predictions; the nanoscale geom-                               1.15
+etry enters the problem exclusively through the parameter
+Evac . Comprehensive numerical details and convergence
+                                                                                           1.10
+tests are available in the SM [32].
+   The HHG spectrum for each individual realization is
+calculated from the Fourier transform of the Ehrenfest                                     1.05
+dipole acceleration,
+                                                                                           1.00
+                                         
+                              ∂V
+                  a(t) = −        − E(t) ,                (9)
+                              ∂x                                                                        0.0             0.5         1.0               1.5           2.0
+following the standard approach of Refs. [36, 37]. The                                                                    Squeezing Parameter r
+resulting spectral intensity is given by
+                     Z ∞                     2                    FIG. 2. Statistical filtering of tunnel ionization. (a) Ion-
+            S(ω) =        a(t) W (t) e−iωt dt ,    (10)           ization contribution P (I)Γ(I) versus normalized intensity I/I0
+                      −∞                                          for CS (black dashed), AS (blue), and PS (red shaded). The
+                                                                  bare ADK rate Γ(I) (gray dotted, right axis) illustrates ex-
+where W (t) is an applied Blackman window. From each              ponential weighting toward rare high-intensity realizations.
+calculated Si (ω), we extract a per-shot cutoff position          (b) Normalized ionization yield ⟨Γ⟩/Γcoh versus r, comparing
+Hi . This is defined as the spectral position where the           numerical evaluation of Eq. (12) for AS (blue dashed) and PS
+smoothed log Si (ω) curve drops a predetermined number            (red dashed) with the analytical approximation Eq. (15) (filled
+of decades below its characteristic plateau value (the            symbols).
+exact extraction protocol is detailed in the SM [32]). The
+statistical mean ⟨H⟩ and variance ∆H 2 = ⟨H 2 ⟩ − ⟨H⟩2
+are calculated as ensemble averages over Nshot = 1000                                                                    III.   RESULTS
+distinct realizations.
+  Crucially, ∆H 2 is a directly extractable quantity from
+                                                                                                        A.      Ionization and statistical filtering
+standard shot-to-shot HHG measurements, requiring nei-
+ther homodyne detection nor photon-counting capabilities.
+Because the variance signatures derived below originate              In the tunneling regime (γ < 1) [35], the instantaneous
+fundamentally from the statistics of the driving field,            ionization rate is highly nonlinear and is well-described
+they are expected to remain physically robust beyond the           by the ADK formula [29]:
+present 1D implementation. We provide validation of this                                                                                        
+robustness against deterministic TDSE simulations in the                                                                                B
+                                                                                                                     Γ(E) ∼ A(E) exp −                 ,            (11)
+SM [32].                                                                                                                               |E|
+                                                                                                                                                                                  5
+
+where B = 23 (2Ip )3/2 and A(E) is a weakly field-                                                     −1       (a)                                          CS (r = 0)
+                                                                                                  10
+dependent prefactor. The macroscopic, observable yield                                                                                                       AS (r = 2:5)
+is the convolution of this rate with the field statistics:                                        10
+                                                                                                       −3                                                    PS (r = 2:5)
+                      Z ∞                                                                                                                                    Classical Cutoff
+                ⟨Γ⟩ =       dE Q(E)Γ(E),                (12)                                           −5                                                    PS Theory (Eq. 18)
+                                                                                                  10
+
+
+
+
+                                                                Yield (arb. units)
+                        −∞
+                                                                                                       −7
+where Q(E) represents the marginal field distribution at                                          10
+the pulse maximum.                                                                                10
+                                                                                                       −9
+
+   The steep exponential structure of Eq. (11) effectively
+                                                                                                   −11
+acts as a statistical filter. Rare, high-amplitude field                                   10
+realizations [e.g., see Fig. 1(f)] are weighted exponentially                                      −13
+more strongly than fluctuations occurring near the mean                                    10
+field, as visualized in Fig. 2(a). By expanding ln Γ(E) as                                         −15
+                                                                                           10
+a Taylor series about the mean field E0 ,
+                                                                                                   −17
+                          B       B                                                        10
+  ln Γ(E) = ln Γ(E0 ) +       δE − 3 δE 2 + O(δE 3 ), (13)                                                  0         25   50     75     100     125     150      175    200
+                          E02     E0                                                                                                Harmonic Order
+and applying a cumulant expansion tailored to the Gaus-
+sian field distribution, we can isolate the leading-order                                         200           (b)                    TDSE
+yield as                                                                                                                               CS (SQL)
+                                   2                                                                                                  Analytical (Eq. 18)
+                                                                                                  180
+                                             
+               ⟨Γ⟩      2    2     B      B
+           ln        ≃ Evac σX (r)      − 3 .        (14)
+
+
+
+
+                                                                         Cutoff Position (H.O.)
+              Γ(E0 )               2E04   E0
+                                                                                                  160
+The bracketed coefficient captures two competing effects:
+a positive enhancement arising from the squared linear
+term in Eq. (13), and a partial cancellation from the neg-                                        140
+ative quadratic correction. For the physical parameters
+considered here, the first term dominates, resulting in                                           120
+a net yield enhancement whenever amplitude statistics
+are broadened. If we define the dimensional vacuum field
+           2       2                                                                              100
+variance σvac = Evac /2 and a dimensionless parameter
+η = σvac (B /2E0 − B/E03 ), the effective ensemble yield,
+      2     2    4
+
+normalized to the coherent-state yield (Γcoh ), simplifies                                                      0.5        1.0         1.5        2.0          2.5         3.0
+to                                                                                                                               Squeezing Parameter r
+                ⟨Γ⟩
+                     ≃ exp η e−2r − 1 .
+                                      
+                                                      (15)
+               Γcoh                                             FIG. 3. HHG cutoff extension under squeezed-field
+   Figure 2(b) demonstrates that this statistical enhance-      driving. (a) Ensemble-averaged HHG spectra for CS (black),
+ment is sensitive to the specific quadrature variance. PS       AS (blue), and PS (red) drivers at r = 2.5. The classical cutoff
+                                                                Ip + 3.17Up (E0 ) (gray dashed) and the analytical stochastic
+states exhibit a monotonic yield enhancement due to their
+                                                                prediction Eq. (18) (red dotted, PS Theory) are indicated.
+broadened amplitude statistics. Conversely, AS states           (b) Extracted cutoff position versus r from TDSE simulations
+produce little modification; their suppressed amplitude         (filled circles) and from the analytical prediction Eq. (18) (red
+fluctuations are transferred into the phase quadrature,         solid) for the phase-squeezed (PS) case, with the coherent-
+which does not couple at leading order to the tunneling         state SQL reference (gray dashed).
+exponent. We emphasize that this enhancement is a sta-
+tistical consequence, not an exclusively quantum one: any
+classical field possessing an identical marginal amplitude
+distribution would generate the same yield response. The        ure 3(a) displays the ensemble-averaged HHG spectra
+role of the squeezed state here is to provide a rigorously      computed at a fixed mean field E0 . When compared to
+Heisenberg-bounded, experimentally tunable mechanism            the coherent-state reference, the PS driver generates a
+for shaping single-shot field statistics. Quantum signa-        significant above-cutoff extension spanning several tens of
+tures emerge when examining fluctuations of the HHG             harmonic orders (H.O.), whereas the AS spectrum remains
+cutoff.                                                         close to the classical limit. This high-energy extension is a
+                                                                direct macroscopic consequence of the statistical filtering
+                                                                detailed in Sec. III A: a small subset of high-amplitude
+               B.   HHG cutoff extension                        stochastic realizations contributes disproportionately to
+                                                                the ensemble, generating larger ponderomotive energies
+ The statistical filtering of the ionization step funda-        and pushing the rate-weighted cutoff beyond the mean-
+mentally shapes the macroscopic HHG spectrum. Fig-              field prediction. Each individual realization strictly obeys
+                                                                                                                             6
+
+the standard classical cutoff law,                                   With this in mind, we construct a classical benchmark
+                                                                  to serve as the most permissive single-mode model consis-
+                 Ecutoff = Ip + 3.17Up (E),               (16)    tent with P ≥ 0. In this benchmark, we allow full freedom
+                                                                  to identically match the squeezed-state amplitude variance
+evaluated at its own instantaneous field amplitude. The             2
+                                                                  σX  (r, θ), while fixing the conjugate variance at σP2 = 1/2
+observed extension emerges upon statistical averaging
+                                                                  to saturate the SQL bound from below. Because introduc-
+over the ensemble.                                                                              cl
+                                                                  ing classical correlations σXP   ̸= 0 cannot push a marginal
+  Mathematically, the ensemble cutoff behaves as the                                                              cl
+                                                                  variance below the vacuum limit, choosing σXP       = 0 does
+rate-weighted average
+                                                                  not artificially weaken the comparison. Any alternative
+                                     ⟨Γ(E)Up (E)⟩                 classical field with σP2 < 1/2 would inherently certify its
+            ⟨Ecutoff ⟩ = Ip + 3.17                .       (17)    own nonclassicality, and any with σP2 > 1/2 would repre-
+                                        ⟨Γ(E)⟩
+                                                                  sent a more conservative bound. Our benchmark therefore
+By expanding Up (E) about E0 and integrating this with            represents the tightest single-mode classical comparison
+the previously derived cumulant expansion of the ADK              available, isolating the impact of the covariance structure
+rate, we arrive at an analytical expression for the cutoff        imposed by the strict saturation σX σP = 1/2.
+shift:                                                               When examining the mean cutoff behavior, we find it
+                                        
+                                             2B
+                                                                is classically reproducible. Figure 4(a) plots ⟨H⟩ versus
+                                       2
+  Ecutoff (r) ≃ Ip + 3.17Up (E0 ) 1 + ϵ 1 +         , (18)        θ at a fixed r = 1.5. The quantum and classical results
+                                             E0                   are nearly indistinguishable, consistent with our finding
+which is valid in the ϵ ≪ 1 limit. Here, the small parame-        from Eq. (18) that the mean shift relies exclusively on
+ter ϵ is defined as                                               the marginal amplitude variance.
+                                                                     The fluctuations, however, distinguish between the two
+                           Evac er                                regimes [Fig. 4(c)]. The classical benchmark remains SQL-
+                        ϵ= √       ,                      (19)
+                             2 E0                                 bounded across all values of θ, whereas the squeezed state
+                                                                  descends below the SQL, reaching a minimum at θ = 0.
+and dictates the magnitude of the largest quadrature fluc-
+                                                                  By linearizing the classical cutoff relationship [Eq. (16)]
+tuation relative to the mean driving field. All analytical
+                                                                  about E0 , we obtain δH ≃ (∂H/∂E) δE. The derivative
+expressions in this work are asymptotic in this parameter.
+                                                                  term (∂H/∂E) = 2(3.17Up (E0 )/E0 ) is identical for both
+As shown in Fig. 3(b), the analytical model captures both
+                                                                  quantum and classical drivers evaluated at the same E0 .
+the magnitude and the monotonic scaling of the TDSE-
+                                                                  The resulting variance is ∆H 2 = (∂H/∂E)2 σδE       2
+                                                                                                                         , with
+extracted cutoffs at moderate squeezing levels (e.g., at            2       2   2
+                                                                  σδE = Evac σX (r, θ = 0) in the case of amplitude squeezing.
+r = 1.5, ϵ ∼ 3 × 10−2 ). Predictable deviations emerge
+                                                                  By normalizing this expression against the coherent-state
+at larger r (such as r = 3.0, where ϵ ∼ 1.4 × 10−1 ), as
+                                                                  variance at the same mean field, both the linear-response
+higher-order cumulants become non-negligible.
+                                                                  prefactor and the absolute vacuum-field amplitude cancel
+   While the mean cutoff extension demonstrates sensi-
+                                                                  at leading order:
+tivity to the underlying field statistics, it does not intrin-
+sically establish nonclassicality: an engineered classical                     ∆H 2 (r)  σ 2 (r, θ = 0)
+stochastic field with matched amplitude statistics would                          2     = X 2           = e−2r .          (20)
+                                                                               ∆HSQL        σX,SQL
+reproduce an identical mean cutoff shift. To find a deci-
+sive distinction, we must look to the fluctuations of the         This cancellation is exact at O(ϵ0 ). Conversely, phase
+HHG cutoff.                                                       squeezing (θ = π/2) yields ∆H 2 /∆HSQL2
+                                                                                                             = e+2r > 1, con-
+                                                                  sistent with the super-SQL behavior visible in Fig. 4(c).
+                                                                  While explicit dependence on Evac does re-emerge at
+       C.   Quadrature-resolved cutoff statistics                 higher orders (particularly when incorporating the phase-
+                                                                  noise channel discussed below), to leading order, Eq. (20)
+   To establish a classicality criterion, we recall that a        is independent of Veff . This constitutes the central result
+single-mode field is considered classical in the quantum-         of our work: we have isolated a normalized Heisenberg
+optical sense if it admits a positive Glauber–Sudarshan           witness whose scaling behavior is dictated entirely by the
+representation (P ≥ 0) [19, 20]. Because such fields are          squeezing parameter and is protected against the domi-
+statistical mixtures of coherent states, their quadrature co-     nant theoretical uncertainties associated with nanoscale
+variance decomposes as Σ = Σvac + Σcl , where Σvac = 1/2          geometries. Furthermore, across the full angular sweep,
+and Σcl ≥ 0. A corollary of this is that every marginal           ∆H 2 tracks σX 2
+                                                                                   (θ), yielding a quadrature-resolved map-
+variance—including measurements along any arbitrar-               ping between the abstract Wigner ellipse and the physical
+ily rotated quadrature Xθ = X cos θ + P sin θ—remains             cutoff observable.
+bounded strictly below by 1/2. This holds true even                  To ensure a complete physical picture, we must ad-
+                                                     cl
+in the presence of classical cross-correlations (σXP     ̸= 0).   dress the subleading phase-noise channel. Figures 4(b)
+The threshold certification for nonclassicality (i.e., achiev-    and (d) chart ⟨H⟩ and ∆H 2 against r specifically un-
+ing sub-SQL marginal variance) can therefore be applied           der amplitude squeezing. While ∆H 2 closely follows
+rigorously along any selected quadrature direction.               Eq. (20) for r ≲ 1, it develops a minimum near ropt ≈ 1.6.
+                                                                                                                                                                                     7
+
+                                            110                                                                           110
+                                                      (a)                                                                           (b)                            CS (SQL)
+                                            108                                                                           108                                      Eq. (18)
+
+
+
+
+                   Cutoff Position (H.O.)
+                                                                                                                                                                   AS
+                                            106                                                                           106
+
+                                            104                                                                           104
+
+                                            102                                                                           102
+                                                                     CS (SQL)
+                                            100                      Squeezed (AS–PS)                                     100
+                                                                     Classical benchmark
+                                             98                                                                            98
+
+                                                  2                                                                             2
+                                            10                                              10
+                                                                                                 2                        10
+                                                      (c)                                                                           (d)           CS (SQL)
+
+
+
+
+            HHG Cutoff Variance ¢H 2
+                                                                                                                                                  AS
+                                                                                                                                                  e ¡2r (Eq. 20)
+
+
+
+
+                                                                                                      Input Variance ¾X
+                                                                                                                      2
+                                                  1                                                                             1
+                                            10                                                   1                        10                      CX e ¡2r + CP e +2r (Eq. 21)
+                                                                                            10
+
+
+                                                                                                                                0
+                                                  0                                              0                        10
+                                            10                       CS (SQL)               10
+                                                                     Squeezed (AS–PS)
+                                                                     Classical benchmark
+                                                                     Theory (Input ¾X
+                                                                                    2
+                                                                                      )                                        −1
+                                                 −1                                              −1
+                                                                                                                          10
+                                            10                                              10
+                                                      0      ¼=6        ¼=3           ¼=2                                           0         1               2                  3
+                                                            Squeezing Angle µ                                                             Squeezing Parameter r
+
+FIG. 4. Quadrature-resolved HHG cutoff statistics. (a) Mean cutoff ⟨H⟩ versus squeezing angle θ at fixed r = 1.5 for
+the squeezed state (blue circles) and the classical P ≥ 0 benchmark (dark red squares). The CS SQL reference is shown as a
+gray dashed line. (b) Mean cutoff versus r under amplitude squeezing (θ = 0) for AS (blue circles), the CS SQL reference
+(gray dashed), and the analytical prediction from Eq. (18) (red dotted curve). The exact TDSE diverges upward from the
+analytical model at extreme squeezing due to higher-order phase noise contributions. (c) HHG cutoff variance ∆H 2 versus
+θ. The squeezed state (blue circles) descends well below the SQL at θ = 0 and remains sub-SQL over an extended angular
+range before crossing the coherent-state reference; the classical benchmark (dark red squares) remains bounded by the SQL
+                                                                                                         2
+across all θ. The right axis and purple dotted curve show the corresponding input quadrature variance σX   (θ), confirming that
+∆H 2 tracks σX 2
+                 (θ) across the full angular sweep. (d) ∆H 2 versus r under amplitude squeezing. The leading-order e−2r scaling
+[Eq. (20)] is shown as a red dotted curve. The two-channel analytical model [Eq. (21), orange dashed curve], plotted up to
+r = 2.2 where the small-parameter expansion remains valid, accurately captures the variance minimum at ropt ≈ 1.6.
+
+
+To model this turnaround, we must include the con-                                                      at the deterministic saddle point of the three-step model;
+jugate quadrature in our linearization. At θ = 0,                                                       their explicit forms and the saddle-point evaluation of
+the cross-covariance vanishes, rendering amplitude and                                                  ropt are derived in the SM [32].
+phase fluctuations statistically independent. By writing                                                  Minimizing this two-channel variance yields an optimal
+δH ≃ (∂H/∂E) δE + (∂H/∂tion ) δtion , the variance sepa-                                                squeezing parameter ropt = 14 ln(CX /CP ). Because the
+rates into two components:                                                                                         2
+                                                                                                        common Evac    factors cancel out, the ratio
+                       ∆H 2 (r) = CX e−2r + CP e+2r ,                                 (21)                               CX
+                                                                                                                                     
+                                                                                                                                        ∂H/∂E
+                                                                                                                                                 2
+                                                                                                                                 2 2
+                                                                                                                             = ω E0                          (23)
+with the respective coefficients defined as                                                                              CP            ∂H/∂tion
+                  2                   2        2                                                 is mode-volume-independent. Thus, the physical loca-
+          2     ∂H                  Evac      ∂H
+ CX = 21 Evac         , CP = 12                        . (22)                                          tion of the optimum is dictated by the strong-field re-
+                ∂E                  ωE0       ∂tion
+                                                                                                       sponse dynamics rather than the specific parameters of
+Here, the factor Evac /(ωE0 ) effectively translates a fluctu-                                         the nanostructure geometry. While the precise location
+ation in the P -quadrature into a corresponding ionization-                                            of this minimum is model-dependent (relying heavily on
+time jitter via the relation δtion ≃ −Evac δP/(ωE0 ), evalu-                                           the saddle-point evaluation of ∂H/∂tion ), the qualitative
+ated at the saddle-point ionization time. The subscripts                                               existence of such an optimum is a general feature. It
+X and P identify which quadrature variance each coeffi-                                                will naturally arise in any setup where conjugate quadra-
+cient couples to. Both partial derivatives are evaluated                                               tures are coupled to the same macroscopic observable via
+                                                                                                                          8
+
+nonlinear strong-field dynamics.                               channel proportional to e+2r . The resulting turnover is
+                                                               therefore a direct manifestation of conjugate-quadrature
+                                                               redistribution under the Heisenberg constraint. Although
+                  IV.    DISCUSSION                            the precise location of the optimum depends on the saddle-
+                                                               point structure underlying the ionization-time integral,
+   The present results establish a clear operational sepa-     its existence is expected to be generic in nonlinear strong-
+ration between classical stochastic effects and covariance-    field observables where both quadratures contribute to
+driven quantum signatures in strong-field dynamics. The        the same response.
+ensemble-averaged HHG cutoff shift [Eq. (18)] depends             Several theoretical limitations should also be empha-
+only on the marginal amplitude distribution of the driv-       sized. The present analysis assumes a single-mode Gaus-
+ing field and therefore admits a fully classical statistical   sian driver and undepleted propagation, with coherent
+interpretation. Any classical stochastic field engineered      phase locking between the squeezed source and the carrier
+to reproduce the same amplitude statistics would gener-        field. Within this single-mode framework, the stochas-
+ate an equivalent mean cutoff response. In contrast, the       tic quadrature pair (Xi , Pi ) induces fluctuations in the
+cutoff variance inherits the constrained redistribution of     carrier-envelope amplitude and phase of an otherwise
+fluctuations between conjugate quadratures imposed by          deterministic pulse envelope; intra-pulse spectral fluctua-
+the Heisenberg relation. Within the single-mode Gaus-          tions are excluded by construction. Dynamical electron–
+sian framework considered here, the resulting sub-SQL          field back-action and propagation-induced mode mixing
+behavior [Figs. 4(c), (d)] cannot be reproduced within any     may perturb the Gaussian covariance structure underlying
+classical Gaussian field admitting a non-negative Glauber–     the witness mechanism. Likewise, extreme spatial con-
+Sudarshan P-representation. The relevant resource is           finement can suppress macroscopic phase matching and
+therefore not the amplitude variance alone, but the full       coherent buildup, potentially requiring extended nanos-
+quadrature covariance structure linking conjugate degrees      tructured emitter arrays, e.g., dielectric metasurfaces, for
+of freedom. The full angular dependence ∆H 2 ∝ σX      2
+                                                         (θ)   practical signal generation [25, 38]. Spatially varying
+provides the decisive test: reproducing this profile simul-    near fields may additionally introduce dephasing through
+taneously for all θ requires det(Σ) = 1/4, i.e., saturation    ponderomotive gradients and trajectory-dependent phase
+of the Robertson–Schrödinger uncertainty bound, a con-        accumulation [22, 39].
+dition satisfied only by minimum-uncertainty quantum              Experimentally, the required operating regime neces-
+states, as established in the SM [32].                         sitates intense squeezed coherent light—a phase-locked
+   The normalized variance ratio derived in Eq. (20) pro-      superposition of a squeezed vacuum and a strong coherent
+vides the operational foundation of the proposed wit-          carrier. Although generating these macroscopic displaced
+ness. At leading order in the small parameter ϵ, the ratio     states differs from the zero-mean bright squeezed vac-
+∆H 2 /∆HSQL2
+               = e−2r becomes independent of the abso-         uum (BSV) utilized in several recent strong-field experi-
+                                       −1/2                    ments, advances in ultrafast quantum light control [13]
+lute vacuum-field amplitude Evac ∝ Veff . Consequently,
+                                                               suggest this parameter space is becoming accessible at
+the witness remains intrinsically calibrated against the
+                                                               mid-infrared wavelengths. Crucially, because the pro-
+dominant uncertainty associated with the effective quanti-
+                                                               posed witness relies exclusively on shot-to-shot spectral
+zation volume in nanoscale confinement geometries. This
+                                                               statistics, its measurement bypasses the need for complex
+distinguishes the present observable from absolute vari-
+                                          2                    homodyne detection or direct quadrature reconstruction.
+ance measurements that scale with Evac       and therefore
+                                                               Instead, the primary experimental challenge lies in stabi-
+inherit substantial uncertainty from the poorly defined
+                                                               lizing the mean driving field; slow drifts in E0 would intro-
+quantization geometry. Although higher-order corrections       duce technical variance that could obscure the predicted
+reintroduce explicit dependence on Evac , the leading-order    sub-SQL scaling. To mitigate this, the simultaneous acqui-
+scaling remains intrinsically calibrated.                      sition of coherent-state reference spectra under identical
+   This robustness also extends naturally to multimode         conditions offers a practical route for common-mode noise
+pulse configurations. Under identical squeezing applied        rejection and rigorous SQL calibration.
+uniformly across all occupied pulse modes, the normalized         More generally, the mechanism identified here is not
+ratio e−2r remains invariant independent of mode number.       restricted to HHG. A broad class of nonlinear processes
+Deviations from this ideal scaling arise when the squeezing    that selectively filter field fluctuations and map quadra-
+bandwidth ∆ωsq does not fully cover the pulse bandwidth        ture covariance into measurable macroscopic responses
+∆ωpulse , leaving unsqueezed spectral components that          may support analogous witness structures, suggesting a
+contribute additional vacuum noise, as quantified in the       wider family of covariance-sensitive strong-field observ-
+SM [32].                                                       ables capable of operationally probing quantum noise
+   The subleading variance minimum observed near ropt ≈        redistribution in nonlinear optical systems.
+1.6 originates from competition between two independent
+fluctuation channels coupled to the same macroscopic
+observable. Amplitude squeezing suppresses the direct
+field-amplitude noise contribution proportional to e−2r ,
+while simultaneously enhancing the conjugate phase-noise
+                                                                                                                               9
+
+                   V.     CONCLUSION                              not specific to HHG. Any sufficiently nonlinear process
+                                                                  that filters a marginal field distribution while coupling
+   In conclusion, we have shown that the shot-to-shot             a conjugate-quadrature channel into the same macro-
+variance of the HHG cutoff energy, when normalized to             scopic response—such as nonsequential double ionization
+its coherent-state value, descends below the SQL under            or strong-field photoelectron interferometry—may sup-
+amplitude squeezed light driving. This normalized ratio           port an analogous witness structure. The findings there-
+constitutes a Heisenberg witness—an observable whose              fore suggest a wider class of covariance-sensitive observ-
+sub-SQL scaling certifies the redistribution of quantum           ables in nonlinear and ultrafast optics, emerging wherever
+uncertainty between conjugate quadratures—and remains             the Heisenberg constraint couples conjugate noise chan-
+operationally accessible using standard shot-to-shot spec-        nels into a common nonlinear response.
+tral measurements without homodyne detection or photon
+counting.
+   Our central result is the leading-order relation                                DATA AVAILABILITY
+
+                                                                    The data that support the findings of this study are
+                        ∆H 2 (r)
+                           2     = e−2r ,                         available from the corresponding author upon reasonable
+                        ∆HSQL                                     request.
+
+which is exact at O(ϵ0 ) and independent of the abso-
+lute vacuum-field amplitude and effective mode volume.                        AUTHOR CONTRIBUTIONS
+This self-calibrating normalization isolates the squeezing-
+induced covariance signature from the dominant geometric            T.K. conceived the theoretical framework, developed
+uncertainties inherent to nanoscale strong-field geometries,      and implemented the stochastic TDSE simulation code,
+distinguishing the present observable from absolute vari-         performed all numerical calculations, and wrote the
+                                       2                          manuscript. R.T.S. and I.L. supervised the project, pro-
+ance measurements that scale with Evac    .
+   We further identified a subleading phase-noise channel         vided critical guidance on the theoretical interpretation
+in which the anti-squeezed conjugate quadrature couples           and manuscript preparation, and reviewed and revised
+back into the same macroscopic observable, producing a            the manuscript. All authors discussed the results and
+variance minimum near ropt ≈ 1.6. The existence of this           approved the final version.
+optimum is generic to nonlinear strong-field processes in
+which conjugate quadratures couple into the same observ-
+able through distinct fluctuation pathways, although its                          ACKNOWLEDGMENTS
+precise location remains model-dependent.
+   More broadly, these results establish a route for trans-         This work was supported by the Australian Research
+ducing quantum-optical covariance into experimentally             Council through the Discovery Project program (Grant
+accessible strong-field observables. The mechanism is             No. DP230101253).
+
+
+
+
+ [1] P. B. Corkum, Plasma perspective on strong field multi-           2642 (1992).
+     photon ionization, Phys. Rev. Lett. 71, 1994 (1993).          [7] T. S. Iskhakov, A. M. Pérez, K. Y. Spasibko, G. Leuchs,
+ [2] M. Lewenstein, P. Balcou, M. Y. Ivanov, A. L’Huillier,            and M. V. Chekhova, Macroscopic bright squeezed vac-
+     and P. B. Corkum, Theory of high-harmonic generation by           uum, Optics Letters 37, 1919 (2012).
+     low-frequency laser fields, Phys. Rev. A 49, 2117 (1994).     [8] M. V. Chekhova, G. Leuchs, and M. Żukowski, Broadband
+ [3] M. Hentschel, R. Kienberger, C. Spielmann, G. A. Rei-             biphotons and bright squeezed vacuum, Optics Commu-
+     der, N. Milosevic, T. Brabec, P. Corkum, U. Heinzmann,            nications 337, 27 (2015).
+     M. Drescher, and F. Krausz, Attosecond metrology, Na-         [9] A. M. Pérez, T. S. Iskhakov, A. Scholl, M. Huber,
+     ture 414, 509 (2001).                                             G. Leuchs, and M. V. Chekhova, Projective filtering of the
+ [4] P.-M. Paul, E. S. Toma, P. Breger, G. Mullot, F. Augé,           fundamental mode from a macroscopic bright squeezed
+     P. Balcou, H. G. Muller, and P. Agostini, Observation of a        vacuum, Physical Review A 92, 053861 (2015).
+     train of attosecond pulses from high harmonic generation,    [10] A. Rasputnyi, Z. Chen, M. Birk, O. Cohen, I. Kaminer,
+     Science 292, 1689 (2001).                                         M. Krüger, D. Seletskiy, M. Chekhova, and F. Tani, High-
+ [5] B. Walker, B. Sheehy, L. F. DiMauro, P. Agostini, K. J.           harmonic generation by a bright squeezed vacuum, Nature
+     Schafer, and K. C. Kulander, Precision measurement of             Physics 20, 1960 (2024).
+     strong field double ionization of helium, Phys. Rev. Lett.   [11] S. Lemieux et al., Photon bunching in high-harmonic
+     73, 1227 (1994).                                                  emission controlled by quantum light, Nature Photonics
+ [6] D. N. Fittinghoff, P. R. Bolton, B. Chang, and A. L.              19, 767 (2025).
+     Osterheld, Observation of nonsequential double ionization    [12] J. Heimerl, A. Rasputnyi, J. Pölloth, S. Meier,
+     of helium with optical tunneling, Phys. Rev. Lett. 69,            M. Chekhova, and P. Hommelhoff, Quantum light drives
+                                                                                                                                 10
+
+     electrons strongly at metal needle tips, Nature Physics              Plasmon-enhanced high-harmonic generation from solid
+     10.1038/s41567-025-03087-1 (2025).                                   silicon, Nature Physics 13, 659 (2017).
+[13] M. Sennary, J. Rivera-Dean, M. ElKabbash, V. Pervak,            [26] K. E. Cahill and R. J. Glauber, Density operators and
+     M. Lewenstein, and M. T. Hassan, Ultrafast quantum                   quasiprobability distributions, Phys. Rev. 177, 1857
+     light uncertainty dynamics in real time, Light: Science &            (1969).
+     Applications 10.1038/s41377-025-02055-x (2025).                 [27] D. F. Walls, Squeezed states of light, Nature 306, 141
+[14] A. Gorlach, M. Even Tzur, M. Birk, M. Krüger, N. Rivera,            (1983).
+     O. Cohen, and I. Kaminer, High-harmonic generation              [28] R. Loudon and P. L. Knight, Squeezed light, Journal of
+     driven by quantum light, Nature Physics 19, 1689 (2023).             Modern Optics 34, 709 (1987).
+[15] U. Bhattacharya, T. Lamprou, A. S. Maxwell, A. Ordóñez,       [29] M. V. Ammosov, N. B. Delone, and V. P. Krainov, Tunnel
+     E. Pisanty, J. Rivera-Dean, P. Stammer, M. F. Ciap-                  ionization of complex atoms and of atomic ions in an
+     pina, and M. Lewenstein, Strong–laser–field physics, non–            alternating electromagnetic field, Sov. Phys. JETP 64,
+     classical light states and quantum information science,              1191 (1986).
+     Reports on Progress in Physics 86, 094401 (2023).               [30] W. P. Schleich, Quantum Optics in Phase Space (Wiley-
+[16] R. Tzur, A. Gorlach, and I. Kaminer, Quantum optical                 VCH, Berlin, 2001).
+     signatures in strong-field physics, Nature Physics 19, 1378     [31] C. Gardiner and P. Zoller, Quantum Noise: A Handbook
+     (2023).                                                              of Markovian and Non-Markovian Quantum Stochastic
+[17] M. Even Tzur, M. Birk, A. Gorlach, M. Krüger,                       Methods with Applications to Quantum Optics, 3rd ed.
+     I. Kaminer, and O. Cohen, Photon-statistics force in                 (Springer, Berlin, 2004).
+     ultrafast electron dynamics, Nature Photonics 17, 501           [32] T. Khurelbaatar, R. T. Sang, and I. Litvinyuk, Sup-
+     (2023).                                                              plemental Material for “Nonclassical Cutoff Fluctua-
+[18] M. Lewenstein, M. F. Ciappina, E. Pisanty, J. Rivera-                tions in Squeezed-Light-Driven High-Harmonic Gener-
+     Dean, P. Stammer, T. Lamprou, and P. Tzallas, Gen-                   ation” (2026).
+     eration of optical Schrödinger cat states in intense           [33] Q. Su and J. H. Eberly, Model atom for multiphoton
+     laser–matter interactions, Nature Physics 17, 1104 (2021).           physics, Phys. Rev. A 44, 5997 (1991).
+[19] R. J. Glauber, Coherent and incoherent states of the            [34] J. Javanainen, J. H. Eberly, and Q. Su, Numerical sim-
+     radiation field, Phys. Rev. 131, 2766 (1963).                        ulations of multiphoton ionization and above-threshold
+[20] E. C. G. Sudarshan, Equivalence of semiclassical and quan-           electron spectra, Phys. Rev. A 38, 3430 (1988).
+     tum mechanical descriptions of statistical light beams,         [35] L. V. Keldysh, Ionization in the field of a strong electro-
+     Phys. Rev. Lett. 10, 277 (1963).                                     magnetic wave, Sov. Phys. JETP 20, 1307 (1965).
+[21] S. Kim, J. Jin, Y.-J. Kim, I.-Y. Park, Y. Kim, and S.-W.        [36] K. Burnett, V. Reed, J. Cooper, and P. Knight, Calcu-
+     Kim, High-harmonic generation by resonant plasmon field              lation of the background emitted during high-harmonic
+     enhancement, Nature 453, 757 (2008).                                 generation, Physical Review A 45, 3347 (1992).
+[22] M. Ciappina, J. Pérez-Hernández, A. Landsman, W. A.           [37] J. C. Baggesen and L. B. Madsen, On the dipole, velocity
+     Okell, S. Zherebtsov, J. Biegert, F. Farrelly, M. Ma-                and acceleration forms in high-order harmonic generation
+     ciejczyk, F. Lépine, M. Kling, et al., Attosecond physics at        from a single atom or molecule, Journal of Physics B:
+     the nanoscale, Reports on Progress in Physics 80, 054401             Atomic, Molecular and Optical Physics 44, 115601 (2011).
+     (2017).                                                         [38] S. Liu, G. Vampa, I. De Leon, D. N. Neshev, Y. S. Kivshar,
+[23] M. Krüger, M. Schenk, and P. Hommelhoff, Attosecond                 P. B. Corkum, and R. W. Boyd, High-harmonic generation
+     control of electrons emitted from a nanoscale metal tip,             from an all-dielectric metasurface and its application in
+     Nature 475, 78 (2011).                                               extreme ultraviolet optical components, Nat. Phys. 14,
+[24] M. Sivis, M. Taucer, G. Vampa, K. Johnston, A. Staudte,              1006 (2018).
+     A. Y. Naumov, D. M. Villeneuve, C. Ropers, and P. B.            [39] A. Husakou, S.-J. Im, and J. Herrmann, Above-threshold
+     Corkum, Tailored semiconductors for high-harmonic op-                ionization and high-harmonic generation of electrons
+     toelectronics, Science 357, 303 (2017).                              in plasmonic near-fields, Phys. Rev. Lett. 107, 233901
+[25] G. Vampa, T. Hammond, N. Thiré, B. Schmidt, F. Légaré,            (2011).
+     C. McDonald, T. Brabec, D. Klug, and P. Corkum,
+

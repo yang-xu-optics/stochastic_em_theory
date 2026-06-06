@@ -1,0 +1,1840 @@
+                                                          Quantum Optical Signatures of Band Topology in Solid-State High Harmonics
+
+                                                                                        Denis Ilin,1, 2 Alexander S. Solntsev,1 and Ivan Iorsh3
+                                                           1
+                                                               School of Mathematical and Physical Sciences, University of Technology Sydney, Ultimo, NSW 2007, Australia
+                                                                                      2
+                                                                                        Sydney Quantum Academy, Sydney, NSW 2000, Australia
+                                                                                                3
+                                                                                                  Queen’s University, Kingston, Canada
+                                                                       We develop a general theory of high-harmonic generation (HHG) in solid-state systems, based
+                                                                    on a weak-correlation expansion of photonic and matter degrees of freedom. Unlike standard HHG
+                                                                    theories, which treat light-matter dynamics through the Schrödinger equation, our approach employs
+                                                                    density-matrix evolution, naturally capturing the mixed-state character of both the field and the
+
+
+
+
+arXiv:2604.20388v1 [cond-mat.mes-hall] 22 Apr 2026
+                                                                    matter - a critical aspect for describing complex solid-state band structures. We show explicitly that
+                                                                    the properties of the emitted fields are governed by the quantum statistics and quantum geometry
+                                                                    of the underlying solid. Taking the Su-Schrieffer-Heeger (SSH) model in a one-sided optical cavity
+                                                                    as a paradigmatic example and considering the dual regime, we demonstrate that in the topological
+                                                                    phase a system exhibits a stronger HHG response and stronger quantum-light signatures than in
+                                                                    the trivial phase. Furthermore, we show that cavity-matter interaction gives rise to squeezed high-
+                                                                    harmonic quantum light, whose properties are directly imprinted by the current-current fluctuations
+                                                                    in the material system. Crucially, the observed squeezing does not rely on a separate quartic Kerr
+                                                                    mechanism. In the mesoscopic regime, the genuine quantum Kerr term is higher order in light-matter
+                                                                    coupling strength and negligible, while the relevant non-classical effect is governed by current-current
+                                                                    fluctuations encoded in the complex susceptibility of the material. This work establishes a direct link
+                                                                    between band topology and photon statistics, opening new avenues for topology-sensitive quantum
+                                                                    light generation and photon statistics based spectroscopy of solid-state systems.
+
+
+                                                                        I.   INTRODUCTION                                 do not capture inherently quantum properties of the elec-
+                                                                                                                          tromagnetic field nor all back-action between light and
+                                                                                                                          matter.
+                                                        High-harmonic generation (HHG) is an extreme non-
+                                                     linear optical phenomenon that arises when mat-                         When the field is treated quantum mechanically, HHG
+                                                     ter—whether isolated atoms, molecules, or condensed                  reveals new layers of behavior [12–15]. Quantum op-
+                                                     solids—is driven by an intense laser and emits radiation             tical theory and experiments have shown that har-
+                                                     at integer multiples of the driving frequency [1–3]. Over            monic emission can exhibit non-classical photon statis-
+                                                     decades of experiment and theory, HHG has become the                 tics, mode correlations, and entanglement between light
+                                                     main framework for coherent extreme-ultraviolet sources              and the generating medium. Transitions connecting dif-
+                                                     and the foundation of attosecond science [4, 5]. In di-              ferent initial and final electronic states can produce mul-
+                                                     lute gases the process is commonly rationalized by the               tiple spectrally shifted harmonic combs; the emitted
+                                                     intuitive three-step picture [6, 7]: under a strong field            modes may depart from Poissonian statistics and dis-
+                                                     an electron escapes the suppressed atomic potential, it              play squeezing [16], bunching, or correlated two-mode
+                                                     is accelerated by the laser in the continuum, and—when               behavior [17]; and corrections beyond the dipole ap-
+                                                     conditions permit—returns to recombine with the par-                 proximation can give rise to even harmonics even for
+                                                     ent ion while releasing a high-energy photon. Repetition             a monochromatic driver [18]. Importantly, conditional
+                                                     each optical cycle produces the characteristic comb-like             protocols—measurements or photon subtraction on se-
+                                                     harmonic spectrum. In solids [8–11], HHG is often de-                lected modes—can herald non-classical states such as
+                                                     scribed by a combination of interband and intraband cur-             coherent-state superpositions (cat states) [19], offering
+                                                     rents: interband emission admits an analog of the three-             routes to quantum-state engineering within strong-field
+                                                     step mechanism (promotion across a bandgap, accelera-                platforms [20–22].
+                                                     tion of electron and hole, and recombination), while in-                These quantum features become richer in systems with
+                                                     traband emission stems from field-driven motion within               strong electron–electron interactions. Correlated materi-
+                                                     non-parabolic bands; both contributions are in general               als including Mott insulators and other beyond-mean-
+                                                     coupled and shape the observed spectrum.                             field phases modify electronic dynamics and can enhance
+                                                        Traditional theoretical treatments typically quantize             non-classical light generation [23–25]. Modeling such ef-
+                                                     the matter but treat both the driving laser and the radi-            fects with canonical many-body Hamiltonians (for exam-
+                                                     ated field classically, modeling emission as dipole radia-           ple, the Fermi–Hubbard model) reveals that increasing
+                                                     tion given by the expectation value of the driven dipole.            correlations can qualitatively alter the photon statistics
+                                                     Semiclassical approaches—exemplified by Lewenstein-                  and squeezing of the emitted field [26, 27]. Furthermore,
+                                                     type semi-analytic theories [6, 8] and refined by many               preparing ensembles in correlated or collective states
+                                                     ab initio calculations—have achieved striking agreement              maps many-body correlations onto photonic observables,
+                                                     with HHG spectra from atoms and molecules. Neverthe-                 enabling entanglement and squeezed-light emission not
+                                                     less, these hybrid descriptions are limited in scope: they           present in uncorrelated phases.
+                                                                                                                         2
+
+   Despite this progress, existing quantum-optical HHG        namely solids, atoms, or gases. Our study shows how
+theories have mainly focused on matter systems treated        to analyze the material geometric properties from study-
+effectively at the pure-state level, i.e. composite light-    ing the photonic statistics, or, vice versa, how to generate
+matter systems that can be described via evolution            quantum light from the geometry of a mesoscopic system.
+of a wavefunction. For thermally occupied multiband           In this paper atomic units (ℏ = me = −e = 4πϵ0 = 1)
+solids [22, 28, 29] and reduced light-matter dynamics,        are used unless explicitly stated otherwise.
+however, a density-matrix formulation is more natural,           The rest of this paper is organized as follows. In Sec. II
+as it accommodates mixed-state occupations, dephasing,        we provide a brief summary of the main physical results.
+and band-resolved correlations without restricting the de-    In Sec. III we define the general model and derive the
+scription to a single wavefunction. At the same time, sev-    reduced density matrix equation for the photonic system.
+eral theories of second harmonic generation within the        In Sec. IV we obtain equations of motion for the photonic
+quantum kinetic framework have been established [30–          field operators and then we link intracavity in Sec. IV A
+32], where particular attention has been paid to differ-      and far field in Sec. IV B cavity statistics in the one-
+ent quantum geometric properties of the electronic wave-      side cavity setup and current-current correlation in the
+function in semiconductors. To our knowledge, a general       solid-state system. In Sec. V we consider 1D SSH model
+framework that combines a quantum-kinetic description         inside the cavity as an example of the developed theory.
+of a solid with predictions for the quantum statistics of     We conclude with an outlook in Sec. VI.
+the emitted HHG field has not yet been established.
+   In this paper, we develop a formalism that connects
+the material properties, such as topology and electric                    II.   SUMMARY OF RESULTS
+current and dynamical current-current fluctuations in-
+duced by a multi-mode coherent-state laser, with the             We start with a general electronic crystal structure
+field-counting photonic statistics of the emitted field in    driven by a multi-mode coherent-state laser, coupled
+the problem of HHG. This formalism is presented via a         weakly to a quantized electromagnetic field. We decom-
+universal Lindblad-type (ULL) equation [33] written for       pose the vector potential into a classical part which drives
+the reduced density matrices of the quantum field degrees     the material system semiclassically and a quantum part
+of freedom and a solid-state system that takes into ac-       which is responsible for the emitted radiation. This rota-
+count the weak correlation mechanism between the emit-        tion maps the initial laser field to a vacuum state, so that
+ted field and the matter system. The main idea is based       only the field emitted by the crystal is tracked. The to-
+on a rotation of the initial photon space onto the exter-     tal Hamiltonian is then expanded to second order in the
+nal laser field, which in turn decouples the system into      light-matter coupling strength g0 , yielding an effective
+two subsystems, namely a classically pumped material          Hamiltonian Eq. (3) that contains both paramagnetic
+structure and a photon vacuum state [27]. Due to the          and diamagnetic coupling terms, the latter encoding a
+weak light-matter interaction, general light-matter cor-      Kerr-like nonlinearity enhanced by the classical driving
+relations can be studied perturbatively, where the dom-       field.
+inant semiclassical contribution arises from a classically       Because the total matter-field state cannot in gen-
+driven matter system that produces coherent fields, and       eral be described as a pure state, we formulate a uni-
+there is a weak back-action force of the emitted field on     versal Lindblad-like (ULL) master equation for the cou-
+the material system due to the mesoscopic interaction         pled reduced density matrices of the photonic and ma-
+regime. The nature of each contribution in the total emit-    terial subsystems Eq. (6). The weak-coupling regime
+ted field is studied in detail. We demonstrate that the       β02 = N 3/2 g02 < 1 permits a controlled expansion. To
+current–current fluctuations arising from the coupling be-    leading order in this expansion, the material density ma-
+tween the solid-state emitter and the photonic vacuum         trix is shown to remain close to its initial thermal equilib-
+dictate the quantum properties of the emitted light, giv-     rium state Eq. (8), with corrections driven by the average
+ing rise to multi-mode correlations, squeezing, and entan-    quantum field. This allows us to express the total param-
+glement. Notably, in the mesoscopic regime the enhanced       agnetic current as a sum of the classically induced current
+by the classical field Kerr nonlinearity is incorporated in   and a back-action correction mediated by the nonlinear
+the quantum fluctuations mediated by the susceptibility       dynamical susceptibility χµ,ν (t, t′ ) in Eq. (9). The back-
+of the system. Crucially, the careful description of the      action term reflects the retarded influence of previously
+matter correlation functions reveals the influence of the     emitted fields on the material, and represents the leading
+topologically trivial and non-trivial matter phases on the    quantum correction to the semiclassical HHG current.
+emitted field properties in HHG. We emphasize the po-            The reduced photonic density matrix obeys a Lind-
+tential benefits of using the topological phase to generate   blad equation Eq. (10) in which the Lindblad dissipator
+enhanced quantum light in HHG compared to the triv-           is governed by the two-time current-current correlation
+ial phase. As a concrete example, the one-dimensional         tensor Dµ,ν (t, t′ ) of the driven material system. This
+Su–Schrieffer–Heeger (1D SSH) model is considered in          tensor, evaluated over the initial equilibrium state, en-
+two different phases. The universality of our formalism       codes key quantum geometric and topological properties
+allows it to be applied to any type of matter system,         of the solid, its antisymmetric part coincides with the
+                                                                                                                              3
+
+nonlinear susceptibility of the matter system. We em-
+phasize that its non-vanishing value even in equilibrium
+Eq. (13) reflects intrinsic quantum current fluctuations
+in the crystal, which are the origin of non-classical light
+generation.
+
+   Turning to specific observables, we write the equation
+of motion for the intracavity field amplitude Eq. (15)
+and identify two contributions: a classical semiclassical
+term scaling as ∼ β0 N 1/4 , and a quantum back-action
+correction scaling as ∼ β03 N −1/4 in Eq. (16). The in-
+tracavity mode population is decomposed into a coher-
+ent part and a quantum noise contribution in Eq. (17),          Figure 1. The solid-state structure is driven by external multi-
+where the latter is strictly positive and is governed by the    mode coherent-state laser. The relation between photonic
+spectral noise function Sµ,m (t), which is proportional to      statistics and the matter transport correlations is studied.
+the Fourier transform of Dµ,ν evaluated at the cavity
+resonance frequency Eq.√(18). The quantum noise con-
+tribution scales as ∼ β02 / N and vanishes in the classical                     III.   GENERAL MODEL
+N → ∞, as expected.
+                                                                   In this section, we develop a fully quantum formal-
+   For single-mode photon statistics, we derive an ex-          ism that describes the emission of quantum light as the
+pression for the second-order correlation function g (2) (0)    response of an electronic system initially in thermal equi-
+Eq. (27), which is dominated by the semiclassical field         librium under a strong time-dependent electromagnetic
+and generically yields super-Poissonian statistics. We          field (see Fig. 1). The method is based on quantum elec-
+further derive the condition for intracavity squeezing          trodynamical perturbation theory that enables the study
+Eq. (30): squeezing occurs when the dynamical quality           of the quantum statistics of the emitted fields. Although
+factor of the material, QM,m , exceeds the cavity quality       some initial steps involved in this theory can be found in
+factor Qc,m for a chosen mode. This condition directly          recently developed quantum theories of the HHG [15, 26],
+links the inductive (reactive) properties of the solid to the   the novelty of our formalism lies in a density matrix ap-
+generation of non-classical light. The same condition gov-      proach that takes into account the incoherent nature of
+erns far-field squeezing via the output noise power spec-       the emitted light states. The full derivation can be di-
+trum Eq. (39), so that squeezed intracavity fields produce      vided into three independent parts: first, we derive the
+squeezed far fields. For two-mode statistics, we define         effective time-dependent Hamiltonian; second, we formu-
+the covariance matrix Eq. (32) and compute two-mode             late a coupled system of equations for the reduced ma-
+squeezing and entanglement between cavity modes via             terial and photonic density matrices; and finally, we find
+the logarithmic negativity. All non-trivial two-mode cor-       the equation of motion for intracavity light observables.
+relations arise exclusively from the quantum noise term         Although the following formalism is suitable for any pho-
+and are therefore sensitive to the material’s transport         tonic bath realization, in this study, we consider only a
+properties.                                                     one-sided cavity setup
+                                                                   We start with a general electronic crystal structure
+   As a concrete example, we apply this formalism to the        that can be written as
+one-dimensional Su–Schrieffer–Heeger (1D SSH) model
+                                                                                              tl,j ĉ†l ĉj + ..,
+                                                                                          X
+in its trivial and topological phases. Using a dual-                               Hsys =                               (1)
+ity between the two phases that preserves the disper-                                       l,j
+sion relation, we show that the topological phase car-
+                                                                where the indices l, j encode an electron position, tl,j
+ries larger induced currents at every harmonic order
+                                                                is the hopping strength between the points l and j and
+due to an enhanced quantum metric tensor Eq. (43),
+                                                                the sum accounts for more complex interaction terms.
+Fig. 3(b). Consequently, the topological phase gener-
+                                                                The electronic system is driven by an external laser
+ates more strongly squeezed light Fig. 3(c), Fig. 4(b),
+                                                                field that is described by a multi-mode coherent state
+larger two-mode squeezing, and stronger inter-mode en-
+                                                                laser |ψlaser (t)⟩ = ⊗q,σ |αq,σ e−iωq t ⟩, where ωq is the
+tanglement Fig. 5 compared to the trivial phase. We
+                                                                dispersion of the photonic mode with the wave vector
+further find that squeezing is enhanced at weaker laser
+                                                                q, σ is the polarization and αq,σ represents the co-
+fields, since stronger driving amplifies the semiclassical
+                                                                herent states parameters. Following the Peierls sub-
+coherent response faster than the quantum noise con-
+                                                                stitution method, it is possible to represent the inter-
+tribution. These results demonstrate that topological
+                                                                action of the electromagnetic field with the system as
+phases of matter provide a practical advantage for gen-                           Rl
+erating non-classical light via high-harmonic generation,       tl,j → tl,j exp i j Â(r, t)dr , where Â is vector poten-
+and that measurements of photon statistics constitute a         tial operator. The total Hamiltonian can then be ex-
+new probe of quantum geometry in solids.                        pressed as Ĥ = Ĥsys−int + ĤF , where Ĥsys−int is the
+                                                                                                                           4
+
+system Hamiltonian with the Peierls substitution and ĤF         definition of dipole matrix elements for translational-
+is the Hamiltonian of electromagnetic modes. The first           invariant systems such as crystals [34]. It can be shown,
+step of our formalism is the same as in previous quan-           this singularity corresponds to the term that is propor-
+tum HHG theories, namely, we implement the rotation              tional to the derivative of the Dirac delta function of the
+of the total Hamiltonian to decompose the vector po-             electronic momenta ∇k δ(k − k’) and hence, some spe-
+tential A into a sum of a classical time-dependent part          cial techniques should be implemented to overcome this
+Acl = ⟨ψlaser (t)|A|ψlaser (t)⟩ and a quantum part AQ            issue. Nevertheless, a relatively simple method can be
+                                                                 used [30] to calculate the single-time average of observ-
+                  X g(q)                                         ables in crystals; however, it is futile for calculating the
+                             eµ âq,µ eiqr + h.c. ,
+                                                 
+          AQ =        √                                   (2)
+                  q,µ
+                        ωq,µ                                     correlation functions that arise in our study. As a result,
+                                                                 we choose the velocity gauge and consider only the weak
+where g(q) is the light-matter coupling strength whose           light-matter coupling regime.
+particular nature depends on the surrounding photonic               In this research, we use the long wavelength limit
+structure, in the simple empty space case, it is g0 =            (dipole approximation), which means that we neglect
+                                                                 spatial dispersion and assume a uniform vector poten-
+p
+   2π/V P, where V is a quantization volume, the sum-
+mation q,µ is over all photonic modes with momentum              tial A over the entire crystal structure. This approxi-
+q and polarization µ, âq,µ (â†q,µ ) is an annihilation (cre-   mation is justified [15], in case we are interested in only
+ation) operator and eσ is a unit vector of polarization.         the first few emitted harmonics. Note that, under the
+The rotation shifts the initial state of the field to the        dipole approximation, the hopping strengths are reduced
+vacuum state as D̂(t)|ψlaser (t)⟩ = |vac⟩. This effectively      to tl,j → tl,j exp (i∆rlj A(t)). By switching to the inter-
+corresponds to a subtraction of the laser field from the         action picture, we finally obtain the effective Hamiltonian
+total field and hence, in this picture, only the field emit-     of the electronic system under the classical pumping force
+ted by the electronic structure is present. As a result,                              (µ)    1          (µ)   (ν)
+the laser pumping is embedded in the classical field Acl          Ĥef f (t) = jµ (t)AQ (t) + jd,µν (t)AQ (t)AQ (t),     (4)
+                                                                                             2
+that drives the electronic structure. At the same time,
+the quantum field term AQ is responsible for the emission        where paramagnetic and diamagnetic terms include all
+into space, which contains multi-mode coherent radiation         orders in the classical field expansion. Hence, the Kerr-
+in full accordance with semiclassical HHG theory and ad-         nonlinearity term enhanced by the coherent field that
+                                                                                                                          2
+ditional quantum corrections to the classically emitted          is quadratic in the photonic operators, i.e.∼ (a2 + a† )
+state. Naturally, the light-matter interaction strength g0       is incorporated in the diamagnetic current, whereas the
+is small enough to serve as an expansion parameter for           purely quantum Kerr nonlinearity, i.e.∼ (a† a)2 is propor-
+perturbation theory. Therefore, the total Hamiltonian            tional to g04 and hence negligible.
+can be written up to the second order in the coupling               From the semiclassical HHG theories [6–8] we know
+strength g0 as                                                   that the leading term in the emitted field is fully gov-
+                                                                 erned by paramagnetically induced currents driven by
+         Ĥ ′ (t) = Ĥcl (t) + Ĥph                              laser pumping. Besides the semiclassical current re-
+                            (µ) 1 (s)     (µ) (ν)
+                                                          (3)    sponse, the system evolution determines the quantum
+                + jµ(s) (t)AQ + jd,µν (t)AQ AQ ,                 contributions to the total emission, which destroys the
+                                2
+                                                                 coherent state nature of the emission and results in the
+        (s)           (s)
+where jµ (t) and jd,µν (t) are time-dependent paramag-           non-classicality of photon statistics. However, the im-
+netic and diamagnetic terms, respectively, the index s           portant point here is that the emitted field in the past
+represents the Schrödinger picture and the sum over the         can induce extra currents in the system due to the non-
+repeating polarization indices µ, ν is implied. The first        trivial conduction properties, which results in a correc-
+line corresponds to the electronic system under classi-          tion to the total matter current. Such a back-action di-
+cal pumping force Ĥcl (t) and a photonic system Ĥph ,          agram arises in the second order in expansion of g0 and
+while the second line represents the light-matter coupling       hence must be taken into account. Initially, at t = −∞
+through paramagnetic and diamagnetic responses. The              the matter subsystem and the field are decoupled, i.e.
+explicit expressions of current operators are determined         ρM F (−∞) = ρM (−∞)⊗|vac⟩⟨vac|, where ρM (−∞) ≡ ρ0
+by the system Hamiltonian under the classical pumping,           is the incoherent thermal equilibrium state of the matter
+which manifests in time-dependent behavior. In the case          subsystem. Because the light-matter interaction is rela-
+where higher-order statistics of the emitted field are of in-    tively weak, it allows us to write down a weak-correlation
+terest, Eq. (3) should contain other orders of expansion         expansion which takes into account the reciprocal in-
+with respect to g0 .                                             fluence of matter and emitted fields. The main idea
+   It should be noted, that Eq. (3) is written in the veloc-     of studying the evolution of the total matter-field state
+ity gauge and this choice is well motivated. Although in         ρM F (t) is its decomposition in terms of an uncorrelated
+the length gauge it is possible to take into account all field   part, given by the tensor product of the instantaneous re-
+terms simultaneously by introducing the field-matter in-         duced states of the field subsystem ρF (t) = TrM [ρM F (t)]
+teraction term as dEQ , the main problem occurs in the           and ρM (t) = TrF [ρM F (t)], and the remainder χM F (t)
+                                                                                                                                           5
+
+which carries all correlations in the total system state,                where ⟨..⟩F = Tr(...ρF (t)) and ρ0 ≡ ρM (−∞). From
+                                                                         here, we can immediately calculate the paramagnetic cur-
+             ρM F (t) = ρM (t) ⊗ ρF (t) + χM F (t).                (5)   rent as
+The weak-correlation expansion for the corresponding                                                   Zt
+correlation function χM F (t) [33] requires a coupled sys-                                                                   D
+                                                                                                                               (µ)
+                                                                                                                                      E
+tem of equations for both matter and photonic subsys-                         ⟨jµ (t)⟩ = ⟨jµ (t)⟩0 +        dt′ χµ,ν (t, t′ ) AQ (t′ ) , (9)
+                                                                                                                                     F
+tems simultaneously. This result emphasizes that the                                                   −∞
+total evolution is not unitary and hence a general HHG
+problem of the material system cannot be solved in terms                 where ⟨⟩0 denotes averaging over the initial density ma-
+of the pure state evolution. At the beginning, the initial               trix of the matter system, i.e. ⟨jµ (t)⟩0 = Tr(jµ (t)ρ0 ) is
+matter-field correlation vanishes, i.e. χM F (−∞) = 0. In                the classical current in the system induced by the laser,
+light of this, we use the universal Lindblad-like (ULL)                  χµ,ν (t, t′ ) = −i⟨[jµ (t), jν (t′ )]⟩0 is the nonlinear suscep-
+dynamical master equation to determine coupled system                    tibility of the solid-state system. As can be seen, the
+as                                                                       total current in the system results from the laser pump-
+                                                                         ing and from previously emitted fields, which can induce
+ρ̇M (t) = − i [TrF [Hef f (t)ρF (t)] , ρM (t)]                           currents via nonlinear susceptibility, thereby introducing
+              h           Zt                                        i    important retardation effects into the total picture. This
+        −TrF Hef f (t),      dt′ [H̃ef f (t′ ), ρM (t′ ) ⊗ ρF (t′ )] ,   result is in good accordance with the traditional Kubo
+                                                                         formula, as is well known, except that the susceptibil-
+                               −∞
+                                                                         ity should be calculated for the classically driven system;
+ρ̇F (t) = − i [TrM [Hef f (t)ρM (t)] , ρF (t)]                           hence it is the dynamical susceptibility that matters for
+               h          Zt                                        i    HHG problems in general. Finally,     √     we note that the av-
+        −TrM Hef f (t),      dt′ [H̃ef f (t′ ), ρM (t′ ) ⊗ ρF (t′ )] ,   erage current grows as N + β02 N , this aspect will be of
+                                                                         great importance in the following field statistics study..
+                               −∞
+                                                                   (6)      The main goal of this work concerns the evolution of
+where                                                                    the emitted field. Therefore, we can write the reduced
+                                                                         density matrix equation in the Lindblad form as
+ H̃ef f (t′ ) = Ĥef f (t′ )
+           − TrM [Ĥef f (t′ )ρM (t′ )] − TrF [Ĥef f (t′ )ρF (t′ )]                   h                               i Zt
+                                                                          ′
+                                                                 (7)     ρ (t) = −i TrM           Ĥef f (t)ρM (t) , ρ(t) +   dt′ L[ρ(t′ )],
+We note that the obtained system of equations is written                                                                    −∞
+in the non-Markovian regime. The reason for this is the                                                                                  (10)
+matter correlation function that possesses highly non-                   where
+local temporal correlations.                                                                                   h                 i
+   Before proceeding further, we should address the                      L[ρ(t′ )] =iχµ,ν (t, t′ )⟨A(ν) (t′ )⟩F A(µ) (t), ρ(t′ )
+many-body nature of the considered process. Because                                 +Dµ,ν (t, t′ )
+of the multiple emitters in the matter system, the effec-                              h                                          i
+                                                                                           (ν)        (µ)      (µ)   (ν)
+tive light-matter interaction is increased. Hence, a new                             × AQ (t′ )ρ(t′ )AQ (t) − AQ (t)AQ (t′ )ρ(t′ )
+effective light-matter coupling strength must be taken
+                                                                                    +Dν,µ (t′ , t)
+into account in order to construct the perturbative ex-                                h                                          i
+                                                                                           (µ)      (ν)              (ν)     (µ)
+pansion. In this research, we study the regime in which                              × AQ (t)ρ(t′ )AQ (t′ ) − ρ(t′ )AQ (t′ )AQ (t) ,
+β02 = N 3/2 g02 ≤ 1. This restriction guarantees the va-
+                                                                                                                                       (11)
+lidity of the following results. Regarding matter observ-
+                                                                         where we omitted the prefix F for simplicity (ρ(t) ≡
+ables, we note that the average paramagnetic (or diamag-
+                                                                         ρF (t)), Dµ,ν (t, t′ ) = ⟨jµ (t)jν (t′ )⟩M − ⟨jµ (t)⟩M ⟨jν (t′ )⟩M
+netic) current, ⟨jµ (t)⟩, grows linearly with the number of
+                                                                         is the time correlation tensor of the matter degrees of
+emitters in the leading term, i.e. ⟨jµ (t)⟩ ∼ N . Hence, the
+                                                                         freedom and ⟨O(t)⟩M = TrM (O(t)ρM (t)) is the averaging
+semiclassical response produces      the average electromag-
+                   (µ)
+                                                                        over the matter subsystem. A careful consideration of the
+netic field Tr AQ (t)ρF (t) , the dominant contribution                  asymptotics reveals that it is possible to average over the
+                                 √
+of which grows as N g02 = β02 / N . At the same time, the                material subsystem in the Lindblad term over ρ0 to ob-
+current-current correlation function ⟨[jµ (t), jµ (t′ )]⟩ can-           tain the dominant contribution. Hence, in the following,
+not grow faster than N . Altogether, these scaling laws                  the correlation tensor is calculated via ρM (t) → ρ0 (see
+allow us to integrate the matter density matrix equation                 Appendix A 2). By solving it, all the necessary statistics
+and suppress the non-Markovian nature in the two lead-                   of the quantum field can be obtained. We note that the
+ing terms (see Appendix A 1).                                            correlation matter tensor Dµ,ν (t, t′ ) is a more general ob-
+                                                                         ject than susceptibility, because χµ,ν = −i(Dµ,ν − Dν,µ ).
+                         Zt       D        E                             Hence, it is natural to anticipate the difference in quan-
+                                    (µ)
+    ρM (t) = ρ0 − i            dt′ AQ (t′ ) [jµ (t′ ), ρ0 ]        (8)   tum field statistics for trivial and topological phases of
+                                             F
+                        −∞                                               matter.
+                                                                                                                                 6
+
+   Although the above formalism is valid for any type
+of material system, here we focus on translationally in-
+variant systems that do not mix electrons with different
+momenta. In this case, the current     P operator is diagonal
+in momentum space, i.e., ĵ(t) = k ĵk (t), where k is the
+Bloch wave vector of the lattice. Therefore, it can be
+shown that the correlation tensor D grows linearly with
+the number of emitters N , as it can be rewritten as
+                   X
+   Dµ,ν (t, t′ ) =   ⟨jµ,k (t)jν,k (t′ )⟩ − ⟨jµ,k (t)⟩⟨jν,k (t′ )⟩
+                       k
+                   X
+               =           ⟨δjµ,k (t)δjν,k (t′ )⟩,
+                       k
+                                                         (12)
+where δjµ,k (t) = jµ,k (t) − ⟨jµ,k (t)⟩ and thus, this tensor
+can be interpreted as a covariance tensor. We note that
+in the case of the length gauge, instead of the current-             Figure 2. The crystal structure is placed inside a one-sided
+current correlation function, we would obtain the dipole-            cavity. An external multimode coherent-state laser enters the
+dipole correlation function. Under the external field,               cavity and interacts with the material system. The currents
+electrons are able to move throughout the crystal struc-             generated inside the system emit light and populate the intra-
+ture and hence their coordinates might be correlated on              cavity modes. As a result, each mode starts radiating outside
+such length scales, which results in a possible divergence           the cavity.
+of the dipole-dipole correlations. Thus, we choose the
+velocity gauge to avoid such issues.
+                                                                                    IV.   FIELD STATISTICS
+   In the absence of pumping, correlation matter tensor
+depends on relative time Dµ,ν (t, t′ ) = Dµ,ν (t − t′ ). For
+systems with inversion symmetry, the correlation tensor                 As mentioned in the previous section, no strict restric-
+is an even function of the pumped field. See the Ap-                 tion on the photonic surroundings was imposed to de-
+pendix F where the case of linear response is studied in             rive the aforementioned formalism except for weak light-
+detail. However, it is possible to write the zeroth-order            matter coupling. In this part and further, we restrict our
+term in the expansion as                                             consideration to a particular case of a single-sided multi-
+                                                                     mode cavity, which is a Fabry-Pérot cavity with an em-
+    (0)
+                 X          X
+                                         mn nm −(γM +iϵnm,k )τ       bedded back mirror. The laser enters the cavity, excites
+   Dµ,ν (τ ) =                     fk,m jµ,k jν,k e                  the matter system embedded in the cavity, which results
+                   k        n̸=m
+                                    "                         #!     in emitting light inside and subsequent emission outside
+            X     ∂ϵk,m                 ∂ϵk,m X       ∂ϵk,n          the cavity. To implement the open-type photonic sur-
+         +   fk,m                            −   fk,n            ,   roundings, we phenomenologically introduce cavity losses
+           m
+                   ∂kµ                   ∂kν   n
+                                                       ∂kν
+                                                                     via an effective decay rate γ for the fundamental mode
+                                                         (13)        (see Fig. 2). In the case of radiation in a cavity, instead
+where the indeces n, m denote the band number, ϵm,k is               of determining the radiation mode via the wave vector
+the energy of an electron in the band m with momentum                qµ we can do it by introducing a cavity mode number
+k, ϵnm,k ≡ ϵn,k −ϵm,k , fm,k = (1+eβth (ωk,m −µ0 ) )−1 is the        mµ and the frequency of radiation ωm . For simplicity,
+Fermi-Dirac distribution function, βth = 1/(kB Tth ), kB             we consider a cavity whose relevant resonances are tuned
+is the Boltzmann constant, Tth is the absolute temper-               to harmonic frequencies such as ωm = mΩ and m ∈ N.
+                                       mn                 mn
+ature, µ0 is the chemical potential, jµ,k = −iϵmn,k rµ,k             Finally, we assume that the cavity has only M modes for
+is the matrix element of paramagnetic current operator,              each polarization. We assume the high quality factor for
+  mn
+rµ,k = ⟨um        n
+          k |i∂µ uk ⟩ is the momentum space non-Abelian              the fundamental mode, i.e. Qc = Ω/2γ ≫ 1, whereas the
+Berry connection and the sum over momentum is calcu-                 decay rate increases linearly with the mode number.
+lated over the First Brillouin Zone (FBZ). The fact that                We start from the boundary condition relating each of
+the matter correlation tensor is nonzero in the absence of           the far field amplitudes outside the cavity to the intra-
+an external field reflects the quantum nature of current-            cavity field. Each mode in the cavity can be related to
+current fluctuations inside the crystal. As will be shown            its own channel as
+below, these correlations play a crucial role in the quan-                                  p
+tum properties of the radiated fields.                                           a(out)
+                                                                                  µ,m (t) =   2γm aµ,m (t) − a(in)
+                                                                                                               µ,m (t)      (14)
+   Whereas previous HHG theories proceed with the di-
+rect solution of the corresponding Schrödinger equation             As a result, interference terms between the input and
+for the wavefunction (the ULL equation for the density               the cavity field may contribute to the observed moments
+matrix in our case), we instead use the ULL equation to              outside the cavity. We note that initially in the rotated
+                                                                                                             (in)
+write the equations of motion for field statistics.                  frame there is no incoming field, so ⟨aµ,m (t)⟩ = 0, be-
+                                                                                                                                                7
+
+cause the laser field is taken into account as a classical                 non-trivial statistical features of the emitted light. After
+driving force for a material system.                                       some algebra, the equation for the intracavity population
+   Finally, we can write down the equation of motion for                   deviation can be written as
+the intracavity field operators. Taking into account the
+explicit value of the average current in the material sys-                                              Zt
+                                                                                                                                      ′
+tem, Eq. (9), the field amplitude operator inside the cav-                   nµ,m (t) = n(coh)               dt′ Sµ,m (t′ )e−2γm (t−t ) .
+                                                                                         µ,m (t) +                                            (17)
+ity is
+                                                                                                        −∞
+
+  d⟨aµ,m (t)⟩                                  g0
+              = −(γm + iωm )⟨aµ,m (t)⟩ − i √        ⟨jµ (t)⟩0              In this paper, we set Tth = 0. However, one can consider
+      dt                                        ωm                         a positive temperature by adding the corresponding ther-
+                    Z
+                 g0                       (ν)                              mal population term nth to the equation. The first term
+              −√       dt′ σµ,ν (t, t′ )⟨AQ (t′ )⟩,
+                 ωm                                                        in Eq. (17) is a coherent contribution, and the second
+                                                                           is the response from the Lindbladian term in Eq. (11).
+                                                                           This term is of a purely quantum nature, as it arises
+   σµ,ν (t, t′ ) = iΘ(t − t′ )                                             from the commutation relation between photonic opera-
+                 × (χµ,ν (t, t′ ) + 2⟨jd,µν (t′ )⟩0 δ(t − t′ )) ,          tors and represents the spectral noise function. It can be
+                                                        (15)               written as
+where σµ,ν (t, t′ ) is the dynamical conductivity tensor and
+Θ(t − t′ ) is the Heaviside function. The obtained equa-                                               2 Z∞
+tion for the field amplitude has a clear physical meaning,                                         g0
+                                                                             Sµ,m (t) = Qc,m                    dτ Dµ,µ (t + τ, t)e−iωm τ ,
+namely, the first line corresponds to the classical genera-                                        ωm
+                                                                                                          −∞
+tion of the field via classically induced paramagnetic cur-                                                                        (18)
+rent and leakage outside the cavity, whereas the second                    where Qc,m = ωm /2γm is a quality factor for the m-th
+line corresponds to the back-action phenomenon, which                      mode. From the definition of the correlation matter ten-
+is a retarded effect of the emitted fields via nonlinear                   sor Eq. (12) we can deduce that the quantum correction
+conductivity, which in turn induces extra currents in the                  δnµ,m is strictly positive due to the similarity of the ex-
+material system as a correction to the classical param-                    pression with the spectral density. It can be√noticed, that
+agnetic one. As a result, it is particularly convenient to                                                            2
+solve this equation using the following ansatz
+                                                                           the quantum contribution
+                                                                                                    2
+                                                                                                      √ grows 4as ∼ β0 / N , whereas
+                                                                           the coherent part ∼ β0 N + β0 , where the first part
+                ⟨aµ,m (t)⟩ = a(cl)       (q)
+                              µ,m (t) + aµ,m (t),                   (16)   corresponds to the semiclassical response and the second
+                                                                           to the interference between the classical field and quan-
+where the first classical term represents the semiclassical                tum correction for field amplitudes Eq. (16). From such
+HHG answer and grows as ∼ β0 N 1/4 , while the second                      behaviour, it is obvious that for extremely large systems
+term is a quantum correction to the classical term and                     the quantum noise term decays to zero, which reflects
+scales ∼ β03 N −1/4 . Despite the fact that we associate the               the classical limit, as expected. Nevertheless, only the
+second term with the quantum correction, it has a purely                   quantum noise induced population can break the multi-
+classical meaning in the sense that its occurrence can be                  mode coherent nature of the emitted fields and hence is
+anticipated from the point of view of classical electro-                   responsible for quantum light generation. The fact that
+dynamics. Moreover, the Lindbladian part of the ULL                        quantum features arise due to the nonlinear nature of
+equation has no influence on the dynamics of the field                     the correlation matter tensor leads to the idea that all
+amplitude, and hence the total dynamics is governed by                     light statistics are highly sensitive to quantum geome-
+the unitary rotation in the ULL equation. Therefore, the                   try of the material system, correlations and interactions
+quantum meaning of this term should be understood as                       of electrons within it. Thus, by exploring emitted field
+that of only the next term in the expansion of the pertur-                 statistics, one can study the transport properties of ma-
+bative series in terms of the weak coupling strength. This                 terial systems and hence open a new avenue for study.
+fact is crucial in understanding the quantum features of
+                                                                              For our purposes in this survey, we also need to find the
+light inside or outside the cavity.
+                                                                           average squared field for each mode, namely ⟨a2µ,m (t)⟩.
+   Turning to two-operator statistics, it is reasonable
+                                                                           As before, of particular interest is the equation for de-
+to start from the intracavity mode population nµ,m =
+                                                                           viations from the coherent field δa2µ,m (t) = ⟨a2µ,m (t)⟩ −
+⟨a†µ,m aµ,m ⟩. The corresponding equation of motion de-
+scribes the energy change of the field inside the cavity                   ⟨aµ,m (t)⟩2 . Thus, by performing the same algebra, we
+over time. (see Appendix B). However, the most inter-                      obtain
+esting characteristic is a variation δnµ,m (t) = nµ,m (t) −
+  (coh)
+nµ,m (t) that describes the deviations of the aver-                           ⟨a2µ,m (t)⟩ = ⟨aµ,m (t)⟩2
+                                                    (coh)                                    Zt
+age population from the coherent population nµ,m =                                                                                   ′    ,   (19)
+   †
+⟨aµ,m ⟩⟨aµ,m ⟩. These deviations are responsible for depar-                             −2        dt′ Ξm,µµ (t′ )e−2(γm +iωm )(t−t )
+tures from the multi-mode coherent state, as well as for                                    −∞
+                                                                                                                                     8
+
+where                                                            example, the time-averaged steady-state population of
+                         2                                     the m-th mode can be calculated as
+                    g0
+ Ξm,µµ (t) = Qc,m
+                   ωm                                                                                   t+T
+                                                                                                        Z
+                                                                                              1
+                         Z∞                                          nµ,m ≡ ⟨nµ,m (t)⟩t = lim                                    (22)
+                                                   
+                                                                                                              nµ,m (t)dt
+               i                                                                          t→∞ T
+           ×  ⟨jd,µµ ⟩ + dτ Dµ,µ (t + τ, t)e−iωm τ  ,                                                 t
+               2
+                             0
+                                                         (20)    In this case, one can determine the energy averaged over
+where Ξm,µµ (t) is generalized noise correlation tensor. As      one period of laser pumping. For a particular cavity
+can be seen, the spectral noise function is proportional to      mode m this energy can be calculated from the popu-
+the real part of the generalized noise correlation function,     lation nm,µ of the mode, i.e. ϵm,µ = ωm nm,µ . Thus,
+i.e. Sµ,m (t) = 2Re Ξm,µµ (t). Hence, the real part of           taking into account Eq. (17), it can be written as
+this noise tensor corresponds to a dissipative quantity of                                            
+the solid system. As before, the first term in Eq. (19)                       ϵµ,m = ωm n(coh)
+                                                                                         µ,m   + δn µ,m .                        (23)
+corresponds to the coherent fields, whereas the second
+one arises due to the quantum noise, which in turn is            The first term corresponds to the coherent-type response
+responsible for the generation of quantum light states.          and the second one is a purely quantum contribution.
+The scaling of the expression is the same as for population      To find the dc-component of the population variance
+in Eq. (17).                                                     δnµ,m (t), it is sufficient to average the correlation matter
+   By proceeding in the same way, it is possible to con-         tensor D → ⟨D⟩t over the time t in the definition of the
+sider the higher-order statistics of the fields. However,        spectral noise function Eq. (18). It is important to note
+this is outside the scope of the present paper.                  that the semiclassical contribution experiences overlap
+   Turning to the statistical properties of emitted fields,      of the distribution tails from every Lorentzian resonant
+one should distinguish between two different mechanisms,         peak because of the finite cavity decay rate. This can
+namely intracavity and far field emission. The first de-         be seen from the explicit expression of the semiclassical
+scribes the statistical properties of light inside the cavity,   term
+whereas the second measures the statistical properties of
+the field going out of the cavity.                                                               g02 X     |jµ,p |2
+   To obtain results that can be easily interpreted in the          ncl (m) ≡ ⟨|a(cl)    2
+                                                                                 µ,m (t)| ⟩t =                         ,
+                                                                                                 ωm p γm + (ωm − ωp )2
+                                                                                                       2
+examples below, we implement the incident laser field
+with two bright coherent tones at ±Ω as                                                                                    (24)
+                                                                 where jµ,m is the m-th Fourier coefficient in the current
+                    A(t) = A0 sin(Ωt),                   (21)    expansion, i.e. jµ,m = ⟨⟨jµ (t)⟩e−iωm t ⟩t . As a result, even
+                                                                 for systems with inversion symmetry there will be finite
+where A0 is the modulation amplitude and Ω is the mod-
+                                                                 population of even cavity modes. However, this mat-
+ulation frequency. Another advantage of such a simple
+                                                                 ter does not lead to any contradiction because selection
+field is that it is easy to generate experimentally.
+                                                                 rules are related to far field statistics (see Appendix C).
+                                                                 Furthermore, for weak laser power, a simple analytical
+            A.   Intracavity field properties                    formula can be obtained
+                                                                                          2 X X
+                                                                                                        2γM fn1 ,k ϵ2n1 n2 ,k gµµ
+                                                                                                                               n1 n2
+                                                                                 
+                                                                                     g0
+   The developed fully quantum-mechanical treatment of           δnµ,m = Qc,m                            2 + (ϵ                    2
+                                                                                                                                     ,
+                                                                                     ωm                 γM       n1 n2 ,k − ωm )
+the HHG process makes it possible to determine not only                                     k n1 ̸=n2
+the emission spectrum — the standard observable in con-                                                                 (25)
+                                                                             (k) = 21 rµnm rνmn + rµmn rνnm is the quantum
+                                                                          nm
+                                                                                                           
+ventional HHG analyses — but also additional properties          where gµν
+of the emitted field. In particular, since this method pro-      metric tensor. As a result, the noise contribution has a
+vides access to the photon number distribution in each           deep connection with the topology of the material sys-
+mode, one can evaluate the photon statistics and thus ex-        tem through the quantum metric tensor. One can notice
+plore signatures of non-classical behavior in HHG. Below,        that the constant part in Eq. (13) does not influence the
+we show how to compute the second-order correlation              population of modes at all because it is proportional to
+function g2 (0) [35], which can be measured via photon           δ(Ω), which can never be satisfied. Hence, this constant
+counting [36] the squeezing of the single-mode photonic          contribution pertains to the reactive response of the mat-
+state, which can be found experimentally via homodyne            ter.
+detection method [37].                                             This intracavity power can be viewed as the first-order
+   As aforementioned, in this work, we study HHG at              correlation function and hence it does not reveal all the
+sufficiently large times, when a quasi-stationary state is       statistical properties of the underlying distribution from
+established, as in the Floquet formalism. In light of this,      which it was calculated. In order to obtain information
+we are interested in field statistics averaged over one pe-      about higher-order correlations of the generated light,
+riod T of laser oscillations in the long-time limit. For         the second-order correlation function can instead be cal-
+                                                                                                                                9
+
+culated. For a single mode it is given by                        tensor Ξµ,µ . One may reasonably ask what the condition
+                                     2
+                                                                 for the appearance of intracavity squeezing is. To find
+                             ⟨⟨â†m,µ â2m,µ ⟩⟩t                 this, we need a negative value of the expression in curly
+              g2 (0)µ,m = h                    i2 ,      (26)    braces to obtain a variance below the quantum limit. As
+                            ⟨⟨â†m,µ âm,µ ⟩⟩t                   a result, the condition for intracavity squeezing is
+
+where the double averaging ⟨⟨..⟩⟩t denotes averaging over                               1 Im ⟨Ξµ,µ (ωm )⟩t
+                                                                             QM,m ≡                        > Qc,m .           (30)
+density matrix and then over the period of laser pumping.                               2 Re ⟨Ξµ,µ (ωm )⟩t
+g2 (0)µ,m = 1 corresponds to Poissonian statistics, which
+a coherent field possesses, whereas for g2 (0)µ,m > 1 the        In other words, the dynamical quality factor of the ma-
+photon statistics are called super-Poissonian while for          terial system must exceed the quality factor of the cor-
+g2 (0)µ,m < 1 it is called sub-Poissonian, referring to a        responding cavity mode. Therefore, in order to obtain
+broader and narrower distribution than a Poissonian dis-         squeezed light, one should choose cavities with not ex-
+tribution, respectively. We note that super-Poissonian           tremely large quality factors, but large enough to prevent
+statistics may not be a quantum feature because classi-          broadening of the resonant emission. Alternatively, it
+cal mixtures of coherent states and thermal states, as well      means that materials with high inductive properties are
+as non-classical states, can have super-Poissonian photon        more beneficial for generating high-harmonic squeezed
+statistics. However, only a non-classical state can pro-         light. A simple analytical formula can be obtained in the
+duce sub-Poissonian statistics. Nevertheless, from the           case of a weak laser field.
+perspective of the semiclassical population Eq. (24), it           Im ⟨Ξµ,µ (ωm )⟩t = ⟨jd,µµ ⟩
+is clear that it represents classical mixtures of coherent                                                        n1 n2
+                                                                          X X fn1 ,k (ϵn1 n2 ,k − ωm )ϵ2n n ,k gµµ            (31)
+states and hence even in the presence of quantum cor-                  +                                   1 2
+                                                                                          2 + (ϵ                2
+rections the semiclassical response will be dominant and                                 γM      n1 n2 ,k − ωm )
+                                                                          n1 ̸=n2 k
+leads to super-Poissonian statistics. Thus, the second-
+order correlation function is given                              and the real part can be obtained from Eq. (25). One
+                                   (cl)
+                                                                 can notice that the dissipative part is proportional to
+                                ⟨|aµ,m (t)|4 ⟩t                  scattering rate in a crystal, hence in the regime of weak
+               g2 (0)µ,m = h                   i2 .      (27)
+                                   (cl)                          laser power one can deduce that the cleaner a sample is,
+                               ⟨|aµ,m (t)|2 ⟩t
+                                                                 the higher squeezing fields can be obtained.
+                                                                    Moreover, one can study the two-mode correlations of
+The analytical expression can be found in Appendix C.            the cavity fields. Turning to two-mode squeezing, its de-
+  The last quantity to describe single-mode statistics is        gree can be estimated via covariance matrix σp1 ,p2 for
+the degree of intracavity squeezing, which is an inherently      two different modes p1 and p2 [38], which is defined as
+non-classical feature of light. The degree of squeezing of
+the mode in units of dB is given as
+                                                                                                     
+                                                                                                 A C
+                                                                                     σp1 ,p2 =          ,              (32)
+                                n            o2                                                CT B
+    ηm,µ = −10 log10 4 min ∆t X̂m,µ (θ)            ,   (28)
+                           θ∈[0,π)                               where A, B and C are 2 × 2 matrices whose elements are
+                                                                 given by
+where the minimum is found over angles θ that minimize
+the time-averaged variance of the generalized quadrature                      ⟨⟨X̂i,p1 , X̂j,p1 ⟩⟩t + ⟨⟨X̂j,p1 , X̂i,p1 ⟩⟩t
+operator X̂m,µ (θ) = (âm,µ e−iθ + â†m,µ eiθ )/2 over one pe-         Ai,j =
+                                                                                                      2
+riod of pumping. We note that classical coherent light is                     ⟨⟨X̂i,p2 , X̂j,p2 ⟩⟩t + ⟨⟨X̂j,p2 , X̂i,p2 ⟩⟩t   (33)
+not squeezed, i.e. η = 0 for all modes and polarizations               Bi,j =
+of coherent light. In our model, the degree of maximally                                              2
+squeezed intracavity light can be expressed as                         Ci,j = ⟨⟨X̂i,p1 , X̂j,p2 ⟩⟩t ,
+
+                                                                 where ⟨a, b⟩ = ⟨ab⟩ − ⟨a⟩⟨b⟩. Here we denote X̂1,p =
+                        "                    2
+                                         g0
+      ηm,µ = −10 log10 1 + 4Qc,m                                                             −i
+                                                                 √1 (â† + âp ) and X̂2,p = √  (â† − âp ), and the index p de-
+                                         ωm                        2 p                         2 p
+                                               #        (29)   notes the mode characteristics as p = (µ, m). In princi-
+                                |Ξ̃µ (ωm )|                    ple, squeezing between two modes with different polariza-
+           × Re Ξ̃µ (ωm ) − q                      ,             tions can be achieved. If the maximum eigenvalue λmax
+                                 1 + 4Q2    c,m                equals 0.5, then it indicates the absence of squeezing,
+                                                                 while λmax > 0.5 indicates that squeezing is present. As
+where Ξ̃µ (ωm ) = ⟨Ξµ,µ (ωm )⟩t /(Qc,m g02 /ωm2
+                                                ).  This         two-mode squeezing inherently involves quantum corre-
+change in notation is made to explicitly factor out the          lations between different modes, entanglement measure-
+cavity quality factor from the generalized noise correla-        ment is crucial for accurate identification. One can use
+tion function. Again, it becomes nonzero due to quan-            the logarithmic negativity [17, 39] that serves as an en-
+tum noise, which arises from the generalized noise matter        tanglement measure for the correlations between modes
+                                                                                                                                      10
+
+p1 and p2 . This quantity can be computed as                    the average population of cavity modes per oscillation
+                                                                period. Each cavity channel consists of emission at each
+             E(p1 , p2 ) = max(0, − ln2 (2ν− )),         (34)   resonant mode that is proportional to the squared abso-
+                                                                lute value of the corresponding current harmonic as well
+where ν− is the smallest of the two symplectic eigenvalues      as some incoherent radiation due to the current-current
+of the partial transpose of the covariance matrix σp1 ,p2 .     fluctuations in the material. From the explicit form of
+Two modes are entangled if E(p1 , p2 ) > 0. Both two-           the coherent part, it is clear that there is no contribution
+mode quantities are constructed from averages between           of the even harmonics in total spectrum in systems with
+different modes. They can be found in the same way              inversion symmetry. To maintain the prominent result of
+as we did for the correlation between operators of the          direct scattering in open space [26], one can recover the
+same mode. However, as can be seen from the explicit            density of states profile and take the limit of Qc,m → 0.
+formulas for matrix coefficients of matrices A, B and C,        On the other hand, in the case of closed cavities, the
+the nontrivial two-mode correlations can arise only from        limit Qc,m → ∞ yields a delta function δm,p in terms
+the noise correlation functions (see Appendix C).               of mode orders, which corresponds to negligible broaden-
+                                                                ing. However, as seen from the discussion of intracavity
+                                                                squeezing a finite decay rate γm may be quite useful for
+                 B.     Far field properties
+                                                                generating quantum light.
+   To calculate any type of Far field statistics, one needs       To estimate the far field squeezing, the noise power
+to consider the double-time correlation function of the         spectrum of the quadrature rotated by angle θ quadra-
+                   (out)
+output operator aµ,m . This can be done with the help           ture Xµ,m should be calculated as
+of the quantum regression theorem [40–43] which states
+that in cases where the master equation gives linear equa-
+tions for the mean, they can be used to determine multi-                          Z∞
+time observables with modified initial conditions. As an
+                                                                  SX(θ),X(θ) =           dτ eiωτ ⟨: Xµ,m
+                                                                                                     (out)       (out)
+                                                                                                           (t), Xµ,m   (t + τ ) :⟩,
+example, we can consider the two-time correlation func-
+tion between creation and annihilation operators of the                          −∞
+
+m-th mode at different times.                                                                                        (38)
+                                                                where ⟨: .. :⟩ denotes normal ordering of operators. With
+ ⟨a†µ,m (t)aµ,m (t + τ )⟩ = ⟨a†µ,m (t)⟩⟨aµ,m (t + τ )⟩          the help of quantum regression theorem and after opti-
+                                                                mizing over all angles θ, the noise power spectrum can
+                      + ⟨a†µ,m (t), aµ,m (t)⟩e−(γm +iωm )τ ,
+                                                                be simplified as
+                                                        (35)
+The first term corresponds to coherent scattering, while
+the second one represents incoherent scattering (see Ap-
+pendix D). This allows us to calculate the intensity spec-                                16γ 2 (γ 2 + ω 2 + ωm  2
+                                                                                                                   )
+                                                                 S X(θopt ),X(θopt ) =
+trum of the outgoing field from the m-th channel mode.                                   (γ 2 + (ω + ω
+                                                                                                 m ) 2 )(γ 2 +  (ω − ω m )2 )
+                                                                                                                    
+                                                                                2 
+                Z∞
+                                                                           
+                                                                             g0                          |Ξ̃µ (ωm )| 
+     Sm (ω) =         dτ eiωτ ⟨a(out)
+                                      †
+                                        (out)                       × Qc,m           Re Ξ̃µ (ωm ) − q                   .
+                                µ,m (t)aµ,m (t + τ )⟩    (36)                ωm                          1 + 4Q2      c,m
+                −∞
+                                                                                                                         (39)
+After some algebra, the result can be decomposed into           In the second line, we can identify the already familiar
+coherent and incoherent parts as                                expression in the curly braces of Eq. (29). Hence, in or-
+                                                                der to obtain squeezed outgoing light, Eq.(39) should be
+                       2 "                        #
+                                                                negative. This leads us directly to the intracavity squeez-
+                  
+                    g0
+  Sm (ω) = 8Qc,m            scoh (ω) + sincoh (ω) ,             ing condition in Eq. (30). Therefore, we can deduce that
+                    ωm
+                                                              a squeezed intracavity field produces squeezed far fields
+                X                  |jµ,p |2                   and the condition for squeezing is established in Eq.(30),
+     scoh (ω) =    δ(ω − ωp )                   2 + (q)   ,     which connects the cavity properties with the dynamical
+                               1 + (ωm −ω   p)
+                                                                dissipative and reactive features of the solid-state sys-
+                p                          2
+                                                        
+                                            γm
+
+                      Re Ξ̃µ (ωm )                              tem. Hence, we report that the squeezed light could be
+     sincoh (ω) =                 2   ,                         found in cavities with a not very high quality factor and
+                     1 + (ωmγ−ω)
+                             2                                  its occurrence is linked to general current-current fluctu-
+                              m
+                                                   (37)         ations in the solid-state system. According to Eq.(3), the
+where by (q) we denote the extra quantum interference           quantum Kerr nonlinearity scales as g04 N ∼ β04 /N 2 and
+term (see Appendix D). As can be seen, the semiclas-            hence is negligible
+                                                                               √    compared to the quantum noise, which
+sical coherent response grows linearly with the quality         scales as β02 / N . Finally, to obtain the degree of far field
+factor, as well as the incoherent part. The scaling of          squeezing, one can use η = −10 log10 (1 + SX(θopt ),X(θopt ) )
+each of the contributions is the same the discussion of         in a similar way to intracavity squeezing.
+                                                                                                                                     11
+
+              V. ONE-DIMENSIONAL
+             SU-SCHRIEFFER-HEEGER
+
+   As the first example of our general quantum HHG
+formalism we choose the one-dimensional Su-Schrieffer-
+Heeger (1D SSH) model as the simplest and canonical
+model of a topological insulator in one dimension [44]. Its
+topological properties in the static case have been stud-
+ied in detail [45, 46]. Moreover, its periodically driven
+version has been used to analyze Floquet phases [47].
+   In light of the HHG problem, the model can be viewed
+as a coupled-cavity array with a bipartite lattice struc-
+ture and temporally modulated hopping strengths with
+only one photonic polarization along the chain, as de-
+picted in Fig. 3(a). In the static case the Hamiltonian
+can be written as
+            N
+            X                                               
+  ĤSSH =          J1 ĉ†A,j ĉB,j + J2 ĉ†A,j+1 ĉB,j + h.c. , (40)
+            j=1                                                        Figure 3. a) The atomic structure of the one-dimensional
+                                                                       model is presented; b) magnitudes of the resonant harmonics
+where ĉ†A(B),j (ĉA(B),j ) is the creation (annihilation) op-         of the average current, normalized to the number of cells N
+erator for the sublattice A(B) at site j. We assume that               as a function of frequency are plotted for the trivial phase by
+the A and B sites have the same on-site energy, J1 and                 blue dots and for the topological phase by red crosses. Here,
+                                                                       we set J = 1/2 and Ω = ∆/5. As can be seen, the system
+J2 represent the static components of the intra-cell and
+                                                                       in the topological phase responds to the external field more
+inter-cell hoppings, respectively. In the case of periodic             efficiently than in the trivial one. c) the degree of intracavity
+boundary conditions, we can define the lattice opera-                  squeezing in the absence of external pumping as a function
+tors in momentum space and rewrite the Hamiltonian                     of the scattering rate in the material, γM /∆ ∈ [10−2 , .., 0.2].
+ĤSSH = k Ψ†k HSSH (k)Ψk , where
+          P
+                                                                       All other parameters are the same as in b), except for the
+                                                                     pumping field. The blue and red colors denote the trivial and
+                                 0       J1 + J2 eik                   the topological phases, respectively.
+         HSSH (k) =                                    ,  (41)
+                           J1 + J2 e−ik      0
+
+and Ψk = (ψA (k), ψB (k)) and k = k̃a is the dimen-                    case of weak laser modulation, a simple analytical result
+sionless momentum normalized with respect to the cell                  via the Kubo formula can be derived to compare currents
+length a. This model
+                 p    consists of two bands with disper-               and obtain more insight into the nature of the differences
+sion ϵ± (k) = ± J12 + J22 + 2J1 J2 cos(k) and band gap                 (see Appendix E). For this simple estimation, we omit the
+∆ = 2|J1 − J2 |. The topology of the model can be char-                relaxation time near the Fermi surface in the regime far
+acterized by the Zak phase, which is obtained by inte-                 from resonance, ∆ ≫ Ω, which is the case at least for
+                               −−
+grating the Berry connection rµ,k  over the FBZ [48]:                  the first harmonic in HHG. As shown in Appendix E,
+                                                                       each paramagnetic current component in the momen-
+                   Z π                                                 tum space in the insulating phase is proportional to the
+                          −−                                                                                   +−
+            γ0 =         rµ,k dk = πΘ(J2 /J1 − 1),             (42)    quantum metric tensor, i.e. jp,µ (k) ∼ gµµ  (k), while the
+                    −π                                                 diamagnetic response is proportional to the non-Abelian
+and hence nontrivial topology occurs when J2 > J1 . We                 Berry connection rµ+− . However, there is a particular re-
+note that a duality between the topological and triv-                  lation between paramagnetic and diamagnetic responses
+ial phases exists in this model for two different sets of              for the matter in the insulating phase. Namely, for a ho-
+parameters such that striv = (J2 /J1 = J < 1) and                      mogeneous external electric field (q = 0) both scalar and
+stop = (J2 /J1 = 1/J < 1) correspond to the trivial and                vector potential gauges must give the same result which
+topological phases, respectively, with the same dispersion             can be written as χdia         para
+                                                                                            µ,ν = −χµ,ν (q = 0, Ω = 0). As a
+relation ϵtop (k) = ϵtriv (k). Here and below we fix J < 1.            result, the total average current in the system in linear
+Despite the fact that the problem of semiclassical HHG                 response theory is proportional to the quantum metric
+                                                                                +−
+in SSH chains has already been studied [49], to the best               tensor gµµ  (k). One can show that the quantum metric
+of our knowledge there is no work that addresses which of              tensor is sensitive to the phase of the matter. Hence,
+the phases is more suitable for generating quantum light               in the dual regime the difference between the quantum
+via HHG.                                                               metric tensor in the topological and trivial phases is
+   To answer this question, we first calculate the average
+                                                                                    +−         +−
+currents in these dual systems to compare them. In the                             gtop (k) − gtriv (k) = |J12 − J22 |/∆2k ,       (43)
+                                                                                                                           12
+
+where ∆k = ϵ+ (k) − ϵ− (k). Because the difference is
+always positive in dual regime, we conclude that the ma-
+terial in the topological phase conducts more than in
+the trivial phase, due to the extra geometric correlations
+conducts more than in trivial phase, i.e. |⟨jtop (t)⟩| >
+|⟨jtriv (t)⟩|. As a result, even in the semiclassical regime
+of HHG we expect differences in the emission spectrum
+in the dual regime for two different phases, as can be no-
+ticed from Eq.(23), where the semiclassical emission part
+is proportional to the average current in frequency do-
+main. The 1D SSH model possesses inversion symmetry
+and hence we anticipate zero odd response of the exter-
+nal field in the correlation matter tensor Dµµ (t, t′ ) (see
+Appendix F).
+   Before starting the modeling, we briefly discuss the
+physical range of parameters for the chosen model. The
+polyacetylene molecule is a typical example of the 1D
+SSH model [46, 49, 50]. The band gap of the molecule
+varies, hence we take a value from the middle of the
+range, i.e. ∆ = 1.5eV . As a result, it is possible to
+use infrared lasers with frequency Ω. The scattering
+time is τM ∼ 10 − 20fs, so it is reasonable to assume
+γM = 1/τM = ∆/20. In the dimensionless units of the
+chain we fix parameters as J = 1/2, ∆      ˜ = ∆/J1 = 1,
+                 ˜
+Ω̃ = Ω/J1 = ∆/3. In our example we consider a chain
+with N = 106 emitters. Finally, we consider the mag-
+nitude of vector potential in the range A0 a ∼ 0.2 − 0.5,
+which corresponds to a peak electric field of F0 = A0 Ω ∼
+                          2
+(0.4 − 1.0) × 109 W/cm . The quality factor of the cavity
+for the fundamental mode is fixed by Qc,1 = 100.               Figure 4. a) The second-order correlation function g2 (0) and
+   We start our analysis by considering the average cur-       b) the degree of intracavity squeezing η are shown for the res-
+rent in the frequency domain at the resonant frequencies       onant cavity modes. The left and right panels correspond to
+in the system, which is plotted in Fig. 3(b). Because          Ω = ∆/3 and Ω = ∆/5, respectively. All other parameters are
+the 1D SSH model possesses inversion symmetry it has           the same for both panels. Blue and red colors correspond to
+no response at even-order resonances, as can be seen.          trivial and topological phases, respectively. The lighter lines
+                                                               correspond to A0 a = 0.2, while the darker lines correspond to
+Moreover, due to additional geometric correlations, in-
+                                                               A0 a = 0.5.
+duced currents in the topological-phase system are larger
+in magnitude than in the trivial-phase case. This pattern
+is observed not only for a current in general but for every
+high-harmonic order at the resonance peaks. Hence, we          topologically non-trivial materials to generate quantum
+anticipate enhanced quantum light features in the topo-        light.
+logical case compared to the trivial case.                        The scenario with a non-zero laser pumping field is de-
+   As mentioned previously, current-current fluctuations       picted in Fig. 4. In Fig. 4(a) the second-order correlation
+always happen even in the absence of external field.           function g2 (0) for each mode is plotted for different fun-
+Hence, the degree of intracavity squeezing η0 determined       damental frequencies (left and right panels) and differ-
+in Eq. (29) can be calculated with the help of Eq. (31)        ent laser intensity strengths. As can be seen, the super-
+which is valid for negligible pumping. As a result, the        Poissonian statistics are observed for each mode, except
+corresponding quantity for trivial and topological phases      the fundamental one. This occurs because the response
+for different scattering times γM is plotted in Fig. 3(c).     at this frequency is the most powerful compared to the
+As can be seen, and as noted previously, with increas-         other modes and hence the influence of the Lorentzian
+ing γM the ability to achieve a squeezed field decreases       tails from other modes is negligible. As a result, we ob-
+for a fixed cavity quality factor Qc . Moreover, reduc-        serve Poissonian statistics for the fundamental mode. In
+ing impurities and imperfections in the chain provides         general, high harmonics possess strong super-Poissonian
+a natural way to increase the matter quality factor QM         statistics, mainly because their resonant contribution is
+and hence to attain squeezed light at lower harmonics.         small compared to the tails of the first powerful harmon-
+Finally, the light is more strongly squeezed when gen-         ics, as can be seen in Fig. 3(b), and hence the final state
+erated by the material in the topological phase than in        represents a mixture of contributions from all lower har-
+the trivial phase. This provides clear benefits for using      monics and the structure of the state does not change
+                                                                                                                        13
+
+                                                                   In addition to the single-mode correlations, one can
+                                                                study two-mode correlations in the 1D SSH model. They
+                                                                naturally occur in such systems because of the complex-
+                                                                ity of correlation noise function. The two-mode squeezing
+                                                                and entanglement are presented in Fig. 5. The degree of
+                                                                squeezing can be found via the maximal eigenvalue of
+                                                                covariance matrix σp1 ,p2 in Eq. (32), while a two-mode
+                                                                entanglement can be quantified via the smallest symplec-
+                                                                tic eigenvalue in Eq. (34). We can see that the modes of
+                                                                emitted light are slightly squeezed and entangled. How-
+                                                                ever, as before, correlations are stronger in the topologi-
+                                                                cal phase than in the trivial one.
+                                                                   As a result, the simple 1D SSH model reveals an im-
+                                                                portant outcome: quantum geometric properties of the
+                                                                material play a primary role in generating high-harmonic
+                                                                light, determining the quantum properties of the emitted
+                                                                light at the single-mode level and controlling multi-mode
+                                                                correlations.
+Figure 5. Two-mode squeezing (top panel) and two-mode en-
+tanglement (bottom panel) are presented for the trivial phase
+(left column) and for the topological phase (right column),                       VI.   CONCLUSION
+with the same parameters as for the current in Fig. 3(b).
+                                                                   To conclude, we have developed the theory connecting
+                                                                the quantum statistical properties of radiation nonlin-
+significantly for the high harmonics. At the same time,         early scattered of the arbitrary crystal to the two-time
+the most bunched light is observed for the third harmonic       current correlation functions for the classically driven
+under strong laser fields. This is the consequence of rela-     crystal. We note that while in the Manuscript we only
+tively strong resonant contribution of the third harmonic       applied the formalism to the systems of non-interacting
+which is of the same order as the tail of the fundamental       electrons, it can be straightforwardly applied to the sys-
+mode contribution. As a result, we obtain a mixture of          tems of interacting electrons provided that two time
+two coherent states that in turn produce such a peak in         current-current correlations are obtained using either di-
+the correlation function g2 (0).                                agrammatic techniques or with time-dependent density
+                                                                functional theory (TD-TDFT) methods. The developed
+   Turning to the degree of squeezing for these regimes,
+                                                                theory paves the way towards novel methods of probing
+several conclusions can be drawn on the basis of Fig. 4(b).
+                                                                electron quantum correlations with quantum optical set-
+First of all, for high harmonic orders light is more
+                                                                ups and towards possibility of quantum light engineering
+strongly squeezed in the topological phase than in the
+                                                                with correlated quantum phases of matter.
+trivial one. Secondly, in the case of strong laser fields,
+emitted light is less squeezed at lower harmonics com-
+pared to weak lasers. This happens because, at stronger
+                                                                           VII.   ACKNOWLEDGMENTS
+drive, the coherent semiclassical contribution grows more
+rapidly than the noise-induced correction, reducing the
+relative weight of the quantum-noise term in the quadra-          I.I. acknowledges the support of the Natural Sciences
+ture variance Ξµ,µ and therefore suppressing the observ-        and Engineering Research Council of Canada (NSERC)
+able squeezing. Hence, to obtain the quantum proper-            [Discovery Grant No. 2024-05599]. D.I. and A.S. were
+ties for lower harmonics, weaker laser fields should be         supported by the Sydney Quantum Academy, Sydney,
+used. Thirdly, the topological phase of matter is more          NSW, Australia. D.I. also acknowledges UTS for the
+strongly affected by laser fields at low harmonics than         support through the International Research Scholarship.
+the trivial phase. Finally, by taking two different lasers
+with fundamental frequencies Ω1 = ∆/3 (the left panel)
+and Ω2 = ∆/5 (the right panel) and comparing the light
+squeezing between the same energy modes, one can de-
+duce that the degree of squeezing is greater for low fun-
+damental frequency than for high, because effectively it
+needs to consider higher resonant cavity modes for low
+laser frequency to achieve energy balance. As aforemen-
+tioned, intra- and far field squeezing are connected, and
+hence the same conclusions hold for far field squeezing as
+well.
+                                                                                                                                                       14
+
+                                                                                       (µ)                         √
+    Appendix A: Derivation density matrices from                          because ⟨AQ (t)⟩F ∼ g02 ⟨jµ (t)⟩ ∼ β02 / N in the first
+          universal Lindblad-like equation                                non-vanishing light-matter coupling order. Such scaling
+                                                                          allows us to omit the time-dependence of ρM (t′ ) in the
+                      1.       Matter subsystem                           second term in Eq. (A3) and replace it with the unper-
+                                                                          turbed value ρ0 . The third term in Eq.(A3) is propor-
+  We start form the weak-correlation expansion for re-                    tional to non-unitary Lindbladian like dynamics. By us-
+duced density matrices for matter and photonic subsys-                    ing the same evaluation strategy, one can show that it is
+tems, namely                                                              proportional only to g02 = β02 /N 3/2 which in turn is out
+                                                                          of scope for the considered photonic equation. Hence, for
+                                                                          the considered approximation regime of photonic equa-
+ρ̇M (t) = − i [TrF [Hef f (t)ρF (t)] , ρM (t)]                            tions, the third term can be omitted entirely. This results
+              h           Zt                                        i     in the already familiar Eq. (8) from the main text
+        −TrF Hef f (t),      dt′ [H̃ef f (t′ ), ρM (t′ ) ⊗ ρF (t′ )] ,
+                                                                                                  Zt          D        E
+                                −∞                                                                              (µ)
+                                                                            ρM (t) = ρ0 − i                dt′ AQ (t′ ) [jµ (t′ ), ρ0 ].             (A4)
+ρ̇F (t) = − i [TrM [Hef f (t)ρM (t)] , ρF (t)]                                                                               F
+                                                                                              −∞
+               h          Zt                                        i
+        −TrM Hef f (t),      dt′ [H̃ef f (t′ ), ρM (t′ ) ⊗ ρF (t′ )] ,    To make our conclusion about the scaling of the third
+                                −∞
+                                                                          term more explicit, one can study the average paramag-
+                                                                   (A1)   netic current in a solid system by directly using Eq.(A3)
+where                                                                     with the time-dependent density matrix terms ρM (t′ )
+                                                                          omitted on the RHS.
+ H̃ef f (t′ ) = Ĥef f (t′ )
+                                                                                                            Zt
+          − TrM [Ĥef f (t′ )ρM (t′ )] − TrF [Ĥef f (t′ )ρF (t′ )].
+                                                                                                                                  D         E
+                                                                                                                                    (µ)
+                                                                            ⟨jµ (t)⟩ =⟨jµ (t)⟩0 +                dt′ χµ,ν (t, t′ ) AQ (t′ )
+                                                              (A2)                                                                              F
+                                                                                                           −∞
+  By one integration over the time of matter reduced
+                                                                                                       ′
+density matrix we obtain an integral equation, which em-                                Zt        Zt                                                 (A5)
+                                                                                              ′
+phasizes the non-Markovian nature of equations.                                     −        dt            dt′′ ⟨[[jµ (t), jν (t′ )], jν (t′′ )]⟩0
+                           Zt                                                           −∞        −∞
+                                                                                                        D                     E
+                                  ′              ′       ′         ′                                       (ν)       (ν)
+    ρM (t) = ρ0 − i             dt [TrF [Hef f (t )ρF (t )] , ρM (t )]                                 × [AQ (t′ ), AQ (t′′ )] ,
+                                                                                                                                          F
+                        −∞
+                   Zt                                                     where the average photonic field commutator is just a
+                                                                          number and is proportional to g02 , whereas the current
+       h                                                     i
+   −TrF Hef f (t),    dt′ [H̃ef f (t′ ), ρM (t′ ) ⊗ ρF (t′ )]
+                                                                          double commutator grows linearly with N for transla-
+                       −∞
+                                                                          tionally invariant systems because
+                                                      (A3)
+As mentioned in the main text, in this research we study
+                                                                                ⟨[[jµ (t), jν (t′ )], jν (t′′ )]⟩0
+the weak light-matter coupling regime when N 3/2 g02 ≡
+                                                                                                                                                     (A6)
+                                                                                    X
+β02 ≤ 1. This allows us to sufficiently simplify the equa-                      =       ⟨[[jµ,k (t), jν,k (t′ )], jν,k (t′′ )]⟩0 ∼ N.
+tions under consideration and obtain a relatively simple                            k
+analytical solution. Moreover, because we are interested
+only in photonic statistics, it further simplifies the re-                See the similar detailed derivation of Eq. (A8). As a
+duced density matrix equation, since we need to preserve                  result, the √third term in Eq. (A5) is proportional to
+only the terms that contribute to the non-vanishing or-                   N g02 = β02 / N which is small enough to neglect its con-
+ders of light-matter interaction in the photonic equations.               tribution to the photonic dynamics. This can be no-
+   Now we consider each term separately. The first term                   ticed by considering an average field ⟨aµ (t)⟩, which is
+corresponds to the unperturbed initial condition of the                   at least proportional to ∼ g0 ⟨jµ (t)⟩0 , and
+                                                                                                                      √ hence accord-
+material system, which means that in the case of in-                      ing to Eq.(A5) scales as β0 N 1/4 (1 + β02 / N + β02 /N 3/2 ).
+finitely small light-matter coupling the interaction repre-               Hence, the third term can be omitted and we finally ar-
+sentation in which this equation is written first becomes                 rive at Eq.(9) from the main text.
+nothing but the Heisenberg representation. The second
+term denotes unitary dynamics, which occurs due to the
+finite light-matter interaction between a cavity and a ma-                                   2.    Photonic subsystem
+terial system. By definition, it is proportional to the av-
+              (µ)
+erage field ⟨AQ (t)⟩F . According to the reduced photonic                    We can rewrite the photonic density matrix equa-
+density matrix equation (A1), it can be noticed that√the                  tion (A1) in the form of Eq. (10) by opening the brackets
+average field is proportional to at least g02 N = β02 / N                 in the Lindbladian term. This equation can be simplified
+                                                                                                                                     15
+
+further. Taking into account our discussion of the aver-                 system is placed inside one-sided cavity. We start from
+age paramagnetic current from the previous subsection,                   the boundary condition relating each of the far-field am-
+we can say that the unitary term in Eq. (10) is                          plitudes outside the cavity to the intracavity field. Each
+                                                                       mode in the cavity can be related to its own channel as
+                  (µ)                  1           ′   (ν)
+ ⟨Ĥef f (t)⟩M = AQ (t) ⟨jµ (t)⟩0 + ⟨jd,µν (t )⟩0 AQ (t)
+                                       2
+                                                                                                    p
+                        Z t                                                           a(out)
+                                                                                       µ,m (t) =        2γm aµ,m (t) − a(in)
+                                                                                                                        µ,m (t)    (B1)
+                  (µ)                          (ν)
+               + AQ (t)     dt′ χµ,ν (t, t′ )⟨AQ (t)⟩,
+                                −∞
+                                                             (A7)        As a result, interference terms between the input and
+where the first line originates from the unitary evolution               the cavity field may contribute to the observed moments
+of Ĥef f and the second line is a consequence of the weak               outside the cavity. We note that initially in the rotated
+                                                                                                                  (in)
+correlation regime between photonic fields and a solid                   frame there is no incoming field, so ⟨aµ,m (t)⟩ = 0, be-
+system.                                                                  cause the laser field is taken into account as a classical
+   Regarding the Lindbladian term, as noted in the main                  driving force for a solid system.
+text, to determine the susceptibility and matter correla-                   First of all, we are going to derive the corresponding
+tion tensor one can use ρ0 instead of ρM (t) for the same                equation of motion for a single operator, namely the am-
+reason as we did in the analysis of the reduced matter                   plitude of the field aµ,m of the m-th mode. Because
+density matrix equation. Initially, the Lindbladian term                 Eq. (11) is written in the interaction picture, we note
+contains a correlation of two currents as ⟨jµ (t)jν (t′ )⟩0              that the full time derivative of any operator OH (t) in the
+which grows quadratically with the number of emitters                    Heisenberg picture is
+N . However, one can notice that
+                                                                                                                        
+                           X                                               d⟨OH (t)⟩              dρ(t)          ∂OI (t)
+  ⟨jµ (t)jν (t′ )⟩M = Tr    jµ,k1 (t)jν,k1 (t′ ) (⊗k ρk (t′ ))                     = Tr OI (t)          + Tr           ρ(t)
+                                                                              dt                    dt             ∂t          (B2)
+                                 k1 ,k2
+       X                                     X                                       + Tr [Lf [ρ(t)]OI (t)] ,
+  =             ⟨jµ,k1 (t)⟩⟨jν,k2 (t′ )⟩ +       ⟨jµ,k (t)jν,k (t′ )⟩
+      k1 ̸=k2                                k
+
+  = ⟨jµ (t)⟩⟨jν (t′ )⟩ + Dµ,ν (t, t′ ),                                  where the first line corresponds to the standard trans-
+                                                       (A8)              formation from the interaction picture to the Heisenberg
+where we defined a correlation matter tensor as in                       one, while the second line describes leakage from the cav-
+Eq. (12) in the main text. As a result, it is clear that                 ity into open space. We extract this term explicitly from
+the correlation matter tensor grows linearly with N . In                 the dρ/dt to emphasize the open-type cavity used in this
+the following discussion of photonic statistics, the scaling             research. The decay field outside the cavity can be writ-
+of the Lindbladian terms is discussed in detail as well as               ten in the standard Lindbladian form as
+the nature of additional dynamics that are governed by
+it.                                                                                 X
+                                                                                          γm 2aµ,m ρa†µ,m − ρa†µ,m aµ,m − a†µ,m aµ,m ρ .
+                                                                                                                                      
+                                                                         Lf [ρ] =
+                                                                                    µ,m
+            Appendix B: Cavity field equations                                                                              (B3)
+                                                                         Keeping this in mind and taking into account Eq. (11)
+  In this section, we are going to derive in detail the                  and Eq. (A7), the unitary contribution to the evolution
+photonic equations of motion in the case when the solid                  of the field amplitude can be written as
+
+
+                                                                             Zt                                                    
+        
+                    −iωm t
+                             h                 i     g0                 g0       ′  (ν) ′             ′              ′           ′
+ −iTr aµ,m e                  ⟨Ĥef f ⟩M , ρ(t) = −i √    ⟨jµ (t)⟩0 − i √       dt ⟨AQ (t )⟩ χµ,ν (t, t ) + 2⟨jd,µν (t )⟩0 δ(t − t )
+                                                       ωm                 ωm
+                                                                             −∞
+                                                                                                                                   (B4)
+
+
+the expression under the last integral is nothing but                    tary evolution part can be rewritten as
+a matter conductivity tensor σµ,ν (t, t′ ) = iΘ(t −
+t′ ) (χµ,ν (t, t′ ) + 2⟨jd,µν (t′ )⟩0 δ(t − t′ )). Hence, the uni-
+                                                                                                    Z                           
+                                                                                     g0                                  (ν)
+                                                                          (B4) = −i √     ⟨jµ (t)⟩0 + dt′ σµ,ν (t, t′ )⟨AQ (t′ )⟩ .
+                                                                                      ωm
+                                                                                                                                (B5)
+                                                                                                                                16
+
+The physical meaning of each term is straightforward.                  meaning by analogy with classical electrodynamics. This
+The first one is a semiclassical response of the solid sys-            is not surprising, especially since they govern the unitary
+tem under the classical pumping force, while the second                evolution of the field.
+term is the back-force field influence on a solid system
+which occurs because the emitted fields in the past in-                  Turning to the evolution governed by the Lindbladian
+duce extra current in the crystal through nonlocal con-                term in Eq.(11), it is instructive to use the non-simplified
+duction in time. Each of the terms has a simple physical               version of the Lindbladian as
+
+
+                             h                   h                                                                ii
+                                         (µ)              (ν)                    (ν)               (ν)
+            Tr aµ,m e−iωm t jµ (t)AQ (t), jν (t′ )AQ (t′ ) − ⟨jν (t′ )⟩AQ (t′ ) − jν (t′ )⟨AQ (t′ )⟩, ρ0 ⊗ ρ(t)
+                 hh                                i                                                        i            
+                                               (µ)            (ν)                     (ν)              (ν)
+            =Tr      aµ,m e−iωm t , jµ (t)AQ (t) , jν (t′ )AQ (t′ ) − ⟨jν (t′ )⟩AQ (t′ ) − jν (t′ )⟨AQ (t′ )⟩ , ρ0 ⊗ ρ(t)
+                g0     h
+                                              (ν)                (ν)                   (ν)
+                                                                                               i                              (B6)
+            =√     Tr jµ (t), jν (t′ )AQ (t′ ) − ⟨jν (t′ )⟩AQ (t′ ) − jν (t′ )⟨AQ (t′ )⟩ , ρ0 ⊗ ρ(t)
+                ωm
+                g0                            (ν)                                   (ν)
+                                                                                                     
+            =√        ⟨[jµ (t), jν (t′ )]⟩0 ⟨AQ (t′ )⟩ − 0 − ⟨[jµ (t), jν (t′ )]⟩0 ⟨AQ (t′ )⟩Tr(ρ(t)) = 0
+                ωm
+
+
+
+This result follows from the conservation of the trace of              term is enforced by its zero value. The two remain-
+ρ(t) in time. Hence, we come to an important conclusion,               ing terms are trivial. The leakage term generates the
+namely the average amplitudes of the field in the weak                 −γm ⟨aµ,m (t)⟩ part, and the one with the partial deriva-
+correlation regime are not affected by the non-unitary                 tive generates the −iωm ⟨aµ,m (t)⟩ part. Overall, the equa-
+evolution at all and hence the way we omitted time de-                 tion of motion of the average amplitude inside the cavity
+pendence of ρM (t) in the derivation of the Lindbladian                is
+
+
+                                                                                        Z
+                   d⟨aµ,m (t)⟩                               g0               g0                              (ν)
+                               = −(γm + iωm )⟨aµ,m (t)⟩ − i √    ⟨jµ (t)⟩0 − √              dt′ σµ,ν (t, t′ )⟨AQ (t′ )⟩   .    (B7)
+                       dt                                     ωm               ωm
+
+
+
+It matches Eq.(15) from the main text. As stated in the                can be written
+main text, it is convenient to solve this equation by using                                         ∗
+                                                                                      −ig0 X       jµ,p
+the following ansatz                                                       a(cl)                              e−iωp t ,
+                                                                            µ,m (t) = √                                        (B9)
+                                                                                        ωm p γm + i(ωm − ωp )
+
+                                                                       where jµ,m is the m-th Fourier coefficient in current ex-
+                                                                       pansion.
+                                                                          To determine photonic statistics we also need to learn
+                                                                       about two-operator observables, such as the average
+                                                                       number of photons nµ,m = ⟨a†µ,m aµ,m ⟩ and the average
+                                                                       squared field ⟨a2µ,m ⟩ of the mode m. Their differences
+                                                       √               from the average amplitudes indicate deviations from the
+ ⟨aµ,m (t)⟩ = a(cl)       (q)
+               µ,m (t) + aµ,m (t) ∼ β0 N
+                                         1/4
+                                             (1 + β02 / N ).           multi-mode coherent emission. We start from the average
+                                                         (B8)          population of modes. In the interaction picture the cor-
+The first term describes the semiclassical evolution, while            responding population operator does not depend on time
+the second one denotes the back-force action. This will be             explicitly, so the contribution from the partial derivative
+extremely helpful in understanding the origin of quantum               is zero in the equation of motion. The leakage part pro-
+properties of the emitted light. On a large time scale, we             duces the −2γm nµ,m (t) term. The unitary evolution part
+can expand the obtained field in the Fourier series. For               provides analogous terms to those obtained in the field
+the semiclassical response, the simple analytical answer               amplitude equation in Eq.(B5), namely
+
+
+                                                                                                           √
+                                                                           Z                        
+                            h                    i  1   (µ)                                 (ν) ′
+     −iTr       a†µ,m aµ,m       ⟨Ĥef f ⟩M , ρ(t) =                           ′          ′
+                                                        ⟨EQ (t)⟩ ⟨jµ (t)⟩0 + dt σµ,ν (t, t )⟨AQ (t )⟩ ∼ β02 N + β04 ,         (B10)
+                                                     ωm
+                                                                                                                                       17
+
+                      (µ)                (µ)
+where we denoted EQ (t) = −∂AQ (t)/∂t i by analogy with the electric field operator. Because it is governed only
+by the average amplitudes of the field, it can generate only mixtures of coherent states.
+  The most interesting part arises from the contribution of the non-unitary term in Eq.(11). We can calculate it as
+                             h                 h                                                               ii
+                                         (µ)               (ν)                 (ν)                 (ν)
+            −Tr a†µ,m aµ,m jµ (t)AQ (t), jν (t′ )AQ (t′ ) − ⟨jν (t′ )⟩AQ (t′ ) − jν (t′ )⟨AQ (t′ )⟩, ρ0 ⊗ ρ(t)
+                 −i h               (µ)               (ν)                 (ν)                 (ν)
+                                                                                                        i      
+               =    Tr jµ (t)EQ,m (t), jν (t′ )AQ (t′ ) − ⟨jν (t′ )⟩AQ (t′ ) − jν (t′ )⟨AQ (t′ )⟩ , ρ0 ⊗ ρ(t)
+                 ωm
+                 −i                                                                                               (B11)
+                                            (µ)      (ν)                           (ν)     (µ)
+               =      ⟨jµ (t)jν (t′ )⟩0 ⟨EQ,m (t)AQ (t′ )⟩ − ⟨jν (t′ )jµ (t)⟩0 ⟨AQ (t′ )EQ,m (t)⟩
+                 ωm
+                  i                          (ν)         (µ)                             (µ)         (ν)
+                                                                                                             
+               +      ⟨[jν (t′ ), jµ (t)]⟩0 ⟨AQ (t′ )⟩⟨EQ,m (t)⟩ + ⟨jν (t′ )⟩⟨jµ (t)⟩0 ⟨[EQ,m (t), AQ (t′ )]⟩
+                 ωm
+                                                                                                                        (µ)
+Any product of two operators can be decomposed into symmetric and antisymmetric parts as ⟨Em A(ν) ⟩ =
+1     (µ)    (ν)            (µ)
+2 (⟨{Em , A      }⟩ + ⟨[Em , A(ν) ]⟩). Then we note that the commutator of two operators in this case is just a number,
+            (µ)
+namely ⟨[Em , A(ν) ]⟩ = ig02 δµ,ν (eiωm τ + e−iωm τ ), where τ = t − t′ . Thus, it can be rewritten as
+           g2                          ′                    ′
+                                                                
+ (B10) = 0 Dµ,µ (t, t′ )e−iωm (t−t ) + Dµ,µ (t′ , t)eiωm (t−t )
+          ωm
+          ig02
+                                                                                                                          
+                         ′        2     ′             ′ 2
+                                                              †    ′        ′       †     ′          ′
+                                                                                                          −iωm (t−t′ )
+       +       χµ,ν (t, t )     ⟨aµ,m (t )⟩ − ⟨aµ,m (t )⟩ + ⟨aµ,m (t )aµ,m (t )⟩ − ⟨aµ,m (t )⟩⟨aµ,m (t )⟩ e             − c.c .
+          ωm
+                                                                                                                          (B12)
+
+                                       √
+The first line grows as g02 N ∼ β02 / N , while the sec-              this term corresponds to the noise spectral function and
+ond part consists of differences between second- and first-           as a result generates deviations from coherent radiation.
+order statistics. Its scaling will be discussed below. For            Collecting all terms together, we can write the equation
+now, we just omit this part. Returning to the first line,             for the average population of the m-th mode as
+
+
+                                                                                                  Z∞
+    dnµ,m (t)                   d  †                                                 g2
+                                   ⟨aµ,m (t)⟩⟨aµ,m (t)⟩ + 2γm ⟨a†µ,m (t)⟩⟨aµ,m (t)⟩ + 0                dτ Dµ,µ (t + τ, t)e−iωm τ
+                                                       
+              = −2γm nµ,m (t) +
+       dt                       dt                                                   ωm
+                                                                                                 −∞                                .
+                                                d (coh)
+              ≡ −2γm        nµ,m (t) − n(coh)
+                                        µ,m (t) +   n     (t) + Sµ,m (t)
+                                                  dt µ,m
+                                                                                                                              (B13)
+
+
+One should note that when the temperature Tth of the                  spectral noise
+                                                                                   √ function definition it is clear that it grows
+optical bath is positive, the corresponding population of             as S ∼ β02 / N , hence the difference between the total
+thermal bosons nth should be added to the equation.                   population of each mode and   √ its coherent contribution
+However, in this work, we set Tth = 0. The formal solu-               cannot grow faster than β02 / N . Now we can return to
+tion on a large time scale can be written as                          Eq. (B12) to estimate the scaling of the second line. It
+                                                                      is clear that it is bounded by g02 N × g02 N ∼ β04 /N and
+                            Zt                                        hence it is out of the scope of the current work.
+                                                        ′
+ nµ,m (t) = n(coh)
+             µ,m (t) +           dt′ Sµ,m (t′ )e−2γm (t−t ) . (B14)
+                         −∞                                             By proceeding in the same way, the corresponding
+                                                                      equation for the average squared field amplitude can be
+Several comments should be made here. Firstly, from the               found as
+
+
+                                                                                      Z∞
+                                                                                                                
+                                                                          2
+d  2                                                                  2g     i
+   ⟨aµ,m (t)⟩ − ⟨aµ,m (t)⟩2 = −2(γm + iωm ) ⟨a2µ,m (t)⟩ − ⟨aµ,m (t)⟩2 − 0  ⟨jd,µµ ⟩ + dτ Dµ,µ (t + τ, t)e−iωm τ 
+                                                                   
+                                                                                                                                            .
+dt                                                                     ωm 2
+                                                                                                   0
+                                                                                                                              (B15)
+
+
+As can be seen, the average squared field is different from           the squared average one by the additional noise factor.
+                                                                                                                                            18
+
+This extra term is essential for destroying the coherent                      where the generalized noise tensor Ξµ,µ (ωm ) is deter-
+nature of the emitted light as well as to generate quantum                    mined by Eq. (19) in the main text. By using Eq. (B9) we
+properties of light. The formal solution for Eq. (B15) can                    can evaluate the semiclassical contribution to the mode
+be found by analogy with Eq. (B14). The same procedure                        population as
+can be extended to more complicated observables that
+mix different modes, polarizations, etc.                                                                         g02 X     |jµ,p |2
+                                                                                    ncl (m) ≡ ⟨|a(cl)    2
+                                                                                                 µ,m (t)| ⟩t =         2 + (ω − ω )2
+                                                                                                                                      .
+                                                                                                                 ωm p γm      m     p
+
+                                                                                                                                     (C4)
+       Appendix C: Intracavity field statistics                               This sum represents the mixture of different Lorentzian
+                                                                              peaks, namely a mixture of one resonant peak with heavy
+   In this work, all emitted light statistics are measured                    tails from other resonant modes. The weight of these tails
+on a large time scale t → ∞; on such large time scales,                       is characterized by γm , so for a closed cavity, Qc,m → ∞,
+the corresponding statistics are periodic functions of time                   the influence of the tails is suppressed and the popu-
+with the period of laser oscillations T , since the transient                 lation of each mode is determined only by the corre-
+processes have already decayed. Hence, the light statis-                      sponding Fourier component of the average current in
+tics averaged over one period T are of particular interest.                   the solid system. Nevertheless, in the case of an open
+For example, for some correlation function C(t)we can                         cavity and a solid-state system with inversion symme-
+determine its statistics averaged over one period as                          try these Lorentzian tails generate a nonzero population
+                                                                              of the even modes. Despite the apparent contradiction,
+                                        t+T
+                                        Z                                     these tails do not induce light emission from the even
+                              1
+            C ≡ ⟨C(t)⟩t = lim                 C(t)dt.               (C1)      modes outside the cavity. See the next section for the de-
+                          t→∞ T
+                                        t
+                                                                              tailed discussion. Meanwhile, the average squared semi-
+                                                                              classical field amplitude is
+In other words, this is nothing but the zeroth component
+of the Fourier expansion. As a result, using the Eq.(B14),                                              g02 X     |jµ,p |2
+                                                                                      ⟨a(cl)   2
+                                                                                        µ,m (t) ⟩t =                            .         (C5)
+we can determine intracavity population averaged over                                                   ωm p (γm + iωm )2 + ωp2
+one period of the n-th mode as
+                                                                                 Another important intracavity characteristic is the
+  nµ,m = n(coh)
+          µ,m                                                                 second-order correlation function. Here we study only
+                  2 Z∞                                                      the limit g2 (0) = ⟨g2 (t, τ = 0)⟩t to reveal the statis-
+                g0                                                            tical properties of emission. One should note that the
+       + Qc,m            dτ ⟨Dµ,µ (t + τ, t)⟩t e−iωm τ ,
+                ωm                                                            quantity under study is relevant to far field statistics as
+                          −∞
+                                                                              well. Because the semiclassical response is a mixture of
+                                                                    (C2)
+                                                                              multi-mode coherent states,we anticipate that, in gen-
+and the averaged squared field amplitude as
+                                                                              eral, the open cavity generates light that possesses super-
+                                     2 ⟨Ξµ,µ (ωm )⟩t                          Poissonian statistical properties, namely g2 (0)µ,m > 1.
+     ⟨a2µ,m ⟩ = ⟨⟨aµ,m (t)⟩2 ⟩t −                    ,              (C3)      Thus, by using Eq. (B9), one can show that
+                                       1 + 2iQc,m
+
+                                               P               jp1             j p2            jp∗             jp∗ +p −p
+                                                                                                  3               1  2   3
+                      (cl)                               γm +i(ωp1 −ωm ) γm +i(ωp2 −ωm ) γm +i(ωm −ωp3 ) γm +i(ωm −ωp1 +p2 −p3 )
+                   ⟨|aµ,m (t)|4 ⟩t          p1 ,p2 ,p2
+    g2 (0)µ,m = h                i2 =                                       "                      #2                              ≥ 1.   (C6)
+                    (cl)
+                 ⟨|aµ,m (t)|2 ⟩t                                                P           |2
+                                                                                        |jµ,p
+                                                                                     2 +(ω −ω )2
+                                                                                    γm     m  p
+                                                                                p
+
+
+
+
+As can be seen, this quantity grows as ∼ β00 N 0 ∼ 1.                            In spite of the fact that so far we have not demon-
+Moreover, in the limit of a closed cavity γm → 0, only                        strated any quantum features of radiation, the degree
+resonant terms contribute and hence g2 (0)µ,m → 1, and                        of squeezing can reveal the quantum properties of the
+this in turn corresponds to coherent states, as it should                     field. As stated in the main text, one can characterize
+be.                                                                           the degree of squeezing in Eq. (28) by the variance of the
+                                                                              rotated quadrature, which can be calculated as
+
+
+                                                                                                                       ∗
+                                                                                    2 ⟨Ξµ,µ (ωm )⟩t −2iθ 2 ⟨Ξµ,µ (ωm )⟩t 2iθ
+                                                                                                                            
+                     2                                      1
+   ∆t X̂µ,m (θ) = ⟨X̂µ,m (θ)⟩t − ⟨X̂µ,m (θ)⟩2t =                 1 + 2⟨Sµ,m (t)⟩t +                e    +                e     .          (C7)
+                                                            4                         1 + 2iQc,m           1 − 2iQc,m
+                                                                                                                                        19
+
+As can be noticed, due to the coherent state proper-                     tion between the spectral noise function and the gener-
+ties, this expression does not depend on coherent fields                 alized noise correlation function and by optimizing over
+at all. Meanwhile, its value is determined by noise cor-                 all angles, one can obtain Eq. (29).
+relation functions. This in turn proves our statement                       Turning to two-mode intracavity correlations, one
+that noise correlation functions that are determined by                  needs to calculate the two-operator averages between dif-
+current-current fluctuations in a solid are responsible for              ferent modes. In the same way as we did in B, we can
+quantum light generation. Taking into account the rela-                  determine them as
+
+
+           d
+              ⟨aµ,p1 (t), aν,p2 (t)⟩ = −(γp1 + γp2 + i(ωp1 + ωp2 )) ⟨aµ,p1 (t), aν,p2 (t)⟩ − (Ξµ,ν (ωp1 ) + Ξν,µ (ωp2 )),
+           dt                                                                                                                        (C8)
+           d †
+              ⟨a     (t), aν,p2 (t)⟩ = −(γp1 + γp2 + i(ωp2 − ωp1 )) ⟨a†µ,p1 (t), aν,p2 (t)⟩ + (Ξ∗µ,ν (ωp1 ) + Ξν,µ (ωp2 )).
+           dt µ,p1
+
+
+
+As might be expected from the previous discussion, these                 By using the relation between input and output fields
+quantities achieve nontrivial values at long times t → ∞                 Eq. (B1) as well as the zero-temperature condition Tth =
+only in the presence of noise correlation functions. By                  0, the expression Eq. (D1) can be rewritten as
+calculating the generalized noise correlation function be-
+tween different modes, it is possible to determine the co-
+variance matrix between modes and hence estimate two-                                       Z∞
+mode correlations.                                                         Sm (ω) = 2γm          dτ eiωτ ⟨⟨a†µ,m (t)aµ,m (t + τ )⟩⟩t . (D2)
+                                                                                           −∞
+
+         Appendix D: Far field field statistics
+
+   The simplest statistics that characterizes the far fields             Therefore, in order to describe the far field statistics of
+is the intensity spectrum of the outgoing field from the                 emitted fields, one needs to consider correlation functions
+m-th channel mode, which can be calculated by studying                   with two operators of intracavity fields at two different
+the correlation function of outgoing fields at two different             times. One can do it with the help of the quantum regres-
+times.                                                                   sion theorem. To do so, we first need to write down the
+                                                                         closed linear system of equations of motion for single-
+              Z∞                                                         time operators. It has already been done in Eq. (B7).
+                                  †
+   Sm (ω) =        dτ eiωτ ⟨⟨a(out)   (out)
+                              µ,m (t)aµ,m (t + τ )⟩⟩t .       (D1)       The formal solution of it is
+              −∞
+
+
+                                                  Zt                                        Z                                
+                         −(γm +iωm )t       g0                             ′                                         (ν)
+     ⟨aµ,m (t)⟩ = C0 e                  − i√           dt′ e−(γm +iωm )(t−t ) ⟨jµ (t′ )⟩0 + i dt′′ σµ,ν (t′ , t′′ )⟨AQ (t′′ )⟩ ,     (D3)
+                                             ωm
+                                                  −∞
+
+
+
+
+where C0 stands for the initial condition. Because we are                deduce that it consists only of semiclassical fields, namely
+interested in the limit t → ∞, this means that we can
+omit the first homogeneous term, and hence the answer                      d (cl)                                     g0
+                                                                             a (t). = −(γm + iωm )a(cl) µ,m (t) − i √      ⟨jµ (t)⟩0
+does not depend on the initial condition. Another com-                    dt µ,m                                      ωm
+ment should be made about the last homogeneous term.                        d (q)
+Taking into account the expansion in Eq. (B8), we can                         a (t) = −(γm + iωm )a(q)  µ,m (t)
+                                                                           dt µ,m             Z
+                                                                                         g0                        X 2g0
+                                                                                     −√          dt′ σµ,ν (t, t′ )   √ Re a(cl)        ′
+                                                                                                                                 µ,n (t ).
+                                                                                          ωm                       n
+                                                                                                                       ω n
+                                                                                                                                     (D4)
+                                                                         As can be seen, we obtain a closed system of linear differ-
+                                                                         ential equations with an inhomogeneous part. Hence, the
+                                                                         quantum regression theorem states that double-time cor-
+                                                                         relation functions can be found via the same differential
+                                                                         equations for the single-time system but with a different
+                                                                                                                                       20
+
+initial condition and inhomogeneous part. By using the                     a product of single-time average operators at different
+formal solution of the single-time operator equation we                    times. The initial condition states that for τ = 0 the
+can write that                                                             correlation function is ⟨a†µ,m (t)aµ,m (t)⟩, and this single-
+                                                                           time double operator correlation we already know from
+   ⟨a†µ,m (t)aµ,m (t + τ )⟩ = ⟨a†µ,m (t)⟩⟨aµ,m (t + τ )⟩                   the intracavity study. Hence, we get
+                                                                    (D5)
+                              + Ce−(γm +iωm )τ .
+
+In other words, the inhomogeneous part provides only
+
+
+                                                                      "                                         #
+      ⟨a†µ,m (t)aµ,m (t + τ )⟩ = ⟨a†µ,m (t)⟩⟨aµ,m (t + τ )⟩ + ⟨a†µ,m (t)aµ,m (t)⟩ − ⟨a†µ,m (t)⟩⟨aµ,m (t)⟩ e−(γm +iωm )τ             (D6)
+
+
+
+
+In this equation, we associate the first term with coher-                  a density matrix equation for the material system up to
+ent scattering, and the second with incoherent scatter-                    linear order in the external field A(t). In the presence of
+ing. This follows from the fact that the term in brackets                  finite a scattering rate the kinetic equation in the velocity
+is zero for coherent fields, and in our case is equal to                   gauge can be written as
+δnµ,m , in other words, it arises only due to the spec-
+                                                                              d              h             i         h              i
+tral noise function. Technically, Eq. (D6) was obtained                          ρk (t) = −i Ĥ0,k , ρk (t) − iAµ (t) ĵk,µ , ρk (t)
+for τ ≥ 0. However, in order to calculate the Fourier                         dt                                                      (E1)
+                                                                                                         (0)
+transform of this expression as in Eq. (D1), we need                                    − γM (ρk (t) − ρk ),
+to know it for τ < 0 as well. By using the identity
+                                                                           where H0,k is the unperturbed Hamiltonian. Because we
+⟨a† (t + τ )a(t)⟩ = ⟨a† (t)a(t + τ )⟩∗ , we can see that the
+                                                                           are interested in the linear response only, the correspond-
+expectation values for τ < 0 are related to those with
+                                                                           ing ansatz for density matrix can be written in the form
+τ > 0 by complex conjugation. By taking into account                                 (0)    (1)             (0)
+Eq. (B9), we can obtain the semiclassical response to the                  ρk (t) ≈ ρk + ρk (t), where ρk = diag(fk,m ) is the ini-
+                                                                                                                               (1)
+intensity spectrum of the m-th mode as                                     tial condition in thermal equilibrium and ρk (t) ∼ A0 .
+                              2 X                                         Hence, after some algebra, we obtain the expression for
+                                            8|jµ,p |2
+                     
+   (cl)                  g0                                                matrix elements of linear term in the density matrix as
+  Sµ,m  (ω) = Qc,m                           (ωm −ωp )2
+                                                            δ(ω − ωp ).
+                         ωm        p   1+
+                                                                                          
+                                                                                            ∂fk,m
+                                                                                                                                   
+                                                 2                              (1)
+                                                γm
+                                                                              ρk,mp (t) =          δm,p + irµmp′ ,k (fk,m − fk,p )
+                                                     (D7)                                     ∂kµ
+As one can notice, it contributes only to resonant har-                                   Zt                                         (E2)
+monics. Furthermore, by taking into account the fields                                          ′      ′ (iϵmp,k +γM )(t′ −t)
+ (q)                                                                                    ×     dt Aµ′ (t )e                    ,
+aµ,m , it is possible to find quantum corrections to this
+                                                                                         −∞
+semiclassical term. However, they also contribute only
+to resonant terms, which in turn justifies the notation of                         mp
+                                                                           where rµ,k  = ⟨uk,m |i∂µ uk,p ⟩ is the momentum space non-
+Eq. (37) in the main text. At the same time, the inco-                     Abelian Berry connection. In this section, it is conve-
+herent part of the intensity spectrum can be found as                      nient to set Aµ (t) = A0,µ eiΩt . We can do it without any
+                                      2                                  loss of generality because we are studying only the lin-
+                                  g0        Re Ξ̃µ (ωm )                   ear response. At the same time, the current operator in
+     Sincoh (ω) = 8Qc,m                                     2   .   (D8)
+                                  ωm        1 + (ωmγ−ω)
+                                                    2
+                                                                           the velocity gauge is time-dependent and hence can be
+                                                        m
+                                                                           represented as a sum of paramagnetic and diamagnetic
+  The far field squeezing can be obtained in the same                      responses.
+way via the quantum regression theorem. In this case,                                  ĵk,µ (t) = ĵp,µ (k) + ĵd,µν (k)Aν (t),
+one needs to find ⟨aµ,m (t)aµ,m (t + τ )⟩.                                                                                          (E3)
+                                                                                       ⟨jµ (t)⟩ = jp,µ (t) + jd,µ (t)
+                                                                           where the first term corresponds to the paramagnetic cur-
+  Appendix E: Linear response theory for 1D SSH                            rent, and the second one to the diamagnetic current. In
+                      model                                                this case, the average paramagnetic current can be found
+                                                                           as
+  In this section, we are going to use the linear response                                 X  ∂ϵk,m                     
+                                                                                                                           (1)
+theory to find an estimate of the current that occurs in                      jp,µ (t) = −             δp,m + irµpm ϵpm,k ρk,mp (t),
+1D SSH model. To prove the current evaluation from                                                ∂kµ
+                                                                                          m,p,k
+the main text, the most straightforward way is to solve                                                                             (E4)
+                                                                                                                                  21
+
+where we have embedded the matrix element of the para-             Appendix F: Linear response theory for the
+magnetic current operator explicitly, and the sum over                     correlation matter tensor
+k runs over the FBZ. By further simplification, we can
+write the paramagnetic response as                              In this section, we are going to find the linear term in
+              X X ϵ3mp,k (fk,m − fk,p ) mp                    the external field in the correlation matter tensor
+   jp,µ (t) =                          g ′ (k),       (E5)
+                         + (Ω + iγM )2 µµ
+                                                                                X
+                   ϵ2                                           Dµ,ν (t, t′ ) =   ⟨jµ,k (t)jν,k (t′ )⟩ − ⟨jµ,k (t)⟩⟨jν,k (t′ )⟩.
+              k m,p mp,k
+                                                                                 k
+                             mp
+where ωmp,k ≡ ωk,m −ωk,p , gµµ ′ (k) is the quantum metric                                                                (F1)
+tensor. At the same time, the average diamagnetic term        This can be done with the help of results from the pre-
+is                                                            vious section as well as the quantum regression theorem
+                            XX
+                                          mm                  for treating the two-time correlation function. In what
+         jd,µ (t) = Aµ′ (t)        fk,m jd,µµ ′ (k)  (E6)     follows, we omit k in all notation assuming that all parts
+                              k      m
+                                                              are taken with the same momentum. The last term in
+Although our derivation is general and valid for arbitrary    Eq. (F1) can be written immediately according to the
+system and external temperature Tth , from this point on,     previous section as
+we set for the 1D SSH model Tth = 0, f− = 1, f+ =                                                      !                !
+0 and assume small decay rate compared to the band                                 ′
+                                                                                            X      ∂ϵm     X        ∂ϵm
+                                                                 ⟨jµ,k (t)⟩⟨jν,k (t )⟩ =        fm               fm
+gap, i.e. γM ≪ ∆. Moreover, we omit the projection                                                 ∂kµ              ∂kν
+                                                                                             m              m
+notation because the geometry of 1D SSH model allows                                          !                 !
+wave propagation only along one axis. As a result, after                        X        ∂ϵm      X
+                                                                   + Aν ′ (t′ )      fm                   mm
+                                                                                                     fm jd,νν ′
+some algebra, we obtain                                                                  ∂kµ
+                                                                                  m                m
+                               2∆3k
+                                                                                               !               !
+                                                                                                         ∂ϵm
+                     X
+    jp (t) = −A(t)                       g +− (k),
+                                                                                X                 X
+                                                                                         mm
+                         ∆k + (Ω + iγM )2 µµ
+                          2                                        + Aµ′ (t)         fm jd,µµ′        fm
+                     k                                                                                    ∂kν
+                     X                                (E7)                       m                 m
+                         ∆k rµ+− ,
+                                                                                              !                       mp
+                                                                                                                          !
+    jd (t) = −A(t)                                                              X        ∂ϵ m
+                                                                                                  X (fm − fp )ϵ3mp gνν  ′
+                     k                                             + Aν ′ (t′ )      fm
+                                                                                  m
+                                                                                         ∂kµ          ϵ2 + (γM + iΩ)2
+                                                                                                  mp mp
+where ∆k = ϵ+ (k) − ϵ− (k). As can be seen, the para-                                                mp
+                                                                                                         !                !
+magnetic current is proportional to the quantum metric                          X (fm − fp )ϵ3mp gµµ   ′    X        ∂ϵm
+         +−                                                        + Aµ′ (t)                                      fm        .
+tensor gµµ  , while the diamagnetic component is propor-                        mp mp
+                                                                                     ϵ2 + (γM + iΩ)2          m
+                                                                                                                     ∂kν
+tional to the Berry connection. Because we are working                                                            (F2)
+in the insulating phase, the Drude weight must be zero,       At the same time, the two-time correlation function can
+in other words we must get                                    be written as
+                ∂jd /∂A = − lim ∂jp /∂A.              (E8)                               X               pm
+                                                                                                                
+                                  Ω→0                             ⟨jµ,k (t)jν,k (t′ )⟩ =   jµpm + Aµ′ (t)jd,µµ′
+
+                                                                                         pm
+By explicitly taking the limit, one can show
+                              X
+                                                                                        "                           #            (F3)
+                                      +−                                                        ′         ′     ′
+             lim ∂jp /∂A = −      ∆k gµµ (k),         (E9)                           × L(t, t ) [jν,k (t )ρ̃(t )]            ,
+            Ω→0
+                                     k                                                                                  mp
+
+which, by analytically evaluating the sum over the FBZ,       where L(t, t′ )[ρ(t′ )] is the evolution operator of the cor-
+equals to ∂jd /∂A with the opposite sign. As a result, we     responding Lindblad equation Eq. (E1), from time t′ to
+obtain                                                        t with initial condition ρ(t′ ) and ρ̃(t′ ) is defined by its
+                  X 2∆k Ω(Ω − 2iγM )                          matrix elements as
+   ⟨j(t)⟩ = −A(t)                       g +− (k). (E10)
+                      ∆2k + (Ω + iγM )2 µµ                                                                mp
+                                                                        ρ̃mp (t′ ) = jνmp fp + Aν ′ (t′ )jd,νν
+                     k                                                                                         ′ fp
+
+
+As can be seen, in the dual regime, the ratio under the                                         X (fn − fp )j mn j np            (F4)
+                                                                                                                     ν′
+sum is the same for both matter phases. However, the                               + Aν ′ (t′ )                  ν
+                                                                                                                        .
+                                                                                                n
+                                                                                                  γ M   +  i(ϵ np  + Ω)
+quantum metric tensor is different. It can be shown that
+         +−
+        gtop        +−
+             (k) − gtriv (k) = |J12 − J22 |/∆2k .    (E11)    Eq. (F3) is the manifestation of the quantum regression
+                                                              theorem. We use matrix jν,k (t′ )ρ̃(t′ ) as a new effective
+As can be seen, the difference is always positive and hence   density matrix which we evolve sequentially until time
+the absolute value of linear response of the matter in        t to find the two-time correlation function. The sum in
+the topological phase is always higher than in the trivial    Eq. (F3) can be separated into two parts because the part
+phase. The obtained equations are accurate in the case of     that is proportional to Aµ′ is already of the first order of
+weak laser fields, i.e. the regime where the Kubo formula     the external field and hence it is sufficient to take only
+is valid.                                                     the trivial evolution part from L(..). Thus, we obtain
+                                                                                                                                                                    22
+                          "                                #                                                                               
+    X                                                                           X                 ∂ϵp   X pm                             ′
+                 pm
+         Aµ′ (t)jd,µµ ′   L(t, t′ ) [jν,k (t′ )ρ̃(t′ )]              = Aµ′ (t)   fp j pp   d,µµ′     +  jd,µµ′ jνmp fp e−(γM +iϵmp )(t−t )                    (F5)
+    pm                                                                               p
+                                                                                                  ∂kν
+                                                               mp                                          m̸=p
+
+For the first part in Eq. (F4) the corresponding density matrix equation can be written as
+                dρmp                                                           X                          
+                      + iϵmp ρmp + γM (ρmp − ρ̃pp (t′ )δmp ) = −iAµ′ (t′ + τ )    jµmn  np      mn
+                                                                                     ′ jν fp − jν  fn jµnp′ ,                                                   (F6)
+                 dτ                                                            n
+
+where ρmp ≡ ρmp (t′ + τ ). The initial ρ̃(t′ ) contains terms of different orders in the external field. Only those that
+are independent of A0 are evolved by the inhomogeneous part in Eq. (F6). Taking this into account, the solution of
+Eq. (F6) can be found as
+ ρmp (t) = δmp ρ̃pp (t′ ) + (1 − δmp )
+                            (                                                                                                                           )
+                                                                           X                                      A ′ (t) − A ′ (t′ )e−(γM +iϵmp )τ           (F7)
+                                                                                                                      µ            µ
+                               ×           ′
+                                   ρ̃mp (t )e      −(γM +iϵmp )τ
+                                                                      +i           jνmn fn jµnp′ − jµmn  np
+                                                                                                      ′ jν fp                                               .
+                                                                             n
+                                                                                                                             γM + i(Ω + ϵmp )
+
+
+
+Now we have everything we need to resolve Eq. (F1) up                                    replicates Eq. (13) from the main text. Turning to the
+to linear order i A0 . The general formula is too cum-                                   first order, it is instructive to group all terms according
+bersome. Instead, we are going to group different parts                                  to whether they contain a diamagnetic matrix element.
+into groups of terms with similar physical meaning and                                   Then
+deal with them separately. The zeroth order of expansion
+
+                                                                 !                             !                                       !                        !
+                                            X           pp            ∂ϵp X      ∂ϵm                                X         pp           ∂ϵp X      ∂ϵm
+   (dia) : Dµν (t, t′ )k = Aµ′ (t)                  fp jd,µµ ′            −   fm                   + Aν ′ (t′ )           fp jd,νν ′           −   fm
+                                               p
+                                                                      ∂kν   m
+                                                                                 ∂kν                                 p
+                                                                                                                                           ∂kµ   m
+                                                                                                                                                      ∂kµ
+                                                                                   ′
+                                                                                                                                −(γM +iϵmp )(t−t′ )
+                                          X         pm
+                                                                                                         X       mp
+                              + Aµ′ (t)            jd,µµ    mp
+                                                         ′ jν  fp e−(γM +iϵmp )(t−t ) + Aν ′ (t′ )              jd,νν    pm
+                                                                                                                      ′ jµ fp e                     .
+                                          m̸=p                                                           m̸=p
+                                                                                                                                                                (F8)
+
+
+   In the case of a system with inversion symmetry, where                                and hence after taking the sum over the FBZ it vanishes.
+electron dispersion is an even function of its momen-                                    Turning to the second line, one can notice that the off-
+tum, i.e. ϵn (k) = ϵn (−k), one can show that Berry                                      diagonal matrix element of the current operator is an odd
+              nm
+connection rµ,k   is an odd function of momentum, while                                  function because it is proportional to the Berry connec-
+ pp       ∂2ϵp                                                                           tion, and hence the second line is also an odd function
+jd,µµ′ ∼ ∂ ∂   is an even function. This immediately im-
+          µ µ′                                                                           of momentum. As a result, for a system with inversion
+plies that the first line in Eq. (F8) is an odd function                                 symmetry there is no diamagnetic term in the linear re-
+                                                                                         sponse. Finally, the paramagnetic response is
+
+
+                                                                                 mp
+                                                                                                                           !
+                                                               X (fm − fp )ϵ3mp gµµ′             ∂ϵp X ∂ϵn
+                (para) : Dµν (t, t′ )k = Aµ′ (t)                                                     −   fn
+                                                               mp
+                                                                     ϵ2mp + (γM + iΩ)2           ∂kν   n
+                                                                                                            ∂kν
+                                                                             mp
+                                                                                                                            !
+                                                           X (fm − fp )ϵ3mp gνν ′                ∂ϵp X ∂ϵn
+                                                           ′
+                                               + Aν ′ (t )      2 + (γ          2
+                                                                                                     −   fn
+                                                              ϵ
+                                                           mp mp       M + iΩ)                   ∂kµ   n
+                                                                                                            ∂kµ
+                                                                                                                                                                (F9)
+                                                                                                         A ′ (t) − A ′ (t′ )e−(γM +iϵmp )τ
+                                                                                                             µ               µ
+                                                      XX
+                                               +i                jµpm       jνmn fn jµnp′ − jµmn  np
+                                                                                               ′ jν fp
+                                                                                                                     γM + i(Ω + ϵmp )
+                                                      m̸=p n
+                                                                 XX                (fn − fp )jνmn jνnp
+                                                                                                     ′
+                                               + Aν ′ (t′ )                 jµpm                       e−(γM +iϵmp )τ .
+                                                                                   γM + i(ϵnp + Ω)
+                                                               m̸=p n
+
+
+
+
+As can be noticed, each contribution is proportional to                                  the product of three matrix elements of the current op-
+                                                                                                                               23
+
+erator, which makes Eq. (F9) an odd function of momen-            ements can be extended to higher orders of the expansion.
+tum and hence it cancels out after summation over the             Hence, we can say that the matter correlation tensor is
+FBZ. As a result, we conclude that there is no linear re-         an even function of the external field for such systems.
+sponse term in the matter correlation tensor for a system         In particular, for the 1D SSH model ϵ± (k) = ϵ± (−k) and
+with inversion symmetry, and hence D ∼ D0 + O(A20 ).              hence for such a model there is no odd response in the
+Moreover, the argument about the parity of the matrix el-         tensor Dµµ (t, t′ ).
+
+
+
+
+ [1] P. B. Corkum, “Plasma perspective on strong field mul-       [15] A. Gorlach, O. Neufeld, N. Rivera, et al., “The quantum-
+     tiphoton ionization,” Phys. Rev. Lett. 71, 1994–1997              optical nature of high harmonic generation,” Nature
+     (1993).                                                           Communications 11, 4598 (2020).
+ [2] N. H. Burnett, H. A. Baldis, M. C. Richardson, and           [16] Philipp Stammer, Javier Rivera-Dean, Andrew S.
+     G. D. Enright, “Harmonic generation in co2 laser target           Maxwell, Theocharis Lamprou, Javier Argüello-Luengo,
+     interaction,” Applied Physics Letters 31, 172–174 (1977).         Paraskevas Tzallas, Marcelo F. Ciappina, and Maciej
+ [3] M Ferray, A L’Huillier, X F Li, L A Lompre, G Mainfray,           Lewenstein, “Entanglement and squeezing of the opti-
+     and C Manus, “Multiple-harmonic conversion of 1064 nm             cal field modes in high harmonic generation,” Phys. Rev.
+     radiation in rare gases,” Journal of Physics B: Atomic,           Lett. 132, 143603 (2024).
+     Molecular and Optical Physics 21, L31 (1988).                [17] J. Rivera-Dean, H. B. Crispin, P. Stammer, Th. Lam-
+ [4] P. M. Paul, E. S. Toma, P. Breger, G. Mullot, F. Augé,           prou, E. Pisanty, M. Krüger, P. Tzallas, M. Lewenstein,
+     Ph. Balcou, H. G. Muller, and P. Agostini, “Observa-              and M. F. Ciappina, “Squeezed states of light after high-
+     tion of a train of attosecond pulses from high harmonic           order harmonic generation in excited atomic systems,”
+     generation,” Science 292, 1689–1692 (2001).                       Phys. Rev. A 110, 063118 (2024).
+ [5] Ferenc Krausz and Misha Ivanov, “Attosecond physics,”        [18] M. F. Ciappina, “Solid-state high-order harmonic gen-
+     Rev. Mod. Phys. 81, 163–234 (2009).                               eration: emerging frontiers in ultrafast and quan-
+ [6] M. Lewenstein, Ph. Balcou, M. Yu. Ivanov, Anne                    tum light science,” Advances in Physics             (2025),
+     L’Huillier, and P. B. Corkum, “Theory of high-harmonic            10.1080/00018732.2025.2598130.
+     generation by low-frequency laser fields,” Phys. Rev. A      [19] Sili Yi, Nikolai D. Klimkin, Graham Gardiner Brown,
+     49, 2117–2132 (1994).                                             Olga Smirnova, Serguei Patchkovskii, Ihar Babushkin,
+ [7] Jeffrey L. Krause, Kenneth J. Schafer, and Kenneth C.             and Misha Ivanov, “Generation of massively entangled
+     Kulander, “High-order harmonic generation from atoms              bright states of light during harmonic generation in res-
+     and ions in the high intensity regime,” Phys. Rev. Lett.          onant media,” Phys. Rev. X 15, 011023 (2025).
+     68, 3535–3538 (1992).                                        [20] Lun Yue and Mette B. Gaarde, “Characterizing anoma-
+ [8] G. Vampa, C. R. McDonald, G. Orlando, D. D. Klug,                 lous high-harmonic generation in solids,” Phys. Rev.
+     P. B. Corkum, and T. Brabec, “Theoretical analysis                Lett. 130, 166903 (2023).
+     of high-harmonic generation in solids,” Phys. Rev. Lett.     [21] A. Pizzi, A. Gorlach, N. Rivera, et al., “Light emis-
+     113, 073901 (2014).                                               sion from strongly driven many-body systems,” Nature
+ [9] Shambhu Ghimire, Anthony D. DiChiara, Emily                       Physics 19, 551–561 (2023).
+     Sistrunk, Urszula B. Szafruga, Pierre Agostini, Louis F.     [22] M. Kim, T. Kim, A. Galler, et al., “Quantum interfer-
+     DiMauro, and David A. Reis, “Redshift in the optical              ence and occupation control in high harmonic genera-
+     absorption of zno single crystals in the presence of an           tion from monolayer ws2,” Nature Communications 16
+     intense midinfrared laser field,” Phys. Rev. Lett. 107,           (2025), 10.1038/s41467-025-65725-9.
+     167407 (2011).                                               [23] Yuta Murakami, Kento Uchida, Akihisa Koga, Koichiro
+[10] O. Schubert, M. Hohenleutner, F. Langer, et al., “Sub-            Tanaka, and Philipp Werner, “Anomalous temperature
+     cycle control of terahertz high-harmonic generation by            dependence of high-harmonic generation in mott insula-
+     dynamical bloch oscillations,” Nature Photonics 8, 119–           tors,” Phys. Rev. Lett. 129, 157401 (2022).
+     123 (2014).                                                  [24] Mina R. Bionta, Elissa Haddad, Adrien Leblanc, Vin-
+[11] S. Ghimire, A. DiChiara, E. Sistrunk, et al., “Observa-           cent Gruson, Philippe Lassonde, Heide Ibrahim, Jérémie
+     tion of high-order harmonic generation in a bulk crystal,”        Chaillou, Nicolas Émond, Martin R. Otto, Álvaro
+     Nature Physics 7, 138–141 (2011).                                 Jiménez-Galán, Rui E. F. Silva, Misha Ivanov, Bradley J.
+[12] I. Gonoskov, N. Tsatrafyllis, I. Kominis, et al., “Quantum        Siwick, Mohamed Chaker, and Fran çois Légaré, “Track-
+     optical signatures in strong-field laser physics: Infrared        ing ultrafast solid-state dynamics using high harmonic
+     photon counting in high-order-harmonic generation,” Sci-          spectroscopy,” Phys. Rev. Res. 3, 023250 (2021).
+     entific Reports 6, 32821 (2016).                             [25] K. Uchida, G. Mattoni, S. Yonezawa, F. Nakamura,
+[13] Ákos Gombkötő, Sándor Varró, Péter Mati, and Péter         Y. Maeno, and K. Tanaka, “High-order harmonic gen-
+     Földi, “High-order harmonic generation as induced by a           eration and its unconventional scaling law in the mott-
+     quantized field: Phase-space picture,” Phys. Rev. A 101,          insulating ca2 ruo4 ,” Phys. Rev. Lett. 128, 127401 (2022).
+     013418 (2020).                                               [26] Christian Saugbjerg Lange, Thomas Hansen,              and
+[14] Danis N. Yangaliev, Vladimir P. Krainov, and Oleg I.              Lars Bojer Madsen, “Electron-correlation-induced non-
+     Tolstikhin, “Quantum theory of radiation by nonstation-           classicality of light from high-order harmonic genera-
+     ary systems with application to high-order harmonic gen-          tion,” Phys. Rev. A 109, 033110 (2024).
+     eration,” Phys. Rev. A 101, 013410 (2020).                   [27] Christian Saugbjerg Lange and Lars Bojer Madsen, “Hi-
+                                                                                                                             24
+
+     erarchy of approximations for describing quantum light           387, 471–475 (1997).
+     from high-harmonic generation: A fermi-hubbard-model        [38] Christian Weedbrook, Stefano Pirandola, Raúl Garc´ia-
+     study,” Phys. Rev. A 111, 013113 (2025).                         Patrón, Nicolas J. Cerf, Timothy C. Ralph, Jeffrey H.
+[28] Jan Wilhelm, Patrick Grössing, Adrian Seith, Jack               Shapiro, and Seth Lloyd, “Gaussian quantum informa-
+     Crewse, Maximilian Nitsch, Leonard Weigl, Christoph              tion,” Rev. Mod. Phys. 84, 621–669 (2012).
+     Schmid, and Ferdinand Evers, “Semiconductor bloch-          [39] Ryszard Horodecki, Pawel Horodecki, Michal Horodecki,
+     equations formalism: Derivation and application to high-         and Karol Horodecki, “Quantum entanglement,” Rev.
+     harmonic generation from dirac fermions,” Phys. Rev. B           Mod. Phys. 81, 865–942 (2009).
+     103, 125419 (2021).                                         [40] Peter Zoller and C. W. Gardiner, “Quantum noise in
+[29] Katharina Buczolich, Takeshi Sato, Kenichi L. Ishikawa,          quantum optics: The Stochastic Schrödinger equation,”
+     Fabian Lackner, Joachim Burgdörfer, and Iva Březinová,        (1997), arXiv:quant-ph/9702030.
+     “Reduced density matrix description of high-harmonic        [41] S Swain, “Master equation derivation of quantum regres-
+     generation in multielectron atoms: Exploring subcycle            sion theorem,” Journal of Physics A: Mathematical and
+     correlation effects,” Phys. Rev. Res. 7, 043322 (2025).          General 14, 2577 (1981).
+[30] J. E. Sipe and A. I. Shkrebtii, “Second-order optical re-   [42] Philip Daniel Blocher and Klaus Mølmer, “Quantum
+     sponse in semiconductors,” Phys. Rev. B 61, 5337–5352            regression theorem for out-of-time-ordered correlation
+     (2000).                                                          functions,” Phys. Rev. A 99, 033816 (2019).
+[31] Pankaj Bhalla, Kamal Das, Dimitrie Culcer, and Amit         [43] Ivan V. Panyukov, Vladislav Yu. Shishkov,             and
+     Agarwal, “Resonant second-harmonic generation as a               Evgeny S. Andrianov, “Adjoint master equation for mul-
+     probe of quantum geometry,” Phys. Rev. Lett. 129,                titime correlators,” Phys. Rev. A 109, 052207 (2024).
+     227401 (2022).                                              [44] W. P. Su, J. R. Schrieffer, and A. J. Heeger, “Solitons in
+[32] Zhi Li, Ya-Qin Jin, Takami Tohyama, Toshiaki Iitaka,             polyacetylene,” Phys. Rev. Lett. 42, 1698–1701 (1979).
+     Jiu-Xing Zhang, and Haibin Su, “Second harmonic gen-        [45] Daichi Obana, Feng Liu, and Katsunori Wakabayashi,
+     eration in the weyl semimetal taas from a quantum ki-            “Topological edge states in the su-schrieffer-heeger
+     netic equation,” Phys. Rev. B 97, 085201 (2018).                 model,” Phys. Rev. B 100, 075437 (2019).
+[33] S. Alipour, A. T. Rezakhani, A. P. Babu, K. Mølmer,         [46] An F. Meier and B. Gadway, “Observation of the topo-
+     M. Möttönen, and T. Ala-Nissila, “Correlation-picture          logical soliton state in the su–schrieffer–heeger model,”
+     approach to open-quantum-system dynamics,” Phys.                 Nat Commun 7 (2016), 10.1038/ncomms13986.
+     Rev. X 10, 041024 (2020).                                   [47] B. Pérez-González, G. Platero, and Á. Gómez-León,
+[34] Nishchhal Verma and Raquel Queiroz, “Framework to                “Quantum origin of anomalous floquet phases in cavity-
+     measure quantum metric from step response,” Phys. Rev.           qed materials,” Communications Physics 7, 395 (2024).
+     Lett. 134, 106403 (2025).                                   [48] D. Mondal, A. Bandyopadhyay, and D. Jana, “Su-
+[35] Marlan O. Scully and M. Suhail Zubairy, Quantum Op-              schrieffer-heeger model — from fundamentals to re-
+     tics (Cambridge University Press, 1997).                         sponses,” International Journal of Theoretical Physics
+[36] Tim J. Bartley, Gaia Donati, Xian-Min Jin, Animesh               (2025), 10.1007/s10773-025-05981-z.
+     Datta, Marco Barbieri, and Ian A. Walmsley, “Direct         [49] Hannah Jürß and Dieter Bauer, “High-harmonic gener-
+     observation of sub-binomial light,” Phys. Rev. Lett. 110,        ation in su-schrieffer-heeger chains,” Phys. Rev. B 99,
+     173602 (2013).                                                   195428 (2019).
+[37] G. Breitenbach, S. Schiller, and J. Mlynek, “Measure-       [50] P. M. Grant and I. P. Batra, “Band structure of poly-
+     ment of the quantum states of squeezed light,” Nature            acetylene, (ch)x,” Solid State Communications 29, 225–
+                                                                      229 (1979).
+

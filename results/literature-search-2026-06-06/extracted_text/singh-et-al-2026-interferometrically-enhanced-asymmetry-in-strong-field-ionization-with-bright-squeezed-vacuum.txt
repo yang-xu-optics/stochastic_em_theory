@@ -1,0 +1,1024 @@
+                                                Interferometrically Enhanced Asymmetry in Strong-field Ionization with Bright
+                                                                              Squeezed Vacuum
+                                                               G. Singh,1, 2, ∗ T. Rook,3 J. Rivera-Dean,4, 5 and C. Figueira de Morisson Faria4
+                                                                 1
+                                                                  Perimeter Institute for Theoretical Physics, Waterloo, Ontario, N2L 2Y5, Canada
+                                                      2
+                                                       Department of Physics and Astronomy, University of Waterloo, Waterloo, Ontario, N2L 3G1, Canada
+                                                           3
+                                                             Clarendon Laboratory, University of Oxford, Parks Road, Oxford OX1 3PU, United Kingdom
+                                                   4
+                                                     Department of Physics and Astronomy, University College London, Gower Street, London WC1E 6BT, UK
+                                            5
+                                              ICFO – Institut de Ciencies Fotoniques, The Barcelona Institute of Science and Technology, 08860 Castelldefels (Barcelona)
+                                                                                               (Dated: April 15, 2026)
+                                                             We demonstrate that quantum light statistics can be used to control strong-field ionization at the
+                                                          tunneling step. Using a bichromatic linearly polarized field composed of a strong coherent driver
+                                                          and a weak bright squeezed vacuum (BSV), we show through simulation that photoelectron mo-
+                                                          mentum distributions (PMDs) exhibit asymmetries that exceed those obtained with classical fields
+
+
+
+
+arXiv:2604.12646v1 [quant-ph] 14 Apr 2026
+                                                          of comparable intensity by orders of magnitude. This enhancement is uniquely linked to the non-
+                                                          classical statistics of the BSV field. A semiclassical analysis based on the strong-field approximation
+                                                          (SFA) reveals that the effect originates from fluctuations in the instantaneous field amplitude, which
+                                                          strongly modify the tunneling ionization probability while leaving the electron’s continuum dynam-
+                                                          ics essentially unchanged. This selective control enables reconstruction of ionization pathways and
+                                                          provides a robust route to extract sub-cycle dynamics from strong-field observables.
+
+
+                                               Symmetry has long served as a fundamental principle             lated to map quantum phase differences in photoelectron
+                                            in physics and a powerful guide in understanding phys-             spectra and structural features in the target [28, 35, 63].
+                                            ical laws. Its role is encapsulated by Noether’s theo-                Often, it is desirable to maximize the effects of spatio-
+                                            rem, which establishes the connection between contin-              temporal asymmetry in strong-field observables and min-
+                                            uous symmetries and conservation laws [1]. Beyond con-             imize the disruption to the electron’s continuum dynam-
+                                            servation laws, symmetries provide a unifying framework            ics. With that in mind, adding a weak second color to
+                                            that systematically constrains dynamics, reduces the ef-           a strong driving field introduces subtle, but measurable
+                                            fective dimensionality of calculations, determines selec-          distortions in the PMDs. As the strength of the second
+                                            tion rules, and enables the classification of states and           wave increases, the electron’s propagation in the contin-
+                                            phases, revealing common structures behind otherwise               uum can change significantly and hinder the ability to re-
+                                            disparate physical phenomena [2–11].                               construct ionization pathways. This invites the question
+                                               In strong-field and attosecond physics, tailored light          of whether ionization can be substantially modified, with
+                                            such as elliptically polarized [12–15], orthogonal two-            dramatic consequences for the PMDs, without strongly
+                                            color (OTC) [16–28], bicircular [29–45], knotted [46] and          perturbing the continuum dynamics.
+                                            chiral [47–49] fields, possess spatio-temporal symmetries,            Quantum light may provide a solution to this question.
+                                            which have been systematically studied (for reviews see,           In particular, Bright Squeezed Vacuum (BSV) can serve
+                                            e.g., [50, 51]; for a group-theoretical discussion see [52]).      as the weak perturbing component of a two-color field,
+                                            Temporal periodicity leads to rings in above-threshold             allowing us to investigate whether it helps achieve this
+                                            ionization (ATI) photoelectron momentum distributions              goal. Recent experiments use BSV to drive HHG and
+                                            (PMDs) [53] and half-cycle symmetry (invariance under              strong-field ionization [64, 65] which has opened a wide
+                                            a translation by half a cycle followed by time-axis reflec-        range of possibilities for experimenting with shaped light
+                                            tion) ensures that there are only odd-order harmonics in           that were previously inaccessible [66–70]. Here, we ex-
+                                            the high-harmonic generation (HHG) spectrum [54].                  plore symmetry in ATI for linearly polarized two-color
+                                               Moreover, controlled symmetry-breaking may be em-               fields, by adding a weaker BSV driver of frequency ω to
+                                            ployed to probe a system’s dynamics. For instance, few-            an intense coherent field of frequency 2ω. We show that
+                                            cycle pulses break the temporal translation invariance             even a weak squeezed second wave influences the result-
+                                            and thus enable pulse characterization [55, 56] and iso-           ing PMDs in a radical fashion. Exploiting the quantum
+                                            lated attosecond-pulse generation [57, 58]. Instead of us-         properties of the weak BSV field yields asymmetric mo-
+                                            ing a broad spectral bandwidth, combining two field fre-           mentum distributions, with a significantly stronger asym-
+                                            quencies breaks the half-cycle symmetry of the light, pro-         metry than that produced by an equally weak coherent
+                                            ducing asymmetries in photoelectron emission to charac-            perturbing field.
+                                            terize tunnel ionization [16, 59–62]. In phase-of-the-phase           To understand the origin of this asymmetry, we ex-
+                                            spectroscopy, the time delay in two-color fields is modu-          tend the symmetry classification of linearly polarized bi-
+                                                                                                               and polychromatic classical fields introduced in Ref. [62].
+                                                                                                               A monochromatic linearly polarized field exhibits three
+                                                                                                               discrete symmetries: (i) half-cycle symmetry, (ii) tem-
+                                            ∗ gsingh@perimeterinstitute.ca
+                                                                                                               poral reflection about the field extrema, and (iii) tem-
+                                                                                                                                       2
+
+poral reflection at the field nodes followed by spatial re-               squeezing angle, i.e., the optical quadrature along which
+flection. Adding a weaker coherent ω-field breaks the                     squeezing occurs in phase-space. Such intensity regimes
+half-cycle symmetry and one of the remaining reflection                   translate to squeezing strengths of up to r = 12.15,
+symmetries. In this letter, we analyze the impact of                      which is compatible with state-of-the-art BSV genera-
+the perturbing quantum light on the symmetries of the                     tion techniques [65, 67, 68, 77, 78] based on high-gain
+field and resulting PMDs. For this, we work within the                    spontaneous-parametric down-conversion [64, 79]. These
+strong-field approximation (SFA) without rescattering,                    high intensities have been theoretically and experimen-
+the dipole approximation and, otherwise stated, employ                    tally shown to strongly affect strong-field processes [80].
+atomic units [71]. Our theoretical framework is detailed                     When accounting for the quantum nature of the driver
+in the Supplementary Material (Appendix A).                               in the time evolution of the full electron-field state, the
+   A central observable in ATI is the PMD, which gives                    resulting PMD yield is given by (see Supplementary Ma-
+the probability of detecting an electron with final mo-                   terial, Appendix A 2).
+mentum p = (px , py ), where px and py are the electron                                        Z
+momentum components parallel and perpendicular to the                                 Y (p) = d2 αω Q(αω )|Mα (p)|2 ,             (3)
+laser-field polarization, respectively. The PMD encodes
+interference between electron trajectories ionized at dif-
+ferent times within the strong-field cycle, providing in-                 where Mα (p) = lim t→∞ Mα (p, t, t0 ). If this limit is
+                                                                                                 t0 →−∞
+sight into both the driving field and the target system. In               not taken, one obtains the differential ionization proba-
+semiclassical theories, the electron is treated quantum                   bility YD (p, t, t0 ) for an electron ionized within the finite
+mechanically while the electric field is described by a time              time interval [t0 , t], which may correspond to a single
+dependent function Eα (t), parameterized by the classical                 ionization event.
+field amplitude α. Within the SFA [71, 72], the PMD can                      The yield Y (p) corresponds to an average over semi-
+then be computed from the ATI amplitude Mα (p, t, t0 ),                   classical PMDs evaluated for electric field amplitudes
+given by                                                                  α = (αω , α2ω ) where αω is sampled from the Husimi
+                 Z t                                                      distribution of the weak component of the driving field,
+                                 ′
+ Mα (p, t, t0 ) = dt′ eiSα (p,t,t ) Eα (t′ )·⟨p + Aα (t′ )| r̂ |g⟩. (1)
+                                                                                  Eα (t) = ig(ω) αω e−iωt − αω     ∗ iωt
+                                                                                                                        
+                   t0
+                                                                                                                    e
+                                                                                                                                      (4)
+                                                                                               + ig(2ω) α2ω e−2iωt − α2ω ∗ 2iωt
+                                                                                                                               
+                                                                                                                           e     ,
+Here, |g⟩ is the atomic ground state, |p + Aα (t′ )⟩ is
+a RVolkov (field-dressed continuum) state, Aα (t) =                       where g(ω) is a proportionality factor that sets the field
+− dtEα (t) is the vector potential, and Sα (p, t, t′ ) =                  normalization and incorporates the polarization of each
+                 Rt
+Ip (t − t′ ) + t′ dτ [p + Aα (τ )]2 /2 is the semiclassical ac-           optical mode, taken to be linear throughout. We take
+tion, representing the phase accumulated by the electron                  α2ω to be real, so that the relative phase between the two
+during evolution, with Ip the atomic ionization potential.                colors is controlled only by the phase of αω . For bichro-
+    Extensions incorporating the field’s Hilbert space, and               matic fields with a weaker coherent or thermal compo-
+thus moving to a full quantum treatment of the electric                   nent, varying this phase amounts to varying the tempo-
+field, have been developed previously [73]; details of this               ral phase θ, i.e, the time delay between the two waves.
+formalism are provided in the Supplementary Material                      In contrast, for the bichromatic BSV field, we vary the
+(Appendix A 1). Within this approach, the initial quan-                   phase of αω by tuning the squeezing angle ϕ of the ω
+tum state of the bichromatic field with frequencies ω and                 mode, while keeping θ fixed. A shift ∆ϕ in the squeezing
+2ω can be expressed in the coherent basis using the gen-                  angle corresponds to ∆θ = ∆ϕ/2 in the temporal phase
+eralized positive-P representation [74] as                                [Supplementary Material, Appendix C]. In what follows,
+                                                                          θ = π/2 (θ = π/4) for the bichromatic coherent or ther-
+                                           P (αω , βω∗ )
+                              Z     Z
+                                                                          mal light corresponds to the same relative phase as ϕ = 0
+ρ̂field (t0 ) = |α2ω ⟩⟨α2ω | ⊗ d2 αω d2 βω               |αω ⟩⟨βω | ,
+                                            ⟨βω∗ |αω ⟩                    (ϕ = −π/2) for the bichromatic BSV field.
+                                                                (2)          Fig. 1 illustrates the electric fields (and the associ-
+where P (α, β ∗ ) = (4π)−1 exp −|β ∗ − α|2 /4 Q((α +
+                                                         
+                                                                          ated vector potentials) employed in this work, together
+β ∗ )/2) [75], and Q(α) = tr[ρ̂ω |α⟩⟨α|] is the Husimi                    with the corresponding Husimi distributions for the two
+function [76] of the ω field. This probability distribu-                  colors and the resulting PMDs (left, middle and right
+tion function fully characterizes the field properties, ir-               columns, respectively) for He atom. For reference, the
+respective of their pure or mixed nature, allowing us                     first row shows these quantities for a monochromatic, lin-
+to use coherent, squeezed and thermal fields for the ω                    early polarized field, while the remaining rows correspond
+driver. We restrict this weak ω field to the intensities                  to bichromatic fields defined in Eq. (4), where a weaker
+Iω ∼ 1012 W/cm2 , while keeping the 2ω field in a co-                     (b) coherent, (c,d) squeezed, or (e) thermal ω field is su-
+herent state with I2ω ∼ 1014 W/cm2 , corresponding to                     perposed onto a stronger coherent 2ω field. The PMD
+intensity ratios Iω /I2ω ∼ 10−2 . For the case of squeezed                obtained for the monochromatic, purely coherent wave
+ω field, the Husimi function is parameterized by ξ = reiϕ ,               [Fig. 1(a)] is reflection-symmetric with regard to the py
+where r ≥ 0 denotes the squeezing strength and ϕ/2 the                    axis, exhibits clear ATI rings (concentric structures corre-
+                                                                                                                                              3
+
+                                                                                           Photoelectron momentum
+                    Field configuration                  Husimi distribution                      distribution
+        (a)                                                                                                         1
+
+
+
+
+                                                                                                                        Photoelectron yield
+
+
+
+                                                                                                                         (arbitrary units)
+
+
+
+                                                                                                                    0
+        (b)                                                                                                         1
+
+
+
+
+                                                                                                                        Photoelectron yield
+
+
+
+                                                                                                                         (arbitrary units)
+
+
+
+                                                                                                                    0
+        (c)                                                                                                         1
+
+
+
+
+                                                                                                                        Photoelectron yield
+
+
+
+                                                                                                                         (arbitrary units)
+
+
+
+                                                                                                                    0
+        (d)                                                                                                         1
+
+
+
+
+                                                                                                                        Photoelectron yield
+
+
+
+                                                                                                                         (arbitrary units)
+
+
+
+                                                                                                                    0
+        (e)                                                                                                         1
+
+
+
+
+                                                                                                                        Photoelectron yield
+
+
+
+                                                                                                                         (arbitrary units)
+
+
+
+                                                                                                                    0
+
+
+
+
+Figure 1. Electric fields, Husimi distributions and direct ATI photoelectron momentum distributions (left, middle and right
+columns, respectively) for He atom (Ip = 0.904) in linearly polarized coherent light with intensity Icoh = 3 × 1014 W/cm2 and
+wavelength λ = 400 nm where: (a) is unperturbed monochromatic light and the remaining rows are perturbed by a I = 3 × 1012
+W/cm2 , wavelength λ = 800 nm, (b) coherent field with relative phase θ = π/2, (c) and (d) squeezed vacuum, with squeezing
+parameter r = 12.15 corresponding to the given intensity, and squeezing angle (c) ϕ = 0 and (d) ϕ = −π/2, and finally (e)
+thermal light. The PMDs are calculated using Y ((px , py )) (Eq. (3)). The dashed lines in the left column mark the field extrema,
+and the time is in units of the period T = π/ω of the 2ω field. The PMDs are normalized by the maximum value in each panel.
+
+
+sponding to discrete photon absorption) and well-defined           fringes. In contrast, adding the ω-BSV field [Figs. 1(c)
+intra-cycle interference patterns arising from electron tra-       and (d)] dramatically changes the PMDs. The ATI rings
+jectories released within the same optical cycle. Adding           are significantly suppressed, the interference patterns are
+a coherent wave of frequency ω [Fig. 1(b)] slightly dis-           blurred and the ATI cutoff energy is extended. Both
+rupts these patterns, but retains the sharp interference           features are due to the uncertainty introduced by the
+                                                                                                                                                                                                        4
+
+                                                                                                        0.3                               field, the symmetry of the momentum distribution can
+                                        1.0 (a)
+
+
+
+
+Photoelectron yield (arbitrary units)
+                                                                                                               (b)
+
+
+
+                                                                                      mean(px) (a.u)
+                                                                                                        0.2
+                                                                                                                                          respond in two qualitatively distinct ways. Firstly, the
+                                        0.8                                                                                               whole distribution may be shifted; the degree to which
+                                                                                                        0.1                               this occurs is mainly characterized by the mean value of
+                                        0.6                                                                                               px as a function of mean intensity of the weak ω-field
+                                                                                                        0.0
+                                                                                                                                          [shown in Fig. 2(b)]. The coherent-bichromatic         field ap-
+                                                                                                               (c)                                                            p
+                                        0.4
+
+
+
+                                                                                      skew(px) [x100]
+                                                                                                        1.5                               proximately exhibits ⟨px ⟩ ∝           ⟨Iω ⟩ while the BSV-
+                                                                                                        1.0
+                                                                                                                                          bichromatic field maintains a roughly linear dependence
+                                        0.2
+                                                                                                                                          on mean intensity in the intensity range considered. Ad-
+                                                                                                        0.5
+                                                                                                                                          ditionally, the distribution may be skewed [characterized
+                                        0.0                                                             0.0                               by the skewness of px shown in Fig. 2(c)], meaning that
+                                              -1.5 -1.0 -0.5    0.0 0.5   1.0   1.5                           0        2        4
+                                                               px (a.u)                                       Mean intensity (10-4 a.u)   the tail of the distribution is more prominent in one di-
+                                                                                                                                          rection than another. The BSV-bichromatic field leads to
+Figure 2.       Panel (a): Dependence of photoelectron yield                                                                              a momentum distribution which is orders of magnitude
+Y ((px , 0)) at the parallel momentum axis on px , for the                                                                                more skewed than for the coherent-bichromatic field.
+coherent bichromatic field [same as Fig. 1(b)] and BSV                                                                                       For the direct SFA, the photoelectrons after ionization
+bichromatic field [same as Fig. 1(c)] indicated by dashed-                                                                                follow the driving electromagnetic field. In Appendix
+red lines and solid-blue lines, respectively. Panels (b) and                                                                              B, we show that the net force associated with the light
+(c): The asymmetries of the differential ionization probabil-                                                                             statistics of the squeezed component has negligible effect
+ity, YD ((px , 0), t, t0 ) where the interval [t0 , t] contains only a                                                                    on the propagation of photoelectrons in the continuum.
+single ionization peak, for the two types of field studied in
+                                                                                                                                          Consequently, changes to the PMDs depend dominantly
+panel (a) are characterized by ⟨px ⟩ and skew(px ) in terms of
+their dependence on the mean intensity of the perturbing 800                                                                              on the ionization probability. To explore this, in Fig. 3
+nm field. This means, we only consider photoelectrons pro-                                                                                we plot the differential ionization probability associated
+duced within a single half-cycle of the coherent 2ω field with                                                                            with specific ionization events (I1 –I4 ), for the bichromatic
+py = 0 and avoid oscillations due to interference between pho-                                                                            fields in Figs. 1(b), (c) and (d), along with coherent-
+toelectrons emitted in different half-cycles.                                                                                             bichromatic field at θ = π/4. The lack of (ii) symme-
+                                                                                                                                          try, for BSV-bichromatic field at ϕ = 0, means that the
+                                                                                                                                          ionization probability is consistently biased towards pos-
+squeezed light: the blurring is associated with loss of co-                                                                               itive momenta [notice the dominance of the positive mo-
+herence, and the cutoff extension is associated with the                                                                                  menta part of the curves at high ionization probability in
+uncertainty in intensity. Similar features are present for                                                                                Fig. 3(c)]. For BSV-bichromatic field at ϕ = −π/2, the
+thermal light [Fig. 1(e)] and have been reported elsewhere                                                                                left-right asymmetry disappears as expected. We observe
+for monochromatic squeezed fields [81].                                                                                                   that the BSV contribution can significantly enhance ion-
+   Furthermore, for ϕ = 0 [Fig. 1(c)], the px → −px sym-                                                                                  ization probability in general [compare Fig. 3(a) and (b)
+metry no longer holds. In contrast, for ϕ = −π/2 [Fig. 1                                                                                  with Figs. 3(c) and (d)], since, despite the mean inten-
+(d)], the distributions retain this symmetry. This raises                                                                                 sity being the same in each case, there is some chance of
+the question of what physical effect is behind this strik-                                                                                a measurement of the BSV having a much larger elec-
+ing change. The symmetry of the driving fields provide                                                                                    tric field than in the coherent case. This leads to a
+insight into this behavior: while, for the monochromatic                                                                                  disproportionate contribution to the tunneling probabil-
+wave, the symmetries (i)-(iii) are present, the field in                                                                                  ity, which depends exponentially on the instantaneous
+Fig. 1(c)[Fig. 1(d)] retains only (iii) [(ii)] symmetry. The                                                                              field amplitude. Further details on the dependence of
+strong asymmetry is unique to the BSV case: for a coher-                                                                                  tunneling times on light statistics are provided in Ap-
+ent second wave [Fig. 1(b)] it is markedly reduced, while                                                                                 pendix D. The fuzziness observed in the PMDs with a
+for a thermal wave [Fig. 1(e)] it is absent. In fact, varying                                                                             BSV driver [Figs. 1(c) and (d)] can be attributed to the
+the relative phase of the thermal light has no effect on                                                                                  uncertainty in the corresponding ionization probabilities,
+the PMDs due to the rotational symmetry of the ther-                                                                                      and, for ϕ = −π/2, to their unequal value in subsequent
+mal state in phase space. The PMDs for intermediate                                                                                       half cycles. The latter weakens the contrast of inter-
+squeezing parameters are given in Appendix C.                                                                                             ference fringes in the PMD [compare Fig. 1(c) and (d)
+   This asymmetry trend is confirmed by Fig. 2, where we                                                                                  with reference to Fig. 3(c) and (d), respectively]. Finally,
+show that the central moments of the momentum distri-                                                                                     the BSV perturbing field [solid grey schematic curves in
+bution in px related to asymmetry, tend to be much larger                                                                                 Fig. 3(c) and (d)] is periodic with half the temporal pe-
+if an ω-BSV wave at ϕ = 0 is considered. Fig. 2(a) com-                                                                                   riod compared to a weak coherent perturbation [solid
+pares the photoelectron momentum distributions along                                                                                      grey schematic curves in Fig. 3(a) and (b)]. This results
+the px axis (py = 0), taking the ω wave to be coherent or                                                                                 in ionization patterns which repeat twice as frequently in
+squeezed for the asymmetric cases [Figs. 1(b) and 1(c)].                                                                                  the BSV-bichromatic case.
+It shows an increase in the asymmetry of the PMDs and a                                                                                      In summary, the present results show that adding a
+blurring of the peaks for the BSV case and px > 0. More                                                                                   weak bright squeezed vacuum (BSV) field of frequency
+systematically, upon introduction of the ω perturbing                                                                                     ω to a strong coherent wave of frequency 2ω may sig-
+                                                                                                                                                 5
+
+
+
+
+                                                                                                                                       I4
+                                                                   I3           I4                                                 +    -
+                                                               -        +   +        -          I1                        I3
+                                         I1           I2                                     - +             I2       - +
+                                     - +          +    -                                                 +        -
+
+
+
+
+                                     -        +   +        -   -        +   +        -                   +        -                +        -
+
+                                                                                            -        +                -        +
+
+
+
+
+Figure 3.     The dependence of differential ionization probability YD ((px , 0), t, t0 ) upon the ionization time, computed for
+temporal windows [t, t0 ] defined in the first, second, third and fourth quarter cycle of the ω field, is shown for a coherent-
+bichromatic field with (a) relative (temporal) phase θ = π/2 [same as Fig. 1(b)] and (b) θ = π/4, a BSV-bichromatic field with
+(c) ϕ = 0 [same as Fig. 1(c)] and (d) ϕ = −π/2 [same as Fig. 1(d)]. Notably, the relative phase between the two colors in
+panels (a) and (b) is identical to that in panels (c) and (d), respectively. The times are plotted in units of the period of the 2ω
+field, which is T = π/ω. Whether px of the ionized photoelectron is positive/negative is indicated by +/−. The short orbits,
+for which the electron leaves after the field extrema, are indicated by red lines and the long orbits, for which the electron is
+freed before the field extrema, are indicated by blue lines, and different tones of red and blue have been chosen for different
+half cycles. The transparency of each line indicates the magnitude of the Husimi-Q distribution. In each panel, a schematic of
+the ω (light gray solid line) and 2ω (dark gray dotted line) fields is shown for reference. The ionization events are labelled in
+the top-row panels for each half cycle of the 2ω field.
+
+
+
+nificantly amplify asymmetries in the resulting ATI pho-                                 photoelectron spectra.
+toelectron momentum distributions, in comparison with                                       In principle, the asymmetry amplification reported in
+classical, coherent or thermal fields. These asymmetries                                 this work enables the precise extraction of tunneling
+occur for values of the relative phase between the two                                   times, quantum phases, and pathway-resolved dynamics.
+waves, where the reflection symmetry regarding the field                                 This is in stark contrast with strong-field tunneling with
+extrema breaks down. They can be traced back to the                                      classical fields, for which the relevant information, such
+tunneling probabilities associated with each ionization                                  as timing, phase, or electron pathway selection, is often
+event, which are unequally influenced by the field statis-                               encoded in very small differences buried under symmet-
+tics. Systematic comparison between the skewness of                                      ric backgrounds. This calls for intricate schemes such as
+PMDs generated by squeezed and coherent light, respec-                                   the phase-of-the-phase spectroscopy, or observables like
+tively, as well as a direct inspection of the ionization prob-                           the asymmetry parameter, to extract this information.
+ability for specific events has confirmed that this effect                               Here, we have demonstrated that even a weak additional
+is specific to BSV light statistics and increases with the                               BSV driver increases the asymmetry by orders of mag-
+squeezing parameter. Further studies, presented in the                                   nitude and turns a weak differential signal into a robust
+supplementary material, have shown that, for the param-                                  observable.
+eter range considered in this article, there is no effective                             Acknowledgements. We profited from discussions
+photon statistic force altering the electron’s propagation                               with M. Hassan, H. Ma, P. H. Bucksbaum, D. B.
+in the continuum. Thus, the effect reported here is exclu-                               Milošević and M. Lewenstein. This work is funded by the
+sively associated with the tunneling dynamics, mapping                                   UK Engineering and Physical Sciences Research Council
+sub-cycle emission times onto measurable asymmetries in                                  (EPSRC) Funding, Grant UKRI2300 - Attosecond Pho-
+                                                                                         toelectron Imaging with Quantum Light (APIQuL).
+                                                                                                                               6
+
+
+
+
+ [1] E. Noether, Nachrichten von der Gesellschaft der Wis-            A 98, 053433 (2018).
+     senschaften zu Göttingen, Mathematisch-Physikalische       [29] D. B. Milošević, W. Becker, and R. Kopold, Phys. Rev.
+     Klasse 1918, 235 (1918).                                         A 61, 063403 (2000).
+ [2] C. N. Yang and R. L. Mills, Phys. Rev. 96, 191 (1954).      [30] O. Smirnova, Y. Mairesse, and S. Patchkovskii, Journal
+ [3] M. Gell-Mann 10.2172/4008239 (1961).                             of Physics B: Atomic, Molecular and Optical Physics 48,
+ [4] S. Coleman and J. Mandula, Phys. Rev. 159, 1251                  234005 (2015).
+     (1967).                                                     [31] D. B. Milošević, Phys. Rev. A 92, 043827 (2015).
+ [5] S. Weinberg, Phys. Rev. Lett. 19, 1264 (1967).              [32] D. B. Milošević and W. Becker, Phys. Rev. A 93, 063418
+ [6] R. Haag, J. T. Lopuszański, and M. Sohnius, Nuclear             (2016).
+     Physics B 88, 257 (1975).                                   [33] C. A. Mancuso, D. D. Hickstein, K. M. Dorney, J. L.
+ [7] M. Born and R. Oppenheimer, Annalen der Physik 389,              Ellis, E. Hasović, R. Knut, P. Grychtol, C. Gentry,
+     457 (1927).                                                      M. Gopalakrishnan, D. Zusin, F. J. Dollar, X.-M. Tong,
+ [8] H. A. Jahn and E. Teller, Proceedings of the Royal So-           D. B. Milošević, W. Becker, H. C. Kapteyn, and M. M.
+     ciety of London. A. Mathematical and Physical Sciences           Murnane, Phys. Rev. A 93, 053406 (2016).
+     161, 220 (1937).                                            [34] V.-H. Hoang, V.-H. Le, C. D. Lin, and A.-T. Le, Phys.
+ [9] H. Longuet-Higgins, Molecular Physics 6, 445 (1963).             Rev. A 95, 031402 (2017).
+[10] M. V. Berry, Proceedings of the Royal Society of London.    [35] M. A. Almajid,           M. Zabel,      S. Skruszewicz,
+     A. Mathematical and Physical Sciences 392, 45 (1984).            J. Tiggesbäumker, and D. Bauer, Journal of Physics
+[11] F. D. M. Haldane, Phys. Rev. Lett. 61, 2015 (1988).              B: Atomic, Molecular and Optical Physics 50, 194001
+[12] T. Nubbemeyer, K. Gorling, A. Saenz, U. Eichmann, and            (2017).
+     W. Sandner, Phys. Rev. Lett. 101, 233001 (2008).            [36] M. Busuladžić, A. Gazibegović-Busuladžić, and D. B.
+[13] M. Abu-samha and L. B. Madsen, Phys. Rev. A 84,                  Milošević, Phys. Rev. A 95, 033411 (2017).
+     023411 (2011).                                              [37] S. Eckart, M. Kunitski, I. Ivanov, M. Richter, K. Fehre,
+[14] C. Hofmann, T. Zimmermann, A. Zielinski, and A. S.               A. Hartung, J. Rist, K. Henrichs, D. Trabert, N. Schlott,
+     Landsman, New Journal of Physics 18, 043011 (2016).              L. P. H. Schmidt, T. Jahnke, M. S. Schöffler, A. Kheifets,
+[15] J. Daněk, M. Klaiber, K. Z. Hatsagortsyan, C. H. Kei-           and R. Dörner, Phys. Rev. A 97, 041402 (2018).
+     tel, B. Willenberg, J. Maurer, B. W. Mayer, C. R.           [38] D. B. Milošević and W. Becker, Journal of Physics
+     Phillips, L. Gallmann, and U. Keller, Journal of Physics         B: Atomic, Molecular and Optical Physics 51, 054001
+     B: Atomic, Molecular and Optical Physics 51, 114001              (2018).
+     (2018), arXiv:1703.03283.                                   [39] D. Ayuso, P. Decleva, S. Patchkovskii, and O. Smirnova,
+[16] D. Shafir, H. Soifer, B. D. Bruner, M. Dagan,                    Journal of Physics B: Atomic, Molecular and Optical
+     Y. Mairesse, S. Patchkovskii, M. Y. Ivanov, O. Smirnova,         Physics 51, 06LT01 (2018).
+     and N. Dudovich, Nature 485, 343 (2012).                    [40] D. Ayuso, P. Decleva, S. Patchkovskii, and O. Smirnova,
+[17] T. Das, B. B. Augstein, and C. Figueira de Morisson              Journal of Physics B: Atomic, Molecular and Optical
+     Faria, Physical Review A 88, 023404 (2013).                      Physics 51, 124002 (2018).
+[18] X. Xie, Phys. Rev. Lett. 114, 173003 (2015).                [41] D. Baykusheva and H. J. Wörner, Phys. Rev. X 8, 031060
+[19] M. Richter, M. Kunitski, M. Schöffler, T. Jahnke, L. P.         (2018).
+     Schmidt, M. Li, Y. Liu, and R. Dörner, J. Phys. Conf.      [42] N. Eicke and M. Lein, Phys. Rev. A 99, 031402 (2019).
+     Ser. 635, 143001 (2015).                                    [43] S. Yue, S. Brennecke, H. Du, and M. Lein, Phys. Rev. A
+[20] T. Das, B. B. Augstein, C. Figueira de Morisson Faria,           101, 053438 (2020).
+     L. E. Chipperfield, D. J. Hoffmann, and J. P. Marangos,     [44] A. S. Maxwell, G. S. J. Armstrong, M. F. Ciappina,
+     Phys. Rev. A 92, 023406 (2015).                                  E. Pisanty, Y. Kang, A. C. Brown, M. Lewenstein, and
+[21] J. Henkel and M. Lein, Phys. Rev. A 92, 013422 (2015).           C. Figueira de Morisson Faria, Faraday Discuss. 228, 394
+[22] Y. Li, Y. Zhou, M. He, M. Li, and P. Lu, Opt. Express            (2021).
+     24, 23697 (2016).                                           [45] Y. Kang, E. Pisanty, M. Ciappina, M. Lewenstein,
+[23] X. Gong, C. Lin, F. He, Q. Song, K. Lin, Q. Ji, W. Zhang,        C. Figueira de Morisson Faria, and A. S. Maxwell, The
+     J. Ma, P. Lu, Y. Liu, H. Zeng, W. Yang, and J. Wu, Phys.         European Physical Journal D 75, 199 (2021).
+     Rev. Lett. 118, 143203 (2017).                              [46] E. Pisanty, G. J. Machado, V. Vicuña-Hernández,
+[24] M. Han, P. Ge, Y. Shao, M.-M. Liu, Y. Deng, C. Wu,               A. Picón, A. Celi, J. P. Torres, and M. Lewenstein, Na-
+     Q. Gong, and Y. Liu, Phys. Rev. Lett. 119, 073201                ture Photonics 13, 569 (2019).
+     (2017).                                                     [47] S. Rozen, A. Comby, E. Bloch, S. Beauvarlet,
+[25] L. Zhang, X. Xie, S. Roither, D. Kartashov, Y. Wang,             D. Descamps, B. Fabre, S. Petit, V. Blanchet, B. Pons,
+     C. Wang, M. Schöffler, D. Shafir, P. B. Corkum,                 N. Dudovich, and Y. Mairesse, Phys. Rev. X 9, 031004
+     A. Baltuška, I. Ivanov, A. Kheifets, X. Liu, A. Staudte,        (2019).
+     and M. Kitzler, Phys. Rev. A 90, 061401 (2014).             [48] D. Ayuso, O. Neufeld, A. F. Ordonez, P. Decleva,
+[26] X. Xie, T. Wang, S. Yu, X. Lai, S. Roither, D. Kartashov,        G. Lerner, O. Cohen, M. Ivanov, and O. Smirnova, Na-
+     A. Baltuška, X. Liu, A. Staudte, and M. Kitzler, Phys.          ture Photonics 13, 866 (2019).
+     Rev. Lett. 119, 243201 (2017).                              [49] N. Mayer, D. Ayuso, P. Decleva, M. Khokhlova,
+[27] M. Han, P. Ge, Y. Shao, Q. Gong, and Y. Liu, Phys. Rev.          E. Pisanty, M. Ivanov, and O. Smirnova, Nature Pho-
+     Lett. 120, 073202 (2018).                                        tonics 18, 1155 (2024).
+[28] V. A. Tulsky, M. A. Almajid, and D. Bauer, Phys. Rev.       [50] D. Habibović, K. R. Hamilton, O. Neufeld, and L. Rego,
+                                                                                                                                 7
+
+     Nature Reviews Physics 6, 663 (2024).                        [71] K. Amini, J. Biegert, F. Calegari, A. Chacón, M. F.
+[51] O. Neufeld, M. E. Tzur, G. Lerner, O. Kfir, A. Fleischer,         Ciappina, A. Dauphin, D. K. Efimov, C. F. d. M. Faria,
+     and O. Cohen, Advances in Optics and Photonics 18, 160            K. Giergiel, P. Gniewek, A. S. Landsman, M. Lesiuk,
+     (2026).                                                           M. Mandrysz, A. S. Maxwell, R. Moszyński, L. Ortmann,
+[52] O. Neufeld, D. Podolsky, and O. Cohen, Nature Commu-              J. A. Pérez-Hernández, A. Picón, E. Pisanty, J. Prauzner-
+     nications 10, 405 (2019).                                         Bechcicki, K. Sacha, N. Suárez, A. Zaı̈r, J. Zakrzewski,
+[53] P. Agostini, F. Fabre, G. Mainfray, G. Petite, and N. K.          and M. Lewenstein, Reports on Progress in Physics 82,
+     Rahman, Phys. Rev. Lett. 42, 1127 (1979).                         116001 (2019).
+[54] M. Ferray, A. L’Huillier, X. F. Li, L. A. Lompre, G. Main-   [72] M. Lewenstein, P. Balcou, M. Y. Ivanov, A. L’Huillier,
+     fray, and C. Manus, Journal of Physics B: Atomic, Molec-          and P. B. Corkum, Phys. Rev. A 49, 2117 (1994).
+     ular and Optical Physics 21, L31 (1988).                     [73] Y. Fang, F.-X. Sun, Q. He, and Y. Liu, Phys. Rev. Lett.
+[55] G. G. Paulus, F. Lindner, H. Walther, A. Baltuška,               130, 253201 (2023).
+     E. Goulielmakis, M. Lezius, and F. Krausz, Phys. Rev.        [74] P. D. Drummond and C. W. Gardiner, Journal of Physics
+     Lett. 91, 253004 (2003).                                          A: Mathematical and General 13, 2353 (1980).
+[56] A. Baltuška, T. Udem, M. Uiberacker, M. Hentschel,          [75] P. D Drummond and S. Chaturvedi, Physica Scripta 91,
+     E. Goulielmakis, C. Gohle, R. Holzwarth, V. S. Yakovlev,          073007 (2016).
+     A. Scrinzi, T. W. Hänsch, and F. Krausz, Nature 421,        [76] W. P. Schleich, Phase Space Functions, in Quantum Op-
+     611 (2003).                                                       tics in Phase Space (John Wiley & Sons, Berlin, Ger-
+[57] M. Hentschel, R. Kienberger, C. Spielmann, G. A. Rei-             many, 2001) Chap. 12, pp. 321–348.
+     der, N. Milosevic, T. Brabec, P. Corkum, U. Heinzmann,       [77] J. Heimerl, A. Mikhaylov, S. Meier, H. Höllerer,
+     M. Drescher, and F. Krausz, Nature 414, 509 (2001).               I. Kaminer, M. Chekhova, and P. Hommelhoff, Nature
+[58] M.-C. Chen, C. Mancuso, C. Hernández-Garcı́a, F. Dol-            Physics 20, 945 (2024).
+     lar, B. Galloway, D. Popmintchev, P.-C. Huang,               [78] J. Heimerl, A. Rasputnyi, J. Pölloth, S. Meier,
+     B. Walker, L. Plaja, A. A. Jaroń-Becker, A. Becker,              M. Chekhova, and P. Hommelhoff, Nature Physics 21,
+     M. M. Murnane, H. C. Kapteyn, and T. Popmintchev,                 1899 (2025).
+     Proceedings of the National Academy of Sciences 111,         [79] M. Manceau, K. Y. Spasibko, G. Leuchs, R. Filip, and
+     E2361 (2014).                                                     M. V. Chekhova, Physical Review Letters 123, 123606
+[59] J. Zhao and M. Lein, Phys. Rev. Lett. 111, 043901                 (2019).
+     (2013).                                                      [80] P. Stammer, J. Rivera-Dean, P. Tzallas, M. F. Ciappina,
+[60] O. Pedatzur, G. Orenstein, V. Serbinenko, H. Soifer,              and M. Lewenstein, Colloquium: Quantum optics of in-
+     B. D. Bruner, A. J. Uzan, D. S. Brambila, A. G. Harvey,           tense light–matter interaction (2025), arXiv:2510.19045
+     L. Torlina, F. Morales, O. Smirnova, and N. Dudovich,             [quant-ph].
+     Nature Physics 11, 815 (2015).                               [81] Z. Lyu, F. Sun, Y. Fang, Q. He, and Y. Liu, Phys. Rev.
+[61] J. Tan, Y. Zhou, M. He, Y. Chen, Q. Ke, J. Liang,                 Research 7, L012072 (2025).
+     X. Zhu, M. Li, and P. Lu, Phys. Rev. Lett. 121, 253203       [82] J. Rivera-Dean, P. Stammer, A. S. Maxwell, T. Lamprou,
+     (2018).                                                           P. Tzallas, M. Lewenstein, and M. F. Ciappina, Phys.
+[62] T. Rook and C. Figueira de Morisson Faria, Journal of             Rev. A 106, 063705 (2022).
+     Physics B: Atomic, Molecular and Optical Physics 55,         [83] J. Rivera-Dean, Physical Review A 110, 063704 (2024).
+     165601 (2022).                                               [84] S. Wang and X. Lai, Phys. Rev. A 108, 063101 (2023).
+[63] S. Skruszewicz, J. Tiggesbäumker, K.-H. Meiwes-Broer,       [85] A. Gorlach, M. Even Tzur, M. Birk, M. Krüger,
+     M. Arbeiter, T. Fennel, and D. Bauer, Phys. Rev. Lett.            N. Rivera, O. Cohen, and I. Kaminer, Nat. Phys. 19,
+     115, 043001 (2015).                                               1689 (2023).
+[64] K. Y. Spasibko, D. A. Kopylov, V. L. Krutyanskiy, T. V.      [86] N. Werby, A. S. Maxwell, R. Forbes, P. H. Bucksbaum,
+     Murzina, G. Leuchs, and M. V. Chekhova, Phys. Rev.                and C. F. d. M. Faria, Phys. Rev. A 104, 013109 (2021).
+     Lett. 119, 223603 (2017).                                    [87] B. Podolsky and L. Pauling, Physical Review 34, 109
+[65] A. Rasputnyi, Z. Chen, M. Birk, O. Cohen, I. Kaminer,             (1929).
+     M. Krüger, D. Seletskiy, M. Chekhova, and F. Tani, Nat.     [88] M. Even Tzur, M. Birk, A. Gorlach, M. Krüger,
+     Phys. 20, 1960 (2024).                                            I. Kaminer, and O. Cohen, Nature Photonics 17, 501
+[66] J. Rivera-Dean, P. Stammer, M. Ciappina, and                      (2023).
+     M. Lewenstein, Physical Review Letters 135, 013801
+     (2025).
+[67] S. Lemieux, S. A. Jalil, D. N. Purschke, N. Boroumand,
+     T. J. Hammond, D. Villeneuve, A. Naumov, T. Brabec,                     SUPPLEMENTARY MATERIAL
+     and G. Vampa, Nature Photonics 19, 767 (2025).
+[68] M. E. Tzur, C. Mor, N. Yaffe, M. Birk, A. Rasput-               Here, we present material of technical or complemen-
+     nyi, O. Kneller, I. Nisim, I. Kaminer, M. Krüger,           tary nature, which supports the findings discussed in the
+     N. Dudovich, and O. Cohen, Measuring and control-
+                                                                  main body of the paper. This includes a theoretical
+     ling the birth of quantum attosecond pulses (2025),
+     arXiv:2502.09427 [physics].                                  framework, in which the key equations employed to cal-
+[69] P. Stammer, J. Rivera-Dean, M. F. Ciappina, and              culate the PMDs and other observables are derived and a
+     M. Lewenstein, Weak measurement in strong laser field        connection with other, existing approaches is established
+     physics (2025), arXiv:2508.09048 [quant-ph].                 (Appendix A), a proof that for the parameter range em-
+[70] J. Rivera-Dean, L. Petrovic, M. Lewenstein, and P. Stam-     ployed there is no effective continuum force arising from
+     mer, Reports on Progress in Physics 89, 047901 (2026).       the field statistics (Appendix B), PMD dependence on
+                                                                                                                                         8
+
+squeezing parameters and linking the time delay with             satisfies
+the squeezing parameter (Appendix C), and an analysis
+of the saddle-point times, which can be associated with                     ∂ Û (t, t0 )                         
+                                                                        i                = Ĥat + r̂ · Ê + Ĥfield Û (t, t0 ),      (A5)
+the instantaneous tunneling probability (Appendix D).                            ∂t
+
+                                                                 where Ĥat is the atomic Hamiltonian, r̂ · Ê denotes the
+                                                                 light-matter  interaction in the length-gauge, and Ĥfield =
+                                                                            †
+                                                                 P
+                                                                    ω,µ ℏωâω,µ âω,µ is the free-field Hamiltonian. The elec-
+         Appendix A: Theoretical framework                                                                P
+                                                                 tric field operator is given by Ê = i ω,µ ϵµ g(ω)[âµ,ω −
+                                                                 â† ] where ϵµ is the polarization vector, and g(ω) =
+       1.   A coherent-state-based formulation                   pµ,ω
+                                                                    ω/(2ϵ0 V ) is the light-matter coupling parameter with
+                                                                 V the quantization volume. In this work, both optical
+   In this work, we are interested in describing direct ATI      modes in Eq. (A1) are assumed to be polarized along the
+processes under the presence of quantum bichromatic              same direction, and therefore the reason why we omitted
+light. More specifically, we consider the case where the         the polarization index µ in the equation.
+driving field consists of a coherent 2ω field and a BSV ω
+field, i.e.,                                                         Within the interaction picture with respect to Ĥfield ,
+                                                                 the electric field operator acquires a time-dependence
+                                                                 (âµ,ω → âµ,ω e−iωt , so Ê → Ê(t)), and Eq. (A4) can
+                                            
+             |Φ(t0 )⟩ = Ŝω (ξ) ⊗ D̂2ω (α2ω ) |0̄⟩     (A1)
+                                                                 be written as
+                                   †     ∗
+                                           
+where
+     1 D̂  ω (α) =  exp αω âω − αω âω     and Ŝω (ξ) =                 Z
+exp 2 (ξ ∗ â2ω − ξâ†2
+                     ω  )  are the displacement and squeezing       |Ψ(t)⟩ = d2 αω c(αω )Ûf (t, t0 )ÛI (t, t0 ) |g⟩⊗|αω ⟩⊗|α2ω ⟩
+operators, respectively, acting on the optical mode with                    Z
+frequency ω. Here, â(†) denotes the annihilation (cre-                    = d2 αω c(αω )Ûf (t, t0 ) D̂ω (αω )⊗ D̂2ω (α2ω )
+                                                                                                                            
+ation) operator and |0̄⟩ the vacuum state of all modes.
+Since the coherent state    R basis is overcomplete, with clo-                                        × ÛI,α (t, t0 ) |g⟩ ⊗ |0̄⟩ ,   (A6)
+sure relation 1 = π −1 d2 α |α⟩⟨α| (|α⟩ ≡ D̂(α) |0⟩), any
+quantum state can be expanded in this basis. Thus, an            where i∂ Ûf (t, t0 )/∂t = Ĥfield Ûf (t, t0 ) and i∂ ÛI (t, t0 )/t =
+equivalent representation to Eq. (A1) can be obtained            [Ĥat + r̂ · Ê(t)]ÛI (t, t0 ). Furthermore, in going from
+by inserting the closure relation above acting on the ω          the first to the second equality we define ÛI,α (t, t0 ) ≡
+mode, in front of the squeezing and displacement opera-                         †
+                                                                 [D̂ω† (αω )⊗ D̂2ω (α2ω )]ÛI (t, t0 )[D̂ω (αω )⊗ D̂2ω (α2ω )], which
+tors, yielding
+                                                                 satisfies
+                         Z
+            |Φ(t0 )⟩ = d2 αω c(αω ) |αω ⟩ ⊗ |α2ω ⟩ ,     (A2)         ∂ ÛI,α (t, t0 )                             
+                                                                  i                   = Ĥat + r̂ · Eα (t) + r̂ · Ê ÛI,α (t, t0 ) (A7)
+                                                                            ∂t
+where we denote c(αω ) ≡ π −1 ⟨αω | Ŝω (ξ) |0ω ⟩, which can
+                                                                 where Eα (t) ≡ ⟨αω , α2ω , 0̄| Ê(t) |αω , α2ω , 0̄⟩ is the classi-
+be written more explicitly as
+                                                                 cal electric field corresponding to the coherent state am-
+                       "
+                                2
+                                                      #          plitudes α ≡ (αω , α2ω ).
+              1           |αω |    1 iϕ            ∗2
+ c(αω ) =           exp −         − e tanh(r)αω . (A3)             When working under the strong-field approximation
+          π cosh(r)         2      2
+                                                                 (SFA) [71, 72], and neglecting the backaction of the elec-
+In this expression, we have written ξ = reiϕ where r ≥           tronic motion onto the field [82, 83], one can approximate
+0 denotes the squeezing strength and ϕ determines the
+phase-space direction along which squeezing occurs.                   ÛI,α (t, t0 ) |g⟩ ⊗ |0̄⟩ ≈ eiIp (t−t0 ) |g⟩ ⊗ |0̄⟩
+                                                                              Z        Z t                                            (A8)
+   One of the main advantages of using a coherent-state                  − i dp            dt′ bα (p, t, t′ ) |p + Aα (t′ )⟩ ⊗ |0̄⟩ ,
+expansion to describe the initial quantum optical state                                t0
+is that ATI driven by coherent states is well-understood.                           R
+Considering that the atom is initially in its ground state       where Aα (t) = − dtEα (t) is the vector potential as-
+|g⟩, and denoting by Û (t, t0 ) the unitary operator de-        sociated with the field, and bα (p, t, t′ ) is the direct ATI
+scribing the time-evolution of the system from t0 to t,          probability amplitude,
+the joint light-matter state at any time t can be written                                         ′
+as                                                                bα (p, t, t′ ) = eiSα (p,t,t ) ⟨p + Aα (t′ )| r̂ |g⟩ · Eα (t′ ), (A9)
+           Z
+  |Ψ(t)⟩ = d2 αω c(αω )Û (t, t0 ) |g⟩ ⊗ |αω ⟩ ⊗ |α2ω ⟩ . (A4)   with Sα (p, t, t′ ) the semiclassical action given by
+                                                                                            Z t
+                                                                                 ′  1                           2
+                                                                                                  dτ p + Aα (τ ) + Ip (t − t′ ). (A10)
+                                                                                                    
+                                                                  Sα (p, t, t ) = −
+In our case, we are interested in scenarios where Û (t, t0 )                       2        t′
+                                                                                                                                                9
+
+Here, Ip is the ionization potential of the atom, i.e.,                   the following, we therefore justify under which conditions
+Ĥat |g⟩ = −Ip |g⟩. Thus, by combining Eqs. (A4) and                      retaining only the diagonal contributions of Eq. (A14)
+(A8), we obtain the final state of the joint light-matter in-             provides an accurate approximation.
+teraction within the assumptions described above, which                     To address this question, let us examine how the fac-
+explicitly reads                                                          tor c(α)c∗ (β) ⟨β|α⟩ in the integrand behaves as we move
+                                                                          away from the diagonal contributions, i.e., when setting
+  |Ψ(t)⟩ = eiIp (t−t0 ) |g⟩ ⊗ Ûf (t, t0 ) |Φ(t0 )⟩                       β = α + δ. For this, we find
+           Z          Z      Z t                                                                   "                       #
+         + d2 αω dp               dt′ c(αω )Ûf (t, t0 )bα (p, t, t′ )              ∗                   |α|
+                                                                                                           2
+                                                                                                                  |α + δ|
+                                                                                                                         2
+                                   t0                                       c(α)c(β ) ⟨β|α⟩ = exp −           −
+                          ′                                                                              2           2
+          × |p + Aα (t )⟩ ⊗ |αω ⟩ ⊗ |α2ω ⟩ .                                                                                          
+                                                                  (A11)                                   tanh(r)  ∗2              2
+                                                                                                                                      
+                                                                                                × exp −              α + (α + δ)
+                                                                                                               2
+                                                                                                      "                         #
+                                                                                                              2
+ 2.   Photoelectron spectrum and relation to other                                                        |δ|       αδ ∗ − α∗ δ
+                                                                                                × exp −          −               .
+                     approaches                                                                             2            2
+                                                                                                                                   (A15)
+   The main observable of interest in this work is the                    From this exponential, we are primarily interested in the
+direct ATI photoelectron spectrum. The photoelectron                      real part of the exponent, as it determines the weight
+spectrum corresponds to the probability of measuring                      at which each contribution of the integrand behaves as
+photoelectrons, or photoelectron yield, with a given final                δ varies. Writing α = αx + iαy and δ = δx + iδy in
+momentum p. From Eq. (A4), this yield can be calcu-                       terms of their real imaginary components, and denoting
+lated by projecting onto the final momentum and taking                    Exp(α, β) = ln[c(α)c(β ∗ ) ⟨β|α⟩], we arrive at
+the limit of t(t0 ) going to ∞(−∞):
+                                                                                                     δ2     δy2   α2
+                                                                             Re[Exp(α, α + δ)] = − x −          − x 1 + tanh(r)
+                                                                                                                                  
+      Y (p) = lim tr |p⟩⟨p| ⊗ 1 |Ψ(t)⟩⟨Ψ(t)|
+                                           
+                                                                                                      2      2    2
+              t→∞
+                                                   (A12)                                             αy2
+            = lim ⟨Φ(p, t)|Φ(p, t)⟩ ,
+                                                                                                                       
+                t→∞
+                                                                                                   −      1 − tanh(r)
+                                                                                                      2
+                                                                                                   − αx + δx )2 1 + tanh(r)
+                                                                                                                               
+where the identity operator acts on the optical sub-
+                                                                                                   − αy + δy )2 1 − tanh(r) ≤ 0,
+                                                                                                                              
+space. In the above expression, |Ψ(t)⟩ is given by
+Eq. (A11) with t0 → −∞ and we have defined |Φ(p, t)⟩ =                                                                           (A16)
+⟨p|Ψ(t)⟩. Under the same conditions for which Eq. (A8)                    which is manifestly non-positive. Thus, we confirm that
+is valid, this state can be written, up to normalization,                 the off-diagonal elements contribution get exponentially
+as                                                                        suppressed as we move away from the diagonal.
+               Z      Z t                                                    To gain intuition for the practical scale of this sup-
+  |Φ(p, t)⟩ ≈ d αω2
+                          dt′ c(α)bα (p, t, t′ ) |αω ⟩ ⊗ |α2ω ⟩ .         pression, let us rewrite our integrals in terms of the elec-
+                              t0                                          tric field strength εα , such that Re[Exp(α, α + δ)] →
+                                              (A13)                       (4g(ω)2 )−1 Re[Exp(εα , εα +εδ )]. In these units, we observe
+Accordingly, the ATI yield can be expanded as                             that the off-diagonal contributions become suppressed by
+                Z      Z      Z t Z t                                     a factor of e−1 when εδ changes by 4(g(ω))2 ≈ 10−8
+ Y (p) ≈ lim      d2 αω d2 βω dt1 dt2 c(αω )c∗ (βω )                      a.u.—a variation too small to produce any appreciable
+             t→∞
+           t0 →−∞                        t0      t0                       effect on the direct ATI probability amplitude, which re-
+                    × bα (p, t, t1 )b∗β (p, t, t2 ) ⟨βω |αω ⟩ .   (A14)   quires field strengths on the order of 10−2 a.u. to become
+                                                                          significant.
+   One of the main differences between the above expres-                     We can thus approximately rewrite Eq. (A14) as
+sion and previous approaches (see, e.g., Refs. [80, 81, 84]                            Z             Z
+and references therein) is that it includes off-diagonal el-                 Y (p) ≈ d αω Yα (p) d2 βω c(αω )c∗ (βω ) ⟨βω |αω ⟩
+                                                                                           2
+ements of the quantum-optical density matrix, i.e., terms                              Z
+with βω ̸= αω , and at first sight appears to lack a Husimi
+                                                                                    = d2 αω Q(αω )Yα (p),
+distribution weighting of the semiclassical ATI photoelec-
+tron probabilities. These differences arise from the fact                                                                                  (A17)
+that in many of those approaches, the so-called classical                                              Rt                         2
+                                                                          where Yα (p) = lim t→∞        t0
+                                                                                                             dt′ bα (p, t, t′ )       is the semi-
+limit is employed [85], where both V and αω are taken to                                      t0 →−∞
+                                                                          classical ATI probability amplitude for a field with coher-
+     √ under the condition that the ratio ε = 2g(ω)αω ∝
+infinity
+αω / V , which determines the electric field strength, re-                ent state amplitudes determined by α (see Eq. A9), and
+                                                                                   2                       2
+mains constant. In contrast, in our analysis, we keep g(ω)                π|c(αω )| = π −1 |⟨αω |Φω (t0 )⟩| ≡ Q(αω ), i.e., the Husimi
+fixed and small, satisfying g(ω) ∼ 10−8 ≪ 1 [82, 83]. In                  distribution of the BSV ω-field (|Φω (t0 )⟩ = Ŝω (ξ)|0ω ⟩).
+                                                                                                                                                   10
+
+This expression coincides with those found in the litera-          weighted by the Husimi distribution
+ture (see, e.g., Refs. [80, 81, 84] and references therein).                                                                              
+Note that in the main text, we have PMD    R t amplitude de-                             1       −|α|2 − tanh
+                                                                                                           2
+                                                                                                              r
+                                                                                                                       e−iϕ α2 +eiϕ α∗2
+noted by Mα (p, t, t0 ) which is equal to t0 dt′ bα (p, t, t′ ).     QBSV (α; r, ϕ) =          e                                               .
+                                                                                      π cosh r
+                                                                                                                     (A21)
+                                                                   of the BSV ω-field to obtain Y (p) (A17). Note that for
+                                                                   ϕ = 0, QBSV is squeezed (anti-squeezed) along Re(α)
+                                                                   (Im(α)) and positive increment in ϕ rotates the Husimi
+ 3.   Saddle point approach to modeling ionization                 distribution counter-clockwise.
+                                                                      For comparison (see Figs. 1-3), we also consider co-
+  We solve Yα (p) by saddle point approximation for the            herent and thermal fields in our analysis; their Husimi
+time integral. This involves finding the stationary point          functions are given by
+for the argument of the exponential in Eq. (A9)                                            1
+                                                                                             exp −|α − α0 |2 ,
+                                                                                                 
+                                                                      Qcoherent (α; α0 ) =                                                (A22)
+                    [p + Aα (tsp )]    2                                                   π
+      ∂t′ S t = 0 ⇒                 + Ip = 0,            (A18)                                              |α|2
+                                                                                                                 
+                                                                                               1
+             sp           2                                             Qthermal (α; n̄) =           exp −          ,                     (A23)
+                                                                                           π(1 + n̄)       1 + n̄
+which is the saddle point equation. We solve for the
+(complex) saddle point solutions tsp numerically for each          where α0 is the amount of displacement in the complex
+value of α sampled from the Husimi distribution at some            α plane and n̄ is the average number of photons in the
+value of r and ϕ. Yα (p) after the saddle-point approxi-           thermal state. For the weaker ω field, α0 is taken to
+mation is given by                                                 be one-tenth of the electric field amplitude, consistent
+                     s                                             with its√intensity being 1/100 of that of the stronger field
+                 X          2πi        iSα (p,tsp )
+                                                                   (E0 ∝ I0 ). Accordingly, n̄ is chosen to be 1/100 of the
+       Yα (p) =          2 S (p, t ) e                             average photon number in the 2ω field.
+                 t
+                       ∂t   α     sp
+                      sp
+
+                                                 2
+               ⟨p + Aα (tsp )| r̂ |g⟩ · Eα (tsp ) ,      (A19)
+                                                                      Appendix B: About the photon statistics force
+where ∂t2 Sα (p, tsp ) = Eα (tsp )·(p+Aα (tsp )). The saddle-
+point times and their variation under sampling of α from              With this background in mind, we can now obtain
+the Husimi distribution are discussed in the next subsec-          some practical insight into the role of a photon statis-
+tion. To avoid ambiguities associated with the temporal            tics force. In Refs. [66, 88], the influence of squeezing on
+window, we perform incoherent sums in the PMDs as                  electron trajectories leading to strong-field phenomena—
+described in Ref. [86].                                            specifically high-harmonic generation—was interpreted
+  We consider the ground state wavefunction of the elec-           as the action of an effective force arising from the pho-
+tron to be given by                                                ton statistics of BSV light: the so-called photon statistics
+                                                                   force. Its derivation is based on evaluating the Fourier
+                           r
+                             λ3 −λr                                transform of the expectation value of the dipole opera-
+                   ⟨r|g⟩ =     e    ,                              tor under the saddle-point approximation with respect
+                             π                                     to all integration variables, including those defining the
+where λ is the effective nuclear charge felt by the elec-          electric field amplitude. Yet, this quantity determines the
+tron and r is the radial parameter. The dipole transition          HHG response [71, 72]; because ATI spectra is not de-
+matrix element ⟨p + Aα (t)| r̂ |g⟩ is given by [87]                termined by dipole expectation values, that derivation
+                                                                   cannot be directly transplanted to describe the influence
+                                                                   of a photon-statistics force in ATI processes.
+                       r
+                         λ3 16λ       −(p + Aα (t))
+⟨p + Aα (t)| r̂ |g⟩ = i                                  .            In standard semiclassical ATI theory, the saddle-point
+                         2 π (λ2 +p2⊥ +(p∥ + Aα (t))2 )3
+                                                    (A20)          approximation is instead applied to the probability am-
+For 1s state of Helium atom, Ip = 0.904 a.u. and λ =               plitudes themselves. Accordingly, in our case we intro-
+1.6875.                                                            duce the saddle-point approximation directly at the level
+                                                                   of Eq. (A13). To do so, we first expand the coherent state
+                                                                   |αω ⟩ in the Fock basis so that all dependence on α and t′
+                                                                   appears explicitly in the probability amplitudes [83], i.e.,
+                                                                                  ∞ Z          Z t
+                 4.    Husimi distributions                                       X                                             1     2
+                                                                    |Φ(p, t)⟩ =         d2 α         dt′ c(α)bα (p, t, t′ )e− 2 |α|
+                                                                                  n=0           t0
+                                                                                                                                           (B1)
+  After substituting these expressions in Eq. (A19),                                                      αn
+                                                                                                        × √ |nω ⟩ ⊗ |α2ω ⟩ .
+we numerically integrate over the complex amplitude α                                                      n!
+                                                                                                                        11
+
+Note that we renamed the integration variable αω to α.        we find
+From the above equation, we can extract an effective
+                                                                                    1 h
+                                                                                         q                      i
+                                                                   e−r cosh(r) =
+                                                                                                         p
+quantum optical action                                                                     Isqu + g(ω)2−  I squ
+                                                                                 g(ω)2
+                      1 t 
+                       Z                                                           q
+                                         2
+   (QO)       ′
+  Sα (p, t, t ) = −        dτ p + Aα (τ ) + Ip (t′ − t0 )                       × Isqu + g(ω)2 ,                 (B10)
+                      2 t′
+                                                                                  1   h q                     i
+                                αy2            αy2                 er cosh(r) =
+                                                                                                       p
+                  αx2                     α2                                             Isqu + g(ω)2 + Isqu
+                                                  
+         + i −r            + r         + x+                                     g(ω)2
+              e cosh(r) e cosh(r)          2    2                                  q
+         + αx αy tanh(r),                                                       × Isqu + g(ω)2 .                 (B11)
+                                                     (B2)
+consisting of the semiclassical action in Eq. (A10) and       In the strong squeezing regime, we have that Isqu ≫
+additional terms coming from c(α) and the Fock state          g(ω)2 . We may therefore consider a Taylor expansion of
+expansion.                                                    the square root terms around this limit
+                                                                             s
+                                                                                   g(ω)2        g(ω)2
+                                                                                1+       ≃1+           ,       (B12)
+  Analogously to Refs. [66, 88], we apply the saddle-point                          Isqu         2Isqu
+approximation to the integration variables (αx , αy , t′ ),
+which leads to the following set of saddle-point equations    which yields
+
+                 [p + Aα (t′ )]2                                                1 g(ω)2    1                       2Isqu
+      (QO)
+ ∂t′ Sα    =0⇒                    + Ip = 0,           (B3)      e−r cosh(r) ≃     +       ≈ ,       er cosh(r) ≃         ,
+                        2                                                       2   8Isqu  2                       g(ω)2
+                          Z t
+      (QO)          g(ω)                                                                                            (B13)
+ ∂αx Sα    =0⇒−                dτ p + Aα (τ ) · ϵµ cos(ωτ )
+                      ω     t′
+                                                            where only the dominant higher-order from each Taylor
+                    2                                         expansion have been retained. Under these approxima-
+        + iαx −r             + 1 + αy tanh(r) = 0, (B4)
+               e cosh(r)                                      tions, Eqs. (B4) and (B5) reduce to
+                    g(ω) t 
+                          Z
+      (QO)
+                                             
+ ∂αy Sα    =0⇒−                dτ p + Aα (τ ) · ϵµ sin(ωτ )          g(ω) t
+                                                                           Z                                    
+                      ω
+                                                                                                  
+                           t′                                      −            dτ p(τ ) + Aα (τ ) · ϵµ cos(ωτ )
+             
+                   2
+                                                                      ω    t′
+        + iαy r           + 1 + αx tanh(r) = 0, (B5)                              + i5αx + αy = 0,                 (B14)
+               e cosh(r)
+                                                                           Z t                                  
+                                                                     g(ω)                                     
+where we have taken into account that                              −            dτ p(τ ) + Aα (τ ) · ϵµ sin(ωτ )
+                                                                       ω    t ′
+
+                      2g(ω)                                                         2g(ω)2 αy
+Aα (t) = A2ω (t)+ϵµ          αx cos(ωt)+αy sin(ωt) . (B6)                         +i            + iαy + αx = 0.    (B15)
+                        ω                                                               Isqu
+Eq. (B3) is identical to that in Appendix A 3 and gives
+energy conservation upon ionization, while the remaining         These two equations reveal three distinct orders of
+equations are associated with the photon statistics force.    magnitude for the αx and αy variables: terms propor-
+                                                              tional to g(ω)2 , terms proportional to g(ω), and terms of
+                                                              order unity. This motivates a perturbative expansion of
+  To gain insight into how these expressions scale with       αx and αy in powers of the coupling parameter g(ω),
+g(ω), we use the fact that the intensity of a BSV state is          (0)     (1)       (2)
+                                                              αi = αi +g(ω)αi +g(ω)2 αi +O g(ω)3 ,
+                                                                                                
+given by                                                                                                    i ∈ {x, y},
+                                                                                                                 (B16)
+                  Isqu = g(ω)2 sinh2 (r).             (B7)    and from Eqs. (B14) and (B15), we find that their zeroth
+                                                              order contributions satisfy
+By inverting this relation, we obtain
+                                p      !                                  αy(0) = −i5αx(0) ,   αx(0) = −iαy(0) ,     (B17)
+                          −1      Isqu
+                 r = sinh     ±         ,             (B8)    meaning that, at zeroth order with respect to g(ω), the
+                                g(ω)
+                                                              contribution of an effective photon statistics force van-
+where we have restricted ourselves to real-valued squeez-     ishes. We further benchmarked this analytical conclu-
+ing amplitudes. Using the additional relations                sion against numerical evaluations that do not rely on
+                                                              the Taylor expansions employed above, i.e., solutions of
+                    −1
+                           p                                  Eqs. (B3)-(B5). For field amplitudes |A2ω (t)| ≈ 1 a.u.,
+             e± sinh (x) = x2 + 1 ± x,
+                              p                    (B9)      we find that |αx | ≈ |αy | ∝ 10−5 across values of the
+             cosh sinh−1 (x) = x2 + 1,                        squeezing strength ranging from 4 to 15 [Fig. 4].Thus, the
+                                                                                                                                                                 12
+
+                                                                                                                                           0                      1
+                                                                              1.0
+                                                                                      (a)                       r=0           (b)                      r = 11
+                                                                              0.5
+
+
+                                                                  py (a.u.)
+                                                                              0.0
+
+                                                                              0.5
+
+                                                                              1.0
+                                                                              1.0
+                                                                                      (c)                      r = 12         (d)                      r = 13
+                                                                              0.5
+
+
+                                                                  py (a.u.)
+Figure 4. Solutions for αx and αy when evaluating Eqs. (B3)-                  0.0
+(B5) numerically. Here, we set p = 0 (similar results are found
+for varying values of p), |g(ω)| = 10−8 a.u., ω = 0.057 a.u.,                 0.5
+and E2ω = 0.106 a.u.
+                                                                              1.0
+                                                                                    1.0     0.5      0.0      0.5       1.0 1.0     0.5      0.0      0.5       1.0
+                                                                                                  px (a.u.)                               px (a.u.)
+perturbative solution considered here appears to capture
+the correct order of magnitude and provides meaningful
+                                                                  Figure 5. Direct ATI photoelectron momentum distributions
+insight into the behavior of these variables.
+                                                                  with same parameters as in Fig. 1(c) for varying squeezing
+   Turning now to the physical implications, these re-            parameter r. The squeezing angle is ϕ = 0 for all the plots.
+sults indicate that, for the present configuration, no
+photon statistics force arises in the sense described in
+Refs. [66, 88]. The saddle-points, representing the most          gle is changed by ∆ϕ is given by
+probable ionization pathways, therefore coincide with                                 Z
+those determined primarily by the 2ω field alone. In this
+                                                                    Y (p, θ, ϕ + ∆ϕ) = d2 α QBSV (α; r, ϕ + ∆ϕ)Yα (p, θ)
+picture, the role of the squeezed field ω is to introduce
+fluctuations around the ionization trajectories induced by
+                                                                                 Z
+the 2ω field, rather than exerting an effective force that                     = d2 α QBSV (αe−i∆ϕ/2 ; r, ϕ)Yα (p, θ). (C2)
+shifts them.
+                                                                  Now, we make the substitution β = αe−i∆ϕ/2 . The Ja-
+                                                                  cobian : d2 β = d2 α. Thus,
+                                                                                       Z
+    Appendix C: PMD dependence on squeezing                        Y (p, θ, ϕ + ∆ϕ) = d2 β QBSV (β; r, ϕ)Yβei∆ϕ/2 (p, θ)
+                  parameters                                                    Z
+                                                                              = d2 β QBSV (β; r, ϕ)Yβ (p, θ + ∆ϕ/2), (C3)
+   In this part, we will discuss how the squeezing pa-
+rameter r and squeezing angle ϕ influence the PMDs.                                         = Y (p, θ + ∆ϕ/2, ϕ).                                           (C4)
+We first show that varying the squeezing angle ϕ by ∆ϕ
+is equivalent to shifting the temporal (relative) phase θ         Hence, a change of squeezing angle by ∆ϕ in the squeez-
+between the two fields by ∆ϕ/2. For that, let us look             ing angle corresponds to a change of ∆ϕ/2 in the relative
+at the Husimi function for BSV [Eq. (A21)]. Note that             phase between the two superposed fields.
+QBSV (α; r, ϕ + ∆ϕ) = QBSV (αe−i∆ϕ/2 ; r, ϕ). If we in-              Let’s now look at the effect of the squeezing parameter
+clude the temporal phase explicitly in the expression of          r on the PMDs. The ATI PMD amplitude is calculated
+the electric field, we have (from Eq. (4)),                       from Eq. (A17) after employing the saddle point approx-
+                                                                  imation from Eq. (A19). Fig. 5 shows ATI PMDs for
+                                                                  He atom in linearly polarized ω − 2ω bichromatic light
+     Eα (t) = ig(ω) αω e−i(ωt−θ) − αω
+                                   ∗ i(ωt−θ)
+                                      e
+                                                                 with the coherent 2ω component superposed with the
+                                                                  BSV ω field at different squeezing parameters. The fig-
+              + ig(2ω) α2ω e−2iωt − α2ω
+                                      ∗ 2iωt
+                                            
+                                        e     ,          (C1)     ure shows that the asymmetry, the cutoff and the blur-
+                                                                  ring of the interference patterns increases with squeezing
+  Thus, Yα (p) depends on θ through Eα (t) and Aα (t)             parameter r. It starts from a monochromatic field of fre-
+(see Eq. (A19)), in particular, Yα (p, θ + ∆θ) =                  quency 2ω, with reflection symmetry about the py axis,
+Yαei∆θ (p, θ). So, the total PMD when the squeezing an-           well defined ATI rings and nearly vertical intra-cycle in-
+                                                                                                                          13
+
+
+
+
+Figure 6. Dependence of imaginary parts of the saddle-point solutions on px for linearly polarized bichromatic field with
+intensity 3 × 1014 W/cm2 for the 400 nm coherent part of the light and (a) superposed 800 nm BSV field at r = 12.15
+(IBSV = 3 × 1012 W/cm2 ) with ϕ = −π/2 for ionization events I1 and I3 as shown in Fig. 3 and for (b) events I2 and I4 ; (c)
+superposed 800nm BSV field at ϕ = 0 for all events and (d) 800 nm thermal light for all events. The black dotted and dashed
+lines depict the case of coherent bichromatic field for the labelled events in Fig. 3(a) and 3(b).
+
+
+terference fringes [Fig. 5(a)]. For r = 11 and r = 12           field.
+[Figs. 5(b) and (c), respectively], the symmetry is broken
+                                                                   For all phases, the figure shows that introducing
+and the features move towards positive momenta px > 0,
+                                                                squeezing leads to an uncertainty in Im[tsp ], in compari-
+until the asymmetry surpasses that in the main body of
+                                                                son to the results obtained for coherent bichromatic field
+the paper [Fig. 5(d)].
+                                                                (see the black solid and dashed lines in the figure). For
+                                                                ϕ = −π/2 [Figs. 6(a) and (b)], the imaginary parts are
+                                                                reflection-symmetric with regard to px = 0 . This means
+  Appendix D: Analysis of saddle-point ionization               that the tunneling probability and, consequently, the
+                     times                                      PMD, are reflection-symmetric about px → −px . How-
+                                                                ever, in panel (b) which corresponds to just the ionization
+   In this Appendix, we analyze the saddle point ioniza-        events I2 and I4 in Fig. 3(d), Im[tsp ] has a larger degree
+tion times (obtained from solving Eq. (A18)) as a func-         of uncertainty, extending towards lower values. This will
+tion of the longitudinal momentum px and the complex            result in a larger probability amplitude, in comparison
+amplitudes α as sampled from the Husimi distribution            to the contributions from panel (a) which depicts ion-
+of different driving fields. This analysis complements the      ization events I1 and I3 in Fig. 3(d). The correspond-
+discussion of the ionization probabilities near field ex-       ing Im(tsp ) for the ionization events associated with the
+trema (see Fig. 3 in the main body of the paper), but is        coherent bichromatic field with relative temporal phase
+slightly more technical.                                        θ = π/2 [Fig. 3(a) and Fig. 6(c)] and θ = π/4 [Fig. 3(b)
+   From Eq. (A18), it can be seen that the saddle point         and Fig. 6(a,b)] are shown as black lines and act as refer-
+solution tsp = tr + iti depends on the momentum px and          ence markers for the noisy imaginary-time solutions aris-
+complex variable α. For each value of px and α, we obtain       ing from the BSV field. The difference in magnitude
+the saddle point solution and plot the imaginary part of        for the probability densities in consecutive half cycles
+the ionization time in Fig. 6. The solutions are weighted       will worsen the contrast in the quantum-interference pat-
+by the Husimi function through their transparency. The          terns and thus lead to blurred PMDs [see Fig. 1(d)]. For
+imaginary parts Im[tsp ] provide qualitative information        ϕ = 0 [Fig. 6(c)], Im[tsp ] is no longer reflection-symmetric
+about the instantaneous tunneling probability at tsp : the      about px = 0 and exhibits a higher degree of uncertainty
+smaller Im[tsp ], the higher the probability for the electron   for positive momentum px , reaching much lower values.
+to tunnel through the barrier. This is a consequence of         This will result in a higher signal for positive momenta, as
+this probability being proportional to exp[−2Im(S)] and         shown in the PMDs. An inspection of Fig. 3(c) confirms
+the dominant term in the action being linear with tsp .         this trend, with comparable, but asymmetric ionization
+This explains why the minimum of the imaginary part             probabilities around each driving-field extrema. Finally,
+occurs near px = 0, corresponding to the peak of the            in 6(d) we show Im[tsp ] for the thermal light. The plot is
+                                                                                                                                            14
+
+                                     1e 5                                          nary part of the saddle-point times. For each longitudinal
+                                 7          BSV, φ = − π/2        BSV, φ = − π/2   momentum px , this is defined as
+                                            Events I1, 3          Events I2, 4
+                                 6          BSV, φ = 0            Thermal                                                                 2
+                                            All events            All events                          d2 α Q(α) Im(tsp (α)) − ⟨Im(tsp )⟩Q
+                                                                                                     R
+                                                                                               
+                                                                                   VarQ Im(tsp ) =                                           ,
+                                 5
+
+
+      Var Q [Im(tsp )]; [T 2 ]
+                                                                                                                  R
+                                                                                                                    d2 α Q(α)
+                                                                                                                                        (D1)
+                                 4                                                 where the weighted mean is given by
+                                 3                                                                         R 2
+                                                                                                             d α Q(α) Im(tsp (α))
+                                                                                            ⟨Im(tsp )⟩Q =                         .     (D2)
+                                 2
+                                                                                                                R
+                                                                                                                   d2 α Q(α)
+                                 1                                                    Here, tsp (α) denotes the saddle-point time correspond-
+                                 0                                                 ing to a field realization labeled by α, sampled from
+                                      2          1        0         1         2    the Husimi distribution Q(α). The weights Q(α) en-
+                                                      px (a.u.)                    code the probability of each phase-space configuration,
+                                                                                   ensuring that the variance captures the uncertainty in
+Figure 7. Variance of imaginary part of saddle point times                         tunneling-time induced by quantum fluctuations of the
+weighted by the Husimi distributions corresponding to the                          field in phase space.
+four bichromatic field configurations shown in Fig. 6, as a                           Fig. 7 shows the variance in imaginary part of sad-
+function of px .                                                                   dle point times calculated using Eq. (D1) for the plots
+                                                                                   shown in Fig. 6. This provides an additional signature of
+                                                                                   the asymmetry in the PMDs. For the bichromatic BSV
+                                                                                   field at ϕ = 0, the variance is asymmetric about px = 0,
+symmetric about px = 0 and the uncertainty is uniform                              whereas for ϕ = −π/2 it is symmetric, consistent with
+across the momenta, which explains the blurred and sym-                            the behavior of the PMD and the differential ionization
+metric PMD in Fig. 1(e).                                                           probabilities. We further observe that the variance in
+                                                                                   the imaginary-time solutions associated with the ioniza-
+  We observe that the spread in the imaginary part of the                          tion events I2 and I4 is larger than that for I1 and I3 , in
+ionization time, for different values of α sampled from the                        agreement with the trends seen in Fig. 6(a,b). Finally,
+Husimi distribution, varies with px . This spread can be                           for bichromatic thermal light, the variance of Im(tsp ) re-
+quantified by the Husimi-weighted variance of the imagi-                           mains symmetric about px = 0.
+

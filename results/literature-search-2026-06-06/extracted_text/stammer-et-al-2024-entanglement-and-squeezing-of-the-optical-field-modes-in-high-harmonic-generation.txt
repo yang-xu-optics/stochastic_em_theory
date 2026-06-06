@@ -1,0 +1,389 @@
+                                             Entanglement and squeezing of the optical field modes in high harmonic generation
+
+                                                         Philipp Stammer,1, ∗ Javier Rivera-Dean,1 Andrew S. Maxwell,2 Theocharis Lamprou,3, 4
+                                                    Javier Argüello-Luengo,1 Paraskevas Tzallas,3, 5 Marcelo F. Ciappina,6, 7, 8 and Maciej Lewenstein1, 9
+                                                                           1
+                                                                             ICFO – Institut de Ciencies Fotoniques, The Barcelona Institute
+                                                                           of Science and Technology, 08860 Castelldefels (Barcelona), Spain
+                                                              2
+                                                                Department of Physics and Astronomy, Aarhus University, DK-8000 Aarhus C, Denmark
+                                                                                     3
+                                                                                       Foundation for Research and Technology-Hellas,
+                                                                    Institute of Electronic Structure & Laser, GR-70013 Heraklion (Crete), Greece
+                                                         4
+                                                           Department of Physics, University of Crete, P.O. Box 2208, GR-70013 Heraklion (Crete), Greece
+                                                                   5
+                                                                     ELI-ALPS, ELI-Hu Non-Profit Ltd., Dugonics tér 13, H-6720 Szeged, Hungary
+                                                                     6
+                                                                       Department of Physics, Guangdong Technion - Israel Institute of Technology,
+                                                                                  241 Daxue Road, Shantou, Guangdong, China, 515063
+                                                                             7
+                                                                               Technion - Israel Institute of Technology, Haifa, 32000, Israel
+
+
+
+
+arXiv:2310.15030v1 [quant-ph] 23 Oct 2023
+                                                            8
+                                                              Guangdong Provincial Key Laboratory of Materials and Technologies for Energy Conversion,
+                                                                                   Guangdong Technion - Israel Institute of Technology,
+                                                                                  241 Daxue Road, Shantou, Guangdong, China, 515063
+                                                                              9
+                                                                                ICREA, Pg. Lluis Companys 23, ES-08010 Barcelona, Spain
+                                                                                                 (Dated: October 24, 2023)
+                                                            Squeezing of optical fields, used as a powerful resource for many applications, and the radiation
+                                                         properties in the process of high harmonic generation have thus far been considered separately. In
+                                                         this Letter, we want to clarify that the joint quantum state of all the optical field modes in the
+                                                         process of high harmonic generation is in general entangled and squeezed. We show that this is
+                                                         already the case in the simplest scenario of driving uncorrelated atoms by a classical laser light field.
+                                                         The previous observation of product coherent states after the high harmonic generation process is
+                                                         a consequence of the assumption that the ground state depletion can be neglected, which is related
+                                                         to vanishing dipole moment correlations. Furthermore, we analyze how the resulting quadrature
+                                                         squeezing in the fundamental laser mode after the interaction can be controlled and explicitly show
+                                                         that all field modes are entangled.
+
+
+                                               Introduction. – The field of attosecond science [1] has         we show that the quadrature squeezing of the fundamen-
+                                            recently established connections to the field of quantum           tal driving mode can be tuned by varying the carrier-
+                                            optics and quantum information science [2, 3]. This is             envelope phase (CEP) of the driving laser field allowing
+                                            mainly due to the efforts in describing systems driven by          the angle of the squeezed field quadrature to rotate. This
+                                            strong light fields with fully quantized approaches [4],           is particularly interesting since the squeezing already oc-
+                                            going beyond the extremely successful (semi)-classical             curs in the simplest scenario when driving uncorrelated
+                                            methods [5]. In particular, the process of high harmonic           atoms with classical laser light. Thus far, squeezed light
+                                            generation (HHG) [6, 7] has been the subject of various            has been considered to drive the HHG process [16, 17],
+                                            investigations to gain novel insights into the radiation           showing an extension of the generated spectrum. How-
+                                            properties of the scattered field. These insights were elu-        ever, the other field properties besides the spectrum, such
+                                            sive from a semi-classical perspective without the quanti-         as squeezing [8] or quantum coherence [12], only received
+                                            zation of the electromagnetic field [8–10]. It was shown,          very limited attention in HHG. Here, we will observe two-
+                                            that the final quantum state of the field modes are given          mode squeezing between all field modes participating in
+                                            by product coherent states [9, 10], which holds when as-           the process, which naturally leads to an entangled state
+                                            suming small depletion of the ground state and is related          between all modes [18]. Generating such squeezed and
+                                            to vanishing dipole moment correlations [11] (note that a          massive entangled states is of importance for modern
+                                            coherent state driving field needs to be assumed as well           quantum technologies [19–21]. This further highlights
+                                            [12]). However, further analysis has shown that the field          the use of strong-laser driven systems for quantum state
+                                            state generated in the HHG process is entangled [13, 14].          engineering of light [4, 14], which has already shown the
+                                            In this work, we show how the description of the final             ability to generate non-classical states of light by means
+                                            quantum optical state after HHG by means of product                of optical Schrödinger cat-states [9] having sufficient pho-
+                                            coherent states is a consequence of the aforementioned             ton numbers to induce non-linear phenomena [22]. This
+                                            approximations [15]. In particular, we show that all field         work further manifest the intrinsic properties in the HHG
+                                            modes are naturally entangled, and further show that               process beyond the semi-classical framework by showing
+                                            each mode exhibits squeezing. As a proof of principle              that entanglement and squeezing naturally occurs even
+                                                                                                               in simple gas targets.
+                                                                                                                  Quantum optical HHG without dipole correlations. – In
+                                                                                                               the quantum optical description of HHG the interaction
+                                            ∗ philipp.stammer@icfo.eu
+                                                                                                               of an intense laser field, described by the coherent state
+                                                                                                                             2
+
+|α⟩, with an atom in the ground state |g⟩ is given by the          where we have defined |Φ(v, t)⟩ = ⟨v|Ψ(t)⟩ for the con-
+following interaction Hamiltonian (a detailed derivation           tinuum state |v⟩ of the electron with velocity v. Solving
+can be found in [4])                                               the exact dynamics for |Φ(t)⟩ in (7) is a tedious task,
+                                                                   and approximations based on the physical situation un-
+                    HI (t) = −d(t)EQ (t),                   (1)    der consideration are necessary. For instance, we can
+                                                                   assume that the depletion of the electronic ground state
+where the electric field operator                                  is small [6], such that the second term in (8) can be ne-
+                       N
+                                                                   glected since it is proportional to the total continuum
+                       X √                                         state amplitude. The remaining equation can then be
+                              q a†q eiqωt − aq e−iqωt ,
+                                                     
+        EQ (t) = −ig                                        (2)
+                                                                   solved and is given by [14]
+                       q=1
+                                                                                        Z t                   
+with q ≥ 2 being the harmonic field modes, is coupled to                                       ′    ′        ′
+                                                                      KHHG ≃ T exp i         dt ⟨d(t )⟩ EQ (t ) = D[χ]. (10)
+the time-dependent dipole moment operator                                                 0
+
+                           †
+                   d(t) = Usc (t) d Usc (t).                (3)    leading toQ a displacement operation for each mode
+                                                                   D[χ] =        q D[χq ], with the coherent state displace-
+                                                                                 Rt                ′
+   The dipole moment is in thehinteraction picture
+                                                i of the           ments χq ∝ 0 dt′ ⟨d(t′ )⟩ eiωq t , which are proportional to
+                                  Rt
+reference frame Usc (t) = T exp −i 0 dτ Hsc (τ ) , with re-        the Fourier transform of the dipole moment expectation
+                                                                   value ⟨g| d(t) |g⟩ = ⟨d(t)⟩. Note that the approximation
+spect to the semi-classical Hamiltonian of the electron
+                                                                   to obtain Eq. (10) is equivalent to neglecting dipole mo-
+Hsc (t) = HA − dEcl (t). This semi-classical Hamiltonian
+                                                                   ment correlations of the electron [11, 13, 14], such that
+is the same as the one traditionally considered in semi-
+                                                                   the final field state
+classical HHG theory [6], where HA = p2 /2 + V (r) is the
+pure electronic Hamiltonian, and                                               |Φ(t)⟩ = KHHG |{0q }⟩ = |{χq }⟩ ,          (11)
+   Ecl (t) = Tr[EQ (t) |α⟩⟨α|] = ig(αe−iωt − α∗ eiωt ),     (4)    is given by product coherent states. We shall now show
+                                                                   that the actual field state in the process of HHG is not
+is the classical part of the driving laser electric field. Solv-   given by product coherent states when taking into ac-
+ing the dynamics for the parametric process of HHG, in             count the dipole moment correlations, and we will see
+which the electron is found in the ground state after the          that the proper final field state is entangled and squeezed.
+end of the pulse, the dynamical equation for the field                Including dipole moment correlations. – The crucial
+state conditioned on the electronic state |g⟩ is given by          approximation to find the expression for the final field
+                                                                   state in (11) is based on the assumption of negligible
+            i∂t |Φ(t)⟩ = − ⟨g| d(t)EQ (t) |Ψ(t)⟩ ,          (5)    depletion of the ground state amplitude, equivalent to
+                                                                   neglecting dipole moment correlations of the electron.
+where |Φ(t)⟩ = ⟨g|Ψ(t)⟩, with |Ψ(t)⟩ the state of the total
+                                                                   That is, the approximation from (7) to (10) leading to
+system. The general solution for the field state condi-
+                                                                   the product coherent states of all field modes (11), due
+tioned on the electronic ground state is given by [14]                                                              (†)
+                                                                   to a linear expression in the field operators aq in (10).
+         |Φ(t)⟩ = ⟨g| U (t) |g⟩ |Φi ⟩ = KHHG |Φi ⟩ ,        (6)    In typical experiments with moderate laser intensities
+                                                                   (≈ 1 × 1014 W/cm2 ), this assumption is reasonable, but,
+with the conditioned evolution operator                            if we increase the intensity to values around ≈ 5 × 1014
+                          Z t                                    W/cm2 or larger, the ground state depletion starts to
+                                                                   play a role, depending on the atomic species under con-
+      KHHG = ⟨g| T exp i       dt′ d(t′ )EQ (t′ ) |g⟩ ,     (7)
+                                 0                                 sideration. Theoretically speaking, the ground state de-
+                                                                   pletion implies that the exact interaction Hamiltonian
+ which solely acts on the initial field state |Φi ⟩ = |{0q }⟩.     in the propagator (7) does not commute at different
+ To obtain the exact solution for the field we introduce           times and remains an operator in the total Hilbert space
+Rthe identity on the electronic subspace 1 = |g⟩⟨g| +              (HA ⊗ HF ) of the electron plus the field
+   dv |v⟩⟨v| (for the sake of simplicity we use a 1d mo-
+mentum representation) [4, 9, 10], and in the spirit                             [HI (t1 ), HI (t2 )] ∈ HA ⊗ HF .         (12)
+of the strong field approximation (SFA)[5] we neglect
+continuum-continuum transitions such that we have to                 In contrast, the commutator of the approximate in-
+solve the following set of coupled equations                       teraction Hamiltonian HI′ (t) = − ⟨d(t)⟩ EQ (t) is just a
+                                                                   complex number, i.e. [HI′ (t1 ), HI′ (t2 )] ∈ C, and thus,
+       ∂t |Φ(t)⟩ = iEQ (t) ⟨g| d(t) |g⟩ |Φ(t)⟩          (8)        when solving (7), the modes do not mix. Going beyond
+                     Z                                             the linear term of the field operator EQ (t) would lead,
+                  + i dvEQ (t) ⟨g| d(t) |v⟩ |Φ(v, t)⟩ ,            for instance, to squeezing in the field modes. Further-
+                                                                   more, all field modes will become entangled due to the
+     ∂t |Φ(v, t)⟩ = iEQ (t) ⟨v| d(t) |g⟩ |Φ(t)⟩ ,           (9)                                   (†)
+                                                                   mixing of the field operators aq of the different modes.
+                                                                                                                                      3
+
+We therefore, anticipate signatures of squeezing and en-
+tanglement between the modes when going beyond the
+approximation of neglecting dipole moment correlations.
+This is done by solving (8) without the assumption of
+negligible ground state depletion of the electron. We
+thus solve the dynamics for higher orders of the exact
+interaction Hamiltonian HI (t) = −d(t)EQ (t) instead of
+HI′ = − ⟨d(t)⟩ EQ (t) as done in (10). Especially, we want
+to find a solution of (8), and have
+
+    ∂t |Φ(t)⟩ = iEQ (t) ⟨d(t)⟩ |Φ(t)⟩                        (13)
+                Z t    Z
+       − EQ (t)     dt′ dvd∗vg (t)dvg (t′ )EQ (t′ ) |Φ(t′ )⟩ ,            FIG. 1. Squeezing parameter of the fundamental mode
+                  0                                                       ⟨D(ω)D(ω)⟩ versus the carrier-envelope phase (CEP). To
+                                                                          convert to dB units, we employed the relation [db] =
+where dvg (t) = ⟨v| d(t) |g⟩. In order to find the evolu-                                2
+                                                                          10 log10 (e2|r| ), with r ≡ −g 2 BNat denoting the squeezing
+tion operator for the state |Φ(t)⟩, we perform a Markov                   parameter. The driving laser field used in the calculations
+type approximation |Φ(t′ )⟩ → |Φ(t)⟩,
+                                    R and make use of the                 has an intensity of 4 × 1014 W/cm2 with a central frequency
+identity on the electronic subspace dv |v⟩⟨v| = I −|g⟩⟨g|,                ω = 0.057 a.u. (corresponding to a wavelength λ = 800 nm)
+such that                                                                 and a sin2 -shaped envelope with 2 cycles of total duration
+              h                D         Ei                               (approximately 5 fs). The target is an H atom in its ground,
+   ∂t |Φ(t)⟩ = iEQ (t) ⟨d(t)⟩ − Q̇(t)Q(t) |Φ(t)⟩ , (14)                   1s, state. Here, we have considered that Nat = 5×1013 atoms
+                                                                          independently contribute to HHG in the interaction region [9].
+where we have defined                                                     The laser field is plotted in the upper panels for each of the
+                Z t                                                       CEP values indicated. The arrows in this plot correspond to
+                                                                          the values for which the Wigner function is shown in Fig. 2.
+         Q(t) =     dt′ EQ (t′ ) [d(t′ ) − ⟨d(t′ )⟩] .             (15)
+                          0
+
+  Neglecting the commutators [Q(t), Q(t′ )] we find [23]                     We expect all the averages to be comparable,
+                D         E 1 ∂                                           i.e. |⟨D(ω)D(ω)⟩| = D† (ω)D(ω) = B, where we
+                 Q̇(t)Q(t) =      Q2 (t) ,                         (16)   have used that D† (ω)D(ω) is self-adjoint and defined
+                             2 ∂t                                                    ∗
+                                                                          ⟨D(ω)D(ω)⟩ = D† (ω)D† (ω) ≡ Be−2iψ , such that we
+and thus, the evolution of the initial state reads                        can write
+
+                                                                                                                    2
+                                                                                                                   
+                                                                                                 i
+               |Φ(t)⟩ = D[χ]e− 2 ⟨Q (t)⟩ |Φi ⟩ .
+                                    1    2
+                                                                   (17)              2     2         † iψ      −iψ
+                                                                                    Q = 2g B √ a e − ae                .   (21)
+                                                                                                  2
+  Here, we have used that [EQ (t), Q(t′ )] is a complex
+number such that the two operations in (17) can be fac-                     Interestingly, this includes a quadrature operator, lead-
+torized. The additional term is quadratic in Q(t) and                     ing to squeezing along the momentum quadrature
+thus in the electric field operator and therefore leads to
+                                                                                                i
+                                                                                          Pψ = √ a† eiψ − ae−iψ .
+                                                                                                               
+squeezing and mixing between the field modes. Evaluat-                                                                             (22)
+ing this term we find                                                                            2
+                 Z tZ t                                                     We can now write down the final field state of the fun-
+        Q2 (t) =          dt′ dt′′ EQ (t′ )EQ (t′′ )  (18)                damental mode after the process of HHG, which is given
+                      0       0
+                                                                          by (in the laboratory frame)
+                   ⟨[d(t′ ) − ⟨d(t′ )⟩] [d(t′′ ) − ⟨d(t′′ )⟩]⟩ .
+                                                                                          |Φ1 ⟩ = D[α]D[χ1 ]S(ψ) |0⟩ ,             (23)
+  As done in previous works [9, 10], we will focus on the
+fundamental mode of the driving field (with operators                     which is a displaced and squeezed vacuum state, i.e. a
+ (†)
+a1 = a(†) ) since the amplitudes of the harmonics are                     high photon number squeezed coherent state, with the
+much smaller. We can thus write                                           squeezing operator given by
+   Q2 = − g 2 (a† )2 ⟨D(ω)D(ω)⟩ + a2 D† (ω)D† (ω)
+              
+                                                                                           S(ψ) = exp −g 2 BPψ2 .
+                                                                                                              
+                                                                                                                            (24)
+        −a† a D(ω)D† (ω) − aa† D† (ω)D(ω) , (19)
+                                                 
+                                                                             We note that varying the squeezing phase ψ in (22) al-
+where we have considered t → ∞ and defined                                lows to consider squeezing along different directions given
+                 Z ∞                                                      by the quadrature operator Pψ . In order to quantify the
+                             ′
+         D(ω) =      dt′ eiωt [d(t′ ) − ⟨d(t′ )⟩] .                (20)   squeezing in the fundamental mode, we need the correla-
+                          0                                               tions of the dipole moment fluctuations around its mean
+                                                                                                                                   4
+
+D(ω) in (20). We therefore numerically solve [24]
+                        Z t         Z t
+                                                   ′    ′′
+      ⟨D(ω)D(ω)⟩ =            dt′          dt′′ eiωt eiωt     (25)
+                          0          0
+                   × [⟨d(t′ )d(t )⟩ − ⟨d(t′ )⟩ ⟨d(t′′ )⟩] ,
+                                      ′′
+
+
+from which we obtain the single atom contribution to
+the squeezing |⟨D(ω)D(ω)⟩| = B. Taking into account
+that in the interaction region we have Nat atoms inde-
+pendently contributing to the HHG process we can write
+the total squeezing power via the squeezing parameter
+                                                2
+r ≡ −g 2 BNat in units of [db] = 10 log10 (e2|r| ). In Fig. 1
+we show the squeezing power in the fundamental mode
+after the HHG process for varying carrier-envelope phase
+(CEP) of the driving laser field. The squeezing phase
+ψ = 21 arg[⟨D(ω)D(ω)⟩] is indicated with the color-coding
+for each CEP value. We observe that by varying the CEP
+we can control the squeezing power and the squeezing
+phase, which allows to rotate the angle of the quadrature
+operator along which the squeezing occurs. The arrows
+at different CEP values in Fig. 1 show different shapes
+                                                                     FIG. 2. Wigner function W (β) of the state of the fundamental
+of the electric field of the driving pulse. To further il-
+                                                                     mode (23) for different values of the CEP ϕ, with the same
+lustrate the effect of the squeezing on the fundamental              laser parameters as specified in the caption of Fig. 1. The
+mode, and to show the rotation of the quadrature opera-              cases (a)-(d) correspond to the arrows indicated in Fig. 1, il-
+tor, the Wigner function [25] of the state in (23) is shown          lustrating the ability to control the rotation of the quadrature
+in Fig. 2 for the CEP values indicated by the arrows in              squeezing by varying the CEP.
+Fig. 1. We can see significant squeezing along the field
+quadratures and the ability to rotate the squeezing ellipse
+by varying the CEP. Further, we can see how the sym-
+metry between the pulse shapes (see Fig. 1) is reflected
+in the orientation of the squeezing quadrature showing a
+rotation of the Wigner function in Fig. 2 between (a) and
+                                                                     HHG, where many different field modes participate in the
+(d) of π. The same holds between (b) and (c) in Fig.2,
+                                                                     process, this two-mode squeezing leads to massive entan-
+which emphasizes that there exists a relation between the
+                                                                     gled states. In view of quantum information processing
+CEP phase ϕ and the squeezing phase ψ, such that when
+                                                                     tasks with continuous variable systems [19, 20] the detec-
+applying a sign change and time-reversal symmetry op-
+                                                                     tion and characterisation of entanglement in continuous
+eration on the driving pulse, the squeezing phase changes
+                                                                     variable systems is of great importance [26, 27]. Taking
+according to ψ → π − ψ.
+                                                                     into account that N modes participate in the process of
+   Entanglement in HHG. – Now, we shall take into ac-
+                                                                     HHG, we expect the final field state to exhibit genuine
+count all harmonic field modes, to show that the final
+                                                                     multipartite continuous variable entanglement [28], and
+state of the field is in general entangled. Starting from
+                                                                     its detection is subject of future investigation.
+(18) by considering all modes in the field operator, we
+can write
+                    X√                                                 Conclusions. – We have shown that the final field state
+       Q2 = − g 2         qp a†q a†p ⟨D(ωq )D(ωp )⟩     (26)         in the process of HHG is an entangled state between all
+                    q,p                                              field modes and that each mode is squeezed. The squeez-
+              −a†q ap     D(ωq )D† (ωp ) + h.c. .
+                                               
+                                                                     ing can be manipulated by varying the CEP of the driv-
+                                                                     ing field, which allows to rotate the quadrature operator
+   This is a generic bilinear Hermitian operator for all             along which the squeezing occurs. Showing that the field
+the bosonic field modes participating in the process of              is entangled provides further usefulness of the recently
+HHG. The terms in which q = p, i.e. the pairs of identical           emerging connection of attosecond physics with quantum
+harmonic photons created or annihilated, correspond to               information science [2, 3]. Especially the generation of a
+a single mode squeezing, and the equivalent terms with               genuine multipartite entangled continuous variable sys-
+q ̸= p correspond to two-mode squeezing. It is known                 tem is of fundamental and technological importance. We
+that those two-mode squeezing terms are responsible for              anticipate that driving more complex systems [29–31] or
+entanglement between the two modes [18]. This further                using non-classical driving fields [16, 17, 32] could lead
+manifests that the actual field state in the process of              to further insights into the entanglement and squeezing
+HHG is in general entangled. In the particular case of               properties of the generated harmonic light.
+                                                                                                                                5
+
+                    Acknowledgments                               (PASQuanS2.1, 101113690); EU Horizon 2020 FET-
+                                                                  OPEN OPTOlogic (Grant No 899794); EU Horizon
+                                                                  Europe Program (Grant Agreement 101080086 —
+  P.S. acknowledges funding from the European Union’s             NeQST), National Science Centre, Poland (Symfonia
+Horizon 2020 research and innovation programme                    Grant No. 2016/20/W/ST4/00314); ICFO Internal
+under the Marie Sklodowska-Curie grant agreement                  “QuantumGaudi” project; European Union’s Hori-
+No 847517. J.R-D. acknowledges funding from the                   zon 2020 research and innovation program under the
+Government of Spain (Severo Ochoa CEX2019-000910-S                Marie-Sklodowska-Curie grant agreement No 101029393
+and TRANQI), Fundació Cellex, Fundació Mir-Puig,                (STREDCH) and No 847648 (“La Caixa” Junior Lead-
+Generalitat de Catalunya (CERCA program) and                      ers fellowships ID100010434: LCF/BQ/PI19/11690013,
+the ERC AdG CERQUTE. ICFO group acknowl-                          LCF/BQ/PI20/11760031,          LCF/BQ/PR20/11770012,
+edges support from: ERC AdG NOQIA; MICIN/AEI                      LCF/BQ/PR21/11840013). Views and opinions ex-
+(PGC2018-0910.13039/501100011033, CEX2019-000910-                 pressed are, however, those of the author(s) only and do
+S/10.13039/501100011033, Plan National FIDEUA                     not necessarily reflect those of the European Union, Eu-
+PID2019-106901GB-I00, FPI; MICIIN with funding from               ropean Commission, European Climate, Infrastructure
+European Union NextGenerationEU (PRTR-C17.I1):                    and Environment Executive Agency (CINEA), nor any
+QUANTERA MAQS PCI2019-111828-2); MCIN/AEI/                        other granting authority. Neither the European Union
+10.13039/501100011033 and by the “European Union                  nor any granting authority can be held responsible for
+NextGeneration EU/PRTR” QUANTERA DYNAMITE                         them. M. F. C. acknowledges financial support from
+PCI2022-132919 within the QuantERA II Programme                   the Guangdong Province Science and Technology Major
+that has received funding from the European Union’s               Project (Future functional materials under extreme
+Horizon 2020 research and innovation programme under              conditions - 2021B0301030005) and the Guangdong
+Grant Agreement No 101017733Proyectos de I+D+I                    Natural Science Foundation (General Program project
+“Retos Colaboración” QUSPIN RTC2019-007196-7);                   No. 2023A1515010871). P. Tzallas group at FORTH
+Fundació Cellex; Fundació Mir-Puig; Generalitat de              acknowledges support from: LASERLABEUROPE V
+Catalunya (European Social Fund FEDER and CERCA                   (H2020-EU.1.4.1.2 grant no.871124), the H2020 project
+program, AGAUR Grant No. 2021 SGR 01452, Quan-                    IMPULSE (GA 871161) and ELI–ALPS. ELI–ALPS
+tumCAT U16-011424, co-funded by ERDF Operational                  is supported by the European Union and co-financed
+Program of Catalonia 2014-2020); Barcelona Super-                 by the European Regional Development Fund (GINOP
+computing Center MareNostrum (FI-2023-1-0013); EU                 Grant No. 2.3.6-15-2015-00001).
+
+
+
+
+ [1] F. Krausz and M. Ivanov, Reviews of modern physics 81,       [11] B. Sundaram and P. W. Milonni, Physical Review A 41,
+     163 (2009).                                                       6571 (1990).
+ [2] U. Bhattacharya, T. Lamprou, A. S. Maxwell, A. Or-           [12] P. Stammer, arXiv:2309.05010 (2023).
+     donez, E. Pisanty, J. Rivera-Dean, P. Stammer, M. F.         [13] P. Stammer, J. Rivera-Dean, T. Lamprou, E. Pisanty,
+     Ciappina, M. Lewenstein, and P. Tzallas, Reports on               M. F. Ciappina, P. Tzallas, and M. Lewenstein, Physical
+     Progress in Physics 86, 094401 (2023).                            Review Letters 128, 123603 (2022).
+ [3] M. Lewenstein, N. Baldelli, U. Bhattacharya, J. Biegert,     [14] P. Stammer, Physical Review A 106, L050402 (2022).
+     M. Ciappina, U. Elu, T. Grass, P. Grochowski, A. John-       [15] P. Stammer and M. Lewenstein, arXiv:2306.07854
+     son, T. Lamprou, et al., arXiv:2208.14769 (2022).                 (2023).
+ [4] P. Stammer, J. Rivera-Dean, A. Maxwell, T. Lamprou,          [16] A. Gorlach, M. E. Tzur, M. Birk, M. Krüger, N. Rivera,
+     A. Ordóñez, M. F. Ciappina, P. Tzallas, and M. Lewen-           O. Cohen, and I. Kaminer, Nature Physics , 1 (2023).
+     stein, PRX Quantum 4, 010201 (2023).                         [17] P. Stammer, arXiv:2308.15087 (2023).
+ [5] K. Amini, J. Biegert, F. Calegari, A. Chacón, M. F. Ciap-   [18] V. Josse, A. Dantan, A. Bramati, and E. Giacobino, Jour-
+     pina, A. Dauphin, D. K. Efimov, C. F. de Morisson Faria,          nal of Optics B: Quantum and Semiclassical Optics 6,
+     K. Giergiel, P. Gniewek, et al., Reports on Progress in           S532 (2004).
+     Physics 82, 116001 (2019).                                   [19] S. L. Braunstein and P. Van Loock, Reviews of modern
+ [6] M. Lewenstein, P. Balcou, M. Y. Ivanov, A. L’huillier,            physics 77, 513 (2005).
+     and P. B. Corkum, Physical Review A 49, 2117 (1994).         [20] G. Adesso and F. Illuminati, Journal of Physics A: Math-
+ [7] P. B. Corkum, Physical review letters 71, 1994 (1993).            ematical and Theoretical 40, 7821 (2007).
+ [8] A. Gorlach, O. Neufeld, N. Rivera, O. Cohen, and             [21] A. Acı́n, I. Bloch, H. Buhrman, T. Calarco, C. Eichler,
+     I. Kaminer, Nature communications 11, 4598 (2020).                J. Eisert, D. Esteve, N. Gisin, S. J. Glaser, F. Jelezko,
+ [9] M. Lewenstein, M. F. Ciappina, E. Pisanty, J. Rivera-             et al., New Journal of Physics 20, 080201 (2018).
+     Dean, P. Stammer, T. Lamprou, and P. Tzallas, Nature         [22] T. Lamprou, J. Rivera-Dean, P. Stammer, M. Lewen-
+     Physics 17, 1104 (2021).                                          stein, and P. Tzallas, arXiv:2306.14480 (2023).
+[10] J. Rivera-Dean, T. Lamprou, E. Pisanty, P. Stammer,          [23] The operator Q(t) quantifies the deviation of the dipole
+     A. F. Ordóñez, A. Maxwell, M. Ciappina, M. Lewenstein,          moment from it’s mean value, i.e. its fluctuations. And
+     and P. Tzallas, Physical Review A 105, 033714 (2022).             since the commutator [Q(t), Q(t′ )] is related to the fluc-
+                                                                                                                                 6
+
+     tuations of this operator, we neglect those fluctuations of        I. Kaminer, Nature Physics 19, 551 (2023).
+     the fluctuations.                                             [30] J. Rivera-Dean, P. Stammer, A. S. Maxwell, T. Lamprou,
+[24] See Supplementary Material for details on the model and            A. F. Ordóñez, E. Pisanty, P. Tzallas, M. Lewenstein, and
+     its numerical implementation.                                      M. F. Ciappina, arXiv:2211.00033 (2022).
+[25] A. Royer, Physical Review A 15, 449 (1977).                   [31] J. Rivera-Dean, P. Stammer, A. S. Maxwell, T. Lamprou,
+[26] L.-M. Duan, G. Giedke, J. I. Cirac, and P. Zoller, Phys-           A. F. Ordóñez, E. Pisanty, P. Tzallas, M. Lewenstein, and
+     ical review letters 84, 2722 (2000).                               M. F. Ciappina, arXiv:2309.14435 (2023).
+[27] R. Simon, Physical Review Letters 84, 2726 (2000).            [32] M. Even Tzur, M. Birk, A. Gorlach, M. Krüger,
+[28] P. Van Loock and A. Furusawa, Physical Review A 67,                I. Kaminer, and O. Cohen, Nature Photonics 17, 501
+     052315 (2003).                                                     (2023).
+[29] A. Pizzi, A. Gorlach, N. Rivera, A. Nunnenkamp, and
+

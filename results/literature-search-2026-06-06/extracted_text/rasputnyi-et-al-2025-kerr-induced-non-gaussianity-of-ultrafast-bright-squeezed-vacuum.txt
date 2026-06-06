@@ -1,0 +1,859 @@
+                                             Kerr-induced non-Gaussianity of ultrafast bright
+                                                           squeezed vacuum
+                                                  Andrei Rasputnyi1,2 , Ilya Karuseichyk3 , Gerd Leuchs1 ,
+                                                         Denis Seletskiy4,5 , Maria Chekhova1,2,6*
+                                              1 Max Planck Institute for the Science of Light, Erlangen, Germany.
+
+
+
+
+arXiv:2512.17797v1 [quant-ph] 19 Dec 2025
+                                                    2 Department of Physics, Friedrich-Alexander-Universität
+
+                                                          Erlangen-Nürnberg (FAU), Erlangen, Germany.
+                                            3 Laboratoire d’Optique Appliquée (LOA), CNRS, École polytechnique,
+
+                                                  ENSTA, Institut Polytechnique de Paris, Palaiseau, France.
+                                            4 femtoQ Laboratory, Department of Engineering Physics, Polytechnique
+
+                                            Montréal, 2500 ch. de Polytechnique, Montréal, QC H3T 1J4, Canada.
+                                            5 femtoQ Laboratory, Department of Physics and Astronomy, MSC07
+
+                                               4220, 1 University of New Mexico, Albuquerque NM, 87131-0001,
+                                                                         United States.
+                                             6 Faculty of Electrical and Computer Engineering, Technion—Israel
+
+                                                          Institute of Technology, Haifa 32000, Israel.
+
+
+                                              *Corresponding author(s). E-mail(s): maria.chekhova@mpl.mpg.de;
+
+
+                                                                                   Abstract
+                                              Non-Gaussian states of light are a critical resource for fault-tolerant quantum
+                                              computing and enhanced metrology, but are typically faint and often obtained
+                                              via post-selection. Here, we demonstrate the deterministic generation of a bright
+                                              non-Gaussian state by introducing a Kerr nonlinearity to a macroscopic state of
+                                              light called bright squeezed vacuum (BSV). To characterize the resulting state,
+                                              we use a single-shot f-2f interferometer to sample its Husimi function. We observe
+                                              a clear transformation from a 2D Gaussian distribution to an ’S’-shaped non-
+                                              Gaussian profile, which is the direct statistical evidence of the intensity-dependent
+                                              nonlinear phase. The negativity of the Wigner function, which is an intrinsic
+                                              property of any pure non-Gaussian state, cannot be observed because BSV is a
+                                              mixed state even under minute optical loss. However, we show that BSV can be
+                                              considered as a mixture of pure squeezed coherent states, for some of which Kerr-
+                                              induced Wigner-function negativity is quite tolerant to loss. This work bridges
+
+
+
+
+                                                                                       1
+     the gap between quantum optics and ultrafast nonlinear optics, opening a path
+     to quantum applications that require high photon flux.
+
+
+
+
+1 Introduction
+Non-Gaussian states of light are of great interest in quantum photonic technologies
+[1–3]. They are indispensable in universal quantum computing [4], as they enable
+fault-tolerant quantum algorithms and can enhance the performance of sensing and
+metrology techniques [5]. The best-known non-Gaussian states are the single-photon
+state [6], the Schrödinger cat and superposition states [7, 8], and the Gottesman-
+Kitaev-Preskill state [9]. These states can be obtained through heralding, i.e., with
+post-selection [10]. Direct generation of a non-Gaussian state with a brightness of more
+than a few photons requires a very strong nonlinearity [11]. Brighter non-Gaussian
+states have never been obtained so far.
+    Here, we solve this problem by exploiting a macroscopic non-classical – yet still
+Gaussian – state of light called bright squeezed vacuum (BSV) [12]. BSV originates
+from a strongly pumped unseeded optical parametric amplifier (OPA), which enhances
+the quantum fluctuations of the electromagnetic vacuum in a phase-sensitive manner.
+Recently, we have generated single-mode BSV, which has the mean number of photons
+N ∼ 1012 confined in a pulse of 25-fs [13, 14]. Now we expose this state to Kerr non-
+linearity to generate a very bright non-Gaussian state without posing any conditions
+for the detection.
+    Kerr, or third-order, nonlinearity leads to the accumulation of a nonlinear phase,
+proportional to the peak intensity I: ∆ϕ = n2 ILω/c, where n2 is the nonlinear refrac-
+tive index, L the propagation length, ω the frequency, and c the speed of light [15].
+This effect leads to self-phase modulation in the time domain, which is the workhorse
+for nonlinear spectral broadening and pulse compression [16]. It also plays a crucial role
+in soliton dynamics [17]. Importantly, Kerr nonlinearity is known to squeeze coherent
+states of light in the limit of weak nonlinear coupling [18–21], which can be used to
+generate continuous-variable entanglement [22] and polarization squeezing [23, 24]. A
+further increase in the interaction strength results in a ‘banana’-shaped Wigner func-
+tion exhibiting negativity [11, 25, 26]. The negativity of the Wigner function appears
+as a result of interference in phase space, as soon as the curvature becomes pronounced
+[27]. It turns out that for BSV, unlike for coherent states of light, even a weak Kerr
+nonlinearity can induce the negativity of the Wigner function, turning a Gaussian
+BSV state into a strongly non-Gaussian state [28, 29]. This state has been predicted
+so far only theoretically [28], but has never been observed in an experiment.
+    The results reported here measure the positive definite Husimi function, which is a
+convolution of the Wigner function with the vacuum state. In regimes of large curva-
+ture of the Husimi function, the corresponding Wigner function will have a negativity
+in the case of the pure state. The main challenge addressed in this work is the low
+purity of the initial macroscopic Gaussian state of light. We demonstrate theoreti-
+cally that BSV can be represented as a mixture of squeezed coherent states subject
+
+
+
+                                            2
+to random displacement, which induces quantum decoherence. Despite this, each con-
+stituent squeezed coherent state retains a large photon number and exhibits extreme
+sensitivity to Kerr nonlinearity due to suppressed phase noise. Consequently, for suf-
+ficiently strong displacement, the outgoing states become non-Gaussian following the
+Kerr interaction, which results in the mixture of the non-Gaussian states.
+     The cornerstone of our approach lies in ultrafast optics, which allows us to reach
+high peak intensities. Unlike conventional quantum optics, we are dealing with bright
+broadband light, which poses a challenge to the common techniques of the state char-
+acterization. To characterize the resulting state, we sample its Husimi function using a
+single-shot f-2f interferometer [30], which was recently ported for analysis of quantum
+light [31]. This measurement directly reveals a non-Gaussian ’S’-shaped distribution,
+the statistical evidence of the intensity-dependent phase shift responsible for ulti-
+mately generating Wigner negativity. Importantly, this bright non-Gaussian state is
+generated without any postselection.
+
+2 Experiment
+
+(a)                                                              (b)       φ2ω
+      pump:          OPA 1           OPA 2
+                                                            ND
+      0.8 µm,                                  t
+      35 fs,                                                                            |α2ω|
+                                              DM1
+      1 kHz
+                      Fused silica
+                                                   DM2
+                        1 2 3
+      Spectrometer
+
+                     SHG             1.6 µm        0.8 µm
+           t                              t
+
+Fig. 1 (a) Experimental setup. OPA 1 and OPA 2, 3-mm BBO crystals; DM1 and DM2, dichroic
+mirrors; ND, neutral density filter; SHG, second-harmonic generation. (b) Two typical single-shot
+spectra with spectral fringes (incoherent background is subtracted). Each single-shot spectrum con-
+tains information about the amplitude |α2ω | and relative phase ϕ2ω of the second-harmonic pulse of
+BSV.
+
+
+    In the experiment, we generate temporally and spatially single-mode BSV using
+an unseeded two-stage optical parametric amplifier (OPA 1 and OPA 2), comprising
+two 3 mm BBO crystals pumped by a Ti-Sa laser system (800 nm, 35 fs, 1 kHz), see
+Fig. 1(a). This allows us to obtain a 25-fs BSV centered at 1.6 µm. Next we send
+both the BSV and the OPA pump to the two-color interferometer, where we separate
+and combine them by dichroic mirrors (DM1 and DM2) to attenuate the OPA pump
+by a neutral density filter (ND), rotate its polarization, to be aligned with the BSV
+polarization, and set the optical delay between the BSV pulse and the OPA pump
+pulse. Finally, we focus both beams using a CaF2 lens into a 1.5-mm thick slab of
+fused silica, which imprints the Kerr phase on the BSV. The fused silica slab is placed
+at different positions after the focus, marked as (1) far from the focus, (2) at an
+
+
+                                                    3
+intermediate position, and (3) at the focus, so that by moving it from position (1) to
+position (3) we increase the peak intensity in the slab.
+    Afterwards, using 0.5-mm thick periodically poled lithium niobate (PPLN), we
+generate the second harmonic of BSV, which interferes with the attenuated OPA
+pump. As there is a delay between the second-harmonic (SH) pulse and the OPA pump
+pulse, we observe spectral fringes (Fig. 1(b)). This configuration effectively serves as
+a single-shot f-2f interferometer. The OPA pump pulse is phase-locked to BSV and
+its second harmonic (SH) because BSV is generated in a phase-sensitive manner.
+Therefore, we use the OPA pump pulse as a reference and estimate the amplitude
+|α2ω | and the relative phase ϕ2ω of each SH pulse. The SH field scales as the square
+of the BSV field such that we can restore the amplitude |αω | and the phase     p ϕω of
+the BSV after the Kerr interaction through the following mapping: |αω | = |α2ω |,
+ϕω = ϕ2ω /2. By acquiring the statistics of the spectral interferogram at a fixed time
+delay, we can sample the Husimi function as the joint probability distribution of the
+amplitude and phase.
+
+3 ’S’-shaped Husimi function
+
+                  1                             2                              3
+
+  (a)                               (b)                              (c)
+
+
+
+
+   (d)                              (e)                              (f )
+
+
+
+
+Fig. 2 (a-c) Experimental and (d-f) simulated Husimi functions for different strengths of the Kerr
+interaction. The radial coordinate is normalized to the mean amplitude.
+
+
+    Figures 3(a-c) show the measured Husimi functions of BSV after the Kerr nonlinear
+interaction (Fig. 1(a)). When the fused silica slab is far from the focus, we observe
+predominantly amplitude fluctuations, typical for BSV (Fig. 3(a)). Near the center of
+the polar plot (for small field amplitudes) the histogram shows no detectable signal
+because the efficiency of the second harmonic drops. As the Kerr interaction gets
+
+
+                                                4
+stronger (position ”2” of the slab), an additional nonlinear phase is observed for larger
+amplitudes, leading to an ’S’-shaped Husimi function (Fig. 3(b)). Finally, if the sample
+is at the focus (position ”3” of the slab), a much stronger Kerr phase is imprinted
+onto the original state (Fig. 3(c)).
+     To theoretically describe the large-scale structure of the measured Husimi function
+for a single-mode BSV under Kerr nonlinearity, it is sufficient to use classical Liouville
+equation (see Methods, section 7.1). In this regime, the Kerr nonlinearity reduces to a
+phase-space rotation at an angle proportional to the squared distance from the origin,
+i.e., to the peak intensity. This amplitude-dependent shear maps the initially elongated
+Gaussian Husimi function of BSV into the characteristic ’S’-shaped profile shown in
+Fig. 3(d-f). In stark contrast, the measured distribution for the same strength of Kerr
+interaction (Fig. 3(c)) shows that the spiral tails of Husimi function are ’cut,’ and the
+probability at large amplitudes is suppressed. This observation indicates that at this
+high intensity, the desired Kerr effect is competing with other nonlinear processes,
+such as those related to nonlinear spectral broadening (supercontinuum generation)
+and non-degenerate four-wave mixing. Because these nonlinear effect are especially
+pronounced for high intensities, they deplete the high-photon-number components of
+the BSV state more than the rest. This behavior in phase-space is consistent with the
+’sharp cut-off’, independently observed in the photon-number statistics for the exact
+same setting (see Supplementary materials, Figure S1(f), green curve).
+
+4 BSV as a mixture of squeezed states
+The ’S’-shaped Husimi function is a direct evidence of the Kerr nonlinearity acting
+on the macroscopic state of light. For a pure state, this nonlinear phase would lead
+to a Wigner-function negativity [1, 29]. However, BSV is not a pure state: its purity
+degrades even under minute optical losses, which inevitably occur on optical elements
+and through additional nonlinear-optical processes accompanying optical parametric
+amplification.
+    The purity of a squeezed vacuum state can be calculated as the inverse product of
+its maximal and minimal quadrature uncertainties [32]. From this definition, we see
+that losses on the order of ∼ 1/N , where N is the BSV mean photon number, will
+reduce its purity by about a factor of two [33] (see also Methods). Practically, it is
+impossible to manage such tiny losses for N ∼ 1012 ; therefore, BSV is never a pure
+quantum state. At the same time, under linear losses, the minimal variance of the BSV
+quadratures remains below the vacuum level, so that the state is still non-classical.
+    Using the fact that BSV remains a Gaussian state of light even after linear losses,
+although with reduced quadrature squeezing, one can show (see Methods) that after
+loss, BSV becomes a squeezed thermal state, which can be also seen as a mixture of
+squeezed coherent states |β, r⟩,
+                                      Z
+                            ρ̂BSV =       d2 β Pe(β)|β, r⟩⟨β, r|,                     (1)
+
+
+
+
+                                              5
+where, for moderate losses R, the squeezing parameter r is related to the initial
+squeezing parameter r0 as r ≈ r20 + 14 ln(1/R − 1) and
+                                                                 
+                                     1         Re(β)2    Im(β)2
+                          Pe(β) =        exp −         −                                         (2)
+                                    πnth       nth e2r   nth e−2r
+
+is the statistical weight of a squeezed coherent state in the mixture. The initial mean
+photon number of BSV N and the amount of optical losses R are mapped to the
+number of thermal photons nth , related to the optical losses, and the effective squeezing
+parameter r.
+
+
+                                 (1+2nth)e-2r     P                          e2r
+                                                             β                                     X
+                                                                                   e-2r
+                                             (1+2nth)e2r
+
+Fig. 3 Schematic representation of BSV as a mixture (red ellipse) of squeezed coherent states (blue
+ellipses) in phase space. The dashed circle represents the vacuum state (the shot-noise uncertainty).
+
+
+    As a result, after losses BSV becomes a mixture of pure squeezed coherent
+states |β, r⟩ stochastically displaced mostly in the x-quadrature direction (Fig. 3), all
+squeezed along the same quadrature p, which for Re(β) ≫ 1 approximately corre-
+sponds to phase squeezing. The effective squeezing parameter r defines the area of
+quantum coherence in the phase space. Meanwhile, displacement β acts as a stochas-
+tic variable responsible for the quantum decoherence of BSV. This stochasticity, with
+the probability distribution given in Eq.(2), washes out the negativity of the Wigner
+function of the non-Gaussian bright state. However, as we show in this work, those
+pure states in the mixture which are squeezed along the phase quadrature become
+strongly non-Gaussian as a result of the Kerr effect, and under reasonable loss, their
+Wigner functions maintain negativity even for rather high photon numbers.
+
+5 A phase-squeezed state and the Kerr effect
+As the mixed BSV state is composed of pure squeezed states stochastically displaced
+predominantly in the x-quadrature direction, one has to address the Kerr evolution
+of these displaced state. In the limit of weak Kerr nonlinearity, a coherent state of
+light experiences predominantly quadrature squeezing with an extremely low level of
+Wigner-function negativity. At the same time, some components of the statistical mix-
+ture in Eq. (1), namely those resembling phase-squeezed states, are expected to have
+a very pronounced Wigner-function negativity under the same weak action of Kerr
+nonlinearity that leads to quadrature-squeezing of the coherent state. Figure 4(a,b)
+compares the simulated effect of the Kerr nonlinearity on the Wigner functions of a
+coherent state and a phase-squeezed state of the same energies (see Section 7.1 for the
+details). The considered level of squeezing is 8 dB, corresponding to sinh2 r = 1 photon
+in the squeezing operator. The accumulated nonlinear Kerr phase ϕKerr is assumed to
+
+
+                                                 6
+be the same as in our experiment with BSV, ϕKerr = 0.6; however, the photon number
+of the simulated state is considerably lower (|α|2 = 200).
+
+                 (a)                       (c)
+                                ^
+
+                                SKerr
+                                                                  Phase-squeezed
+                                                                       state
+
+
+                (b)
+                                ^
+
+                                SKerr                             Coherent
+                                                                    state
+
+                              ∆Xmax
+
+
+
+Fig. 4 Transformation of the Wigner function due to the Kerr nonlinearity described by unitary
+transformation ŜKerr for (a) a coherent state with |α|2 = 200 and (b) a phase-squeezed state with the
+same mean number of photons and degree of squeezing 8 dB. (c) Simulated Wigner negativity volume
+vs. the number of photons |α|2 for the fixed Kerr phase ϕKerr = 2χt|α|2 = 0.6. Circles correspond to
+the lossless case, triangles assume a 5%-loss before the Kerr interaction and 5% loss after it. Lines
+visualize an exponential fit of the points.
+
+
+    Figure 4(c) shows the dependence of the volume of the Wigner-function negativity
+of an initially coherent (blue points) and an initially phase-squeezed (red points) state
+on the initial displacement |α| for a fixed nonlinear phase ϕKerr = 0.6. In both cases,
+circles correspond to no losses and triangles, to 5% losses before the Kerr effect and
+another 5% losses after it. As the displacement increases, the value of the Kerr non-
+linearity is assumed to drop, to keep the nonlinear phase constant. This leads to an
+exponential reduction of the Wigner negativity with increasing photon number. At the
+same time, even a moderate (8 dB) phase squeezing of the state amplifies the Wigner
+negativity by several orders of magnitude (Fig. 4(c)). Moreover, it improves the expo-
+nential decay rate of the Wigner negativity with the number of photons by more than
+a factor of 10. This allows us to expect substantial Wigner negativity for thousands of
+displacement photons for a phase-squeezed light, while in the case considered for the
+coherent pump, negativity gets vanishingly small for |α|2 ∼ 100.
+    The reason for this behavior is that a phase-squeezed state has reduced phase
+noise and amplified amplitude noise, which makes it more sensitive to the intensity-
+dependent Kerr phase. Different parts of the Wigner function along the radius (dashed
+line in Fig. 4(b)) experience different nonlinear phases, resulting in a non-Gaussian
+shape and, as a consequence, in negativity. This effect allows for the observation of a
+significant Wigner negativity for much brighter states even in the presence of losses.
+
+6 Discussion
+We have experimentally studied the effect of the Kerr nonlinearity on a macroscopic
+state of light, namely single-mode BSV. In order to sample the Husimi function,
+
+
+                                                  7
+we used a single-shot f-2f interferometer, which provided the simultaneous measure-
+ment of the BSV amplitude and phase. At moderate Kerr interaction, the measured
+Husimi function acquired an S-shape, a direct consequence of the nonlinear intensity-
+dependent phase. Under these experimental conditions, the photon-number statistics
+of BSV was still unchanged, and the state remained single-mode (see SI, Section
+1). At stronger Kerr interaction, which was achieved by focusing BSV tighter into
+the nonlinear material, the experimentally measured Husimi function deviated from
+the one expected from simulation using the classical Liouville equation. In addition,
+this regime led to the appearance of higher-order frequency modes and to a modi-
+fied photon-number statistics (SI, Section 1). We assign all these effects to additional
+nonlinear optical processes, which appear at high intensity.
+    The non-Gaussian shape of the Husimi function is an evidence of the non-
+Gaussianity of the state. For a pure state, this would lead to the negativity of the
+Wigner function. However, the purity of a macroscopic state such as BSV is very sus-
+ceptible to loss. Assuming a loss of 5%, which can be caused by imperfect anti-reflection
+coating on the nonlinear crystal and lenses, imperfect reflectivity of the mirrors, as well
+as the nonlinear effects occurring in the nonlinear crystal, we can estimate the purity
+of our BSV as P ∼ 10−5 . This low purity definitely prevents the direct observation of
+the Wigner-function negativity.
+    However, even after loss, BSV still contains some pure quantum superpositions.
+We have shown that a realistic BSV can be represented as a mixture of states squeezed
+along the same quadrature, which is close to the phase quadrature for states with large
+displacements. This answers the long-standing question [13, 14] to what extent can
+BSV be treated as a quantum superposition. To fully harness quantum features, such as
+Wigner function negativity, BSV must be distilled to isolate a pure squeezed coherent
+state. Adopting the purification protocol for Gaussian states [34] and developing new
+protocols based on the strong-field light-matter interaction presents a clear avenue for
+future work, enabling exploration of quantum dynamics beyond the statistical limit.
+
+7 Methods
+7.1 Quantum and classical simulations of Kerr interaction
+The optical Kerr effect arises from the third–order nonlinear susceptibility of a
+medium. In terms of quantum optics, for a single mode with bosonic annihilation
+operator â, it can be described by the effective Hamiltonian
+
+                                    ĤK = ℏχ â†2 â2 ,                                (3)
+
+where χ (with units of angular frequency) is the Kerr interaction constant. For
+multi-mode fields, cross-Kerr interactions between different modes also arise, but
+here we focus on the single-mode case and the self-Kerr interaction effect. The
+corresponding unitary evolution operator for an interaction time t is
+                                                            
+                              ŜKerr (t) = exp −iχt â†2 â2 .                         (4)
+
+
+
+                                             8
+The transformation of the Wigner function under this process can be described with
+the following Wigner current in the polar coordinates W (r, ϕ)1 [28] :
+                                               1    
+                                                       ⃗
+                                J⃗ = χ − 2r2 W + ∇2 W rϕ.                                          (5)
+                                                8
+
+The first term, proportional to r2 , describes the azimuthal flow of the Wigner func-
+tion, with the angular speed proportional to the squared distance to the origin. This
+corresponds to a photon-number–dependent phase shift, which leads to the shearing of
+quantum states in phase space. The second term contains higher-order spatial deriva-
+tives of the Wigner function, and it is responsible for the appearance of the negative
+values of the Wigner function. The complete quantum simulation of the Kerr effect
+requires taking into account the complete dynamics, described by either the Wigner
+current in Eq. (5) or the unitary ŜKerr in Eq. (4). We perform the simulation shown in
+Fig. 4 by representing the Kerr unitary operator ŜKerr in the Fock basis and implement-
+ing the evolution using the Python toolbox QuTiP. This approach provides a flexible
+framework for analyzing the dynamics of the quantum state and its Wigner function,
+but the truncation to the lowest 700 Fock states we use here restricts the simula-
+tions to relatively low-energy states. The simulations clearly reveal narrow (so-called
+sub-Planckian) regions where the Wigner function of the Kerr-evolved phase-squeezed
+states becomes negative. The overall degree of Wigner negativity is quantified by the
+negativity volume                      Z
+                         Nneg [W ] = −             W (x, p) dx dp,                   (6)
+                                              W (x,p)<0
+which is shown in Fig. 4(c). For completeness, we also show the Wigner function of
+the Kerr-evolved squeezed vacuum state in the Supplementary Materials.
+    In our experiment, the noise of the Husimi function measurement is much larger
+than the vacuum-level quadrature fluctuations. Thus, any fine features of the quantum
+state cannot be directly observed there. In this regime, higher-order derivatives in the
+Wigner current (5) can be neglected to describe the measured coarse-grained Husimi
+functions of our high photon-number states. This brings the dynamics of the states to
+the classical Liouville equation, which includes only energy-dependent rotation of the
+phase space (the first term in Eq. (5)).
+    The value of the Kerr interaction constant χ is related to the non-linear refraction
+index of the medium n2 as
+                                           ℏω 2 c
+                                     χ = 2 0 n2 ,                                       (7)
+                                          n0 Veff
+with ω0 the angular frequency of the light, n0 the refraction index, and Veff the effective
+mode volume. The non-linear refractive index n2 used in the simulation of Fig. 3
+corresponds to values reported in the literature for fused silica, n2 ∼ 10−20 m2 /W [35].
+
+  1
+    The chosen polar coordinates system is rotating with angular velocity χ to compensate for the rigid
+rotation of the Wigner function, caused by the chosen form of the Kerr Hamiltonian
+
+
+
+
+                                                  9
+7.2 Quantum decoherence of BSV
+Optical linear losses are modeled as a beamsplitter, which reflects part of the radiation
+but adds a contribution of the vacuum from the ‘empty’ input port. As a result, the
+                    2
+input variance ∆Xin    of a quadrature becomes
+                               2         2       2
+                             ∆Xout = T ∆Xin + R∆Xvac ,                               (8)
+
+where R is the reflection coefficient of the beamsplitter, which is equivalent to losses,
+                                                    2
+T = 1 − R is the transmission coefficient, and ∆Xvac    = 1 is the vacuum quadrature.
+As a result, the losses reduce the purity of BSV:
+
+                               1                         1         1
+                 P=p             2
+                                               =√              ≈ √     ,             (9)
+                           2
+                         ∆Xmax ∆Xmin                 1 + 4RT N  2 RT N
+
+where N = sinh2 (r0 ) is the mean number of photons of BSV and r0 is the initial
+squeezing parameter. This shows explicitly that one has to manage losses up to R ∼
+1/N to have a pure quantum state of BSV. After linear losses, BSV remains a Gaussian
+                                                       2                        2
+state of light, which can be described by squeezed ∆Xmin   and anti-squeezed ∆Xmax
+quadratures. By considering the two quadratures after losses, we can represent BSV
+as a squeezed thermal state, in which the initial mean number of photons is nth and
+the squeezing parameter is r:
+                         2
+                       ∆Xmin = T e−2r0 + R = (1 + 2nth )e−2r ,                      (10)
+                         2
+                       ∆Xmax = T e2r0 + R = (1 + 2nth )e2r .                        (11)
+
+From these expressions we can estimate the squeezing parameter r and the number of
+thermal photons nth :
+                                           s
+                                                T e2r0 + R
+                                   e2r =                                            (12)
+                                               T e−2r0 + R
+                                           √
+                                               1 + 4RT N − 1
+                                nth =                                               (13)
+                                                    2
+In the limit of a large photon number N and moderately low optical losses R ∼ 0.1,
+we can simplify Eqs. (13):
+
+                                        r0  1
+                                     r≈    − ln(R/T ),                              (14)
+                                        √2  4
+                                   nth ≈ RT N .                                     (15)
+
+   The resulting state of BSV after losses can be written as
+                                          Z
+                ρ̂BSV = Ŝ(r)ρ̂th Ŝ (r) = d2 α P (α)Ŝ(r)|α⟩⟨α|Ŝ † (r),
+                                    †
+                                                                                    (16)
+
+
+
+                                                10
+where                                                 
+                                     1            |α|2
+                             P (α) =    exp −                                   (17)
+                                   πnth           nth
+is the Glauber–Sudarshan P representation for a thermal state. The density matrix in
+Eq. (16) can be rewritten as
+                                      Z
+                            ρ̂BSV =       d2 β Pe(β)|β, r⟩⟨β, r|,                   (18)
+
+which means that BSV after losses is a mixture of squeezed coherent states |β, r⟩, with
+weights forming a double-Gaussian distribution:
+                                                             
+                                 1         Re(β)2    Im(β)2
+                      Pe(β) =        exp −         −            .                   (19)
+                                πnth       nth e2r   nth e−2r
+
+    Although the density matrix of the lossy BSV in equation (16) is unique, its
+decomposition into pure states is mathematically non-unique. For instance, the ther-
+mal state can equivalently be decomposed in the photon-number Fock basis, treating
+BSV as a mixture of squeezed Fock states. Consequently, the fundamental nature of
+a single BSV pulse realization cannot be uniquely determined independently of the
+measurement scheme.
+    It is also worth noting that the impurity of the BSV state after losses arises due to
+entanglement with the environment, following the quantum beamsplitter model. Trac-
+ing out the environment results in a squeezed thermal state where individual pulses
+do not strictly possess a pure wavefunction. Physically, this mechanism is distinct
+from a ‘proper mixture’ where a pure squeezed coherent state is subject to random
+displacements. However, in the limit of local measurements where the environment is
+inaccessible, these two mechanisms of decoherence are operationally indistinguishable
+[36]. This equivalence justifies modeling the macroscopic Kerr effect using an ensemble
+of pure squeezed coherent state trajectories.
+Acknowledgments. A.R. thanks Maksim Sirotin for helpful discussions. This
+research was supported by the Deutsche Forschungsgemeinschaft (DFG, German
+Research Foundation), Project-ID 545591821. D.V.S. acknowledges his work to have
+been partially funded by the European Union’s Horizon Europe Research and
+Innovation Programme under agreement 101070700 (project MIRAQLS).
+
+References
+ [1] Walschaers, M.: Non-gaussian quantum states and where to find them. PRX
+     Quantum 2, 030204 (2021) https://doi.org/10.1103/PRXQuantum.2.030204
+
+ [2] Kawasaki, A., Ide, R., Brunel, H., Suzuki, T., Nehra, R., Nakashima, K., Kashi-
+     wazaki, T., Inoue, A., Umeki, T., China, F., Yabuno, M., Miki, S., Terai, H.,
+     Yamashima, T., Sakaguchi, A., Takase, K., Endo, M., Asavanant, W., Furusawa,
+
+
+
+
+                                              11
+    A.: Broadband generation and tomography of non-gaussian states for ultra-
+    fast optical quantum processors. Nature Communications 15(1), 9075 (2024)
+    https://doi.org/10.1038/s41467-024-53408-w
+
+ [3] Lvovsky, A.I., Grangier, P., Ourjoumtsev, A., Parigi, V., Sasaki, M., Tualle-
+     Brouri, R.: Production and applications of non-Gaussian quantum states of light
+     (2020). https://arxiv.org/abs/2006.16985
+
+ [4] Menicucci, N.C., Loock, P., Gu, M., Weedbrook, C., Ralph, T.C., Nielsen, M.A.:
+     Universal quantum computation with continuous-variable cluster states. Phys.
+     Rev. Lett. 97, 110501 (2006) https://doi.org/10.1103/PhysRevLett.97.110501
+
+ [5] Tej, J.P., Devi, A.R.U., Rajagopal, A.K.: Quantum reading of digital memory
+     with non-Gaussian entangled light. Phys. Rev. A 87, 052308 (2013) https://doi.
+     org/10.1103/PhysRevA.87.052308
+
+ [6] Lvovsky, A.I., Hansen, H., Aichele, T., Benson, O., Mlynek, J., Schiller, S.: Quan-
+     tum state reconstruction of the single-photon fock state. Phys. Rev. Lett. 87,
+     050402 (2001) https://doi.org/10.1103/PhysRevLett.87.050402
+
+ [7] Ourjoumtsev, A., Jeong, H., Tualle-Brouri, R., Grangier, P.: Generation of optical
+     ‘schrödinger cats’ from photon number states. Nature 448(7155), 784–786 (2007)
+     https://doi.org/10.1038/nature06054
+
+ [8] Schulte, C.H.H., Hansom, J., Jones, A.E., Matthiesen, C., Le Gall, C., Atatüre,
+     M.: Quadrature squeezed photons from a two-level system. Nature 525(7568),
+     222–225 (2015) https://doi.org/10.1038/nature14868
+
+ [9] Larsen, M.V., Bourassa, J.E., Kocsis, S., Tasker, J.F., Chadwick, R.S., González-
+     Arciniegas, C., Hastrup, J., Lopetegui-González, C.E., Miatto, F.M., Motamedi,
+     A., Noro, R., Roeland, G., Baby, R., Chen, H., Contu, P., Di Luch, I., Drago,
+     C., Giesbrecht, M., Grainge, T., Krasnokutska, I., Menotti, M., Morrison, B.,
+     Puviraj, C., Rezaei Shad, K., Hussain, B., McMahon, J., Ortmann, J.E., Collins,
+     M.J., Ma, C., Phillips, D.S., Seymour, M., Tang, Q.Y., Yang, B., Vernon,
+     Z., Alexander, R.N., Mahler, D.H.: Integrated photonic source of gottesman–
+     kitaev–preskill qubits. Nature 642(8068), 587–591 (2025) https://doi.org/10.
+     1038/s41586-025-09044-5
+
+[10] Endo, M., He, R., Sonoyama, T., Takahashi, K., Kashiwazaki, T., Umeki, T.,
+     Takasu, S., Hattori, K., Fukuda, D., Fukui, K., Takase, K., Asavanant, W., Marek,
+     P., Filip, R., Furusawa, A.: Non-gaussian quantum state generation by multi-
+     photon subtraction at the telecommunication wavelength. Opt. Express 31(8),
+     12865–12879 (2023) https://doi.org/10.1364/OE.486270
+
+[11] Ghosh, S., Gorlach, A., Mechel, C., Chekhova, M.V., Kaminer, I., Eisenstein, G.:
+     Tunable N-level EIT: Deterministic Generation of Optical States with Negative
+     Wigner Function (2025). https://arxiv.org/abs/2503.12169
+
+
+                                          12
+[12] Sh. Iskhakov, T., Pérez, A.M., Yu. Spasibko, K., Chekhova, M.V., Leuchs, G.:
+     Superbunched bright squeezed vacuum state. Optics Letters 37(11), 1919 (2012)
+     https://doi.org/10.1364/ol.37.001919
+
+[13] Rasputnyi, A., Chen, Z., Birk, M., Cohen, O., Kaminer, I., Krüger, M., Selet-
+     skiy, D., Chekhova, M., Tani, F.: High-harmonic generation by a bright squeezed
+     vacuum. Nature Physics 20(12), 1960–1965 (2024) https://doi.org/10.1038/
+     s41567-024-02659-x
+
+[14] Heimerl, J., Rasputnyi, A., Pölloth, J., Meier, S., Chekhova, M., Hommelhoff,
+     P.: Quantum light drives electrons strongly at metal needle tips. Nature Physics
+     (2025) https://doi.org/10.1038/s41567-025-03087-1
+
+[15] Boyd, R.W.: Nonlinear Optics, Third Edition, 3rd edn. Academic Press, Inc.,
+     USA (2008)
+
+[16] Schulte, J., Sartorius, T., Weitenberg, J., Vernaleken, A., Russbueldt, P.: Nonlin-
+     ear pulse compression in a multi-pass cell. Opt. Lett. 41(19), 4511–4514 (2016)
+     https://doi.org/10.1364/OL.41.004511
+
+[17] Turitsyn, S.K., Bale, B.G., Fedoruk, M.P.: Dispersion-managed solitons in fibre
+     systems and lasers. Physics Reports 521(4), 135–203 (2012) https://doi.org/10.
+     1016/j.physrep.2012.09.004 . Dispersion-Managed Solitons in Fibre Systems and
+     Lasers
+
+[18] Bergman, K., Haus, H.A.: Squeezing in fibers with optical pulses. Opt. Lett.
+     16(9), 663–665 (1991) https://doi.org/10.1364/OL.16.000663
+
+[19] Bergman, K., Haus, H.A., Ippen, E.P., Shirasaki, M.: Squeezing in a fiber
+     interferometer with a gigahertz pump. Opt. Lett. 19(4), 290–292 (1994) https:
+     //doi.org/10.1364/OL.19.000290
+
+[20] Schmitt, S., Ficker, J., Wolff, M., König, F., Sizmann, A., Leuchs, G.: Photon-
+     number squeezed solitons from an asymmetric fiber-optic Sagnac interferometer.
+     Phys. Rev. Lett. 81, 2446–2449 (1998) https://doi.org/10.1103/PhysRevLett.81.
+     2446
+
+[21] Kalinin, N., Leuchs, G., Sánchez-Soto, L.L., Andrianov, A.V.: 7.3
+     db polarization squeezing using kerr effect in fibers. In: Quan-
+     tum 2.0 Conference and Exhibition, pp. 4–3. Optica Publishing
+     Group, ??? (2024). https://doi.org/10.1364/QUANTUM.2024.QM4A.3 .
+     https://opg.optica.org/abstract.cfm?URI=QUANTUM-2024-QM4A.3
+
+[22] Silberhorn, C., Lam, P.K., Weiß, O., König, F., Korolkova, N., Leuchs, G.: Gen-
+     eration of continuous variable Einstein-Podolsky-Rosen entanglement via the
+     Kerr nonlinearity in an optical fiber. Phys. Rev. Lett. 86, 4267–4270 (2001)
+     https://doi.org/10.1103/PhysRevLett.86.4267
+
+
+                                          13
+[23] Heersink, J., Josse, V., Leuchs, G., Andersen, U.L.: Efficient polarization squeez-
+     ing in optical fibers. Opt. Lett. 30(10), 1192–1194 (2005) https://doi.org/10.
+     1364/OL.30.001192
+
+[24] Dong, R., Heersink, J., Yoshikawa, J.-I., Glöckl, O., Andersen, U.L., Leuchs, G.:
+     An efficient source of continuous variable polarization entanglement. New Journal
+     of Physics 9(11), 410 (2007) https://doi.org/10.1088/1367-2630/9/11/410
+
+[25] Stobińska, M., Milburn, G.J., Wódkiewicz, K.: Wigner function evolution of quan-
+     tum states in the presence of self-kerr interaction. Phys. Rev. A 78, 013810 (2008)
+     https://doi.org/10.1103/PhysRevA.78.013810
+
+[26] Sarlette, A., Raimond, J.M., Brune, M., Rouchon, P.: Stabilization of nonclassical
+     states of the radiation field in a cavity by reservoir engineering. Phys. Rev. Lett.
+     107, 010402 (2011) https://doi.org/10.1103/PhysRevLett.107.010402
+
+[27] Najafabadi, M.S., Klimov, A.B., Sánchez-Soto, L.L., Leuchs, G.: Quasiclassical
+     approach to the nonlinear Kerr dynamics. Optics Communications 545, 129717
+     (2023) https://doi.org/10.1016/j.optcom.2023.129717
+
+[28] Rosiek, C.A., Rossi, M., Schliesser, A., Sørensen, A.S.: Quadrature squeezing
+     enhances Wigner negativity in a mechanical duffing oscillator. PRX Quantum 5,
+     030312 (2024) https://doi.org/10.1103/PRXQuantum.5.030312
+
+[29] Yanagimoto, R., Onodera, T., Ng, E., Wright, L.G., McMahon, P.L., Mabuchi, H.:
+     Engineering a Kerr-based deterministic cubic phase gate via gaussian operations.
+     Phys. Rev. Lett. 124, 240503 (2020) https://doi.org/10.1103/PhysRevLett.124.
+     240503
+
+[30] Ren, X., Summers, A.M., Raju P, K., Vajdi, A., Makhija, V., Fehrenbach, C.W.,
+     Kling, N.G., Betsch, K.J., Wang, Z., Kling, M.F., Carnes, K.D., Ben-Itzhak, I.,
+     Trallero-Herrero, C., Kumarappan, V.: Single-shot carrier-envelope-phase tagging
+     using an f–2f interferometer and a phase meter: a comparison. Journal of Optics
+     19(12), 124017 (2017) https://doi.org/10.1088/2040-8986/aa9865
+
+[31] Cusson, P., Virally, S., Seletskiy, D.V.: Carrier-envelope phase
+     correlations in few-cycle bright twin beams. In: International Confer-
+     ence on Ultrafast Phenomena (UP 2024). Optica Technical Digest.
+     Optica Publishing Group, Barcelona, Spain (2024). Optica. Th-4A.
+     https://virtual.oxfordabstracts.com/event/5180/submission/386
+
+[32] Wenger, J., Fiurášek, J., Tualle-Brouri, R., Cerf, N.J., Grangier, P.: Pulsed
+     squeezed vacuum measurements without homodyning. Phys. Rev. A 70, 053812
+     (2004) https://doi.org/10.1103/PhysRevA.70.053812
+
+[33] Leuchs, G., Andersen, U.L.: The effect of dissipation on nonclassical states of the
+     radiation field. Laser Physics 15, 129–134 (2005)
+
+
+                                           14
+[34] Glöckl, O., Andersen, U.L., Filip, R., Bowen, W.P., Leuchs, G.: Squeezed-state
+     purification with linear optics and feedforward. Phys. Rev. Lett. 97, 053601 (2006)
+     https://doi.org/10.1103/PhysRevLett.97.053601
+
+[35] Schiek, R.: Nonlinear refractive index in silica glass. Opt. Mater. Express 13(6),
+     1727–1740 (2023) https://doi.org/10.1364/OME.489520
+
+[36] Zurek, W.H.: Decoherence, einselection, and the quantum origins of the classical.
+     Rev. Mod. Phys. 75, 715–775 (2003) https://doi.org/10.1103/RevModPhys.75.
+     715
+
+
+
+
+                                          15
+1 Spectral intensity correlations and photon
+  statistics
+
+(a)               1           (b)              2             (c)            3
+
+
+
+
+(d)                           (e)                            (f )
+                          1                             1                                 1
+                          2                             2                                 2
+                          3                             3                                 3
+
+
+
+
+Fig. S1. (a-c) Spectral intensity covariance maps for different positions of fused silica
+slab. (d) Probability of occurrence of different spectral modes. (e) The spectral inten-
+sity of the fundamental frequency mode. (f) Photon-number probability distribution.
+Black curve is fit with the Gamma distribution.
+
+
+    We investigate how the Kerr effect modifies the spectral intensity correlations of
+BSV. To this end, we measure the spectral intensity covariance maps, defined as
+Cov(λ1 , λ2 ) = ⟨I(λ1 )I(λ2 )⟩ − ⟨I(λ1 )⟩⟨I(λ2 )⟩, where ⟨...⟩ is averaging over the acquired
+BSV pulses. The spectral intensity covariance is measured by acquiring 7000 single-
+shot spectra of BSV. Figures 1(a-c) show the covariance maps obtained for different
+positions of the fused silica slab, corresponding to different magnitudes of the Kerr
+interaction. We see that while the covariance has a close-to-Gaussian shape in the
+case of weak Kerr effect (Fig. 1(a)), stronger Kerr interaction leads to the appearance
+of additional lobes and even negativity (Fig. 1(c)). The negativity (not to be con-
+fused with the Wigner-function negativity) indicates anti-correlation between different
+spectral intensity components, which by itself is not a quantum effect.
+    By performing the singular value decomposition of the covariance matrix, we can
+estimate the spectral mode content of the radiation: the weights of the frequency
+modes (Fig. 1(d)) and their spectral shapes. As an example, Fig. 1(e) shows the shape
+of the fundamental mode. By integrating the spectral intensity of each shot, we can
+
+
+                                             1
+also characterize the photon-number probability distribution (Fig. 1(e)). The photon-
+number distribution    of single-mode
+                                        BSV follows the Gamma distribution P (N ) =
+      1                 N
+p              exp −           , where ⟨N ⟩ is the mean photon number, which is plotted
+   2πN ⟨N ⟩            2⟨N ⟩
+as a black line in Figure 1(f). In this experiment, the BSV pulse energy is 130 nJ,
+which corresponds to ⟨N ⟩ ≈ 1 × 1012 .
+    When the fused silica slab is placed far from the focus, a separable 2D-Gaussian
+distribution of intensity covariance (Fig. 1(a)) is a clear indication that the BSV is
+single-mode. Indeed, the mode weights (panel d) show that the fundamental mode
+is strongly dominant, with the second mode’s weight being two orders of magnitude
+lower. Moreover, the fundamental mode has a nearly Gaussian shape (Fig. 1(e)), and
+the photon-number distribution (Fig. 1(f)) follows the Gamma distribution, expected
+for single-mode BSV. When the slab is in the intermediate position, we start to see
+slight spectral broadening (Fig. 1(b)), an increase in the weights of the higher-order
+frequency modes (Fig. 1(d)), but still a Gaussian fundamental mode and a photon-
+number distribution close to a single-mode one (Fig. 1(e,f), orange curves).
+    If the silica window is placed in the focus, we observe significant spectral broadening
+(Fig. 1(c)). Along with the continued increase in higher-order mode weights (Fig. 1(d)),
+the spectral shape of the fundamental mode also changes (Fig. 1(e)). In this case, the
+tail of the photon-number distribution does not follow the exponential decay but has
+a sharp cut-off. From a quantum-optical point of view, Kerr nonlinearity contributes
+only to the additional nonlinear phase without changing the photon-number probabil-
+ity distribution. The observed modification of photon-number statistics is related to
+the additional nonlinear-optical processes accompanying supercontinuum generation.
+These observations give us indirect evidence of the Kerr nonlinearity.
+
+2 Wigner function of a pure squeezed vacuum after
+  Kerr interaction
+As discussed in Ref. [1], a pure squeezed vacuum state evolving under a Kerr
+nonlinearity develops pronounced Wigner negativity. Because the squeezed vac-
+uum coherently includes components with drastically different field amplitudes, the
+amplitude-dependent Kerr phase induces a strong shearing of the state in phase space,
+which in turn generates interference fringes with significant negative regions in the
+Wigner function.
+    Two examples of Kerr-evolved squeezed vacuum Wigner functions are shown in
+Fig. 2(a,b). These were obtained from Fock-basis simulations using the QuTiP Python
+toolbox, with initial mean photon numbers ns = 4 (a) and ns = 20 (b), both at
+fixed Kerr phase ϕKerr = 2χtns = 0.16. The Kerr interaction transforms the initial
+elongated elliptical structure into an ’S’-shaped pattern, while generating numerous
+narrow interference fringes around the central maximum with alternating positive and
+negative regions. The fringe scale decreases as the nonlinearity weakens. Note that finer
+fringes of the Wigner function are more susceptible to loss, which acts as a Gaussian
+smoothing filter. This is illustrated in Fig. 2(c), where the negativity volume Nneg of
+the brighter state with lower non-linearity (b) decays faster than that of the dimmer
+
+
+                                            2
+ (a)                             0.30
+                                         (b)                                  0.30
+                                                                                                          (c) 0
+                                                                                                                 10
+    10                           0.25        10                               0.25
+
+
+
+
+                                                                                      Wigner negativity volume
+                                 0.20                                         0.20
+                                                                                                                      −1
+                                 0.15                                         0.15                               10
+    5                                        5
+                                 0.10                                         0.10
+                                 0.05                                         0.05                                    −2
+                                                                                                                 10                                (a)
+p   0                            0.00    p   0                                0.00
+
+                                                                                                                      −3
+                                                                                                                 10
+    −5                           −0.05       −5                               −0.05
+                                                                                                                                        (b)
+                                                                                                                      −4
+                                                                                                                 10
+ −10                             −0.10   −10                                  −0.10
+                                                                                                                           0   10       20    30         40
+         −10   −5   0   5   10                    −10   −5       0   5   10                                                         Losses, %
+                    x                                            x
+
+Fig. S2. Wigner functions of Kerr-evolved squeezed vacuum states and their negativity
+under loss. The Kerr phase at the mean photon number ns is ϕKerr = 2χtns = 0.16.
+(a) ns = 4 (low energy, strong nonlinearity χt = 0.02). (b) ns = 20 (higher energy,
+weaker nonlinearity χt = 0.004). (c) Wigner negativity volume versus loss after the
+Kerr interaction: orange curve for case (a), blue curve for case (b).
+
+
+state with higher non-linearity (a), despite its initially larger negativity. While any
+pure non-Gaussian state retains some Wigner negativity up to 50% loss [2], moderate
+losses suffice to render bright-state negativity practically undetectable.
+
+References
+[1] Rosiek, C. A., Rossi, M., Schliesser, A. & Sørensen, A. S. Quadrature squeezing
+    enhances Wigner negativity in a mechanical duffing oscillator. PRX Quantum 5,
+    030312 (2024). URL https://link.aps.org/doi/10.1103/PRXQuantum.5.030312.
+
+[2] Nugmanov, B., Zunikov, N. & Khalili, F. Y. Robustness of negativity of the Wigner
+    function to dissipation. arXiv preprint arXiv:2201.03257 (2022).
+
+
+
+
+                                                             3
+

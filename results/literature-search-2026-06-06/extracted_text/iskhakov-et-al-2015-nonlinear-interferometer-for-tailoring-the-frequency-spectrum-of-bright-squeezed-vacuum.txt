@@ -1,0 +1,565 @@
+July 20, 2021                                   Journal of Modern Optics      Freq˙spec˙narr8
+
+
+
+                                                To appear in the Journal of Modern Optics
+                                                Vol. 00, No. 00, 00 Month 20XX, 1–9
+
+
+
+
+                                                       Nonlinear interferometer for tailoring the frequency spectrum of bright
+                                                                                  squeezed vacuum
+
+                                                     T. Sh. Iskhakova† , S. Lemieuxb , A. Pereza,c , R. W. Boydb,d,e , G. Leuchsa,b,c , and M. V. Chekhovaa,c∗
+
+
+
+
+    arXiv:1503.03406v1 [quant-ph] 11 Mar 2015
+                                                a
+                                                 Max-Planck Institute for the Science of Light, Guenther-Scharowsky-Str. 1 / Bau 24, Erlangen D-91058,
+                                                                                                   Germany;
+                                                                b
+                                                                  Department of Physics, University of Ottawa, Ottawa, ON, Canada K1N 6N5;
+                                                              c
+                                                                University of Erlangen-Nürnberg, Staudtstrasse 7/B2, 91058 Erlangen, Germany;
+                                                 d
+                                                   Institute of Optics and Department of Physics and Astronomy, University of Rochester, Rochester, NY
+                                                                                                  14627 USA;
+                                                              e
+                                                                School of Physics and Astronomy, University of Glasgow, Glasgow G12 8QQ,UK
+                                                                                                (v4.1 released September 2014)
+
+
+                                                        We propose a method for tailoring the frequency spectrum of bright squeezed vacuum by generating it in
+                                                        a nonlinear interferometer, consisting of two down-converting nonlinear crystals separated by a dispersive
+                                                        medium. Due to a faster dispersive spreading of higher-order Schmidt modes, the spectral width of the
+                                                        radiation at the output is reduced as the length of the dispersive medium is increased. Preliminary results
+                                                        show 30% spectral narrowing.
+
+                                                        Keywords: high-gain parametric down-conversion, bright squeezed vacuum, Schmidt modes, nonlinear
+                                                        interferometer, group-velocity dispersion
+
+
+
+                                                1.     Introduction
+
+                                                Bright squeezed vacuum (BSV) is a state of light emerging from the output of a high-gain unseeded
+                                                parametric amplifier (OPA). Due to its nonclassical properties such as photon-number entangle-
+                                                ment and quadrature squeezing, this state is useful for various quantum-information applications,
+                                                among them quantum metrology [1], quantum imaging [2], and quantum lithography [3]. Besides
+                                                containing a high number of photons in each mode, the state is essentially multimode, both in
+                                                the frequency and in the angle. These features provide its large information capacity, as quantum
+                                                information can be encoded in the number of photons in different modes. At the same time, the
+                                                presence of a large number of modes can be a disadvantage in certain experiments, for instance
+                                                achieving phase super-sensitivity [4] or (related) gravitational-wave detection [5]. A possible way
+                                                to reduce the number of modes without losing nonclassical correlations is to use a nonlinear inter-
+                                                ferometer, in which only part of the spectrum is amplified. This has been already demonstrated for
+                                                the angular spectrum in Ref. [6]. The goal of this work is to show similar behavior in the frequency
+                                                domain.
+                                                  The paper is organized as follows. In the next two subsections, we briefly describe the mode
+                                                structure of BSV (subsection 1.1) and the idea and operation of a nonlinear interferometer (sub-
+                                                section 1.2). Section 2 explains the idea of reducing the number of modes in BSV in space/angle
+                                                and time/frequency and demonstrates the narrowing of the BSV angular spectrum in a nonlin-
+
+
+                                                † Present address: Technical University of Denmark Department of Physics, Fysikvej 309, 2800 Kgs. Lyngby, Denmark
+
+                                                ∗ Corresponding author. Email: maria.chekhova@mpl.mpg.de
+
+
+
+
+                                                                                                              1
+July 20, 2021   Journal of Modern Optics   Freq˙spec˙narr8
+
+
+
+
+                ear interferometer with spatially separated crystals. The experiment on the narrowing of the BSV
+                frequency spectrum is described in Section 3. Section 4 contains the conclusions.
+
+
+                1.1.   BSV and its eigenmodes
+                The most convenient way of generating BSV is high-gain parametric down-conversion in a nonlin-
+                ear crystal, which can be considered as an unseeded traveling-wave OPA. The frequency-angular
+                spectrum and photon-number correlations are well described by the Bloch-Messiah formalism [7–9],
+                in which the Hamiltonian is diagonalized by passing to the eigenmodes of the OPA. For instance,
+                in the case of spatially multimode PDC, the Hamiltonian can be written as [9]
+                                                     ZZ
+                                             H = i~Γ    dqs dqi F (qs , qi )a†qs a†qi + h.c.,                (1)
+
+                where Γ characterizes the coupling strength, qs,i are the transverse wavevectors of the signal and
+                idler radiation, and a†qs,i are the photon creation operators in the corresponding plane-wave modes.
+                The central part of the Hamiltonian is the two-photon amplitude (TPA), F (qs , qi ), whose meaning
+                is the probability amplitude of a photon pair created with the wavevectors qs , qi . The Hamiltonian
+                (1) is diagonalized by representing the TPA as a Schmidt decomposition,
+                                                                      Xp
+                                                     F (qs , qi ) =           λk uk (qs )vk (qi ),                (2)
+                                                                      k
+
+                where λk are the Schmidt eigenvalues, uk (qs ), vk (qi ) the Schmidt modes, and k is a two-dimensional
+                index. By definition, the modes are ordered so that λk+1 ≤ λk . The Hamiltonian (1) can be now
+                written as a sum of two-mode Hamiltonians,
+
+                                                                 λk Hk , Hk = i~ΓA†k Bk† + h.c.,
+                                                       Xp
+                                                 H=                                                               (3)
+                                                         k
+
+
+                with the photon creation operators A†k , Bk† relating to the Schmidt modes. Moreover, if the signal
+                and idler beams are indistinguishable, their Schmidt modes are the same, and
+
+                                                             Hk = i~Γ(A†k )2 + h.c.                               (4)
+
+                It is worth mentioning that the Schmidt decomposition can be alternatively performed in the space
+                coordinates, which is equivalent to the wavevector decomposition (2). A similar decomposition is
+                valid for the frequency/temporal domain. In different works, the Schmidt modes are also called non-
+                monochromatic modes [11], squeezing (eigen)modes [12], broadband modes [8], or supermodes [13].
+                   Clearly, in terms of these new modes, photon-number correlations are only pairwise. The total
+                mean photon number can be represented as a sum of incoherent contributions from all Schmidt
+                modes,
+                                                             X                         p
+                                                  hN i =         hNk i, hNk i = sinh2 [ λk G],                    (5)
+                                                             k
+                             R
+                where G = Γdt is the parametric gain. This means that while at low gain (G << 1), the Schmidt
+                modes are populated with the weights given by the Schmidt eigenvalues λk , at high gain these
+                weights are changed to become [9]
+                                                                           √
+                                                                    sinh2 [ λk G]
+                                                             λ̃k = P       2 √      .                             (6)
+                                                                     k sinh [ λk G]
+
+
+
+
+                                                                          2
+July 20, 2021   Journal of Modern Optics     Freq˙spec˙narr8
+
+
+
+
+                According to this, at high gain the lower-order Schmidt modes, initially having higher eigenvalues,
+                become more pronounced.
+
+
+
+
+                1.2.   SU(1,1) interferometers
+                At the very start of nonlinear optics, an idea emerged to realize two nonlinear effects at spatially
+                separated points and to see interference between them. Such nonlinear interference would enable
+                the observation of the relative phase between two effects. It was first realized by Chang et al. [14]
+                who measured in this way the complex values of surface quadratic susceptibility for several semi-
+                conductors. Later, it became a common way to measure the phases of nonlinear susceptibilities.
+                  After the discovery of parametric amplification via PDC and four-wave mixing (FWM), it was
+                soon suggested to realize nonlinear interference based on these effects. Yurke et al. [15] proposed
+                an interferometer in which the signal and idler beams emitted in the first parametric amplifier were
+                directed into the second one and got amplified or deamplified depending on the phases introduced
+                in the pump, signal, or idler beams, φp,s,i (Fig. 1). Because the transformations performed by the
+                interferometer on the fields at its two output modes relate to the SU(1,1) group, this type of in-
+                terferometer is usually referred to as SU(1,1). Initially the SU(1,1) interferometer was proposed as
+
+
+
+
+                                                        nonlinear                            nonlinear
+                                                        crystal 1                  fi        crystal 2
+                                                                             fp
+                                               pump                 idler
+                                                                    signal
+
+                                                                                        fs
+
+                        Figure 1. (Color online) An SU(1,1) nonlinear interferometer based on two high-gain parametric amplifiers.
+
+
+
+
+                a method to perform phase measurement below the shot-noise level, which is possible due to the
+                strong dependence of its output intensity on the phases φs,i at high parametric gain [16]. Never-
+                theless, the first implementations of SU(1,1) interferometers were based on low-gain (spontaneous)
+                PDC [17, 18]. In particular, in a clever modification of such interferometer the effect of ‘induced
+                coherence without induced emission’ was observed [19], which later was successfully implemented
+                for the measurement of absorption [20] and dispersion [21], as well as imaging [22] in the infrared
+                or terahertz [23] spectral ranges without the detection of infrared or terahertz radiation.
+                  Only recently, the SU(1,1) interferometer using FWM in rubidium vapor has been implemented
+                for overcoming the shot-noise level of phase measurement [24]. More than 4 dB improvement has
+                been obtained compared to a conventional (SU(2)) interferometer populated with the same mean
+                number of photons. The operation was at high gain, which provided 7.4 dB amplification of the
+                radiation from the first FWM source in the second one.
+                  The same mechanism can be used for shaping the spectrum of high-gain PDC or FWM, both
+                in the angle and in the frequency. Because of the nonlinear amplification of the incident radiation,
+                the modes that are not amplified in the second nonlinear crystal will be much weaker at the output
+                than those amplified. Moreover, one can take advantage of the de-amplification of certain modes,
+                which, however, is not accompanied by a noise increase. Such selective amplification of different
+                modes can enable tailoring the structure of the spectrum.
+
+
+
+
+                                                                             3
+July 20, 2021   Journal of Modern Optics     Freq˙spec˙narr8
+
+
+
+
+                2.     Diffractive and dispersive spreading, and reduction of the mode number
+
+                2.1.    Angular spectrum tailoring
+                In a nonlinear interferometer formed by two spatially separated traveling-wave high-gain parametric
+                amplifiers (Fig. 2) [6], broadband radiation emitted by the first crystal is amplified in the second
+                one. If the distance between the crystals is considerable, only part of the radiation is amplified in
+                the second one - namely, the part that passes through the pump beam in the second crystal. In
+                accordance with this, it was shown [6] that at a certain distance between the crystals, the angular
+                spectrum becomes nearly single-mode. At a sufficiently large distance between the crystals, the
+                angular width of the spectrum amplified in the second crystal should be roughly given by the ratio
+                between the pump diameter a and the distance L between the crystals,
+                                                                                    a
+                                                                       ∆θ ≈           .                                         (7)
+                                                                                    L
+
+
+                                                     nonlinear                            nonlinear
+                                                     crystal 1          L                 crystal 2
+
+
+
+                                                                                          amplification
+                                             pump
+                                                                                    a
+
+                              Figure 2. (Color online) A nonlinear interferometer formed by two spatially separated crystals.
+
+
+
+                  This effect of spatial spectrum narrowing has a simple explanation in terms of the Schmidt modes
+                of high-gain PDC. Indeed, each of the spatial Schmidt modes of BSV emitted by the first crystal is
+                diffracting (spreading) in the course of propagation to the second crystal. To a good approximation,
+                the spatial Schmidt modes are given by the Hermite-Gauss or Laguerre-Gauss set, the lowest-order
+                mode being simply a Gaussian beam. Lower-order modes spread slowly and in the second crystal
+                they overlap with the pump beam. Therefore, they get amplified provided that the phase acquired
+                in the course of propagation is appropriate. However, higher-order modes (no matter if they are
+                given by Laguerre-Gauss or Hermite-Gauss beams) spread faster in the space between the crystals
+                and do not get amplified. As a result, the spatial spectrum at the output of the second crystal gets
+                narrower. This continues until only the first Schmidt mode gets amplified, after which the angular
+                width remains constant; increasing the distance L only reduces the total intensity.
+                  The dependence of the angular width ∆θ on the distance L between the crystals can be derived
+                from this picture as follows. The zeroth-order Schmidt mode is a Gaussian beam of waist radius
+                w0 . As it propagates from the crystal, the waist radius at a distance z is [25]
+                                                               s                       2
+                                                                                 λz
+                                                    w0 (z) =       w02 +                     , w0 (0) = w0 ,                    (8)
+                                                                                πw0
+
+                with λ being the wavelength. The parameter θ0 ≡ λ/(πw0 ) is the half-angle divergence of the
+                Gaussian beam. Higher-order
+                                     √         modes have larger spatial sizes, wm = M w0 ; for instance, for Hermite-
+                Gauss beams, M = 2m + 1. At the same time, they have larger divergences θm = M θ0 , so that
+                as the distance z increases, they spread as
+                                                                     s             2
+                                                                         2 + M2
+                                                                                 λz
+                                                         wm (z) =       wm             .                                        (9)
+                                                                                πwm
+
+
+
+
+                                                                                4
+July 20, 2021   Journal of Modern Optics      Freq˙spec˙narr8
+
+
+
+
+                Assuming that for z = L, only modes of orders from 0 to m are amplified in the second crystal, we
+                find the corresponding M from the condition wm (L) = a/2. We obtain
+                                                                                      "           2 #−1/2
+                                                                                    a          λL
+                                                                                 M=    w02 +                .                             (10)
+                                                                                    2          πw0
+
+                Then, the divergence of the beam will be equal to twice the half-angle divergence of mode m,
+                                λ
+                ∆θ = 2θm = M πw   0
+                                    :
+
+                                                                                            "                2 #−1/2
+                                                                                           1                 L
+                                                                                     ∆θ =      +                       ,                  (11)
+                                                                                          ∆θ02               a
+
+                              aλ
+                where ∆θ0 = πw  2 is the initial angular width.
+                                0
+                  We have measured the dependence of the angular width on the distance between the crystals
+                under the same experimental conditions as in Ref. [6]: two 3 mm crystals were placed into a single
+                pump beam of full width at half maximum (FWHM) waist 200 µm, and the distance between them
+                was changed from 10 to 130 mm. The results are shown in Fig. 3. Equation (11) was used for fitting
+
+                                                                         0,012
+
+
+                                                                         0,010
+
+
+
+
+                                                     Angular FWHM, rad
+                                                                         0,008                                        single-mode
+                                                                                                                      radiation
+                                                                         0,006
+
+
+                                                                         0,004
+
+
+                                                                         0,002
+
+
+                                                                         0,000
+                                                                                 0     20       40     60      80       100   120   140
+                                                                                                     distance L, mm
+
+                Figure 3. (Color online) The angular width of the spectrum measured at the output of the second crystal, versus the distance
+                between the crystals. The solid line is calculated with Eq. (11), without fitting parameters. The dashed line is a guide to an
+                eye. The arrow shows the position at which m = 1.1 spatial modes were reported in Ref. [6].
+
+
+
+                the dependence at L ≤ 60 mm. At larger distances, the angular spectrum shows no dependence on
+                L; the dashed line is just a guide to the eye. The position at which nearly single-mode was observed
+                (the number of modes was measured to be m = 1.1) [6] is shown by an arrow.
+
+
+                2.2.    Frequency spectrum tailoring
+                This effect has an analogue in the frequency/time domain. In this case, the role of the diffractive
+                spreading of beams is played by the dispersive spreading of pulses. Indeed, let a dispersive material
+                of length d be placed between the two crystals. Each frequency Schmidt mode of the BSV from
+                the first crystal will spread in time in the course of propagation through the material, and the
+                spreading will be determined by the group-velocity dispersion (GVD) k′′ = d2 k/dω 2 . Lower-order
+                modes are narrower in time than higher-order ones, but they will still spread in the GVD material
+                slower than higher-order ones. This is illustrated by Fig. 4 where several temporal Schmidt modes
+                are plotted for BSV emitted from a 3 mm crystal pumped by 6 ps pulses at wavelength 355 nm
+                (a). The emission is at the degenerate wavelength 710 nm. The modes are assumed to be the same
+                as for spontaneous parametric down-conversion [10]. To a good approximation, they are given by
+                Hermite functions [7].
+
+
+
+
+                                                                                                        5
+July 20, 2021   Journal of Modern Optics       Freq˙spec˙narr8
+
+
+
+
+                  After propagation through a dispersive material with the GVD k′′ and length d, the temporal
+                modes will spread in time but maintain their shapes. The latter follows from the fact that, similar
+                to diffractive spreading of beams, dispersive spreading of pulses acts as the Fourier transformation,
+                so that after a sufficiently long GVD material the shape of a pulse becomes similar to its spectral
+                amplitude. At the same time, Hermite functions are eigenfunctions of the Fourier transformation.
+                Therefore, the whole set of Schmidt modes will be simply rescaled after the propagation through the
+                dispersive material. For instance, the zeroth-order Schmidt mode (dotted line in Fig. 4a), initially a
+                Gaussian pulse of duration τ0 will remain a Gaussian pulse with the duration depending on d [26],
+                                                                             s               ′′ 2
+                                                                                             k d
+                                                                 τ0 (d) =        τ02 +              .                                   (12)
+                                                                                              τ0
+
+                Higher-order modes will also maintain their shapes but, similar to the case of the angular modes,
+                will spread faster.
+                   In the right panel of Fig. 4, the Schmidt modes are plotted after the propagation through various
+                lengths d of SF6 glass, whose GVD at the wavelength 710 nm is k′′ = 238 fs2 /mm [27]. In the
+                calculation, Eq. (12) was used for the Gaussian mode, and the higher-order modes were simply
+                rescaled accordingly.) For the length d = 10 cm (b), only higher-order modes (mode 50 in the
+                figure) get sufficiently spread so that they do not fully overlap with the pump pulse in the second
+                crystal. Therefore, high-order modes will not be amplified.
+                   However, at d = 20 cm (c), even the tenth-order mode becomes considerably spread and will not
+                get fully amplified in the second crystal. This should lead to the narrowing of the spectrum. As the
+                length of the dispersive glass increases, the spectral width should reduce. After d = 60 cm of glass
+                (d), the zeroth-order Schmidt mode will overlap with the pump pulse. At high gain, this situation
+                should lead to single-mode output emission.
+
+
+                                                                                   0.5
+                                                                                                                        b
+                                  2
+                                       a             mode 0
+                                                                                       0
+
+                                                                                   -0.5
+                                              mode 10
+                                  1                               mode 50
+                                                                                      0.4
+                                                                                                                        c
+                                       pump
+                                                                                       0
+                                   0
+                                                                                   -0.4
+
+                                                                                   0.4                                  d
+                                        -4      -2       0       2       4             0
+                                                     time, ps
+                                                                                   -0.4
+                                                                                     -20         -10        0      10       20
+                                                                                                        time, ps
+                Figure 4. (Color online) Temporal Schmidt modes of orders 0 (red dotted line), 10 (blue dashed line) and 50 (green solid line)
+                for a 3 mm crystal pumped by 6 ps pulses before (a) and after propagating through 10 cm (b), 20 cm (c) and 60 cm (d) of SF6
+                glass. For comparison, the amplitude of the pump pulse is shown by magenta dash-dotted line.
+
+
+
+                  By analogy with Eq. 11, one can estimate the frequency spectrum of BSV generated in the system
+                of two crystals separated by a GVD material as
+                                                                     "              ′′ 2 #−1/2
+                                                                   1                k d
+                                                             ∆ω =      +                         ,                                      (13)
+                                                                  ∆ω02               Tp
+
+
+
+
+                                                                                  6
+July 20, 2021   Journal of Modern Optics   Freq˙spec˙narr8
+
+
+
+
+                where Tp is the pump pulse duration and ∆ω0 the initial spectral width. In the next section, we
+                describe the experimental results confirming this behavior.
+
+
+                3.   Experiment
+
+                The scheme of the experimental setup is shown in Fig. 5. Collinear high-gain PDC with the central
+                wavelength at 709.3 nm was created in a type-I 3-mm-long BBO crystal by pumping it with a third
+                harmonic of the pulsed Nd:YAG laser at 354.7 nm, with a pulse duration of 18 ps (the coherence
+                time being 6 ps) and a repetition rate of 1 kHz. The laser power was varied by a half wave plate
+                λp /2 followed by a polarization beamsplitter P BSp . A telescope, made of plano convex lenses Lp1
+                and Lp2 with the focal distances of 50 cm and 5 cm, respectively, compressed the beam size down
+                to half-power beam width of 225 µm. A dichroic mirror DM1 separated the pump beam and the
+                PDC. The PDC pulses were passing through the group velocity dispersion (GVD) medium. We
+                had three options of GVD media: SF-6 glass rods of length 9 cm and 18.3 cm, and SF-57 glass
+                rod of length 19.4 cm. The pump pulses were timed, by means of a delay line, to overlap with
+                the time-stretched PDC pulses on the dichroic mirror DM2 and amplify them in the second type-I
+                3-mm-long BBO crystal. After the crystal the pump was blocked by a pair of dichroic mirrors DM3
+                and a long-pass filter OG580. The iris A1 placed in the focal plane of the lens L with the focal
+                distance of 10 cm was used to align the crystals for collinear geometry. The lens Li focused the
+                PDC radiation onto the input slit of the spectrometer with a resolution of 0.15 nm.
+
+
+
+
+                                            Figure 5. (Color online) Schematic of the experimental setup.
+
+
+
+                  Figure 6 (a) shows the measured PDC spectra with and without the GVD medium placed between
+                the crystals. The PDC spectrum for the crystals separated by an air gap of 24.2 cm is shown by a
+                blue line. The measurement was performed at an average pump power of 73.4 mW in the setup,
+                published before in [6]. The interference fringes due to different refractive indexes of the pump and
+                the signal and idler beams in the air were avoided by averaging the spectra taken over different
+                positions of the first crystal in the range from 22.7 cm to 25.7 cm with the step of 2 mm. The
+                FWHM of the spectrum was found to be 45.6 nm.
+                  Green and red lines in Fig. 6 (a) show how the spectrum of the PDC evolves as the value of k′′ d
+                for the inserted GVD medium is increased. All the spectra are affected by the interference arising
+                from the frequency-dependent phase of the broadband PDC generated in the first crystal after
+                passing through the GVD media. As a result, constructive or destructive interference is observed
+                for the different frequencies at the output of the second crystal. Despite the interference, one can
+                clearly see that the spectra measured with the GVD media are narrower than the one obtained
+                with the air gap between the crystals. The FWHM of the envelope for each measurement was
+                considered as the width of the spectrum. In Fig. 6 (b) we compare the measurement results for
+                the PDC spectral width (blue triangles) and the calculation according to Eq. 13 (red line) using
+                the GVD values for the Schott glass SF6 and SF57 [27]. Instead of the pulse duration Tp , the
+                coherence time of the laser Tc = 6 ps was used since it is the coherence of the pump that matters
+
+
+
+
+                                                                         7
+July 20, 2021   Journal of Modern Optics    Freq˙spec˙narr8
+
+
+
+
+                Figure 6. (Color online) (a) Measured PDC spectra with different GVD media inserted. (b) FWHM of the PDC spectra
+                experimentally measured with and without GVD media placed between the crystals (blue triangles) and the theoretically
+                calculated dependence according to Eq. 13 (red line) plotted versus k ′′ d.
+
+
+                for parametric amplification. One can see that the experimental FWHM values agree well with the
+                calculations.
+
+
+                4.   Conclusion
+
+                In conclusion, we have considered a nonlinear interferometer formed by two unseeded traveling-wave
+                parametric amplifiers (based on parametric down-conversion in nonlinear crystals) and showed that
+                its angular and frequency spectrum of emission can be modified by spatially separating the two
+                crystals and/or placing a dispersive material between them. The effect has a simple interpretation
+                in terms of Schmidt modes: higher-order modes spread in space and time faster than low-order
+                ones and hence do not get amplified in the second crystal. Our experimental results show the
+                narrowing of the spatial spectrum, leading ultimately to a single spatial mode. For frequency
+                spectrum narrowing, preliminary results show 30% narrowing for a glass rod with large group
+                velocity dispersion inserted into the interferometer.
+                   The research leading to these results has received funding from the EU FP7 under grant agree-
+                ment No. 308803 (project BRISQ2). We thank Xin Jiang and Patricia Schrehardt for providing
+                the samples of SF6 and SF57.
+
+
+                References
+
+                 [1] Giovannetti, V.; Lloyd, S.; Maccone, L. Science 2004, 306, 1330; Anisimov, P.; Raterman, G. M.;
+                     Chiruvelli, A.; Plick, W. N.; Huver, S. D.; Lee, H.; Dowling, J. P. Phys. Rev. Lett. 2010, 104, 103602.
+                 [2] Brida, G.; Genovese, M.; Ruo Berchera, I. Nature Photonics 2010, 4, 227–230; Lopaeva, E. D.; Ruo
+                     Berchera, I.; Degiovanni, I. P.; Olivares, S.; Brida, G.; Genovese, M. Phys. Rev. Lett. 2013, 110, 153603.
+                 [3] Boyd, R. W.; Dowling, J. P. Quantum Inf. Process. 2012, 11, 891.
+                 [4] Hudelist, F.; Kong, J.; Liu, C.; Jing, J.; Ou, Z. Y.; Zhang, W. Nature Comm. 2014, 5:3049.
+                 [5] The LIGO Scientific Collaboration Nat. Phys. 2011, 7, 962-965.
+                 [6] Pérez, A. M.; Iskhakov, T. Sh.; Sharapova, P.; Lemieux, S.; Tikhonova, O.V.; Chekhova, M. V.; Leuchs,
+                     G. Optics Letters 2014, 39, 2403-2406.
+                 [7] Wasilewski, W.; Lvovsky, A. I.; Banaszek, K.; Radzewicz, C. Phys. Rev. A 2006, 73, 063819.
+                 [8] Christ, A.; Brecht, B.; Mauerer, W.; Silberhorn, Ch; New J. Phys. 2013, 15, 053038.
+                 [9] Sharapova, P.; Pérez, A. M.; Tikhonova, O.V.; Chekhova, M. V. arXiv:1410.6658 [quant-ph] 2014.
+                [10] Law, C. K.; Walmsley, I. A.; Eberly, J. H. Phys. Rev. Lett. 2000, 84, 5304–5307.
+                [11] Opatrny, T.; Korolkova, N.; Leuchs, G. Phys. Rev. A 2002, 66, 053813-1–053813-14.
+                [12] Bennink, R. S.; Boyd, R. W. Phys. Rev. A 2002, 66, 053815-1–053815-5.
+                [13] Law, G.; Navarrete-Bennloch, C.; Valcarcel, G. J.; Fabre, C. Eur. Phys. J. D. 2012, 66, 241.
+                [14] Chang, R. K.; Ducuing, J.; Bloembergen, N. Phys. Rev. Lett. 1965, 15, 6–8.
+
+
+
+
+                                                                         8
+July 20, 2021   Journal of Modern Optics   Freq˙spec˙narr8
+
+
+
+
+                [15] Yurke, B.; McCall, S. L.; Klauder, J. R. Phys. Rev. A 1986, 33, 4033–4054.
+                [16] Ou, Z. Y. Phys. Rev. A 2012, 85, 023815-1–023815-7.
+                [17] Herzog, T. J.; Rarity, J. G.; Weinfurter, H.; Zeilinger, A. Phys. Rev. Lett. 1994, 72, 629–632.
+                [18] Burlakov, A. V.; Chekhova, M. V.; Klyshko, D. N.; Kulik, S. P.; Penin, A. N.; Shih, Y. H.; Strekalov,
+                     D. V. Phys. Rev. A 1997, 56, 3214.
+                [19] Wang, L. J.; Zou, X. Y.; Mandel, L. Phys. Rev. A 1991, 7, 4.
+                [20] Burlakov, A. V.; Mamaeva, Yu. D.; Penin, A.N.; Chekhova, M. V. JETP 2001, 93, 55–62.
+                [21] Korystov, D. Yu.; Kulik, S. P.; Penin, A. N.JETP Lett. 2001, 73, 214–218.
+                [22] Lemos, G. B.; Borish, V.; Cole, G. D.; Ramelow, S.; Lapkiewicz, R.; Zeilinger, A. Nature 2014, 512,
+                     409–412.
+                [23] Kitaeva, G. Kh.; Kovalev, S. P.; Penin, A. N.; Tuchak, A. N.; Yakunin, P. V. J Infrared Milli Terahz
+                     Waves 2011, 32, 1144–1156.
+                [24] Hudelist, F.; Kong, J.; Liu, C.; Jing, J.; Ou, Z. Y.; Zhang, W. Nature Communications 2014, DOI:
+                     10.1038/ncomms4049.
+                [25] Kogelnik, H., and Li, T. Applied Optics 1966, 32, 1550–1567.
+                [26] Yariv, Amnon, and Yeh, Pochi. Photonics: optical electronics in modern communications 2007, 6-th
+                     ed. New York: Oxford University Press.
+                [27] SCHOTT optical glass data sheets 2012-12-04
+
+
+
+
+                                                                    9
+

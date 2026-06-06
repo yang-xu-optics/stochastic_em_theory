@@ -1,0 +1,403 @@
+                                                        Spatially single-mode source of bright squeezed vacuum
+
+                                                     A. M. Pérez1,∗ , T. Sh. Iskhakov1 , P. Sharapova2,3 , S. Lemieux4 , O. V. Tikhonova2,3 ,
+                                                                                M. V. Chekhova1,2,5 , G. Leuchs1,5
+                                                                                      1
+                                                                                       Max-Planck Institute for the Science of Light,
+                                                                           Guenther-Scharowsky-Str. 1 / Bau 24, Erlangen 91058, Germany
+                                                                2
+                                                                  Physics Department, Lomonosov Moscow State University, Moscow 119991, Russia
+                                                     3
+                                                       Skobeltsyn Institute of Nuclear Physics, Lomonosov Moscow State University, Moscow 119234, Russia
+                                                                       4
+                                                                         Department of Physics, University of Ottawa, Ottawa, Ontario, Canada
+                                                                   5
+                                                                     Universität Erlangen-Nürnberg, Staudtstrasse 7/B2, Erlangen 91058, Germany
+                                                                                    ∗
+                                                                                      Corresponding author: angela.perez@mpl.mpg.de
+
+
+
+
+arXiv:1402.2771v1 [quant-ph] 12 Feb 2014
+                                                                                                 Compiled July 31, 2021
+                                                       Bright squeezed vacuum, a macroscopic nonclassical state of light, can be obtained at the output of a strongly
+                                                      pumped non-seeded traveling-wave optical parametric amplifier (OPA). By constructing the OPA of two con-
+                                                      secutive crystals separated by a large distance we make the squeezed vacuum spatially single-mode without a
+                                                      significant decrease in the brightness or squeezing.
+                                                             c 2021 Optical Society of America
+                                                          OCIS codes: 040.1345, 030.5260, 120.3940
+
+
+
+                                           Bright squeezed vacuum (BSV) is a state of light emerg-              of the PDC radiation emitted by the first crystal and
+                                           ing at the output of an unseeded high-gain optical para-             amplified in the second one. At L ≫ Lc , the angle ∆θ
+                                           metric amplifier. Although squeezed vacuum can be gen-               will be given by the pump beam waist and the distance
+                                           erated in cavities below threshold or in nonlinear waveg-            between the crystals, ∆θ = a/L.
+                                           uides, the states with the highest brightness (photon                   As a result, by increasing the distance between the
+                                           number per mode) have been so far achieved only in                   crystals one can reduce the total angular width ∆θ of
+                                           bulk crystals pumped by short pulses with high peak                  the PDC spectrum. At the same time, the width of the
+                                           power [1–3]. This way of generation, however, leads to               photon-number correlations within the angular spectrum
+                                           an essentially multimode structure. In this work, we                 δθ is determined, roughly, by the pump angular diver-
+                                           show that by generating BSV in two spatially separated               gence [6] and, as long as L is less than the Rayleigh
+                                           crystals one can achieve spatially single-mode structure             length for the pump, does not depend on the distance
+                                           of the radiation without considerable reduction of the               between the crystals. As soon as ∆θ becomes equal to
+                                           brightness or loss of the nonclassical features.                     δθ, the radiation becomes spatially single-mode. In our
+                                             A traveling-wave OPA made of two consecutive crys-                 experiment, this is tested by measuring the second-order
+                                           tals with the optic axes tilted oppositely has been used             normalized intensity correlation function (CF) at zero
+                                           before in order to increase twice the interaction length             time delay g (2) (0) after narrowband frequency selection
+                                           without the increase in the transverse walk-off (see, for            at a non-degenerate wavelength. Because a single mode
+                                           instance, Ref. [4] or recent Ref. [2]). It considerably re-          of PDC has thermal statistics, with g (2) (0) = 2 [3, 7, 8],
+                                           duces the effect of anisotropy on the generation of both             the measured value of the CF g (2) (0)meas depends on
+                                           two-photon light and BSV [5]. Now, we will consider the              the total number of collected modes m according to
+                                           two crystals separated by a larger distance. Let BSV                 the relation g (2) (0)meas = 1 + 1/m [9]. Here, m in-
+                                                                                                                cludes both the number ml of longitudinal (frequency)
+                                                                    a                 Dq                        modes and the number mt of transverse (angular) modes,
+                                                                                                                m = mt ml . With narrowband spectral filtering, we can
+                                                                                                                achieve ml = 1.25 [3], and the value of g (2) (0)meas can
+                                                               Lc       L        Lc
+                                                                                                                be used to infer the number of transverse modes.
+                                                                                                                   The experimental setup is shown in Fig. 2. Third-
+                                                     Fig. 1. The idea of the experiment.                        harmonic radiation of a YAG:Nd laser, with the wave-
+                                                                                                                length 355 nm, pulse duration 18 ps, repetition rate 1
+                                           be generated in two crystals of length Lc , separated by             kHz and mean power 60 mW, is softly focused by a
+                                           a distance of L, from a strong pump with the beam                    telescope (lenses L1,2 ) into a waist of 200 µm. PDC is
+                                           waist a (Fig. 1). Each crystal, taken separately, would              obtained from two 3 mm BBO crystals cut for type-I
+                                           emit parametric down-conversion (PDC) radiation into                 collinear frequency-degenerate phase matching, the sec-
+                                           a rather broad solid angle (shown as transparent cones               ond crystal fixed after the beam waist and the first one
+                                           in the figure). However, if the parametric gain is high,             placed on a movable platform. The platform can be dis-
+                                           then the PDC generation is strongly nonlinear, and the               placed without any angular tilting in such a way that the
+                                           width of the angular spectrum ∆θ is given by the part
+
+                                                                                                            1
+                    BBO   BBO       DM    L3 NDF
+                                                                                                       1.0
+
+
+                                                                                                       0.8
+
+
+
+
+                                                                               intensity, arb. units
+          L1   L2                                                                                                        0.01rad
+
+                                L7 BS          L4                                                      0.6
+                          D1
+                                     L6                                                                0.4
+                                          L5
+                               D2              M                                                       0.2
+
+
+                                                                                                       0.0   a
+Fig. 2. The experimental setup. BSV from two BBO crys-
+                                                                                                             0   2   4      6      8   10   12   14   16   18
+tals, after the elimination of the pump with a dichroic                                                                         distance, cm
+mirror DM, is collected into the input slit of a monochro-                                             1.8
+
+mator filtering out 1.25 longitudinal modes. Further,
+                                                                                                       1.7
+g (2) (0) is measured to find out the number of transverse
+modes. Neutral-density filters (NDF) prevent the satu-                                                 1.6
+
+ration of the detectors or a CCD (placed at the position                                               1.5
+of the dashed line).                                                          g(2)
+                                                                                                       1.4
+
+
+                                                                                                       1.3
+
+                                                                                                             b
+distance between the crystals is changed from 7 mm to                                                  1.2
+                                                                                                             0   2   4      6      8   10   12   14   16   18
+170 mm. After the crystals, the pump radiation is elimi-                                                                        distance, cm
+nated by a dichroic mirror (DM). Due to the high value
+of the parametric gain, most part of the PDC radiation            Fig. 3. PDC intensity (a) and the second-order CF (b)
+is produced in the second crystal. To collimate it, a lens        versus the distance between the crystals. The insets show
+(L3 ) with a focal distance of 200 mm is placed at 200 mm         two-dimensional angular spectra of PDC recorded for
+from the second crystal. In its focal plane (shown by a           different distances between the crystals.
+dashed line), in its turn, a CCD camera can be placed
+(not shown) to capture the angular distribution of the
+PDC intensity. The camera is preceded by an interfer-             They correspond to a larger number of modes due to
+ence filter (not shown) cutting a bandwidth of 10 nm out          their delocalized shapes. The total number of transverse
+of the PDC spectrum around the degenerate wavelength              modes varied from 2.96 to 1.13.
+709 nm. In the absence of the camera, all radiation is col-          For a quantitative theoretical description of the effect,
+lected by lens L4 into the input slit of a monochromator          we used the formalism of Bloch-Messiah reduction [12].
+(M) selecting a bandwidth of 0.1 nm, which is sufficient          The Hamiltonian was diagonalized by passing from plane
+for obtaining ml = 1.25 [3]. After the monochromator,             waves to a new set of collective angular modes like the
+the radiation is collimated with another lens (L5 ) and           broadband modes introduced in [13] for the frequency
+fed, by means of a beamsplitter and two lenses L6,7 , to          domain. At high gain, the eigenvalues (Schmidt coeffi-
+two charge-integrating detectors based on p-i-n diodes,           cients) are redistributed similar to Ref. [14]: the strongest
+and both integral intensity and normalized second-order           ones survive, the weaker ones are suppressed.
+intensity CF are measured. To prevent saturation of the              The total Hamiltonian describing high-gain PDC can
+camera and detectors, neutral density filters (NDF) are           be written in the form
+used in some measurements.                                                                  →
+                                                                                            −                 1
+                                                                                        Z
+   In the first run, we measured the intensity of BSV                             H = dks h̄ωs (a†ks aks + ) +
+                                                                                                              2
+and the normalized CF (Fig. 3). As the distance L be-                                   Z
+                                                                                            −
+                                                                                            →        †        1
+tween the crystals increased, both the integral intensity                              + d ki h̄ωi (aki aki + ) +
+                                                                                                              2
+and the second-order normalized CF showed oscillations                          Z
+                                                                                    → −
+                                                                                    −   → −  → −→ † †
+with the period 35 mm. These oscillations are caused by                 +(ih̄Γ dks d ki F (ks , ki )aks aki + h.c.),        (1)
+the interference between the contributions to PDC from
+both crystals [10, 11]. One can see that the peaks of the         where the indices s and i label the signal and idler pho-
+g (2) (L) dependence became higher with the growth of L.          tons respectively, a†ks , a†ki are the photon creation op-
+The highest value achieved was 1.71 ± 0.03. The maxima                               → −
+                                                                                     −    →            → −
+                                                                                                       −  →
+                                                                  erators in modes ks , ki , and F (ks , ki ) stands for the
+of g (2) corresponded to the maxima of intensity, and the
+                                                                  amplitude of the PDC process. Since we would like to
+shots made by the camera show that the corresponding
+                                                                  describe only the spatial features of BSV, we assume
+angular spectra had nearly Gaussian shapes (insets to
+                                                                  the frequency phase-matching condition to be fulfilled:
+Fig. 3a). At these points of the dependence, constructive
+                                                                  ωs + ωi = ωp . In this case, the interaction term in the
+interference between the PDC contributions from both
+                                                                  Hamiltonian (1) can be written as
+crystals occurred. In contrast, the angular spectra at the
+minima had ring shapes, with the intensity at the center
+                                                                                     Z
+suppressed. These are points of destructive interference.                Hnl ∝ ih̄Γ dθs dθi F (θs , θi )a†θs a†θi + h.c., (2)
+
+
+                                                              2
+where θs , θi are the angles of emission for signal and idler              where the averaging is performed over the initial vacuum
+photons, respectively, and a†θs , a†θi are the photon cre-                 state of the system. It should be mentioned that in order
+ation operators in the corresponding plane-wave modes.                     to obtain the correct dependence of g (2) on the distance
+The amplitude F (θs , θi ) for the two-crystal configuration               L we perform the analysis both for non-anisotropic and
+can be calculated using the approach of Ref. [11], which                   anisotropic directions. In the latter case, partial compen-
+yields                                                                     sation of anisotropy due to the opposite tilts of the optic
+                                                                           axes of the two crystals is taken into account by using
+                        σ 2 kp2 (θs + θi )2        Lc kp (θs − θi )2
+F (θs , θi ) ∝ exp{−                        }sinc{                   }     the expression for F (θs , θi ) introduced in Ref. [5]. The
+                                  8                        16              final value of g (2) is calculated as g (2) = 1 + K1
+                                                                                                                                where the
+                                 (Lc + nLp )kp (θs − θi )2      δkL        Schmidt number K represents the effective total num-
+                       × cos{                               −       }. (3) ber of independent Schmidt modes and the number of
+                                             16                 2np
+            √                                                              frequency Schmidt modes is 1.25.
+Here, 2 ln2σ is the full width at half maximum                                The results of the calculation are presented in Fig. 4.
+(FWHM) of the pump spatial intensity distribution, kp                      The periodic modulation of both the intensity and the
+and np are the wave vector and the refractive index of
+the pump in the crystal, and the additional mismatch                                      0.6
+        ω n
+δk = pc p δnair depends on the difference between the                                     0.5
+refractive indices of the pump and the signal and idler
+
+
+                                                                                     intensity, arb. units
+                                                                                          0.4
+waves in the air space gap: δnair ≡ np − ns +n          2
+                                                           i
+                                                             . Accord-
+                                                                                          0.3
+ing to (3), F (θs , θi ) as a function of L oscillates with the
+                                                                                          0.2
+period of approximately 35 mm, which is caused by the
+                                                               −5
+difference of refractive indices δnair = 1.016 · 10 .                                     0.1
+
+   To obtain the photon numbers in the signal or idler                                    0.0   a
+channels and the correlations between them as a func-                                          0   2  4  6    8 10 12 14 16 18
+                                                                                                         distance, cm
+tion of L, we develop an analytical approach based on
+the collective angular Schmidt modes. According to the                                    1.8
+Schmidt decomposition, the amplitude F (θs , θi ) can be                                  1.7
+represented as                                                                            1.6
+                                Xp
+                                                                                          1.5
+               F (θs , θi ) =         λn un (θs )vn (θi ),          (4)             (2)
+                                                                                     g
+                                                                                                             1.4
+                            n
+                                                                                                             1.3
+where λn are the eigenvalues and un (θs ), vn (θi ), the
+                                                                                                             1.2   b
+eigenfunctions of the reduced density matrix of the
+                                                                                                                   0   2   4   6   8   10     12   14   16   18
+bipartite system. Using decomposition (4), we intro-                                                                           distance, cm
+
+duce new creation/annihilation operators in the Schmidt
+modes as                                                                Fig. 4. Calculated intensity in the signal channel (a) and
+            Z                       Z                                   the second-order CF (b) versus the distance between the
+      A†n = dθs un (θs )a†θs , Bn† = dθi vn (θi )a†θi . (5)             crystals. The lines are guides to the eye.
+
+Spatial collective modes were also introduced in [15, 16]               CF, as well as the envelope growth of the CF, are repro-
+but their evolution could be only obtained by numerical                 duced. Note that after reaching its peak value, the CF
+solution of integro-differential equations. In the Heisen-              starts to decrease, and the same dependence is observed
+berg picture, the evolution of operators (5) is given by                in the experiment. This is explained by the fact that al-
+Hamilton’s equations, which in our case can be solved                   though at each point of constructive interference (peak of
+analytically:                                                           CF) there is a strong pronounced nearly-Gaussian max-
+              dAn     p                                                 imum, there is also a background caused by the non-
+                   = Γ λn Bn† − iωs An ,                                interfering part of PDC radiation. At large L, the max-
+               dt
+              dBn      p                                                ima become reduced as the part of the radiation am-
+                   = Γ λn A†n − iωi Bn .               (6)              plified in the second crystal becomes narrower than the
+               dt
+                                                                        first eigenmode. Then the background gets a higher rela-
+Using the connection between the Schmidt and plane-
+                                                                        tive weight, and the number of effective modes increases.
+wave operators we obtain the explicit expressions for the
+                                                                        This occurs after the fourth peaks in Figs. 3,4. For the
+latter as functions of time and calculate, for different
+                                                                        same reason, the highest value of CF is never reached
+distances L between crystals, both the integral photon
+                                                                        for the current gain values. Also, note that the theory
+numbers in the signal and idler beams, hNs,i i and the
+                                                                        predicts a monotonic reduction of the envelope for the
+second-order autocorrelation function g (2) ,
+                                                                        intensity dependence on L while the experiment shows
+                                   hNs2 i                               an increase of intensity at L = 11 cm. This is because
+                         g (2) =          ,                   (7)       in experiment, this position corresponded to the waist
+                                   hNs i2
+
+                                                                    3
+of the beam while the theory assumed a constant beam                                        able squeezing (NRF=0.65) was observed.
+diameter everywhere.                                                                           In conclusion, by constructing a traveling-wave para-
+   It is important that even with the crystal separated,                                    metric amplifier of two spatially separated nonlinear
+we were able to observe considerable amount of squeez-                                      crystals, we have obtained bright squeezed vacuum with
+ing. For this, we re-aligned the crystal for frequency non-                                 nearly single spatial mode (mt = 1.13) and the angu-
+degenerate phasematching with the wavelengths 635 nm                                        lar spectrum close to Gaussian. Single-mode generation
+and 805 nm, replaced the beamsplitter by a dichroic mir-                                    was achieved at the expense of a certain reduction in
+ror and removed the monochromator with the lenses.                                          both intensity and squeezing; however, photon-number
+The resulting setup was similar to the one for two-color                                    correlation considerably below shot-noise level was still
+squeezing measurement [2], with the only exception that                                     achieved. Further improvement of the noise reduction in
+all angular spectrum was collected. Squeezing was char-                                     such a configuration can be obtained by reducing the
+acterized by the noise reduction factor (NRF) defined                                       wavelength difference.
+as the variance of the photon-number difference normal-                                        The research leading to these results received fund-
+ized to the mean value of the photon-number sum. The                                        ing from the EU FP7 under grant No. 308803 (project
+results of NRF measurement are presented in Fig 5. In                                       BRISQ2) and ERA-Net.RUS (project Nanoquint). We
+the same plot, the value of the normalized intensity auto-                                  also acknowledge partial financial support of the Rus-
+correlation function is shown. Although it is very close to                                 sian Foundation for Basic Research, grants 12-02-00965,
+unity due to the presence of many longitudinal modes,                                       14-02-00389-a, and 14-02-31084-mol-a.
+its dependence on the distance between the crystals is
+qualitatively the same as in Fig. 3. One can see that                                       References
+                                                                                             1. M. Bondani, A. Allevi, G. Zambra, M. G. A. Paris,
+                                    1.1                                                         and A. Andreoni, Phys. Rev. A 76, 013833(1)-013833(4)
+                                    1.0                                                         (2007).
+                                    0.9                                                      2. I. N. Agafonov, M. V. Chekhova, and G. Leuchs, PRA
+
+
+                   NRF, SNL units
+                                    0.8
+                                                                                                82, 011801 (2010).
+                                                                                             3. T. Sh. Iskhakov, A. M. Perez, K. Yu. Spasibko,
+                                    0.7
+                                                                                                M. V. Chekhova, and G. Leuchs, Optics Letters 37, 1919
+                                    0.6
+                                                                                                (2012).
+                                    0.5
+                                              a                                              4. P. Grangier, R. E. Slusher, B. Yurke, and A. LaPorta,
+                                          2       4   6      8   10      12   14   16
+                                                                                                PRL 59, 2153 (1987).
+                                                          distance, cm                       5. A. M. Perez, F. Just, A. Cavanna, M. V. Chekhova, and
+               1.0030
+                                                                                                G. Leuchs, Laser Physics Letters 10, 125201 (2012).
+               1.0025                                                                        6. M. V. Fedorov, M. A. Efremov, P. A. Volkov,
+               1.0020
+                                                                                                E. V. Moreva, S. S. Straupe, and S. P. Kulik, Phys. Rev.
+                                                                                                Lett. 99, 063901-1–063901-4 (2007).
+               1.0015
+            g(2)                                                                             7. P. R. Tapster and J. G. Rarity, J. Mod. Opt. 45, 595–604
+               1.0010                                                                           (1998).
+               1.0005
+                                                                                             8. F. Paleari, A. Andreoni, G. Zambra, and M. Bondani,
+                                              b                                                 Optics Express, 12, Issue 13, 2816–2824 (2004).
+               1.0000
+                                          2       4   6      8   10      12   14   16
+                                                                                             9. O. A. Ivanova, T. Sh. Iskhakov, A. N. Penin, and
+                                                          distance, cm                          M. V. Chekhova, Quantum Electronics 36, 951–956
+                                                                                                (2006).
+Fig. 5. NRF (a) and CF (b) measured without the fre-                                        10. A. V. Burlakov, M. V. Chekhova, D. N. Klyshko,
+quency filtering versus the distance between the crystals.                                      S. P. Kulik, A. N. Penin, Y. H. Shih, and
+Dotted straight line: the shot-noise level.                                                     D. V. Strekalov, PRA 56, 3214–3225 (1997).
+                                                                                            11. D. N. Klyshko, JETP , 105, 1574 (1994).
+                                                                                            12. A. M. Perez, P. Sharapova, O. V. Tikhonova,
+the maxima of the CF, i.e., the cases of fewer modes in                                         M. V. Chekhova, and G. Leuchs, to be submitted
+the angular spectrum, correspond to the peaks of NRF                                            (2014).
+and therefore to reduced squeezing. This is because for                                     13. Andreas Christ, Kaisa Laiho, Andreas Eckstein, Katius-
+fewer angular modes, the setup becomes more critical                                            cia N Cassemiro, and Christine Silberhorn, New Journ.
+to the alignment and, in particular, to the presence of                                         of Phys. 13, 033027 (2011).
+unmatched modes in the two channels [2]. At the same                                        14. W. Wasilewski, A. I. Lvovsky, K. Banaszek, and
+time, a certain mismatch is always present as long as                                           C. Radzewicz, PRA 73, 063819 (2006).
+the signal and idler beams differ in wavelength, because                                    15. E. Brambilla, A. Gatti, M. Bache, and L. A. Lugiato,
+the angle ∆θ is selected by purely geometrical relations                                        Phys Rev A 69, 023802 (2004).
+while in two-color squeezing measurements, the angular                                      16. E. Brambilla, L. Caspani, O. Jedrkiewicz, L. A. Lugiato,
+widths selected in the two channels should scale as the                                         and A. Gatti, Phys Rev A 77, 053807 (2008).
+corresponding wavelengths [2]. Nevertheless, even in the
+case of single-mode generation (L = 11.5 cm), consider-
+
+                                                                                        4
+References
+ 1. M. Bondani, A. Allevi, G. Zambra, M. G. A. Paris, and
+    A. Andreoni, “Sub-shot-noise photon-number correla-
+    tion in a mesoscopic twin beam of light”, Phys. Rev.
+    A 76, 013833(1)-013833(4) (2007).
+ 2. I. N. Agafonov, M. V. Chekhova, and G. Leuchs, “Two-
+    color squeezed vacuum”, PRA 82, 011801 (2010).
+ 3. T. Sh. Iskhakov, A. M. Perez, K. Yu. Spasibko,
+    M. V. Chekhova, and G. Leuchs, “Superbunched bright
+    squeezed vacuum state”, Optics Letters 37, 1919 (2012).
+ 4. P. Grangier, R. E. Slusher, B. Yurke, and A. La-
+    Porta, “Squeezed-Light–Enhanced Polarization Interfer-
+    ometer”, PRL 59, 2153 (1987).
+ 5. A. M. Perez, F. Just, A. Cavanna, M. V. Chekhova, and
+    G. Leuchs, “Compensation of anisotropy effects in a non-
+    linear crystal for squeezed vacuum generation”, Laser
+    Physics Letters 10, 125201 (2012).
+ 6. M. V. Fedorov, M. A. Efremov, P. A. Volkov,
+    E. V. Moreva, S. S. Straupe, and S. P. Kulik, “Anisotrop-
+    ically and High Entanglement of Biphoton States Gen-
+    erated in Spontaneous Parametric Down-Conversion”,
+    Phys. Rev. Lett. 99, 063901-1–063901-4 (2007).
+ 7. P. R. Tapster and J. G. Rarity, “Photon statistics of
+    pulsed parametric light”, J. Mod. Opt. 45, 595–604
+    (1998).
+ 8. F. Paleari, A. Andreoni, G. Zambra, and M. Bondani,
+    “Thermal photon statistics in spontaneous parametric
+    downconversion”, Optics Express, 12, Issue 13, 2816–
+    2824 (2004).
+ 9. O. A. Ivanova, T. Sh. Iskhakov, A. N. Penin, and
+    M. V. Chekhova, “Multiphoton correlations in para-
+    metric down-conversion and their measurement in the
+    pulsed regime”, Quantum Electronics 36, 951–956
+    (2006).
+10. A. V. Burlakov, M. V. Chekhova, D. N. Klyshko,
+    S. P. Kulik, A. N. Penin, Y. H. Shih, and
+    D. V. Strekalov, “Interference effects in spontaneous
+    two-photon parametric scattering from two macroscopic
+    regions”, PRA 56, 3214–3225 (1997).
+11. D. N. Klyshko, “Interference effects ...”, JETP , 105,
+    1574 (1994).
+12. A. M. Perez, P. Sharapova, O. V. Tikhonova,
+    M. V. Chekhova, and G. Leuchs, “Schmidt modes in
+    the angular spectrum of bright squeezed vacuum”, to be
+    submitted (2014).
+13. Andreas Christ, Kaisa Laiho, Andreas Eckstein, Katius-
+    cia N Cassemiro, and Christine Silberhorn, “Probing
+    multimode squeezing with correlation functions”, New
+    Journ. of Phys. 13, 033027 (2011).
+14. W. Wasilewski, A. I. Lvovsky, K. Banaszek, and
+    C. Radzewicz, “Pulsed squeezed light: Simultaneous
+    squeezing of multiple modes”, PRA 73, 063819 (2006).
+15. E. Brambilla, A. Gatti, M. Bache, and L. A. Lugiato,
+    “Simultaneous near-field and far-field spatial quantum
+    correlations in the high-gain regime of parametric down-
+    conversion”, Phys Rev A 69, 023802 (2004).
+16. E. Brambilla, L. Caspani, O. Jedrkiewicz, L. A. Lugiato,
+    and A. Gatti, “High-sensitivity imaging with multi-
+    mode twin beams”, Phys Rev A 77, 053807 (2008).
+
+
+
+
+                                                                5
+

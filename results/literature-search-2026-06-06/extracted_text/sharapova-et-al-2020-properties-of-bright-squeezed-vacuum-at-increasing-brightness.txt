@@ -1,0 +1,598 @@
+                                                            Properties of bright squeezed vacuum at increasing brightness
+
+                                                          P. R. Sharapova,1 G. Frascella,2, 3 M. Riabinin,1 A. M. Pérez,2, 3 O. V. Tikhonova,4, 5
+                                                                  S. Lemieux,6 R. W. Boyd,6, 7 G. Leuchs,2 and M. V. Chekhova2, 3, 4
+                                                                                   1
+                                                                                     Department of Physics, University of Paderborn,
+                                                                                  Warburger Straße 100, Paderborn D-33098, Germany
+                                                             2
+                                                               Max-Planck Institute for the Science of Light, Staudtstr. 2, Erlangen D-91058, Germany
+                                                                   3
+                                                                     University of Erlangen-Nürnberg, Staudtstr. 7/B2, 91058 Erlangen, Germany
+                                                           4
+                                                             Physics Department, Moscow State University, Leninskiye Gory 1-2, Moscow 119991, Russia
+                                                      5
+                                                        Skobeltsyn Institute of Nuclear Physics, Lomonosov Moscow State University, Moscow 119234, Russia
+                                                    6
+                                                      Department of Physics, University of Ottawa, 25 Templeton Street, Ottawa, Ontario K1N 6N5, Canada
+                                                                   7
+                                                                     Institute of Optics, University of Rochester, Rochester, New York 14627, USA
+                                                           Bright squeezed vacuum (BSV) is a non-classical macroscopic state of light, which can be gen-
+                                                        erated through high-gain parametric down-conversion or four-wave mixing. Although BSV is an
+
+
+
+
+arXiv:1905.10109v2 [quant-ph] 3 Dec 2019
+                                                        important tool in quantum optics and has a lot of applications, its theoretical description is still
+                                                        not complete. In particular, the existing description in terms of Schmidt modes fails to explain
+                                                        the spectral broadening observed in experiment as the mean number of photons increases. On the
+                                                        other hand, the semi-classical description accounting for the broadening does not allow to decouple
+                                                        the intermodal photon-number correlations. In this work, we present a new generalized theoretical
+                                                        approach to describe the spatial properties of multimode BSV. In the multimode case one has to
+                                                        take into account the complicated interplay between all involved modes: each plane-wave mode in-
+                                                        teracts with all other modes, that complicates the problem significantly. The developed approach is
+                                                        based on exchanging the (k, t) and (ω, z) representations and solving a system of integro-differential
+                                                        equations. Our approach predicts correctly the dynamics of the Schmidt modes and the broadening
+                                                        of the spectrum with the increase in the BSV mean photon number due to a stronger pumping.
+                                                        Moreover, the model succesfully describes various properties of a widely used experimental con-
+                                                        figuration with two crystals and an air gap between them, namely an SU(1,1) interferometer. In
+                                                        particular, it predicts the narrowing of the intensity distribution, the reduction and shift of the side
+                                                        lobes, and the decline in the interference visibility as the mean photon number increases due to
+                                                        stronger pumping. The presented experimental results confirm the validity of the new approach.
+                                                        The model can be easily extended to the case of frequency spectrum, frequency Schmidt modes and
+                                                        other experimental configurations.
+
+                                                        PACS numbers: 42.65.Lm, 42.65.Yj, 42.50.Lc
+
+
+                                                            I.   INTRODUCTION                                 other works, equations similar to the classical propaga-
+                                                                                                              tion equations were derived and their solutions based on
+                                              At high parametric gain, parametric down-conversion             the Green-function method were suggested [26]. Integro-
+                                           (PDC) and four-wave mixing (FWM) generate bright                   differential equations for PDC with a fixed spectral pro-
+                                           squeezed vacuum (BSV). BSV is a macroscopic non-                   file of the pump were written in [27–29]. The broadband-
+                                           classical state of light with strong photon-number corre-          mode approach for the temporal domain based on the
+                                           lations (twin-beam squeezing) [1–4], quadrature squeez-            independent Schmidt modes was introduced in [27] and
+                                           ing [5], multimode structure [6–8] and polarization entan-         developed in [28]; the Schmidt-mode approach for the
+                                           glement if the generated photons have orthogonal polar-            spatial domain was developed and applied to experiment
+                                           izations [9]. BSV is a promising tool for a lot of applica-        in [30]. This approach describes several BSV effects and
+                                           tions in quantum optics and metrology: imaging [10–14],            is very convenient for the analytical treatment of the
+                                           quantum state engineering [15, 16], non-linear interfer-           problem. However, the Schmidt-mode theory neglects
+                                           ometry [17–19], super resolution and phase sensitivity             the energy mismatch between the pump, signal and idler
+                                           beyond the shot-noise limit [20, 21]. Due to the high              photons and cannot describe the broadening of the spec-
+                                           mean photon number and the large number of modes in-               trum, which is observed in experiment [31] as the BSV
+                                           volved, a theoretical description of BSV is complicated.           gets brighter due to the increase in the parametric gain
+                                                                                                              (stronger pumping).
+                                              Several works on the theoretical description of multi-
+                                           mode BSV are based on the coupled differential equa-                  Moreover, the behaviour of BSV properties with the in-
+                                           tions for the signal and idler plane-wave operators under          crease of the parametric gain can be completely different
+                                           the plane-wave pump approximation [22–25]. This ap-                depending on the geometry of experiment. For PDC in a
+                                           proximation leads to the fact that each plane-wave sig-            single crystal, the spatial intensity distribution has a typ-
+                                           nal mode interacts with only one plane-wave idler mode.            ical ‘sinc-squared’ shape at low parametric gain, and it
+                                           This simplifies the problem significantly and allows to ob-        broadens as the parametric gain increases (see the results
+                                           tain analytical expressions for the output operators. In           below). Similar behavior was observed for the frequency
+                                                                                                                                                           2
+
+spectrum in Ref. [31]. In contrast, a two-crystal configu-             the decomposition, the Hamiltonian becomes
+ration with an air gap in between leads to a complicated                           ZZ
+                                                                               i~Γ                   x2 +y 2
+interference pattern of intensity with side lobes, which                  H=           dks dki d3 re− 2σ2 eikp z ei(−ks −ki )r ×
+gets narrower with increasing parametric gain [17, 30, 32].                     2π
+This configuration is known as the SU(1,1) interferome-                                                        ei(ωs +ωi −ωp )t a†ks a†ki + h.c..(2)
+ter [18] and it has recently attracted a lot of attention
+due to its metrological applications [21, 33–36].                      Here we neglect the dependence of the coefficients Cks,i
+                                                                       on ks,i and suppose that the interaction strength Γ, in-
+   In this work, we present a new theoretical approach to
+                                                                       volving χ(2) (r), the pump field amplitude, and other pa-
+the description of the spatial properties of multimode
+                                                                       rameters is a constant. For simplicity we consider a 2D
+BSV taking into account the mode correlations. Our
+                                                                       model, using only one transverse coordinate x. After in-
+approach is based on exchanging the (k, t) and (ω, z)
+                                                                       tegration over x and substituting dks,i = dqs,i dksz,iz ,
+representations and solving the high-dimensional system
+                                                                       where qs,i are the transverse wavevectors and ksz,iz are
+of integro-differential equations for plane-wave operators.
+                                                                       the longitudinal wavevectors of signal (idler) radiation,
+This approach describes various features of BSV, such as
+                                                                       the Hamiltonian can be represented in the form
+the intensity distribution and the shapes of the Schmidt                         ZZ
+modes, as well as their evolution with increasing para-                      i~Γ                             (qs +qi )2 σ 2
+
+metric gain, both in the case of a single crystal and in               H=             dqs dksz dqi dkiz dze−      2         ei(kp −ksz −kiz )z
+                                                                              2π
+the case of a two-crystal configurations. In full agreement
+                                                                               ×ei(ωs +ωi −ωp )t a†s (qs , ksz , t)a†i (qi , kiz , t) + h.c.             (3).
+with the experiment, the theory predicts the broadening
+of both the intensity distribution and the Schmidt-mode                  This Hamiltonian is written in the momentum-time
+shapes with increasing gain in the case of a single crystal            (k, t) representation. In this picture, the Heisenberg
+and the reduction of the side lobes in the two-crystal con-            equation of motion for the signal plane-wave operators
+figuration. The suggested approach does not include any                takes the form
+limitations on the pump waist width and the number of                                                Z
+                                                                             das (qs , ksz , t)   Γ                  (qs +qi )2 σ 2
+modes, as it was the case in the previous considerations,                                       =      dqi dkiz dze−      2         ×
+and it does not assume that the Hamiltonian commutes                               dt             2π
+with itself at different moments of time.                                          ei(kp −ksz −kiz )z ei(ωs +ωi −ωp )t a†i (qi , kiz , t),              (4)
+   The paper is organized as follows. Section II describes             and similarly for the idler operators. The operators
+the theoretical approach and applies it to the case of
+                                                                       a†s,i (qs,i , ksz,iz , t) and as,i (qs,i , ksz,iz , t) defined before are
+high-gain PDC in a single crystal. The Schmidt modes
+                                                                       the slowly varying parts of creation and annihilation op-
+at variable parametric gain are considered in Section III.
+                                                                       erators. The fast varying components are connected with
+Section IV deals with the two-crystal configuration. In
+                                                                       the slowly varying parts as
+all sections, experimental results are also presented and
+compared with the theory. Finally, Section V is the con-                             a†s,i (qs,i , ksz,iz , t) = eiωs,i t a†s,i (qs,i , ksz,iz , t),
+clusion.
+                                                                            a†s,i (qs,i , z̃, ω̃s,i ) = a†s,i (qs,i , z̃, ω̃s,i )e−iksz,iz (ω̃s,i ,q)z̃ . (5)
+                                                                       The Fourier transformation allows one to pass from
+                                                                       (q, kz , t) to (q, z, ω) representation. For example, for the
+ II.   HIGH-GAIN PDC IN A SINGLE CRYSTAL                               fast varying part of the idler creation operator the Fourier
+                                                                       transformation is
+                                                                                                 Z
+  The Hamiltonian of PDC in a crystal with a quadratic                      †                  1
+                                                                          ai (qi , kiz , t) =      a†i (qi , z̃, ω̃i )eiω̃i t eikiz z̃ dω̃i dz̃. (6)
+susceptibility χ(2) (r) is given by [23]                                                      2π
+
+       Z                                                                  After substituting (6) and (5) in (4) and integrating its
+ H∼         3
+           d rχ (2)                                 (−)
+                      (r)Ep(+) (r, t)Ês(−) (r, t)Êi (r, t) + h.c.,   left and right parts over the interaction time, equation (4)
+                                                                       takes the form
+                                                     (1)
+where Ês,i are electromagnetic field operators for sig-                                           as (qs , ksz , t = τ ) − as (qs , ksz , t = 0) =
+                                                                               Z
+nal/ idler photons, the pump is assumed to be a                          Γ                                             (qs +qi )2 σ 2
+                                                                                    dqi dkiz dz dt dω̃i dz̃e−               2           ei(kp −ksz −kiz )z ×
+classical beam with a Gaussian envelope, propagating                   (2π)2
+                                                  x2 +y 2
+                            (+)
+along the z axis, Ep (r, t) = E0 e− 2σ2 ei(kp z−ωp t) ,                               e−i(ωs +ω̃i −ωp )t eikiz z̃ a†i (qi , z̃, ω̃i )e−ikiz (ω̃i ,q)z̃ , (7)
+with the full width at half maximum     √       (FWHM) of the
+intensity distribution being 2 ln 2σ. By using the                     where time τ corresponds to the end of the interaction.
+                                                      (−)              The operators at the final as (qs , ksz , t = τ ) and initial
+quantization of the electromagnetic field, Ês,i (r, t) =              as (qs , ksz , t = 0) moments of time describe the boundary
+                                  †            †
+  dks,i Cks,i e−i(ks,i r−ωs,i t) aks,i ,where aks,i are the cre-
+R
+                                                                       conditions. Using the boundary conditions, we have an
+ation plane-wave operators, Cks,i are the coefficients of              equality between the operators in the end (beginning) of
+                                                                                                                                                  3
+
+the interaction and operators corresponding to further                          Finally, by solving the system of integro-differential
+(previous) free propagation in the linear medium. Out-                        equations Eq. (10-11) in the form of Eq. (12), var-
+side the nonlinear medium, k and ω are connected by the                       ious characteristics of BSV can be found. For exam-
+dispersion law ω = ω(k) such that as,i (qs,i , ksz,iz , t) does               ple, the mean photon-number distribution over trans-
+not depend on t and as,i (qs,i , z, ωs,i ) does not depend on                 verse wavevectors is
+z. This is the reason for which the boundary conditions
+in different representations are connected: as (qs , ksz , t =                          Ns (qs ) = ha†s (qs , L, ωs )as (qs , L, ωs )i =
+τ ) ∼ as (qs , L, ωs ), as (qs , ksz , t = 0) ∼ as (qs , L = 0, ωs )
+                                                                                                              Z
+[23], where L is the length of the non-linear medium.                                                            dqi0 |β(qs , qi0 , L, Γ)|2 .   (13)
+   In the right-hand part of Eq. (7), integration over time
+and longitudinal momentum leads to the δ− functions,                          In what follows, we assume small angles of emission θs,i ,
+            Z                                                                 so that qs ≈ ks θs , and consider angular intensity distri-
+         1
+                dt e−i(ωs +ω̃i −ωp )t = δ(ω̃i − ωp + ωs ),                    butions.
+        2π
+                           Z                                                     To find the connection between the theoretical parame-
+                        1                                                     ter Γ and the measured experimental gain, we have mod-
+                               dkiz eikiz (z−z̃) = δ(z − z̃),   (8)
+                       2π                                                     elled the single plane-wave mode by calculating the total
+the first of them defines the idler frequency through the                     photon number in the collinear direction (qs = qi = 0)
+signal and pump frequencies.                                                  from Eq. (13) as a function of Γ and fitted this depen-
+                                                                              dence by the well-known dependence for the single-mode
+   The δ− functions allow one to take integrals over dω̃
+                                                                              regime, y = B sinh2 (AΓ), where A and B are the fit-
+and dz̃ and simplify Eq. (7):
+                                                                              ting parameters. Then the parametric gain is defined
+                                       Z    Z L
+                                                     (qs +qi )2 σ 2           as G = AΓ. A similar procedure was performed in the
+as (qs , L, ωs ) − as (qs , 0, ωs ) = Γ dqi     dze−      2         ×         experiment. Using a pinhole, the dependence of the
+                                                   0
+                                                                              total intensity in the collinear direction on the para-
+                    ei(kp −ksz −kiz (ωp −ωs ))z a†i (qi , z, ωp − ωs ). (9)   metric gain was √measured and fitted by the function
+                                                                              y = Be sinh2 (Ae P ), where Ae and Be are the fitting
+Taking a derivative of the left and the right parts of Eq.                    parameters, P is the pump power. In√this case, the ex-
+(9) with respect to the length of the nonlinear medium                        perimental gain is defined as Ge = Ae P , and the theo-
+L leads to the coupled integro-differential equations for                     retical and experimental gains have to coincide.
+the signal/idler annihilation/creation operators,
+                                                                                 To compare the predictions of the described theory
+           das (qs , L, ωs )
+                                Z
+                                        (qs +qi )2 σ 2                        with the experiment, we considered a 2 mm thick BBO
+                             = Γ dqi e−      2
+                                                                              crystal and a pump laser with the wavelength 354.7
+                 dL
+                                                                              nm and with a beam waist of FWHM 170 µm. The
+                      ×ei∆kL a†i (qi , L, ωp − ωs ),                 (10)     transverse wavevector intensity distributions of type-I
+                                                                              PDC were calculated using Eq. (13) for different val-
+where ∆k = kp − ksz (ωs ) − kiz (ωp − ωs ). A similar equa-
+                                                                              ues of the parametric gain G, as shown in Fig. 1.
+tion can be written for the idler frequency,
+                                                                              For ideal experimental conditions the phase mismatch
+        da†i (qi , L, ωp − ωs )
+                                   Z
+                                             (qs +qi )2 σ 2
+                                                                              δk = kp (θaxis , ωp ) − 2ks,i (ωs,i ) = 0, with θaxis being the
+                                = Γ dqs e−        2                           angle between the pump wavevector and the optic axis
+                   dL
+                                                                              of the crystal. Due to imperfect crystal alignment, the
+                           ×e−i∆kL as (qs , L, ωs ).        (11)              phase mismatch can be slightly non-zero. Such a devi-
+                                                                              ation is hard to fix in the experiment but have an im-
+The solution to the system of coupled integro-differential                    portant effect on the shape of the intensity distribution,
+equations (10, 11) can be found in the form                                   which is shown in panels (a) and (b) of Fig. 1.
+                                                                                 It is clearly seen that with increasing parametric gain
+                                 Z
+  as (qs , L, ωs ) = as (qs ) + dqs0 η(qs , qs0 , L, Γ)as (qs0 ) +            the angular intensity distribution broadens. The broad-
+                                Z                                             ening is directly connected with the fact that each sig-
+                                   dqi0 β(qs , qi0 , L, Γ)a†i (qi0 ),         nal plane-wave operator is coupled with all idler plane-
+                                 Z                                            wave operators in integro-differential equations through
+   ai (qi , L, ωi ) = ai (qi ) + dqi0 η ∗ (qi , qi0 , L, Γ)a†i (qi0 ) +
+    †                  †                                                      the functions β and η dependent on Γ.
+                               Z                                                 In experiment, BSV was obtained through PDC
+                                                                              pumped by the third harmonic radiation (wavelength
+                                  dqs0 β ∗ (qi , qs0 , L, Γ)as (qs0 ), (12)
+                                                                              354.7 nm) of a pulsed Nd:YAG laser. The pulsed radia-
+                                                                              tion (pulse width 18 ps, repetition rate 1 kHz) is essential
+where η(qs , qs0 , L, Γ), β(qs , qi0 , L, Γ) are functions of the             to reach the high-gain regime. The intensity distributions
+transverse wavevectors, crystal length and the interac-                       were recorded with a charge-coupled device (CCD) cam-
+tion strength, and as (qs ) = as (qs , L = 0, ωs ) , a†i (qi ) =              era in the Fourier plane of a lens with the focal length
+a†i (qi , L = 0, ωi ) are the initial plane-wave operators.                   of 100 mm. The spectral filtering was performed using
+                                                                                                                                  4
+
+
+
+
+                                                              FIG. 2. The theoretical FWHM of the BSV intensity distri-
+                                                              bution vs parametric gain for a 170 µm FWHM pump (cyan
+                                                              solid line) and plane-wave pump (blue dashed line) calculated
+                                                              according to the approach of Refs. [23, 24], and the experi-
+                                                              mental data (red dots).
+
+
+                                                              idler mode, which greatly facilitates the analysis.
+                                                                 In a simplified Schmidt-mode approach [30], the shapes
+                                                              of the BSV Schmidt modes do not depend on the para-
+                                                              metric gain. In addition, the natural mode competi-
+FIG. 1. The calculated normalized BSV intensity distribu-     tion mechanism, i.e. low-order modes acquiring larger
+tions for different values of the parametric gain and phase   weights at larger gain, leads to the reduction in the num-
+mismatch δk = 4530 m−1 (a) and δk = −3200 m−1 (b).            ber of Schmidt modes with increasing the gain. These
+                                                              two statements lead to the spatial (and frequency) nar-
+                                                              rowing of the intensity distribution, which is in contradic-
+a band-pass filter with the transmission centered around      tion with the observed broadening. The broadening can
+the wavelength 710 nm and with a bandwidth of 10 nm.          be only understood in the framework of the new approach
+   The dependence of the FWHM of the spatial intensity        considered here, and, as shown below, is connected with
+distribution of BSV on the parametric gain for δk = 4530      the mode widths changing with the gain.
+m−1 (we fixed this value in further calculations according       The complex function β in Eq. (12) can be written us-
+to the small mismatch in the experiment) was calculated       ing the Schmidt decomposition with respect to the trans-
+and compared with the experimental data, see Fig. 2.          verse wavevectors,
+In the low-gain regime, the FWHM of the BSV intensity
+distribution coincides with the value calculated using the                              Xp
+                                                                 β(qs , qi0 , L, Γ) =        Λn eiφn un (qs , Γ) ψn (qi0 , Γ) , (14)
+first-order perturbation theory [37]. As the parametric
+                                                                                        n
+gain increases, the FWHM monotonically grows. The
+same tendency is observed in the experiment (red points)      where gain-dependent eigenfunctions un (qs , Γ) and
+and is in good agreement with the theoretical dependence      ψn (qi0 , Γ) for the signal and idler beams, respectively,
+(cyan line). The blue dashed line, calculated for the case    are labeled with the index n, while Λn represent gain-
+of a plane-wave pump, predicts a slower broadening of         dependent weights of the decomposition, and φn are
+the spectrum than the one with a focused pump.                constant phases. Similarly, the function η can be de-
+                                                              composed with eigenvalues Λ̃n , constant phases ϕn , and
+                                                              eigenfunctions vn (qs , Γ) and ξn (qs0 , Γ):
+              III.   SCHMIDT MODES                                                    Xq
+                                                                 η(qs , qs0 , L, Γ) =     Λ̃n eiϕn vn (qs , Γ) ξn (qs0 , Γ) . (15)
+                                                                                        n
+   The BSV radiation is strongly multimode. This mul-
+timode structure is important for a lot of applications       From direct numerical decomposition of β(qs , qi0 , L, Γ)
+[11] but, at the same time, is difficult to analyze. The      and η(qs , qs0 , L, Γ) the following relations between eigen-
+most useful way to describe the multimode BSV radia-          functions are ensued: vn (q, Γ) = un (q, Γ), ξn∗ (q, Γ) =
+tion is by introducing a system of normalized orthogonal      ψn (q, Γ), and the absolute values of all functions are
+Schmidt modes. Within the Schmidt mode basis, each            equal: |ψn | = |un | = |ξn | = |vn |. The gain-dependent
+signal mode is only correlated with a single matching         weights Λn and Λ̃n are different in the low-gain regime
+                                                                                                                                         5
+
+(Λn > Λ̃n ) but are getting closer with increasing the                  (17), leads to
+gain and become equal in the high-gain regime. Using                                              "                            #2
+the Schmidt decompositions in Eqs. (14, 15), we can in-                                    0
+                                                                                                      X
+troduce new photon creation/annihilation operators for                            Cov (q, q ) ∝             Λn un (q) u∗n (q 0 )
+                                                                                                        n
+the collective spatial Schmidt modes (the Schmidt-mode                                              "                          #2
+operators) of the radiation as a result of the nonlinear                                                X
+interaction,                                                                                   +            Λn vn (q) vn∗ (q 0 )
+                                                                                                        n
+                         Z                                                                                                         2
+
+                 A†n =       dqs ξn∗ (qs , Γ) a†s (qs ),
+                                                                                                      X
+                                                                                               +2           Λn un (q) vn (q 0 ) ,      (20)
+                         Z                                                                              n
+                 Bn† =       dqi ψn (qi , Γ) a†i (qi ).        (16)     where we suppose that Λn = Λ̃n for high gain. The first
+                                                                        two terms of Eq. (20) are related to the auto-correlation
+                                                                        of intensity fluctuations, respectively, of the signal and
+The operators A†n and Bn† have the same form but they                   idler beams, while the third one represents the cross-
+are related with the signal and idler plane-wave creation               correlation between the signal and idler radiation.
+operators, respectively. Equations (12) can be written in                  For simplifying the reconstruction of the Schmidt
+terms of the Schmidt operators,                                         modes, in experiment we eliminated the cross-
+                                                q                       correlations between the signal and idler radiation by fil-
+as (qs , L, ωs ) = as (qs ) +
+                                X
+                                    un (qs , Γ)( Λ̃n eiϕn An            tering a wavelength slightly shifted from the degeneracy
+                                n
+                                                                        point, so that the detected signal photons did not have
+                                              p                         idler matches. In this case, in the covariance Eq. (20)
+                                             + Λn eiφn Bn† ),           only the first term should remain, containing the sig-
+                                            q
+ †                  †
+                              X                                         nal Schmidt modes un (q). Simultaneously, if the filtered
+ai (qi , L, ωi ) = ai (qi ) +   vn (qi , Γ)( Λ̃n e−iϕn Bn†
+                                 ∗
+                                                                        wavelengths are still rather close to degeneracy, one can
+                                n
+                                               p                        assume un (q) = vn (q). The Schmidt modes and weights
+                                              + Λn e−iφn An ). (17)     were found by performing the singular value decomposi-
+                                                                        tion (SVD) of the square root of the covariance distribu-
+Equations (17) clearly show that the output signal and                  tion [40].
+idler plane-wave operators are connected with the same
+functions un (q, Γ) = vn (q, Γ), which is because we as-
+sumed frequency degeneracy.
+   The input/output relations (17) are similar to the ones
+of Ref. [30]. However, in Eqs. (17) not only the weights
+Λn , Λ̃n but also the functions un (qs , Γ), vn (qi , Γ) depend
+on the parametric gain Γ. Thereby, the output operators
+are now defined by the Schmidt modes whose shapes are
+gain-dependent. Using Eqs. (17), the intensity distribu-
+tion Eq. (13) can be written in a simple form as a sum of
+the squared absolute values of the Schmidt modes with
+the corresponding weights:
+                              X
+                Ns (qs ) =          Λn |un (qs , Γ) |2 .       (18)
+                                n
+
+
+   The Schmidt eigenmodes and eigenvalues of BSV can
+be reconstructed from the covariance of its intensity dis-
+tribution [39]. Indeed, consider the sum of the contribu-
+tions of the signal and idler radiation for a fixed gain,               FIG. 3. Experimental distribution of the covariance in nor-
+i.e. IΣ (q) = Is (q) + Ii (q), the covariance of intensities            malized units for the parametric gain Ge = 6. Cross-
+measured at positions q and q 0 is defined as                           correlations are removed by using a filter selecting only the
+                                                                        signal radiation. For comparison, the white dashed line de-
+                                                                        notes the 0.5 level of the fitted distribution, shown in the
+     Cov (q, q 0 ) = hIΣ (q) IΣ (q 0 )i − hIΣ (q)i hIΣ (q 0 )i . (19)   inset.
+
+Calculation of the covariance distribution in terms of the                In experiment, we filtered the signal radiation using a
+Schmidt modes, using the input/output relations of Eqs.                 band-pass filter with the central wavelength 700 nm and
+                                                                                                                                            6
+
+a bandwith of 10 nm. Since the length of the nonlin-
+ear crystal was small enough (2 mm), we could neglect
+the effect of spatial walk-off. Accordingly, the BSV ra-
+diation was axially symmetric and one could assume the
+factorability of the x and y degrees of freedom. There-
+fore, the analysis was restricted to the intensity profiles
+along the x direction. For a better signal to noise ratio
+we integrated the intensity distributions in the y direc-
+tion within the range from −2 to 2 mrad of the angle
+qy / |q|, where q = (qx , qy ). Around 2000 single-shot in-
+tensity profiles I (θ) with θ = qx / |q| were measured, and
+the 2D covariance distribution Cov (θ, θ0 ) was calculated.
+   Figure 3 shows the experimental distribution of the
+covariance for Ge = 6 in normalized units. The auto-
+correlation part is distributed along the main diagonal,
+where θ = θ0 . Conversely, the cross-correlation, which       FIG. 4. Dependence of the FWHM of the covariance main
+would lead to nonzero covariance values along the com-        (blue) and complementary (orange) diagonals on the para-
+plementary diagonal θ = −θ0 , is absent due to spectral       metric gain. (Please note the different axis scales.) The solid
+filtering. In order to get rid of the background noise,       lines represent theoretical calculations, while the points stand
+a 2D fit was performed on the covariance distribution.        for the experimental data. The dashed blue line corresponds
+Given the high-gain version of the intensity profile of the   to the main diagonal of covariance calculated under the plane-
+                                                              wave pump approximation [23, 24].
+PDC radiation [24] and the fact that the covariance dis-
+tribution along the main diagonal behaves as the squared
+intensity profile, the function used for the fit was
+                                                              widths strictly depend on the gain. The general tendency
+                                       0 2                    is the broadening of the Schmidt modes with increasing
+         Cov (θ, θ0 ) = A + B e−C (θ−θ ) ×
+                                                              gain, this broadening being more pronounced for higher-
+                r                       2 2               order modes. The theoretical results show a good agree-
+               2      2            0 2
+          sinh     Ge − D (θ + θ ) + E                      ment with the experimental data.
+                                     2     ,      (21)
+                                 2
+                                            
+                 2             0
+               Ge − D (θ + θ ) + E
+                                                                     IV.     TWO-CRYSTAL CONFIGURATION
+with A, B, C, D being fitting parameters and E being
+an experimentally determined quantity dependent on the           The method described above can be extended to the
+phase mismatch. The inset of Fig. 3 demonstrates the fit-     two-crystal configuration, with the two crystals separated
+ted distribution for Ge = 6, which is indeed equivalent to    by an air gap of length d, known in the literature as the
+the experimental one. The white dashed line in the main       SU(1,1) interferometer [7, 18, 33–35]. In this case, one
+figure represents the half-maximum level of the fitted co-    should take into account that during the free propagation
+variance distribution and shows a good agreement with         in the air gap the signal, idler and pump photons acquire 0
+the half-maximum level (in cyan) for the experiment.          an additional phase. This phase creates a factor of ei∆k d
+   The broadening of the covariance distribution with the     standing in front of the integral over the second crystal,
+increase of the parametric gain is shown in Fig. 4. The       where ∆k 0 = kpair −ksair −kiair is the wavevector mismatch
+experimental FWHM follows the predicted trend from            in the air [38]. Considering the problem step by step, we
+the theory for both the main and the complementary            modify Eq. (7) by taking into account the δ - function
+diagonals. For low gain, the theoretical dependence co-       conditions in Eq. (8):
+incides with the covariance obtained through the first-
+order perturbation theory. The dependence of the main
+diagonal on the gain (blue solid curve in Fig. 4) has a                               as (qs , ksz , t = τ ) − as (qs , ksz , t = 0) =
+minimum. This minimum is also observed in the case                   Z
+                                                                                  (q +q )2 σ 2
+                                                                                                Z L
+                                                                                 − s 2i
+of a plane-wave pump (blue dashed line in Fig. 4) and            Γ       dqi e                 [      dzei∆kz a†i (qi , z, ωp − ωs ) +
+qualitatively separates the low- and high-gain regimes.                                       Z 2L
+                                                                                                     0
+   The shapes and the weights of the Schmidt modes                                        0
+
+can be obtained through the SVD of the function                                      ei∆k d              dzei∆kz a†i (qi , z, ωp − ωs )]. (22)
+p                                                                                                L
+   Cov (θ, θ0 ). This procedure has been performed for
+both the theoretical, Eq. (20), and the fitted experimen-     The boundary conditions connect the beginning and
+tal covariance distributions. The results of the recon-       the end of the interaction in different representations:
+struction for different gain values are shown in Fig. 5 for   as (qs , ksz , t = 0) ∼ as (qs , L = 0, ωs ), as (qs , ksz , t = τ ) ∼
+the first and the second Schmidt modes. The shapes of         as (qs , 2L, ωs ).
+the modes are close to the Hermite functions and their           The derivative of Eq. (22) over the parameter L gives
+                                                                                                                                       7
+
+                                                                            in the air, an additional phase is acquired in the gap and
+                                                                            the intensity of light emitted in the collinear direction os-
+                                                                            cillates from minimum to maximum as d increases. Also,
+                                                                            an increase in d leads to more and more frequent inter-
+                                                                            ference fringes in the intensity distribution (Fig. 6 a).
+                                                                               In the experiment, we pumped two nonlinear crystals
+                                                                            with the third harmonic of a pulsed Nd:YAG laser (rep-
+                                                                            etition rate 50 Hz, wavelength 354.7 nm, and pulse dura-
+                                                                            tion 29.4 ps) with a FWHM diameter of approximately
+                                                                            0.3 mm. The two BBO crystals (3-mm thick, cut for de-
+                                                                            generate type-I PDC) were aligned, in turn, for degen-
+                                                                            erate phase matching. A dichroic mirror and a color-
+                                                                            glass filter suppressed the pump after the nonlinear in-
+                                                                            teraction. A band-pass filter selected a 10 nm bandwidth
+                                                                            (FWHM) of the PDC around the wavelength 710 nm. A
+                                                                            lens brought the PDC to the momentum space, where
+                                                                            a CMOS camera was introduced. On the camera, the
+                                                                            background was subtracted and the data was acquired for
+                                                                            200 ms. The pump energy per pulse was measured before
+                                                                            the crystals with a calibrated energy meter. The distance
+                                                                            between the crystals was varied by changing the position
+                                                                            of the first crystal using a translation stage. Neutral den-
+                                                                            sity filters were used to avoid the saturation of the cam-
+                                                                            era. The ring patterns measured with the camera were
+                                                                            then transformed into polar coordinates. The radial pro-
+                                                                            files were obtained by averaging out the polar plots over
+                                                                            the azimuthal angle.
+                                                                               As the pump power increases, the parametric gain in
+                                                                            each crystal grows (the gain after two crystals with a
+                                                                            gap grows non-monotonically). Figure 6 a-c shows the
+                                                                            resulting spectra both calculated (blue) and measured
+                                                                            (red), with the parametric gain and the pump pulse en-
+FIG. 5. a) The first and b) the second Shmidt modes for                     ergy shown in each panel. (In the low-gain case, the mea-
+different parametric gain values: G=5.0 (red), G=5.7 (blue),                surement was not possible because of the small intensity.)
+G=6.6 (black). Solid lines represent theoretical calculations.              Apart of a small shift in the fringes, increasing the pump
+Dashed lines stand for modes retrieved from the experiment.
+                                                                            power leads to the reduction of the side peaks. There-
+                                                                            fore, the envelope of the spectrum gets narrower as the
+                                                                            parametric gain grows, in contrast to the single-crystal
+                                   Z                                        case. Moreover, from Fig. 6 a-c it is clearly seen that
+         das (qs , 2L, ωs )                     (qs +qi )2 σ 2              the visibility of the interference fringes drops down with
+                            =Γ         dqi e−        2           ×
+               dL                                                           increasing pump power. Note that with stronger pump-
+                               0                                            ing the Kerr effect, which leads to an additional phase
+         (ei∆kL (1 − ei∆k d ) a†i (qi , L, ωp − ωs ) +
+                   0
+                                                                            (mostly manifested in the collinear direction) [39], be-
+           +2ei∆k d e2i∆kL a†i (qi , 2L, ωp − ωs )),                 (23)   comes more pronounced and must be taken into account
+                                                                            for the correct description.
+and for the idler creation operator,
+                                                                               In Fig. 6 d-f, one can observe that with increasing the
+      da†i (qi , 2L, ωp − ωs )                                              distance between the crystals, the total angular width
+                                  Z
+                                          (qs +qi )2 σ 2
+                               = Γ dqs e−      2         ×                  of the spectrum for the same pump power (or for the
+                  dL
+                                        0                                   same gain in each crystal) is reduced, as reported in
+               (e−i∆kL (1 − e−i∆k d ) as (qs , L, ωs ) +                    [30]. This happens due to diffraction, which leads to
+                           0
+                 +2e−i∆k d e−2i∆kL as (qs , 2L, ωs )),               (24)   the reduction of the angular width of BSV that overlaps
+                                                                            with the pump and is amplified in the second crystal;
+where a†i (qi , L, ωp − ωs ) and as (qs , L, ωs ) can be found by           diffraction is more pronounced for larger distances. As
+solving Eqs. (10, 11) for the single crystal.                               it was mentioned above, the second mechanism leading
+   The intensity distribution in the presence of the air                    to the narrowing of the spatial intensity distribution in
+gap is completely different from the single-crystal case                    the two-crystal configuration is the increase of the pump
+and depends on the length of the air gap. Due to the dif-                   power (the parametric gain in each crystal). Simultane-
+ferent refractive indices of the pump and BSV photons                       ously, these two mechanisms diminish the number of the
+                                                                                                                            8
+
+
+
+
+FIG. 6. The normalized intensity distributions of BSV in the two-crystals configuration with an air gap. a)-c) The distance
+between the crystals is 10.66 mm, the gain in each crystal is a) G = 0.01, b) G = 1.1, c) G = 2.45. d-f) The gain is fixed,
+G = 3.15, the distance between the crystals is d) 5.58 mm, e) 10.66 mm, f) 23.36 mm. Blue curves are theoretical calculations,
+red curves present the experimental data. The legends also show the values of the pump energy per pulse.
+
+
+Schmidt modes in the system, allowing one to create dif-                           V.    CONCLUSION
+ferent shapes of intensity distributions and to control the
+number of modes in BSV.
+                                                                   We have presented a new theoretical approach to de-
+                                                                 scribe the spatial properties of BSV generated through
+                                                                                                                            9
+
+high-gain PDC. In this approach, we derived and solved           model gives a deep insight into the properties of high-gain
+the integro-differential equations for plane-wave opera-         PDC, its mode structure, the origin of nonclassical corre-
+tors without limitations on the pump waist width, num-           lations; opens a broad opportunities for profound investi-
+ber of modes and commutation of the Hamiltonian at               gation and in-depth understanding of BSV, development
+different moments of time. The developed approach suc-           and implementation of its numerous unique applications.
+cessfully captures a lot of features of BSV. On the one
+hand, it is compatible with the Schmidt-mode represen-
+tation. On the other hand, it properly describes the
+broadening of the spectrum with increasing parametric
+                                                                             VI.   ACKNOWLEDGMENTS
+gain. As a result, the new treatment correctly predicts
+the dependence of the Schmidt mode widths on the para-
+metric gain. The model describes different experimental             Financial support of the Deutsche Forschungsgemein-
+configurations: the single-crystal case and the configura-       schaft(DFG) through TRR 142, Project No. C02 is
+tion of two crystals with an air gap between them. For           gratefully acknowledged. P.R.Sh. thanks the state of
+the verification of our theoretical model, we have per-          Nordrhein-Westfalen for support by the Landesprogramm
+formed several experiments, both with a single-crystal           für geschlechtergerechte Hochschulen. We also acknowl-
+and with a two-crystals PDC source (SU(1,1) interfer-            edge financial support of the DFG project SH 1228/3-
+ometer). The presented experimental results are in good          1 and joint DFG-Russian Science Foundation (RSF)
+agreement with performed theoretical calculations. Our           project SH 1228/2-1, ME 1916/7-1 - No.19-42-04105.
+
+
+
+
+ [1] O. Jedrkiewicz, Y.-K. Jiang, E. Brambilla, A. Gatti, M.     [19] M. V. Chekhova and Z. Y. Ou, Advances in Optics and
+     Bache, L. A. Lugiato, and P. Di Trapani, Phys. Rev. Lett.        Photonics 8, 104 (2016).
+     93, 243601 (2004).                                          [20] G. Brida, I. P. Degiovanni, M. Genovese, M. L. Rastello,
+ [2] M. Bondani, A. Allevi, G. Zambra, M. G. A. Paris, and            and I. R.-Berchera, Opt. Exp. 18, 20572 (2010).
+     A. Andreoni, Phys. Rev. A 76, 013833 (2007).                [21] M. Manceau, G. Leuchs, F. Ya. Khalili, and M.V.
+ [3] G. Brida, L. Caspani, A. Gatti, M. Genovese, A. Meda,            Chekhova, Phys. Rev. Lett. 119, 223604 (2017).
+     and I. R. Berchera, Phys. Rev. Lett. 102, 213602 (2009).    [22] M. I. Kolobov, Rev. Mod. Phys. 71, 1539 (1999).
+ [4] I. N. Agafonov, M. V. Chekhova, and G. Leuchs, Phys.        [23] D. N. Klyshko, Photons and Nonlinear Optics. Gordon
+     Rev. A 82, 011801(R) (2010).                                     and Breach Science Publishers (1988).
+ [5] N. Corzo, A. M. Marino, K. M. Jones, and P. D. Lett,        [24] B. Dayan, Phys. Rev. A 76, 043813 (2007).
+     Opt. Exp. 19, 21358 (2011).                                 [25] E. Brambilla, L. Caspani, O. Jedrkiewicz, L. A. Lugiato,
+ [6] C. K. Law, I. A. Walmsley and J. H. Eberly Phys. Rev.            and A. Gatti, Phys. Rev. A 77, 053807 (2008).
+     Lett. 84, 5304 (2000).                                      [26] W. Wasilewski, A. I. Lvovsky, K. Banaszek, and
+ [7] A. M. Pérez, T. Sh. Iskhakov, P. Sharapova, S. Lemieux,         C. Radzewicz, Phys. Rev. A 73, 063819 (2006).
+     O. V. Tikhonova,M. V. Chekhova, and G. Leuchs, Opt.         [27] A. Christ, B. Brecht, W. Mauerer, and C. Silberhorn,
+     Lett. 39, 2403 (2014).                                           New Journ. of Phys. 15, 053038 (2013).
+ [8] X. Guo, N. Liu, X. Li, Z. Y. Ou, Opt. Exp. 23, 29369        [28] A. Eckstein, B. Brecht, and C. Silberhorn, Opt. Express
+     (2016).                                                          19, 13770 (2011).
+ [9] T. Sh. Iskhakov, I. N. Agafonov, M.V. Chekhova, and G.      [29] R. S. Bennink and R. W. Boyd, Phys. Rev. A 66, 053815
+     Leuchs, Phys. Rev. Lett. 109, 150502 (2012).                     (2002).
+[10] L. A. Lugiato, A. Gatti and E. Brambilla, J. Opt. B:        [30] P. Sharapova, A. M. Pérez, O. V. Tikhonova, and M. V.
+     Quantum Semiclass. Opt. 4, S176S183, (2002).                     Chekhova, Phys. Rev. A 91, 043816 (2015).
+[11] V. Boyer, A. M. Marino, R. C. Pooser, P. D. Lett, Science   [31] K. Yu. Spasibko, T. Sh. Iskhakov, and M. V. Chekhova,
+     321, 544 (2008).                                                 Spectral properties of high-gain parametric down-
+[12] V. Boyer, A.M. Marino, and P. D. Lett, Phys. Rev. Lett.          conversion. Opt. Exp. 20, 7507 (2012).
+     100, 143601 (2008).                                         [32] P. R. Sharapova, O. V. Tikhonova, S. Lemieux, R. W.
+[13] G. Brida, M. Genovese, and I. R. Berchera, Nature Pho-           Boyd, and M. V. Chekhova, Phys. Rev. A 97, 053827
+     tonics 4, 227 (2010).                                            (2018).
+[14] A. Allevi and M. Bondani, J. Opt. 19, 064001 (2017).        [33] F. Hudelist, J. Kong, C. Liu, J. Jing, Z. Y. Ou, and W.
+[15] A. Ourjoumtsev, H. Jeong, R. Tualle-Brouri, and P.               Zhang, Nature Comm. 5, 3049 (2014).
+     Grangier, Nature (London) 448, 784 (2007).                  [34] P. Gupta, B. L. Schmittberger, B. E. Anderson, K. M.
+[16] G. Harder, T. J. Bartley, A. E. Lita, S. W. Nam, T.              Jones, and P. D. Lett, Opt. Exp. 26, 391-401 (2018).
+     Gerrits, and C. Silberhorn, Phys. Rev. Lett. 116, 143601    [35] X. Ma, C. You, S. Adhikari, E. S. Matekole, R. T.
+     (2016).                                                          Glasser, H. Lee, J. P. Dowling, Opt. Exp. 26, 18492-
+[17] S. Lemieux, M. Manceau, P. R. Sharapova, O. V.                   18504 (2018).
+     Tikhonova, R. W. Boyd, G. Leuchs and M. V. Chekhova,        [36] Y. Shaked, Y. Michael, R. Z. Vered, L. Bello, M. Rosen-
+     Phys. Rev. Lett. 117, 183601 (2016).                             bluh, and A. Peer, Nature Comm. s41467-018-03083-5
+[18] B. Yurke, S.L. McCall, and J.R. Klauder, Phys. Rev. A            (2018).
+     33, 4033 (1986).
+                                                                                                                           10
+
+[37] A. V. Burlakov, M. V. Chekhova, D. N. Klyshko,                    Boyd, G. Leuchs, and M. V. Chekhova, J. Opt. 19, no. 4,
+     S. P. Kulik, A. N. Penin, Y. H. Shih, and D. V. Strekalov,        044005 (2017).
+     Phys. Rev. A 56, 3214 (1997).                                [40] M. A. Finger, N. Y. Joly, P. St. J. Russell, and M. V.
+[38] D. N. Klyshko, Zh. Eksp. Teor. Fiz. 104, 2676-268 (1993).         Chekhova, Phys. Rev. A 95, 053814 (2017).
+[39] L. Beltran, G. Frascella, A. M. Pérez, R. Fickler,
+     P. R. Sharapova, M. Manceau, O. V. Tikhonova, R. W.
+

@@ -1,0 +1,1162 @@
+                                                           Propagation of intense squeezed vacuum light in non-linear media
+
+                                                                      J. Rivera-Dean,1, ∗ D. Kanti,2, ∗ P. Stammer,1, 3, ∗ S. Carlström,4 N.
+                                                                      Tsatrafyllis,2 M. Yu Ivanov,4 M. Lewenstein,1, 5 and P. Tzallas2, 6, 7, †
+                                                                           1
+                                                                             ICFO – Institut de Ciencies Fotoniques, The Barcelona Institute
+                                                                           of Science and Technology, Castelldefels (Barcelona) 08860, Spain
+                                                                                    2
+                                                                                      Foundation for Research and Technology-Hellas,
+                                                                   Institute of Electronic Structure & Laser, GR-70013 Heraklion (Crete), Greece
+                                                                          3
+                                                                            Atominstitut, Technische Universität Wien, 1020 Vienna, Austria
+                                                                         4
+                                                                           Max-Born-Institut für Nichtlineare Optik und Kurzzeitspektroskopie,
+                                                                       im Forschungsverbund Berlin e.V. Max-Born-Straße 2 A, 12489 Berlin
+                                                                               5
+                                                                                 ICREA, Pg. Lluís Companys 23, 08010 Barcelona, Spain
+                                                      6
+                                                        Center for Quantum Science and Technologies (FORTH-QuTech), GR-70013 Heraklion (Crete), Greece.
+                                                                  7
+                                                                    ELI-ALPS, ELI-Hu Non-Profit Ltd., Dugonics tér 13, H-6720 Szeged, Hungary
+                                                                                               (Dated: November 5, 2025)
+
+
+
+
+arXiv:2509.19608v3 [quant-ph] 4 Nov 2025
+                                                             Recent developments in quantum light engineering have enabled the use of infrared bright squeezed
+                                                          vacuum (BSV) femtosecond pulses in highly nonlinear optics, particularly strong field physics and
+                                                          high-harmonic generation. However, theoretical studies were focused on the microscopic interaction
+                                                          with a single atom, neglecting the crucial macroscopic aspect of light propagation through the media.
+                                                          This raises a key question: How does BSV propagates in strongly light–driven nonlinear media and
+                                                          how this affects the generation of non-linear optical signals? We address this question by introducing
+                                                          a fully quantized framework that accounts for the propagation in gas media. We find that atomic
+                                                          ionization caused by strong BSV fluctuations and the associated infrared photon losses introduce
+                                                          decoherence effects that can substantially limit the propagation length in the medium, reduce the
+                                                          harmonic yield, and decrease the number of emitted harmonics at high intensities. However, these
+                                                          effects are not detrimental. We identify conditions under which propagation-induced decoherence is
+                                                          minimized while the generated harmonics remain clearly detectable–an issue of particular importance
+                                                          for future studies exploring the connection between strong-field physics and quantum optics. Our
+                                                          results lay the foundation for future studies of BSV in strong-field physics, nonlinear optics, and
+                                                          ultrafast science, and establish a basis for exploring its propagation through all states of matter in
+                                                          a fully quantized framework.
+
+
+                                              Squeezed states of light, first developed decades ago,           in particular BSV states, have also emerged as promis-
+                                           are one of the key resources for quantum technolo-                  ing drivers of extreme nonlinear processes, in particu-
+                                           gies [1, 2]. Recent advances in quantum light engineer-             lar high-harmonic generation (HHG) [33–42], where the-
+                                           ing have dramatically increased their brightness, enabling          oretical studies have shown that IR squeezed light can
+                                           the generation of bright squeezed vacuum (BSV) states               produce harmonics with photon energies beyond those
+                                           in the infrared (IR) regime [3–5]. Together with re-                of conventional laser pulses [33, 34, 37]. Moreover, it
+                                           cent advantages in generating high-photon number non-               has been recently proposed that squeezed coherent states
+                                           classical states and multimode entangled light [6–23],              over a wide spectral range can be engineered via laser
+                                           these sources form key pillars of a rapidly emerging field          interactions inducing strong ground-state depletion [43],
+                                           often referred to as strong-field quantum optics. Born out          through atoms resonantly excited or initially prepared in
+                                           of the synergy between quantum optics and strong laser-             excited states [17, 44], or by driving HHG in strongly
+                                           field physics, this field aims to merge tools and methods           correlated materials [16, 20, 45].
+                                           of these disciplines to both develop new approaches for                So far, however, theoretical investigations of BSV-
+                                           fundamental research and novel applications in quantum              driven HHG have focused on the single-atom response.
+                                           information and ultrafast science at the fully quantized            As emphasized in Refs. [27, 46], assessing the applica-
+                                           level [17, 24–27].                                                  bility of such light sources requires incorporating the
+                                              BSV has already been employed in nonlinear optics                interplay of essential mechanisms such as ionization,
+                                           for the generation of low-order harmonics in optical crys-          ground state depletion, and field propagation through
+                                           tals [4], multiphoton [28] and tunneling-induced [29] elec-         the medium. While these aspects have been exten-
+                                           tron emission, atomic ionization [30, 31], and to probe             sively studied for intense coherent femtosecond laser
+                                           the role of statistical properties of light in atomic spec-         drivers using semiclassical approaches [47–50], and for
+                                           troscopy [32]. High-photon number squeezed states, and              low photon number light sources using fully quantized
+                                                                                                               approaches [51–55], they remain largely unexplored for
+                                                                                                               intense BSV light sources due to the lack of fully quan-
+                                                                                                               tized approaches capable of describing the propagation
+                                           ∗ These authors contributed equally to this work                    of intense BSV light in highly nonlinear media.
+                                           † ptzallas@iesl.forth.gr
+                                                                                                                  Here, we fill this gap by introducing a fully quantized
+                                                                                                                              2
+
+
+
+
+FIG. 1. Schematic of the propagation of intense IR
+BSV in a gas medium. Multiphoton ionization (MPI),
+tunneling ionization (TI), high-harmonic generation (HHG),        FIG. 2. Atomic ionization in a BSV field. (a) Schematic
+and IR scattering (Scat.) are the processes that typically oc-    of the interaction between BSV light pulses and a single Ar
+cur during propagation. |BSV⟩in and ρ̂out depict the IR light     atom. Q(Eα ) represents a marginal of the Husimi distribution
+states entering and exiting a gas medium of length Lm , respec-   of BSV light with a mean intensity ⟨I⟩ = 1.3 × 1014 W/cm2 .
+tively. Nq indicates the generated harmonic photon number.        For a coherent state of the same intensity Q(Eα ) is narrowly
+                                                                  peaked at Eα ≈ 3 × 108 (red-dashed line). (b) Dependence
+                                                                  of the mean ionization probability ⟨Yi ⟩ on ⟨I⟩ of a BSV field
+                                                                  (black line). For comparison, the dependence of ⟨Yi ⟩ on ⟨I⟩
+framework that accounts for the propagation of intense
+                                                                  for interactions with coherent light states is shown in blue.
+BSV in strongly driven nonlinear media. Focusing on
+a gas medium, we analyze conditions under which the
+BSV loses its quantum character due to fundamental
+                                                                  Schrödinger equation (TDSE) including all valence elec-
+processes occurring during propagation: strong-field ion-
+                                                                  trons in the 3s2 and 3p6 -shells (see Appendix B 2). Here-
+ization (SFI), whether in multiphoton (MPI) or tunnel-
+                                                                  after, for reasons of simplicity, we omit the subscript α
+ing (TI) regimes, scattering, and high harmonic gener-
+                                                                  from the amplitude distribution, i.e. Iα ≡ I and Eα ≡ E.
+ation (HHG) (Fig. 1). We consider the interaction of
+Argon (Ar) atoms with intense, linearly polarized BSV                One of the defining features of Q(Eα ) for BSV light
+light carried at λ = 800 nm, for multi-cycle femtosec-            is its remarkably broad nature (Fig. 2(a)) for ⟨I⟩ =
+ond pulses. Using HHG as a nonlinear observable, we               1.3 × 1014 W/cm2 ) which reflects the intrinsic field fluc-
+reveal the central role of decoherence, the probabilistic         tuations of high-intensity squeezed light along the an-
+nature of nonlinear interactions, the atomic ionization           tisqueezed quadrature. This behavior contrasts sharply
+and ground-state depletion induced by the BSV pulse.              with that of coherent states, whose distribution under
+Under conditions that preserve the quantum properties             the same mean intensity conditions is narrowly peaked
+of BSV, we determine the number of high-harmonic pho-             at E ≈ 3 × 108 V/cm. Such distinction has direct exper-
+tons generated and benchmark the results against those            imental implications: while coherent light sources yield
+obtained with conventional coherent laser light sources.          nearly identical intensities across successive laser shots,
+                                                                  BSV pulses exhibit much larger shot-to-shot fluctua-
+                                                                  tions, as encoded in Q(E). On average, these fluctua-
+        Atomic ionization in a BSV light field                    tions follow ⟨I⟩ ∝ sinh2 (r), where r is the squeezing
+                                                                  amplitude, roughly corresponding to r ≈ 17 for obtain-
+                                                                  ing ⟨I⟩ ≈ 1.3 × 1014 W/cm2 under experimental condi-
+  Starting from single-atom interactions, one of the most
+                                                                  tions. This pronounced broadening of the field distribu-
+fundamental steps in HHG is atomic ionization, whose
+                                                                  tion is expected to strongly influence atomic ionization.
+rate we denote as Γ, and that generally depends on the
+                                                                     To illustrate this effect, Fig. 2(b) shows the total ion-
+time-dependent field intensity Γ[Iα (t)]. With this, and
+                                                                  ization yield for both coherent (blue) and BSV (in black)
+for an arbitrary quantum state of light ρ̂, the ionization
+                                                                  light interacting with Ar atoms. The driving field is mod-
+probability reads
+                                                                  eled as a pulse E(t) = Ef (t) cos(ωt + θ), with f (t) taken
+                                                                  as a sin2 -envelope of duration τ = 13 fs. For interactions
+                     Z               Rt
+       ⟨Yi (t)⟩ = 1 − dEα Q(Eα )e− −∞ Γ[Iα (t)]dt ,    (1)        with coherent light states the ionization yield ⟨Yi ⟩ ≈ 2%
+                                                                  occurs at intensities ≈ 1.3 × 1014 W/cm2 , while for inter-
+where Q(Eα ) corresponds to a marginal of the Husimi              actions with BSV, due to the enlarged field fluctuations,
+distribution, which represents the probability density of         the ionization is substantially higher at much lower in-
+finding the quantum state ρ̂ in the coherent state |α⟩.           tensities providing the same ionization yield at intensities
+Equivalently, Q(Eα ) gives the probability of having an           ≈ 9 × 1012 W/cm2 . In the following sections, we discuss
+electric field amplitude Eα (with Eα ∝ α) and inten-              how this strong ionization induced by the BSV signifi-
+sity Iα = cϵ20 Eα2 (where c is the speed of light in vac-         cantly affects both the quantum properties of the BSV
+uum and ϵ0 is the vacuum permittivity) within ρ̂. In our          field and the HHG process during light propagation in a
+case, the rate has been calculated using time-dependent           medium.
+                                                                                                                           3
+
+ Decoherence effects of the BSV field in non-linear
+                       media
+
+
+   Quantum features of non-classical light fields are
+highly sensitive to decoherence effects arising from pho-
+ton losses caused by scattering and absorption as light
+propagates through a medium. In the interaction of BSV
+with gaseous media, the majority of IR photon losses
+originate from absorption due to strong ionization, while
+those caused by scattering and the HHG process itself can
+be considered negligible (see Appendix B 4). The strong
+ionization modifies the quantum properties of the BSV
+state, transforming the initial pure state of the driving    FIG. 3. Decoherence of BSV in non-linear media. (a)
+field |BSV⟩in to a generally mixed state ρ̂out (Fig. 1).     Dependence of the Wigner function W (X1 , X2 ) of the light
+   To quantify this impact, we analyze the evolution         state on the photon losses during the propagation in the
+of the Wigner function W (X1 , X2 ) (Fig. 3(a)) and          medium. Here, X̂1 = (â† + â) and X̂2 = −i(â† − â) are
+the deviation of the product of the optical quadrature       the optical quadrature operators. The left panel corresponds
+                                                             to the W (X1 , X2 ) of an initial BSV state |BSV⟩in , with A = 0
+variances from the Heisenberg uncertainty limit, i.e.,
+                                                             (0% losses) and squeezing parameter r=2. The middle and
+(∆X12 )(∆X22 ) − 1 (Fig. 3(b)) under photon losses [56]      right panels show the W (X1 , X2 ) for A = 1/8 (12.5% photon
+(see Appendix B 5). The optical quadratures are defined      losses) and A = 1/2 (50% photon losses), respectively. (b)
+as X̂1 = (â† + â) and X̂2 = i(â − â† ). At extreme ab-   Dependence of product of variances of the optical quadratures
+sorption (A) values, the product reaches the Heisenberg      on the photon losses minus the Heisenberg limit. The white
+limit, with ρ̂out corresponding either to a pure BSV (no     dashed line depicts the 12% photon losses that we define as
+absorption A = 0) or a vacuum state (maximum ab-             the border above which the BSV state losses its quantumness,
+sorption, A = 1). For intermediate losses, the state is      i.e., for A < 1/8 the BSV preserves the initial quantum fea-
+noisy: although the quadrature distributions retain some     tures |BSV⟩in and for A > 1/8 the state changes to a mixed
+                                                             state ρ̂out . (c) Dependence of A on ⟨I⟩ at different values of
+stretching reminiscent of squeezing, these features do not                                                              (BSV)
+correspond to genuine quantum squeezing below the vac-       Lm for ρat = 1018 atoms per cm3 . (d) Dependence of Lm
+                                                             on ⟨I⟩ for ρat = 10 atoms per cm .
+                                                                                  18              3
+uum level. Based on this, we define that the BSV loses its
+quantumness when photon losses exceed A = 1/8 (12.5%
+of the mean IR photon number ⟨NIR ⟩) (white dashed
+line in Fig. 3(b)). Considering that n IR photons are re-     Propagation of BSV in non-linear media and HHG
+quired to ionize a single atom, the number of absorbed
+IR BSV photons as a function of the medium length Lm
+can be roughly estimated as ⟨Nabs ⟩ = ⟨Yi ⟩nρat SBSV Lm .       Having established the interplay between BSV driv-
+SBSV is the focal spot area of a BSV light beam of           ing fields and strong-field ionization, we now turn to the
+⟨I⟩ = ℏω⟨NIR ⟩/τ SBSV and ρat is the atomic density.         HHG response. For single-atom interactions, Fig. 4(a)
+Based on this, we can estimate the absorption factor         shows the harmonic yield ⟨Nq ⟩ of the 15th harmonic or-
+A = ⟨Nabs ⟩/⟨NIR ⟩ due to strong-field ionization as         der as a function of ⟨I⟩ for both types of fields. In the
+                                                             case of BSV-driven interactions, ⟨Nq ⟩ reaches its maxi-
+                                                             mum within the intensity range ≈ 6 × 1013 to ≈ 2 × 1014
+             ⟨Yi ⟩nρat SBSV Lm   ℏω⟨Yi ⟩nρat Lm              W/cm2 . For coherent light, the corresponding range is
+        A=                     =                ,     (2)
+                   ⟨NIR ⟩            τ ⟨I⟩                   narrower, exhibiting a peak around ≈ 1.3 × 1014 W/cm2 .
+                                                             Hereafter, we define Isat = 1.3 × 1014 W/cm2 as the
+                                                             harmonic saturation intensity, i.e., the value yielding the
+with the condition that A ≤ 1. Figure 3(c) illustrates
+                                                             maximum harmonic output for both fields. This inten-
+the dependence of A on ⟨I⟩ at different values of Lm for
+                                                             sity range is commonly employed in HHG and attosecond
+ρat = 1018 atoms per cm3 . Using Eq. 2 and considering
+                                                             experiments using the interaction of Ar atoms with in-
+the limit A ≲ 1/8, a relation which provides an upper
+                  (BSV)                                      tense coherent light [49, 50, 57], as it provides maximum
+medium length (Lm       ) upon which the BSV preserves       harmonic yield and while keeps the ionization at low lev-
+its quantumness is,                                          els ⟨Yi ⟩ ≈ 2% (Fig. 2(b)), conditions which is important
+                                                             for maintaining the phase matching conditions and at-
+                       τ ⟨I⟩                                 tosecond pulse formation. For a BSV field at this inten-
+             Lm ≲                = L(BSV)
+                                    m     .           (3)    sity range, although the harmonic yield is maximum, the
+                    8ℏω⟨Yi ⟩nρat
+                                                             ionization level is also high ⟨Yi ⟩ ≈ 50% (Fig. 2(b)), an
+                                                             issue that substantially affects the quantum properties
+                      (BSV)
+The dependence of Lm      on ⟨I⟩ for ρat = 1018 atoms        of the BSV and the harmonic yield exiting the medium.
+per cm is shown in Fig. 3(d).
+      3
+                                                             We also, restrict our analysis to this regime, since we can
+                                                                                                                           4
+
+
+
+
+FIG. 4. Propagation of BSV in non-linear media and HHG. The upper panels ((a), (b)) refer to the harmonic yield
+generated when a BSV and coherent fields interact with a single Ar atoms. The lower panels ((c), (b) and (e)) refer to
+the harmonic yield exiting an Ar gas medium when the interaction occurs with BSV and coherent fields. (a) Dependence of
+the mean photon number of the 15th harmonic ⟨N15 ⟩ on ⟨I⟩ of a BSV field (black line). For comparison, the dependence
+of ⟨N15 ⟩ on ⟨I⟩ for interactions with coherent light states is shown with a blue line. (b) HHG spectra generated by BSV
+(black line) and coherent (blue line) fields at ⟨I⟩ = 1.3 × 1014 W/cm2 . (c) Dependence of ⟨N15 ⟩ on the medium length Lm
+generated by BSV (black line) and coherent (blue line) fields without taking into account the BSV decoherence effects in the
+medium. (d) Dependence of ⟨N15 ⟩(Coh.) /⟨N15 ⟩(BSV) on ρat calculated taking into account the BSV decoherence in the medium.
+The calculation has been conducted for Lm = 2La where the BSV preserves its quantumness. For the coherent states the
+calculation has been conducted for Lm > 52 La . (e) HHG spectra generated by BSV (black line) and coherent states (blue
+                                   (BSV)                                          (BSV)
+line) after propagation of Lm ≈ Lm        ≈ 2La and Lm > 25 La , respectively. Nq       indicates the harmonic photon number
+generated by the state ρ̂out ≈ |BSV⟩⟨BSV|.
+
+
+roughly consider that for both fields (BSV and coherent),       ics dominate, thanks to the enhanced field fluctuations
+at higher intensities the yield decreases due to ground-        which allow the BSV to sample higher intensities. At
+state depletion, while at lower intensities is suppressed       ⟨I⟩ ∼ Isat the single-atom harmonic yield is already
+by the HHG nonlinearity.                                        strongly suppressed by the strong ground-state deple-
+   In this analysis, the mean photon number of                  tion, again due to the high intensity fluctuations of the
+the qth harmonic ⟨Nq ⟩ is evaluated as ⟨Nq ⟩ =                  BSV. As a result, around Isat the single-atom HHG yield
+                        ˆ E (t)⟩]|2 , where dˆ is the dipole    for the BSV driver is over an order of magnitude lower
+R
+   dEQ(E)|FT[⟨ψE (t)|d|ψ
+operator, FT[·] denotes the Fourier Transform, and              than for the coherent state driver, with comparable val-
+|ψE (t)⟩ is the electron state driven by E(t), which in-        ues observed across other plateau harmonics (not shown
+corporates ground-state depletion via the ionization rate       in Fig. 4(a) for simplicity). Once ⟨I⟩ > Isat , depletion ef-
+Γ (see Appendix B 3). For BSV drivers, this approach            fects dominate, leading to a rapid reduction of the HHG
+effectively neglects quantum coherence between the dif-         field. The suppression is much faster for the coherent
+ferent coherent-state realizations of the BSV, especially       state driver, as now the BSV-driven atoms benefit from
+natural in the case of strong absorption of the driving         sampling lower intensities. Notably, while HHG driven
+field by the medium. This absorption inevitably entan-          by coherent states exhibits an oscillatory behavior in the
+gles light with medium during propagation. Thus, as             yield due to quantum path interference [58], these inter-
+long as the observation traces out the final state of the       ferences are washed out by the intensity fluctuations of
+generating medium, the quantum coherence between the            the BSV driver.
+different BSV realizations will be lost.                           This broadening of the electric field amplitudes also ex-
+   At low intensities ⟨I⟩ ≪ Isat the BSV-driven harmon-         plains the, relatively smaller here due to the ground state
+                                                                                                                         5
+
+depletion, extension of the highest harmonics observed            Finally, Fig. 4(c) shows ⟨N15 ⟩ as a function of the
+for BSV compared to coherent sources [33]. Figure 4(b)         medium length Lm for BSV (black-line) and coherent
+shows the HHG spectrum for both fields at ⟨I⟩ = Isat ,         (blue–line) state driving fields. Two key features emerge:
+with a cutoff at the 29th harmonic for coherent light and      (i) for both BSV and coherent fields, ⟨N15 ⟩ is maximized
+at the 33rd for BSV. We note, however, that these spec-        when Lm > 52 La ; (ii) in this regime (Lm > 52 La ), the
+tra would correspond to multi-shot averages over single-       photon yield for coherent states exceeds that of BSV by
+atom responses and, at this stage, do not include propa-       about 30 times, i.e., ⟨N15 ⟩(Coh.) /⟨N15 ⟩(BSV) ∼ 30. Taking
+gation or decoherence effects. Importantly, while Nq (I)       into account the decoherence effects and the limitations
+and Yi (I) at a specific intensity I cannot be observed        introduced by Eq. 3, which provide a maximum medium
+experimentally for a BSV driver, they play crucial role        length of Lm ≈ Lm
+                                                                                 (BSV)
+                                                                                        ≈ 2La , we obtain (Methods) that
+in the propagation effects and the resulting decoherence.
+These effects are unavoidable in any experimental con-                        ⟨Nq ⟩(Coh.) /⟨Nq ⟩(BSV) ≳ 50,            (6)
+figuration and significantly influence the emitted HHG         indicating that, for ρat > 2 × 10 atoms per cm3
+                                                                                                      16
+radiation.                                                     (Fig. 4(d)), the conventional coherent laser sources are
+   To account for propagation of the harmonic emission         by more than 50 times more efficient for the generation
+to the detector, we take advantage of the fact that, un-       of plateau harmonics that the BSV states in the ⟨I⟩ = Isat
+der strong BSV driving, the microscopic state of the           regime. In this case the corresponding harmonic spectra
+qth harmonic    can be approximated by the mixed state         are shown in Fig. 4(e) (Methods).
+ρ̂q = dEQ(E) |χq (E)⟩⟨χq (E)|, where χq (E) represents
+      R
+a coherent state of amplitude χq when the process is
+driven by the field E(t) [33, 37]. Then, we incorporate                                Discussion
+on-axis propagation of these states in our calculations,
+and find that the intensity of the qth harmonic mode at           In recent theoretical studies involving the ideal case
+time t and position z after propagation reads                  of interaction with a single atom, it has been shown
+                   Z             h            i                that the harmonic yield and the number of generated
+           ⟨Iq ⟩ = dE Q(E) tr Êq2 (z, t)ρ̂(t)                 harmonic frequencies increase dramatically when using
+                   Z                                   (4)     BSV pulses compared to intense coherent light states
+                                 2
+                 ≈ dE Q(E)Eq (z, t; α),                        [33]. However, our findings show that propagation ef-
+                                                               fects in the medium, limit the practical use of intense
+                                                               BSV sources in strong-field physics and HHG compared
+with Eq (z, t) obeying the propagation equation under the      to intense coherent light. These limitations arise from
+paraxial approximation (see Appendix B 3). This allows         decoherence due to photon losses during propagation—
+to calculate the generated harmonic photon number by           primarily from enhanced ionization in the medium—as
+introducing, via Q(E), the amplitude distribution of the       well as from the broader intensity distribution of BSV
+BSV driving field the into the standard semi-classical         states. Consequently, the effective propagation length in
+propagation equations [49]. For simplicity, we assume          the medium is reduced, and the probability of observing
+that the microscopic atomic response amplitude is in-          events with sufficiently high intensities to generate high
+dependent of the position in the medium—an assump-             harmonics is lower than for coherent states. Moreover,
+tion which is valid when the IR confocal parameter (df )       the nonlinearity of the processes driven by intense BSV
+greatly exceeds the medium length Lm . We also set the         light, combined with atomic ground-state depletion, fur-
+mean intensity to ⟨I⟩ = Isat .                                 ther constraints the HHG yield. As a result of the above,
+   Under these conditions, the mean photon number              when the HHG process is driven by BSV light in a gas
+of the qth harmonic mode exiting on-axis from a gas            medium, the number of the emitted harmonic frequencies
+medium with atomic density ϱat reads                           is very similar to those produced by coherent light, while
+                                                               the harmonic yield is more than 50 times lower than that
+                                                               of the coherent light states.
+                                               
+                               ′        πLm − L′
+   ⟨Nq ⟩ ∝ BNq (I) 1 + e−L − 2 cos             e 2    ,
+                                         Lc                       Nevertheless, the ability to detect a highly nonlinear
+                                                      (5)      observable, such as high harmonics, remains of signif-
+                                                               icant interest for applications in ultrafast science and
+where B = 4ϱ2at La /(1 + 4π 2 (La /Lc )2 ) and L′ = Lm /La .   quantum technologies [25–27]. Thus, it is crucial to ad-
+Here, La = 1/(σ (1) ϱat ) is the absorption length, while      dress the conditions at which the BSV harmonics are de-
+Lc = π/|∆k| is the coherence length, and ∆k is the phase       tectable. To quantify this, we used experimentally and
+mismatch (see Appendix B 3). Finally, Nq depends on            theoretically established HHG conversion efficiencies for
+the quantum properties of the driving field via Nq (I)         Ar atoms (see Appendix B 3). For plateau harmonics
+and Lc (I) ∝ f (Yi (I)), both associated to Q(E). We           driven by a BSV driving field of mean photon number
+                                                                                                                   (BSV)
+illustrate the calculations using the 15th harmonic, and       ∼ 1013 photons per pulse [5], a medium length of Lm       ,
+a gas density of ρat ∼ 1018 atoms/cm3 , typical for HHG        yields ∼ 5 × 10 harmonic photons per pulse exiting the
+                                                                                2
+
+experiments(see Appendix B 3).                                 Ar medium. Such photon numbers are detectable.
+                                                                                                                             6
+
+   An advantage of BSV light over standard coherent             alitat de Catalunya (European Social Fund FEDER and
+states emerges in the intensity range ⟨I⟩ < Isat —a regime      CERCA program. P.S. acknowledges funding from the
+in which coherent light states cannot produce harmon-           European Union’s Horizon 2020 research and innovation
+ics. In this way, we can minimize or even eliminate de-         program under the Marie Skłodowska-Curie grant agree-
+coherence effects, since photon losses caused by atomic         ment No 847517.
+ionization are significantly reduced (Figs. 3(c), (d)), i.e.,
+A ≪ 12%. For example, it can be estimated (see Ap-
+pendix B 4) that for BSV light with ⟨I⟩ ∼ 1013 W/cm2 ,
+the emitted photon number is in the range of 20 photons                                  References
+per pulse, which remains detectable. Therefore, this in-
+tensity regime can also be considered as suitable for the        [1] Ling-An Wu, H. J. Kimble, J. L. Hall, and Huifa Wu,
+generation of high harmonics without BSV light being                 Generation of squeezed states by parametric down con-
+affected by decoherence effects. It is furthermore impor-            version, Phys. Rev. Lett. 57, 2520 (1986).
+tant to emphasize that none of the results presented here        [2] U. L. Andersen, T. Gehring, C. Marquardt, and G.
+can be taken as a proof of the quantum nature of a high-             Leuchs, 30 years of squeezed light generation, Phys. Scr.
+photon-number BSV source, or as evidence that quantum                91, 053001 (2016).
+                                                                 [3] T. S. Iskhakov, I. N. Agafonov, M. V. Chekhova, and
+features are imprinted on the HHG observables. Demon-
+                                                                     G. Leuchs, Polarization-entangled light pulses of 10 5
+strating this would require methods capable of character-            photons, Physical Review Letters 109, 150502 (2012).
+izing quantum states at high photon numbers while min-           [4] K. Y. Spasibko, D. A. Kopylov, V. L. Krutyanskiy, T. V.
+imizing decoherence from passive optical elements—an                 Murzina, G. Leuchs, and M. V. Chekhova, Multiphoton
+issue beyond the scope of this work.                                 effects enhanced due to ultrafast photon-number fluctu-
+   Since ionization, harmonic generation, and light scat-            ations, Phys. Rev. Lett. 119, 223603 (2017).
+tering are ubiquitous in light–matter interactions, our          [5] M. Manceau, K. Y. Spasibko, G. Leuchs, R. Filip, and
+study provides a foundation for understanding the prop-              M. V. Chekhova, Indefinite-mean pareto photon distri-
+agation of intense BSV light across all states of matter,            bution from amplified quantum noise, Phys. Rev. Lett.
+such us the recent works conducted in solids [38, 39].               123, 123606 (2019).
+                                                                 [6] M. Lewenstein, M. F. Ciappina, E. Pisanty, J. Rivera-
+This underlines its relevance for future investigations in
+                                                                     Dean, P. Stammer, T. Lamprou, and P. Tzallas, Gen-
+strong-field physics, nonlinear optics, and ultrafast sci-           eration of optical Schrödinger cat states in intense
+ence [26, 27]. Finally, these findings demonstrate the               laser–matter interactions, Nat. Phys. 17, 1104 (2021).
+need to account for propagation effects when examining           [7] J. Rivera-Dean, T. Lamprou, E. Pisanty, P. Stammer,
+the phase locking of harmonics generated by BSV states,              A. Ordóñez, A. S. Maxwell, M. F. Ciappina, M. Lewen-
+a consideration that is particularly critical for attosecond         stein, and P. Tzallas, Strong laser fields and their power
+science applications.                                                to generate controllable high-photon-number coherent-
+                                                                     state superpositions, Phys. Rev. A 105, 033714 (2022).
+                                                                 [8] P. Stammer, Theory of entanglement and measurement
+                                                                     in high-order harmonic generation, Phys. Rev. A 106,
+                   Acknowledgements                                  L050402 (2022).
+                                                                 [9] P. Stammer, J. Rivera-Dean, T. Lamprou, E. Pisanty,
+   The group of P.T. at FORTH acknowledges the Hel-                  M. F. Ciappina, P. Tzallas, and M. Lewenstein, High
+lenic Foundation for Research and Innovation (HFRI)                  Photon Number Entangled States and Coherent State
+and the General Secretariat for Research and Technology              Superposition from the Extreme Ultraviolet to the Far
+(GSRT) under grant agreement CO2toO2 Nr.:015922,                     Infrared, Phys. Rev. Lett. 128, 123603 (2022).
+                                                                [10] J. Rivera-Dean, P. Stammer, A. S. Maxwell, Th. Lam-
+the European Union’s HORIZON-MSCA-2023-DN-01
+                                                                     prou, P. Tzallas, M. Lewenstein, and M. F. Ciappina,
+project QU-ATTO under the Marie Skłodowska-Curie                     Light-matter entanglement after above-threshold ioniza-
+grant agreement No 101168628 and ELI–ALPS. ELI–                      tion processes in atoms, Phys. Rev. A 106, 063705
+ALPS is supported by the EU and co-financed by                       (2022).
+the European Regional Development Fund (GINOP                   [11] J. Rivera-Dean, P. Stammer, A. S. Maxwell, Th. Lam-
+No. 2.3.6-15-2015-00001). H2020-EU research and in-                  prou, E. Pisanty, P. Tzallas, M. Lewenstein, and M. F.
+novation program under the Marie Skłodowska-Curie                    Ciappina, Quantum-optical analysis of high-order har-
+(No. 847517). ICFO-QOT group acknowledges sup-                       monic generation in H+  2 molecules, Phys. Rev. A 109,
+port from: European Research Council AdG NO-                         033706 (2024).
+QIA; MCIN/AEI (PGC2018-0910.13039/501100011033,                 [12] Á. Gombkötő, S. Varró, B. G. Pusztai, I. Magashegyi,
+CEX2019-000910-S/10.13039/501100011033, Plan Na-                     A. Czirják, S. Hack, and P. Földi, Parametric model
+                                                                     for high-order harmonic generation with quantized fields,
+tional STAMEENA PID2022-139099NB, project funded
+                                                                     Phys. Rev. A 109, 053717 (2024).
+by MCIN/AEI/10.13039/501100011033 and by the                    [13] J. Rivera-Dean, P. Stammer, A. S. Maxwell, T. Lamprou,
+“European Union NextGenerationEU/PRTR" (PRTR-                        A. F. Ordóñez, E. Pisanty, P. Tzallas, M. Lewenstein, and
+C17.I1), FPI); project funded by the EU Horizon 2020                 M. F. Ciappina, Nonclassical states of light after high-
+FET-OPEN OPTOlogic, Grant No 899794, QU-ATTO,                        harmonic generation in semiconductors: A bloch-based
+101168628), Fundació Cellex; Fundació Mir-Puig; Gener-               perspective, Phys. Rev. B 109, 035203 (2024).
+                                                                                                                                7
+
+[14] I. Gonoskov, R. Sondenheimer, C. Hünecke, D. Kar-              [29] J. Heimerl, A. Rasputnyi, J. Pölloth, S. Meier,
+     tashov, U. Peschel, and S. Gräfe, Nonclassical light gen-           M. Chekhova, and P. Hommelhoff, Driving electrons
+     eration and control from laser-driven semiconductor in-             at needle tips strongly with quantum light (2025),
+     traband excitations, Phys. Rev. B 109, 125110 (2024).               arXiv:2503.22464 [quant-ph].
+[15] Th. Lamprou, J. Rivera-Dean, P. Stammer, M. Lewen-             [30] H. Liu, H. Zhang, X. Wang, and J. Yuan, Atomic dou-
+     stein, and P. Tzallas, Nonlinear optics using intense opti-         ble ionization with quantum light, Phys. Rev. Lett. 134,
+     cal coherent state superpositions, Phys. Rev. Lett. 134,            123202 (2025).
+     013601 (2025).                                                 [31] Z. Lyu, F. Sun, Y. Fang, Q. He and Y. Liu, Effect of pho-
+[16] C. S. Lange, T. Hansen, and L. B. Madsen, Excitonic                 ton quantum statistics on electrons in above-threshold
+     enhancement of squeezed light in quantum-optical high-              ionization, Phys. Rev. Res. 7, L012072 (2025).
+     harmonic generation from a mott insulator, Phys. Rev.          [32] G. Mouloudakis and P. Lambropoulos, Pairing super-
+     Lett. 135, 043603 (2025).                                           bunching with compounded nonlinearity in a resonant
+[17] S. Yi, N. D. Klimkin, G. G. Brown, O. Smirnova, S.                  transition, Phys. Rev. A 102, 023713 (2020).
+     Patchkovskii, I. Babushkin, and M. Ivanov, Generation          [33] A. Gorlach, M. E. Tzur, M. Birk, et al.,, High-harmonic
+     of massively entangled bright states of light during har-           generation driven by quantum light, Nat. Phys. 19, 1689
+     monic generation in resonant media, Phys. Rev. X 15,                (2023).
+     011023 (2025).                                                 [34] S. Wang, S. Yu, X. Lai, and X. Liu, High harmonic gener-
+[18] A. Pizzi, A. Gorlach, N. Rivera, A. Nunnenkamp, and I.              ation from an atom in a squeezed-vacuum environment,
+     Kaminer, Light emission from strongly driven manybody               Phys. Rev. Res. 6, 033010 (2024).
+     systems, Nat. Phys. 19, 551–561 (2023).                        [35] P. Stammer, On the limitations of the semi-classical pic-
+[19] E. S. Andrianov and O. I. Tolstikhin, Formation of non-             ture in high harmonic generation, Nat. Phys. 20, 1040
+     classical and non-gaussian states of a strong electromag-           (2024).
+     netic field due to its interaction with free electrons pro-    [36] M. E. Tzur, M. Birk, A. Gorlach, I. Kaminer, M. Krüger,
+     duced by ionization of a target gas, Phys. Rev. A 110,              and O. Cohen, Generation of squeezed high-order har-
+     023115 (2024).                                                      monics, Phys. Rev. Res. 6, 033079 (2024).
+[20] C. S. Lange, T. Hansen, and L. B. Madsen, Electron             [37] J. Rivera-Dean, P. Stammer, M. F. Ciappina, and M.
+     correlation-induced nonclassicality of light from high or-          Lewenstein, Structured squeezed light allows for high-
+     der harmonic generation, Phys. Rev. A 109, 033110                   harmonic generation in classical forbidden geometries,
+     (2024).                                                             Phys. Rev. Lett. 135, 013801 (2025).
+[21] D. Theidel, V. Cotte, R. Sondenheimer, V. Shiriaeva,           [38] S. Lemieux, S. A. Jalil, D. Purschke, N. Boroumand, T.
+     M. Froidevaux, V. Severin, P. Mosel, A. MerdjiLarue,                J. Hammond, D. Villeneuve, A. Naumov, T. Brabec, and
+     S. Fröhlich, K.-A. Weber, U. Morgner, M. Kovacev, J.                G. Vampa, Photon bunching in high-harmonic emission
+     Biegert, and H. Merdji, Evidence of the quantum optical             controlled by quantum light, Nat. Photon. 19, 767–771
+     nature of high-harmonic generation, PRX Quantum 5,                  (2025).
+     040319 (2024).                                                 [39] A. Rasputnyi, Z. Chen, M. Birk, O. Cohen, I. Kaminer,
+[22] E. S. Andrianov and O. I. Tolstikhin, Formation of a                M. Krüger, D. Seletskiy, M. Chekhova, and F. Tani, High-
+     schrödinger cat state of a strong circularly polarized laser        harmonic generation by a bright squeezed vacuum, Nat.
+     field due to thomson scattering by free electrons, Phys.            Phys. 20, 1960 (2024).
+     Rev. A 112, 013117 (2025).                                     [40] R. V. Gothelf, C. S. Lange, and L. B. Madsen, High-order
+[23] S. Imai, A. Ono, N. Tsuji, Electron dynamics induced by             harmonic generation in a crystal driven by quantum light,
+     quantum cat-state light, arXiv:2501.16801 (2025).                   Phys. Rev. A 111, 063105 (2025).
+[24] P. Stammer, J. Rivera-Dean, A. S. Maxwell, T. Lamprou,         [41] M. E. Tzur, C. Mor, N. Yaffe, M. Birk, A. Rasput-
+     A. Ordóñez, M. F. Ciappina, P. Tzallas, and M. Lewen-               nyi, O. Kneller, I. Nisim, I. Kaminer, M. Krüger,
+     stein, Quantum Electrodynamics of Intense Laser-Matter              N. Dudovich, and O. Cohen, Measuring and control-
+     Interactions: A Tool for Quantum State Engineering,                 ling the birth of quantum attosecond pulses (2025),
+     PRX Quantum 4, 010201 (2023).                                       arXiv:2502.09427 [physics].
+[25] U. Bhattacharya, T. Lamprou, A. S. Maxwell, A. Or-             [42] P. Stammer, J. Rivera-Dean, M. F. Ciappina, and
+     donez, E. Pisanty, J. Rivera-Dean, P. Stammer,                      M. Lewenstein, Weak measurement in strong laser field
+     M. F. Ciappina, M. Lewenstein, and P. Tzallas,                      physics (2025), arXiv:2508.09048 [quant-ph].
+     Strong–laser–field physics, non–classical light states and     [43] P. Stammer, J. Rivera-Dean, A. S. Maxwell, Th. Lam-
+     quantum information science., Rep. Prog. Phys. 86,                  prou, J. Argüello-Luengo, P. Tzallas, M. F. Ciappina,
+     094401 (2023).                                                      and M. Lewenstein, Entanglement and squeezing of the
+[26] L. Cruz-Rodriguez, D. Dey, A. Freibert, and P. Stam-                optical field modes in high harmonic generation, Phys.
+     mer, Quantum phenomena in attosecond science, Nature                Rev. Lett. 132, 143603 (2024).
+     Reviews Physics 6, 691 (2024).                                 [44] J. Rivera-Dean, H. B. Crispin, P. Stammer, T. Lamprou,
+[27] Th. Lamprou, P. Stammer, J. Rivera-Dean, N. Tsatrafyl-              E. Pisanty, M. Krüger, P. Tzallas, M. Lewenstein, and
+     lis, M. F. Ciappina, M. Lewenstein, and P. Tzallas, Re-             M. F. Ciappina, Squeezed states of light after high-order
+     cent developments in the generation of non–classical and            harmonic generation in excited atomic systems, Physical
+     entangled light states using intense laser–matter interac-          Review A 110, 063118 (2024).
+     tions, J. Phys. B: At. Mol. Opt. Phys. 58, 132001 (2025).      [45] C. S. Lange and L. B. Madsen, Hierarchy of approxima-
+[28] J. Heimerl, A. Mikhaylov, S. Meier, H. Höllerer, I.                 tions for describing quantum light from high-harmonic
+     Kaminer, M. Chekhova, and P. Hommelhoff, Multipho-                  generation: A Fermi-Hubbard-model study, Physical Re-
+     ton electron emission with non-classical light, Nat. Phys.          view A 111, 013113 (2025).
+     20, 945 (2024).
+                                                                                                                               8
+
+[46] P. Tzallas, Squeezed light effect, Nat. Photon. 17,          [65] Maciej Lewenstein and Pascal Salières and Anne
+     463–464 (2023).                                                   L’Huillier, Phase of the atomic polarization in high-order
+[47] M. Lewenstein, P. Balcou, M. Y. Ivanov, A. L’Huillier             harmonic generation, Phys. Rev. A 4747, 10.1103/Phys-
+     and P. B. Corkum, Theory of high-harmonic genera-                 RevA.52.4747 (1997).
+     tion by lowfrequency laser fields, Phys. Rev. A 49, 2117     [66] P. Salières and A. L’Huillier and M. Lewenstein, Coher-
+     (1994).                                                           ence Control of High-Order Harmonics, Phys. Rev. Lett.
+[48] P. Salières, A. L’Huillier, P. Antoine, M. Lewenstein,            75, 3376 (1995).
+     Study of the spatial and temporal coherence of high-order    [67] S. Carlström, M. Spanner, and S. Patchkovskii, Gen-
+     harmonics, Advances In Atomic, Molecular, and Optical             eral time-dependent configuration-interaction singles. I.
+     Physics 41, 83 (1999).                                            Molecular case, Physical Review A 106, 043104 (2022).
+[49] E. Constant, D. Garzella, P. Breger, E. Mével, C. Dor-       [68] S. Carlström, M. Bertolino, J. M. Dahlström, and
+     rer, C. Le Blanc, F. Salin, and P. Agostini, Optimizing           S. Patchkovskii, General time-dependent configuration-
+     high harmonic generation in absorbing gases: Model and            interaction singles. II. Atomic case, Physical Review A
+     experiment, Phys. Rev. Lett. 82, 1668 (1999).                     106, 042806 (2022).
+[50] R. Weissenbilder, S. Carlström, L. Rego, et al.,, How to     [69] F. A. Ilkov, J. E. Decker, and S. L. Chin, Ionization of
+     optimize high-order harmonic generation in gases, Nat.            atoms in the tunnelling regime with experimental evi-
+     Rev. Phys. 4, 713–722 (2022).                                     dence using Hg atoms, Journal of Physics B: Atomic,
+[51] I. Abram, Quantum theory of light propagation: Linear             Molecular and Optical Physics 25, 4005 (1992).
+     medium, Phys. Rev. A 35, 4661 (1987).                        [70] A. Perelomov, V. Popov, and M. Terent’ev, Ionization
+[52] R. J. Glauber and M. Lewenstein, Quantum optics of                of atoms in an alternating electric field: II, Sov. Phys.
+     dielectric media, Phys. Rev. A 43, 467 (1991).                    JETP 24, 207 (1965).
+[53] J. Jeffers and S. M. Barnett, Propagation of squeezed        [71] P. D. Drummond and C. W. Gardiner, Generalised P-
+     light in dielectrics, J. Mod. Opt. 41, 1121 (1994).               representations in quantum optics, Journal of Physics A:
+[54] M.T. Manzoni, D.E. Chang and J.S. Douglas, Simulating             Mathematical and General 13, 2353 (1980).
+     quantum light propagation through atomic ensembles us-       [72] E. Pisanty, RB-SFA: High Harmonic Generation in the
+     ing matrix product states, Nat. Commun 8, 1743 (2017).            Strong Field Approximation via Mathematica, Github:
+[55] M. G. Raymer, Quantum theory of light in a dispersive             https://github.com/episanty/RB-SFA (2020).
+     structured linear dielectric: a macroscopic hamiltonian      [73] B. Henke, E. Gullikson, and J. Davis, X-ray interactions:
+     tutorial treatment, J. Mod. Opt. 67, 196 (2020).                  photoabsorption, scattering, transmission, and reflection
+[56] U. Leonhardt, Quantum statistics of a lossless beam split-        at e = 50–30,000 ev, z = 1–92, At. Data Nucl. Data
+     ter: SU(2) symmetry in phase space, Physical Review A             Tables 54, 181 (1993).
+     48, 3265 (1993).
+[57] J.-F. Hergott, M. Kovacev, H. Merdji, C. Hubert,
+     Y. Mairesse, E. Jean, P. Breger, P. Agostini, B. Carré,
+     and P. Salières, Extreme-ultraviolet high-order harmonic
+     pulses in the microjoule range, Phys. Rev. A 66, 021801
+     (2002).
+[58] A. Zaïr, M. Holler, A. Guandalini, F. Schapper, J.
+     Biegert†, L. Gallmann, U. Keller, A. S. Wyatt, A. Mon-
+     mayrant, I. A. Walmsley, E. Cormier, T. Auguste, J. P.
+     Caumes, and P. Salières, Quantum path interferences in
+     high-order harmonic generation, Phys. Rev. Lett. 100,
+     143902 (2008).
+[59] Anne L’Huillier and Philippe Balcou and Sebastien Can-
+     del and Kenneth J. Schafer and Kenneth C. Kulander,
+     Calculations of high-order harmonic-generation processes
+     in xenon at 1064 nm, Phys. Rev. A 46, 2778 (1992).
+[60] Muffett, J. E. and Wahlström, Claes-Göran and Hutchin-
+     son, M. H. R, Numerical Modeling of the Spatial Profiles
+     of High-order Harmonics, J. Phys. B: At. Mol. Opt. Phys.
+     27, 5693 (1994).
+[61] J. Peatross and D. D. Meyerhofer, Intensity-dependent
+     atomic-phase effects in high-order harmonic generation,
+     Phys. Rev. A 52, 3976 (1995).
+[62] J. Peatross and M. V. Fedorov and K. C. Kulander,
+     Intensity-dependent phase-matching effects in harmonic
+     generation, J. Opt. Soc. Am. B 12, 863 (1995).
+[63] S. C. Rae, X. Chen, and K. Burnett, Saturation of har-
+     monic generation in one- and three-dimensional atoms,
+     Phys. Rev. A 50, 1946 (1994).
+[64] S. C. Rae and K. Burnett and J. Cooper, Generation and
+     propagation of high-order harmonics in a rapidly ionizing
+     medium, Phys. Rev. A 50, 3438 (1994).
+                                                                                                                              9
+
+                                                          Appendix
+
+                       A.    PROPAGATION FROM A SEMICLASSICAL PERSPECTIVE
+
+                                                  1.    Macroscopic response
+
+   To calculate the macroscopic response of the system, one has to solve the Maxwell equations for the fundamental and
+harmonic fields. This can be done using the slowly varying envelope and paraxial approximations. The fundamentals
+of such an approach have been formulated by [59]. Several groups have used similar approaches to study the effects of
+phase matching, and to perform direct comparison of the theory with experiments [60–64]. One should stress that the
+theory presented in this paper, although based on semi-classical ideas, is very different, since it includes the quantum
+electrodynamical (QED) nature of the electromagnetic (EM) fields.
+   In the following, we present the Maxwell equations for the fundamental and harmonic fields used in the main
+text. Using the slowly varying envelope and paraxial approximations, the propagation equations can be reduced to
+the form (here we use SI units)
+                                                                    ∂E1 (r, t)
+                    ∇2⊥ E1 (r, t) + 2k10 δk1 (r, t)E1 (r, t) + 2ik10            = 0,                                      (A1)
+                                                                        ∂z
+                                                                                  ∂Eq (r, t)    q2 ω2
+                    ∇2⊥ Eq (r, t) + 2kq0 [∆kq0 (z) + δkq (r, t)]Eq (r, t) + 2ikq0            =−       Pq (r, t),          (A2)
+                                                                                     ∂z         ϵ0 c2
+where E1 (r, t), and Eq (r, t) denote the slowly varying (complex) envelopes of the fundamental and harmonic fields,
+respectively, kq0 = qω/c, whereas the rest of the symbols are explained below. The slow time dependence in the
+above equations accounts for the temporal profile of the fundamental field that enters Eq. (A1) through the boundary
+condition for E1 . The solutions of the propagation equations for given t have therefore to be integrated over time.
+  The terms containing ∆kq0 (r, t) describe dispersion effects due to the linear polarisability of atoms, and can be
+in fact neglected in the regime of parameters considered (low density). The terms proportional to δkq (r, t) =
+−e2 Ne (r, t)/(2mqcω), with e denoting the electron charge, m- its mass, and Ne (r, t) the electronic density, de-
+scribe the corrections to the index of refraction due to ionization; here the ionic part of those corrections is neglected.
+The electronic density is equal to the number of ionized atoms
+                                                            Z t                        
+                                 Ne (r, t) = Na (z) 1 − exp −        Γ(|E1 (r, t′ )|) dt′ ,                           (A3)
+                                                                       −∞
+
+where Na (z) is the initial density of the atomic jet and Γ(|E1 (r, t′ )|) is the total ionization rate, taking into account
+                                                                RT
+the contributions of all active electrons using Γ = 2Re[ 0 γ(t)dt/T ] with T = 2π/ω for an instantaneous and local
+value of the electric field envelope E1 (r, t′ ). Note that since Γ depends functionally on E1 (r, t′ ), Eq. (A1) is a nonlinear
+integro-differential equation; it has to be solved first, and its solution is used then to solve Eq. (A2).
+   Finally, the Fourier components of the atomic polarization are given by
+                                                                        Z t                      
+                                                         iqϕ1 (r,t)                      ′      ′
+                            Pq (r, t) = 2Na (z)xq (r, t)e           exp −     Γ(|E1 (r, t )|) dt ,
+                                                                            −∞
+
+where xq (r, t) denotes the harmonic components of the total atomic dipole moment, which includes the couplings
+of all active electrons calculated for a field (|E1x | cos(ωt), |E1y | sin(ωt), 0). The factor of 2 arises from the different
+conventions used in the definitions of Pq and xq . Finally, ϕ1 (r, t) represents the phase of the laser field envelope
+E1 (r, t), obtained by solving the propagation equation for the fundamental.
+
+
+                                                  2.   Phase matching effects
+
+   Phase matching effects depend on many aspects of the HHG process, but in the first place on the dynamically
+induced phase of the atomic polarization [65, 66]. This phase, in general, is “random”, since it includes interference
+of various electronic trajectories. This can be influenced by the propagation effects, leading to phase matching and
+generation of attosecond pulse trains. It can also be compensated by the intrinsic Guoy phase of the driving laser
+pulse [66], leading to on-axis or off-axis generation, for harmonics corresponding to different families of electronic
+trajectories. Propagation might decrease the extent of the plateau of the harmonic spectrum compared to the single
+atom response, from a photon energy of Ip + 3.2Up to about Ip + 2Up .
+                                                                                                                      10
+
+                                       B.      QUANTUM OPTICAL ANALYSIS
+
+                                         1.        Husimi distribution for BSV light
+
+  The Husimi distribution as a function of the electric field amplitude reads,
+                                                              Ex21         Ex22
+                                                                                   
+                                             1
+                                Q(E) =             exp −              −              ,                              (B1)
+                                        π cosh(r)          2(1 + e2r ) 2(1 + e−2r )
+
+where r is the squeezing parameter. The Q(E) is a marginal of the Husimi function π −1 ⟨α|ρ̂|α⟩, with ρ̂. The sign
+of r (whether positive or negative) determines which quadrature is squeezed, namely x1 or x2 . However, for BSV
+states—being centered at the origin of phase space and lacking a coherent displacement—there is no intrinsic phase
+reference. Consequently, the distinction between “amplitude” and “phase” squeezing is arbitrary, and all orientations
+of squeezing are virtually equivalent. Thus, without loss of generalization, we set r > 0. Furthermore, besides having a
+vanishing mean field amplitude, the mean photon number of the state is ⟨n⟩ = sinh2 (r), related to the mean intensity
+through ⟨I⟩ = cℏω⟨n⟩/V , where V is the quantization volume, considered here to be about 10−14 cm3 .
+
+
+                                                       2.   Ionization rates
+
+                                              a.    Ionization rates for classical fields
+
+   Here, we work in the quasistatic approximation, assuming that the ionization rate Γ depends only on the field
+strength, and parametrically on the frequency ω, denoted as Γ[E(t)]. For an atom initially in its ground state, the
+ionization yield can be obtained as
+                                       ∂Yi (t)
+                                               = Γ[E(t)] [1 − Yi (t)] ,       Yi (−∞) = 0,                          (B2)
+                                        ∂t
+with solution
+                                                             Z t            
+                                            Yi (t) = 1 − exp −    dτ Γ[E(τ )] .                                     (B3)
+                                                                      −∞
+
+  The calculations are performed within the time-dependent configuration interaction singles (TD-CIS) ansatz (see
+Refs. [67, 68] for details). More specifically, if |ψ(t)⟩ denotes the solution of the time-dependent Schrödinger equation
+(TDSE) at time t, we approximate the ionization yield as the norm lost from the calculation box, i.e., Yi (t) ≈
+                2
+1 − |ψ(t + tD )| , where an additional time delay tD accounts for the finite time the ionized electron takes to leave the
+box. Consequently, from Eq. (B2), we have
+                                           Z t
+                                                                                2
+                                                  dτ Γ[E(t)] ≈ − ln[|ψ(t + tD )| ].                                 (B4)
+                                              −∞
+
+Neglecting sub-cycle effects, the integral above can be approximated as
+                                        Z t
+                                             dτ Γ[E(t)] ≈ f (t0 ) + Γ(E0 )(t − t0 ),                                (B5)
+                                            −∞
+
+                                              2
+and a straight-line fit to − ln[|ψ(t + tD )| ] is used to extract the ionization rate Γ(E0 ). For numerical reasons, this
+approach yields TDSE ionization rates which are reliable above approximately I0 = 1013 W/cm2 . Below this intensity,
+we instead use PPT rates [69, 70], scaled to match the TDSE rates in the intermediate regime.
+
+
+                               b.   Ionization probability under the influence of quantum light
+
+  If Pbound (t0 ) denotes the probability of the system being in a bound state at the initial time t0 , then at any later
+time this probability satisfies
+                                                                         Z t          
+                        dPbound (t)
+                                    = −Γ(t)Pbound (t) ⇒ Pbound (t) = exp −     dτ Γ(τ ) Pbound(t0 ) ,               (B6)
+                            dt                                              t0
+                                                                                                                          11
+
+which is trivially related to the ionization probability via
+
+                                                     Pion (t) = 1 − Pbound (t).                                         (B7)
+
+For a generic quantum state ρ̂(t) describing the initial state of the system at time t, this probability can equivalently
+be expressed as
+                                                                                 !
+                                                              X
+                                         Pion (t) = 1 − tr          |ψi ⟩⟨ψi | ρ̂ ,                                 (B8)
+                                                                     i∈bound
+
+where {|ψi ⟩ : i ∈ bound} denotes the set of all bound states of the atomic system.
+  When strong-field phenomena are driven with a generic state of light, it can be shown [33, 37] that the final quantum
+state of the joint light-matter system can be written in terms of the generalized positive P representation [71] as
+
+                                                     P (α, β ∗ )
+                                        Z     Z
+                                 ρ̂(t) ≈ d α d2 β
+                                           2
+                                                                 |ϕα (t)⟩⟨ϕβ ∗ (t)| ⊗ ρ̂light (t),                  (B9)
+                                                      ⟨β ∗ |α⟩
+
+with ρ̂light (t) representing the quantum optical state, and |ϕα (t)⟩ the electronic state evolving under the Hamiltonian
+Ĥ = Ĥatom + dˆ · ⟨α, {0}|Ê(t)|α, {0}⟩ where Ê(t) the electric field operator. Inserting this expression into Eq. (B8),
+we obtain
+                                            X Z                 P (α, β ∗ )
+                                                         Z
+                             Pion (t) ≈ 1 −         d2 α d2 β               ⟨ϕβ ∗ (t)|ψi ⟩ ⟨ψi |ϕα (t)⟩ .           (B10)
+                                                                 ⟨β ∗ |α⟩
+                                          i∈bound
+
+   Because we are dealing with strong-fields propagating in free space, we evaluate this expression in the classical
+limit [33, 37]. This requires taking V →√∞ and α → ∞, with V denoting the quantization volume, while ensuring
+that the electric field strength Eα ∝ |α|/ V remains finite. In this limit, we arrive at
+                                              X Z        h                   i
+                                                                                         2
+                               Pion (t) ≈ 1 −      d2 Eα lim P (Eα , Eα ) |⟨ϕα (t)|ψi ⟩|
+                                                                         V →∞
+                                               i∈bound
+                                               Z                                                                      (B11)
+                                                                                         (α)
+                                                          h                   i Rt
+                                         ≈1−        2
+                                                   d Eα       lim P (Eα , Eα ) e− −∞ dτ ΓADK (τ ) ,
+                                                              V →∞
+
+which we refer to as ⟨Yi (t)⟩ in the main text.
+
+
+                                          3.       Analysis of the HHG spectrum
+
+                               a.   Introducing depletion in the analysis of the HHG spectrum
+
+  When driving HHG with very large intensities—typically exceeding 1014 W/cm2 —ground-state depletion effects
+become non-negligible and can significantly reduce the intensity of the emitted harmonics. Under such conditions,
+the standard SFA, which assumes negligible depletion, must be revised. In particular, the usual ansatz
+                                                           Z
+                                        |ψ(t)⟩ = a(t) |g⟩ + dv b(v, t) |v⟩ ,                               (B12)
+
+requires a more accurate treatment of the ground-state amplitude a(t). While typical SFA analyses assume |a(t)| ≈ 1,
+this approximation breaks down at high intensities. To account for depletion, we find that the ground-state amplitude
+evolves according to
+                                                                     1
+                                                                         Rt
+                                                        a(t) ∝ e− 2 −∞ dτ Γ(τ ) ,                                     (B13)
+
+up to a phase prefactor, where Γ(t) denotes the ionization rate.
+  Consequently, when depletion effects are included, the time-dependent dipole moment—used to compute the HHG
+spectrum—takes the form
+                           Z    Z t
+                                           1
+                                             Rt                                                      1 R t1
+   d(t) = ⟨ψ(t)| dˆ|ψ(t)⟩ ≈ dv      dt1 e− 2 −∞ dτ Γ(τ ) e−iS(p,t,t1 ) d p + A(t) E(t1 )d p + A(t1 ) e− 2 −∞ dτ Γ(τ ) , (B14)
+                                                                                 
+                                    t0
+                                                                                                                              12
+
+with S(p, t, t1 ) is the semiclassical action, E(t) the electric field, and d(v) denotes the transition matrix element
+between the ground state and a continuum state |v⟩. In our case, we compute the dipole using the RB-SFA Mathematica
+package [72], chosen for its computational efficiency in generating HHG spectra under the SFA.
+   However, this efficiency relies on the saddle-point approximation, which does not account for depletion effects.
+To incorporate depletion, we exploit one of the package’s features—its ability to treat the vector potential in the
+semiclassical action and the electric field in the dipole matrix element as independent quantities. This flexibility
+allows us to define a modified electric field that incorporates depletion
+                                                                      1
+                                                                          Rt
+                                                   Ẽ(t) = E(t)e− 2 −∞ dτ Γ(τ ) ,                                         (B15)
+so that the dipole moment computed within RB-SFA becomes
+                                     Z   Z t
+                                             dt1 e−iS(p,t,t1 ) d p + A(t) Ẽ(t1 )d p + A(t1 ) ,                           (B16)
+                                                                                            
+                        dRB-SFA (t) ≈ dv
+                                                   t0
+                                                                  1
+                                                                      Rt
+which relates to the full semiclassical dipole via d(t) = e− 2 −∞ dτ Γ(τ ) dRB-SFA (t).
+                                                                                   Rt
+                                                                                        Thus, to fully account for depletion
+                                                                               − 21 −∞
+effects, we simply multiply the RB-SFA dipole by the ionization factor e                dτ Γ(τ )
+                                                                                                 . The HHG spectrum is then
+obtained via a Fast Fourier Transform (FFT) of d(t). Figure S1 shows the limiting Q(α) = limV →∞ P (α, α) function
+for different squeezing intensities (left y axis) alongside the corresponding harmonic yield associated with the range of
+electric field strengths spanned by the Wigner function for various harmonics (right y axis). As observed, a broader
+Q(α) distribution implies that a larger range of electric field strengths contributes; however, beyond a critical field
+strength, the harmonic yield decreases sharply.
+
+
+
+
+FIG. 5. Q(α) function and harmonic yields of various harmonics computed for different mean intensities of the driving BSV
+light. In all cases, we considered a pulse with a sin2 -envelope, 13 fs of duration and central wavelength λ = 800 nm. The atomic
+species under consideration is Argon (Ip = 0.58 a.u.).
+
+
+
+
+                                              b.    Propagation of the electric field
+
+  The main objective of this section is to derive the following classical propagation equation for the qth harmonic
+order
+                                                  ∂Eq
+                                    ∇2⊥ Eq − 2ikq      = −µ0 q 2 ω 2 Pq ei(qk1 −kq )z ,                       (B17)
+                                                   ∂z
+                                                                                                                      13
+
+where z is the propagation direction, and Eq and Pq are the field amplitude and polarization components related
+to the qth harmonic order. First, we will try to understand where this equation comes from a classical perspective.
+Then, we will attempt to do a sort of quantum optical justification for using it in our analysis.
+
+Classical analysis
+For the classical derivation, our starting point are Maxwell equations in a source-free, non-magnetic media that,
+however, has a non-zero electrical susceptibility. These equations are
+                                                                         ∂D                  ∂B
+                            ∇ · D = 0,    ∇ · B = 0,      ∇ × B = µ0         ,      ∇×E =−      ,                  (B18)
+                                                                          ∂t                 ∂t
+where D = ε0 E + P , where P represents the polarization. Combining these equations, we arrive at
+                                                                   ∂2E       ∂2P
+                                          ∇ × ∇ × E = −µ0 ε0           − µ 0     ,                                 (B19)
+                                                                   ∂t2       ∂t2
+which by using the relation
+
+                                           ∇ × ∇ × E = ∇ ∇ · E − ∇2 E,                                             (B20)
+                                                              
+
+can be rewritten as
+                                                               ∂2E    ∂2P
+                                         ∇2 E − ∇ ∇ · E = µ0 ε0 2 + µ0 2 .                                         (B21)
+                                                       
+                                                               ∂t     ∂t
+  Taking into account that P ∝ χ(n) ELn , then from Gauss law we have that
+
+                                              ∇ · D = 0 =⇒ ∇ · E = 0,                                              (B22)
+
+such that Eq. (B21) reads
+
+                                                              ∂2E     ∂2P
+                                              ∇2 E = µ0 ε0      2
+                                                                  + µ0 2 .                                         (B23)
+                                                              ∂t      ∂t
+   This equation is, under the conditions established at the beginning, general and exact; no approximations have been
+done thus far. However, to arrive to Eq. (B17) it is crucial to introduce the paraxial approximation, which essentially
+consists in neglecting second-order spatial derivatives along the propagation direction, thus focusing on what happens
+close to the propagation axis. When expanding the electric field in terms of the harmonic orders
+                                                   X
+                                              E=       Eq ei(kq z+qωt) + c.c.,                                   (B24)
+                                                     q
+
+this results in
+                                                        h              ∂Eq         i
+                                   ∇2 Eq eikq z ≈ eikq z ∇2⊥ Eq + 2ikq     − kq2 Eq ,                              (B25)
+                                              
+                                                                        ∂z
+such that the propagation equation reads
+                                                              ∂Eq     ∂2P
+                                              ∇2⊥ Eq + 2ikq       = µ0 2 .                                         (B26)
+                                                               ∂z     ∂t
+  To conclude, we expand the polarization as
+                                                    X
+                                              P =        Pq ei(qkL z+qωt) + c.c.,                                  (B27)
+                                                     q
+
+given that the qth harmonic order is affected by the qth susceptibility order of the material, proportional to ELq . With
+this, we arrive at
+                                                     ∂Eq
+                                     ∇2⊥ Eq + 2ikq       = −µ0 (qω)2 Pq ei(qk1 −kq )z ,                            (B28)
+                                                      ∂z
+corresponding to Eq. (B17) given initially.
+                                                                                                                                14
+
+Quantum optical analysis
+To present a potential quantum optical formalism that we can make compatible with the propagation calculations we
+have considered thus far, we could consider as starting point the following light-matter interaction Hamiltonian
+                                Z                       Z                                
+                                                      1        1          1           2
+                                      ˆ
+                 Ĥ = Ĥsystem + drJ (r) · A(r, t) +      dr      Π̂(r) +     ∇ × A(r)      + Ĥother ,         (B29)
+                                                      2        ϵ0         µ0
+
+where the first term represents the system Hamiltonian, the second is the interaction term with J (r) the current
+operator, the third is the free-field Hamiltonian while the fourth contains additional terms such as the diamagnetic
+term. In the free-field Hamiltonian, Â(r) is the vector potential operator and Π̂(r) is its conjugate variable. These
+two satisfy
+                                                                            ⊥
+                                                    [Âm (r), Π̂n (r)] = iℏδm,n (r − r′ ),                                    (B30)
+
+with δm,n
+      ⊥
+          (r − r′ ) the transverse Dirac-delta function.
+  For our purposes, we want to look at how the Π̂(r) operator, which in the end is related to the electric field operator,
+evolves in time. For that, we use the Heisenberg equation
+                                                                        i
+                                                         ∂t Π̂i (r) =     [Ĥ, Π̂i (r)].                                      (B31)
+                                                                        ℏ
+In the following, we evaluate the commutator with each of the elements of the Hamiltonian separately. Firstly, we
+have that [Ĥsystem , Π̂i (r)] = 0, so we begin a more in-depth analysis for the free-field Hamiltonian. Considering hat
+part of this Hamiltonian commutes with Π̂i (r), we find that
+                                                                Z
+                                                              1                  2
+                                                                  dr′ ∇ × Â(r′ ) , Π̂i (r) .                      (B32)
+                                                                                          
+                                        [Ĥfield , Π̂i (r)] =
+                                                              2
+
+  Having in mind that (∇ × Â(r))j = k,l εjkl ∂k Âl (r) with εjkl the Levi-Civita symbol, we can write
+                                              P
+
+                                                     2 X
+                                          ∇ × Â(r′ ) =   εjkl εjmn ∂k′ Âl (r)∂m
+                                                                                ′
+                                                                                  Ân (r),                                    (B33)
+                                                                jklmn
+
+such that we can write the commutator within the integral as
+                     2            X          n                                                                           o
+        [ ∇ × Â(r′ ) , Π̂i (r)] =   εjkl εjmn ∂k′ Âl (r′ )[∂m
+                                                              ′
+                                                                Ân (r′ ), Π̂i (r)] + [∂k′ Âl (r′ ), Π̂i (r)]∂m
+                                                                                                               ′
+                                                                                                                 Ân (r′ )
+                                      jklmn
+                                          X                n                                                            o     (B34)
+                                   = iℏ           εjkl εjmn ∂k′ Âl (r′ )∂m
+                                                                          ′ ⊥
+                                                                            δn,i (r′ − r) + ∂k′ δl,i
+                                                                                                 ⊥ ′         ′
+                                                                                                     (r − r)∂m Ân (r′ ) ,
+                                          jklmn
+
+and after integrating by parts, we find for the integral
+   Z                                                  Z                                                         
+                    ′ 2
+                                       X
+        ′                                                ′   ⊥   ′     ′  ′       ′     ⊥ ′         ′ ′        ′
+                                                                                                                              (B35)
+                      
+      dr [ ∇ × Â(r ) , Π̂i (r)] = −iℏ       εjkl εjmn dr δn,i (r − r)∂m ∂k Âl (r ) + δl,i (r − r)∂k ∂m Ân (r ) .
+                                             jklmn
+
+  Now, having in mind the following property of the Levi-Civita symbols
+                                        X
+                                            εjkl εjmn = δkm δln − δkn δlm ,                                                   (B36)
+                                                     j
+
+which introduced in our expressions results in
+            Z                                     XZ                                                            
+                               2
+              dr′ [ ∇ × Â(r′ ) , Π̂i (r)] = −2iℏ    dr′ δ ⊥ (r′ − r)∂m
+                                                                      ′2
+                                                                         Âl (r′ ) − δ ⊥ (r′ − r)∂m
+                                                                                                  ′
+                                                                                                    ∂i′ Âm (r′ ) ,           (B37)
+                                                            m
+
+
+and that, after taking into account that ∂m ∂n Âi = ∂n ∂m Âi , we can more compactly write as
+                    Z                                    Z
+                                     ′ 2
+                       dr [ ∇ × Â(r ) , Π̂i (r)] = −2iℏ dr′ δ ⊥ (r′ − r) ∇2 Âi (r′ ) − ∂i′ ∇ · Â(r′ ) .
+                          ′
+                                                                                                                              (B38)
+                                                                                                      
+                                                                                                                                15
+
+  Working in the Coulomb gauge implies that ∇ · Â(r′ ) = 0, such that the vector potential operator is a transverse
+operator. Consequently, the Dirac delta acts trivially, and we can write
+                                   Z
+                                                        2
+                                      dr′ [ ∇ × Â(r′ ) , Π̂i (r)] = −2iℏ∇2 Âi (r).                          (B39)
+
+resulting in the following evolution of Π̂(r) in the absence of any other contribution
+                                                                         1 2
+                                                         ∂t Π̂i (r) =       ∇ Âi (r),                                      (B40)
+                                                                         µ0
+
+and provided that Π̂i (r) = ε0 ∂t Âi (r), if we derive the whole equation with respect to time we get
+                                                                         1
+                                                        ∂t2 Π̂i (r) =         ∇2 Π̂i (r),                                   (B41)
+                                                                        µ0 ϵ0
+which is the usual wave-equation.
+  The introduction of additional terms results in extra sources. For example, when incorporating the charge current
+we find
+                    Z                                   Z
+                       dr[Jˆ(r) · A(r, t), Π̂i (r)] = iℏ dr′ Jˆi (r)δ ⊥ (r′ − r) = iℏJˆi (r), with i ∈⊥,     (B42)
+
+where only the transverse contributions of the current should contribute as the vector potential is a transverse operator
+by definition. Consequently, the additional terms result in
+                                                   1                             i
+                                  ∂t2 Π̂i (r) =         ∇2 Π̂i (r) − ∂t Jˆi (r) + ∂t [Ĥothers , Π̂i (r)],                  (B43)
+                                                  µ0 ϵ0                          ℏ
+after performing the additional derivative over time. In fact, having in mind that current and polarization are related
+through Jˆ(r) = ∂t P̂ (r), we can rewrite the equation as
+                                                   1                              i
+                                 ∂t2 Π̂i (r) =          ∇2 Π̂i (r) − ∂t2 P̂i (r) + ∂t [Ĥothers , Π̂i (r)],                 (B44)
+                                                  µ0 ϵ0                           ℏ
+
+which essentially resembles Eq. (B23) when
+    • Applying the Ehrenfest theorem such that we essentially deal with mean values;
+    • When neglecting the contribution of the commutator with Ĥothers .
+Propagation for the generated harmonics
+We are interested in the intensity of the harmonics at a given position r and time t. Denoting by ρ̂q the state of the
+qth harmonic order before propagating to the space-time point (r, t), this quantity can be computed as
+                                                            h               i
+                                              ⟨I(r, t)⟩ = tr ρ̂Π̂2i,q (r, t) ,                                  (B45)
+
+with Π̂i,q (r, t) satisfying Eq. (B44). In our specific case, this expression can be rewritten as [42]
+                                               Z
+                                    ⟨I(r, t)⟩ = d2 Eα Q(Eα )⟨χq (Eα )|Π̂i,q (r, t)|χq (Eα )⟩.                               (B46)
+
+  Using the relation D̂† (α)Π̂i,q (r, t)D̂(α) = Π̂i,q (r, t) + Eq (r, t, α), where Eq (r, t, α) = ⟨χq |Π̂i,q (r, t)|χq ⟩, Eq. (B46)
+can be recast as
+                                  Z              h                                                        i
+                    ⟨I(r, t)⟩ = d2 Eα Q(Eα ) Eq2 (r, t, Eα ) + 2Eq (r, t, Eα )Π̂i,q (r, t) + Π̂2i,q (r, t) .                  (B47)
+
+Provided that ||Π̂i,q (r, t)|| ∝ 10−8 a.u. ≪ Eq (r, t, α) this expression can be further approximated by
+                                                         Z
+                                            ⟨I(r, t)⟩ ≈ dEα Q(Eα )Eq2 (r, t, Eα ).                                          (B48)
+                                                                                                                    16
+
+  Applying the Ehrenfest theorem to Eq. (B44), it follows immediately that Eq (r, t, α) can be obtained from
+Eq. (B46) when neglecting the commutator involving Ĥothers . Furthermore, by applying the paraxial approximation,
+Eq (r, t, Eα ) can be computed using Eq. (B17).
+
+Phase mismatch ∆k
+The phase mismatch is given by with ∆k = ∆kmed + ∆kel + ∆kfoc + ∆kdip , with contributions from medium dispersion
+(med), free electrons (el), focusing conditions (foc) and the atomic dipole (dip), respectively [50]. In this work, we
+neglect the focusing and dipole terms, i.e., ∆kfoc ≈ 0 and ∆kat ≈ 0, which is a good approximation for df ≫ Lm and
+for frequencies near a single harmonic order. Thus, we consider ∆k ≈ ∆kmed + ∆kel , with ∆kmed = qk0 − kq and
+
+                                                                e2 ωq ρat Yi (I)
+                                                    ∆kel ≈ −                     .                               (B49)
+                                                                 2ϵ0 cme ω 2
+
+Here, σ (1) , is the single-photon absorption cross section of Ar atoms induced by the harmonics, which is ∼ 10−17 cm2
+in the 20-40 eV photon energy range [73]. The wave numbers of the driving IR and the qth harmonic order are
+k0 = n0 ω0 /c and kq = nq ωq /c respectively, with n0 and nq the corresponding refractive indices. The electron mass is
+denoted as me . For the 15th harmonic, ∆kmed ≈ 2 × 10−6 (rad/cm) [50, 73].
+
+On the derivation of Eq. 6
+In Eq. 6, we consider that for plateau harmonics (⟨Nq ⟩(Coh.) )(⟨Nq ⟩(BSV) ) = (⟨N15 ⟩(Coh.) )(⟨N15 ⟩(BSV) ). We also
+consider that ⟨Nq ⟩(Coh.) and ⟨Nq ⟩(BSV) are the harmonic photon numbers generated by the coherent and BSV states
+                                              (BSV)
+after propagation of Lm ≳ 25 La and Lm ≲ Lm         , respectively. The power spectrum generated by coherent and BSV
+                                                      (BSV)
+states after propagation of Lm ≈ 2 La and Lm ≈ Lm
+                                   5
+                                                            ≈ 2La , respectively, is shown in Fig. 4 (e).
+
+Photon number estimation of high harmonics generated by BSV
+To estimate the photon number of the high harmonics generated by BSV light, we use the experimentally and
+theoretically demonstrated values of conversion efficiency (defined as CES = Nq /NIR ∝ S) of the HHG process in Ar
+atoms (S is the focal spot area of the laser beam in the HHG medium). For interactions of Ar atoms with ≈ 60 fs IR
+                  (coh.)
+laser pulses of NIR      ∼ 2 × 1016 photons per pulse, I ∼ 1014 W/cm2 , ρat ∼ 1018 atoms/cm3 and Scoh. ∼ 5 × 10−4 cm2 ,
+it has been found [57] that the CEScoh. ∼ 5 × 10−6 . Considering that the available BSV sources deliver pulses with
+mean photon number ∼ 1013 photons [4, 5], we have to focus a 60 fs BSV pulse into focal spot area of SBSV ≈ 2.5×10−7
+cm2 in order to reach an intensity of ∼ 1014 W/cm2 . In this case the CESBSV ∼ 2.5 × 10−9 and the estimated harmonic
+                                                                                             (BSV)
+photon number per pulse will be ∼ 2.5 × 104 × ⟨N15 ⟩(BSV) /⟨N15 ⟩(Coh.) . This, for a Lm ≈ Lm      ≈ 2La long medium
+length, results that ∼ 5 × 10 harmonic photons per pulse exiting the Ar medium.
+                                2
+
+   For BSV of mean photon number ∼ 1013 photons and mean intensity ∼ 1013 W/cm2 , the photon losses due to
+ionization can be considered negligible i.e., A ≪ 12%, the focal spot size can be increased to SBSV ≈ 10−6 cm2 .
+Considering that for this BSV intensity, the ⟨N15 ⟩(BSV) is an order of magnitude lower than the corresponding value
+at Isat , we obtain that CESBSV ∼ 10−9 and ⟨N15 ⟩(BSV) /⟨N15 ⟩(Coh.) ∼ 2×10−3 . Therefor the estimated photon number
+exiting the medium is ∼ 104 × ⟨N15 ⟩(BSV) /⟨N15 ⟩(Coh.) = 20 photons per pulse.
+
+
+                               4.   BSV photon losses due to scattering and HHG
+
+  The photon losses induced by IR scattering are on the order of 10−8 photons/cm and can be considered negligible.
+For ϱat ∼ 1018 atoms/cm3 , the photon losses induced by IR scattering are on the order of 10−8 photons/cm and
+can thus be considered negligible. Comparing the ionization probabilities (Fig. 2(b)) with the harmonic generation
+probabilities (Fig. 4(a)), we see that the major part of the IR photon losses is associated with the atomic ionization.
+
+
+      5.   Second-order autocorrelation and optical quadratures variance for a driver with photon losses
+
+  Generally, the initial state can be expressed in terms of the generalized positive P -representation as
+
+                                                                      P (α, β ∗ )
+                                                Z          Z
+                                         ρ̂ =         2
+                                                     d α       d2 β               |α⟩⟨β ∗ | .                    (B50)
+                                                                       ⟨β ∗ |α⟩
+                                                                                                                            17
+
+
+
+
+FIG. 6. (a) Variance of X̂1 for the noiseless state compared to the same state with photon losses. (b) Same as (a), but for X̂2
+and multiplied by a minus sign. (c) Product of both variances minus the Heisenberg limit.
+
+
+Introducing photon losses modeled through a noisy beam splitter—an appropriate description for gaussian
+environments—we obtain for the reduced state of the driver
+                              Z     Z
+                                           P (α, β ∗ ) √          √           √        √
+                          ˆ
+                          ρ̃ = d α d2 β
+                                  2
+                                                         1 − tβ ∗
+                                                                    1 − tα |α   t⟩⟨β ∗
+                                                                                         t|.     (B51)
+                                            ⟨β ∗ |α⟩
+From this expression it follows directly that any n-order autocorrelator can be written as
+                                        Z    Z
+                                                   P (α, β ∗ ) √         √           √ √
+                   ⟨â†n ân ⟩noisy = tn d2 α d2 β    ∗
+                                                                 1 − tβ ∗ 1 − tα ⟨β ∗ t|α t⟩β n αn .                    (B52)
+                                                    ⟨β |α⟩
+  Interestingly, provided that
+                                              √    √
+                                                                                
+                                                           t   2        2
+                                          ∗
+                                                                                                                        (B53)
+                                                                               
+                                      ⟨β t|α t⟩ = exp − |α| + |β| − 2βα ,
+                                                           2
+                         √             √          √ ∗√
+we immediately find that   1 − tβ ∗ 1 − tα         tβ    tα = ⟨β ∗ |α⟩. Hence, we obtain
+                                                Z     Z
+                           ⟨â†n ân ⟩noisy = tn d2 α d2 βP (α, β ∗ )β n αn = tn ⟨â†n ân ⟩0 .                         (B54)
+
+and in particular the following expression for the g (2) (0) function
+                                                         (2)          (2)
+                                                        gnoisy (0) = g0 (0).                                            (B55)
+
+   It is worth noting, however, that g (2) (0) becomes ill-defined when t = 0. In this case, both the numerator (⟨â†2 â2 ⟩)
+and denominator (⟨â† â⟩) vanish, preventing a meaningful definition of g (2) (0). For intermediate values of t, although
+g (2) (0) may remain identical to that of the original state, this does not imply that the final state exhibits squeezing.
+To assess squeezing, it is necessary to evaluate the variances of the optical quadratures. Using
+                                                                 √
+                                                    ⟨â⟩noisy = t⟨â⟩0 ,                                             (B56)
+
+and defining X̂1 = (â† + â) and X̂2 = −i(â† − â), we obtain
+                                               √
+                                  ⟨X̂i ⟩noisy = t⟨X̂i ⟩0 , ⟨X̂i2 ⟩noisy = t ⟨X̂i2 ⟩0 − 1 + 1,                           (B57)
+                                                                                        
+
+so that the variances read
+                                                  ∆Xi2 |noisy = t∆Xi2 |0 + (1 − t),                                     (B58)
+with ∆X12 |0 = e2r and ∆X22 |0 = e−2r for a BSV state with squeezing parameter r.
+  Figure 6 shows the variances along different optical quadratures (panels (a) and (b)), as well as the products of
+these variances (panel (c)). Several features can be highlighted:
+                                                                                                                            18
+
+   • Panel (a). Displays the variance of X1 (antisqueezed quadrature), computed as the difference between that of
+     the noiseless state and the noisy one. As t increases, the distribution becomes more concentrated compared to
+     the ideal, lossless case.
+   • Panel (b). Shows the variance of X2 (squeezed quadrature) of the noisy state minus that of the noiseless one—
+     the opposite of panel (a). This difference is always positive, indicating that squeezing is gradually lost along this
+     quadrature as photon losses increase.
+   • Panel (c). Displays the product of both variances minus 1, corresponding to the Heisenberg limit in our
+     notation. We observe the product of the variances exceeds one for noisy states and reaches zero only at the
+     extremes (either a pure BSV or a vacuum state). In between, the state is noisy: although it retains some
+     stretching reminiscent of squeezing, these features do not correspond to genuine quantum squeezing.
+
+
+                                             C.    On the calculation of ⟨Nq ⟩
+
+  In Fig. 7, we illustrate the calculations using the 15th harmonic, and a gas density of ρat ∼ 1018 atoms/cm3 , typical
+for HHG experiments. The mean intensity was set at ⟨I⟩ = Isat . Figure 7(a) shows the dependence of Lc (green
+curve) and La (red line) on the driving intensity. Here, I corresponds to the intensity values sampled from the Q(E)
+distribution of a BSV field with ⟨I⟩ = Isat . The black line in Fig. 7(b) displays the dependence of N15 on I across the
+Q(E) distribution for a BSV field, computed for Lm = 10La . The maximum N15 occurs around I ≈ 9 × 1013 W/cm2 .
+At higher intensities, N15 drops sharply due to strong ionization. Averaging over Q(E) yields ⟨N15 ⟩ (black point),
+which is about thirty times smaller than the value obtained for a coherent state (blue point). Finally, Fig. 4(c) of
+the main text shows ⟨N15 ⟩ as a function of the medium length Lm for BSV (black-line) and coherent (blue-line) state
+driving fields.
+
+
+
+
+FIG. 7. (a) The green-line shows the dependence of the coherence length Lc on the intensity of driving field I. The red-line is
+the constant absorption length La . It is noted that, I corresponds to each intensity value in the Q(E) distribution of a BSV
+light with ⟨I⟩ = Isat (x-axis in Fig.2(a) of the main text of the manuscript). (b) The black-line shows the dependence of N15
+on each intensity I in the Q(E) distribution of the BSV field, for Lm = 10La . The black and blue points show the ⟨N15 ⟩ of the
+BSV and coherent states, respectively.
+

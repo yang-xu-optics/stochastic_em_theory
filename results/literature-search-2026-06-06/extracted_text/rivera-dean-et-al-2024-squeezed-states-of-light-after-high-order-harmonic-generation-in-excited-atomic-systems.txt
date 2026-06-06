@@ -1,0 +1,1241 @@
+                                                 Squeezed states of light after high-harmonic generation in excited atomic systems
+
+                                                            J. Rivera-Dean,1, ∗ H. B. Crispin,2, 3, 4, 5, 6 P. Stammer,1, 7 Th. Lamprou,8 E. Pisanty,9
+                                                                M. Krüger,4, 5, 6 P. Tzallas,8, 10 M. Lewenstein,1, 11 and M. F. Ciappina2, 3, 12, †
+                                           1
+                                               ICFO – Institut de Ciencies Fotoniques, The Barcelona Institute of Science and Technology, 08860 Castelldefels (Barcelona)
+                                                      2
+                                                        Physics Program, Guangdong Technion–Israel Institute of Technology, Shantou, Guangdong 515063, China
+                                                               3
+                                                                 Guangdong Provincial Key Laboratory of Materials and Technologies for Energy Conversion,
+                                                                 Guangdong Technion – Israel Institute of Technology, Shantou, Guangdong 515063, China
+                                                         4
+                                                           Department of Physics, Technion – Israel Institute of Technology, Technion City, Haifa, 32000, Israel
+                                                           5
+                                                             Solid State Institute, Technion – Israel Institute of Technology, Technion City, Haifa, 32000, Israel
+                                                    6
+                                                      Helen Diller Quantum Center, Technion – Israel Institute of Technology, Technion City, Haifa, 32000, Israel
+                                                                             7
+                                                                               Atominstitut, Technische Universität Wien, 1020 Vienna, Austria
+                                                                                        8
+                                                                                          Foundation for Research and Technology-Hellas,
+                                                                       Institute of Electronic Structure & Laser, GR-70013 Heraklion (Crete), Greece
+                                                                              9
+                                                                                Attosecond Quantum Physics Laboratory, Department of Physics,
+
+
+
+
+arXiv:2408.07577v2 [quant-ph] 6 Jan 2025
+                                                                            King’s College London, Strand WC2R 2LS, London, United Kingdom
+                                                                     10
+                                                                        ELI-ALPS, ELI-Hu Non-Profit Ltd., Dugonics tér 13, H-6720 Szeged, Hungary
+                                                                                  11
+                                                                                     ICREA, Pg. Lluís Companys 23, 08010 Barcelona, Spain
+                                                                               12
+                                                                                  Technion – Israel Institute of Technology, Haifa, 32000, Israel
+                                                                                                    (Dated: January 8, 2025)
+                                                              High-harmonic generation (HHG) has recently emerged as a promising method for generating non-
+                                                           classical states of light with frequencies spanning from the infrared up to the extreme ultraviolet
+                                                           regime. In this work, we theoretically investigate the generation of squeezed states of light through
+                                                           HHG processes in atomic systems that had been initially driven to their first excited state. Our study
+                                                           reveals significant single-mode squeezing in both the driving field and low-order harmonic modes. Ad-
+                                                           ditionally, we characterize two-mode squeezing features in the generated states, both between funda-
+                                                           mental and harmonic modes, and among the harmonic modes themselves. Using these correlations,
+                                                           we demonstrate the generation of optical Schrödinger kitten states through heralding measurements,
+                                                           specifically via photon subtraction in one of the modes influenced by two-mode squeezing.
+
+
+                                                              I.     INTRODUCTION                               prominent examples of nonlinear optical phenomena
+                                                                                                                known to date, its capabilities for generating squeezed
+                                              Non-classical states of light are defined as states whose         states and other non-classical states of light have only re-
+                                           properties cannot be described by classical electromag-              cently been explored [24, 25]. In HHG, high-intensity in-
+                                           netism, and therefore require the framework of quantum               frared (IR) radiation is upconverted into high-frequency
+                                           optics. These states have become crucial for the devel-              radiation after subfemtosecond electron dynamics driven
+                                           opment of photonic quantum technologies [1], provid-                 in a given matter system, producing frequencies that
+                                           ing versatile and resilient tools for quantum information            span from the infrared regime to the extreme ultravio-
+                                           science applications [2–6]. Among them, squeezed states              let (XUV) [26–28]. Consequently, HHG has been used in
+                                           have been of fundamental importance. These states ex-                various applications: from the generation of XUV radia-
+                                           hibit reduced levels of noise for specific physical observ-          tion sources [29, 30] to attosecond science [31, 32]. Within
+                                           ables compared to classical states, at the expense of in-            a quantum optical context, recent experimental [24, 33–
+                                           creased uncertainty in the corresponding conjugate ob-               35] and theoretical [36–40] studies have shown that HHG
+                                           servable, while still complying with Heisenberg’s uncer-             can produce states of light with seemingly non-classical
+                                           tainty principle [7–9]. For this reason, they have been              features, including squeezed states, as evidenced in exper-
+                                           essential for improving measurement sensitivity in inter-            iments [41] and theoretical models [42–44]. Furthermore,
+                                           ferometric setups [10–17]. Additionally, they have been              squeezed states have been used to drive HHG processes
+                                           used as a source of more elaborate non-classical states of           both experimentally [45, 46] and theoretically [47, 48],
+                                           light [18–20].                                                       with predictions suggesting the generation of high-order
+                                              The generation of squeezed states in practice typically           harmonic squeezed states [49].
+                                           relies on nonlinear optical processes such as four-wave                 The generation of squeezed states and other non-
+                                           mixing [11], optical parametric oscillators [21, 22], or             classical states of light directly from classical HHG se-
+                                           optical parametric amplification [23]. However, despite              tups, where a classical driving field interacts with a mat-
+                                           high-harmonic generation (HHG) being one of the most                 ter system, strongly depends on the cross-talk between
+                                                                                                                different energy levels of the system. In Ref. [42], the ob-
+                                                                                                                served squeezing and entanglement features resulted from
+                                                                                                                correlations between the time-dependent dipole moment
+                                           ∗ javier.rivera@icfo.eu
+                                                                                                                at different times. These correlations become significant
+                                           † marcelo.ciappina@gtiit.edu.cn
+                                                                                                                when fields with sufficient intensity are used, which in-
+                                                                                                                                    2
+
+evitably causes non-negligible depletion of the ground         classical states of light, such as optical Schrödinger kitten
+state of the system [50, 51]. Under these conditions,          states, via heralding measurements, specifically through
+substantial squeezing was observed in the fundamental          photon substraction in one of the modes affected by two-
+mode, with properties depending on the specific exci-          mode squeezing. This approach offers an alternative to
+tation conditions. In Ref. [43], a theoretical analysis of     the postselection schemes described in Refs. [33, 34, 38–
+HHG driven in a 1D Fermi-Hubbard model revealed sig-           40] for producing optical Schrödinger kitten-like states
+nificant non-classical features on the field when the mat-     via HHG processes.
+ter system was in the Mott-insulating phase, where the
+coupling between different sites in the chain becomes non-
+vanishing. Conversely, these features were absent in the               II.    THEORETICAL BACKGROUND
+corresponding uncorrelated phase. Similar results were
+observed in the context of HHG in semiconductor ma-               Our analysis is based on solving the time-dependent
+terials [52], attributed to the delocalized nature of the      Schrödinger equation describing the interaction of an
+electron dynamics resulting in HHG [53, 54]. Further-          atomic system with a quantized field, assuming    Nqthe ini-
+more, in solid-state systems, experimental observations        tial state of the system is |Ψ(t0 )⟩ = |e⟩ ⊗ |αL ⟩ q=2
+                                                                                                                   c
+                                                                                                                      |0q ⟩.
+have indicated the presence of two-mode squeezing fea-         This implies that the electron is initially in the (non-
+tures between low-order harmonics [41], which seem to          degenerate) first excited state of the atom (|e⟩), and
+result from Bloch oscillations of electrons within the con-    the field is in a product of coherent states where mode
+duction band of the solid [55].                                q = 1 ≡ L has amplitude |αL | ≫ 1, with the rest in
+   In this work, we deviate from these studies by con-         the vacuum state. This scenario can be prepared by first
+sidering the active participation of excited states of         applying a π-pulse resonant with the transition between
+atomic systems during the HHG process [56–58]. Re-             the atomic ground (|g⟩) and first excited states, followed
+cently, Ref. [44] demonstrated that the backaction of gen-     by a strong-laser field represented by the coherent state
+erated harmonics on the coupling between ground and            |αL ⟩. Under the length gauge, and the dipole and single-
+excited states, potentially enhanced by a cavity, can be       active-electron approximations, the Schrödinger equation
+a versatile tool for generating various non-classical states   for this system can be expressed as [33, 34, 40]
+of light. This includes squeezed-like states, with proper-                         ∂ |Ψ(t)⟩
+ties strongly influenced by the mean photon number of                           iℏ                   ˆ |Ψ(t)⟩ ,
+                                                                                             = Ê(t)d(t)                          (1)
+the generated harmonics. Additionally, Ref. [59] reported                              ∂t
+non-classical features affecting both light and matter         in the interaction picture with respect             Pqc to †the
+when driving HHG in diatomic molecular systems. These          free field Hamiltonian Ĥfield              =         q=1 ℏωq âq âq ,
+features arise from the involvement of both ground and         in the displaced framework with respect to |αL ⟩
+excited states due to the various pathways electrons can       and within the interaction picture with respect to
+take during HHG [60–62]. Moreover, Ref. [63] observed          the semiclassical Hamiltonian Ĥsc (t) = Ĥat +
+that initial entanglement features involving the ground               ˆ Here, dˆ represents the dipole moment opera-
+                                                               Ecl (t)d.
+and excited states of a many-body system of atoms could                  ˆ = Ûsc (t)dU
+                                                               tor and d(t)               ˆ † (t) its time-dependent version,
+                                                                                            sc R
+be mapped onto the generated harmonics.                                                           t
+                                                               with Ûsc (t, t0 ) = T̂ exp[− ℏi t0 dτ Ĥsc (τ )], where T̂ repre-
+   Here, we explore a setup in which atomic systems are        sents the time-ordering operator; Ê(t) = q=1
+                                                                                                                    Pqc
+                                                                                                                           Êq (t) =
+initially pumped to their first excited state before inter-            Pqc
+                                                               −if (t) q=1 g(ωq )[âe−iωq t − h.c.] is the electric field op-
+acting with a classical, strong-laser field [56, 57]. The
+pumping process can be achieved by using a pulse res-          erator with 0 ≤ f (t) ≤ 1 an envelope function       p compatible
+onant with the transition frequency prior to the strong-       with the applied field envelope and g(ω) ≡ ℏω/(2V ϵ0 );
+field interaction, as in similar experimental implemen-        and Êcl (t) = ⟨αL , {0}qq=2
+                                                                                          c
+                                                                                             |Ê(t)|αL , {0}qq=2
+                                                                                                              c
+                                                                                                                  ⟩. While a fully
+tations within the strong-field regime [58]. Within this       rigorous quantum optical analysis would typically re-
+framework, we report squeezing features on the quantum         quire an infinite number of modes to represent a con-
+optical state that emerge from the cross-talk between          tinuous spectrum, we apply the envelope function f (t)
+the electronic ground and first excited states mediated        both to confine the interaction to a finite time inter-
+by the time-dependent dipole moment. Notably, these            val and to recover the classical-pulsed field expressions.
+squeezing features appear only when the electron initi-        This approach yields results equivalent to those obtained
+ates and ends the dynamics in the first excited state, and     when using multimode descriptions of the driving laser
+they are absent in those instances when the electron re-       field [34, 40], while preserving the simplicity of using
+combines with the ground state. We observe that these          single-mode drivers which in particular benefits numer-
+squeezing effects influence both the input driving field       ical analyses. However, it is important to note that the
+and the generated harmonic modes under field parame-           expressions derived in this work are formulated in terms
+ters typical of standard HHG experiments. Additionally,        of Ê(t) and Ecl (t), making our results readily extendable
+we observe significant two-mode squeezing features be-         to more comprehensive multimode descriptions.
+tween different field modes. We demonstrate that these            Within the displaced framework of Eq.N(1), under
+                                                                                                                        qc
+correlations are sufficient to generate other types of non-    which the initial state reads as |Ψ(t0 )⟩ = |e⟩ q=1           |0q ⟩ ≡
+                                                                                                                                              3
+
+|e⟩ ⊗ |0̄⟩, we proceed to solve the dynamics. To do so,                      where Û (t, t0 ) is given, up to a phase prefactor, by
+similarly to Refs. [33, 34, 40], we neglect the continuum
+                                                                                                                      i t
+                                                                                                                      Z            
+                                                                                                             
+populations at all times, assuming their contribution to                              Û (t, t0 ) = D̂ χe (t) exp −        dτ Q̂(τ ) ,   (7)
+be small compared to those of the lowest-energy atomic                                                                ℏ t0
+states [56, 57]. This leads to the following set of coupled                                            Qqc        (q)
+                                                                             where D̂(χe ) ≡             q=1 D̂(χe (t)) with D̂q (·) being
+differential equations (see Appendix A)
+                                                                             the displacement operator acting on the qth harmonic
+                                                                                            (q)              Rt
+     ∂ |Φg (t)⟩                                                              mode [8]; χe (t) ∝ g(ωq ) t0 dτ µee (τ )eiωq τ ; and Q̂(t) ≡
+  iℏ            = µgg (t)Ê(t) |Φg (t)⟩ + µge (t)Ê(t) |Φe (t)⟩ ,                            Rt
+        ∂t                                                                    i
+                                                               (2)           ℏ µeg (t)Ê(t) t0 dτ µge (τ )Ê(τ ).
+                                                                                From Eq. (6) we see that in addition to the displace-
+     ∂ |Φe (t)⟩                                                              ment operator, the field degrees of freedom are also af-
+  iℏ            = µeg (t)Ê(t) |Φg (t)⟩ + µee (t)Ê(t) |Φe (t)⟩ ,
+        ∂t                                                                   fected by an operator that is second order in Ê(t). This
+                                                               (3)           involves second-order terms with respect to creation and
+                   ˆ
+where µij (t) ≡ ⟨i|d(t)|j⟩ and |Φi (t)⟩ ≡ ⟨i|Ψ(t)⟩. It is worth              annihilation operators acting on the different modes, ul-
+noting that although continuum states are not taken into                     timately leading to the presence of squeezing and entan-
+account in the interaction picture we are working with,                      glement between the field modes [42]. These phenomena
+they are considered in the computation of µij (t) [56, 57].                  originate from the cross-talk between the ground and first
+  For the parameters considered here (peak intensity                         excited states through the time-dependent dipole mo-
+I0 = 1014 W/cm2 , central wavelength λL = 800 nm,                            ment operator ˆ      d(t), represented here by µeg (t) [59]. It
+and ionization potentials Ip,g = 54.4 eV and Ip,e = 13.6                     is worth noting that this cross-talk might only involve
+eV), it is found that |µee (t)| ≫ |µeg (t)| ≫ |µgg (t)| (see                 population exchanges mediated by the electronic contin-
+Appendix A). This allows us to write the following per-                      uum states if both excited and ground states have the
+turbation theory solution for Eq. (2)                                        same parity.
+                                                                                It is also important to note that the contribution of
+                       i t
+                         Z
+                                                                             these squeezing-like terms is much smaller than the con-
+         |Φg (t)⟩ ≈ −        dτ µge (τ )Ê(τ ) |Φe (τ )⟩ ,  (4)                                                                     (q)
+                       ℏ t0                                                  tributions stemming from the displacement χe (t), as
+                                                                             the former are proportional to g(ωL )2 while the latter to
+and introducing this expression into Eq. (3) results in
+                                                                             g(ωL ), with g(ωL ) being a perturbative quantity [59, 65].
+    ∂ |Φe (t)⟩                                                               Consequently, to observe squeezing and entanglement ef-
+ iℏ            ≈ µee (t)Ê(t) |Φe (t)⟩ + µeg (t)Ê(t) |Φg (t)⟩               fects, it is necessary to consider the collective contribu-
+        ∂t
+                   i
+                                   Z t                                       tion of many atoms [42]. This, a priori, involves solving
+                 − µeg (t)Ê(t)        dτ µge (τ )Ê(τ ) |Φe (τ )⟩ ,         the strong-field dynamics for a many-body problem in-
+                   ℏ                t0                                       volving a total of Nat atoms, with each atom coupled to
+                                                                 (5)
+                                                                             the same electromagnetic field. However, assuming that
+where we note here that we have now accounted for the
+                                                                             the time-dependent dipole moments of different atoms
+initial conditions specified earlier, assuming the electron
+                                                                             are uncorrelated [66], the potential correlations between
+is initially in the atom’s first excited state. The more
+                                                                             different atoms arising due to this light-mediated dynam-
+general scenario, with arbitrary initial state conditions
+                                                                             ics average to zero (see Appendix B), with standard de-
+for the atomic system, is evaluated in Appendix A.
+                                                                             viations being proportional to g(ωL )4 . Hence, from the
+   To simplify the analysis of Eq. (5), we perform a
+                                                                             point of view of our analysis, which focuses on the squeez-
+Markov-like approximation, i.e. |Φe (τ )⟩ → |Φe (t)⟩, which
+                                                                             ing properties of the field that scale as g(ωL )2 , we can
+neglects transient changes on the quantum optical state
+                                                                             regard the interaction of each atom with the electromag-
+between times t0 and t, effectively assuming that the cu-
+                                                                             netic field as independent. This implies that, assuming
+mulative influence of past interactions can be represented
+                                                                             all atoms are initially in the same state, the many-body
+by an instantaneous operator acting on the state at time
+                                                                             evolution can be approximately written as
+t.These transient changes could be related to quantum
+optical fluctuations arising from the electronic oscillation                                         N
+                                                                                                     Y at               N
+                                                                                                                        Oat
+
+during its excursion in the continuum. A more detailed                                    |Ψ(t)⟩ ≈          U(t, t0 )         |e⟩ ⊗ |0̄⟩ ,   (8)
+analysis of these effects and their influence during the                                             i=1                i=1
+HHG processes can be found in Ref. [64]. Under this ap-                      with U(t, t0 ) the time-evolution operator obtained from
+proximation, a solution to Eq. (5) can be expressed as                       Eq. (1), and that approximately leads to Eqs. (4) and (6).
+(see Appendix A)                                                                Among all possible outcomes, we particularly focus on
+                                                                             scenarios where all electrons return to their initial state,
+  |Φe (t)⟩ ≈ Û (t, t0 ) |0̄⟩
+                     Z t                                                     i.e., the excited state. Hence, upon returning to the orig-
+                 1                                                           inal frame of reference for the electronic degrees of free-
+             + 2           dτ1 Û (t, τ1 )µeg (τ1 )Ê(τ1 )
+                 ℏ t0                                                  (6)   dom, we obtain (see Appendix B)
+                      Z τ1                                                                
+                   ×          dτ2 µge (τ2 )Ê(τ2 )Û (τ2 , t0 ) |0̄⟩ ,         |Φ̄e (t)⟩ = Û (t, t0 )
+                        t0
+                                                                                                                                        4
+                   Z t
+                1
+            +          dτ1 Û (t, τ1 )µeg (τ1 )Ê(τ1 )
+                ℏ2 t0
+                  Z τ1                                  Nat
+                ×      dτ2 µge (τ2 )Ê(τ2 )Û (τ2 , t0 )     |0̄⟩ (9)
+                    t0
+                     Nat
+         ≈ Û (t, t0 )     |0̄⟩ ,                              (10)
+
+
+where we approximate the total state by considering only
+the first contribution, which is valid under the condition
+Nat g(ωL )2 ≲ 1, ensuring that the second term in Eq. (9)               FIG. 1. Amount of single-mode squeezing for different har-
+is significantly smaller than the first one. This condition             monic orders. In panel (a), the blue curve shows the results
+sets the stage for the results discussed in the next section.           of the optimization from Eq. (12), while the orange curve dis-
+                                                                        plays the variance of the conjugate variable. Their product
+   It is worth noting here that when events where the                   is represented by the dashed black curve, corresponding to
+electron recombines in the ground state, or begins in the               the minimum Heisenberg uncertainty. The gray dotted line
+ground state and recombines in the excited state, are                   shows ∆Xq = ∆X̄q for the case of having a coherent state
+considered, we observe delocalized single-photon excita-                in each harmonic mode. In panel (b), the squeezing pa-
+tions spanning multiple harmonic modes (see also Ap-                    rameter is computed as r = −(1/2) log10 (2∆Xq (θ∗ )). We set
+pendix A). This configuration leads to non-classicality                 Nat g(ωL )2 = 1 a.u., with the atomic units (a.u.) obtained by
+and entanglement across harmonic modes, similar to                      setting ℏ = me = |e| = 1.
+those observed in the quantum optical treatment of HHG
+in molecular systems in Ref. [59]. Due to these similar-
+                                                                                          A.       Single-mode squeezing
+ities, and given our focus on squeezing features, we re-
+fer interested readers to the aforementioned reference for
+further details.                                                           When referring to single-mode squeezed states, we are
+                                                                        describing quantum optical states where the uncertainty
+                                                                        in one optical quadrature, hereupon ∆X̂ ≡ ⟨X̂ 2 ⟩ − ⟨X̂⟩2 ,
+                                                                        is reduced below the uncertainty found for coherent states
+                                                                        (∆X = 1/2), at the expense of increased uncertainty in
+                                                                        the conjugate quadrature ∆X̄  ˆ . Here, we aim to determine
+                         III.   RESULTS                                 whether states in the form of Eq. (10), after neglecting
+                                                                        correlations between the different optical modes, can ex-
+                                                                        hibit such features. This expectation arises since, in that
+   In this section, we characterize the squeezing prop-                 scenario, Eq. (10) can be rewritten as
+erties of the state in Eq. (10) using a constructive ap-                                         " q                           #
+                                                                                                         iNat t
+                                                                                                     c
+proach. Initially, we neglect the contribution of âq âq′                                          X         Z
+                                                                                             
+and related second-order terms where q ̸= q ′ , to iden-                    |Φ̄e (t)⟩ ≈ D̂ χ̃ exp −               dτ Q̂q,q (τ ) |0̄⟩ ,
+                                                                                                    q=1
+                                                                                                          ℏ    t0
+tify which harmonic modes are most affected by squeez-
+ing. Subsequently, we incorporate these additional terms.                                                                             (11)
+                                                                                                           Rt
+The numerical analysis presented in this section considers              where Q̂q,q (t) ≡ ℏi µeg (t)Êq (t) t0 dτ µge (τ )Êq (τ ), which
+an applied pulse with sin2 envelope, I0 = 1014 W/cm2 ,                  involves second-order terms of creation and annihilation
+λL = 800 nm and ∆t ≈ 16 fs of duration, while set-                      operators. In this expression, χ̃ ≡ f (χe (t)), where f (·) is
+ting the ionization potentials of the atomic system to                  a function that depends on the prefactors accompanying
+Ip,g = 54.4 eV and Ip,e = 13.6 eV, corresponding to those               the product between creation and annihilation operators
+of He+ [56, 57]. Details about the numerical implementa-                in Q̂q,q [67].
+tion can be found along the Appendix. While our theory                     Given the definition of squeezed states presented in
+is sufficiently general to encompass atomic systems that                the previous paragraph, a natural way to determine the
+satisfy the |µgg (t)| < |µeg (t)| condition, our selection of           amount of squeezing in Eq. (11) is by identifying a di-
+He+ is based on its lack of significant HHG radiation                   rection in phase space along which there is a decrease in
+when the electron begins in the ground state, thereby                   uncertainty in the corresponding photonic quadrature.
+meeting the aforementioned condition. Additionally, its                 To achieve this, we define a phase-dependent quadrature
+prior use in semiclassical analyses provides a valuable                                         ˆ sin(θ), with X̂ = (â + â† )/√2
+                                                                        X̂q (θ) = X̂q cos(θ) + X̄q                  q        q      q
+benchmark for our results [56, 57]. In fact, experimental                     ˆ        †
+                                                                                               √
+                                                                        and X̄ = (â −â )/(i 2), and define the optimal squeez-
+                                                                               q      q        q
+observations of HHG using initial electronic superposi-                 ing direction θ∗ as that satisfying
+tions spanning several excited states have involved alkali
+atoms, with a near-infrared driver to create the initial ex-                               ∆Xq (θ∗ ) = min[∆Xq (θ)],                 (12)
+                                                                                                           θ
+cited state and a mid-infrared driver for the strong-field
+interaction [58].                                                       where the expected values involved in the variance are
+                                                                                                                                          5
+
+                                                                     excessively large values of this parameter would necessi-
+                                                                     tate consideration of the influence of the second term in
+                                                                     Eq. (9). Additionally, Nat represents the number of atoms
+                                                                     initially in the excited state, and its value depends on the
+                                                                     initial excitation conditions, including the fidelity of the
+                                                                     employed π-pulse, and its time delay relative to the sub-
+                                                                     sequent strong-laser field. For example, if this delay sur-
+                                                                     passes the excited state lifetime, the squeezing features
+                                                                     will be absent.
+
+
+                                                                                       B.    Two-mode squeezing
+
+
+FIG. 2. In panel (a), the amount of squeezing as a func-                When referring to two-mode squeezed states, we are
+tion of Nat g(ωL )2 for different harmonic modes. The results        describing states that exhibit correlations between two
+are presented in dB, related to the squeezing parameter r            different modes, denoted as q1 and q2 , resulting in un-
+through [dB] = 10 log10 (e2|r| ), and for values of Nat g(ωL )2 ∈    certainties along certain components for each mode that
+[10−4 , 2]. In panel (b), the Wigner functions of the obtained       are reduced below those of the vacuum state. Thus, in
+states are displayed for various values of q and Nat g(ωL )2 , the   this scenario, we extend Eq. (11) to include correlations
+latter represented in atomic units. The black and grey dashed        between modes q1 and q2
+lines compare the squeezing between the leftmost and right-
+most Wigner functions, respectively.                                                   
+                                                                                           
+                                                                                              iNat t
+                                                                                                  Z                      
+                                                                      |Φ̄e (t)⟩ ≈ D̂ χ̄ exp −         dτ Q̂{q1 ,q2 } (τ ) |0̄⟩ , (13)
+                                                                                                ℏ  t0
+
+taken with respect to the state in Eq. (11).                                             P2
+                                                                     where Q̂{q1 ,q2 } ≡    i,j=1 Q̂qi ,qj . In this expression, we
+   The results from the optimization in Eq. (12) are de-
+                                                                     are only considering correlations between modes q1 and
+picted in Fig. 1 for harmonic modes smaller than q = 5.
+                                                                     q2 , while neglecting the influence of all others. It will be
+Beyond this value, the obtained results were below the
+                                                                     shown later in this section that, similar to the amount of
+numerical precision of the used software. In panel (a)
+                                                                     single-mode squeezing, the presence of correlations be-
+we display the optimal values of the quadrature un-
+                                                                     comes important only for harmonics q = 1 and 3.
+certainties (blue and orange curves) and their product
+                                                                        One of the main advantages of two-mode squeezed
+(black dashed line), which is expected to remain con-
+                                                                     states, similarly to single-mode squeezed states, is that
+stant everywhere and equal to 1/4. However, the uncer-
+                                                                     their properties can be entirely characterized through the
+tainties along the different quadratures do not uniformly
+                                                                     covariance matrix σq1 ,q2 [68], which is defined as
+reach 1/2 for all harmonic modes (gray dotted line), ex-
+hibiting peaks for harmonics q = 1 (fundamental) and                                               
+                                                                                                       A C
+                                                                                                               
+q = 3. This suggests the presence of significant squeez-                                 σq1 ,q2 =               ,              (14)
+                                                                                                     CT B
+ing for these specific harmonic modes. This observation
+is reinforced in panel (b), where the squeezing parame-              where A, B and C are 2 × 2 matrices whose elements are
+ter r = −(1/2) log10 (2∆Xq (θ∗ )) is plotted for the differ-         given by
+ent harmonic modes. A smaller value of r indicates less
+pronounced squeezing features in our state. These plots                          ⟨X̂i,q1 X̂j,q1 ⟩ + ⟨X̂j,q1 X̂i,q1 ⟩
+reveal additional peaks for even harmonic orders, albeit                Ai,j =                                       − ⟨X̂i,q1 ⟩⟨X̂j,q1 ⟩,
+                                                                                                  2
+diminishing as q increases.                                                                                                             (15)
+   The calculations leading to Fig. 1 were performed with
+                                                                                 ⟨X̂i,q2 X̂j,q2 ⟩ + ⟨X̂j,q2 X̂i,q2 ⟩
+Nat g(ωL )2 = 1. However, it is anticipated that increasing             Bi,j =                                       − ⟨X̂i,q2 ⟩⟨X̂j,q2 ⟩,
+this quantity would enhance the squeezing effects. This                                           2
+                                                                                                                                        (16)
+enhancement is indeed illustrated in Fig. 2, where panel
+(a) presents the amount of squeezing (in dB units) as a                 Ci,j = ⟨X̂i,q1 X̂j,q2 ⟩ − ⟨X̂i,q1 ⟩⟨X̂j,q2 ⟩,                 (17)
+function of Nat g(ωL )2 . The plot shows an increase in the
+total amount of squeezing for larger values of this pa-              with the expectation value taken with respect to the state
+rameter, as further exemplified in the Wigner function                                                                     ˆ .
+                                                                     in Eq. (13). Here, we denote X̂1,q ≡ X̂q and X̂2,q ≡ X̄ q
+representations for modes q = 1 (panels (b) and (d) with                By utilizing the covariance matrix, we can equiva-
+squeezing of 0.763 and 1.411 dB respectively) and q = 3              lently perform an optimization similar to the one in
+(panels (c) and (e) with squeezing of 0.277 and 0.526 dB             Eq. (12) by diagonalization instead of using parametriza-
+respectively). In these subplots, the vertical and horizon-          tion methods. This diagonalization enables us to identify
+tal dashed lines delineate the quadrature uncertainties              the principal axes for the squeezing in phase space, where
+for modes q = 1 (black lines) and q = 3 (gray lines)                 the different eigenvalues determine the extent of squeez-
+for each value of Nat g(ωL )2 . It is important to note that         ing along these axes. If the maximum eigenvalue λmax
+                                                                                                                                    6
+
+
+
+
+FIG. 3. In panel (a), we present the maximum eigenvalue of
+the covariance matrix σq1 ,q2 for different pairs (q1 , q2 ). The
+absence of squeezing features corresponds to λmax (σ) = 0.5.
+In panel (b), we show the logarithmic negativity computed as
+in Eq. (18) for various pairs (q1 , q2 ). We set Nat g(ωL )2 = 1
+a.u. in both plots.
+                                                                    FIG. 4. Wigner functions for the two-mode squeezing involv-
+                                                                    ing modes q1 and q2 after performing heralding operations
+equals 0.5, it indicates the absence of squeezing, while            in mode q2 (first row) and in mode q1 (second row). For each
+λmax > 0.5 indicates squeezing is present. In Fig. 3 (a),           row, the probabilities of successful heralding are as follows: in
+we display the maximum eigenvalue for different values              (a1 ) P✓ (q1 ) = 2.87 × 10−3 and in (a2 ) P✓ (q2 ) = 6.09 × 10−3 ;
+of q1 and q2 . Despite the presence of peaks at q2 = 3,             in (b1 ) P✓ (q1 ) = 3.51×10−9 and in (b2 )P✓ (q2 ) = 3.85×10−3 ;
+the maximum eigenvalue remains constant and varies                  in (c1 ) P✓ (q1 ) = 1.38×10−9 and in (c2 ) P✓ (q2 ) = 4.87×10−4 .
+depending on q1 . This reflects the single-mode squeez-             We set Nat g(ωL )2 = 1 a.u. in all plots.
+ing trends shown in Fig. 1. However, the introduction of
+correlations with other modes extends the total squeez-
+ing beyond this constant value. As observed, the greatest              The presence of these correlations can be utilized for
+squeezing is found between modes q = 1 and q = 3, al-               various purposes. For instance, in Ref. [19], it was ob-
+though significant values can also occur between modes              served that performing heralding measurements on one
+q = 2 and q = 3.                                                    of the involved modes allows for the generation of optical
+   Although observing peaks in λmax suggests the pres-              Schrödinger kitten states, i.e., superpositions of two dif-
+ence of correlations between the different modes, it does           ferent coherent states |α⟩ and |β⟩ with |α − β| < 2. This
+not directly quantify them. Similarly, the phase space              operation, termed photon subtraction, was implemented
+Wigner function representations used in the single-mode             using a single-mode squeezed state, a beam splitter and
+analysis (Fig. 2 (b)) offer limited insight into the presence       photodetector heralding the presence of at least one pho-
+of two-mode squeezing beyond revealing slightly more                ton in one of the output modes of the beam splitter. In
+squeezed functions, as indicated by λmax , in comparison            this context, the beam splitter’s role was to introduce
+to single-mode squeezing (see Fig. 6 in Appendix D). As             correlations between the output beams.
+two-mode squeezing inherently involves quantum corre-                  In our case, these correlations are already present be-
+lations between different modes, entanglement measures              tween the different modes as we are dealing with two-
+are essential for accurate identification [69]. An exam-            mode squeezed states. Consequently, heralding opera-
+ple of such a measure is the Positive Partial Transpose             tions can be implemented by physically distinguishing
+(PPT) criterion, also known as Peres-Horodecki crite-               between different modes using a grating system, for ex-
+rion [70, 71]. Interestingly, for bipartite Gaussian states         ample, and detecting the presence of at least one photon
+as those considered here, this criterion is a necessary             in either mode q1 or q2 . Mathematically, such a mea-
+and sufficient condition for separability [72]. Therefore,          surement can be represented by the projective operator
+based on this criterion, the logarithmic negativity [69]            Π̂q2 = 1 ⊗ (1 − |0⟩⟨0|) when aiming to obtain the non-
+serves as an ideal entanglement measure for quantifying             classical state in mode q1 , and as Π̂q1 = (1 − |0⟩⟨0|) ⊗ 1
+the correlations between modes q1 and q2 arising from               when targeting mode q2 . It is worth noting these opera-
+Eq. (13). This quantity can be computed as [69]                     tors are defined in the displaced quantum optical frame
+                                                                   of reference D̂(χ̄), and thus would require the implemen-
+              EN (ρ̂) = max 0, − log2 (2ν̃− ) ,          (18)
+                                                                    tation of displacement operations acting on the herald-
+where ν̃− is the smallest of the two symplectic eigenval-           ing mode [74]. Therefore, the heralded state reads, upon
+ues of the partial transpose of our covariance matrix [73]          normalization, as ρ̂q1 = trq2 (Π̂q2 |Φ̄e (t)⟩⟨Φ̄e (t)|) when per-
+(see Appendix D). The results from this analysis are pre-           forming the heralding on mode q2 .
+sented in Fig. 3 (b) where, consistent with our previous               The results out of this process are presented in Fig. 4
+observations, the modes most correlated are q = 1 and 3.            for different combinations of q1 and q2 , with the success
+Interestingly, for odd values of q1 , the logarithmic nega-         probability of heralding P✓ (q1 ) = tr(Π̂q2 |Φ̄e (t)⟩⟨Φ̄e (t)|)
+tivity exhibits peaks for odd values of q2 and troughs for          shown in the caption. As observed, this approach leads
+the even ones. Conversely, the opposite trend is observed           to non-classical Wigner functions with negative regions,
+when q1 is even.                                                    especially pronounced in the first row, whereas in the
+                                                                                                                          7
+
+second row (panel (a2 )), the non-classical features are        porating a cavity could significantly enhance the coupling
+less pronounced, and even vanish in some cases (panels          between light and matter, thereby strengthening the non-
+(b2 ) and (c2 )). This corresponds to cases where corre-        classical features. This enhancement is crucial for observ-
+lations are weaker, with the state being predominantly          ing the squeezing features reported in our analysis, espe-
+dominated by a (displaced) vacuum component (see Ap-            cially considering the condition Nat g(ωL )2 = 1. Com-
+pendix D). As the correlations between the involved             pared to the experimental observations in Ref. [33], this
+modes weaken, the success probability of heralding de-          condition implies Nat ∼ 1016 , while the aforementioned
+creases significantly, as seen for modes q1 = 3 and q2 = 5.     observations suggest contributions from Nat ∼ 1012 −1013
+   It is worth noting that, despite the similarity of the       phase-matched atoms. However, utilizing QED cavities as
+optical Schrödinger kitten-like states in the first row of      in Ref. [44] allows us to enhance the light-matter coupling
+Fig. 4 to those reported in Refs. [33, 34, 38–40], it is the    factor g(ω) by several orders of magnitude, effectively
+heralding protocol that sets these results apart. In the ref-   making the generation of non-classical states of light
+erenced studies, optical Schrödinger kitten-like features       more efficient. Alternatively, one could increase the num-
+were obtained by postselecting measured data based on           ber of atoms in the interaction region by employing high-
+energy conservation relations resulting from HHG pro-           pressure cells or optimizing the laser spot size. Addition-
+cesses [75–78]. In contrast, our approach here leverages        ally, considering intermediate excited states, rather than
+the entanglement features inherent to two-mode squeez-          only the ground and first excited states, could lead to
+ing, allowing a given harmonic mode to serve as herald for      larger time-dependent dipole moments, as demonstrated
+the non-classical state generated in the additional mode.       in Ref. [58] to observe extended cutoffs initially reported
+                                                                in Refs. [56, 57], which utilized a configuration similar to
+                                                                that of this work.
+                   IV.   DISCUSSION
+
+                                                                                 V.    CONCLUSIONS
+   While this work investigates single-mode and two-
+mode squeezing in various harmonic modes in HHG
+driven atomic systems initially in their first excited state,      In this work, we explored a pathway for generating
+it is essential to highlight its novel contributions relative   squeezed states of light using HHG by driving atomic
+to similar state-of-the-art studies. This comparative per-      systems initially prepared in their (non-degenerate) first
+spective can help clarify the unique aspects of this study      excited state. We characterized the amount of squeezing
+and its place within the broader field.                         in both the driving field and harmonic modes, finding sig-
+   Despite the presence of two-mode squeezing features,         nificant values for the low-harmonic orders and negligible
+the results presented here differ from those of Ref. [41]       amounts for the higher orders. We also investigated two-
+both in terms of the matter system used and the un-             mode squeezing features and used the generated correla-
+derlying dynamics leading to two-mode squeezing. In             tions to propose heralding measurements that facilitate
+Ref. [41], the non-classical features seemingly arose from      the generation of optical Schrödinger kitten states.
+Bloch oscillations within a specific band of the solid-state       This work represents an alternative pathway to ex-
+system [55]. In contrast, the two-mode squeezing is at-         isting methods for generating non-classical states of
+tributed to the cross-talk between the atomic ground and        light from strong-field processes [24]. This emerging and
+first excited states, a mechanisms more similar to the ori-     promising direction not only helps in further delineat-
+gin of squeezing in Ref. [42] and of non-classical features     ing the quantumness of attosecond science [79], but also
+in Refs. [44, 59]. Unlike Ref. [42], however, this study        holds potential to provide unprecedented tools for gener-
+focuses on interactions between different bound states,         ating high-intensity non-classical states of light. These
+allowing us to observe squeezing features without signif-       states can drive nonlinear processes in matter [35]
+icant atomic depletion due to tunneling [50, 51].               and advance the integration of attosecond science with
+   Although our setup involves excited states, it differs       photonic-based quantum information science applica-
+from that in Ref. [44] in that we initially drive the elec-     tions [25, 79].
+tron to the excited state before it interacts with the
+strong-field. Additionally, the non-classical features ob-
+served in our work arise from second-order effects in                              Acknowledgements
+g(ωL ), whereas the effects in Ref. [44] and those in
+Ref. [59] originate from first-order effects. More specifi-       ICFO group acknowledges support from: Euro-
+cally concerning Ref. [44], the observed effects depend on      pean Research Council AdG NOQIA; MCIN/AEI
+back-action with a resonant harmonic mode, facilitated          (PGC2018-0910.13039/501100011033, CEX2019-000910-
+by enclosing the interacting atoms within a cavity whose        S/10.13039/501100011033, Plan National FIDEUA
+length is adjusted to achieve this resonance.                   PID2019-106901GB-I00, Plan National STAMEENA
+   Despite these distinctions, we believe that a synergistic    PID2022-139099NB,    I00,   project  funded    by
+approach combining the setup from Ref. [44] with the one        MCIN/AEI/10.13039/501100011033 and by the “Euro-
+presented in this work would be highly interesting. Incor-      pean Union NextGenerationEU/PRTR” (PRTR-C17.I1),
+                                                                                                                      8
+
+FPI); QUANTERA MAQS PCI2019-111828-2; QUAN-                                        References
+TERA DYNAMITE PCI2022-132919, QuantERA II
+Programme co-funded by European Union’s Horizon
+2020 program under Grant Agreement No 101017733;            [1] A. Aspect, The Second Quantum Revolution: From Basic
+Ministry for Digital Transformation and of Civil Service        Concepts to Quantum Technologies, in Photonic Quan-
+                                                                tum Technologies, edited by M. Benyoucef (Wiley-VCH
+of the Spanish Government through the QUANTUM
+                                                                GmbH, Weinheim, 2023) Chap. 2, pp. 9–30.
+ENIA project call - Quantum Spain project, and by the       [2] N. Gisin and R. Thew, Quantum communication, Nature
+European Union through the Recovery, Transformation             Photonics 1, 165 (2007).
+and Resilience Plan - NextGenerationEU within the           [3] P. Kok, W. J. Munro, K. Nemoto, T. C. Ralph, J. P.
+framework of the Digital Spain 2026 Agenda; Fundació            Dowling, and G. J. Milburn, Linear optical quantum
+Cellex; Fundació Mir-Puig; Generalitat de Catalunya             computing with photonic qubits, Reviews of Modern
+(European Social Fund FEDER and CERCA program,                  Physics 79, 135 (2007).
+AGAUR Grant No. 2021 SGR 01452, QuantumCAT                  [4] V. Giovannetti, S. Lloyd, and L. Maccone, Advances in
+U16-011424, co-funded by ERDF Operational Program               quantum metrology, Nature Photonics 5, 222 (2011).
+of Catalonia 2014-2020); Barcelona Supercomputing           [5] A. Aspuru-Guzik and P. Walther, Photonic quantum sim-
+Center MareNostrum (FI-2023-3-0024); Funded by                  ulators, Nature Physics 8, 285 (2012).
+                                                            [6] S. Pirandola, B. R. Bardhan, T. Gehring, C. Weedbrook,
+the European Union. Views and opinions expressed
+                                                                and S. Lloyd, Advances in photonic quantum sensing,
+are however those of the author(s) only and do not              Nature Photonics 12, 724 (2018).
+necessarily reflect those of the European Union, Eu-        [7] D. F. Walls, Squeezed states of light, Nature 306, 141
+ropean Commission, European Climate, Infrastructure             (1983).
+and Environment Executive Agency (CINEA), or any            [8] M. O. Scully and M. S. Zubairy, Coherent and squeezed
+other granting authority. Neither the European Union            states of the radiation fieldy, in Quantum Optics (Cam-
+nor any granting authority can be held responsible              bridge University Press, Cambridge, UK, 2001) Chap. 2,
+for them (HORIZON-CL4-2022-QUANTUM-02-SGA                       pp. 1–45.
+PASQuanS2.1, 101113690, EU Horizon 2020 FET-OPEN            [9] C. Gerry and P. Knight, Nonclassical light, in Intro-
+OPTOlogic, Grant No 899794), EU Horizon Europe                  ductory Quantum Optics (Cambridge University Press,
+Program (This project has received funding from the Eu-         Cambridge, UK, 2005) Chap. 7, pp. 150–194.
+                                                           [10] C. M. Caves, Quantum-mechanical noise in an interfer-
+ropean Union’s Horizon Europe research and innovation
+                                                                ometer, Physical Review D 23, 1693 (1981).
+program under grant agreement No 101080086 NeQST-          [11] R. E. Slusher, L. W. Hollberg, B. Yurke, J. C. Mertz,
+Grant Agreement 101080086 — NeQST); ICFO Internal               and J. F. Valley, Observation of Squeezed States Gener-
+“QuantumGaudi” project; European Union’s Horizon                ated by Four-Wave Mixing in an Optical Cavity, Physical
+2020 program under the Marie Sklodowska-Curie grant             Review Letters 55, 2409 (1985).
+agreement No 847648;                                       [12] M. Xiao, L.-A. Wu, and H. J. Kimble, Precision mea-
+                                                                surement beyond the shot-noise limit, Physical Review
+  M. K. and H. B. C. thank the Helen Diller Quantum             Letters 59, 278 (1987).
+Center for partial financial support.                      [13] M. T. Jaekel and S. Reynaud, Quantum Limits in Inter-
+                                                                ferometric Measurements, Europhysics Letters 13, 301
+  P. Stammer acknowledges support from: The Euro-               (1990).
+pean Union’s Horizon 2020 research and innovation pro-     [14] H. J. Kimble, Y. Levin, A. B. Matsko, K. S. Thorne,
+gramme under the Marie Skłodowska-Curie grant agree-            and S. P. Vyatchanin, Conversion of conventional
+ment No 847517.                                                 gravitational-wave interferometers into quantum nonde-
+                                                                molition interferometers by modifying their input and/or
+   P. Tzallas group at FORTH acknowledges support               output optics, Physical Review D 65, 022002 (2001).
+from: The Hellenic Foundation for Research and Innova-     [15] K. McKenzie, D. A. Shaddock, D. E. McClelland, B. C.
+tion (HFRI) and the General Secretariat for Research and        Buchler, and P. K. Lam, Experimental Demonstration
+Technology (GSRT) under grant agreement CO2toO2                 of a Squeezing-Enhanced Power-Recycled Michelson In-
+Nr.:015922, LASERLABEUROPE V (H2020-EU.1.4.1.2                  terferometer for Gravitational Wave Detection, Physical
+                                                                Review Letters 88, 231102 (2002).
+grant no.871124), The H2020 Project IMPULSE (GA
+                                                           [16] T. Eberle, S. Steinlechner, J. Bauchrowitz, V. Händ-
+871161), and ELI–ALPS.                                          chen, H. Vahlbruch, M. Mehmet, H. Müller-Ebhardt, and
+                                                                R. Schnabel, Quantum Enhancement of the Zero-Area
+  E.P. acknowledges Royal Society fellowship funding
+                                                                Sagnac Interferometer Topology for Gravitational Wave
+under URF\R1\211390.                                            Detection, Physical Review Letters 104, 251102 (2010).
+  M. F. C. acknowledges support from: the National Key     [17] The LIGO Scientific Collaboration, A gravitational wave
+                                                                observatory operating beyond the quantum shot-noise
+Research and Development Program of China (Grant No.
+                                                                limit, Nature Physics 7, 962 (2011).
+2023YFA1407100), the Guangdong Province Science and        [18] M. Dakna, T. Anhut, T. Opatrný, L. Knöll, and D.-G.
+Technology Major Project (Future functional materials           Welsch, Generating Schrödinger-cat-like states by means
+under extreme conditions - 2021B0301030005) and the             of conditional measurements on a beam splitter, Physical
+Guangdong Natural Science Foundation (General Pro-              Review A 55, 3184 (1997).
+gram project No. 2023A1515010871).                         [19] A. Ourjoumtsev, R. Tualle-Brouri, J. Laurat, and
+                                                                                                                               9
+
+     P. Grangier, Generating Optical Schrödinger Kittens               stein, and P. Tzallas, Strong laser fields and their power
+     for Quantum Information Processing, Science 312, 83               to generate controllable high-photon-number coherent-
+     (2006).                                                           state superpositions, Physical Review A 105, 033714
+[20] J. S. Neergaard-Nielsen, B. M. Nielsen, C. Hettich,               (2022).
+     K. Mølmer, and E. S. Polzik, Generation of a Superpo-        [35] T. Lamprou, J. Rivera-Dean, P. Stammer, M. Lewen-
+     sition of Odd Photon Number States for Quantum In-                stein, and P. Tzallas, Nonlinear optics using intense op-
+     formation Networks, Physical Review Letters 97, 083604            tical Schrödinger “cat” states (2023), arXiv:2306.14480
+     (2006).                                                           [physics, physics:quant-ph].
+[21] L.-A. Wu, M. Xiao, and H. J. Kimble, Squeezed states         [36] J. Rivera-Dean, Quantum-optical analysis of high-order
+     of light from an optical parametric oscillator, JOSA B 4,         harmonic generation, Master thesis, Universitat Politèc-
+     1465 (1987).                                                      nica de Catalunya (2019).
+[22] P. K. Lam, T. C. Ralph, B. C. Buchler, D. E. McClelland,     [37] A. Gorlach, O. Neufeld, N. Rivera, O. Cohen, and
+     H.-A. Bachor, and J. Gao, Optimization and transfer of            I. Kaminer, The quantum-optical nature of high har-
+     vacuum squeezing from an optical parametric oscillator,           monic generation, Nature Communications 11, 4598
+     Journal of Optics B: Quantum and Semiclassical Optics             (2020).
+     1, 469 (1999).                                               [38] P. Stammer, J. Rivera-Dean, T. Lamprou, E. Pisanty,
+[23] K. Schneider, M. Lang, J. Mlynek, and S. Schiller, Gener-         M. F. Ciappina, P. Tzallas, and M. Lewenstein, High
+     ation of strongly squeezed continuous-wave light at 1064          Photon Number Entangled States and Coherent State
+     nm, Optics Express 2, 59 (1998).                                  Superposition from the Extreme Ultraviolet to the Far
+[24] U. Bhattacharya, T. Lamprou, A. S. Maxwell, A. Or-                Infrared, Physical Review Letters 128, 123603 (2022).
+     dóñez, E. Pisanty, J. Rivera-Dean, P. Stammer,               [39] P. Stammer, Theory of entanglement and measurement
+     M. F. Ciappina, M. Lewenstein, and P. Tzallas,                    in high-order harmonic generation, Physical Review A
+     Strong–laser–field physics, non–classical light states and        106, L050402 (2022).
+     quantum information science, Reports on Progress in          [40] P. Stammer, J. Rivera-Dean, A. Maxwell, T. Lamprou,
+     Physics 86, 094401 (2023).                                        A. Ordóñez, M. F. Ciappina, P. Tzallas, and M. Lewen-
+[25] M. Lewenstein, N. Baldelli, U. Bhattacharya, J. Biegert,          stein, Quantum Electrodynamics of Intense Laser-Matter
+     M. F. Ciappina, T. Grass, P. T. Grochowski, A. S. John-           Interactions: A Tool for Quantum State Engineering,
+     son, T. Lamprou, A. S. Maxwell, A. Ordóñez, E. Pisanty,           PRX Quantum 4, 010201 (2023).
+     J. Rivera-Dean, P. Stammer, and P. Tzallas, Attosecond       [41] D. Theidel, V. Cotte, R. Sondenheimer, V. Shiriaeva,
+     Physics and Quantum Information Science, in Proceed-              M. Froidevaux, V. Severin, A. Merdji-Larue, P. Mosel,
+     ings of the 8th International Conference on Attosecond            S. Fröhlich, K.-A. Weber, U. Morgner, M. Kovacev,
+     Science and Technology, edited by L. Argenti, M. Chini,           J. Biegert, and H. Merdji, Evidence of the Quantum Op-
+     and L. Fang (Springer International Publishing, Cham,             tical Nature of High-Harmonic Generation, PRX Quan-
+     2024) pp. 27–44.                                                  tum 5, 040319 (2024).
+[26] N. H. Burnett, H. A. Baldis, M. C. Richardson, and G. D.     [42] P. Stammer, J. Rivera-Dean, A. S. Maxwell, T. Lam-
+     Enright, Harmonic generation in CO2 laser target inter-           prou, J. Argüello-Luengo, P. Tzallas, M. F. Ciappina, and
+     action, Applied Physics Letters 31, 172 (1977).                   M. Lewenstein, Entanglement and Squeezing of the Opti-
+[27] A. McPherson, G. Gibson, H. Jara, U. Johann, T. S. Luk,           cal Field Modes in High Harmonic Generation, Physical
+     I. A. McIntyre, K. Boyer, and C. K. Rhodes, Studies of            Review Letters 132, 143603 (2024).
+     multiphoton production of vacuum-ultraviolet radiation       [43] C. S. Lange, T. Hansen, and L. B. Madsen, Electron-
+     in the rare gases, JOSA B 4, 595 (1987).                          correlation-induced nonclassicality of light from high-
+[28] M. Ferray, A. L’Huillier, X. F. Li, L. A. Lompre, G. Main-        order harmonic generation, Physical Review A 109,
+     fray, and C. Manus, Multiple-harmonic conversion of               033110 (2024).
+     1064 nm radiation in rare gases, Journal of Physics B:       [44] S. Yi, I. Babushkin, O. Smirnova, and M. Ivanov, Gen-
+     Atomic, Molecular and Optical Physics 21, L31 (1988).             eration of massively entangled bright states of light
+[29] M. Drescher, M. Hentschel, R. Kienberger, G. Tem-                 during harmonic generation in resonant media (2024),
+     pea, C. Spielmann, G. A. Reider, P. B. Corkum, and                arXiv:2401.02817 [physics, physics:quant-ph].
+     F. Krausz, X-ray Pulses Approaching the Attosecond           [45] A. Rasputnyi, Z. Chen, M. Birk, O. Cohen, I. Kaminer,
+     Frontier, Science 291, 1923 (2001).                               M. Krüger, D. Seletskiy, M. Chekhova, and F. Tani, High-
+[30] F. Silva, S. M. Teichmann, S. L. Cousin, M. Hemmer, and           harmonic generation by a bright squeezed vacuum, Na-
+     J. Biegert, Spatiotemporal isolation of attosecond soft X-        ture Physics 10.1038/s41567-024-02659-x (2024).
+     ray pulses in the water window, Nature Communications        [46] S. Lemieux, S. A. Jalil, D. Purschke, N. Boroumand,
+     6, 6611 (2015).                                                   D. Villeneuve, A. Naumov, T. Brabec, and G. Vampa,
+[31] P. B. Corkum and F. Krausz, Attosecond science, Nature            Photon bunching in high-harmonic emission controlled
+     Physics 3, 381 (2007).                                            by quantum light (2024), arXiv:2404.05474 [physics,
+[32] F. Krausz and M. Ivanov, Attosecond physics, Reviews              physics:quant-ph].
+     of Modern Physics 81, 163 (2009).                            [47] A. Gorlach, M. E. Tzur, M. Birk, M. Krüger, N. Rivera,
+[33] M. Lewenstein, M. F. Ciappina, E. Pisanty, J. Rivera-             O. Cohen, and I. Kaminer, High-harmonic generation
+     Dean, P. Stammer, T. Lamprou, and P. Tzallas, Gen-                driven by quantum light, Nature Physics 19, 1689 (2023).
+     eration of optical Schrödinger cat states in intense         [48] M. Even Tzur, M. Birk, A. Gorlach, M. Krüger,
+     laser–matter interactions, Nature Physics 17, 1104                I. Kaminer, and O. Cohen, Photon-statistics force in
+     (2021).                                                           ultrafast electron dynamics, Nature Photonics 17, 501
+[34] J. Rivera-Dean, T. Lamprou, E. Pisanty, P. Stammer,               (2023).
+     A. F. Ordóñez, A. S. Maxwell, M. F. Ciappina, M. Lewen-      [49] M. E. Tzur, M. Birk, A. Gorlach, I. Kaminer, M. Krüger,
+                                                                                                                                           10
+
+     and O. Cohen, Generation of squeezed high-order har-               prou, P. Tzallas, M. Lewenstein, and M. F. Ciappina,
+     monics, Physical Review Research 6, 033079 (2024).                 Light-matter entanglement after above-threshold ioniza-
+[50] N. B. Delone and V. P. Krainov, Tunneling and barrier-             tion processes in atoms, Physical Review A 106, 063705
+     suppression ionization of atoms and ions in a laser radi-          (2022).
+     ation field, Physics-Uspekhi 41, 469 (1998).                  [66] B. Sundaram and P. W. Milonni, High-order harmonic
+[51] X. M. Tong and C. D. Lin, Empirical formula for static             generation: Simplified model and relevance of single-
+     field ionization rates of atoms and molecules by lasers            atom theories to experiment, Physical Review A 41, 6571
+     in the barrier-suppression regime, Journal of Physics B:           (1990).
+     Atomic, Molecular and Optical Physics 38, 2593 (2005).        [67] This can be easily seen from the fact that we can always
+[52] J. Rivera-Dean, P. Stammer, A. S. Maxwell, T. Lamprou,             write [f (â2 , â† â), g(â)] = h(â), with f (·), g(·) and h(·) lin-
+     A. F. Ordóñez, E. Pisanty, P. Tzallas, M. Lewenstein,              ear functions of the corresponding operators. Therefore,      h      i
+     and M. F. Ciappina, Quantum Optical Analysis of High-              exp −f (â2 , â† â) exp[g(â)] exp f (â2 , â† â) = exp h̃(â) ,
+                                                                                                                          
+     Order Harmonic Generation in Semiconductors, in High-
+     Order Harmonic Generation in Solids (World Scientific,             where h̃(·) does not necessarily have to be equal to h(·).
+     2024) pp. 139–183.                                            [68] C. Weedbrook, S. Pirandola, R. García-Patrón, N. J.
+[53] E. N. Osika, A. Chacón, L. Ortmann, N. Suárez, J. A.               Cerf, T. C. Ralph, J. H. Shapiro, and S. Lloyd, Gaus-
+     Pérez-Hernández, B. Szafran, M. F. Ciappina, F. Sols,              sian quantum information, Reviews of Modern Physics
+     A. S. Landsman, and M. Lewenstein, Wannier-Bloch Ap-               84, 621 (2012).
+     proach to Localization in High-Harmonics Generation in        [69] R. Horodecki, P. Horodecki, M. Horodecki, and
+     Solids, Physical Review X 7, 021017 (2017).                        K. Horodecki, Quantum entanglement, Reviews of Mod-
+[54] A. M. Parks, G. Ernotte, A. Thorpe, C. R. McDonald,                ern Physics 81, 865 (2009).
+     P. B. Corkum, M. Taucer, and T. Brabec, Wannier quasi-        [70] A. Peres, Separability Criterion for Density Matrices,
+     classical approach to high harmonic generation in semi-            Physical Review Letters 77, 1413 (1996).
+     conductors, Optica 7, 1764 (2020).                            [71] M. Horodecki, P. Horodecki, and R. Horodecki, Separa-
+[55] I. Gonoskov, R. Sondenheimer, C. Hünecke, D. Kar-                  bility of mixed states: necessary and sufficient conditions,
+     tashov, U. Peschel, and S. Gräfe, Nonclassical light gener-        Physics Letters A 223, 1 (1996).
+     ation and control from laser-driven semiconductor intra-      [72] R. Simon, Peres-Horodecki Separability Criterion for
+     band excitations, Physical Review B 109, 125110 (2024).            Continuous Variable Systems, Physical Review Letters
+[56] J. B. Watson, A. Sanpera, X. Chen, and K. Burnett,                 84, 2726 (2000).
+     Harmonic generation from a coherent superposition of          [73] G. Adesso and F. Illuminati, Gaussian measures of entan-
+     states, Physical Review A 53, R1962 (1996), publisher:             glement versus negativities: Ordering of two-mode Gaus-
+     American Physical Society.                                         sian states, Physical Review A 72, 032334 (2005).
+[57] A. Sanpera, J. B. Watson, M. Lewenstein, and K. Bur-          [74] M. G. A. Paris, Displacement operator by beam splitter,
+     nett, Harmonic-generation control, Physical Review A               Physics Letters A 217, 78 (1996).
+     54, 4320 (1996).                                              [75] N. Tsatrafyllis, I. K. Kominis, I. A. Gonoskov, and
+[58] P. M. Paul, T. O. Clatterbuck, C. Lyngå, P. Colosimo,              P. Tzallas, High-order harmonics measured by the photon
+     L. F. DiMauro, P. Agostini, and K. C. Kulander, En-                statistics of the infrared driving-field exiting the atomic
+     hanced High Harmonic Generation from an Optically                  medium, Nature Communications 8, 15170 (2017).
+     Prepared Excited Medium, Physical Review Letters 94,          [76] N. Moiseyev, Photon statistics from non-Hermitian Flo-
+     113906 (2005).                                                     quet theory: High-order-harmonic-generation and above-
+[59] J. Rivera-Dean, P. Stammer, A. S. Maxwell, T. Lam-                 threshold-ionization spectra detected via IR detectors,
+     prou, E. Pisanty, P. Tzallas, M. Lewenstein, and M. F.             Physical Review A 110, L051101 (2024).
+     Ciappina, Quantum-optical analysis of high-order har-         [77] J. Rivera-Dean, T. Lamprou, E. Pisanty, M. F. Ciappina,
+     monic generation in H+                                             P. Tzallas, M. Lewenstein, and P. Stammer, Quantum
+                             2 molecules, Physical Review A
+     109, 033706 (2024).                                                state engineering of light using intensity measurements
+[60] C. Figueira de Morisson Faria, High-order harmonic gen-            and post-selection (2024), arXiv:2409.02016 [quant-ph].
+     eration in diatomic molecules: A quantum-orbit analy-         [78] P. Stammer, Energy conservation in quantum optical
+     sis of the interference patterns, Physical Review A 76,            high harmonic generation (2024), arXiv:2410.15503.
+     043407 (2007).                                                [79] L. Cruz-Rodriguez, D. Dey, A. Freibert, and P. Stam-
+[61] N. Suárez, A. Chacón, J. A. Pérez-Hernández, J. Biegert,           mer, Quantum phenomena in attosecond science, Nature
+     M. Lewenstein, and M. F. Ciappina, High-order-                     Reviews Physics 6, 691 (2024).
+     harmonic generation in atomic and molecular systems,          [80] M. Lewenstein, P. Balcou, M. Y. Ivanov, A. L’Huillier,
+     Physical Review A 95, 033415 (2017).                               and P. B. Corkum, Theory of high-harmonic generation
+[62] N. Suárez Rojas, Strong-field processes in atoms and poly-         by low-frequency laser fields, Physical Review A 49, 2117
+     atomic molecules, Doctoral thesis, Universitat Politèc-            (1994).
+     nica de Catalunya (2018).                                     [81] J. R. Johansson, P. D. Nation, and F. Nori, QuTiP: An
+[63] A. Pizzi, A. Gorlach, N. Rivera, A. Nunnenkamp, and                open-source Python framework for the dynamics of open
+     I. Kaminer, Light emission from strongly driven many-              quantum systems, Computer Physics Communications
+     body systems, Nature Physics 19, 551 (2023).                       183, 1760 (2012).
+[64] J. Rivera-Dean, About the role of short and long trajec-      [82] J. R. Johansson, P. D. Nation, and F. Nori, QuTiP 2:
+     tories on the quantum optical state after high-harmonic            A Python framework for the dynamics of open quantum
+     generation (2024), arXiv:2409.15556 (accepted in Physi-            systems, Computer Physics Communications 184, 1234
+     cal Review A).                                                     (2013).
+[65] J. Rivera-Dean, P. Stammer, A. S. Maxwell, T. Lam-            [83] P. Virtanen, R. Gommers, T. E. Oliphant, M. Haber-
+                                                                 11
+
+     land, T. Reddy, D. Cournapeau, E. Burovski, P. Pe-
+     terson, W. Weckesser, J. Bright, S. J. van der Walt,
+     M. Brett, J. Wilson, K. J. Millman, N. Mayorov, A. R. J.
+     Nelson, E. Jones, R. Kern, E. Larson, C. J. Carey, İ. Po-
+     lat, Y. Feng, E. W. Moore, J. VanderPlas, D. Laxalde,
+     J. Perktold, R. Cimrman, I. Henriksen, E. A. Quintero,
+     C. R. Harris, A. M. Archibald, A. H. Ribeiro, F. Pe-
+     dregosa, P. van Mulbregt, and SciPy 1.0 Contributors,
+     SciPy 1.0: Fundamental Algorithms for Scientific Com-
+     puting in Python, Nat. Meth. 17, 261 (2020).
+[84] L.-M. Duan, G. Giedke, J. I. Cirac, and P. Zoller, In-
+     separability Criterion for Continuous Variable Systems,
+     Physical Review Letters 84, 2722 (2000).
+                                                                                                                        12
+
+                                                            Appendix
+
+                   A.   Describing the light-matter interaction from a single-atom perspective
+
+   We begin this analysis by writing the time-dependent Schrödinger equation describing the interaction of an atomic
+system with a quantized electromagnetic field. This is done within the length gauge, and working under the single-
+active-electron and dipole approximations. In the interaction picture with respect to the semiclassical light-matter
+interaction Hamiltonian Hsc (t) = Ĥat + Ecl (t)dˆ (see, e.g., Refs. [34, 40] for details), this equation can be written as
+
+                                                      ∂ |Ψ(t)⟩           ˆ |Ψ(t)⟩ ,
+                                                 iℏ            = Ê(t) · d(t)                                         (A1)
+                                                         ∂t
+       ˆ the dipole moment operator in the corresponding interaction picture, and Ê(t) the time-dependent electric
+with d(t)
+field operator, given by
+                                          qc
+                                          X                         qc
+                                                                    X
+                                                                          g(ωq ) âe−iωq t − â† eiωq t ,
+                                                                                                      
+                                Ê(t) =         Êq (t) = −if (t)                                                     (A2)
+                                          q=1                       q=1
+
+where we discretize the electromagnetic field modes and account for the pulsed nature of the employed source by means
+of an envelope function 0 ≤ f (t) ≤ 1. While a fully rigorous quantum optical analysis would typically require an
+infinite number of modes to represent a continuous spectrum, we apply the envelope function f (t) both to confine the
+interaction to a finite time interval and to recover the classical-pulsed field expressions. This approach yields results
+equivalent to those obtained when using multimode descriptions of the driving laser field [34, 40], while preserving
+the simplicity of using single-mode drivers.
+   The main difference between this work and Refs. [34, 40, 42] is that we consider the initial state of the system to
+be in a superposition of the form
+                                                                        qc
+                                                                      O
+                                            |Ψ(t0 )⟩ = cg |g⟩ + ce |e⟩     |0q ⟩ ,                                    (A3)
+                                                                                 q=1
+
+that is, the atomic system is in a superposition of different energetic states, where cg and ce represent the initial
+probability amplitudes associated with the ground and first excited states, respectively. Here, we consider the initial
+electronic state to be an arbitrary superposition of the ground and excited states, unlike in the main text. At the end
+of this analysis, we impose the initial conditioncg = 0 and ce = 1, which yield Eqs. (4) and (6) in the main text.
+   To solve the differential equation above, we introduce the identity in the electronic subspace as
+                                                                        Z
+                                    1 = |g⟩⟨g| + |e⟩⟨e| +
+                                                          X
+                                                            |ψn ⟩⟨ψn | + dψc |ψc ⟩⟨ψc | ,                          (A4)
+                                                             n=2
+
+where the first two terms are projectors with respect to the ground and first excited states of the atomic system,
+respectively, which we assume non-degenerate. The third term includes the projector onto all other bound states, and
+the last term accounts for all continuum states. In the following analysis, we neglect the contribution of continuum
+states, as their impact is small compared to that of the atomic lowest energy states for the field parameters we
+consider [42]. However, it is important to highlight that these continuum states have indeed been taken into account
+to compute the time-dependent dipole moment matrix elements, as these are evaluated in the original electronic frame
+of reference. Furthermore, contrary to the standard Strong-Field Approximation (SFA) assumptions that disregard
+contributions from all bound states other than the ground state [80], we include the contribution of the first excited
+state. This inclusion is crucial, as the initial state of the atom, as described in Eq. (A3), makes the contributions from
+excited states significant in defining the properties of the generated harmonic radiation [56, 57].
+   Therefore, introducing Eq. (A4) into the Schrödinger equation (A1) and taking into account the simplications above,
+we arrive to the following set of coupled differential equations
+
+                                    ∂ |Φg (t)⟩
+                                 iℏ            = µgg (t)Ê(t) |Φg (t)⟩ + µge (t)Ê(t) |Φe (t)⟩ ,                      (A5)
+                                       ∂t
+                                    ∂ |Φe (t)⟩
+                                 iℏ            = µeg (t)Ê(t) |Φg (t)⟩ + µee (t)Ê(t) |Φe (t)⟩ ,                      (A6)
+                                       ∂t
+                                                                                                                                            13
+
+                                              †
+where |Φi (t)⟩ ≡ ⟨i|Ψ(t)⟩ and µij (t) ≡ ⟨i| Ûsc (t, t0 )r̂Ûsc (t, t0 ) |j⟩ are the time-dependent dipole moment matrix elements.
+These matrix elements are computed following Ref. [56, 57], by combining numerical integration with saddle-point
+approaches. More specifically, 3D integrals involving momentum variables have been evaluated using the saddle-point
+approximation, while the time-dependent integrals numerically using adaptive algorithms. Different laser parameters
+were used compared to the aforementioned references to make the forthcoming numerical calculations less time-
+consuming. The absolute values of these matrix elements are presented in Fig. 5, where it is observed that |µee (t)| ≥
+|µeg | ≥ |µgg (t)|, in agreement with those of Ref. [37].
+  Given that µgg (t) is perturbatively smaller compared to the other two, we apply perturbation theory to |Φg (t)⟩
+                                                                             ∞
+                                                                             X
+                                                |Φg (t)⟩ = |Φ(0)
+                                                             g (t)⟩ +            |Φ(n)
+                                                                                   g (t)⟩,                                               (A7)
+                                                                             n=1
+
+such that, when substituted in Eq. (A5), it yields the following set of coupled differential equations for each pertur-
+bative order
+                                                (0)
+                                            ∂|Φg (t)⟩
+                                         iℏ           = µge (t)Ê(t) |Φe (t)⟩ ,                                                          (A8)
+                                               ∂t
+                                               (n)
+                                            ∂|Φg (t)⟩
+                                         iℏ           = µgg (t)Ê(t)|Φ(n−1)
+                                                                       g      (t)⟩          ∀n > 0,                                      (A9)
+                                               ∂t
+whose solutions are straightforwardly given by
+                                                              Z t
+                                                          i
+                               |Φ(0)        (0)
+                                 g (t)⟩ = |Φg (t0 )⟩ −              dτ µge (τ )Ê(τ ) |Φe (τ )⟩ ,                                        (A10)
+                                                          ℏ    t0
+                                                              Z t
+                                                          i
+                               |Φ(n)        (n)
+                                 g (t)⟩ = |Φg (t0 )⟩ −              dτ µgg (τ )Ê(τ )|Φ(n−1)
+                                                                                       g     (t)⟩          ∀n > 0.                       (A11)
+                                                          ℏ    t0
+
+
+  We now substitute this solution into Eq. (A6). Given that |µeg (t)| can be treated as a perturbative quantity
+with respect to |µee (t)|, we retain only the zeroth-order solution of Eq. (A7). Consequently, the resulting differential
+equation can be approximately expressed as
+                                                                                                Z t
+              ∂ |Φe (t)⟩                                                   i
+         iℏ              ≈ µee (t)Ê(t) |Φe (t)⟩ + µeg (t)Ê(t)|Φ(0)
+                                                                 g (t0 )⟩ − µeg (t)Ê(t)                 dτ µge (τ )Ê(τ ) |Φe (τ )⟩ ,   (A12)
+                 ∂t                                                        ℏ                        t0
+
+and, similarly to Ref. [42], we apply the Markov approximation, which allows us to express the equation above as
+                                                            Z t                  
+                    ∂ |Φe (t)⟩                 i
+                 iℏ            ≈ µee (t)Ê(t) − µeg (t)Ê(t)     dτ µge (τ )Ê(τ ) |Φe (t)⟩ + µeg (t)Ê(t)|Φ(0)
+                                                                                                            g (t0 )⟩,                    (A13)
+                       ∂t                      ℏ              t0
+
+
+
+
+FIG. 5. Behavior of the matrix elements of the time-dependent dipoles as a function of time. Here, we considered a field of
+amplitude E0 = 0.053 a.u., ωL = 0.057 a.u., with a sin2 -envelope and duration of 6 optical cycles. The target atom used in
+the analysis is He+ , which has ionization potentials Ip,g = 2 a.u. and Ip,e = 0.5 a.u. for the ground and first excited states,
+respectively. In the plots, some of the matrix elements have been multiplied by a constant to properly observe their behavior.
+                                                                                                                                            14
+
+which is an inhomogeneous first-order differential equation with distinct homogeneous and inhomogeneous parts. A
+solution to this equation can be expressed as the sum of a solution to the homogeneous part and a particular solution
+to the inhomogeneous part. Therefore, we first focus on the homogeneous differential equation, which is given by
+                               (h)                                 Z t                  
+                            ∂|Φe (t)⟩                 i
+                         iℏ           ≈ µee (t)Ê(t) − µeg (t)Ê(t)     dτ µge (τ )Ê(τ ) |Φ(h)
+                                                                                            e (t)⟩,            (A14)
+                               ∂t                     ℏ              t0
+
+and whose solution can be generally written, for small enough values of ∆t, as
+                                                 ( N                  )
+                                 (h)
+                                                   Y         i
+                              |Φe (t)⟩ = lim           exp − Ô(tn )∆t |Φ(h) e (t0 )⟩,                                                  (A15)
+                                          N →∞               ℏ
+                                                   n=1
+                                                                        Rt
+where we define Ô(t) ≡ µee (t)Ê(t) − Q̂(t) and Q̂(t) ≡ ℏi µeg (t)Ê(t) t0 dτ µge (τ )Ê(τ ). Our main objective is to express
+the exponential operator as the product of two exponential operators, each incorporating the effects of µee (t)Ê(t)
+and Q̂(t), respectively. This involves using the Baker-Campbell-Hausdorff (BCH) formula. To achieve this, we first
+evaluate the commutation between these operators at different times.
+   We begin by evaluating the commutator [Ê(t), Ê(t′ )]. Considering the definition of the electric field operator given
+in Eq. (A2), and using the commutation relation [âq , â†q′ ] = δq,q′ , we can write
+                                                                       qc
+                                                                       X                             qc
+                                                                                                     X
+                                  [Ê(t), Ê(t′ )] = −i2f (t)f (t′ )         sin(ωq (t − t′ )) ≡ i         φq (t′ , t),                 (A16)
+                                                                       q=1                           q=1
+
+which is essentially a complex constant that depends on g(ωq )2 multiplied by the identity. This expression can be
+used to evaluate the commutator [Ê(t), Q̂(t′ )], which can be expressed as
+                                                          Z t′
+                                                 i
+                               [Ê(t), Q̂(t)] = µeg (t′ )      dτ µge (τ )[Ê(t), Ê(t′ )Ê(τ )],            (A17)
+                                                 ℏ         t0
+
+with the commutator in the integrand satisfying
+                                                                                 X
+  [Ê(t), Ê(t′ )Ê(τ )] = Ê(t′ )[Ê(t), Ê(τ )] + [Ê(t), Ê(t′ )]Ê(τ ) = i     φq (t, τ )Ê(t′ ) + φq (t, t′ )Ê(τ ) ∝ Ô(g 3 (ωq )). (A18)
+                                                                                                                        
+                                                                                  q
+
+   Thus, if we restrict ourselves to cases where terms of order O(g(ωq )3 ) are negligible, we can approximate
+[Ê(t), Q̂(t′ )] ∝ Ô(g 3 (ωq )) ≈ 0. Similarly, one can show that [Q̂(t), Q̂(t′ )] ∝ Ô(g 4 (ωq )) ≈ 0. Consequently, using
+the BCH formula and incorporating these approximations, we can express Eq. (A15) as
+                                                     N                                          
+                                                      Y           i                      i
+                               Û (t, t0 ) ≈ lim          exp − µee (tn )∆t exp − Q̂(tn )∆t
+                                             N →∞                 ℏ                      ℏ
+                                                      n=1                                                             (A19)
+                                                            Z t                           Z t          
+                                                           i                               i
+                                           ≈ eiφ(t) exp −        dτ µee (τ )Ê(τ ) exp −         dτ Q̂(τ ) ,
+                                                           ℏ t0                            ℏ t0
+                                  (h)                      (h)
+where we have denoted |Φe (t)⟩ = Û (t, t0 )|Φe (t0 )⟩. With this solution, we can then write the solution to the
+inhomogeneous equation
+                                                           i t
+                                                            Z
+                        |Φe (t)⟩ = Û (t, t0 )|Φe (t0 )⟩ +      dτ Û (t, τ )µeg (τ )Ê(τ )|Φ(0)
+                                                                                             g (τ )⟩,       (A20)
+                                                           ℏ t0
+and, similarly, we get for the zeroth order term in Eq. (A10)
+                                                  i t
+                                                    Z
+                     |Φ(0)
+                        g  (t)⟩ = |Φ (0)
+                                     g   (t0 )⟩ −        dτ µge (τ )Ê(τ )Û (τ, t0 )|Φe (t0 )⟩
+                                                  ℏ t0
+                                          Z t                      Z τ1
+                                      1
+                                  + 2         dτ1 µge (τ1 )Ê(τ1 )      dτ2 Û (τ1 , τ2 )µeg (τ2 )Ê(τ2 )|Φ(0)
+                                                                                                           g (τ2 )⟩
+                                     ℏ t0                           t0
+                                                                                                                                        (A21)
+                                                  i t
+                                                    Z
+                                ≈ |Φ(0)
+                                     g   (t0 )⟩ −        dτ µge (τ )Ê(τ )Û (τ, t0 )|Φe (t0 )⟩
+                                                  ℏ t0
+                                          Z t                      Z τ1
+                                      1
+                                  + 2         dτ1 µge (τ1 )Ê(τ1 )      dτ2 Û (τ1 , τ2 )µeg (τ2 )Ê(τ2 )|Φ(0)
+                                                                                                           g (t0 )⟩,
+                                     ℏ t0                           t0
+                                                                                                                                        15
+
+where in the last approximation we have omitted the contribution of O(g 3 (ωq )) terms.
+                                                                                                                             (0)
+   At this point, we can introduce the initial conditions, which in our case are |Φe (t0 )⟩ = ce |0̄⟩, |Φg (t0 )⟩ = cg |0̄⟩ and
+   (n)
+|Φg (t0 )⟩ = 0. More specifically, in the main text we are interested in the regime where all the population is initially
+in the excited state, i.e. ce = 1 and cg = 0. From this, we can write
+                                                  Z t       Z τ1
+                                               1
+                 |Φe (t)⟩ ≈ Û (t, t0 ) |0̄⟩ + 2       dτ1        dτ2 Û (t, τ1 )µeg (τ1 )Ê(τ1 )µge (τ2 )Ê(τ2 )Û (τ2 , t0 ) |0̄⟩ , (A22)
+                                              ℏ t0            t0
+                                 i t
+                                    Z
+                |Φ(0)
+                   g  (t)⟩ ≈ −           dτ µge (τ )Ê(τ )Û (τ, t0 ) |0̄⟩ .                                                          (A23)
+                                 ℏ t0
+
+  As seen in Eq. (A22), squeezing features are most pronounced when the electron ends in the (dressed) excited
+state. In contrast, outcomes where the electron is found in the (dressed) ground state produce delocalized single-
+photon excitations across the various harmonic modes. This quantum optical state closely resembles those in Ref.[59],
+particularly when focusing on events where the electron ends in the antibonding (first excited) state. This configuration
+shows significant entanglement and other non-classical properties, making further analysis of Eq. (A23) redundant for
+this work; interested readers are directed to the reference above.
+  Similarly, if we consider initial conditions where cg = 1 and ce = 0, while restricting to scenarios where the electron
+ultimately occupies the first excited state, we derive
+
+                                                    i t
+                                                     Z
+                                         |Φe (t)⟩ ≈      dτ Û (t, τ )µeg (τ )Ê(τ )|0̄⟩,                          (A24)
+                                                    ℏ t0
+
+which suggests the presence of squeezed single-photon excitations across harmonic modes. However, these features
+are minimal in the single-atom regime and would remain so in the many-atom scenario, as can be seen by following
+a similar analysis to that in Ref. [59], equivalent to the one presented in the next section.
+
+
+                                  B.    Laboratory frame and a many-atom considerations
+
+   The analysis we have presented thus far has been conducted in the semiclassical framework, specifically in the
+interaction picture with respect to Ĥsc (t). Within this framework, we have derived the following solution to the
+Schrödinger equation
+
+                                              |Ψ(t)⟩ ≈ |e⟩ ⊗ |Φe (t)⟩ + |g⟩ ⊗ |Φ(0)
+                                                                                g (t)⟩,                                              (B1)
+                        (0)
+where |Φe (t)⟩ and |Φg (t)⟩ are given in Eqs. (A22) and (A23), respectively.
+   Given that the relation between the laboratory frame and the semiclassical picture considered here is given by
+|Ψ̄(t)⟩ = Ûsc (t) |Ψ(t)⟩, we can express the state in the electronic laboratory frame as follows
+                                                                                  
+                                   |Ψ̄(t)⟩ = Ûsc (t) |e⟩ ⊗ |Φe (t)⟩ + Ûsc (t) |g⟩ ⊗ |Φg (t)⟩ ,             (B2)
+
+and under the strong-field approximation [56, 57], we can write
+                                                                               Z
+                                            Ûsc (t) |e⟩ = e−iIp,e t/ℏ |e⟩ +       dc bc (t) |ϕc ⟩ ,                                 (B3)
+
+                                            Ûsc (t) |g⟩ = e−iIp,g t/ℏ |g⟩ ,                                                         (B4)
+
+where {|ϕc ⟩} denotes the set of continuum states, and Ip,g and Ip,e denote the ionization potential for ground and
+first excited states, respectively. Among all possible events, we are particularly interested in those where the electron
+returns to its initial state, i.e., the excited state. Consequently, considering those, we find for the quantum optical
+state
+                                                   Z t     Z τ1                                                             
+                                                  1
+            |Φ̄e (t)⟩ = ⟨e|Ψ̄(t)⟩ ≈ Û (t, t0 ) + 2     dτ1      dτ2 Û (t, τ1 )µeg (τ1 )Ê(τ1 )µge (τ2 )Ê(τ2 )Û (τ2 , t0 ) |0⟩
+                                                 ℏ t0        t0                                                                   (B5)
+                                  ≡ Û(t) |0⟩ ,
+
+corresponding to the superposition of a displaced squeezed vacuum state, a photon-added displaced squeezed vacuum
+state, and a photon-subtracted displaced squeezed vacuum state.
+                                                                                                                                16
+
+  However, all the analysis presented thus far has been conducted at the single-atom level. Consequently, given the
+weak coupling between light and matter, the non-classical features we could potentially observe in our state are
+minimal. Nevertheless, in typical HHG setups, many atoms independently couple to the same electromagnetic field.
+In this scenario, and within the semiclassical interaction picture, the time-dependent Hamiltonian describing the
+system’s dynamics is given by
+                                                                   Nat
+                                                                   X
+                                                        Ĥ(t) =          Ê(t)dˆi (t),                                       (B6)
+                                                                   i=1
+
+where dˆi (t) is the time-dependent dipole moment operator of the ith atom, with Nat the total number of atoms. It is
+important to note that this Hamiltonian is not local, as all the atoms couple independently to the same electromagnetic
+field. This ultimately leads to coupled dynamics, and, in general, we have that
+                                                                                                        X
+                         Ê(t)ri (t), Ê(t′ )rj (t′ ) = r̂i (t)r̂j (t) Ê(t), Ê(t′ ) = ir̂i (t)r̂j (t)
+                                                                                  
+                                                                                                          φq (t) ̸= 0, (B7)
+                                                                                                           q
+
+where we have taken into account that [r̂i (t), r̂j (t)] = 0 ∀i ̸= j.
+   Formally, this means that to solve the many-body problem, we must consider the contributions from all atoms.
+However, if we assume that, on average, the time-dependent dipole moments of different atoms are uncorrelated [66],
+i.e. ⟨r̂i (t)r̂j (t′ )⟩ = 0, the contributions in Eq. (B7) average to zero. More specifically, considering for simplicity a
+single harmonic mode q, we obtain
+                   Z     Z                                         Z    Z
+                       dt dt′ Êq (t)ri (t), Êq (t′ )rj (t′ ) = i dt dt′ ⟨r̂i (t)r̂j (t′ )⟩ sin(ωq (t − t′ ))
+                                                             
+
+                                                                    Z    Z
+                                                                  1                              h          ′              ′
+                                                                                                                             i
+                                                                =     dt dt′ ⟨r̂i (t)⟩⟨r̂j (t′ )⟩ eiωq (t−t ) − e−iωq (t−t )   (B8)
+                                                                  2
+                                                                    " Z                                                #
+                                                                                         2       Z                   2
+                                                                  1
+                                                                =       dt⟨r̂i (t)⟩eiωq t −        dt⟨r̂i (t)⟩eiωq t     = 0,
+                                                                  2
+
+where we have assumed that ⟨r̂i (t)⟩ = ⟨r̂j (t)⟩ ∀i, j, which is valid under the dipole approximation and when all atoms
+are of the same species. Thus, Eq. (B8) implies that the average correlations vanish. Given that the coupling of each
+atom with the field is weak, it is then expected that the influence of each individual atom on the field is weak enough
+for the interaction to be considered independent. Consequently, if we assume that all atoms are initially in the same
+state, the many-body evolution can be expressed as
+                                                        Nat                  Nat           Nat
+                                                ˆ (t)
+                                                        O                    Y             O
+                                      |Ψ̄(t)⟩ = Ū            |e⟩ ⊗ |0̄⟩ ≈         Û(t)         |e⟩ ⊗ |0̄⟩ ,                (B9)
+                                                        i=1                  i=1           i=1
+
+and focusing on those cases where the electron ends up in the excited state, we obtain in the laboratory frame
+                                                               Nat
+                                              |Φ̄e (t)⟩ ≈ Û(t)      |0̄⟩ .                                    (B10)
+
+
+                                 C.    Details about the single-mode squeezing analysis
+
+   Provided the state in Eq. (B10), we want to characterize the amount of squeezing. In principle, such states involve
+correlations between all possible modes, but for the moment we are going to consider the squeezing terms affecting
+single modes. In other words, we will neglect, for simplicity, the two-mode squeezing contributions of Q̂ and keep only
+the diagonal ones, i.e.
+                                                              Z t
+                                                i
+                                       Q̂q,q = µeg (t)Êq (t)     dτ µge (τ )Êq′ (τ ),                            (C1)
+                                               ℏ               t0
+
+such that we approximate Eq. (B10) as
+                                                         " q                         #
+                                                                iNat t
+                                                            Xc      Z
+                                                     
+                                      |Φ̄(t)⟩ ≈ D̂ χ̄ exp −             dτ Q̂q,q (τ ) |0̄⟩ ,                                 (C2)
+                                                            q=1
+                                                                 ℏ   t0
+                                                                                                                                17
+                                          Qqc
+where we defined D̂(χ ≡                       q=1 D̂q (χq ) with D̂(·) representing the displacement operator and Q̂q,q (t) ≡
+ i
+                      Rt
+ℏ µeg (t)Êq (t) t0 dτ µge (τ )Êq (τ ), which involves second-order terms of creation and annihilation operators. In this
+expression, χ̄ ≡ f (χe (t)), where f (·) is a function that depends on the prefactors accompanying the product of
+the creation and annihilation operators in Q̂q,q . This can be observed from the fact that we can always write
+[f (â2 , â† â), g(â)] = h(â), with f (·), g(·) and h(·) being linear functions of the corresponding operators. Therefore,
+exp −f (â2 , â† â) exp[g(â)] exp f (â2 , â† â) = exp[h̃(â)], where h̃(·) does not necessarily have to be equal to h(·), but
+still is a linear function of creation and annihilation operators.
+   To quantify the amount of squeezing present in each harmonic mode of our state, we estimate the value of the
+squeezing parameter r by solving the following optimization problem
+
+                                                           ∆Xq (θ∗ ) = min ∆Xq (θ) ,
+                                                                                   
+                                                                                                                               (C3)
+                                                                 θ
+
+where X̂(θ) is a phase-dependent photonic quadrature defined as
+                                                                        ˆ sin(θ),
+                                                X̂q (θ) ≡ X̂q cos(θ) + X̄                                                    (C4)
+                                                                         q
+                         √       ˆ = (â† − â† )/(i√2). Thus, the optimization problem in Eq. (C3) allows us to find a
+with X̂q = (âq + â†q )/ 2 and X̄q     q     q
+direction in phase space along which the corresponding distribution gets squeezed.
+   Such optimization has been implemented numerically in Python by combining a brute force search with built-in
+functions from the Qutip package [81, 82]. Firstly, the prefactors to the set of operators {â2q , âq â†q , â†q âq , â†2
+                                                                                                                           q } were
+computed through numerical integration using the quad function of the Scipy package [83], with the integration
+parameters suitably adjusted to achieve convergence. Specifically, an upper bound of 1000 subintervals was employed
+in the adaptive algorithm.
+   These prefactors were sequentially used to construct the single-mode-squeezing-like operator in Eq. (C2) by com-
+bining built-in functions in Qutip for defining creation and annihilation operators, with linear algebra functions of
+Scipy that allow the exponentiation of matrices. Given that Qutip expresses quantum optical states and operators
+in the Fock basis, which is inherently infinite dimensional, it is important to select a sufficiently high cutoff dimension
+for the Fock basis to ensure accurate representation of quantum states, while not exceeding the memory capabilities
+of the employed hardware. For the parameter regime we worked with, we found that ncutoff = 50 was sufficient to
+achieve this balance, although convergence tests were performed with ncutoff = 200. These conditions were used for
+evaluating the optimization problem in Eq. (C3), which was addressed through brute-force search. This method is
+particularly useful here, as we have a single parameter θ ∈ [0, π]. Consequently, we generated an array composed of
+100 elements linearly distributed within this interval and proceed to sequentially evaluate Eq. (C3) for each harmonic
+mode individually.
+
+
+                                  D.    Details about the two-mode squeezing analysis
+
+  In the analysis of Sec. C, we have purposely omitted the contribution of correlations between different field modes.
+In other words, we have neglected cross terms of the form âq â†q′ with q ̸= q ′ . However, these correlations are present
+and must be characterized. The main challenge here is that the number of harmonic modes in this problem is large,
+making it numerically daunting to characterize all modes simultaneously. Consequently, we restrict our analysis to two-
+mode squeezing contributions affecting only modes q1 and q2 . As observed in Fig. 3, this approximation is particularly
+valid as, among all the modes involved, the correlations are specially significant between modes q = 1 and 3, while
+for the others they are almost negligible.
+  Provided that the states we are dealing with are Gaussian states, their properties are fully determined by their
+covariance matrix σq1 ,q2 , defined as in Eq. (14). For simplicity, in the numerical calculations of this matrix we have
+omitted the contribution of the displacement operator appearing in Eq. (13). This omission is justified because such
+displacement operators do not affect the correlation properties of the covariance matrix; their influence can be easily
+removed by means of local unitary transformations [69, 84].
+  One of the most interesting aspects about Gaussian states is that the PPT or Peres-Horodecki criterion is a necessary
+and sufficient condition for separability for all bipartite Gaussian states [72]. Thus, the logarithmic negativity is an
+ideal entanglement measure to characterize the entanglement in these states. This quantity can be computed as [69]
+                                                            
+                                             EN (ρ̂) = max 0, − log2 (2ν̃− ) ,                                        (D1)
+
+where ν̃− is the smallest of the two symplectic eigenvalues of the partial transpose of our covariance matrix. For
+the case of Gaussian states, the partial transpose can be computed as σ̃ = ΓσΓ with Γ = diag(1, 1, 1, −1) [72].
+                                                                                                                                                          18
+                                                                                                     Ln
+The        eigenvalues of σ̃ are then computed as the eigenvalues of the matrix |iΩσ| with Ω =
+    symplectic                                                                                          i=1 Λ with
+       0 1
+Λ=           [73]. However, when considering matrices of the form of Eq. (14), ν̃− can also be computed as [73]
+      −1 0
+                                                                   s              p
+                                                                        ∆(σ̃) −       ∆(σ̃)2 − 4 det(σ)
+                                                         ν̃− =                                          ,                                               (D2)
+                                                                                        2
+
+with ∆(σ̃) = det(A) + det(B) − 2 det(C), with det(·) denoting the determinant operation.
+
+
+
+
+FIG. 6. Wigner functions for the two-mode squeezing involving modes q1 and q2 . The amount of squeezing found, in dB units,
+is (a1 ) 6.71 × 10−2 , (a2 ) 8.46 × 10−3 , (b1 ) 6.71 × 10−2 , (b2 ) 4.63 × 10−14 , (c1 ) 8.46 × 10−3 and (c2 ) 5.98 × 10−14 .
+
+                                                                                     †                       †
+  Similar to Sec. C, the prefactors of the operators {â2qi , â†2            †                       †
+                                                                  qi , âqi âqi , âqi âqi , âqi âqj , âqi âqj } were numerically computed
+using the quad function of Scipy. Then, the two-mode squeezing operator and the corresponding covariance matrix
+were computed by combining built-in Qutip functions with linear algebra functions of Scipy. For both q1 and q2
+modes, the upper bound used for their respective Hilbert space dimension was set to ncutoff = 50, leading to a joint
+Hilbert space dimension of 2500. Under these conditions, we obtained the Wigner functions in Fig. 6 for different
+combinations of (q1 , q2 ).
+  The Wigner functions in Fig. 6 correspond to those of Fig. 4 prior to the performance of the heralding operation.
+That such heralding operations can lead to other kinds of non-classical states of light becomes evident when expanding
+the two-mode-squeezing-like operator in Eq. (13) in polynomial series. By denoting, for instance, the prefactor of the
+operator â2qi as g(â2qi ), and by considering only first-order terms while omitting the effect of the displacement operator,
+we can express our state as (up to normalization factors)
+                                    2
+                                    X
+                                       g(âqi âqi )âqi âqj + g(â†qi â†qi )â†qi â†qj + g(â†qi âqi )â†qi âqj + g(âqi â†qi )âqi â†qj |0̄⟩
+                                                                                                                                               
+               |Φ̄e (t)⟩ ≈ |0̄⟩ +
+                                    i,j=1
+                                                                                                                                                        (D3)
+                                    2
+                                    X
+                        = |0̄⟩ +            g(â†qi â†qj )â†qi â†qj |0̄⟩ ,
+                                    i,j=1
+
+which after performing the heralding operation, for instance in the second mode, leads to
+                                                                                           2                          2
+                               ρ̂q1 = trq2 (Π̂q2 |Φ̄e (t)⟩⟨Φ̄e (t)|) = g(â†2                † †
+                                                                           q2 ) |0⟩⟨0| + g(âq1 âq2 ) |1⟩⟨1| ,                                         (D4)
+
+with the obtained non-classical features strongly dependent on the ratio between the single-mode squeezing found in
+mode q2 (|g(â†2   2                                                                † †       2
+              q2 )| ), and the strength of the correlations between q1 and q2 (|g(âq1 âq2 )| ). As observed in Fig. 1, the
+single-mode squeezing properties of our state decrease for higher-harmonic orders, as well as the correlations between
+the modes, although with different scaling as observed in Fig. 3.
+                                                                                                                     19
+
+  Thus, when performing the heralding on q2 > q1 (first row of Fig. 4), it leads to higher non-classical features
+because the single-mode squeezing properties in these higher-order modes are almost vanishing. On the contrary,
+when performing the heralding in mode q1 with q2 > q1 (second row of Fig. 4), the single-mode squeezing properties
+are dominant, and therefore the presence of non-classical features become more diluted (panel (a2 )), if existing at all
+(panels (b2 ) and (c2 )).
+

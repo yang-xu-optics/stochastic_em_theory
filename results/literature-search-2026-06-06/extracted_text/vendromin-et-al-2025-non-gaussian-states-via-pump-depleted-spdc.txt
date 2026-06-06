@@ -1,0 +1,1644 @@
+                                                                           Non-Gaussian states via pump-depleted SPDC
+
+                                                                            Colin Vendromin,∗ Samuel E. Fontaine, and J. E. Sipe
+                                                    Department of Physics, University of Toronto, 60 St. George Street, Toronto, Ontario, Canada M5S 1A7
+                                                                                           (Dated: October 9, 2025)
+                                                           We develop a model for non-Gaussian state generation via spontaneous parametric down-
+                                                        conversion (SPDC) in InGaP microring resonators. The nonlinear Hamiltonian is written in terms
+                                                        of the asymptotic fields for the system, which includes a phantom channel to handle scattering loss.
+                                                        The full ket for the system is written as a Gaussian unitary acting on a residual non-Gaussian ket,
+                                                        which is vacuum initially and evolves according to a non-Gaussian Hamiltonian. We show that for
+                                                        realistic parameters we can access the pump depletion regime, where the Wigner function for the
+                                                        residual non-Gaussian ket has negativity. But we find that the non-Gaussian features for the full ket
+                                                        could be unobservable due to the large amount of squeezing required to lead to pump depletion. We
+                                                        show that a potential solution in the low-loss regime is to implement an inverse Gaussian unitary
+                                                        on the accessible modes to remove most of the squeezing and reveal the non-Gaussian features.
+
+
+
+
+arXiv:2510.06498v1 [quant-ph] 7 Oct 2025
+                                                        This work provides a foundation for modeling pump-depleted SPDC in integrated lossy microring
+                                                        resonators, opening a path toward a scalable on-chip non-Gaussian source.
+
+
+                                                            I.   INTRODUCTION                               niobate platforms, including PPLN [19] and thin-film
+                                                                                                            lithium niobate (TFLN) [20] waveguides, and in lithium
+                                              Spontaneous parametric down-conversion (SPDC) is a            niobate microrings [21].
+                                           widely used process in which a high-energy photon is con-           Recent theoretical work has begun to characterize the
+                                           verted into a pair of lower-energy photons via the second-       non-Gaussian states that emerge in the pump-depletion
+                                           order nonlinear susceptibility (χ(2) ) of a medium. Her-         regime with models focused on PPLN waveguides [18]. In
+                                           alded single photons [1], entangled photon pairs [2], and        these models about −20 dB of squeezing is predicted from
+                                           squeezed states of light [3, 4] can all be generated using       SPDC with only 200 pump photons, corresponding to
+                                           SPDC, with applications across many quantum technolo-            roughly 10% pump depletion for a 1.4 cm crystal length,
+                                           gies, including quantum communication [5, 6], quantum            assuming advanced dispersion engineering. In such cases
+                                           key distribution [7, 8], and continuous-variable quantum         non-Gaussian features in the Wigner function appear
+                                           computing [9, 10].                                               along with the Gaussian ones characterizing squeezing,
+                                              Indium gallium phosphide (InGaP) is a promising ma-           but if the squeezing is too large the non-Gaussian features
+                                           terial to enhance SPDC efficiency due to its large χ(2) co-      are overwhelmed [16], which is often the case when gen-
+                                           efficients [11]. For example, InGaP microring resonators         erating non-Gaussian states via pump depletion. Com-
+                                           have recently demonstrated high conversion efficiencies          pared to microring models, waveguide models seem to
+                                           on the order of 105 %/W with on-chip power on the or-            achieve pump depletion with lower amounts of squeez-
+                                           der of 1 µW [12, 13]. Higher efficiency enables stronger         ing. However, even this lower amount of squeezing
+                                           squeezing and the potential for non-Gaussian states gen-         (around −20 dB) obscures the non-Gaussian features
+                                           erated by pump depletion [14–16]. Non-Gaussian states            in the Wigner function, practically rendering these fea-
+                                           are a key resource for continuous-variable quantum com-          tures inaccessible. In addition, waveguide sources lack
+                                           puting, but they are typically generated probabilistically       the compactness and scalability of integrated microrings.
+                                           [17]. Achieving a deterministic non-Gaussian source in           Theoretical work on the pump-depletion regime in mi-
+                                           a scalable, on-chip source would represent a crucial step        croring resonators remains largely unexplored, particu-
+                                           toward scalable quantum computing architectures.                 larly when accounting for multiple modes and scattering
+                                              The combination of low pump power and high effi-              loss.
+                                           ciency in InGaP microring resonators could allow ac-                Reaching the depletion regime in microring models
+                                           cess to the pump-depletion regime. Pump depletion                requires substantially more pump photons and higher
+                                           from SPDC has already been observed in periodically              squeezing than in the previous PPLN waveguide model
+                                           poled lithium niobate (PPLN) waveguide systems [14]. In          [18]. Higher squeezing makes the Gaussian features dom-
+                                           these systems the generated photon number saturates in           inate, and the non-Gaussianity becomes even harder to
+                                           the depletion regime, and deviates from the exponential          detect. Instead of relying on sources with lower squeezing
+                                           growth expected for purely Gaussian states. These ob-            to observe the non-Gaussianity, when scattering losses
+                                           servations suggest the generation of non-Gaussian states,        are sufficiently small a possible strategy would be to em-
+                                           consistent with theoretical modelling [18]. Demonstra-           ploy a squeezed state interferometer [22]. This would
+                                           tions of pump depletion from second harmonic genera-             effectively apply an inverse Gaussian unitary on the ac-
+                                           tion have also been demonstrated in a number of lithium          cessible modes, removing the Gaussian features from the
+                                                                                                            state and isolating its interesting non-Gaussian features.
+                                                                                                               In this work we develop a multimode model of SPDC
+                                           ∗ colin.vendromin@utoronto.ca
+                                                                                                            in InGaP microring resonators that is capable of describ-
+                                                                                                                         2
+
+ing non-Gaussian state generation in the pump-depletion      λP = 780 nm, λS = 1557.85 nm, and λI = 1562.45 nm,
+regime. Our primary focus is on InGaP, but the model we      respectively, where ωJ = 2πc/λJ for J ∈ {P, S, I}.
+present is readily adaptable for different χ(2) materials.
+The Hamiltonian is written in terms of the asymptotic
+fields for the system, which includes a phantom chan-
+nel to describe scattering loss [23, 24]. The full ket for
+the system is written as a Gaussian unitary acting on a
+residual non-Gaussian ket [18], where we derive an effec-
+tive Hamiltonian that governs the evolution of the non-
+Gaussian ket. By writing the effective Hamiltonian in
+terms of supermodes, we are able to perform efficient nu-
+merical simulations for the non-Gaussian ket with only a
+few dominant supermodes.
+   Using realistic parameters we calculate the squeezing
+level of the signal and idler fields, the amount of pump-
+depletion, and the Wigner function for the non-Gaussian
+ket. We show that under high levels of squeezing the
+non-Gaussian features in the Wigner function for the full
+ket indeed become obscured, but that if the scattering
+loss is sufficiently small the non-Gaussian features can
+be restored by applying an inverse Gaussian unitary on
+the accessible modes. This unitary effectively stretches
+the full ket to remove the squeezing, isolating the non-
+Gaussian features.
+                                                             FIG. 1. (a) Schematic of a ring resonator point-coupled to an
+   This paper is organized as follows. In Sec II we in-      actual waveguide (bottom purple) and phantom waveguide
+troduce the fields and Hamiltonian for the microring res-    (white). (b) Schematic of the positions of the ring resonances
+onator system, including loss. In Sec. III we then present   for the SPDC interaction.
+the solution of the Schrödinger equation for the full ket
+for the system, where we separate its evolution into Gaus-
+                                                                We assume that the SPDC interaction is significant
+sian and non-Gaussian contributions. In Sec. IV we first
+                                                             only in the ring resonator, where the fields are enhanced,
+present results for the Gaussian part of the ket, includ-
+                                                             and we formulate it in a manner similar to previous work
+ing squeezing and the conversion efficiency of signal and
+                                                             [23] by borrowing a strategy from scattering theory. At
+idler photons, followed by results for the Wigner function
+                                                             t = −∞ there is no nonlinear interaction and the only
+of the non-Gaussian ket. We conclude that section with
+                                                             light in the system is a pump pulse moving towards the
+a discussion of how to isolate the non-Gaussian features
+                                                             ring in the actual input channel. To describe the dynam-
+of the full ket when there is loss. Finally, in Sec. V we
+                                                             ics of the pump pulse we use a basis of asymptotic-in
+finish with a conclusion and outlook.
+                                                             fields. Similarly, at t = ∞ there is no nonlinear interac-
+                                                             tion; however, now the only light in the system is mov-
+                                                             ing away from the ring in the actual and phantom out-
+        II.   FIELDS AND HAMILTONIAN                         put channels. To describe the dynamics of the generated
+                                                             signal and idler pulses we use a basis of asymptotic-out
+  In this section we describe the fields of our system and   fields.
+the Hamiltonian that describes the SPDC interaction in          The displacement fields of the asymptotic-in and -out
+the microring resonator.                                     fields are identified by a resonance label J, a channel la-
+  A schematic of the system we envision is shown in          bel n = ac or n = ph for the actual channel or phantom
+Fig. 1(a). The actual waveguide and ring (purple)            channel, respectively, and a continuous label k for the
+are made from In0.49 Ga0.51 P with thickness 102 nm and      wavenumber in either the actual or phantom waveguide.
+width 1194 nm, where the dimensions are chosen such          The positive frequency part of the displacement field op-
+that a set of resonances are quasi-phase matched [25]. At    erator for the pump DP+ (r) can be written as [23]
+an early time a pump pulse injected into the actual input
+channel propagates towards the ring. At t = 0 the peak                             X Z ∞
+of the pump pulse reaches the coupling point, where it                DP+ (r) =                           in
+                                                                                                dk bnP k DnP k (r),    (1)
+                                                                                            0
+enters the ring and generates signal and idler photons via                        n=ac,ph
+SPDC; we include loss by introducing a phantom output
+channel that takes scattered photons out of the ring. The    where bnP k destroys a pump photon in the asymptotic-
+three ring resonances involved in the SPDC interaction       in field for the input channel n with wavenumber k, and
+                                                               in
+are shown in Fig. 1(b), where the center wavelengths of      DnP   k (r) is the asymptotic-in mode field associated with
+the pump (P ), signal (S), and idler (I) resonances are      that photon. The pump operators satisfy the commuta-
+                                                                                                                                       3
+
+tion relations                                                     where ϵ(r; ωJ ) is the dielectric constant at position r for
+                                                                   frequency ωJ [24]. Putting Eqs. (1) and (3) for the pump
+                  [bnP k , b†nP k′ ] = δ(k − k ′ ).          (2)   displacement field operator and the signal and idler dis-
+                                                                   placement field operators respectively into Eq. (7) for
+The positive frequency part of the displacement field op-          the nonlinear Hamiltonian, and only considering the case
+erator for the signal and idler DJ+ (r), for J ∈ {S, I} can        where a pump photon is annihilated from the actual in-
+be written as                                                      put channel, we obtain
+                      X Z ∞                                                       X Z
+         DJ+ (r) =                         out
+                                dk anJk DnJk   (r),     (3)              HNL =            dk1 dk2 dk3 ℏΛac n1 n2 (k1 , k2 , k3 )
+                       n=ac,ph    0                                                n1 ,n2
+
+                                                                                × a†n1 Sk1 a†n2 Ik2 bacP k3 + H.c.,                  (9)
+where anJk destroys a signal (J = S) or idler (J = I)
+photon in the asymptotic-out field for the output channel          where Λac n1 n2 (k1 , k2 , k3 ) is the SPDC nonlinear coeffi-
+                                out
+n with wavenumber k, and DnJk       (r) is the asymptotic-         cient obtained by integrating the field profiles for posi-
+out mode field associated with that photon. The signal             tions inside the ring resonator. It can be written as [25]
+and idler operators satisfy the commutation relations                                                     r
+                                                                         ac n1 n2                            ℏωS ωI ωP ∗
+                                                                       Λ          (k1 , k2 , k3 ) = χ2 R                 F     (k1 )
+                  [anJk , a†nJk′ ] = δ(k − k ′ ).            (4)                                              4πϵ0 Aeff n1 S+
+                                                                                                  × Fn∗2 I+ (k2 )FacP − (k3 ),       (10)
+  The linear Hamiltonian can be written in terms of the
+asymptotic field operators as                                      where χ2 = 220 pm/V [26] is a typical value of the
+                                                                   second-order tensor for InGaP, R = 30 µm is the ring ra-
+                XZ ∞                                               dius, and Aeff = 0.56 (µm)2 is the effective area [25]. We
+         HL =          dkℏωnP k b†nP k bnP k                       have introduced the Lorentzian field-enhancement factors
+                   n    0
+                             Z ∞                                   [27]
+                                      dkℏωnJk a†nJk anJk ,
+                       X
+             +                                               (5)                   s
+                 n,J∈{S,I}    0                                                      vnJ ΓJ ηJ           1
+                                                                        FnJ± (k) =                                  ,     (11)
+                                                                                        πR vnJ (KnJ − k) ± iΓJ
+where ωnJk is the dispersion relation for the actual (n =
+ac) or phantom (n = ph) channel for frequencies within             where 2ΓJ is the linewidth of the resonance and ηJ is the
+the resonance labeled by J. We expand the dispersion               escape efficiency into the actual channel, defined as
+relation in the channel n around a reference wavenumber                                                 Qload,J
+KnJ associated with the resonance J, neglecting group                                        ηJ ≡ 1 −           ,                  (12)
+                                                                                                        Qint,J
+velocity dispersion of frequencies within the resonance
+linewidths                                                         where Qload,J = ωJ /(2ΓJ ) is the loaded quality factor
+                                                                   and Qint,J is the intrinsic quality factor due to scatter-
+                 ωnJk ≈ ωJ + vnJ (k − KnJ ),                 (6)   ing loss. For InGaP we adopt realistic intrinsic quality
+                                                                   factors of Qint,S = Qint,I = 106 and Qint,P = 105 [11, 13].
+where ωJ is the center frequency of the resonance J and              We discretize the continuous wavenumbers to Rperform
+vnJ is the group velocity in the channel n evaluated at            numerical
+                                                                       P      calculations [24], putting for example dk1 →
+the center frequency. The full dispersion relation, how-           ∆k k1 , where ∆k is the spacing between the discrete
+ever, is used to calculate the center frequencies of the           wavenumbers. Then Eq. (9) for HNL can be written as
+ring resonances. Over the frequencies spanning the mul-
+                                                                                      ℏ[Λ]µ1 µ2 µ3 a†Sµ1 a†Iµ2 bP µ3 + H.c., (13)
+                                                                                X
+tiple free-spectral-ranges group velocity dispersion can be           HNL =
+important, and its effects are captured in our model.                           µ1 ,µ2 ,µ3
+   The second-order nonlinear Hamiltonian for the SPDC             where we have introduced Greek indices that group to-
+interaction can be written as [24]                                 gether a channel and discrete wavenumber as
+               Z
+             2                       −j                                 µ1 = (n1 , k1 ), µ2 = (n2 , k2 ), µ3 = (ac, k3 ),          (14)
+ HNL = −         drΓijk       −i             +k
+                      2 (r)DS (r)DI (r)DP (r) + H.c.,
+            ϵ0
+                                                                   where ki for i ∈ {1, 2, 3} are the discrete wavenumbers,
+                                                        (7)
+                                                                   and we have defined
+where DJ− (r) = [DJ+ (r)]† , i, j, and k are Cartesian com-                  [Λ]µ1 µ2 µ3 ≡ (∆k)3/2 Λac n1 n2 (k1 , k2 , k3 ),      (15)
+ponents and the tensor Γijk  2 (r) is related to the more          which has units of frequency. The discrete operators in
+familiar second-order tensor χijk2 (r) by [24]                     Eq. (13) satisfy the commutation relations
+
+                                   χijk
+                                     2 (r)
+                                                                                  [aJµ , a†Jµ′ ] = [bP µ , b†P µ′ ] = δµµ′ ,       (16)
+          Γijk
+           2 (r) =                                     ,     (8)
+                        ϵ0 ϵ(r; ωP )ϵ(r; ωS )ϵ(r; ωI )             and all others are zero.
+                                                                                                                              4
+
+   III.   SOLUTION TO THE SCHRÖDINGER                        Eq. (22) for |ψ(t)⟩ and using Eq. (18) for |Ψ(t0 )⟩ we
+                 EQUATION                                     obtain
+
+   In this section we derive the dynamics of the ket that
+                                                                              p   Z                     
+evolves when Eq. (13) is used for the SPDC Hamiltonian.         |ψ(t0 )⟩ = exp   NP dk Φ(k)b†acP k − H.c. |vac⟩ .
+   We begin by considering the state evolution generally                                                                    (24)
+within an asymptotic fields analysis [23, 28]. The state
+of the system |Ψ(t)⟩ evolves according to the Schrödinger
+equation                                                      So as long as the pulse centered at the position z = vP t0
+                                                              in the input channel is far from the ring, the initial ket
+                 d |Ψ(t)⟩                                     in the interaction picture (24) is independent of t0 .
+            iℏ            = (HL + HNL ) |Ψ(t)⟩ ,      (17)
+                    dt                                           We borrow the strategy of Yanagimoto et al. [18] and
+where HL and HNL are given by Eqs. (5) and (9) respec-        look for a solution of Eq. (23) that separates the Gaus-
+tively. We assume that initially the pump pulse is in a       sian and non-Gaussian dynamics as
+coherent state in the actual channel evolving according
+to HL far from the ring. At this early time t = t0 < 0                             |ψ(t)⟩ = U (t)|ψ̃(t)⟩,                   (25)
+we can put HNL = 0 in Eq. (17), and write the initial
+state for the system as a coherent state for the pump,
+and vacuum for the signal and idler,                          where U (t) is a Gaussian unitary that can be written
+                 Z                                          as a product of displacement, squeezing, and rotation
+   |Ψ(t0 )⟩ = exp   dk x(k, t0 )b†acP k − H.c. |vac⟩ , (18)   operators (see Appendix A), and |ψ̃(t)⟩ is a residual ket
+                                                              that describes the non-Gaussian dynamics. Putting Eq.
+                                                              (25) for |ψ(t)⟩ into Eq. (23) for the Schrödinger equation
+where x(k, t0 ) is the initial coherent state amplitude in    we obtain an equation that |ψ̃(t)⟩ must satisfy
+terms of the wavenumbers for the channel. Here x(k, t0 )
+is given by
+                                                                                   d|ψ̃(t)⟩
+                                                                              iℏ            = Heff (t)|ψ̃(t)⟩,              (26)
+                          p
+              x(k, t0 ) = NP Φ(k)e−ivP kt0 ,          (19)                            dt
+where NP is its initial pump photon number, and we have
+introduced the Gaussian distribution                          where at the initial time t = t0 it is the vacuum state
+             r                                              |ψ̃(t0 )⟩ = |vac⟩, and we have introduced the effective
+                vP τ        1              2                  Hamiltonian
+     Φ(k) =      √ exp − [vP τ (k − KP )] ,        (20)
+                   π        2
+                                                                                                                 dU (t)
+where KP and vP are the center wavenumber for the                 Heff (t) = U † (t)HNL (t)U (t) − iℏU † (t)            ,   (27)
+pulse and its group velocity in the actual channel, re-                                                           dt
+spectively, and τ is its duration. The distribution (20) is
+normalized according to                                       which is constructed to only contain non-Gaussian terms.
+                     Z                                        To make Heff (t) only contain non-Gaussian terms we
+                        dk|Φ(k)|2 = 1.                (21)    choose a form for the Gaussian unitary U (t) and adjust
+                                                              its squeezing, rotation, and displacement parameters so
+                                                              that the Gaussian terms in Heff (t) cancel.
+A Fourier transform of Eq. (19) for x(k, t0 ) yields the
+amplitude  as a function of position in the actual channel,     In the two subsections below we derive the dynami-
+           √
+i.e., (dk/ 2π)x(k, t0 )eikz . We choose t0 so that at the     cal equations for the Gaussian parameters of U (t) which
+     R
+position z = vP t0 where the pulse reaches its peak value     make Heff (t) purely non-Gaussian, and show how to solve
+in the actual channel is very far from the ring.              Eq. (26) for the non-Gaussian ket |ψ̃(t)⟩.
+   We now define the interaction picture ket as
+
+                      |ψ(t)⟩ ≡ eiHL t/ℏ |Ψ(t)⟩ ,      (22)
+
+which satisfies the Schrödinger equation                                     A.      Gaussian evolution
+
+                      d |ψ(t)⟩
+                 iℏ            = HNL (t) |ψ(t)⟩ ,     (23)      In this subsection we derive the equations for the
+                         dt
+                                                              squeezing, rotation, and displacement parameters of the
+where HNL (t) = eiHL t/ℏ HNL e−iHL t/ℏ is the interaction     Gaussian unitary U (t). The form of U (t) we choose im-
+picture SPDC Hamiltonian. The initial ket in the inter-       plements a displacement of the pump operator and a
+action picture is independent of t0 . Putting t = t0 into     squeezing and rotation of the signal and idler operators,
+                                                                                                                                    5
+
+that is                                                              using a fourth-order Runge-Kutta method for the all the
+                                                                     Gaussian parameters.
+          U † (t)bP µ3 U (t) = bP µ3 + [x(t)]µ3 ,             (28)     Before moving on to the non-Gaussian evolution we
+          U † (t)aSµ1 U (t) =
+                               X
+                                   [VSS (t)]µ1 µ2 aSµ2               discuss the Gaussian approximation, which assumes that
+                                µ2
+                                                                     the non-Gaussian ket is vacuum for all times
+
+                                     [WSI (t)]µ1 µ2 a†Iµ2 ,
+                                X
+                           +                                  (29)                          |ψ̃(t)⟩ ≈ |vac⟩ .                 (36)
+                                µ2
+                                                                     In this case Eq. (25) for the full ket is approximately
+                                X
+          U † (t)aIµ1 U (t) =        [VII (t)]µ1 µ2 aIµ2
+                                µ2
+                                                                     given by the Gaussian unitary acting on the vacuum
+                                                                     state. We define the Gaussian ket as
+                                     [WIS (t)]µ1 µ2 a†Sµ2 ,
+                                X
+                           +                                  (30)
+                                µ2                                                      |ψG (t)⟩ ≡ U (t) |vac⟩ .              (37)
+where x(t) is a vector of pump displacement parameters               Using the Gaussian ket, the number of pump photons at
+and the matrices VSS (t), VII (t), WSI (t), and WIS (t)              all times is given by the inner product
+fully describe the characteristics of the squeezed state.
+These matrices can be written in terms of the squeezing                                   X †
+                                                                      NP (t) ≡ ⟨ψG (t)|    bP µ3 bP µ3 |ψG (t)⟩ = [x∗ (t)]T x(t),
+and rotation parameters of a non-degenerate squeezing
+                                                                                          µ3
+operator and the rotation operator, respectively, as we
+                                                                                                                              (38)
+show in Appendix A. Putting Eqs. (28), (29), and (30)
+in Eq. (27) for Heff (t) we show in Appendix B that all
+                                                                     where the amount of pump depletion is defined as
+Gaussian terms in Heff (t) cancel if x(t), VSS (t), VII (t),
+WSI (t), and WIS (t) are solutions of the following differ-
+                                                                                                        NP (t)
+ential equations:                                                                         d(t) ≡ 1 −           ,              (39)
+                                                                                                         NP
+                  dx
+               i      = ∆(t),                             (31)       and the second moments are defined as
+    dV            dt 
+                                                    ∗
+                                                        
+    i dtSS     0           0     Z(t)     0     WSI   (t)                    [MSI (t)]µ1 µ2 ≡ ⟨ψG (t)| aSµ1 aIµ2 |ψG (t)⟩
+                      =                  ∗                  ,
+       0    i dVdtII     Z T (t) 0     WIS  (t)     0
+                                                                                                           T
+                                                          (32)                                 = [WSI (t)VII (t)]µ1 µ2 ,      (40)
+ 
+     0      dWSI
+           i dt
+                      
+                           0
+                                      ∗
+                                 Z(t) VSS (t)     0
+                                                                            [NSS (t)]µ1 µ2 ≡ ⟨ψG (t)| a†Sµ1 aSµ2 |ψG (t)⟩
+                      =    T                      ∗       ,
+  i dW
+     dt
+       IS
+               0         Z   (t)  0      0      VII (t)                                          ∗
+                                                                                            = [WSI  (t)WSI T
+                                                                                                              (t)]µ1 µ2 ,     (41)
+                                                          (33)
+                                                                              [NII (t)]µ1 µ2 ≡ ⟨ψG (t)| a†Iµ1 aIµ2 |ψG (t)⟩
+where we have introduced the vector ∆(t) as                                                       ∗         T
+                                                                                             = [WIS  (t)WIS    (t)]µ1 µ2 .    (42)
+            X
+ [∆(t)]µ3 =      [Λ∗ (t)]µ1 µ2 µ3 [WSI (t)VII
+                                            T
+                                              (t)]µ1 µ2 , (34)       These moments can be partitioned into into 2 × 2 block
+               µ1 ,µ2                                                matrices involving the four different combinations of out-
+                                                                     put channels
+and the matrix Z(t) as
+                                                                                               
+                                                                                             ac ac       ac ph     
+                                                                                           MSI     (t) MSI     (t)
+                                                                                MSI (t) =                             ,       (43)
+                       X
+         [Z(t)]µ1 µ2 =   [Λ(t)]µ1 µ2 µ3 [x(t)]µ3 .            (35)                           ph ac
+                                                                                           MSI           ph ph
+                                                                                                   (t) MSI     (t)
+                           µ3                                                              ac ac       ac ph     
+                                                                                           NJJ (t) NJJ        (t)
+                                                                                NJJ (t) =   ph ac       ph ph       ,         (44)
+Here ∆(t) determines the rate at which the pump ampli-                                     NJJ    (t) NJJ     (t)
+tude changes, which increases with increasing squeezing
+of the signal and idler fields. The matrix Z(t) charac-              for J ∈ {S, I}. The block matrices labeled by (ac ac)
+terizes the squeezing of the signal and idler fields, which          and (ph ph) account for cases where both signal and idler
+is driven by the pump amplitude and enhanced by the                  are in the actual output and phantom output channels,
+resonant effects of the ring.                                        respectively, while those labeled by (ac ph) and (ph ac)
+   Since at our early time t0 there is no nonlinear interac-         account for cases where the signal and idler pairs are
+tion and the signal and idler are in the vacuum state, we            split across the two output channels.
+have WSI (t0 ) = WIS (t0 ) = 0, VSS (t0 ) = VII (t0 ) = I,             Given x(t), MSI (t), NSS (t), and NII (t), we obtain a
+where I is the identity matrix. The initial coherent                 complete description of the Gaussian dynamics. We em-
+state
+√ √   for the pump (24) has the amplitude [x(t0 )]µ3 =               phasize that this solution fully describes non-degenerate
+  ∆k NP Φ(k3 ), where Φ(k3 ) is given by Eq. (20). With              squeezing of the signal and idler fields for arbitrary pump
+these initial conditions we solve Eqs. (31), (32), and (33)          energies, including pump depletion and scattering loss.
+                                                                                                                                                    6
+
+                 B.       Non-Gaussian evolution                                     The perturbative solution in Eq. (46) is valid as long as
+                                                                                     the norm of the correction is much less than unity for all
+   We now turn our attention to the non-Gaussian dy-                                 t,
+namics. Given that the Gaussian parameters x(t),                                                                  X                    2
+VSS (t), VII (t), WSI (t), and WIS (t) are solutions to the                             ⟨ψ̃1 (t)|ψ̃1 (t)⟩ ≪ 1 →        [O(t)]µ′1 µ′2 µ3 ≪ 1.
+differential Eqs. (31)–(33) this guarantees that all the                                                           µ′1 ,µ′2 ,µ3
+
+Gaussian terms in Eq. (27) for Heff (t) cancel, leaving                                                                                          (49)
+only the non-Gaussian terms (see Appendix B)
+                                                                                     The Gaussian approximation would be exact were the
+                          X                                                          norm of the correction zero; a nonzero norm indicates a
+   Heff (t) =                           ℏ[Λ∗ (t)]µ1 µ2 µ3                            deviation from the Gaussian regime. As the value of the
+                 µ1 ,µ2 ,µ3 ,µ′1 ,µ′2                                                norm becomes significant, the perturbative non-Gaussian
+             × [VSS (t)]µ1 µ′1 [VII (t)]µ2 µ′2 aIµ′2 aSµ′1 b†P µ3                    solution (46) should not be trusted either. This occurs
+                                                                                     when the generation of signal and idler photons is very
+             + [WSI (t)]µ1 µ′1 [VII (t)]µ2 µ′2 a†Iµ′ aIµ′2 b†P µ3                    efficient, as we show in Sec. IV.
+                                                             1
+
+             + [VSS (t)]µ1 µ′1 [WIS (t)]µ2 µ′2 a†Sµ′ aSµ′1 b†P µ3                       When ⟨ψ̃1 (t)|ψ̃1 (t)⟩ becomes non-negligible, we must
+                                                                 2                   move beyond the perturbative solution (46) and look for
+             + [WSI (t)]µ1 µ′1 [WIS (t)]µ2 µ′2 a†Iµ′ a†Sµ′ b†P µ3
+                                                                              
+                                                                                     a numerical solution of Eq. (26) for |ψ̃(t)⟩. However, it is
+                                                                 1        2
+
+             + H.c..                                                          (45)   numerically impractical to obtain |ψ̃(t)⟩ using Eq. (45),
+                                                                                     where Heff (t) is written in terms of asymptotic field oper-
+                                                                                     ators. A more practical method is to express Heff (t) in a
+Given that Eq. (45) for Heff (t) only contains non-
+                                                                                     basis of supermodes that can be truncated to a few that
+Gaussian terms, Eq. (26) for the residual Schrödinger
+                                                                                     are dominant. This strategy has been investigated in pre-
+equation yields a |ψ̃(t)⟩ that describes only the non-                               vious work [18] in the context of degenerate squeezing in
+Gaussian features of the light.                                                      PPLN; in what follows we adapt this strategy to identify
+   Before obtaining a numerical solution for the non-                                the dominant supermodes in our microring system.
+Gaussian ket |ψ̃(t)⟩ using Eq. (45) for Heff (t) we seek                                We identify the dominant supermodes based on the
+a perturbative Dyson series solution under the assump-                               heuristic assumption that non-Gaussian features are con-
+tion that the effect of Heff (t) acting on the vacuum is                             centrated in supermodes with substantial squeezing. The
+small. Only keeping up to the first-order term in the                                information about the squeezed state is contained in the
+Dyson series, the ket can be approximately written as                                matrices VSS (t), VII (t), WSI (t), and WIS (t). To ex-
+                                                                                     tract the modes that are most squeezed we perform the
+                      |ψ̃(t)⟩ ≈ |vac⟩ + |ψ̃1 (t)⟩,                            (46)   following joint singular value decomposition (SVD) of the
+                                                                                     matrices [29]
+where we have defined the first-order correction to the
+ket as                                                                                            VSS (t) = FS (t) cosh[r(t)]GS (t),
+                                                                                                  VII (t) = FI∗ (t) cosh[r(t)]G∗I (t),
+                    [O(t)]µ′1 µ′2 µ3 a†Iµ′ a†Sµ′ b†P µ3 |vac⟩ ,
+                 X
+  |ψ̃1 (t)⟩ = −i                                                                                  WSI (t) = FS (t) sinh[r(t)]GI (t),
+                                                         1       2
+                    µ′1 ,µ′2 ,µ3
+                                                                                                  WIS (t) = FI∗ (t) sinh[r(t)]G∗S (t),           (50)
+                                                                              (47)
+                                                                                     where FS (t), FI (t), GS (t), and GI (t) are uni-
+where                                                                                tary matrices, r(t) = diag(r1 (t), r2 (t), . . .) is a di-
+                                                                                     agonal matrix, where ru (t) ≥ 0 is the squeez-
+                              X Z t                                                  ing amplitude for supermode u.                    Here we can
+     [O(t)]  µ′1 µ′2 µ3   =                  dt′ [Λ∗ (t′ )]µ1 µ2 µ3
+                              µ1 ,µ2    t0                                           write cosh[r(t)] = diag(cosh[r1 (t)], cosh[r2 (t)], . . .) and
+                                                                                     sinh[r(t)] = diag(sinh[r1 (t)], sinh[r2 (t)], . . .). Putting Eq.
+                          × [WSI (t′ )]µ1 µ′1 [WIS (t′ )]µ2 µ′2 .             (48)   (50) for the joint SVD into Eq. (45) for Heff (t) we obtain
+
+
+
+
+                                                     
+                                 ℏ[L(t)]µ3 uu′ b†P µ3 cosh[ru (t)] cosh[ru′ (t)][G∗I (t)]u′ µ′2 aIµ′2 [GS (t)]uµ′1 aSµ′1
+             X        X
+Heff (t) =
+             u,u′ µ3 ,µ′1 ,µ′2
+
+        + sinh[ru (t)] cosh[ru′ (t)][GI (t)]u′ µ′1 a†Iµ′ [G∗I (t)]uµ′2 aIµ′2 + cosh[ru (t)] sinh[ru′ (t)][G∗S (t)]u′ µ′2 a†Sµ′ [GS (t)]uµ′1 aSµ′1
+                                                       1                                                                     2
+                                                                             
+                                                    †      ∗            †
+        + sinh[ru (t)] sinh[ru′ (t)][GI (t)]u′ µ′1 aIµ′ [GS (t)]uµ′2 aSµ′ + H.c.,                                                            (51)
+                                                                      1              2
+                                                                                                                                               7
+
+where we have introduced the tensor                                           obtain
+                                                                                                      ℏDλ (t)[Q† (t)]λ(u,u′ ) BP† λ (t)
+                                                                                             X
+                      X                                                        Heff (t) =
+  [L(t)]µ3 uu′ =             [Λ (t)]µ1 µ2 µ3 [FS (t)]µ1 u [FI∗ (t)]µ2 u′ .
+                               ∗
+                                                                                            u,u′ ,λ
+                    µ1 ,µ2                                                                  
+                                                                       (52)            × cosh[ru (t)] cosh[ru′ (t)]AIu′ (t)ASu (t)
+
+                                                                                       + sinh[ru (t)] cosh[ru′ (t)]A†Iu′ (t)AIu (t)
+With Eq. (51) in hand it is natural to define the su-
+permode annihilation operators for the signal and idler                                + cosh[ru (t)] sinh[ru′ (t)]A†Su′ (t)ASu (t)
+                                                                                                                                    
+as                                                                                     + sinh[ru (t)] sinh[ru′ (t)]A†Iu′ (t)A†Su (t) + H.c.,
+                                   X                                                                                                      (57)
+                  ASu (t) =              [GS (t)]uµ′1 aSµ′1 ,          (53)
+                                   µ′1                                        where we have introduced the pump supermode annihi-
+                            X                                                 lation operators as
+                  AIu (t) =  [G∗I (t)]uµ′2 aIµ′2 ,                     (54)                            X
+                                   µ′2                                                      BP λ (t) =   [X ∗ (t)]µ3 λ bP µ3 , (58)
+                                                                                                               µ3
+
+where GS (t) and GI (t) are the unitary matrices from                         where X(t) is the square unitary matrix from the SVD
+the joint SVD (50). We can write Eq. (51) for Heff (t) in                     (56).
+terms of the signal and idler supermode operators as                             Eq. (57) is our final result for Heff (t), written in terms
+                                                                              of the supermodes. Each pump supermode labeled by λ
+                                                                              is coupled with every pair of signal and idler supermodes
+                         ℏ[L(t)]µ3 uu′ b†P µ3
+                  X
+ Heff (t) =
+                                                                              labeled by (u, u′ ), with the strength of each connection
+              u,u′ ,µ3
+                                                                             weighted by Dλ (t)[Q† (t)]λ(u,u′ ) . The benefit of having
+         × cosh[ru (t)] cosh[ru′ (t)]AIu′ (t)ASu (t)                          the form (57) is that the pump singular values Dλ are
+                                                                              organized in decreasing magnitude, so we obtain an or-
+         + sinh[ru (t)] cosh[ru′ (t)]A†Iu′ (t)AIu (t)                         dering of the coupling strength between a pump mode
+         + cosh[ru (t)] sinh[ru′ (t)]A†Su′ (t)ASu (t)                         and each signal-idler pair that we can exploit. For exam-
+                                                                             ple, using realistic parameters we demonstrate in Sec. IV
+         + sinh[ru (t)] sinh[ru′ (t)]A†Iu′ (t)A†Su (t) + H.c..                that all Dλ (t) are virtually zero except for one. So effec-
+                                                                       (55)   tively a single pump supermode couples to every signal-
+                                                                              idler pair. Additionally, we find that keeping only a few
+                                                                              signal and idler supermodes in Heff (t) is sufficient to cap-
+   Considering Eq. (55) for Heff (t), the tensor element                      ture the total number of photons in the non-Gaussian
+[L(t)]µ3 uu′ describes the coupling between the pump su-                      ket. These observations justify truncating Eq. (57) for
+permode labeled by µ3 and the pair of signal and idler                        Heff (t) to a small number of supermodes. In the trun-
+supermodes labeled by (u, u′ ). In general every element                      cated supermode basis we can perform efficient numerical
+of L(t) is nonzero, which implies that each pump mode                         simulations to obtain the non-Gaussian ket.
+is coupled with some strength to every signal-idler pair.                        We stress that Eqs. (53) and (54) for the signal and
+But for efficient simulation we aim to identify a single                      idler supermode operators annihilate photons in super-
+pump supermode that couples predominantly to a sub-                           modes that have components in both the actual and the
+set of signal and idler supermodes. To try to isolate the                     phantom channels. So Eq. (57) for Heff (t) describes the
+pump from the signal and idler, we perform an SVD of                          evolution of the non-Gaussian ket in the entire system.
+L(t), reorganizing Eq. (52) for the tensor L(t) into a ma-                       With Eq. (57) for Heff (t) we are now in a position
+trix by grouping together the signal and idler supermode                      to solve Eq. (26) for the Schrödinger equation for the
+indices as (u, u′ ). We perform the following SVD on the                      non-Gaussian ket |ψ̃(t)⟩. To benefit from the supermode
+reshaped L(t) matrix                                                          basis we represent |ψ̃(t)⟩ in the basis of time-dependent
+                                                                              supermode Fock states given by
+                          X
+   [L(t)]µ3 (u,u′ ) =          [X(t)]µ3 λ [D(t)]λλ [Q† (t)]λ(u,u′ ) ,                                     1
+                                                                                             |nSu ⟩t = √        [A† (t)]nSu |0⟩ ,         (59)
+                           λ                                                                              nSu ! Su
+                                                                       (56)                               1
+                                                                                              |nIu ⟩t = √       [A†Iu (t)]nIu |0⟩ ,       (60)
+                                                                                                          nIu !
+where X(t) is the square unitary matrix that re-                                                           1
+sults, Q(t) is a non-square semi-unitary matrix, with                                        |nP u ⟩t = √        [B † (t)]nP u |0⟩ ,      (61)
+                                                                                                          nP u ! P u
+Q† (t)Q(t) = I but Q(t)Q† (t) ̸= I, and D(t) =
+diag(D1 (t), D2 (t), . . .) is a diagonal matrix with Dλ (t) ≥                where at each time nSu , nIu , and nP u are the number
+0. Putting Eq. (56) for L(t) into Eq. (55) for Heff (t) we                    of photons in the signal, idler, and pump supermode u
+                                                                                                                                            8
+
+respectively. We consider a truncated basis consisting of                                           IV.   RESULTS
+M signal kets, M idler kets, and L pump kets, where each
+ket contains at most N photons. We choose the same                            In this section we present our calculations. We model
+number of signal and idler kets, but this can be readily                   a squeezing measurement in the output channel and cal-
+generalized. The non-Gaussian ket can be written in this                   culate the conversion efficiency of the signal and idler,
+truncated basis as                                                         compute the Wigner function of the non-Gaussian ket,
+                    N                 N                 N
+                                                                           and discuss how the non-Gaussian features of the full ket
+                    X                 X                 X                  could be observed in the actual output channel.The non-
+  |ψ̃(t)⟩ =
+                                                                           Gaussian ket and the signal and idler kets start in the
+              nS1 ,...,nSM =0 nI1 ,...,nIM =0 nP 1 ,...,nP L =0
+                                                                           vacuum state, and we choose the initial pump field in the
+          × cnS1 ...nSM nI1 ...nIM nP 1 ...nP L (t)                        actual input channel state to take the form of the Gaus-
+          × |nS1 . . . nSM ⟩t |nI1 . . . nIM ⟩t |nP 1 . . . nP L ⟩t ,      sian pulse in Eqs. (19) and (20). We assume that the
+                                                                  (62)     pump is always critically coupled to the ring, ηP = 0.5,
+                                                                           but allow its duration and intrinsic quality factor to vary.
+where cnS1 ...nSM nI1 ...nIM nP 1 ...nP L (t) are the coefficients
+that we determine. Supermode basis kets outside the
+truncated basis are assumed to be in the vacuum state,                                         A.    Gaussian results
+and are not included in the expansion (62). Taking the
+time derivative of Eq. (62) for |ψ̃(t)⟩ we obtain a linear                    We begin with the calculation of a homodyne measure-
+Hamiltonian H̃L (t) given below that captures the time                     ment of the squeezed state in the actual output channel;
+dependence of the supermode basis. Putting Eq. (62)                        details are presented in Appendix D. We evaluate our
+into Eq. (26) for iℏ d|ψ̃(t)⟩/dt, we show in Appendix C                    prediction for the measurement quadrature noise (Eq.
+                                                                                                                    ac ac         ac ac
+that we can write                                                          (D6)) using the reduced moments MSI            (t1 ), NSS    (t1 ),
+                                                                                    ac ac
+                                                                           and NII        (t1 ), where t1 = 30/Γ̄P is a late time when
+                ∂|ψ̃(t)⟩                                                 the pump pulse has left the ring and the generated light
+           iℏ           = Heff (t) + H̃L (t) |ψ̃(t)⟩,               (63)   is far from the ring. The reduced moments are obtained
+                   ∂t
+                                                                           numerically from the coupled Eqs. (31), (32), and (33)
+where Heff (t) is given by Eq. (57) and we have defined                    for the Gaussian parameters. The quadrature noise is
+                                                                           squeezed when it reaches below the vacuum noise, which
+  ∂|ψ̃(t)⟩
+                     N
+                     X                N
+                                      X               N
+                                                      X                    we normalize to 1, and the minimum in the quadrature
+           =                                                               noise is achieved by using the optimal local oscillator
+     ∂t                                                                    (LO) shapes that are obtained by a Lagrange multiplier
+             n   S1 ,...,nSM =0 nI1 ,...,nIM =0 nP 1 ,...,nP L =0
+
+              ∂                                                            method, as discussed in Appendix D.
+           ×    [cn ...n n ...n n ...n (t)]
+             ∂t S1 SM I1 IM P 1 P L
+           × |nS1 . . . nSM ⟩t |nI1 . . . nIM ⟩t |nP 1 . . . nP L ⟩t .
+                                                                  (64)
+
+The linear Hamiltonian H̃L (t), which arises because the
+supermodes themselves are time dependent, is given by
+
+                    dG∗S (t) T
+                                   
+   H̃L (t) = −iℏ            GS (t)       A†Su′ (t)ASu (t)
+                       dt              ′
+                                 uu
+                  dGI (t) †
+           − iℏ           GI (t)      A†Iu′ (t)AIu (t)
+                    dt            uu′
+                  dX T (t) ∗
+                                 
+           − iℏ           X (t)        BP† u′ (t)BP u (t),          (65)
+                     dt            uu′
+
+where GS (t) and GI (t), and X(t) are the unitary matri-                   FIG. 2. Squeezing (blue) and anti-squeezing (orange) in the
+ces from the SVDs in Eqs. (50), and (56) respectively.                     actual output channel versus input pump energy for (a) ηS =
+   We numerically solve Eq. (63) for the coefficients of                   ηI = 0.95 and (b) ηS = ηI = 0.5. The squeezing measurement
+|ψ̃(t)⟩ by evolving the state over short time steps ∆t,                    is done at a late time t1 = 30/Γ̄P , where Γ̄P = 2π × 3.84 GHz,
+during which the time dependence of the Hamiltonian                        when the pump pulse has left the ring. We have taken a pump
+can be neglected. This approach allows us to efficiently                   pulse duration of 0.5 ns, and used Qint,S = Qint,I = 106 .
+obtain the non-Gaussian ket for a number of supermodes
+on the order of 1 (M ≈ L ≈ 1) and a Fock space cutoff                        In Fig. 2(a) the squeezing (blue) and anti-squeezing
+for the non-Gaussian ket on the order of 10 (N ≈ 10).                      (orange) in the actual channel are shown as functions
+                                                                                                                              9
+
+of the input pump energy for overcoupling of the sig-
+nal and idler, ηS = ηI = 0.95. The asymmetric squeez-
+ing and anti-squeezing is due to the mixed-state of the
+actual output channel that arises from tracing over the
+phantom channel in Eq. (D6) for the quadrature noise.
+The squeezing saturates at approximately −12.99 dB for
+an energy of 0.1 pJ. We show in Appendix D that the
+limiting squeezing level when ηS = ηI is approximately
+given by ⟨X 2 ⟩min ≈ 1 − (ηS + ηI )/2, indicating that the
+minimum noise is limited by the escape efficiency into
+the actual channel. So for ηS = ηI = 0.95 the analyt-
+ical minimum noise is given by ⟨X 2 ⟩min ≈ 0.05, which
+is about −13.01 dB. In Fig. 2(b) the squeezing (blue)
+and anti-squeezing (orange) are shown for critical cou-
+pling, ηS = ηI = 0.5. The squeezing saturates at ap-
+proximately −3.01 dB for an energy of 0.1 pJ, which is
+virtually identical to the analytical result for the mini-
+mum noise ⟨X 2 ⟩min ≈ 1/2.
+
+
+
+
+                                                               FIG. 4. (a) Conversion efficiency and (b) overlap of the per-
+                                                               turbative non-Gaussian ket versus the initial pump energy for
+                                                               ηS = ηI = 0.5 (green) and ηS = ηI = 0.95 (red), evaluated at
+                                                               t1 = 30/Γ̄P with Γ̄P = 2π × 3.84 GHz. We have taken a pump
+                                                               pulse duration of 0.5 ns, and used Qint,S = Qint,I = 106 .
+
+
+
+                                                               pair regime the efficiency is independent of the pump en-
+                                                               ergy, beyond that regime it first increases exponentially
+FIG. 3. Signal photon number (identical to the idler photon    with increasing pump energy, and then starts to decrease
+number) versus the initial pump energy for ηS = ηI = 0.5       in the pump depletion regime. The decrease in the ef-
+(green) and ηS = ηI = 0.95 (red), evaluated at t1 = 30/Γ̄P     ficiency is due to the gradual saturation of the photon
+with Γ̄P = 2π × 3.84 GHz. We have taken a pump pulse           number as the initial pump photon number continues to
+duration of 0.5 ns, and used Qint,S = Qint,I = 106 .           increase. For a pump energy of 1 pJ the efficiencies are
+                                                               about 4.6% (green) and 54.8% (red) for critical coupling
+   We now calculate the number of generated signal pho-        and overcoupling, respectively. For low pump energies
+tons, which is identical to the number of generated idler      and critical coupling we obtain an efficiency independent
+photons. The photon number is given by tr[NSS (t1 )] =         of energy of 1.66 × 10−4 , which is the same order of mag-
+tr[NII (t1 )], where the photons in the phantom channel        nitude observed in similar InGaP microrings [13].
+are included. In Fig. 3 the photon number versus initial          To estimate the validity of the Gaussian approxima-
+pump energy for for critical coupling (green) and over-        tion in the pump depletion regime we calculate the
+coupling (red) is shown. We evaluate the photon num-           norm of the perturbative non-Gaussian ket |ψ̃1 (t1 )⟩ (see
+ber at a very late time when the pump pulse has left the       Eq. (49)). In Fig. 4(b) the norm versus the ini-
+ring. For low pump energy the photon number is propor-         tial pump energy is shown. The norm is approximately
+tional to the energy, which is indicative of the photon-pair   unity ⟨ψ̃1 (t1 )|ψ̃1 (t1 )⟩ ≈ 1 at 0.013 pJ for critical coupling
+regime [25]. Increasing the pump energy causes the pho-        (green) and at 0.1 pJ for overcoupling (red), indicating
+ton number to increase exponentially due to the creation       that the Gaussian approximation is no longer valid at
+of a squeezed state, and then a gradual saturation of the      these respective energies.
+photon number indicates the onset of the pump depletion
+regime [14].
+   The amount of pump depletion (see Eq. (39)) is equal
+                                                                               B.    Non-Gaussian results
+to the conversion efficiency of pump photons into signal
+and idler photons. The conversion efficiency is defined as
+the ratio of the number of generated signal photons after        Having identified the pump energy regimes in which
+the pump pulse has left the ring to the initial number         the Gaussian approximation starts to fail, we now turn
+of pump photons. In Fig. 4(a) the conversion efficiency        our attention to the non-Gaussian ket.
+versus the initial pump energy is shown. In the photon-          We begin by considering an escape efficiency of
+                                                                                                                                 10
+
+
+
+
+                                                                    FIG. 6. Non-Gaussian photon number in the first signal su-
+                                                                    permode (purple line), in the second signal supermode (pur-
+                                                                    ple dashed), and in the first pump supermode (cyan line). We
+                                                                    scale time by the pump light decay rate, Γ̄P = 2π × 3.84 GHz.
+                                                                    We have taken ηS = ηI = 0.95, Qint,S = Qint,I = 106 , and
+FIG. 5. (a) Largest 30 singular values associated with the          used a pump pulse duration of 0.5 ns and a pump energy of
+signal and idler (see Eq. (50)) and (b) largest 5 singular values   0.09 pJ.
+associated with the pump (see Eq. (56)), for ηS = ηI = 0.95
+and a pump energy of 0.09 pJ, evaluated at t1 = 30/Γ̄P with
+Γ̄P = 2π × 3.84 GHz. We have taken a pump pulse duration
+of 0.5 ns, and used Qint,S = Qint,I = 106 .
+
+
+
+ηS = ηI = 0.95 and a pump energy of 0.09 pJ where
+⟨ψ̃1 (t1 )|ψ̃1 (t1 )⟩ ≈ 1 and the onset of non-Gaussianity is
+expected. In Fig. 5(a) the leading 30 singular values
+associated with the signal and idler supermodes squeez-
+ing coefficients ru are shown. The first singular value is
+approximately r1 = 3.7, and r10 , r20 and r30 are approx-
+imately 0.19, 0.05, and 0.006 respectively. This indicates
+that the effective Hamiltonian and the resulting evolu-
+tion of the non-Gaussian ket are dominated by the first
+                                                                    FIG. 7. Wigner function for the hybrid pump, signal, and
+signal and idler supermodes. In Fig. 5(b) the largest 5             idler mode for the entire system calculated at t1 = 30/Γ̄P ,
+singular values of the pump supermodes Dλ are shown.                where Γ̄P = 2π × 3.84 GHz. We used Eq. (67), where we put
+The singular values other than the first one are virtually          θ = 0.67π and ϕ = 2.12π. We have taken ηS = ηI = 0.95,
+zero, indicating that keeping only the first pump super-            Qint,S = Qint,I = 106 , a pump pulse duration of 0.5 ns, and a
+mode in the effective Hamiltonian is sufficient to model            pump energy of 0.09 pJ.
+the evolution of the non-Gaussian ket.
+   To perform the non-Gaussian dynamical simulations
+we numerically solve Eq. (63) for |ψ̃(t)⟩ using a Fock              ated with the annihilation operators AS1 (t), AI1 (t), and
+space cutoff of N = 16 and ∆t = 0.1/ΓP . The Hamilto-               BP 1 (t). We now calculate the Wigner function for the
+nian is given by Eqs. (65) and (57) for H̃L (t) and Heff (t)        hybrid-mode Cθ,ϕ which is a linear combination of the
+respectively, where we only keep the first pump super-              dominant supermode operators [18]
+mode and the two leading signal and idler supermodes.
+Fig. 6 shows the non-Gaussian photon number in the first                              AS1 (t1 ) + AI1 (t1 )
+                                                                      Cθ,ϕ = cos(ϕ)            √            + sin(ϕ)eiθ BP 1 (t1 ),
+and second signal supermodes, ⟨ψ̃(t)|A†S1 (t)AS1 (t)|ψ̃(t)⟩                                      2
+                                                                                                                                (66)
+and ⟨ψ̃(t)|A†S2 (t)AS2 (t)|ψ̃(t)⟩, respectively. The photon
+number saturates at approximately 0.8 in the first sig-
+                                                                    where the angles θ and ϕ are real numbers. The Wigner
+nal supermode, and at ∼ 10−5 in the second signal su-
+                                                                    function for the non-Gaussian ket is given by
+permode; the idler supermode numbers are identical to
+the signal supermode numbers. The first pump super-                                Z
+                                                                                      dxdy
+                                                                       NG
+mode, ⟨ψ̃(t)|BP† 1 (t)BP 1 (t)|ψ̃(t)⟩, saturates at approxi-         Wθ,ϕ (q, p) =         ⟨ψ̃(t1 )|Dθ,ϕ (x, y)|ψ̃(t1 )⟩e2i(px−qy) ,
+                                                                                       π2
+mately 0.75.                                                                                                                   (67)
+   These results indicate that the non-Gaussian ket con-
+tains photons in three dominant supermodes associ-                  where we have introduced the displacement operator
+                                                                                                                                 11
+
+Dθ,ϕ (x, y) as                                                   not have access to the non-Gaussian ket itself. To model
+                                                               a realistic measurement we calculate the expectation
+                                    †
+         Dθ,ϕ (x, y) = exp [x + iy]Cθ,ϕ − H.c. .         (68)    value of observables involving the actual channel oper-
+                                                                 ators with respect to the full ket. We show that its non-
+   To compute Eq. (67) for the Wigner function we cal-           Gaussian features are obscured by the large squeezing
+culate the expectation value ⟨ψ̃(t1 )|Dθ,ϕ (x, y)|ψ̃(t1 )⟩ for   amplitude, but they can be revealed by applying a uni-
+each pair of displacement variables (x, y), and then do          tary to the state in the actual channel.
+the Fourier transform. Here |ψ̃(t1 )⟩ is given by Eq. (62)          For microring resonator systems pumped with a co-
+for the ket expanded in the supermode Fock bases. We             herent state, strong squeezing is required to achieve suf-
+truncate the set of bases to just the three dominant basis       ficient pump depletion to observe non-Gaussianity. If
+sets, one each for the dominant pump, signal, and idler          one calculates the Wigner√         function of the hybrid mode
+supermodes. All other supermodes are assumed to re-              [AS1 (t1 )+AI1 (t1 )]/ 2 using the full ket, the phase-space
+main in the vacuum state. In Fig. 7 the Wigner function          portrait in Fig. 8(b) for the reduced Wigner function in
+is shown for θ = 0.67π and ϕ = 2.12π. These angles give          the actual channel is squeezed along the q-axis by a fac-
+the greatest Wigner negativity volume [30] of approxi-           tor exp(−r1 ) ≈ 0.025, where the squeezing parameter
+mately 0.18, indicating that the state is non-Gaussian.          is r1 = 3.7. This extreme squeezing obscures the non-
+   We now consider the hybrid mode formed by a com-              Gaussian features.
+bination of the leading signal and idler supermodes  √ for          In principle, the Gaussian features in the Wigner func-
+the entire system, given by [AS1 (t1 ) + AI1 (t1 )]/ 2. In       tion of the full ket can be removed by applying the in-
+Fig. 8(a) the Wigner function for this hybrid mode for           verse Gaussian transformations to the light after the ring.
+ηS = ηI = 0.95 and a pump energy of 0.09 pJ is shown,            Prior to any measurement, one could imagine applying
+which displays non-Gaussian features. To investigate the         a Gaussian unitary that would stretch the Wigner func-
+effect of loss we compute the reduced Wigner function            tion along the q-axis by a factor of exp(r1 ), cancelling the
+for the actual channel only. In Appendix E we show that          initial squeezing. An appropriate rotation and displace-
+the reduced Wigner function for ηS = ηI ≡ η is well              ment of the ket could also be applied if needed. These
+approximated by                                                  operations would be equivalent to applying the Hermi-
+               Z                                                 tian conjugate of the Gaussian unitary U † to the full
+   NG              dxdy                                          ket after the ring, leading to a final full ket equal to the
+Wac   (q, p) ≈
+                     π2                                          non-Gaussian ket, U † |ψ⟩ = |ψ̃⟩. The Wigner function
+                                                        
+                         √ x + iy h †          i                 of the final full ket would then be equal to that of the
+             × ⟨ψ̃| exp   η √       AS1 + A†I1 − H.c. |ψ̃⟩       non-Gaussian ket.
+                               2
+                                                                    In practice it is impossible to implement U † exactly,
+                              x2 + y 2 2i(px−qy)
+                                     
+             × exp −(1 − η)             e         ,      (69)    since it requires access to scattered photons in the phan-
+                                 2                               tom channel. One can only implement a unitary U † that
+where we dropped the time-dependence on the ket for              acts on the light in the actual channel. In Fig. 9 is a
+convenience. The integrand in Eq. (69) contains a vac-           schematic of the system that implements U † on the light
+uum noise term that depends on the loss as 1 − η. When           exiting the ring in the actual channel. The final ket can
+there is loss (η < 1) the vacuum noise term can dominate         be written as |ψ ′ ⟩ = U † U |ψ̃⟩. The squeezing parame-
+the Wigner function, causing it to resemble that of the          ters of U † should be chosen so that the combined unitary
+vacuum state.                                                    U † U minimizes squeezing of the light in the actual chan-
+   In Fig. 8(b) the reduced Wigner function is shown for         nel. We employ a strategy in which the Gaussian unitary
+η = 0.95 and a pump energy of 0.09 pJ. Here the non-             is initially calculated under the artificial condition of no
+                                                                                        †
+Gaussian features persist in the reduced Wigner function.        scattering loss, Uno     loss . In this case, we can set the uni-
+                                                                                                              †
+Compare this with the scenario shown in Fig. 8(c) and            tary in the actual channel to U † = Uno        loss , ensuring that
+Fig. 8(d). In Fig. 8(c) we plot the Wigner function √    for     the Gaussian operations in the ket are exactly inverted.
+the signal and idler hybrid mode [AS1 (t1 ) + AI1 (t1 )]/ 2      When scattering loss is introduced we expect that a rea-
+                                                                                                                †
+if we assume critical coupling (ηS = ηI = 0.5) and a             sonable choice for U † would be U † ≈ Uno        loss provided the
+pump energy of 0.01 pJ, and in Fig. 8(d) we plot the re-         loss is not too large. We investigated this strategy below.
+duced Wigner function that results. Here tracing out the            The full Gaussian unitary U contains a squeezing ma-
+phantom channel erases the non-Gaussian features, lead-          trix J (t) (see Appendix A). In Fig. 10(a) we plot the
+ing to a reduced Wigner function for the actual channel          absolute value of the elements of the squeezing matrix
+that resembles the Wigner function of the vacuum state.          |[J (t1 )]µ1 µ2 | for the artificial case where there is no sig-
+                                                                 nal and idler loss. In this lossless case the components
+                                                                 of |[J (t1 )]µ1 µ2 | involving the phantom channel are zero.
+  C.   Stretching the full ket in the actual channel             Now we include signal and idler loss in Fig. 10(b),
+                                                                 where |[J (t1 )]µ1 µ2 | is shown for ηS = ηI = 0.95 and
+  In the previous subsection we calculated the Wigner            Qint,S = Qint,I = 106 . The loss causes the phantom
+function for the non-Gaussian ket. In practice one does          channel components of |[J (t1 )]µ1 µ2 | to be non-zero. We
+                                                                                                                              12
+
+
+
+
+                                                                                              √
+FIG. 8. (a) Wigner function (67) for the hybrid signal and idler mode [AS1 (t1 ) + AI1 (t1 )]/ 2 for ηS = ηI = 0.95 and a pump
+energy of 0.09 pJ. (b) Reduced Wigner function (69) √    for η = 0.95 and a pump energy of 0.09 pJ. (c) Wigner function (67) for
+the hybrid signal and idler mode [AS1 (t1 ) + AI1 (t1 )]/ 2 for ηS = ηI = 0.5 and a pump energy of 0.01 pJ. (d) Reduced Wigner
+function (69) for ηS = ηI = 0.5 and a pump energy of 0.01 pJ. Each plot is made using Qint,S = Qint,I = 106 , a pump pulse
+duration of 0.5 ns, and t1 = 30/Γ̄P with Γ̄P = 2π × 3.84 GHz.
+
+
+                                                                  3.7 to about 1. Much of the squeezing is removed but the
+                                                                  phantom channel components of J (t) prevent sufficient
+                                                                  stretching along the q-axis to reveal the non-Gaussian
+                                                                  features in the Wigner function.
+                                                                     With these parameters an effective stretching to reveal
+                                                                  the non-Gaussian features cannot be done. To move to
+                                                                  a regime where it is possible, we consider an increase in
+                                                                  the signal and idler escape efficiency (ηS = ηI = 0.997)
+                                                                  and the intrinsic quality factors for the signal, idler, and
+FIG. 9. Schematic of the system used to isolate the non-          pump (Qint,S = Qint,I = 15 × 106 , and Qint,P = 106 ).
+Gaussian features of the full ket. A Gaussian unitary U † is      To maintain a similar squeezing level we choose a pump
+applied only to the light in the actual output channel.           energy and duration of 0.027 pJ and 0.3 ns, respectively.
+                                                                     Using these new parameters, we proceed in a similar
+                                                                  way as above and first consider |[J (t1 )]µ1 µ2 | in Fig. 10(c)
+can see that the non-zero phantom channel components              for the artificial case of no signal and idler loss. Then sig-
+prevent the squeezing matrix from being identical to the          nal and idler losses are introduced in Fig. 10(d), where
+lossless squeezing matrix in Fig. 10(a).                          now the magnitude of the phantom channel elements are
+   We are now in a position to implement the strategy             visibly smaller than those in Fig. 10(b). We construct U †
+outlined above. We construct U † using the (ac., ac.)             using the (ac., ac.) component of J (t) given in Fig. 10(c)
+component of the squeezing matrix given in Fig. 10(a)             and calculate the Wigner function for |ψ ′ ⟩ = U † U |ψ̃⟩. In
+and calculate the Wigner function for |ψ ′ ⟩ = U † U |ψ̃⟩.        Fig. 11(b) we show the resulting Wigner function, where
+The details are in Appendix F, here we just present the           now a sufficient amount of squeezing has been removed
+results. In Fig. 11(a) we show the resulting Wigner func-         to reveal the non-Gaussian features. For comparison, in
+tion for |ψ ′ ⟩. The state resembles a squeezed vacuum            Fig. 11(c) we show that the squeezing could be entirely
+with an effective squeezing parameter of approximately            removed under the artificial conditions where the escape
+1. So applying U † reduces the squeezing parameter from           efficiencies approach unity and the intrinsic quality fac-
+                                                                                                                                13
+
+
+
+
+FIG. 10. Absolute values of the squeezing matrix elements |[J(t1 )]µ1 µ2 | (see Eq. (A3)) at a late time t1 after the pump has left
+the ring, where µ1 = (ac., k1 ) or (ph., k1 ) denotes photons exiting the actual or phantom channel, respectively. Signal and idler
+detunings are defined as (k1 − KS )vS /Γ̄S and (k2 − KI )vI /Γ̄I , with KJ the resonance center, vJ the group velocity, and 2Γ̄J
+the linewidth (J = S, I). (a) No signal/idler loss: pump energy 0.09 pJ, pulse duration 0.5 ns, ηP = 0.5, Qint,P = 105 . (b) With
+signal/idler loss: ηS = ηI = 0.95, Qint,S = Qint,I = 106 , pump energy 0.09 pJ, pulse duration 0.5 ns, ηP = 0.5, Qint,P = 105 .
+(c) No signal/idler loss: pump energy 0.027 pJ, pulse duration 0.3 ns, ηP = 0.5, Qint,P = 106 . (d) With signal/idler loss:
+ηS = ηI = 0.997, Qint,S = Qint,I = 15 × 106 , pump energy 0.027 pJ, pulse duration 0.3 ns, ηP = 0.5, Qint,P = 106 .
+
+
+tors approach infinity.                                            by the squeezing, they could be revealed by applying
+                                                                   an appropriate inverse Gaussian unitary that undid the
+                                                                   squeezing by “stretching.” Although the intrinsic quality
+                   V.     CONCLUSION                               factors needed for this approach are roughly an order of
+                                                                   magnitude higher than those currently being reported in
+   We have developed a framework for modeling non-                 the InGaP literature, with future design and fabrication
+Gaussian state generation via SPDC that incorporates               improvements this should be a viable approach.
+scattering loss with a phantom channel. The full ket for             In the InGaP microrings considered, the onset of non-
+the system is written as a Gaussian unitary acting on a            Gaussianity required high escape efficiencies and pump
+residual non-Gaussian ket, separating the evolution into           energies on the order of 0.1 pJ, yielding a Wigner function
+Gaussian and non-Gaussian parts. In this framework we              that was squeezed along one axis by a factor of ∼ 0.025.
+are able to use the Gaussian solution to find supermodes           In contrast, PPLN waveguide models require less pump
+that enable the efficient simulation of the non-Gaussian           energy, typically achieving non-Gaussianity with a com-
+ket.                                                               paratively smaller squeezing factor (e.g., ∼ 0.1) [18]. Al-
+   Using this approach, in calculations using realistic pa-        though waveguide models achieve non-Gaussianity with
+rameters for InGaP microrings we found a Wigner neg-               comparatively less squeezing, both microring and waveg-
+ativity volume of approximately 0.18 for the residual              uide systems share the challenge that the ability to re-
+non-Gaussian ket. While the non-Gaussian features are              veal non-Gaussian features depends on suppressing the
+largely obscured in the Wigner function of the full ket            dominant Gaussian features in the Wigner function. In
+                                                                                                                             14
+
+
+
+
+FIG. 11. Wigner functions for the full ket in the actual channel after a Gaussian unitary U † is applied (see schematic in Fig.
+9). (a) High-loss scenario using the squeezing matrix in Fig. 10(a) to construct U † : pump energy 0.09 pJ, pulse duration
+0.5 ns, ηP = 0.5, Qint,P = 105 , ηS = ηI = 0.95, Qint,S = Qint,I = 106 , and r1 = 3.7. (b) Low-loss scenario using the squeezing
+matrix in Fig. 10(c) to construct U: pump energy 0.027 pJ, pulse duration 0.3 ns, ηP = 0.5, Qint,P = 106 , ηS = ηI = 0.997,
+Qint,S = Qint,I = 15 × 106 , and r1 = 3.6. Artificial scenario with arbitrarily low signal/idler loss: (c) pump energy 0.09 pJ,
+pulse duration 0.5 ns, ηP = 0.5, Qint,P = 105 , ηS = ηI = 0.9999, Qint,S = Qint,I = 500 × 106 , and r1 = 3.7.
+
+
+addition, we showed that the suppression of Gaussian                             ACKNOWLEDGEMENTS
+features critically depends on the accurate inclusion of
+scattering loss in the model. Ultimately, the advantage             This work is supported by Mitacs through the Mi-
+of microring resonators are their compactness, and with           tacs accelerate program Grant No. IT15614. The au-
+effective handling of scattering loss, they open a path for       thors acknowledge Natural Sciences and Engineering Re-
+the deterministic generation of non-Gaussian states in a          search Council of Canada (NSERC) for funding. S.E.F.
+compact and scalable architecture.                                and J.E.S. acknowledge the Natural Sciences and Engi-
+                                                                  neering Research Council of Canada European Union’s
+                                                                  Horizon Europe Research and Innovation Programme
+                                                                  (101070700, project MIRAQLS) for financial support.
+                                                                  S.E.F. acknowledges support from a Walter C. Sumner
+                                                                  Memorial Fellowship.
+
+
+
+
+ [1] C. K. Hong and L. Mandel, Phys. Rev. Lett. 56, 58            [13] J. Akin, Y. Zhao, Y. Misra, A. K. M. N. Haque, and
+     (1986).                                                           K. Fang, Light Sci. Appl. 13, 290 (2024).
+ [2] P. G. Kwiat, K. Mattle, H. Weinfurter, A. Zeilinger, A. V.   [14] J. Flórez, J. S. Lundeen, and M. V. Chekhova, Opt. Lett.
+     Sergienko, and Y. Shih, Phys. Rev. Lett. 75, 4337 (1995).         45, 4264 (2020).
+ [3] L. A. Wu, H. J. Kimble, J. L. Hall, and H. Wu, Phys.         [15] M. Jankowski, R. Yanagimoto, E. Ng, R. Hamerly, T. P.
+     Rev. Lett. 57, 2520 (1986).                                       McKenna, H. Mabuchi, and M. M. Fejer, Adv. Opt. Pho-
+ [4] R. Schnabel, Phys. Rep. 684, 1 (2016).                            tonics 16, 347 (2024).
+ [5] N. Gisin and R. Thew, Nature Photonics 1, 165 (2007).        [16] R. Yanagimoto, E. Ng, M. Jankowski, R. Nehra, T. P.
+ [6] M. Halder, A. Beveratos, R. Thew, C. Jorel, H. Zbinden,           McKenna, T. Onodera, L. G. Wright, R. Hamerly,
+     and N. Gisin, New J. Phys. 10, 023027 (2008).                     A. Marandi, M. M. Fejer, and H. Mabuchi, Optica 11,
+ [7] N. Gisin, G. Ribordy, W. Tittel, and H. Zbinden, Rev.             896 (2024).
+     Mod. Phys. 74, 145 (2002).                                   [17] H. Aghaee Rad, T. Ainsworth, R. N. Alexander, et al.,
+ [8] T. Zhong, H. Zhou, R. D. Horansky, et al., New J. Phys.           Nature 638, 912 (2025).
+     17, 022002 (2015).                                           [18] R. Yanagimoto, E. Ng, A. Yamamura, T. Onodera, L. G.
+ [9] N. C. Menicucci, P. van Loock, M. Gu, C. Weedbrook,               Wright, M. Jankowski, M. M. Fejer, P. L. McMahon, and
+     T. C. Ralph, and M. A. Nielsen, Phys. Rev. Lett. 97,              H. Mabuchi, Optica 9, 379 (2022).
+     110501 (2006).                                               [19] T. Park, H. S. Stokowski, V. Ansari, T. P. McKenna,
+[10] S. Yokoyama, R. Ukai, S. C. Armstrong, C. Sornphiphat-            A. Y. Hwang, M. M. Fejer, and A. H. Safavi-Naeini, Opt.
+     phong, T. Kaji, S. Suzuki, J. Yoshikawa, H. Yonezawa,             Lett. 47, 2706 (2022).
+     N. C. Menicucci, and A. Furusawa, Nat. Photonics 7, 982      [20] J. Zhao, M. Rüsing, U. A. Javid, J. Ling, M. Li, Q. Lin,
+     (2013).                                                           and S. Mookherjea, Opt. Express 28, 19669 (2020).
+[11] L. Thiel, J. E. Castro, T. J. Steiner, C. L. Nguyen,         [21] H. Du, X. Zhang, H. Lv, J. Lin, L. Wang, and F. Chen,
+     A. Pechilis, L. Duan, N. Lewis, G. D. Cole, J. E. Bowers,         Opt. Lett. 49, 391 (2024).
+     and G. Moody, Appl. Phys. Lett. 125, 131102 (2024).          [22] C. M. Caves, Adv. Quantum Technol. 3, 1900138 (2020).
+[12] M. Zhao and K. Fang, Optica 9, 258 (2022).
+                                                                                                                               15
+
+[23] M. Liscidini, L. G. Helt, and J. E. Sipe, Phys. Rev. A 85,   Eqs. (A5) - (A8) give the solution of Eqs. (33) and (32)
+     013833 (2012).                                               in terms of the squeezing matrix and rotation matrices.
+[24] N. Quesada, L. G. Helt, M. Menotti, M. Liscidini, and           We now show how to extract the squeezing matrix J (t)
+     J. E. Sipe, Adv. Opt. Photon. 14, 291 (2022).                and rotation matrices ϕS (t) and ϕI (t) from Eqs. (A5) -
+[25] S. E. Fontaine, C. Vendromin, T. J. Steiner, A. Atrli,       (A8). We closely follow our previous strategy [28]. Eqs.
+     L. Thiel, J. Castro, G. Moody, J. Bowers, M. Liscidini,
+                                                                  (A5) and (A6) for VSS (t) and VII (t) are in the form of po-
+     and J. E. Sipe, Phys. Rev. A 111, 023705 (2025).
+[26] Y. Ueno, V. Ricci, and G. I. Stegeman, J. Opt. Soc. Am.      lar decompositions already, where cosh[u(t)] is a Hermi-
+     B 14, 1428 (1997).                                           tian positive semidefinite (PSD) matrix and exp[iϕS (t)]
+[27] M. Banic, L. Zatti, M. Liscidini, and J. E. Sipe, Phys.      and exp[iϕI (t)] are unitary matrices.
+     Rev. A 106, 043707 (2022).                                      Having uniquely identified the matrices cosh[u(t)],
+[28] C. Vendromin, Y. Liu, Z. Yang, and J. E. Sipe, Phys.         exp[iϕS (t)] and exp[iϕI (t)] from the polar decomposi-
+     Rev. A 110, 033709 (2024).                                   tions, the SVD of cosh[u(t)] can be written as
+[29] M. Houde, W. McCutcheon, and N. Quesada, Can. J.
+     Phys. 102, 497 (2024).                                                cosh[u(t)] = F (t) cosh[σ(t)]F † (t),        (A10)
+[30] A. Kenfack and K. Życzkowski, J. Opt. B: Quantum
+     Semiclass. Opt. 6, 396 (2004).                               where σ(t) = diag[σ1 (t), . . .] is a diagonal matrix, and
+[31] X. Ma and W. Rhodes, Phys. Rev. A 41, 4625 (1990).
+[32] N. Quesada, arXiv preprint arXiv:2507.06154 (2025).                            u(t) = F (t)σ(t)F † (t),            (A11)
+
+                                                                  with the unitary matrix F (t) the same in both decom-
+             Appendix A: Gaussian unitary                         positions. Using Eq. (A11) for u(t) we can write
+
+                                                                           sinh[u(t)] = F (t) sinh[σ(t)]F † (t).        (A12)
+   In this section we define the Gaussian unitary that
+identifies the Gaussian dynamics of the full ket, and we          Putting Eq. (A12) for sinh[u(t)] into Eq.          (A7) for
+relate its squeezing and rotation parameters to the solu-         WIS (t) we obtain
+tion of Eqs. (33) and (32).
+   The Gaussian unitary is written as                             WIS (t) = F (t) sinh[σ(t)]F † (t) exp[iα(t)] exp[−iϕ∗S (t)].
+                                                                                                                       (A13)
+            U (t) = eiγ(t) D[x(t)]S[J (t)]R[ϕ(t)],       (A1)
+where the phase γ(t) is a real function of time, and the          Introducing the matrix K(t) as
+unitary displacement, squeezing, and rotation operators
+are given by                                                              K(t) = F (t) sinh[σ(t)]σ −1 (t)F † (t),       (A14)
+
+                                                                  and its inverse
+                                            
+     D[x(t)] = exp [x(t)]µ3 b†P µ3 − H.c. ,           (A2)
+                                                                     K −1 (t) = F (t)σ(t){sinh[σ(t)]}−1 F † (t),      (A15)
+     S[J (t)] = exp [J (t)]µ1 µ2 a†Sµ1 a†Iµ2 − H.c. , (A3)
+                                                                we can multiply Eq. (A13) from the left by K −1 (t) to
+     R[ϕ(t)] = exp i[ϕS (t)]µ1 µ2 a†Sµ1 aSµ2
+                                                                  obtain
+                                             
+              × exp i[ϕI (t)]µ1 µ2 a†Iµ1 aIµ2 ,       (A4)               K −1 (t)WIS (t) = J (t) exp[−iϕ∗S (t)].        (A16)
+where x(t) is a vector of displacements for the pump,             So the squeezing matrix J (t) is given by
+J (t) is the non-degenerate squeezing matrix, and ϕS (t)
+and ϕI (t) are the Hermitian rotation matrices for the                    J (t) = K −1 (t)WIS (t) exp[iϕ∗S (t)].        (A17)
+signal and idler, respectively.
+   Putting Eq. (A1) for U (t) into the RHS of Eq.                 All quantities on the right-hand side of Eq. (A17) are
+(30) and the RHS of Eq. (29) for U † (t)aIµ1 U (t) and            known, so we can determine J (t).
+U † (t)aSµ1 U (t), respectively, and equating coefficients in       We stress that the vector of displacements for the
+front of similar operators on both sides we obtain                pump x(t) is obtained directly from the solution of the
+                                                                  coupled differential equations (31), (33), and (32).
+    VSS (t) = cosh[u(t)] exp[iϕS (t)],                   (A5)
+    VII (t) = cosh[u(t)] exp[iϕI (t)],                   (A6)
+    WIS (t) = sinh[u(t)] exp[iα(t)] exp[−iϕ∗S (t)],      (A7)       Appendix B: Removing Gaussian terms in Heff (t)
+
+    WSI (t) = sinh[u(t)] exp[iα(t)] exp[−iϕ∗I (t)],      (A8)
+                                                                     In this section we simplify Eq. (27) for Heff (t) by re-
+where the Hermitian matrices u(t) and α(t) are from the           moving all Gaussian terms.
+polar decomposition of the squeezing matrix                          The term that needs to be simplified in Eq. (27)
+                                                                  is the Gaussian transformation of the nonlinear Hamil-
+                  J (t) = u(t) exp[iα(t)].               (A9)     tonian, U † (t)HNL (t)U (t).   We begin by evaluating
+                                                                                                                                     16
+
+U † (t)HNL (t)U (t), where HNL (t) is given by Eq. (7) in                  the displaced, squeezed, rotated form of U (t) into Eq.
+the interaction picture                                                    (B6) and multiplying from the left by U † (t) we obtain
+                                                                                      dV(t)                          dγ(t)
+  U † (t)HNL (t)U (t) = ℏ[Λ(t)]µ1 µ2 µ3 U † (t)a†Sµ1 a†Iµ2 U (t)                iℏV † (t)    = V † (t)HG (t)V(t) + ℏ       , (B8)
+                                                                                        dt                            dt
+                          × U † (t)bP µ3 U (t)                             where we have introduced the unitary operator V(t) as
+                          + H.c.,                                   (B1)
+                                                                                            V(t) = D[x(t)]S[J (t)]R[ϕ(t)].         (B9)
+where the explicit notation for the sum over indices                       A differential equation for the global phase γ(t) can be
+is removed for convenience throughout this section.                        derived by requiring that dγ(t)/dt cancels all terms pro-
+Using Eqs. (29), and (30) for U † (t)aSµ1 U (t), and                       portional to the identity in Eq. (B8). This approach was
+U † (t)aIµ1 U (t) we can write                                             originally introduced by Ma and Rhodes [31] and has re-
+                                                                           cently been extended by Quesada to a more practical and
+U † (t)a†Sµ1 a†Iµ2 U (t) = [VSS
+                             ∗                †
+                                (t)]µ1 µ′1 [VII (t)]µ′2 µ2 a†Sµ′ a†Iµ′     scalable method for computing the phase [32]. The global
+                                                                1    2
+                                                                           phase γ(t) does not affect any of our results, so we put
+                              ∗
+                          + [VSS              †
+                                 (t)]µ1 µ′1 [WIS (t)]µ′2 µ2 a†Sµ′ aSµ′2
+                                                                1          γ(t) = 0 and neglect terms proportional to the identity
+                                               †
+                              ∗
+                          + [WSI (t)]µ1 µ′1 [VII (t)]µ′2 µ2 a†Iµ′ aIµ′1    in Eq. (B8). Then Eq. (B8) can be written as
+                                                                2
+                              ∗
+                          + [WSI              †
+                                 (t)]µ1 µ′1 [WIS (t)]µ′2 µ2 aIµ′1 aSµ′2                           dV(t)
+                                                                                               iℏ         = HG (t)V(t).           (B10)
+                              ∗       †                                                             dt
+                          + [WSI (t)VII (t)]µ1 µ2 .                 (B2)
+                                                                              From Ma and Rhodes [31] we know that since HG (t)
+Putting Eq. (28) for U † (t)bP µ3 U (t) and Eq. (B2) for                   is at most quadratic in operators, the unique solution
+                                                                           (neglecting the global phase) to Eq. (B10) is given by a
+U † (t)a†Sµ1 a†Iµ2 U (t) into Eq. (B1) above, we find it can               squeezed, displaced, rotated unitary given by Eq. (B9)
+be written as                                                              for V(t). The task is then to obtain equations for the
+                                                                           Gaussian parameters x(t), J (t), and ϕ(t). To obtain
+  U † (t)HNL (t)U (t) = U † (t)HG (t)U (t) + HNG (t),               (B3)
+                                                                           these equations we borrow a strategy from previous work
+                                                                           [24, 28]. Consider the vector of time-dependent operators
+where we have introduced the Gaussian Hamiltonian                                       †                                  
+                                                                               aS (t)       U (t)aS U (t)       VSS (t)   0      aS
+            HG (t) = ℏ[Z(t)]µ1 µ2 a†Sµ1 a†Iµ2                                           ≡                    =
+                                                                                aI (t)      U † (t)aI U (t)         0   VII (t) aI
+                     + ℏ[∆∗ (t)]µ3 {bP µ3 − [x(t)]µ3 }                                    
+                                                                                                0     WSI (t) a†S
+                                                                                                               
+                                                                                        +                             ,           (B11)
+                     + H.c.,                                        (B4)                   WIS (t)        0      a†I
+
+where Z(t) and ∆(t) are given by Eqs. (35) and (34)                        where for convenience we have introduced the column
+respectively, and the non-Gaussian Hamiltonian HNG (t)                     vector of operators aJ = [aJ1 , aJ2 , . . .]T for J = S, I
+is given by Eq. (45).                                                      and T is the transpose, and we have used Eqs. (29) and
+   We now put Eq.              (B3) for the simplified                     (30) for U † (t)aS U (t) and U † (t)aI U (t). Taking the time
+U † (t)HNL (t)U (t) into Eq. (27) for Heff (t)                             derivative of Eq. (B11) we obtain
+                                                                                    daS (t)     dVSS (t)       dWSI (t) †
+                                                              dU (t)                         =           aS +           aI ,       (B12)
+ Heff (t) = U † (t)HG (t)U (t) + HNG (t) − iℏU † (t)                 ,                  dt        dt              dt
+                                                               dt                    daI (t)    dVII (t)      dWIS (t) †
+                                                                  (B5)                       =           aI +         aS .         (B13)
+                                                                                        dt        dt             dt
+To cancel all the Gaussian terms in Eq. (B5) clearly                       We can form an equivalent expression for the derivative
+we just need to enforce that U (t) is a solution to the                    of the operators aS and aI with the Heisenberg picture
+Schrödinger equation                                                      using Eq. (B4) for the Gaussian Hamiltonian. In the
+                                                                           Heisenberg picture the derivatives of the operators are
+                          dU (t)                                              "         #
+                     iℏ          = HG (t)U (t).                     (B6)        daS (t)         
+                                                                                                 Z(t)     0     U (t)a†I U (t)
+                                                                                                               †             
+                           dt                                                     dt      =  −i                                  . (B14)
+                                                                                daI (t)           0 Z T (t) U † (t)a†S U (t)
+                                                                                  dt
+Enforcing this condition leads to Eq. (B6) makes Eq.
+(B5) for Heff (t) containing only non-Gaussian terms                       Putting Eqs.      (29) and (30) for U † (t)aS U (t) and
+                                                                            †
+                                                                           U (t)aI U (t) into Eq. (B14) above we obtain
+                          Heff (t) = HNG (t).                       (B7)
+                                                                            daS (t)
+                                                                                    = −iZ(t)WIS ∗
+                                                                                                   (t)aS − iZ(t)VII  ∗
+                                                                                                                       (t)a†I ,    (B15)
+  Having simplified Heff (t) we now derive Eqs. (31),                         dt
+(32), and (33) for the coupled differential equations for                   daI (t)
+                                                                                    = −iZ T (t)WSI∗
+                                                                                                     (t)aI − iZ T (t)VSS∗
+                                                                                                                          (t)a†S . (B16)
+the Gaussian parameters of U (t). Putting Eq. (A1) for                        dt
+                                                                                                                                     17
+
+Comparing Eqs. (B15) and (B16) with Eqs. (B12) and                  Eq. (59) for |nSu ⟩t we can write
+(B13) above and equating the coefficients in front of sim-
+ilar operators we obtain the differential equations (32)              d |{nS }⟩t            1
+                                                                                 =√
+and (33) for dVSS (t)/dt and dVII (t)/dt, and dWSI (t)/dt                 dt          nS1 ! . . . nSM !
+and dWIS (t)/dt respectively. Once we have obtained the
+                                                                                     d(A†S1 )nS1
+                                                                                   
+solutions VSS (t), VII (t), WSI (t), and WIS (t) we use the                      ×                  . . . (A†SM )nSM |0⟩1 . . . |0⟩M
+results of Appendix A to extract the rotation matrices                                    dt
+ϕS (t) and ϕI (t) and the squeezing matrix J (t) from the                        + ...
+solutions.
+                                                                                                    d(A†SM )nSM
+                                                                                                                                   
+                                                                                      † nS1
+   To obtain the equation for the coherent state ampli-                          + (AS1 )       ...                |0⟩1 . . . |0⟩M ,
+                                                                                                            dt
+tudes for the pump, consider                                                                                                       (C2)
+
+         dbP (t)   d  †                                           where we have dropped the explicit time dependence of
+                 ≡    U (t)bP U (t) = x(t),               (B17)     operators for clarity and will do so throughout the re-
+           dt      dt
+                                                                    mainder of this section. Using Eq. (53) for ASu (t) we
+where we have introduced the column vector of pump                  can write
+operators bP = [bP 1 , bP 2 , . . .]T and used Eq. (28) for
+                                                                            d(A†Su )nSu       X  dG∗ (t)       
+U † (t)bP U (t). In the Heisenberg picture the derivative of                            = nSu         S     T
+                                                                                                          GS (t)
+the pump operators using Eq. (B4) for HG (t) is given by                        dt             ′
+                                                                                                     dt          uu′
+                                                                                                  u
+
+                                                                                          × ASu′ (A†Su )(nSu −1) ,
+                                                                                             †
+                                                                                                                                  (C3)
+                      dbP (t)
+                              = −i∆(t).                   (B18)
+                        dt                                          where GS (t) is given by SVD (50). Putting Eq. (C3) into
+                                                                    Eq. (C2), after some straightforward algebra we obtain
+Equating these two expressions for the pump derivative
+                                                                     d |{nS }⟩t    X  dG∗ (t)       
+gives Eq. (31) for dx(t)/dt.                                                    =           S
+                                                                                               GT (t)      A†Su′ ASu |{nS }⟩t .
+                                                                                                S
+                                                                         dt          ′
+                                                                                           dt          uu′
+                                                                                     u
+                                                                                                                                  (C4)
+
+  Appendix C: Derivative of the non-Gaussian ket                    Following similar steps we obtain
+
+                                                                     d |{nI }⟩t   X  dGI (t) † 
+  In this section we derive Eq. (63) for the derivative of                      =             GI (t)      A†Iu′ AIu |{nI }⟩t ,
+                                                                         dt        ′
+                                                                                         dt          uu ′
+the non-Gaussian ket.                                                               u
+                                                                                                                                  (C5)
+  We begin by taking the total time derivative of Eq.
+                                                                     d |{nP }⟩t     X  dX T (t)        
+(62) for |ψ̃(t)⟩ expanded in the time-dependent super-                          =                   ∗
+                                                                                                   X (t)         BP† u′ BP u |{nP }⟩t ,
+mode Fock states                                                         dt                  dt            uu′
+                                                                                    u′
+                                                                                                                                  (C6)
+  d|ψ̃(t)⟩   ∂|ψ̃(t)⟩
+           =                                                        where GI (t) and X(t) are given by SVDs (50) and (56)
+     dt         ∂t
+                                  d |{nS }⟩t                        respectively.
+           + c{nS }{nI }{nP } (t)            |{nI }⟩t |{nP }⟩t         Finally, we put Eq. (26) for iℏ d|ψ̃(t)⟩/dt into the left-
+                                      dt
+                                           d |{nI }⟩t               hand side of Eq. (C1) and put Eqs. (C4) - (C6) into
+           + c{nS }{nI }{nP } (t) |{nS }⟩t             |{nP }⟩t     the right-hand side of Eq. (C1). Isolating the result for
+                                               dt
+                                                                    iℏ ∂|ψ̃(t)⟩/∂t we obtain Eq. (63) in the main text.
+                                                    d |{nP }⟩t
+           + c{nS }{nI }{nP } (t) |{nS }⟩t |{nI }⟩t             ,
+                                                         dt
+                                                             (C1)
+                                                                       Appendix D: Treatment of squeezing in the
+                                                                      Gaussian approximation using asymptotic fields
+where we put {nS } = nS1 , . . . , nSM , {nI } =
+nI1 , . . . , nIM , and {nP } = nP 1 , . . . , nP L , and we have     In this section we model a homodyne measurement of
+dropped the summation for convenience. Here ∂|ψ̃(t)⟩/∂t             the generated squeezed state within the Gaussian approx-
+is given by Eq. (64).                                               imation in the actual output channel. We describe the
+   To proceed with Eq. (C1) we need to take the total               Lagrange multiplier method that we use to obtain the
+derivative of the basis kets. We focus on the derivative of         optimal local oscillator that minimizes the quadrature
+the signal basis kets, but the derivatives of the idler and         noise, and we derive an analytical formula that approxi-
+pump basis kets are derived in a similar fashion. Using             mates the minimum noise.
+                                                                                                                               18
+
+  Consider a general quadrature operator written in                 where we have introduced
+terms of the asymptotic-out operators for the actual out-                                
+                                                                                         f
+put channel                                                                         f= S ,                                 (D10)
+                                                                                          fI
+         1 X                                                                             ac ac
+                                                                                         NSS        0
+                                                                                                         
+  Xac = √     ([fS ]k aacSk + [fI ]k aacIk ) + H.c.,       (D1)                    N=
+          2 k                                                                                       ac ac ,                (D11)
+                                                                                             0     NII
+                                                                                                       ac ac
+                                                                                                            
+where k is a wavenumber in the actual waveguide, and                                          0     MSI
+                                                                                  M=         ac acT            ,           (D12)
+the vectors fS and fI are the local oscillator profiles for                              MSI           0
+the signal and idler, respectively. The local oscillator
+                                                                    and we have put ⟨X 2 ⟩ = ⟨ψ(t1 )| Xac    2
+                                                                                                               |ψ(t1 )⟩ for conve-
+profiles for the signal and idler are normalized such that
+                                                                    nience. We treat the problem of minimizing the noise
+                           fS† fS + fI† fI                          subject to the constraint 21 f T f ∗ −1 = 0 using the method
+                     1=                    ,               (D2)     of Lagrange multipliers. The Lagrangian is written as
+                                  2
+                                                                                                                  
+ensuring that the commutator is satisfied                                                               1 T ∗
+                                                                          L(f , f ∗ , λ) = ⟨X 2 ⟩ + λ     f f −1 ,          (D13)
+                                                                                                        2
+                                †
+                        [Xac , Xac ] = 1.                  (D3)
+                                                                    where λ is the Lagrange multiplier. Requiring that all
+The orthogonal quadrature operator Yac is given by                  partial derivatives of the Lagrangian vanish leads to the
+                                                                    following eigenvalue equation
+           i X
+  Yac = − √     ([fS ]k aacSk + [fI ]k aacIk ) + H.c., (D4)                                                
+                                                                                                                     1
+                                                                                                                        
+            2 k                                                        Re{N + M } − Im{N + M } σ                          σ
+                                                                                                          =− λ+
+                                                                      Im{N − M } Re{N − M }            s             2    s
+where                                                                                                                  (D14)
+
+                        [Xac , Yac ] = i.                  (D5)     where σ and s are complex vectors related to the local
+                                                                    oscillator profiles f by
+   At a very late time t = t1 when the pump pulse has                                        √
+left the ring, and the generated signal and idler light is                               f = 2 (σ + is) ,           (D15)
+far from the ring propagating in the actual and phan-
+tom output channels, we consider a homodyne measure-                and satisfy the normalization condition
+ment in the actual output channel. The noise in the Xac
+quadrature within the Gaussian approximation is given                                          1 = σ T σ + sT s.           (D16)
+by                                                                  The quadrature noise is given by
+           2
+ ⟨ψ(t1 )| Xac |ψ(t1 )⟩ = fS† NSS
+                              ac ac
+                                    (t1 )fS + fI† NII
+                                                    ac ac
+                                                          (t1 )fI                               ⟨X 2 ⟩ = −2λ.              (D17)
+                            T   ac ac
+                                                   
+                       + fS MSI (t1 )fI + c.c + 1, (D6)
+                                                                    The minimum noise corresponds to the negative λ that
+       ac ac
+where MSI               ac ac
+             (t1 ) and NJJ    (t1 ) are given by Eqs.
+                                                  (43)              is closest to zero, and the optimal local oscillator is given
+and (44), respectively. The commutation relation (D5)               by the eigenvector corresponding to this λ.
+between Xac and Yac produces the uncertainty relation                  The Lagrangian method is fully numerical but reliably
+                                                                    gives the optimal local oscillators. We now derive an ap-
+               2                      2
+     ⟨ψ(t1 )| Xac |ψ(t1 )⟩ ⟨ψ(t1 )| Yac |ψ(t1 )⟩ ≥ 1,      (D7)     proximate analytical expression for the quadrature noise
+                                                                    that closely matches the minimum noise obtained numer-
+with equality achieved for the vacuum state, which sets             ically.
+the vacuum noise level to 1. So the condition for squeez-              Due to the point-coupling model we use to obtain the
+ing in the Xac quadrature below the vacuum noise is given           field components in the different channels, and the result-
+by                                                                  ing partitioning of the nonlinear coefficient into a 2 × 2
+                            2                                       block matrix, the full Gaussian moments are given by
+                  ⟨ψ(t1 )| Xac |ψ(t1 )⟩ < 1.               (D8)
+                                                                                              q          
+                                                                                                  1−ηI
+The optimal local oscillator shapes fS and fI that min-                               1            η              ac ac
+                                                                        MSI = q 1−η q 1−η qI 1−η  ⊗ MSI               , (D18)
+imize Eq. (D6) for the quadrature noise are obtained                                       S             I            S
+                                                                                      ηS            ηI           ηS
+using the method of Lagrange multipliers, as described                                         q            
+below.                                                                                            1−ηJ
+                                                                                     1             ηJ     ac ac
+  Consider Eq. (D6) for the quadrature noise can be                    NJJ = q 1−η              1−ηJ
+                                                                                                        ⊗ NJJ    ,         (D19)
+                                                                                           J
+written without the time-dependence as                                                ηJ          ηJ
+
+                        1 T           1                            where ηJ for J = S, I is the escape efficiency into the
+  ⟨X 2 ⟩ = f ∗T N f +     f M f + c.c + f T f ∗ ,          (D9)
+                        2              2                            actual channel and ⊗ is the Kronecker product. Here
+                                                                                                                         19
+
+MSI and NJJ are 2nk × 2nk matrices, where nk is the             We make the ansatz that the minimum quadrature noise
+number of discrete wavenumbers used to resolve the sig-         is closely achieved when the signal local oscillator fS is
+                             ac ac      ac ac
+nal or idler resonance, and MSI    and NJJ    are nk × nk       the first column vector of USS and the idler local oscilla-
+matrices.                                                       tor fI is the first column vector of UII , i.e., the optimal
+  Consider the SVD of the matrix partitians associated          local oscillators are approximately given by
+with the actual channel
+                   ac ac
+                                                                                    [fS ]k = eiθ [USS ]k1 ,          (D32)
+                  MSI    = USI ΣSI OSI ,              (D20)
+                                                                                    [fI ]k = [UII ]k1 ,              (D33)
+                   ac ac            †
+                  NJJ    = UJJ ΣJJ UJJ ,              (D21)
+                                                                where θ is a global phase. These vectors correspond to
+where UJJ , USI , and OSI are nk × nk unitary matrices,         the largest singular values in ΣSS and ΣII .
+and ΣSI and ΣJJ are nk ×nk diagonal matrices. Putting             Putting Eqs. (D32) and (D33) for the optimal local
+Eqs. (D20) and (D21) into Eqs. (D18) and (D19) and us-          oscillators into Eq. (D30) for the noise we obtain
+ing the mixed-product property of the Kronecker product
+we obtain                                                                 √
+                                                                 ⟨X 2 ⟩ = ηS ηI eiθ sinh r[1,1] cosh r[1,1] uu Pu + c.c
+                                                                                                                    
+                      1                 
+ MSI = (QS ⊗ USI )
+                       √
+                         η S η I
+                                 0
+                                     ⊗ ΣSI (QI ⊗ OSI ) ,              + (ηS + ηI ) sinh2 (r1 ) + 1,                  (D34)
+                          0      0
+                                                      (D22)     where summation over u is implied and we have intro-
+                      1                                    duced
+                        ηJ 0 ⊗ Σ
+                                                       
+                                                    †
+ NJJ = (QJ ⊗ UJJ )                    JJ    Q J ⊗ U JJ ,
+                        0 0                                                          T
+                                                                              Pu = [USI USS ]u1 [OSI UII ]u1 .       (D35)
+                                                      (D23)
+where we have introduced the 2 × 2 unitary matrix QJ            Here sinh2 (r1 ) is the number of signal and idler photon
+as                                                              pairs corresponding to the largest singular value r1 . We
+                     √        √                               choose the phase θ such that exp(iθ)P1 = −1. Putting
+                    − ηJ
+                    √        − 1 − ηJ                           this into Eq. (D34) we obtain
+           QJ =                 √        ,     (D24)
+                   − 1 − ηJ       ηJ                                                                          
+                                                                              exp(−2r1 ) ηS + ηI √
+where J = S, I.                                                      ⟨X 2 ⟩ =                        + ηS ηI
+                                                                                   2           2
+  On the other hand the joint SVD of MSI and NJJ                                                           
+can be written as (c.f. Eq. (50) and Eqs. (40), (41), and                     exp(2r1 ) ηS + ηI √
+                                                                            +                      − ηS ηI
+(42))                                                                             2          2
+                                                                                  ηS + η I
+              MSI = FS sinh(r) cosh(r)FI† ,           (D25)                 +1−
+                                                                                      2
+                                                                              √        nk
+              NSS = FS∗ sinh2 (r)FST ,                (D26)                     ηS ηI X
+                                                                                          sinh(2ru ) P1∗ Pu + c.c .
+                                                                                                                 
+                                                                            −                                       (D36)
+              NII = FI sinh2 (r)FI† ,                 (D27)                      2 u=2
+
+where r is a 2nk × 2nk diagonal matrix where sinh2 (r) =        We find numerically that Pu ≈ 0 for u ≥ 2, so we can
+diag(sinh2 (r1 ), sinh2 (r2 ), . . .). We compare these equa-   neglect the last line of Eq. (D36). So the minimum
+tions with Eqs. (D22) and (D23) and immediately obtain          quadrature noise is approximately given by
+relations between the singular values                                                                       
+                √                                                                exp(−2r1 ) ηS + ηI √
+                                                                        ⟨X 2 ⟩ ≈                     + ηS ηI
+                                               
+       ΣSI = ηS ηI sinh r[1,1] cosh r[1,1] ,            (D28)
+                                                                                     2           2
+       ΣJJ = ηJ sinh2 (r[1,1] ),                      (D29)                               
+                                                                                 exp(2r1 ) ηS + ηI √
+                                                                                                           
+                                                                               +                   − ηS ηI
+where we have defined the nk × nk matrix r[1,1] as the                              2          2
+upper left block of the full 2nk × 2nk matrix r.                                    ηS + η I
+                                                                               +1−           .                 (D37)
+   Having Eqs. (D28) and (D29) for the singular values                                  2
+in hand, we now put Eqs. (D20) and (D21) into Eq. (D6)
+for the quadrature noise                                        For ηS = ηI = η and exp(−2r1 ) → 0 the noise is simply
+                                                                limited by 1 − η.
+                  ∗       †
+   ⟨X 2 ⟩ = (fST USS ΣSI UII fI + c.c)
+         + fS† USS ΣSS USS
+                        †
+                           fS + fI† UII ΣII UII
+                                             †
+                                                fI + 1,
+                                                                Appendix E: Wigner function in the actual channel
+                                                    (D30)                   for the non-Gaussian ket
+where we have introduced the nk × nk matrix
+                      T
+                                                                   In this section we show how to obtain the Wigner func-
+               ΣSI = USS USI ΣSI OSI UII .            (D31)     tion of the non-Gaussian ket in the actual channel.
+                                                                                                                              20
+
+  Consider the operators dS and dI that are linear com-               However, Eq. (62) for the non-Gaussian ket is written in
+binations of the signal and idler operators for the asymp-            terms of Eqs. (53) and (54) for the non-Gaussian super-
+totic field for the actual output channel                             mode operators at the final time AS (t1 ) and AI (t1 ). It
+                                                                      can be easily shown that Eqs. (E4) and (E5) for dS and
+                       dS = βST aacS ,                      (E1)      dI can be written in terms of AS (t1 ) and AI (t1 ) as
+                        dI = βIT aacI ,                     (E2)
+                                                                                           dS = βST GS AS (t1 ),             (E6)
+where aacS and aacI are nk × 1 column vectors of op-
+                                                                                           dI = βIT GI AI (t1 ),             (E7)
+erators for the nk modes in the actual channel for the
+signal and idler and βS and βI are nk × 1 column vec-
+tor of the expansion coefficients that we will determine.             where we have introduced the nk × 2nk reduced matrices
+We normalize βS and βI so that the commutators are                    GS and GI as
+satisfied
+                                                                                        GS = Ink 0nk G†S (t1 ),
+                                                                                                   
+                                                                                                                             (E8)
+                  [dS , d†S ] = [dI , d†I ] = 1.            (E3)
+                                                                                        GI = Ink 0nk GT
+                                                                                                   
+                                                                                                       I (t1 ),              (E9)
+It will be convenient to write Eqs. (E1) and (E2) as
+                                                                      which are formed by removing the rows associated with
+                 dS = βST Ink 0nk aS ,
+                                   
+                                                    (E4)              the phantom channel from the original 2nk ×2nk matrices
+                         T                                            G†S (t1 ) and GT
+                                                                                     I (t1 ). Eqs. (E6) and (E7) for dS and dI
+                                   
+                 dI = βI Ink 0nk aI ,               (E5)
+                                                                      represent a weighted sum of the supermode operators for
+where Ink and 0nk are the nk × nk identity matrix and                 the signal and idler, where the weights are given by the
+zeros matrix respectively, and we have introduced the                 1 × 2nk row vectors βST GS and βIT GI respectively.
+2nk × 1 column vectors aS = [aT             T
+                                      acS aphS ]
+                                                 T
+                                                   and aI =              We will now show that these weights contribute to a
+        T T
+[aT
+  acI a phI ] . Here [Ink 0 nk ] is an n k × 2nk  matrix that         Gaussian noise term in the Wigner characteristic
+                                                                                                                     √ func-
+projects onto the part of the operator associated with the            tion. Consider the hybrid mode (dS + dI )/ 2 in the
+actual channel.                                                       actual channel. Using Eqs. (E6) and (E7) we can write
+  We will calculate the Wigner function for the non-                  the Wigner function for |ψ̃(t1 )⟩ in terms of this hybrid
+Gaussian ket for the actual channel in terms of dS and dI .           mode as
+
+
+
+                            Z                                                                     
+             NG                  dxdy                x + iy † ∗ †             † ∗ †
+            Wac (q, p) =              ⟨ψ̃(t1 )| exp   √    [βS GS AS (t1 ) + βI GI AI (t1 )] − H.c. |ψ̃(t1 )⟩e2i(px−qy) .   (E10)
+                                  π2                    2
+
+
+
+Assuming that the non-Gaussian ket |ψ̃(t1 )⟩ is vacuum                for all modes expect the first signal and idler modes we
+                                                                      can write Eq. (E10) as
+
+
+
+                             Z                                                                              
+              NG               dxdy                  x + iy n † ∗        †           † ∗     †
+                                                                                                    o
+             Wac (q, p) =           ⟨ ψ̃(t1 )| exp     √       [β  G ] A   (t
+                                                                  S S 1 S1 1  ) + [β  G  ] A
+                                                                                     I I 1 I1 1 (t )  − H.c.   |ψ̃(t1 )⟩
+                                π2                       2
+                                               2n                              !
+                                   x2 + y 2 Xk          † ∗
+                                                                2
+                                                                       † ∗
+                                                                              2
+                          × exp −                     [βS GS ]u + [βI GI ]u        e2i(px−qy) ,                             (E11)
+                                        4      u=2
+
+
+
+
+where [βS† GS∗ ]u and [βI† GI∗ ]u are the weights associated          would also make the noise term vanish. In the presence
+with the signal and idler supermode u. So the super-                  of loss the noise term will never vanish. The matrices GS
+modes u ≥ 2 that are not included in the ket contribute               and GI are not invertible, so it is not possible to obtain
+to the vacuum noise term in Eq. (E11). The noise term                 coefficients βS and βI that yield the ideal weights. The
+vanishes for the ideal weights satisfying βS† GS∗ = βI† GI∗ =         best one can do is minimize the vacuum noise term in
+[1 0 . . . 0], where there are 2nk − 1 zeros and we put               Eq. (E11) by choosing the optimal coefficients βS and
+the first element to 1 but any non-zero complex number
+                                                                                                                                 21
+
+βI according to                                                     where GS+ and GI+ denote the pseudo-inverses of GS and
+                                                                    GI respectively.
+                                                                       Putting Eqs. (E12) and (E13) for the optimal coef-
+                    βST = 1 0 . . . 0 GS+ ,                         ficients into Eq. (E11) for the reduced Wigner function
+                                    
+                                                          (E12)
+                                                                    and for ηS = ηI ≡ η we numerically find that the reduced
+                    βIT = 1 0 . . . 0 GI+ ,
+                                    
+                                                          (E13)     Wigner function is well approximated by
+
+
+
+                                                                                                         x2 + y 2 2i(px−qy)
+                                                                                                              
+                                         √ x + iy n †
+                Z
+  NG                dxdy                                        †
+                                                                      o
+ Wac (q, p) ≈            ⟨ ψ̃(t1 )| exp   η √      A   (t
+                                                     S1 1 ) + A   (t
+                                                                I1 1 )  − H.c.   |ψ̃(t1 )⟩ exp  −(1 − η)           e        .
+                     π2                       2                                                             2
+                                                                                                                       (E14)
+
+
+
+So in the approximation (E14) clearly the Wigner func-              where aacS and aacI are introduced in Eqs. (E1) and
+tion approaches the vacuum result when η → 0 and                    (E2) respectively.
+the noise term vanishes as η → 1. We demonstrate in                    To proceed with Eq. (F1) for the Wigner function we
+Fig. 8(d) that for η = 0.5 the non-Gaussian features                need to calculate the operation U † Uaac U † U on the actual
+in the Wigner function are erased and remain visible for            channel operators. We assume that unitary U † does the
+η = 0.95.                                                           following transformation on the actual channel operators
+                                                                                     U † aac U = V̄ aac + W̄ a†ac ,           (F4)
+                                                                                              †     †
+ Appendix F: Measuring the non-Gaussian features                                     Uaac U = V̄        aac − W̄ T a†ac       (F5)
+                 of the full ket.
+                                                                    where V̄ and W̄ are matrices that encode the squeezing
+                                                                    and rotation in U. We will determine these matrices to
+   In this section we show how a prospective measurement
+                                                                    best remove the squeezing in U . We partition V̄ and W̄
+of the portion of light in the actual output channel could
+                                                                    into signal and idler parts as
+reveal the non-Gaussian features in the Wigner function                                               
+for the full ket.                                                                             V̄    0
+                                                                                        V̄ = SS          ,             (F6)
+   We consider the setup in Fig. 9, where the unitary U † ,                                     0 V̄II
+represented by the red-lined box, acts only on the actual                                               
+                                                                                                 0 W̄SI
+output channel. Before the box the state is |ψ⟩ = U |ψ̃⟩                               W̄ =                .           (F7)
+                                                                                              W̄IS 0
+and after the box it becomes |ψ ′ ⟩ = U † U |ψ̃⟩. Here U (Eq.
+(A1)) is the Gaussian unitary already determined, and               The commutation relations have to be preserved, yielding
+|ψ̃⟩ is the residual non-Gaussian ket. By adjusting U † we          the following constraints
+aim to remove the Gaussian unitary so that |ψ ′ ⟩ ≈ |ψ̃⟩.             I = [U aac U † , Ua†T  †      †       T  ∗
+                                                                                         ac U ] → V̄ V̄ − W̄ W̄ = I,          (F8)
+   The Wigner function for a mode in the actual channel                              †           †      T ∗     †
+d using the full ket |ψ ′ ⟩ is given by                               0 = [U aac U       , UaT
+                                                                                             ac U ] → W̄ V̄ − V̄ W̄ = 0.      (F9)
+                Z
+                   dxdy ′                                             Applying the full unitary U to Eq. (F5) for Uaac U †
+    full
+                        ⟨ψ | exp γd† − H.c. |ψ ′ ⟩ e2i(px−qy)       and using Eq. (B11) for U † aU it is straightforward to
+                                               
+Wac (q, p) =
+                    π2                                              obtain
+                Z
+                   dxdy           
+                                       †     †
+                                                 †        
+             =          ⟨ψ̃| exp   γ U   UdU   U    − H.c.   |ψ̃⟩         U † Uaac U † U = V̄ † Vac − W̄ T Wac
+                                                                                                            ∗
+                                                                                                               
+                    π2                                                                                           a
+                                                                                              †           T ∗
+                                                                                                               †
+            × e2i(px−qy)                                   (F1)                          + V̄ Wac − W̄ Vac a .        (F10)
+                                                                    where a = [aT       T T
+                                                                                   S aI ]   is a column vector of signal and
+where we put γ = x + iy. Similar to what was done in
+                                                                    idler operators for the full system, and Vac and Wac are
+Appendix E, we write d as a superposition of the actual
+                                                                    the reduced V and W matrices only keeping the elements
+channel operators for the signal and idler
+                                                                    that involve the actual channel. They are given by
+                          d = β T aac ,                    (F2)
+                                                                                                                            
+                                                                             [VSS ]ac ac [VSS ]ac ph     0           0
+                                                                      Vac =                                                    ,
+                                                                                 0           0       [VII ]ac ac [VII ]ac ph
+where β is the local oscillator shape and aac is the column                                                                   (F11)
+vector of signal and idler operators                                                                                            
+                                                                                  0           0       [WSI ]ac ac [WSI ]ac ph
+                                                                   Wac =                                                         ,
+                               aacS                                          [WIS ]ac ac [WIS ]ac ph        0             0
+                      aac =            ,                (F3)
+                                aacI                                                                                          (F12)
+                                                                                                                           22
+
+where the frequency bin partitions VSS , VII , WSI , and      and we have defined the vectors
+WIS encode the squeezing and rotation in the full uni-
+                                                                           C ≡ β T V̄ † Vac − W̄ T Wac
+                                                                                                    ∗
+                                                                                                       
+tary U and are determined. So we can see that when the                                                   G,             (F17)
+matrices V̄ and W̄ associated with the Gaussian uni-                             T    †           T ∗
+                                                                           D ≡ β V̄ Wac − W̄ Vac G .
+                                                                                                        ∗
+                                                                                                                        (F18)
+tary U are chosen sufficiently close to Vac and Wac then
+V̄ † Vac − W̄ T Wac
+                  ∗
+                    ≈ R0 , where R0 is an arbitrary rota-       Assuming the non-Gaussian ket |ψ̃⟩ only contains pho-
+tion matrix and V̄ † Wac − W̄ T Vac∗ ≈ 0. In this case Eq.    tons in the first supermode [A]1 and vacuum in the re-
+(F10) become approximately U † Uaac U † U ≈ R0 a, where       maining supermodes, we can write Eq. (F16) for the
+the squeezing has been removed, as required. We choose        Wigner characteristic function as
+V̄ and W̄ to be the matrices of the full system when
+there is no loss, as we discussed in the main text.           χ(x, y) = ⟨ψ̃| exp γ{[C]1 [A]1 + [D]1 [A† ]1 }† − H.c. |ψ̃⟩
+                                                                                                                    
+
+   To calculate expectation values using the residual non-               M
+                                                                         Y
+                                                                               ⟨vac| exp γ{[C]l [A]l + [D]l [A† ]l }† − H.c. |vac⟩
+                                                                                                                            
+Gaussian ket, we need to relate the operators a on the               ×
+right-hand side of Eq. (F10) to the supermode operators.                 l=2
+Using Eqs. (53) and (54) for the supermode operators we              = ⟨ψ̃| exp γ{[C]1 [A]1 + [D]1 [A† ]1 }† − H.c. |ψ̃⟩
+                                                                                                                      
+can write Eq. (F10) as                                                           M
+                                                                                                                       !
+                                                                               1X
+                                                                     × exp −        [γC † − γ ∗ D T ]l [γ ∗ C − γD ∗ ]l ,
+                                                                               2
+                                                                                     l=2
+    U † Uaac U † U = V̄ † Vac − W̄ T Wac
+                                      ∗
+                                         
+                                           GA                                                                         (F19)
+                        †           T ∗
+                                         ∗ †
+                   + V̄ Wac − W̄ Vac G A ,            (F13)   where M is the total number of supermodes.
+                                                                 The exponential factor in Eq. (F19) obscures the non-
+                                                              Gaussian features. The argument of the exponential fac-
+where A = [AT     T T                                         tor depends on the local oscillator shape. We show be-
+              S AI ] , and for convenience we have in-
+troduced the matrix G as                                      low that by choosing the local oscillator shape appropri-
+                                                              ately, we can minimize the argument of the exponential
+                                                                   PM
+                              †                             i.e., l=2 [γC † − γ ∗ D T ]l [γ ∗ C − γD ∗ ]l ≈ 0. One way to
+                              GS 0                            achieve this is to require that Eq. (F17) for C to be a
+                       G=             ,               (F14)   vector of zeros except for the first element, and Eq. (F18)
+                               0 GT
+                                  I
+                                                              for D to be a vector of zeros. In this way the sum over
+                                                              the l = 2 to l = M elements would be zero exactly. So
+where the determined matrices GS and GI come from the         we take the target vectors for C and D are
+SVD (50) of the V and W matrices and are introduced                                                      
+in Eqs. (53) and (54) respectively.                                             Ctarget = 1 0 . . . 0 ,               (F20)
+                                                                                                         
+                                                                                Dtarget = 0 0 . . . 0 .               (F21)
+  Putting Eq. (F13) for U † Uaac U † U into Eq. (F1) for
+the Wigner function we obtain                                 We attempt to satisfy Eq. (F21) for Dtarget by choosing
+                                                              W̄ and V̄ so that V̄ † Wac − W̄ T Vac∗ ≈ 0 as discussed
+                       Z                                      above. We can try to satisfy Eq. (F20) for Ctarget by
+                           dxdy
+       full
+      Wac   (q, p) =            χ(x, y)e2i(px−qy) .   (F15)   choosing the local oscillator shape according to
+                            π2
+                                                                                                              +
+                                                                   β T = Ctarget         V̄ † Vac − W̄ T Wac
+                                                                                                          ∗
+                                                                                     
+                                                                                                              G ,       (F22)
+where we have introduced the Wigner characteristic func-      where the + denotes the pseudo-inverse. So after putting
+tion as                                                       Eq. (F22) into Eq. (F17) we have that C ≈ Ctarget . Of
+                                                              course the resulting elements for [C]l for l ≥ 2 and [D]l
+                                                              for l ≥ 1 will not be zero, but their total contribution in
+  χ(x, y) = ⟨ψ̃| exp γ[CA + DA† ]† − H.c. |ψ̃⟩,
+                                         
+                                                      (F16)   the argument of the exponential will be minimized.
+

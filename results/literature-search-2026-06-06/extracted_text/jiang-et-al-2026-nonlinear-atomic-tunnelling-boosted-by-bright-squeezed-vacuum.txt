@@ -1,0 +1,828 @@
+Article
+
+Nonlinear atomic tunnelling boosted by
+bright squeezed vacuum
+
+https://doi.org/10.1038/s41586-026-10485-9                      Zhejun Jiang1,4, Shengzhe Pan1,4, Jianqi Chen1, Mingyu Zhu1, Chenhao Zhao1, Yiwen Wang1,
+                                                                Ru Zhang1, Jianshi Lu1, Lulu Han1, Suwen Xiong1, Dian Wu1, Wenxue Li1, Shicheng Jiang1 ✉,
+Received: 17 August 2025
+                                                                Hongcheng Ni1 ✉ & Jian Wu1,2,3 ✉
+Accepted: 2 April 2026
+
+Published online: xx xx xxxx
+                                                                Nonlinear optical processes, mediated by multiphoton interactions rather than
+Open access                                                     single-photon response, are routinely exploited to enable a range of light-based
+    Check for updates                                           functionalities in devices and applications. Nonlinear effects are enhanced by
+                                                                higher-intensity fields, which is a limiting strategy owing to potential radiation
+                                                                damage. An alternative strategy relies on the fluctuation redistribution typical of
+                                                                quantum light1–4, but experimental demonstrations at the most fundamental level
+                                                                have been limited. Here we report experimental nonlinear tunnelling ionization of
+                                                                isolated atoms, a pivotal nonlinear process that drives high-harmonic generation and
+                                                                forms the basis of attosecond science, boosted by quantum light—bright squeezed
+                                                                vacuum (BSV). A BSV light with an average pulse energy of 300 nJ achieves an effective
+                                                                intensity equivalent to that of a coherent light with 7.1 μJ, demonstrating a more than
+                                                                20-fold quantum boost in the nonlinear effect from BSV light. This boost is revealed by
+                                                                matching the peaks of the photoelectron momentum spectra produced by the BSV
+                                                                and coherent light as measured by angular streaking. Furthermore, we demonstrate
+                                                                control of the effective intensity of the BSV by tuning the correlation function at fixed
+                                                                average pulse energy, establishing a robust method to tailor nonlinear processes by
+                                                                quantum statistics rather than classical intensity scaling. These findings may facilitate
+                                                                the development of quantum-controlled strong-field dynamics using tailored
+                                                                quantum light sources.
+
+
+Nonlinear light–matter interactions driven by multiple photons enable                           HHG in crystals1,4,39 and photoelectrons by multiphoton ionization
+revolutionary abilities beyond perturbative optics, in contrast to the                          from nanotips3,40, as well as enhanced efficiency and spectral broad-
+well-known single-photon process. At the heart of these laser-driven                            ening in these nonlinear processes1,2,4,39,41–50. Despite these remarkable
+nonlinear processes lies tunnelling ionization5–12, which forms the cor-                        advances, the fundamental quantum dynamics of BSV-driven tunnel-
+nerstone of ultrafast science. It not only drives femtochemistry13–16 but                       ling ionization in the most basic isolated atomic systems free from
+also serves as the vital first step in high-harmonic generation (HHG)17–21—                     collective effects remain unexplored, particularly because rare-gas
+the primary mechanism for producing attosecond pulses22–24—thereby                              atoms have relatively high ionization potentials that challenge the
+enabling the direct exploration of electron dynamics on its natural                             achievable BSV intensities now. A direct, intensity-calibrated signa-
+time scale25–31. However, conventional approaches using coherent light                          ture of quantum statistics imprinted on the photoelectron energy
+enhance tunnelling ionization through brute-force intensity scaling                             spectrum of an isolated atom and a means to effectively control it
+face an inherent limitation: material damage threshold constrains                               remain unknown.
+maximum accessible intensity of the laser field. Quantum light, for                                In this work, we report quantum-boosted nonlinear tunnelling of an
+example, bright squeezed light, breaks this pattern by leveraging intrin-                       isolated sodium atom driven by a femtosecond BSV pulse. The use of
+sic photon correlations and enhanced amplitude fluctuation1,2. These                            sodium, with its low ionization potential, is important to overcome the
+quantum properties enable a superior nonlinear boost at low excitation                          limitation of the achievable intensity of the BSV light, while it serves
+powers, accessing non-classical interaction regimes impossible with                             as an elementary atomic system in which material-specific effects
+coherent light32–34.                                                                            are absent. Our experiment shows a striking quantum advantage:
+   Recently, bright squeezed vacuum (BSV) quantum light sources have                            a BSV light with 300 nJ average pulse energy produces equivalent
+been generated by high-gain parametric down-conversion in nonlinear                             peak photoelectron momentum to that generated by 7.1 μJ of coher-
+crystals35–38. Characterized by non-classical photon number statistics,                         ent light, representing a more than 20-fold boost in the nonlinear
+the BSV light has enabled several breakthroughs, including the obser-                           effect through the engineering of quantum statistical properties.
+vation of super-Poissonian statistics in high-energy photons through                            This boost is revealed through angular streaking51, which maps the
+
+
+State Key Laboratory of Precision Spectroscopy, East China Normal University, Shanghai, China. 2Collaborative Innovation Center of Extreme Optics, Shanxi University, Taiyuan, China.
+1
+
+3
+ Chongqing Key Laboratory of Precision Optics, Chongqing Institute of East China Normal University, Chongqing, China. 4These authors contributed equally: Zhejun Jiang, Shengzhe Pan.
+✉e-mail: scjiang@lps.ecnu.edu.cn; hcni@lps.ecnu.edu.cn; jwu@phy.ecnu.edu.cn
+
+
+
+                                                                                                                                                     Nature | www.nature.com | 1
+Article
+                                                                                   time- and position-sensitive microchannel plate detectors positioned
+                     Electron
+                                                                                   at opposite ends of the spectrometer. We select photoelectron events
+       z                                                                           in the single ionization channel by applying a coincidence condi-
+             y            e
+                                                                Major axis         tion of ∣pz(ele) + pz(ion)∣ < 0.2 a.u. along the time-of-flight axis of the
+                                                |pe| = |A(t)|
+                                                                                   spec­trometer with the best momentum resolution. Given the low
+       x                                                                           tunnell­ing ionization probability of about 0.01% per laser pulse, we
+Vapour JET                                                                         accumulate coincidence events over an extended duration and rebin
+                   Na                                                              the recorded electron counts to reflect the statistical fluctuation of
+                                                                                   the ionization rate. For more details of the experimental setup, please
+                                                                                   refer to the Methods.
+                           +
+                        Na
+
+
+                                                                                   Quantum-boosted tunnelling
+                        Ion
+                                                                                   Figure 2a presents the probability distributions of emitted electron
+                                                                                   number driven by coherent and BSV pulses while maintaining the
+                                                                                   same average electron number. The electron number statistics show
+                                                                                   a fundamental distinction between coherent and BSV-driven ioniza-
+                                                                                   tion. For coherent light excitation (Fig. 2a, blue circles), the electron
+Fig. 1 | Experimental scheme. The schematic illustrates the tunnelling             number distribution following a Poissonian profile (Fig. 2a, blue line)
+ionization of sodium atoms from a vapour jet induced by elliptically polarized     confirms that the strong-field nonlinearity in the tunnelling regime
+coherent light or quantum BSV sources. Ionized electrons and parent ions are       preserves the Poissonian character of photon number statistics, as
+detected in coincidence. The inset shows the angular streaking principle, in       expected for coherent processes3. By contrast, BSV-driven ioniza-
+which an electron tunnelling through the laser-suppressed atomic potential         tion (Fig. 2a, orange squares) exhibits pronounced non-Poissonian
+acquires a final momentum determined by the instantaneous vector potential         statistics with a much broader distribution, directly inheriting the
+and a weight determined by the effective intensity of the elliptically polarized
+                                                                                   non-classical photon number statistics of the BSV light, which is suc-
+pulse at the ionization instant.
+                                                                                   cessfully reproduced by our theoretical model (Fig. 2a, orange line;
+                                                                                   see the Methods for details).
+                                                                                       Beyond non-classical electron-number statistics, the quantum
+instantaneous vector potential at the moment of ionization onto                    BSV light provides an advantage of boosting nonlinear response
+the final photoelectron momentum. Furthermore, we develop an                       with markedly extended spectral characteristics. The extension of
+approach to actively control the effective intensity of the BSV light              photoelectron energy spectra for isolated atomic targets has been
+to boost the nonlinear process by tuning the correlation function                  theoretically predicted54–56 but not verified in experiments. Through
+while maintaining fixed average pulse energy. The quantum-boosted                  angular streaking, we directly characterize this advantage in a quan-
+tunnelling ionization is well supported by a quantum Ammosov–                      titative manner: the boosted nonlinearity manifests as extended tails
+Delone–Krainov (QADK) theory, developed here to account for                        in the photoelectron kinetic energy spectrum driven by a BSV pulse
+light–electron entanglement that imprints quantum statistical prop-                compared with that driven by a coherent light with the same effective
+erty of the BSV light onto emitted electrons. These results establish              intensity. To achieve this, we generate both coherent and BSV light
+quantum light as a powerful tool for strong-field physics, offering                sources with matched ellipticity and effective intensity. As shown in
+both an insightful understanding of non-classical light–matter inter-              Fig. 1, the angular streaking technique driven by an elliptically polar-
+actions and practical methods for controlling extreme nonlinear                    ized pulse allows mapping the vector potential A0 at the ionization
+processes.                                                                         instant to the momentum magnitude of the released photoelectron pe,
+                                                                                   that is, ⟨pe⟩ = A0, as predicted by the strong-field approximation. This
+                                                                                   relation arises because the ionized electron is primarily driven by the
+Experimental setup                                                                 laser field after tunnelling. For the BSV light, which exhibits inherent
+To demonstrate the quantum-boosted nonlinear tunnelling of sodium                  field strength fluctuations averaging to a vanishing mean field, we
+atoms, we perform comparable measurements driven by either (1) a                   operationally define its effective intensity as that of a coherent pulse
+conventional laser pulse in a classical coherent state or (2) a quantum            that produces the same most probable photoelectron momentum
+BSV laser pulse. The coherent light source with a pulse duration of 70 fs          (Fig. 2b, magenta arrow) under identical angular streaking conditions,
+and a central wavelength of 1,580 nm is generated by a commercial                  thereby enabling a direct comparison. Note that the actual intensity
+TOPAS-Prime system pumped by a multipass Ti:sapphire amplifier at                  is related to the average pulse energy, whereas the effective intensity
+a 10 kHz repetition rate. By contrast, the BSV light source is generated           is imprinted on the peak momentum of the photoelectron as cali-
+by high-gain parametric down-conversion in two cascaded 3-mm type-I                brated by angular streaking. This configuration requires only 300 nJ
+β-barium borate (BBO) crystals35,36, pumped by the same amplifier                  of the BSV light with a second-order correlation function g(2)(0) = 1.5
+with a pulse duration of 28 fs and a central wavelength of 790 nm. The             (abbreviated as g(2) hereafter) to achieve equivalent strong-field effects
+resulting BSV light has a duration of 150 fs and exhibits a broad spectral         as 7.1 μJ of the coherent light, demonstrating a more than 20-fold
+bandwidth spanning 1,400–1,800 nm, centred at 1,580 nm to ensure                   enhancement in the nonlinear effect. Crucially, we confirm that a
+comparability with the coherent light source. The peak intensity of the            300 nJ coherent light produces no measurable tunnelling, unambigu-
+coherent light in the interaction region is estimated to be 1 × 1013 W cm−2.       ously proving that the quantum statistical properties of BSV drive the
+To facilitate angular streaking, the ellipticity of both coherent and BSV          enhanced nonlinear response rather than classical intensity effects.
+lights is set at 0.7.                                                              The 20-fold quantum enhancement observed here refers to the fact
+   Both light sources are tightly focused onto a dilute sodium vapour              that the effective intensity of the BSV field matches that of a coherent
+jet using a silver-coated concave mirror within an ultrahigh-vacuum                light with 20 times as much pulse energy, rather than an increase in
+chamber of a cold-target recoil ion momentum spectrometer52,53, as                 the total ionization yield.
+shown in Fig. 1. The ionization potential of the sodium atom is 5.14 eV.              The BSV-driven ionization shows a striking quantum signature: a sig-
+The generated photoelectrons and photoions are detected by two                     nificantly broadened photoelectron kinetic energy spectrum compared
+
+
+2 | Nature | www.nature.com
+                          a                                                                                                            b
+                                                    100                                        Coherent light                                                    100                                            Coherent light
+                                                                                               BSV light                                                                                                        BSV light
+                                                                                               Poisson                                                                                                          ADK
+
+
+
+
+                        Normalized yield (arb.u.)                                                                                   Normalized yield (arb.u.)
+                                                                                               QADK                                                                                                             QADK
+                                                    10–1
+
+
+
+
+                                                                                                                                                                10–1
+                                                    10–2
+
+
+
+
+                                                            0   5              10            15               20                                                       1         3             5            7               9
+                                                                           Electron number                                                                                           Electron kinetic energy (eV)
+
+Fig. 2 | Quantum-boosted electron number statistics and energy spectra.                                                          polarized coherent (blue circles) and BSV (orange squares) light. The solid lines
+a, Experimental electron number distributions from ionization driven by                                                          are simulated by semiclassical ADK (blue) and QADK (orange) theories. The
+coherent (blue circles) and BSV (orange squares) light. The solid lines are the                                                  matched peak position (magenta arrow) confirms equal effective intensities,
+corresponding fits using Poisson distribution (blue) and QADK theory                                                             whereas the extended high-energy tail under BSV directly reflects its
+(orange). The slight discrepancy in the tail of the coherent light results                                                       amplitude-stretched quantum fluctuations. The striated structure is an
+compared with ideal Poisson distribution stems from low-count statistical                                                        artefact of limited counting statistics, common in discrete-event detection
+fluctuations. b, Electron kinetic energy spectra produced by elliptically                                                        experiments3,39. arb.u., arbitrary units.
+
+
+
+
+with the classical case (Fig. 2b). Although both light sources gener-
+ate peaks at equivalent electron momentum, maintaining matched                                                                   Quantum tunability
+effective intensities, the BSV-driven spectrum (Fig. 2b, orange squares)                                                         Furthermore, we introduce a method for controlling strong-field
+shows a pronounced high-energy tail absent in the spectrum driven                                                                processes by actively tuning the quantum correlation function g(2) of
+by coherent light (Fig. 2b, blue circles). This spectral broadening                                                              the BSV light while maintaining constant average pulse energy. In our
+provides direct experimental evidence of enhanced energy trans-                                                                  experiment, we first increase the pump power entering the nonlinear
+fer in strong-field light–atom interactions mediated by quantum                                                                  crystal and then attenuate the average power of the generated BSV
+correlations.                                                                                                                    back to the original level. Physically, this procedure simultaneously
+   To rigorously model the quantum enhancement, we have developed                                                                increases the mode number N (ref. 60) and decreases the squeez-
+a QADK theory based on an entangled light–electron Hamiltonian (see                                                              ing parameter r accordingly under the constraint of fixed average
+the Methods for details). This framework shows that the quantum sta-                                                             pulse energy, which in turn leads to the variation of the g(2) parameter
+tistical nature of the BSV light redistributes the ionization probability                                                        (see the Methods for details). Figure 3a demonstrates this principle
+across a broad range of final electron momenta, directly explaining                                                              through photoelectron kinetic energy spectra generated by BSV light
+the enhanced nonlinear effect and spectral broadening we observe. In                                                             with varying g(2). As g(2) increases from 1.00 to 1.39, the spectra sys-
+Fig. 2b, the solid lines compare theoretical predictions from the semi-                                                          tematically shift towards higher energies despite the use of identical
+classical ADK57–59 and QADK theories with the experimental results. The                                                          average pulse energy. The peaks of the spectra can be extracted and
+semiclassical ADK theory accurately reproduces the narrow spectrum                                                               converted into effective intensities (see Methods for details). The
+produced by the coherent light source. By contrast, the QADK theory,                                                             extracted spectral peaks show a linear scaling between g(2) and effec-
+which incorporates the multi-mode quantum statistics (N = 5 Schmidt                                                              tive intensity Ieff (Fig. 3b), establishing three key advances: (1) precise
+modes60), provides good agreement with the broadened spectrum                                                                    effective intensity control at constant average pulse energy; (2) a direct
+measured under the BSV light.                                                                                                    connection between quantum statistics and nonlinear enhancement;
+
+
+
+                            a                       5                                                                  b                                        10
+
+                                                                                                    (2)
+                                                                                                   g = 1.39
+
+
+
+
+                                                                                                                       Effective intensity (TW cm–2)
+                                                    4                                                                                                            9
+
+
+
+
+                         Electron yield (arb.u.)
+                                                                                                    (2)
+                                                                                                   g = 1.20
+                                                                                                                                                                                                                      p
+                                                    3                                                                                                            8
+
+                                                                                                    (2)
+                                                                                                   g = 1.07
+
+                                                    2                                                                                                            7                                                              x
+
+                                                                                                    (2)
+                                                                                                   g = 1.00
+
+                                                    1                                                                                                            6
+                                                        0       2                4                 6               8                                                       1.0       1.1           1.2      1.3             1.4
+                                                                    Electron kinetic energy (eV)                                                                                                   g(2)
+
+Fig. 3 | Quantum control of photoelectron spectra by tuning g(2). a, Electron                                                    and g(2), establishing quantum statistics as a control parameter for strong-field
+kinetic energy spectra resulting from BSV light with varying second-order                                                        processes. The inset shows the quantum statistical nature of BSV light, in which
+correlation function g(2). The systematic shift towards higher energies with                                                     reduced phase fluctuations and enhanced amplitude fluctuations enable the
+increasing g(2) demonstrates enhanced nonlinear interaction strength through                                                     observed intensity enhancement at constant average pulse energy. arb.u.,
+quantum correlation engineering. b, Linear scaling between effective intensity                                                   arbitrary units.
+
+
+                                                                                                                                                                                                                    Nature | www.nature.com | 3
+Article
+and (3) new abilities for optimizing quantum-enhanced strong-field                                9.    Sainadh, U. S. et al. Attosecond angular streaking and tunnelling time in atomic hydrogen.
+                                                                                                        Nature 568, 75–77 (2019).
+phenomena. As detailed in the Methods, for BSV, this linear scaling law                           10.   Akoury, D. et al. The simplest double slit: interference and entanglement in double
+follows                                                                                                 photoionization of H2. Science 318, 949–952 (2007).
+                                                                                                  11.   Kling, M. F. et al. Control of electron localization in molecular dissociation. Science 312,
+                                   Ieff ∝ P[g (2)−1],                                      (1)          246–248 (2006).
+                                                                                                  12.   Popruzhenko, S. V. Keldysh theory of strong field ionization: history, applications,
+                                                                                                        difficulties and perspectives. J. Phys. B At. Mol. Opt. Phys. 47, 204001 (2014).
+obtained under the assumption of a finite number of equally squeezed,                             13.   Li, H. et al. Light-induced ultrafast molecular dynamics: from photochemistry to
+                                                                                                        optochemistry. J. Phys. Chem. Lett. 13, 5881–5893 (2022).
+independent Schmidt modes60, where P represents the constant aver-                                14.   Zhou, L. et al. Ultrafast formation dynamics of d +3 from the light-driven bimolecular
+age pulse energy. This expression establishes g(2) as a powerful experi-                                reaction of the d2–d2 dimer. Nat. Chem. 15, 1229–1235 (2023).
+mental knob for tailoring quantum light–matter interactions, opening                              15.   Mi, Y. et al. D+3 formation through photoionization of the molecular D2–D2 dimer. Nat. Chem.
+                                                                                                        15, 1224–1228 (2023).
+possibilities for intensity-tunable attosecond sources and optimized                              16.   Dantus, M. Ultrafast studies of elusive chemical reactions in the gas phase. Science 385,
+nonlinear spectroscopy at fixed average pulse energy of the driving                                     eadk1833 (2024).
+quantum light.                                                                                    17.   Ferray, M. et al. Multiple-harmonic conversion of 1064 nm radiation in rare gases. J. Phys.
+                                                                                                        B: At. Mol. Opt. Phys. 21, L31–L35 (1988).
+                                                                                                  18.   Krause, J. L., Schafer, K. J. & Kulander, K. C. High-order harmonic generation from atoms
+                                                                                                        and ions in the high intensity regime. Phys. Rev. Lett. 68, 3535–3538 (1992).
+Discussion                                                                                        19.   Macklin, J. J., Kmetec, J. D. & Gordon, C. L. III High-order harmonic generation using
+                                                                                                        intense femtosecond pulses. Phys. Rev. Lett. 70, 766–769 (1993).
+In summary, our work, as an experimental demonstration of atomic                                  20.   Corkum, P. B. Plasma perspective on strong field multiphoton ionization. Phys. Rev. Lett.
+tunnelling driven by quantum light, establishes BSV as a transforma-                                    71, 1994–1997 (1993).
+tive tool for strong-field physics through the following fundamental                              21.   Lewenstein, M., Balcou, Ph., Ivanov, M. Yu., L’Huillier, A. & Corkum, P. B. Theory of high-
+                                                                                                        harmonic generation by low-frequency laser fields. Phys. Rev. A 49, 2117–2132 (1994).
+advances. First, the implementation based on isolated sodium atoms                                22.   Antoine, P., L’Huillier, A. & Lewenstein, M. Attosecond pulse trains using high–order
+conclusively pins down the origin of ionization enhancement and                                         harmonics. Phys. Rev. Lett. 77, 1234–1237 (1996).
+                                                                                                  23.   Schultze, M. et al. Delay in photoemission. Science 328, 1658–1662 (2010).
+spectral broadening to quantum statistical properties of the BSV
+                                                                                                  24.   Isinger, M. et al. Photoionization in the time and frequency domain. Science 358,
+light. Second, by using the angular streaking technique, we have per-                                   893–896 (2017).
+formed a direct and precise calibration of the effective intensity of                             25.   Kanai, T., Minemoto, S. & Sakai, H. Quantum interference during high-order harmonic
+                                                                                                        generation from aligned molecules. Nature 435, 470–474 (2005).
+BSV light, thereby exhibiting a more than 20-fold quantum enhance-
+                                                                                                  26.   Niikura, H. et al. Sub-laser-cycle electron pulses for probing molecular dynamics. Nature
+ment in the nonlinear tunnelling effect, in which identical peak elec-                                  417, 917–922 (2002).
+tron momentum is achieved with 300 nJ BSV pulses compared with                                    27.   Krausz, F. & Ivanov, M. Attosecond physics. Rev. Mod. Phys. 81, 163–234 (2009).
+                                                                                                  28.   Sansone, G. et al. Electron localization following attosecond molecular photoionization.
+7.1 μJ coherent pulses. Third, we introduce a new quantum control
+                                                                                                        Nature 465, 763–766 (2010).
+method in which the effective intensity can be precisely tuned by the                             29.   Niikura, H. et al. Probing molecular dynamics with attosecond resolution using correlated
+correlation function while maintaining constant average pulse energy.                                   wave packet pairs. Nature 421, 826–829 (2003).
+                                                                                                  30.   Wu, J. et al. Understanding the role of phase in chemical bond breaking with coincidence
+Fourth, we have developed a QADK theory that incorporates light–
+                                                                                                        angular streaking. Nat. Commun. 4, 2177 (2013).
+electron entanglement, revealing the quantum statistical nature of                                31.   Ma, Y., Ni, H. & Wu, J. Attosecond ionization time delays in strong-field physics. Chin. Phys. B
+the BSV field as the mechanism behind the enhanced and broadened                                        33, 013201 (2024).
+                                                                                                  32.   Yi, S. et al. Generation of massively entangled bright states of light during harmonic
+photoelectron momentum distribution. These advances, spanning
+                                                                                                        generation in resonant media. Phys. Rev. X 15, 011023 (2025).
+elementary quantum signature characterization, precise effective                                  33.   Stammer, P. et al. Entanglement and squeezing of the optical field modes in high harmonic
+intensity calibration, active control and theoretical verification, estab-                              generation. Phys. Rev. Lett. 132, 143603 (2024).
+                                                                                                  34.   Lewenstein, M. et al. Generation of optical Schrödinger cat states in intense laser–matter
+lish a comprehensive framework for quantum-enhanced strong-field                                        interactions. Nat. Phys. 17, 1104–1108 (2021).
+phenomena, opening new avenues for efficient attosecond sources,                                  35.   Iskhakov, T. Sh., Pérez, A. M., Spasibko, K. Yu., Chekhova, M. V. & Leuchs, G. Super-bunched
+controlled electron dynamics and tailored nonlinear spectroscopy                                        bright squeezed vacuum state. Opt. Lett. 37, 1919–1921 (2012).
+                                                                                                  36.   Pérez, A. M. et al. Bright squeezed-vacuum source with 1.1 spatial mode. Opt. Lett. 39,
+using engineered quantum light. Our results not only advance funda-                                     2403–2406 (2014).
+mental understanding of quantum light–matter interactions but also                                37.   Pérez, A. M. et al. Giant narrowband twin-beam generation along the pump-energy
+position strong-field quantum optics as a promising frontier for explor-                                propagation direction. Nat. Commun. 6, 7707 (2015).
+                                                                                                  38.   Boitier, F. et al. Photon extrabunching in ultrabright twin beams measured by two-photon
+ing extreme nonlinear processes with unprecedented control and                                          counting in a semiconductor. Nat. Commun. 2, 425 (2011).
+efficiency.                                                                                       39.   Manceau, M., Spasibko, K. Yu., Leuchs, G., Filip, R. & Chekhova, M. V. Indefinite-mean pareto
+                                                                                                        photon distribution from amplified quantum noise. Phys. Rev. Lett. 123, 123606 (2019).
+                                                                                                  40.   Heimerl, J. et al. Quantum light drives electrons strongly at metal needle tips. Nat. Phys.
+                                                                                                        21, 1899–1904 (2025).
+Online content                                                                                    41.   Tzur, M. E. et al. Generation of squeezed high-order harmonics. Phys. Rev. Res. 6, 033079
+Any methods, additional references, Nature Portfolio reporting summa-                                   (2024).
+                                                                                                  42.   Lemieux, S. et al. Photon bunching in high-harmonic emission controlled by quantum
+ries, source data, extended data, supplementary information, acknowl-                                   light. Nat. Photon. 19, 767–771 (2025).
+edgements, peer review information; details of author contributions                               43.   Gatti, A., Clerici, M. & Caspani, L. Enhancing upconversion with space-time
+and competing interests; and statements of data and code availability                                   entanglement: from twin photons to twin-beams. Opt. Quantum 3, 269–279 (2025).
+                                                                                                  44.   Li, J., Lyu, Z., Liu, H. & Liu, Y. Quantum-optical signatures of solid-state high-harmonic
+are available at https://doi.org/10.1038/s41586-026-10485-9.                                            generation driven by squeezed coherent states. Phys. Rev. A 112, 033507 (2025).
+                                                                                                  45.   Wang, Y.-B. & Bian, X.-B. High-order harmonic generation in quantum light by a
+1.   Spasibko, K. Y. et al. Multiphoton effects enhanced due to ultrafast photon-number                 generalized von Neumann lattice method. Phys. Rev. A 111, 043111 (2025).
+     fluctuations. Phys. Rev. Lett. 119, 223603 (2017).                                           46.   Gothelf, R. V., Lange, C. S. & Madsen, L. B. High-order harmonic generation in a crystal
+2.   Gorlach, A. et al. High-harmonic generation driven by quantum light. Nat. Phys. 19,                driven by quantum light. Phys. Rev. A 111, 063105 (2025).
+     1689–1696 (2023).                                                                            47.   Liu, H., Zhang, H., Wang, X. & Yuan, J. Atomic double ionization with quantum light.
+3.   Heimerl, J. et al. Multiphoton electron emission with non-classical light. Nat. Phys. 20,          Phys. Rev. Lett. 134, 123202 (2025).
+     945–950 (2024).                                                                              48.   Rivera-Dean, J., Stammer, P., Ciappina, M. F. & Lewenstein, M. Structured squeezed light
+4.   Rasputnyi, A. et al. High-harmonic generation by a bright squeezed vacuum. Nat. Phys.              allows for high-harmonic generation in classical forbidden geometries. Phys. Rev. Lett.
+     20, 1960–1965 (2024).                                                                              135, 013801 (2025).
+5.   Becker, W. et al. in Advances in Atomic, Molecular, and Optical Physics Vol. 48 (eds         49.   Lange, C. S., Hansen, T. & Madsen, L. B. Excitonic enhancement of squeezed light in
+     Bederson, B. & Walther, H.) 35–98 (Academic Press, 2002).                                          quantum-optical high-harmonic generation from a Mott insulator. Phys. Rev. Lett. 135,
+6.   Eckle, P. et al. Attosecond ionization and tunneling delay time measurements in helium.            043603 (2025).
+     Science 322, 1525–1529 (2008).                                                               50.   Fang, Y., Sun, F.-X., He, Q. & Liu, Y. Strong-field ionization of hydrogen atoms with
+7.   Eberly, J. H., Javanainen, J. & Rzążewski, K. Above-threshold ionization. Phys. Rep. 204,          quantum light. Phys. Rev. Lett. 130, 253201 (2023).
+     331–383 (1991).                                                                              51.   Eckle, P. et al. Attosecond angular streaking. Nat. Phys. 4, 565–570 (2008).
+8.   Meckel, M. et al. Laser-induced electron tunneling and diffraction. Science 320, 1478–1482   52.   Dörner, R. et al. Cold target recoil ion momentum spectroscopy: a ‘momentum
+     (2008).                                                                                            microscope’ to view atomic collision dynamics. Phys. Rep. 330, 95–192 (2000).
+
+
+
+4 | Nature | www.nature.com
+53. Ullrich, J. et al. Recoil-ion and electron momentum spectroscopy: reaction-microscopes.            Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims in
+    Rep. Prog. Phys. 66, 1463 (2003).                                                                  published maps and institutional affiliations.
+54. Wang, S. & Lai, X. High-order above-threshold ionization of an atom in intense quantum
+    light. Phys. Rev. A 108, 063101 (2023).                                                                               Open Access This article is licensed under a Creative Commons Attribution-
+55. Lyu, Z., Sun, F., Fang, Y., He, Q. & Liu, Y. Effect of photon quantum statistics on electrons in                      NonCommercial-NoDerivatives 4.0 International License, which permits any
+    above-threshold ionization. Phys. Rev. Res. 7, L012072 (2025).                                                        non-commercial use, sharing, distribution and reproduction in any medium or
+56. Habibović, D. & Milošević, D. B. Intensity-dependent enhancements in strong-field                  format, as long as you give appropriate credit to the original author(s) and the source, provide
+    ionization by quantum light. Phys. Rev. A 112, L051103 (2025).                                     a link to the Creative Commons licence, and indicate if you modified the licensed material. You
+57. Ammosov, M. V., Delone, N. B. & Krainov, V. P. Tunnel ionization of complex atoms and              do not have permission under this licence to share adapted material derived from this article
+    of atomic ions in an alternating electromagnetic field. Sov. Phys. JETP 64, 1191–1194              or parts of it. The images or other third party material in this article are included in the article’s
+    (1986).                                                                                            Creative Commons licence, unless indicated otherwise in a credit line to the material. If
+58. Delone, N. B. & Krainov, V. P. Tunneling and barrier-suppression ionization of atoms and           material is not included in the article’s Creative Commons licence and your intended use is not
+    ions in a laser radiation field. Phys. Usp. 41, 469 (1998).                                        permitted by statutory regulation or exceeds the permitted use, you will need to obtain
+59. Ivanov, M. Y., Spanner, M. & Smirnova, O. Anatomy of strong field ionization. J. Mod. Opt.         permission directly from the copyright holder. To view a copy of this licence, visit http://
+    52, 165–184 (2005).                                                                                creativecommons.org/licenses/by-nc-nd/4.0/.
+60. Christ, A., Laiho, K., Eckstein, A., Cassemiro, K. N. & Silberhorn, C. Probing multimode
+    squeezing with correlation functions. New J. Phys. 13, 033027 (2011).                              © The Author(s) 2026
+
+
+
+
+                                                                                                                                                                Nature | www.nature.com | 5
+Article
+Methods                                                                      conservation in the centre-of-mass frame dictates that the momentum
+                                                                             sum of the electron and ion from the same interacting atom should
+Experimental details                                                         vanish, that is, p(ele) + p(ion) = 0. In practice, the coincidence condition
+Both coherent and quantum light sources are pumped with the                  of ∣pz(ele) + pz(ion)∣ < 0.2 a.u. along the time-of-flight axis of the spec­
+same femtosecond laser pulse (790 nm, 28 fs, 10 kHz) generated by a          trometer, which has the highest momentum resolution, is used to select
+Ti:sapphire multipass amplifier laser system (Femtolaser). The coherent      the right coincidence events from other background signals or false
+light source centred at 1,580 nm and with a pulse duration of 70 fs, is      coincidences.
+produced by a commercial optical parametric amplifier (Light Conver-            Both coherent and quantum light sources are converted from linear
+sion, TOPAS-Prime). For the quantum BSV light source, the pump beam          to elliptical polarization by a broadband quarter-wave plate. By rotating
+collimated to a 4-mm diameter is propagated through two cascaded             the fast axis of the plate relative to the initial linear polarization, the
+3-mm BBO crystals. Both BBO crystals are cut for type-I collinear fre-       relative intensity between the two orthogonal components is controlled
+quency-degenerate phase matching to generate high-gain parametric            while introducing a fixed π/2 phase shift, thereby producing the desired
+down-conversion. Here, the optical axes are oriented oppositely in the       ellipticity of 0.7, which is appropriate for performing angular streaking
+horizontal plane to minimize the spatial walk-off. The distance between      analysis using the accessible BSV light (see section ‘Choice of elliptical
+two crystals is set at 80 cm so that only the spatial mode with the low-     polarization’ for details).
+est diffraction undergoes the phase-sensitive amplification. The pulse
+duration of the BSV light is measured to be approximately 150 fs using       QADK theory
+the technique of cross-correlation frequency-resolved optical gating         The semiclassical ADK theory57–59, commonly used in strong-field
+based on sum-frequency generation of the to-be-calibrated BSV pulse          ionization, treats the electron quantum mechanically while describ-
+and a reference infrared pulse. The effect of different pulse durations      ing the light as a classical field. It represents the adiabatic limit of the
+for coherent and BSV lights is discussed in the section ‘Effect of pulse     strong-field approximation12,63,64 and the Perelomov–Popov–Terent’ev
+duration’.                                                                   theory65–68. In this framework, the doubly differential ionization rate
+   The second-order correlation function g(2) of the generated BSV is        is given by
+measured using the standard Hanbury Brown–Twiss technique. The
+BSV source is split at a nonpolarizing 50/50 beam splitter into two                                                 2[2Ip + (p −A(t)) 2 ]3/2 
+                                                                                                                                e
+                                                                                          ΓADK(pe , t) = F (t)exp −                           ,      (2)
+channels, the photon number distributions of which are measured                                                                3F ( t )         
+                                                                                                                                               
+with two fast InGaAs photodiodes. The signals from the photodiodes
+are recorded by a multichannel oscilloscope and then integrated over         where Coulomb-related prefactors are not included here for consist-
+time to present the total photon numbers. Finally, the second-order          ency. For circular polarization, the time dependence factorizes out,
+correlation function is calculated by g (2) = ⟨n1n2⟩/(⟨n1⟩⟨n2⟩), where n1    allowing us to directly replace A(t) with A0 and F(t) with F0. For elliptical
+and n2 are photon numbers measured for two channels. Considering             polarization, we replace A(t) with εA0 and F(t) with F0 for ionization
+the typical measured g(2) value of 1.5, there are multiple frequency         along the major axis or replace A(t) with A0 and F(t) with εF0 for that
+modes amplified in the BSV generation process, which has been further        along the minor axis. For simplicity of the expression, we adopt the
+confirmed by a spectral filtering of the BSV light using a standard 4-f      substitution A(t) → A0 and F(t) → F0, and the singly differential rate is
+monochromator (see section ‘Mode analysis of photon number statis-           expressed as
+tics’ for details). It is worth noting that to preserve the peak intensity
+required for tunnelling ionization, no spectral filtering is applied in                                          2[2Ip + (p − A0 ) 2 ]3/2 
+                                                                                                                             e
+                                                                                              ΓADK(pe ) = F0exp−                          .         (3)
+our photoionization experiments. The details of controlling the cor-                                                        3F0
+                                                                                                                                           
+relation function g(2) and validating the multi-mode BSV light are dem-
+onstrated in the section ‘Mode analysis of photon number statistics’.        This expression is often further expanded for small initial transverse
+   The beam diameters for both the coherent light and the BSV light are      momentum, leading to an alternative form
+approximately 3 mm and are tightly focused by a concave silver mir-
+ror (focal length f = 75 mm) inside an ultrahigh-vacuum chamber onto                                        2(2Ip)3/2     2Ip              
+                                                                                                                                                 
+                                                                                         ΓADK(pe ) = F0exp−            exp−    (pe − A0 ) 2 .
+the sodium vapour jet. The sodium vapour is produced in a resistively                                           3F0             F0              
+                                                                                                                                              
+heated crucible at 170 °C and collimated by a 2-mm skimmer. The peak
+intensity of the coherent light in the interaction region is estimated to
+be 1 × 1013 W cm−2. The corresponding Keldysh parameter is calculated            The quantum enhancement observed in our experiment is fundamen-
+to be 1.48, which places the ionization process in the non-adiabatic         tally rooted in the quantum statistical property of the BSV light, which
+tunnelling regime. The photoelectron energy spectrum (Fig. 2b) fea-          is imprinted onto the emitted electron by light–electron entanglement
+turing a smooth structure and the absence of resonant peaks61 also           inherent to the quantum-optical description of the tunnelling ioniza-
+indicates that ionization proceeds through a tunnelling pathway, with-       tion process. To rigorously capture this physics, we have developed
+out significant population of intermediate states such as Na(4s). This       a QADK theory based on the entangled light–electron Hamiltonian,
+distinguishes our results from regimes in which atomic saturation            given by
+and resonances suppress quantum-optical enhancement effects62 and
+allows for an observation of the BSV-induced enhancement.                                      = p
+                                                                                                   2/2 + V (r)̂ +              
+                                                                                                                       †a + p   A+  2/2 ,
+                                                                                               H   ωa    
+                                                                                                                        
+                                                                                                                                  ⋅
+                                                                                                                                   A         (4)
+   The strong-field tunnelling ionization of a single atom generates                                      
+                                                                                                          HA
+                                                                                                                        HF           
+                                                                                                                                     H int
+both photoelectron and photoion, whose momenta are coincidently
+                                                                                          g
+                                                                             where 
+                                                                                                      †
+measured using the cold-target recoil ion momentum spectroscopy                      A = ω (aε + a ε *) is the vector potential operator, ε is the polar-
+reaction microscope52,53. These charged particles are accelerated by a       ization vector and g is the coupling strength. The electron is initially
+homogeneous electric field (7 V cm−1) with the assistance of a weak          in the ground state |g⟩, and the light is initially in a BSV state S |0⟩, with
+magnetic field (11 G) and finally strike the detectors at the opposite
+ends of the spectrometer. The momenta of the emitted electron p(ele)
+                                                                                     (   1     2 1
+                                                                                                         )
+                                                                              S = exp 2 ξ *a − 2 ξa the squeezing operator, where the squeezing
+                                                                                                  iϕ
+                                                                                                        †2
+
+                                                                             parameter ξ = re , with r and ϕ the squeezing amplitude and squeezing
+and the corresponding parent ion p(ion) for each laser–atom interaction      phase, respectively. The initial light–electron state is, therefore,
+event are reconstructed from the measured time of flight and position        |Ψ0⟩ = |g ⟩ ⊗ S (ξ )|0⟩, which will evolve into an entangled light–electron
+of impact during the offline analysis. The principle of momentum             state as their interaction initiates.
+  To facilitate calculations of entangled light–electron dynamics, we                          The derivation above for the single-mode BSV can be extended to
+apply a unitary transformation O   ͠ = S †U
+                                             †O
+                                               U S with U
+                                                            = exp(−iH
+                                                                      t),                  the multi-mode case60 by replacing the field momentum pΛ by
+                                             F    F         F         F
+which turns the Hamiltonian into                                                            PΛ = ∑j pΛ2j . This substitution follows from the statistical independence
+                                                                                            of the Schmidt modes. Because the relative squeezing angles between
+                          ͠ = H
+                          H     +p
+                                  ⋅       2
+                                     A S+
+                                           A S /2 ,                                        different modes are random, the momenta add incoherently. This
+                                A                                               (5)
+                                            ͠
+                                            H int
+                                                                                            assumption is implicit in the multi-mode nonlinear response derived
+                                                                                            in refs. 3,39, in which all cross-terms between modes vanish. This treat-
+                                                              †       †
+where the transformed vector potential                
+                                             A S = S U   
+                                                       F AUFS , and the initial             ment is physically justified, as it also ensures gauge invariance of the
+state becomes |Ψ͠ 0⟩ = |g ⟩ ⊗ |0⟩, so that the light part of the initial state              resulting observables. Meanwhile, the Gaussian statistical distribution
+is simply vacuum in the transformed gauge.                                                  for the field momentum should be accordingly changed to be
+   For a BSV state that has a large squeezing amplitude r, 
+                                                                                                         1              2
+                                                                   A S can be               χ (PΛ) = Γ (N / 2) PΛN −1e−PΛ with N the mode number of the field derived
+approximated by                                                                             using convolution across different field modes. This leads to the dou-
+                                                                                            bly differential ionization rate under an N-mode BSV light
+                            †
+         A S = − iA0 (a − a )ε(t) = A0
+                                           ε
+                                            (t) ⋅            ≡A
+                                                            2p     ε(t),
+                                                                   eff
+                                                         Λ                     (6)
+                                       classical     quantum
+                                                                                                                           2[2Ip + (p − 2 A0 PΛ) 2 ]3/2 
+                                                                                                                                       e
+                   †                                                                           ΓQADK(pe , PΛ) ∝ 2 F0PΛexp−                              
+where p   = (a−a )/ 2 i is the momentum quadrature of BSV light,                                                                   3  2 F0PΛ
+       i Λ                                             g                                                                   
+                                                                                                               
+ε(t) = 2 (e−iωt ε−eiωt ε *) with ε = ex + iεey, A0 ≡ 2 ω n
+                                                           2
+                                                             with n the aver­
+                                                                      1+ε                                                             γ (pe , PΛ )                        (9)
+age photon number is the vector potential amplitude defined in such                                                    1              2
+a way that it matches its classical counterpart with the same actual                                            ×            PΛN −1e−PΛ .
+                            cε       2      cε                                                                     Γ ( N /2)
+                                                                                                                  
+intensity because IBSV = 20 ⟨0∣   A S ∣0⟩ = 02 (1 + ε 2)A02 = Icoh with ε0 the                                           χ (PΛ )
+                             ω              2ω
+vac­uum permittivity and c the vacuum light speed, and A           ≡ 2A p    
+                                                                   eff      0 Λ
+is the effective vector potential under BSV quantum light. Corres­                             The quantum statistics of the BSV light redistributes the entire weight
+pondingly, the effective electric field Feff ≡ 2 F0p    Λ . We note that the              of the QADK differential rate, which directly manifests as the extended
+stretched quadrature has been rotated to the momentum direction in                          photoelectron kinetic energy spectrum we observe, as visually con-
+equation (6). In this transformed gauge, the classical and quantum                          firmed in Extended Data Fig. 1. Extended Data Fig. 1a shows the cor-
+aspects of the light–electron interaction factorize, which greatly sim-                     related light–electron energy distribution obtained from the QADK
+plifies the calculation of the entangled dynamics. In particular, the                       theory, in which light energy EΛ ≡ A02 PΛ2 and electron energy Ee = pe2 /2,
+quantum-optical description proceeds in close analogy to its classical                      whereas Extended Data Fig. 1c corresponds to the projection onto the
+counterpart: we replace the classical vector potential A0 with the effec-                   electron energy axis Ee. The semiclassical ADK ionization rate repre-
+tive vector potential A   and the classical electric field F0 with F ,                    sents a single slice of the QADK distribution along a fixed light momen-
+                          eff                                                eff
+whereas all other elements of the theory remain unchanged. It is impor-                     tum at PΛ = 1/ 2 (or EΛ = A02 /2):
+tant to note, however, that the light momentum p        Λ enters the effective
+fields A and F , and the distribution of pΛ encodes the information                                                     1            2[2Ip + (p −A0 ) 2 ]3/2 
+          eff      eff                                                                                                                               e
+                                                                                              ΓADK(pe ) ∝ ΓQADK pe , PΛ =    ∝ F0exp −                          .   (10)
+of the quantum statistical property of the quantum light. For BSV, whose                                                   2                      3F0             
+                                                                                                                                                                   
+initial state is vacuum |0⟩ in the transformed gauge, it can be expanded
+in the light momentum basis:                                                                As the classical slice locates below the dominate region of the positively
+                                                                                            tilted quantum distribution, two key consequences emerge: (1) the BSV
+            |0⟩ = ∫ dpΛ ∣pΛ ⟩⟨pΛ |0⟩ = π−1/4 ∫ dpΛ e−pΛ /2|pΛ ⟩.
+                                                                  2
+                                                                                      (7)   light yields a much higher ionization rate than the coherent light; and
+                                                                                            (2) the BSV light produces a much higher and broader photoelectron
+Therefore, the quantum statistical weight of light momentum pΛ cor-                         energy distribution.
+                           2
+responds to χ (pΛ ) = e−pΛ in the normalized probability distribution.                         To quantify the quantum enhancement, we attenuate the BSV field
+The initial vacuum state |0⟩ is expanded in the momentum quadrature                         until its peak photoelectron momentum matches that produced by the
+basis pΛ because A S is diagonal in this representation. This simplifica-                  coherent light, as shown in Extended Data Fig. 1b,d. This condition is
+tion relies on the fact that, under large squeezing, the contribution                       met when the average photon number of the BSV light is reduced by
+from the conjugate position quadrature becomes negligible. This                             a factor of 14 relative to its original value, corresponding to a quan-
+property allows us to reduce the dimensionality of the expansion. By                        tum enhancement factor of 14 based on peak photoelectron momen-
+contrast, other studies expand the initial state in a coherent-state                        tum matching. The residual discrepancy from the observed 20-fold
+basis2,40 or a number-state basis69. Although all expansions are, in prin-                  quantum enhancement might be attributed to quantum correlations
+ciple, equivalent, it is important to note that the coherent-state basis                    across different field modes, which are not included in our current
+is not orthogonal; therefore, we cannot ignore off-diagonal elements                        model.
+and expect to obtain identical results.
+   In this framework, the doubly differential ionization rate under a                       Analysis of electron number statistics
+single-mode BSV light is given by                                                           Following the development of the QADK theory above, the number of
+                                                                                            electron ne can be calculated as
+                                 2[2Ip + (p − 2 A0 p ) 2 ]3/2 
+                                             e        Λ
+   ΓQADK(pe , pΛ ) ∝ 2 F0pΛ exp−                                    ,
+                                            3 2 F0pΛ             −p 2                (8)                                   ne = Kγ(PΛ),                                 (11)
+                     e
+                                                                   Λ
+
+
+
+
+                 −pΛ2
+                                          γ (pe , pΛ )
+                                                                            ⏟
+                                                                            χ (pΛ )
+                                                                                            where K is a scaling parameter depending on the density of the atom
+where χ (pΛ ) = e stems from the quantum statistical property of the                        and conversion efficiency, γ(PΛ) is the singly differential ionization rate
+BSV light. The QADK theory is a generalization of the semiclassical ADK                     for a specific field momentum PΛ:
+theory to the quantum domain. It explicitly accounts for the entangle-
+ment between the photoelectron momentum pe and the light momen-                                                                    2(2Ip)3/2 
+tum pΛ, which imprints the quantum statistical property of BSV on the                                          γ(PΛ) ∝ 2 F0PΛexp −            .                      (12)
+emitted electrons.                                                                                                                  3 2 F0PΛ 
+Article
+  According to the probability conservation relationship                                             in the limit of large photon number ⟨n̂⟩.
+                                                                                                        The above relationship, g(2) = 1 + 2/N, links the second-order cor-
+                                   f (ne)dne = χ (PΛ)dPΛ,                                     (13)   relation function to the effective number of independently amplified
+the distribution of electron number can be calculated as                                             modes N (refs. 80,81). It is consistent with known properties of BSV,
+                                                n  dP                                              in which the single-mode limit yields g(2) = 3, whereas the expression
+                               f (ne) = χ γ −1 e  Λ .                                   (14)   converges to the coherent state value g(2) = 1 as N → ∞. Moreover, it dem-
+                                            K  dne
+                                                                                                     onstrates that the measured g(2) value of the generated BSV light inher-
+The resulting fit to the BSV-driven electron number distribution is                                  ently reflects an effective number of independent, equally squeezed
+presented in Fig. 2a (orange solid line). It is necessary to note that the                           modes. In the case of unequal gain for different modes, it only breaks
+logic to calculate the electron number distribution is the same as in                                down to a refinement in the interpretation of N from an exact mode
+refs. 3,39, except that we operate in the field momentum space.                                      count to the Schmidt number60, without altering the fundamental
+                                                                                                     conclusions of our analysis. Therefore, we may simply refer to N as the
+Linear scaling between effective intensity and g(2)                                                  mode number.
+The second-order correlation function g(2) is a fundamental quantity                                    For a multi-mode BSV state, the photoelectron momentum spectra
+characterizing the photon number statistics and quantum properties                                   are generated through interactions with individual modes and summed
+of light fields. We note that although the rate of a perturbative n-photon                           across all modes. Consequently, the peak momentum distribution
+process generally scales with the nth order correlation function g(n)                                directly reflect the effective intensity per mode, which is determined
+(refs. 70–79), the characterization of the non-classical photon number                               by the average photon number ⟨nk̂ ⟩ in each mode:
+statistics of the BSV light itself is primarily captured by the standard
+                                                                                                                                        ⟨n⟩       2
+and widely adopted metric of second-order correlation function g(2).                                                         ⟨nk ⟩ =        = sinh r .                       (21)
+                                                                                                                                         N
+This is because g(2) serves as the primary measure of non-classical
+statistical properties of the quantum light, directly reflecting the                                 The correlation function g(2) can then be directly linked to ⟨n̂k ⟩ as
+super-Poissonian character inherent to BSV.                                                                                                  2⟨nk ⟩
+   For the multi-mode BSV light generated in the present study, the                                                            g (2) ≈ 1 +           .                        (22)
+                                                                                                                                              ⟨n⟩
+total photon number is distributed across multiple frequency modes60.
+Understanding how g(2) scales with the effective intensity (photon num-                              In this expression, the average photon number ⟨nk ⟩ per mode is pro-
+ber per mode) is essential for designing quantum light sources with                                  portional to the effective intensity Ieff, whereas the total photon num-
+tailored statistical properties. The multi-mode BSV state is generated                               ber ⟨n⟩ is proportional to the average pulse energy P. The effective
+by applying a multi-mode squeezing operator to the vacuum state,                                     intensity scales with the mean photon number per mode, ⟨nk ⟩, reflect-
+assuming the modes are independent:                                                                  ing the fact that the total ionization signal results from the contribu-
+                                            N                                                        tions of interactions with each individual field mode. Therefore, a
+                                    |ψ ⟩ = ⨂ Sk (ξk)|0⟩k ,                                   (15)   linear scaling between the effective intensity Ieff and the second-order
+                                            k =1
+                                                                                                     correlation function g(2) results:
+                                                         1      1
+where N is the number of modes60 and Sk (ξk) = exp 2 ξk*ak2− 2 ξkak†2 is
+                                                         iϕ k
+                                                                              (                )                                Ieff ∝ P[g (2)−1].                            (23)
+the squeezing operator for the kth mode, with ξk = rk e . The total pho-
+                              N      †
+ton number operator is n = ∑ k =1 ak ak . The zero-delay second-order
+correlation function is defined as                                                                   Effect of pulse duration
+                                                    2                                                In our experiments, although the pulse durations of the 70-fs coherent
+                                                ⟨n ⟩−⟨n⟩
+                                     g (2) =               ,                                  (16)   pulse and 150-fs BSV pulse are different, they have minor influence on
+                                                   ⟨n⟩2                                             our comparison for the two key reasons.
+                          2
+where ⟨n⟩ and ⟨n ⟩ are the first and second moments of the total                                      First, in our measurement, the comparison between coherent and
+photon number distribution.                                                                          BSV light sources focuses on the effective peak intensity. Tunnelling
+  For a single-mode BSV, the moments are                                                             ionization, as a highly nonlinear process, is predominantly driven by
+                                2
+               ⟨nk ⟩ = sinh rk ,
+                                                2           4
+                                         ⟨nk ⟩ = 3sinh rk + 2sinh rk .
+                                                                          2
+                                                                                              (17)   the peak electric field of the pulse. Our angular streaking technique
+                                                                                                     directly measures this effective peak intensity, enabling a controlled
+For N independent modes, the total moments are                                                       comparison at the intensity level relevant to the process.
+                                                                                                        Second, to confirm that the observed photoelectron kinetic energy
+                  N
+                               2                                                                     spectrum is insensitive to pulse duration, we performed a simulation
+        ⟨n⟩ = ∑ sinh rk ,
+                  k =1                                                                               using coherent pulses of varying durations. As shown in Extended Data
+                     N                                                                               Fig. 2, the photoelectron kinetic energy spectra from tunnelling ioniza-
+           2                        4                   2             2               2
+        ⟨n ⟩ = ∑ (3sinh rk + 2sinh rk) + ∑ sinh rk sinh rl                                   (18)   tion driven by 70 fs and 150 fs coherent pulses are virtually identical.
+                   k =1                                     k≠l                                      This demonstrates that over this duration range, the temporal envelope
+                                                                                  2
+                      N
+                                             N                                                     does not introduce qualitatively different physics that could account
+                                     4               2  2
+                = ∑ (2sinh rk + 2sinh rk) +  ∑ sinh rk  .                                        for the observed quantum enhancement.
+                  k =1                       k =1                                                     Therefore, although identical pulse durations for coherent and BSV
+                                                                                                     pulses are, in principle, ideal for comparison, the evidence supports
+Assuming all modes are equally squeezed (rk = r), the moments                                        that our comparison is physically sound, and the conclusions about
+simplify to                                                                                          quantum enhancement remain robust.
+
+                      2              2                  4         2                       4
+     ⟨n⟩ = N sinh r ,          ⟨n ⟩ = 2N sinh r + 2N sinh r + N 2sinh r .                   (19)   Choice of elliptical polarization
+                                                                                                     The choice of elliptical polarization for the driving field, as opposed
+Substituting into g(2), we obtain                                                                    to linear, was a deliberate and important aspect of our experimental
+                                                                                                     design. In linear polarization, the photoelectron momentum distribu-
+                                            2   1      2                                             tion is affected by rescattering and interference effects, resulting in a
+                              g (2) = 1 +     +    ≈1+                                        (20)
+                                            N ⟨n⟩     N                                             complex structure that cannot be uniquely mapped to a single value
+of the vector potential amplitude. The elliptical streaking field, by         power, demonstrating that we can systematically tune this parameter.
+contrast, enables angular streaking, which generates a photoelectron          To validate the independent, equally squeezed multi-mode characteri-
+momentum distribution that is centred around an ellipse correspond-           zation of the BSV light, we measured photon number distributions at
+ing to the vector potential amplitude.                                        distinct g(2) values. Extended Data Fig. 5 presents six typical photon
+   The use of elliptical polarization was further necessitated by signal-     number distributions (blue shades), in which lower g(2) values exhibit
+to-noise considerations. Although circular polarization provides an           multi-mode characteristics: the peak is shifted towards higher photon
+ideal rotating field for angular streaking, it distributes pulse energy       numbers, and the overall distribution shows a progressively closer
+equally between two orthogonal axes, effectively halving the peak inten-      resemblance to a Poissonian distribution. For quantitative comparison,
+sity along any direction. Given the experimental challenge of generating      we calculated the expected photon number distributions, shown in
+intense BSV, circular polarization would have resulted in ionization          Extended Data Fig. 5 (blue curves), according to the multi-mode photon
+yields too low for statistically robust coincidence measurements. Ellip-      number distribution3:
+tical polarization preserves a significant rotating field component for
+                                                                                                                                       N /2
+angular streaking while maintaining a strong field amplitude along                                                 nN /2−1  N                −
+                                                                                                                                                   Nn
+                                                                                                   PBSV(n, N ) =                            e 2⟨n⟩ ,                   (24)
+the major axis, thereby ensuring sufficient ionization rates without                                               Γ (N /2)  2⟨n⟩ 
+compromising the physical interpretation of the streaking signal. The
+selected ellipticity thus represents an optimal trade-off between streak-     where Γ is the gamma function, N is the number of modes, and n denotes
+ing interpretation and ionization efficiency, in which the peak momen-        the photon number. The effective mode number is estimated as
+tum along the direction of maximum emission probability sits at εA0.          N = 2/[g (2)−1] (equation (20)). The good agreement between mea­
+                                                                              surement and calculation provides strong evidence for the multi-mode
+Calibration of effective intensity                                            characterization of our BSV source and the validity of equation (20)
+In both the QADK and semiclassical ADK theories, electron momentum,           derived under the assumption of multiple independent equally
+rather than kinetic energy, is directly involved as shown in equations (8)    squeezed modes. This treatment is a common practice for character-
+and (10). Therefore, in our study, we calibrate the intensity using pho-      izing sources based on parametric down-conversion and is consistent
+toelectron momentum distributions rather than energy. As shown                with the methodology used in established works1,3,60.
+in Extended Data Fig. 3, these distributions maintain a Gaussian-like
+profile across all g(2) values, enabling a reliable and accurate extraction
+of the peak momentum. This photoelectron peak momentum directly               Data availability
+reflects the effective intensity of the BSV field. Here, the enhanced tails   The data supporting this paper are available from the corresponding
+of the momentum distribution are a demonstration of the quantum               authors upon reasonable request.
+statistical nature of the BSV light.
+   Nevertheless, in Fig. 3a of the main text, we present the results in       61.   Mi, Y. et al. Electron-nuclear coupling through autoionizing states after strong-field
+                                                                                    excitation of H2 molecules. Phys. Rev. Lett. 118, 183201 (2017).
+terms of kinetic energy in eV rather than momentum, because the               62.   Mouloudakis, G. & Lambropoulos, P. Revisiting photon-statistics effects on multiphoton
+energy unit of eV is a more intuitive and comprehensible unit, leading              ionization. Phys. Rev. A 97, 053413 (2018).
+to an easier comparison with existing literature40. It should be noted        63.   Faisal, F. H. M. Multiple absorption of laser photons by atoms. J. Phys. B Atom. Mol. Phys.
+                                                                                    6, L89–L92 (1973).
+that the calibrated value of the effective intensity differs slightly         64.   Reiss, H. R. Effect of an intense electromagnetic field on a weakly bound system.
+depending on whether the matching is performed using kinetic energy                 Phys. Rev. A 22, 1786–1813 (1980).
+                                                                              65.   Perelomov, A. M., Popov, V. S. & Terent’ev, M. V. Ionization of atoms in an alternating
+or momentum, as ⟨pe2 ⟩ ≠ ⟨pe ⟩2 . That said, the key conclusions of our
+                                                                                    electric field. Sov. Phys. JETP 23, 924–934 (1966).
+work, particularly the quantum enhancement and linear scaling of the          66.   Perelomov, A. M., Popov, V. S. & Terent’ev, M. V. Ionization of atoms in an alternating
+effective intensity with g(2), remain invariant when we carry out the               electric field: II. Sov. Phys. JETP 24, 207–217 (1967).
+                                                                              67.   Perelomov, A. M. & Popov, V. S. Ionization of atoms in an alternating electric field. III.
+matching using the same physical observable, be it momentum or
+                                                                                    Sov. Phys. JETP 25, 336–343 (1967).
+kinetic energy.                                                               68.   Popov, V. S. Tunnel and multiphoton ionization of atoms and ions in a strong laser field
+                                                                                    (Keldysh theory). Phys. Usp. 47, 855–885 (2004).
+Mode analysis of photon number statistics                                     69.   Mao, Y.-J., Zhou, E.-R., Li, Y., He, P.-L. & He, F. Benchmarking atomic ionization driven by
+                                                                                    strong quantum light. Preprint at arxiv.org/abs/2512.15458 (2025).
+Through singular value decomposition, a multi-mode field can be               70.   Glauber, R. J. The quantum theory of optical coherence. Phys. Rev. 130, 2529–2539 (1963).
+expressed on the basis of independent effective modes. The effective          71.   Ducuing, J. & Bloembergen, N. Statistical fluctuations in nonlinear optical processes.
+                                                                                    Phys. Rev. 133, A1493–A1502 (1964).
+number of these modes, generally quantified by the Schmidt number60,
+                                                                              72.   Lambropoulos, P., Kikuchi, C. & Osborn, R. K. Coherence and two-photon absorption.
+is a measure of the number of independent, uncorrelated components                  Phys. Rev. 144, 1081–1086 (1966).
+within the BSV field, as widely used in both theory and experiments. In       73.   Mollow, B. R. Two-photon absorption and field correlation functions. Phys. Rev. 175,
+                                                                                    1555–1563 (1968).
+the present study, the generated BSV light contains a single spatial mode
+                                                                              74.   Agarwal, G. S. Field-correlation effects in multiphoton absorption processes. Phys. Rev. A
+and multiple frequency modes. To confirm this, we performed spectral                1, 1445–1459 (1970).
+filtering of the BSV light using a standard 4-f monochromator. The slit in    75.   Lecompte, C., Mainfray, G., Manus, C. & Sanchez, F. Laser temporal-coherence effects on
+                                                                                    multiphoton ionization processes. Phys. Rev. A 11, 1009–1015 (1975).
+the monochromator can change the spectral bandwidth and thus alter            76.   Jechow, A., Seefeldt, M., Kurzke, H., Heuer, A. & Menzel, R. Enhanced two-photon excited
+the frequency mode number of the BSV source. Extended Data Fig. 4a                  fluorescence from imaging agents using true thermal light. Nat. Photon. 7, 973–976
+demonstrates the measured second-order correlation function g(2) of                 (2013).
+                                                                              77.   Gonoskov, I. A., Vugalter, G. A. & Mironov, V. A. Ionization in a quantized electromagnetic
+the BSV light after the 4-f monochromator as a function of the slit width           field. J. Exp. Theor. Phys. 105, 1119–1131 (2007).
+in the 4-f monochromator, which manipulate the spectral bandwidth             78.   Balybin, S. N. & Tikhonova, O. V. Photoionization of atomic systems in squeezed states of
+and the frequency mode of the BSV light. After spectral filtering, we               light. JETP Lett. 109, 695–699 (2019).
+                                                                              79.   Tzur, M. E. & Cohen, O. Motion of charged particles in bright squeezed vacuum. Light Sci.
+achieved g(2) values up to 2.6, which confirms the contribution of mul-             Appl. 13, 41 (2024).
+tiple frequency modes to our BSV source. We note that, to maintain the        80.   Eckstein, A., Christ, A., Mosley, P. J. & Silberhorn, C. Highly efficient single-pass source
+high peak intensity required for atomic ionization in our experiment,               of pulsed single-mode twin beams of light. Phys. Rev. Lett. 106, 013603 (2011).
+                                                                              81.   Dyakonov, I. V., Sharapova, P. R., Iskhakov, T. Sh. & Leuchs, G. Direct Schmidt number
+we did not use spectral filtering to the generated BSV that enters the              measurement of high-gain parametric down conversion. Laser Phys. Lett. 12, 065202
+vacuum chamber for the ionization of the atoms as a multi-mode light.               (2015).
+   In our experiments, we primarily control the g(2) parameter of the BSV
+source by varying the pump power incident on the nonlinear crystal.           Acknowledgements We thank J.-W. Pan for the discussions. This work was supported by the
+Extended Data Fig. 4b shows the measured dependence of g(2) on pump           Quantum Science and Technology—National Science and Technology Major Project (grant no.
+Article
+2024ZD0300700), the National Natural Science Foundation of China (grant nos. 12521003,                 Additional information
+12241407, 12474341 and 12574371) and the Shanghai Pilot Program for Basic Research                     Supplementary information The online version contains supplementary material available at
+(grant no. TQ20240204).                                                                                https://doi.org/10.1038/s41586-026-10485-9.
+                                                                                                       Correspondence and requests for materials should be addressed to Shicheng Jiang,
+Author contributions J.W. conceptualized the study. Z.J., S.P., J.C., C.Z., Y.W., L.H., D.W., W.L.     Hongcheng Ni or Jian Wu.
+and J.W. carried out the experimental studies. M.Z., R.Z., J.L., S.X., S.J. and H.N. carried out the   Peer review information Nature thanks Jeehwan Kim, Marco Lisker and the other, anonymous,
+theoretical studies. All authors participated in the discussions and contributed to the paper.         reviewer(s) for their contribution to the peer review of this work. Peer reviewer reports are
+                                                                                                       available.
+Competing interests The authors declare no competing interests.                                        Reprints and permissions information is available at http://www.nature.com/reprints.
+                         a                                      .5   .0   .5      .0    .5    .0    .5    .0     .5   .0      .5     b                                   1.5   1.0   0.5    0.0   .5    .0    .5     .0    .5   .0     .5
+                                                            –7       –7   –6     –6    –5    –5    –4    –4      –3   –3   –2                                        –1      –1   –1       –1     –9   –9    –8    –8      –7   –7   –6
+
+                                                          60                                                                                                       60
+
+
+
+
+                                   Light energy EΛ (eV)                                                                                     Light energy EΛ (eV)
+                                                          40                                                                                                       40
+
+
+
+
+                                                          20                                                                                                       20
+
+
+                                                                                        Classical light: slice at PΛ = 1/√2
+
+                                                           0                                                                                                        0
+                                                                0         10           20          30            40           50                                         0           2            4          6             8         10
+                                                                               Electron kinetic energy Ee (eV)                                                                           Electron kinetic energy Ee (eV)
+
+                         c                                                                                                           d
+                                                          100                                                                                                      100
+                                                                                                           ADK (original)                                                                                          ADK (original)
+                                                                                                           QADK (original)                                                                                         QADK (attenuated)
+
+
+
+
+                       Normalized yield (a.u.)                                                                                     Normalized yield (a.u.)
+                                                    10–1                                                                                                       10–1
+
+
+
+
+                                                    10–2                                                                                                       10–2
+
+
+
+
+                                                    10–3                                                                                                       10–3
+                                                                0         10           20          30            40           50                                         0           2            4          6             8         10
+                                                                               Electron kinetic energy Ee (eV)                                                                           Electron kinetic energy Ee (eV)
+
+Extended Data Fig. 1 | Simulated quantum-boosted photoelectron spectra.                                                                          b,d, Correlated light–electron energy distribution (b, logarithmic scale) and its
+a,c, Correlated light–electron energy distribution (a, logarithmic scale) and its                                                                projection onto the electron energy axis Ee (d, logarithmic scale, normalized).
+projection onto the electron energy axis Ee (c, logarithmic scale, normalized).                                                                  The BSV light is attenuated by a factor of 14 so that its peak momentum matches
+Identical average photon number for coherent and BSV lights are used.                                                                            that of the coherent light of the original intensity.
+Article
+
+
+
+
+Extended Data Fig. 2 | Simulated photoelectron spectra under coherent
+lights with different pulse durations. Blue and yellow curves denote the
+electron kinetic energy spectrum simulated with the pulse duration of 70 fs
+and 150 fs, respectively.
+Extended Data Fig. 3 | Photoelectron momentum spectra resulting from
+BSV light with varying second-order correlation function g(2).
+Article
+
+
+
+
+Extended Data Fig. 4 | Measured second-order correlation function g(2) of the generated BSV light. (a) Second-order correlation function as a function of the
+slit width in the 4-f monochromator. (b) Second-order correlation function as a function of pump power of the pulse entering the nonlinear crystal.
+Extended Data Fig. 5 | Photon number distributions of the generated BSV    according to the multi-mode formula only using the measured average photon
+light with varying g(2) parameters. Blue shades denote the photon number   number and effective mode number estimated from N = 2/[g (2) −1].
+distributions measured in experiments, and blue curves are calculated
+

@@ -1,0 +1,336 @@
+                                                          Benchmarking Atomic Ionization Driven by Strong Quantum Light
+
+                                                                Yi-Jia Mao,1, 2, ∗ En-Rui Zhou,1, ∗ Yang Li,1, † Pei-Lun He,1, ‡ and Feng He1, 2, §
+                                                                      1
+                                                                       State Key Laboratory of Dark Matter Physics, Key Laboratory for Laser
+                                                                       Plasmas (Ministry of Education) and School of Physics and Astronomy,
+                                                                               Collaborative Innovation Center for IFSA (CICIFSA),
+                                                                              Shanghai Jiao Tong University, Shanghai 200240, China
+                                                                 2
+                                                                   Tsung-Dao Lee Institute, Shanghai Jiao Tong University, Shanghai 201210, China
+                                                                                             (Dated: December 18, 2025)
+                                                             The recently available high-intensity quantum light pulses provide novel tools for controlling light-
+                                                          matter interactions. However, the rigor of the theoretical frameworks currently used to describe the
+                                                          interaction of strong quantum light with atoms and molecules remains unverified. Here, we establish
+                                                          a rigorous benchmark by solving the fully quantized time-dependent Schrödinger equation for an
+                                                          atom exposed to bright squeezed vacuum light. Our ab initio simulations reveal a critical limitation
+
+
+
+
+arXiv:2512.15458v1 [quant-ph] 17 Dec 2025
+                                                          of the widely used Q-representation: although it accurately reproduces the total photoelectron
+                                                          spectrum after tracing over photon states, it completely fails to capture the electron-photon joint
+                                                          energy spectrum. To overcome this limitation, we develop a general theoretical framework based on
+                                                          the Feynman path integral that properly incorporates the electron-photon quantum entanglement.
+                                                          Our results provide both quantitative benchmarks and fundamental theoretical insights for the
+                                                          emerging field of strong-field quantum optics.
+
+
+                                               In conventional strong-field physics, laser pulses are           sociation [31]. While the validity of the Q-representation
+                                            predominantly described as Glauber coherent states [1],             has been verified for HHG using the von Neumann lat-
+                                            an approximation that neglects the quantum fluctua-                 tice method [32], the Q-representation faces conceptual
+                                            tions of light. Semiclassical theories based on the time-           challenges regarding which operator corresponds to the
+                                            dependent Schrödinger equation (TDSE) that treat the               experimental observables, leading to inconsistent results
+                                            laser pulses as external classical fields [2–7] have success-       in the literature [1, 21, 26, 27, 29, 30, 33, 34]. Crucially,
+                                            fully underpinned landmark discoveries in attosecond sci-           the validity of the Q-representation for general dynamical
+                                            ence, including high-harmonic generation (HHG) [2, 8–               systems remains unclear and calls for systematic bench-
+                                            10], above-threshold ionization (ATI) [11–13], and non-             marking.
+                                            sequential double ionization (NSDI) [14–16]. In parallel,              In this Letter, we present an ab initio numerical sim-
+                                            quantum optics has long exploited nonclassical states of            ulation of the TDSE for the complete atom-photon sys-
+                                            light, such as Fock states, squeezed states, and thermal            tem in the strong-field regime, where both the electronic
+                                            states, for applications in quantum metrology, quantum              and optical degrees of freedom are treated quantum me-
+                                            communication, and foundational tests of quantum the-               chanically. This simulation establishes a rigorous bench-
+                                            ory [17–20]. Recent experimental breakthroughs have en-             mark for strong-field quantum optics. We find that pre-
+                                            abled the generation of ultrashort quantum light pulses at          dictions from the widely used Q-representation are con-
+                                            intensities reaching 1012 -1013 W/cm2 , comparable to the           sistent for the total electron signals after tracing over
+                                            Coulomb field that binds valence electrons in atoms [21–            the photon degrees of freedom. Crucially, however, the
+                                            24]. This development marks a convergence between                   photon statistics of the driving field deviate significantly
+                                            quantum optics and strong-field physics, giving rise to             from the predictions of the Q-representation. This dis-
+                                            the emerging discipline of strong-field quantum optics.             crepancy motivates a fundamental reformulation of the
+                                            Accordingly, a compelling question arises: how do the               problem. To this end, we rigorously derive a general ex-
+                                            photon statistics and quantum fluctuations of nonclassi-            pression starting from the Feynman path integral for the
+                                            cal fields influence strong-field electronic dynamics?              coupled atom-photon system. Our formulation not only
+                                               At present, theoretical treatments of strong-field               yields a more accurate theoretical tool but also provides
+                                            quantum-light-matter interactions rely heavily on the               clear physical insight into the origin of the discrepancy.
+                                            generalized P -representation [25], from which the Q-               By focusing on the photon-state correlated photoelectron
+                                            representation is obtained by taking an appropriate limit           energy spectrum, we establish a general picture of the
+                                            for practical computations [1, 26–29]. Within this frame-           limits and validity of the Q-representation in describing
+                                            work, one can derive quantities such as HHG [1, 21, 26],            the interaction between intense quantum light and atoms.
+                                            ATI spectra [27, 29, 30] and kinetic energy release in dis-            We begin by numerically solving the TDSE for a one-
+                                                                                                                dimensional model hydrogen atom interacting with a
+                                                                                                                quantized photon field. The total wave function of the
+                                                                                                                coupled atom-photon system satisfies (atomic units are
+                                            ∗ These authors contributed equally to this work.
+                                            † liyang22@sjtu.edu.cn
+                                                                                                                used throughout unless stated otherwise)
+                                            ‡ peilunhe@sjtu.edu.cn
+                                                                                                                                       ∂
+                                            § fhe@sjtu.edu.cn                                                                      i      |Ψ(t)⟩ = Ĥ |Ψ(t)⟩ .           (1)
+                                                                                                                                       ∂t
+                                                                                                                             2
+
+
+
+
+FIG. 1. (a) Joint photon-photoelectron energy spectrum obtained from the full quantum TDSE simulation. (b) Magnified view
+of the joint energy spectrum for photon numbers in the range 25000 − 25010. The upper panel shows the results from the
+full quantum TDSE simulation, while the lower panel shows the corresponding results from the Q-representation method. (c)
+Photoelectron energy spectra correlated with specific Fock states. The upper and middle panels show the spectra for n = 25000
+and n = 25001, respectively, while the lower panel shows their averaged result. Solid and dashed curves denote the results from
+the full quantum TDSE and the Q-representation methods, respectively. (d) Total photoelectron energy spectra calculated
+using the full quantum TDSE simulation (black solid curve) and the Q-representation method (red dashed curve).
+
+
+We expand |Ψ(t)⟩ in the direct product basis                       Having established the numerical framework for solv-
+                                                                 ing the TDSE with a fully quantized photon field, we
+                      Nγ Z
+                      X                                          now assess the performance of the Q-representation ap-
+           |Ψ(t)⟩ =          dx cx,n (t) |x⟩ ⊗ |n⟩ ,      (2)    proach [1, 26–29] to compare it with the full quantum
+                      n=0                                        TDSE simulation. The total density matrix given by the
+                                                                 Q-representation is
+where |x⟩ and |n⟩ denote the electron position ket and                      Z
+the photon Fock state, respectively. The Hamiltonian               ρ (t) = d2 α Q(α) |ψe (t; α)⟩⟨ψe (t; α)| ⊗ |α⟩⟨α|, (3)
+                                                                    (Q)
+in the interaction picture is given by Ĥ = ĤA + Ĥint ,
+                1 d2        1
+where ĤA = −        2
+                       −√         is the field-free atomic       where |α⟩ is a coherent state, Q(α) = ⟨α|ϕγ ⟩⟨ϕγ |α⟩/π
+                2 dx        2
+                          x +2
+                                                                 the Q-representation of the initial photon state |ϕγ ⟩, and
+Hamiltonian, and Ĥint = if (t)ϵV x̂(âe−iωt − â† eiωt ) de-
+                                                                 |ψe (t; α)⟩ the electron state driven by the classical laser
+scribes the atom-photon interaction in the dipole ap-
+                                                                 pulse with coherent-state amplitude α,
+proximation. Here, â and â† are the photon annihila-
+tion and creation operators, f (t) ispthe pulse envelope,          ∂              h                                 i
+ω the angular frequency, and ϵV = 2πω/V the single-              i   |ψe (t; α)⟩ = ĤA + 2x̂|α|ϵV sin(ωt − θα )f (t) |ψe (t; α)⟩,
+                                                                  ∂t
+photon field amplitude associated with the pulse volume                                                                    (4)
+V [35]. The coupled wave function is propagated using            where θα = arg[α] is the carrier-envelope phase.
+the Crank-Nicolson method [36], and the photoelectron               As a representative scenario, we consider strong-field
+energy spectra (PES) are extracted at the end of the             ionization driven by a bright squeezed vacuum (BSV)
+pulse using a window-operator technique [37–39]. Addi-           at a wavelength of 400 nm. The BSV field has a peak
+tional computational details are provided in Sec. I and II       intensity of 1014 W/cm2 . The pulse envelope is trape-
+in the Supplemental Materials [40].                              zoidal, consisting of one optical cycle of ramp-up, two
+                                                                                                                        3
+
+cycles at full intensity, and one cycle of ramp-down. For      ponents. The Q-representation overestimates the even-n
+a given laser intensity in the quantum-field model, the        contributions while underestimating the odd-n ones. Re-
+effective electric-field amplitude scales with the single-     markably, however, once these components are averaged,
+photon amplitude as E0 = 2ϵV sinh r, while the average         the two methods become nearly indistinguishable.
+photon number is n̄ = sinh2 r. Unless stated otherwise,           Motivated by this observation, we now compare the
+we take the squeezing parameter r = 5.3 to ensure con-         total PES obtained by summing over all final photon-
+vergence within a tractable Fock basis. Convergence is         number states. As shown in Fig. 1(d), the full quan-
+verified in Sec. II in the Supplemental Materials [40].        tum TDSE and Q-representation results become essen-
+   To visualize the complete quantum dynamics, we first        tially identical. This agreement arises because the to-
+examine the joint electron-photon energy spectrum by           tal PES integrates over the photon degree of freedom,
+calculating the PES associated with a specific correlated      thereby eliminating photon-number-resolved information
+photon-number state. The resulting spectra are shown           and masking the deficiencies of the Q-representation
+in Fig. 1(a). Several distinct patterns emerge, highlight-     in reproducing the electron-photon entangled dynamics.
+ing that both the electron and light field are modulated       This is a critical finding for strong-field quantum optics,
+during the interaction. The ATI peaks appear as stripes        as it validates the use of the computationally simpler Q-
+spaced by the photon energy ω. Notably, these stripes tilt     representation for systems where only the electron’s final
+from top-left to bottom-right, consistent with the pon-        kinetic energy distribution is measured. We emphasize,
+                             (n)
+deromotive energy shift Up = ϵ2V (2n + 1)/2ω 2 of the          however, that unlike the joint photon-photoelectron en-
+final state |E⟩ ⊗ |n⟩ [40]. Two well-defined energy cutoffs    ergy spectrum, which exhibits clear ATI peaks and cutoff
+                       (n)               (n)                   structures, the total PES displays strongly blurred ATI
+emerge at E = 2Up and E = 10Up , corresponding                 modulations and barely visible cutoffs. This loss of struc-
+to direct ionization and rescattering ionization, respec-      ture has recently been reported experimentally in elec-
+tively, in agreement with well-established semiclassical       tron energy spectra generated at a metal nanotip using
+                                                 (n)
+theories [41]. Since the ponderomotive shift Up associ-        quantum light [43]. Here, we show that such broadening
+ated with each Fock state increases linearly with n, these     originates from quantum photon-number fluctuations in-
+cutoffs appear as two straight lines as marked in Fig. 1(a).   trinsic to the driving field, which, in principle, can be
+                                   (n)
+Moreover, in the region E < 2Up , two pronounced local         experimentally measured in strong-quantum-field ioniza-
+minima emerge as additional linear features. These min-        tion of atoms.
+ima arise from intra-cycle interference [42], which also          To pinpoint the origin of the breakdown of the Q-
+                               (n)
+scales proportionally with Up , and thus with the pho-         representation method in the joint spectra, we exam-
+ton number n.                                                  ine the underlying photon-number statistics. In the full
+   Beyond the classical strong-field features discussed        quantum TDSE simulation, the photon-number distri-
+above, the fully quantized simulation uncovers additional      bution after the light-atom interaction is computed as
+                                                                 (F )         R                  2
+structures. In particular, Fig. 1(a) exhibits dense hor-       Pγ (n, t) ≡ dx |⟨x, n| Ψ(t)⟩| , as shown by the black
+izontal fringes, which are more clearly presented in a         solid curves in Fig. 2(a). The upper and lower panels
+magnified view in the upper panel of Fig. 1(b). The            show the distributions for even and odd photon-number
+results show subtle photon-number-dependent modula-            states, respectively. Initially, the BSV state (gray dash-
+tions of the ionization channels. To assess whether such       dotted curve) exhibits strict even photon-number par-
+quantum-correlated features can be reproduced by semi-         ity. After interacting with the atom, however, the light
+classical quantum light modeling, we calculate the corre-      state becomes a mixed state containing both even and
+sponding joint spectrum using the commonly adopted Q-          odd photon contributions. The zoom-in views around
+representation method [40], as shown in the lower panel        n ≈ 12000 and 20000, shown in Figs. 2(b) and 2(c), fur-
+of Fig. 1(b). A clear discrepancy emerges: The full quan-      ther reveal that the local dominance of even versus odd
+tum results reveal that photoelectron signals correlated       photon numbers varies across the distribution. This mod-
+with even and odd Fock states exhibit distinct behaviors.      ulation directly reflects the entangled nature of electrons
+In particular, different ATI peaks are predominantly as-       and photons during the interaction, which is inherently
+sociated with either even or odd photon-number states.         lost in semiclassical approximations.
+In stark contrast, although calculations based on the Q-          As a comparison, we also calculate the photon
+representation capture the overall envelope, the spectrum      statistics in the Q-representation. The photon statis-
+appears continuous and lacks the even-odd modulation           tics predicted by the Q-representation are obtained as
+                                                                 (Q)
+                                                               Pγ (n, t) = d2 α Q(α) |⟨n|α⟩|2 by tracing out the de-
+                                                                              R
+associated with the Fock states. This comparison im-
+mediately demonstrates that while the Q-representation         gree of the electron from the density matrix shown by
+may approximate averaged observables, it fails to capture      Eq. (3). Crucially, within this framework, the photon-
+the granular quantum correlations and photon statistics        number distribution remains time-independent through-
+inherent in strong-field quantum optics. Figure 1(c) high-     out the entire light-matter interaction, as shown by the
+lights this point more explicitly through a direct compar-     red dashed curves in Fig. 2(a). No parity mixing or
+ison between the two approaches for representative even        dynamical redistribution occurs. As a result, the Q-
+(n = 25000) and odd (n = 25001) photon-number com-             representation does not capture the light-field modula-
+                                                                                                                                 4
+
+                                                                tion, yielding
+                                                                              Z 2 Z 2 Z      Z    Z xf
+                                                                                d αf d αi
+                                                                   |Ψ(tf )⟩ =             dxf dxi      DxDp
+                                                                                 π    π            xi
+                                                                                R tf                              −iωt   ∗ iωt
+                                                                            ei ti dt [pẋ−HA −if (t)ϵV x(α(t)e      −αf e   )]
+                                                                           ×⟨αf |αi ⟩⟨αi |ϕγ ⟩⟨xi |ψe (ti )⟩ |xf ⟩ ⊗ |αf ⟩,
+                                                                                                                             (5)
+                                                                                       Rt    ′    ′    ′   iωt′
+                                                                where α(t) = αi −ϵV ti dt f (t )x(t )e        is the solution of
+                                                                the Maxwell equation α̇(t) = −ϵV x(t)f (t)eiωt , which de-
+                                                                scribes how the reaction of electron radiation changes the
+                                                                field of light. In the limit ϵV → 0, the backaction on the
+                                                                light field described by α(t) becomes negligible, allowing
+                                                                one to set α(t) → αi ; consequently, αf → αi .Thereby,
+                                                                we obtain an approximate solution to the full quantum
+                                                                TDSE shown in Eq. (1) as
+                                                                                     Z 2
+                                                                                        d α
+                                                                           |Ψ(t)⟩ =         ⟨α|ϕγ ⟩|ψe (t; α)⟩ ⊗ |α⟩,        (6)
+                                                                                         π
+                                                                which can be applied to calculate the physical observ-
+                                                                ables. Equation (6) has a clear physical interpretation:
+                                                                The initial photon state |ϕγ ⟩ is expanded in the coherent-
+                                                                state basis |α⟩, where each component independently
+                                                                steers the electron. This formulation inherently encodes
+FIG. 2. (a) Comparison of the photon-number distributions of    the electron-photon entanglement, and the resulting sys-
+400 nm BSV light after interaction with a 1D hydrogen atom,     tem’s density matrix takes the form
+calculated using the full quantum TDSE (black solid line),
+the Q-representation (red dashed line), and the path integral                     Z 2
+                                                                                     d α d2 β                      2    2
+                                                                                                R(α∗ , β) e− 2 (|α| +|β| )
+                                                                                                             1
+method (blue dotted line). The photon-number distribution              ρ(R) (t) =
+of the incident BSV light is shown by the gray dash-dotted
+                                                                                      π π                                  (7)
+line. The upper and lower panels show the distributions for                       × (|ψe (t; α)⟩⟨ψe (t; β)|) ⊗ (|α⟩⟨β|) ,
+even and odd photon-number states, respectively. (b) Magni-
+                                                                                                            1      2     2
+fied photon-number distribution from the full quantum TDSE      where R(α∗ , β) = ⟨α|ϕγ ⟩⟨ϕγ |β⟩ e 2 (|α| +|β| ) is the
+simulation in the range 12000 − 12010. The red dashed line      R-representation. Partial tracing out the electron yields
+shows the result obtained using the Q-representation. (c)       the photon density matrix composing the time-dependent
+Same as (b), but in the range 20000 − 20010.
+                                                                factor ⟨ψe (t; β)|ψe (t; α)⟩. The corresponding photon-
+                                                                number distribution takes the form
+                                                                                Z        Z 2                             2
+                                                                    (R)                     d α
+                                                                   Pγ (n, t) = dx               ⟨n|α⟩⟨α|ϕγ ⟩⟨x|ψe (t; α)⟩ .
+                                                                                             π
+                                                                                                                           (8)
+                                                                Neglecting the off-diagonal terms in R(α∗ , β) reduces it
+tion observed in the full quantum TDSE simulation. It           to the Q-representation given in Eq. (3) [40], thereby
+only reproduces the photon-averaged outcome, consistent         eliminating the time evolution of the photon-number dis-
+with its behavior in the joint energy spectrum discussed        tribution. The blue dashed curves in Fig. 2(a) show the
+above.                                                          photon-number distributions calculated by Eq. (8). It
+                                                                agrees very well with the full quantum TDSE results,
+                                                                assuring that the approximate state in Eq. (6) accu-
+   To understand how the electron-photon entanglement           rately describes both the electron and photon subsys-
+leads to the breakdown, we use the Feynman path inte-           tems. It is instructive to examine why this approxima-
+gral approach [44, 45] and derive an approximate wave           tion still succeeds even though Eq. (8) neglects the ex-
+function that retains the correlated dynamics presented         plicit retroaction of the electron on the coherent-state
+in the full quantum theory. The central results are sum-        amplitudes α. One might expect this retroaction to be
+marized below, with additional derivation details pro-          essential for modeling photon dynamics, yet the results
+vided in Sec. IV in the Supplemental Materials [40]. By         reveal that it has only a minor impact on observables.
+expressing the state vector evolution via the Feynman           Instead, the dominant mechanism driving the time evo-
+path integral with coherent states as the photon-field ba-      lution of the photon field is encoded in the entanglement
+sis, we analytically evaluate the coherent-state integra-       structure of Eq. (6). When the photon field is expressed
+                                                                                                                             5
+
+in the coherent-state basis, its evolution is driven pri-         spectra can be accessed using recent developments in co-
+marily by the electron-photon entanglement rather than            incident detection techniques, which already enable cor-
+the small electron-induced modification of the coherent           related measurements of photon statistics and emitted
+parameter α. This key insight explains why the ap-                electrons in strong-field settings [43]. This work bridges
+proximate R-representation remains accurate while the             strong-field physics with quantum information science by
+Q-representation breaks down: the latter discards the             establishing entanglement as a fundamental observable in
+off-diagonal correlations that encode this entanglement-          strong-field quantum optics.
+mediated dynamic.                                                    Acknowledgments—This work was supported by Na-
+   In summary, our full quantum TDSE simulations es-              tional Natural Science Foundation of China (NSFC)
+tablish rigorous benchmarks for strong-field ionization           (Grant Nos. 12450405, 12274294, 12574378, 12574377,
+driven by BSV light. Our study shows that the Q-                  11925405). The computations in this paper were run on
+representation accurately describes total photoelectron           the Siyuan-1 cluster supported by the Center for High
+spectra but fails to capture electron-photon entanglement         Performance Computing at Shanghai Jiao Tong Univer-
+signatures in joint energy spectra and photon-number-             sity. P.-L. H. is supported by the Yangyang Development
+resolved observables. The breakdown originates from the           Fund and the Pujiang Program of the Shanghai Baiyulan
+absence of interference effects in the Q-representation,          Talent Plan (Grant No. 24PJA046). Y.-J.M. is supported
+which leads to its inability to describe parity-dependent         by T.D. Lee scholarship.
+ionization pathways, as evidenced by pronounced even-                Data availability—The data that support the findings
+odd photon-number modulations. Joint electron-photon              of this work are openly available [46].
+
+
+
+
+ [1] A. Gorlach, M. E. Tzur, M. Birk, M. Krüger, N. Rivera,           Ebhardt, K. Danzmann, and R. Schnabel, Nat. Photon-
+     O. Cohen, and I. Kaminer, Nat. Phys. 19, 1689 (2023).             ics 7, 626 (2012).
+ [2] P. B. Corkum, Phys. Rev. Lett. 71, 1994 (1993).              [20] J. Wang, S. Paesani, Y. Ding, R. Santagati,
+ [3] M. Lewenstein, P. Balcou, M. Y. Ivanov, A. L’Huillier,            P. Skrzypczyk, A. Salavrakos, J. Tura, R. Augusiak,
+     and P. B. Corkum, Phys. Rev. A 49, 2117 (1994).                   L. Mančinska, D. Bacco, D. Bonneau, J. W. Silverstone,
+ [4] M. Y. Ivanov, M. Spanner, and O. Smirnova, J. Mod.                Q. Gong, A. Acı́n, K. Rottwitt, L. K. Oxenløwe, J. L.
+     Opt. 52, 165 (2005).                                              O’Brien, A. Laing, and M. G. Thompson, Science 360,
+ [5] F. Krausz and M. Ivanov, Rev. Mod. Phys. 81, 163                  285 (2018).
+     (2009).                                                      [21] A. Rasputnyi, Z. Chen, M. Birk, O. Cohen, I. Kaminer,
+ [6] V. Tulsky and D. Bauer, Comput. Phys. Commun. 251,                M. Krüger, D. Seletskiy, M. Chekhova, and F. Tani, Nat.
+     107098 (2020).                                                    Phys. 20, 1960 (2024).
+ [7] Z.-H. Zhang, Y. Li, Y.-J. Mao, and F. He, Comput.            [22] T. S. Iskhakov, A. M. Pérez, K. Y. Spasibko, M. V.
+     Phys. Commun. 290, 108787 (2023).                                 Chekhova, and G. Leuchs, Opt. Lett. 37, 1919 (2012).
+ [8] A. McPherson, G. Gibson, H. Jara, U. Johann, T. S. Luk,      [23] K. Y. Spasibko, D. A. Kopylov, V. L. Krutyanskiy, T. V.
+     I. A. McIntyre, K. Boyer, and C. K. Rhodes, J. Opt. Soc.          Murzina, G. Leuchs, and M. V. Chekhova, Phys. Rev.
+     Am. B 4, 595 (1987).                                              Lett. 119, 223603 (2017).
+ [9] M. Ferray, A. L’Huillier, X. F. Li, L. A. Lompre, G. Main-   [24] M. Manceau, K. Y. Spasibko, G. Leuchs, R. Filip, and
+     fray, and C. Manus, J. Phys. B: At. Mol. Opt. Phys. 21,           M. V. Chekhova, Phys. Rev. Lett. 123, 123606 (2019).
+     L31 (1988).                                                  [25] P. D. Drummond and C. W. Gardiner, J. Phys. A: Math.
+[10] S. Ghimire and D. A. Reis, Nat. Phys. 15, 10 (2019).              Gen. 13, 2353 (1980).
+[11] P. Agostini, F. Fabre, G. Mainfray, G. Petite, and N. K.     [26] M. Even Tzur, M. Birk, A. Gorlach, M. Krüger,
+     Rahman, Phys. Rev. Lett. 42, 1127 (1979).                         I. Kaminer, and O. Cohen, Nat. Photonics 17, 501
+[12] G. G. Paulus, W. Nicklich, H. Xu, P. Lambropoulos, and            (2023).
+     H. Walther, Phys. Rev. Lett. 72, 2851 (1994).                [27] S. Wang and X. Lai, Phys. Rev. A 108, 063101 (2023).
+[13] N. Suárez, A. Chacón, M. F. Ciappina, J. Biegert, and      [28] H. Liu, H. Zhang, X. Wang, and J. Yuan, Phys. Rev.
+     M. Lewenstein, Phys. Rev. A 92, 063421 (2015).                    Lett. 134, 123202 (2025).
+[14] D. N. Fittinghoff, P. R. Bolton, B. Chang, and K. C.         [29] Y. Fang, F.-X. Sun, Q. He, and Y. Liu, Phys. Rev. Lett.
+     Kulander, Phys. Rev. Lett. 69, 2642 (1992).                       130, 253201 (2023).
+[15] B. Walker, B. Sheehy, L. F. DiMauro, P. Agostini, K. J.      [30] Z. Lyu, F. Sun, Y. Fang, Q. He, and Y. Liu, Phys. Rev.
+     Schafer, and K. C. Kulander, Phys. Rev. Lett. 73, 1227            Res. 7, L012072 (2025).
+     (1994).                                                      [31] X. Long, P. Li, and Y. Liu, Phys. Rev. Lett. 135, 153201
+[16] X. Sun, M. Li, D. Ye, G. Xin, L. Fu, X. Xie, Y. Deng,             (2025).
+     C. Wu, J. Liu, Q. Gong, and Y. Liu, Phys. Rev. Lett.         [32] S. de-la Peña, O. Neufeld, M. Even Tzur, O. Cohen,
+     113, 103001 (2014).                                               H. Appel, and A. Rubio, J. Chem. Theory Comput. 21,
+[17] M. O. Scully and M. S. Zubairy, Quantum Optics (Cam-              283 (2025).
+     bridge University Press, 1997).                              [33] S. Wang, X. Lai, and X. Liu, Phys. Rev. A 112, L011102
+[18] C. L. Degen, F. Reinhard, and P. Cappellaro, Rev. Mod.            (2025).
+     Phys. 89, 035002 (2017).                                     [34] J. Rivera-Dean, P. Stammer, M. F. Ciappina, and
+[19] S. Steinlechner, J. Bauchrowitz, M. Meinders, H. Müller-         M. Lewenstein, Phys. Rev. Lett. 135, 013801 (2025).
+                                                                                                                             6
+
+[35] A. Wünsche, J. Opt. B: Quantum Semiclass. Opt. 6, S47      [42] D. G. Arbó, K. L. Ishikawa, K. Schiessl, E. Persson, and
+     (2004).                                                          J. Burgdörfer, Phys. Rev. A 81, 021403 (2010).
+[36] J. Crank, P. Nicolson, and D. R. Hartree, Proceedings       [43] J. Heimerl, A. Rasputnyi, J. Pölloth, S. Meier,
+     of the Cambridge Philosophical Society 43, 50 (1947).            M. Chekhova, and P. Hommelhoff, Nat. Phys. 21, 1899
+[37] D. Bauer and P. Koval, Comput. Phys. Commun. 174,                (2025).
+     396 (2006).                                                 [44] H. Kleinert, Path integrals in quantum mechanics, statis-
+[38] F. Catoire and H. Bachau, Phys. Rev. A 85, 023422                tics, polymer physics, and financial markets (World Sci-
+     (2012).                                                          entific Publishing Company, 2006).
+[39] K. Liu, P. Lan, C. Huang, Q. Zhang, and P. Lu, Phys.        [45] L. Cruz Rodriguez, T. Rook, B. B. Augstein, A. S.
+     Rev. A 89, 053423 (2014).                                        Maxwell, and C. Figueira de Morisson Faria, Phys. Rev.
+[40] See the Supplemental Materials for numerical details and         A 108, 033114 (2023).
+     for the derivation of the Feynman path integral using       [46] Y.-J. Mao, E.-R. Zhou, Y. Li, P.-L. He, and F. He,
+     coherent states as the basis.                                    https://scidata.sjtu.edu.cn/records/pdx4j-kph26.
+[41] D. B. Milošević, G. G. Paulus, D. Bauer, and W. Becker,
+     J. Phys. B: At. Mol. Opt. Phys. 39, R203 (2006).
+

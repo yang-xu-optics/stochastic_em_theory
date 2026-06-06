@@ -1,0 +1,1104 @@
+                                              Observation of a Displaced Squeezed State in
+
+                                                            High-Harmonic Generation
+                                                   David Theidel1*, Viviane Cotte1 , Philip Heinzel2 ,
+                                               Houssna Griguer1 , Mateusz Weis1 , René Sondenheimer2, 3 ,
+                                                                    Hamed Merdji1
+
+
+
+
+arXiv:2411.02311v2 [quant-ph] 9 Dec 2024
+                                             1 Laboratoire d’Optique Appliquée, ENSTA ParisTech, CNRS, École
+
+                                           polytechnique, 828 Boulevard des Maréchaux, Palaiseau, 91120, France.
+                                               2 Friedrich-Schiller-University Jena, Institute of Condensed Matter
+
+                                                  Theory and Optics, Max-Wien-Platz 1, Jena, 07743, Germany.
+                                           3 Fraunhofer Institute for Applied Optics and Precision Engineering IOF,
+
+                                                           Albert-Einstein-Str. 7, Jena, 07745, Germany.
+
+
+                                           *Corresponding author(s). E-mail(s): david.theidel@polytechnique.edu;
+
+
+                                                                            Abstract
+                                             High harmonic generation is a resource of extremely broad frequency
+                                             combs of ultrashort light pulses. The non-classical nature of this new
+                                             quantum source has been recently evidenced in semiconductors by
+                                             showing that high harmonic generation generates multimode squeezed
+                                             states of light. Applications in quantum information science require the
+                                             knowledge of the mode structure of the created states, defining how
+                                             the quantum properties distribute over the spectral modes. To achieve
+                                             that, an effective Schmidt decomposition of the reduced photonic state
+                                             is performed on a tripartite harmonic set by simultaneously measur-
+                                             ing the second- and third-order intensity correlation function. The
+                                             Schmidt number is estimated which indicates an almost single-mode
+                                             structure for the each harmonic, a useful resource in quantum technol-
+                                             ogy. By modelling our data with a displaced squeezed state, we retrieve
+                                             the dependencies of the measured correlation as a function of the high
+                                             harmonic driving laser intensity. The effective high-harmonic mode
+                                             distribution is retrieved, and the strength of the contributing squeez-
+                                             ing modes is estimated. Additionally, we demonstrate a significant
+                                             violation of a Cauchy-Schwarz-type inequality for three biseparable
+
+
+                                                                                1
+     partitions by multiple standard deviations. Our results confirm non-
+     classicality of the high-harmonic generation process in semiconductors
+     . The source operates at room temperature with compact lasers, and
+     it could become a useful resource for future applications in quantum
+     technologies.
+
+
+
+
+Introduction
+
+Non-classical sources of light are a versatile resource in quantum information science
+
+and technology [1], thanks to their unique properties like entanglement and squeez-
+
+ing to boost metrology [2–4], imaging [5, 6], or establish secure communication [7–9].
+
+Another promising prospect is photonic quantum simulation [10–12] that use displaced
+
+squeezed states of light, superposed to simulate arbitrary quantum systems. The main
+
+advantages of photonic quantum states are their robustness against decoherence due
+
+to their low interaction with the environment. Furthermore, the agility of light manip-
+
+ulation offers the possibility of encoding high-dimensional entanglement in time bins,
+
+frequency bins, or topological states [13].
+
+   It is important to determine the mode structures of engineered quantum states. The
+
+concept of modes is well known in classical electromagnetism and refers to multiple
+
+solutions of the Maxwell equations. The electromagnetic field can propagate in e.g.,
+
+different spatial, polarization, or spectral modes. Here, we are instead investigating the
+
+distribution of quantum mechanical properties, which are not necessarily restricted to
+
+one optical mode [14]. The mode analysis of quantum states is of great importance, as
+
+it leverages engineering to monitor and select favourable modes for specific photonic
+
+quantum state applications [15–17].
+
+   To this extent, higher-order intensity correlation functions can be analyzed to infer
+
+the underlying modal distribution of the generated state. Being closely connected to
+
+the moment-generating functions, higher-order photon number correlation functions
+
+
+
+
+                                              2
+probe properties like the width or skewness of the underlying photon number distri-
+
+bution. In the case of multimode squeezed states of light, they can also, under some
+
+assumptions, be used to estimate the modal squeezer distribution [18]. Based on this,
+
+entanglement can be quantified by an analysis of the multimodal structure through
+
+an effective Schmidt mode decomposition.
+
+   In this work, we analyze the modal distribution of a non-classical state of light
+
+generated by a new source of quantum light, high harmonic generation (HHG), by
+
+measuring higher-order correlation functions. The non-classicality of a tripartite har-
+
+monic state is demonstrated through the violation of a multimode Cauchy-Schwarz
+
+inequality (CSI). Here, the discrete nature of the HHG light and the strong correla-
+
+tion between photons of different harmonic orders are responsible for the violation of
+
+the CSI. Further, we extend existing techniques analyzing a squeezed vacuum state
+
+[18–20], to a more general one including displacement of the state.
+
+   Theoretical works on HHG show the potential of the process to be employed as
+
+a highly versatile source of non-classical light. HHG is a non-perturbative frequency
+
+upconversion process that can generate broadband frequency combs covering a spectral
+
+range from the near-infrared down to the extreme ultraviolet [21–23]. The attosecond
+
+time structure of the HHG pulse is inherited from its underlying highly non-linear
+
+interaction of the electrons with the periodically oscillating driving electric field poten-
+
+tial of an ultrashort pulse of light. This petahertz-frequency electron wave-packet
+
+pendulum generates then attosecond bursts of light as a response to the strong field
+
+interaction.
+
+   Non-classical effects in HHG open new avenues to be explored, exploiting the
+
+broadband generation of non-classical photon correlation, multi-partite entanglement
+
+[24, 25] and attosecond control of squeezed states of light [26], as well as conditioned
+
+generation of cat states [27, 28]. The first experimental work on semiconductor HHG
+
+
+
+
+                                             3
+(SHHG) reported the generation of squeezed states of light [29] and addressing HHG
+
+statistical and spectral properties by driving the process with non-classical light [30].
+
+   In this letter, we explore the mode decomposition of SHHG from a cadmium tel-
+
+luride (CdTe) crystal, which has reported a high conversion efficiency [31], making it
+
+favorable for signal-demanding quantum information applications. By simultaneously
+
+measuring the second-order correlation function (SCF) and third-order correlation
+
+function (TCF), we extract information about the modal structure and parameters of
+
+the state generated. Further, we confirm previous results showing multimode squeezed
+
+light [29]. The violation of a multimode Cauchy-Schwarz-type inequality (CSI) is
+
+shown to be even more significant in CdTe compared to previous studies [29].
+
+   A displaced squeezed state of light is verified by our measurement supported by
+
+numerical simulation. Our analysis shows that, in addition to squeezing, displacement
+
+is necessary to explain the observed dependencies of correlation functions on the driv-
+
+ing laser intensity. Based on the Schmidt decomposition, the dimensionality of the
+
+state is estimated.
+
+
+Measurement of the multimode Cauchy-Schwarz
+inequality
+
+The experimental demonstration is performed using a fiber-based laser system gen-
+
+erating short-wavelength infrared (SWIR), ultrashort femtosecond pulses to excite
+
+SHHG in CdTe with [110] crystal cut and select three harmonics from the third to the
+
+fifth order (Fig. S1). The non-perturbative regime of SHHG is monitored by obser-
+
+vation of the intensity crossovers, which are clearly visible for all of the harmonic
+
+orders (Fig. S4). Using spectrally selective dichroic mirrors and spectral bandpass fil-
+
+ters, we direct each high-harmonic order towards a beamsplitter behind which two
+
+single-photon resolving avalanche photodiodes are placed. The full experimental setup
+
+
+
+
+                                           4
+is shown in Fig. S2. This Hanbury-Brown-Twiss (HBT) like configuration allows us to
+
+retrieve the SCF expressed as
+
+
+                            (2)           ⟨a†i (τ )a†j (0)ai (0)aj (τ )⟩
+                           gij (τ ) =                                            ,               (1)
+                                        ⟨a†i (0)ai (0)⟩⟨a†j (τ )aj (τ )⟩
+where a† and a denote the creation and annihilation operators of photons in the
+
+mode i or j representing two of the three central spectral modes of three harmonic
+
+states H3, H4, and H5. As the HHG pulses have a duration much shorter than the
+
+timing resolution of the detection, we effectively perform a broadband, multimode
+
+measurement
+
+
+                                                  dω2 ⟨â†i (ω1 )â†j (ω2 )âi (ω1 )âj (ω2 )⟩
+                                    R          R
+                (2)       (2)            dω1
+               gij (0) ≡ gij = R                                                                 (2)
+                                        dω1 ⟨â†i (ω1 )âi (ω1 )⟩ dω2 ⟨â†j (ω2 )âj (ω2 )⟩
+                                                                  R
+
+where the convolution of the photon statistics of the spectral modes is measured
+
+[18, 19, 29]. In turn, this acquisition is sensitive to squeezing effects in the radiation. We
+
+observe a characteristic transition of the SCF when adjusting the driving laser intensity
+       (2)           (2)
+from gij ≫ 2 to gij = 1 (Fig. S5). Connecting the SCF to the photon statistics of
+
+the radiation, these values indicate a pronounced Super-Poissonian photon number
+
+distribution in each of the measured harmonic orders. This distinctive dependence
+
+on the driving laser intensity and strong inter-beam correlations are indicative of the
+
+presence of two-mode squeezing in the HHG as reported in previous works [19, 29, 32].
+
+   We evaluate a multimode Cauchy-Schwarz inequality expressed as
+
+                                                   h     i2
+                                           (2) (2)   (2)
+                                          gii gjj ≥ gij                                          (3)
+
+
+
+
+                                                     5
+Fig. 1: From the experimental data in Fig. S5 we evaluate the R parameter, given
+as Eq. (4). For all bipartite sets at all driving laser intensities we observe R > 1 with
+high significance, confirming that the generated state from SHHG is non-classical. The
+error bars are calculated from the multiple repetitions as indicated in the experimental
+data. The pairwise CSI violation and the observation of two-mode squeezing signatures
+imply the generation of three entangled biseparable states.
+
+
+to confirm the presence of non-classical correlations between the harmonic states. We
+
+calculate the R parameter defined as
+
+                                              h          i2
+                                                   (2)
+                                                  gij
+                                     Rij :=       (2) (2)
+                                                                                       (4)
+                                              gii gjj
+
+
+from the experimental data, such that a violation of the CSI corresponds to R > 1. The
+
+results are shown in Fig. 1, where we obtain a significant violation for all bipartite sets
+
+from the experimental data (complete data set displayed in Fig. S5). The CSI is known
+
+to be violated from two-mode squeezed states, as shown by theory [33] and experiment
+
+and proves the presence of non-classical correlations between the analysed modes [34].
+
+Indeed, the bipartite reductions correspond most likely to a two-mode squeezed state,
+
+exhibiting entanglement between modes. The tripartite state, as illustrated in Fig. 1,
+
+
+                                              6
+can therefore be interpreted as three entangled biseparable states. Genuine tripartite
+
+entanglement is out reach here it requires entanglement measures beyond the current
+
+study [35].
+
+
+Estimation of the mode distribution
+
+Further, insights in the modal structure of the generated squeezed state of light can be
+
+obtained by simultaneous measurement of the SCF and TCF [18, 19]. The broadband
+
+TCF is given as
+
+
+
+
+                                           dω3 ⟨â†i (ω1 )â†j (ω2 )â†k (ω3 )âi (ω1 )âj (ω2 )âk (ω3 )⟩
+                       R         R         R
+             (3)           dω1       dω2
+            gijk = R                                                                                       .   (5)
+                       dω1 ⟨â†i (ω1 )âi (ω1 )⟩ dω2 ⟨â†j (ω2 )âj (ω2 )⟩ dω3 ⟨â†k (ω3 )âk (ω3 )⟩
+                                                R                               R
+
+
+   Being closely linked to the generating moments, measuring higher order cor-
+
+relations can give further insights into the underlying photon number probability
+
+distribution function. Indeed for squeezed vacuum states the analysis of the simulta-
+
+neous measurement of g (2) and g (3) can be used to estimate the broadband squeezing
+
+distribution, the squeezing strength and the effective cooperativity parameter K
+
+[19, 20].
+
+   The adapted experimental setup is shown in Fig. S3. We select a single harmonic
+
+order to a single-beam configuration and add an additional beamsplitter behind the
+
+dichroic mirror. At the three outputs of this configuration, the single-photon avalanche
+
+diodes are placed and connected to the time tagging device to acquire the two-fold
+
+and three-fold coincidence counts to simultaneously acquire the SCF and TCF.
+
+   By normalizing the raw triple coincidences (Fig. 2a)) to the height of the off-
+                                                                                             (3)
+diagonal peaks, we calculate the third-order correlation function giii . Details on the
+
+data treatment can be found in the methods section. By changing the driving laser
+
+intensity, we obtain a set of data with distinctive values for intrabeam correlations
+
+
+
+                                                          7
+Fig. 2: Figure a) shows the raw dataset of the triple coincidence counts for the fourth
+harmonic using the setup in S3. The colormap encodes the relative number of triple
+coincidences per second. The periodic grid appears due to the pulsed excitation. The
+spacing between the peaks coincides with the time difference between the ultrashort
+laser pulses used for the excitation of the SHHG process. We calculate the TCF by
+normalizing the raw three-fold coincidences with respect to the mean height of the
+peaks. Peaks which are placed on the diagonal and as well as the peaks in the first
+row and first column are not taken into account for then normalization, as they may
+contain correlations from photons generated in the same pulse, and thus might not be
+uncorrelated. The figures b) and c) show the results from the joint measurement of
+the SCF and TCF in a single-beam setup (Fig. S3) for the fourth harmonic depicted
+                                                   (2)     (3)
+in blue. An almost linear relationship between g44 and g444 is apparent in Figure a).
+                             (2)
+Figure b) shows the SCF g44 over the loss-corrected mean photon number per pulse
+⟨n⟩. The green curve is the result from a simulation of a multimode, displaced squeezed
+thermal state from which the respective observable are calculated. The simulation
+reproduces well the measured values and suggest that the SHHG state is a displaced
+squeezed state. A similar analysis is shown for the dataset of the fifth harmonic in
+Fig. S6.
+
+ (2)       (3)
+gii and giii . Similar to the analysis carried out in [19, 20], we establish a linear rela-
+
+tionship between these two parameters (Fig. 2 and Fig. S6), from which we estimate
+
+the squeezing strength and distribution. As a result, the generated state can be inter-
+
+preted as a displaced squeezed state in contrast to the squeezed vacuum state analyzed
+
+in [19, 20].
+
+   Motivated by the interaction Hamiltonian modelling the SHHG process [29], we
+
+base our analysis on a simulated multimode system of a multimodal Gaussian state. In
+
+
+
+                                            8
+Fig. 3: Estimated squeezer distribution for the fourth (blue) and fifth harmonic
+(orange), calculated from a datapoint of the simulated multimode, displaced squeezed
+states from Fig. 2 and Fig. S6. Multiple modes exhibit non-neglible squeezing with
+a maximum squeezing level of 8.5 dB for the fourth harmonic and 7.53 dB for
+the fifth harmonic. Additionally, we calculate the effective Schmidt numbers to be
+KH4, eff = 1.43 (KH5, eff = 1.23).
+
+
+the most general case, this includes multimode displacement, squeezing and rotation
+
+of the vacuum in case of a pure state. However, for the purpose of modelling the state,
+
+we neglect rotations in a first analysis, since they can be switched past squeezing and
+
+displacement operators to act on the vacuum first [36]. The actual state generated
+
+might be more refined with rotations present among the modes. However, this aspect
+
+is beyond the scope of our current explorative analysis. We would like to emphasize
+
+at this point that more detailed theory investigations, beyond the current state of the
+
+art of such systems, are necessary to properly determine the impact of such effects.
+
+Consequently, we use the fact that the vacuum is an eigenstate of a rotation with
+
+eigenvalue 1 which leaves us with only a squeezing and displacement operation. For
+
+simplicity, we have also forgone the inclusion of two beam squeezing between spectral
+
+modes for now, such that the squeezing matrix is diagonal, and the operator can be
+
+
+                                          9
+decomposed into k single beam squeezer. In order to take losses into account, we do
+
+not restrict the subsequent analysis to pure states (squeezing and displacement) but
+
+allow for a general mixed Gaussian state, i.e., a displaced, squeezed thermal state [37].
+
+   The density matrix of such a state goes along the following standard formulation:
+
+                                  d
+                                        D̂k (α)Ŝk (ζ)ρth,k Ŝk† (ζ)D̂k† (α)
+                                  O
+                           ρk =                                                         (6)
+                                  k=1
+
+
+
+where D̂k (α)     =   exp (αk aˆk † − αk∗ aˆk ) is the displacement operator, Ŝk (ζ)    =
+            † 2        2
+exp {(ζk∗ (aˆk ) − ζk aˆk )/2} the squeezing operator with ζk = rk · exp (iθk ) and ρth,k =
+P
+  n P (nk )|n⟩⟨n| the density matrix of a thermal state with occupation number nk
+
+and d the number of spectral modes constituting the corresponding SHHG mode. We
+
+discretize the integrals in equation Eq. (1)
+
+
+                                                       ⟨â† â† âl âm ⟩
+                                            Pd Pd
+                              g   (2)
+                                        ≈ Pdl † m Pl d m †                              (7)
+                                           l ⟨âl âl ⟩     m ⟨âm âm ⟩
+
+
+
+and assume uncorrelated squeezer modes. This simplifies the numerator in the case
+
+l ̸= m to products of expectation values of photon number operators. The integral
+
+expression Eq. (5) is discretized analogously. Further, we parametrize the squeezing
+                                   p
+parameter as rk = B ·λk with λk = 1 − µ2 µk , assuming a 2D Gaussian joint-spectral
+
+density distribution (JSD) [19] with an underlying, normalized thermal squeezer dis-
+
+tribution characterized by the thermal occupation parameter µ. The assumption of a
+
+Gaussian JSD is justified through the use of narrowband spectral filters [38].
+
+   The strength of the process B is assumed to be isotropic for all modes k as well as
+
+isotropic displacement over the modes αk = α and nk = n. Finally θk = 0.
+
+   We note that these assumptions are primarily made to simplify the simulations in
+
+accordance with [19, 20]. However, they may still serve as a rough estimation of the
+
+
+
+
+                                                    10
+underlying parameters, as the state generated in SHHG is likely Gaussian in a first
+
+approximation.
+
+   In total, the parameters B, µ, α and nth are employed to create k states specified
+
+by Eq. (6).
+
+   Different values for the SCF, TCF and mean photon number ⟨n⟩ are obtained by
+
+subsequently including up to d = 50 modes to the simulation [39]. The convergence
+
+of the simulation is verified by decreasing the number of modes by 15 and confirming
+
+that the same parameters and estimated Schmidt number is obtained. Additionally
+
+the simulated data points, shown as green points in Fig. 2b) and 2c), show excellent
+
+convergence to the experimental data with an increase of k. The parameters for both
+
+datasets on the fourth and fifth harmonics are found by minimizing the root mean
+
+square deviation between the data and the obtained values from the simulation on the
+
+g (2) vs. g (3) and ⟨n⟩ vs. g (2) dataset. The results for the fourth and fifth harmonic are
+
+shown in Fig. 2 and Fig. S6. The simulation reproduces the experimentally observed
+
+dependence well. For both measured harmonic orders we find, that a state with non-
+
+negligible squeezing is needed to interpret the experimental data. In the case of the
+
+fourth harmonic, the optimal parameters are found to be Bopt,4 = 0.471, µopt,4 =
+
+0.4226, αopt,4 = 0.127 and nth,opt,4 = 0.001. For the fifth harmonic Bopt,5 = 0.397,
+
+µopt,5 = 0.32, αopt,5 = 0.161 and nth,opt,5 = 0.001 . From the numerical analysis we
+
+estimate the effective Schmidt number Keff = 1/ k λ4k [40] as KH4, eff = 1.43 and
+                                                   P
+
+KH5, eff = 1.23.
+
+   Despite restrictive parameter assumptions, we find the simulations of the model to
+
+be in good agreement with the experimental data and fitting well the interpretation
+
+of the observed scaling of the correlation functions with the driving laser intensity due
+
+to the broad squeezer distribution, as previously suggested in [29]. The deviations of
+
+the experimental data, could originate from the finite data size introducing a statisti-
+
+cal uncertainty, which becomes more pronounced for a low number of mean photons
+
+
+
+                                            11
+[20]. Still, our interpretation and numerical analysis provides a good explanation. As
+
+the SHHG process is highly complex and the theoretical work on understanding the
+
+emergence of quantum features has just recently started, we expect that other intrin-
+
+sic effects such as light-matter entanglement might contribute to the observed features
+
+of the data [41].
+
+
+Discussion
+
+In summary, we present a thorough analysis of the second and third-order photon
+
+number correlation function of the state created in SHHG. In a three-beam config-
+
+uration, we measure the violation of the CSI in the bipartite partitions, a strong
+
+signature for non-classical correlations. This result motivates for an investigation of
+
+genuine tripartite entanglement in SHHG. Indeed, in quantum information science,
+
+especially computing, a central goal is to generate fully controllable entangled states
+
+featuring increasingly many (N > 2) particles. SHHG could potentially meet this
+
+key requirement for quantum advantage. We restrict here our quantum correlations
+
+studies to three biseparable states and further investigate for a specific harmonic the
+
+behaviour of the second- and third-order correlation function with the driving laser
+
+intensity. The data are representative of a displaced squeezed thermal state. On the
+
+basis of the numerical analysis, a Schmidt decomposition is performed to quantify the
+
+mode structure of the state generated and estimate the effective Schmidt number and
+
+squeezing strength of the spectral modes. This result confirms and extends previous
+
+work reporting two-mode squeezed states from SHHG [29]. The presence of displace-
+
+ment and squeezing of the SHHG state, show the complexity and future prospects for
+
+fine control of the state generated using advanced quantum engineering. Spectrally
+
+entangled states are major resources in quantum information science and emerging
+
+technologies such as quantum metrology, computing, and cryptography.
+
+
+
+
+                                          12
+   Our findings further establish the application of quantum optical methods to the
+
+tripartite SHHG state and are, to the best of our knowledge, a unique study of the
+
+squeezer distribution generated from SHHG. With this, we pave the way for further
+
+studies and applications of the displaced squeezed state generated via SHHG. This
+
+further establishes SHHG as a highly promising candidate for applications in the broad
+
+field of quantum state engineering, gaining possible quantum advantage due to the
+
+potential high dimensionality of the HHG bosonic platform [42].
+
+
+Methods
+
+Our experimental setups are based on a 200 mW all-fiber pulsed laser system with a
+
+central wavelength of 2100 nm and a repetition rate of 18.66 MHz. The ultrashort laser
+
+pulses with a duration of 80 fs are linearly polarized and focused on the CdTe[110]
+
+crystal with a focal length of 2.5 cm. Before, a half-wave plate and polarizer combi-
+
+nation allowed us to adjust the driving laser intensity. After the sample, a slightly
+
+closed aperture and infrared filter separate the driving laser light from the generated
+
+high-harmonic orders. An additional broadband polarizer removes the luminescence
+
+background of the SHHG signal. The SHHG radiation is collimated and the harmonic
+
+modes 3 to 5 spatially separated by means of dichroic mirrors and spectral filters. For
+
+the measurement of the SCF, a beamsplitter is placed behind each spectral filter, and
+
+the two outputs are focused on single photon avalanche diodes (SPADs). They are con-
+
+nected to a time-to-digital converter (TDC), recording the arrival time of the photons
+
+registered on the SPADs. From the time-stamps, the mean photon number as well as
+
+intra- and interbeam correlation are calculated. To record the threefold coincidence
+
+counts, a single harmonic order is selected, and two beamsplitters are placed behind
+
+the spectral filter. Behind the three beamsplitter outputs, the SPADs are placed and
+
+threefold coincidence recorded via the TDC. At the same time, the two outputs of
+
+the second beamsplitter are used to record coincidence counts. In both setups, care is
+
+
+
+                                          13
+taken to not saturate the binary detectors by having an event rate of less than one
+
+photon per pulse.
+
+
+Data treatment and simulation
+
+Assuming that coincidence events from photons created in subsequent pump pulses are
+
+uncorrelated, yielding g (2) = 1, we normalize the raw coincidence counts with respect
+
+to the satellite peaks. For the calculation of the SCF, Gaussian peaks with a coefficient
+
+of determination of at least 90 %. In total, the normalization is then performed over
+
+40 satellite peaks with a percentage coefficient of variation of the root mean square
+
+deviation (RMSD) of approximately 15 %. The maximum value of a fitted Gaussian
+
+to the central peak is used as the final value of g (2) (0). The error bars are calculated
+
+from around 10 repetitions of the experiment.
+
+   A similar approach is followed to obtain the TCF. The raw three-fold coincidence
+
+counts shown in Fig. 2a) are normalized with respect to the satellite peaks, as g (3) = 1
+
+for uncorrelated events. Only off-diagonal satellite peaks are accounted for, and the
+
+first row and first column are neglected as well. For these, photon events from the same
+
+laser pulse could create a threefold coincidence event. A peak-finding algorithm is used
+
+to identify the maxima and, again, about 50 satellite peaks with a total coefficient of
+
+variation of less than 15 %. The value g (3) (0) is the read as the maximum value of
+
+the central peak in the normalized dataset. The error bars for g (3) = 1 are likewise
+
+calculated as the standard deviation over the same number of repetitions.
+
+   For the numerical simulation, the QuTiP Python framework is employed. A set of
+
+k displaced squeezed thermal states is specified with the parameters mentioned in the
+
+main text. An optimization algorithm is used to find the parameters that approach
+
+our dataset the best. To the right, the mean square error is calculated as the linear
+
+best fit to the experimental data, to the linear best fit of the simulated values. For the
+
+g (2) vs. ⟨n⟩ dataset, a power fit is used instead. The total error to minimize is the sum
+
+
+
+                                           14
+out of these two errors. In this sense, we optimize the parameters for both datasets
+
+simultaneously.
+
+Supplementary information.         The supplementary information contains Figures
+
+S1 - S6.
+
+Acknowledgements.        We acknowledge support on the single photon detection by
+
+Milutin Kovacev from the Institute of Quantum Optics Hanover. We thank the par-
+
+ticipants of the Extreme Quantum Optics Workshop 2024 for discussions. P.H. and
+
+R.S. acknowledge funding by the Deutsche Forschungsgemeinschaft (DFG, German
+
+Research Foundation) – Project-ID 398816777 – SFB 1375 NOA.
+
+
+Declarations
+
+Contributions
+
+D.T. conceived the study and performed the experiments. D.T., V.C. and P.H. ana-
+
+lyzed the data. D.T., P.H. and R.S. conducted the theoretical analysis. D.T. wrote the
+
+simulation. D.T. provided the plots. D.T., H.M., P.H. and R.S. wrote the manuscript
+
+with input from all authors. H.M. initiated the quantum HHG research program and
+
+acquired the funding. All authors discussed the results.
+
+
+Competing interests
+
+The authors declare no competing financial interests.
+
+
+
+
+                                          15
+References
+
+[1] O’brien, J. L., Furusawa, A. & Vučković, J. Photonic quantum technologies.
+
+   Nature Photonics 3, 687–695 (2009).
+
+
+[2] Polino, E., Valeri, M., Spagnolo, N. & Sciarrino, F. Photonic quantum metrology.
+
+   AVS Quantum Science 2, 024703 (2020). URL https://pubs.aip.org/aqs/article/
+
+   2/2/024703/997285/Photonic-quantum-metrology.
+
+
+[3] Schnabel, R. Squeezed states of light and their applications in laser interferome-
+
+   ters. Physics Reports 684, 1–51 (2017).
+
+
+[4] Gessner, M., Smerzi, A. & Pezzè, L.      Multiparameter squeezing for optimal
+
+   quantum enhancements in sensor networks. Nature communications 11, 3817
+
+   (2020).
+
+
+[5] Defienne, H. et al. Advances in quantum imaging. Nature Photonics (2024). URL
+
+   https://www.nature.com/articles/s41566-024-01516-w.
+
+
+[6] Moreau, P.-A., Toninelli, E., Gregory, T. & Padgett, M. J. Imaging with quantum
+
+   states of light. Nature Reviews Physics 1, 367–380 (2019).
+
+
+[7] Braunstein, S. L. & van Loock, P.         Quantum information with continuous
+
+   variables. Quantum information with continuous variables 77 (2005).
+
+
+[8] Gottesman, D. & Preskill, J. Secure quantum key distribution using squeezed
+
+   states. Quantum Information with Continuous Variables 317–356 (2003).
+
+
+[9] Yonezawa, H., Aoki, T. & Furusawa, A. Demonstration of a quantum teleporta-
+
+   tion network for continuous variables. Nature 431, 430–433 (2004).
+
+
+
+
+                                         16
+[10] Zhong, H.-S. et al. Quantum computational advantage using photons. Sci-
+
+    ence 370, 1460–1463 (2020). URL https://www.science.org/doi/10.1126/science.
+
+    abe8770.
+
+
+[11] Cai, Y. et al. Multimode entanglement in reconfigurable graph states using optical
+
+    frequency combs. Nature communications 8, 15645 (2017).
+
+
+[12] Walmsley, I.      Light in quantum computing and simulation: perspective.
+
+    Optica Quantum 1, 35 (2023). URL https://opg.optica.org/abstract.cfm?URI=
+
+    opticaq-1-1-35.
+
+
+[13] Erhard, M., Krenn, M. & Zeilinger, A. Advances in high-dimensional quantum
+
+    entanglement. Nature Reviews Physics 2, 365–381 (2020).
+
+
+[14] Fabre, C. & Treps, N. Modes and states in quantum optics. Reviews of Modern
+
+    Physics 92, 035005 (2020).
+
+
+[15] Wang, J. et al.     Multidimensional quantum entanglement with large-scale
+
+    integrated optics. Science 360, 285–291 (2018).
+
+
+[16] Wright, L. G., Renninger, W. H., Christodoulides, D. N. & Wise, F. W. Nonlinear
+
+    multimode photonics: nonlinear optics with many degrees of freedom. Optica 9,
+
+    824–841 (2022).
+
+
+[17] Caldwell, E. D., Sinclair, L. C., Newbury, N. R. & Deschenes, J.-D. The time-
+
+    programmable frequency comb and its use in quantum-limited ranging. Nature
+
+    610, 667–673 (2022).
+
+
+[18] Laiho, K., Dirmeier, T., Schmidt, M., Reitzenstein, S. & Marquardt, C. Measuring
+
+    higher-order photon correlations of faint quantum light: A short review. Physics
+
+    Letters A 435, 128059 (2022). URL https://linkinghub.elsevier.com/retrieve/pii/
+
+    S0375960122001414.
+
+                                          17
+[19] Christ, A., Laiho, K., Eckstein, A., Cassemiro, K. N. & Silberhorn, C. Probing
+
+    multimode squeezing with correlation functions. New Journal of Physics 13,
+
+    033027 (2011). URL https://iopscience.iop.org/article/10.1088/1367-2630/13/3/
+
+    033027.
+
+
+[20] Wakui, K. et al. Ultrabroadband direct detection of nonclassical photon statistics
+
+    at telecom wavelength. Scientific Reports 4, 4535 (2014). URL https://www.
+
+    nature.com/articles/srep04535.
+
+
+[21] Krausz, F. & Ivanov, M. Attosecond physics. Reviews of modern physics 81,
+
+    163–234 (2009).
+
+
+[22] Ghimire, S. et al. Strong-field and attosecond physics in solids. Journal of Physics
+
+    B: Atomic, Molecular and Optical Physics 47, 204030 (2014). URL https://
+
+    iopscience.iop.org/article/10.1088/0953-4075/47/20/204030.
+
+
+[23] Yue, L. & Gaarde, M. B. Introduction to theory of high-harmonic generation in
+
+    solids: tutorial. Journal of the Optical Society of America B 39, 535 (2022). URL
+
+    https://opg.optica.org/abstract.cfm?URI=josab-39-2-535.
+
+
+[24] Gorlach, A., Neufeld, O., Rivera, N., Cohen, O. & Kaminer, I. The quantum-
+
+    optical nature of high harmonic generation. Nature communications 11, 4598
+
+    (2020).
+
+
+[25] Sloan, J. et al. Entangling extreme ultraviolet photons through strong field
+
+    pair generation (2023). URL http://arxiv.org/abs/2309.16466. ArXiv:2309.16466
+
+    [physics, physics:quant-ph].
+
+
+[26] Stammer, P. et al. Entanglement and squeezing of the optical field modes in high
+
+    harmonic generation. Physical Review Letters 132, 143603 (2024).
+
+
+
+
+                                           18
+[27] Lewenstein, M. et al.     Attosecond Physics and Quantum Information Sci-
+
+    ence (2022). URL http://arxiv.org/abs/2208.14769. ArXiv:2208.14769 [physics,
+
+    physics:quant-ph].
+
+
+[28] Rivera-Dean, J. et al. Nonclassical states of light after high-harmonic generation
+
+    in semiconductors: A Bloch-based perspective. Physical Review B 109, 035203
+
+    (2024). URL https://link.aps.org/doi/10.1103/PhysRevB.109.035203.
+
+
+[29] Theidel, D. et al. Evidence of the quantum-optical nature of high-harmonic
+
+    generation (2024).    URL http://arxiv.org/abs/2405.15022.       ArXiv:2405.15022
+
+    [quant-ph], (accepted in PRX Quantum).
+
+
+[30] Rasputnyi, A. et al. High-harmonic generation by a bright squeezed vacuum.
+
+    Nature Physics 1–6 (2024).
+
+
+[31] Long, Z. et al. High-harmonic generation in cdte with ultra-low pump intensity
+
+    and high photon flux. Communications Physics 6, 228 (2023).
+
+
+[32] Cardoso, F. R., Rossatto, D. Z., Fernandes, G. P., Higgins, G. & Villas-Boas, C. J.
+
+    Superposition of two-mode squeezed states for quantum information processing
+
+    and quantum sensing. Physical Review A 103, 062405 (2021).
+
+
+[33] Peng, J. & Li, G. Introduction to modern quantum optics (World Scientific,
+
+    Singapore, 1998).
+
+
+[34] Wasak, T., Szańkowski, P., Trippenbach, M. & Chwedeńczuk, J. Cauchy–Schwarz
+
+    inequality for general measurements as an entanglement criterion. Quantum
+
+    Information Processing 15, 269–278 (2016). URL http://link.springer.com/10.
+
+    1007/s11128-015-1181-z.
+
+
+
+
+                                          19
+[35] Cobucci, G. & Tavakoli, A. Detecting the dimensionality of genuine multiparticle
+
+    entanglement. Science Advances 10, eadq4467 (2024).
+
+
+[36] Ma, X. & Rhodes, W. Multimode squeeze operators and squeezed states. Physical
+
+    Review A 41, 4625 (1990).
+
+
+[37] Yuan, H.-C. & Xu, X.-X. Squeezed vacuum state in lossy channel as a squeezed
+
+    thermal state. Modern Physics Letters B 29, 1550219 (2015).
+
+
+[38] Zielnicki, K. et al. Joint spectral characterization of photon-pair sources. Journal
+
+    of Modern Optics 65, 1141–1160 (2018).
+
+
+[39] Johansson, J. R., Nation, P. D. & Nori, F.        Qutip: An open-source python
+
+    framework for the dynamics of open quantum systems.              Computer physics
+
+    communications 183, 1760–1772 (2012).
+
+
+[40] Eberly, J. Schmidt analysis of pure-state entanglement. Laser physics 16, 921–926
+
+    (2006).
+
+
+[41] Rivera-Dean, J. et al. Light-matter entanglement after above-threshold ionization
+
+    processes in atoms. Physical Review A 106, 063705 (2022).
+
+
+[42] Yi, S., Babushkin, I., Smirnova, O. & Ivanov, M. Generation of massively entan-
+
+    gled bright states of light during harmonic generation in resonant media. arXiv
+
+    preprint arXiv:2401.02817 (2024).
+
+
+
+
+                                           20
+Fig. S1: The spectrum shows the three investigated high-harmonics. The grey area
+represents the width of the spectral filters employed in the experimental setup. Spectral
+filtering is already a mode selection, as we thereby reduce the width of the squeezer
+distribution.
+
+
+
+
+                                                          (2)
+Fig. S2: Experimental setup for measuring the SCF gij . The ultrashort pulses are
+directed through a half-wave plate followed by a polarizer to control the driving laser
+intensity. The near-infrared pulses are focused on the CdTe[110] sample in which
+the SHHG process is induced. An aperture and infrared filter are placed behind the
+sample to filter the pump light. A second polarizer is placed to filter the luminescent
+background created in the sample. The three harmonic orders are collimated with an
+achromatic doublet and directed towards the dichroic mirrors to spatially separate
+the different frequencies. Behind the spectral filters, a beamsplitter is placed and
+the photons are measured with single photon avalanche diodes. The detectors are
+connected to a time-to-digital converter to record the arrival times of the photons,
+from which the SCF is calculated.
+
+
+
+
+                                           21
+Fig. S3: The experimental setup to measure the SCF and TCF in a single beam
+configuration. The setup is similar to Fig. S2 up to the collimation lens. Here, only one
+high-harmonic order is selected with a dichroic mirror and a spectral filter. Behind the
+spectral filter, two beamsplitters are placed and the radiation at the three outputs of
+the beamsplitter focused onto the single photon avalanche diodes. These are connected
+to a time-to-digital converter to record the arrival times of the photon and calculate
+the SCF as well as TCF.
+
+
+
+
+                                           22
+Fig. S4: The graph shows the loss-corrected number of photons per pulse over the
+driving laser intensity. For all recorded high-harmonic orders an intensity crossover is
+apparent, at which the dependency changes from a pertubative to a non-perturbative
+scaling law. The fitted curves are a best fit of a power law and the perturbative scaling
+law is depicted to ease the comparison.
+
+
+
+
+                                           23
+                                                                (2)
+Fig. S5: The graphic depicts the auto- and cross-correlations gij for the three different
+harmonic acquired with the setup shown in Fig. S2. A clear transition from super-
+bunching with g (2) > 2 towards Poissonian photon statistics g (2) = 1 is visible. This
+behaviour is characteristic for a photonic state exhibiting multimode squeezing. As
+the driving laser intensity is increased, the squeezer distribution is broadened and a
+convolution of the photon statistics of the individual spectral modes is measured. As
+these are uncorrelated with each other, it results in a transitions towards g (2) = 1.
+For low driving laser intensities, only few squeezing modes are excited such that the
+Super-Poissonian photon number distribution is resolved.
+
+
+
+
+                                           24
+Fig. S6: Similar to Fig. 2, the measured SCF over TCF at time delay zero is shown
+as the blue points in the left figure. The right graph depicts the SCF over the mean
+photon number per pulse. Again, an optimization algorithm is employed to retrieve
+the parameters, for which a displaced squeezed thermal state reproduces the observed
+behaviour. The result of the simulation is shown as the green curves. The trend is
+reproduced well by the numerical comparison.
+
+
+
+
+                                        25
+

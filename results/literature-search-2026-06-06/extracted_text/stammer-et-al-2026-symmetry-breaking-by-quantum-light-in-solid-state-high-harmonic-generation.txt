@@ -1,0 +1,1156 @@
+                                                        Symmetry breaking by quantum light in solid-state high-harmonic generation
+
+                                                            P. Stammer,1, 2, ∗ J. Rivera-Dean,3, † D. Kim,4 A. Chacón,5, 6, 7, 8 W. Gao,9 and C. Granados9, ‡
+                                                                                 1
+                                                                                   ICFO—Institut de Ciencies Fotoniques, The Barcelona Institute
+                                                                                of Science and Technology, 08860 Castelldefels (Barcelona), Spain
+                                                                                2
+                                                                                  Atominstitut, Technische Universität Wien, 1020 Vienna, Austria
+                                                                               3
+                                                                                 Department of Physics and Astronomy, University College London,
+                                                                                        Gower Street, London WC1E 6BT, United Kingdom
+                                                                                         4
+                                                                                           Department of Materials Science and Engineering,
+                                                                              Pohang University of Science and Technology, Pohang 37673, Korea
+                                                                                5
+                                                                                  Departamento de Fı́sica, Área de Fı́sica, Universidad de Panamá,
+                                                                                    Ciudad Universitaria 3366 Octavio Mendez Pereira, Panama
+
+
+
+
+arXiv:2605.28236v1 [physics.optics] 27 May 2026
+                                                                                           6
+                                                                                             Sistema Nacional de Investigación de Panamá,
+                                                                                          Building 205, Ciudad del Saber, Clayton Panamá
+                                                                     7
+                                                                       Centro de Investigación con Técnicas Nucleares, Universidad de Panamá, Panama
+                                                         8
+                                                           Parque Cientı́fico y Tecnológico, Universidad Autónoma de Chiriquı́, Ciudad Universitaria, David, Panama
+                                                                                      9
+                                                                                        Eastern Institute of Technology, Ningbo 315200, China
+                                                                                                         (Dated: May 28, 2026)
+                                                                  Symmetry governs nonlinear interactions in condensed matter systems, particularly in high-
+                                                               harmonic generation (HHG), the interplay between the driving field and crystal symmetries dictate
+                                                               the properties of the emitted harmonics. A central open question is how quantum fluctuations
+                                                               of light modify these symmetry-imposed selection rules in solid state systems. Here, we address
+                                                               this by studying the nonlinear response of graphene and Molybdenum disulfide (MoS2 ) to circular
+                                                               polarized quantum light, where both materials with distinct rotational symmetries and corresponding
+                                                               classical selection rules. We show that the quantum fluctuations break the dynamical symmetry of
+                                                               the driving field while preserving the crystal symmetry, which enables the generation of classically
+                                                               forbidden harmonics by breaking the corresponding selection rules. These results establish quantum
+                                                               states of light as a new degree of control over harmonic generation in solids, opening routes toward
+                                                               all-optical symmetry engineering of the quantum optical harmonic properties towards attosecond
+                                                               pulse generation.
+
+
+                                                                      INTRODUCTION                                  of even harmonics, for example, by breaking the temporal
+                                                                                                                    symmetry of the driving laser field [14].
+                                                                                                                       However, quantum optical properties of light can pro-
+                                                     Symmetries are one the most powerful principles in             foundly modify this picture and offer new degrees of
+                                                  physics, dictating which processes are allowed and shap-          freedom that are hidden in classical descriptions [15, 16].
+                                                  ing the observables we can access. In the interaction of          For instance, a squeezed driving field can yield harmonic
+                                                  light with matter, this role is played by dynamical sym-          generation in previously unattainable classical geome-
+                                                  metries, encoding the joint symmetries of the driving field       tries [15]. When HHG is driven by circular polarized
+                                                  and the target Hamiltonian that impose strict selection           classical light, the high-harmonic efficiency drops signifi-
+                                                  rules on the emitted radiation [1–3]. The advent of strong,       cantly for increasing ellipticity ϵ, and the harmonic yield
+                                                  ultrashort laser pulses has turned these dynamical sym-           maximizes at ϵ = 0 and falls to zero for circular polar-
+                                                  metries into a versatile tool, exploited across a broad           ized light with ϵ = 1 [17, 18]. In contrast, fluctuations
+                                                  range of platforms, from atoms [4, 5] and molecules [6, 7]        introduced by amplitude- or phase-squeezed states [19],
+                                                  to solid state systems [8, 9]. This allows to control the         restore harmonic generation for a circular polarized driver,
+                                                  electronic response, and tailor the high-harmonic emission        demonstrating that quantum fluctuations can effectively
+                                                  spectra. In all of these settings, the driving light is treated   overcome classical limitations [15].
+                                                  as a classical coherent field, which strictly preserves the
+                                                                                                                       An even more striking consequence arises when HHG is
+                                                  symmetries inherited from the system Hamiltonian.
+                                                                                                                    driven by bicircular quantum light, consisting of ω − 2ω
+                                                     A paradigmatic example where symmetries lead to se-            counter-rotating circular polarized fields. It was recently
+                                                  lection rules of the radiated spectrum is the high-order          shown [20] that quantum fluctuations in the driving field
+                                                  harmonic generation (HHG) process [10, 11], which is a            effectively violate the dynamical symmetries that lead
+                                                  highly nonlinear, non-perturbative process that can intu-         to classical selection rules for the harmonic emission in
+                                                  itively be understood by the three-step model [12]. In the        gases. Interestingly, it was demonstrated that the effect
+                                                  HHG process, energy conservation and the symmetry of              of quantum fluctuations in the forbidden harmonics can
+                                                  the dipole response for single color driving fields restrict      be witnessed by intensity correlation measurements [20].
+                                                  the emission of radiation to odd harmonics [10, 13]. How-            However, in solid state systems the role of symmetry
+                                                  ever, breaking this symmetry can lead to the generation           constraints is more complex compared to atoms. Circu-
+                                                                                                                                               2
+
+larly polarized light does not necessarily maximize the                                               Circular
+harmonic yield at zero ellipticity; instead, the response de-
+pends on the rotational symmetry of the crystal [9], as ex-                                                      Coherent   (a2)
+                                                                 (a1)
+emplified by graphene [21] and topological materials [22].                                                       Squeezed
+
+
+                                                                                                                                   Graphene
+Under circular polarized driving fields, the emitted har-
+                                                                                   δ3    δ1
+monics follow selection rules dictated by the crystal’s                             δ2
+
+point group symmetry [9]. Because solid-state materials
+span a vast range of symmetry classes, their correspond-
+ing HHG selection rules are highly diverse [2, 9]. How           (b1)
+                                                                                         β3    β2                           (b2)
+these selection rules are modified, or broken, when the
+                                                                         β4
+driving field includes non-classical quantum fluctuations,               β5
+
+remains an open question of fundamental and practical                                    β6     β1
+                                                                                                                                   MoS2
+importance.
+   Here, we address these questions by investigating how
+quantum fluctuations modify the symmetries governing
+light-matter interactions in solid-state HHG. We study
+graphene and Molybdenum disulfide (MoS2 ), two mate-                                                  Bicircular
+rials whose distinct crystal symmetries impose different
+classical selection rules, and therefore provide a clean plat-    (c1)                                                      (c2)
+form to test how quantum fluctuations alter the dynamical
+
+                                                                                                                                    Graphene
+symmetries. In particular, we show that the quantum na-                        δ3       δ1
+                                                                                   δ2
+ture of the driving field opens a helicity-zero interaction
+channels that relax, conventional HHG selection rules.
+This establishes quantum states of light as a powerful new
+resource for controlling nonlinear optical phenomena in           (d1)
+                                                                                             β3 β 2
+                                                                                                                            (d2)
+solids.                                                                       β4
+                                                                         β5
+
+
+                                                                                                                                    MoS2
+   A schematic representation of the simulated quantum                                    β6    β1
+
+optical light–matter interaction is shown in Fig. 1. In
+panels (a1) and (b1) we show the circular quantum light
+interacting with the honeycomb lattice of graphene and
+MoS2 , respectively. In panels (c1) and (d1) we show the
+bicircular quantum light interacting with the same sys-
+tems. In all panels, the quantum driver is composed by a         FIG. 1. Quantum light-matter interaction in graphene and
+coherent field which is orthogonal to the squeezed compo-        MoS2 . (a1) and (b1) show the interaction with circularly po-
+nent. Here, the coherent component lies along the x̂-axis        larized amplitude-squeezed quantum light, while (c1) and (d1)
+(∥), while the squeezed component lies along the ŷ-axis         correspond to bicircular quantum light. The black (blue) dots
+(⊥). The graphene structure is characterized by a six-fold       denote the carbon (Mo/S) atoms in the sublattices; orange
+                                                                 vectors δi (βi ) indicate the nearest-neighbor hopping direc-
+rotational symmetry, meaning that it is invariant under
+                                                                 tions in graphene (MoS2 ). The resulting harmonic spectra are
+2π/6 rotations and preserves the spatial symmetry under          shown in panels (a2)-(d2), where light orange and dark curves
+inversion. In contrast to graphene, MoS2 exhibits a three-       denote quantum and classical (coherent) driving fields, respec-
+fold rotational symmetry, invariant under 2π/3 rotations,        tively. The dashed vertical lines mark the classically forbidden
+and lacks spatial inversion symmetry, leading to selection       harmonic orders and the appearance of harmonics q = 3 and
+rules that differ from those in graphene. Additionally, in       q = 9 in (a2) is a clear signature of the dynamical-symmetry
+panels (a2) to (d2) we present the resulting harmonic            breaking discussed in the main text. For the simulations we
+                                                                 used a driving wavelength of λ = 3200 nm, with pulse dura-
+spectra for the circular and bicircular coherent and quan-
+                                                                 tions of 14 cycles for graphene and 10 cycles for MoS2 . The
+tum drivers. The results reveal the impact of quantum            squeezing intensities are Iq = 0.9 × 10−8 a.u. for graphene and
+fluctuations on the classical selection rules due to the         Iq = 1.0 × 10−7 a.u. for MoS2 . For the coherent component
+appearance of classical forbidden harmonics.                     we used 10−3 a.u. and 2 × 10−3 a.u. for graphene and MoS2 ,
+                                                                 respectively.
+
+      SYMMETRIES IN SOLID STATE HIGH
+         HARMONIC GENERATION                                     of solid state systems introduces additional spatial sym-
+                                                                 metries that modify the harmonic selection rules [23, 24].
+  Unlike HHG in isotropic media, such as gases, where the        For instance, in atomic systems the dipole symmetry re-
+symmetry of the Hamiltonian is determined by the driv-           stricts the emission to odd harmonics for linear polarized
+ing field and the atomic potential, the crystal structure        drivers, whereas harmonic emission is suppressed due to
+                                                                                                                            3
+
+the absence of electron recollision trajectories for circu-     defined symmetry properties. However, recent advances
+larly polarized fields [25]. This scenario changes drasti-      in strong-field quantum optics [16, 26–39] call for extend-
+cally when considering quantum light driving fields, which      ing this framework to quantum light driving fields, where
+allows harmonic emission by driving circular polarized          dynamical symmetries must be reconsidered in the pres-
+fields [15].                                                    ence of field quantization and their intrinsic quantum
+   In solid-state HHG, by contrast, the crystal struc-          fluctuations [20].
+ture sets new dynamical symmetry operations Un =                   In the following we will show that the existing classical
+R2π/n Tτ /n , where R2π/n is a spatial rotation by 2π/n         picture radically changes when the driving field carries
+and Tτ /n is a time translation by τ /n, with τ = 2π/ω the      quantum fluctuations, leading to a modification of the
+laser period. The system exhibits a dynamical symmetry          underlying dynamical symmetries. In the classical case,
+when the Hamiltonian is invariant under the classical           the dynamical symmetry operation on the Hamiltonian
+symmetry transformations (see Appendix)                         does not take into account the field operators, and only
+                                                                consider the average classical field as shown in Eq. (2).
+             Un : (r, t) 7→ (R2π/n r, t + τ /n),         (1)
+                                                                To account for the quantum nature of the driving field,
+such that                                                       we decompose the field operator as [20]
+              Ĥ(R2π/n r, t + τ /n) = Ĥ(r, t),          (2)                     ÊQ (t) = Ecl (t) + δ Ê(t),             (5)
+or equivalently for the symmetry operation on the classical
+field                                                           where Ecl (t) = ⟨ÊQ (t)⟩ is the classical mean field, and
+                                                                ⟨δ Ê(t)⟩ = 0 describes quantum fluctuations. The total
+       Un : Ecl (t) 7→ R2π/n Ecl (t + τ /n) = Ecl (t).   (3)
+                                                                Hamiltonian then reads
+   Note that in the semi-classical case the Hamiltonian is
+given by Ĥ(t) = Ĥ0 + Ĥcl (t), where Ĥ0 is the Hamiltonian                  Ĥ(t) = Ĥ0 + Ĥcl (t) + ĤI (t),          (6)
+of the crystal and Ĥcl (t) = −er̂ · Ecl (t) is the dipole
+interaction with the classical field Ecl (t), and that the      which separates into the classical driving term Ĥcl (t),
+rotation R2π/n is defined around the propagation direction      and a fluctuation-induced contribution, ĤI (t) = −er̂ ·
+of the driving field.                                           δ Ê(t). Importantly, the classical component satisfies the
+   For instance, considering a crystal with C3 rotational       dynamical symmetry
+symmetry such as MoS2 , and driving HHG with counter-
+rotating circular polarized fields, the emitted spectrum                           Ûn† Ĥcl (t)Ûn = Ĥcl (t).           (7)
+follows the dynamical symmetry U3 = R2π/3 Tτ /3 . This is
+                                                                Since the full quantum Hamiltonian involves field opera-
+imposed by the combined symmetry of the crystal and
+                                                                tors whose transformation under unitary operators Ûn is
+the field, which constrain the induced charge currents in
+                                                                not captured by a purely classical rotation and time trans-
+the solid [9]. We note that in MoS2 , the absence of the
+                                                                lation, we analyze the symmetry properties of the system
+inversion symmetry permits both even and odd harmonics
+                                                                beyond the mean-field level. In particular, while the mean-
+following q = 3j ± 1, j ∈ N, with q = 3j harmonics for-
+                                                                field preserves the dynamical symmetry, higher-order field
+bidden. Since different crystal symmetries lead to distinct
+                                                                correlations, such as
+harmonic emission channels, choosing another crystal
+structure like graphene will lead to different selection                      ∆E2 (t) = ⟨Ê2Q (t)⟩ − ⟨ÊQ (t)⟩2 ,         (8)
+rules: the C6 rotational symmetry of graphene only allows
+for odd harmonics at orders q = 6j ± 1, while the q = 3j        do not, in general, remain invariant under the same trans-
+harmonics are forbidden. Furthermore, all even harmon-          formation (see Appendix). This implies that quantum
+ics are forbidden by inversion symmetry. In the general         fluctuations break the dynamical symmetry, even when
+scenario, the combined crystal symmetry Cn and the con-         the average driving field remains symmetric. Consequently,
+servation of angular momentum restricts the emission            the total response of the system changes and the dynami-
+spectra and leads to the selection rule (see Appendix)          cal symmetries are not respected
+                       q = nj + σH ,                     (4)
+                                                                                    Ûn† Ĥ(t)Ûn ̸= Ĥ(t),               (9)
+where q is the harmonic order, σH = ±1 denotes the
+helicity of the emitted harmonic, and j ∈ N.                    with Ûn = R̂2π/n T̂τ /n . Here, R̂2π/n and T̂τ /n are now the
+                                                                unitary operators for the rotation in polarization and tem-
+                                                                poral translation, respectively. This inequality shows that,
+SYMMETRY BREAKING BY QUANTUM LIGHT                              although the mean-field Hamiltonian remains invariant,
+                                                                higher-order quantum correlations break the dynamical
+  So far, symmetry-based descriptions of solid-state HHG        invariance of the full response, thereby modifying the
+have been limited to classical driving fields with well-        harmonic selection rules.
+                                                                                                                             4
+
+   The breakdown of dynamical symmetry induced by               (amplitude squeezed) into coherent-state contributions via
+quantum fluctuations is evident in Fig. 1 (a1) to (d1),         the Husimi Q function, as presented in Ref. [15, 20, 35, 40,
+where the averaged fields and their fluctuations for circular   41]. This allows us to calculate the total HHG spectrum
+and bicircular quantum light directly reveal the loss of        by averaging the coherent-state-driven spectra over the
+symmetry. Importantly, in atoms, Eq. (6) has a structure        Husimi distribution. In particular, the nonlinear response
+where the isotropic potential imposes inversion symmetry,       of the solid-material to the coherent driver is computed
+protecting the odd-harmonic rule even under quantum             by solving the time-dependent density matrix, i.e. the
+driving, but lacks the discrete rotational crystal symmetry     equations of motion of the single-particle density matrix,
+Cn present in solids. It is this additional symmetry that       in the Wannier gauge (see Appendix) [42–44]. Moreover,
+produces rich medium-specific selection rules observed          we model both solids using tight-binding Hamiltonians.
+in solids. To explicitly quantify the impact of quantum         For graphene, modeled as the Haldane Hamiltonian in
+fluctuations of the circular quantum light on the system’s      the trivial limit, we set the second-neighbor hopping,
+symmetries, we evaluate the field variance, which directly      magnetic flux, and onsite potential to zero. For MoS2 , we
+captures the symmetry breaking of the interaction               include first- and third-nearest-neighbor hopping terms
+                                                                following [45].
+ ∆E2 (t) = 4 [cosh(2r) − sinh(2r) cos(2ω(t + τ /n))] , (10)        Breaking the dynamical symmetry has direct and strik-
+where r is the squeezing parameter determining the              ing consequences for the harmonic spectra, as shown in
+strength of the quantum fluctuations in the driving field       Fig. 1(a2) and (b2) for graphene and MoS2 , respectively.
+and τ /n is the time shift associated with the dynamical        Quantum fluctuations induce additional harmonic orders,
+symmetry transformation (see Appendix). The second              providing a direct signature of the modified dynamical
+term in Eq. (10) demonstrates that the quantum fluctua-         constraints of the driver. The harmonic spectra driven
+tions are not invariant under the same dynamical symme-         by the coherent circular and bicircular drivers is shown
+try operations as the expectation value of the driving field,   in light black in all the panels. As expected, the emitted
+resulting in a breaking of the dynamical symmetry (see          radiation follows the classical selection rules. In the case of
+the Supplementary material). Similarly, for the bicircular      circular polarized quantum light, presented in light orange
+field, one can find that the quantum fluctuations are given     in all the panels, the spectrum consists only of odd har-
+by ∆E2 (t) = 2[1 + cosh(2r) − sinh(2r) cos(4ω(t + τ /n))],      monics for graphene as shown in panel (a2). However, for
+likewise demonstrating dynamical symmetry breaking due          MoS2 the spectrum exhibits all the harmonics, as shown
+to field fluctuations.                                          in panel (b2). This latter effect is explained in terms of
+   The consequences of circular and bicircular quantum          two different effects: (i) the breaking of spatial inversion
+light on the emitted spectra are discussed below. We            symmetry in the MoS2 , which allows even harmonics,
+further show that the fluctuation-induced modification of       and (ii) quantum fluctuations, which enable classically
+the Hamiltonian reshapes the nonlinear crystal response,        forbidden harmonics. In the classical case, the combined
+generating squeezed-like Gaussian Wigner functions.             dynamical symmetry, Û3 = R̂2π/3 T̂τ /3 , imposes the selec-
+                                                                tion rule in Eq. (4), restricting the emission to harmonics
+                                                                q = 3j ± 1 with well-defined helicity (see Supplementary
+QUANTUM LIGHT DRIVING HIGH HARMONIC                             Material).
+       GENERATION IN SOLIDS                                        For classical bicircular driving, shown in Fig. 1(c2,d2),
+                                                                both materials display the same allowed harmonic chan-
+   To understand the consequence of the fluctuation in-         nels because the combined field-crystal interaction shares
+duced symmetry breaking of Eq. (9), we now consider             an effective three-fold dynamical symmetry, despite origi-
+the particular example of HHG driven by circular and            nating from different microscopic mechanisms: temporal
+bicircular laser fields including quantum fluctuations. To      symmetry breaking in graphene and broken inversion
+this end, we consider the solid to be driven by quantum         symmetry in MoS2 [9]. When quantum fluctuations are
+light via the initial state (Supplementary Material):           included, higher-order correlations disrupt this effective
+                                                                symmetry, lifting the conventional constraints and en-
+         |Φmω (t0 )⟩ = D̂mω,⊥ (αmω )Ŝmω,⊥ (r) |0⊥ ⟩            abling emission at all harmonic orders.
+                                                        (11)
+                      ⊗ D̂mω,∥ (iαmω ) 0∥ ,                        Physically, the microscopic mechanism of the symmetry
+                                                                breaking is the anomalous correlation of opposite polar-
+where D̂mω,µ (α) and Ŝmω,µ (r) are the displacement and        ization in the quantum field, described by the expectation
+squeezing operators acting on the optical mode (mω, µ),         value ⟨âR âL ⟩, which carries zero helicity (see Appendix).
+respectively, and m ∈ {1, 2} indicates circular (m = 1)         This contribution effectively introduces a helicity-zero
+or bicircular (m = 2) polarized light. The subindex µ           channel in the light–matter interaction, while the classical
+indicates the perpendicular and parallel components.            interaction in contrast does not allow for such contribu-
+  To calculate the effect of the quantum light on the           tions. As a result, harmonics that are forbidden in the
+HHG process, we decomposed the quantum driving field            classical case, specifically those satisfying q = 3j, become
+                                                                                                                                     5
+
+quantum-allowed. Note that, although the dynamical sym-                                  Squeezed                        (a)
+metry of the driving field is lifted, the spatial inversion
+symmetry of the crystal remains intact (in the case of
+graphene), which continues to impose constraints on the
+                                                                                                               1.2 fs
+harmonic spectrum, as shown particularly in Fig. 1(a2).
+This interplay leads to a modified set of allowed harmonics,
+where the classical selection rules are relaxed.
+   For example, for MoS2 when the driving field contains
+quantum fluctuations, such as squeezing, the additional                                  Coherent                        (b)
+contribution to the light-matter interaction introduces
+terms oscillating at 2ω, which are not invariant under
+the time-translation operator T̂τ /3 , as demonstrated in
+                                                                                                                1.6 fs
+Eq. (10). Under the T̂τ /3 transformation t → t + τ /3,
+one has cos(2ωt) → cos(2ωt + 4π/3) ̸= cos(2ωt). As a
+consequence, the full Hamiltonian Ĥ(t) no longer com-
+mutes with the symmetry operation Ûn (here Û3 ), and
+the associated dynamical symmetry is broken. Similarly,
+for graphene the full Hamiltonian does not commute with
+Û6 and the associated dynamical symmetry is broken.                    FIG. 3. Synthesized pulse trains for the squeezed (a) and co-
+   Furthermore, the relaxation of the classical selection               herent (b) driver. The central-pulse FWHM is 1.2 fs (squeezed)
+can be controlled by tuning the intensity of the quantum                and 1.6 fs(coherent), a reduction of 25% enabled by the
+light contribution. In Fig. 2, we show the squeezing inten-             quantum-fluctuation-induced harmonics. For the reconstruc-
+                                                                        tion of the pulse train, we use the spectral windows H3-H15
+sity of the driving field versus the resulting normalized               for all the panels. The resulting pulse durations and temporal
+intensity of the classically forbidden harmonic orders 3                structure are consistent with the increased effective bandwidth
+and 9 for both solid-state materials. In the plot, it is                in the quantum-driven case, stemming from the symmetry-
+clear that for the squeezing values below Iq = 1.0 × 10−10 ,            induced relaxation of selection rules. Furthermore, the pulse
+the symmetry is preserved and the full system dynamics                  duration (central pulse) approaches the Fourier-limited value
+respect the classical selection rules imposed by the driving            for a flat spectrum.
+field and the solid. However, for larger squeezing intensity,
+Iq , the intensity of the forbidden harmonics increases,
+demonstrating the control of the classical selection rules.                The results presented here clearly demonstrate the effect
+Consequently, the squeezing intensity acts as a control                 of the quantum fluctuations on the classical selection rules.
+parameter for the forbidden harmonic channels in solids.                In the following we will demonstrate the repercussions
+                                                                        of the harmonic spectra driven by quantum light on the
+                                    1. (a)                              synthesis of short pulses.
+
+
+
+
+            Normalized Intensity
+                                                  Graphene
+                                   0.8                           H3
+                                                                 H9
+                                   0.6
+                                                                          TOWARD ATTOSECOND PULSE SYNTHESIS
+                                   0.4                                        VIA QUANTUM FLUCTUATIONS
+                                   0.2
+                                    0. -11                                 Beyond spectral symmetry control, the emergence of
+                                    10       10-10      10-9     10-8
+                                    1. (b)                              quantum-allowed harmonics increases the effective spec-
+
+
+
+
+            Normalized Intensity
+                                             Squeezing
+                                                   MoS2(a. u.)
+                                   0.8                           H3
+                                                                        tral density, leading to simpler temporal structure and
+                                                                 H9     to shorter pulse trains. In solids, the generation of short
+                                   0.6
+                                                                        pulses is limited by the available bandwidth of the driver
+                                   0.4                                  and constrained by the damage threshold of the material,
+                                   0.2                                  which restricts the number of harmonic orders that can
+                                    0.                                  be efficiently generated. For coherent drivers, the absence
+                                    10-11    10-10      10-9     10-8
+                                                                        of specific harmonic orders, such as the q = 3j, leads to a
+                                             Squeezing (a. u.)
+                                                                        discrete spectral structure. This, in turn, results in longer
+                                                                        pulse trains.
+FIG. 2. Control of forbidden harmonics for a circularly po-
+larized driving field and for graphene (a) and MoS2 (b). The               In contrast, when the driving field contains a squeezed
+normalized intensity points for the 3rd and 9th harmonics               component, quantum fluctuations enable the generation
+corresponds to their maximum point and they were extracted              of the otherwise forbidden q = 3j harmonics. This results
+from the individual spectrum calculated via the Husimi func-            in a more continuous and uniform spectral distribution,
+tion.                                                                   reducing the spectral gaps present in the classical case. As
+                                                                                                                             6
+
+a consequence, the temporal modulation of the emitted           tum light, going beyond classical observables such as the
+radiation is reduced.                                           spectrum and pulse synthesis. While the quantum fluc-
+   To demonstrate this effect, we reconstructed the tempo-      tuations of the driving field leave non-trivial signatures
+ral structure of a number of harmonics from the complex         in these observables, the full potential of this scheme is
+field amplitudes                                                within quantum optical observables itself. This includes
+                      Z                                         the quantum state of the harmonic response, by means
+               A(ω) = d2 α Q(α) A(ω, α),              (12)      of the Wigner function, and the intensity correlations via
+                                                                the g (2) (0) function. Typical values of the second-order
+including the average over the contributions from the           correlation function g (2) (0) provide a useful characteriza-
+squeezing via the Husimi distribution Q(α), which pre-          tion of the quantum statistics of light. Classical coherent
+serves the full spectral phase inherited from the electron      light exhibits Poissonian statistics with g (2) (0) = 1, while
+dynamics in the valence and conduction bands. The emit-         thermal light shows photon bunching with g (2) (0) = 2.
+ted complex field is obtained from the electron current         For squeezed vacuum states a superbunching behavior
+A(ω, α) ∝ ωJ(ω, α), where the factor of ω accounts for          with g (2) (0) > 2 is expected, whose exact value depends
+the conversion from current to radiation. From this, the        on the squeezing parameter. The Wigner function of a
+temporal pulse intensity is obtained from (see Appendix)        coherent state is a Gaussian distribution with minimum
+            Z         Z                        2              uncertainty, centered at the classical field amplitude value.
+    I(t) =       dω ω     d α Q(α) J(ω, α) eiωt , (13)
+                           2
+                                                                   Figure 4 (a) and (c) show the Wigner functions of two
+             ∆ω                                                 symmetry forbidden harmonics for graphene and MoS2 ,
+where ∆ω = [ωmin , ωmax ] defines the spectral filter window    respectively, driven by a circularly polarized field. From
+applied to select the harmonic plateau region. Dispersion       left to right, the panels display the independent contribu-
+effects are expected to introduce only minor pulse broad-       tion of intraband and interband currents, together with
+ening, as the Fourier-limited durations remain well above       their combined response where, interestingly, the two ma-
+the sub-femtosecond regime where group delay dispersion         terials exhibit qualitatively different Gaussian phase-space
+becomes critical [46]. Moreover, for simplicity in our anal-    functions for each current. In graphene, both current con-
+ysis we assumed a flat phase. The inclusion of the dipole       tributions exhibit squeezed-like distributions, whereas in
+phase did not change significantly the overall results.         MoS2 the intraband component remains isotropic while
+   A comparison between the synthesized harmonic emis-          the interband one has a squeezed-like character. The com-
+sion for the coherent and quantum drivers is presented in       bined response inherits features of both contributions,
+Fig. 3 for MoS2 . In panels (a) and (b), we show the pulse      particularly highlighted in the case of graphene, where
+trains obtained for the circular quantum and coherent           both of them importantly determine the spectral am-
+drivers, respectively. For the quantum light cases, the in-     plitudes of the generated harmonics. The squeezed-like
+clusion of the additional harmonics leads to a reduction in     character is further supported by the corresponding g (2) (0)
+the temporal duration of the pulse train. Furthermore, the      values [Fig. 4 (b) and (d)] which, consistent with previous
+temporal structure of the pulse train is simpler than that      results [20], satisfy g (2) (0) ≥ 3 for the fluctuation induced
+for the coherent driver. This is evident from the intensity     harmonics, in contrast to the near-Poissonian statistics of
+of the satellite peak structure: For the squeezed light,        the classically allowed ones. This behavior originates from
+the femtosecond pulse train consists of individual peaks,       the harmonic response to the fluctuation induced symme-
+while for the coherent driver, the resulting femtosecond        try breaking of the driving field. As observed in Fig. 2,
+pulse train consist of several satellite peaks around a large   the intensity of the fluctuation induced harmonics scales
+intensity peak.                                                 approximately linearly with the squeezing contribution
+   Importantly, while the driving field remains multi-cycle,    to the field intensity. Under the assumption J(ω, α) ∝ α,
+the enhanced spectral density enabled by quantum fluc-          one obtains [20]
+tuations shortens the effective emission window resulting
+                                                                                           d2 α Q(α)|J(ω, α)|4
+                                                                                       R
+in a simpler pulse-train structure. This highlights a route
+toward generating shorter and potentially isolated attosec-              gq(2) (0) =  R                       2 = 3.    (14)
+                                                                                           d2 α Q(α)|J(ω, α)|2
+ond pulses in solids without single-cycle driving fields. We
+note that macroscopic propagation effects are not included
+and may further modify the temporal structure.                  In contrast, for classically allowed harmonics J(ω, α) re-
+                                                                mains largely independent on α, leading instead to Pois-
+                                                                                           (2)
+                                                                sonian statistics with gq (0) = 1. For sufficiently large
+    WIGNER FUNCTIONS FROM QUANTUM                               values of Isqu , however, the linear scaling of J(ω, α) for the
+             FLUCTUATIONS                                       symmetry breaking harmonics, and its independence on
+                                                                α for the classically allowed ones, is no longer guaranteed
+  We now turn to the quantum-optical signatures of the          anymore, and deviations from the Gaussian character of
+harmonic response in solid-state crystals driven by quan-       the generated states may consequently emerge.
+                                                                                                                            7
+
+                                                                   QIA; MCIN/AEI (PGC2018-0910.13039/501100011033,
+                                                                   CEX2019-000910-S/10.13039/501100011033, Plan Na-
+                                                                   tional FIDEUA PID2019-106901GB-I00, Plan National
+                                                                   STAMEENA PID2022-139099NB, I00, project funded by
+                                                                   MCIN/AEI/10.13039/501100011033 and by the “Euro-
+                                                                   pean Union NextGenerationEU/PRTR” (PRTR-C17.I1),
+                                                                   FPI); QUANTERA DYNAMITE PCI2022-132919, Quan-
+                                                                   tERA II Programme co-funded by European Union’s Hori-
+                                                                   zon 2020 program under Grant Agreement No 101017733;
+                                                                   Ministry for Digital Transformation and of Civil Service of
+                                                                   the Spanish Government through the QUANTUM ENIA
+FIG. 4. Wigner functions for Graphene and MoS2 in the case         project call - Quantum Spain project, and by the Euro-
+of circular quantum light in (a) and (c). Both cases are for the   pean Union through the Recovery, Transformation and Re-
+RCP driving field (both of them yield similar results). The        silience Plan - NextGenerationEU within the framework of
+investigated harmonics corresponds to the classical forbidden      the Digital Spain 2026 Agenda; Fundació Cellex; Fundació
+harmonics, q = 3 for graphene and q = 6 for MoS2 . In (b)          Mir-Puig; Generalitat de Catalunya (European Social
+and (d), the g (2) (0) function also for graphene and MoS2 ,       Fund FEDER and CERCA program; Barcelona Supercom-
+respectively. We note that to calculate the g (2) (0) plots, we    puting Center MareNostrum (FI-2023-3-0024); Funded by
+used 10−9 a. u. for the squeezing value.
+                                                                   the European Union. Views and opinions expressed are
+                                                                   however those of the author(s) only and do not necessarily
+                                                                   reflect those of the European Union, European Commis-
+                       DISCUSSION
+                                                                   sion, European Climate, Infrastructure and Environment
+                                                                   Executive Agency (CINEA), or any other granting au-
+   In conclusion, we demonstrated that quantum fluctua-            thority. Neither the European Union nor any granting au-
+tions of light provide a new route to control high-harmonic        thority can be held responsible for them (HORIZON-CL4-
+generation in solids beyond classical symmetry constraints.        2022-QUANTUM-02-SGA PASQuanS2.1, 101113690, EU
+The underlying microscopic mechanism is due to the quan-           Horizon 2020 FET-OPEN OPTOlogic, Grant No 899794,
+tum fluctuations opening a new helicity-zero channel that          QU-ATTO, 101168628), EU Horizon Europe Program
+breaks the dynamical symmetry of the driving field. As a           (This project has received funding from the European
+consequence, forbidden harmonics emerge, following the             Union’s Horizon Europe research and innovation pro-
+constraints imposed by the crystal symmetries. Impor-              gram under grant agreement No 101080086 NeQSTGrant
+tantly, this mechanism is different from the atomic gas            Agreement 101080086 — NeQST); ICFO Internal “Quan-
+case, where quantum fluctuations allow the generation of           tumGaudi” project.
+harmonics in geometries without respecting the crystal                J .R.-D. acknowledges funding from UKRI2300 – At-
+symmetries.                                                        tosecond Photoelectron Imaging with Quantum Light.
+   Beyond spectral control, the inclusion of the new har-             A.C. acknowledge the Sistema Nacional de Investigación
+monics modifies the temporal structure of the emitted              de Panamá for partial financial support.
+radiation, leading to shorter pulse synthesis with more               DK thanks the Institute for Basic Science (IBS), Ko-
+regular pulse structure. This opens a new avenue for               rea under Project Code IBS-R014-A1. The National Re-
+all-optical attosecond science in solid state systems [47],        search Foundation of Korea grants (Grant no. NRF-
+where the quantum state of the driver becomes a key                2023R1A2C2007998). The MSIT (Ministry of Science and
+control parameter, and can imprint quantum signatures              ICT), Korea, under the ITRC (Information Technology
+onto the properties of the emitted harmonics.                      Research Center) support program (Grant no. IITP-2023-
+   Our results establish quantum states of light as a new          RS-2022-00164799) supervised by the IITP (Institute for
+degree of freedom for controlling nonlinear optical pro-           Information Communications Technology Planning Eval-
+cesses in solids, enabling symmetry engineering, spectral          uation).
+shaping, and quantum-state-sensitive spectroscopy in con-             W. Gao thanks financial support from National Natural
+densed matter systems. Additionally, the generation of             Science Foundation of China (Grant number: 12474309).
+attosecond pulses in solids can now be exploited using
+quantum light owing to two fundamental results presnted
+in this work: (i) the larger bandwidth introduced by the
+symmetry relaxation, and (ii) the larger damage thresh-              ∗
+                                                                        philipp.stammer@icfo.eu
+old that the material can withstand when the driver is               †
+                                                                        javier.dean@ucl.ac.uk
+composed of quantum light [48].                                       ‡
+                                                                        cagrabu@eitech.edu.cn
+   Acknowledgments.– ICFO-QOT group acknowledges                    [1] O. Neufeld, D. Ayuso, P. Decleva, M. Y. Ivanov,
+support from: European Research Council AdG NO-                         O. Smirnova, and O. Cohen, Ultrasensitive chiral spec-
+                                                                                                                                    8
+
+     troscopy by dynamical symmetry breaking in high har-                  tion, Phys. Rev. A 48, R3437(R) (1993).
+     monic generation, Phys. Rev. X 9, 031002 (2019).                 [18] Y. Liang, S. Augst, M. V. Ammosov, S. Lazarescu, and
+ [2] A. J. Uzan-Narovlansky, G. Orenstein, S. Shames,                      S. L. Chin, Experimental investigation of the ellipticity
+     M. Even Tzur, O. Kneller, B. D. Bruner, T. Arusi-Parpar,              dependence of high-harmonic generation and ionization
+     O. Cohen, and N. Dudovich, Revealing the interplay be-                in argon in the multiphoton regime, Journal of Physics B:
+     tween strong field selection rules and crystal symmetries,            Atomic, Molecular and Optical Physics 28, 2757 (1995).
+     Phys. Rev. Lett. 131, 223802 (2023).                             [19] D. F. Walls, Squeezed states of light, nature 306, 141
+ [3] O. Neufeld, D. Podolsky, and O. Cohen, Floquet group                  (1983).
+     theory and its application to selection rules in harmonic        [20] P. Stammer, C. Granados, and J. Rivera-Dean,
+     generation, Nature Communications 10, 405 (2019).                     Fluctuation-induced symmetry breaking in high harmonic
+ [4] K. Amini, J. Biegert, F. Calegari, A. Chacón, M. F. Ciap-            generation for bicircular quantum light, arXiv preprint
+     pina, A. Dauphin, D. K. Efimov, C. Figueira de Moris-                 arXiv:2603.24377 (2026).
+     son Faria, K. Giergiel, P. Gniewek, A. S. Landsman, M. Le-       [21] N. Yoshikawa, T. Tamaya, and K. Tanaka, High-harmonic
+     siuk, M. Mandrysz, A. S. Maxwell, R. Moszyński, L. Ort-              generation in graphene enhanced by elliptically polarized
+     mann, J. Antonio Pérez-Hernández, A. Picón, E. Pisanty,            light excitation, Science 356, 736 (2017).
+     J. Prauzner-Bechcicki, K. Sacha, N. Suárez, A. Zaı̈r, J. Za-    [22] D. Baykusheva, A. Chacón, J. Lu, T. P. Bailey, J. A.
+     krzewski, and M. Lewenstein, Symphony on strong field                 Sobota, H. Soifer, P. S. Kirchmann, C. Rotundu, C. Uher,
+     approximation, Reports on Progress in Physics 82, 116001              T. F. Heinz, D. A. Reis, and S. Ghimire, All-Optical
+     (2019).                                                               Probe of Three-Dimensional Topological Insulators Based
+ [5] G. Lerner, O. Neufeld, L. Hareli, G. Shoulga, E. Bordo,               on High-Harmonic Generation by Circularly Polarized
+     A. Fleischer, D. Podolsky, A. Bahabad, and O. Cohen,                  Laser Fields, Nano Letters 21, 8970 (2021).
+     Multiscale dynamical symmetries and selection rules in           [23] O. E. Alon, V. Averbukh, and N. Moiseyev, Selection
+     nonlinear optics, Science Advances 9, eade0953 (2023).                rules for the high harmonic generation spectra, Phys. Rev.
+ [6] A. Mondal, O. Neufeld, T. Balčiūnas, B. Waser, S. Müller,          Lett. 80, 3743 (1998).
+     M. Rossi, Z. Yin, A. Rubio, N. Tancogne-Dejean, and              [24] C. L. Tang and H. Rabin, Selection rules for circularly
+     H. J. Wörner, Multi-plateau high-harmonic generation in              polarized waves in nonlinear optics, Phys. Rev. B 3, 4025
+     liquids driven by off-site recombination, Nature Photonics            (1971).
+     20, 216 (2026).                                                  [25] Y. Li, X. Zhu, Q. Zhang, M. Qin, and P. Lu, Quantum-
+ [7] O. Neufeld, M. E. Tzur, G. Lerner, O. Kfir, A. Fleischer,             orbit analysis for yield and ellipticity of high order har-
+     and O. Cohen, Light symmetry, chirality, and their role               monic generation with elliptically polarized laser field,
+     in nonlinear optics and ultrafast phenomena, Advances                 Opt. Express 21, 4896 (2013).
+     in Optics and Photonics 18, 160.                                 [26] P. Stammer, J. Rivera-Dean, P. Tzallas, M. F. Ciappina,
+ [8] S. Ghimire and D. A. Reis, A tutorial on high-order                   and M. Lewenstein, Colloquium: Quantum optics of in-
+     harmonic generation in atoms, molecules, and condensed                tense light–matter interaction, arXiv:2510.19045 (2025).
+     matter, APL Photonics 11, 021102 (2026).                         [27] M. Lewenstein, M. F. Ciappina, E. Pisanty, J. Rivera-
+ [9] N. Saito, P. Xia, F. Lu, T. Kanai, J. Itatani, and N. Ishii,          Dean, P. Stammer, T. Lamprou, and P. Tzallas, Gener-
+     Observation of selection rules for circularly polarized fields        ation of optical schrödinger cat states in intense laser–
+     in high-harmonic generation from a crystalline solid, Op-             matter interactions, Nature Physics 17, 1104 (2021).
+     tica 4, 1333 (2017).                                             [28] A. Rasputnyi, Z. Chen, M. Birk, O. Cohen, I. Kaminer,
+[10] M. Lewenstein, P. Balcou, M. Y. Ivanov, A. L’Huillier,                M. Krüger, D. Seletskiy, M. Chekhova, and F. Tani, High-
+     and P. B. Corkum, Theory of high-harmonic generation by               harmonic generation by a bright squeezed vacuum, Nature
+     low-frequency laser fields, Phys. Rev. A 49, 2117 (1994).             Physics 20, 1960 (2024).
+[11] F. Krausz and M. Ivanov, Attosecond physics, Rev. Mod.           [29] S. Yi, N. D. Klimkin, G. G. Brown, O. Smirnova,
+     Phys. 81, 163 (2009).                                                 S. Patchkovskii, I. Babushkin, and M. Ivanov, Gener-
+[12] P. B. Corkum, Plasma perspective on strong field multi-               ation of massively entangled bright states of light during
+     photon ionization, Phys. Rev. Lett. 71, 1994 (1993).                  harmonic generation in resonant media, Physical Review
+[13] P. Stammer, Energy conservation in quantum optical high               X 15, 011023 (2025).
+     harmonic generation, arXiv preprint arXiv:2410.15503             [30] C. S. Lange, T. Hansen, and L. B. Madsen, Excitonic
+     (2024).                                                               enhancement of squeezed light in quantum-optical high-
+[14] Álvaro Jiménez-Galán, N. Zhavoronkov, M. Schloz,                   harmonic generation from a mott insulator, Physical Re-
+     F. Morales, and M. Ivanov, Time-resolved high har-                    view Letters 135, 043603 (2025).
+     monic spectroscopy of dynamical symmetry breaking in             [31] P. Stammer, J. Rivera-Dean, T. Lamprou, E. Pisanty,
+     bi-circular laser fields: the role of rydberg states, Opt.            M. F. Ciappina, P. Tzallas, and M. Lewenstein, High
+     Express 25, 22880 (2017).                                             photon number entangled states and coherent state super-
+[15] J. Rivera-Dean, P. Stammer, M. F. Ciappina, and                       position from the extreme ultraviolet to the far infrared,
+     M. Lewenstein, Structured squeezed light allows for high-             Physical Review Letters 128, 123603 (2022).
+     harmonic generation in classical forbidden geometries,           [32] R. V. Gothelf, C. S. Lange, and L. B. Madsen, High-order
+     Phys. Rev. Lett. 135, 013801 (2025).                                  harmonic generation in a crystal driven by quantum light,
+[16] L. Cruz-Rodriguez, D. Dey, A. Freibert, and P. Stam-                  Physical Review A 111, 063105 (2025).
+     mer, Quantum phenomena in attosecond science, Nature             [33] S. de-la Peña, O. Neufeld, M. Even Tzur, O. Cohen,
+     Reviews Physics 6, 691 (2024).                                        H. Appel, and A. Rubio, Quantum electrodynamics in
+[17] K. S. Budil, P. Salières, A. L’Huillier, T. Ditmire, and             high-harmonic generation: Multitrajectory ehrenfest and
+     M. D. Perry, Influence of ellipticity on harmonic genera-             exact quantum analysis, Journal of chemical theory and
+                                                                           computation 21, 283 (2024).
+                                                                                                                                 9
+
+[34] D. Theidel, V. Cotte, P. Heinzel, H. Griguer, M. Weis,        [49] D. Kim, Y. Lee, A. Chacón, and D.-E. Kim, Effect of
+     R. Sondenheimer, and H. Merdji, Observation of a dis-              interlayer coupling and symmetry on high-order harmonic
+     placed squeezed state in high-harmonic generation, Phys-           generation from monolayer and bilayer hexagonal boron
+     ical Review Research 7, 033223 (2025).                             nitride, Symmetry 14, 10.3390/sym14010084 (2022).
+[35] A. Gorlach, M. E. Tzur, M. Birk, M. Krüger, N. Rivera,       [50] R. E. F. Silva, F. Martı́n, and M. Ivanov, High harmonic
+     O. Cohen, and I. Kaminer, High-harmonic generation                 generation in crystals using maximally localized wannier
+     driven by quantum light, Nature Physics 19, 1689 (2023).           functions, Phys. Rev. B 100, 195201 (2019).
+[36] P. Stammer, J. Rivera-Dean, A. Maxwell, T. Lamprou,           [51] D. Kim, D. Shin, A. S. Landsman, D. E. Kim, and
+     A. Ordóñez, M. F. Ciappina, P. Tzallas, and M. Lewen-            A. Chacón, Theory for all-optical responses in topological
+     stein, Quantum electrodynamics of intense laser-matter             materials: The velocity gauge picture, Phys. Rev. B 106,
+     interactions: A tool for quantum state engineering, PRX            214314 (2022).
+     quantum 4, 010201 (2023).
+[37] P. Stammer, J. Rivera-Dean, A. S. Maxwell, T. Lam-
+     prou, J. Argüello-Luengo, P. Tzallas, M. F. Ciappina,
+     and M. Lewenstein, Entanglement and squeezing of the
+     optical field modes in high harmonic generation, Physical
+     review letters 132, 143603 (2024).
+[38] J. Rivera-Dean, T. Lamprou, E. Pisanty, P. Stammer, A. F.
+     Ordóñez, A. S. Maxwell, M. F. Ciappina, M. Lewenstein,
+     and P. Tzallas, Strong laser fields and their power to
+     generate controllable high-photon-number coherent-state
+     superpositions, Physical Review A 105, 033714 (2022).
+[39] A. Gorlach, O. Neufeld, N. Rivera, O. Cohen, and
+     I. Kaminer, The quantum-optical nature of high harmonic
+     generation, Nature communications 11, 4598 (2020).
+[40] J. Rivera-Dean, L. Petrovic, M. Lewenstein, and P. Stam-
+     mer, Attosecond quantum optical interferometry, Reports
+     on Progress in Physics 89, 047901 (2026).
+[41] P. Stammer, J. Rivera-Dean, M. F. Ciappina, and
+     M. Lewenstein, Weak measurement in strong laser field
+     physics, arXiv preprint arXiv:2508.09048 (2025).
+[42] A. Chacón, D. Kim, W. Zhu, S. P. Kelly, A. Dauphin,
+     E. Pisanty, A. S. Maxwell, A. Picón, M. F. Ciappina, D. E.
+     Kim, C. Ticknor, A. Saxena, and M. Lewenstein, Circular
+     dichroism in higher-order harmonic generation: Heralding
+     topological phases and transitions in chern insulators,
+     Phys. Rev. B 102, 134115 (2020).
+[43] K. S. Virk and J. E. Sipe, Semiconductor optics in length
+     gauge: A general numerical approach, Phys. Rev. B 76,
+     035213 (2007).
+[44] L. Yue and M. B. Gaarde, Structure gauges and laser
+     gauges for the semiconductor bloch equations in high-
+     order harmonic generation in solids, Phys. Rev. A 101,
+     053411 (2020).
+[45] G.-B. Liu, W.-Y. Shan, Y. Yao, W. Yao, and D. Xiao,
+     Three-band tight-binding model for monolayers of group-
+     vib transition metal dichalcogenides, Phys. Rev. B 88,
+     085433 (2013).
+[46] G. Vampa, C. McDonald, A. Fraser, and T. Brabec, High-
+     harmonic generation in solids: Bridging the gap between
+     attosecond science and condensed matter physics, IEEE
+     Journal of Selected Topics in Quantum Electronics 21, 1
+     (2015).
+[47] A. Nayak, D. Rajak, B. Farkas, C. Granados, P. Stammer,
+     J. Rivera-Dean, T. Lamprou, K. Varju, Y. Mairesse, M. F.
+     Ciappina, M. Lewenstein, and P. Tzallas, Attosecond
+     metrology of vacuum-ultraviolet high-order harmonics
+     generated in semiconductors via laser-dressed photoion-
+     ization of alkali metals, Nature Communications 16, 1428
+     (2025).
+[48] A. Rasputnyi, Z. Chen, M. Birk, O. Cohen, I. Kaminer,
+     M. Krüger, D. Seletskiy, M. Chekhova, and F. Tani, High-
+     harmonic generation by a bright squeezed vacuum, Nature
+     Physics 20, 1960 (2024).
+                                                                                                                               10
+
+                      APPENDIX                                 crystal Cn symmetry governs the allowed harmonic or-
+                                                               ders. In bicircular driving fields, the superposition of
+    Classical symmetries of the Hamiltonian and                counter-rotating fields at ω and 2ω establishes a discrete
+                  selection rules                              dynamical C3 three-fold symmetry, leading to the selec-
+                                                               tion rule q = 3j ± 1 and enforcing alternating helicity in
+  The symmetries of the Hamiltonian ultimately dictate         the emitted harmonics. Although the system may possess
+the selection rules. For the laser-solid interaction consid-   a higher intrinsic spatial symmetry, the effective selec-
+ered here, we write the total Hamiltonian as the sum of        tion rules in high-harmonic generation are determined by
+two terms:                                                     the symmetry of the full driven Hamiltonian. When the
+                                                               driving field imposes a lower dynamical symmetry, the
+                     Ĥ = Ĥ0 + Ĥint ,                (15)    latter governs the emission process, as only operations
+                                                               that leave both the material response and the external
+where Ĥ0 represents the solid and Ĥint = −e r̂ · E(t) de-    drive invariant can constrain the harmonic spectrum.
+scribes the coupling of classical light with matter. To
+understand what are the symmetries governing the light-
+solid interaction, we analyze the Hamiltonian under the          Symmetry breaking due to quantum fluctuations
+time translation and spatial rotation operations. Conse-
+quently, the classical dynamical symmetries of the system        The inclusion of a squeezing component modifies the
+define the symmetry transformation as:                         driving field in the following way:
+                       Un = Rn Tn ,
+
+where Rn is a spatial rotation by 2π/n and Tn a time                               ÊQ (t) = Ecl (t) + δ Ê(t),               (20)
+translation by T /n, where T is the period of the driving
+                                                               which simplifies the Hamiltonian of the laser-mater inter-
+field. If the Hamiltonian is invariant under the dynamical
+                                                               action as:
+symmetries, the following relation must hold:
+
+                        Un Ĥ = Ĥ.                                             Ĥ(t) = Ĥ0 + Ĥcl (t) + ĤI (t)              (21)
+
+The solid Hamiltonian, Ĥ0 , remains invariant under time      where, ĤI represents the interaction with the quantum
+translation, leading to:                                       field, including the fluctuations. The solids and classical
+                                                               parts of the Hamiltonian carry their own symmetry as
+                       Ĥ0 = R̂n Ĥ0 .                 (16)    shown in Eqs. (16) and (17). Now, for the quantum light,
+                                                               the quantum fluctuations symmetry should be evaluated:
+The solid Hamiltonian spatial symmetry is set by its
+rotational symmetry group. Now, for the interaction term                                     
+we obtain invariance requires Rn E(t) = E(t + T /n):                 δ Ê(t) = R̂n T̂n δ Ê(t) ≡ R̂n T̂n δ Ê(t)R̂n† T̂n† ,   (22)
+
+              Un ĤI = −e r̂ · Rn E(t + T /n).         (17)                           h
+                                                                                                  †          †
+                                                                                                                     i
+                                                               where R̂n = exp −i 2π       n  (â R âR − â L âL )   is the uni-
+This shows that, for the Hamiltonian to be symmetric           tary operator
+                                                                          h leading to rotations       i in polarization, and
+both time translation and spatial rotation operations          T̂n = exp −i nω2π
+                                                                                 (â†R âR + â†L âL ) induces time transla-
+should leave the external field invariant.                     tions. This can be done evaluating the field’s variance:
+   Furthermore, imposing the dynamical symmetries, Ûn ,
+over the generated currents in the solid, J(t) restricts the                                    2
+                                                                                ∆E2 (t) = ⟨Ê (t)⟩ − ⟨Ê(t)⟩2 .               (23)
+frequencies that can be emitted, namely:
+                                                               For the calculations, it is necessary to express the creation
+              J± (t) = e±i2π/n J± (t + T /n).          (18)
+                                                               and annihilation operators in linear basis:
+The Fourier transform of Eq. (18), leads to the selection                                 1           
+rules:                                                                             âR = √ â∥ − iâ⊥
+                                                                                           2
+                      q = nj + σH .                    (19)                              1           
+                                                                                  âL = √ â∥ + iâ⊥ .                        (24)
+                                                                                          2
+Here, q is the harmonic order and n represents the or-
+der of the rotational symmetry. For circularly polarized       Furthermore, since we defined the action of squeezing
+driving fields, the helicity of the emitted harmonics is       in one direction, and we can show that â†R âR + â†L âL =
+fixed by angular momentum conservation, whereas the            â†∥ â∥ + â†⊥ â⊥ , it is possible to show that the variance is
+                                                                                                                      11
+
+                                                                         (W)
+reduced to calculate:                                           Here, Pmn (k) represents the momentum matrix ele-
+                                  1                            ment in the Wannier gauge, which is given by:
+                   ⟨âR âL ⟩ = − sinh(r) cosh(r)
+                                  2
+                      † †         1                                                    (W)      (W)        (W)
+                   ⟨âR âL ⟩ = − sinh(r) cosh(r)                        P(W)
+                                                                          mn (k) = ⟨ψmk |∂k Ĥ0       (k)|ψnk ⟩.    (32)
+                                  2
+            †         †
+         ⟨âR âR + âL âL ⟩ = sinh2 (r)
+         ⟨âR â†R + âL â†L ⟩ = cosh2 (r) + 1        (25)
+These expressions combined, lead to the total field’s vari-
+ance after simplification:                                                         Pulse synthesis
+
+ ∆E2 (t) = 4 [cosh(2r) − sinh(2r) cos(2ω(t + τ /n))] . (26)
+                                                                 For calculating the temporal structure of the harmonic
+Consequently, the action of the quantum light on the           spectra, including the quantum allowed harmonics, we
+solid is to break symmetry of the Hamiltonian via the          used the state
+cos(2ω(t + τ /n)) term, while leaving the solid Hamilto-                         Z
+nian intact. We note that the term breaking the symmetry                    ρq = d2 α Q(α) |χq (α)⟩⟨χq (α)|        (33)
+comes from the term with null helicity in Eq. (25).
+                                                               from where we can calculate the expectation value of the
+                                                               harmonic field
+              Time-dependent density matrix                                      Z
+                                                                       ⟨Eq (t)⟩ = d2 α Q(α)[χq (α) + χ∗q (α)]      (34)
+  To calculate the nonlinear material response to the
+quantum light, we use the density matrix formalism as          This is the complex field, which is the Fourier transform
+proposed in Refs. [42, 49]. The simulation requires to solve   (FT) of the generated current, i.e., χq (α) = FT[J(t, α)].
+the evolution of the density matrix in the Wannier gauge:      From this we get the harmonic intensity from the FT of
+      ∂               h
+                          (W)
+                                                 i             the complex field
+    i ρ(W)   (K, t) =   H     (k(t)), ρ(W)
+                                           (K, t)     , (27)
+     ∂t mn                0
+                                                   mn                               "Z                            #
+                                                                                          2
+                                                                            
+with k(t) = K + A(t). Here, m, n label valence and con-          FT ⟨Eq (t)⟩ = FT        d α Q(α) |χq (α)⟩⟨χq (α)| (35)
+duction bands. The dissipation term is represented by a
+dephasing term, T2 and it is calculated in the Hamiltonian
+                                                               By calculating the FT to time, and by defining the num-
+gauge, following theoretical proposal in Ref. [42, 49]:
+                                                               ber of harmonics to be synthesized or the spectral filter
+    ∂               h
+                       (H)
+                                              i                window ∆ω, we arrive to Eq. (13).
+  i ρ(H)  (K, t) =   H     (k(t)), ρ(H)
+                                        (K, t)
+   ∂t mn               0
+                                                mn
+                 + E(t) · [D(H) (K + A(t)), ρ(H) (K, t)]
+                     1 − δmn (H)
+                 − i           ρ (K, t)],              (28)
+                        T2
+
+with the gauge transformation in each step following the
+procedure presented in Refs. [50, 51]. The total harmonic
+signal is obtained from the Fourier transform of the cur-
+rent calculated from the inter and intraband contributions,
+J(t) = Jra (t) + Jer (t), yielding:
+                                        2
+                          I(ω) = F[J(t)] ,             (29)
+
+  The inter and intraband contributions are calculated
+as follows:
+             XZ
+   Jer (t) =       dK P(H)             (H)
+                        nm (K + A(t))ρnm (K, t), (30)
+              n̸=m   BZ
+
+
+              XZ
+  Jra (t) =               dK P(H)           (H)
+                              mm (K + A(t))ρmm (K, t). (31)
+              m      BZ
+                                                                                                                         12
+
+                                          SUPPLEMENTARY MATERIAL
+
+
+                                      Dynamical symmetry and selection rules
+
+   In this work we consider the interaction of quantum light with different solid-state materials, and investigate how
+its quantum fluctuations break the dynamical symmetries that govern harmonic emission. In this Supplementary
+Material we present the formal derivation and additional results for harmonic generation driven by phase-squeezed
+light, supporting the findings reported in the main manuscript.
+
+We begin by considering a crystal with C3 rotational symmetry driven by a circularly polarized quantum
+field. The total Hamiltonian reads
+
+                                                      Ĥ(t) = Ĥ0 + Ĥcl (t),                                          (36)
+
+where Ĥcl (t) = −er̂ · Ecl (t), Ĥ0 is invariant under C3 rotations, and r̂ is the dipole operator. We define the dynamical
+symmetry [3] operator as
+
+                                                        Un = R2π/n Tτ /n ,
+
+where R2π/n is a spatial rotation by 2π/n and Tτ /n is a time translation by τ /n, with τ = 2π/ω, the laser field period.
+The system exhibits dynamical symmetry if U † ĤU = Ĥ such that:
+
+                                                 Ĥ(R2π/n r, t + τ /n) = Ĥ(r, t),                                     (37)
+
+To demonstrate the selection rules stemming from the dynamical symmetry of the system, we focus on the total current
+generated in the solid-material, J(t), which must satisfy:
+
+                                                    J(t) = R2π/n J(t + τ /n).                                          (38)
+
+This transformation, naturally imposes constraints on the Fourier components, as we will show in the following. The
+emitted current can be decomposed in the circular basis as:
+
+                                                   J(t) = J+ (t)ê+ + J− (t)ê− ,
+
+which under rotation takes the form:
+
+                                                    R2π/n : ê± → e∓i2π/n ê±
+
+and under time translation:
+
+                                                   Tτ /n : J(t) → J(t + τ /n)
+
+  Applying the symmetry condition yields:
+
+                                                 J± (t) = e∓i2π/n J± (t + τ /n),
+
+which can be expanded in the Fourier components:
+                                                                     (q)
+                                                                X
+                                                     J± (t) =       J± e−iqωt ,                                        (39)
+                                                                q
+
+from which we obtain:
+                                           (q)                             (q)
+                                    X                               X
+                                          J± e−iqωt = e∓i2π/n            J± (ω)e−iqω(t+τ /n)
+                                      q                              q
+
+  Non-trivial solutions require to match the Fourier components:
+
+                                                 e−iqωt = e∓i2π/n e−iqω(t+τ /n) ,
+                                                                                                                       13
+
+where we used ωτ = 2π, which leads to the selection rules:
+                                                          q = nj ± 1.                                                (40)
+We note that our derivation agrees with the selection rules reported in [9]. The selection rules imply that for circularly
+polarized driving, the field exhibits continuous rotational symmetry, while the discrete symmetry n is imposed by
+the crystal. For MoS2 , the crystal symmetry imposes n = 3 leading to the well-known selection rules q = 3j ± 1. For
+graphene, the crystal symmetry corresponds to n = 6, resulting in q = 6j ± 1, for the circular driving.
+  For the case of bicircular, counter rotating laser fields, we need to also calculate the selection rules taking into
+account the symmetries of the field. For the bicircular field, the dynamical symmetry intrinsic to the field is given by:
+                                              Ecl (t) → R2π/3 Ecl (t + τ /3).                                        (41)
+   This dynamical symmetry leads to the selection rules q = 3j ± 1, which coincides with the selection rule calculated
+for MoS2 when its crystal rotational symmetry is taken into account. Furthermore, the harmonics q = 3j + 1 and
+q = 3j − 1 exhibit opposite helicities, while harmonics q = 3j are forbidden. For graphene, the selection rule from the
+circular light is q = 6j ± 1 with the other harmonics, the 3q in this case, forbidden. When HHG in graphene is driven
+by a bicircular field, the dominant symmetry is the driving field C3 , and not the symmetry from the solid. This leads
+to identical selection rules as for the MoS2 case.
+
+
+                                       Fluctuations in the generated currents
+
+   To further understand the effect of quantum fluctuations on the generated currents during the harmonics process, we
+will impose the dynamical symmetry on the new quantum field. In general, the harmonic generation selection rules for
+circular fields constrain the Fourier transform of the generated currents. Now, since the fluctuations are not invariant,
+under the dynamical symmetries, the new current is also not invariant, and allows us to write:
+                                          δE
+                                         J±  (t) = e∓i2π/n J±
+                                                            δE
+                                                               (t + τ /n) + Q± ,
+where Q± is a symmetry-breaking source term induced by the quantum fluctuations. The Fourier transform of the new
+currents should also satisfy:
+                                                    X (q,δE)
+                                           δE
+                                          J±  (t) =   J±     e−iqωt ,
+                                                            q
+                                                                   (q,δE) −iqωt −iq2π/n
+                                                          X
+                                        δE
+                                       J±  (t + τ /n) =          J±        e        e     ,
+                                                            q
+                                                                   (q)
+                                                          X
+                                              Q± (t) =           Q± e−iqωt .
+                                                            q
+
+  Substituting into the symmetry relation gives:
+                        X (q,δ)                  X (q,δE)                   X (q)
+                           J± e−iqωt = e∓i2π/n    J±      e−iqωt e−iq2π/n +  Q± e−iqωt .
+                          q                          q                                    q
+
+From here it is straightforward to calculate, by matching the individual harmonics,that:
+                                                                         (q)
+                                                 (q,δE)               Q±
+                                               J±         =                    2π   .                                (42)
+                                                                1 − e−i(q±1) n
+When Q± = 0, the classical selection rules are recovered. However, for Q± ̸= 0, the quantum fluctuations make
+ (m,δE)
+J±      ̸= 0 for any harmonic, not just the classically allowed ones q = nj ± 1. This simple schematic result shows how
+the quantum fluctuations allow for the generation of harmonics with q = 3j.
+
+
+                              Dynamical symmetries of the classical-drive Hamiltonian
+
+  The symmetries of the Hamiltonian ultimately dictate the selection rules. For the case considered here, we write the
+total Hamiltonian as:
+                                                     Ĥ = Ĥ0 + Ĥcl ,                                               (43)
+                                                                                                                        14
+
+where Ĥ0 represents the solid-state contribution and Ĥcl = −er̂ · Ecl (t) describes the light–matter interaction.
+  The dynamical symmetries of the system are obtained by enforcing symmetry operations on the Hamiltonian and
+analyzing its behavior under their action. We define the symmetry operator as:
+
+                                                       Un = Rn Tn ,
+
+where R̂n is a spatial rotation and T̂n a time translation by τ /n. A symmetry of the system requires:
+
+                                                     U Ĥ(t) = Ĥ(t).
+
+Applying this transformation, we obtain:
+                                                                           
+                                             Un Ĥ(t) = Tn Rn Ĥ0 + Ĥcl (t)
+
+  Since Ĥ0 is time-independent, Tn Ĥ0 = Ĥ0 , and therefore:
+
+                                              Un Ĥ = Rn Ĥ0 + Tn Rn ĤI (t).
+
+For the interaction term, we have:
+
+                                              Tn Ĥcl = −er̂ · Ecl (t + τ /n),
+
+and classical Hamiltonian:
+
+                                           Tn Rn Ĥcl = −e r̂ · Rn Ecl (t + τ /n).
+
+  Therefore, the symmetry condition U Ĥ = Ĥ leads to:
+                                                Ecl (t) = Rn Ecl (t + τ /n),
+                                                                                                                      (44)
+                                                   Ĥ0 = Rn Ĥ0 .
+As shown previously, these conditions directly lead to the corresponding selection rules.
+
+
+                             Symmetries of the driving field with quantum fluctuation
+
+  The generation of harmonics when quantum fluctuations act on the coherent field can be described in the following
+way:
+
+                                                 Ê(t) = Ecl (t) + δ Ê(t),                                           (45)
+
+with δ Ê(t) the quantum fluctuations. Now, we can write the Hamiltonian of the system, Eq. (15) , as follows:
+
+
+                                              Ĥ(t) = Ĥ0 + Ĥcl (t) + ĤI (t),                                       (46)
+
+where the term ĤI (t) = −er̂ · δ Ê(t) accounts for the quantum fluctuations. As we demonstrated before the semi-classical
+Hamiltonian is invariant under the dynamical transformation. Now we need to investigate the symmetry of the quantum
+fluctuations part, ĤI = −er̂ · δ Ê(t). For this, we need to impose the invariance on the field fluctuations:
+                                                                           
+                                                 δ Ê(t) = T̂n† R̂n† δ Ê(t) R̂n T̂n ,                                 (47)
+                     h                            i
+                                 †          †
+where R̂n = exp −i 2π         (â  âR − â   â
+                                            L L  )  is the unitary operator leading to rotations in polarization, and T̂n =
+   h                        n
+                                iR
+       2π
+exp −i nω (â†R âR + â†L âL ) induces time translations.
+  In Ref. [20] we showed that fluctuations on the bicircular driver do not preserve the classical dynamical symmetry.
+In the following we will demonstrate that this is also the case for the fluctuation on the circular field. To this end, we
+start by defining the electric field:
+                                                  X h                                 i
+                                        Ê(t) =          ϵµ âµ e−iωt + ϵ∗µ â†µ eiωt                                 (48)
+                                                  µ=R,L
+                                                                                                                            15
+
+Applying the field transformation we can write by using ϵ∗R = ϵL :
+
+                               Ê(t) = ϵR âR e−i(ω(t+τ /n)+θ) + ϵR â†L ei(ω(t+τ /n)−θ)
+                                     + ϵL âL e−i(ω(t+τ /n)−θ) + ϵL â†R ei(ω(t+τ /n)+θ)
+                                     = ϵR âR e−iΘ+ + ϵR â†L eiΘ− + ϵL âL e−iΘ− + ϵL â†R eiΘ+                          (49)
+
+  Now, we can calculate Ê 2 (t), using ϵR · ϵR = 0, ϵL · ϵL = 0 and ϵR · ϵL = 1 and Θ± = ω(t + τ ) ± θ :
+
+                                         Ê 2 (t) = âR â†R + â†R âR + âL â†L + â†L âL
+                                                                        
+                                                  + â†R â†L + â†L â†R ei(Θ+ +Θ− )
+                                                                        
+                                                  + âR âL + âL âR e−i(Θ+ +Θ− )
+
+                                                  = âR â†R + â†R âR + âL â†L + â†L âL
+                                                                        
+                                                  + â†R â†L + â†L â†R ei(2ω(t+τ ))
+                                                                        
+                                                  + âR âL + âL âR e−i(2ω(t+τ )) .                                     (50)
+
+Substituting this in the definition of variance:
+
+                                                ∆E 2 (t) = ⟨Ê 2 (t)⟩ − ⟨Ê(t)⟩2                                          (51)
+
+while expressing the creation and annihilation operators in the linearly polarized basis:
+                                                          1           
+                                                   âR = √ â∥ − iâ⊥ ,
+                                                           2
+                                                           1          
+                                                    âL = √ â∥ + iâ⊥ ,                                                  (52)
+                                                            2
+
+and since we are defining the squeezing in only one direction, we can show that â†R âR + â†L âL = â†∥ â∥ + â†⊥ â⊥ , and
+arrive to the expressions:
+                                                                     1
+                                                     ⟨âR âL ⟩ = − sinh(r) cosh(r)
+                                                                     2
+                                                        † †          1
+                                                     ⟨âR âL ⟩ = − sinh(r) cosh(r)
+                                                                     2
+                                          ⟨â†R âR + â†L âL ⟩ = sinh2 (r)
+                                          ⟨âR â†R + âL â†L ⟩ = cosh2 (r) + 1                                          (53)
+
+  Grouping all terms, we finally obtain:
+                                      h                                              i
+                         ∆E 2 (t) = 2 1 + sinh(r) sinh(r) − cosh(r) cos(2ω(t + τ /n)) ,
+                                                 
+                                                                                                                          (54)
+
+which demonstrates that the fluctuations are not invariant under time translation transformations, since they do not
+have the same symmetry as that of the expectation value of the field.
+
+
+                                                       Phase squeezing
+
+   To fully understand the action of quantum light on the nonlinear response of the selected solids and consequently
+the modification of the selection rules, we also investigated the HHG process driven by a phase squeezed vacuum. An
+example of the driving fields for phase squeezing is presented in Fig. 5 (a) and (b), for the circular and bicircular case,
+respectively. To generate the fields we used Iq = 1 × 10−7 a.u. for the squeezing intensity.
+   As shown in Fig. 5, the spectra resulting from the phase squeezed quantum driver is similar to the one resulting
+from the amplitude squeezed one. Consequently, the order of the newly generated harmonics coincides for both cases.
+                                                                                                                                                                16
+
+
+
+                                                                                                          0.002
+                                                           (a)                                                     (b)
+                                                 0.001
+
+
+
+
+                                   Ey (a. u.)                                               Ey (a. u.)
+                                                     0
+
+                                                                                                              0
+
+                                                - 0.001
+                                                                                                         - 0.001
+                                                          - 0.0006        0        0.0006                          - 0.001       0         0.001
+                                                                      Ex (a. u.)                                             Ex (a. u.)
+
+
+
+                                                                     Graphene                                                  MoS2
+                                                                                      (c)                                                          (d)
+
+                            ω-ω
+
+
+
+
+                                                                                      (e)                                                          (f)
+
+                            ω-2ω
+
+
+
+
+FIG. 5. Phase squeezing fields and harmonic spectra. In (a) and (b) the circular and bicircular quantum fields. In (c) and (d)
+the resulting spectra from the circular case and for graphene and MoS2 , respectively. In (e) and (f) the harmonic spectra for the
+bicircular quantum driver and for graphene and MoS2 , respectively. For all the panels, the black spectra represents the response
+of the solid to the coherent driver, while the orange spectra results from the quantum driver.
+
+
+                                                                        Circular components
+
+  The classical harmonics exhibit alternating helicity with the 3j + 1 sharing the same helicity as the fundamental
+driver and the 3j − 1 harmonics with opposite helicity. This last characteristic can be explained by the laser field
+coupling to the dipole moment matrix, E(t) · dcv (t), which results, in circular representation in the different RCP and
+LCP components:
+                                                                                E0 iω0 t
+                                                                     RCP      →   e      ê+ · d−
+                                                                                                cv (k)
+                                                                                2
+                                                                                E0 iω0 t
+                                                                     LCP      →   e      ê− · d+
+                                                                                                cv (k),                                                        (55)
+                                                                                2
+                                                                                                                                          (x)            (y)
+where we expressed the dipole moment matrix in the circular base as d±        cv (k) = dcv (k)x̂ ± idcv (k)ŷ. Consequently,
+each circular component of the driving field selectively couples to a corresponding circular projection of the dipole
+matrix elements, leading to helicity-resolved harmonic emission.
+   For the quantum light driver, the new harmonics posses almost to circular polarization, as shown in Fig. 6. These
+numerical results supports our analytical calculations which show that the symmetry breaking originate from a helicity
+zero channel. For a small squeezing intensity, Iq = 1 × 10−11 , the spectra (bottom filled) follow the classical selection
+rules with harmonics exhibiting well define helicity. For larger values of squeezing (full lines), Iq = 1 × 10−8 , the helicity
+is mixed, aligning well withing our previous description. The results are shown in Fig. 6 (a) and (b) for the circular
+                                                                                                                        17
+
+quantum driver and in (c) and (d) for the bicircular quantum driver.
+
+
+
+
+                                          Graphene                                   MoS2
+
+                                      LCP                    (a)                                    (b)
+                                      RCP
+
+                   ω-ω
+
+
+
+
+                                                             (d)                                    (h)
+
+
+                   ω-2ω
+
+
+
+
+FIG. 6. Harmonic polarization components. Panels (a) and (b) show the resulting spectra for the circular quantum driver and
+for graphene and MoS2 , respectively. Panels (c) and (d) show the corresponding results for the bicircular case.
+
+
+
+
+                                            Left circularly polarized driver
+
+   Complementary to the simulations presented before, we shown in Fig. 7, the harmonic spectra for graphene resulting
+from a quantum driver with amplitude squeezing and with left circular polarization. Panels (a) and (c) show the
+spectra resulting from the interaction with coherent circular and bicircular light, respectively. In panels (b) and (d),
+the spectra resulting from the interaction with quantum circular and bicircular light, respectively. In the panels,
+the bottom filled areas corresponds to the classical selection rules. The spectra demonstrate the generation of new
+harmonics with helicity composed of both handedness, contrary to the classical case, where the helicity state of the
+individual harmonics is well defined.
+                                                                                                                           18
+
+
+
+                                                         Graphene
+                     ω-ω
+
+                                                          (a)                                         (b)
+
+
+
+
+                    ω-2ω
+                                                          (c)                                         (d)
+
+
+
+
+FIG. 7. Harmonic spectra for LCP coherent in panels (a) and (c). The nonlinear response of graphene to quantum circular
+(b) and bicircular (d) light. The generation of new harmonics and the loss of pure helicity state for the individual harmonics
+coincide with the case of amplitude squeezed light.
+

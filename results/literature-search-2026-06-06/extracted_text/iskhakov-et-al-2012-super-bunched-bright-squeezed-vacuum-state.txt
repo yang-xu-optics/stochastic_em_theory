@@ -1,0 +1,264 @@
+                                                                Super-bunched bright squeezed vacuum state
+
+                                                      T. Sh. Iskhakov1,∗ , A. Perez1 , K. Yu. Spasibko2 , M. V. Chekhova1,2 , G. Leuchs1
+                                                                                  1
+                                                                                   Max-Planck Institute for the Science of Light,
+                                                                       Guenther-Scharowsky-Str. 1 / Bau 24, Erlangen D-91058, Germany
+                                                                                 2
+                                                                                   Physics Department, Moscow State University,
+                                                                                   Leninskiye Gory 1-2, Moscow 119991, Russia
+                                                                              ∗
+                                                                                Corresponding author: Timur.Iskhakov@mpl.mpg.de
+
+                                                                                             Compiled September 22, 2018
+                                                      In this paper we experimentally study the statistical properties of a bright squeezed vacuum state containing
+
+
+
+
+arXiv:1202.1682v1 [quant-ph] 8 Feb 2012
+                                                     up to 1013 photons per mode (10 µJ per pulse), produced via high gain parametric down conversion (PDC).
+                                                     The effects of bunching and superbunching of photons were observed for a single mode PDC radiation by
+                                                     second-order intensity correlation function measurements with analog detectors.
+                                                           c 2018 Optical Society of America
+                                                         OCIS codes: 270.0270, 270.5585
+
+
+
+                                          Parametric down conversion (PDC) is one of the                       they cannot be used for the conditional preparation of
+                                          widespread sources of nonclassical light fields. There are           large photon-number Fock states.
+                                          two main classes of states that can be obtained via PDC                 In this letter we present an experiment dedicated to
+                                          in experiment. First, few-photon states: for example,                the observation of the statistics of an extremely bright
+                                          conditionally prepared Fock states [1], two-photon Bell              single-mode squeezed vacuum state. Special attention is
+                                          states [2], polarization-entangled W and GHZ states [3].             paid to the detection conditions to be satisfied in order
+                                          These states have found their applications in quantum                to observe the statistics of one mode of PDC radiation.
+                                          information and quantum computing. Second, macro-                    We consider two states generated under two different
+                                          scopic quantum states: quadrature [4] and two-mode                   phase matching conditions: collinear nondegenerate and
+                                          squeezed states [5]. The noise of these states is reduced            collinear degenerate. The effects of photon bunching and
+                                          below the shot noise level and therefore they are attrac-            superbunching were experimentally observed for these
+                                          tive for high-precision measurements and optical commu-              states, respectively.
+                                          nication. Another type of a macroscopic quantum state,                  The size of a spatiotemporal mode of the radiation is
+                                          intensively studied at present, is bright squeezed vac-              approximately given by the coherence volume [12],
+                                          uum (BSV). The quantum properties of this state are
+                                          mostly of interest in the single-mode case. However, since                               Vcoh ≃ c · τcoh · ρ2coh ,          (1)
+                                          the BSV generated via PDC in a bulk crystal is usually
+                                          multi-mode with typical coherence time of few tenths of a            where c is the phase velocity of light in a medium, τcoh is
+                                          picosecond, consequently the observation of single-mode              the coherence time, and ρ2coh is the coherence area. Inside
+                                          statistics of BSV is a difficult experimental problem.               the coherence volume the degree of coherence is not uni-
+                                             It is well known that the statistics of a single mode of          form: it is the highest at the center and decreases closer
+                                          signal or idler squeezed vacuum radiation is thermal [6].            to the borders because of the influence of the fields that
+                                          It was experimentally proved by Tapster and Rarity [7],              belong to the neighboring coherence volumes. Therefore
+                                          who observed the statistics of one spatiotemporal mode               the single-mode statistics can be observed if the detec-
+                                          of PDC signal beam by measuring the second-order in-                 tion volume Vdet is much smaller than the coherence vol-
+                                          tensity correlation function (ICF) in a standard Han-                ume,
+                                          bury Brown-Twiss interferometer. The obtained value                                  Vdet ≡ c · τdet · ρ2det ≪ Vcoh ,        (2)
+                                          of correlation function was g (2) = 1.85, while the ex-              where τdet and ρ2det denote the detection time and the
+                                                                                       (2)
+                                          pected value for the thermal light is gth = 2. The                   detection area, respectively.
+                                          single-mode statistics was also observed by narrow spec-                The twin-beam squeezed vacuum state at the output
+                                          tral and spatial filtering of the signal PDC beam in [8]             of a nondegenerate collinear optical parametrical ampli-
+                                          and for nearly single-mode states generated in a pe-                 fier (NOPA) manifests perfect photon number n correla-
+                                          riodically poled KT iOP O4 waveguide [9]. Multi-mode                                                        P
+                                                                                                                                                      ∞
+                                          thermal statistics of the signal beam of PDC radiation               tion in the conjugate channels, |ψi =     Cn |n, ni. Here
+                                                                                                                                                           n=0
+                                          was measured in [10] and [11]. In both experiments the               the coefficients Cn depend on the parametric gain. The
+                                          number of detected modes was about twenty so the ob-                 photon number distribution in each channel is ‘geomet-
+                                          served statistics was almost Poissonian. It should be                                  hnin
+                                                                                                               ric’, PB (n) = (hni+1) n+1 , with the mean photon number
+                                          noted here that the single-mode states obtained earlier              hni. Under the condition (2), photon bunching can be
+                                          always contained very low photon numbers and therefore               observed via second-order ICF measurement: g (2) = 2.
+
+                                                                                                           1
+  The single-mode squeezed vacuum state at the output                   by two lenses (L1 , L2 ) on a pair of analog photodetectors
+of a degenerate OPA contains only even photon num-                      (D1 , D2 ) based on p-i-n diodes in combination with low-
+             P
+             ∞
+                                                                        noise amplifiers described in [17]. The signals from the
+bers: |ψi =     Cn |2ni. The photon number probabi-
+               n=0                                                      detectors were measured by an analog-digital converter
+                                                     n/2
+                                                  hni
+lity distribution [13], PSB (n) = 2n (n!n !)2 (hni+1) n/2+1/2 for
+                                                                        by integrating the electronic pulses over time. The mean
+                                       2
+                                                                        values of the signals per pulse hS1 i, hS2 i and the mean of
+even n and PSB (n) = 0 for odd n, allows us to observe
+                                                                        the product signals hS1 ·S2 i were used for the calculation
+the effect of superbunching (g (2) > 2) in the Hanbury                                 (2)
+Brown-Twiss measurement [14, 15],                                       of the ICF: gmeas = hShS11i·hS
+                                                                                                    ·S2 i
+                                                                                                       2i
+                                                                                                          . Before the main experi-
+                                                                        ment the setup was calibrated by measuring the second-
+                                      1                                 order ICF for coherent radiation. As a source we used
+                        g (2) = 3 +     ,                    (3)
+                                      N                                 a strongly attenuated second harmonic of the Nd:YAG
+                                                                                                                 (2)
+where N is the mean photon number per mode, i.e., in                    laser at 532 nm. The obtained result gcoh = 1.005±0.005
+the coherence volume of PDC radiation. In the case of                   is in agreement with the expected value and therefore
+detecting m modes (m = Vdet /Vcoh ≫ 1) the value of                     confirms the validity of the measurement procedure.
+measured ICF is reduced by a factor of m in comparison
+with the single-mode case:                                                    Nd:YAG                     HWP GP           Lp   BBO        OG L             A
+
+
+                      (2)         g (2) − 1
+                     gmeas =1+              .                (4)                          1.2                                                                  LM
+                                      m                                                                                              M
+
+
+                                                                           Signal, mV*s
+                                                                                                                                                    NPBS
+                                                                                          0.8        Г = 15.8
+Therefore multimode detection makes the superbunch-
+                                                                                          0.4                                             D1
+ing effect for spontaneous PDC only observable when                                                                                  S1        L1
+                                                                                                                               CF                      L2
+m · N < 1. Taking into account that the number of pho-                                    0.0                                        S2
+                                                                                                20      40      60   80                                D2
+tons per mode increases as N = sinh2 Γ, where Γ is the                                               Power, mW
+parametric gain, at high gain the second term in (3) is
+eliminated and the effect of superbunching can be ob-                   Fig. 1. The experimental setup. Bottom left: Dependence
+served only at low number of detected modes. The su-                    of the PDC signal on the pump power.
+perbunching at high-gain PDC was already observed by
+means of an ultrafast measurement, namely, two-photon                      First, the parametric gain of collinear degenerate PDC
+counting in semiconductors [16]. However, sometimes                     was determined through the nonlinear dependence of the
+single-mode BSV is required for further applications. In                PDC signal on the power of the pump (the inset of Fig.
+this case, a single mode of BSV should be filtered out                  1). The highest value achieved in the measurement with
+optically.                                                              75 mW mean pump power was Γmax = 15.8, which cor-
+   In order to generate states manifesting photon bunch-                responds to extremely high mean number of photons per
+ing and superbunching we have built the experimental                    mode: N ≈ 1.3 · 1013 .
+setup presented in Fig. 1. The BSV state was produced                      The angular (spatial) correlation function for degen-
+in two 2 mm BBO crystals by pumping with the pulsed                     erate PDC was measured by scanning the aperture (A)
+radiation of the third harmonic of a Nd:YAG laser at                    in the horizontal direction in the far-field plane (Fig. 2
+355 nm, with a pulse duration of 18 ps and a repetition                 (a)). In order to select the degenerate wavelength of PDC
+rate of 1 kHz. The pump power was varied by means of a                  radiation the monochormator was adjusted to transmit
+half wave plate (HW P ) and a Glan prism (GP ) placed                   λc = (709.3 ± 0.05) nm. As predicted by the theory, the
+in front of the crystals. The pump was focused by a 100                 central part of the dependence represents the effect of
+cm lens (Lp ) into a waist of 0.26 mm diameter to increase              photon superbunching, when the pinhole selects the sig-
+the parametric gain. The effect of spatial walk off in two              nal and the idler beams simultaneously. The ICF values
+crystals was reduced twofold by placing the optical axes                at the edges of this dependence represents the effect of
+of the crystals in the horizontal plane but in opposite                 photon bunching when only signal or idler beam is de-
+directions. The crystals were cut for type-I collinear de-              tected. The blue line is a Gaussian fit to determine the
+generate phase matching, the central wavelength being                   FWHM of the correlation area (the spatial mode size),
+λc = 709.3 nm and the PDC spectral width (FWHM)                         which is (4.1 ± 0.3) mrad.
+was 57 nm. After eliminating the UV pump by a cut-off                      Figure 2 (b) shows the spectral distribution of g (2)
+mirror (M ) and a long-pass filter (OG), the angular spec-              measured for collinear PDC. Similar to the angular dis-
+trum of parametric radiation was selected by an aper-                   tribution the data reveal the superbunching of photons
+ture (A) placed in the focal plane of a 30 cm lens (L).                 for the degenerate case when λi = λs and the bunching
+The spectral mode filtering was made by a monochro-                     of photons for nondegenerate PDC. The FWHM of this
+mator with a spectral resolution of ∆λ = 0.1nm. To in-                  dependence (0.22 ± 0.03 nm) provides the information
+crease the signal the light was focused by a lens (LM ) on              about the spectral width of the correlation.
+the input slit of a monochromator. At the output of the                    The measured signal probability distributions for the
+monochromator the radiation was split at a nonpolariz-                  radiation at 708 nm (red triangles) and 709.3 nm (blue
+ing beamsplitter (N P BS) into two channels and focused                 circles) are presented in Figure 3 . The solid red curve
+
+                                                                    2
+Correlation function                                       Correlation function
+                                                                                                                     Therefore the state of light after the angular and fre-
+                       (a)                                                             (b)                        quency filtering is nearly single-mode.
+                                                                                                                     In conclusion, we have achieved extremely high para-
+                                                                                                                  metric gain (15.8) in a single-pass OPA. Nearly single-
+                                                                                                                  mode selection (m = 1.25) was carried out. The pho-
+                             Dq=4.1 mrad                                                         Dl=0.22 nm
+                                                                                                                  ton bunching was observed for collinear non-degenerate
+                                                                                                                  PDC. For collinear degenerate PDC, superbunching of
+                              Angle, rad                                                     Wavelength, nm       photons was observed. The states produced in the ex-
+                                                                                                                  periment were so bright that even after single-mode se-
+               Fig. 2. The second-order ICF measured versus the angle                                             lection the mean photon number was about 8000 photons
+               (a) and the wavelength (b).                                                                        per pulse.
+                                                                                                                     This work was supported in part by the Russian Foun-
+                                                                                                                  dation for Basic Research, grant # 10-02-00202 and 11-
+               and the dashed blue one are the theoretical fits plot-                                             02-01074. T. Sh. I. acknowledges support from Alexander
+               ted according to the probability distributions PB (n)                                              von Humboldt Foundation.
+               and PSB (n) respectively with the fixed mean signals.
+               One can see that the distributions are different, indi-                                            References
+               cating that different regimes of the PDC have different
+                                                                                                                   1. A. I. Lvovsky, H. Hansen, T. Aichele, O. Benson,
+               photon-number statistics. The losses in the optical chan-
+                                                                                                                      J. Mlynek, and S. Schiller,“Quantum State Reconstruc-
+               nel smooth out only the internal structure of the probabi-                                             tion of the Single-Photon Fock State”, Phys. Rev. Lett.
+               lity distribution for the state with even photon numbers,                                              87, 050402-1–050402-4 (2001).
+               however, the envelope does not change. The mean values                                              2. A. V. Burlakov, S. P. Kulik, G. O. Rytikov,
+               of the signals are about 70 nV·s, which corresponds to                                                 and M. V. Chekhova,“Biphoton light generation in
+               8 · 103 detected photons [17]. Both probability distribu-                                              polarization-frequency Bell states”, JETP 95, 639–644
+               tions are influenced around zero by the electronic noise                                               (2002).
+               of the detectors. Nevertheless this influence is not dra-                                           3. H. Mikami, Y. Li, and T. Kobayashi, “Generation of the
+               matic: the F W HM = 10 nV·s of the electronic noise                                                    four-photon W state and other multiphoton entangled
+               histogram (see the inset of Fig. 3) is almost by an or-                                                states using parametric down-conversion”, Phys. Rev.
+               der of magnitude smaller than the mean values of the                                                   A 70, 052308-1–052308-7 (2004).
+               signals.                                                                                            4. Ling-An Wu, H. J. Kimble, J. L. Hall, and Huifa Wu,
+                                                                                                                      “Generation of Squeezed States by Parametric Down
+                                                                                                                      Conversion”, Phys. Rev. Lett. 57, 2520-2523 (1986).
+
+                                             Probability
+                                                                                                                   5. O. Aytur and P. Kumar, “Pulsed twin beams of light”,
+                                                                                                                      Phys. Rev. Lett. 65, 1551-1554 (1990).
+
+
+                               Probability
+                                                                                                                   6. B. R. Mollow and R. J. Glauber, “Quantum Theory of
+                                                                                  Signal, nV*s
+                                                                                                                      Parametric Amplification”, Phys. Rev. 160, 1076-1096
+                                                                                                                      (1967).
+                                                                                                                   7. P. R. Tapster and J. G. Rarity, “Photon statistics of
+                                                                                                                      pulsed parametric light”, J. Mod. Opt. 45, 595–604
+                                                                                                                      (1998).
+                                             Signal, nV*s                                                          8. H. De Riedmatten, V. Scarani, I. Marcikic, A. Acin,
+                                                                                                                      W. Tittel, H. Zbinden, and N. Gisin, “Two indepen-
+               Fig. 3. Signal probability distribution for thermal (red                                               dent photon pairs versus four-photon entangled states
+               triangles) and superthermal (blue circles) statistics. The                                             in parametric down conversion”, J. Mod. Opt. 51, 1637-
+               curves are the theoretical fits. Inset: probability distribu-                                          1649 (2004).
+               tion for the electronic noise.                                                                      9. A. Eckstein, A. Christ, P. J. Mosley, and C. Silberhorn,
+                                                                                                                      “Highly Efficient Single-Pass Source of Pulsed Single-
+                 Finally, the question is why the measured values of the                                              Mode Twin Beams of Light”, Phys. Rev. Lett. 106,
+               ICF are less than expected from the theory, i.e., 3 for                                                013603-1–013603-4 (2011).
+               the degenerate case and 2 for the nondegenerate case.                                              10. F. Paleari, A. Andreoni, G. Zambra, and M. Bondani,
+               According to (2) the single mode statistics can be ob-                                                 “Thermal photon statistics in spontaneous parametric
+                                                                                                                      downconversion”, Optics Express, 12, Issue 13, 2816–
+               served when the detection volume is much smaller then
+                                                                                                                      2824 (2004).
+               the coherence volume. In this experiment the detected
+                                                                                                                  11. B. Blauensteiner, I. Herbauts, S. Bettelli, A. Poppe,
+               angle θdet = 0.45 mrad was indeed much smaller then                                                    and H. Hubel, “Photon bunching in parametric down-
+               the angular mode size θ = 4.1 mrad. Meanwhile the best                                                 conversion with continuous-wave excitation”, Phys. Rev.
+               spectral bandpass of the monochromator ∆λdet = 0.1                                                     A 79, 063846-1–063846-6 (2009).
+               nm was just twice as narrow as the spectral mode size                                              12. D. N. Klyshko, ”Photons and nonlinear optics”, Gordon
+               ∆λmode = 0.22 nm. Thereby the condition (2) was not                                                    and Breach (1988).
+               completely satisfied and the effective number of detected                                          13. Jan Perina, ”Quantum statistics of linear and nolinear
+               modes, according to (4), was m = 1.25.                                                                 optical phenomena”, Reidel (1984).
+
+
+                                                                                                              3
+14. J. Janszky, Y. Yushin, “Many-photon processes with the
+    participation of squeezed light”, Phys. Rev. A 36, 1288–
+    1292 (1987).
+15. R. Loudon & P. L. Knight, “Squeezed light”, J. Mod.
+    Opt. 34, 709–759 (1987).
+16. F. Boitier, A. Godard, N. Dubreuil, P. Delaye, C. Fabre,
+    E. Rosencher, “Photon extrabunching in ultrabright
+    twin beams measured by two-photon counting in
+    a semiconductor.” Nat. Commun. Aug 9;2:425. doi:
+    10.1038/ncomms1423 (2011).
+17. T. Sh. Iskhakov, M. V. Chekhova, and G. Leuchs, “Gen-
+    eration and Direct Detection of Broadband Mesoscopic
+    Polarization-Squeezed Vacuum” Phys. Rev. Lett. 102,
+    183602-1–183602-4 (2009).
+18. M. V. Fedorov, M. A. Efremov, P. A. Volkov,
+    E. V. Moreva, S. S. Straupe, and S. P. Kulik, “Anisotrop-
+    ically and High Entanglement of Biphoton States Gen-
+    erated in Spontaneous Parametric Down-Conversion”,
+    Phys. Rev. Lett. 99, 063901-1–063901-4 (2007).
+19. W. P. Grice and I. A. Walmsley, “Spectral information
+    and distinguishability in type-II down-conversion with a
+    broadband pump”, Phys. Rev. A 56, 1627-1634 (1997).
+20. G. O. Rytikov and M. V. Chekhova, “Detection of two-
+    mode compression and degree of entanglement in contin-
+    uous variables in parametric scattering of light”, JETP
+    107, 923–932 (2008).
+
+
+
+
+                                                                4
+

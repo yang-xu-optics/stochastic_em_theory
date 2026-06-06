@@ -1,0 +1,1341 @@
+                                                         High-Harmonic Generation in a Crystal Driven by Quantum Light
+
+                                                              Rasmus Vesterager Gothelf, Christian Saugbjerg Lange, and Lars Bojer Madsen
+                                                                            Department of Physics and Astronomy, Aarhus University,
+                                                                               Ny Munkegade 120, DK-8000 Aarhus C, Denmark
+                                                                                           (Dated: February 24, 2025)
+                                                            We study intraband high-harmonic generation (HHG) in a crystal driven by quantum light. Pre-
+                                                         vious theoretical studies have developed a framework based on coherent state expansions in terms
+                                                         of P distributions to consider nonclassical driving fields for HHG in atoms. Here, we adapt this
+                                                         framework to the context of solids and consider an intraband model of ZnO. We investigate the effect
+                                                         of the quantum optical nature of the driving field on the harmonic spectra including the cutoff and
+                                                         the intensity scaling of the harmonics with driving field intensity. Based on analytical calculations
+                                                         in the Floquet limit, we explain why driving with thermal light or bright-squeezed vacuum (BSV)
+                                                         produces a much higher cutoff than when driving with fields described by coherent or Fock states.
+
+
+
+
+arXiv:2502.11803v2 [quant-ph] 21 Feb 2025
+                                                         Further, we derive an expression for the generated time-dependent electric field and its fluctuations
+                                                         and find that it inherits characteristics of the driving field. Finally, we discuss the limitations of
+                                                         an approximative positive P representation, which is introduced to be able to reduce the numerical
+                                                         complexity for Fock and BSV driving fields.
+
+
+                                                            I.   INTRODUCTION                                 are typically negligible when considering intense-field-
+                                                                                                              induced processes.
+                                               High-harmonic generation (HHG), the non-linear up-                Recently, a shift towards a fully quantum description
+                                            conversion of a low-frequency intense laser field via an          of HHG is developing. This is motivated by the wish to
+                                            electronic medium, has through the years proven to                combine attoscience and quantum optics, involving the
+                                            be a subject of much interest. After the phenomenon               investigation of the quantum nature of the emitted light.
+                                            was observed [1] and analyzed theoretically [2, 3] it             These quantum degrees of freedom of the emitted light
+                                            was used to produce sub-femtosecond laser pulses [4, 5],          can be used as spectroscopic measures to study the HHG
+                                            which brought with them the research area of attosecond           medium and potentially create attosecond pulses of non-
+                                            physics [6–8].                                                    classical light in the XUV regime. Overall, this field of
+                                               The original studies of HHG considered atomic gasses           study can be categorized into two areas: (1) fully quan-
+                                            as the generating medium. However, a new avenue for               tum descriptions of HHG when driven by coherent light
+                                            exploration opened when HHG with near-infrared fields             [19–27], and (2) HHG driven by quantum light [28–31],
+                                            was observed from a bulk crystal [9]. HHG from solids             such as squeezed light or Fock states. In both cases, the
+                                            proved to have many unique characteristics, such as the           accurate treatment of the quantum degrees of freedom of
+                                            harmonic cutoff scaling linearly with field strength [9],         both electrons and photons presents a challenge to the-
+                                            as opposed to the quadratic scaling in gasses, as well as,        ory.
+                                            e.g., topological features that affect the spectra [10–14].          In the first category, the theoretical framework for con-
+                                            Understanding of HHG in this context is reached through           sidering quantum fields in the context of HHG is de-
+                                            the three-step model [8, 15–17]. First, electrons are pro-        scribed in detail in, e.g., Refs. [19, 21]. This method-
+                                            moted from the valence band to a conduction band. In              ology has been used to show that the harmonic modes
+                                            the conduction band, the electrons propagate driven by            are entangled [19, 20, 23, 27], that electron correlations
+                                            the external electric field. Lastly, the electrons recom-         in many-body systems can cause non-classicality in the
+                                            bine with their holes in the valence band, and the excess         produced light [23, 32], that HHG can be used to generate
+                                            energy is released as light. Because of the nonparabolic          optical cat states [33], and that a so-called Markov-state
+                                            shape of the conduction band, high harmonics are also             approximation, where the photonic degrees of freedom
+                                            generated in the propagation step. As such, it has been           are accounted for in a closed analytical form can be ac-
+                                            useful to divide theoretical considerations of HHG in             curate [26]. Recently the quantum optical nature of HHG
+                                            solids into generation from intraband and interband cur-          was verified experimentally in crystals [24, 25].
+                                            rents. Not only was this development a subject of scien-             In the second category, models of HHG in atomic
+                                            tific curiosity, it also pointed towards applications, such       gasses driven with quantum light have been presented,
+                                            as using optical methods to reconstruct the conduction            which use coherent-state expansions in terms of general-
+                                            bands [18].                                                       ized P distributions to describe the photonic degrees of
+                                               In these investigations, the electromagnetic field used        freedom [28, 29]. This coherent-state expansion is attrac-
+                                            to drive HHG as well as the generated field were modeled          tive, as it allows for theory and methods developed for
+                                            by classical fields, while the electronic degrees of free-        a semiclassical description to be applied. The theoreti-
+                                            dom were typically treated quantum mechanically. This             cal results show that quantum properties of the driving
+                                            approach has produced many successful results, as the             field can affect characteristics of the harmonic spectrum
+                                            quantum properties of intense pulses of coherent light            such as the cutoff [28]. Furthermore, it has been shown
+                                                                                                                               2
+
+that driving HHG with squeezed coherent light produces                               II.    THEORY
+squeezed harmonics [30], indicating that quantum prop-
+erties of the driving field are mapped onto the properties        The theory of HHG in solids driven by quantum light is
+of the generated field. To this end, we note that new          based on the models of Refs. [28, 29] developed for atoms.
+experimental methods allow for the production of non-          For completeness, we present an overview of the deriva-
+classical bright-squeezed vacuum (BSV) fields, which are       tion of the generated field. Readers familiar with these
+becoming sufficiently intense to drive HHG [34, 35]. Such      matters may therefore skip this section. We will be utiliz-
+a BSV field can also be used to perturb a stronger co-         ing the velocity gauge as in Refs. [23, 26] and as opposed
+herent driving field resulting in the emission of bunched      to Refs. [28, 29], since this is a more convenient gauge
+sidebands from HHG [36].                                       for considering solids, as the interaction is independent
+   As a whole, the quantum-optical consideration of HHG        of electron spatial coordinate in the dipole approxima-
+has multiple prospects. Besides the ability to optimize        tion, and Bloch’s theorem therefore still applies. We will
+the cutoff, the study bridges the gap between strong–field     be deriving the model using a general P representation
+physics and quantum optics. HHG has the potential              to describe the photonic degrees of freedom. As there
+to produce and control high-intensity quantum states of        are multiple choices of such representations, we keep the
+light, which points towards applications in the field of       notation general for the derivation of the generated field
+quantum information [20, 22, 37, 38].                          and specify the choice of representation later (Sec. II B).
+
+   As stated, most theoretical models of HHG driven by
+quantum light have so far considered the medium of                      A.    Derivation of the photonic state
+atomic gasses [28, 29]. This paper aims to extend this de-
+velopment to HHG in crystals driven by quantum light.           Consider the minimally coupled, fully quantized
+To do so, we adapt the newly developed models for non-         Hamiltonian in the velocity gauge
+classical driving of HHG [28, 29] to the established model                                    2
+for intraband HHG in crystals. The intraband HHG de-                           1 X
+                                                                         Ĥ =         p̂j + Â + V̂e + ĤF , (1)
+scription is sufficiently simple to lend itself to analytic                    2 j
+considerations, which we use to determine and interpret
+the characteristics of the generated spectrum. Hereby,         where p̂j is the momentum of the j’th electron, V̂e
+we show that these recent developments can also be ap-                                            P         †
+                                                               is the electronic potential, ĤF =  k,σ ωk âk,σ âk,σ is
+plied to solids, and we identify some of the immediate
+differences between HHG in gasses and crystals.                the free-field Hamiltonian with âk,σ (â†k,σ ) being the
+                                                               annihilation (creation) operator of the field mode of
+   The paper is organized as follows. In Sec. II we present    wave vector k and polarization σ and ωk being the
+the derivation of the generated photonic state for intra-      frequency    of the corresponding mode, and lastly Â =
+band HHG driven by quantum light, and we discuss the           P
+                                                                      √g0 (eσ âk,σ + h.c.) is the quantized vector poten-
+                                                                  k,σ ωk
+different choices of coherent state expansions of the driv-    tial in the dipole approximation with
+ing fields, i.e., the P representations that are considered.                                         p eσ being the unit
+                                                               vector of the polarization, g0 =         2π/V the coupling
+In Sec. III we discuss the HHG spectrum. We consider           constant, and V the quantization volume.
+the Floquet limit of a time-periodic driving field and re-        Similar to Refs. [28, 29], the state of the combined
+late these results to simulations of the generated field us-   electronic and photonic system at the initial time ti is
+ing a 16-cycle pulse. From this, we study the dependence       assumed to be described by the total density operator
+of the harmonic cutoff of the spectra on the quantum op-
+tical nature of the driving field and the scaling of the
+                                                                                               O
+                                                                         ρ̂(ti ) = |ϕi ⟩⟨ϕi |         |0k,σ ⟩⟨0k,σ |
+harmonic intensity in terms of the driving field intensity.
+                                                                                           (k,σ)̸=(k0 ,σ0 )
+In Sec. IV we derive an expression for and compute the
+                                                                                                                |α⟩⟨β ∗ |
+                                                                                               Z
+time-resolved electric field generated from the HHG spec-                                  ⊗       dµP (α, β)             ,   (2)
+trum. In Sec. V we discuss the accuracy of an introduced                                                         ⟨β ∗ |α⟩
+approximative positive P representation that is consid-
+ered in the case of Fock and BSV driving fields. Lastly,       where |ϕi ⟩ is the electronic ground state, |0k,σ ⟩ is the vac-
+in Sec. VI we give a conclusion and an outlook. The            uum state in the photonic mode of wave vector k and po-
+Appendices A, B, and C give details on the accuracy of         larization σ. The driving field is assumed to be described
+describing different observables with an approximate pos-      by a single mode (k0 , σ0 ) and is expressed in terms of a
+itive P representation, the accuracy of the lowest-order       generalized P representation [39, 40] over the coherent
+expansion of the Bessel function involved in the analy-        states of that mode. In this way, the theory is built in a
+sis of the perturbative regime, and the derivation of the      general representation, and a specific representation can
+generated time-dependent electric field, respectively.         be chosen by specifying the measure dµ in Eq. (2) over
+                                                               the coherent phase space (Sec. II B).
+  Atomic units (ℏ = me = 4πϵ0 = e = 1) are used                   To determine the time evolution of Eq. (2) through
+throughout the paper unless stated otherwise.                  the Hamiltonian [Eq. (1)], the Ansatz is made that the
+                                                                                                                                            3
+
+time-dependent density matrix can be written as                       initial conditions as ρ̃ˆαβ ∗ (t), and therefore ρ̃ˆαβ ∗ (t) =
+                    Z                                                 |Ψα (t)⟩⟨Ψβ ∗ (t)|.
+                        P (α, β)                                         To determine |Ψξ (t)⟩, an interaction picture is em-
+             ρ̂(t) = dµ ∗        ρ̂αβ ∗ (t),                   (3)
+                         ⟨β |α⟩                                       ployed via the time-evolution operator ÛSC (t; ξ) associ-
+where integration is still over the coherent phase space              ated with ĤSC (t; ξ). In this picture, Eq. (9) becomes
+of the driving mode with the measure dµ, and where                       ∂
+                                                                                                                              
+                                                                                                  †
+           is the time evolution of the state |ϕi ⟩⟨ϕi | ⊗
+ρ̂αβ ∗ (t) N                                                           i |Ψξ (t)⟩ = ÂQ (t) · ÛSC    (t; ξ)ĵ ξ (t)ÛSC (t; ξ) |Ψξ (t)⟩,
+                                                                         ∂t
+|α⟩⟨β ∗ | (k,σ)̸=(k0 ,σ0 ) |0k,σ ⟩⟨0k,σ |. By the linearity of the
+                                                                                                                                     (10)
+integral in Eq. (3), it is then apparent that such a solu-                                h               i
+tion would also determine the time evolution of Eq. (2).              where ĵ ξ (t) = j p̂j + Aξcl (t) is the current operator.
+                                                                                       P
+   To find ρ̂αβ ∗ (t), the interaction picture with respect
+                                                                         Equation (10) may be solved by expanding in the elec-
+to ĤF is employed. This picture introduces the time-
+                                                                      tronic basis {|ϕm ⟩} of solutions to the field-free time-
+dependent phases e±iωk t to the vector potential
+                                                                      independent Schrödinger equation. Letting {|χξm (t)⟩}
+                   X g0                                               denote the corresponding photonic states, the complete
+                                 eσ âk,σ e−iωk t + h.c. .
+                                                        
+           Â(t) =      √                                      (4)
+                            ωk                                        state of the
+                                                                                 Pcombined system can then be expressed as
+                      k,σ
+                                                                      |Ψξ (t)⟩ = m |ϕm ⟩ ⊗ |χξm (t)⟩. Projecting onto the m’th
+    Next, another unitary transformation is applied, using            electronic state, ⟨ϕm |, the equation of motion for the cor-
+displacement operators with the coherent state ampli-                 responding photonic state |χξm (t)⟩ becomes
+tudes α and β ∗ , such that the driving mode of ρ̂αβ ∗ (t)                      ∂                      X
+                                                                                                           ξ
+is shifted to a vacuum state at time ti , that is, we let                      i |χξm (t)⟩ = ÂQ (t) ·    jm,n (t)|χξn (t)⟩,  (11)
+                                                                                ∂t
+ρ̃ˆαβ (t) = D̂† (α)ρ̂αβ (t)D̂(β ∗ ). Applying this transform to                                        n
+the Hamiltonian in Eq. (1), the vector potential trans-               where
+forms as Â(t) 7→ ÂQ (t) + Aα       cl (t) [41], where ÂQ (t) is                      ξ
+                                                                                       jm,n (t) = ⟨ϕξm (t)|ĵ ξ (t)|ϕξn (t)⟩            (12)
+the same quantum vector potential as Â(t) in Eq. (4)
+but now given a subscript for the sake of distinction, and            is the current matrix elements between different semi-
+where                                                                 classically propagated electronic states, |ϕξn (t)⟩ =
+                                  g0                                  ÛSC (t; ξ)|ϕn ⟩. We note that in the SC theory of HHG,
+     Aα                                  eσ0 αe−iω0 t + h.c.
+                                                            
+        cl (t) = ⟨α|Â(t)|α⟩ = √                               (5)
+                                                                      the spectrum is related to the norm square of the
+                                   ω0
+                                                                                                                                       ξ
+                                                                      Fourier transform of the current matrix element ji,i               (t) =
+is the classical vector potential of the driving field corre-
+                                                                      ⟨ϕξi (t)|ĵ ξ (t)|ϕξi (t)⟩ for i denoting the initial state of the
+sponding to the coherent state |α⟩. It then follows that
+                                                                      electronic problem. It is the presence of the non-diagonal
+       ∂ ρ̃ˆαβ ∗ (t)                                                  transition current matrix elements in Eq. (11) that in-
+        i            = Ĥα (t)ρ̃ˆαβ ∗ (t) − ρ̃ˆαβ ∗ (t)Ĥβ (t), (6)   duce quantum light in the HHG process [19, 23, 26, 27].
+             ∂t                                                          Before we specify our solid-state model, a few remarks
+                      P                                2            regarding the characteristics of the above developments
+where Ĥξ (t) = 21 j p̂j + ÂQ (t) + Aξcl (t) + V̂e for               are in place. First, we note that the expansion in coher-
+ξ = {α, β}. We neglect Â2Q (t) as done in Refs. [19, 23].            ent states in terms of the P function allows the usage of
+Hence,                                                                SC theory and associated numerical techniques to solve
+                                     Xh               i               the time-dependent Schrödinger equation. Secondly, the
+   Ĥξ (t) = ĤSC (t; ξ) + ÂQ (t) ·    p̂j + Aξcl (t) , (7)          additional use of displacement operators to transform the
+                                       j                              initial state to be in the vacuum state allows one to han-
+                                                                      dle the large number of photons considered in this prob-
+where                                                                 lem, i.e., one only needs to numerically handle the pho-
+                            1 Xh              i2                      tons generated from the HHG process which are much
+            ĤSC (t; ξ) =       p̂j + Aξcl (t) + V̂e ,         (8)    fewer than the ones in the driving field. These two ingre-
+                            2 j
+                                                                      dients are essential for the making the problem tractable
+                                                                      numerically.
+is the semiclassical (SC) Hamiltonian of the single-mode                 We now specify the electronic system considered in this
+coherent field with amplitude ξ.                                      work. We use an intraband model which corresponds to
+   Letting |Ψξ (t)⟩ be the solution to the time-dependent             considering a one-dimensional cut of the solid along the
+Schrödinger equation
+                                                                      polarization direction of Aξcl (t). We consider a lattice
+                    ∂                                                 constant a and beyond-nearest-neighbor terms, which in
+                  i   |Ψξ (t)⟩ = Ĥξ (t)|Ψξ (t)⟩       (9)            the crystal-momentum basis is expressed as
+                   ∂t
+                                                                                                    X
+                                                                                    ĤSC (t; ξ) =       E[q + Aξcl (t)] ĉ†q,µ ĉq,µ ,    (13)
+                           N
+with |Ψξ (ti )⟩ = |ϕi ⟩ k,σ |0k,σ ⟩, it is apparent that
+|Ψα (t)⟩⟨Ψβ ∗ (t)| is a solution to Eq. (6) with the same                                         q,µ
+                                                                                                                                               4
+
+where ĉq,µ (ĉ†q,µ ) is the annihilation (creation) operator                The SC evolution of the field-free eigenstates is simply
+of the crystal momentum state q with spin µ, and where                       given as |ϕξi (t)⟩ = exp[−iEξ (t)]|ϕi (ti )⟩, where Eξ (t) =
+                                                                             Rt ′P                 ξ   ′     †
+                                                                                 dt    q,µ E[q + Acl (t )]⟨ĉq,µ ĉq,µ ⟩ [44]. The electronic
+                              X
+                                                                              ti
+                      E(q) =     bl cos(alq)             (14)
+                                                                             states are then traced out, leaving their phases, and the
+                                     l=0
+                                                                             state of the field at time t is given as
+is the dispersion relation of the material, where bl is the                                   Z
+                                                                                                   P (α, β) i[Eβ∗ (t)−Eα (t)]
+l’th Fourier coefficient of the band structure. The current                         ρ̂F (t) = dµ ∗            e
+operator in this model is                                                                           ⟨β |α⟩
+                                                                                              O                           ∗
+                                                                                                 D̂(α)|γkα0 ,σ0 (t)⟩⟨γkβ0 ,σ0 (t)|D̂† (β ∗ )
+                           X ∂E[q + Aξ (t)]
+           ĵ ξ (t) = eσ                        cl
+                                                     ĉ†q,µ ĉq,µ ,   (15)                       O
+                                                                                                              α           β∗
+                                           ∂q                                                              |γk,σ  (t)⟩⟨γk,σ  (t)|.           (21)
+                           q,µ
+                                                                                              (k,σ)̸=(k0 ,σ0 )
+which is a vector along the polarization direction.
+  From Eqs. (13) and (15) it is apparent that both                           Equation (21) shows that the emitted field state is a
+                                                                             weighted average of many coherent states driven with a
+ĤSC (t; ξ) and ĵ ξ (t) are diagonal in the basis of crystal-
+                                                                             SC driving field, all weighted by the distribution function
+momentum states meaning that the off-diagonal terms in
+                                                                             P (α, β). We note that the right-hand side of Eq. (21) is
+Eq. (12) vanish. Hereby Eq. (10) reduces to                                                                                    ξ
+                                                                             completely specified, once the current element ji,i (t) [and
+                 ∂ ξ                                                                 ξ
+             i                      ξ
+                   |χ (t)⟩ = ÂQ · jm,m (t)|χξm (t)⟩.                 (16)   hence γk,σ (t)] is obtained and P is specified. The phase
+                 ∂t m                                                        factors with the time-dependent electronic energies will
+                                                                             disappear under the choice of representation considered
+We consider the case where the system is initially in its
+                                                                             in Sec. II B.
+ground state, i.e., |χξm (ti )⟩ = δi,m |0⟩, so we only need
+to consider the state with m = i. Equation (16) thus
+reduces to
+                                                                                     B.    Representation of the driving fields
+                  ∂
+                 i |χξi (t)⟩ = ÂQ · ji,i
+                                      ξ
+                                          (t)|χξi (t)⟩,               (17)
+                  ∂t                                                            We consider different types of driving fields. Specifi-
+which is linear in creation and annihilation operators and                   cally, we drive our model with coherent, Fock, thermal,
+can therefore be solved. The solution to Eq. (17) is a                       and BSV light. As the generated photonic state [Eq.
+direct product of coherent states [42, 43]                                   (21)] was derived in a general representation, the choice
+                                                                             of representation can be made freely which we will now
+              |χξi (t)⟩ =
+                          O      ξ
+                             D̂[γk,σ (t)]|0k,σ ⟩,     (18)                   specify for each of the driving fields. For Coherent and
+                                                                             thermal light we use the Glauber-Sudarshan representa-
+                                 k,σ
+                                                                             tion which takes dµ = d2 αd2 βδ 2 (α − β ∗ ) [39] with corre-
+over all considered photonic modes (k, σ) including the                      sponding distributions [42]
+laser mode, and where                                                                      (α )
+                        Z t
+                                                                                              L
+                                                                                          PCoherent (α) = δ 2 (α − αL ),                    (22)
+        ξ            g0      ξ                    ′
+                                                                                                              1
+                                                                                                                     
+                                                                                                                         |α|2
+                                                                                                                              
+      γk,σ (t) = −i √       ji,i (t′ ) · eσ eiωk t dt′ , (19)                               (⟨N ⟩)
+                                                                                          PThermal (α) =          exp −         ,           (23)
+                      ωk ti                                                                               π⟨N ⟩          ⟨N ⟩
+is the coherent state amplitude which is the Fourier trans-                  where αL is the coherent state amplitude of the driving
+form of the current matrix element in the Floquet limit                      field and ⟨N ⟩ is the mean photon number for coherent
+of t → ∞ and ti → −∞. As such, the time dependence                           and thermal light, respectively. The Glauber-Sudarshan
+in the model is carried by these integral limits. The pho-                   representations for Fock and BSV light are highly sin-
+tonic state in Eq. (18) was also discussed in Ref. [23] and                  gular [40, 42] and therefore not computationally useful.
+the result shows that only coherent light can be generated                   Instead, we use the positive P representation for these
+when driving a one-band model with coherent light.                           types of quantum light [42]. In the positive P represen-
+   The solution [Eq. (18)] to Eq. (11) is substituted                        tation dµ = d2 αd2 β, with the corresponding positive P
+                                                             β∗
+into Eq. (3) by writing ρ̃ˆαβ ∗ (t) = |ϕα           i (t)⟩⟨ϕi (t)| ⊗         distribution given by
+            β∗
+|χαi (t)⟩⟨χi (t)|. Hereby it is found that
+                                                                              P (α, β) = (4π)−1 exp(−|α − β ∗ |2 /4)Q[(α + β ∗ )/2], (24)
+                Z
+                      P (α, β) α              ∗
+         ρ̂(t) = dµ ∗           |ϕi (t)⟩⟨ϕβi (t)|                            with
+                      ⟨β |α⟩
+                O                          ∗                                                                     1
+                    D̂(α)|γkα0 ,σ0 (t)⟩⟨γkβ0 ,σ0 (t)|D̂† (β ∗ )                                      Q(α) =        ⟨α|ρ̂|α⟩                 (25)
+                                                                                                                 π
+                                           β∗
+                    O
+                                α
+                            |γk,σ   (t)⟩⟨γk,σ  (t)|.            (20)         the Husimi Q function [45]. Following Ref. [28], the in-
+                  (k,σ)̸=(k0 ,σ0 )                                           teraction volume is assumed to be small and the average
+                                                                                                                                              5
+
+photon number of the driving field to be large, so the              sum over polarizations σ and express the spectrum as
+positive P function in Eq. (24) is approximated as                  the emitted energy per frequency. Furthermore, we dis-
+                                                                    regard the driving field in the laser mode, i.e., we take
+                                    α + β∗
+                                          
+                             ∗
+           P (α, β) ≈ δ(α − β )Q             .     (26)             |γkα0 ,σ0 (t) + α⟩ → D̂† (α)|γkα0 ,σ0 (t) + α⟩ = |γkα0 ,σ0 (t)⟩ in Eq.
+                                      2
+                                                                    (31) since we are only interested in the generated field.
+We shall refer to Eq. (26) as the approximative positive P          The spectrum can then be expressed as
+(APP) representation. Within the APP we thus describe                                         Z
+Fock and BSV light as [45]                                                            S(ω) ∝ d2 αP (α)SSC (ω; α)                      (32)
+
+                  (n)                            (n)
+                 PFock (α, β) ≈ δ(α − β ∗ )PFock (α),       (27)    with
+                                                                                                   Z ∞                            2
+where                                                                                                                         ′
+
+                                             2n                                    SSC (ω; α) =            dt′ ji,i
+                                                                                                                α ′ iωt
+                                                                                                                    (t )e                 (33)
+            (n)        (n)       1     2 |α|
+                                                                                                      −∞
+          PFock (α) = QFock (α) = e−|α|         ,           (28)
+                                 π         n!
+                                                                    being the expression for the SC spectrum. Looking at Eq.
+and similarly                                                       (32), this leads to the same interpretation as in Ref. [28]:
+                     (r)                         (r)
+                 PBSV (α, β) ≈ δ(α − β ∗ )PBSV (α),         (29)    The spectrum is a weighted average of SC spectra [Eq.
+                                                                    (33)] each driven with a classical field characterized by
+where                                                               the coherent-state parameter α and weighted by a P (α)
+    (r)
+  PBSV (α) = QBSV (α)
+                        (r)                                         distribution.
+                                    2[Re(α)]2   2[Im(α)]2
+                                                         
+                        1
+                 =            exp −           −
+                     π cosh r       1 + e−2r     1 + e2r                                A.    The Floquet limit
+                                                          (30)
+for a Fock state |n⟩ and for a squeezed vacuum state                    To analyze the harmonic spectrum [Eq. (32)] further,
+Ŝ(r)|0⟩, respectively, with Ŝ being the squeezing opera-          we assume a time-periodic vector potential, i.e., a vec-
+tor [42] and where r is chosen to be real for simplicity.           tor potential with no envelope. The vector potential is
+                                                                                                  −1/2
+In both Eqs. (28) and (30), we have defined the P func-             written as Aα   cl (t) = 2g0 ω0    |α| sin(ω0 t − ϕ) where ϕ is
+tion within the APP representation to be the appropriate            the phase of α. We assume that the conduction band is
+Husimi Q function.                                                  filled symmetrically around q = 0 with an equal num-
+   As the four representations of light in Eqs. (22, 23,            ber of electrons with both spin orientations. Then, the
+28, 30) along with the corresponding expression for dµ              dispersion function in Eq. (15) can be expanded via
+are diagonal in phase space [Eqs. (28) and (30) only                the trigonometric addition identities, where the sin(alq)
+diagonal within the APP], we can rewrite the field state            terms are discarded, since these are odd functions of
+in Eq. (21) for the cases considered as                             q. From these assumptions the current matrix element
+                                                                      α
+              Z                                                     ji,i (t) from Eq. (12), with ĵ α (t) from Eq. (15), becomes
+     ρ̂F (t) = d2 αP (α)|γkα0 ,σ0 (t) + α⟩⟨γkα0 ,σ0 (t) + α|                                    "             #
+                                                                                         X       X
+                                                                          α
+                         O
+                                     α
+                                  |γk,σ       α
+                                        (t)⟩⟨γk,σ (t)|,      (31)       ji,i (t) = −2a      lbl     cos(alq) sin[alAα  cl (t)] , (34)
+                                                                                         l        q
+                              (k,σ)̸=(k0 ,σ0 )
+
+where the P distribution, P (α), for the driving field can          along the direction of the chain. In Eq. (34) the sum over
+describe either of the four types of driving fields in Eqs.         crystal momentum states q is now only over the occupied
+(22, 23, 28, 30). From Eq. (31), expectation values of              states.
+interest can be calculated. These expectation values are               Looking at the expression for the spectrum [Eqs. (32)
+exact for coherent and thermal light driving fields, while          and (33)], we note that it is proportional to the square of
+they are approximate for Fock light and BSV driving                 Fourier transformed current. To proceed analytically, we
+fields, due to the APP representation. A discussion of              use the Jacobi-Anger expansion and perform the Fourier
+the accuracy of the APP representation in relation to               transform of the time-dependent part of Eq. (34) as done
+different observables is given in Sec. V and App. A.                in Ref. [44]
+                                                                       Z ∞                                           ∞
+                                                                                                      ′     √        X
+                                                                             dt′ sin(alAα    ′
+                                                                                        cl (t )) e
+                                                                                                   iωt
+                                                                                                       =        πi         J2n−1 (lg̃0 |α|)
+          III.       THE HARMONIC SPECTRUM                              −∞                                           n=1
+                                                                               ω
+                                                                           ×ei ω0 ϕ {δ[ω + (2n − 1)ω0 ] − δ[ω − (2n − 1)ω0 ]} ,
+   Using Eq. (31), the harmonic spectrum can be found
+                                                                                                                             (35)
+by considering the energy in the photonic degrees of free-
+dom E = k,σ ωk ⟨â†k,σ âk,σ ⟩ as in Refs. [19, 23, 28]. Let-
+         P
+                                                                    where Jn denotes the n’th order Bessel function of
+ting k 7→ V /(2πc)3 dω ω 2 dΩ, we can write out the
+     P               R          R
+                                                                    the first kind, δ denotes the delta function and g̃0 =
+                                                                                                                                                                                                                      6
+
+                                          
+                                                                                                                                                    integrand is contained in the P function. Assuming an
+                                          
+                                                                                                                            % 6 9                     adiabatic evolution of the envelope of the driving field
+                                   
+                                          
+                                                                                                                                                      [which is already a necessary assumption to apply an en-
+                                                                                                                                                    velope to Eq. (5)], we can assume that the norm square
+
+
+
+S( )   D U E   X Q L W V 
+                                   
+                                          
+                                                                                                                        7 K H U P D O                 of the Fourier transform of the current matrix element is
+                                                                                                                                                    independent of the phase of α. Therefore, we may write
+                                   
+                                                                                                                                                      the harmonic spectrum of Eq. (32) using polar coordi-
+                                          
+                                                                                                                         ) R F N                    nates for integration as
+                                           
+                                                                                                                                                                  Z ∞      Z ∞                  2
+                                                                                                                                                                                        α ′ iωt′
+                                   
+                                                                                                                                                        S(ω) ∝ ω 2     d|α|       dt′ ji,i (t )e   P (|α|), (37)
+                                                                                                                        & R K H U H Q W                               0           −∞
+                                          
+                                                                                                                        
+                                                                              + D U P R Q L F  R U G H U                                            where we have defined the radial distribution as
+                                                                                                                                                                                  Z 2π
+       FIG. 1. Simulated HHG spectra using the parameters spec-                                                                                                     P (|α|) = |α|      dϕP (α),                    (38)
+                                                                                                                                                                                        0
+       ified in Sec. III B. Graphs [coherent (blue), Fock (orange),
+       thermal (green), and BSV (red)] are simulated from Eq. (37)                                                                                    and where ϕ again denotes the phase of α. As such, the
+       with at 10 cycle flat-top pulse with additional 3 cycle turn-                                                                                  angular integral can be performed without relation to
+       on and turn-off. For visual clarity, the spectrum for HHG                                                                                      frequency ω, which lowers the dimensionality of compu-
+       driven by Fock light is multiplied by 1020 , for Thermal light                                                                                 tation. This approximation is valid if the width of the
+       1040 , and for BSV 1060 . Black markers [coherent (dots), Fock
+                                                                                                                                                      individual harmonic peaks overlap minimally, which is
+       (triangles), thermal (squares), and BSV (stars)] are simulated
+       in the Floquet limit using Eq. (36). Vertical lines [coherent                                                                                  the case for the ∼ 16 laser cycles pulse that we use for
+       (blue, long dashed), Fock (orange, dotted), thermal (green,                                                                                    simulations. Using Eq. (37), we calculate the spectra
+       dash-dotted), and BSV (red, short dashed)] denote the pre-                                                                                     where the electrons are driven by a flat top pulse with 10
+       dicted cutoff calculated with Eq. (39).                                                                                                        cycles of constant amplitude with an additional 3 cycle
+                                                                                                                                                      sin2 turn-on and turn-off as in Ref. [44]. We use the
+                                                                                                                                                      P functions for coherent [Eq. (22)], thermal [Eq. (23)],
+             √                                                                                                                                        Fock [Eq. (28)], and BSV [Eq. (30)] driving fields.
+       2ag0 / ω0 is a lattice-modified coupling constant. Tak-
+       ing the square norm, the products of delta functions for                                                                                          In the simulations, we use g0 = 4 × 10−8 a.u. and
+       different n’s must vanish. Hence, any phase on the delta                                                                                       ω0 = 0.005 a.u. as in Ref. [23], a mean photon num-
+       functions vanishes. Furthermore, as we restrict ourselves                                                                                      ber of the driving fields ⟨â†k0 ,σ0 âk0 ,σ0 ⟩ = 7.35 × 1011 (a
+       to positive frequencies, the terms δ [ω + (2n − 1)ω0 ] may                                                                                     coherent field with this photon number has the inten-
+                                                                                                                                                                                          2
+       be discarded. Therefore, by inserting Eqs. (34) and (35)                                                                                       sity I = 8.26 × 1011 W/cm ). We use the parameters
+       into Eqs. (32) and (33), the generated HHG spectrum in                                                                                         for the first conduction band in a ZnO crystal along the
+       the Floquet limit is given as                                                                                                                  Γ − M direction [46] populated by L = 10 electrons.
+                                                                                                                                                      Clearly, the characteristics of the results are independent
+                                               ∞
+                                                                                                #2
+                                                                                                                                                      of the number of electrons. In this model, the lattice
+                                                                  Z         "
+                                               X                              X
+                                                          2          2
+         S(ω) ∝                                      ω δ [ω − nω0 ] d αP (α)    Cl Jn (lg̃0 |α|) ,                                                    constant is a = 5.32 a.u. and the Fourier coefficients are
+                                        n=1,3,5,...                                                           l                                       b1 = −0.0814 a.u., b2 = −0.0024 a.u., b3 = −0.0048 a.u.,
+                                                                                                                                               (36)   b4 = −0.0003 a.u. and b5 = −0.0009 a.u. The periodic-
+                                                                                                                                                                                             2π
+                                                                                                                                                      ity is chosen such that ∆q = 10a           and qmax = 2∆q. For
+       where we collect
+                     P crystal specific properties in the coeffi-                                                                                     the BSV light, the squeezing parameter is obtained from
+       cient Cl = lbl q cos(alq). In Eq. (36), the selection rule                                                                                     the relation ⟨â†k0 ,σ0 âk0 ,σ0 ⟩ = sinh2 (r), yielding r = 14.35
+       for the odd harmonics is clearly seen. We also see that                                                                                        in our simulations. In Ref. [35] the production of BSV
+       the size of the n’th harmonic peak is determined by the                                                                                        fields reaching r = 15.3 ± 0.5 was reported, and the BSV
+       integral of the product between the P distribution func-                                                                                       field considered in this work is therefore experimentally
+       tion and a weighted sum of Bessel functions of order n.                                                                                        realizable.
+       As we now show, analysis of these integrals can be used                                                                                           The spectra in Fig. 1 show the overall same behavior
+       to gain insights into the characteristics of the spectrum.                                                                                     as the spectra in Ref. [28] for atomic gasses. The spec-
+                                                                                                                                                      trum generated from a Fock-state driving field is visually
+                                                                                                                                                      identical to the coherently driven spectrum, both with
+                                                              B.     Simulated spectra                                                                a clear cutoff. On the other hand, the spectra for ther-
+                                                                                                                                                      mal and BSV driving fields are much broader with less
+         From Eqs. (32) and (36) the HHG spectra can be                                                                                               clearly defined cutoffs but with the generation of much
+       computed for a quantum state of driving light, given the                                                                                       higher harmonics. Coherent and Fock fields produce the
+       appropriate P functions. To simplify the computation,                                                                                          same field because the radial part of the P function for
+       we note that for the HHG spectrum in the Floquet limit                                                                                         coherent light is a delta function and similarly the radial
+       [Eq. (36)] the only dependence on the phase of α in the                                                                                        part of the P function for a Fock state is approximately
+                                                                                                                                                                                         7
+
+a delta function for large photon numbers [28]. This is                   ×  
+                                                                                    
+                                                                                               n = 13                                    n = 33                            
+further discussed in Secs. III C and V.                                                                    & R K H U H Q W                           & R K H U H Q W
+   In Fig. 1, the finite pulse [Eq. (32)] and Floquet limits                                                                                                               
+                                                                         
+                                                               P(| |)                                                                                                       J2n(g0| |)
+[Eq. (36)] are also compared, where the harmonic peaks
+                                                                                                                                                                           
+obtained from the Floquet calculation are given by the
+                                                                         
+black markers. The heights of the harmonic peaks are                                                                                                                       
+identical in the two calculations up to a global constant.
+Longer pulse durations just create sharper peaks. This                                                                                                                    
+                                                                                  
+is congruent with studies of inter- and intracycle aspects                ×                                                                                             
+of HHG [47].                                                                                                      ) R F N                                   ) R F N
+                                                                                                                                                                           
+                                                                         
+                                                               P(| |)                                                                                                       J2n(g0| |)
+                                                                                                                                                                           
+                       C.    Cutoff                                      
+                                                                                                                                                                           
+
+   Figure 1 shows that the characteristics of the spectra                                                                                                                 
+                                                                                  
+pertaining to the harmonic peaks can be interpreted in                    ×                                                                                             
+the Floquet limit. Via Eq. (36), the magnitude of the                                                       7 K H U P D O                             7 K H U P D O
+n’th harmonic is proportional to the integral of the prod-                                                                                                                 
+                                                                         
+                                                               P(| |)                                                                                                       J2n(g0| |)
+uct between the distribution function of the driving field,                                                                                                                
+P (α) and the square sum of Bessel functions of order n.                 
+The Bessel function Jn (x) quickly vanishes for x < n [47].                                                                                                                
+Hence, if the P function is only nonzero within the region
+                                                                                                                                                                          
+where the arguments of the Bessel function are smaller                            
+than its order, the overlap between these functions will                  ×                                                                                             
+vanish and there will be no harmonic peak.                                                                         % 6 9                                     % 6 9
+                                                                                                                                                                           
+   The argument of the Bessel function is lg̃0 |α|, which                
+means that the |α|-interval where all the Bessel functions     P(| |)                                                                                                       J2n(g0| |)
+                                                                                                                                                                           
+of order n vanish is |α| < n/(lmax g̃0 ), where lmax denotes             
+                                                                                                                                                                           
+the highest significant order in the Fourier expansion of
+the conduction band, which in the simulations of Fig. 1 is                                                                                                               
+                                                                                                                                                   
+lmax = 5 (see Ref. [47] for a discussion of the relation be-                                   g0 | |                                    g0 | |
+tween the Bessel functions and cutoff in intraband HHG).
+The distributions for coherent and Fock states are narrow
+                                                                FIG. 2. Illustration of the radial distribution functions, P (|α|)
+on the axis of |α|. In fact, the P function for a coherent      of Eq. (38) for a coherent, Fock, thermal, and BSV driving
+state is a delta function on |α|, and the APP function          field at the same mean photon number as used in Fig. 1
+for a Fock state can be approximated as a delta function        plotted against a Bessel function of order 13 (left) and 33
+on |α| [28]. Therefore, for ascending harmonic orders,          (right). The APP representation is used for the thermal and
+the regime of no overlap is quickly reached for coherent        BSV fields. The behavior of Jn (x) ≈ 0 for x < n can be seen.
+and Fock driving fields in comparison with thermal and          For coherent and Fock states, there is no overlap for n = 33.
+BSV driving fields. This is depicted in Fig. 2, where the       However, for the thermal field and even more so for the BSV
+square of the Bessel function Jn2 (g̃0 |α|) and the P func-     field, a non-vanishing overlap is seen. Note that the P (|α|)
+tion is plotted as a function of the argument |α|g̃0 for        distributions for the coherent and Fock states extend beyond
+harmonics n = 11 and 33.                                        the range of the ordinate.
+   The quickly vanishing overlap for Fock and coherent
+driving fields explains why these two spectra are very          (see Fig. 1).
+similar in Fig. 1. The heights of the peaks and also the          If we were to define the cutoff (γcutoff ) in the units of
+cutoff are determined only from the radial distributions        harmonic order for such a state, it makes sense from these
+P (|α|) [see Eq. (38)], which for coherent and Fock states      considerations to write it as
+are approximately equal. Furthermore, for coherent driv-
+ing fields this cutoff is the same as found in Ref. [47].                                        γcutoff = lmax g̃0 (µP + 3σP ),                                              (39)
+For thermal and BSV fields, the distributions are broad
+and extend much further than their mean value (see Fig.         where µP and σP are the mean and standard deviation,
+2). Hence, even though the mean photon number might             respectively, of the variable |α| given the distribution
+be the same, the broad distributions of these reach far         P (α), which are equivalent to the mean and standard de-
+larger values of |α| and the overlap between P (|α|) and        viation of the radial distribution P (|α|) [see Eqs. (B13)
+the Bessel functions is nonvanishing for higher harmon-         and (B14) for explicit expressions]. These quantities are
+ics yielding a higher cutoff. The gradual decrease of the       therefore unitless and entirely determined by the choice
+tails also explains why the cutoff is less clearly defined      of P . The cutoffs are calculated numerically and plot-
+                                                                                                                                                                                                                                                                   8
+
+ted alongside the harmonic spectra in Fig. 1 as verti-
+
+
+                                                                           N5 0   D U E   X Q L W V                                                               N5 0   D U E   X Q L W V  
+                                                                                                                                                                                                                      
+cal lines. This choice of cutoff is sensible, as most of                                                         
+                                                                                                                                                                                                              
+the P function will be contained within the domain of                                                                                                                                                               
+                                                                                                                                                                                                            
+µP − 3σP ≤ |α| ≤ µP + 3σP , and it yields the correct                                                                                                                                                              
+cutoff for the coherent and Fock driving fields as seen in                                                                                                                                                 
+                                                                                                                                                      & R K H U H Q W                                                                              7 K H U P D O
+Fig. 1. However, as is also apparent from Fig. 1, the cut-                                                                     
+                                                                                                                                     
+                                                                                                                                           
+                                                                                                                                                 
+                                                                                                                                                          
+                                                                                                                                                                 
+                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                     
+                                                                                                                                                                                                                                                            
+off is not clearly defined for the thermal and BSV fields                                                                                N0                                                                                           N0
+due to the more gradually vanishing overlap.
+
+
+
+                                                                           N5 0   D U E   X Q L W V                                                               N5 0   D U E   X Q L W V  
+                                                                                                                                                                                                                      
+                                                                                                                 
+                                                                                                                                                                                                              
+                                                                                                                                                                                                                      
+                                                                                                                
+                                                                                                                                                                                                            
+                    D.   Power Scaling Regime
+                                                                                                                                                                                                                   
+                                                                                                                                                                                                           
+                                                                                                                                                             ) R F N                                                                                       % 6 9
+   In relation to experimental results like those presented                                                                                                                                                                                           
+                                                                                                                                                                                                                                           
+in, e.g., Ref. [34], we can, from Eq. (36), determine that                                                                               N0                                                                                           N0
+the signal in the n’th odd harmonic is
+                              "                   #2
+                 Z             X                                               FIG. 3. Solid, blue curves         show the mean photon count
+                      2
+                                                                                Nnω0 = ⟨â†nk0 ,σ0 ânk0 ,σ0 ⟩ in the fifth harmonic as a function
+                                                                                                              
+      S(nω0 ) ∝ d αP (α)          Cl Jn (lg̃0 |α|) .   (40)
+                                     l                                         of the mean photon count of the driving field as computed
+                                                                               from Eq. (40) using the P representation of the different
+Taylor expanding the Bessel functions to the lowest non-                       driving fields. The dashed, yellow line shows the perturbative
+vanishing order gives Jn (x) ≈ xn /(n!2n ). From this, it                      power-scaling approximation computed from Eq. (42), and
+follows that                                                                   the black-dashed vertical line denotes the predicted range of
+          "                   #2                                               applicability of the perturbative treatment.
+            X                     g̃ 2n Kn
+              Cl Jn (lg̃0 |α|) ≈ 0 2 2n |α|2n ,     (41)
+                                 (n!) 2
+                l
+                                                                               driving field using Eq. (40) for the non-perturbative re-
+                           n n                                                 sult and using Eq. (42) for the power-scaling approxima-
+               P
+where Kn =        l1 ,l2 l1 l2 Cl1 Cl2 is a geometric constant
+of the material, which is determined by the dispersion                         tion. To determine when the lowest-order approximation
+relation and the filling of the conduction band. Equation                      of Jm (x) is valid, we apply the Taylor remainder theorem,
+(41) is substituted into Eq. (40) to give (to lowest order)                    see details in App. B. At the photon count, where the
+                                                                               perturbative treatment is expected to break down based
+                        g̃02n
+                                 Z
+                                                                               on the analysis in App. B, we mark the cutoff for this
+    S(nω0 ) ∝ Kn                    d2 αP (α)|α|2n
+                    (n!)2 22n                                                  expected range of applicability with a vertical dotted line
+                        g̃02n                         n                       in Fig. 3.
+              =Kn               ⟨: â†k0 ,σ0 âk0 ,σ0 :⟩                          As clearly seen in Fig. 3, this analysis yields a good
+                    (n!)2 22n
+                                                                               estimation of the range of applicability of a perturbative
+                        g̃02n                                                  treatment. It is clear that this range is smaller for BSV
+              =Kn               g (n) (0)⟨â†k0 ,σ0 âk0 ,σ0 ⟩n , (42)
+                    (n!)2 22n                                                  and thermal driving fields. Our predictions can explain
+                                                                               this behavior: since BSV and thermal states have much
+where : Ô : denotes the normal ordering of the operator                       broader P distributions, their standard deviation will
+Ô and g (n) (0) is the n’th order single-mode normalized                      be large. Therefore, these distributions will reach into
+correlation function. Thus, we have recovered the power                        the range where the lowest-order Taylor expansion is not
+scaling law ⟨â†nk0 ,σ0 ânk0 ,σ0 ⟩ ∝ ⟨â†k0 ,σ0 âk0 ,σ0 ⟩n of the per-       valid at a lower mean photon count than for states with
+turbative regime [34]. Interestingly, we note that in this                     narrow distributions such as coherent and Fock states. In
+particular model, the n’th order correlation function of                       other words, due to the broad P distributions of thermal
+the driving field, g (n) (0), enters as a proportionality fac-                 and BSV states, these driving fields probe nonperturba-
+tor and dictates the height of the signal in the n’th har-                     tive processes at lower intensities than coherent and Fock
+monic. This is another way of showing how the quantum                          driving fields.
+optical nature of the driving field affects the generated                         These findings are not immediately in line with Ref.
+HHG spectrum. In other words, this means, that if one                          [34], in which it is reported that HHG driven by BSV
+could precisely control the mean photon number of the                          has a broader intensity range of the perturbative regime
+driving field, the height of the n’th harmonic is deter-                       than HHG driven by coherent light. However, multiple
+mined by the quantum nature of the driving field via                           factors make the comparison difficult. Firstly, only one
+g (n) (0). We note for clarity that this scaling law only                      of the harmonics reported in Ref. [34] is an odd har-
+holds when the lowest-order approximation of the Bessel                        monic below the band gap and can be compared directly
+function is a valid approximation, see App. B.                                 with our studies. For this harmonic, the threshold of op-
+   In Fig. 3, the peak intensity of the fifth harmonic is                      tical damage for the coherent driving field is around the
+plotted as a function of the mean photon count in the                          intensity cutoff of the perturbative regime for the BSV
+                                                                                                                                                                                                                       9
+
+                                       ×                                                                                                                that the coherent states are eigenstates of the annihila-
+                                                                               & R K H U H Q W                                        7 K H U P D O        tion operator, we use Eqs. (31) and (43) to determine
+
+
+E(t)    D U E   X Q L W V 
+                                   
+                                                                                                                                                           the expectation value of the generated electric field as
+                                                                                                                                                                                        h         i
+                                                                                                                                                                        ⟨Ê(t)⟩HHG = Tr ρ̂(t)Ê(t)
+                                   
+                                                                                                                                                                  X √ Z
+                                                                                                                                                                      g0 ωk d2 αP (α) 2 Im êkσ γkσ  α
+                                                                                                                                                                                                       (t)e−iωk t ,
+                                                                                                                                                                                                                
+                                                                                                                                                              =−
+                                       ×                                                                                                                        k,σ
+                                                                                       ) R F N                                               % 6 9
+
+
+
+E(t)    D U E   X Q L W V 
+                                                                                                                                                                                                                   (44)
+
+                                                                                                                                                          where we, as in connection with Eq. (32), have neglected
+                                                                                                                                                           the +α from the laser in the driving mode as we are only
+                                                                                                                                                          interested in the generated field.
+                                                                                                                                                              Inserting Eq. (19) and executing the sum over the
+                                                                                                                                    
+                                                          7 L P H   I V                                       7 L P H   I V                          polarizations and the solid angle integral, it is found that
+                                                                                                                                                                                     Z
+                                                                                                                                                                              2V g0
+     FIG. 4. Time-resolved electric field generated by HHG for                                                                                               ⟨Ê(t)⟩HHG = − 2 3           d2 αP (α)
+                                                                                                                                                                              3π c
+     coherent, Fock, thermal, and BSV driving fields. Solid lines                                                                                                        Z t                 Z ∞                 
+     represent the expectation value of the electric field and the                                                                                                                                            ′
+
+     shaded area represents the uncertainty in the electric field ne-
+                                                                                                                                                                    ×Im −i      dt′ ji,i
+                                                                                                                                                                                     α ′
+                                                                                                                                                                                         (t )     dω ω 2 eiω(t −t) , (45)
+                                                                                                                                                                              ti             0
+     glecting the zero-point vacuum fluctuations. Simulated from
+     Eqs. (46) and (48). The same parameters are used as in Sec.                                                                                           where the innermost integral can be recognized as the
+     III B.                                                                                                                                                                  d2     ′
+                                                                                                                                                           distribution −π dt  2 δ(t − t), when the imaginary part is
+
+                                                                                                                                                           taken. As t ∈ [ti , t] and by writing out g0 , we obtain
+     driving field. Below the optical damage threshold for the                                                                                                                        4
+                                                                                                                                                                                        Z
+                                                                                                                                                                                                   d2 α
+     coherent driving field, a clear deviation from the power-                                                                                                   ⟨Ê(t)⟩HHG = − 3         d2 αP (α) 2 ji,i (t).    (46)
+                                                                                                                                                                                    3c             dt
+     scaling law is not apparent. That coherent driving should
+     become nonperturbative at lower intensities is reported                                                                                               Likewise, the variance of the generated field can be de-
+     instead for the fourth harmonic, which does not appear                                                                                                rived. Taking ji,i along the one-dimensional chain of the
+     in this work, as we consider spatially symmetric crystals.                                                                                            model to be in the z-direction, we compute ⟨Ez2 ⟩. Gen-
+     Finally, the results presented in Ref. [34] may be affected                                                                                           erally, this will yield four terms: The square of the gen-
+     by electrons being promoted across the bandgap even for                                                                                               erated fields, the square of the driving field, an interfer-
+     the harmonics below the bandgap which is an effect not                                                                                                ence term between the driving and generated field, and
+     taken into account in this work.                                                                                                                      the zero-point fluctuations. As the generated field at fre-
+                                                                                                                                                           quencies different from ω0 is of interest, the other terms
+                                                                                                                                                           are neglected. For details, see App. C. We then find that
+                                   IV.            TIME-RESOLVED ELECTRIC FIELD                                                                                                      Z           2       2
+                                                                                                                                                                     2          16     2        d α
+                                                                                                                                                                  ⟨Êz ⟩HHG = 6       d αP (α)     j (t) ,        (47)
+        As is apparent in Eq. (31), the derived density op-                                                                                                                    9c               dt2 ii
+     erator of the fields is time dependent. This allows for
+                                                                                                                                                           which is used to determine the variance
+     the evaluation of time-dependent observables such as the                                                                                                                    (Z
+     electric field, which bears relevance in relation to experi-                                                                                                                               2        2
+                                                                                                                                                                    2         16       2        d α
+     mental work [48–52], where the temporal characteristics                                                                                                   ⟨∆Êz ⟩HHG = 6        d αP (α)      j (t)
+                                                                                                                                                                             9c                 dt2 ii
+     of the generated field may be observed. We therefore de-
+     termine the electric field in the time domain within the                                                                                                                                          2 )
+                                                                                                                                                                                              d2 α
+                                                                                                                                                                                 Z
+                                                                                                                                                                                     2
+     considered model.                                                                                                                                                         −    d αP (α) 2 jii (t)      .       (48)
+                                                                                                                                                                                             dt
+        The quantized electric field operator in the dipole ap-
+     proximation is given as                                                                                                                               Note that the distribution function of the driving field,
+                      X √                                                                                                                                  P (α), also enters into the expressions of the character-
+                         g0 ωk eσ âk,σ e−iωk t − h.c.
+                                                      
+           Ê(t) = i                                        (43)                                                                                           istics of the generated fields in Eqs. (46) and (48), in-
+                                                            k,σ                                                                                            dicating that the quantum nature of the driving field is
+                                                                                                                                                           mapped onto the generated field. This mapping of field
+     As the APP for Fock and BSV fields is an approximate                                                                                                  characteristics is in accordance with the simulations of
+     description of the density matrix [Eq. (31)], we verify                                                                                               the generated electric fields shown in Fig. 4 where both
+     in App. C that this approximation produces the cor-
+     rect electrical field for the different types of driving fields                                                                                                     q ⟨Ê(t)⟩HHG [Eq. (46)], along with its
+                                                                                                                                                           the electric field,
+     considered.                                                                                                                                           uncertainty, ⟨∆Êz2 ⟩HHG [Eq. (48)], for different driv-
+       We now investigate the generated electric field. Using                                                                                              ing fields is shown. In Fig. 4, it is apparent that the
+                                                                                                                            10
+
+field generated from coherent light has the characteris-          photon statistics or degree of squeezing for the driving
+tics of coherent light. This is in accordance with the            field. This is due to the fact that the APP representa-
+result of Ref. [23], in which it is found that the har-           tion neglects the coherence of α and β in the positive P
+monics of HHG are coherent when the driving field is              distribution [Eq. (24), see also Eq. (26)]. This shows a
+coherent and the electrons of the medium are uncorre-             limitation of the APP and we do therefore not consider
+lated. For the BSV driving field, the generated field also        the photon statistics or squeezing of the emitted field.
+has the characteristics of BSV fields, where the expecta-         Further calculations and discussion on the validity of the
+tion value of the electric field is vanishing but it still has    APP representation is given in App. A.
+a large time-dependent uncertainty. Likewise, the gener-
+ated fields from the Fock and thermal driving fields have
+vanishing expectations values of the fields with constant                           VI.   CONCLUSION
+uncertainty, which are the same characteristics as their
+corresponding driving fields.
+                                                                     In this work, we presented a derivation of the quan-
+   Estimating the width of the peaks in Fig. 4, they are          tum optical state of light emitted from intraband HHG
+all at least 0.8 fs corresponding to a maximum frequency          driven by quantum light. Using this quantum optical
+of around 1 PHz. This spectral resolution is within reach         state for the emitted field, we calculated the harmonic
+for experimental settings using, e.g., TIPTOE [51, 52].           spectrum for different types of driving fields: coherent,
+As such, it should be feasible to measure such time-              Fock, thermal, and BSV light. These results were com-
+dependent fields, from which we can uncover information           pared to the Floquet limit which produced identical spec-
+on how the quantum state of the driving field maps onto           tra. Using the analytical Floquet limit, we studied the
+the quantum state of the emitted field via the process of         harmonic spectrum and predicted the harmonic cutoff
+HHG.                                                              for a given type of driving field. In this limit, the spec-
+                                                                  trum is expressed analytically in terms of Bessel functions
+                                                                  Jn (lg̃0 |α|), with arguments that depend on the dispersion
+  V.    ACCURACY OF THE APPROXIMATIVE                             relation of the generating crystal as well as the strength
+         POSITIVE P REPRESENTATION
+                                                                  of the driving field. We found that the harmonic cutoff
+                                                                  is dictated by the overlap between these Bessel functions
+   Figures 1 and 3 were computed using the APP rep-               and the P distributions used to describe the driving field.
+resentation for BSV and Fock light. The accuracy of               This enabled us to explain why the cutoff is less clearly
+these results therefore depends on the accuracy of the            defined when driving with a thermal or BSV field than
+APP representation as introduced in Sec. II B. To illus-          for a coherent or Fock field. Furthermore, we estimated
+trate why this is an important point, consider a Fock             the intensity range of the driving field for which the har-
+state R|n⟩, which is described by the density operator            monic peaks can be treated perturbatively. From this
+ρ̂ = d2 αP (α)|α⟩⟨α| in the Glauber-Sudarshan repre-              analysis, we found that fields with broad coherent phase-
+sentation where the P function is [42]                            space distributions can probe nonperturbative processes
+                               2
+                                                                  with a lower intensity than fields with narrow distribu-
+            (n)             e|α|  ∂ 2n                            tions such as coherent and Fock fields.
+          PFock, GS (α) =                δ (2) (α).       (49)
+                             n! ∂αn ∂α∗n                             Utilizing that the derived field state is time dependent,
+                                                                  we also derived expressions for the expectation value of
+Here, derivatives of the delta function are understood            the generated electric field and its variance. In the single-
+in the distributional sense. On the other hand, the               band model of a solid considered in this paper, we found
+APP representation for the Fock state is given by Eq.             that the temporal characteristics of the driving field are
+(28). From Eqs. (28) and (49) it is not trivial that              mapped to the generated field. Since these generated
+             (n)                     (n)
+ρ̂ = d2 αPGS (α)|α⟩⟨α| ≈ d2 αQFock (α)|α⟩⟨α| for large
+     R                       R
+                                                                  time-dependent fields vary on a timescale that can be
+n. Indeed, it would be difficult to make the arguments            observed experimentally, this presents potential for ex-
+of Secs. III C and III D using the highly non-singular P          perimental studies on how the HHG process maps the
+function of Eq. (49), as one cannot make statements on            quantum state of the driving field onto the generated
+the value of P at a given α. Hence, it is important to            field, as temporal characteristics depend on the quantum
+study if the APP is accurate for the observables that we          state of the field.
+consider and verify the APP on a case-by-case basis.                 We also discussed the accuracy of approximating the
+   In order to verify that the APP representation indeed          nondiagonal positive P (α, β) representation of a quan-
+yields reliable results (for BSV and Fock light), we test         tum state by an approximate positive P description for
+it on the incoming driving field. We find that it yields          the Fock and BSV driving fields. We confirmed that this
+the correct photon number ⟨â†k,σ âk,σ ⟩ in the limit of large   approximation yields the correct harmonic spectra (in the
+photon number n for both BSV and Fock light. Further,             limit of large photon numbers) and time-dependent elec-
+it reproduces the correct mean and variance of the time-          tric fields for the driving fields before calculating these
+dependent electric field as discussed in App. C. However,         observables for the emitted field. However, this approxi-
+the APP representation does not reproduce the correct             mation does not yield the correct photon statistics or de-
+                                                                                                                              11
+
+gree of squeezing for the driving field and we did therefore   where we have used α = x + iy. Equation (A3) dif-
+not consider these observables for the emitted field. Go-      fers from the exact result for a squeezed vacuum state
+ing beyond the APP and using the full positive P (α, β)        which is ⟨â† â⟩Exact
+                                                                                BSV   = sinh2 (r) [42]. However, in the
+is to be considered in future work, such that the nonclas-     limit of a large photon number, we see that sinh2 (r) =
+sical observables of the emitted light can be investigated     cosh2 (r) − 1 ≈ cosh2 (r) approximately yielding the cor-
+in more detail.                                                rect result. Thus, as the spectrum is proportional to the
+   The model of solids considered in this work is a sim-       mean photon number, we conclude that the spectra for
+ple one-dimensional single-band model. It is therefore         the driving fields are correctly reproduced by the APP
+relevant for future work to extend the description of the      representation and we extend the analysis to the emitted
+electronic system to include, e.g., multiple bands, topo-      HHG spectrum with this representation in Sec. III in the
+logical effects and electron correlation. However, in such     main text.
+extensions it would not generally be possible to make             We now consider the photon statistics for the Fock
+the same analytical considerations regarding the induced       driving field. Here we consider the Mandel-Q parameter
+current as in this work without further approximations.        (not to be confused with the Husimi-Q function) given
+More specifically, the current operator would not gen-         by
+erally commute with the Hamiltonian as it does in the
+model of this work and hence all cross current matrix
+elements would need to be considered which greatly in-                                  ⟨n̂2 ⟩ − ⟨n⟩2
+                                                                                   Q=                       −1
+creases the complexity of the problem. Approaches to get                                       ⟨n⟩
+around this could be considered, such as using a Markov                                 ⟨â† â† ââ⟩ − ⟨â† â⟩2
+state approximation (see Ref. [26]), which can accurately                             =                            .       (A4)
+capture features such as the generated spectrum, includ-                                           ⟨â† â⟩
+ing squeezing and photon statistics.
+                                                               Calculating the second moment in the APP representa-
+                                                               tion, we find
+ Appendix A: Observables using the approximative
+            positive P representation                                                     (APP)
+                                                                                ⟨â† â† ââ⟩Fock = n2 + 3n + 2,          (A5)
+  In this appendix, we discuss which observables of the                                                          (APP)
+driving field are reproduced by using the APP represen-        yielding a Mandel-Q parameter of QFock = 3 + 2/n,
+tation for the Fock and BSV driving fields in Eqs. (28)        which does not match the exact result of QExact    Fock   =
+and (30). The approximative APP for the density matrix         −1. This is a significant error, as the APP result pre-
+for the driving field is then                                  dicts super-Poissonian statistics for a state with sub-
+                          Z                                    Poissonian statistics.
+               ρ̂ (APP)
+                        = d2 α Q(α)|α⟩⟨α|,         (A1)          Similarly, we consider the degree of squeezing for
+                                                               the BSV driving field. This is done through minimiz-
+                                                               ing the variance of the quadrature operator X̂(θ) =
+where Q(α) represents either Fock or BSV driving fields.             −iθ
+                                                               1
+                                                               2 âe     + â† eiθ for θ ∈ [0, π). The variance of this op-
+  First, we calculate the mean photon number. The
+                                                               erator is
+spectrum for a Fock state is determined by
+            (APP)                                                              1  −2iθ
+    ⟨â† â⟩Fock = Tr â† âρ̂(APP)                            ⟨∆X̂ 2 (θ)⟩ =            ⟨â2 ⟩ − ⟨â⟩2 + e2iθ ⟨â†2 ⟩ − ⟨â† ⟩2
+                                                                                                                             
+                                                                                  e
+                    Z                                                          4
+                                                                                 +2 ⟨â† â⟩ − ⟨â⟩⟨â† ⟩ + 1 ,
+                               (n)
+                                                                                                            
+                  = d2 α QFock (α)|α|2                                                                                    (A6)
+                    Z 2π     Z ∞                  2n
+                                       1     2 |α|             Calculating the moments of the photonic operators, we
+                  =      dϕ        d|α| e−|α|        |α|2 ,    find that in
+                     0         0       π         n!
+                  =n
+                                                                               = ⟨aˆ† ⟩BSV = 0,
+                                                                      (APP)            (APP)
+                                                                  ⟨â⟩BSV                                                  (A7)
+                     †
+                = ⟨â â⟩Exact                         (A2)           (APP)               (APP)
+                         Fock
+                                                                 ⟨â2 ⟩BSV     = ⟨(â† )2 ⟩BSV    = − tanh(r) cosh2 (r).   (A8)
+which shows that the APP gives the correct result for the
+spectrum. Similarly, we find for a BSV state                     Inserting Eqs. (A7) and (A8) into Eq. (A6), we find
+              (APP)
+                                                               that
+      ⟨â† â⟩BSV = Tr â† âρ̂(APP)
+                                    
+                      Z ∞     Z ∞
+                                       (r)
+                    =     dx       dy QBSV (x2 + y 2 )                            1                               1
+                         −∞      −∞
+                                                                  ⟨∆X̂ 2 (θ)⟩ =     cosh2 r [1 − cos(2θ) tanh r] + .       (A9)
+                                                                                  2                               4
+                           2
+                  = cosh (r)
+                                                               To minimize this, we can take the derivative with respect
+                  ̸= ⟨â† â⟩Exact
+                             BSV ,                     (A3)    to θ, which vanishes for θ = 0, π/2. Obviously, of these
+                                                                                                                           12
+
+two, θ = 0 minimizes the expression, and hence                     Using the identities for differentiating a Bessel function
+                                                                   we may write
+  (APP)                              1                       1
+ϑBSV      = min ⟨∆X̂ 2 (θ)⟩ =          cosh2 r (1 − tanh r) + .                                n+1 
+                                     2                       4           dn+1
+                                                                                                         
+            θ∈[0,π)                                                                        1 X n+1
+                                                           (A10)               Jn (x) = n+1                J2k−1 (x),    (B5)
+                                                                        dxn+1           2             k
+                                                                                               k=0
+Notice especially that |tanh x| ≤ 1 for all x ∈ R, so 1 −                                           √
+                                                                   and utilizing that |Jn (x)| ≤ 1/ 2 for all x and for n ≥ 1,
+tanh r ≥ 0, which means that in the APP representation
+                                                                   we conclude that
+                (APP)                               1                                          n+1 
+                        = min ⟨∆X̂ 2 (θ)⟩ ≥                             dn+1
+                                                                                                         
+              ϑBSV                                    ,    (A11)                           1 X n+1 1               1
+                           θ∈[0,π)                  4                 | n+1 Jn (x)| ≤ n+1                  √ = √ . (B6)
+                                                                       dx               2             k      2      2
+                                                                                               k=0
+which does clearly does not match exact results where                                           √
+          1 −2r                                                    Hence, we choose M = 1/ 2 to obtain that
+ϑExact
+  BSV = e       [42].
+          4
+   Hence, the APP representation does not capture the                                         1 xn+1
+                                                                                  |Rn (x)| ≤ √
+correct photon statistics for Fock states or correct squeez-                                   2 (n + 1)!
+ing BSV fields and hence we abstain from considering                                          1      nn+1
+these observables for the emitted field.                                                   ≤ √ n+1             ,         (B7)
+                                                                                               2r     (n + 1)!
+                                                                   which is independent of x. Lastly, we want a uni-
+Appendix B: Details on the lowest-order expansion                  versal √estimate for all n. For this, we can use that
+            of the Bessel functions                                n! ≥ 2πe(n/e)n , where e is Euler’s number. Hereby
+                                                                   we can estimate that
+   For the discussion of the range of the perturbative                                   1
+                                                                                              
+                                                                                                n
+                                                                                                   n+1  
+                                                                                                          e n+1
+regime of HHG in Sec. III D, we are interested in deter-                     |Rn (x)| ≤ √
+                                                                                       2 πe n + 1         r
+mining the error in approximating the Bessel functions
+Jn (x) to the lowest order. To this end, we employ Tay-                                  1  e n+1
+                                                                                      ≤ √           ,               (B8)
+lor’s remainder theorem to obtain an upper bound on the                                2 πe r
+error for some interval of x.                                      which is a decreasing function of n when r ≥ e. We
+   Specifically, we use the theorem that states that for an        therefore find that
+analytic function f : [a, b] ∈ R → R the remainder Rn (x)
+                                                                                                1  e 2
+of the n’th order Taylor expansion of f can be estimated                            |Rn (x)| ≤ √         ,        (B9)
+as for x ∈ [a, b] as                                                                          2 πe r
+                                                                   for all n ≥ 1. We can then solve the equation for r given
+                                      xn+1
+                      |Rn (x)| ≤ M            ,             (B1)   the tolerance
+                                     (n + 1)!
+                                                                                    1  e 2      1
+                                                                                   √          ≤
+where M is a positive real number that fulfills                                   2 πe r         100
+                                                                                                    √
+                        dn+1                                                                          e
+              M ≥|           f (x)|,    ∀x ∈ [a, b].        (B2)                          ⇒ r ≥ 10 √     ≈ 9.         (B10)
+                       dxn+1                                                                        24π
+  Writing the Bessel function as a Taylor expansion we             As such we have found an estimate of an interval [0, n/9],
+have                                                               where the error of the Bessel functions is within the set
+                    ∞
+                                                                   tolerance.
+                    X    (−1)k  x n+2k                              We note that this is a rough estimate since we have
+           Jn (x) =                        ,      (B3)
+                       k!(n + k)! 2                                made an estimation that is valid for all n. For more pre-
+                        k=0
+                                                                   cise results, which could yield lower r values, one could
+which means that the lowest nonvanishing order in the              consider each order separately and obtain an order de-
+expansion is n. Since we know that Bessel functions van-           pendent rn . This could be done from Eq. (B7), and
+ish when the argument is smaller than the order, we                could also be improved by making a less rough estima-
+are motivated to consider the interval [0, n/r], where r           tion of the bounds of Jn (x), which become smaller with
+is some positive real number that we will tune to give an          the harmonic orders. The point is that we now know that
+acceptably low remainder. We fix this tolerance for the            the lowest-order approximation of Jn (x) is valid within
+remainder to be |Rn (x)| ≤ 1/100, as we deem a 1% error            the tolerance 1/100 on at least the interval [0, n/9].
+acceptable.                                                           Hereby, in relation to Sec. III D, we can say that the
+   We can then determine the M parameter for a given r             lowest-order approximation is valid for the Bessel func-
+as                                                                 tion Jn (lg̃0 |α|) when
+                       dn+1                         n                                             n
+            M ≥|            Jn (x)|,     ∀x ∈ [0,     ].    (B4)                           |α| ≤       .                (B11)
+                      dxn+1                         r                                            9lg̃0
+                                                                                                                                                                                                                           13
+
+  We can then argue similarly to Sec. III C, that we                                                        ×    
+can use this approximation when the P distribution is                                                                                              & R K H U H Q W                                        7 K H U P D O
+
+
+
+                                                                     E(t)    D U E   X Q L W V 
+contained within this region. Again, we estimate the re-
+gion where P (α) is not negligible as µP − 3σP ≤ |α| ≤                                                  
+µP + 3σP . Hence, we can use the power-scaling law [Eq.
+(42)] for the n’th harmonic when
+                                                                                                        
+
+                    µP + 3σP ≤ n/(9lmax g̃0 ).               (B12)                                          ×    
+                                                                                                                                                           ) R F N                                               % 6 9
+
+
+
+                                                                     E(t)    D U E   X Q L W V 
+The parameters µP and σP are the mean and standard
+derivation of the distribution P (|α|), respectively, which                                             
+depends on the mean photon count of the driving field.
+Explicitly, they are given as
+                                                                                                        
+              Z                                                                                                                                                                                          
+        µP = d2 αP (α)|α|                             (B13)                                                                    7 L P H   I V                                       7 L P H   I V 
+                Z                     Z                2
+                                                                          FIG. 5. Time-resolved electric driving fields for coherent,
+        σP2 =       d2 αP (α)|α|2 −         d2 αP (α)|α|                  Fock, thermal and BSV fields. Solid lines represent the expec-
+                                                                          tation value of the electric field and the shaded area represent
+            = ⟨a†k0 ,σ0 ak0 ,σ0 ⟩ − µ2P .                    (B14)        the uncertainty in the electric field neglecting the zero-point
+                                                                          vacuum fluctuations.
+For a coherent state [Eq. (22)], the mean photon number
+is ⟨â†k,σ âk,σ ⟩ = |αk,σ |2 while for BSV fields [Eq. (30)] it
+                                                                            We now derive the equation for the mean and variance
+is ⟨â†k,σ âk,σ ⟩ = sinh2 (r). For Fock and thermal fields, the          for the generated electric field. We consider the derived
+mean photon number enters the respective distributions                    state of the field [Eq. (31)]
+explicitly [see Eqs. (28) and (23)]. The parameters µP                                Z
+and σP are calculated numerically using Eqs. (B13) and                       ρ̂F (t) = d2 αP (α)|γkα0 σ0 (t) + α⟩⟨γkα0 σ0 (t) + α|
+(B14) for each value of mean photon number in the driv-
+ing field. Thus, the inequality of Eq. (B12) is checked for
+                                                                                                      O
+                                                                                                                 α          α
+                                                                                                               |γkσ (t)⟩⟨γkσ  (t)|, (C1)
+each of these values, and the cutoff is set at the lowest
+                                                                                                                                                     (k,σ)̸=(k0 ,σ0 )
+mean photon number for which the inequality is broken.
+These cutoffs are plotted in Fig. 3.                                      where
+                                                                                                                                                        Z t
+                                                                                                                                g0                                α ′                     ′
+                                                                                                                   α
+                                                                                                                  γkσ (t) = −i √                                 jii (t ) · eσ eiωk t dt′ .                        (C2)
+Appendix C: Derivation of the time-resolved electric                                                                             ωk                        ti
+                      field
+                                                                          The electric field operator in the dipole approximation is
+                                                                          given again for clarity
+   In this appendix, we investigate the electric fields emit-                            X √
+                                                                                             g0 ωk eσ âkσ e−iωk t − h.c. .
+                                                                                                                         
+ted from the HHG process. Before deriving the expres-                          Ê(t) = i                                       (C3)
+sions for the emitted electric field, we first verify that the                                                                   kσ
+electric field of the driving laser is correctly reproduced in
+the APP. To this end, we compute ⟨Ê(t)⟩ with Ê(t) given                 Computing the expectation value of the electric field op-
+in Eq. (43) for the driving fields using the P functions                  erator yields
+in Eqs. (22), (23), (28) and (30). Likewise, we can com-                            Z        
+                                                                                                 √
+                                                                          ⟨Ê(t)⟩ = d2 αP (α) ig0 ω0 eσ0 (γkα0 σ0 (t) + α)e−iω0 t − c.c.
+                                                                                                                                        
+pute the variance of the driving field and hereby the un-
+certainty in the field (neglecting zero-point fluctuations).                                                                     
+These results are shown in Fig. 5. It is seen that the fields
+                                                                                           X      √        α
+                                                                                                              (t)e−iωk t − c.c.
+                                                                                                                               
+                                                                                       +i       g0 ωk eσ γkσ
+are as expected: The coherent field has a well-defined fre-                                                                         kσ̸=k0 σ0
+quency and amplitude with vanishing fluctuations. Ther-                                                                   Z                                X√
+                                                                                                                                 d2 αP (α)                                   α
+                                                                                                                                                                                (t)e−iωk t − c.c.
+                                                                                                                                                                                                 
+mal and Fock fields have vanishing mean fields, but their                                                         = ig0                                               ωk eσ γkσ
+uncertainties are on the scale of the coherent state am-                                                                                                   kσ
+plitude and are constant in time. The BSV field also has                                                                                √
+                                                                                                                                                     Z
+                                                                                                                                                            d2 αP (α) eσ0 αe−iω0 t − c.c. .
+                                                                                                                                                                                         
+a vanishing mean field but the uncertainty oscillates in                                                                      + ig0 ω0
+time with the same amplitude and twice the frequency                                                                                                                                                               (C4)
+of the coherent oscillations. As the APP representation
+reproduces the correct time-dependent driving fields for                  The last term in this equation is just the expectation
+Fock and BSV, we trust its validity to produce the correct                value of the driving field, which we shall henceforth ne-
+time-dependent generated fields.                                          glect, since we are interested in the generated field. With
+                                                                                                                               14
+                                                                                                  p
+this, we let k 7→ V /(2πc)3 dωω 2 dΩ, where V is the
+            P                R     R
+                                                                             By writing out g0 = 2π/V , the front factor is then
+                                                                           4
+quantization volume, c the speed of light in vacuum and                   3c3 and we achieve that the generated electric field is
+dΩ the solid angle infinitesimal.                                         then given as
+
+                                                                                                             d2 α
+                                                                                                  Z
+                                    Z ∞                                                         4
+                                              √                                ⟨ÊHHG (t)⟩ = − 3    d2 αP (α) 2 jii (t).   (C10)
+                        Z
+                  g0 V     2
+⟨ÊHHG (t)⟩ =i            d  αP (α)     dω ω 2 ω                                               3c            dt
+                 (2πc)3              0
+                                                                            The variance of the electric field can be derived in a
+                      Z   X
+                                        α
+                                          (t)e−iωt
+                                                   
+                   × dΩ       2iIm eσ γkσ                                 similar way.
+                                  σ
+                                         Z t
+                2g 2 V
+                       Z
+              = 0 3      d2 αP (α)Im i          dt′
+               (2πc)                         ti
+                  Z                             Z ∞                 #
+                                                        2 iω(t′ −t)
+                         X
+                                 α ′
+               × dΩ         eσ (jii (t ) · eσ )     dω ω e            .
+                              σ                       0
+                                                                 (C5)
+We now seek to simplify this. Consider first the term
+              Z     X
+                              α ′
+                 dΩ     eσ (jii (t ) · eσ ) .       (C6)
+                              σ
+
+As a one-dimensional model of a solid is applied, we can
+let this direction be ẑ and take the polarization vectors
+be e1 = θ̂ and e2 = ϕ̂, which are the spherical co-
+ordinate unit vectors, that form an orthonormal basis
+of the orthogonal complement to the k vector. Hereby
+  α ′                 α ′                 α ′
+jii (t ) · e1 = −jii    (t ) sin θ and jii  (t ) · e2 = 0. Hereby
+                                 α ′                  α ′
+                     P
+it is found that σ eσ (jii (t ) · eσ ) = −θ̂jii        (t ) sin θ, and
+utilizing the spherical symmetry of the problem around
+the ẑ axis, it is found that
+Z       X                                      Z 2π     Z π
+                  α ′                 α ′
+    dΩ       eσ (jii (t ) · eσ ) = −jii (t )ẑ       dϕ       dθ sin3 θ
+        σ                                         0       0
+                                          8π α ′
+                                  =−        j (t ),              (C7)
+                                           3 ii
+and we thereby get
+               2g02 V
+                       Z
+ ⟨ÊHHG (t)⟩ =             d2 αP (α)
+               3π 2 c3
+                Z t               Z ∞                 
+                         ′ α ′             2 iω(t′ −t)
+            ×Im i      dt jii (t )     dω ω e            . (C8)
+                         ti                0
+
+Next, we rewrite the term
+           Z t                Z ∞                  
+                                               ′
+       Im −i      dt′ jii
+                       α ′
+                          (t )     dω ω 2 eiω(t −t)
+                    ti                0
+                                   2 Z ∞
+               Z t                                     
+                          ′ α ′ d             iω(t′ −t)
+          = Im i      dt jii (t ) ′2       dωe
+                  ti             dt    0
+             Z t               2
+                      α ′ d
+          =π     dt′ jii (t ) ′2 δ(t′ − t)
+              ti             dt
+               d2 α
+          =π      j (t),                                         (C9)
+               dt2 ii
+                              α
+where we have utilized that jii (t) is real, from being a
+diagonal matrix element, derivatives of distributions, and
+that t ∈ [ti , t].
+                                                                                                                             15
+
+
+
+
+ [1] M. Ferray, A. L’Huillier, X. F. Li, L. A. Lompre, G. Main-        (2022).
+     fray, and C. Manus, Multiple-harmonic conversion of          [18] G. Vampa, T. J. Hammond, N. Thiré, B. E. Schmidt,
+     1064 nm radiation in rare gases, Journal of Physics B:            F. Légaré, C. R. McDonald, T. Brabec, D. D. Klug,
+     Atomic, Molecular and Optical Physics 21, L31 (1988).             and P. B. Corkum, All-Optical Reconstruction of Crys-
+ [2] P. B. Corkum, Plasma perspective on strong field mul-             tal Band Structure, Physical Review Letters 115, 193603
+     tiphoton ionization, Physical Review Letters 71, 1994             (2015).
+     (1993).                                                      [19] A. Gorlach, O. Neufeld, N. Rivera, O. Cohen, and
+ [3] M. Lewenstein, Ph. Balcou, M. Yu. Ivanov, A. L’Huillier,          I. Kaminer, The quantum-optical nature of high har-
+     and P. B. Corkum, Theory of high-harmonic generation              monic generation, Nature Communications 11, 4598
+     by low-frequency laser fields, Physical Review A 49, 2117         (2020).
+     (1994).                                                      [20] P. Stammer, J. Rivera-Dean, T. Lamprou, E. Pisanty,
+ [4] P. M. Paul, E. S. Toma, P. Breger, G. Mullot, F. Augé,           M. F. Ciappina, P. Tzallas, and M. Lewenstein, High
+     Ph. Balcou, H. G. Muller, and P. Agostini, Observation of         Photon Number Entangled States and Coherent State
+     a Train of Attosecond Pulses from High Harmonic Gen-              Superposition from the Extreme Ultraviolet to the Far
+     eration, Science 292, 1689 (2001).                                Infrared, Physical Review Letters 128, 123603 (2022).
+ [5] M. Hentschel, R. Kienberger, C. Spielmann, G. A. Rei-        [21] P. Stammer, J. Rivera-Dean, A. Maxwell, T. Lamprou,
+     der, N. Milosevic, T. Brabec, P. Corkum, U. Heinzmann,            A. Ordóñez, M. F. Ciappina, P. Tzallas, and M. Lewen-
+     M. Drescher, and F. Krausz, Attosecond metrology, Na-             stein, Quantum Electrodynamics of Intense Laser-Matter
+     ture 414, 509 (2001).                                             Interactions: A Tool for Quantum State Engineering,
+ [6] F. Krausz and M. Ivanov, Attosecond physics, Reviews              PRX Quantum 4, 010201 (2023).
+     of Modern Physics 81, 163 (2009).                            [22] U. Bhattacharya, T. Lamprou, A. S. Maxwell,
+ [7] D. M. Villeneuve, Attosecond science, Contemporary                A. Ordóñez, E. Pisanty, J. Rivera-Dean, P. Stammer,
+     Physics 59, 47 (2018).                                            M. F. Ciappina, M. Lewenstein, and P. Tzallas, Strong–
+ [8] G. Vampa and T. Brabec, Merge of high harmonic gen-               laser–field physics, non–classical light states and quan-
+     eration from gases and solids and its implications for at-        tum information science, Reports on Progress in Physics
+     tosecond science, Journal of Physics B: Atomic, Molecu-           86, 094401 (2023).
+     lar and Optical Physics 50, 083001 (2017).                   [23] C. S. Lange, T. Hansen, and L. B. Madsen, Electron-
+ [9] S. Ghimire, A. D. DiChiara, E. Sistrunk, P. Agostini,             correlation-induced nonclassicality of light from high-
+     L. F. DiMauro, and D. A. Reis, Observation of high-order          order harmonic generation, Physical Review A 109,
+     harmonic generation in a bulk crystal, Nature Physics 7,          033110 (2024).
+     138 (2011).                                                  [24] D. Theidel, V. Cotte, R. Sondenheimer, V. Shiriaeva,
+[10] D. Bauer and K. K. Hansen, High-Harmonic Genera-                  M. Froidevaux, V. Severin, A. Merdji-Larue, P. Mosel,
+     tion in Solids with and without Topological Edge States,          S. Fröhlich, K.-A. Weber, U. Morgner, M. Kovacev,
+     Physical Review Letters 120, 177401 (2018).                       J. Biegert, and H. Merdji, Evidence of the quantum opti-
+[11] Y. Bai, F. Fei, S. Wang, N. Li, X. Li, F. Song, R. Li,            cal nature of high-harmonic generation, PRX Quantum
+     Z. Xu, and P. Liu, High-harmonic generation from topo-            5, 040319 (2024).
+     logical surface states, Nature Physics 17, 311 (2021).       [25] D. Theidel, V. Cotte, P. Heinzel, H. Griguer, M. Weis,
+[12] T. Morimoto and N. Nagaosa, Topological nature of                 R. Sondenheimer, and H. Merdji, Observation of a mul-
+     nonlinear optical effects in solids, Science Advances 2,          timode displaced squeezed state in high-harmonic gener-
+     e1501524 (2016).                                                  ation (2024), arXiv:2411.02311 [quant-ph].
+[13] A. Chacón, D. Kim, W. Zhu, S. P. Kelly, A. Dauphin,         [26] C. S. Lange and L. B. Madsen, Hierarchy of approxima-
+     E. Pisanty, A. S. Maxwell, A. Picón, M. F. Ciappina,             tions for describing quantum light from high-harmonic
+     D. E. Kim, C. Ticknor, A. Saxena, and M. Lewenstein,              generation: A fermi-hubbard-model study, Phys. Rev. A
+     Circular dichroism in higher-order harmonic generation:           111, 013113 (2025).
+     Heralding topological phases and transitions in Chern in-    [27] S. Yi, N. D. Klimkin, G. G. Brown, O. Smirnova,
+     sulators, Physical Review B 102, 134115 (2020).                   S. Patchkovskii, I. Babushkin, and M. Ivanov, Genera-
+[14] R. E. F. Silva, Á. Jiménez-Galán, B. Amorim,                   tion of massively entangled bright states of light during
+     O. Smirnova, and M. Ivanov, Topological strong-field              harmonic generation in resonant media, Phys. Rev. X 15,
+     physics on sub-laser-cycle timescale, Nature Photonics            011023 (2025).
+     13, 849 (2019).                                              [28] A. Gorlach, M. E. Tzur, M. Birk, M. Krüger, N. Rivera,
+[15] S. Ghimire, A. D. DiChiara, E. Sistrunk, G. Nd-                   O. Cohen, and I. Kaminer, High-harmonic generation
+     abashimiye, U. B. Szafruga, A. Mohammad, P. Agostini,             driven by quantum light, Nature Physics 19, 1689 (2023).
+     L. F. DiMauro, and D. A. Reis, Generation and propaga-       [29] M. Even Tzur, M. Birk, A. Gorlach, M. Krüger,
+     tion of high-order harmonics in crystals, Physical Review         I. Kaminer, and O. Cohen, Photon-statistics force in
+     A 85, 043836 (2012).                                              ultrafast electron dynamics, Nature Photonics 17, 501
+[16] G. Vampa, C. R. McDonald, G. Orlando, D. D. Klug,                 (2023).
+     P. B. Corkum, and T. Brabec, Theoretical Analysis of         [30] M. E. Tzur, M. Birk, A. Gorlach, I. Kaminer, M. Krüger,
+     High-Harmonic Generation in Solids, Physical Review               and O. Cohen, Generation of squeezed high-order har-
+     Letters 113, 073901 (2014).                                       monics, Physical Review Research 6, 033079 (2024).
+[17] L. Yue and M. B. Gaarde, Introduction to theory of high-     [31] P. Stammer, Absence of quantum optical coherence in
+     harmonic generation in solids: Tutorial, JOSA B 39, 535           high harmonic generation, Physical Review Research 6,
+                                                                                                                              16
+
+     L032033 (2024).                                              [51] M. R. Bionta, F. Ritzkowsky, M. Turchetti, Y. Yang,
+[32] A. Pizzi, A. Gorlach, N. Rivera, A. Nunnenkamp, and               D. Cattozzo Mor, W. P. Putnam, F. X. Kärtner, K. K.
+     I. Kaminer, Light emission from strongly driven many-             Berggren, and P. D. Keathley, On-chip sampling of op-
+     body systems, Nature Physics 19, 551 (2023).                      tical fields with attosecond resolution, Nature Photonics
+[33] M. Lewenstein, M. F. Ciappina, E. Pisanty, J. Rivera-             15, 456 (2021).
+     Dean, P. Stammer, T. Lamprou, and P. Tzallas, Gener-         [52] P. D. Keathley, S. V. B. Jensen, M. Yeung, M. R. Bionta,
+     ation of optical Schrödinger cat states in intense laser–        and L. B. Madsen, Uncovering extreme nonlinear dynam-
+     matter interactions, Nature Physics 17, 1104 (2021).              ics in solids through time-domain field analysis, Physical
+[34] A. Rasputnyi, Z. Chen, M. Birk, O. Cohen, I. Kaminer,             Review B 107, 054302 (2023).
+     M. Krüger, D. Seletskiy, M. Chekhova, and F. Tani, High-
+     harmonic generation by a bright squeezed vacuum, Na-
+     ture Physics 20, 1960 (2024).
+[35] M. Manceau, K. Y. Spasibko, G. Leuchs, R. Filip, and
+     M. V. Chekhova, Indefinite-Mean Pareto Photon Distri-
+     bution from Amplified Quantum Noise, Physical Review
+     Letters 123, 123606 (2019).
+[36] S. Lemieux, S. A. Jalil, D. Purschke, N. Boroumand,
+     D. Villeneuve, A. Naumov, T. Brabec, and G. Vampa,
+     Photon bunching in high-harmonic emission controlled
+     by quantum light (2024), arXiv:2404.05474.
+[37] J. Rivera-Dean, in Non-classical States of Light: Gen-
+     eration via Strong-Field Processes and Applications in
+     Quantum Key Distribution (Springer Nature Switzer-
+     land, Cham, 2024).
+[38] S. L. Braunstein and P. van Loock, Quantum information
+     with continuous variables, Reviews of Modern Physics
+     77, 513 (2005).
+[39] P. D. Drummond and C. W. Gardiner, Generalised P-
+     representations in quantum optics, Journal of Physics A:
+     Mathematical and General 13, 2353 (1980).
+[40] D. Walls and G. J. Milburn, Quantum Optics (Springer,
+     Berlin, Heidelberg, 2008).
+[41] C. Cohen-Tannoudji, G. Grynberg, and J. Dupont-Roc,
+     Atom-Photon Interactions: Basic Processes and Applica-
+     tions (Wiley, New York, 1998).
+[42] C. Gerry and P. Knight, Introductory Quantum Optics
+     (Cambridge University Press, Cambridge, 2004).
+[43] M. O. Scully and M. S. Zubairy, Quantum Optics (Cam-
+     bridge University Press, Cambridge, 1997).
+[44] C. S. Lange, T. Hansen, and L. B. Madsen, Noninteger
+     high-order harmonic generation from extended correlated
+     systems, Physical Review A 109, 063103 (2024).
+[45] M. S. Kim, F. A. M. de Oliveira, and P. L. Knight, Prop-
+     erties of squeezed number states and squeezed thermal
+     states, Physical Review A 40, 2494 (1989).
+[46] G. Vampa, C. R. McDonald, G. Orlando, P. B. Corkum,
+     and T. Brabec, Semiclassical analysis of high harmonic
+     generation in bulk crystals, Physical Review B 91, 064302
+     (2015).
+[47] A. T. Andersen, S. V. B. Jensen, and L. B. Madsen, Intra-
+     and intercycle analysis of intraband high-order harmonic
+     generation, Physical Review A 109, 063109 (2024).
+[48] S. Sederberg, D. Zimin, S. Keiber, F. Siegrist, M. S. Wis-
+     mer, V. S. Yakovlev, I. Floss, C. Lemell, J. Burgdörfer,
+     M. Schultze, F. Krausz, and N. Karpowicz, Attosecond
+     optoelectronic field measurement in solids, Nature Com-
+     munications 11, 430 (2020).
+[49] D. A. Zimin, V. S. Yakovlev, and N. Karpowicz, Ultra-
+     broadband all-optical sampling of optical waveforms, Sci-
+     ence Advances 8, eade1029 (2022).
+[50] A. Husakou, N. Karpowicz, V. S. Yakovlev, M. Ivanov,
+     and D. A. Zimin, Towards multi-petahertz all-
+     optical electric field sampling (2024), arXiv:2410.19196
+     [physics.optics].
+

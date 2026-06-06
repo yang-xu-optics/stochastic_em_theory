@@ -1,0 +1,1473 @@
+                                                                    A classical model of spontaneous parametric down-conversion
+                                                       Girish Kulkarni,1, ∗ Jeremy Rioux,1 Boris Braverman,1, † Maria V. Chekhova,2, 3 and Robert W. Boyd1, 4
+                                                                         1
+                                                                           Department of Physics, University of Ottawa, Ottawa, Ontario K1N 6N5, Canada
+                                                                    2
+                                                                        Max Planck Institute for the Science of Light, Staudtstr. 2, 91058 Erlangen, Germany
+                                                                           3
+                                                                             University of Erlangen-Nuremberg, Staudtstr. 7/B2, 91058 Erlangen, Germany
+                                                                        4
+                                                                          The Institute of Optics, University of Rochester, Rochester, New York 14627, USA
+                                                                                                      (Dated: January 12, 2022)
+                                                                 We model spontaneous parametric down-conversion (SPDC) as classical difference frequency gen-
+                                                               eration (DFG) of the pump field and a hypothetical stochastic “vacuum” seed field. We analytically
+
+
+
+
+arXiv:2201.03842v1 [physics.optics] 11 Jan 2022
+                                                               show that the second-order spatiotemporal correlations of the field generated from the DFG process
+                                                               replicate those of the signal field from SPDC. Specifically, for low gain, the model is consistent
+                                                               with the quantum calculation of the signal photon’s reduced density matrix; and for high gain,
+                                                               the model’s predictions are in good agreement with our experimental measurements of the far-field
+                                                               intensity profile, orbital angular momentum spectrum, and wavelength spectrum of the SPDC field
+                                                               for increasing pump strengths. We further theoretically show that the model successfully captures
+                                                               second-order SU(1,1) interference and induced coherence effects in both gain regimes. Intriguingly,
+                                                               the model also correctly predicts the linear scaling of the interference visibility with object trans-
+                                                               mittance in the low-gain regime – a feature that is often regarded as a quintessential signature of the
+                                                               nonclassicality of induced coherence. Our model may not only lead to novel fundamental insights
+                                                               into the classical-quantum divide in the context of SPDC and induced coherence, but can also be a
+                                                               useful theoretical tool for numerous experiments and applications based on SPDC.
+
+
+                                                                   I.     INTRODUCTION                                 While the precise form of two-photon state produced
+                                                                                                                    in the perturbative low-gain regime has long been an-
+                                                     Spontaneous parametric down-conversion (SPDC) is a             alytically derived for a general pump profile [6–8], the
+                                                  nonlinear optical phenomenon in which an incident field           theoretical characterization of the non-perturbative high-
+                                                  known as pump interacts with a non-centrosymmetric                gain regime has proved to be much more difficult. In or-
+                                                  medium to produce a pair of fields known as signal and            der to correctly evaluate higher-order contributions, one
+                                                  idler [1–3]. In the quantum paradigm, the interaction             must account for the fact that the interaction Hamil-
+                                                  can be modeled as a series of infinitely-many contribut-          tonian may not commute with itself at different times,
+                                                  ing processes, where the n’th order contribution physi-           and consequently, the Schrodinger time-evolution oper-
+                                                  cally corresponds to n pump photons getting annihilated           ator must strictly be expanded in terms of the time-
+                                                  to produce n signal photons and n idler photons simulta-          ordered Dyson series instead of the usual Taylor series
+                                                  neously [4]. The strength of the interaction, referred to as      [22]. However, it was shown that any finite-order trunca-
+                                                  gain, is directly proportional to the pump amplitude [5].         tion of the Dyson series destroys the Gaussian character
+                                                  For typical continuous-wave and low-power pulsed pump             of the output state [23], whereas the exact solution can be
+                                                  lasers, the interaction is weak and can be approximated           proved to be a Gaussian state solely from the quadratic
+                                                  by the dominant first-order contribution alone, which             form of the interaction Hamiltonian [24]. Such issues can
+                                                  yields an entangled two-photon signal-idler state [6–8].          be avoided by turning to the Heisenberg picture, where
+                                                  In this low-gain regime, which is characterized by a linear       one instead obtains a set of coupled differential equations
+                                                  growth of the generated fields with respect to the pump           for the evolution of the signal and idler mode operators
+                                                  amplitude, SPDC sources are ubiquitously employed in              [5, 25–27]. However, these equations have so far been
+                                                  fundamental quantum optics experiments [9–12] and op-             exactly solved only for the special case of a monochro-
+                                                  tical quantum technologies [13–15]. On the other hand,            matic plane-wave pump [5], and approximately solved
+                                                  for high-power pulsed pump lasers, the interaction can            for the cases of a broadband pump with a single spatial
+                                                  be strong and may comprise of significant higher-order            mode [25], and a pump with narrow spectral and angular
+                                                  contributions, thereby producing a bright multiphoton             bandwidth [16]. For more general cases, numerical solu-
+                                                  entangled state of the signal and idler fields [16, 17]. In       tions that are often computationally intensive have to be
+                                                  this high-gain regime, which is characterized by an ex-           sought. Some studies have explored analytical ansatz so-
+                                                  ponential growth of the generated fields with respect to          lutions that assume gain-independent Schmidt modes for
+                                                  the pump amplitude, SPDC has significant potential for            the output state [28, 29]. However, these solutions have
+                                                  applications such as sub-shot noise imaging [18, 19] and          limited applicability as they are unable to account for
+                                                  generation of nonclassical states of light [20, 21].              experimental observations such as broadening of the an-
+                                                                                                                    gular spectrum and wavelength spectrum of the SPDC
+                                                                                                                    field with increasing gain [30, 31]. Thus, a consistent
+                                                  ∗ girishkulkarni@protonmail.com
+                                                                                                                    analytical quantum description for high-gain SPDC has
+                                                  † Present address: QuEra Computing, Boston, MA 02135, USA         still not been achieved for a general pump field.
+                                                                                                                                   2
+
+   In view of the aforementioned challenges encountered
+in performing a general quantum calculation, one can in-                      Pump
+stead ask: is there a classical analytic description that                                                   Generated ﬁeld
+can consistently explain at least a restricted class of cor-       Classical "vacuum"
+relations in high-gain SPDC? For instance, in the low-
+gain regime, it is known that second-order (in fields)
+autocorrelations of the individual fields can be modeled
+classically [32–36]. A simple and elegant approach in this
+context was developed in Ref. [32], where SPDC is mod-         FIG. 1. Modeling SPDC as DFG of the pump with a hypo-
+eled as the paraxial propagation of a classical partially-     thetical classical “vacuum” seed field.
+coherent source created in the nonlinear medium by the
+coupling of the pump field to a classical noise field that                  II.    THEORETICAL MODEL
+simulates the vacuum fluctuations. The second-order
+correlations derived using this approach were demon-             As depicted in Fig. 1, we model SPDC as DFG of the
+strated to be consistent with the quantum calculation          pump field Ap with a hypothetical classical seed field Ai
+of the reduced one-photon density matrix in the low-           that mimics the effect of zero-point vacuum fluctuations.
+gain regime. However, this approach does not appear to         Our goal is to compute the second-order spatiotemporal
+admit a straightforward generalization to the high-gain        correlations of the generated field As . We approximate
+regime as the generated field is a priori assumed to scale     the fields to be paraxially propagating along the longi-
+linearly with the pump amplitude. Another approach,            tudinal z-axis. A crystal of length L and second-order
+which has also been neatly summarized in Ref. [32], is to      nonlinear susceptibility χ(2) is placed perpendicular to
+model SPDC as a three-wave mixing process between the          the z-axis with its input face defining z = 0. The Fourier
+pump and the vacuum fluctuations [33–35]. In particu-          amplitudes (not including propagation phases) for the
+lar, the spatial and spectral profiles of the SPDC field       pump field, classical “vacuum”, and the generated fields
+can be derived by solving differential equations involving     are denoted by stochastic functions Aj (qj , ωj , z), where
+a stochastic term that represents the vacuum fluctuations      qj and ωj represent the transverse wavevector and fre-
+[34, 35], although the origin of coherence is less clear and   quency coordinates, for j = p, i, and s, respectively. In
+has been attributed to various specific experimental con-      terms of the position vector r ≡ (ρ, z), where ρ is trans-
+ditions [37, 38]. However, to our knowledge, this latter       verse position, and wavevectors kj ≡ (qj , kjz ), we define
+approach has not been taken beyond the monochromatic           the electric field mode functions
+plane-wave pump approximation in the high-gain regime                              Z
+to derive analytic solutions for realistic pump fields with           Ej (r, ωj ) = dqj Aj (qj , ωj , z) ei(qj ·ρ+kjz z) . (1)
+finite spectral and angular bandwidth. Moreover, this
+latter approach has also not yet been employed for ana-        We now assume that the energy depletion of the pump
+lyzing two-crystal settings such as SU(1,1) interferome-       due to the nonlinear interaction is negligible, and conse-
+ters [39, 40] and induced coherence experiments [11, 41].      quently, the pump amplitude Ap (qp , ωp ) is independent
+                                                               of z. We emphasize that the pump field can be pulsed or
+                                                               continuous-wave with any arbitrary spectral and spatial
+   In this work, we adopt the aforementioned latter ap-        profile. The evolution of the other two fields is governed
+proach and model SPDC as classical difference frequency        by the wave equation of nonlinear optics (see Eq. (2.1.23)
+generation (DFG) of the pump field and a classical             of Ref. [3])
+stochastic seed field that simulates the zero-point vac-
+                                                                                   n2j ωj2                   ωj2
+uum fluctuations. In contrast with previous studies, we         ∇2 Ej (r, ωj ) +           Ej (r, ω j ) = −        PN L (r, ωj ), (2)
+derive analytical expressions for the second-order spa-                              c2                     ǫ 0 c2
+tiotemporal correlations of the generated signal field for a
+                                                               where j = s, i and nj ≡ nj (ωj ) is the refractive index
+narrow-but-finite-bandwidth pump in low and high gain
+                                                               inside the crystal. Assuming energy conservation, i.e,
+regimes. The paper is organized as follows: In Section II,
+                                                               ωp = ωs + ωi , the nonlinear polarization PN L (r, ωj ) can
+we set up the model and derive the second-order spa-
+                                                               be written as (see Eq. (1.5.30) of Ref. [3])
+tiotemporal correlation function of the generated field in
+low and high gain regimes. In Section III, we perform ex-
+                                                                                          Z
+perimental measurements of the far-field intensity profile,       PN L (r, ωj ) = 4ǫ0 deff dωp Ep (r, ωp )El∗ (r, ωl ), (3)
+orbital angular momentum spectrum, and wavelength
+spectrum for increasing pump strengths and demonstrate         where j = s(i) and l = i(s). In our scalar treat-
+their agreement with the model’s predictions. In Sec-          ment, the quantity deff = χ(2) /2 is the nonlinear cou-
+tion IV, we extend the model to analyze SU(1,1) interfer-      pling coefficient of the crystal medium, and its depen-
+ence and induced coherence effects in both low and high        dence on the frequencies of the coupling waves has
+gain regimes. In Section V, we conclude with a summary         been ignored. Substituting equations (1) and (3) in (2)
+and outlook.                                                   and making the slowly-varying envelope approximation
+                                                                                                                                                     3
+
+∂2                          ∂
+∂z 2 Aj (qj , ωj , z) ≪ kjz ∂z Aj (qj , ωj , z) for j = s, i, we ob-
+                                                                            the classical “vacuum” are completely uncorrelated, i.e,
+tain (see Appendix A for the detailed calculation)                          hAi (qi′ , ωi′ , 0)A∗i (qi , ωi , 0)i = C δ(qi − qi′ )δ(ωi − ωi′ ), it is
+                                                                            possible to explicitly derive this relation along with the
+  ∂As (qs , ωs , z)   2ideff ωs2
+                                   ZZ
+                                                                            value of the scaling factor C if we make a short detour to
+                    =                   dωi dqi Ap (qp , ωp )
+        ∂z             ksz c2                                               quantum theory. We note from the quantized theory of
+                                    × A∗i (qi , ωi , z)ei∆kz z , (4a)       the electromagnetic field that (see Sec. 2.3.3 of Ref. [43])
+                                                                                                    Z         r
+   ∂A∗i (qi , ωi , z)   −2ideff ωi2                                                                              ~ωi
+                                    ZZ
+                      =                 dωs dqs A∗p (qp , ωp )                 Êi (r, ωi ) = i dqi                  â(qi , ωi ) ei(qi ·ρ+kiz z) , (7)
+         ∂z              kiz c2                                                                                 4πǫ0
+                               × As (qs , ωs , z)e−i∆kz z , (4b)            where Êi (r, ωi ) is the quantized operator corresponding
+                                                                            to the classical amplitude Ei (r, ωi ) defined in Eq. (1)
+where ∆kz = kpz −ksz −kiz is the longitudinal phase mis-                    and â(qi , ωi ) is the annihilation operator for the mode
+match, and its dependence on qs , qi , ωs , and ωi has been                 specified by its arguments. Upon comparing equa-
+suppressed for brevity. Also, we have assumed that the                      tions (1) and q    (7), it is evident that Ai (qi , ωi , 0) cor-
+transverse dimensions of the crystal are much larger than                                    ~ωi
+those of the pump beam, which leads to conservation                         responds to i 4πǫ  0
+                                                                                                 â(qi , ωi ). Now for Ai (qi , ωi , 0)
+of transverse momentum, i.e, qp = qs + qi . The above                       to effectively simulate the zero-point vacuum fluc-
+coupled differential equations (4) describe the nonlinear                   tuations,
+                                                                             √         we must have hAi (qi′ , ωi′ , 0)A∗i (qi , ωi , 0)i =
+interaction for arbitrary strengths of the pump field.                      ~    ωi ωi′         ′    ′ †
+                                                                                4πǫ0 hvac|âi (qi , ωi )âi (qi , ωi )|vaci,   where |vaci is the
+                                                                            quantum state of the vacuum. Using the relation
+                                                                            hvac|âi (qi′ , ωi′ )â†i (qi , ωi )|vaci = δ(qi′ − qi )δ(ωi − ωi′ ) from
+                     A.    Low-gain regime
+                                                                            quantum theory [44], we obtain
+
+   When the pump power is low, the nonlinear interac-                                                                  ~ωi
+                                                                             hAi (qi′ , ωi′ , 0)A∗i (qi , ωi , 0)i =        δ(qi − qi′ )δ(ωi − ωi′ ).
+tion is weak. In the context of DFG with monochro-                                                                     4πǫ0
+matic plane waves, it is known that under weak inter-                                                                                             (8)
+action, the longitudinal growth of the seed wave is neg-                    Thus, we find that the different modes of the classical
+ligible (see Sec. 2.8 of Ref. [3]). Hence, we approximate                   “vacuum” are indeed completely uncorrelated. Moreover,
+A∗i (qi , ωi , z) ≈ A∗i (qi , ωi , 0) and simply integrate Eq. (4a)         the scaling factor ~ωi /4πǫ0 ensures consistency with the
+from z = 0 to z = L to obtain                                               zero-point energy of the vacuum fluctuations. The above
+                                                                            derivation of Eq. (8) is the only calculation in this paper
+                           2ideff ωs2
+                                       ZZ
+      As (qs , ωs , L) =                    dωi dqi Ap (qp , ωp )           that explicitly appeals to quantum theory [45].
+                              ksz c2                                           We now substitute Eq. (8) in Eq. (6), replace the
+                                                     Z L
+                                                                            slowly-varying term ωi by its central value ωi0 , and take
+                                       ∗
+                                  × Ai (qi , ωi , 0)     dz ei∆kz z
+                                                      0
+                                                                            it outside the integral to obtain
+           deff Lωs2                                                                                                                       2
+                     ZZ
+      =                   dωi dqi Ap (qp , ωp )A∗i (qi , ωi , 0)                                                    ~ωi0 d2eff L2 ωs2 ωs′
+            ksz c2                                                          hAs (qs , ωs , L)A∗s (qs′ , ωs′ , L)i =               ′ c4
+                                                                                                                     4πǫ0 ksz ksz
+                    × sinc (∆kz L/2) exp (i∆kz L/2) ,               (5)
+                                                                               ZZ
+                                                                             ×      dωi dqi hAp (qs + qi , ωs + ωi )A∗p (qs′ + qi , ωs′ + ωi )i
+where sinc(x) ≡ (sin x)/x. Using the above equation, we
+                                                                                 × sinc (∆kz L/2) sinc (∆kz′ L/2) ei(∆kz −∆kz )L/2 .
+                                                                                                                                       ′
+can evaluate the second-order correlation function [42]                                                                                            (9)
+                                                                            The above expression is consistent with the reduced den-
+                                          d2eff L2 ωs2 ωs′ 2
+                                                             ZZZZ
+                  ∗ ′         ′
+hAs (qs , ωs , L)As (qs , ωs , L)i =                              dωi dqi   sity matrix of the signal photon obtained from the full
+                                                   ′ c4
+                                             ksz ksz                        quantum-mechanical treatment of low-gain SPDC [6–8].
+  × dωi′ dqi′ hAp (qs + qi , ωs + ωi )A∗p (qs′ + qi′ , ωs′ + ωi′ )i         The integration over the classical “vacuum” modes on the
+                                                                            right-hand side of Eq. (9) is formally equivalent to per-
+           × hAi (qi′ , ωi′ , 0)A∗i (qi , ωi , 0)i sinc (∆kz L/2)
+                                                                            forming a partial trace of the two-photon density matrix
+                   × sinc (∆kz′ L/2) ei(∆kz −∆kz )L/2 ,
+                                                      ′
+                                                                   (6)      over the idler photon. Thus, the generated field from
+                                                                            DFG in the low-gain regime replicates the signal field
+where h· · ·i denotes an ensemble average and ∆kz′ is the                   from SPDC with respect to second-order spatiotemporal
+phase mismatch evaluated for the primed variables. We                       correlations, and in this context the classical “vacuum”
+have assumed that the pump and classical “vacuum”                           field in DFG plays a role equivalent to that of the idler
+fields have no mutual correlation, and as a result, their                   field from SPDC. However, we emphasize that the lat-
+individual correlation functions factor out separately.                     ter equivalence is valid only for the specific purpose of
+   In order to evaluate the above equation (6), we must                     deriving the second-order correlations of the signal field
+now substitute for hAi (qi′ , ωi′ , 0)A∗i (qi , ωi , 0)i. While it          because the correlations of the classical “vacuum” do not
+may seem reasonable to assume that different modes of                       reflect those of the idler field in reality.
+                                                                                                                                                    4
+
+                   B.     High-gain regime                                 pendix B.II for details)
+
+                                                                                                 2ideff ωs2
+                                                                                                               ZZZZ
+   When the pump power is high and consequently, the                       As (qs , ωs , L) =                           dωi dqi dρ dt Vp (ρ, t)
+nonlinear interaction is strong, we can no longer ignore                                        (2π)3 ksz c2
+the longitudinal growth of the seeding classical “vac-
+                                                                                                                                              
+                                                                                                                          sinh Γ(∆k̄z , ρ, t)L
+uum”. As a result, the derivation of the signal field cor-                          × e−i(qp ·ρ−ωp t) A∗i (qi , ωi , 0)
+                                                                                                                             Γ(∆k̄z , ρ, t)
+relations is slightly more involved and proceeds a bit dif-
+ferently. In particular, we will now use the position-time                                                   ei(∆kz −∆k̄z /2)L ,                  (14)
+representation Vp (ρ, t) of the pump amplitude, which is
+related to the Fourier amplitude Ap (qp , ωp ) as                          where
+                                                                                                         s
+                                                                                                                                    2
+                  ZZ                                                                                                          ∆k̄z
+    Vp (ρ, t) =        dqp dωp Ap (qp , ωp )e   i(qp ·ρ−ωp t)
+                                                                .   (10)              Γ(∆k̄z , ρ, t) ≡     Ḡ2 (ρ, t) −                   .       (15)
+                                                                                                                               2
+
+We invert the Fourier relation in Eq. (10), substitute it                  Using equations (8) and (14), and taking ωi ≈ ωi0 outside
+in Eq. (4), and differentiate with respect to z to obtain                  the integral, we find (see Appendix B.III for the detailed
+                                                                           calculation)
+  ∂ 2 As (qs , ωs , z)    2ideff ωs2
+                                        ZZZZ
+             2
+                       =                     dωi dqi dρ dt                                                           2~ωi0 d2eff ωs2 ωs′
+                                                                                                                                              2
+          ∂z             (2π)3 ksz c2                                        hAs (qs , ωs , L)A∗s (qs′ , ωs′ , L)i =
+                                            "
+                                                ∗
+                                                                                                                     (2π)4 ǫ0 ksz ksz
+                                                                                                                                    ′ c4
+                       −i(qp ·ρ−ωp t) i∆kz z ∂Ai (qi , ωi , z)
+                                                                                   ZZ
+          × Vp (ρ, t)e               e                                                                                     ′             ′
+                                                   ∂z                            ×        dρ dt h|Vp (ρ, t)|2 i e−i[(qs −qs )ρ−(ωs −ωs )t]
+
+                                                                                           sinh Γ(∆k̄z , ρ, t)L sinh Γ(∆k¯′ z , ρ, t)L
+                                                       #                                                                                
+                                  + i∆kz A∗i (qi , ωi , z) . (11)                     ×
+                                                                                              Γ(∆k̄z , ρ, t)             Γ(∆k¯′ z , ρ, t)
+                                                                                                                               ′
+                                                                                                               × ei(∆k̄z −∆k̄z )L/2 .             (16)
+In most experiments, the angular and frequency band-
+widths δqp and δωp of the pump are much smaller                            The above expression quantifies the second-order spa-
+than the corresponding bandwidths δqs and δωs of the                       tiotemporal correlations of the generated field for a
+generated SPDC field, respectively. Under this condi-                      narrow-band pump in the high-gain regime. It may be
+tion of a “narrow-band pump”, the variation of ∆kz                         verified that Eq. (16) is consistent with previous quan-
+with respect to qp and ωp is much slower than that of                      tum derivations of the high-gain SPDC field correlations
+Ap (qp , ωp ), which is usually sharply-peaked around the                  for a monochromatic plane-wave pump [5] and a narrow-
+central wavevector qp0 = 0 and the central pump fre-                       band pump [16] (also, see Eq. B.1 in Appendix B of
+quency ωp0 . As a result, one can define ∆k̄z as the cen-                  Ref. [46], where the expression derived in Ref. [16] has
+tral value of ∆kz evaluated for the conditions qs + qi = 0                 been used for quantifying spatial correlations in degen-
+and ωs + ωi = ωp0 , approximate ∆kz ≈ ∆k̄z (this ap-                       erate SPDC with a quasimonochromatic pump with nar-
+proximation is exactly true only for the monochromatic                     row angular bandwidth). We however note that owing to
+plane-wave pump case) in the second term on the right                      the “narrow-band” approximation involved in the above
+hand side, and take it outside the integral. We note that                  derivation, in the low-gain limit G(ρ, t) → 0 wherein
+any quantity appearing with an overbar notation in the                     Γ(∆k̄z , ρ, t) → i∆k̄z /2, Eq. (16) is in general only ap-
+rest of this paper must be understood as the central value                 proximately equivalent to Eq. (9). Nevertheless, it can
+of that quantity evaluated for the aforementioned con-                     be verified that the equivalence is exact for the case
+ditions. Using equations (4) and (10) in Eq. (11) (see                     of a monochromatic plane-wave pump, for which the
+Appendix B.I for details), we obtain                                       “narrow-band” approximation is exactly true. In the fol-
+                                                                           lowing section, we experimentally test the predictions of
+  ∂ 2 As (qs , ωs , z)         ∂As (qs , ωs , z)                           Eq. (16) by measuring the far-field intensity profile, OAM
+                       − i∆k̄z
+          ∂z 2                       ∂z                                    spectrum, and frequency spectrum in high-gain SPDC for
+                                2
+                           − Ḡ (ρ, t) As (qs , ωs , z) = 0, (12)          increasing gain with a pulsed Gaussian pump.
+
+where we have defined
+                                                                           III.    SINGLE-CRYSTAL SETUP: EXPERIMENTS
+                         4d2 ω 2 ω 2                                                        AND THEORY
+              G2 (ρ, t) = eff s 4i |Vp (ρ, t)|2 .                   (13)
+                          ksz kiz c
+                                                                             In our experimental setup depicted in Fig. 2, a 355
+Upon solving Eq. (12) subject to the initial conditions                    nm vertically-polarized 30-ps 50-Hz pulsed Gaussian
+As (qs , ωs , z = 0) = 0 and ∂As (qs , ωs , z)/∂z|z=0 evalu-               Nd:YAG laser (EKSPLA PL2231) is spatially-filtered
+ated using equations (4a) and (10), we obtain (see Ap-                     and used to pump a 3-mm type-I β-barium borate SPDC
+                                                                                                                                5
+
+                                                                   a slight asymmetry between the widths in the two direc-
+                                                                   tions due to spatial walk-off. However, we ignore walk-
+                                                                   off effects in our study and consider the mean of the two
+                                                                   widths as the width of the far-field profile. The FWHM
+                                                                   width is converted from number of pixels to angle in mil-
+                                                                   liradians by using the camera pixel-size and the focal
+                                                                   length of the collimating lens.
+                                                                      For obtaining the theoretical prediction, we fix the
+                                                                   variables in the temporal degree of freedom by assuming
+                                                                   degenerate SPDC λs = 710 nm with a quasimonochro-
+                                                                   matic pump of wavelength λp0 = 355 nm. We verify that
+                                                                   the pump angular bandwidth δqp = 2/wp2 ≈ 58 mm−2 is
+                                                                   indeed much smaller than the SPDC angular bandwidth
+FIG. 2. Schematic of the experimental setup used for mea-
+suring the far-field intensity profile, OAM spectrum, and          δqs = |ks |/L ≈ 4910 mm−2 [16]. We then use Eq. (16)
+wavelength spectrum in high-gain SPDC for increasing pump          to compute the far-field intensity as
+strengths. SF: spatial filter, HWP+PBS: half-wave plate                                      Karb
+                                                                                                  Z
++ polarizing beam-splitter combination for pump ampli-                       h|As (qs )|2 i = 2     dρ h|Vp (ρ)|2 i
+tude control, BBO: β-barium borate nonlinear crystal, DM:                                     ksz
+dichroic mirror, BD: beam dump, BS: beam-splitter, FM:                                                               2
+                                                                                                 sinh Γ(∆k̄z , ρ)L
+flip mirror, T: translation stage to control the interferometric                             ×                           ,    (17)
+phase δ, IF: interference filter centered at 710 nm.
+                                                                                                    Γ(∆k̄z , ρ)
+                                                                   where Karb is an overall scaling constant. Throughout
+crystal (cut to produce horizontally-polarized collinear           this paper, the quantity Karb must be interpreted as
+degenerate emission for perpendicular incidence of a               an arbitrary scaling factor whose value is irrelevant for
+vertically-polarized pump) placed at the pump’s waist              our purposes. The frequency-time coordinates have been
+plane. The combination of the half-wave plate (HWP)                suppressed for brevity.
+and polarizing beam-splitter (PBS) is used to control                For our experiments, the pump field profile and phase-
+the pump amplitude reaching the crystal. This pump                 mismatch are given by
+amplitude is inferred up to an overall scaling factor from                      Vp (ρ) = g exp{−|ρ|2 /wp2 },                 (18a)
+energy measurements using the energy meter (Coherent                                           p
+EnergyMax USB-J-10MB-HE). The beam-waist size wp ,                               ∆k̄z = |kp |−2 |ks |2 −|qs |2 ,             (18b)
+defined as the 1/e2 half-width of the intensity profile at
+                                                                   where g is a pump amplitude scaling factor,
+the waist plane, was measured using a Gentec Beamage-
+                                                                   |ks |= 2πnso /λs , |kp |= 2πηp (θp )/λp0 , θp is the
+3.0 beam profiler to be wp = 185 µm. The residual pump
+                                                                   angle between the pump propagation direc-
+after the crystal is removed by means of two dichroic
+                                                                   tion and the opticqaxis inside the crystal, and
+mirrors (DMs), and the generated SPDC field is guided
+towards different parts of the setup for measurements as           ηp (θp ) = npe npo / n2po sin2 θp + n2pe cos2 θp is the
+described in the following subsections.                            effective refractive index of the extraordinary-polarized
+                                                                   pump inside the crystal [47]. The values np(e)o and nso
+                                                                   of the (extra)ordinary and ordinary refractive indices of
+                  A.    Far-field intensity                        BBO for the pump and signal wavelengths, respectively,
+                                                                   can be obtained using the Sellmeier relations [48]
+   We place a lens with its focal plane coinciding with the                                 0.0184
+crystal output face, and directly image the SPDC far-field             n2e (λ) = 2.7405 +            − 0.0155λ2 ,            (19a)
+                                                                                         λ2 − 0.0179
+on an Andor Ixon-897 EMCCD camera (pixel size 16 µm                                         0.0128
+×16 µm) that is placed at the plane indicated by the                   n2o (λ) = 2.3730 + 2          − 0.0044λ2 ,            (19b)
+dashed line after the flip mirror (FM) location depicted                                 λ − 0.0156
+in Fig. 2. The crystal orientation was approximately set           where λ is the corresponding wavelength in microns. Us-
+to satisfy the collinear emission, and a 10 nm interfer-           ing these parameters with Eq. (17), we perform a least-
+ence filter (IF) centered at the degenerate wavelength             squares fit between theory and experiment of the loga-
+λs = 2λp0 = 710 nm was placed at the camera entrance.              rithmic total far-field intensity with g as the fit param-
+We rotate the HWP across different angles and acquire              eter. The value of θp for the simulations is allowed to
+five sets of ten images each of the SPDC far-field for each        have a small offset from the collinear emission condition
+                                                                    (coll)
+corresponding pump amplitude, which is simultaneously              θp      = 32.914◦ because in experiments, θp is set by
+measured using the energy meter up to an overall scaling           hand to approximately satisfy collinear emission. We ig-
+factor. We then take diametric slices along the horizon-           nore walk-off effects and exploit the rotational symmetry
+tal and vertical axes of each SPDC profile and compute             of the pump and the SPDC field to significantly speed
+the full-widths-at-half-maximum (FWHMs). We observe                up our simulations.
+                                                                                                                                                                                                            6
+
+                                                                     1.0                                                  1.0
+                                       (a) Experiment                                       (b) eory                                      OAM states is referred to as the OAM spectrum. We
+                                 20                                                    20
+                                                                     0.8                                                  0.8              now study the behavior of the OAM spectrum in high-
+
+       (in mrad)                                                           (in mrad)
+                                 10                                                    10
+                                                                     0.6                                                  0.6              gain SPDC for increasing pump strengths.
+                                  0                                                    0                                                     We define the polar coordinates (qs , φs ) of qs
+                                                                     0.4                                                  0.4
+                                 -10                                               -10                                                     to be related to the Cartesian coordinates as
+                                 -20
+                                                                     0.2
+                                                                                   -20
+                                                                                                                          0.2              (qs sin φs , qs cos φs ) = (qsx , qsy ). The generated field of
+                                                                                                                                           Eq. (14) can be written as [51]
+                                                                     0.0                                                  0.0
+                                        -20 -10     0 10 20                                  -20 -10     0 10 20
+                                                  (in mrad)                                            (in mrad)                                                      +∞   ∞
+                                                                                                                                                                      X    X
+                                      (c)
+                                                                                                                                                    As (qs , φs ) =              αlp LGlp (qs ) eilφs ,   (20)
+
+
+
+
+ SPDC intensity (in arb units)
+                                                                                                                   32.5
+                                 1010                                                                                                                                 l=−∞ p=0
+                                                                                                                   30.0
+
+
+
+
+                                                                                                                          FWHM (in mrad)
+                                 108                                                                               27.5                    where l and p are the azimuthal and radial indices of
+                                                                                                                   25.0                    the Laguerre-Gauss mode functions LGlpP      (qs ) eilφs , and
+                                 106                                                                               22.5                    αlp are stochastic coefficients that satisfy p hαlp α∗l′ p i =
+                                                                                                                   20.0                    Sl δll′ , where δll′ is the Kronecker delta symbol. The
+                                 104                                                                               17.5                    quantities Sl , which include contributions from all the
+                                                                                                                   15.0                    constituent radial modes, are collectively referred to as
+                                         0     0.5      1.0    1.5         2.0               2.5   3.0     3.5                             the OAM spectrum. The angular coherence function
+                                                        pump amplitude g (in arb units)
+                                                                                                                                           W (φs1 , φs2 ) = W (φs1 − φs2 ) defined as [51, 52]
+FIG. 3. Broadening of the far-field intensity profile of the                                                                                                    Z
+SPDC field with increasing gain. (a) and (b) depict the ex-                                                                                 W (φs1 − φs2 ) = dqs qs hAs (qs , φs1 )A∗s (qs , φs2 )i, (21)
+perimental and theoretical images for g = 3.5. The exper-
+imental and theoretical total intensities and full-widths-at-
+half-maximum (FWHMs) of diametric slices of such profiles                                                                                  has been shown to be related to the OAM spectrum Sl
+for increasing pump amplitudes are depicted in (c).                                                                                        by the Fourier transform relation [51, 52]
+                                                                                                                                                              Z π
+                                                                                                                                                         Sl =     d∆φ W (∆φ) eil∆φ .      (22)
+   We depict our experimental and theoretical results in                                                                                                          −π
+Fig. 3. In our simulations, we chose θp = 32.9105◦, which
+is less than 0.004◦ away from θp
+                                   (coll)
+                                          = 32.914◦. The                                                                                   Thus, the angular coherence function W (φs , −φs ) =
+experimental and theoretical far-field intensity profiles                                                                                  W (2φs ) can be computed using equations (16) and (21),
+for g = 3.5 (in arbitrary units) are shown in Fig. 3(a)                                                                                    following which Eq. (22) can be used to obtain the OAM
+and 3(b), respectively. Apart from some visible aberra-                                                                                    spectrum.
+tions in the experimental image Fig. 3(a) that appear                                                                                         In our experiments, we employ the interferometric
+due to burnt spots and dust on a dichroic mirror, the                                                                                      technique reported in Ref. [51] to measure the OAM spec-
+profiles match closely. In Fig. 3(c), we show the trends                                                                                   trum of the high-gain SPDC field. As shown in Fig. 2,
+of the full widths at half maximum (FWHMs) of dia-                                                                                         the SPDC field is incident into a Mach-Zehnder interfer-
+metric slices and total intensities of the far-field profiles                                                                              ometer with an odd and even number of mirrors in the
+with increasing pump amplitudes. The observed increas-                                                                                     two arms, and its far-field interferograms are imaged us-
+ing trend of the FWHMs indicating the broadening of the                                                                                    ing the EMCCD camera. The constructive and destruc-
+angular spectrum with gain has also been reported previ-                                                                                   tive interferograms are acquired by changing the inter-
+ously [31]. Here, we find good agreement of our classical                                                                                  ferometric phase δ using the translation stage, and their
+model’s predictions with experiment.                                                                                                       difference image is used to compute the OAM spectrum
+                                                                                                                                           [51]. However, this direct procedure results in large er-
+                                                                                                                                           rors in the value of S0 due to shot-to-shot fluctuations
+                                                                                                                                           in the pump energy. We partially address this problem
+                                                        B.    OAM spectrum                                                                 by averaging the interferograms over two hundred pulses,
+                                                                                                                                           but interferometric phase drifts prevent us from increas-
+   In SPDC with a zero-OAM Gaussian pump field, OAM                                                                                        ing the acquisition time further. Moreover, the larger
+conservation constrains the form of the generated state                                                                                    acquisition times also introduce errors due to systematic
+to a high-dimensional superposition involving signal and                                                                                   energy drifts of the laser. Therefore, we normalize the
+idler modes with opposite anti-correlated OAM values.                                                                                      constructive and destructive interferograms such that the
+In the low-gain regime, these modes are populated by one                                                                                   intensities in a 20×20 pixels region away from the central
+photon each [49], whereas in the high-gain regime, the                                                                                     interference fringe for both images are the same. Such a
+same modes can be populated by higher but correlated                                                                                       normalization effectively simulates the situation where
+numbers of photons [50]. In both cases, the second-order                                                                                   the two interferograms were obtained for identical pump
+spatial correlations of the signal field are equivalent to                                                                                 energies and almost entirely eliminates the error in S0 . In
+those of a field that is an incoherent mixture of different                                                                                addition, the sum image of the two interferograms after
+OAM states, and the distribution of the weights of the                                                                                     this normalization effectively approximates the intensity
+                                                                                                                               7
+
+                                                               shown in Fig. 4(c). The width of the OAM spectrum can
+                                                               beP  quantified using the angular Schmidt number Ka ≡
+                                                                        2
+                                                               P l Sl , where the spectrum is normalized such that
+                                                               1/
+                                                                  l Sl = 1. In Fig. 4(d), we depict the trends of the total
+                                                               intensity and the Schmidt number for increasing pump
+                                                               amplitudes. The decreasing Schmidt number implies that
+                                                               the OAM spectrum narrows with increasing gain. Again,
+                                                               we find that our experimental measurements are in good
+                                                               agreement with the predictions of our classical model.
+
+
+                                                                              C.   Wavelength spectrum
+
+                                                                  We raise the flip mirror depicted in Fig. 2 and guide the
+                                                               SPDC field into a spectrometer to measure its wavelength
+                                                               spectrum. The spectrometer is an imaging spectrograph
+                                                               (Princeton Instruments Acton Series SP2558 500 mm
+                                                               triple-grating) with a CCD camera (PIXIS:100BR eX-
+                                                               celon, pixel size 20 µm × 20 µm). An aperture of 1 mm
+                                                               radius is used to select only the central portion of the
+                                                               collinear emission far-field corresponding to qs ≈ 0, and
+                                                               a lens with focal length 500 mm is used to focus the light
+                                                               from the aperture onto the entrance slit of the spectrom-
+                                                               eter. We enable vertical binning so that the signal at a
+                                                               certain wavelength is the sum of the photoelectron counts
+                                                               over all the pixels that correspond to that wavelength.
+                                                               The integration time for each of the spectra is 4000 ms.
+                                                               We record ten spectra for each pump amplitude over the
+                                                               range from 610 nm to 810 nm, and to cover this range,
+                                                               we repeat the acquisition for different angular positions
+FIG. 4. Narrowing of the OAM spectrum of the SPDC signal       of the grating (1200 grooves per mm, 750 nm blaze). We
+field with increasing gain. (a) and (b) are the constructive   apply a median filter to the recorded spectra to eliminate
+and destructive interferograms, and (c) depicts the measured   outlier peaks that appear at random locations.
+OAM spectrum alongwith the theoretical prediction for g =         For evaluating the theoretically predicted spectrum,
+3.0. (d) depicts the total intensity and Schmidt number Ka     we set qs = 0 in collinear SPDC, and obtain the fre-
+as a function of pump amplitude g.                             quency spectrum from Eq. (16) as
+                                                                                              ZZ
+profile of the SPDC field, which is then used for fitting           h|As (ωs )|2 i = Karb ωs2    dρ dt h|Vp (ρ, t)|2 i
+the experimental results to the model’s predictions. In
+                                                                                                                    2
+this way, we experimentally obtain the OAM spectra and                                       sinh Γ(∆k̄z , ρ, t)L
+the total intensities for different pump amplitudes.                                     ×                              ,    (23)
+                                                                                                Γ(∆k̄z , ρ, t)
+   We compute the theoretical predictions using the same
+parameters that were used in the previous subsection.          The spatial coordinates of the signal field have been
+We perform a fit between theory and experiment of              suppressed for brevity.          The wavelength spectrum
+the logarithmic total intensities for different pump am-       S(λs ) can be computed using the relation S(λs ) =
+plitudes with g as the fit parameter. Using equations          h|As (ωs )|2 i|dωs /dλs | that upon using ωs = 2πc/λs yields
+(16) and (21), we then compute W (φs , −φs ), and subse-
+quently use Eq. (22) to compute the OAM spectrum for                       S(λs ) = Karb h|As (2πc/λs )|2 i/λ2s ,            (24)
+each pump amplitude. For our simulations, we choose
+                                                  (coll)       We now compute then S(λs ) using the relations,
+θp = 32.894◦, which is only 0.02◦ away from θp           =
+       ◦
+32.914 . The rotational and reflection symmetries of the                          
+                                                                                       t2
+                                                                                                 
+                                                                                                     |ρ|2
+                                                                                                          
+pump and SPDC fields can be used to significantly speed          Vp (ρ, t) = g exp −          exp  −        ,               (25a)
+up the computations.                                                                 (2∆t)2           wp2
+   We depict our experimental and theoretical results in                      2πηp (θp ) 2πno (λs ) 2πno (λ̄i )
+                                                                     ∆k̄z =             −          −            ,           (25b)
+Fig. 4. The constructive and destructive experimentally-                        λp0         λs         λ̄i
+measured interferograms for g = 3.0 (in arb units) are
+depicted in Fig. 4(a) and Fig. 4(b). The measured OAM          where g is a pump amplitude scaling factor, λ̄i =
+spectrum with the theoretically-predicted spectrum are         1/(1/λp0 − 1/λs ), and ∆t = 30/2.355 = 12.738 ps, where
+                                                                                                                                                                                      8
+
+                             1                                                                                                       L             D              L
+                                 (a)                                   experiment
+                                                                       theory
+                           0.8
+
+                                                                                                                                     1                         2
+                           0.6
+
+
+    spectrum               0.4
+
+                           0.2
+                                                                                                        FIG. 6. Conceptual schematic depiction of SU(1,1) interfer-
+                                                                                                        ence as interpreted in our classical model.
+                            0
+                             620 640       660   680 700 720 740      760   780 800
+                                                 wavelength (in nm)                                           IV.       TWO-CRYSTAL SETUPS: THEORY
+                           10 (b)
+                             8
+                                                                                    65
+                                           theory                                                                           A.       SU(1,1) interference
+                                          experiment
+
+
+
+
+intensity (in arb units)
+                                                                                    60
+
+
+
+                                                                                         FWHM (in nm)
+                           107                                                                             SU(1,1) interferometers are nonlinear interferometers
+                                                                                    55
+                                                                                                        that can be created by essentially replacing the beam-
+                                                                                                        splitters in linear SU(2) interferometers, such as Mach-
+                                                                                    50
+                           106                                                                          Zehnder interferometers, by nonlinear crystals [39, 40,
+                                                                                    45                  54]. It is known that such interferometers can achieve a
+                                                                        theory                          phase sensitivity approaching the Heisenberg limit with
+                                                                       experiment
+                           105                                                      40                  the important advantage that they have a better loss
+                                 1.00   1.25 1.50 1.75 2.00 2.25 2.50 2.75 3.00                         tolerance than linear SU(2) interferometers employing
+                                             pump amplitude g (in arb units)                            squeezed states of light. In addition to phase metrol-
+                                                                                                        ogy [55], SU(1,1) interferometers are also useful for ap-
+FIG. 5. Broadening of the wavelength spectrum of the SPDC
+signal field with increasing gain. (a) depicts the wavelength
+                                                                                                        plications such as radiation shaping [56], microscopy [57],
+spectrum for g = 2.8. (b) depicts the total intensity and                                               optical coherence tomography [58], and sensing [59].
+FWHM widths of the spectra for different pump amplitudes.                                                  We consider the SU(1,1) setup shown in Fig. 6 that
+                                                                                                        involves two crystals 1 and 2, each of length L, separated
+                                                                                                        by an air gap of length D. We define the longitudinal
+                                                                                                        coordinate z ′ such that z ′ = 0 corresponds to the input
+                                                                                                        face of crystal 2. We assume that there is no postselection
+                                                                                                        taking place between the crystals, and that D is small
+                                                                                                        enough such that the far-fields of both the crystals can
+                                                                                                        be assumed to overlap perfectly. As the field Aj for j =
+we have converted the FWHM pulse width of the power                                                     p, s, i propagates across crystal 1 and the air gap to reach
+to the standard deviation width [53]. Using these pa-                                                                                                 (air)
+                                                                                                        crystal 2, it acquires a phase kjz L + kjz D, where kjz
+                                                                                                                                                                        (air)
+rameters and the dispersion relations (19), we perform                                                  represents the longitudinal wavevector component of the
+a least-squares fit of the total intensities of the recorded                                            corresponding field in air. As a result, the field generated
+spectra to the total intensities predicted by equation (23)                                             in crystal 2 follows the relation
+with g as the fit parameter. We then use the fit value of g
+to compute the theoretically-predicted spectra for differ-                                                   ∂As (qs , ωs , z ′ )   2ideff ωs2
+                                                                                                                                               ZZ
+ent pump amplitudes. The spatial rotational symmetry                                                                              =               dωi dqi Ap (qp , ωp )
+                                                                                                                   ∂z ′              ksz c2
+of the pump can be exploited to significantly reduce com-                                                                        (air)                                         ′
+
+putation time.                                                                                                          × ei[∆kz         D+∆kz L]
+                                                                                                                                                    A∗i (qi , ωi , z ′ )ei∆kz z ,   (26)
+                                                                                                                    (air)        (air)         (air)      (air)
+                                                                                                        where ∆kz         = kpz − ksz − kiz is the longitudinal
+                                                                                                        phase-mismatch in air. Using equations (4a) and (26),
+   In Fig. 5, we depict our experimental and theoreti-                                                  the net field As (qs , ωs ) at the output of the interferome-
+cal results. In Fig. 5(a), we depict the experimental                                                   ter can be written as
+and theoretical wavelength spectrum for g = 2.8 (in arb
+                                                                                                                            2ideff ωs2
+                                                                                                                                         ZZ
+units), and in Fig. 5(b), we depict the total intensities                                                   As (qs , ωs ) =                  dωi dqi Ap (qp , ωp )
+and the FWHM widths of the spectra for different pump                                                                         ksz c2
+strengths. The increasing FWHM width implies that the                                                          hZ L                                      (air)
+
+wavelength spectrum gets broader with increasing pump                                                        ×        dz A∗i (qi , ωi , z)ei∆kz z + ei[∆kz D+∆kz L]
+                                                                                                                    0
+strength in high-gain SPDC [30]. Our experimental re-                                                                                Z L                                       i
+                                                                                                                                                                             ′
+sults are in good agreement with the theoretical predic-                                                                         ×           dz ′ A∗i (qi , ωi , z ′ )ei∆kz z .     (27)
+tions of our classical model.                                                                                                            0
+                                                                                                                                                            9
+
+In what follows, we derive the second-order spatiotempo-                    The above relation quantifies the growth of the classical
+ral correlations of the output field in low and high gain                   “vacuum” inside crystal 1.
+regimes, and illustrate the interference in the spatial do-                    We now note that the generated field in crystal 2 will be
+main through numerical simulations.                                         governed by Eq. (12). Moreover, the field As (qs , ωs , z ′ =
+                                                                            0) at the entrance of crystal 2 is given by Eq. (14) as the
+                                                                            field remains constant through the air gap. In addition,
+                          Low-gain regime                                   ∂As (qs , ωs , z ′ )/∂z ′ |z′ =0 can be evaluated using Eq. (26).
+                                                                            Solving Eq. (12) for the above initial conditions, we ob-
+   In the low-gain regime, as the interaction is weak, the                  tain (see Appendix B. IV for details)
+longitudinal growth of the classical “vacuum” across both
+                                                                                               4ideff ωs2
+                                                                                                             ZZZZ
+the crystals is negligible. Therefore, we approximate                       As (qs , ωs ) =                          dωi dqi dρ dt Vp (ρ, t)
+A∗i (qi , ωi , z) ≈ A∗i (qi , ωi , 0) in both terms of the right-                             (2π)3 ksz c2
+hand side of Eq. (27), and perform the integrations over                                                                 
+                                                                                                                           sinh Γ(∆k̄z , ρ, t)L
+                                                                                                                                                
+z and z ′ to obtain                                                                  × e−i(qp ·ρ−ωp t) A∗i (qi , ωi , 0)
+                                                                                                                              Γ(∆k̄z , ρ, t)
+                  deff Lωs2
+                             ZZ
+ As (qs , ωs ) =                   dωi dqi Ap (qp , ωp )A∗i (qi , ωi , 0)                     × ei(∆kz −∆k̄z /2)L h(∆kz(air) , D),                     (32)
+                   ksz c2
+                  × sinc (∆kz L/2) ei∆kz L/2                                where we have defined
+                           n         (air)
+                                              o
+                         × 1 + ei[∆kz D+∆kz L] .                                                  (air)
+                                                                                                           h
+                                                                   (28)     h(∆kz(air) , D) ≡ ei∆kz D/2 cosh Γ(∆k̄z , ρ, t)L
+Using the above equation alongwith Eq. (8), we obtain
+                                                                                  n              o           ∆k̄z
+                                                                             × cos ∆kz(air) D/2 −                       sinh Γ(∆k̄z , ρ, t)L
+                                                      2 ZZ                                              2Γ(∆k̄z , ρ, t)
+                ∗ ′      ′      ~ωi0 d2eff L2 ωs2 ωs′
+ hAs (qs , ωs )As (qs , ωs )i =                            dωi dqi
+                                                                                                              n              oi
+                                 4πǫ0 ksz ksz ′ c4                                                      × sin ∆kz(air) D/2 .             (33)
+  × hAp (qs + qi , ωs + ωi )A∗p (qs′ + qi , ωs′ + ωi )i
+                                                                            Using the above relations and Eq. (8), we obtain
+     × sinc (∆kz L/2) sinc (∆kz′ L/2) ei(∆kz −∆kz )L/2
+                                                           ′
+
+                                                                                                                                      2
+                                                                                                                     4~ωi0 d2eff ωs2 ωs′
+               n                       o                                                                                                       ZZ
+                          (air)
+             × 1 + ei[∆kz D+∆kz L]                                             hAs (qs , ωs )A∗s (qs′ , ωs′ )i =                                    dρ dt
+                                                                                                                     (2π)4 ǫ0 ksz ksz
+                                                                                                                                    ′ c4
+                         n            ′ (air)  ′
+                                                   o
+                       × 1 + e−i[∆kz D+∆kz L] . (29)
+                                                                                                                 ′            ′
+                                                                               × h|Vp (ρ, t)|2 i e−i[(qs −qs )ρ−(ωs −ωs )t]
+                                                                                   sinh Γ(∆k̄z , ρ, t)L sinh Γ(∆k¯′ z , ρ, t)L
+                                                                                                                               
+The above expression quantifies the second-order spa-                          ×
+tiotemporal correlations of the output field of the SU(1,1)                            Γ(∆k̄z , ρ, t)            Γ(∆k¯′ z , ρ, t)
+interferometer in the low-gain regime.                                                                       ′
+                                                                               × h̄(∆kz(air) , D) h̄∗ (∆kz(air) , D) ei(∆k̄z −∆k̄z )L/2 .
+                                                                                                                                           ′
+                                                                                                                                                       (34)
+
+                                                                            The above equation quantifies the second-order spa-
+                          High-gain regime                                  tiotemporal correlations of the output field of the SU(1,1)
+                                                                            interferometer in the high-gain regime.
+   In the high-gain regime, the initial classical “vacuum”
+A∗i (qi , ωi , 0) will first be amplified over the length L of
+crystal 1 to A∗i (qi , ωi , L), which then seeds the DFG                             Numerical simulations in the spatial domain
+process in crystal 2. In order to quantify the growth
+of the classical “vacuum”, we define A∗i (qi , ωi , z) =                       We fix the frequency variables by restricting our atten-
+f (z)A∗i (qi , ωi , 0), differentiate Eq. (4b) with respect to              tion to degenerate SPDC with a monochromatic pump,
+z, and make the “narrow-band pump” approximation to                         and suppress those variables for brevity. This restric-
+obtain                                                                      tion physically corresponds to placing a narrowband fil-
+       ∂ 2 f (z)         ∂f (z)                                             ter centered at the degenerate emission wavelength. We
+                 + i∆k̄z        − Ḡ2 (ρ, t) f (z) = 0.            (30)     numerically simulate collinear degenerate SPDC for the
+         ∂z 2             ∂z
+                                                                            same parameters used in Sec. IIIA. For computing the
+Solving the above Eq. (30) subject to the initial condi-                    phase mismatch ∆kzair , we use the dispersion relation
+tions f (z = 0) = 1 and ∂f (z)/∂z|z=0= 0, we obtain                         for air from Ref. [60], according to which the refrac-
+                   (                                                        tive index of air for the pump wavelength 355 nm is
+ f (z) = e−i∆k̄z z/2      cosh Γ(∆k̄z , ρ, t)z                              nair
+                                                                              p = 1.00028571, and that for the signal (idler) wave-
+                                                                            length 710 nm is nair
+                                                                                               s(i) = 1.00027571. We use Eq. (29) and
+                                                                            ∆kz = |qs −qi |2 /4ks to compute the low-gain interference
+                                                         )
+                        i∆k̄z
+                   +                 sinh Γ(∆k̄z , ρ, t)z . (31)            patterns, and use Eq. (34) to compute the high-gain in-
+                     2Γ(∆k̄z , ρ, t)
+                                                                            terference patterns for different air gap lengths and depict
+                                                                                                                            10
+
+              D=5 mm          D=10 mm      D=15 mm
+                                                         1.0
+                                                         0.8
+
+
+
+  low gain
+                                                         0.6
+
+                                                         0.4
+                                                         0.2
+                                                         0
+                                                         1.0
+                                                         0.8
+
+
+
+  high gain
+                                                         0.6
+
+                                                         0.4
+                                                         0.2
+                                                         0       FIG. 8. Conceptual schematic of the induced coherence exper-
+FIG. 7. SU(1,1) far-field interference patterns in the low and   iment [11] interpreted in classical SPDC. Here, the partially-
+high gain regimes for increasing air gap lengths.                transmissive object O is modeled as a beam-splitter.
+
+
+them in Fig. 7. It is evident that in both gain regimes,         true signature of induced emission being negligible, and
+the interference exhibits high visibility. Moreover, with        that the scaling is not linear when induced emission is
+increasing air gap, the fringe separation reduces, and ow-       significant. Moreover, they termed the former regime as
+ing to the finite dispersion of air, the intensity at the        “quantum”, and the latter regime as “classical”. Thus,
+center also varies. These predictions qualitatively agree        it was implied that induced coherence without induced
+with previous experimental observations [31, 61].                emission is an intrinsically quantum-mechanical effect
+                                                                 with no classical explanation.
+                                                                    In more recent years, with the series of intriguing ex-
+                       B.   Induced coherence                    perimental demonstrations of “quantum imaging with
+                                                                 undetected photons” [41], “quantifying the momentum
+   In their seminal 1991 experiment [11], Zou, Wang and          correlation between two light beams by detecting one”
+Mandel built a modified SU(1,1) interferometric setup in         [68], and “interference fringes controlled by noninterfer-
+which the signal fields from the two crystals were sepa-         ing photons” [69], the question of whether induced co-
+rated and superposed on a beam-splitter. Ordinarily, the         herence admits a classical explanation has gained re-
+signal fields from two distinct SPDC processes do not in-        newed interest. While imaging with undetected light has
+terfere with each other. However, Zou et al. [11] observed       been demonstrated in classical settings where an auxil-
+that when the idler paths from the two processes are             iary external field stimulates the emission in both crystals
+aligned, the signal fields become mutually coherent and          [70, 71], it was explicitly stated that the case of spon-
+exhibit interference. This intriguing effect, termed as “in-     taneous low-gain emission cannot be explained within
+duced coherence”, has not only revealed fundamental in-          classical physics [71]. Subsequently, a theoretical study
+sights about interference and indistinguishability [11, 62],     showed that induced coherence persists even when the
+but has also been harnessed in a variety of applications         pump field is a single photon Fock state, where the oc-
+such as imaging [41] and spectroscopy [63].                      currence of stimulated emission is strictly impossible [67].
+   The physical origin of induced coherence has been             Based on this result, the authors concluded that any clas-
+extensively debated over the years since its inception           sical or semiclassical explanation of induced coherence
+[11, 62, 64–67]. In particular, the possibility of the coher-    is effectively ruled out. Nevertheless, we submit that
+ence originating from “induced emission”, i.e, the idler         their study does not preclude the existence of a classi-
+photons from the first crystal stimulating emission in           cal model that successfully captures the various induced
+the second crystal, was recognized [11, 62]. Zou et al.          coherence-related experiments that have been performed
+ruled out this possibility by performing their experiment        so far in which the pump can be treated classically. In
+at weak pump power where induced emission could be               what follows, we show that the classical SPDC model of
+shown to be negligible. They argued that the induced             the present paper captures several important experimen-
+coherence is a consequence of the signal photon paths            tally observed features of induced coherence in low and
+being rendered indistinguishable by the alignment of the         high gain regimes, including the linear scaling of the visi-
+idler paths. Their theoretical analysis also supported           bility for low gain that is often regarded as the signature
+this quantum interpretation by correctly predicting the          quantum feature of induced coherence.
+experimentally-observed linear scaling of the interference          In Fig. 8, we depict the conceptual schematic of a
+visibility with respect to the transmittance of an object        prototypical induced coherence experiment involving two
+placed in the idler path between the crystals. Subse-            identical crystals as interpreted in the classical SPDC
+quently, Wiseman and Mølmer [65] performed a four-               model of the present paper. The pump field is split into
+mode quantum calculation for arbitrary pump strengths            two equal parts: one part pumps crystal 1; the other
+and showed that the linear scaling of the visibility is the      part acquires a uniform phase φ0 and pumps crystal 2.
+                                                                                                                                  11
+
+                       (b                 (c)                     camera. We now note that Bi has the same auto-
+                                                                  correlations as that of Ai , i.e, hBi (qi′ , 0)Bi∗ (qi , 0)i =
+                                                           1.0    hAi (qi′ , 0)A∗i (qi , 0)i = Cδ(qi − qi′ ), where C is a scaling
+                   1
+ (a)                                                       0.8    factor. However, Bi has no mutual correlations with Ai ,
+                                                                  i.e, hAi (qi′ , 0)Bi∗ (qi , 0)i = 0. Using these relations, the
+                                                           0.6
+                                                                  measured intensity takes the form
+                       (d)                (e)              0.4
+                                                                                             Karb
+                                                                                                  Z
+                                                            0.2     I = h|As (qs )|2 i = 2           dqi |Ap (qp )|2 sinc2 (∆kz L/2)
+                   0                                                                          ksz
+                                                                                                   n                      o
+                                                            0
+                                                                                                 × 1 + T cos (γ + φ0 ) ,         (36)
+
+                                                                  In general, the transmittance T and phase γ could be
+FIG. 9. Numerical simulations of the case similar to the one      spatially-structured, in which case they would explicitly
+studied by Lemos et al. [41] where the object O has a binary      depend on qi . However, when T and γ are uniform, the
+structured transmission profile T . As shown in (a), we as-       visibility V (qs ) = (Imax − Imin )/(Imax + Imin ) scales lin-
+sume T (qi ) shaped in the Greek symbol Ψ. (b) and (c) are        early with T , in agreement with the quantum-mechanical
+interferograms obtained for φ0 = 0 and φ0 = π, respectively.      prediction and experimental observations [11, 62]. Thus,
+(d) and (e) are the sum and difference images, respectively.
+                                                                  our classical model is able to correctly predict the linear
+                                                                  scaling of the visibility with object transmittance in the
+A classical “vacuum” field Ai seeds the process in crystal        low-gain regime – a feature that is often regarded as the
+1 and then encounters the object O that is assumed to             quintessential signature of nonclassicality. We will now
+have a complex field transmittance T eiγ . The object
+                                                  √ O is          theoretically analyze two intriguing cases of the object O
+modeled as a beam-splitter of splitting ratio T : 1 − T 2         within our classical model.
+with a second classical “vacuum” Bi that is completely               We first consider the case where the object O has a bi-
+uncorrelated with the first classical “vacuum” Ai enter-          nary structured transmission profile T (qi ) and constant
+ing its other port. The output superposition of the two           phase γ = 0 similar to the one studied by Lemos et al.
+“vacua” from this hypothetical beam-splitter then seeds           [41]. Specifically, as shown in Fig. 9 (a), we assume that
+the process in crystal 2. The fields As1 and As2 generated        T (qi ) has the shape of the Greek symbol Ψ. We assume
+from the two crystals 1 and 2 are superposed on a per-            collinear degenerate SPDC with the same parameters as
+fectly symmetric 50:50 beam-splitter and the interference         chosen in Sec. IIIA. Using Eq. (36), we numerically com-
+is recorded on a CCD camera. We emphasize that Fig. 8             pute the interferograms for φ0 = 0 and φ0 = π and de-
+must be viewed as a conceptual depiction because the              pict them in Fig. 9(b) and Fig. 9(c), respectively. The
+actual geometry of the setup can be entirely different.           sum and difference images of these interferograms are de-
+For instance, the experiment can also be implemented              picted in Fig. 9(d) and Fig. 9(e), respectively. We note
+using collinear phase-matching [41], but the underlying           that the interferograms in Fig. 9(b) and Fig. 9(c) dis-
+concept remains the same. In what follows, we fix the             play the object O even though the interfering signal fields
+temporal variables by assuming degenerate SPDC with a             themselves have not directly interacted with the object,
+quasimonochromatic pump, and derive the output spatial            whereas the classical “vacuum” that has directly inter-
+interference patterns recorded in the induced coherence           acted with the object is never detected. This intriguing
+experiment in low and high gain regimes.                          phenomenon was termed “quantum imaging with unde-
+                                                                  tected photons” in Lemos et al. [41], and was explained
+                                                                  in terms of the quantum-mechanical interpretation of in-
+                        Low-gain regime                           duced coherence. Here, it is evident that the same fea-
+                                                                  ture is also captured within our classical model. We em-
+   In the low-gain regime, the growth of the “vacuum”             phasize that while other studies have previously demon-
+A∗i (qi , 0) can be neglected. Using Eq. (5), the generated       strated this feature in classical settings involving a real
+fields from the two crystals can then be written as               external stimulating field [70, 71], to our knowledge, this
+                                                                  is the first classical treatment applied to the spontaneous
+               Karb
+                     Z
+  As1 (qs ) =          dqi Ap (qp )A∗i (qi , 0) sinc (∆kz L/2)    low-gain limit in which Zou et al. [11, 62] and Lemos et
+                ksz                                               al. [41] performed their experiments.
+                               × ei∆kz L/2 ,             (35a)       Next, we consider the case studied by Hochrainer et
+             Karb
+                   Z                                              al. [68] in which the object O is a lens – a pure phase
+ As2 (qs ) =          dqi Ap (qp ) eiφ0 sinc (∆kz L/2)            object with T = 1 and γ = λi d |qi |2 /(4π) as depicted
+              ksz
+             h                    p                    i          in Fig. 10a. We set the equivalent free-space propaga-
+  × ei∆kz L/2 T eiγ A∗i (qi , 0) + 1 − T 2 Bi∗ (qi , 0) , (35b)   tion distance d = 22.6 mm in our analysis, and study the
+                                                                  interference for different values of the pump beam-waist
+The above fields overlap at the beam-splitter √      to yield     wp . The other parameters are chosen to be the same as
+the field As (qs ) = {As1 (qs ) + As2 (qs )} / 2 at the CCD       those used in Sec. IIIA. In Fig. 10, we depict our numeri-
+                                                                                                                                                                                      12
+                                                                                                                 1.0
+ (a)                            (                  (c)                             (d)          (e)                                          High-gain regime
+                                                                                                                 0.8
+                                                                                                                 0.6
+                                                                                                                 0.4
+
+                                      =60 m         =120 m                        =180 m     =240 m
+                                                                                                                 0.2      In the high-gain regime, the initial “vacuum” A∗i (qi , 0)
+                                                                                                                 0.0
+                                                                                                                       is amplified in crystal 1 to A∗i (qi , L) = A∗i (qi , 0)f (L),
+             1.0
+                   ()                                                         14 (g                                  which then superposes with the “vacuum” Bi∗ (qi , 0) from
+
+
+                                                              FWHM (in mrad)
+             0.8                                                               12                                      the other port of O to seed crystal 2. Using equations
+visibility
+             0.6                                                               10                                      (14) and (31), the fields from the two crystals can be
+                                   =120 m
+             0.4                                                                8                                      written as,
+                                   wp=180 m                                     6
+             0.2
+                                                                                                                                      Karb
+                                     =240 m
+                                                                                                                                            ZZ
+                                                                               4
+             0.0                                                                                         linear t
+                                                                                                                         As1 (qs ) =             dqi dρ Vp (ρ) e−iqp ·ρ ei(∆kz −∆k̄z /2)L
+                     -           0 2        4         6                          50    100     150    200                          ksz
+                               qs (in mrad)                                                 wp (in microns)                                                                
+                                                                                                                                                          sinh Γ(∆k̄z , ρ)L
+                                                                                                                                         × A∗i (qi , 0)                       ,   (37a)
+FIG. 10. Numerical low-gain simulations of the case consid-                                                                                                  Γ(∆k̄z , ρ)
+ered in A. Hochrainer et al. [68] where object O is a lens with                                                                       Karb
+                                                                                                                                            ZZ
+T = 1. (a) depicts the phase γ ∼ |qi |2 modulo 2π. (b), (c),                                                             As2 (qs ) =             dqi dρ Vp (ρ) e−i(qp ·ρ−φ0 )
+(d), and (e) depict interference patterns for increasing pump                                                                          ksz
+                                                                                                                                                                          
+beam-waist wp . (f) depicts the visibility computed along a                                                                          i(∆kz −∆k̄z /2)L sinh Γ(∆k̄z , ρ)L
+horizontal slice through the center of the interferograms by                                                                     ×e
+                                                                                                                                                             Γ(∆k̄z , ρ)
+varying the phase φ0 from 0 to 2π, and (g) depicts the scaling                                                                 h                            p                   i
+                                                                                                                                     iγ ∗
+of the FWHM of the visibility profiles with wp .                                                                             × T e Ai (qi , 0)f (L) + 1 − T 2 Bi∗ (qi , 0) . (37b)
+
+                                                                                                                       The above fields overlap at the beam-splitter
+                                                                                                                                                                 √     to yield the
+                                                                                                                       field As (qs ) = {As1 (qs ) + As2 (qs )} / 2, and the mea-
+                                                                                                                       sured intensity at the CCD camera takes the form
+                                                                                                                                                                                   2
+                                                                                                                                        Karb                     sinh Γ(∆k̄z , ρ)L
+                                                                                                                                              Z
+                                                                                                                                  2
+                                                                                                                        h|As (qs )| i = 2        dρ h|Vp (ρ)|2 i
+                                                                                                                                         ksz                        Γ(∆k̄z , ρ)
+cal simulations of Eq. (36) corresponding to the low-gain
+                                                                                                                            × 1 + T̄ 2 |f (L)|2 +2 T̄ |f (L)|
+                                                                                                                               
+regime. As shown in (b), (c), (d), and (e) for small val-
+ues of wp , the interference is blurred out away from the                                                                        × cos{arg f (L) + γ̄ + φ0 } + (1 − T̄ 2 ) ,
+                                                                                                                                                                          
+                                                                                                                                                                                 (38)
+center, whereas for large values of wp , the interference ex-
+hibits sharp contrast even for large radial distances. This                                                            As seen in the above expression, when |f (L)|≫ 1, the
+effect can be interpreted in our classical model as follows:                                                           terms quadratic in T̄ don’t cancel, and as a result, the
+for small wp , the pump has a large angular bandwidth,                                                                 visibility V (qs ) is not linear in T̄ .
+implying a large spread in qp . Consequently, the far-field                                                               We numerically study the effect of increasing pump
+intensity at qs is a superposition of a large number of                                                                strength on the spatial interference. For simplicity, we
+interference patterns corresponding to several different                                                               now assume the object is no longer structured, but has
+qi that satisfy qi = qp − qs . As a result, the interfer-                                                              a uniform transmittance T , and compute the behavior
+ence pattern is blurred. On the other hand, for large                                                                  of the visibility for increasing pump strengths. We as-
+wp , the pump’s angular bandwidth is small, and conse-                                                                 sume collinear degenerate SPDC with the same parame-
+quently, the averaging effect is less pronounced leading                                                               ters chosen in Sec. IIIA. In Fig. 11(a), we depict the vis-
+to high interference visibility. For different values of wp ,                                                          ibility with respect to transmittance for different pump
+we then compute the visibility V (qs ) along a horizon-                                                                strengths g (in arb units) computed by numerically vary-
+tal slice through the center by numerically varying the                                                                ing φ0 from 0 to 2π in Eq. (38). While the visibility
+phase φ0 from 0 to 2π. As shown in Fig. 10(f), for small                                                               has a linear dependence on transmittance for g = 0.01 in
+wp , the visibility decays rapidly in the radial directions,                                                           the low-gain regime, the dependence is in general neither
+whereas the decay is slower for larger wp . In Fig. 10(f),                                                             linear nor monotonic for g = 1.01 and g = 2.01 that cor-
+we plot the FWHM of the visibility curves for increasing                                                               respond to the high-gain regime. The latter fact may be
+wp alongwith a linear fit. This implies that the inter-                                                                understood as follows: for T = 0, the fields As1 (qs ) and
+ference visibility can be used to infer the pump’s angu-                                                               As2 (qs ) are equal in magnitude, but have no mutual co-
+lar bandwidth which, in the usual quantum mechanical                                                                   herence, and consequently, the visibility vanishes. How-
+picture of SPDC, also determines the transverse momen-                                                                 ever, for T > 0, the visibility increases with respect to
+tum correlations between the signal and idler photons.                                                                 T until some critical value, but when the classical “vac-
+Therefore, the visibility can be used for “quantifying the                                                             uum” seeding the second crystal is stronger than that
+momentum correlations between two photons by detect-                                                                   seeding the first crystal, the field As2 (qs ) is stronger than
+ing one”, as experimentally demonstrated by Hochrainer                                                                 the field As1 (qs ), which causes the visibility to decrease.
+et al. [68]. Here, we find that our above results quali-                                                               This behavior of the visibility in the high-gain regime has
+tatively agree with those depicted in Fig. 2 of Ref. [68],                                                             also been predicted in existing quantum calculations for
+but the interpretation is classical within our model.                                                                  a monochromatic plane-wave pump [64–66].
+                                                                                                                                                                             13
+
+              1                                              1
+                   (a)                                            (IJ                                           At this juncture, one can ask whether the decline in
+             0.8                                            0.8                                               visibility is only due to the disproportion of the overlap-
+             0.6                                            0.6                                               ping fields As1 (qs ) and As2 (qs ) or whether there is also
+
+visibility
+             0.4                             789:;<
+                                                            0.4
+                                                                                                              a simultaneous reduction in the degree of their mutual
+                                             =>?@AB
+                                             CDEFGH                                            $%&'()         coherence. This question is important from a practical
+             0.2                                            0.2                                *+,./0
+                                                                                               123456         standpoint in the context of imaging because in the for-
+              0
+                   0     0.2    0.4   0.6   0.8       1.0
+                                                             0
+                                                                  0     0.2     0.4   0.6   0.8         1.0
+                                                                                                              mer case, the fields As1 (qs ) and As2 (qs ) can be equalized
+                           transmi !" #                                     transmia                   in magnitude by suitably attenuating As2 (qs ) to realize
+FIG. 11. (a) depicts the interference visibility, and (b) depicts                                             perfect visibility [64, 66], whereas in the latter case, the
+the degree of coherence |µ(qs )| as a function of object trans-                                               visibility cannot be optimized beyond |µ(qs )|, where the
+mittance T for different pump amplitudes g (in arb units).                                                    mutual degree of coherence
+                                                                                                                                    p          µ(qs ) is defined as µ(qs ) ≡
+                                                                                                              hA∗s1 (qs )As2 (qs )i/ hAs1 (qs )A∗s1 (qs )ihAs2 (qs )A∗s2 (qs )i.
+                                                                                                              Using equations (37), we obtain
+
+
+
+                                                                         dρ h|Vp (ρ)|2 i| Φ(∆k̄z , ρ, L)|2 f (L) T̄ eiγ̄
+                                                                                  R
+                               µ(qs ) = qR                                          qR                                                         ,                          (39)
+                                                  dρ h|Vp (ρ)|2 i| Φ(∆k̄z , ρ, L)|2    dρ h|Vp (ρ)|2 i| Φ(∆k̄z , ρ, L)|2 1 + T̄ 2 (|f (L)|2 −1)
+
+
+
+where Φ(∆k̄z , ρ, L) ≡ sinh Γ(∆k̄z , ρ, L)/Γ(∆k̄z , ρ, L). It                                                 demonstrated their agreement with the model’s predic-
+may be verified that Eq. (39) is consistent with previous                                                     tions. The far-field intensity profile and wavelength spec-
+theoretical calculations for a monochromatic plane-wave                                                       trum exhibit broadening, whereas the OAM spectrum
+pump [65, 66]. We compute and plot the behavior of                                                            exhibits narrowing with increasing gain.
+|µ(qs )| with respect to transmittance T in Fig. 11(b) for                                                       Next, we use the model to theoretically analyse second-
+different pump amplitudes. In much similarity with the                                                        order interference in SU(1,1) interferometers and induced
+monochromatic plane-wave pump case [65, 66], |µ(qs )|                                                         coherence experiments. We derive analytical expressions
+scales linearly with T for low-gain, but the scaling does                                                     for the second-order spatiotemporal correlations of the
+not remain linear for increasing gain. Nevertheless, µ(qs )                                                   output field of a prototypical SU(1,1) interferometer, and
+remains very high even for large gain, therefore allowing                                                     illustrate some salient features of the interference in the
+the possibility to realize imaging with high visibility by                                                    spatial domain through numerical simulations. We then
+means of attenuation. There is a small discrepancy from                                                       apply the model to the induced coherence experiment,
+perfect coherence in the high-gain regime for unity trans-                                                    and derive expressions for spatial interference in the low
+mittance, i.e, µ(qs ) < 1 for T = 1. In fact, it is evident                                                   and high gain regimes. Interestingly, the model correctly
+from Eq. (39) that owing to the expicit dependence of                                                         predicts the experimentally-observed linear scaling of the
+f (L) on ρ, in general |µ(qs )| 6= 1 for T = 1. However,                                                      visibility with object transmittance in the spontaneous
+we are unable to ascertain if this discrepancy is a gen-                                                      low-gain limit – a feature that is often regarded as the
+uine physical effect, or an artifact of the “narrow-band”                                                     quintessential signature of the nonclassicality of induced
+approximation because the discrepancy vanishes for the                                                        coherence. We then apply the model to numerically an-
+monochromatic plane-wave pump case.                                                                           alyze the intriguing induced coherence-related phenom-
+                                                                                                              ena known as “quantum imaging with undetected pho-
+                                                                                                              tons” [41] and “quantifying the momentum correlation
+                          V.      SUMMARY AND OUTLOOK                                                         between two light beams by detecting one” [68]. Finally,
+                                                                                                              we analyze the behavior of visibility and degree of mu-
+   We describe a classical model that simulates SPDC                                                          tual coherence of the interfering fields in the high-gain
+as DFG of the pump field with a hypothetical stochas-                                                         regime for increasing pump strengths. We find the behav-
+tic field that mimics the effect of vacuum fluctuations.                                                      ior to be consistent with previous studies that assumed
+We show that the second-order spatiotemporal correla-                                                         a monochromatic plane-wave pump [65, 66].
+tions of the field generated from DFG replicate those of                                                         In future, our work may potentially pave the way to-
+the signal field from SPDC. In particular, for low gain,                                                      wards a better understanding of the classical-quantum
+the second-order correlations predicted by the model are                                                      divide in the context of SPDC and induced coherence.
+identical to those predicted by the quantum calculation of                                                    The model itself could be viewed as a specific application
+the reduced density matrix of the signal photon, whereas                                                      of stochastic electrodynamics – a broader research pro-
+for high gain, we performed experimental measurements                                                         gram that attempts to explain a variety of quantum phe-
+of the far-field intensity profile, OAM spectrum, and the                                                     nomena by positing the existence of a classical stochastic
+wavelength spectrum for increasing pump strengths and                                                         background radiation field that statistically mimics the
+                                                                                                                                              14
+
+zero-point vacuum fluctuations [72–76]. It may be possi-                  knowledge of these properties may not only lead to a bet-
+ble to push the model further to investigate higher-order                 ter quantitative understanding of high-dimensional mul-
+correlations and other intriguing fundamental effects re-                 tiphoton entanglement of the high-gain SPDC field [78],
+lated to SPDC and induced coherence, which could po-                      but may also inform experiments aimed at harnessing
+tentially shed light on the limits to which classical physics             the underlying correlations for applications in imaging
+can be used to approximate the quantum world.                             [18, 19], quantum state preparation [20], phase metrol-
+   In addition to fundamental implications, our work may                  ogy [55], radiation shaping [56], microscopy [57], sensing
+also have significant practical applicability. Our model                  [59], and spectroscopy [63].
+can be a useful theoretical tool for analysing high-gain
+SPDC [30, 31, 50, 56] and induced coherence experi-
+ments [41, 68, 69]. Moreover, using the connection be-                                      ACKNOWLEDGMENTS
+tween Schmidt decomposition in quantum theory and the
+coherent-mode decomposition in classical coherence the-                     We acknowledge useful discussions with Samuel
+ory [32, 51], our model can be used to extract impor-                     Lemieux, Nicolás Quesada, Jeff Lundeen, and Polina
+tant properties of the global quantum state such as the                   Sharapova. B.B acknowledges support from the Bant-
+Schmidt spectrum and Schmidt modes [77]. A precise                        ing Postdoctoral Fellowship.
+
+
+                                APPENDIX A: DERIVATION OF THE DFG EQUATIONS
+
+Upon substituting equations (1) and (3) in (2), we obtain
+        "               #Z
+                n2j ωj2                                             4deff ωj2
+                                                                              ZZZ
+            2
+          ∇ + 2            dqj Aj (qj , ωj , z) ei(qj ·ρ+kjz z) = −               dωp dqp dql Ap (qp , ωp ) A∗l (ql , ωl , z)
+                  c                                                   c2
+                                                                                                    × ei[(qp −ql )·ρ+(kpz −klz )z] ,        (40)
+for j = s(i) and q
+                 l = i(s). We first focus only on the left hand side of the above equation. Using ∇ ≡ (∇⊥ , ∂/∂z) and
+                           2 and simplifying, we obtain
+|kj |= nj ωj /c = |qj |2 +kjz
+                                                                                                               
+                                                        ∂              ∂Aj (qj , ωj , z)
+  Z                                                        Z
+               2   2                   i(qj ·ρ+kjz z)
+                                                                                         + ikjz Aj (qj , ωj , z) ei(qj ·ρ+kjz z)
+                     
+     dqj |kj | −qj Aj (qj , ωj , z) e                 +        dqj
+                                                        ∂z                   ∂z
+                                                    2                                                                                    
+                                                      ∂ Aj (qj , ωj , z)          ∂Aj (qj , ωj , z)
+     Z
+                 2               i(qj ·ρ+kjz z)                                                          2                   i(qj ·ρ+kjz z)
+  = dqj kjz Aj (qj , ωj , z) e                   +                       + 2ikjz                    − kjz Aj (qj , ωj , z) e                  .
+                                                            ∂z 2                         ∂z
+                                                                     2
+                                                                 ∂                          ∂
+We make the slowly-varying envelope approximation ∂z               2 Aj (qj , ωj , z) ≪ kjz ∂z Aj (qj , ωj , z), use a different dummy
+           ′
+variable qj instead of qj , and equate to the right hand side of Eq. (40) to obtain
+                ∂Aj (qj′ , ωj , z) i(q ′ ·ρ+k′ z)    4deff ωj2
+  Z                                                            ZZZ
+     dqj′ 2ikjz
+             ′
+                                  e j        jz   =−                 dωp dqp dql Ap (qp , ωp ) A∗l (ql , ωl , z) ei[(qp −ql )·ρ+(kpz −klz )z] .
+                      ∂z                               c2
+Multiplying both sides by e−iqj ·ρ and integrating with respect to ρ over the transverse extent of the crystal, we obtain
+                   ∂Aj (qj′ , ωj , z) i[(q ′ −qj )·ρ+k′ z]    4deff ωj2
+ ZZ                                                                     Z    ZZZ
+     dρ dqj′ 2ikjz
+                ′
+                                     e j              jz   =−             dρ     dωp dqp dql Ap (qp , ωp ) A∗l (ql , ωl , z)
+                         ∂z                                     c2
+                                                                                                            × ei[(qp −ql −qj )·ρ+(kpz −klz )z] .
+We now assume that the transverse extent of the crystal is much larger than the pump spot-size and therefore, the
+integration over ρ can be performed over the entire infinite range of ρ to yield
+                 ∂Aj (qj′ , ωj , z) ik′ z                4deff ωj2
+   Z                                                               ZZZ
+      dqj′ 2ikjz
+              ′
+                                   e jz δ(qj′ − qj ) = −               dωp dqp dql Ap (qp , ωp ) A∗l (ql , ωl , z) ei(kpz −klz )z
+                       ∂z                                  c2
+                                                                                                                  × δ(qp − ql − qj ),
+where the Dirac delta relation on the right-hand side expresses conservation of transverse momentum, i.e, qp = qs +qi .
+Using ωp = ωs + ωi and ∆kz = kpz − ksz − kiz , the above equation can be simplified to yield
+                          ∂Aj (qj , ωj , z)   2ideff ωj2
+                                                         ZZ
+                                            =               dωl dql Ap (qp , ωp )A∗l (ql , ωl , z)ei∆kz z ,
+                                ∂z             kjz c2
+which represents Eq. (4a) for (j, l) = (s, i), and Eq. (4b) for (j, l) = (i, s) upon complex conjugation.
+                                                                                                                                                      15
+
+                APPENDIX B: DETAILED CALCULATIONS FOR THE HIGH-GAIN REGIME:
+
+                      I. Derivation of the second-order differential equation (12) for the signal field
+
+  Upon substituting Eq. (10) in equations (4), we obtain
+
+             ∂As (qs , ωs , z)      2ideff ωs2
+                                               ZZZZ
+                                =                   dωi dqi dρ dt Vp (ρ, t) e−i(qp ·ρ−ωp t) A∗i (qi , ωi , z)ei∆kz z ,                          (41a)
+                   ∂z             (2π)3 ksz c2
+             ∂A∗i (qi , ωi , z)   −2ideff ωi2
+                                               ZZZZ
+                                =                   dωs dqs dρ dt Vp∗ (ρ, t) ei(qp ·ρ−ωp t) As (qs , ωs , z)e−i∆kz z .                          (41b)
+                   ∂z             (2π)3 kiz c2
+
+We now consider the right-hand side of Eq. (11)
+                                                                          "                                             #
+ 2ideff ωs2                                                                   ∂A∗i (qi , ωi , z)
+               ZZZZ
+                                                  −i(qp ·ρ−ωp t) i∆kz z                                  ∗
+                        dωi dqi dρ dtVp (ρ, t)e                 e                                + i∆kz Ai (qi , ωi , z)
+(2π)3 ksz c2                                                                        ∂z
+    4d2eff ωs2 ω̄i2
+                      ZZZZ                     ZZZZ
+                                                                                                               ′   ′         ′ ′
+=                              dωi dqi dρ dt           dωs′ dqs′ dρ′ dt′ Vp (ρ, t)Vp∗ (ρ′ , t′ )e−i[(qp ·ρ−qp ·ρ )−(ωp t−ωp t )] As (qs′ , ωs′ , z)
+  (2π)6 ksz k̄iz c4
+                                            2ideff ωs2
+                                                        ZZZZ
+                      i(∆kz −∆kz′ )z
+                 ×e             + i∆k̄z                           dωi dqi dρ dt Vp (ρ, t) e−i(qp ·ρ−ωp t) A∗i (qi , ωi , z)ei∆kz z
+                                          (2π)3 ksz c2
+    4d2eff ωs2 ω̄i2
+                      ZZZZ                  ZZZZ
+                                                                                                             ′ ′           ′ ′          ′           ′
+=       6           4
+                            dωi dqi dρ dt            dωs′ dqs′ dρ′ dt′ Vp (ρ, t)Vp∗ (ρ′ , t′ )e−i[(qs ·ρ−qs ·ρ )−(ωs t−ωs t )+qi (ρ−ρ )−ωi (t−t )]
+  (2π) ksz k̄iz c
+                                                                                                                 ′             ∂As (qs , ωs , z)
+                                                                                × As (qs′ , ωs′ , z)ei(∆kz −∆kz )z + i∆k̄z
+                                                                                                                                      ∂z
+    4d2eff ωs2 ω̄i2
+                      ZZ       ZZZZ
+                                           ′    ′     ′  ′            ∗ ′ ′ −i[(qs ·ρ−qs′ ·ρ′ )−(ωs t−ωs′ t′ )]
+=                        dρ dt          dωs dqs dρ dt Vp (ρ, t)Vp (ρ , t )e                                       δ(ρ − ρ )δ(t − t )As (qs′ , ωs′ , z)
+                                                                                                                            ′        ′
+  (2π)3 ksz k̄iz c4
+                                                                                                                   ′            ∂As (qs , ωs , z)
+                                                                                                  × ei(∆kz −∆kz )z + i∆k̄z
+                                                                                                                                       ∂z
+    4d2eff ωs2 ω̄i2                                                                                                                ∂A  s (qs , ωs , z)
+                      ZZ       ZZ
+                                                                     ′                                               ′
+=                        dρ dt      dωs′ dqs′ |Vp (ρ, t)|2 e−i[(qs −qs )·ρ−(ωs −ωs )t] As (qs′ , ωs′ , z) ei(∆kz −∆kz )z + i∆k̄z
+  (2π)3 ksz k̄iz c4                                                                                                                        ∂z
+    2     2 2
+  4d ω ω̄                                                                                                        ∂As (qs , ωs , z)
+                          ZZ
+                                                                                                   ′
+= eff s 4i |Vp (ρ, t)|2        dωs′ dqs′ δ(qs − qs′ ) δ(ωs − ωs ) As (qs′ , ωs′ , z) ei(∆kz −∆kz )z + i∆k̄z
+   ksz k̄iz c                                                                                                          ∂z
+    2     2 2
+  4d ω ω̄                                          ∂As (qs , ωs , z)
+= eff s 4i |Vp (ρ, t)|2 As (qs , ωs , z) + i∆k̄z                     .
+   ksz k̄iz c                                              ∂z
+We note that in the second-last step of the above calculation, we have used the fact that the pump intensity profile
+|Vp (ρ, t)|2 has a very slow variation with respect to ρ and t due to our assumption that the frequency and angular
+bandwidth of the pump is much smaller than that of the generated field. Consequently, the function |Vp (ρ, t)|2 could
+be taken out of the integral. Upon shifting the above result to the left-hand side of Eq. (11), we obtain Eq. (12).
+
+
+                       II. Solution of the second-order differential equation (12) for the signal field
+
+  Substituting an ansatz solution of the form As (qs , ωs , z) = erz in Eq. (12), we obtain r2 − i∆k̄z r − Ḡ2 (ρ, t) = 0,
+which has the roots r± = i∆k̄z /2 ± Γ(∆k̄z , ρ, t), where Γ(∆k̄z , ρ, t) is defined by Eq. (15). The general solution
+then takes the form As (qs , ωs , z) = Cer+ z + Der− z , where C and D are scaling factors to be determined by initial
+conditions. The first condition As (qs , ωs , z = 0) = 0 implies C + D = 0, and the value of ∂As (qs , ωs , z)/∂z|z=0
+obtained by evaluating Eq. (41a) for z = 0 yields
+
+                             ideff ωs2                          Vp (ρ, t)
+                                        ZZZZ
+                     C=                         dωi dqi dρ dt                e−i(qp ·ρ−ωp t) A∗i (qi , ωi , 0).
+                          (2π)3 ksz c2                        Γ(∆k̄z , ρ, t)
+
+We again use the approximation that the function Γ(∆k̄z , ρ, t) from its dependence on |Vp (ρ, t)|2 has a very slow
+variation with respect to ρ and t. The above relation then implies As (qs , ωs , z) = 2C ei∆k̄z z/2 sinh Γ(∆k̄z , ρ, t)z ,
+                                                                                                                       
+which yields Eq. (14) for z = L.
+                                                                                                                                                         16
+
+                  III. Evaluating the high-gain spatiotemporal correlation function of the signal field:
+
+   Using Eq. (14), we evaluate
+                                                        2
+                                            4d2eff ωs2 ωs′
+                                                               ZZZZ                      ZZZZ
+hAs (qs , ωs , z)A∗s (qs′ , ωs′ , z)i =                                  dωi dqi dρ dt             dωi′ dqi′ dρ′ dt′ hVp (ρ, t)Vp (ρ′ , t′ )i
+                                          (2π)6 ksz ksz ′ c4
+
+                                                                              sinh Γ(∆k̄z , ρ, t)L sinh Γ(∆k¯′ z , ρ′ , t′ )L i[(∆kz −∆kz′ )+(∆k̄z −∆k̄z′ )/2]L
+                                                                                                                                     
+   −i[(qp ·ρ−qp′ ·ρ′ )−(ωp t−ωp′ t′ )]    ∗                     ′   ′
+×e                                     hAi (qi , ωi , 0)Ai (qi , ωi , 0)i                                                                 e
+                                                                                  Γ(∆k̄z , ρ, t)               Γ(∆k¯′ z , ρ′ , t′ )
+                   2 ZZZZ
+    4d2eff ωs2 ωs′
+                                                   ZZZZ
+                                                                                                                            ′  ′           ′ ′
+=                              dω    i dq i dρ dt              dωi′ dqi′ dρ′ dt′ hVp (ρ, t)Vp (ρ′ , t′ )i e−i[(qp ·ρ−qp ·ρ )−(ωp t−ωp t )]
+  (2π)6 ksz ksz ′ c4
+
+                                                           sinh Γ(∆k̄z , ρ, t)L sinh Γ(∆k¯′ z , ρ′ , t′ )L i[(∆kz −∆kz′ )+(∆k̄z −∆k̄z′ )/2]L
+                                                                                                                  
+                      ~ωi              ′              ′
+                 ×        δ(qi − qi )δ(ωi − ωi )                                                                        e
+                     4πǫ0                                      Γ(∆k̄z , ρ, t)              Γ(∆k¯′ z , ρ′ , t′ )
+                   2 ZZZZ
+    4d2eff ωs2 ωs′
+                                                            ZZ
+                                                    ~ωi                                                            ′   ′           ′ ′           ′       ′
+=      6        ′    4
+                               dω    i dq i dρ dt                 dρ′ dt′ hVp (ρ, t)Vp (ρ′ , t′ )i e−i[(qs ·ρ−qs ·ρ )−(ωs t−ωs t )] ei[qi ·(ρ−ρ )−ωi (t−t )]
+  (2π) ksz ksz c                                   4πǫ0
+                                                             sinh Γ(∆k̄z , ρ, t)L sinh Γ(∆k¯′ z , ρ′ , t′ )L i[(∆kz −∆kz′ )+(∆k̄z −∆k̄z′ )/2]L
+                                                                                                                   
+                                                        ×                                                                 e
+                                                                Γ(∆k̄z , ρ, t)              Γ(∆k¯′ z , ρ′ , t′ )
+                       2 ZZ
+  2~ωi0 d2eff ωs2 ωs′
+                                        ZZ
+                                                                                             ′   ′             ′ ′
+=                            dρ dt            dρ′ dt′ hVp (ρ, t)Vp (ρ′ , t′ )i e−i[(qs ·ρ−qs ·ρ )−(ωs t−ωs t )] δ(ρ − ρ′ )δ(t − t′ )
+  (2π)4 ǫ0 ksz ksz  ′ c4
+
+                                                                               sinh Γ(∆k̄z , ρ, t)L sinh Γ(∆k¯′ z , ρ′ , t′ )L i(∆k̄z −∆k̄z′ )L/2
+                                                                                                                                      
+                                                                          ×                                                                e
+                                                                                  Γ(∆k̄z , ρ, t)                Γ(∆k¯′ z , ρ′ , t′ )
+                       2 ZZ
+  2~ωi0 d2eff ωs2 ωs′                                                                                                    sinh Γ(∆k¯′ z , ρ, t)L i(∆k̄z −∆k̄z′ )L/2
+                                                                                                                                            
+                                                     2     −i[(qs −qs′ )·ρ−(ωs −ωs′ )t] sinh Γ(∆k̄z , ρ, t)L
+=                            dρ    dth|V   p (ρ, t)|   i e                                                                                       e                 ,
+  (2π)4 ǫ0 ksz ksz  ′ c4                                                                    Γ(∆k̄z , ρ, t)                   Γ(∆k¯′ z , ρ, t)
+
+which is Eq. (16).
+
+
+                                      IV. Evaluating the output field from the SU(1,1) setup:
+
+                                                                                                                                                     ′
+ As the field As (qs , ωs , z ′ ) satisfies Eq. (12), we can assume an ansatz solution of the form As (qs , ωs , z ′ ) = Cer+ z +
+      ′
+Der− z , where r± = i∆k̄z /2±Γ(∆k̄z , ρ, t). Thus, wenhave C +D = As (qs , ωs , z ′ = 0) and Cr+ o  +Dr− = Ȧs (qs , ωs , z ′ =
+0) = ∂As (qs , ωs , z ′ )/∂z|z′ =0 , which implies C = Ȧs (qs , ωs , z ′ = 0) − r− As (qs , ωs , z ′ = 0) /(r+ − r− ) and D =
+n                                                   o
+ r+ As (qs , ωs , z ′ = 0) − Ȧs (qs , ωs , z ′ = 0) /(r+ − r− ). Substituting from equations (14) and (26), we obtain
+
+                                      2ideff ωs2
+                                                    ZZZZ
+          As (qs , ωs , z ′ = L) =                         dωi dqi dρ dt Vp (ρ, t) e−i(qp ·ρ−ωp t) A∗i (qi , ωi , 0) ei(∆kz −∆k̄z /2)L
+                                   (2π)3 ksz c2
+                              (     "                (                             )                                 #
+                                         i∆kz(air) D
+                                 ΓL e                              i∆k̄z                                   sinh ΓL
+                                                                                         
+                            × e                        cosh ΓL +          sinh ΓL + Γ − i∆k̄z /2
+                                            2Γ                      2Γ                                       2Γ2
+                                                      "                                            (                               )#)
+                                                                                       i∆kz(air) D
+                                                                        sinh   ΓL    e                            i∆  k̄z
+                                            +e−ΓL i∆k̄z /2 + Γ
+                                                        
+                                                                                  −                  cosh ΓL +            sinh ΓL
+                                                                            2Γ2           2Γ                        2Γ
+               2ideff ωs2
+                             ZZZZ
+          =                         dωi dqi dρ dt Vp (ρ, t) e−i(qp ·ρ−ωp t) A∗i (qi , ωi , 0) ei(∆kz −∆k̄z /2)L
+              (2π)3 ksz c2
+                              (             (                                   )                                                  )
+                                 i∆kz(air) D sinh 2ΓL        i∆k̄z       2          sinh ΓL                                       
+                            × e                           +         sinh ΓL +                    2Γ cosh ΓL − i∆k̄z sinh ΓL
+                                                    2Γ        2Γ2                     2Γ2
+               2ideff ωs2
+                             ZZZZ
+          =                         dωi dqi dρ dt Vp (ρ, t) e−i(qp ·ρ−ωp t) A∗i (qi , ωi , 0) ei(∆kz −∆k̄z /2)L
+              (2π)3 ksz c2
+                                               (                                                                                )
+                                                   sinh 2ΓL                     i∆k̄  sinh ΓL 2                           
+                                                                    i∆kz(air) D         z                          i∆kz(air) D
+                                            ×                 1+e                −                          1−e
+                                                      2Γ                             2            Γ
+                                                                                                                                    17
+
+            2ideff ωs2
+                          ZZZZ
+                                                                                                           (air)
+       =                   dωi dqi dρ dt Vp (ρ, t) e−i(qp ·ρ−ωp t) A∗i (qi , ωi , 0) ei(∆kz −∆k̄z /2)L ei∆kz D/2
+           (2π)3 ksz c2
+                                  (                                                          2                       )
+                                    sinh 2ΓL         n
+                                                           (air)
+                                                                     o              sinh ΓL           n
+                                                                                                          (air)
+                                                                                                                      o
+                                ×               cos ∆kz D/2 − ∆k̄z                                sin ∆kz D/2
+                                         Γ                                               Γ
+          4ideff ωs2
+                                                                                                                               
+                                                                                                                        sinh ΓL
+                      ZZZZ
+                                                     −i(qp ·ρ−ωp t) ∗                  i(∆kz −∆k̄z /2)L i∆kz(air) D/2
+       =                   dωi dqi dρ dt Vp (ρ, t) e                Ai (qi , ωi , 0) e                  e
+         (2π)3 ksz c2                                                                                                      Γ
+                                                 n                o ∆k̄                      n              o
+                                                                             z
+                                × cosh ΓL cos ∆kz(air) D/2 −                   sinh ΓL sin ∆kz(air) D/2 ,
+                                                                         2Γ
+
+which is Eq. (32).
+
+
+
+
+ [1] D. Klyshko, Coherent photon decay in a nonlinear                 [17] I.    N.     Agafonov,     M.      V.     Chekhova,    and
+     medium, JETP Letters 6, 490 (1967).                                   G. Leuchs, Two-color bright squeezed vacuum,
+ [2] D. C. Burnham and D. L. Weinberg, Observation of si-                  Phys. Rev. A 82, 011801 (2010).
+     multaneity in parametric production of optical photon            [18] O. Jedrkiewicz, Y.-K. Jiang, E. Brambilla, A. Gatti,
+     pairs, Phys. Rev. Lett. 25, 84 (1970).                                M. Bache, L. A. Lugiato, and P. Di Trapani, Detection of
+ [3] R. W. Boyd, Nonlinear optics (Academic press, 2020).                  sub-shot-noise spatial correlation in high-gain parametric
+ [4] C. Couteau, Spontaneous parametric down-conversion,                   down conversion, Phys. Rev. Lett. 93, 243601 (2004).
+     Contemporary Physics 59, 291 (2018).                             [19] G. Brida, M. Genovese, and I. Ruo Berchera, Experi-
+ [5] D. N. Klyshko, Photons and Nonlinear Optics (CRC                      mental realization of sub-shot-noise quantum imaging,
+     Press, 1988).                                                         Nature Photonics 4, 227 (2010).
+ [6] C. K. Hong and L. Mandel, Theory of para-                        [20] G. Harder, T. J. Bartley, A. E. Lita, S. W.
+     metric     frequency    down     conversion   of    light,            Nam, T. Gerrits, and C. Silberhorn, Single-mode
+     Phys. Rev. A 31, 2409 (1985).                                         parametric-down-conversion states with 50 pho-
+ [7] T. E. Keller and M. H. Rubin, Theory of two-                          tons as a source for mesoscopic quantum optics,
+     photon entanglement for spontaneous parametric                        Phys. Rev. Lett. 116, 143601 (2016).
+     down-conversion driven by a narrow pump pulse,                   [21] T. S. Iskhakov, I. N. Agafonov, M. V. Chekhova, and
+     Phys. Rev. A 56, 1534 (1997).                                         G. Leuchs, Polarization-entangled light pulses of 105 pho-
+ [8] W. P. Grice and I. A. Walmsley, Spectral information                  tons, Phys. Rev. Lett. 109, 150502 (2012).
+     and distinguishability in type-II down-conversion with a         [22] A. M. Brańczyk, T. M. Stace, and T. C. Ralph, Time
+     broadband pump, Phys. Rev. A 56, 1627 (1997).                         ordering in spontaneous parametric down-conversion,
+ [9] C. K. Hong, Z. Y. Ou, and L. Mandel, Measurement of                   AIP Conference Proceedings 1363, 335 (2011).
+     subpicosecond time intervals between two photons by in-          [23] N.    Quesada      and    J.    E.     Sipe,   Effects    of
+     terference, Phys. Rev. Lett. 59, 2044 (1987).                         time     ordering   in    quantum nonlinear          optics,
+[10] Y. H. Shih and C. O. Alley, New type of Einstein-                     Phys. Rev. A 90, 063840 (2014).
+     Podolsky-Rosen-Bohm experiment using pairs of light              [24] S. L. Braunstein, Squeezing as an irreducible resource,
+     quanta produced by optical parametric down conversion,                Phys. Rev. A 71, 055801 (2005).
+     Phys. Rev. Lett. 61, 2921 (1988).                                [25] B. Dayan, Theory of two-photon interactions with
+[11] X. Y. Zou, L. J. Wang, and L. Mandel, Induced co-                     broadband down-converted light and entangled photons,
+     herence and indistinguishability in optical interference,             Phys. Rev. A 76, 043813 (2007).
+     Phys. Rev. Lett. 67, 318 (1991).                                 [26] W. Wasilewski, A. I. Lvovsky, K. Banaszek,
+[12] G. Weihs, T. Jennewein, C. Simon, H. Wein-                            and C. Radzewicz, Pulsed squeezed light:                 Si-
+     furter, and A. Zeilinger, Violation of Bell’s in-                     multaneous       squeezing      of     multiple     modes,
+     equality under strict Einstein locality conditions,                   Phys. Rev. A 73, 063819 (2006).
+     Phys. Rev. Lett. 81, 5039 (1998).                                [27] N. Quesada, G. Triginer, M. D. Vidrighin, and J. E. Sipe,
+[13] D. Bouwmeester, J.-W. Pan, K. Mattle, M. Eibl, H. We-                 Theory of high-gain twin-beam generation in waveg-
+     infurter, and A. Zeilinger, Experimental quantum tele-                uides: From maxwell’s equations to efficient simulation,
+     portation, Nature 390, 575 (1997).                                    Phys. Rev. A 102, 033519 (2020).
+[14] T. Jennewein, C. Simon, G. Weihs, H. Weinfurter, and             [28] A. Christ,       K. Laiho,       A. Eckstein,      K. N.
+     A. Zeilinger, Quantum cryptography with entangled pho-                Cassemiro, and C. Silberhorn, Probing mul-
+     tons, Phys. Rev. Lett. 84, 4729 (2000).                               timode      squeezing    with      correlation   functions,
+[15] P.-A. Moreau, E. Toninelli, T. Gregory, and M. J.                     New Journal of Physics 13, 033027 (2011).
+     Padgett, Imaging with quantum states of light,                   [29] P. Sharapova, A. M. Pérez, O. V. Tikhonova,
+     Nature Reviews Physics 1, 367 (2019).                                 and M. V. Chekhova, Schmidt modes in the
+[16] E. Brambilla, A. Gatti, M. Bache, and L. A. Lugiato, Si-              angular spectrum of bright squeezed vacuum,
+     multaneous near-field and far-field spatial quantum cor-              Phys. Rev. A 91, 043816 (2015).
+     relations in the high-gain regime of parametric down-            [30] K. Y. Spasibko, T. S. Iskhakov, and M. V. Chekhova,
+     conversion, Phys. Rev. A 69, 023802 (2004).                           Spectral properties of high-gain parametric down-
+                                                                                                                                 18
+
+     conversion, Opt. Express 20, 7507 (2012).                            Nature 412, 313 (2001).
+[31] P. R. Sharapova, G. Frascella, M. Riabinin, A. M.               [50] L. Beltran, G. Frascella, A. M. Perez, R. Fickler, P. R.
+     Pérez, O. V. Tikhonova, S. Lemieux, R. W. Boyd,                     Sharapova, M. Manceau, O. V. Tikhonova, R. W. Boyd,
+     G. Leuchs, and M. V. Chekhova, Properties of                         G. Leuchs, and M. V. Chekhova, Orbital angular mo-
+     bright squeezed vacuum at increasing brightness,                     mentum modes of high-gain parametric down-conversion,
+     Phys. Rev. Research 2, 013371 (2020).                                Journal of Optics 19, 044005 (2017).
+[32] H. Di Lorenzo Pires, F. M. G. J. Coppens, and                   [51] G. Kulkarni, R. Sahu, O. S. Magaña-Loaiza, R. W. Boyd,
+     M. P. van Exter, Type-i spontaneous paramet-                         and A. K. Jha, Single-shot measurement of the orbital-
+     ric down-conversion with a strongly focused pump,                    angular-momentum spectrum of light, Nature Communi-
+     Phys. Rev. A 83, 033837 (2011).                                      cations 8, 1054 (2017).
+[33] W. H. Louisell, A. Yariv, and A. E. Siegman, Quan-              [52] A. K. Jha, G. S. Agarwal, and R. W. Boyd, Partial angu-
+     tum fluctuations and noise in parametric processes. i.,              lar coherence and the angular schmidt spectrum of entan-
+     Phys. Rev. 124, 1646 (1961).                                         gled two-photon fields, Phys. Rev. A 84, 063847 (2011).
+[34] B.       Schröder,     Optical        parametric       am-     [53] We have implicitly assumed that the pump field is a
+     plification         from            quantum            noise,        transform-limited Gaussian pulse, which is not strictly
+     Optical and Quantum Electronics 15, 57 (1983).                       true. However, for our purposes, this assumption will not
+[35] A. Gatti, H. Wiedemann, L. A. Lugiato, I. Mar-                       introduce significant errors.
+     zoli, G.-L. Oppo, and S. M. Barnett, Langevin                   [54] M. V. Chekhova and Z. Y. Ou, Nonlinear interferometers
+     treatment of quantum fluctuations and optical pat-                   in quantum optics, Adv. Opt. Photon. 8, 104 (2016).
+     terns in optical parametric oscillators below threshold,        [55] M. Manceau, G. Leuchs, F. Khalili, and M. Chekhova,
+     Phys. Rev. A 56, 877 (1997).                                         Detection      loss    tolerant   supersensitive    phase
+[36] S. Trajtenberg-Mills,       A. Karnieli,       N. Voloch-            measurement       with     an   SU(1,1)    interferometer,
+     Bloch,      E. Megidish,       H. S. Eisenberg, and                  Phys. Rev. Lett. 119, 223604 (2017).
+     A. Arie, Simulating correlations of structured                  [56] S. Lemieux, M. Manceau, P. R. Sharapova, O. V.
+     spontaneously       down-converted         photon      pairs,        Tikhonova, R. W. Boyd, G. Leuchs, and M. V. Chekhova,
+     Laser & Photonics Reviews 14, 1900321 (2020).                        Engineering the frequency spectrum of bright squeezed
+[37] P. Di Trapani, G. Valiulis, W. Chinaglia, and A. An-                 vacuum via group velocity dispersion in an SU(1,1) in-
+     dreoni, Two-dimensional spatial solitary waves from                  terferometer, Phys. Rev. Lett. 117, 183601 (2016).
+     traveling-wave parametric amplification of the quantum          [57] A. V. Paterova, S. M. Maniam, H. Yang, G. Grenci,
+     noise, Phys. Rev. Lett. 80, 265 (1998).                              and L. A. Krivitsky, Hyperspectral infrared mi-
+[38] A. Picozzi and M. Haelterman, Influence of walk-off, dis-            croscopy with visible light, Science Advances 6,
+     persion, and diffraction on the coherence of parametric              10.1126/sciadv.abd0460 (2020).
+     fluorescence, Phys. Rev. E 63, 056611 (2001).                   [58] G. J. Machado, G. Frascella, J. P. Torres, and M. V.
+[39] B. Yurke, S. L. McCall, and J. R. Klauder, SU(2) and                 Chekhova, Optical coherence tomography with a nonlin-
+     SU(1,1) interferometers, Phys. Rev. A 33, 4033 (1986).               ear interferometer in the high parametric gain regime,
+[40] D. Klyshko, Ramsey interference in two-photon paramet-               Applied Physics Letters 117, 094002 (2020).
+     ric scattering, JETP Letters 104, 2676 (1993).                  [59] M. Kutas, B. Haase, P. Bickert, F. Riexinger, D. Molter,
+[41] G. B. Lemos, V. Borish, G. D. Cole, S. Ramelow, R. Lap-              and G. von Freymann, Terahertz quantum sensing, Sci-
+     kiewicz, and A. Zeilinger, Quantum imaging with unde-                ence Advances 6, 10.1126/sciadv.aaz8065 (2020).
+     tected photons, Nature 512, 409 (2014).                         [60] P. E. Ciddor, Refractive index of air:                new
+[42] L. Mandel and E. Wolf, Optical Coherence and Quantum                 equations for the visible and near infrared,
+     Optics (Cambridge University Press, 1995).                           Appl. Opt. 35, 1566 (1996).
+[43] Z. J. Ou, Quantum optics for experimentalists (World            [61] A. M. Pérez, T. S. Iskhakov, P. Sharapova, S. Lemieux,
+     Scientific Publishing Company, 2017).                                O. V. Tikhonova, M. V. Chekhova, and G. Leuchs,
+[44] R. J. Glauber, The quantum theory of optical coherence,              Bright squeezed-vacuum source with 1.1 spatial mode,
+     Phys. Rev. 130, 2529 (1963).                                         Opt. Lett. 39, 2403 (2014).
+[45] It is also possible to derive the spectral density of vac-      [62] L. J. Wang, X. Y. Zou, and L. Mandel, In-
+     uum within the program of stochastic electrodynamics in              duced     coherence       without    induced     emission,
+     a purely classical manner from considerations of transla-            Phys. Rev. A 44, 4614 (1991).
+     tional, rotational, and Lorentz invariance. We refer the        [63] D. A. Kalashnikov, A. V. Paterova, S. P. Kulik, and
+     interested reader to Ref. [72] for a semi-technical account,         L. A. Krivitsky, Infrared spectroscopy with visible light,
+     and Ref. [74] for the actual derivation.                             Nature Photonics 10, 98 (2016).
+[46] V. A. Averchenko, G. Frascella, M. Kalash, A. Ca-               [64] A. Belinsky and D. Klyshko, Interference of classical and
+     vanna, and M. V. Chekhova, Reconstructing two-                       non-classical light, Physics Letters A 166, 303 (1992).
+     dimensional spatial modes for classical and quantum             [65] H. Wiseman and K. Mølmer, Induced co-
+     light, Phys. Rev. A 102, 053725 (2020).                              herence with and without induced emission,
+[47] S. Walborn, C. Monken, S. Pádua, and P. S. Ribeiro,                 Physics Letters A 270, 245 (2000).
+     Spatial correlations in parametric down-conversion,             [66] M. I. Kolobov, E. Giese, S. Lemieux, R. Fickler, and
+     Physics Reports 495, 87 (2010).                                      R. W. Boyd, Controlling induced coherence for quantum
+[48] D. Eimerl, L. Davis, S. Velsko, E. K. Graham, and A. Za-             imaging, Journal of Optics 19, 054003 (2017).
+     lkin, Optical, mechanical, and thermal properties of bar-       [67] M. Lahiri, A. Hochrainer, R. Lapkiewicz, G. B.
+     ium borate, Journal of Applied Physics 62, 1968 (1987).              Lemos, and A. Zeilinger, Nonclassicality of in-
+[49] A. Mair, A. Vaziri, G. Weihs, and A. Zeilinger, Entangle-            duced     coherence       without    induced     emission,
+     ment of the orbital angular momentum states of photons,              Phys. Rev. A 100, 053839 (2019).
+                                                                                                                            19
+
+[68] A. Hochrainer, M. Lahiri, R. Lapkiewicz, G. B. Lemos,       [74] T. H. Boyer, Classical statistical thermodynam-
+     and A. Zeilinger, Quantifying the momentum corre-                ics    and     electromagnetic     zero-point  radiation,
+     lation between two light beams by detecting one,                 Phys. Rev. 186, 1304 (1969).
+     Proc. Nat. Acad. Sci. 114, 1508 (2017).                     [75] T. H. Boyer, Random electrodynamics: The theory of
+[69] A. Hochrainer, M. Lahiri, R. Lapkiewicz, G. B. Lemos,            classical electrodynamics with classical electromagnetic
+     and A. Zeilinger, Interference fringes controlled by non-        zero-point radiation, Phys. Rev. D 11, 790 (1975).
+     interfering photons, Optica 4, 341 (2017).                  [76] L. De la Peña and A. M. Cetto, The quantum dice: an
+[70] J. H. Shapiro, D. Venkatraman, and F. N. C.                      introduction to stochastic electrodynamics (Springer Sci-
+     Wong, Classical imaging with undetected photons,                 ence & Business Media, 2013).
+     Scientific Reports 5, 10329 (2015).                         [77] S. S. Straupe, D. P. Ivanov, A. A. Kalinkin,
+[71] A. C. Cardoso, L. P. Berruezo, D. F. Ávila, G. B.               I. B. Bobrov, and S. P. Kulik, Angular schmidt
+     Lemos, W. M. Pimenta, C. H. Monken, P. L. Saldanha,              modes in spontaneous parametric down-conversion,
+     and S. Pádua, Classical imaging with undetected light,          Phys. Rev. A 83, 060302 (2011).
+     Phys. Rev. A 97, 033827 (2018).                             [78] B. Kanseri, T. Iskhakov, G. Rytikov, M. Chekhova,
+[72] T. H. Boyer, The classical vacuum, Scientific American           and G. Leuchs, Multiphoton nonclassical cor-
+     253, 70 (1985).                                                  relations in entangled squeezed vacuum states,
+[73] T.     W.     Marshall,     Random       electrodynamics,        Phys. Rev. A 87, 032110 (2013).
+     Proc. Roy. Soc. of London. 276, 475 (1963).
+

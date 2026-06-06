@@ -183,17 +183,18 @@
   },
   "active": "8ad97e7375a24d50",
   "lastOpenFiles": [
-    "results/literature-search-2026-06-06/arxiv-mps-ultrafast-quantum-nonlinear.xml",
-    "results/literature-search-2026-06-06/arxiv-gaussian-interaction-frame.xml",
-    "results/literature-search-2026-06-06/arxiv-pump-depletion-pdc.xml",
-    "results/literature-search-2026-06-06/arxiv-nongaussian-pulsed.xml",
-    "results/literature-search-2026-06-06/arxiv-g2-bsv.xml",
-    "results/literature-search-2026-06-06/arxiv-broadband-bsv-nonlinear.xml",
-    "results/literature-search-2026-06-06/arxiv-classical-bsv.xml",
-    "results/literature-search-2026-06-06/arxiv-stochastic-squeezed.xml",
-    "results/literature-search-2026-06-06/arxiv-or-quantum.xml",
-    "results/literature-search-2026-06-06/arxiv-thz-optical-rectification-squeezed.xml",
-    "results/literature-search-2026-06-06/arxiv-thz-plasma-quantum.xml",
+    "results/literature-search-2026-06-06/extracted_text/wang-et-al-2024-attosecond-pulse-synthesis-from-high-order-harmonic-generation-in-intense-squeezed-light.txt",
+    "results/literature-search-2026-06-06/extracted_text/kulkarni-et-al-2022-a-classical-model-of-spontaneous-parametric-down-conversion.txt",
+    "results/literature-search-2026-06-06/extracted_text/stammer-et-al-2026-symmetry-breaking-by-quantum-light-in-solid-state-high-harmonic-generation.txt",
+    "results/literature-search-2026-06-06/extracted_text/liu-et-al-2026-strong-field-ionization-of-atoms-with-bright-squeezed-vacuum-light.txt",
+    "results/literature-search-2026-06-06/extracted_text/ilin-et-al-2026-quantum-optical-signatures-of-band-topology-in-solid-state-high-harmonics.txt",
+    "results/literature-search-2026-06-06/extracted_text/jiang-et-al-2026-nonlinear-atomic-tunnelling-boosted-by-bright-squeezed-vacuum.txt",
+    "results/literature-search-2026-06-06/extracted_text/khurelbaatar-et-al-2026-nonclassical-cutoff-fluctuations-in-squeezed-light-driven-high-harmonic-generation.txt",
+    "results/literature-search-2026-06-06/extracted_text/singh-et-al-2026-interferometrically-enhanced-asymmetry-in-strong-field-ionization-with-bright-squeezed-vacuum.txt",
+    "results/literature-search-2026-06-06/extracted_text/imai-2026-heralded-ultrafast-generation-of-macroscopic-quantum-states-in-matter-with-bright-squeezed-vacuum-light.txt",
+    "results/literature-search-2026-06-06/extracted_text/stammer-et-al-2026-fluctuation-induced-symmetry-breaking-in-high-harmonic-generation-for-bicircular-quantum-light.txt",
+    "results/literature-search-2026-06-06/extracted_text/lange-et-al-2026-edge-states-and-quantum-optical-high-harmonic-generation-from-topological-insulators.txt",
+    "results/literature-search-2026-06-06/download_manifest.md",
     "results/literature-search-2026-06-06/screened_candidates.md",
     "docs/superpowers/plans/2026-06-06-paper-one-simulation-implementation.md",
     "docs/superpowers/specs/2026-06-06-correspondence-first-hhg-paper-design.md",
@@ -217,7 +218,6 @@
     "wiki/sources/raymer-landes-2022-broadband-squeezed-vacuum-tpa.md",
     "paper/outline.md",
     "paper/README.md",
-    "results/README.md",
-    "code/README.md"
+    "results/README.md"
   ]
 }

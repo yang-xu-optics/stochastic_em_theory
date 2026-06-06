@@ -1,0 +1,922 @@
+                                            Efficient simulation of ultrafast quantum nonlinear optics with matrix product states
+
+                                                  Ryotatsu Yanagimoto,1, ∗ Edwin Ng,1 Logan G. Wright,2, 3 Tatsuhiro Onodera,2, 3 and Hideo Mabuchi1
+                                                                  1
+                                                                   E. L. Ginzton Laboratory, Stanford University, Stanford, California 94305, USA
+                                                                          2
+                                                                            NTT Physics and Informatics Laboratories, NTT Research, Inc.,
+                                                                             1950 University Ave., East Palo Alto, California 94303, USA
+                                                          3
+                                                            School of Applied and Engineering Physics, Cornell University, Ithaca, New York 14853, USA
+                                                                                              (Dated: February 12, 2021)
+                                                            Ultra-short pulses propagating in nonlinear nanophotonic waveguides can simultaneously leverage
+                                                         both temporal and spatial field confinement, promising a route towards single-photon nonlinearities
+                                                         in an all-photonic platform. In this multimode quantum regime, however, faithful numerical sim-
+                                                         ulations of pulse dynamics naı̈vely require a representation of the state in an exponentially large
+                                                         Hilbert space. Here, we employ a time-domain, matrix product state (MPS) representation to en-
+
+
+
+
+arXiv:2102.05902v1 [quant-ph] 11 Feb 2021
+                                                         able efficient simulations by exploiting the entanglement structure of the system. In order to extract
+                                                         physical insight from these simulations, we develop an algorithm to unravel the MPS quantum state
+                                                         into constituent temporal supermodes, enabling, e.g., access to the phase-space portraits of arbitrary
+                                                         pulse waveforms. As a demonstration, we perform exact numerical simulations of a Kerr soliton in
+                                                         the quantum regime. We observe the development of non-classical Wigner-function negativity in the
+                                                         solitonic mode as well as quantum corrections to the semiclassical dynamics of the pulse. A similar
+                                                         analysis of χ(2) simultons reveals a unique entanglement structure between the fundamental and
+                                                         second harmonic. Our approach is also readily compatible with quantum trajectory theory, allow-
+                                                         ing full quantum treatment of propagation loss and decoherence. We expect this work to establish
+                                                         the MPS technique as part of a unified engineering framework for the emerging field of broadband
+                                                         quantum photonics.
+
+
+                                                             I.   INTRODUCTION                                like a strongly nonlinear propagating pulse is a nontrivial
+                                                                                                              task due to the immense dimension of the Hilbert space
+                                               The ability to manipulate photon-photon interactions           that the quantum optical states in general occupy. For
+                                            at the quantum level holds the key to lifting conventional        instance, when we discretize an optical pulse into 100
+                                            classical limits in a wide range of photonic technolo-            bins, as is conventionally done in classical pulse propa-
+                                            gies and applications [1–6]. Recent efforts in the field          gation, but with, say, < 10 interacting photons in each
+                                            of nonlinear nanophotonics have resulted in the devel-            bin, we would naı̈vely need to compute the evolution of a
+                                            opment of ultra-low-loss and highly efficient platforms           ∼ 10100 -dimensional quantum state vector, which clearly
+                                            for nonlinear optics [7, 8], with experimental numbers            exceeds any available computational resource. Thus, to
+                                            coming remarkably close to bridging the long-standing             fully exploit the technological advantages offered by these
+                                            gap between classical optics and the “strong interaction          emerging quantum-optical devices, it is essential to ap-
+                                            regime” of quantum optics with single-photon-level non-           ply sophisticated model reduction techniques to the naı̈ve
+                                            linearity [9–13]. In particular, advances in dispersion en-       full quantum model to obtain computationally tractable
+                                            gineering on these platforms enable ultra-short-pulse op-         models that nevertheless retain quantum features ex-
+                                            eration [14, 15], where the available peak power further          pected to be important given the hardware specifications.
+                                            leverages the material nonlinearities by orders of magni-
+                                            tude, bringing the possibility of engineering highly non-            For modeling the propagation of a quantum pulse,
+                                            classical states of light into the foreseeable future [16].       some key features that we can utilize to reduce the
+                                            In the presence of such strong nonlinearities, the quan-          complexity of the naı̈ve quantum state are (1) the one-
+                                            tum nature of individual photons plays a critical role in         dimensionality of the optical field, and (2) the locality of
+                                            the physical behavior of these systems [17], i.e., classi-        the interactions and dynamics. Quantum mechanically,
+                                            cal mean-field theories and semiclassical approximations          a nonlinear waveguide can be seen as a system of bosons
+                                            are no longer valid in predicting the results of exper-           (i.e., photons) confined to a one-dimensional space evolv-
+                                            iments [18, 19]. At the same time, controllably har-              ing under a Hamiltonian that mediates only local inter-
+                                            nessing these exotic quantum phenomena for photonic               actions, and intuitively, the classical envelope of a pulse
+                                            quantum engineering requires the development of uni-              (i.e., the g (1) correlation function) simply describes how
+                                            fied simulation and modeling methodologies faithful to            the bosons are spatially distributed [20]. Notably, it is
+                                            the hardware level, posing a significant and imminent             known in the context of many-body physics that such
+                                            theoretical and modeling problem. In general, model-              a one-dimensional system of locally interacting particles
+                                            ing non-classical photon dynamics in a broadband system           often exhibits a limited amount of entanglement [21], in-
+                                                                                                              dicating that a large portion of the naı̈vely large Hilbert
+                                                                                                              space (i.e., the parts representing highly nonlocal entan-
+                                                                                                              gled states) are not relevant. One technique extensively
+                                            ∗ Email: ryotatsu@stanford.edu
+                                                                                                              used in the field of many-body physics to exploit this
+                                                                                                                               2
+
+feature is to cast the quantum state into the form of a         quantum propagation of a pulse initialized as a coherent-
+matrix product state (MPS) [22, 23], which yields an ef-        state simulton [47], a quadratic soliton of a 1D χ(2) -
+ficient state representation for numerical studies [24, 25].    nonlinear waveguide composed of two co-propagating
+   MPS has recently been extended to analyze opti-              pulses at the fundamental harmonic (FH) and second
+cal systems, such as in the treatment of pulse prop-            harmonic (SH). We compute a two-mode reduced density
+agation through a mesoscopic atomic cloud [26] and              matrix for the FH and SH pulse supermodes and reveal
+atom-coupled chiral waveguides [27]. While these stud-          their entanglement structure. As a result, we find that
+ies have uncovered rich many-body dynamics, the focus           non-classicality in the quantum simulton primarily accu-
+has predominantly been on the “particle” aspect of the          mulates in a hybrid supermode consisting of a specific
+physics, such as analyzing their mean-field distributions       linear combination of the FH and SH supermodes. The
+and n-particle correlation functions. On the other hand,        numerical techniques highlighted in these examples can
+relatively little attention has been paid to the phase-         be generalized to address various questions about quan-
+space properties of the quantum state [28] which char-          tum pulse propagation expected to arise with the advent
+acterize the “oscillator” aspect of the physics related         of strongly-interacting broadband quantum photonics.
+to the continuous-variable (CV) nature of the optical
+field [29, 30]; in many cases, it is this latter picture that
+conceptually connects more directly to the perspectives
+employed both in classical wave optics and CV quan-                II. MATRIX PRODUCT STATES FOR
+tum information. In the CV approach, it is natural to            QUANTUM OPTICAL PULSE PROPAGATION
+ask about, for example, the reduced density matrix [31]
+of a given pulse supermode, which is indispensable for            In this section, we introduce basic concepts of matrix
+photonic quantum state engineering in the time [32–             product states (MPS), together with methods to imple-
+35] and/or spectral [36, 37] domains, but which is not          ment time evolutions. While we base our discussions
+straightforward to infer from the n-particle correlation        on quantum pulse propagation on a 1D χ(3) -nonlinear
+functions. Other CV quantities such as the Wigner func-         waveguide to keep discussions concrete, the basic con-
+tion and various entanglement measures computed from            cepts introduced in this section is general and can be
+the reduced density matrix are routinely used to quan-          applied to a broader class of systems. We extend our
+tify photonic states as resources for quantum information       analysis to χ(2) nonlinear waveguides in Sec. V.
+processing [38, 39].
+                                                                  The Hamiltonian of a 1D χ(3) -nonlinear waveguide in
+   In this article, we first review the application of MPS      the moving frame takes a form [20]
+and MPS-based time evolution methods to the problem
+of quantum pulse propagation. In order to appreciate                                     Z
+the optical phase-space dynamics of this novel nonlinear                             1                                  
+                                                                            Ĥ = −           dz φ̂†z ∂z2 φ̂z + φ̂†2 φ̂
+                                                                                                                 z z ,
+                                                                                                                       2
+                                                                                                                             (1)
+quantum regime, we develop a “demultiplexing” scheme                                 2
+which can be applied to an MPS representation of a quan-
+tum pulse to extract the reduced density matrix in a            where photon field annihilation operators fulfill commu-
+basis of pulse supermodes [33]. In our scheme, a care-          tation relationships [φ̂z , φ̂†z0 ] = δ(z − z 0 ). The mean-field
+fully chosen sequence of one- and two-mode (i.e., local)        (i.e., c-number) equation under (1) takes a well-known
+linear operations (phaseshifters and beamsplitters) are         form of nonlinear Schrödinger equation (NLSE) [40]
+used to overcome the problem of manipulating nonlo-
+cal supermodes—which are not naturally accessible in
+                                                                                          1
+the MPS framework—by mapping them onto local bins.                              i∂t φz = − ∂z2 φz − |φz |2 φz ,              (2)
+As a demonstration, we analyze the quantum propaga-                                       2
+tion of a pulse initialized in a coherent-state Kerr soli-
+ton of a 1D χ(3) -nonlinear waveguide [40], using the           where time t and space z have been normalized. In the
+MPS-based approach of time-evolving block decimation            context of many-body physics, (1) is referred to as Lieb-
+(TEBD) [21, 41, 42] which is compatible with standard           Liniger Hamiltonian, describing bosons (e.g., photons)
+quantum-optical treatments of linear loss [43]. We show         with point-like interactions [24, 48].
+that the Wigner function of the state contained in the             While the continuum coordinate z is convenient for an-
+canonical sech-pulse supermode can exhibit a consider-          alytic studies, it is often easier to work in a discretized
+able amount of negativity with an enhancement corre-            coordinate for numerical evaluations. More importantly,
+lated with the peak intensity. We highlight features of the     discretization of the field allows us to encode system
+pulse dynamics that indicate departures from established        states on an MPS. We consider a finite space interval
+models, such as broadband corrections to the conven-            −L/2 ≤ z ≤ L/2 and discretize it into N spatial bins
+tional time-dependent Hartree-Fock approximation for            with size ∆z = L/N . As shown in Fig. 1 (a), we assign
+fundamental Kerr solitons [44, 45], and, for higher-order       a photon annihilation operator âm to the mth the spa-
+solitons [46], stark qualitative deviations from classical      tial bin for m ∈ {1, 2, . . . , N }. When N is large enough,
+breather dynamics. Then, we extend our analysis to the          (1) can be approximated by a discretized Bose-Hubbard
+                                                                                                                                        3
+
+     (a)                            L                                     much of the states in the entire Hilbert space might not
+                                                                          be populated and thus could be excluded. To this end,
+                                                                          matrix product states (MPS) allows an effective repre-
+                                                      Δz                  sentation of quantum states given the amount of entan-
+                                                                          glement is limited and local.
+              SPM                                                           Using an MPS representation with bond dimension χ,
+                                                                          (4) can be approximated as [21, 41]
+                    Dispersion                               f(z)
+               f1     f2    f3          f4     f5      f6                          X       [1]i                       [N −1] [N ]iN
+                                                                           ci =           Γ1α11 λ[1] [2]i2 [2]
+                                                                                                 α1 Γα1 α2 λα2 · · · λαN −1 ΓαN −1 1 , (5)
+              a1       a2      a3       a4     a5      a6    z                   α1 ,...,αn−1
+
+
+     (b)       a1      a2      a3       a4     a5     a6                  where Γ[m] is a rank-3 tensor, λ[m] is a vector, and each
+                                                                          αm runs through 1 to χ. Intuitively, (5) is a decompo-
+              SPM SPM SPM SPM SPM SPM                                     sition of a rank-N tensor ci into a product of low-rank
+                                                                          tensors. For instance,
+                                                                                           P a coherent pulse with a normalized
+               Dispersion      Dispersion      Dispersion
+                                                                          envelope f with m |fm |2 = 1 takes a form
+                      Dispersion        Dispersion                                                   ∗
+                                                                                                       α)im
+       Time
+                                                                                 [m]i       ∗   2  (fm                    [m]
+                                                                                Γ11 m = e−|fm α| /2 √       ,           λ1      = 1,   (6)
+              SPM SPM SPM SPM SPM SPM                                                                  im !
+               Dispersion      Dispersion      Dispersion                 where all the other tensor elements are zero. Physically,
+                                                                                                                        P
+                                                                          (6) is obtained by displacing a supermode Â = m fm âm
+                      Dispersion        Dispersion
+                                                                          by α from the vacuum. Notice that parameters needed
+                                                                          for (5) has a favorable polynomial scaling of O(χ2 N ).
+                                                                          The bond dimension χ is related to the maximum amount
+FIG. 1. (a) Finite space interval −L/2 ≤ z ≤ L/2 is dis-                  of entanglement that (5) can support, and larger χ is
+cretized to n spatial bins with size ∆z = L/N . Pulse en-                 needed to describe |Ψi with longer-range entanglement.
+velope function f (z) (red lines) is discretized to form a vec-           Notably, it is heuristically known that entanglement in
+tor f = (f1 , . . . , fN )| (orange boxes). Self-phase modulation         1D quantum many-body systems is often limited [21],
+(SPM) acts locally on discretized photon field (blue arrows),
+                                                                          making MPS an ideal representation to study quantum
+while dispersion mediates interactions between neighboring
+bins (brown arrows). (b) An example of how time evolution                 pulse propagation.
+under the Hamiltonian (3) can be decomposed into one-mode                   Similarly, a generic operator
+SPM operations (blue boxes) and two-mode operations cor-                                           X
+responding to dispersions (brown boxes). Spatial bins are la-                                 Ô =     Oii0 i i0               (7)
+beled by corresponding annihilation operators for the purpose                                             ii0
+of illustration.
+                                                                          can also be expressed in the form of a matrix product as
+                                                                                                    [1]i i0 [2]i i0        [N ]iN i0N
+                                                                                           X
+Hamiltonian of the form [49, 50]                                                 Oii0 =           O1α11 1 Oα1 α22 2 · · · OαN −1 1    (8)
+                                                                                          α1 ,...,αN −1
+             X       1
+                           â†m âm+1 + H.c.
+                                            
+        Ĥ =      −      2
+              m
+                     2∆z                                                  where O[m] is a rank-4 tensor. Operators expressed in
+                                                                   (3)   the form of (8) are referred to as matrix product oper-
+                             1 †            1 †2 2
+                       +         âm âm −    â â .                     ators (MPO), and their expectation values with respect
+                            ∆z 2           2∆z m m                        to MPS are computed via tensor contractions [22]. Just
+Similarly, as shown in the figure, a pulse waveform in                    in the same way as χ for an MPS is determined by how
+the continuous coordinate f (z) is discretized as an N -                  entangled the state is, bond dimension of an MPO is de-
+dimensional vector f = (f1 , . . . , fN )| .                              termined by how non-local the operator Ô is.
+  A generic system state can be written as                                   In his seminal paper [41], Vidal introduced an algo-
+                                                                          rithm, which is often referred to as time-evolving block
+                                                                          decimation (TEBD), to efficiently simulate the time evo-
+                          X
+                    |Ψi =        ci |ii ,            (4)
+                                    i
+                                                                          lution of an MPS. Multiple open-source packages have
+                                                                          been developed for TEBD [51, 52] to this date. TEBD
+where i = (i1 , i2 , . . . , iN )| and |ii = |i1 i ⊗ |i2 i · · · |iN i.   utilizes the fact that updating an MPS for local one-
+Each local Hilbert space is spanned by Fock states                        mode or two-mode unitary operations can be done effi-
+|im i (im ≥ 0). Generally, keeping and updating ci re-                    ciently. While this process involves a truncation of minor
+quire computational resources that grow exponentially                     singular-value components, truncation error can in prin-
+with respect to N . On the other hand, depending on the                   ciple be arbitrary small by taking large enough bond di-
+specific properties of the Hamiltonian, such as locality,                 mension χ. For instance, as shown in Fig. 1(b), dynamics
+                                                                                                                                                       4
+
+under (3) is simulated by Trotter decomposing a short-                          the space for the rth supermode, and the Hilbert space
+time evolution Û = e−iĤδt into a sequence of one-mode                         for the rest of the system is denoted as E. Here, we are
+and two-mode operations                                                         interested in a reduced density matrix
+                                                                                                             X
+    Û ≈ (D̂2 D̂4 D̂6 · · · )(D̂1 D̂3 D̂5 · · · )(Ŝ1 Ŝ2 Ŝ3 · · · ),    (9)             ρ̂S = TrE |ΨihΨ| =     ρjj 0 |jiS j 0 S , (12)
+                                                                                                                    jj 0
+where Ŝm = exp iδtâ†2  2
+                                             
+                     m âm /2∆z implements Kerr self-
+phase modulation (SPM) on the mth bin, and                                      where j = (j1 , . . . , js )| , |jiS = |j1 iS1 ⊗ |j2 iS2 ⊗ · · · ⊗
+                                                                               |js iSs , and similarly for j 0 S . Once we obtain ρ̂S , whose
+                 iδt                                                            dimension is much smaller than the original Hilbert
+    D̂m = exp        (â† âm+1 + âm â†m+1
+                2∆z 2 m                              (10)                       space, we can study detailed properties of the state,
+                                                   i                            such as Wigner function and entanglement among super-
+                        −â†m âm − â†m+1 âm+1 )
+                                                                                modes with standard techniques for continuous variable
+                                                                                systems [29].
+represents hopping interactions between mth and (m +                               To obtain ρ̂S , we ideally would like to have a low-rank
+1)th bins due to quadratic energy dispersions. Note that                        MPO representation of the operators
+operations in each parentheses of (9) commute, and thus,
+they can be implemented in parallel numerically. Addi-                                              µ̂jj 0 = j 0 S hj|S ⊗ 1̂E ,                      (13)
+tionally, higher-order decomposition methods can reduce
+the Trotter discretization errors [53]. For comprehensive                       where 1̂E is an identity operator on E. The expectation
+overview on time-evolution methods for MPS, we lead                             values of these operators would directly give the matrix
+readers to Ref. [42].                                                           elements of ρ̂S via (ρ̂S )jj 0 = hΨ|µ̂jj 0 |Ψi, but the highly
+   It is worth mentioning that we can readily include                           non-local structure of µ̂jj 0 makes it nontrivial to find such
+dissipations to the simulation, e.g., by the Monte-Carlo                        a low-rank MPO expression.
+wavefunction method (MCWF) [43]. The capability of                                 In the following, as a main result of this research, we
+including loss is particularly important for optical simu-                      describe a procedure to efficiently calculate the reduced
+lations, not only because realistic optical systems often                       density matrix ρ̂S of an MPS |Ψi for an arbitrary set
+have a non-negligible amount of loss, but also because                          of supermodes comprising S. As shown schematically in
+dissipation plays critical roles in a host of emergent phe-                     Fig. 2, our approach is based on constructing a linear
+nomena, such as dissipative Kerr solitons [54] and the                          unitary operation V̂ which “demultiplexes” the s (nonlo-
+physics of PT -symmetric systems [55, 56].                                      cal) supermodes into the leftmost s (local) spatial bins.
+                                                                                In other words, by computing |Φi = V̂ |Ψi, we would like
+                                                                                to calculate the matrix elements of ρ̂S via
+III.    DEMULTIPLEXING SUPERMODES FROM
+                  AN MPS
+                                                                                                     (ρ̂S )jj 0 = hΦ|π̂jj 0 |Φi                      (14)
+
+    After a numerical simulation of a quantum pulse prop-                       where the operators π̂jj 0 have a local form
+agation using MPS, we wish to calculate various physical
+properties of the resultant quantum state |Ψ(t)i. For in-                                           s
+                                                                                                                     !             N
+                                                                                                                                             !
+                                                                                                    O                              O
+                                                                                                            0
+stance, the two photon correlation function g (2) (`, m) =                               π̂jj 0 =         |jm ihjm |       ⊗           1̂m       ,   (15)
+hâ†` â†m âm â` i/hâ†` â` ihâ†m âm i can be calculated by express-                           m=1                        m=s+1
+
+ing â†` â†m âm â` and â†j âj (j = `, m) as MPOs and comput-
+                                                                                where 1̂m is an identity operator on the mth spatial bin.
+ing their expectation values. This procedure can be ex-
+                                                                                Explicitly, the MPO representation of π̂jj 0 is
+tended to compute n-particle correlation function as well.
+Generically, physical quantities associated to MPOs with                                               
+                                                                                              [m]i i0     δim jm0 δi0 j m≤s
+larger bond dimension are more expensive to compute.                                        O11 m m =               m m
+                                                                                                                                ,    (16)
+                                                                                                          δim i0m       s<m
+    In the context of quantum engineering and informa-
+tion, it is of great importance to know quantum states
+                                                                                with all other tensor elements zero; because (16) only re-
+populating certain supermodes of interest. To be more
+                                                                                quires a bond dimension of 1, its expectation value can be
+precise, let us consider s  N supermodes, where the
+                                                                                efficiently computed. Then the demultiplexing problem
+rth pulse supermode [33] is defined as
+                                                                                posed by (14) is to obtain
+                                    N
+                                                                                                       V̂ † π̂jj 0 V̂ = µ̂jj 0 .                     (17)
+                                    X
+                         Â(r) =           (r)
+                                          fm   âm                       (11)
+                                    m=1
+                                                                                While solutions to (17) are not generally unique, we
+for an arbitrary set of orthonormal vectors                                     choose to construct V̂ as a product of local one-mode
+{f (1) , . . . , f (s) }. We denote the Hilbert space for                       and two-mode linear operations to allow for the compu-
+these supermodes as S = S1 ⊗ S2 ⊗ . . . Ss , where Sr is                        tation of |Φi = V̂ |Ψi using the standard MPS operations
+                                                                                                                                                                                     5
+
+           (1)
+        A = Σ f m am
+                            (1)     (1)                                                                      through (r − 1) into the leftmost (r − 1) spatial bins.
+                                                                                                             The second line indicates that for spatial bins with index
+                                                        (2)
+                                                    A = Σ f m am
+                                                                       (2)    (2)
+                                                                                                             m ≥ r, the effect of the transformation V̂ (r−1) has been
+                                                                                                             to only “mix in” components from bins m − r + 1 up to
+           a1             a2                a3       aN-2          aN-1                   aN                 N ; more precisely, for m ≥ r, âm
+                                                                                                                                                         (r−1)
+                                                                                                                                                               is independent of
+                                                                                                             any â` such that ` ≤ m − r. (19) is fulfilled for the base
+                                                                                           (1)
+                                                                                          RN                                               (0)
+                                                                                                             case of V̂ (0) = 1̂ and cm` = δm` at r = 0, so we only need
+       R
+        (1)                                                                     (1)
+                                                                              RN-1                           to ensure that our construction of R̂(r) preserves (19) for
+                                                                 (1)
+                                                                                                             any r > 0. At the end of the final sth iteration, we should
+                                                                RN-2                        (2)
+                                                                                                                                   (s)       (s)
+                                                                                                             then find that âm = Âm for 1 ≤ m ≤ s, which satisfies
+                                                                                          RN
+                                                    (1)
+                                                   R3                               (2)
+                                                                                                             our goal of (17) and allows us to take V̂ = V̂ (s) .
+                                                                              RN-1                              We parametrize R̂(r) with two sets of angles
+                                      (1)
+                                    R2                           (2)
+                                                                RN-2
+                                                                                                                (r)          (r)            (r)         (r)
+                                                                                                             {θr , . . . , θN } and {ϕr , . . . , ϕN −1 } (i.e., the rth iter-
+                      (1)
+                     R1                                                                           (2)        ation requires 2(N − r) + 1 parameters). For m < N ,
+                                                    (2)
+                                                   R3                                             R
+                                                                                                             these parameters are taken to define a set of phase-
+                                      (2)
+                                    R2                                                                       shifter/beamsplitter operations
+                                                                                                                              h                                i
+                                             (2)          (2)           (2)                (2)
+                                                                                                                (r)
+                                                                                                              R̂m   = exp iθm        (âm âm − â†m+1 âm+1 )
+                                                                                                                                 (r) †
+                                                                                                                                                                            (20a)
+           A
+               (1)
+                          A
+                              (2)
+                                            a3       aN-2          aN-1                   aN                          h π                                                 i
+                                                                                                                                                 (r)              (r)
+                                                                                                               × exp           − ϕ(r)
+                                                                                                                                   m       e−iθm â†m âm+1 − eiθm âm â†m+1 ,
+                                                                                                                            2
+                                                                                                             which implement the operator transformations [59]
+                                                                                                                                           (r)
+FIG. 2. Illustration of our supermode demultiplexing scheme.                                                       (r)†
+                                                                                                                 R̂m          (r)
+                                                                                                                        âm R̂m   = eiθm sin ϕ(r)          (r)
+                                                                                                                                              m âm + cos ϕm âm+1 (20b)
+Application of a unitary transformation R̂(r) , which is com-                                                                                (r)
+                                                (r)      (r)
+posed of one-mode and two-mode gates {R̂r , . . . , R̂N }, de-
+                                                                                                                (r)†
+                                                                                                              R̂m            (r)
+                                                                                                                     âm+1 R̂m   = e−iθm sin ϕ(r)            (r)
+                                                                                                                                              m âm+1 − cos ϕm âm .
+                                 (r)  P     (r)
+multiplexes rth supermode Â = m fm âm to the rth (lo-                                                                                                  (r) †
+                                                                                                                                           (r)
+cal) spatial bin. We show operations up to r = 2, where                                                      For m = N , we fix R̂N = eiθN âN âN . We then construct
+local annihilation operators of the first and second bins are                                                R̂(r) by cascading these one- and two-mode operations
+transformed to Â(1) and Â(2) , respectively. For the purpose of
+                                                                                                             according to
+illustration, spatial bins are labeled by associated annihilation
+operators.                                                                                                                                         (r)            (r)       (r)
+                                                                                                                            R̂(r) = R̂r(r) R̂r+1 · · · R̂N −1 R̂N .               (20c)
+
+also used in TEBD. Such construction of a linear unitary                                                        Because R̂(r) should demultiplex the rth supermode
+gate with one-mode and two-mode operations may be                                                            into the rth spatial bin, we require
+seen as a family of general multiport linear interferom-                                                                                                  N
+eters [57, 58], where each “port” is a discretized spatial                                                                                                        (r)
+                                                                                                                                                          X
+                                                                                                                                â(r)
+                                                                                                                                  r = Â
+                                                                                                                                         (r)
+                                                                                                                                             =                   f` â` .          (21)
+bin of an MPS in our setup.                                                                                                                               `=1
+   Our scheme to construct V̂ works in an iterative man-
+ner with iteration index r ∈ {1, 2, . . . , s}. In the rth                                                   On the other hand, based on (19) and (20), we have
+iteration, we construct a transformation R̂(r) that de-
+                                                                                                                                     N
+multiplexes the rth supermode into the rth spatial bin.                                                                              X
+                                                                                                                         â(r)
+                                                                                                                           r =
+                                                                                                                                            (r) (r−1)
+                                                                                                                                           gm  âm
+Note that, as a consequence, the construction of R̂(r) is
+                                                                                                                                     m=r
+dependent on the partial operations                                                                                                                                                (22)
+                                                                                                                                     N min(r−1+`,N )
+                                                                                                                                                                  (r) (r−1)
+                                                                                                                                     X      X
+                     V̂ (r−1) = R̂(r−1) R̂(r−2) · · · R̂(1)                                           (18)                     =                                 gm  cm` â` ,
+                                                                                                                                     `=1           m=r
+which have already been applied.            If the previous
+                                                                                                                     (r)      (r)    (r) Qm−1       (r)
+(r − 1) iterations were valid, then we can suppose                                                           where gm = eiθm sin ϕm k=r cos ϕk . By equating
+                                                     (r−1)                                                   (21) and (22), we can solve for the angles via
+V̂ (r−1) implements the transformations âm 7→ âm         =
+   (r−1)†        (r−1)
+V̂        âm V̂       , where                                                                                        (r)                                   −1
+                  (                                                                                                  θm   = arg Im                  ϕ(r)
+                                                                                                                                                     m = sin   |Im |,             (23a)
+       (r−1)        Â(m)                 m≤r−1
+     âm      = PN              (r−1)              .    (19)                                                 where
+                               c
+                        `=m−r+1 m`    â` m≥r
+                                                                                                                               (r)           (r) (r−1)
+                                                                                                                                                 Pm−1
+                                                                                                                             fm−r+1 −   k=r gk ck,m−r+1
+Here, the first line of (19) means the previous (r − 1)                                                              Im =        (r)    Qm−1        (r)
+                                                                                                                                                                                  (23b)
+iterations have successfully demultiplexed supermodes 1                                                                         cm,m−r+1 k=r cos ϕk
+                                                                                                                                          6
+
+for m ∈ {r, r + 1, . . . , N }. Notice that the right hand                  in the subspace S has unit purity throughout the dynam-
+                                 (r)      (r)                               ics of (26). Nevertheless, due to the Kerr-type nonlinear
+side of (23a) only depends on θm0 and ϕm0 with m0 < m,
+and thus, we can solve the equations starting from m = r                    phase shifts, (26) deviates from a coherent state as it
+towards n iteratively to straightforwardly determine all                    evolves, leading to a variety of interesting phase-space
+    (r)
+of θm and ϕm .
+              (r)                                                           dynamics [16, 45, 64, 65]. On the other hand, it is diffi-
+   For the first supermode, we have analytic solutions                      cult to quantify the accuracy or regime of validity of the
+                                                                            TDHF due to its non-perturbative nature, and phase-
+                                               fm
+                                                 (1)                        space dynamics of quantum solitons beyond TDHF in
+  (1)
+ θm          (1)
+      = arg fm   ,   ϕ(1)    −1
+                                                                   , (24)   the few-photon regime remain largely unexplored. In the
+                      m = sin   r
+                                             Pm−1        (1)
+                                                               2            following, we show that our MPS-based scheme serves as
+                                       1−       k=1     fk                  a powerful numerical tool to explore this latter regime.
+                                                                               To simulate the propagation of a soliton, we initial-
+while we generally need to employ numerical methods                         ize a coherent-state MPS according to (6) with envelope
+to demultiplex further supermodes. After solving for all                                                  √
+ (r)      (r)
+                                                                            f (sech) and with α = n̄. Using TEBD, we simulate
+θm and ϕm and determining R̂(r) , it is straightforward                     the time evolution of the state under the Hamiltonian
+            (r)
+to obtain c`m and confirm that (19) is fulfilled by the                     (3) with and without linear loss, where the loss dynam-
+above construction. The iterative procedure culminating                     ics are√simulated√via MCWF with quantum jump opera-
+in V̂ = V̂ (s) thus demultiplexes all s supermodes into                     tors { κâ1 , . . . , κâN }, where κ is the power decay rate.
+the leftmost s spatial bins. We can then compute the                        Fig. 3(a) shows the time evolution of the photon density
+reduced density matrix ρ̂S via (14).                                        distribution (i.e., g (1) correlation function) hφ̂†z φ̂z i, for
+                                                                            an initial pulse amplitude n̄ = 3. We see that even on
+                                                                            the level of g (1) , the pulse envelope exhibits dispersion
+   IV.   QUANTUM PROPAGATION OF KERR                                        as a function of time [62], reflecting the fact that the
+                SOLITONS
+                                                                            initial classical soliton is not an exact eigenstate of the
+                                                                            quantum Hamiltonian; we sometimes refer to such non-
+  In this section, we study quantum propagation of a                        classical dispersion as being “quantum induced”.
+Kerr soliton. A classical soliton solution for (2) with                        We next consider the reduced density matrix ρ̂S for the
+an average photon number of n̄ takes a well-known sech                      sech-pulse supermode S using the demultiplexing scheme
+form [40, 46]                                                               developed in Sec. III with the envelope function f (sech) .
+                               n̄ in̄2 t/8      n̄z                         Consider first the case without loss, or κ = 0. Fig. 3(b)
+               φ(sech)
+                z      (t) =     e         sech     .                (25)   shows snapshots of the Wigner functions of ρ̂S , which
+                               2                 2
+                                                                            exhibit a substantial amount of Wigner function nega-
+While this solution is exact in the realm of classical optics               tivity and signify non-classicality in the state as might
+where it may be thought of as specifying the pulse am-                      be expected for single-mode Kerr evolution. However,
+plitudes of a coherent state, quantum mechanical effects                    Fig. 3(c) shows that the purity Tr(ρ̂2S ) exhibits a mono-
+such as squeezing [60, 61], quantum-induced dispersion                      tonic decay in time, indicating that the sech-pulse sub-
+of pulse envelope [62], and soliton evaporation [63] can                    space S is not closed under the dynamics and in fact,
+become pronounced in the regime of large nonlinearity                       coupling between S and the rest of the system E can act
+where n̄ becomes small.                                                     as an effective decoherence channel. Actually, due to the
+   Conventionally, quantum mechanical soliton solitons                      nonlinear nature of the dynamics, ρ̂S may not be pure for
+can be treated using the time-dependent Hartree-Fock                        any choice of a supermode f in general. Also shown in
+approximation (TDHF) [44]. As long as n̄  1 holds                          Fig. 3(c) is the volume of the Wigner function negativity,
+true, TDHF predicts that a quantum soliton initialized                      which serves as a measure of the non-classicality of the
+as a coherent state of the envelope φz (0) approximately                    state [66]. Following an initial increase, the volume of
+evolves according to [45]                                                   Wigner function negativity starts to decrease after some
+                                                                            time, again due to competition between the nonlinear
+                           i(2n − n̄)n̄nt αn Â†n
+                                        
+              n̄
+                 X                                                          dynamics and the effective decoherence caused by entan-
+  |Ψ(t)i ≈ e− 2      exp                           |0i , (26)
+                                 8           n!                             glement with E. These features are in stark contrast to
+                 n=0
+                                                                            the single-mode dynamics predicted by TDHF.
+              √
+where α =       n̄, and Â is the annihilation operator                        We can also contrast this effective decoherence due to
+of the classical soliton-pulse supermode [45]. In dis-                      entanglement between S and E with standard dissipation
+cretized coordinates, Â =
+                           P (sech)
+                              fm
+                                                 (sech)
+                                    âm , where fm      ∝                   due to linear loss. When loss is incorporated to the sim-
+ (sech)                                                                     ulation, we obtain an ensemble of quantum trajectories
+φm∆z−L/2 (0), up to a proportionality constant indepen-                     {|Ψ1 (t)i , . . . , |ΨM (t)i} via the MCWF method [43]. The
+dent of m such that f (sech) is normalized. The main                        final reduced density matrix is calculated by averaging
+feature of the approximate TDHF solution is that it is                      the reduced density matrices over the ensemble according
+                                                                                                 PM
+closed within the subspace S of the soliton supermode                       to ρ̂S = M −1 i=1 ρ̂S,i , where ρ̂S,i is the reduced den-
+f (sech) , so that, e.g., the reduced density matrix of |Ψ(t)i              sity matrix of |Ψi i. As expected, the linear loss causes
+                                                                                                                                                                                                                            7
+
+                 (a)                                    (b)       t = 0.5           t = 1.0                                                (c)
+                                                                                                                                                           1.0     0.3
+                                                                                                                                0.3
+                                                                                                                                        State purity
+                                          t = 0.0        3                                                                                                                  = 0.0
+
+
+                                                                                                                                                                                    WF negativity
+                     2
+
+    Photon density
+                                          t = 0.5                                                                                         0.8                               = 0.5
+                                                                                                                                                                   0.2
+= 0.0
+                                          t = 1.0                                                                               0.2
+                                                                                                                                      in soliton mode
+                                          t = 1.5   p    0                                                                                0.6                      0.1
+                     1
+                                                                                                                                0.1
+                                                         3                                                                                0.4                      0.0
+                     0                                                                                                                       0.0 0.5 1.0 1.5          0.0 0.5 1.0 1.5
+                                                                                                                                0.0               Time t                   Time t
+                             Position z
+                                                         3                                                                            (d)
+                     2                                                                                                                    0.3
+
+    Photon density
+                                                                                                                                  0.1               t = 0.1
+
+                                                                                                                                           WF negativity
+= 0.5                                               p    0
+                                                                                                                                  0.2
+                                                                                                                                          0.2       t = 0.2
+                                                                                                                                                    t = 0.3
+                     1
+                                                                                                                                          0.1
+                                                         3                                                                        0.3
+                     0                                        3     0       3   3     0          3                                        0.0
+                         4   2 0 2 4                6                                                                                           1     2     3     4      5    6   7
+                              Position z                            x                 x                                                                Average photon number n
+
+FIG. 3. (a)–(c) Quantum simulations of a pulse instantiated as a coherent-state sech soliton using MPS with bond dimension
+χ = 40. Average photon number of n̄ = 3.0 is used with (κ = 0.5) and without (κ = 0) linear loss. MCWF with M = 100
+quantum trajectories is used for the simulation with finite loss. (a) Time evolution of photon density distribution hφ̂†z φ̂z i. (b)
+Wigner functions for the reduced density matrix ρ̂S for the sech supermode f sech . Upper and lower rows are for κ = 0.0 and
+κ = 0.5, respectively. (c) Time evolution of the purity Tr(ρ̂2S ) (left figure) and the doubled volume of the Wigner function
+(WF) negativity [66] (lower figure) of the soliton pulse state. (d) WF negativity of the soliton pulse state at various times as
+a function of n̄. MPS-based simulation with χ = 50 is used.
+
+
+a decay in the amplitude of the photon density distribu-                                                                                t = 0.05                         t = 0.15                       t = 0.3
+                                                                                                                            4                                                                                         0.3
+
+
+
+
+                                                                                              TDHF approx. MPS simulation
+tion as shown in Fig. 3(a), while quantum mechanically,
+Fig. 3(b) and (c) show that the non-classical features of
+                                                                                                                                                                                                                      0.2
+the state are critically diminished by the presence of the                                                    p             0
+linear loss.                                                                                                                                                                                                          0.1
+   We additionally investigate how the amount of exci-                                                                      4
+                                                                                                                                                                                                                      0.0
+tation affects the phase-space dynamics of pulse propa-                                                                     4
+gation. Classically, due to the nonlinear nature of the                                                                                                                                                                0.1
+interactions, the effective nonlinear rate is expected to                                                     p             0
+be enhanced when the peak pulse intensity is larger. In                                                                                                                                                                0.2
+Fig. 3(d), we show the volume of the Wigner function                                                                        4                                                                                          0.3
+negativity as a function of the average photon number n̄                                                                          4               0              4   4      0       4               4     0       4
+in the soliton pulse, where we observe that larger pulse                                                                                          x                         x                             x
+excitations increase the rate at which non-classical fea-
+tures are formed, confirming the classical intuition in the                                    FIG. 4. Wigner functions of soliton pulse state with n̄ =
+few-photon regime.                                                                             6 obtained using MPS-based full-quantum simulation with
+   Finally, to highlight the difference between full numer-                                    χ = 50 (upper row) and the time-dependent Hartree-Fock
+ical simulation and TDHF, Fig. 4 compares the Wigner                                           approximation (TDHF) following (26) (lower row).
+functions of a soliton pulse initialized with n̄ = 6 ob-
+tained by the MPS-based simulation against TDHF (26).
+While they exhibit qualitatively similar interference pat-                                     namics of fundamental solitons is in qualitative agree-
+terns, the discrepancies in the time at which a similar                                        ment with their classical behavior, it is in fact possible for
+phase-space structure is reached indicate that TDHF is                                         highly-quantum photon dynamics to exhibit much more
+overestimating the rate of the nonlinear phase-shift (see                                      striking deviations from classical behavior. This is the
+t = 0.3 for MPS-based simulation and t = 0.15 for                                              case, for example, if we apply our simulation method to
+TDHF, for instance). Additionally, full quantum sim-                                           study the quantum propagation of a second-order soliton
+ulation results exhibit visible reduction in the magnitude                                     with classical waveform [46]
+of Wigner function negativity compared to TDHF, high-                                                              2
+                                                                                                                               2
+                                                                                                                                                              
+lighting the effects of aforementioned decoherence due                                                        2ein̄ t/8 n̄ 3ein̄ t cosh(n̄z/2) + cosh(3n̄z/2)
+to entanglement between S and E. These discrepan-                                              φ(2sech)
+                                                                                                 z      (t) =                                                   ,
+                                                                                                                   3 cos(n̄2 t) + 4 cosh(n̄z) + cosh(2n̄z)
+cies point to the presence of broadband physics beyond                                                                                                    (27)
+TDHF in soliton propagation.
+   While the quasi-stationary nature of the quantum dy-                                        which, classically, is a periodic “breather” solution of the
+                                                                                                                                                            8
+
+   (a) Classical solution       (b) Full quantum simulation
+                                                                        a1       b1      a2       b2      a3       b3      a4       b4      a5       b5
+
+                                                                             UNL,1            UNL,2            UNL,3            UNL,4            UNL,5
+
+                                                                         USWAP                                USWAP                             USWAP
+
+
+                                                                        b1       a1      a2       b2      b3       a3      a4       b4      b5       a5
+
+                                                                                      UA,1             UB,2             UA,3             UB,4
+
+                                                                         USWAP               USWAP            USWAP             USWAP            USWAP
+
+
+                                                                        a1       b1      b2       a2      a3       b3      b4       a4      a5       b5
+FIG. 5. Time evolution of the photon density distribution of                          UB,1             UA,2             UB,3             UA,4
+a pulse instantiated as a coherent-state second-order soliton
+                                                                                             USWAP                              USWAP
+with mean photon number n̄(2sech) = 8. (a) Classically ex-
+pected dynamics given by (27). (b) Full quantum simulation
+under the Hamiltonian (1) using MPS with bond dimension                 a1       b1      a2       b2      a3       b3      a4       b4      a5       b5
+χ = 60.
+                                                                 FIG. 6. An example implementation of a short-time evolu-
+                                                                 tion under the χ(2) Hamiltonian (28) using TEBD. Discretized
+NLSE (2). The average photon number of the second-
+                                                                 FH modes {â1 , . . . , âN } and SH modes {b̂1 , . . . , b̂N } are en-
+order soliton is n̄(2sech) = 4n̄, where n̄ is the average
+                                                                 coded on an MPS in an alternating manner. Swap operations
+photon number in its corresponding fundamental soliton.          ÛSWAP are used to bring distant modes together. Two-mode
+At t = 0, this means the waveform field amplitude of the         operations Ûa,m , Ûb,m , and ÛNL,m are for FH dispersion, SH
+second-order soliton is twice that of the fundamental soli-      dispersion, and nonlinear three-wave mixing interaction, re-
+            (2sech)         (sech)
+ton, i.e., φz       (0) = 2φz      (0). After t = 0, as shown    spectively.
+in Fig. 5(a), the classical waveform of the second-order
+soliton exhibits significant narrowing and a characteris-
+tic triplet structure. On the other hand, as shown in            [φ̂z , φ̂†z0 ] = [ψ̂z , ψ̂z†0 ] = δ(z − z 0 ). We have assumed that
+Fig. 5(b), full quantum evolution of a second-order soli-        the FH and SH carriers are group-velocity matched, while
+ton instantiated in a few-photon coherent state of (27)          β represents the group velocity dispersion of SH relative
+at t = 0 exhibits qualitatively different dynamics. While        to FH. (28) can be discretized in space to give
+the photon density distribution exhibits some narrow-
+ing of the pulse width initially, the peak pulse intensity                                   X                             
+                                                                                     Ĥ =             Ĥa,m + Ĥb,m + ĤNL,m ,                           (29a)
+fails to reach the level expected from the classical solu-
+                                                                                             m
+tion. Moreover, no signature of the triplet structure is
+observed. We attribute these features to the quantum-            with
+induced dispersion of the pulse envelope that we also ob-
+served in the quantum propagation of fundamental soli-                       1  †                      †         †
+                                                                                                                        
+                                                                  Ĥa,m = −        â m+1  âm +  âm âm+1 − 2â m âm   (29b)
+tons [62], which appears to play a more critical role in                    2∆z 2
+the evolution of this higher-order soliton.                                  β                                        
+                                                                  Ĥb,m = −         b̂† b̂m + b̂m b̂†m+1 − 2b̂†m b̂m      (29c)
+                                                                            2∆z 2 m+1
+                                                                              1                        
+        V.   QUANTUM PROPAGATION OF                               ĤNL,m = √         â†2        2 †
+                                                                                       m b̂m + âm b̂m ,                  (29d)
+                  SIMULTONS
+                                                                           2 ∆z
+
+                                                                 where âm and b̂m are the FH and SH field annihilation
+  In this section, we apply our technique to a 1D χ(2)           operators for the mth spatial bin, respectively.
+nonlinear waveguide in which interactions occur between             The presence of both FH and SH fields requires some
+a fundamental harmonic (FH) band and a second har-               care in applying the two-mode operations for implement-
+monic (SH) band. After normalization with respect                ing TEBD for the Hamiltonian (29). One approach is
+to time and space, the system Hamiltonian takes the              shown schematically in Fig. 6, where we prepare 2N
+form [67, 68]                                                    MPS bins to represent N spatial bins, with FH and
+                                                                 SH modes encoded in an alternating manner. To ap-
+                    Z
+                  1                                   
+          Ĥ = −      dz φ̂†z ∂z2 φ̂z + β ψ̂z† ∂z2 ψ̂z           ply Trotterization as in Sec. II, a short-time unitary evo-
+                  2
+                        Z                                 (28)   lution e−iĤδt is decomposed into two-mode operations
+                      1                             
+                    +      dz φ̂†2  z ψ̂z +  φ̂ 2 †
+                                                 ψ̂
+                                                z z     ,        Ûλ,m = e−iĤλ,m δt (λ = a, b, NL) and applied as shown in
+                      2
+                                                                 Fig. 6. Since âm and âm+1 are no longer next to each
+where φ̂z and ψ̂z are respectively FH and SH local field         other in this representation, we also utilize a swap op-
+annihilation operators with commutation relationships            eration ÛSWAP [41] to bring these modes together in an
+                                                                                                                                9
+
+alternating manner for the application of Ûa,m (and sim-     (a)                                (b)
+ilarly for Ûb,m ).
+   The Hamiltonian (28) supports various classical soliton
+solutions [69, 70]. Specifically, an analytic “simulton”
+solution exists for β = 2 with the form [47]
+                          p       
+        φz (t) = φ0 sech2   φ0 /6 z eiφ0 t/3        (30a)
+                    φ0      p       
+        ψz (t) = − sech2      φ0 /6 z e2iφ0 t/3 ,   (30b)
+                    2
+where φ0 p is related to the average FH photon number n̄       (c)
+via φ0 = 3 3n̄2 /32. As was done for (25), we discretize
+and normalize (30) at t = 0 to construct FH and SH
+supermodes with annhilation operators denoted Â and
+B̂, respectively. The initial simulton MPS state is that√
+of a coherent
+       √        state in Â and B̂ with displacements n̄
+and − n̄/2, respectively. In Fig. 7(a), we show the time
+evolution via TEBD of the photon density distribution
+of a pulse initialized in the classical simulton supermode.
+As for the case of the Kerr soliton, the dynamics show
+a quantum-induced dispersion of the pulse envelope not
+predicted by classical dynamics; as part of this process,
+we also numerically observe a slight exchange of excita-
+tions between FH and SH.
+   To investigate the joint phase-space properties of the
+FH and SH pulse supermodes, we calculate two-mode
+reduced density matrix ρ̂S where S = A ⊗ B, the joint
+Hilbert space of FH and SH, respectively. In general,
+the state of the system features entanglement between
+A and B; to quantify this entanglement, we utilize the
+negativity measure N (ρ̂) (not to be confused with the
+Wigner function negativity used earlier) [71], defined for    FIG. 7. Quantum simulations of pulses instantiated as a
+                                                              coherent-state simulton with FH photon number n̄ = 4. MPS
+a bipartite density matrix ρ̂ as
+                                                              with bond dimension χ = 50 is used. (a) Time evolution
+                 N (ρ̂) = 21 (1 − kρ̂TA k1 ),         (31)    of the FH and SH photon density distribution. (b) Negativ-
+                                                              ity N (ρ0S ) calculated for the two-mode reduced density ma-
+where TA is partial transposition with respect to the first   trix under linear transformations ρ̂0S = Ŵ † ρ̂S Ŵ , where Ŵ is
+mode, and k·k1 is the trace norm. Here, N (ρ̂) > 0 serves     parametrized by a pair of angles (Φ, Θ). White cross indicates
+as a sufficient condition for the entanglement.               (Φ0 , Θ0 ) ≈ (0.21π, 0.28π) that minimizes N (ρ̂0S ) for t = 4. (c)
+   Generally, we can change the value of the N by con-        Wigner function of the single-mode reduced density matrix
+                                                              before (ρ̂A,B ) and after (ρ̂0A,B ) applying Ŵ (Φ0 , Θ0 ) at t = 4.
+sidering hybrid mixtures of the modes A and B. Finding
+                                                              Labels A and B represent FH and SH, respectively.
+the linear combination that best “disentangles” A and B
+therefore provides insight into their entanglement struc-
+ture. More specifically, we introduce   a two-mode linear
+                                                              of both ρ̂A and ρ̂B are crescent-shaped with no nega-
+                               n                       o
+operation Ŵ (Φ, Θ) = exp Φ e Â B̂ − e−iΘ ÂB̂ †
+                                     iΘ †
+                                                              tivity, indicating that they are highly mixed states due
+with −π/4 ≤ Φ ≤ π/4 and −π/2 ≤ Θ ≤ π/2, which                 to the entanglement between FH and SH. On the other
+implements the transformation ρ̂0S = W † ρ̂S Ŵ . Impor-      hand, after application of Ŵ0 , the Wigner function of ρ̂0A
+tantly, the transformation Ŵ0 = Ŵ (Φ0 , Θ0 ) that mini-     remarkably exhibits considerable non-classicality, while
+mizes N (ρ̂0S ) is expected to maximize the amount of in-     the Wigner function of ρ̂0B resembles that of a coher-
+formation available in the single-mode reduced density        ent state. This reveals a somewhat surprising feature
+matrices ρ̂0A = TrB (ρ̂0S ) and ρ̂0B = TrA (ρ̂0S ).           of the simulton quantum dynamics: a hybrid supermode
+  In Fig. 7(b), for the final state of the pulse prop-        Â0 = cos Φ0 Â + eiΘ0 sin Φ0 B̂, composed of both FH and
+agation at t = 4, we map the negativity N (ρ̂0S ) for         SH components, is the one which predominantly experi-
+various (Φ, Θ), which shows a clear minimum at the            ences strongly nonlinear dynamics, while the other hy-
+marked position of (Φ0 , Θ0 ). In Fig. 7(c), we show          brid supermode B̂0 = cos Φ0 B̂ − e−iΘ0 sin Φ0 Â experi-
+the Wigner functions of the single-mode reduced density       ences little nonlinearity. A similar analysis can, in prin-
+matrices before and after the transformation Ŵ0 . Be-        ciple, be applied to a broader class of solitons and general
+fore applying the transformation, the Wigner functions        pulse propagation [46].
+                                                                                                                          10
+
+                  VI.   CONCLUSION                              end, our work takes a step towards bridging the signifi-
+                                                                cant conceptual gaps between classical wave optics, CV
+   In this research, we have motivated the use of MPS           photonic quantum information, and strongly-interacting
+techniques to efficiently represent and simulate a quan-        quantum many-body physics, all of which are expected to
+tum optical pulse as it dynamically propagates through          play important roles in conceptualizing and engineering
+a nonlinear 1D waveguide. In doing so, we have devel-           the future of broadband quantum optics.
+oped a numerical method to overcome the problem of
+efficiently accessing and manipulating nonlocal pulse su-
+                                                                                        FUNDING
+permodes of the local MPS representation, allowing us
+to view for the first time the full quantum dynamics of
+the pulse in a phase-space picture. As a demonstration,           Army Research Office (W911NF-16-1-0086); National
+we have performed quantum simulations of Kerr soliton           Science Foundation (CCF-1918549, PHY-2011363).
+propagation and observed that the phase-space portraits
+of an initially classical sech-pulse supermode can evolve
+highly non-classical features, i.e., Wigner function nega-                     ACKNOWLEDGMENTS
+tivity. These results have been contrasted with predic-
+tions based on TDHF, highlighting the presence of rich             R. Y. developed the numerical techniques, performed
+quantum dynamics beyond conventional approximations             the simulations, and generated the figures. E. N. and
+for quantum Kerr solitons. We have also extended our            H. M. advised and directed the project. R. Y. and E. N.
+analysis to the quantum propagation of a χ(2) simulton          wrote the manuscript with detailed input and feedback
+and have revealed unexpected entanglement structure be-         from all authors. All authors contributed significantly to
+tween the FH and SH pulses of the simulton, identifying         the conception of the project.
+a hybrid supermode that predominantly exhibits non-                The authors wish to thank NTT Research for their
+classical features. Our scheme is compatible with local         financial and technical support. R. Y. would like to
+dissipation associated with, e.g., waveguide losses, and,       thank Tomohiro Soejima for helpful discussions. R. Y.
+more generally, could be applied to any one-dimensional         is supported by Stanford Q-FARM Ph.D. Fellowship and
+photonic system in principle. Considering the rapid             Masason Foundation.
+recent progress towards single-photon nonlinearities in
+dispersion-engineered and highly nonlinear nanophotonic
+platforms, it is of imminent interest to establish a uni-                            DISCLOSURES
+fied theoretical framework in which to understand the
+quantum dynamics of photons in such devices. To this              The authors declare no conflicts of interest.
+
+
+
+
+ [1] The LIGO Scientific Collaboration, Enhanced sensitiv-           Ultrahigh-efficiency wavelength conversion in nanopho-
+     ity of the LIGO gravitational wave detector by using            tonic periodically poled lithium niobate waveguides, Op-
+     squeezed states of light, Nat. Photon. 7, 613 (2013).           tica 5, 1438 (2018).
+ [2] M. Tsang, R. Nair, and X.-M. Lu, Quantum Theory             [9] J. Lu, M. Li, C.-L. Zou, A. Al Sayem, and H. X. Tang,
+     of Superresolution for Two Incoherent Optical Point             Towards 1% single photon nonlinearity with periodically-
+     Sources, Phys. Rev. X 6, 031033 (2016).                         poled lithium niobate microring resonators, Optica 7,
+ [3] N. Gisin and R. Thew, Quantum communication, Nat.               1654 (2020).
+     Photon. 1, 165 (2007).                                     [10] M. Placke and S. Ramelow, Engineering AlGaAs-on-
+ [4] J. L. O’Brien, A. Furusawa, and J. Vučković, Photonic         insulator towards quantum optical applications, Opt.
+     quantum technologies, Nat. Photon. 3, 687 (2009).               Lett. 45, 6763 (2020).
+ [5] D. E. Chang, V. Vuletić, and M. D. Lukin, Quantum         [11] S. Ramelow, A. Farsi, Z. Vernon, S. Clemmen, X. Ji,
+     nonlinear optics - photon by photon, Nat. Photon. 8, 685        J. E. Sipe, M. Liscidini, M. Lipson, and A. L. Gaeta,
+     (2014).                                                         Strong Nonlinear Coupling in a Si3 N4 Ring Resonator,
+ [6] H.-S. Zhong, H. Wang, Y.-H. Deng, M.-C. Chen, L.-C.             Phys. Rev. Lett. 122, 153906 (2019).
+     Peng, Y.-H. Luo, J. Qin, D. Wu, X. Ding, Y. Hu, P. Hu,     [12] M. Heuck, K. Jacobs, and D. R. Englund, Photon-photon
+     X.-Y. Yang, W.-J. Zhang, H. Li, Y. Li, X. Jiang, L. Gan,        interactions in dynamically coupled cavities, Phys. Rev.
+     G. Yang, L. You, Z. Wang, L. Li, N.-L. Liu, C.-Y. Lu,           A 101, 042322 (2020).
+     and J.-W. Pan, Quantum computational advantage using       [13] A. W. Bruch, X. Liu, J. B. Surya, C.-L. Zou, and H. X.
+     photons, Science (2020).                                        Tang, On-chip χ(2) microring optical parametric oscilla-
+ [7] M. Zhang, C. Wang, R. Cheng, A. Shams-Ansari, and               tor, Optica 6, 1361 (2019).
+     M. Lončar, Monolithic ultra-high-Q lithium niobate mi-    [14] M. Jankowski, C. Langrock, B. Desiatov, A. Marandi,
+     croring resonator, Optica 4, 1536 (2017).                       C. Wang, M. Zhang, C. R. Phillips, M. Lonc̆ar, and M. M.
+ [8] C. Wang, C. Langrock, A. Marandi, M. Jankowski,                 Fejer, Ultrabroadband nonlinear optics in nanophotonic
+     M. Zhang, B. Desiatov, M. M. Fejer, and M. Lončar,             periodically poled lithium niobate waveguides, Optica 7,
+                                                                                                                              11
+
+     40 (2020).                                                       work for Quantum Information Science, Phys. Rev. X 5,
+[15] L. Zhang, Q. Lin, Y. Yue, Y. Yan, R. G. Beausoleil,              041017 (2015).
+     and A. E. Willner, Silicon waveguide with four zero-        [34] W. Asavanant, Y. Shiozawa, S. Yokoyama, B. Charoen-
+     dispersion wavelengths and its application in on-chip            sombutamon, H. Emura, R. N. Alexander, S. Takeda,
+     octave-spanning supercontinuum generation, Opt. Ex-              J. Yoshikawa, N. C. Menicucci, H. Yonezawa, and A. Fu-
+     press 20, 1685 (2012).                                           rusawa, Generation of time-domain-multiplexed two-
+[16] R. Yanagimoto, T. Onodera, E. Ng, L. G. Wright, P. L.            dimensional cluster state, Science 366, 373 (2019).
+     McMahon, and H. Mabuchi, Engineering a Kerr-Based           [35] V. Ansari, J. M. Donohue, B. Brecht, and C. Silberhorn,
+     Deterministic Cubic Phase Gate via Gaussian Opera-               Tailoring nonlinear processes for quantum optics with
+     tions, Phys. Rev. Lett. 124, 240503 (2020).                      pulsed temporal-mode encodings, Optica 5, 534 (2018).
+[17] K. M. Birnbaum, A. Boca, R. Miller, A. D. Boozer, T. E.     [36] J. M. Lukens and P. Lougovski, Frequency-encoded pho-
+     Northup, and H. J. Kimble, Photon Blockade in an Op-             tonic qubits for scalable quantum information processing,
+     tical Cavity With One Trapped Atom, Nature 436, 87               Optica 4, 8 (2017).
+     (2005).                                                     [37] J. Roslund, R. M. de Araújo, S. Jiang, C. Fabre, and
+[18] J. Javanainen and J. Ruostekoski, Light propagation be-          N. Treps, Wavelength-multiplexed quantum networks
+     yond the mean-field theory of standard optics, Opt. Ex-          with ultrafast frequency combs, Nat. Photon. 8, 109
+     press 24, 993 (2016).                                            (2014).
+[19] R. Yanagimoto, E. Ng, M. P. Jankowski, T. Onodera,          [38] E. Chitambar and G. Gour, Quantum resource theories,
+     M. M. Fejer, and H. Mabuchi, Broadband Parametric                Rev. Mod. Phys. 91, 025001 (2019).
+     Downconversion as a Discrete-Continuum Fano Interac-        [39] F. Albarelli, M. G. Genoni, M. G. A. Paris, and A. Fer-
+     tion (2020), arXiv:2009.01457.                                   raro, Resource theory of quantum non-Gaussianity and
+[20] P. D. Drummond and M. Hillery, The Quantum Theory                Wigner negativity, Phys. Rev. A 98, 052350 (2018).
+     of Nonlinear Optics (Cambridge University Press, 2014).     [40] G. P. Agrawal, Nonlinear Fiber Optics, 6th edition (Aca-
+[21] G. Vidal, Efficient Simulation of One-Dimensional Quan-          demic Press, 2019).
+     tum Many-Body Systems, Phys. Rev. Lett. 93, 040502          [41] G. Vidal, Efficient Classical Simulation of Slightly Entan-
+     (2004).                                                          gled Quantum Computers, Phys. Rev. Lett. 91, 147902
+[22] U. Schollwöck, The density-matrix renormalization group         (2003).
+     in the age of matrix product states, Ann. Phys. 326, 96     [42] J. J. Garcı́a-Ripoll, Time evolution of Matrix Product
+     (2011).                                                          States, New J. Phys. 8, 305 (2006).
+[23] R. Orús, A practical introduction to tensor networks:      [43] H. W. Wiseman and G. J. Milburn, Quantum Measure-
+     Matrix product states and projected entangled pair               ment and Control (Cambridge University Press, 2009).
+     states, Ann. Phys. 349, 117 (2014).                         [44] A. Haus and Y. Lai, Quantum theory of solitons in optical
+[24] D. Muth and M. Fleischhauer, Dynamics of Pair Correla-           fibers. I.Time-dependent Hartree approximation, Phys.
+     tions in the Attractive Lieb-Liniger Gas Dominik, Phys.          Rev. A 40, 844 (1989).
+     Rev. Lett. 105, 150403 (2010).                              [45] E. W. Wright, Quantum theory of soliton propagation in
+[25] A. J. Daley, H. Pichler, J. Schachenmayer, and P. Zoller,        an optical fiber using the Hartree approximation, Phys.
+     Measuring Entanglement Growth in Quench Dynamics                 Rev. A 43, 3836 (1991).
+     of Bosons in an Optical Lattice, Phys. Rev. Lett. 109,      [46] Y. S. Kivshar and G. P. Agrawal, Optical Solitons (Aca-
+     020505 (2012).                                                   demic Press, 2003).
+[26] M. T. Manzoni, D. E. Chang, and J. S. Douglas, Simu-        [47] M. J. Werner and P. D. Drummond, Simulton solutions
+     lating quantum light propagation through atomic ensem-           for the parametric amplifier, J. Opt. Soc. Am. B 10, 2390
+     bles using matrix product states, Nat. Commun. 8, 1743           (1993).
+     (2017).                                                     [48] E. H. Lieb and W. Liniger, Exact Analysis of an Interact-
+[27] S. Mahmoodian, G. Calajó, D. E. Chang, K. Hammerer,             ing Bose Gas. I. The General Solution and the Ground
+     and A. S. Sørensen, Dynamics of Many-Body Photon                 State, Phys. Rev. 130, 1605 (1963).
+     Bound States in Chiral Waveguide QED, Phys. Rev. X          [49] D. Muth, B. Schmidt, and M. Fleischhauer, Fermioniza-
+     10, 031011 (2020).                                               tion dynamics of a strongly interacting one-dimensional
+[28] K. E. Cahill and R. J. Glauber, Density Operators and            Bose gas after an interaction quench, New J. Phys. 12,
+     Quasiprobability Distributions, Phys. Rev. 177, 1882             083065 (2010).
+     (1969).                                                     [50] D. Muth, M. Fleischhauer, and B. Schmidt, Discretized
+[29] S. L. Braunstein and P. van Loock, Quantum informa-              versus continuous models of p-wave interacting fermions
+     tion with continuous variables, Rev. Mod. Phys. 77, 513          in one dimension, Phys. Rev. A 82, 013602 (2010).
+     (2005).                                                     [51] D. Jaschke, M. L. Wall, and L. D. Carr, Open source Ma-
+[30] D. Gottesman, A. Kitaev, and J. Preskill, Encoding a             trix Product States: Opening ways to simulate entangled
+     qubit in an oscillator, Phys. Rev. A 64, 012310 (2001).          many-body quantum systems in one dimension, Comput.
+[31] M. A. Nielsen and I. L. Chuang, Quantum Computation              Phys. Commun 225, 59 (2018).
+     and Quantum Information (Cambridge University Press,        [52] B. Bauer, L. D. Carr, H. G. Evertz, A. Feiguin,
+     2000).                                                           J. Freire, S. Fuchs, L. Gamper, J. Gukelberger, E. Gull,
+[32] P. C. Humphreys, B. J. Metcalf, J. B. Spring, M. Moore,          S. Guertler, A. Hehn, R. Igarashi, S. V. Isakov,
+     X.-M. Jin, M. Barbieri, W. S. Kolthammer, and I. A.              D. Koop, P. N. Ma, P. Mates, H. Matsuo, O. Parcol-
+     Walmsley, Linear Optical Quantum Computing in a Sin-             let, G. Pawlowski, J. D. Picon, L. Pollet, E. Santos,
+     gle Spatial Mode, Phys. Rev. Lett. 111, 150501 (2013).           V. W. Scarola, U. Schollwöck, C. Silva, B. Surer, S. Todo,
+[33] B. Brecht, D. V. Reddy, C. Silberhorn, and M. G.                 S. Trebst, M. Troyer, M. L. Wall, P. Werner, and S. Wes-
+     Raymer, Photon Temporal Modes: A Complete Frame-                 sel, The ALPS project release 2.0: open source software
+                                                                                                                              12
+
+     for strongly correlated systems, J. Stat. Mech.: Theory      [62] Y. Lai and H. A. Haus, Quantum theory of solitons in
+     Exp. 2011, 05001.                                                 optical fibers. II. Exact solution, Phys. Rev. A 40, 854
+[53] A. T. Sornborger and E. D. Stewart, Higher-order meth-            (1989).
+     ods for simulations on quantum computers, Phys. Rev.         [63] L. Di Mauro Villari, D. Faccio, F. Biancalana, and
+     A 60, 1956 (1999).                                                C. Conti, Quantum soliton evaporation, Phys. Rev. A
+[54] T. J. Kippenberg, A. L. Gaeta, M. Lipson, and M. L.               98, 043859 (2018).
+     Gorodetsky, Dissipative Kerr solitons in optical microres-   [64] N. Korolkova, R. Loudon, G. Gardavsky, M. W. Hamil-
+     onators, Science 361, 567 (2018).                                 ton, and G. Leuchs, Time evolution of a quantum soliton
+[55] R. El-Ganainy, K. G. Makris, D. N. Christodoulides,               in a kerr medium, J. Mod. Opt. 48, 1339 (2001).
+     and Z. H. Musslimani, Theory of coupled optical PT -         [65] F. Singer, M. J. Potasek, J. M. Fang, and M. C. Teich,
+     symmetric structures, Opt. Lett. 32, 2632 (2007).                 Femtosecond solitons in nonlinear optical fibers: Classi-
+[56] N. V. Alexeeva, I. V. Barashenkov, A. A. Sukhorukov,              cal and quantum effects, Phys. Rev. A 46, 4192 (1992).
+     and Y. S. Kivshar, Optical solitons in PT -symmetric         [66] A. Kenfack and K. Życzkowski, Negativity of the Wigner
+     nonlinear couplers with gain and loss, Phys. Rev. A 85,           function as an indicator of non-classicality, J. Opt. B:
+     063837 (2012).                                                    Quantum Semiclass. Opt. 6, 396 (2004).
+[57] W. R. Clements, P. C. Humphreys, B. J. Metcalf, W. S.        [67] P. D. Drummond and H. He, Optical mesons, Phys. Rev.
+     Kolthammer, and I. A. Walmsley, Optimal design for uni-           A 56, R1107(R) (1997).
+     versal multiport interferometers, Optica 3, 1460 (2016).     [68] M. G. Raymer, P. D. Drummond, and S. J. Carter,
+[58] M. Reck, A. Zeilinger, H. J. Bernstein, and P. Bertani,           Limits to wideband pulsed squeezing in a traveling-wave
+     Experimental realization of any discrete unitary opera-           parametric amplifier with group-velocity dispersion, Opt.
+     tor, Phys. Rev. Lett. 73, 58 (1994).                              Lett. 16, 1189 (1991).
+[59] S. Olivares, Quantum optics in the phase space, Eur.         [69] A. V. Buryak and Y. S. Kivshar, Solitons due to second
+     Phys. J. Special Topics 203, 3 (2012).                            harmonic generation, Phys. Lett. A 197, 407 (1995).
+[60] H. A. Haus and Y. Lai, Quantum theory of soliton squeez-     [70] A. V. Buryak, P. Trapani, D. V. Skryabin, and S. Trillo,
+     ing: a linearized approach, J. Opt. Soc. Am. B 7, 386             Optical solitons due to quadratic nonlinearities: from ba-
+     (1990).                                                           sic physics to futuristic applications, Phys. Rep. 370, 63
+[61] S. J. Carter, P. D. Drummond, M. D. Reid, and R. M.               (2002).
+     Shelby, Squeezing of quantum solitons, Phys. Rev. Lett.      [71] G. Vidal and R. F. Werner, Computable measure of en-
+     58, 1841 (1987).                                                  tanglement, Phys. Rev. Lett. 65, 032314 (2002).
+

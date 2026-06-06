@@ -1,0 +1,944 @@
+                                                       Strong-field ionization of atoms with bright squeezed
+                                                                                        vacuum light
+
+
+
+
+arXiv:2604.06703v1 [physics.atom-ph] 8 Apr 2026
+                                                  Haodong Liu1 , Xiaoxiao Long1 , Peizeng Li1 , Zijian Lyu1 , Yunquan Liu1,2,3,*
+                                                   1
+                                                      State Key Laboratory for Mesoscopic Physics and Frontiers Science Center for
+                                                  Nano-optoelectronics, School of Physics, Peking University, Beijing, 100871, China.
+                                                   2
+                                                     Collaborative Innovation Center of Extreme Optics, Shanxi University, Taiyuan,
+                                                                                    030006, China.
+                                                   3
+                                                     Peking University Yangtze Delta Institute of Optoelectronics, Nantong, Jiangsu,
+                                                                                    226010, China.
+                                                                              *
+                                                                                Yunquan.Liu@pku.edu.cn.
+
+
+
+
+                                                                                             Abstract
+                                                    Strong-field ionization is the cornerstone of attosecond physics, which has been extensively
+                                                    studied under coherent-state driving. Recently, the interface between attosecond physics and
+                                                    quantum optics has emerged as a new frontier. Yet, owing to experimental limitations, the
+                                                    role of the quantum nature of light in atomic strong-field ionization has remained unexplored.
+                                                    Here, we demonstrate strong-field ionization of xenon atoms driven by bright squeezed vac-
+                                                    uum (BSV) with average pulse energy up to 10 µJ. We show that, as a nonclassical state with
+                                                    zero mean field and strong intensity fluctuations, BSV selectively enhances the spider-like
+                                                    holographic structures in the photoelectron momentum distributions. Using a quantum-light-
+                                                    corrected quantum-trajectory Monte Carlo (q-QTMC) model, we attribute this effect to
+                                                    the intrinsic coherence of trajectory pairs emitted within the same subcycle field fluctua-
+                                                    tion. These dynamically correlated paths exhibit enhanced phase stability and remain robust
+                                                    against dephasing, whereas asynchronous paths are filtered out by field noise. Our results
+                                                    reveal a quantum-fluctuation-induced mechanism for coherence protection in strong-field pro-
+                                                    cesses, positioning BSV as an effective coherence filter and establishing a new regime of
+                                                    quantum-enabled noise-resilient ultrafast dynamics.
+
+
+
+
+                                                                                                  1
+     Main
+     Strong-field physics investigates the interaction between intense laser pulses and matter. Among
+     its fundamental processes is strong-field ionization of atoms. The basic picture of strong field ion-
+     ization is understood within the pioneering work by Keldysh theory[1]. In the Keldysh framework,
+     photoionization can be classified as multiphoton ionization or tunneling ionization, depending on
+     the value of the Keldysh parameter γ . Specifically, multiphoton ionization dominates when γ < 1
+     while tunneling ionization takes place when γ > 1. In the intermediate regime, above threshold
+     ionization (ATI) would take place, in which electrons can absorb more photons than the minimum
+     required to ionize an atom [2]. Strong-field ionization has laid the foundation for ultrafast science,
+10   enabling the generation of attosecond pulses through high-order harmonic generation (HHG) [3–5]
+     and facilitating the study of electron dynamics in atoms and molecules[6, 7]. In the strong-field ion-
+     ization process, the photoelectron momentum distribution (PMD) encodes rich electron dynamics.
+     Depending on whether the electrons are released within the same optical cycle or across different
+     cycles, the photoelectron patterns are classified as intracycle or intercycle interferences[8]. Inter-
+     cycle interference produces the well-known concentric ATI rings. The intracycle interference gives
+     rise to a set of holographic structures, including those arising from forward and backward elec-
+     tron rescattering[9–11]. Among them, the forward-scattered interference produces a characteristic
+     spider-like pattern, which underpins photoelectron holography [7, 12], which is a powerful approach
+     for imaging molecular structure and capturing ultrafast electron dynamics[13, 14]. It arises from
+20   the interference between a reference electron wave, which reaches the detector without scatter-
+     ing, and a signal wave that undergoes scattering by the parent ion during strong-field ionization
+     process[7, 15, 16]. Because the holographic fringes are governed by the electron de Broglie wave-
+     length and the sub-cycle emission timing, decoding the hologram embedded in the PMD allows
+     to retrieve the structural and temporal information with sub-ångström spatial and attosecond
+     temporal resolution.
+         The current understanding of strong-field processes relies on the assumption that the driving
+     field is classical coherent-state light [5, 17, 18]. However, recent developments have begun to extend
+     this classical-field paradigm by incorporating the quantum nature of light[19–26]. The crossover
+     between quantum optics with attosecond physics has been the new frontiers. The quantum light,
+30   such as bright squeezed vacuum (BSV) with zero mean field and strong fluctuations[27, 28], gives
+     rise to new behaviors. For example, the HHG driven by BSV has revealed novel scaling laws, indi-
+     cating that large intensity fluctuations can significantly enhance non-perturbative processes[23].
+     In two-color configurations combining the BSV and coherent-state light, the photon-bunched side-
+     bands have been observed, suggesting a viable pathway for generating quantum light sources in the
+     extreme ultraviolet (XUV) regime[29, 30]. Importantly, the quantum statistical properties of the
+     driving light is expected to be transferred to the photoelectrons, offering a direct pathway to gen-
+     erate quantum electron beams with tailored statistics [31]. This concept has been experimentally
+     demonstrated, for instance, for multiphoton ionization of metal tips, where the quantum statistical
+     properties of BSV can be imprinted onto photoelectrons, opening a potential path toward engi-
+40   neered quantum electron sources[32, 33]. While quantum-light-driven strong-field physics draws
+     much attention, the experimental study on strong-field ionization of atoms has not been conducted.
+     According to our best knowledge, the intensity of reported BSV generation is not enough to ionize
+     the atoms[34, 35]. Little is known about how the quantum nature of BSV affects the phase coher-
+     ence of photoelectrons, which is a critical factor in the interferometric features. In particular, as is
+     known, BSV has pronounced intensity fluctuations. This raises several crucial questions, e.g., does
+
+
+
+
+                                                        2
+           a
+               P(n)
+
+
+                      n
+                          L1   BBO1   BBO2   L2   P(n)
+                                                                 b
+                                                         n
+                                                                                             MCP
+                                                                      Indirect
+
+
+                                                                     Scattered
+
+
+
+
+                                                                                 Direct
+
+
+
+
+    Figure 1. Photoelectron holography in strong field ionization with bright squeezed vacuum.
+    a, Experimental setup for generating bright squeezed vacuum (BSV). An 800 nm laser beam (Poissonian
+    photon statistics) is focused between two symmetrically aligned BBO crystals via a 4f system. BSV (super-
+    Poissonian photon statistics) centered at 1600 nm is generated in the BBO crystals. b, The generated BSV
+    is focused onto a supersonic atomic beam, where electrons from the atoms undergo strong-field ionization
+    via multiple quantum pathways. Each path accumulates a different phase due to the atomic Coulomb
+    potential and results in distinct contributions to PMD.
+
+
+
+
+   the interference structure survive in the noise of a quantum field? How does the quantum nature
+   of the light alter the subcycle emission dynamics and trajectory correlations?
+       To address those fundamental questions, we experimentally investigate strong-field ionization of
+   xenon atoms driven by intense BSV and analyze the resulting photoelectron holograms. Since the
+50 formation of holographic fringes relies sensitively on the coherence between the tunneling electron
+   pathways, the interference structure would serve as a direct probe of how quantum-state light
+   modifies the electron dynamics. In this way, photoelectron holography offers a unique route into
+   the interplay between quantum light and ultrafast electron dynamics.
+       Experimentally, the intense BSV light is generated through the degenerate spontaneous para-
+   metric down-conversion (SPDC) with double-crystal geometry (see experimental method for the
+   details), as illustrated in Fig. 1a. We have obtained near-single-mode BSV with average pulse ener-
+   gies of up to 10 µJ, which is sufficiently intense to induce strong-field ionization in xenon atoms. To
+   probe BSV-driven photoelectron holography, we perform strong-field ionization experiments using
+   a Cold Target Recoil Ion Momentum Spectroscopy (COLTRIMS) setup[36, 37]. In Fig. 1b, we
+60 illustrate the microscopic subcycle electron dynamics under BSV driving light. In a cycle of BSV
+   light, most of the released electrons can be categorized as direct, scattered, or indirect trajectories
+   depending on the ionization instant[9, 10]. As is known, the BSV light follows super-Poissonian pho-
+   ton statistics, leading to strong shot-to-shot fluctuations of instantaneous intensity. Consequently,
+   the field-suppressed Coulomb potential and those photoionized electron trajectories fluctuate with
+   the quantum light field accordingly. The photoelectron momentum distributions are recorded with
+   two-dimensional position-sensitive detectors (see experimental method for details), which allows
+   us to investigate how the quantum nature of BSV is imprinted on photoelectron interference.
+       In Figures 2a-d, we present the measured PMDs using BSV pulses with average pulse energies
+   of 3.3, 5.0, 8.3, and 10 µJ, respectively. Notably, all spectra show the suppression of ATI peaks and
+70 reveal a ring-like inter-cycle interference structure that is typically prominent under the coherent-
+   state driving[7]. This suppression of ATI can be easily understood with the presence of strong
+   pulse-to-pulse field fluctuations in BSV, which effectively disrupt the intercycle phase coherence
+   necessary for ATI peak formation[38]. Complementarily, shot-to-shot variations induced by BSV
+
+
+                                                             3
+                              0                 0.5                     1
+
+
+
+
+                             0.6   a                                                            0.6   b                                                       0.6   c                                                       0.6   d
+                             0.4                                                                0.4                                                           0.4                                                           0.4
+
+                             0.2                                                                0.2                                                           0.2                                                           0.2
+
+        pz (a.u.)             0                                         pz (a.u.)                0                                       pz (a.u.)             0                                       pz (a.u.)             0
+
+                         -0.2                                                               -0.2                                                          -0.2                                                          -0.2
+
+                         -0.4                                                               -0.4                                                          -0.4                                                          -0.4
+
+                         -0.6                                                               -0.6                                                          -0.6                                                          -0.6
+
+                               -0.5-0.4 -0.2    0      0.2 0.40.5                                     -0.4 -0.2   0     0.2 0.4                                     -0.4 -0.2   0     0.2 0.4                                     -0.4 -0.2   0     0.2 0.4
+                                           px (a.u.)                                                         px (a.u.)                                                     px (a.u.)                                                     px (a.u.)
+                                         Mode 1
+                                                       g(2)(0) = 2.18                                                   g(2)(0) = 1.97                                                g(2)(0) = 1.83                                                g(2)(0) = 1.78
+                                         Mode 2
+                                         Mode 3
+                             1.2                                                                1.2                                                           1.2                                                           1.2
+                             1.0   e                                                            1.0   f                                                       1.0   g                                                       1.0   h
+
+         smum2 (arb. uni.)                                                  smum2 (arb. uni.)                                             smum2 (arb. uni.)                                             smum2 (arb. uni.)
+                             0.8                                                                0.8                                                           0.8                                                           0.8
+                             0.6                                                                0.6                                                           0.6                                                           0.6
+                             0.4                                                                0.4                                                           0.4                                                           0.4
+                             0.2                                                                0.2                                                           0.2                                                           0.2
+                              0                                                                  0                                                             0                                                             0
+                                   1.2    1.4    1.6     1.8    2.0                                   1.2   1.4   1.6     1.8    2.0                                1.2   1.4   1.6    1.8     2.0                                1.2   1.4   1.6    1.8     2.0
+                                            λ (μm)                                                            λ (μm)                                                        λ (μm)                                                        λ (μm)
+
+
+    Figure 2. Measured PMDs driven by BSV pulses with respect to the quantum statistics. Panels
+    a-d, show the results for the averaged pulse energies of 3.3 µJ, 5 µJ, 8.3 µJ, and 10 µJ, respectively. The
+    corresponding average peak intensities are 0.53 × 1014 W/cm2 , 0.80× 1014 W/cm2 , 1.33× 1014 W/cm2 , and
+    1.60 × 1014 W/cm2 . Dashed lines in (c) indicate the spider-like structures. e-h, The first three contributing
+    spectral modes of the BSV source are shown via modal decomposition. Each panel corresponds to the
+    BSV driving field used in the photoelectron measurement shown directly above. In e-h, the insets display
+    the measured photon-number distributions corresponding to each BSV pulse, from which the second-order
+    correlation function g (2) is extracted.
+
+
+
+
+   intensity fluctuations can also radially smear out the ATI rings by blurring the energy positions
+   because of the ac-Stark shift.
+       Interestingly, the spider-like interference structure robustly persists across all measurements, as
+   highlighted by dashed lines in Fig. 2c. Such structures are associated with photoelectron hologra-
+   phy driven by the coherent-state light[7, 9], which is attributed to the interference between indirect
+   and forward-scattered (hereafter referred to as scattered) electron trajectories. The distinct prop-
+80 agation dynamics of these trajectories in the combined laser and Coulomb fields are illustrated
+   schematically in Fig. 1b. The persistence of this feature under strong quantum fluctuations sug-
+   gests the presence of inherently coherence-resilient interference pathways, providing a concrete
+   experimental pathway toward the quantum-noise-resilient imaging modalities.
+       We have also performed single-shot spectral characterization of BSV pulses. From the measured
+   spectra, we can perform the modal decomposition that yields the spectral shape um and corre-
+   sponding weight sm of each mode (as described in Methods). In Figures 2e-h, we present the first
+   three dominant spectral modes—modes 1, 2, and 3— for every experimental condition. Among
+   them, mode 1 contributes most significantly. Since strong-field ionization is a highly nonlinear pro-
+   cess, the PMDs are predominantly determined by this first mode. In parallel, the photon-number
+90 distributions of BSV pulses are measured. We then obtained the corresponding second-order cor-
+   relation function g (2) , as illustrated in the upper-right corner in Figures 2e-h. The corresponding
+
+
+                                                                                                                                    4
+     values of g (2) are 2.18, 1.97, 1.83, and 1.78, respectively. The g (2) decreases with increasing pulse
+     energy of BSV.
+
+
+                                      0           0.5             1
+
+                                a                                                  b                                            c
+                               0.6                                                0.6                                          0.6
+
+                               0.4                                                0.4                                          0.4
+
+                               0.2                                                0.2                                          0.2
+
+                   pz (a.u.)     0                                    pz (a.u.)     0                              pz (a.u.)     0
+
+                               -0.2                                               -0.2                                         -0.2
+
+                               -0.4                                               -0.4                                         -0.4
+
+                               -0.6                                               -0.6                                         -0.6
+
+                                      -0.4 -0.2   0     0.2 0.4                          -0.4 -0.2   0   0.2 0.4                      -0.4 -0.2   0   0.2 0.4
+                                             pr (a.u.)                                          pr (a.u.)                                    pr (a.u.)
+
+
+     Figure 3. Simulated PMDs using q-QTMC with BSV light with average peak intensity of 0.53 ×
+     1014 W/cm2 (a), 0.80 × 1014 W/cm2 (b) and 1.33 × 1014 W/cm2 (c)
+
+
+
+         To explore the origin of the robustness observed in the spider-like interference pattern, we
+    develop a quantum-light-corrected quantum trajectory Monte Carlo (q-QTMC) model (see theo-
+    retical Method for details), in which we incorporate the quantum nature of the driving field into
+    the QTMC model [39]. This model successfully reproduces the experimentally observed spider-like
+    fringes under BSV driving, as highlighted by the dashed lines in Figures 3a-c. In the simulation,
+    we construct an ensemble of intensities I (α) sampled from the Husimi distribution Q(α), such
+                                                                   P
+100 that the ensemble-averaged pulse energy ⟨E⟩ = K ⟨I⟩ = K α Q(α)I (α) matches the experimen-
+    tal value. Under our experimental conditions, average pulse energies of 3.3, 5.0, 8.3 µJ correspond
+    to average peak intensities of 0.53, 0.80, 1.33 × 1014 W/cm2 , respectively. This model successfully
+    reproduces the experimentally observed spider-like fringes under BSV driving, as highlighted by the
+    dashed lines in Figures 3a-c. The q-QTMC model provides an intuitive simulation of the spider-like
+    structure.
+         Experimentally, photoelectron three-dimensional momenta have been measured. q       In order to
+    observe the interference pattern clearly, we can plot the PMDs of pr =              2    2
+                                                                                       px + py vs pz for
+    the experiment. In the q-QTMC model, the photoelectron momentum distributions are calcu-
+    lated by coherent superposition of three-dimensional trajectories onto a two-dimensional virtual
+110 detector[39], which can be directly compared with the measurements. In Fig. 4a, we present the
+    measured pr with respect to pz for the BSV light at average pulse energy up to 10 µJ with
+    g (2) (0)=1.78. One can see that the spider structure is even more evident. The simulated PMD with
+    the q-QTMC model (Fig. 4c) agrees better with the experimental measurement pr vs pz .
+         For comparison, we also examine how the PMD differs under coherent-state driving fields. In
+    Fig. 4b, we present the measured PMD driven by a 1600 nm coherent-state light at an intensity
+    of 1.0 × 1014 W/cm2 . As expected, the measured second-order correlation g (2) of coherent-state
+    light is 1.003 (up right corner in Fig. 4b). Obviously, a striking contrast emerges between the
+    coherent-state and the BSV driven cases (Fig. 4a). The PMD with the coherent-state light reveals
+    pronounced ATI rings and carpet-like interference patterns[40, 41]. These interference features are
+120 dramatically suppressed under BSV driving. In contrast, the spider-like fringes not only survive but
+    become even more prominent, as highlighted by dashed lines in Fig. 4a. This difference suggests
+    that quantum fluctuations fundamentally alter the formation and visibility of specific interference
+
+
+                                                                                               5
+                                 0                 0.5                 1
+
+                                                                                                                                                                   (2)
+                            1                                                     g(2)(0) = 1.78                1                                                 g (0) = 1.00
+
+                                     a                                                                               b
+                           0.8                                                                                 0.8
+
+                           0.6                                                                                 0.6
+               pr (a.u.)                                                                           pr (a.u.)
+                           0.4                                                                                 0.4
+
+                           0.2                                                                                 0.2
+
+                            0                                                                                   0
+                                     -0.6   -0.4   -0.2      0        0.2   0.4     0.6                              -0.6   -0.4   -0.2      0        0.2   0.4     0.6
+                                                          pz (a.u.)                                                                       pz (a.u.)
+
+                            1                                                                                   1
+
+                           0.8
+                                     c                                                                         0.8
+                                                                                                                     d
+                           0.6                                                                                 0.6
+               pr (a.u.)                                                                           pr (a.u.)
+                           0.4                                                                                 0.4
+
+                           0.2                                                                                 0.2
+
+                            0                                                                                   0
+                                     -0.6   -0.4   -0.2      0        0.2   0.4     0.6                              -0.6   -0.4   -0.2      0        0.2   0.4     0.6
+                                                          pz (a.u.)                                                                       pz (a.u.)
+
+
+     Figure 4. Measured PMD of pr vs pz for strong-field ionization driven by BSV and coherent-
+     state light, along with simulation result. a, Experimental PMD driven by BSV with average pulse
+     energy of 10 µJ (the averaged intensity 1.60 × 1014 W/cm2 ). b, Experimental PMD driven by the coherent-
+     state light at the wavelength of 1600 nm with intensity of 1.0 × 1014 W/cm2 . c, Simulated 2D PMD using
+     q-QTMC model with the averaged intensity 1.60 × 1014 W/cm2 . d, Simulated PMD using q-QTMC model
+     for the coherent-state light with intensity of 1.0 × 1014 W/cm2 .
+
+
+
+    structures in strong-field ionization, potentially favoring those that are less sensitive to phase
+    variations or energy blurring.
+        In Fig. 4d, we show the simulated PMD with coherent-state driving at the intensity of
+    1014 W/cm2 [39] using the QTMC model. The QTMC simulation reproduces the ATI rings and
+    carpet-like features on PMD. In contrast, the BSV driving (Fig. 4c) leads to a selective survival
+    of the spider-like pattern and concurrent suppression of other interference structures. This behav-
+    ior reinforces the notion that such photoelectron holography exhibits intrinsic robustness under
+130 quantum-fluctuating light fields. As seen in the good agreement between q-QTMC simulations and
+    experimental observations, we then adopt the model to capture the essential physics.
+        The motion of free and bound electrons driven by BSV light has been theoretically studied
+    using a toy model [42]. Under our experimental condition, the energy of photoelectrons is mainly
+    populated below 2Up for strong-field ionization of atoms. The contribution of backward-scattered
+    electrons to the high-energy region is negligible, and thus the interference channels related to the
+    backward-scattered electrons can be ignored[11]. Using the q-QTMC framework, we can classify
+    the contributed trajectories within an optical cycle into three categories: indirect, scattered, and
+    direct electrons. When two types of these electron trajectories acquire the same final momentum,
+    the interference between them will be expected. Taking full advantage of the q-QTMC model, we
+140 provide an intuitive interpretation of the enhancement of the spider-structure with BSV light. In
+    Fig. 5a, we illustrate the ionization dynamics in an optical cycle of coherent-state light. For the
+    classical coherent-state light, the oscillating electric field follows a sinusoidal curve with a well-
+    defined amplitude. Within the simple-man picture of tunneling ionization, most of the electrons
+    can be classified as direct electrons, indirect electrons, and scattered electrons depending on the
+    ionization instant. Both indirect and scattered electrons are ionized during the first quarter cycle
+
+
+                                                                                                      6
+                                                                                  indirect                  scattered                               indirect              direct                            direct             scattered
+                                                                                 0                                                             0                                                        0                                              1
+         a                                            indirect                            b                                                         c                                                       d
+                                                                               -0.2                                                          -0.2                                                    -0.2
+                                                                   pz (a.u.)                                                     pz (a.u.)                                               pz (a.u.)
+                                                      scattered
+                                                      direct                                                                                                                                                                                           0.5
+                                                                               -0.4                                                          -0.4                                                    -0.4
+              E
+                                                                               -0.6                                                          -0.6                                                    -0.6
+                                                              t                                                                                                                                                                                        0
+                                                                                          -0.4   -0.2   0        0.2       0.4                      -0.4   -0.2     0     0.2      0.4                      -0.4   -0.2    0     0.2       0.4
+                                                                                                    px (a.u.)                                                 px (a.u.)                                                 px (a.u.)
+
+
+        e                                                                      0.6        f                                                  0.6    g                                                0.6    h
+                                                       indirect
+                                                       scattered               0.4                                                           0.4                                                     0.4
+                                                       direct
+                                                                               0.2                                                           0.2                                                     0.2
+              E
+                                                                   pz (a.u.)     0                                               pz (a.u.)     0                                         pz (a.u.)     0
+                                                              t
+                                                                               -0.2                                                          -0.2                                                    -0.2
+
+                                                                               -0.4                                                          -0.4                                                    -0.4
+
+                                                                               -0.6                                                          -0.6                                                    -0.6
+
+
+                                                                                          -0.4   -0.2   0        0.2       0.4                      -0.4   -0.2     0     0.2      0.4                      -0.4   -0.2    0     0.2       0.4
+                                                                                                    px (a.u.)                                                 px (a.u.)                                                 px (a.u.)
+
+                      i                                                               j                                                                                   k                                                                      1
+                    500       indirect                                           500          scattered                                                                 500       direct
+
+
+         z (a.u.)                                                     z (a.u.)                                                                               z (a.u.)
+                      0                                                               0                                                                                   0                                                                      0.5
+
+
+
+                    500                                                          500                                                                                    500
+                                                                                                                                                                                                                                                 0
+                          0          2            4           6                           0                 2                    4                    6                       0                 2                   4                  6
+                                         t (cycles)                                                             t (cycles)                                                                           t (cycles)
+
+
+     Figure 5. Subcycle dynamics of strong-field ionization in the coherent-state and BSV light.
+     a, The ionization dynamics in an optical cycle of a coherent-state pulse. Depending on the ionization time,
+     the released photoelectrons experience different dynamics for each quarter cycle. Electrons ionized in the
+     first quarter-cycle follow indirect or scattered trajectories, while those ionized in the second quarter-cycle
+     undergo direct ionization without returning to the parent ions and rescattering. These distinct electron
+     trajectories yield similar final momenta, allowing their interference in the PMDs. b–d, The photoelectron
+     interference structures with the coherent-state driving, b, The indirect–scattered electron interference
+     pattern; c, The indirect–direct electron interference pattern; d, The direct–scattered interference pattern.
+     e, The ionization dynamics in an optical cycle of BSV pulse. A representative BSV field reveals pronounced
+     subcycle amplitude fluctuations. f–h, The photoelectron interference structures with BSV driving. Under
+     BSV driving, quantum field fluctuations affect each interference channel differently: f, the indirect–scattered
+     electron interference pattern of BSV. The spider-like structure of indirect–scattered interference is not
+     only preserved but notably enhanced; g, The indirect–direct electron interference pattern of BSV; h, The
+     direct–scattered electron interference pattern of BSV. i–k, The real-time evolution of indirect (i), scattered
+     (j), and direct (k) electrons under BSV driving along the polarization axis.
+
+
+
+
+    of the coherent-state driving field (Fig. 5a). The indirect electrons propagate away from the core
+    with negligible interaction, while the scattered electrons revisit and scatter off the parent ion.
+    Thus, the scattered electrons encode the structural and dynamical information about the atomic
+    and molecular structures. Consequently, the interference between indirect electrons and scattered
+150 electrons has been termed photoelectron holography[7]. In contrast, the direct electrons are ionized
+    during the second quarter-cycle and are directly accelerated to the detector without returning to
+    the parent ion. Each type of trajectory contributes differently to the formation of interference
+    patterns. The interference between indirect and scattered trajectories gives rise to the characteristic
+    spider-like fringes, as shown in Fig. 5b. The interference between indirect and direct trajectories
+
+
+                                                                                                                       7
+      leads to the time double-slit structure[8], as shown in Fig. 5c. In Fig. 5d, the interference pattern
+      for direct and scattered electrons gives rise to yet another interference pattern.
+          However, the photoelectron interference arising from these trajectories under BSV illumina-
+      tion differs significantly from that driven by the coherent-state light. In Fig. 5e, we illustrate the
+      electron dynamics within a single optical cycle of BSV light. Unlike coherent-state light, BSV is a
+160   quantum state with a vanishing average electric field but with pronounced quantum fluctuations.
+      The ionization dynamics differ remarkably from those under the coherent-state illumination. In
+      Figures 5f-5h, we present the interference patterns resulting from the same types of trajectory pairs:
+      indirect and scattered electrons (f), indirect and direct electrons (g), and direct and scattered elec-
+      trons (h). Accordingly, one can observe that the direct-indirect and direct-scattered interference
+      patterns observed in the coherent-state light are substantially suppressed, whereas the spider-like
+      fringes not only persist but are remarkably enhanced.
+          This coherence preservation is nontrivial, as it reveals that the selective preservation of pho-
+      toelectron interference originates from intrinsic electron trajectory pairs with BSV. In reality, the
+      surviving photoelectron hologram arises from those electrons ionized within the same quarter-cycle,
+170   whereas the interference of those electrons with different ionization times is much suppressed. This
+      contrast suggests that the underlying mechanism is rooted in the correlation between electron tra-
+      jectories, e.g., electrons released within the same subcycle are simultaneously exposed to the close
+      quantum fluctuations, allowing them to accumulate phase in a synchronized manner. Consequently,
+      their mutual coherence is less susceptible to quantum-induced dephasing.
+          To elucidate the underlying mechanism, we have simulated the representative indirect, scat-
+      tered, and direct electron trajectories, as shown in Figures 5i-k. One can find that the robustness
+      of the spider-like interference originates from the intrinsic similarity between the two contributing
+      quantum trajectories of the indirect and scattered electrons, which are released within the same
+      subcycle and undergo nearly synchronous evolution under the combined laser and Coulomb fields.
+180   This intrinsic similarity ensures that their phase difference remains relatively insensitive to inten-
+      sity fluctuations, resulting in dynamically protected coherence. In contrast, the trajectory pairs
+      with significantly different ionization times—such as the direct and indirect electrons—accumulate
+      phase differences that are highly sensitive to the instantaneous field variations, rendering them
+      more susceptible to dephasing.
+          Remarkably, this intrinsic robustness of photoelectron holography against strong quantum fluc-
+      tuation suggests that quantum noise—typically viewed as a detrimental factor—can instead be
+      harnessed as a resource for ultrafast imaging. Specifically, strong-field ionization inherently gen-
+      erates multiple interfering pathways. Various interference structures coexist and would obscure
+      the desired holographic signal. Under quantum illumination, however, the intrinsic correlation
+190   between holographic electron trajectories selectively preserves their coherence while suppressing
+      competing interferences. As a result, the holographic structure emerges more clearly. These find-
+      ings point out a new class of coherence-protected observables in strong-field physics and highlight
+      photoelectron holography for ultrafast imaging of molecular structure and electron dynamics under
+      quantum-fluctuating conditions.
+
+
+
+
+      Conclusion
+      Strong-field ionization of atoms has been experimentally studied. Our study reveals that photoelec-
+      tron holography under BSV driving does not merely survive in quantum noise—it thrives within
+      it, while other photoelectron interferences are erased. This selective enhancement originates from
+
+
+                                                        8
+    a hidden order in the ionization dynamics with quantum light: the tunneling electron trajecto-
+200 ries that share the same birth times and evolve in a correlated manner retain robust coherence,
+    despite strong intensity fluctuations. Conversely, the interference features that lack this intrinsic
+    synchrony succumb to dephasing and vanish from the photoelectron momentum distributions. Cru-
+    cially, this is not a passive robustness. It is an active filtration, i.e., the quantum field does not
+    indiscriminately degrade coherence, but selectively preserves it along dynamically correlated path-
+    ways. In this way, BSV acts as a quantum filter, projecting out observables that are resilient not
+    because they are immune to noise, but because their coherence is encoded in the system’s dynam-
+    ical order. Through joint experimental observations and q-QTMC modeling, we identify these
+    surviving structures as quantum-coherence-protected features, revealing a new operational regime
+    of strong-field physics—where coherence is not externally engineered but intrinsically sustained
+210 through the dynamic correlations between quantum light and electron motion.
+        Looking forward, this selective survival of intrinsically correlated electron trajectories under
+    quantum-field drive opens a promising path for quantum-enhanced ultrafast atomic and molec-
+    ular imaging. In particular, photoelectron holography driven by bright squeezed light leverages
+    quantum-engineered strong fields to control the timing of electron emission and reduce phase
+    noise, thereby enhancing the visibility and coherence of holographic imaging. Such an effect
+    significantly improves the resolution and sensitivity of molecular imaging, potentially enabling
+    quantum-enhanced strong-field spectroscopy. By tailoring the quantum properties of the driving
+    light, i.e., squeezing strength, mode composition, and temporal correlations, it may become feasible
+    to sculpt specific interference features that are robust to environmental noise, or even to harness
+220 quantum fluctuations. These capabilities could be transformative for strong-field and attosecond
+    science, enabling precise probing of ultrafast electron dynamics, inner-shell motion[43], or field-
+    induced molecular processes[44] at the atomic and molecular scale. More broadly, our findings point
+    toward a new paradigm in quantum imaging—one in which quantum fluctuations are not merely
+    treated as noise but actively re-engineered as a resource—laying conceptual foundations for future
+    quantum technologies.
+
+
+      References
+      [1] Keldysh, L. Ionization in the field of a strong electromagnetic wave. Journal of Experimental
+          and Theoretical Physics 20, 1307–1314 (1965).
+
+      [2] Agostini, P., Fabre, F., Mainfray, G., Petite, G. & Rahman, N. K. Free-free transitions
+230       following six-photon ionization of xenon atoms. Physical Review Letters 42, 1127 (1979).
+
+      [3] Ferray, M. et al. Multiple-harmonic conversion of 1064 nm radiation in rare gases. Journal of
+          Physics B: Atomic, Molecular and Optical Physics 21, L31–L35 (1988).
+
+      [4] Lewenstein, M., Balcou, Ph., Ivanov, M. Yu., L’Huillier, A. & Corkum, P. B. Theory of
+          high-harmonic generation by low-frequency laser fields. Physical Review A 49, 2117–2132
+          (1994).
+
+      [5] Corkum, P. B. Plasma perspective on strong field multiphoton ionization. Physical Review
+          Letters 71, 1994–1997 (1993).
+
+      [6] Itatani, J. et al. Tomographic imaging of molecular orbitals. Nature 432, 867–871 (2004).
+
+      [7] Huismans, Y. et al. Time-resolved holography with photoelectrons. Science 331, 61–64 (2011).
+
+
+                                                       9
+240    [8] Arbó, D. G., Persson, E. & Burgdörfer, J. Time double-slit interferences in strong-field
+           tunneling ionization. Physical Review A 74, 063407 (2006).
+
+       [9] Bian, X.-B. et al. Subcycle interference dynamics of time-resolved photoelectron holography
+           with midinfrared laser pulses. Physical Review A 84, 043420 (2011).
+
+      [10] Bian, X.-B. & Bandrauk, A. D. Attosecond time-resolved imaging of molecular structure by
+           photoelectron holography. Physical Review Letters 108, 263003 (2012).
+
+      [11] Li, M. et al. Recollision-induced subcycle interference of molecules in strong laser fields.
+           Physical Review A 89, 033425 (2014).
+
+      [12] Spanner, M., Smirnova, O., Corkum, P. B. & Ivanov, M. Y. Reading diffraction images in
+           strong field ionization of diatomic molecules. Journal of Physics B: Atomic, Molecular and
+250        Optical Physics 37, L243–L250 (2004).
+
+      [13] Meckel, M. et al. Signatures of the continuum electron phase in molecular strong-field
+           photoelectron holography. Nature Physics 10, 594–600 (2014).
+
+      [14] Porat, G. et al. Attosecond time-resolved photoelectron holography. Nature Communications
+           9, 2805 (2018).
+
+      [15] Hickstein, D. D. et al. Direct visualization of laser-driven electron multiple scattering and
+           tunneling distance in strong-field ionization. Physical Review Letters 109, 073004 (2012).
+
+      [16] Khurelbaatar, T. et al. Strong-field photoelectron holography in the subcycle limit. Light:
+           Science & Applications 13, 108 (2024).
+
+      [17] Walker, B. et al. Precision measurement of strong field double ionization of helium. Physical
+260        Review Letters 73, 1227 (1994).
+
+      [18] Salières, P. et al. Feynman’s path-integral approach for intense-laser-atom interactions.
+           Science 292, 902–905 (2001).
+
+      [19] Gorlach, A., Neufeld, O., Rivera, N., Cohen, O. & Kaminer, I. The quantum-optical nature
+           of high harmonic generation. Nature Communications 11, 4598 (2020).
+
+      [20] Rivera-Dean, J. et al. Light-matter entanglement after above-threshold ionization processes
+           in atoms. Physical Review A 106, 063705 (2022).
+
+      [21] Bhattacharya, U. et al. Strong–laser–field physics, non–classical light states and quantum
+           information science. Reports on Progress in Physics 86, 094401 (2023).
+
+      [22] Even Tzur, M. et al. Photon-statistics force in ultrafast electron dynamics. Nature Photonics
+270        17, 501–509 (2023).
+
+      [23] Gorlach, A. et al. High-harmonic generation driven by quantum light. Nature Physics 19,
+           1689–1696 (2023).
+
+      [24] Lange, C. S., Hansen, T. & Madsen, L. B. Electron-correlation-induced nonclassicality of light
+           from high-order harmonic generation. Physical Review A 109, 033110 (2024).
+
+
+
+                                                      10
+      [25] Rivera-Dean, J. et al. Squeezed states of light after high-order harmonic generation in excited
+           atomic systems. Physical Review A 110, 063118 (2024).
+
+      [26] Stammer, P. Absence of quantum optical coherence in high harmonic generation. Physical
+           Review Research 6, L032033 (2024).
+
+      [27] Scully, M. O. & Zubairy, M. S. Quantum Optics (Cambridge University Press, 1997).
+
+280   [28] Wolfgang, P. S. Quantum Optics in Phase Space (Wiley, 2001).
+
+      [29] Lemieux, S. Photon bunching in high-harmonic emission controlled by quantum light. Nature
+           Photonics 19, 150 (2025).
+
+      [30] Tzur, M. E. et al. Attosecond-resolved quantum fluctuations of light and matter. Preprent at
+           https://arxiv.org/abs/2511.18362 (2025).
+
+      [31] Lyu, Z., Sun, F., Fang, Y., He, Q. & Liu, Y. Effect of photon quantum statistics on electrons
+           in above-threshold ionization. Physical Review Research 7, L012072 (2025).
+
+      [32] Heimerl, J. et al. Multiphoton electron emission with non-classical light. Nature Physics 20,
+           945–950 (2024).
+
+    [33] Heimerl, J. et al. Quantum light drives electrons strongly at metal needle tips. Nature Physics
+290      21, 1899–1904 (2025).
+
+      [34] Sh. Iskhakov, T., Pérez, A. M., Yu. Spasibko, K., Chekhova, M. V. & Leuchs, G. Superbunched
+           bright squeezed vacuum state. Optics Letters 37, 1919 (2012).
+
+      [35] Pérez, A. M. et al. Bright squeezed-vacuum source with 1.1 spatial mode. Optics Letters 39,
+           2403 (2014).
+
+      [36] Ullrich, J. et al. Recoil-ion and electron momentum spectroscopy: Reaction-microscopes.
+           Reports on Progress in Physics 66, 1463–1545 (2003).
+
+      [37] Dörner, R. et al. Cold target recoil ion momentum spectroscopy: A ‘momentum microscope’
+           to view atomic collision dynamics. Physics Reports 330, 95–192 (2000).
+
+      [38] Fang, Y., Sun, F.-X., He, Q. & Liu, Y. Strong-field ionization of hydrogen atoms with quantum
+300        light. Physical Review Letters 130, 253201 (2023).
+
+      [39] Li, M. et al. Classical-quantum correspondence for above-threshold ionization. Physical Review
+           Letters 112, 113002 (2014).
+
+      [40] Korneev, Ph. A. et al. Interference carpets in above-threshold ionization: From the coulomb-
+           free to the coulomb-dominated regime. Physical Review Letters 108, 223601 (2012).
+
+      [41] Möller, M. et al. Off-axis low-energy structures in above-threshold ionization. Physical Review
+           A 90, 023412 (2014).
+
+      [42] Even Tzur, M. & Cohen, O. Motion of charged particles in bright squeezed vacuum. Light:
+           Science & Applications 13, 41 (2024).
+
+
+
+                                                       11
+      [43] Drescher, M. et al. Time-resolved atomic inner-shell spectroscopy. Nature 419, 803–807
+310        (2002).
+
+      [44] Long, X., Li, P. & Liu, Y. Hydrogen molecular dissociation driven by quantum light. Physical
+           Review Letters 135, 153201 (2025).
+
+      [45] Barakat, I. et al. Simultaneous measurement of multimode squeezing through multimode
+           phase-sensitive amplification. Optica Quantum 3, 36 (2025).
+
+      [46] Allevi, A. & Bondani, M. Statistics of twin-beam states by photon-number resolving detectors
+           up to pump depletion. Journal of the Optical Society of America B 31, B14 (2014).
+
+      [47] Ammosov, M. V., Delone, N. B. & Krainov, V. P. Tunnel ionization of complex atoms and
+           atomic ions in electromagnetic field. SPIE 64, 1191 (1986).
+
+      [48] Delone, N. B. & Krainov, V. P. Energy and angular electron spectra for the tunnel ionization
+320        of atoms by strong low-frequency radiation. Journal of the Optical Society of America B 8,
+           1207 (1991).
+
+
+
+
+      Methods
+      Experimental methods
+      BSV generation and Characterization
+
+
+
+
+                                          Spectrometer-1
+
+
+
+                  Collimated BSV                           P
+                                                                                       COLTRIMS
+                                                               FM
+
+                                                               PBS1
+
+                                                                      PBS2   BBO
+                                                                                   Spectrometer-2
+
+
+
+                                    Delay Stage
+
+
+
+
+      Extended Figure 1. Experimental setup for characterizing the BSV source. ’P’: glass plate; ’FM’:
+      flipping mirror; ’PBS’: polarizing beam splitter; ’BBO’: 1-mm-thick type-I beta-barium borate crystal;
+      ’Spectrometer-1’: AvaSpec-NIR256-2.5-HSC-EVO, with a spectral range of 1000 ∼ 2500 nm; ’Spectrometer-
+      2’: AvaSpec-ULS4096CL-EVO, with a spectral range of 200 ∼ 1100 nm.
+
+
+
+                                                                12
+        We generate the BSV pulses through type-I spontaneous parametric down-conversion (SPDC).
+    The pump source is an amplified Ti:sapphire femtosecond laser system operating at a central
+    wavelength of 800 nm, with a pulse duration of 25 fs and a repetition rate of 3 kHz. It delivers
+    tunable single-pulse energies up to approximately 700 µJ. BSV is generated via collinear, frequency-
+    degenerate type-I SPDC in a pair of 2-mm-thick BBO crystals placed symmetrically about the
+330 common focus of an f = 1000 mm lens. The crystals are angularly tuned to achieve phase matching
+    around 1600 nm. A long-pass filter (cutoff at 1180 nm) is inserted after the crystal pair to remove
+    residual 800 nm pump effectively. An f = 600 mm lens is used to collimate the BSV.
+
+
+
+
+                                                     13
+                a 1.2                                                      b 1.2                                                c 1.0                                   0
+                                                                                                                                                                   10
+
+
+
+
+                                                                                                                                                                            contribution (arb. uni.)
+                                                                                                                     mode 1
+
+
+
+
+           intensity (arb. uni.)
+                                   1.0                                                      1.0                      mode 2
+                                                                                                                                     0.8
+                                                                                                                     mode 3                                             -20
+
+
+
+
+                                                                       sm um2 (arb. uni.)
+                                                                                                                                                             -13   10
+                                   0.8                                                      0.8                                                       6×10
+                                                                                                                                     0.6
+                                   0.6                                                                                          sm                                      -40
+                                                                                            0.6                                                                    10
+                                                                                                                                     0.4
+                                   0.4                                                      0.4                                                                         -60
+                                                                                                                                     0.2                           10
+                                   0.2                                                      0.2
+                                    0                                                        0                                        0
+                                         1.2   1.4   1.6   1.8   2.0                              1.2   1.4   1.6   1.8   2.0              1 2 3 4 5 6 7 8
+                                                λ (μm)                                                   λ (μm)                                   m
+
+
+     Extended Figure 2. Shot-by-shot measurement and modal decomposition of the BSV. a, Shot-
+     by-shot spectra of 20, 000 BSV pulses measured with Spectrometer-1. b, Schmidt mode decomposition of
+     the BSV spectra. The first mode dominates, exhibiting a single-peaked spectrum. The second and third
+     modes, multiplied by a factor of 5 for better visibility, display multi-peaked structures. c, The weights of
+     each mode (left axis), along with their ionization contributions defined as the product of modal intensity
+     and ADK ionization rate (right axis).
+
+
+
+        As shown in the Extended Figure 1, to characterize the temporal, spectral, and statistical prop-
+    erties of BSV pulses, we implemented shot-by-shot measurements immediately after the generation.
+    A low-reflectivity glass plate was used to pick off a small fraction of the BSV beam, which was sent
+    into a spectrometer covering the 1000 ∼ 2500 nm range, and spectra were recorded in the Extended
+    Figure 2a. For each laser shot, the spectrometer recorded a spectrum I (λ). Taking into account the
+    spectrometer response function S (λ) and the reflection coefficient R of the glass plate, the photon
+                                              1
+                                                R    I(λ)
+    number per pulse was obtained N = R           dλ S(λ) . By recording spectra from 20, 000 consecutive
+340 pulses, we obtained the photon-number statistics at each BSV intensity level and computed the
+                                                                                                       2
+    second-order intensity correlation function in a large-photon-number limit as g (2) = N 2 / ⟨N ⟩ .
+        In parallel, we performed a spectral Schmidt mode analysis on the measured ensemble of
+    spectra[45]. Specifically, from the spectra I (λ) we construct the wavelength–wavelength intensity-
+    fluctuation covariance matrix Cov(λ, λ′ ) = ⟨∆I (λ)∆I (λ′ )⟩, and normalize it to obtain a dimen-
+                                                                                        √
+    sionless correlation kernel C (λ, λ′ ). We then evaluate its matrix square root K = C and perform
+    a singular value decomposition,
+                                                                                                        X
+                                                                       K (λ, λ′ ) =                           sm um (λ)u∗m (λ′ ).                                                                      (1)
+                                                                                                        m
+
+
+    This procedure yields an orthonormal set of spectral modes um (λ) that diagonalize the experimen-
+    tally accessible second-order intensity correlations, together with the corresponding modal weights
+350 sm . This analysis allowed us to quantify the modal decomposition of the BSV pulse. Under our
+    experimental conditions, the BSV was pumped in the high-gain regime. The effective number of
+    Schmidt modes increases modestly with the pump power, leading to a gradual decrease in g (2) [46].
+    Nevertheless, the strong-field ionization process is highly nonlinear in nature. For the highest BSV
+    intensity used in this work, its frequency Schmidt modal decomposition result is shown in the
+    Extended Figure 2b. To examine the contribution of each mode in the ionization event, we can
+    calculate the relative contribution by multiplying the mode weight and the ADK ionization rate.
+    As shown in the Extended Figure 2c, the Schmidt modes beyond the first account for less than
+    10−12 of the total ionization events. Therefore, the contribution of photoelectron yields is mainly
+
+
+                                                                                                              14
+      from the first-order Schmidt mode in our experiments, while the contributions from higher orders
+360   remain negligible.
+
+
+
+
+                          a                                               b                            FWHM = 31.31 fs
+                                  850                                                        1.0
+
+
+
+
+                                                                     Intensity (arb. uni.)
+                                                                                             0.9
+                                  800
+                                                                                             0.8
+                         λ (nm)                                                              0.7
+                                  750
+                                                                                             0.6
+
+                                  700
+                                        0   50      100   150                                      0      50      100   150
+                                                 τ (fs)                                                        τ (fs)
+
+
+      Extended Figure 3. Results of FROG measurement. a, Time–wavelength spectrogram obtained
+      from FROG measurement. b. Temporal profile retrieved by integrating over wavelength and fitting the
+      intensity envelope, yielding a pulse duration of ∆t = FWHM = 31.31 fs.
+
+
+
+
+          To examine the pulse duration of the BSV, we have utilized a frequency-resolved optical gating
+      (FROG) method. The BSV beam was redirected into a FROG setup via a flipping mirror, then
+      split by a polarizing beamsplitter into two orthogonal components. After traveling through two
+      arms, the beams were recombined at another polarizing beamsplitter and focused onto a BBO
+      crystal for second-harmonic generation (SHG). By scanning the delay between the two arms and
+      recording the SHG spectra (Extended Figure 3a), we reconstructed the BSV temporal envelope
+      using a standard retrieval algorithm shown in Extended Figure 3b. The retrieved pulse duration
+      at the input of the interaction region was approximately 31.31 fs.
+
+
+
+      Strong-field ionization experiment with BSV
+370 PMDs of ionization with BSV are measured using a COLTRIMS system[36, 37]. The BSV pulses
+    are focused into a pulsed supersonic xenon gas jet inside a high-vacuum chamber (5 × 10−11 mbar)
+    by a concave mirror of focal length 75 mm. The backing pressure is kept at 0.7 atm to maintain
+    sufficient ionization yield while avoiding space-charge effects. The electrons are extracted and
+    guided by a well-calibrated combination of electric and magnetic fields toward a microchannel
+    plate (MCP) detector equipped with a delay-line detector (DLD). This setup allows for time-
+    and position-resolved detection of each electron, thereby enabling full reconstruction of the three-
+    dimensional momentum vector on a single-event basis. By accumulating millions of events, we
+    obtain statistically significant three-dimensional PMDs for each experimental condition.
+        For the experiment with coherent-state light, the BSV beam is replaced by coherent-state mid-
+380 IR pulses at 1600 nm wavelength generated from an optical parametric amplifier (OPA) pumped
+    by the same laser system. The OPA output is passed through the same optical path and focused
+    onto the xenon target under identical experimental geometry.
+
+
+                                                                15
+      Theoretical method: quantum-light-corrected quantum trajectory
+      Monte Carlo (q-QTMC) theory
+      To understand the photoelectron momentum distributions in the presence of BSV, we have devel-
+      oped a quantum-light-corrected quantum trajectory Monte Carlo (q-QTMC) model. Briefly, for
+      strong-field ionization with the coherent-state field, each electron trajectory is weighted by the
+                                                                 j                        j
+      Ammosov-Delone-Krainov  √ (ADK) theory [47, 48], W (t0 , v⊥ ) = W0 (E (t0 )) × W1 (v⊥ )[39], in which
+    W0 (t) = |(2Ip )2 /E (t)|2/ 2Ip −1 exp −2(2Ip )3/2 /|3E (t)| determines the ionization rate with respect
+                                           j                                 j
+390 to the ionization instant, and W1 (v⊥ ) = 2Ip /E (t) exp − 2Ip (v⊥ )2 / |E (t)| determines the initial
+                                                  p                 p
+
+    transverse momentum distribution, where E (t) is the instantaneous strength of the laser field and
+    Ip is the ionization potential. The electron tunneling exit is along the instantaneous direction of the
+    light field, and its value is given by Ip /|E (t)|. After sampling all the electrons, their classical motion
+    outside the barrier is governed by the Newtonian equation r̈ = −E (t) −r/r3 until the laser is turned
+    off, where r is the distance from the electron to the nucleus. To solve the Newtonian equations more
+    precisely near the nucleus, we use an explicit method that automatically selects the solution algo-
+    rithm when solving ordinary differential equations. To interpret the photoelectron              holography, the
+                                                                                 R∞ h            2
+                                                                                                                  i
+    trajectory phase is given by a Feynman path-integral approach Φj = t0 dt p(t)              2   + Ip − V (r(t)) ,
+    where p(t) is the electron’s instantaneous velocity, Ip is the ionization potential, and V (r(t)) is
+400 the atomic Coulomb potential. The final PMD is then obtained by coherently summing over all
+                                                                                                       2
+                                                                      P q                j
+    trajectories that reach the same final momentum M (p) =              j   W  ( t  ,
+                                                                                    0 ⊥v   ) exp −i Φj .
+
+           To extend the QTMC framework to quantum light, we incorporate the quantum statistical
+      nature of the bright squeezed vacuum (BSV) field via the reduced electronic density matrix for-
+      malism in the joint system of light and atom. In the framework, we have considered several
+      assumptions: i) negligible atom–field entanglement; ii) small single-photon amplitude limit, and
+      iii) negligible fluctuations of the coherent-state basis in the high-photon-number regime. The total
+      atom–field density matrix is thus expressed as an incoherent mixture over the coherent-state
+      projections[22, 23]. By tracing out the field degrees of freedom, the reduced electronic density
+      matrix is given by,                       Z
+410                                      ρe (t) =    d2 αQ (α) |ϕα (t)⟩ ⟨ϕα (t)| .                              (2)
+
+      where Q(α) is the Husimi Q-function describing the quantum state of the light, and |ϕα (t)⟩ is the
+      electronic wavefunction evolved under a classical field corresponding to the coherent amplitude α.
+      The final PMD under quantum-light driving is obtained by projecting ρe onto the ionized state
+      via a projection operator Π, yielding:
+
+                                           Mq (p) = ⟨p| Πρe (t → ∞)Π |p⟩
+                                                    Z                                                           (3)
+                                                  = d2 α Q(α)Mα (p),
+
+
+      where Mα (p) denotes the PMD resulting from a coherent-state field realization of amplitude α.
+
+
+
+
+      Acknowledgments
+      This work is supported by the National Key R&D Program (No. 2022YFA1604301) and Natural
+      Science Foundation of China (Nos. 12334013 and 92250306).
+
+
+                                                           16
+420   Author Contributions
+      H.L., X.L., and P.L. designed and performed the experiments. H.L. built the theoretical model and
+      conducted simulations. H.L. and Y.L. analyzed the data. H.L. and Y.L. drafted the paper with
+      extensive input from all authors. Y.L. conceived the idea and supervised the project.
+
+
+      Additional information
+      Data availability
+      The datasets generated during and/or analysed during the current study are available from the
+      corresponding author on reasonable request.
+
+      Code availability
+      All codes used for the analysis and production of results of the current study are available from
+430   the corresponding author on reasonable request.
+
+
+
+
+                                                     17
+

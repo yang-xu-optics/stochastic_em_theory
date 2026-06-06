@@ -1,0 +1,1148 @@
+                                            Heralded ultrafast generation of macroscopic quantum states in
+                                                      matter with bright squeezed vacuum light
+                                                                                                 Shohei Imai
+                                                                Department of Physics, University of Tokyo, Hongo, Tokyo 113-0033, Japan
+                                                                                shohei.imai@phys.s.u-tokyo.ac.jp
+
+
+
+
+arXiv:2605.30224v1 [quant-ph] 28 May 2026
+                                                                                                May 29, 2026
+
+
+                                                                                                   Abstract
+                                                      We show that bright squeezed vacuum light, combined with a single-shot quadrature measurement
+                                                  of the post-interaction light, enables the ultrafast generation of macroscopic quantum states in matter.
+                                                  Although in the weak-coupling regime multiphoton quantum light leaves the unconditional matter state
+                                                  as a classical mixture due to light–matter entanglement, quadrature-based heralding prepares the matter
+                                                  in a Gaussian-weighted quantum superposition. For an ensemble of resonantly electric-dipole-coupled
+                                                  two-level systems, this heralding dynamics acts as a Gaussian filter with respect to the electric polarization,
+                                                  with brighter squeezed-vacuum light accelerating the preparation of the zero-eigenvalue Dicke state.
+                                                  Counter-rotating terms further drive a stroboscopic transition from this Dicke state to a cat-like state. Our
+                                                  results open a route to ultrafast engineering of macroscopic quantum matter with strong-field quantum
+                                                  light.
+
+
+                                            1    Introduction
+                                            Macroscopic quantumness lies at the heart of fundamental physics, serving as a bridge between the classical
+                                            (macroscopic) and quantum (microscopic) worlds and opening new frontiers for future research [1–4].
+                                            Moreover, its ability to surpass classical limits facilitates practical applications in quantum computing [5, 6]
+                                            and quantum metrology [7–10]. However, such macroscopic nonclassicality is intrinsically fragile against
+                                            interactions with the environment [11, 12]. This motivates an approach in which macroscopic quantum states
+                                            are generated on timescales shorter than those of relaxation and dephasing.
+                                                Recent advances in strong-field quantum light make this approach increasingly feasible. Ultrafast quantum
+                                            optics is developing rapidly [13–18], driven by the realization of Schrödinger cat or kitten states of light
+                                            through the combination of high-harmonic generation and quantum measurement [19–23], and of bright
+                                            squeezed vacuum (BSV) light containing as many as 1013 photons per mode [24–26]. Correspondingly,
+                                            studies exploring the interaction between matter and strong-field quantum light have become increasingly
+                                            active, including the enhancement of nonlinear effects arising from the super-Poissonian photon statistics of
+                                            BSV [27], high-harmonic generation driven by BSV [28–34], BSV-driven electron dynamics [35, 36] and
+                                            photoemission [37, 38], as well as second-harmonic generation [39] and electron dynamics [40, 41] driven by
+                                            cat-state light.
+                                                However, quantum light gives rise to strong light–matter entanglement. Consequently, discarding the
+                                            information carried by the light after the interaction reduces the matter subsystem to a classically mixed state.
+                                            To harness the latent quantum character of the matter system, one therefore needs heralding that exploits the
+                                            information encoded in its entanglement with light. Indeed, Ref. [41] showed that, by performing single-shot
+                                            projective measurements of photon-number parity or quadrature on the post-interaction light, one can induce
+                                            a Rabi-oscillation cat state under driving by a macroscopic Schrödinger cat state of light.
+
+                                                                                                        1
+     In this paper, we show that single-shot quadrature measurements of the post-interaction BSV light herald
+the ultrafast preparation of macroscopic quantum states of matter that are inaccessible in the corresponding
+unconditional dynamics. We develop a general theory for BSV-driven dynamics by combining the external-
+field approximation (XFA), which is valid for multiphoton light as well as the realistic weak electron–photon
+coupling [40, 41], with the Janszky representation of the squeezed-vacuum (SV) state [42] (Sec. 3). Based on
+this effective theory, we derive that the quadrature-heralded state of matter is a Gaussian-weighted quantum
+superposition of matter states driven by classical light [Eq. (18)].
+     Applying this XFA theory to the Tavis–Cummings (TC) model, the most basic electric-dipole-coupled
+system [43], we find that quadrature-heralded matter dynamics is described as an ultrafast Gaussian filter
+[Eq. (24)] with respect to the collective electric polarization (or polarization current). The resulting state is a
+Dicke state with zero eigenvalue of that macroscopic observable. Furthermore, when finite measurement
+resolution is taken into account, the success-probability-weighted quantum Fisher information (QFI) scales as
+𝑁 3/2 with the particle number 𝑁, implying metrological performance beyond the standard quantum limit (SQL)
+(Sec. 4.3). We also analyze the Dicke model [44, 45] beyond the rotating-wave approximation (RWA) and
+show that the counter-rotating terms drive a stroboscopic transition from the Dicke state to a 𝑧-spin-polarized
+cat-like state (Sec. 5). Overall, this work offers a matter-response perspective on a fundamental question in
+strong-field quantum optics: what is genuinely quantum in the phenomena induced by BSV light?
+     Unlike previous schemes for quantum state generation using SV light or optical measurements, our
+framework combines a macroscopic matter system with ultrafast generation enabled by strong fields, a basic
+electric-dipole coupling, and a single-shot optical readout. Previous studies using SV light have reported spin
+squeezing in small systems [46], conditional state generation by continuous quantum nondemolition (QND)
+optical measurement [47], squeezing transfer by complete light absorption [48, 49], long-time steady states
+under incoherent noise (a broadband bath) [50], and quantum-filtering formulations [51]. Other than SV light,
+proposed schemes have also considered QND-based protocols [52–64], light–matter disentanglement with
+quantum erasure [65], and spin-1 ensembles [66].
+     The remainder of this paper is organized as follows. Section 2 reviews the preliminaries, including the
+formulation of the XFA for general quantum light (Sec. 2.1) and the Janszky representation, which expresses
+the SV state as a compact superposition of coherent states (Sec. 2.2). Section 3 formulates the XFA theory for
+BSV-driven dynamics and derives general expressions for unconditional states (Sec. 3.1) and heralded states
+(Sec. 3.2). Section 4 applies this theory to the TC model and analyzes optically heralded ultrafast matter
+dynamics. It also discusses the measurement resolution and success probability (Sec. 4.3) and assesses the
+validity of the XFA by comparison with exact numerical calculations (Sec. 4.4). Section 5 extends the analysis
+to the Dicke model and examines the effects of the counter-rotating terms. Section 6 presents the conclusions.
+
+
+2     Preliminaries
+2.1   External-field approximation (XFA)
+This section presents a general formulation of the XFA, which is valid when the electron–photon coupling is
+weak. Focusing on ultrafast dynamics induced by strong-field quantum light, we analyze the time evolution
+of the pure state of the total light–matter coupling system while neglecting relaxation and dephasing. The
+formulation follows Ref. [41]. Within this approach, the weak electron–photon coupling justifies neglecting
+the backaction from matter on the quantum light, allowing the total state to be expressed as a quantum
+superposition of matter states driven by classical light.
+    We first represent the initial state of the quantum light as a superposition of coherent states:
+                                                      ∫
+                                            |𝜓(0)⟩p =    d2 𝛼 𝜒(𝛼)|𝛼⟩.                                   (1)
+
+
+                                                        2
+Here, |𝛼⟩ (𝛼 ∈ C) denotes a coherent state satisfying ˆ𝑎|𝛼⟩ = 𝛼|𝛼⟩, where 𝑎ˆ is the bosonic annihilation
+operator. This property makes coherent states classical states describing laser light. Note that, because the
+coherent-state basis is overcomplete, the amplitude 𝜒(𝛼) is not unique; however, in the zero-coupling limit
+this nonuniqueness is generally irrelevant for the XFA formulation.
+    Using this representation, the total-system wave function at time 𝑡 can be approximated as
+                                                 ∫
+                                              1
+                            |ΨXFA (𝑡)⟩mp = √        d2 𝛼 𝜒(𝛼)|𝜓 𝐹 ( 𝛼) (𝑡)⟩m |𝛼(𝑡)⟩p ,                    (2)
+                                              N
+where N is a normalization constant and 𝐹 (𝛼) is the field strength; if the electron–photon coupling constant
+is 𝑔, then 𝐹 (𝛼) = 𝑔𝛼. The quantity 𝑔 depends on system-specific details such as the optical mode function
+and the electric-dipole moment. The state |𝜓 𝐹 (𝑡)⟩m denotes the matter state driven by the classical field 𝐹 (𝛼),
+whose time evolution is determined by the following Schrödinger equation:
+
+                                    i𝜕𝑡 |𝜓 𝐹 (𝑡)⟩m = 𝐻ˆ m [𝐹 (𝛼(𝑡))] |𝜓 𝐹 (𝑡)⟩m .                              (3)
+
+Here, 𝐻ˆ m [𝐹 (𝛼(𝑡))] consists of the bare matter Hamiltonian and the classical-field driving term. When the
+optical frequency is 𝜔, then 𝛼(𝑡) = 𝛼 exp(−i𝜔𝑡). The subscripts m, p, and mp denote the Hilbert spaces of
+matter, photons, and the total system, respectively (omitted when unambiguous).
+     The XFA becomes asymptotically valid in the thermodynamic limit for the photon field. In this limit, the
+field strength is kept finite while the coupling constant tends to zero and the photon number tends to infinity:
+                                               √︁
+                                             𝑔 ⟨ ˆ𝑛⟩ = const, 𝑔 → 0.                                        (4)
+
+As a practical criterion, the XFA works well when the initial photon number ⟨ ˆ𝑛⟩ greatly exceeds the number
+of excited particles 𝑁exc , namely, ⟨ ˆ𝑛⟩ ≫ 𝑁exc . In addition, because this approximation is based on an iterative
+expansion of the Born series, the condition 𝑔𝑡 ≪ 1 also provides a useful estimate of its timescale of validity.
+In summary, the XFA provides a quantum generalization of the external-field picture: it adheres to the
+superposition principle while neglecting matter-to-light backaction along each classically driven trajectory.
+
+2.2   Squeezed vacuum state and its Janszky representation
+Here we adopt the Janszky representation [42] as the coherent-state expansion (1) of the SV state. A
+useful feature of the Janszky representation is that it exploits the overcompleteness of coherent states to
+simplify an expansion that is, in general, given by a two-dimensional integral over the complex plane into a
+one-dimensional real integral.
+    The SV state is defined by
+                                                      1    ∗ 2       †2
+                                           |𝜉⟩ sv = e 2 ( 𝜉 𝑎ˆ − 𝜉 𝑎ˆ ) |0⟩,                             (5)
+where 𝜉 = 𝑟 exp(i𝜗) is the squeezing parameter. Below, we set the angle 𝜗 = 0 and consider real 𝑟 only.
+   The Janszky representation of the SV state is given by [42]
+                                         ∫ ∞
+                                                  d𝑝        coth 𝑟 −1 2
+                                     sv
+                                  |𝑟⟩ =       √           e− 2 𝑝 |i𝑝⟩.                                  (6)
+                                          −∞    2𝜋 sinh 𝑟
+This expression shows that the SV state can be written as a Gaussian-weighted quantum superposition of
+coherent states, with a width determined by the squeezing parameter 𝑟.
+
+
+
+
+                                                         3
+3     General theory for BSV-induced matter dynamics
+Based on the formulation above, we derive the XFA effective theory for BSV-light driving. The key control
+parameter in this theory is the effective field strength of the SV light,
+
+                                                   𝐹c ≡ 𝑔e𝑟 .                                                (7)
+
+The corresponding photonic thermodynamic limit (4) becomes
+
+                                              𝐹c = const, 𝑔 → 0.                                             (8)
+
+In this limit, the SV Janszky representation can be rewritten, with 𝐹 = 𝑔 𝑝, as
+                                             ∫ ∞
+                                      sv 𝑔→0        d𝐹              2
+                                   |𝑟⟩ =          √       e− (𝐹/𝐹c ) |i𝐹/𝑔⟩.                                 (9)
+                                              −∞    𝜋𝑔𝐹c
+That is, the SV state is represented as a superposition of coherent states weighted by a Gaussian distribution
+with width 𝐹c . At the same time, the total-system wave function becomes
+                                           ∫ ∞
+                                                 d𝐹              2
+                           |ΨXFA (𝑡)⟩mp =      √       e− (𝐹/𝐹c ) |𝜓i𝐹 (𝑡)⟩m |i𝐹 (𝑡)/𝑔⟩p .                (10)
+                                            −∞   𝜋𝑔𝐹c
+This equation indicates that light–matter entanglement is formed through the quantum superposition of light
+and matter states labeled by the field strength 𝐹.
+
+3.1   Unconditional dynamics
+We first consider unconditional matter dynamics without any measurement on the light. The matter state is
+described by the reduced density matrix obtained by tracing out the photonic degrees of freedom:
+
+                                       𝜌ˆ m (𝑡) = Trp [|Ψ(𝑡)⟩mp mp ⟨Ψ(𝑡)|].                                 (11)
+                                                                                                            𝑔→0
+√ By using the orthogonality of coherent states in the photonic thermodynamic limit (4), ⟨i𝐹/𝑔|i𝐹 ′ /𝑔⟩ =
+            ′
+ 2𝜋𝑔𝛿(𝐹 − 𝐹 ), the unconditional matter density matrix follows from Eq. (10) as
+                                       ∫
+                                            d𝐹                2
+                                𝜌ˆ m =   √︁         e−2(𝐹/𝐹c ) |𝜓i𝐹 ⟩⟨𝜓i𝐹 |.                           (12)
+                                            𝜋/2𝐹c
+
+Thus, the matter density matrix is a Gaussian-weighted classical mixture over the 𝐹-diagonal states |𝜓i𝐹 ⟩⟨𝜓i𝐹 |.
+If no intrinsic interparticle interaction is present, classical-light driving does not increase the matter-side
+quantumness (such as entanglement) contained in each |𝜓i𝐹 ⟩. In addition, convex quantum measures do not
+increase under classical mixtures with positive weights. It therefore follows that no nonclassical phenomenon
+emerges in unconditional matter dynamics driven solely by SV light. This conclusion is consistent with
+Refs. [40, 41], which studied electronically driven systems under Schrödinger cat-state light, and with
+Ref. [67], which discussed the limitations of approximations based on the Husimi function.
+
+3.2   Heralded dynamics
+Next, we perform a measurement on the light and derive the matter state conditioned on the outcome. The
+measurement is described by Kraus operators 𝑀ˆ 𝜇 labeled by outcome 𝜇, and the corresponding effects
+
+
+
+                                                        4
+𝐸ˆ 𝜇 = 𝑀ˆ 𝜇† 𝑀ˆ 𝜇 satisfy 𝜇 𝐸ˆ 𝜇 = 1 [68, 69]. Using these operators, the heralded matter density matrix at time 𝑡
+                         Í
+is given by                                         h                              i
+                                                 Trp 𝑀ˆ 𝜇 |Ψ(𝑡)⟩mp mp ⟨Ψ(𝑡)| 𝑀ˆ 𝜇†
+                                         𝜇
+                                      𝜌ˆ m (𝑡) =                                     .                        (13)
+                                                      mp ⟨Ψ(𝑡)| 𝐸ˆ 𝜇 |Ψ(𝑡)⟩mp
+
+    Performing a suitable measurement on the light can disentangle the light–matter system while preserving
+the matter’s quantum superposition. Here we consider measurements of an optical quadrature. The quadrature
+operator with axis angle 𝜑 is defined as
+                                                                   √
+                                         𝑞ˆ 𝜑 = e−i𝜑 𝑎ˆ + ei𝜑 𝑎ˆ † / 2.
+                                                
+                                                                                                       (14)
+
+Let |𝑞; 𝜑⟩ denote
+                √
+                      the eigenstate
+                                √
+                                           with eigenvalue 𝑞 ∈ R. Its overlap with a coherent state |𝛼⟩ is ⟨𝑞; 𝜑|𝛼⟩ =
+  −1/4  −i𝑞   +i  2       − (𝑞−   2𝑞  ) 2 /2
+𝜋      e 0 0𝑝       𝑝0 e
+                       𝑞            0        , where 𝛼 exp(−i𝜑) = 𝑞 0 + i𝑝 0 .
+    An ideal projective measurement of the quadrature is represented by the Kraus operator
+
+                                                 𝑀ˆ 𝑞 = |0⟩⟨𝑞; 𝜑|.
+                                                    𝜑
+                                                                                                                (15)
+
+Choosing the quadrature angle in the rotating frame of the harmonic oscillator (𝜑 = −𝜔𝑡) and introducing the
+scale-invariant outcome 𝑞˜ = 𝑞/𝑔, Eq. (10) shows that the heralded matter state can be described using the
+following unnormalized vector:
+                                        |𝜓 𝑞 (𝑡)⟩m ≡ p ⟨𝑞; 𝜑|Ψ(𝑡)⟩mp .                                  (16)
+The success probability density for realizing this 𝑞-heralded state is then
+
+                                                 𝑃(𝑞) = ⟨𝜓 𝑞 |𝜓 𝑞 ⟩.                                            (17)
+
+    Let |𝜓i𝐹 (𝑡)⟩m = 𝑈ˆ 𝐹 (𝑡)|𝜓(0)⟩m denote the time evolution of the classically driven state with field
+strength 𝐹. We then define the 𝑞-heralded time-evolution operator as follows:
+                                                          ∫
+                                                                d𝐹                     √
+                𝑞           𝑞               𝑞    ˜
+                                                 𝑞=const.                − (𝐹/𝐹c ) 2 i𝐹 2𝑞˜ ˆ
+             |𝜓 (𝑡)⟩m ≡ Û (𝑡)|𝜓(0)⟩m , Û (𝑡) =                 √     e            e      𝑈𝐹 (𝑡).   (18)
+                                                            𝜋 3/4 𝑔𝐹c
+Unlike the unconditional case (12), this effective time-evolution operator shows that the 𝑞-heralded state
+|𝜓 𝑞 (𝑡)⟩m is a Gaussian-weighted quantum superposition of classically driven states |𝜓i𝐹 (𝑡)⟩m . The nature of
+the resulting matter state depends on the details of the classically driven evolution 𝑈ˆ 𝐹 (𝑡). In Sec. 4 we show
+that this yields a Dicke state in the TC model, while Sec. 5 demonstrates a stroboscopic cat-like state in the
+Dicke model.
+
+
+4    Application to the Tavis–Cummings model
+In this section we analyze the TC model to study concrete matter dynamics. The model describes the
+interaction between a resonant single-mode photon field and an ensemble of 𝑁 independent particles treated
+as electric-dipole-coupled two-level electronic states (including atoms, excitons, and electron–hole pairs)
+within the RWA. After introducing the model and the observables used in the analysis in Sec. 4.1, we study
+quadrature-heralded matter dynamics in Sec. 4.2, measurement resolution and success probability in Sec. 4.3,
+and the validity of the XFA in Sec. 4.4. Unless stated otherwise, the dynamics below is analyzed in the
+rotating frame at frequency 𝜔.
+
+
+
+
+                                                         5
+4.1    Model and observables
+We define the 𝑁-particle TC model [43] as
+                                                          𝑁
+                                                         ∑︁                  ∑︁                        
+                                   𝐻ˆ TC = 𝜔 𝑎ˆ † 𝑎ˆ +         𝛥𝑆ˆ 𝑧𝑗 − i𝑔          𝑎ˆ 𝑆ˆ+𝑗 − 𝑎ˆ † 𝑆ˆ −𝑗 .            (19)
+                                                         𝑗=1                  𝑗
+
+
+Here, 𝑆ˆ 𝑏𝑗 = 𝜎 𝑗𝑏 /2 (𝑏 = 𝑥, 𝑦, 𝑧) is the spin-1/2 operator representing the 𝑗th electric-dipole-coupled two-level
+state, and 𝜎 𝑏 is a Pauli matrix (𝑆ˆ±𝑗 = 𝑆ˆ 𝑥𝑗 ± i𝑆ˆ 𝑗 ). The parameter 𝛥 is the level spacing, and 𝑔 is the
+                                                        𝑦
+
+electron–photon coupling constant. The first and second terms are the free Hamiltonians of the photon field
+and matter system, respectively, and the third term is the RWA interaction between the electric field and the
+polarization. We consider the resonance condition 𝜔 = 𝛥, use 𝜔 as the energy unit, and write 𝜔 = 1 unless
+otherwise noted. We also restrict attention to even 𝑁.
+    The classically driven matter state |𝜓i𝐹 (𝑡)⟩m evolves according to
+                                                 ∑︁           ∑︁                            
+                                  𝐻ˆ TC,m [i𝐹] =     𝛥𝑆ˆ 𝑧𝑗 +      𝐹 (𝑡) 𝑆ˆ+𝑗 + 𝐹 (𝑡) ∗ 𝑆ˆ −𝑗 ,                (20)
+                                                    𝑗                  𝑗
+
+which is obtained by replacing 𝑎ˆ → i(𝐹/𝑔) in Eq. (19). Here, 𝐹 (𝑡) = 𝐹 exp(−i𝜔𝑡). In the 𝜔-rotating frame,
+the corresponding time-evolution operator is
+                                                                       ˆ𝑥
+                                                   𝑈ˆ TC,𝐹 (𝑡) = e−i2𝐹 𝐽 𝑡 ,                                          (21)
+
+where Jˆ = 𝑖 Ŝ𝑖 is the collective spin operator.
+              Í
+     We take the initial state to be the direct product of the matter ground state, the all-spin-down state
+|↓↓ · · · ↓⟩, and the SV state of light |𝑟⟩ sv . Since the TC model conserves the total spin, it is convenient
+to use the Dicke basis. For total spin 𝐽 = 𝑁/2, the 𝑏-axis Dicke states {|𝐽, 𝑚⟩ 𝑏 | 𝑚 = −𝐽, . . . , 𝐽} satisfy
+Jˆ2 |𝐽, 𝑚⟩ 𝑏 = 𝐽 (𝐽 + 1)|𝐽, 𝑚⟩ 𝑏 and 𝐽ˆ𝑏 |𝐽, 𝑚⟩ 𝑏 = 𝑚|𝐽, 𝑚⟩ 𝑏 for 𝑏 = 𝑥, 𝑦, 𝑧.
+     Although many measures of quantumness in many-body quantum systems are proposed [3], we employ
+the quantum Fisher information (QFI) [9, 70, 71], which is well suited for quantifying the number of entangled
+particles, and the spin Wigner function [72, 73], which is convenient for visualizing quantum states. The QFI
+is defined as
+                                                  ∑︁ (𝜆 𝑖 − 𝜆 𝑗 ) 2
+                                     FQ = max           2                  𝐴|𝜆 𝑗 ⟩| 2 .
+                                                                    |⟨𝜆 𝑖 | ˆ                             (22)
+                                              𝐴ˆ
+                                                   𝑖, 𝑗
+                                                          𝜆 𝑖 + 𝜆 𝑗
+
+Here, 𝐴ˆ is an arbitrary additive observable, and 𝜆𝑖 and |𝜆 𝑖 ⟩ are the 𝑖th eigenvalue and eigenvector of a density
+matrix ˆ𝜌. For a pure state, FQ = max 𝐴ˆ [4(⟨ 𝐴ˆ 2 ⟩ − ⟨ 𝐴⟩
+                                                         ˆ 2 )] holds. An important feature of the QFI is that
+if the QFI density FQ /𝑁 exceeds a positive integer 𝑘, then one can infer that at least 𝑘 + 1 particles are
+entangled [74–77]. Thus macroscopic quantumness is present when the QFI density is extensive, namely,
+FQ /𝑁 ∝ 𝑁.
+     Following Ref. [78], we define the spin Wigner function as
+
+                                                𝐽     2𝐽
+                                               ∑︁   ©∑︁ 2 𝑗 + 1 𝐽 𝑚 ª ˆ
+      𝑊 (𝜃, 𝜙) = Tr[ 𝜌ˆ Δ̂(𝜃, 𝜙)], Δ̂(𝜃, 𝜙) =                    𝐶 𝐽 𝑚; 𝑗0 ® 𝑅(𝜃, 𝜙)|𝐽, 𝑚⟩ 𝑧 𝑧 ⟨𝐽, 𝑚| 𝑅ˆ † (𝜃, 𝜙),    (23)
+                                                             +
+                                                    ­
+                                              𝑚=− 𝐽 « 𝑗=0
+                                                          2𝐽   1
+                                                                           ¬
+                                                                                                                 ˆ𝑧   ˆ𝑦
+where ˆ 𝑅(𝜃, 𝜙) is the rotation operator about the axis l = (− sin 𝜙, cos 𝜙, 0), given by ˆ        𝑅(𝜃, 𝜙) = ei𝜙 𝐽 ei𝜃 𝐽 =
+       ˆ
+e−i𝜃l·J , and 𝐶 𝐽𝑗1𝑀
+                   ,𝑚1 ; 𝑗2 ,𝑚2 = ⟨ 𝑗 1 , 𝑚 1 ; 𝑗 2 , 𝑚 2 |𝐽, 𝑀⟩ denotes a Clebsch–Gordan coefficient.
+
+
+
+
+                                                                   6
+4.2   Quadrature-heralded dynamics
+                                                  𝑞
+We derive the heralded time-evolution operator ÛTC (𝑡) for the matter system conditioned on a quadrature
+outcome 𝑞. From the classically driven time-evolution operator 𝑈ˆ TC,𝐹 (𝑡) [Eq. (21)] and Eq. (18), we obtain
+                                           √︄
+                                               𝐹c         2 ˆ𝑥
+                                                                   √      2
+                                 ÛTC (𝑡) = √ e− (𝐹c 𝑡 ) [ 𝐽 − ˜𝑞/( 2𝑡 ) ] .
+                                    𝑞
+                                                                                                         (24)
+                                                𝜋𝑔
+
+This shows that SV-light driving followed by a single-shot quadrature projective measurement of the light
+yields an effective Gaussian filter with respect to 𝐽ˆ𝑥 , or equivalently, imaginary-time one-axis twisting [79],
+for the matter system. For 𝑞˜ = 0, this filter selects the 𝐽ˆ𝑥 = 0 eigenspace of the collective electric-polarization
+operator, thereby driving the state toward the 𝑥-axis Dicke state |𝐽, 0⟩ 𝑥 . Returning to the laboratory frame,
+this corresponds to the zero-eigenvalue state of cos(𝜔𝑡) 𝐽ˆ𝑥 + sin(𝜔𝑡) 𝐽ˆ𝑦 , where 𝐽ˆ𝑦 is the polarization-current
+operator. Moreover, because the asymptotic rate increases with the effective field strength 𝐹c [Eq. (7)], BSV
+light enables ultrafast Dicke-state preparation. This distinguishes the present mechanism from Gaussian
+filters based on conventional QND measurements [55, 60, 61, 64] and from imaginary-time one-axis twisting
+in open systems [80, 81]. Even for outcomes 𝑞˜ ≠ 0, the dynamics likewise converges to the 𝐽ˆ𝑥 = 0 eigenstate
+in the long-time regime 𝑡 ≫ | ˜  𝑞|.
+     We now analyze the QFI dynamics starting from the initial matter state |𝐽, −𝐽⟩ 𝑧 . In the rotating frame,
+the additive observable that maximizes the QFI (22) is 𝐴ˆ = 𝐽ˆ𝑦 . By expanding the quadrature-heralded state
+vector |𝜓 𝑞 (𝑡)⟩ [Eq. (18)] in the 𝑥-axis Dicke basis, we obtain
+                                                                Í𝐽       2      2     2
+                                                    −2𝜏 2        𝑚=− 𝐽 (𝐽 − 𝑚 )|𝑐 𝑚 |
+                                FQ = 𝑁 + 2(1 − e            )                           ,                       (25)
+                                                                                   2
+                                                                   Í𝐽
+                                                                      𝑚=− 𝐽 |𝑐 𝑚 |
+                                                  √︃
+                                                      2𝐽 
+                                                                                                       √
+where |𝜓 𝑞 (𝑡)⟩ = 𝑚 𝑐 𝑚 |𝐽, 𝑚⟩ 𝑥 with 𝑐 𝑚 = 2− 𝐽 𝐽+𝑚        exp[−𝜏 2 (𝑚 − 𝜇) 2 ], 𝜏 = 𝐹c 𝑡, and 𝜇 = ˜
+                 Í
+                                                                                                    𝑞/( 2𝑡). For
+the outcome 𝑞˜ = 0, this simplifies in the large-𝑁 limit to
+                                                            2                 
+                                                   −2𝜏 2    𝑁          𝑁
+                                 FQ ≈ 𝑁 + (1 − e         )     −                 .                          (26)
+                                                             2   2(1 + 𝑁𝜏 2 )
+
+This expression demonstrates that the QFI density approaches the saturation value 𝑁/2 + 1 in a squared-
+exponential manner, on the timescale of order 𝐹c−1 [Eq. (7)].
+    Figure 1 shows the numerically calculated quadrature-heralded matter dynamics for 𝑁 = 32 and
+𝐹c = 𝑔 exp(𝑟) ≈ 0.10 (𝑔 = 0.005, 𝑟 = 3). Figure 1(a) plots the QFI density FQ /𝑁 conditioned on 𝑞˜ = 0
+[Eq. (25)] as a blue line, together with the corresponding result calculated from the unconditional state 𝜌ˆ m
+[Eq. (12)] and Eq. (22) as an orange line. Numerically, the integral over 𝐹 is evaluated using the rectangular
+method. For the unconditional state, the QFI density remains below unity; consequently, the QFI does
+not reveal any many-body quantumness. By contrast, with quadrature heralding, the QFI density increases
+rapidly on a timescale 𝑡 ∼ 𝐹c−1 ≈ 10 and reaches the maximum value 𝑁/2 + 1. This value coincides with the
+QFI density of the Dicke state |𝐽, 0⟩ 𝑥 . For comparison, the large-𝑁 approximation (26) is also shown as a
+light-blue dashed line, indicating that even at 𝑁 = 32 it already agrees well with the exact result within the
+XFA (25).
+                                          √︁ maps of the spin Wigner function 𝑊 (𝜃, 𝜙) [Eq. (23)], calculated
+    Figures 1(b)–(d) display spherical color
+from the normalized state vector |𝜓 𝑞 ⟩/ ⟨𝜓 𝑞 |𝜓 𝑞 ⟩ [Eq. (18)] at the times marked by the arrowheads above
+Fig. 1(a). In the initial stage of the QFI growth [Fig. 1(b)], the Gaussian distribution, which is localized
+around −𝑧 at 𝑡 = 0, becomes anti-squeezed along the 𝑦 axis. Near the end of the QFI growth [Fig. 1(c)],
+squeezing along the 𝑥 axis develops, and negative interference fringes begin to appear around the distribution.
+
+
+                                                            7
+                      (b)       (c)               (d)
+  (a)                                                                    (e)
+          17       𝑁/2 + 1                                                  17
+
+
+          13                                                               13
+
+
+  FQ /𝑁    9                                                                9
+                                                                                     𝑞˜ = 0       100       200
+           5                                      Heralded 𝑞˜ = 0           5
+                                                  Unconditional
+                                                  Large-𝑁 limit
+           1                                                                1
+               0                 10              20                 30           0                  10                20   30
+                                        𝑡                                                                         𝑡
+      (b)                             𝑊 (𝜃, 𝜙)        (c)                                               (d)
+                                            1
+                                           0
+                                           −1
+
+
+
+      𝑥                                    𝑦          𝑥                                       𝑦         𝑥                  𝑦
+
+
+
+
+                            𝑧                                        𝑧                                                𝑧
+
+Figure 1: Quadrature-heralded matter dynamics in the TC model (19) within the XFA for 𝐹c ≈ 0.10
+(𝑔 = 0.005, 𝑟 = 3) and 𝑁 = 32. (a) Time profile of the QFI density FQ /𝑁 (blue solid line), for 𝑞˜ = 0
+[Eq. (25)]. The orange line shows the unconditional case calculated from 𝜌ˆ m [Eq. (12)]. The light-blue dashed
+line shows the large-𝑁 limit (26). (b)–(d) Spin Wigner function 𝑊 (𝜃, 𝜙) [Eq. (23)] at the times indicated
+in (a). For visualization, only the 𝑧 axis is inverted. (e) QFI dynamics for different quadrature outcomes,
+𝑞˜ = 𝑞/𝑔 = 0, 100, 200, corresponding to 𝑞 = 0, 0.5, 1 for 𝑔 = 0.005.
+
+
+Once the QFI reaches its stationary value [Fig. 1(d)], the distribution becomes rotationally symmetric about
+the 𝑥 axis and is concentrated around the 𝑦𝑧 plane, with distinct interference fringes, clearly indicating the
+formation of the Dicke state |𝐽, 0⟩ 𝑥 . This non-Gaussianity of the Dicke state originates from the finite size of
+the matter system. Intuitively, the anti-squeezing along the 𝑦 axis wraps around the Bloch sphere, inducing
+self-interference and generating quantumness, thereby producing a rotationally symmetric distribution about
+the 𝑥 axis.
+    Figure 1(e) shows the dependence of the QFI dynamics on the quadrature measurement outcome. The
+𝑞(= 𝑞/𝑔) = 0 curve (blue) exhibits a squared-exponential increase [see Eq. (26)], whereas the 𝑞˜ = 100 (green)
+ ˜
+and 𝑞˜ = 200 (orange) curves show qualitatively similar behavior, except for a delayed onset and step-like
+increments at later times. The later-time structure visible for 𝑡 ≳ 10 reflects the discrete spectrum of 𝐽ˆ𝑥 .
+Importantly, even for outcomes with 𝑞˜ ≠ 0, the heralded state eventually converges to the same state |𝐽, 0⟩ 𝑥 ,
+indicating a certain robustness against finite measurement resolution (Sec. 4.3).
+
+4.3       Effects of measurement resolution and success probability
+In this section we investigate the effects of measurement resolution and success probability on the generation
+of the Dicke state by SV-light driving and quadrature-based heralding. In this paper, a quadrature measurement
+
+                                                                     8
+                              17
+
+                                        Δ𝑞˜ = 0                 40                   80                  120
+
+                              13
+
+
+
+                      FQ /𝑁   9
+
+
+
+                              5
+
+
+
+                              1                                                                          ∞
+                                   0   10               20               30           40            50         60
+                                                                          𝑡
+
+Figure 2: Dependence of the quadrature-heralded QFI density FQ /𝑁 on the measurement resolution Δ𝑞˜
+in the TC model (19) within the XFA for 𝐹c ≈ 0.10 (𝑔 = 0.005, 𝑟 = 3), 𝑞˜ = 0, and 𝑁 = 32. The QFI is
+calculated from 𝜌ˆ 𝑞;Δ𝑞 [Eq. (28)]. Given 𝑔 = 0.005, the resolutions Δ𝑞˜ = Δ𝑞/𝑔 = 40, 80, 120 correspond to
+Δ𝑞 = 0.2, 0.4, 0.6, respectively.
+
+
+with resolution Δ𝑞 is modeled by the following effect:
+                                                        ∫ 𝑞+Δ𝑞/2
+                                       𝐸ˆ 𝑞                              d𝑞 ′ |𝑞 ′ ; 𝜑⟩⟨𝑞 ′ ; 𝜑|.
+                                          𝜑;Δ𝑞
+                                               =                                                                    (27)
+                                                            𝑞−Δ𝑞/2
+
+Using this operator and the measurement probability density 𝑃(𝑞) [Eq. (17)], the matter state heralded by an
+outcome centered at 𝑞 with resolution Δ𝑞 is given by
+                                                            ∫ 𝑞+Δ𝑞/2          ′      ′
+                                                             𝑞−Δ𝑞/2
+                                                                    d𝑞 ′ |𝜓 𝑞 ⟩⟨𝜓 𝑞 |
+                                                 𝑞;Δ𝑞
+                                            𝜌ˆ          =     ∫ 𝑞+Δ𝑞/2                 .                            (28)
+                                                                       d𝑞  ′ 𝑃(𝑞 ′ )
+                                                               𝑞−Δ𝑞/2
+
+      Figure 2 shows the time evolution of the QFI density FQ /𝑁 [Eq. (22)] calculated from the matter state
+𝜌ˆ 𝑞;Δ𝑞 [Eq. (28)] heralded by a finite-resolution quadrature measurement. Since the scaled outcome 𝑞˜ = 𝑞/𝑔
+is the relevant quantity in the XFA (18), the dynamics depends on Δ𝑞 only through the scaled resolution
+Δ𝑞˜ = Δ𝑞/𝑔. We set the outcome center to 𝑞˜ = 0. Numerically, the integral over 𝑞 ′ is evaluated using the
+rectangular method. Overall, the monotonic growth of the ideal measurement Δ𝑞˜ = 0 is suppressed up to a
+certain time by finite Δ ˜
+                         𝑞, but eventually crosses over to the same squared-exponential growth. At early times,
+larger Δ𝑞˜ prolongs the agreement with the unconditional curve (red), corresponding to Δ𝑞˜ → ∞. This is
+followed by stepwise increases arising from the discreteness of 𝐽ˆ𝑥 , as in the case of nonzero outcomes 𝑞˜ ≠ 0.
+Finally, as Δ𝑞˜ increases, the waiting time before the onset of squared-exponential growth becomes longer.
+Below we analyze this behavior separately in the high-resolution limit of small Δ𝑞˜ and the coarse-grained
+limit of large Δ ˜
+                 𝑞.
+
+High-resolution limit
+We analyze the high-resolution case Δ𝑞 ≪ 1 and examine the particle-number 𝑁 scaling of the QFI weighted
+by the success probability. This quantity is important because it directly determines the practically achievable
+sensitivity in quantum metrology.
+
+
+
+                                                                     9
+    For small resolution Δ𝑞 ≪ 1, the probability-weighted QFI can be approximated as
+                                             ∫ 𝑞+Δ𝑞/2                    h       √︁          i
+                        FQ [ 𝜌ˆ   𝑞;Δ𝑞
+                                         ]              d𝑞 ′ 𝑃(𝑞 ′ ) ≈ FQ |𝜓 𝑞 ⟩/ ⟨𝜓 𝑞 |𝜓 𝑞 ⟩ 𝑃(𝑞)Δ𝑞.               (29)
+                                              𝑞−Δ𝑞/2
+
+For the bin centered at 𝑞 = 0, the probability density 𝑃(0) = ⟨𝜓 0 |𝜓 0 ⟩ reads
+                                                                𝐹c √ 1
+                                         
+                                𝐹c ∑︁ − 𝑁 2𝐽
+                                               
+                                                              √ 𝜋𝑔
+                                                             
+                                                                             ,               (𝜏 ≪ 1)
+                                                   −2𝜏 2 𝑚2               𝜏2
+                                                            ≈ 𝐹c 1+𝑁
+                        0     0
+                                                             
+                     ⟨𝜓 |𝜓 ⟩ = √      2          e                     1                                            (30)
+                                 𝜋𝑔 𝑚      𝐽+𝑚                √ 𝜋𝑔 √ 𝜋 𝑁 /2 ,
+                                                                                             (𝜏 ≫ 1).
+                                                             
+In either limit, one thus finds 𝑃(0) ∝ 𝑁 −1/2 . Meanwhile, Eq. (26) shows that the QFI of the normalized state
+|𝜓 𝑞 ⟩ scales as FQ ∝ 𝑁 2 for 𝜏 = 𝐹c 𝑡 ≫ 1. Accordingly, the probability-weighted QFI scales as
+                                        h       √︁        i
+                                    FQ |𝜓 𝑞 ⟩/ ⟨𝜓 𝑞 |𝜓 𝑞 ⟩ 𝑃(𝑞)Δ𝑞 ∝ 𝑁 3/2 .                               (31)
+
+This result shows that, although the Heisenberg scaling of the Dicke state |𝐽, 0⟩ 𝑥 is weakened by the success
+probability, the attainable precision still surpasses the SQL.
+    Although both the SV state and the even cat state consist only of even-photon-number components, they
+induce matter states with different metrological scalings. For driving with the even cat-state light |𝛼0 ⟩ + |−𝛼0 ⟩,
+the total-system wave function in the XFA is given by [41]
+
+                                            cat    1
+                                     |ΨXFA ⟩mp  = √ (|𝜓 𝛼0 ⟩m |𝛼0 ⟩ + |𝜓 − 𝛼0 ⟩m |−𝛼0 ⟩).                           (32)
+                                                    2
+The probability density for a quadrature outcome 𝑞 is then
+                                2
+                             e−𝑞                     √                           √     
+                      𝑃 (𝑞) = √ 2 + ⟨𝜓 𝛼0 |𝜓 − 𝛼0 ⟩ei2 2𝛼0 𝑞 + ⟨𝜓 − 𝛼0 |𝜓 𝛼0 ⟩e−i2 2𝛼0 𝑞 ,
+                        cat
+                                                                                                                    (33)
+                             2 𝜋
+
+with 𝛼0 ∈ R and the quadrature angle 𝜑 = −𝜔𝑡 + 𝜋/2. When the QFI is maximized, namely, ⟨𝜓 − 𝛼0 |𝜓 𝛼0 ⟩ = 0,
+this reduces to                                            2
+                                                       e−𝑞
+                                            𝑃cat (𝑞) = √ ,                                             (34)
+                                                         𝜋
+which is independent of the particle number 𝑁. It follows that
+                                   h                    √ i
+                               FQ (|𝜓 𝛼0 ⟩ + |𝜓 − 𝛼0 ⟩)/ 2 𝑃cat (𝑞)Δ𝑞 ∝ 𝑁 2 ,                                       (35)
+
+so the Heisenberg limit is retained even after including the success probability. Thus, while SV light and
+even cat-state light consist only of even-photon-number states, even cat-state light can generate stronger
+nonclassicality in the matter system.
+
+Coarse-grained limit
+Next, we derive the relationship between the measurement resolution Δ𝑞 and the onset time of the squared-
+exponential growth of the QFI. At long times, the heralded state can be approximated by a three-component trun-
+cation in the 𝐽ˆ𝑥 basis, involving only 𝑚 = 0, ±1, because of the Gaussian filtering ÛTC
+                                                                                       𝑞
+                                                                                          (𝑡) ∼ exp[−(𝐹c 𝑡) 2 ( 𝐽ˆ𝑥 ) 2 ]
+
+
+
+
+                                                                  10
+[Eq. (24)]. Then the 𝑞-heralded state vector follows from Eq. (18) as
+                      √︄           √︄  
+                          𝐹c            2𝐽 − (𝐹c ˜𝑞) 2 /2
+              |𝜓 𝑞 ⟩ ≈ √ 2− 𝐽                  e            |𝐽, 0⟩ 𝑥
+                          𝜋𝑔             𝐽
+                         √︄                                          √︄                                        !
+                                                 √                                           √
+                                                                              
+                               2𝐽                      2                    2𝐽                      2
+                      +             e− [𝐹c ( ˜𝑞− 2𝑡 ) ] /2 |𝐽, 1⟩ 𝑥 +            e− [𝐹c ( ˜𝑞+ 2𝑡 ) ] /2 |𝐽, −1⟩ 𝑥 .   (36)
+                              𝐽+1                                          𝐽−1
+
+To account for the reduction in the QFI density from 𝑁/2 + 1, it is sufficient to evaluate the diagonal
+weights of |𝐽, ±1⟩ 𝑥 , since these quantify admixtures outside |𝐽, 0⟩ 𝑥 . For either of the diagonal components
+|𝐽, ±1⟩ 𝑥 𝑥 ⟨𝐽, ±1| contained in the density matrix 𝜌ˆ 𝑞;Δ𝑞 [Eq. (28)], the coefficient is proportional to
+                   ∫ Δ𝑞/2                                                        2
+                                                                                            √      2
+                                                            √                e−2𝐹c [𝑡 −Δ𝑞/(2 2𝑔) ]
+                                          
+                               𝐹c − 𝑁 2𝐽
+                               ′               −𝐹c2 (𝑞 ′ /𝑔∓ 2𝑡 ) 2      1
+                           d𝑞 √ 2            e                      ≈      √              √          ,                (37)
+                     −Δ𝑞/2      𝜋𝑔     𝐽±1                            2𝜋𝐹c 𝑁 𝑡 − Δ𝑞/(2 2𝑔)
+                                   √              √
+which is an expansion controlled by 2𝐹c [𝑡 − Δ𝑞/(2 2𝑔)] ≫ 1. Hence, the crossover time is estimated as
+                                                               Δ𝑞˜
+                                                            𝑡≳ √ ,                                                    (38)
+                                                              2 2
+beyond which the asymptotic dynamics approaching the Dicke state |𝐽, 0⟩ 𝑥 appear even for finite-resolution
+measurements.
+
+4.4    Validity of XFA: comparison with total-system simulations
+We validate the XFA used above by comparing it with numerical simulations of the total system. We compute
+the time evolution of the total-system state under the TC Hamiltonian 𝐻ˆ TC [Eq. (19)] using a small time
+                                     ˆ                Í4        ˆ 𝑛                         5
+step δ𝑡 as |Ψ(𝑡 + δ𝑡)⟩mp = exp(−i𝐻δ𝑡)|Ψ(𝑡)⟩     mp =    𝑛=0 (−i 𝐻δ𝑡) /𝑛! |Ψ(𝑡)⟩mp + O (δ𝑡 ). The numerical
+accuracy is controlled by δ𝑡 and by the truncation maximum photon number 𝑛max of the photonic Hilbert
+space. Convergence is confirmed by setting (δ𝑡, 𝑛max ) as: (10−4 , 2000) for 𝑔 = 0.02 and 0.015; (10−4 , 3000)
+for 𝑔 = 0.01; and (1.25 × 10−5 , 5000) for 𝑔 = 0.005.
+    Figure 3 shows the dependence of the quadrature-heralded QFI density FQ /𝑁 dynamics on the electron–
+photon coupling constant 𝑔, where we assume the ideal projection (15) for 𝑞 = 0 and the density matrix (13).
+The squeezing parameter is set to 𝑟 = 3 − ln(𝑔/0.005) so as to keep 𝐹c [Eq. (7)]. As 𝑔 is reduced from 0.02 to
+0.005, the full simulation agrees with the XFA (blue dashed curve) over an increasingly long time span. This
+observation is consistent with the Born-series-based formulation of the XFA, which is justified when 𝑔𝑡 ≪ 1.
+The long-time deviation between the exact numerical results and the XFA can be attributed to backaction from
+the driven matter system onto the quantum light; its physical consequences are summarized in Appendix A.
+
+
+5     Application to the Dicke model
+In this section, we analyze the Dicke model [44, 45] as a light–matter coupling model without the RWA. We
+show that the counter-rotating terms can periodically reshape the heralded Dicke state into a cat-like state.
+
+
+
+
+                                                                11
+                                                                                                   𝑔 = 0.005
+                               17
+                                                  XFA                                              0.01
+
+                               13
+
+                                                                                                   0.015
+                       FQ /𝑁   9
+
+
+                                                                                                   0.02
+                               5
+
+
+                               1
+                                    0                10                               20                       30
+                                                                        𝑡
+
+Figure 3: Comparison between the XFA and full light–matter simulations for the quadrature-heralded QFI
+density FQ /𝑁 in the TC model (19). The blue dashed curve shows the XFA result (25), and the solid curves
+show full numerical simulations for different electron–photon couplings 𝑔 = 0.005, 0.01, 0.015, and 0.02.
+Parameters are set to 𝑟 = 3 − ln(𝑔/0.005), 𝑞 = 0, Δ𝑞 = 0, and 𝑁 = 32.
+
+
+    The 𝑁-qubit Dicke model is defined as
+                                                              𝑁
+                                                             ∑︁
+                                        𝐻ˆ D = 𝜔 𝑎ˆ † 𝑎ˆ +         𝛥𝑆ˆ 𝑧𝑗 − 𝐸ˆ · 𝑃,
+                                                                                 ˆ                                  (39)
+                                                             𝑗=1
+                                                                            ∑︁
+                                        𝐸ˆ = i𝐸 0 ( 𝑎ˆ − 𝑎ˆ † ), 𝑃ˆ =            𝑑 ( 𝑆ˆ+𝑗 + 𝑆ˆ −𝑗 ).                (40)
+                                                                            𝑗
+
+
+Here, 𝐸ˆ is the electric-field operator (𝐸 0 is the mode function), and 𝑃ˆ is the electric-polarization operator
+(𝑑 is the electric-dipole moment). The TC model (19) is obtained by applying the RWA, which neglects
+the counter-rotating terms 𝑎ˆ 𝑆ˆ −𝑗 and 𝑎ˆ † 𝑆ˆ+𝑗 oscillating at 2𝜔 in the rotating frame. In this case, 𝑔 = 𝑑𝐸 0 . The
+RWA is valid when one focuses on the √︁         coarse-grained dynamics obtained by averaging over the rapid 2𝜔
+oscillations, or when the field strength 𝑔 ⟨ ˆ𝑛⟩ is not too large.
+     We analyze the quadrature-heralded matter state |𝜓 𝑞 (𝑡)⟩ [Eq. (18)] in the Dicke model within the
+XFA. The matter state |𝜓i𝐹 (𝑡)⟩ evolves under the Hamiltonian 𝐻ˆ D,m [i𝐹] = 𝜔 𝐽ˆ𝑧 + 2(𝐹e−i𝜔𝑡 + 𝐹 ∗ ei𝜔𝑡 ) 𝐽ˆ𝑥 ,
+obtained by replacing 𝑎ˆ → i(𝐹/𝑔). Numerically, we diagonalize the single-two-level Hamiltonian ℎˆ D,m, 𝑗
+(𝐻ˆ D,m = 𝑗 ℎˆ D,m, 𝑗 ), evolve each two-level state according to |𝜓 𝑗 (𝑡 + δ𝑡)⟩ = exp(−i ℎˆ D,m, 𝑗 δ𝑡)|𝜓 𝑗 (𝑡)⟩, and
+          Í
+construct the 𝑁-qubit state as their direct product (δ𝑡 = 0.01). For the optical quadrature measurement, as in
+Sec. 4.2, we consider a projective measurement onto a quadrature eigenstate (15).
+     Figure 4 shows the quadrature-heralded
+                                   √︁                QFI (22) and spin Wigner function (23), calculated from the
+normalized state vector |𝜓 𝑞 ⟩/ ⟨𝜓 𝑞 |𝜓 𝑞 ⟩ [Eq. (18)] for 𝑞˜ = 0. In Fig. 4(a), the QFI exhibits an oscillatory
+component at frequency 2𝜔 (𝜔 = 1). For the relatively weak SV field strength, 𝐹c = 𝑔 exp(𝑟) ≈ 0.037 (𝑟 = 2,
+𝑔 = 0.005), this oscillation remains small, consistent with the RWA results for the TC model [Eq. (26) and
+Fig. 1(a)]. By contrast, for the stronger field 𝐹c ≈ 0.27 (𝑟 = 4), the oscillation amplitude becomes large, and
+the QFI density reaches its maximal value 𝑁 at certain times. The corresponding spin Wigner functions
+in Fig. 4(b), taken at the arrow-marked times in Fig. 4(a), display Gaussian lobes localized at the ±𝑧 axes
+together with clear interference fringes on the 𝑥𝑦 plane. These indicate the formation of a 𝑧-polarized cat-like
+state, namely a Greenberger–Horne–Zeilinger (GHZ)-like state [82].
+     To understand heuristically the mechanism of this 𝑧-polarized cat-like state formation, we perform an
+
+
+                                                                   12
+                                                    (b)
+(a)                                                                                                            (b)
+        32   𝑁                                                                                                           𝑊 (𝜃, 𝜙)
+                                                                                                                               1
+                                                                                                                              0
+        24
+                                                                                                                              −1
+
+
+FQ /𝑁   16                                                                                                      𝑥              𝑦
+                                                                                           𝑁/2 + 1
+                 𝐹c ≈ 0.27
+
+        8
+
+
+                     𝐹c ≈ 0.037
+                                                                                                                     𝑧
+        0
+         0            10          20              30         40                         50               60
+                                                   𝑡
+
+Figure 4: Quadrature-heralded matter dynamics in the Dicke model (39) within the XFA for 𝑞˜ = 0 and
+𝑁 = 32. (a) Time profile of the QFI density FQ /𝑁 for 𝐹c = 𝑔 exp(𝑟) ≈ 0.27 and 0.037, corresponding to
+𝑟 = 4 and 2 for 𝑔 = 0.005. (b) Spin Wigner function 𝑊 (𝜃, 𝜙) at the time indicated in (a).
+
+
+analytical calculation using the Floquet–Magnus expansion [83–87]. In this approach, the time-evolution
+operator 𝑈ˆ D,𝐹 (𝑡) of the Dicke model 𝐻ˆ D,m [i𝐹] coupled to classical light can be approximated as
+                                                           ˆ
+                                          𝑈ˆ D,𝐹 (𝑡) ≈ e−i𝐾 (𝑡 ) 𝑈ˆ TC,𝐹 (𝑡),                                                      (41)
+                                                    𝐹 
+                                          𝐾ˆ (𝑡) =      sin(2𝜔𝑡) 𝐽ˆ𝑥 + (cos(2𝜔𝑡) − 1) 𝐽ˆ𝑦 .
+                                                                                         
+                                                                                                                                   (42)
+                                                    𝜔
+This approximation decomposes the Dicke-model evolution into the RWA evolution 𝑈ˆ TC,𝐹 (𝑡) [Eq. (21)] and
+a micromotion operator exp[−i𝐾ˆ (𝑡)] oscillating at frequency 2𝜔, and is valid under the condition 𝐹/𝜔 ≪ 1.
+    We focus on times 𝑡 = (2𝑚 + 1)𝜋/(2𝜔) (𝑚 ∈ N), at which the noncommutativity between the micromotion
+operator and the RWA time-evolution operator becomes pronounced. At these times, the 𝑞˜ = 0 quadrature-
+heralded time-evolution operator under the XFA is calculated from Eq. (18) as
+                             ∑︁             2                 2
+                ÛD𝑞=0 (𝑡) ∝      e− (𝐹c 𝑡 ) [𝑚𝑥 −𝑚𝑦 /( 𝜔𝑡 ) ] 𝑦 ⟨𝐽, 𝑚 𝑦 |𝐽, 𝑚 𝑥 ⟩ 𝑥 |𝐽, 𝑚 𝑦 ⟩ 𝑦 𝑥 ⟨𝐽, 𝑚 𝑥 |. (43)
+                                       𝑚𝑦 ,𝑚 𝑥
+
+
+Examining the exponential factor, we find that at sufficiently late times (𝑡 ≫ 𝐹c−1 ) the main contribution first
+comes from the collective-spin eigenvalue 𝑚 𝑥 = 0 along the 𝑥 axis. This agrees with the RWA result obtained
+in Sec. 4.2. On top of this, the correction factor from the counter-rotating terms is expressed as
+                                                                            2
+                                                                −       𝐹c
+                                                                                  ( 𝐽ˆ 𝑦 ) 2
+                                                 ÛD𝑞=0 (𝑡) ∝ e         𝜔
+                                                                                               |𝐽, 0⟩ 𝑥 𝑥 ⟨𝐽, 0|.                  (44)
+
+The dynamics can therefore be interpreted as a two-step filtering process: Gaussian filtering first selects
+|𝐽, 0⟩ 𝑥 in the 𝑥-spin basis, and the counter-rotating terms then impose an additional Gaussian filter on the 𝑦
+spin with strength 𝐹c /𝜔. When the SV field strength 𝐹c /𝜔 is small, this additional filtering along the 𝑦 axis
+has only a minor effect, as seen in the blue curve in Fig. 4(a). As 𝐹c /𝜔 increases, however, the spin Wigner
+distribution, initially spread isotropically over the 𝑦𝑧 plane, is filtered toward the eigenspace of 𝐽ˆ𝑦 = 0, whose
+weight is concentrated around the 𝑥𝑧 plane. As a result, the weight shifts toward the ±𝑧 directions, and a
+
+
+                                                                             13
+𝑧-polarized cat-like state emerges during this intermediate process.
+     This mechanism admits a simple analytical interpretation, particularly for 𝐹c /𝜔 = 𝑁 −1/2 . Expanding
+|𝐽, 0⟩ 𝑥 = 𝑚 𝑐 𝑚 |𝐽, 𝑚⟩ 𝑦 , one finds that within the Gaussian filtering exp(−𝑚 2 /𝑁) the coefficients 𝑐 𝑚 can
+          Í
+be regarded as nearly uniform magnitude, up to symmetry-related phases. That is, 𝑐 𝑚 ∝ 𝑁 −1/2 Π 𝐽 (𝑚),
+where Π 𝐽 (𝑚) = [1 + (−1) 𝐽 −𝑚 ]/2. Combining this with the large-𝑁 expression |𝐽, ±𝐽⟩ 𝑧 ∝ 𝑁 −1/4 𝑚 (±1) 𝑚
+                                                                                                    Í
+exp(−𝑚 2 /𝑁)|𝐽, 𝑚⟩ 𝑦 , we obtain
+                                                                                     
+                                  ˆ𝑦 2
+                             e− ( 𝐽 ) /𝑁 |𝐽, 0⟩ 𝑥 ∝ 𝑁 −1/4 |𝐽, 𝐽⟩ 𝑧 + (−1) 𝐽 |𝐽, −𝐽⟩ 𝑧 .                  (45)
+
+The above argument clarifies that the counter-rotating terms in the Dicke model drive a stroboscopic
+transformation of the 𝑥-axis Dicke state |𝐽, 0⟩ 𝑥 into the 𝑧-polarized cat-like state.
+
+
+6    Conclusion
+We propose a framework for the ultrafast generation of macroscopic quantum states in matter using bright
+squeezed vacuum (BSV) light. In the weak-coupling, multiphoton regime (the photonic thermodynamic
+limit), we show that driving with BSV light alone yields only a classical mixture of classically driven states
+because of light–matter entanglement. We then demonstrate that, when the system is heralded by the outcome
+of a single-shot quadrature projective measurement on the post-interaction squeezed-vacuum (SV) light, the
+resulting matter state generally becomes a Gaussian-weighted quantum superposition. For a minimal model
+with electric-field–polarization coupling, the heralded matter system is filtered into the zero-eigenspace of
+the matter observable coupled to light, at a rate proportional to the square root of the photon number in
+the SV light. The resulting macroscopic quantum states also exhibit metrological performance beyond the
+standard quantum limit. These results suggest that macroscopic quantum states can be prepared on ultrashort
+timescales, before relaxation or dephasing becomes dominant, thereby opening a new route to ultrafast
+quantum metrology.
+     The proposed mechanism for generating macroscopic quantum states in matter can be extended to a
+broader class of matter systems, including atoms, molecules, and solid-state electronic systems. In general, the
+increasingly complex dependence of the classically driven time-evolution operator 𝑈ˆ 𝐹 (𝑡) on the field strength
+𝐹 leads to a richer variety of matter states, as illustrated by the nonlinear effects of the counter-rotating
+terms in Sec. 5. Conversely, when the exponent of 𝑈ˆ 𝐹 (𝑡) contains only terms linear or quadratic in 𝐹, the
+quadrature-heralded time-evolution operator Û 𝑞 (𝑡) [Eq. (18)] can sometimes be evaluated as a Gaussian
+integral. In such cases, heralding essentially acts as a filter onto the zero-eigenspace of the observable
+coupled to light. The present framework can therefore also be viewed as a general principle of strong-field
+quantum-light engineering for designing desired many-body quantum states.
+     We summarize experimental parameter estimates below. In free-space driving, the electron–photon
+coupling constant √︁ 𝑔 depends on the effective mode volume 𝑉eff . Nevertheless, the standard single-mode
+expression 𝑔 = 𝑑 𝜔/2ℏ𝜖0𝑉eff gives a typical scale of 𝑔/𝜔 ∼ 10−8 –10−5 . In cavity systems, 𝑔/𝜔 ∼ 10−2 –10−1
+is widely available [88]. As for the squeezing parameter 𝑟, directly measured values reach 𝑟 ≈ 1.73 (15 dB) [89].
+For recent BSV light, meanwhile, one can infer 𝑟 eff ≈ 15 from photon numbers ⟨ ˆ𝑛⟩ ∼ 1013 [24–26], although
+this is not a direct measurement. Assuming ℏ𝜔 = 1.55 eV in the optical/infrared range, 𝐹c /𝜔 ≳ 0.5 allows
+state generation on subfemtosecond, i.e., attosecond, timescales. This can be achieved, for example, either
+with 𝑔/𝜔 ∼ 10−7 and ⟨ ˆ𝑛⟩ ∼ 1013 , or with 𝑔/𝜔 ∼ 10−1 and 𝑟 ∼ 1.7.√Meanwhile, the measurement model in
+Sec. 4.3 indicates that the required quadrature resolution is Δ𝑞 ≲ 2 2𝑔𝑡 [Eq. (38)]. To reach the attosecond
+regime, one likewise needs Δ𝑞 ∼ exp(−𝑟). In particular, for BSV light with ⟨ ˆ𝑛⟩ ∼ 1013 , this requires
+Δ𝑞 ≲ 10−6 . Hence, advances in quantum measurement techniques for the multiphoton regime are essential
+for realizing and observing new attosecond quantum many-body phenomena driven by strong-field quantum
+
+
+                                                       14
+light. Notably, this is also the resolution required to verify the intrinsic quantum nature of the BSV light itself,
+which is consistent with the idea that resolving the quantum nature of the driving light is a prerequisite for
+inducing quantum features in the driven system.
+     As a future direction, it is important to refine the treatment of the mode structure of the light field. In this
+work, the light interacting with matter is modeled as a single bosonic mode. A more rigorous treatment of
+scattering, input-output processes, and measurement, however, would require multiple channels corresponding
+to the input and output ports, as well as continuous spatiotemporal modes in each channel. A natural
+framework for such an extension is provided by input-output theory [90, 91]. In particular, actual quadrature
+measurements are implemented through balanced homodyne detection [92–94], and a quantitative assessment
+of the mode matching with the local oscillator is necessary to evaluate the performance of the ultrafast
+heralding discussed here. Nevertheless, if a single dominant spatiotemporal mode is effectively selected both
+in the light–matter interaction and in the measurement of the outgoing light—for example, when a dominant
+Schmidt mode exists and mode matching with the local oscillator is high—then the single effective-mode
+description used here should remain a good approximation.
+
+
+Acknowledgments
+This work was supported by JST FOREST (Grant No. JPMJFR2131) and JSPS KAKENHI (Grant Nos.
+JP25K17343 and JP26K21749).
+
+
+Appendix A            Backaction-induced unconditional macroscopic quantum-state
+                      generation at late times
+We investigate the long-term dynamics of the coupled light–matter system and demonstrate that matter can
+be driven into a quantum state even without conditioning on optical measurement outcomes, due to the
+previously neglected backaction of matter on light. Because this action–backaction process is rate-limited
+by the electron–photon √︁ coupling constant 𝑔, it proceeds on a slower timescale than the driving set by the
+effective field strength 𝑔 ⟨ ˆ𝑛⟩ of strong-field quantum light. Accordingly, relaxation and dephasing generally
+compete with this dynamics; however, in the present analysis, we restrict ourselves to the coherent limit.
+     Figure 5 shows the dynamics of the unconditional matter density matrix 𝜌ˆ m [Eq. (11)] calculated from the
+total-system wave function time-evolved under the TC model (19). The computational method and conditions
+are the same as those of Fig. 3, with the electron–photon coupling fixed at 𝑔 = 0.005. Figure 5(a) shows the
+time profile of the QFI density FQ /𝑁 [Eq. (22)]. In the multiphoton regime 𝑟 = 4 (dark blue curve), the QFI
+density does not exceed unity for 𝑡 ≲ 40, consistent with the unconditional XFA results shown as the red
+curve in Fig. 2. At later times, after once reaching the stationary value (𝑁 − 1)/[2(𝑁 + 1)], the QFI density
+rises again, which can be interpreted as a manifestation of matter-to-light backaction.
+     With weaker squeezing and hence fewer photons, backaction influences the dynamics already in the early
+stage. In the few-photon regime 𝑟 = 0.5 (light blue curve), the QFI density exhibits a peaked increase. This
+dynamics can be understood as quantum-state transfer, in which the matter system absorbs all the energy
+initially contained in the light field, together with its squeezing [48, 49]; see Ref. [41] for the cat-state case.
+     For 𝑁 = 32, the QFI peak originating from this complete  √ energy absorption reaches its maximum around
+𝑟 = 1.85 (blue curve); the peak time scales as 𝑡peak ∝ 1/𝑔 𝑁 because of the collective coupling. Figure 5(b)
+shows the dependence of the time-maximized QFI density, max𝑡 [FQ /𝑁], on the squeezing parameter 𝑟.
+Again, the QFI density is nonmonotonic in 𝑟 and exhibits a peak. In particular, the decrease of max𝑡 [FQ /𝑁]
+for 𝑟 ≫ 1 is consistent with the XFA conclusion that the quantumness characterized by the QFI does not
+increase in the unconditional case.
+
+
+                                                         15
+ (a)                                                                                  (b)
+              17                                                                                    17
+
+                                                     𝑟 = 1.85
+              13                                                                                    13                                 𝑁 = 32
+
+
+                                                                                      max [FQ /𝑁]
+FQ /𝑁          9                                                                                     9
+                                                                                             𝑡                                 16
+               5                                                                                     5
+                                                                                                                          8
+                                                            0.5
+               1                                 4                                                   1
+                   0     20            40              60             80       100                       0        1                2             3    4
+                                                 𝑡                                                                                 𝑟
+ (c)                                                                                  (d)
+              29       0.649 𝑁 0.862                                                                 4       exp(𝑟 c ) = 1.284 𝑁 0.462
+
+                                                                                                     3
+
+max [FQ /𝑁]
+              26
+                                                                                          𝑟c
+                                                                                                     2
+       𝑡,𝑟
+              23
+                                                                                                     1
+
+              20                                                                                     0
+                        23                  26                  29             212                           23               26                29    212
+                                                 𝑁                                                                                 𝑁
+
+Figure 5: Late-time unconditional matter dynamics in the TC model (19) without the XFA. The electron–
+photon coupling is fixed at 𝑔 = 0.005. (a) Time profile of the QFI density FQ /𝑁 calculated from 𝜌ˆ m [Eq. (11)]
+for 𝑁 = 32. The curves correspond to 𝑟 = 0.5, 1.85, and 4. (b) Maximum QFI over time as a function
+of the squeezing parameter 𝑟. (c) Maximum QFI over time and 𝑟 as a function of the particle number 𝑁.
+(d) Particle-number dependence of the optimal squeezing parameter 𝑟 c that maximizes the QFI.
+
+
+     Figure 5(c) shows the particle-number dependence of this QFI-density peak. The numerical data can be
+fitted by                                 h           i
+                                      max max [FQ /𝑁] ≈ 0.65 𝑁 0.86 .                                (46)
+                                                                  𝑟        𝑡
+
+Although this does not reach the Heisenberg scaling FQ ∝ 𝑁 2 , it suggests metrological sensitivity beyond the
+SQL (FQ ∝ 𝑁). However, because relaxation and dephasing are neglected here, environmental effects should
+be carefully considered for this quantum-state formation in the long-time regime (𝑡 ∼ 𝑔 −1 ).
+    Figure 5(d) further shows the particle-number dependence of the optimal squeezing parameter 𝑟 c that
+maximizes the QFI density. The numerical results are well fitted by
+
+                                                                       𝑟 c ≈ 0.46 ln 𝑁 + 0.26.                                                       (47)
+
+
+References
+     [1] E. Schrödinger, “Die gegenwärtige Situation in der Quantenmechanik”, Naturwissenschaften 23, 807
+         (1935).
+     [2] A. J. Leggett, “Macroscopic Quantum Systems and the Quantum Theory of Measurement”, Prog.
+         Theor. Phys. Suppl. 69, 80 (1980).
+
+
+                                                                                     16
+ [3] F. Fröwis, P. Sekatski, W. Dür, N. Gisin, and N. Sangouard, “Macroscopic quantum states: Measures,
+     fragility, and implementations”, Rev. Mod. Phys. 90, 025004 (2018).
+ [4] M. Arndt and K. Hornberger, “Testing the limits of quantum mechanical superpositions”, Nat. Phys.
+     10, 271 (2014).
+ [5] P. Shor, “Algorithms for quantum computation: discrete logarithms and factoring”, in Proc. 35th Annu.
+     Symp. Found. Comput. Sci. (1994), pp. 124–134.
+ [6] L. K. Grover, “A fast quantum mechanical algorithm for database search”, in Proc. twenty-eighth Annu.
+     ACM Symp. Theory Comput. - STOC ’96, Vol. Part F1294, March (1996), pp. 212–219.
+ [7] C. Helstrom, “Minimum mean-squared error of estimates in quantum statistics”, Phys. Lett. A 25, 101
+     (1967).
+ [8] C. M. Caves, “Quantum-mechanical noise in an interferometer”, Phys. Rev. D 23, 1693 (1981).
+ [9] S. L. Braunstein and C. M. Caves, “Statistical distance and the geometry of quantum states”, Phys. Rev.
+     Lett. 72, 3439 (1994).
+[10] V. Giovannetti, S. Lloyd, and L. Maccone, “Quantum-Enhanced Measurements: Beating the Standard
+     Quantum Limit”, Science 306, 1330 (2004).
+[11] E. Joos and H. D. Zeh, “The emergence of classical properties through interaction with the environment”,
+     Zeitschrift für Phys. B Condens. Matter 59, 223 (1985).
+[12] W. H. Zurek, “Decoherence, einselection, and the quantum origins of the classical”, Rev. Mod. Phys.
+     75, 715 (2003).
+[13] P. Stammer, J. Rivera-Dean, P. Tzallas, M. F. Ciappina, and M. Lewenstein, “Colloquium: Quantum
+     optics of intense light–matter interaction”, arXiv:2510.19045.
+[14] M. F. Ciappina, M. Y. Ivanov, M. Lewenstein, J. Rivera-Dean, P. Stammer, and P. Tzallas, “Quantum
+     Optics and Quantum Electrodynamics of Strong Field Processes”, arXiv:2509.26602.
+[15] P. Stammer, J. Rivera-Dean, A. Maxwell, T. Lamprou, A. Ordóñez, M. F. Ciappina, P. Tzallas, and
+     M. Lewenstein, “Quantum Electrodynamics of Intense Laser-Matter Interactions: A Tool for Quantum
+     State Engineering”, PRX Quantum 4, 010201 (2023).
+[16] U. Bhattacharya, T. Lamprou, A. S. Maxwell, A. Ordóñez, E. Pisanty, J. Rivera-Dean, P. Stammer,
+     M. F. Ciappina, M. Lewenstein, and P. Tzallas, “Strong–laser–field physics, non–classical light states
+     and quantum information science”, Reports Prog. Phys. 86, 094401 (2023).
+[17] M. Lewenstein, N. Baldelli, U. Bhattacharya, J. Biegert, M. F. Ciappina, T. Grass, P. T. Grochowski,
+     A. S. Johnson, T. Lamprou, A. S. Maxwell, A. Ordóñez, E. Pisanty, J. Rivera-Dean, P. Stammer, and
+     P. Tzallas, in Springer Proc. Phys. (2024), pp. 27–44.
+[18] L. Cruz-Rodriguez, D. Dey, A. Freibert, and P. Stammer, “Quantum phenomena in attosecond science”,
+     Nat. Rev. Phys. 6, 691 (2024).
+[19] M. Lewenstein, M. F. Ciappina, E. Pisanty, J. Rivera-Dean, P. Stammer, T. Lamprou, and P. Tzallas,
+     “Generation of optical Schrödinger cat states in intense laser–matter interactions”, Nat. Phys. 17, 1104
+     (2021).
+[20] J. Rivera-Dean, T. Lamprou, E. Pisanty, P. Stammer, A. F. Ordóñez, A. S. Maxwell, M. F. Ciappina,
+     M. Lewenstein, and P. Tzallas, “Strong laser fields and their power to generate controllable high-photon-
+     number coherent-state superpositions”, Phys. Rev. A 105, 033714 (2022).
+[21] P. Stammer, “Theory of entanglement and measurement in high-order harmonic generation”, Phys. Rev.
+     A 106, L050402 (2022).
+
+                                                     17
+[22] P. Stammer, J. Rivera-Dean, T. Lamprou, E. Pisanty, M. F. Ciappina, P. Tzallas, and M. Lewenstein,
+     “High Photon Number Entangled States and Coherent State Superposition from the Extreme Ultraviolet
+     to the Far Infrared”, Phys. Rev. Lett. 128, 123603 (2022).
+[23] J. Rivera-Dean, T. Lamprou, E. Pisanty, M. F. Ciappina, P. Tzallas, M. Lewenstein, and P. Stammer,
+     “Quantum state engineering of light using intensity measurements and postselection”, Phys. Rev. A
+     112, 013110 (2025).
+[24] T. Sh. Iskhakov, A. M. Pérez, K. Yu. Spasibko, M. V. Chekhova, and G. Leuchs, “Superbunched bright
+     squeezed vacuum state”, Opt. Lett. 37, 1919 (2012).
+[25] M. Chekhova, G. Leuchs, and M. Żukowski, “Bright squeezed vacuum: Entanglement of macroscopic
+     light beams”, Opt. Commun. 337, 27 (2015).
+[26] P. R. Sharapova, G. Frascella, M. Riabinin, A. M. Pérez, O. V. Tikhonova, S. Lemieux, R. W. Boyd,
+     G. Leuchs, and M. V. Chekhova, “Properties of bright squeezed vacuum at increasing brightness”,
+     Phys. Rev. Res. 2, 013371 (2020).
+[27] K. Y. Spasibko, D. A. Kopylov, V. L. Krutyanskiy, T. V. Murzina, G. Leuchs, and M. V. Chekhova,
+     “Multiphoton Effects Enhanced due to Ultrafast Photon-Number Fluctuations”, Phys. Rev. Lett. 119,
+     223603 (2017).
+[28] A. Gorlach, M. E. Tzur, M. Birk, M. Krüger, N. Rivera, O. Cohen, and I. Kaminer, “High-harmonic
+     generation driven by quantum light”, Nat. Phys. 19, 1689 (2023).
+[29] A. Rasputnyi, Z. Chen, M. Birk, O. Cohen, I. Kaminer, M. Krüger, D. Seletskiy, M. Chekhova, and
+     F. Tani, “High-harmonic generation by a bright squeezed vacuum”, Nat. Phys. 20, 1960 (2024).
+[30] S. Wang, S. Yu, X. Lai, and X. Liu, “High harmonic generation from an atom in a squeezed-vacuum
+     environment”, Phys. Rev. Res. 6, 033010 (2024).
+[31] M. E. Tzur, M. Birk, A. Gorlach, I. Kaminer, M. Krüger, and O. Cohen, “Generation of squeezed
+     high-order harmonics”, Phys. Rev. Res. 6, 033079 (2024).
+[32] S. Lemieux, S. A. Jalil, D. N. Purschke, N. Boroumand, T. J. Hammond, D. Villeneuve, A. Naumov,
+     T. Brabec, and G. Vampa, “Photon bunching in high-harmonic emission controlled by quantum light”,
+     Nat. Photonics 19, 767 (2025).
+[33] J. Rivera-Dean, P. Stammer, M. F. Ciappina, and M. Lewenstein, “Structured Squeezed Light Allows
+     for High-Harmonic Generation in Classical Forbidden Geometries”, Phys. Rev. Lett. 135, 013801
+     (2025).
+[34] R. V. Gothelf, C. S. Lange, and L. B. Madsen, “High-order harmonic generation in a crystal driven by
+     quantum light”, Phys. Rev. A 111, 063105 (2025).
+[35] M. Even Tzur, M. Birk, A. Gorlach, M. Krüger, I. Kaminer, and O. Cohen, “Photon-statistics force in
+     ultrafast electron dynamics”, Nat. Photonics 17, 501 (2023).
+[36] M. Even Tzur and O. Cohen, “Motion of charged particles in bright squeezed vacuum”, Light Sci.
+     Appl. 13, 41 (2024).
+[37] J. Heimerl, A. Mikhaylov, S. Meier, H. Höllerer, I. Kaminer, M. Chekhova, and P. Hommelhoff,
+     “Multiphoton electron emission with non-classical light”, Nat. Phys. 20, 945 (2024).
+[38] J. Heimerl, A. Rasputnyi, J. Pölloth, S. Meier, M. Chekhova, and P. Hommelhoff, “Quantum light
+     drives electrons strongly at metal needle tips”, Nat. Phys. 21, 1899 (2025).
+[39] T. Lamprou, J. Rivera-Dean, P. Stammer, M. Lewenstein, and P. Tzallas, “Nonlinear Optics Using
+     Intense Optical Coherent State Superpositions”, Phys. Rev. Lett. 134, 013601 (2025).
+
+
+                                                   18
+[40] S. Imai, A. Ono, and N. Tsuji, “Electron dynamics induced by quantum cat-state light”, arXiv:2501.
+     16801.
+[41] S. Imai, “Macroscopic Schrödinger-cat states of nonequilibrium electrons induced by cat-state optical
+     driving and projective measurements on the light field”, Phys. Rev. A 113, 023702 (2026).
+[42] J. Janszky and A. V. Vinogradov, “Squeezing via one-dimensional distribution of coherent states”,
+     Phys. Rev. Lett. 64, 2771 (1990).
+[43] M. Tavis and F. W. Cummings, “Exact Solution for an N-Molecule–Radiation-Field Hamiltonian”,
+     Phys. Rev. 170, 379 (1968).
+[44] I. I. Rabi, “Space Quantization in a Gyrating Magnetic Field”, Phys. Rev. 51, 652 (1937).
+[45] R. H. Dicke, “Coherence in Spontaneous Radiation Processes”, Phys. Rev. 93, 99 (1954).
+[46] C. Genes, P. R. Berman, and A. G. Rojo, “Spin squeezing via atom-cavity field coupling”, Phys. Rev. A
+     68, 043809 (2003).
+[47] A. E. B. Nielsen, U. V. Poulsen, A. Negretti, and K. Mølmer, “Atomic quantum superposition state
+     generation via optical probing”, Phys. Rev. A 79, 023841 (2009).
+[48] A. Kuzmich, K. Mølmer, and E. S. Polzik, “Spin Squeezing in an Ensemble of Atoms Illuminated with
+     Squeezed Light”, Phys. Rev. Lett. 79, 4782 (1997).
+[49] J. Hald, J. L. Sørensen, C. Schori, and E. S. Polzik, “Spin Squeezed Atoms: A Macroscopic Entangled
+     Ensemble Created by Light”, Phys. Rev. Lett. 83, 1319 (1999).
+[50] G. S. Agarwal and R. R. Puri, “Cooperative behavior of atoms irradiated by broadband squeezed light”,
+     Phys. Rev. A 41, 3782 (1990).
+[51] J. Gough and D. Rees, “Quantum Filtering for Squeezed Noise Inputs”, arXiv:2601.12564.
+[52] K. Lemr and J. Fiurášek, “Conditional preparation of arbitrary superpositions of atomic Dicke states”,
+     Phys. Rev. A 79, 043808 (2009).
+[53] J. K. Stockton, R. van Handel, and H. Mabuchi, “Deterministic Dicke-state preparation with continuous
+     measurement and control”, Phys. Rev. A 70, 022106 (2004).
+[54] C. Genes and P. R. Berman, “Generating conditional atomic entanglement by measuring photon number
+     in a single output channel”, Phys. Rev. A 73, 013801 (2006).
+[55] Y.-l. Zhang, C.-s. Yang, C.-l. Zou, T. Xia, G.-C. Guo, and X.-B. Zou, “Quantum state preparation of
+     an atomic ensemble via cavity-assisted homodyne measurement”, J. Phys. B At. Mol. Opt. Phys. 52,
+     215003 (2019).
+[56] S. Massar and E. S. Polzik, “Generating a Superposition of Spin States in an Atomic Ensemble”, Phys.
+     Rev. Lett. 91, 060401 (2003).
+[57] R. McConnell, H. Zhang, S. Ćuk, J. Hu, M. H. Schleier-Smith, and V. Vuletić, “Generating entangled
+     spin states for quantum metrology by single-photon detection”, Phys. Rev. A 88, 063802 (2013).
+[58] R. McConnell, H. Zhang, J. Hu, S. Ćuk, and V. Vuletić, “Entanglement with negative Wigner function
+     of almost 3,000 atoms heralded by one photon”, Nature 519, 439 (2015).
+[59] W. Chen, J. Hu, Y. Duan, B. Braverman, H. Zhang, and V. Vuletić, “Carving Complex Many-Atom
+     Entangled States by Single-Photon Detection”, Phys. Rev. Lett. 115, 250502 (2015).
+[60] T. Vanderbruggen, S. Bernon, A. Bertoldi, A. Landragin, and P. Bouyer, “Spin-squeezing and Dicke-state
+     preparation by heterodyne measurement”, Phys. Rev. A 83, 013821 (2011).
+
+
+
+                                                    19
+[61] T. Vanderbruggen, R. Kohlhaas, A. Bertoldi, E. Cantin, A. Landragin, and P. Bouyer, “Feedback control
+     of coherent spin states using weak nondestructive measurements”, Phys. Rev. A 89, 063619 (2014).
+[62] G. Tóth and M. W. Mitchell, “Generation of macroscopic singlet states in atomic ensembles”, New J.
+     Phys. 12, 053007 (2010).
+[63] N. Behbood, F. Martin Ciurana, G. Colangelo, M. Napolitano, G. Tóth, R. J. Sewell, and M. W. Mitchell,
+     “Generation of macroscopic singlet states in a cold atomic ensemble”, Phys. Rev. Lett. 113, 093601
+     (2014).
+[64] I. Bouchoule and K. Mølmer, “Preparation of spin-squeezed atomic states by optical-phase-shift
+     measurement”, Phys. Rev. A 66, 043811 (2002).
+[65] I. D. Leroux, M. H. Schleier-Smith, H. Zhang, and V. Vuletić, “Unitary cavity spin squeezing by
+     quantum erasure”, Phys. Rev. A 85, 013803 (2012).
+[66] S. J. Masson and S. Parkins, “Rapid Production of Many-Body Entanglement in Spin-1 Atoms via
+     Cavity Output Photon Counting”, Phys. Rev. Lett. 122, 103601 (2019).
+[67] R. V. Gothelf, L. B. Madsen, and C. S. Lange, “Limitations of an approximative phase-space description
+     in strong-field quantum optics”, arXiv:2602.04370.
+[68] K. Kraus, States, Effects, and Operations: Fundamental Notions of Quantum Theory, edited by A. Böhm,
+     J. D. Dollard, and W. H. Wootters, Vol. 190, Lecture Notes in Physics (Springer Berlin Heidelberg,
+     Berlin, Heidelberg, 1983).
+[69] H. M. Wiseman and G. J. Milburn, Quantum Measurement and Control (Cambridge University Press,
+     Cambridge, Nov. 2009).
+[70] C. W. Helstrom, “Quantum detection and estimation theory”, J. Stat. Phys. 1, 231 (1969).
+[71] A. Holevo, Probabilistic and Statistical Aspects of Quantum Theory (Edizioni della Normale, Pisa,
+     2011).
+[72] R. L. Stratonovich, “On Distributions in Representation Space”, Zh. Eksp. Teor. Fiz. 31, 1012 (1956).
+[73] C. Brif and A. Mann, “Phase-space formulation of quantum mechanics and quantum-state reconstruction
+     for physical systems with Lie-group symmetries”, Phys. Rev. A 59, 971 (1999).
+[74] G. Tóth, “Multipartite entanglement and high-precision metrology”, Phys. Rev. A 85, 022322 (2012).
+[75] P. Hyllus, W. Laskowski, R. Krischek, C. Schwemmer, W. Wieczorek, H. Weinfurter, L. Pezzé, and
+     A. Smerzi, “Fisher information and multiparticle entanglement”, Phys. Rev. A 85, 022321 (2012).
+[76] M. Gessner, A. Smerzi, and L. Pezzè, “Metrological Nonlinear Squeezing Parameter”, Phys. Rev. Lett.
+     122, 090503 (2019).
+[77] Z. Ren, W. Li, A. Smerzi, and M. Gessner, “Metrological Detection of Multipartite Entanglement from
+     Young Diagrams”, Phys. Rev. Lett. 126, 80502 (2021).
+[78] J. Davis, M. Kumari, R. B. Mann, and S. Ghose, “Wigner negativity in spin-j systems”, Phys. Rev. Res.
+     3, 033134 (2021).
+[79] M. Kitagawa and M. Ueda, “Squeezed spin states”, Phys. Rev. A 47, 5138 (1993).
+[80] C. Groiseau, S. J. Masson, and S. Parkins, “Generation of spin cat states in an engineered Dicke model”,
+     Phys. Rev. A 104, 053721 (2021).
+[81] C. Groiseau, “Generation of Large Kitten states via thermally driven dissipative freezing”, arXiv:2509.
+     00601.
+
+
+
+                                                     20
+[82] D. M. Greenberger, M. A. Horne, and A. Zeilinger, in Bell’s Theorem, Quantum Theory and Conceptions
+     of the Universe, 3 (Springer Netherlands, Dordrecht, 1989), pp. 69–72.
+[83] W. Magnus, “On the exponential solution of differential equations for a linear operator”, Commun.
+     Pure Appl. Math. 7, 649 (1954).
+[84] J. H. Shirley, “Solution of the Schrödinger Equation with a Hamiltonian Periodic in Time”, Phys. Rev.
+     138, B979 (1965).
+[85] H. Sambe, “Steady States and Quasienergies of a Quantum-Mechanical System in an Oscillating Field”,
+     Phys. Rev. A 7, 2203 (1973).
+[86] S. Rahav, I. Gilary, and S. Fishman, “Effective Hamiltonians for periodically driven systems”, Phys.
+     Rev. A 68, 013820 (2003).
+[87] A. Eckardt and E. Anisimovas, “High-frequency approximation for periodically driven quantum systems
+     from a Floquet-space perspective”, New J. Phys. 17, 093039 (2015).
+[88] P. Forn-Díaz, L. Lamata, E. Rico, J. Kono, and E. Solano, “Ultrastrong coupling regimes of light-matter
+     interaction”, Rev. Mod. Phys. 91, 025005 (2019).
+[89] H. Vahlbruch, M. Mehmet, K. Danzmann, and R. Schnabel, “Detection of 15 dB Squeezed States of
+     Light and their Application for the Absolute Calibration of Photoelectric Quantum Efficiency”, Phys.
+     Rev. Lett. 117, 110801 (2016).
+[90] C. W. Gardiner and M. J. Collett, “Input and output in damped quantum systems: Quantum stochastic
+     differential equations and the master equation”, Phys. Rev. A 31, 3761 (1985).
+[91] A. H. Kiilerich and K. Mølmer, “Input-Output Theory with Quantum Pulses”, Phys. Rev. Lett. 123,
+     123604 (2019).
+[92] A. I. Lvovsky and M. G. Raymer, “Continuous-variable optical quantum-state tomography”, Rev. Mod.
+     Phys. 81, 299 (2009).
+[93] T. Tyc and B. C. Sanders, “Operational formulation of homodyne detection”, J. Phys. A. Math. Gen. 37,
+     7341 (2004).
+[94] M. G. Raymer, J. Cooper, H. J. Carmichael, M. Beck, and D. T. Smithey, “Ultrafast measurement of
+     optical-field statistics by dc-balanced homodyne detection”, J. Opt. Soc. Am. B 12, 1801 (1995).
+
+
+
+
+                                                    21
+

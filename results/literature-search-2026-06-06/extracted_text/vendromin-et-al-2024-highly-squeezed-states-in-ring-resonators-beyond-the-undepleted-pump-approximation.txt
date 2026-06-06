@@ -1,0 +1,1048 @@
+                                                                             Highly Squeezed States in Ring Resonators:
+                                                                            Beyond the Undepleted Pump Approximation
+                                                                       Colin Vendromin,1, ∗ Yan Liu,2 Zhenshan Yang,2 and J. E. Sipe1
+                                                     1
+                                                     Department of Physics, University of Toronto, 60 St. George Street, Toronto, Ontario, Canada M5S 1A7
+                                                                            2
+                                                                              School of Physics Science and Information Technology,
+                                            Shandong Key Laboratory of Optical Communication Science and Technology, Liaocheng University, Liaocheng 252059, China
+                                                                                             (Dated: April 25, 2024)
+                                                           We present a multimode theory of squeezed state generation in resonant systems valid for arbitrary
+                                                         pump power and including pump depletion. The Hamiltonian is written in terms of asymptotic-in
+                                                         and -out fields from scattering theory, capable of describing a general interaction. As an example
+                                                         we consider the lossy generation of a highly squeezed state by an effective second-order interaction
+                                                         in a silicon nitride ring resonator point-coupled to a waveguide. We calculate the photon number,
+
+
+
+
+arXiv:2404.15563v1 [quant-ph] 23 Apr 2024
+                                                         Schmidt number, and the second-order correlation function of the generated state in the waveguide.
+                                                         The treatment we present provides a path forward to study the deterministic generation of non-
+                                                         Gaussian states in resonant systems.
+
+
+                                                             I.   INTRODUCTION                                  Including time-ordering corrections, the ket can ob-
+                                                                                                             tained under the assumption that the pump is classical
+                                               Continuous-variable (CV) squeezed states of light ex-         and undepleted, and that the generated light is Gaus-
+                                            hibit an uncertainty below vacuum noise in one quadra-           sian. As a result, the full Gaussian ket can be written
+                                            ture [1] making them an essential resource for implement-        generally as a squeezed vacuum state
+                                            ing CV quantum information processing [2], and with                           Z                                      
+                                                                                                                           1
+                                            post-selection strategies they can be used to create non-          |ψ⟩ = exp       dk1 dk2 J(k1 , k2 )a†k1 a†k2 − H.c. |vac⟩ ,
+                                            Gaussian states of light [3, 4], an important resource for                     2
+                                            quantum computing.                                                                                                          (2)
+                                               Squeezed states are typically generated through non-
+                                            linear optical processes such as spontaneous paramet-            where the squeezing matrix J(k1 , k2 ) can be obtained
+                                            ric down conversion (SPDC) and spontaneous four-wave             from the Heisenberg equations of motion [10]. If time-
+                                            mixing (SFWM), the first relying on the presence of a            ordering corrections are negligible this ket reduces to Eq.
+                                            χ(2) susceptibility, and the second on the χ(3) suscepti-        (1), with the squeezing matrix just being proportional to
+                                            bility [5, 6]. In the usual treatment of these processes,        the biphoton wavefuction J(k1 , k2 ) ≈ βϕ(k1 , k2 ).
+                                            the pump field or fields are treated classically, with the          However, if the nonlinear process is strong enough that
+                                            nonlinear process being considered sufficiently weak that        pump depletion needs to be considered, the generated
+                                            those fields can be treated as undepleted. In this case the      light can be expected to be non-Gaussian due to entangle-
+                                            resulting squeezed state can be approximately written as         ment between the pump and the generated fields [12, 13].
+                                            [7]                                                              In this case a squeezed vacuum state such as in Eq. (2)
+                                                                                                             does not provide a complete description of the features of
+                                                                                                             the generated light, such as pump depletion. To go be-
+                                                           Z                                   
+                                                           β                       † †
+                                               |ψ⟩ = exp        dk1 k2 ϕ(k1 , k2 )ak1 ak2 − H.c. |vac⟩ ,     yond the undepleted pump approximation one strategy
+                                                            2
+                                                                                                       (1)   that has been employed is to replace the vacuum state
+                                                                                                             in Eq. (2) with a non-Gaussian ket, which starts from
+                                            where β is an overall squeezing parameter, and ϕ(k1 , k2 )       vacuum initially and evolves such that it remains close
+                                            is the normalized biphoton wavefunction that describes           to the vacuum. This treatment was recently investigated
+                                            the production of pairs of photons; one with wavenumber          in waveguides [12] and for a single-mode SPDC Hamilto-
+                                            k1 and the other k2 . The ket in Eq. (1) is equivalent to a      nian [13], and offers a potential route to the deterministic
+                                            lowest-order Magnus expansion [8] that treats the pump           generation of non-Gaussian states of light. In fact exper-
+                                            as classical and undepleted. If the squeezing parameter β        iments have already demonstrated high conversion effi-
+                                            is sufficiently weak, then time-ordering corrections that        ciencies where the undepleted pump approximation is no
+                                            arise in the higher-order terms of the Magnus expansion          longer valid [14, 15], and non-Gaussianity may become
+                                            are expected to be negligible. However, time-ordering            important.
+                                            effects become important when the amount of squeezing               In this paper we extend such a treatment to resonant
+                                            increases [9–11], and the approximate ket in Eq. (1) then        systems. As an example we study a ring resonator, a
+                                            becomes a poorer and poorer approximation.                       system of interest in its own right due to its resonant en-
+                                                                                                             hancement of nonlinear processes and the precise control
+                                                                                                             over the frequencies involved, as well as its integrabil-
+                                                                                                             ity on photonic chips [16–18]. We develop a multimode
+                                            ∗ colin.vendromin@utoronto.ca
+                                                                                                             Hamiltonian theory of non-Gaussian state generation in
+                                                                                                                          2
+
+such systems, including scattering loss, by employing the
+asymptotic-in and -out fields used in scattering theory
+[19].
+   We apply the theory to the particular case of generat-
+ing a highly squeezed state by an effective χ(2) interaction
+in a ring resonator [15, 20]. For this interaction one re-
+lies on the χ(3) response of the medium, but there is one
+pump field in a mode C that is continuous wave (CW)
+and so strong that it can be treated as classical and un-
+depleted; in the presence of the material χ(3) this leads to
+an effective χ(2) through which a much weaker pump in
+the mode P can generate two photons in the mode S (see
+Fig. 1(a)). There is no issue with phase-matching, since
+the pumps and the generated photons are close in wave-
+length. The formalism we present can also be applied to
+a standard χ(2) interaction as well.                           FIG. 1: (a) SFWM with a weak pump at ωP and a strong
+                                                                       pump at ωC . (b) Schematic of a ring resonator
+   Although the theory we present is capable of studying         point-coupled to an actual waveguide (bottom red) and
+non-Gaussian states, our focus in this paper is on highly        phantom waveguide (top white). (c) Asymptotic-in field
+squeezed states that include the effects of pump deple-         associated with the input channel of the actual waveguide
+tion. The treatment of the non-Gaussian corrections to         (left), and asymptotic-out fields associated with the output
+the squeezed state will be handled in a subsequent com-           channel of the actual waveguide (center) and phantom
+munication, as will the effects of self- and cross-phase                  waveguide (right), respectively [19, 21].
+modulation, and the excitation of fields in additional ring
+resonances. While in this paper we specialize to ring res-
+onator systems, most of the formalism can be applied to        or -out mode field has an amplitude in both waveguides
+other systems as well, such as waveguides.                     and in the ring. In each diagram, the black arrow corre-
+   This paper is organized as follows. In Sec. II we write     sponds to a freely propagating field that is either incom-
+the system Hamiltonian, including the SFWM interac-            ing (asymptotic-in) or outgoing (asymptotic-out), with
+tion in a ring resonator, in terms of the asymptotic-in        its amplitude equal to that of a mode field in an iso-
+and -out fields for our system. In Sec. III we introduce       lated waveguide. The white arrows indicate either outgo-
+the input and output kets that are used to describe the        ing (asymptotic-in) or incoming (asymptotic-out) fields
+generation of light in the ring resonator system. In Sec.      in the other channels, and their amplitudes depend on
+IV we derive the non-Gaussian unitary operator that con-       the coupling parameters between the ring and the waveg-
+nects the input ket to the output ket. In Sec. V we show       uides [21]. Asymptotic-in mode fields are also defined for
+how to obtain the first-order solution for the ket. In         the phantom channel, but they will not appear in our
+Sec. VI we numerically study the generation of a highly        calculations.
+squeezed state by an effective χ(2) interaction in a ring         The asymptotic-in and -out mode fields can be iden-
+resonator with loss. In Sec. VII we conclude.                  tified by three parameters. We use a discrete index n
+                                                               to indicate the actual output channel or the phantom
+                                                               output channel, the waveguide wavenumbers k, and an
+              II.   THE HAMILTONIAN                            index J that identifies the range of wavenumbers k in
+                                                               the waveguide that correspond to a range of frequencies
+   Our system of interest is a ring resonator point-coupled    near a ring resonance, where J = P, S, C. We assume
+to an actual waveguide and a phantom waveguide (see            the ring resonances have sufficiently high quality factors
+Fig. 1(b)), where the phantom waveguide is used to de-         that the ranges over which k varies for each J can be
+scribe scattering losses [21]. We define the “input and        considered distinct; we leave this implicit in the integrals
+output channels” of the actual waveguide (shown in red)        below.
+as the parts of that waveguide that are to the left and           For the system considered here, the displacement field
+to the right of the coupling point, respectively; likewise,    operator can be written in terms of the asymptotic-in
+the input and output channels of the phantom waveg-            mode fields as [19]
+uide (shown in white) are the parts of that waveguide                            XZ
+that are to the right and to the left of the coupling point,                                      in
+                                                                         D(r) =         dkbnJk DnJk  (r) + H.c.,        (3)
+respectively.                                                                     n,J
+   As a basis for expanding the electromagnetic field in
+the full system of waveguides and ring, we employ the          where bnJk is the operator that annihilates an
+asymptotic-in and -out mode fields [19, 21]; they are          asymptotic-in photon associated with input channel n,
+                                                                                                                   in
+sketched in Fig. 1(c), and are eigenstates of the full         with wavenumber k in the ring resonance J, and DnJk    (r)
+linear Hamiltonian of the system. Each asymptotic-in           is the mode field associated with that photon (see the left
+                                                                                                                                             3
+
+sketch in Fig. 1(c) for the asymptotic-in mode field as-           becomes [21]
+sociated with the actual input channel). Similarly, the                                      Z
+displacement field operator can be written in terms of                              3 X                                ′
+                                                                     HN L = −                    dk1 dk2 dk3 dk4 K nn (k1 , k2 , k3 , k4 )
+the asymptotic-out mode fields as                                                   ϵ0 ′
+                                                                                     n,n
+
+         D(r) =
+                  XZ
+                                out
+                        dkanJk DnJk (r) + H.c.,      (4)                    × a†nSk1 a†n′ Sk2 bP k3 bCk4 + H.c.,                         (9)
+                   n,J
+                                                                   where the nonlinear coefficient for SFWM is given by
+where anJk is the operator that annihilates an                                                 Z              h           i∗
+                                                                        ′
+asymptotic-out photon associated with output channel n,             K nn (k1 , k2 , k3 , k4 ) = drΓijkl3  (r)  D out,i
+                                                                                                                 nSk1  (r)
+                                                  out
+with wavenumber k in the ring resonance J, and DnJk   (r)                                      h           i∗
+is the mode field associated with that photon (see the                                        × Dnout,j
+                                                                                                   ′ Sk (r)   DPin,k       in,l
+                                                                                                       2          k3 (r)DCk4 (r).
+middle or right sketch in Fig. 1(c)). The input and out-
+put operators satisfy the commutation relations                                                                                        (10)
+
+        [anJk , a†nJk′ ] = [bnJk , b†nJk′ ] = δ(k − k ′ ),   (5)   We take the integral in Eq. (10) to range over the ring
+                                                                   where the fields are concentrated, and the effect of the
+with all others zero; the linear Hamiltonian can be writ-          nonlinearity is most significant. The sums over n and
+ten in terms of the input or output operators as                   n′ , which range over the actual and phantom output
+                                                                   channels, take into account the four combinations of two
+                    XZ                                             photons exiting the ring through two output channels.
+             HL =          dkℏωnJk b†nJk bnJk
+                                                                   That is, both photons can leave through the phantom
+                      n,J
+                                                                   or actual output channel, or one through    each of the
+                      XZ                                                                                    ′
+                  =          dkℏωnJk a†nJk anJk ,            (6)   channels. The nonlinear coefficient K nn (k1 , k2 , k3 , k4 )
+                      n,J                                          gives the strength of the interaction corresponding to
+                                                                   each combination. It is symmetric with respect to ex-
+where ωnJk is the dispersion relation for the waveguide            changing the order of both n and n′ and k1 and k2 ; that
+containing channel n, ranging only over wavenumbers k              is,
+near ring resonance J; see Appendix A for details.                            ′                             ′
+  We now include a third-order nonlinear interaction de-                 K nn (k1 , k2 , k3 , k4 ) = K n n (k2 , k1 , k3 , k4 ).       (11)
+scribed by the Hamiltonian [22]
+               Z                                                   But it is not symmetric with respect to only exchanging
+            1                                                      the order of n and n′ or k1 and k2 ; that is,
+ HNL = −         drΓijkl     i     j     k     l
+                     3 (r)D (r)D (r)D (r)D (r), (7)
+           4ϵ0
+                                                                              ′                             ′
+                                                                         K nn (k1 , k2 , k3 , k4 ) ̸= K n n (k1 , k2 , k3 , k4 ).      (12)
+where i, j, k, and l are Cartesian components, as usual
+summed over when repeated, and the tensor Γijkl3 (r) is
+related to the more familiar third-order tensor χijkl
+                                                 3 (r)                       III.    INPUT AND OUTPUT KETS
+by [22]
+                                                                     The unitary time-evolution operator for the system,
+                                  χijkl
+                                   3 (r)
+                      Γijkl
+                       3 (r) =              ,                (8)   U(t, t′ ), is a solution to the Schrödinger equation
+                                   2
+                                  ϵ0 ϵ4 (r)
+                                                                                             dU(t, t′ )
+where we have assumed that the relative dielectric func-                                iℏ              = HU(t, t′ ),                  (13)
+tion ϵ(r) does not depend on frequency over the range                                          dt
+of frequencies within each ring resonance, and have ne-            satisfying U(t′ , t′ ) = I for all t′ , where I is the identity
+glected any dependence of χijlk
+                              3 (r) over the frequencies           operator. We write the full Hamiltonian H as the sum
+of interest.                                                       of the linear and nonlinear contributions,
+   Our process of interest is SFWM, where one pump
+photon in resonance P and one in resonance C are an-                                         H = HL + HN L ,                           (14)
+nihilated, and two photons in resonance S are generated
+(see Fig. 1(a)). The asymptotic-out fields for the ac-             where HL is given by Eq. (6) and HN L is given by Eq.
+tual and phantom waveguides are used for the generated             (9). We assume that times ton and toff can be identified
+photons, while only the asymptotic-in mode field for the           such that: (a) For t < ton the excitations of the quantum
+actual waveguide is used for the pump photons; hence we            fields incident on the ring are sufficiently far from it that
+can drop the index n on the asymptotic-in mode fields              HN L has no effect on the evolution of the ket, and that
+and operators, understanding the actual input channel              (b) for t > toff all the field excitation has propagated
+to be identified. If we consider only the terms respon-            sufficiently far from the ring that, again, HN L has no
+sible for SFWM in Eq. (7), the nonlinear Hamiltonian               effect on the evolution of the ket.
+                                                                                                                                                 4
+
+  Consider then the evolution of a ket from some early                       and
+time t0 < ton to some later time t1 > toff . The evolution
+operator can be written as                                                                           |ψin ⟩ = |ψ(−∞)⟩.                       (29)
+
+     U(t1 , t0 ) = U(t1 , toff )U(toff , ton )U(ton , t0 ).           (15)   Taking the derivative of Eq. (28) and using Eqs. (13),
+                                                                             (23), and (26) we obtain
+The evolution operator from t0 to ton and toff to t1 only
+involves the linear Hamiltonian, that is                                                           d
+                                                                                              iℏ      |ψ(t)⟩ = H N L (t)|ψ(t)⟩,              (30)
+                                    −iHL (ton −t0 )/ℏ
+                                                                                                   dt
+                U(ton , t0 ) = e                         ,            (16)
+                                    −iHL (t1 −toff )/ℏ                       where we have defined the interaction picture nonlinear
+                U(t1 , toff ) = e                        .            (17)   Hamiltonian as
+We can then write Eq. (15) as
+                                                                                            H N L (t) ≡ eiHL t/ℏ HN L e−iHL t/ℏ ,            (31)
+                −iHL (t1 −toff )/ℏ                     −iHL (ton −t0 )/ℏ
+  U(t1 , t0 ) = e                    U(toff , ton )e                   .
+                                                                             and as t ranges from −∞ to ∞ in Eq. (30) the ket evolves
+                                                                      (18)
+                                                                             from |ψin ⟩ to |ψout ⟩.
+  We now suppose that an initial ket |ψ(t0 )⟩ is specified
+at a time t0 < ton . We define the “input ket”
+                                                                                           IV.     UNITARY EVOLUTION
+               |ψin ⟩ ≡ e−iHL (0−t0 )/ℏ |ψ(t0 )⟩ ,                    (19)
+                                                                               In Appendix A we simplify the nonlinear Hamiltonian
+which is the ket that the initial ket would evolve to at                     Eq. (31) by treating the strong CW pump classically, and
+t = 0 were HN L = 0. And starting with the ket |ψ(t1 )⟩                      discretize the k involved for the weak pump and gen-
+characterizing the state at a time t1 > toff , we define the                 erated fields to implement numerical calculations. The
+“output ket”                                                                 result can be written as
+               |ψout ⟩ ≡ eiHL (t1 −0)/ℏ |ψ(t1 )⟩ ,                    (20)
+                                                                                                 XX
+                                                                                   H N L (t) = ℏ        Λµνl (t)a†µ a†ν bl + H.c., (32)
+                                                                                                    µ,ν   l
+which is the ket at t = 0 that would evolve to |ψ(t1 )⟩ at
+t = t1 were HN L = 0. Since the evolution of the ket from                    where for convenience we removed the discrete labels P
+from t0 to t1 is given by                                                    and S on the input and output operators, and they sat-
+                    |ψ(t1 )⟩ = U(t1 , t0 ) |ψ(t0 )⟩ ,                 (21)   isfy the usual commutation relations [bl , b†l′ ] = δll′ and
+                                                                             [aµ , a†ν ] = δµν . Here Λµνl (t) is the nonlinear coefficient
+in terms of the input and output kets this can be written                    for the effective χ(2) interaction, where l labels a discrete
+as                                                                           wavenumber kl for the pump, and µ and ν are discrete
+                                                                             indices for the generated photons (see Eq. (A14)). Each
+                     |ψout ⟩ = U (t1 , t0 ) |ψin ⟩ ,                  (22)   Greek index µ, for example, refers to two properties of
+                                                                             the photon, its discrete wavenumber ki and the output
+where we defined
+                                                                             channel n. The sum over µ in Eq. (32) represents two
+          U (t1 , t0 ) ≡ eiHL t1 /ℏ U(t1 , t0 )e−iHL t0 /ℏ .          (23)   sums; one over the actual and phantom output channel
+                                                                             and the second over the discrete wavenumbers ki .
+Then taking the limit                                                           We now turn to the unitary evolution in Eq. (30).
+                                                                             Here we do not consider a general ket |ψin ⟩, but restrict
+            U (∞, −∞) =              lim        U (t1 , t0 ),         (24)   ourselves to an input ket that is a coherent state in the
+                               t1 →∞,t0 →−∞
+                                                                             actual input channel and vacuum in all other channels,
+we obtain
+                                                                                                   |ψin ⟩ = Db (βin ) |vac⟩ ,                (33)
+                    |ψout ⟩ = U (∞, −∞) |ψin ⟩ .                      (25)
+                                                                             where Db (β(t)) is the unitary displacement operator,
+It is then convenient to define                                              with displacement parameter βin ≡ β(−∞). It is written
+                                                                             in terms of the input operators as
+                         U (t) ≡ U (t, −∞),                           (26)
+                                                                                      Db (β(t)) = exp [β(t)]T b† − [β ∗ (t)]T b ,
+                                                                                                                               
+                                                                                                                                  (34)
+for all times t. We can then write
+
+                         |ψout ⟩ = |ψ(∞)⟩,                            (27)   where β(t) = [β1 (t), β2 (t), . . .]T and β ∗ (t) =
+                                                                             [β1∗ (t), β2∗ (t), . . .]T are column vectors of displacement pa-
+where                                                                        rameters, and b = [b1 , b2 , . . .]T and b† = [b†1 , b†2 , . . .]T are
+                                                                             column vectors of input operators. We then seek a solu-
+                        |ψ(t)⟩ = U (t) |ψin ⟩ ,                       (28)   tion of (30) of the form
+                                                                                                                                              5
+
+                                                                        with
+
+                  |ψ(t)⟩ = Ua (t)Ub (t)|ψ̃(t)⟩,                  (35)   Ha (t) ≡ ℏΛµνl (t)[β(t)]l a†µ a†ν + H.c.,                (43)
+                                                                                                                           
+                                                                        Hb (t) ≡ ℏΛ∗µνl (t)[V (t)W T (t)]µν b†l − [β ∗ (t)]l + H.c.,
+where |ψ̃(t)⟩ describes the effect of a non-Gaussian uni-
+                                                                                                                                            (44)
+tary operator acting on the vacuum state, as discussed                                    
+below, and Ua (t) and Ub (t) are Gaussian unitary opera-                           ∗
+                                                                        HI (t) ≡ ℏΛµνl (t) [V (t)]µµ′ [V (t)]νν ′ aµ′ aν ′
+tors, given by
+                                                                                + ([V (t)]µν ′ [W (t)]νµ′ + [W (t)]µµ′ [V (t)]νν ′ ) a†µ′ aν ′
+              Ua (t) = Sa (J (t))Ra (ϕ(t))eiθa (t) ,             (36)                                              
+               Ub (t) = Db (β(t))eiθb (t) ,                      (37)           + [W (t)]µµ′ [W (t)]νν ′ a†µ′ a†ν ′ b†l + H.c..         (45)
+
+where θb (t) and θa (t) are real functions of time, Sa (J (t))          Here repeated indices are summed over, and the matrices
+is a multimode squeezing operator, and Ra (ϕ(t)) is a                   V (t) and W (t) are defined in terms of the parameters
+multimode rotation operator.                                            appearing in the Gaussian unitary operators in Eq. (36)
+   The unitary squeezing operator Sa (J (t)) is given by                and Eq. (37); see Appendix B for details.
+[23]                                                                       The Hamiltonians appearing above each capture part
+                                                                        of the physics: Ha (t) describes the generation of pho-
+                                                                        ton pairs by an effective χ(2) interaction modulated by a
+                                            
+                             1 T
+           Sa (J (t)) = exp a† J (t)a† − H.c. ,                  (38)   time-dependent pump amplitude β(t); Hb (t) determines
+                             2
+                                                                        the rate of depletion of the pump amplitude β(t), which
+                                                                        is being driven by the generation of photon pairs; HI (t),
+where a = [a1 , a2 , . . .]T and a† = [a†1 , a†2 , . . .]T are column   which only contains non-Gaussian terms, describes the
+vectors of output operators and J (t) is the symmetric                  quantum correlations between the pump and the gener-
+time-dependent squeezing matrix, with J (t) = J T (t).                  ated light.
+The unitary rotation operator Ra (ϕ(t)) is given by [23]
+                                                                           To achieve our goal of moving all the non-Gaussian
+                                T                                     behavior to |ψ̃(t)⟩, we must choose the time dependence
+                Ra (ϕ(t)) = exp ia† ϕ(t)a ,                      (39)   of the parameters appearing in the Gaussian operators
+                                                                        in Eq. (36) and Eq. (37) so that
+where ϕ(t) is the Hermitian time-dependent rotation ma-
+                                                                                                   Heff (t) = HI (t).                       (46)
+trix, with ϕ(t) = ϕ† (t). The parameters β(t), J (t),
+and ϕ(t) are subject to the following initial conditions                It is easy to show that this condition is satisfied if we
+β(−∞) = βin , J (−∞) = 0, and ϕ(−∞) = 0, and also                       have
+θb (−∞) = θa (−∞) = 0; further, we take
+                                                                                                  dUa (t)
+                                                                                              iℏ          = Ha (t)Ua (t),                   (47)
+                         |ψ̃(−∞)⟩ = |vac⟩.                       (40)                               dt
+                                                                                                  dUb (t)
+                                                                                               iℏ         = Hb (t)Ub (t).                   (48)
+This guarantees that the initial condition (29) is satisfied.                                       dt
+  Returning to Eq. (35), our goal is to define the param-
+                                                                        We show in Appendix B that this can be achieved by
+eters in the Gaussian unitary operators in Eq. (36) and
+                                                                        appropriately choosing the parameters V (t), W (t), β(t),
+Eq. (37) so that the ket |ψ̃(t)⟩ isolates the non-Gaussian              and θb (t) so that
+behavior of the full ket in Eq. (35). Now regardless of
+how the parameters in those Gaussian unitary operators                             dV (t)
+are chosen to depend on time, we find that for Eq. (35)                                    = −2iζ(t)W ∗ (t),                                (49)
+                                                                                     dt
+to satisfy the full Schrödinger equation in Eq. (30) we
+                                                                                  dW (t)
+require                                                                                    = −2iζ(t)V ∗ (t),                                (50)
+                                                                                    dt
+                       d                                                         d[β(t)]l
+                  iℏ      |ψ̃(t)⟩ = Heff (t)|ψ̃(t)⟩,             (41)          i           = [γ(t)]l ,                                      (51)
+                       dt                                                           dt
+                                                                                             1 t
+                                                                                               Z
+                                                                                    θb (t) =           dt′ [γ(t′ )]l [β ∗ (t′ )]l + c.c.,   (52)
+where we have introduced the effective Hamiltonian                                           2 −∞
+
+                                                            dUa (t)     are satisfied, where the matrix ζ(t) drives the production
+  Heff (t) = HI (t) + Ua† (t)Ha (t)Ua (t) − iℏUa† (t)
+                                                              dt        of photon pairs in the squeezed state,
+                                                dUb (t)
+           + Ub† (t)Hb (t)Ub (t) − iℏUb† (t)            ,        (42)                         [ζ(t)]µν = Λµνl (t)[β(t)]l ,                  (53)
+                                                  dt
+                                                                                                                                    6
+
+and the vector γ(t) determines the rate of pump deple-                          V.    FIRST-ORDER SOLUTION
+tion,
+                                                                        If the energy of the pump is sufficiently low or the non-
+               [γ(t)]l = Λ∗µνl (t)[V (t)W T (t)]µν .          (54)   linear coefficients Λµνl (t) are sufficiently weak, then the
+   We solve the Eqs. (49), (50), and (51) numerically for            elements of the matrix ζ(t) in Eq. (53) will be much less
+the parameters V (t), W (t), and β(t), which are subject             than unity, [ζ(t)]µν ≪ 1 for all µ and ν. In this case the
+to the initial conditions β(−∞) = βin , W (−∞) = 0,                  solution to Eq. (49) and Eq. (50) can be approximately
+and V (−∞) = I, where I is the identity matrix. The                  written as [10]
+solutions are put into Eq. (52), which is then integrated                                 V (t) ≈ I,                             (59)
+to obtain the phase θb (t). In Appendix C we show how                                                  Z t
+to extract the squeezing matrix J (t) and rotation matrix                             W (t) ≈ −2i            dt′ ζ(t′ ).         (60)
+ϕ(t) from the solutions V (t) and W (t), and in Appendix                                                −∞
+D we give an equation for the phase θa (t) in Eq. (36).
+                                                                     Consequently, the pump depletion rate in Eq. (51) is
+This procedure provides a solution for the Gaussian pa-
+                                                                     negligible
+rameters of the unitary operators in Eqs. (36) and (37),
+and is valid for high pump power and nonlinear interac-                   d[β(t)]l
+                                                                                                  Z t
+tion strength.                                                                     ≈ −2iΛ∗µνl (t)     dt′ [ζ(t′ )]µν ≈ 0, (61)
+                                                                             dt                    −∞
+   Still necessary for a full solution, of course, is to in-
+clude the non-Gaussian evolution of |ψ̃(t)⟩. Then the                since it depends on the product of the nonlinear coeffi-
+full solution can be written as the squeezed, displaced,             cients, which are assumed to be small. The Hamiltonian
+and rotated version of non-Gaussian terms acting only                Hb (t) in Eq. (44) can be set to zero, Hb (t) → 0, since
+on the vacuum state,                                                 the coefficients in Hb (t) are given by d[β(t)]l /dt. Simi-
+                                                                     larly the phase θb (t) in Eq. (52) is negligible, θb (t) ≈ 0.
+                  |ψ(t)⟩ = Ua (t)Ub (t)|ψ̃(t)⟩,               (55)      With these approximations, the Gaussian ket |ψ G (t)⟩
+                                                                     in Eq. (57) can be written as
+where recall Eq. (40). An attractive feature of this ap-
+proach is that we can work in the Gaussian limit by set-                           ψ G (t) = Sa (J (t)) |vac⟩ ⊗ |βin ⟩ ,         (62)
+ting |ψ̃(t)⟩ → |vac⟩, and still study the effects of pump
+depletion and the dynamics of the joint spectral ampli-              which satisfies the Schrödinger equation
+tude in squeezed state generation.
+                                                                                          d ψ G (t)
+   That is what we do for the remainder of this paper.                               iℏ             = Ha (t) ψ G (t) .           (63)
+We put                                                                                       dt
+                                                                     Treating Ha (t) as a small quantity we can construct a
+           |ψ(t)⟩ → Ua (t)Ub (t)|vac⟩ ≡ |ψ G (t)⟩,            (56)   first-order solution to Eq. (63) using the Magnus expan-
+                                                                     sion [8], and keeping only the first term we obtain
+and we have
+                                                                                      Z t                                 
+    ψ G (t) = eiθa (t) Sa (J (t)) |vac⟩ ⊗ eiθb (t) |β(t)⟩ .   (57)    ψ G (t) ≈ exp −i        dt′ [ζ(t′ )]µν a†µ a†ν − H.c. ⊗ |βin ⟩ .
+                                                                                              −∞
+where |β(t)⟩ = Db (β(t)) |vac⟩ is a coherent state. The                                                                          (64)
+Gaussian state is a product of a squeezed vacuum state
+                                                                     The higher-order terms in the expansion involve the com-
+written in terms of the output operators and a coherent
+                                                                     mutator between the Hamiltonian at two different times,
+state written in terms of the input operators, and from
+                                                                     such as [Ha (t), Ha (t′ )] [8]. The ket in Eq. (64) is the
+(56) its dynamics is governed by
+                                                                     solution when we assume that [Ha (t), Ha (t′ )] = 0 so that
+              d ψ G (t)                                              time-ordering effects are negligible. It was pointed out
+         iℏ             = (Ha (t) + Hb (t)) ψ G (t) .         (58)   earlier for waveguides [10, 12] that this assumption be-
+                 dt                                                  comes invalid when the power of the pump is increased.
+This of course is an approximate result, and there are               We demonstrate below that this also holds for a squeezed
+                                                     T               state generated in a ring resonator. Comparing Eq. (64)
+consequences. For example, the operator Q = a† a/2 +
+  T                                                                  and Eq. (62) we immediately obtain the approximate
+b† b commutes with HL and HN L , and therefore with
+                                                                     first-order solution for the squeezing matrix
+the full Hamiltonian in Eq. (14), and so it is a conserved
+                                                                                                    Z t
+quantity. It therefore also commutes with H N L (t), which
+governs the evolution of the full |ψ(t)⟩ according to Eq.                              J (t) ≈ −2i      dt′ ζ(t′ ).         (65)
+                                                                                                       −∞
+(30). However, it does not commute with the Hamilto-
+nian Ha (t) + Hb (t) that governs the evolution of the its           This is the expression for W (t) in Eq. (60), so we can
+approximation |ψ G (t)⟩. Nonetheless, in Appendix E we               write J (t) ≈ W (t). To obtain the form in Eq. (62) we
+show that ⟨ψ G (t)|Q|ψ G (t)⟩ is constant as ψ G (t) evolves         have put θa (t) = 0, which is valid for a weak nonlinearity
+according to Eq. (58).                                               (see Appendix D).
+                                                                                                                      7
+
+     VI. EXAMPLE: SQUEEZED STATE                              is about 19, which corresponds to approximately 19 dB
+    GENERATION IN A RING RESONATOR                            of squeezing, putting it in the high-gain regime.
+                                                                 The squeezing matrix in Fig. 2(a) is calculated using
+   In this section we study the example of generating         the approximate first-order solution in Eq. (65). In order
+a highly squeezed state in a ring resonator. We calcu-        to compare the first-order solution to the full Gaussian
+late the squeezing matrix, number of generated photons,       solution, in Fig. 2(b) the magnitude of the squeezing
+Schmidt number, and the second-order correlation func-        matrix is shown for the same parameters as above but
+tion in the actual output channel including scattering        calculated using the full Gaussian solution in Eq. (C20)
+loss, and compare these results to the first-order solu-      that is valid for arbitrary energy. The full Gaussian so-
+tion.                                                         lution in Fig. 2(b) exhibits less correlation between the
+   We consider a SiN ring resonator point-coupled to an       wavenumbers (k1 and k2 ) of the generated photon pairs
+actual waveguide and a phantom waveguide, the latter          than the first-order solution in Fig. 2(a).
+modelling scattering loss; see Fig. 1(b). For a sample
+calculation we consider a structure with a ring radius
+of R = 64µm, ωS = 2π × 193THz, a group velocity of
+1.5 × 108 m/s, a nonlinear parameter of γ nl ≈ 1(Wm)−1
+(see Eq. (A13)), and an intrinsic quality factor of 2 × 106
+for all three ring resonances. We take the loaded quality
+factors for the P , S, and C modes to be 4 × 104 (over-
+coupled), 2 × 106 (over-coupled), and 1 × 106 (critically-
+coupled), respectively.
+   In mode C there is an undepleted CW pump with
+power PC = 30mW, and in mode P there is a weak
+pulsed pump with energy UP and duration τP = 0.5ns.
+The initial amplitude of the pulse is
+              s                                 
+                  NP vP τP      1          2 2 2
+  [βin ]l =         √      exp − (kl − KP ) vP τP ,   (66)
+                      π         2
+
+where for simplicity we neglect group velocity dispersion,
+NP is the initial photon number, vp is the group velocity,
+and KP is the central wavenumber.
+
+
+
+
+                                                               FIG. 3: (a) The average generated photon number in
+                                                                 the squeezed state and (b) the Schmidt number,
+                                                               calculated with the full Gaussian solution (blue line)
+                                                              and the first-order solution (pink dashed) for increasing
+FIG. 2: Magnitude of the squeezing matrix |J(k1 , k2 )|                   energy of the pulsed pump (UP ).
+in the high-gain regime (UP = 100pJ) calculated using
+ the (a) first-order solution and the (b) full Gaussian
+                                                                In Fig. 3(a) the average generated photon number in
+                         solution.
+                                                              the squeezed state is shown for pump energy (UP ) be-
+                                                              tween 1 pJ and 100 pJ. The calculation is done with the
+   In Fig. 2(a) the magnitude of the squeezing matrix         full Gaussian solution (blue line) and the first-order so-
+is shown for UP = 100pJ (NP ≈ 7.8 × 108 ). The x-             lution (pink dashed). The photon number is calculated
+axis and y-axis represent the detuning from the center        with tr(W ∗ (t)W T (t)), where the matrix W (t) is ob-
+of the ring resonance of the mode S, where vS , KS , and      tained using the full Gaussian solution or the first-order
+1/ΓS ≈ 330 ps are its group velocity, central wavenum-        solution. The first-order solution gives a photon number
+ber, and dwelling time, respectively. For this energy the     that is approximately 20% less than the full Gaussian
+average generated photon number in the squeezed state         solution for pump energies at or below 60 pJ. This corre-
+                                                                                                                                            8
+
+                                                                  order correlation function is given by [26]
+
+                                                                  G(2) (t1 , t2 ) = vS ⟨ā† (0+ , t1 )ā† (0+ , t2 )ā(0+ , t2 )ā(0+ , t1 )⟩,
+                                                                                                                                         (68)
+
+                                                                  where the expectation value is done with the Gaussian
+                                                                  ket in Eq. (57). This can be used to predict the prob-
+                                                                  ability of detecting coincidence counts at the two times
+                                                                  t1 and t2 . We normalize it using Φ2 , which is defined as
+                                                                  the ratio of the number of generated photons per pump
+                                                                  pulse duration, given by
+
+                                                                                              Φ ≡ ⟨nS ⟩/τP ,                            (69)
+
+                                                                  where ⟨nS ⟩ is the number of generated photons.
+                                                                     In Figs. 4(a) and 4(b) the second-order correlation
+                                                                  function for the actual output channel is shown using the
+                                                                  first-order solution, as well as in Figs. 4(c) and 4(d) using
+                                                                  the full Gaussian solution. When the energy of the pump
+                                                                  is 10 pJ the correlation functions from the first-order so-
+  FIG. 4: Comparison of the second-order correlation              lution and full Gaussian solution appear to agree. For the
+functions G(2) (t1 , t2 ) in the actual output channel using      high energy pump at 100 pJ the first-order solution be-
+     the first-order solution (left column) with (a)              gins to show correlations that are not present in the full
+ UP = 10 pJ and (b) UP = 100 pJ, as well as using the             Gaussian solution, and the maximum of the first-order
+     full Gaussian solution (right column) with (c)               solution occurs at an early time (t1 = t2 = 0.9/ΓS ) than
+            UP = 10 pJ and (d) UP = 100 pJ.                       the full Gaussian solution (t1 = t1 = 1.5/ΓS ).
+
+
+sponds to an underestimation of the squeezing by about                                 VII.     CONCLUSION
+1 dB at most. But at 80 pJ and 100 pJ the first-order solu-
+tion underestimates the squeezing by 1.6 dB and 2.3 dB,
+                                                                     In conclusion, we presented a multimode theory of
+respectively. Despite the high level of squeezing, the level
+                                                                  Gaussian state generation for an effective χ(2) interac-
+of pump depletion is negligible. As a result the neglect
+                                                                  tion, in terms of asymptotic-in and -out fields, that in-
+of the non-Gaussian corrections to the vacuum, which
+                                                                  cludes scattering loss and pump depletion. We showed
+are captured by the evolution Eq. (41) of |ψ̃(t)⟩ – and
+                                                                  that the full ket for our system can be written as a Gaus-
+which we expect to only become important when there
+                                                                  sian unitary acting on non-Gaussian ket that satisfies a
+is significant pump depletion [12] – is justified.
+                                                                  Schrödinger equation with an effective Hamiltonian that
+   In Fig. 3(b) the Schmidt number [24] of the squeez-
+                                                                  describes the quantum correlations between the pump
+ing matrix is shown for the same parameters as above.
+                                                                  and the generated light. In order for this to be valid, we
+The first-order solution consistently overestimates the
+                                                                  required that the squeezing, rotation, and displacement
+Schmidt number, and thus the squeezing matrix is more
+                                                                  parameters of the Gaussian unitary were solutions to a
+separable than what is predicted by the first-order solu-
+                                                                  set of coupled differential equations. As an example we
+tion.
+                                                                  studied the lossy generation of a highly squeezed state
+   Each Schmidt mode typically involves light exiting into
+                                                                  using an effective χ(2) interaction in a silicon nitride ring
+both the actual and the phantom waveguide, the latter
+                                                                  resonator, and we compared this full Gaussian solution to
+modelling the scattering of light off the chip. To focus on
+                                                                  a lowest-order Magnus expansion for the ket. In future
+the properties of the light exiting the actual waveguide,
+                                                                  work, we will study the evolution of the non-Gaussian
+we consider a measurement of the second-order correla-
+                                                                  ket, the effects of self- and cross-phase modulation, and
+tion function G(2) (t1 , t2 ) of the squeezed light exiting the
+                                                                  the application to more general resonant systems. This
+actual output channel. It is convenient to introduce a
+                                                                  work opens up a path to study the deterministic genera-
+channel operator ā(x, t) as the Fourier transform of the
+                                                                  tion of non-Gaussian states in resonant systems.
+output operators for the actual waveguide ak as [25]
+                       Z
+                             dk
+            ā(x, t) =     √ ak ei(k−KS )(x−vS t) ,        (67)                    ACKNOWLEDGEMENTS
+                              2π
+where x is the direction of propagation in the waveguide.           We thank Marco Liscidini for valuable discussions. J.
+The operator ā(x, t) is associated with an electric field at     E. S. and C. V. acknowledge the Horizon-Europe re-
+the position x and time t. Just beyond the coupling point         search and innovation program under grant agreement
+between the ring and waveguide (x = 0+ ), the second-             ID: 101070168 (HYPERSPACE) and Natural Sciences
+                                                                                                                                            9
+
+and Engineering Research Council of Canada (NSERC)               for funding.
+
+
+
+
+ [1] R. Schnabel, Squeezed states of light and their applica-         entangled-photon-pair generation from an AlGaAs-on-
+     tions in laser interferometers, Phys. Rep. 684, 1 (2016).        insulator microring resonator, PRX Quantum 2, 010337
+ [2] C. Weedbrook, S. Pirandola, R. Garcı́a-Patrón, N. J.            (2021).
+     Cerf, T. C. Ralph, J. H. Shapiro, and S. Lloyd, Gaussian    [17] V. D. Vaidya, B. Morrison, L. G. Helt, R. Shahrokshahi,
+     quantum information, Rev. Mod. Phys. 84, 621 (2012).             D. H. Mahler, M. J. Collins, K. Tan, J. Lavoie, A. Re-
+ [3] J. Wenger, R. Tualle-Brouri, and P. Grangier, Non-               pingon, M. Menotti, N. Quesada, R. C. Pooser, A. E.
+     gaussian statistics from individual pulses of squeezed           Lita, T. Gerrits, S. W. Nam, and Z. Vernon, Broad-
+     light, Phys. Rev. Lett. 92, 153601 (2004).                       band quadrature-squeezed vacuum and nonclassical pho-
+ [4] M. Endo, R. He, T. Sonoyama, K. Takahashi, T. Kashi-             ton number correlations from a nanophotonic device, Sci-
+     wazaki, T. Umeki, S. Takasu, K. Hattori, D. Fukuda,              ence Advances 6, eaba9186 (2020).
+     K. Fukui, K. Takase, W. Asavanant, P. Marek, R. Filip,      [18] Y. Zhang, M. Menotti, K. Tan, V. D. Vaidya, D. H.
+     and A. Furusawa, Non-gaussian quantum state genera-              Mahler, L. G. Helt, L. Zatti, M. Liscidini, B. Morri-
+     tion by multi-photon subtraction at the telecommunica-           son, and Z. Vernon, Squeezed light from a nanophotonic
+     tion wavelength, Opt. Express 31, 12865 (2023).                  molecule, Nat. Commun. 12, 2233 (2021).
+ [5] R. E. Slusher, P. Grangier, A. LaPorta, B. Yurke, and       [19] M. Liscidini, L. G. Helt, and J. E. Sipe, Asymptotic fields
+     M. J. Potasek, Pulsed squeezed light, Phys. Rev. Lett.           for a hamiltonian treatment of nonlinear electromagnetic
+     59, 2566 (1987).                                                 phenomena, Phys. Rev. A 85, 013833 (2012).
+ [6] Y. Zhao, Y. Okawachi, J. K. Jang, X. Ji, M. Lipson,         [20] Z. Vernon, N. Quesada, M. Liscidini, B. Morrison,
+     and A. L. Gaeta, Near-degenerate quadrature-squeezed             M. Menotti, K. Tan, and J. E. Sipe, Scalable squeezed-
+     vacuum generation on a silicon-nitride chip, Phys. Rev.          light source for continuous-variable quantum sampling,
+     Lett. 124, 193601 (2020).                                        Phys. Rev. Appl. 12, 064024 (2019).
+ [7] Z. Yang, M. Liscidini, and J. E. Sipe, Spontaneous          [21] M. Banic, L. Zatti, M. Liscidini, and J. E. Sipe, Two
+     parametric down-conversion in waveguides: A backward             strategies for modeling nonlinear optics in lossy inte-
+     Heisenberg picture approach, Phys. Rev. A 77, 033808             grated photonic structures, Phys. Rev. A 106, 043707
+     (2008).                                                          (2022).
+ [8] S. Blanes, F. Casas, J. Oteo, and J. Ros, The magnus        [22] N. Quesada, L. G. Helt, M. Menotti, M. Liscidini, and
+     expansion and some of its applications, Physics Reports          J. E. Sipe, Beyond photon pairs—nonlinear quantum
+     470, 151 (2009).                                                 photonics in the high-gain regime: a tutorial, Adv. Opt.
+ [9] G. Triginer, M. D. Vidrighin, N. Quesada, A. Eckstein,           Photon. 14, 291 (2022).
+     M. Moore, W. S. Kolthammer, J. E. Sipe, and I. A.           [23] X. Ma and W. Rhodes, Multimode squeeze operators and
+     Walmsley, Understanding high-gain twin-beam sources              squeezed states, Phys. Rev. A 41, 4625 (1990).
+     using cascaded stimulated emission, Phys. Rev. X 10,        [24] M. Houde and N. Quesada, Waveguided sources of consis-
+     031063 (2020).                                                   tent, single-temporal-mode squeezed light: The good, the
+[10] N. Quesada, L. G. Helt, M. Menotti, M. Liscidini,                bad, and the ugly, AVS Quantum Sci. 5, 011404 (2023).
+     and J. E. Sipe, Beyond photon pairs: Nonlinear quan-        [25] H. Seifoory, Z. Vernon, D. H. Mahler, M. Menotti,
+     tum photonics in the high-gain regime, arXiv:2110.04340          Y. Zhang, and J. E. Sipe, Degenerate squeezing in a dual-
+     (2021).                                                          pumped integrated microresonator: Parasitic processes
+[11] N. Quesada and J. E. Sipe, Effects of time ordering              and their suppression, Phys. Rev. A 105, 033524 (2022).
+     in quantum nonlinear optics, Phys. Rev. A 90, 063840        [26] C. Drago and J. E. Sipe, Taking apart squeezed light,
+     (2014).                                                          arXiv:2310.10919 (2023).
+[12] R. Yanagimoto, E. Ng, A. Yamamura, T. Onodera, L. G.
+     Wright, M. Jankowski, M. M. Fejer, P. L. McMahon, and
+     H. Mabuchi, Onset of non-gaussian quantum physics in           Appendix A: Effective χ(2) interaction in a ring
+     pulsed squeezing with mesoscopic fields, Optica 9, 379                          resonator
+     (2022).
+[13] K. Chinni and N. Quesada, Beyond the parametric ap-
+     proximation: pump depletion, entanglement and squeez-          In this Appendix we derive the nonlinear Hamiltonian
+     ing in macroscopic down-conversion, arXiv:2312.09239        for an effective χ(2) interaction in a ring resonator.
+     (2023).                                                        We begin with the nonlinear Hamiltonian for SFWM
+[14] J. Flórez, J. S. Lundeen, and M. V. Chekhova, Pump         in Eq. (9). In the interaction picture it takes the form
+     depletion in parametric down-conversion with low pump                                  Z
+     energies, Opt. Lett. 45, 4264 (2020).                                          3 X
+[15] S. Ramelow, A. Farsi, Z. Vernon, S. Clemmen, X. Ji, J. E.
+                                                                      H N L (t) = −           dk1 dk2 dk3 dk4
+                                                                                    ϵ0    ′n,n
+     Sipe, M. Liscidini, M. Lipson, and A. L. Gaeta, Strong
+                                                                                     nn′
+     nonlinear coupling in a si3 n4 ring resonator, Phys. Rev.                  ×K         (k1 , k2 , k3 , k4 )e−iΩnn′ (k1 ,k2 ,k3 ,k4 )t
+     Lett. 122, 153906 (2019).
+[16] T. J. Steiner, J. E. Castro, L. Chang, Q. Dang, W. Xie,                    × a†nSk1 a†n′ Sk2 bP k3 bCk4 + H.c.,                    (A1)
+     J. Norman, J. E. Bowers, and G. Moody, Ultrabright
+                                                                 where we have used the definition in Eq. (31), and de-
+                                                                                                                                       10
+
+fined                                                               cylindrical coordinates. For positions inside the ring, the
+                                                                    asymptotic-in pump fields can be written as [21]
+  Ωnn′ (k1 , k2 , k3 , k4 ) ≡ ωCk4 + ωP k3 − ωn′ Sk2 − ωnSk1 .                         r
+                                                          (A2)             in            ℏωP
+                                                                         DP k (r) = −         dP (r⊥ ; ζ)eiζκP FP − (k),  (A7)
+                                                                                          4π
+In order to build the effective χ(2) interaction, the pump
+                                                                                       r
+                                                                           in            ℏωC
+in the mode C is treated classically with a cw field that                DCk   (r) = −        dC (r⊥ ; ζ)eiζκC FC− (k),   (A8)
+                                                                                          4π
+is undepleted. The operators bCk4 are replaced with the
+amplitudes [21]                                                     and the asymptotic-out fields can be written as
+                                                                                       r
+                                                                           out            ℏωS                   (n)
+                                                                                              dS (r⊥ ; ζ)eiζκS FS+ (k).
+                      r
+                          2πPC                                           DnSk (r) = −                                     (A9)
+             bCk4 →              δ(k4 − KC ),          (A3)                                4π
+                         ℏωC vC
+                                                                    Here we introduced the field enhancement factors for the
+where PC is the cw power and vC is the group velocity               actual input channel, FJ− (k), given by [21]
+of the cw pump in the actual input channel. Under this                                 1
+                                                                                           
+                                                                                                   (γJ )
+                                                                                                         ∗       
+approximation, Eq. (A1) becomes                                            FJ− (k) = √                              ,    (A10)
+                                                                                        L vJ (KJ − k) − iΓJ
+                   XZ                 ′
+     H N L (t) = ℏ     dk1 dk2 dk3 Λnn (k1 , k2 , k3 , t)           where J = P, C and γJ is a coupling constant between a
+                    n,n′
+                                                                    discrete ring mode and the continuous waveguide mode
+                                                                    of the actual input channel at the frequency band J.
+               × a†nSk1 a†n′ Sk2 bP k3 + H.c.,             (A4)     The field enhancement factors for the output channels,
+                                                                      (n)
+                                                 ′                  FS+ (k), are given by
+where the effective χ(2) coefficient Λnn (k1 , k2 , k3 , t) is                                       ∗    
+given by                                                                                         γ
+                                                                                                   (n)
+                                                                           (n)       1            S
+                                                                          FS+ (k) = √  (n) (n)              ,      (A11)
+                            r                                                                                
+  nn′                     3     2πPC nn′                                              L vS (KS − k) + iΓS
+Λ (k1 , k2 , k3 , t) = −                   K (k1 , k2 , k3 , KC )
+                         ℏϵ0 ℏωC vC
+                       × e−iΩnn′ (k1 ,k2 ,k3 ,KC )t .        (A5)   where now the coupling constant, group velocity, and
+                                                                    center wavenumber depend on the output channel n. The
+   We consider a ring resonator that is point-coupled to            coupling constant for a given channel is related to the in-
+an actual waveguide that couples the light out of the ring          tensity decay rate into that channel, as introduced earlier
+and a phantom waveguide that handles the scattering                 [21]. For simplicity we assume that the coupling con-
+loss; recall Fig. 1(b). The circumference of the ring is            stants are real.
+given by L = 2πR, where R is its radius. The resonant                 Putting Eqs. (A7), (A8), and (A9) into Eq. (10), the
+wavenumbers for the ring are given by κ, such that κL =             nonlinear coefficient for SFWM can be written as
+2πm, where m is a positive integer. We assume that                          ′                       ℏ 2 ϵ 0 vP vC           (n)∗
+around each ring resonance we can neglect group velocity                K nn (k1 , k2 , k3 , k4 ) =               γ nl ωS LFS+ (k1 )
+                                                                                                        12π 2
+dispersion, and that the dispersion relation is the same                                              (n′ )∗
+                                                                                                  × FS+ (k2 )FP − (k3 )FC− (k4 ),
+for the actual and phantom waveguides. Under these
+assumptions the dispersion relation for either channel is                                                                        (A12)
+given by                                                            where we have introduced the nonlinear parameter [21]
+                                                                               √        Z
+                 ωJ (k) = ωJ + vJ (k − KJ ),               (A6)              3 ωP ωC
+                                                                      γ nl =                  dr⊥ dζΓijkl
+                                                                                                     (3) (r)
+                                                                             4ϵ0 vP vC L ring
+where ωJ is the center frequency of the resonance J, vJ                                  ∗j
+                                                                           × d∗i                    k          l
+                                                                              S (r⊥ ; ζ)dS (r⊥ ; ζ)dP (r⊥ ; ζ)dC (r⊥ ; ζ)e
+                                                                                                                           i∆κζ
+                                                                                                                                ,
+is the group velocity in either channel, and KJ is the
+                                                                                                                             (A13)
+wavenumber for the light in either channel with frequency
+ωJ . The linewidth of the ring resonances are given by              which has units of (Wm)−1 , and ∆k = κP + κC − 2κS is
+2ΓJ , which includes coupling losses to the actual waveg-           the phase matching function.
+uide and scattering losses to the phantom waveguide; the               Now to obtain an effective second-order nonlinear co-
+loaded quality factor is then Qload
+                                 J   = ωJ /(2ΓJ ).                  efficient in the ring, we put Eq. (A12) into Eq. (A5),
+   The asymptotic -in and -out displacement fields are              and find
+defined over all space, but we assume that the nonlin-                                                            r
+                                                                          nn′                    ℏvP vC γ nl ωS L    2πPC
+ear interaction takes place mostly inside the ring res-                 Λ (k1 , k2 , k3 , t) = −
+                                                                                                      4π 2          ℏωC vC
+onator. Thus to obtain the nonlinear coefficient we only
+                                                                                                 (n)∗       (n′ )∗
+require expressions for the field that hold at positions in                                 × FS+ (k1 )FS+ (k2 )FP − (k3 )
+the ring. To simplify the integration of that region of                                                    −iΩnn′ (k1 ,k2 ,k3 ,KC )t
+space, we introduce the coordinates of the ring-frame as                                    × FC− (KC )e                           .
+(r⊥ , ζ), where r⊥ = (ρ, z) and ζ = ϕR, and (ρ, ϕ, z) are                                                                        (A14)
+                                                                                                                              11
+
+Then putting Eq. (A14) into Eq. (A4) we obtain the                  where V (t) and W (t) are found to be given by
+nonlinear Hamiltonian for an effective χ(2) interaction in
+a ring resonator. In order to work with this Hamiltonian                           V (t) ≡ cosh(u(t))eiϕ(t) ,                (B2)
+numerically the wavenumbers in all channels have to be                                                              T
+                                                                                  W (t) ≡ sinh(u(t))eiα(t) e−iϕ (t) ,        (B3)
+discretized. Each waveguide mode has a discrete label
+j, such that its wavenumber is given by kj = 2πmj /L,               and where the Hermitian matrices u(t) and α(t) that
+where mj is an integer mode number, and L is the quan-              appear here come from the polar decomposition of the
+tization length [22]. Using this discrete notation, the             squeezing matrix,
+nonlinear Hamiltonian in Eq. (A4) can be written as
+                           ′
+                                                                                        J (t) = u(t) exp(iα(t)).             (B4)
+                                †    †
+                XX
+  H N L (t) = ℏ       Λnn
+                        ijl (t)anSi an′ Sj bP l + H.c., (A15)
+                n,n′ i,j,l
+                                                                    The matrices V (t) and W (t) in Eqs. (B2) and (B3)
+                                                                    satisfy the constraints
+where we defined
+                   3/2                                                            V (t)V † (t) − W (t)W † (t) = I,         (B5)
+          ′        2π       ′
+     Λnn
+      ijl   (t) ≡        Λnn (k1i , k2j , k3l , t),         (A16)                             T               T
+                                                                                   V (t)W (t) − W (t)V (t) = 0,              (B6)
+                   L
+            ′                                                       which are necessary so that the operators in Eq. (B1)
+where Λnn (k1i , k2j , k3l , t) is the effective second-order       satisfy the usual equal time bosonic commutation rela-
+nonlinear coefficient for the ring given in Eq. (A13), and          tions. Taking the time-derivative of the first line in Eq.
+the operators satisfy the commutation relations                     (B1) we obtain the equation of motion
+                [anJi , a†nJj ] = [bP i , b†P j ] = δij .   (A17)                  da(t)  i
+                                                                                         = Ua† (t)[Ha (t), a]Ua (t),         (B7)
+The Hamiltonian in Eq. (A15) can be written equiva-                                 dt    ℏ
+lently as                                                           where we used Eq. (47). Now using Eqs. (43) and (B1),
+                        X X                                         Eq. (B7) becomes
+          H N L (t) = ℏ       Λ(i,n)(j,n′ )l (t)
+                             (i,n),(j,n′ )   l                           da(t)
+                                                                               = −2iζ(t)W ∗ (t)a − 2iζ(t)V ∗ (t)a† ,         (B8)
+                     × a†S(i,n) a†S(j,n′ ) bP l + H.c..     (A18)         dt
+                                                                    where ζ(t) is given by Eq. (53). On the other hand,
+We then introduce the discrete indices µ and ν that are             taking the time derivative of the second line in Eq. (B1),
+constructed by grouping the labels i and n and j and n′             we have equivalently
+together as
+                                                                                    da(t)   dV (t)    dW (t) †
+                               µ ≡ (i, n),                  (A19)                         =        a+       a .              (B9)
+                                                                                     dt      dt        dt
+                               ν ≡ (j, n′ ),                (A20)
+                                                                    Since the expressions for da(t)/dt in Eq. (B9) and Eq.
+where µ refers to a photon in the output channel n with             (B8) are equivalent, we can equate the elements of the
+wavenumber ki . With this labelling we obtain the Hamil-            matrix coefficients multiplying the a and a† operators in
+tonian in Eq. (32).                                                 each expression, leading to the coupled equations Eqs.
+                                                                    (49) and (50).
+                                                                       Next we turn to deriving Eq. (51) for β(t) and Eq.
+ Appendix B: Deriving equations for the Gaussian
+                                                                    (52) for θb (t). We start by multiplying Eq. (48) by Ub† (t)
+                  parameters
+                                                                    from the left
+   In this Appendix we show how the Eq. (47) for Ua (t)                                    dUb (t)
+                                                                                   iℏUb†           = ℏ[γ(t)]l b†l + H.c.,   (B10)
+leads to the Eqs. (49) and (50) for V (t) and W (t), and                                     dt
+how the Eq. (48) for Ub (t) leads to the Eqs. (51) and              where γ(t) is given by Eq. (54). Putting Eq. (37) into
+(52) for β(t) and θb (t).                                           the left hand side of Eq. (B10) we obtain
+   Beginning with Eq. (47) for Ua (t), it was pointed out
+earlier [23] that, with an Ha (t) of the form (43), its unique                  dDb (t)    dθb (t)
+solution can indeed be written as (36). The task here is                iℏDb†           −ℏ         = ℏ[γ(t)]l b†l + H.c..   (B11)
+                                                                                  dt         dt
+just to identify how the parameters in Ua (t) depend on
+time for a specified Ha (t). The strategy that we employ            The derivative of the displacement operator is obtained
+relies on introducing time-dependent output operators               by disentangling it and using the chain rule. Doing this
+a(t) defined as                                                     we obtain
+                                                                            dDb (t)      d[β(t)]l † i d[β(t)]l ∗
+                   a(t) = Ua† (t)aUa (t)                            iℏDb†           = iℏ         bl + ℏ       [β (t)]l + H.c..
+                                                                              dt            dt       2   dt
+                         = V (t)a + W (t)a† ,                (B1)                                                       (B12)
+                                                                                                                                  12
+
+Putting Eq. (B12) into Eq. (B11) and collecting terms,            and so, given Eq. (C4), we have
+we obtain
+                                                                                              si (t) ≥ 1.                       (C9)
+                                    d[β ∗ (t)]l
+                                                         
+       d[β(t)]l
+0= i            − [γ(t)]l b†l − i               + [γ ∗ (t)]l bl      A first consequence of this, which follows from using
+          dt                             dt
+                                                                  it in Eq. (C1), is that cosh(u(t)) is invertible and then
+                           d[β ∗ (t)]l
+                                             
+    i d[β(t)]l ∗                                   dθb (t)        so is V (t); thus from the numerical polar decomposition
+  +             [β (t)]l −             [β(t)]l −            ,
+    2      dt                  dt                     dt          of V (t) we not only extract a unique Hermitian matrix
+                                                          (B13)   cosh(u(t)) but also a unique unitary matrix eiϕ(t) . A
+                                                                  second consequence is that from Eq. (C8) we can write
+which leads to Eqs. (51) and (52).                                Eq. (C2) as
+                                                                         u(t) = F (t)diag(arccosh(s1 (t)), . . .)F † (t)       (C10)
+Appendix C: Extracting J (t) and ϕ(t) from V (t) and
+                      W (t)                                       where by “arccosh” we mean the non-negative arccosh,
+                                                                  by virtue of Eq. (C4). In summary, then, from the nu-
+                                                                  merical polar decomposition of V (t) we immediately ob-
+  We begin by doing a numerical polar decomposition
+                                                                  tain the unique matrices eiϕ(t) and cosh(u(t)), from the
+of V (t). Note that Eq. (B2) is already in the form of
+                                                                  diagonalization Eq. (C1) we determine the unitary ma-
+a polar decomposition, where cosh(u(t)) is a Hermitian
+                                                                  trix F (t) and the {si (t)}, and then from Eq. (C10) we
+positive semi-definite (PSD) matrix and eiϕ(t) is a unitary
+                                                                  construct u(t).
+matrix. And since the Hermitian PSD matrix in a polar
+                                                                     With u(t) in hand we can then form
+decomposition is always unique, the diagonal elements of
+cosh(u(t)), which we identify by the set {si (t)}, will be                 sinh(u(t)) = sinh F (t)r(t)F † (t)
+                                                                                                              
+unique. Further, since the matrices cosh(u(t)) and u(t)
+commute they can be diagonalized by the same unitary                                     = F (t) sinh(r(t))F † (t),            (C11)
+transformation. So we can write                                   or equivalently
+                                                †
+        cosh(u(t)) = F (t)diag(s1 (t), . . .)F (t).        (C1)        sinh(u(t)) = F (t)diag(sinh(r1 (t)), . . .)F † (t),     (C12)
+and                                                               which can be written as
+                                                                                                                          
+              u(t) = F (t)diag(r1 (t), . . .)F † (t),      (C2)                                           sinh(r1 (t))
+                                                                            sinh(u(t)) = F (t)diag                     ,...
+                                                                                                             r1 (t)
+where the unitary matrix F (t) is the same in both decom-                               × diag(r1 (t), . . .)F † (t),          (C13)
+positions, and the set {ri (t)} are the diagonal elements
+of u(t). Since Eqs. (C1) and (C2) are diagonalizations            or
+of PSD Hermitian matrices, we have
+                                                                                      sinh(u(t)) = K(t)u(t),                   (C14)
+                            si (t) ≥ 0                     (C3)
+                                                                  where we have used Eq. (C2) and let
+and                                                                                   
+                                                                                        sinh(r1 (t))
+                                                                                                            
+                                                                     K(t) = F (t)diag                , . . . F † (t),          (C15)
+                            ri (t) ≥ 0.                    (C4)                            r1 (t)
+                                                                  with
+But a condition stronger than Eq. (C3) holds. Writing
+Eq. (C2) as                                                                                        sinh(ri (t))
+                                                                                        Ki (t) =                               (C16)
+                                                                                                      ri (t)
+                                          †
+                     u(t) = F (t)r(t)F (t),                (C5)
+                                                                  Forming Ki (t) seems problematic if ri (t) = 0. Of course,
+where r(t) is a diagonal matrix we have                           in such an instance the natural choice would be to take
+                                                                  Ki (t) to be the limit of Eq. (C16) as ri (t) → 0, which
+             cosh(u(t)) = cosh F (t)r(t)F † (t)
+                                               
+                                                                  would give Ki (t) = 1. But one could worry about issues
+                          = F (t) cosh(r(t))F † (t),       (C6)   of uniqueness. In fact, we show below that if ri (t) = 0
+                                                                  we can take Ki (t) to be any nonzero number, and the
+or                                                                final result of the following calculation of J (t) will be the
+                                                                  same.
+      cosh(u(t)) = F (t)diag(cosh r1 (t), . . .)F † (t).   (C7)      The matrix K(t) is clearly invertible, since we can
+                                                                  identify
+Comparing with Eq. (C1) we see that                                                                          
+                                                                           −1                     1
+                                                                         K (t) = F (t)diag             , . . . F † (t),   (C17)
+                      si (t) = cosh(ri (t)),               (C8)                                 K1 (t)
+                                                                                                                                             13
+
+and furthermore we can numerically construct K −1 (t)                   and so
+since we know F (t) and the ri (t). From Eq. (C14) we                                       †                                    †
+then have                                                                 Ra (ϕ(t)) = eiak [M (t)]kp (χp (t)+2πmp (t))[M (t)]pl al . (C27)
+
+                  K −1 (t) sinh(u(t)) = u(t),                   (C18)   Now put
+
+and from Eq. (B3) we have                                                         cp (t) = [M † (t)]pl al = [M ∗ (t)]lp al ,              (C28)
+                                        T
+     K −1 (t)W (t) = u(t)eiα(t) e−iϕ (t) = J (t)e−iϕ (t) ,
+                                                            T           so
+                                                      (C19)                                     c†q (t) = [M (t)]jq a†j .                 (C29)
+so
+                                                                        Thus
+                             −1               iϕT (t)
+                 J (t) = K        (t)W (t)e             .       (C20)
+                                                                                                [cp (t), c†q (t)] = δpq ,                 (C30)
+All the quantities on the right-hand-side are known, and
+so we can determine J (t).                                              and the new operators cp (t) and c†q (t) satisfy equal time
+   To investigate what happens to J (t) when some of the                commutation relations of raising and lowering harmonic
+eigenvalues ri (t) are zero, consider                                   oscillator operators. In terms of them, we can write (C27)
+                                                                      as
+         −1                         sinh(r1 (t))                                                †
+       K (t)W (t) = F (t)diag                    ,...                        Ra (ϕ(t)) = eicp (t)(χp (t)+2πmp (t))cp (t)
+                                       K1 (t)
+                                                                                                †                            †
+
+                        × F † (t)eiα(t) e−iϕ (t) ,
+                                                  T
+                                                                (C21)                   = eicp (t)χp (t)cp (t) e2πimp (t)cp (t)cp (t) .   (C31)
+
+where we used Eqs. (C18) and (C12). Now we can                          As basis kets we can choose the eigenkets |{n}, t⟩ of all
+see that for any i for which ri (t) = 0 we will have                    the number operators c†q (t)cq (t), where
+sinh(ri (t))/Ki (t) = 0, regardless of which nonzero value
+Ki (t) is set. So the eigenvalues ri (t) that are zero do not                           c†q (t)cq (t)|{n}, t⟩ = nq |{n}, t⟩.              (C32)
+contribute to the matrix J (t).
+                                                                        Then
+   At this point we have identified J (t) and eiϕ(t) ; we
+still must extract ϕ(t). The ϕ(t) appearing in Ra (ϕ(t))                            †
+                                                                        e2πimp (t)cp (t)cp (t) |{n}, t⟩ = e2πimp (t)np |{n}, t⟩ = |{n}, t⟩,
+of (39) is a Hermitian matrix, and so can be diagonalized,                                                                           (C33)
+          ϕ(t) = M (t)diag(χ1 (t), . . . )M † (t),              (C22)   and since any ket |φ(t)⟩ can be written as a superposition
+where M (t) is a unitary matrix. Thus we have                           of the |{n}, t⟩, from (C31) and (C33) we have
+                                                                                                          †
+                                              †                               Ra (ϕ(t))|φ(t)⟩ = eicp (t)(χp (t)+2πmp (t))cp (t) |φ(t)⟩
+          eiϕ(t) = eiM (t)diag(χ1 (t),...)M (t)
+                                                                                                          †
+
+                 = M (t)eidiag(χ1 (t),...) M † (t).             (C23)                               = eicp (t)χp (t)cp (t) |φ(t)⟩.        (C34)
+
+                                                                        Thus the result we find for Ra (ϕ(t)) will be the same
+And so numerically diagonalizing the identified eiϕ(t)
+                                                                        whether we use Eq. (C22) or Eq. (C25) in identifying the
+would naturally lead us to identify ϕ(t) as given by Eq.
+                                                                        logarithm of eiϕ(t) to construct Ra (ϕ(t)); any logarithm
+(C22). But although the eigenvalues of eiϕ(t) are well-
+                                                                        of eiϕ(t) will do.
+defined, the values of the phases appearing in those eigen-
+values are not. For we could just as easily write
+                                                                               Appendix D: Determining the phase θa (t)
+       eiϕ(t) = M (t)eidiag(χ1 (t)+2πm1 (t),...) M † (t)
+                                                        †
+              = eiM (t)diag(χ1 (t)+2πm1 (t),...)M (t) ,         (C24)      The phase θa (t) appears in the unitary operator Ua (t)
+                                                                        in Eq. (36). In this section we determine this phase
+where m1 (t), etc., are any integers. So instead of Eq.                 following the approach of Ma and Rhodes [23]. Recall
+(C22) we could just as well claim that ϕ(t) is given by                 that Ua (t) is the solution to the Schrödinger equation in
+                                                                        Eq. (47) with the Hamiltonian Ha (t) defined in Eq. (43).
+     ϕ(t) = M (t)diag(χ1 (t) + 2πm1 (t), ...)M † (t).           (C25)
+                                                                        Given the form of Ha (t) in Eq. (43), it follows [23] that
+However, this ambiguity is benign, because both Eq.                     the phase θa (t) is given by
+(C22) and Eq. (C25) lead to the same effective Ra (ϕ(t)).
+                                                                                    1 t
+                                                                                      Z                                        
+                                                                                                                              ′
+  To see this, note that if we posit Eq. (C25) we have                   θa (t) = −         dt′ tr ζ ∗ (t′ ) tanh(u(t′ ))eiα(t ) + c.c.,
+                                                                                    2 −∞
+ [ϕ(t)]kl = [M (t)]kp (χp (t) + 2πmp (t))[M † (t)]pl , (C26)                                                                       (D1)
+                                                                                                                                 14
+
+where ζ(t) is defined in Eq. (53) and is related to the            In what follows we drop the time-dependence of W (t)
+coefficients in Ha (t); recall Eq. (B4) for the polar decom-       and β(t) for convenience. This quantity is conserved if
+position of the squeezing matrix J (t) = u(t) exp(iα(t)).          its time derivative is zero
+   The first-order solution that is discussed in Sec. V is
+valid when the amount of squeezing is small or the nonlin-                                           d⟨Q̂⟩
+                                                                                                           = 0.              (E4)
+earity is weak. In this subsection we show that the phase                                             dt
+θa (t) in Eq. (D1) is approximately zero in the first-order
+solution. In this case because the entries of the squeezing        Putting Eq. (E3) into Eq. (E4) we obtain
+matrix J (t) are small we replace tanh(u(t′ )) exp(iα(t′ ))
+in Eq. (D1) with u(t′ ) exp(iα(t′ )) = J (t′ ) (recall Eq.                                         1
+                                                                                                     trA + B = 0             (E5)
+(B4)). Doing this we can write Eq. (D1) approximately                                              2
+as
+                                                                   where we have defined
+                  1 t
+                   Z
+       θa (t) ≈ −        dt′ tr (ζ ∗ (t′ )J (t′ )) + c.c.. (D2)                         dW †           dW
+                  2 −∞                                                                A≡     W + W†         ,                (E6)
+                                                                                         dt             dt 
+                                                                                        X dβ ∗            dβl
+But from Eq.              (65) we have that J (t′ ) =                                B≡        l
+                                                                                                 βl + βl∗     .              (E7)
+     R t′                                                                                    dt           dt
+−2i −∞ dt′′ ζ(t′′ ). Putting this into Eq. (D2), the term                                      l
+inside the trace is ζ ∗ (t′ )ζ(t′′ ), which is much smaller than   Now we use the differential equations for βl and W in
+unity. Thus θa (t) is approximately zero.                          Eqs. (51) and (50) to simplify A and B. First, to simplify
+                                                                   B we put Eq. (51) into Eq. (E7)
+                                                                            X                              X
+          Appendix E: A conserved quantity                                          γkji βi V ∗ W † kj − i    ∗
+                                                                                                                  βi∗ V W T kj
+                                                                                                                        
+                                                                     B=i                                     γkji
+                                                                            i,k,j                                 i,k,j
+  We define the operator Q̂                                                 X                          X
+                                                                                  [ζ]kj V ∗ W † kj − i   [ζ ∗ ]kj V W T kj
+                                                                                                                    
+                                                                       =i
+                        1 T       T                                         k,j                               k,j
+                    Q̂ ≡ a† a + b† b,                     (E1)                         ∗   †              ∗
+                                                                                                   − itr ζ W V T .
+                                                                                                               
+                        2                                              = itr ζW V                                            (E8)
+which is a conserved quantity with respect to the full
+                                                                   Next we simplify A by putting Eq. (50) into Eq. (E6),
+Hamiltonian in Eq. (32), that is
+                                                                   and obtain
+                      [Q̂, H N L (t)] = 0.                (E2)
+                                                                                     A = 2iV T ζ ∗ W − 2iW † ζV ∗ .          (E9)
+But Q̂ is not a conserved quantity with respect to the             Putting Eqs. (E9) and (E8) into Eq. (E5)
+effective Hamiltonian in Eq. (45). In this Appendix we
+show that the average value of Q̂ in the Gaussian limit                   1 
+                                                                            tr 2iV T ζ ∗ W − 2iW † ζV ∗ + itr ζW ∗ V †
+                                                                                                                      
+is nonetheless a conserved quantity.                                  0=
+                                                                          2
+   We begin with expectation value of Q̂ using the ket in              − itr ζ ∗ W V T
+                                                                                        
+the Gaussian limit given by Eq. (57)
+                                                                       = itr ζ ∗ W V T − itr ζV ∗ W † + itr ζW ∗ V †
+                                                                                                                      
+
+      ⟨Q̂⟩ ≡ ψ G (t) Q̂ ψ G (t)                                        − itr ζ ∗ W V T ,
+                                                                                        
+             1
+           = tr W † (t)W (t) + [β ∗ (t)]T β(t).
+                                
+                                                          (E3)
+             2                                                     and since W ∗ V † = V ∗ W † the right hand side is zero.
+

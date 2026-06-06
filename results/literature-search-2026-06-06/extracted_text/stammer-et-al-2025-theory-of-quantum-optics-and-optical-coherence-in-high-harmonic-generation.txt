@@ -1,0 +1,1719 @@
+                                                  Theory of quantum optics and optical coherence in high harmonic generation
+
+                                                                      Philipp Stammer,1, 2, ∗ Javier Rivera-Dean,1 and Maciej Lewenstein1, 3
+                                                                          1
+                                                                            ICFO-Institut de Ciencies Fotoniques, The Barcelona Institute of
+                                                                            Science and Technology, Castelldefels (Barcelona) 08860, Spain.
+                                                                          2
+                                                                            Atominstitut, Technische Universität Wien, 1020 Vienna, Austria
+                                                                              3
+                                                                                ICREA, Pg. Lluı́s Companys 23, 08010 Barcelona, Spain
+                                                                                                 (Dated: April 21, 2025)
+                                                           Optical coherence encodes information about the correlations of the electromagnetic field. In
+                                                         combination with quantum optical approaches, it allows for the study of the correlations between
+                                                         photons. Since the pioneering papers of Glauber, studies of optical coherence have facilitated many
+                                                         fundamental insights into non-classical signatures of light emission processes, with wide applicability
+                                                         in modern quantum technologies. However, when it comes to the photon up-conversion process of
+
+
+
+
+arXiv:2504.13287v1 [quant-ph] 17 Apr 2025
+                                                         high-order harmonic generation the description has focused on semi-classical methods for decades.
+                                                         In this work, we overcome this limitation and establish a quantum optical theory of field correlations
+                                                         for the process of high harmonic generation (HHG). In effect, we introduce the notion of optical
+                                                         coherence at the intersection of quantum optics and strong laser-driven processes, and obtain the
+                                                         harmonic field correlation functions. In particular, we focus on the first and second order field
+                                                         correlation, which allow to understand the origin of the classical properties of the HHG spectrum,
+                                                         and its departure into the quantum regime. Further, we develop the theory for two-time intensity
+                                                         correlation functions of the harmonic field, and demonstrate the onset of anti-bunching signatures
+                                                         in HHG. We study the correlation functions in the regime of a single, few and many emitters in
+                                                         atomic HHG, showing the transition from quantum to classical signatures in the correlations. Since
+                                                         the theory is generic, it can be extended to multi-time correlation functions of any order, and allows
+                                                         to consider the interaction of light with arbitrary material systems.
+
+
+                                                                 I.     Introduction                          of the scattered photons. In particular, the semi-classical
+                                                                                                              theory fails at relatively high driving laser intensities. In-
+                                               Quantum optical coherence theory was formulated in             terestingly, at very high intensities the semi-classical the-
+                                            the 1960s in a series of papers by Roy J. Glauber [1–             ory becomes accurate again, as we will see below for the
+                                            4], who combined the wave-particle dualism of quantum             case of high-order harmonic generation [9].
+                                            electromagnetic (EM) fields, i.e. Maxwell’s wave descrip-
+                                            tion and the explanation via photons. These papers gave              Coming back to the driven TLS, it was observed that
+                                            birth to contemporary quantum optics, studying field              for increasing laser intensity the spectrum splits into
+                                            properties in terms of correlation functions. Quantum             three peaks, known as the Mollow triplet [10], which orig-
+                                            optics (QO) studies EM field properties constituted out           inates from an additional incoherent contribution to the
+                                            of individual photons, while field correlation functions          spectrum. This incoherent contribution arises from the
+                                            are used to investigate the coherence properties of the           quantum fluctuations of the dipole moment around the
+                                            radiation field [1, 5]. Of special interest are the first and     steady-state average, which are intrinsic to the proba-
+                                            second-order correlation functions, since they are associ-        bilistic nature of the underlying quantum dynamics (note
+                                            ated with the spectrum and photon correlations of the             that the Mollow triplet can also be explained in the
+                                            field, respectively [6].                                          dressed-state picture [11] due to the Autler-Townes ef-
+                                               A well studied paradigmatic example is the process of          fect [12]). However, in addition to the resonance fluo-
+                                            resonance fluorescence [7], in which a two-level system           rescence spectrum, one can look at higher order correla-
+                                            (TLS) is driven by a classical field and scatters radiation       tion functions such as the second order intensity correla-
+                                            into the vacuum. In view of a classical description, the          tion [13], as introduced in the seminal work by Hanbury
+                                            driven emitter is associated with an induced dipole oscil-        Brown and Twiss (HBT) who measured photon bunching
+                                            lator emitting coherent radiation, and the result agrees          in thermal radiation in an intensity interferometer [14].
+                                            with the semi-classical picture for small driving inten-          Measuring the intensity correlation at two detectors with
+                                            sities [8]. However, the TLS is not an oscillator, and            a variable time-delay τ between the detector counts al-
+                                            the quantum mechanical dipole moment is probabilistic             lows for inference about the temporal statistics of the
+                                            such that averages over the dipole operator can acquire           emitted photons (see Fig. 1 for a schematic experimen-
+                                            a stochastic component [6]. In other words, the classical         tal configuration). In particular, the normalized second
+                                            and semi-classical pictures fail when looking carefully, i.e.     order intensity correlation function g (2) (τ ) is used to wit-
+                                            when using the proper observables such as the statistics          ness non-classical signatures in the photon correlations.
+                                                                                                              For instance, the effect of photon anti-bunching is the
+                                                                                                              case in which g (2) (0) < 1, implying anti-correlations be-
+                                                                                                              tween photon counts at the two detectors, and the case
+                                            ∗ philipp.stammer@icfo.eu
+                                                                                                              of g (2) (0) = 0 is evidence for the presence of only a single
+                                                                                                                            2
+
+photon. In fact, the process of resonance fluorescence was       matter interaction, the physically relevant objects origi-
+used to show anti-bunching signatures [7], representing          nate from measurements such as expectation values and
+the first evidence for the existence of optical photons [15].    correlations. While the quantum state in principle allows
+An optical field is said to be non-classical if it shows anti-   to compute any expectation value, it can become chal-
+bunching signatures g (2) (0) < 1 in the measured intensity      lenging when practically doing so, for instance when com-
+correlations. The case of g (2) (0) = 1 is associated to clas-   puting two-time averages. In contrast, this work consid-
+sical coherent radiation, where the photons are not cor-         ers the complementary perspective, namely the perspec-
+related and arrive at random [6], while incoherent (classi-      tive of an observer. With this, we ultimately go beyond
+cal) thermal light in contrast shows bunching properties         the quantum state of the field, as we are interested in
+in the intensity correlations [13], given by g (2) (0) = 2.      the rich manifold of observables. Therefore, in this work,
+   With the advent of high intensity laser sources of fem-       we develop a Heisenberg picture approach for the strong
+tosecond pulse duration, and the associated non-linear           laser driven process of high harmonic generation which
+dynamics of the driven emitter, the semi-classical pic-          allows to investigate observations inaccessible before. A
+ture experienced a resurgence [16]. In this regime of            clear advantage of the Heisenberg approach established
+high intensity laser driven systems the classical and semi-      in this work is that we do not rely on specific assumptions
+classical picture of the light emission process resume its       underlying the strong field driven dynamics, and that ap-
+predictive power. With the observation of high-order             proximate solutions of the Schrödinger equation are not
+harmonics of the driving laser frequency [17, 18], it was        needed. This allows to uncover so far unknown properties
+shown that classical methods can provide a good descrip-         of the harmonic radiation. In particular, we gain further
+tion of the observed harmonic spectrum [19]. Further-            insights into the constitution of previously considered ob-
+more, the subsequent semi-classical approach based on            servables and show where to find new non-classical signa-
+the dipole moment of the laser driven electron has been          tures. Further, we consider novel field observables which
+the theoretical building block to describe the process of        reveal so far unseen non-classical properties in the radi-
+high harmonic generation (HHG) [9]. This is achieved by          ation emitted in HHG. This is achieved by providing a
+considering the dipole moment expectation value of the           description of the first and second order field correlation
+coherently driven electron, while the non-linearity of the       function. With this, we can precisely reveal the classical
+process is encoded in the highly anharmonic oscillation of       and quantum nature of the spectrum and highlight on
+the dipole. In contrast, early attempts to provide a full        the importance of the many atom picture for the success
+quantum optical description of the process of HHG has            of the semi-classical approach to HHG. Our analysis al-
+remained without much attention [20–24]. On the one              lows to study time dependent properties of the field from
+hand, this could be due to the non-perturbative nature           a quantum optical perspective, and particularly enables
+of the HHG process [25–27] while, on the other hand,             to compute two-time averages of the scattered field. Fi-
+the semi-classical approach have shown tremendous suc-           nally, we present the first theoretical prediction of photon
+cess [9]. In this work we will show the underlying reason        anti-bunching in HHG. A schematic configuration of ex-
+for this success in describing experimental observations,        perimental realizations we are concerned with—field and
+and we show where and how the quantum signatures ap-             intensity correlation functions—are presented in Fig 1.
+pear in the field correlation functions.
+                                                                    If we wish to summarize this work in other words, we
+   However, over the last few years, the quantum op-             establish and formulate a full quantum optical theory of
+tical perspective on the process of HHG has experi-              field correlations and coherence for the process of high
+enced an Indian summer, with a variety of proposed,              harmonic generation.
+and some observed deviations from the semi-classical pic-
+ture [28]. So far the majority of this recurring inter-             The remaining article is organized as follows: In Sec. II,
+est was devoted to study and characterize the quantum            we introduce the Heisenberg picture approach to HHG.
+state of the generated harmonics [29–33] or the state of         Followed by Sec. III, where we provide the quantum op-
+the driving field [34–36]. This was done by solving the          tical theory of field correlation functions for high har-
+time-dependent Schrödinger equation for the quantized           monic generation, with the derivation of the first order
+electromagnetic field coupled to matter, ranging from            field correlations in Sec. III A, and show in Sec. III B that
+atoms [34, 37] to solid state systems [38–41]. Focusing          HHG has first order coherence. In Sec. III C we show the
+on the quantum state of the field has shown interest-            connection to the previous quantum optical approaches
+ing aspects of the interplay between strong laser fields         to HHG, and go beyond those results in Sec. III D. We
+and matter. It was theoretically demonstrated that cor-          compare the single with the many atom picture in III E.
+related materials can imprint their correlations on the          Next, Sec. IV discuss the second order field correlation
+quantum state of the harmonics [31], that the quan-              function. In Sec. IV A we consider intensity correlations
+tum state can exhibit squeezing [33, 36], and that post-         in HHG, and in Sec. IV B we likewise discuss the many
+selection schemes allow for the generation of non-classical      atom picture together with the importance for observing
+states [34, 35, 42].                                             non-classical signatures experimentally. In Sec. V A, we
+   While the study of the quantum state of the field is          conclude with the results of this article and provide a
+interesting by itself, and provides insights into the light-     detailed outlook for future studies in Sec. V B.
+                                                                                                                               3
+
+
+
+
+FIG. 1. Here, we schematically show the experimental configurations studied in this work using the process of high harmonic
+generation (HHG). In (a) an illustration of the HHG process, in which an intense driving field induces highly non-linear electron
+dynamics in an atomic, molecular or solid state target leading to the light scattering event of HHG. The generated harmonics
+span over a wide frequency range up to the extreme-ultraviolet regime. In (b) and (c) we show the configuration for measuring
+the first and second order correlation function of the harmonics, respectively. In (b) the spectrum is recorded leading to the
+well known harmonic peaks, while in (c) the intensity correlation of a single harmonic shows anti-correlated photon emission.
+
+
+       II.   QO-HHG in the Heisenberg picture                     the field plus the HHG medium is given by
+
+                                                                                    H = HF + HS + HI ,                       (1)
+                                                                                           qc
+                                                                                         2 X
+  In this work we are interested in formulating a full
+                                                                                                   ℏωq,λ a†q,λ aq,λ ,
+                                                                                         X
+quantum optical theory of field correlation functions for                         HF =                                       (2)
+                                                                                         λ=1 q=1
+the process of high harmonic generation (HHG), and to
+develop the corresponding quantum theory of optical co-           where HF and HS are the free Hamiltonians of the field
+herence. Previous studies on the quantum optical de-              and the matter system, respectively. For the field modes
+scription of HHG have focused on finding the final field          we consider the driving field mode q = 1 until the HHG
+state after the interaction with the material system, from        cut-off at qc . The sum over λ accounts for the two
+which time-independent expectation values of field oper-          possible polarization directions of the field. The sys-
+ators are obtained. However, a substantial part in un-            tem Hamiltonian HS of the HHG medium consists of
+derstanding the radiation properties is missing, which            N charges, e.g. electrons, which are driven by the in-
+includes information about two-time averages and oper-            tense laser field. To allow for arbitrary matter systems,
+ator products encoded in the field correlation functions.         and for the sake of generality, we consider a generic sys-
+Furthermore, there is yet no existing quantum theory of           tem Hamiltonian HS , which will be specified for concrete
+optical coherence for the process of harmonic generation.         cases later on. This could, for instance, be a single ac-
+                                                                  tive electron from a gas phase atom or a complex solid
+   We are therefore interested in providing an alterna-           state system with non-trivial characteristics. The light-
+tive quantum optical description for the process of HHG.          matter interaction Hamiltonian HI is given within the
+This is achieved by developing a Heisenberg picture ap-           dipole approximation and length-gauge where each elec-
+proach, such that two point field expectation values can          tron (i) is coupled to the electric field operator EQ via
+be obtained straightforwardly, and allows to study the            its dipole moment operator di (for a detailed derivation
+phenomena of correlation functions of the radiation in            of the interaction Hamiltonian see Ref. [37])
+HHG. To provide the quantum optical theory of HHG in
+the Heisenberg picture we shall first define the Hamilto-                                       N
+                                                                                                X
+nians governing the dynamics of the optical field inter-                               HI = −         di · EQ ,              (3)
+acting with the HHG medium. The total Hamiltonian of                                            i=1
+                                                                                                                                 4
+
+and the electric field operator is given by                           dipole moment. Before proceeding with the derivation,
+                       X√                                             we shall emphasize on an interesting aspect of the source
+           EQ = −ig̃         qϵq,λ (a†q,λ − aq,λ ),            (4)    term in Eq. (9), which concerns the temporal integral
+                         q,λ                                          over the time-dependent dipole moment. It shows that
+              p                                                       the field at time t does not only depend on the source at
+where g̃ ≡ ℏω/(2V ϵ0 ) is the coupling constant of the                this particular time t, but depends on the entire history
+light-matter interaction with the quantization volume V ,             of the dipole from t0 to t, emphasizing non-Markovian
+ϵq,λ is the unit polarization vector of harmonic mode q               memory effects in the dynamics [43, 44].
+                           (†)                                           In order to compute expectation values for the field
+with polarization λ and aq,λ is the annihilation (creation)
+operator of the respective field mode. The initial bound-             we need an expression for the dipole moment operator in
+ary conditions imposed on the experiment are given by a               the Heisenberg picture d(t), since the trace in Eq. (6) is
+coherent state for the fundamental mode |α⟩ correspond-               performed over the matter and field degrees of freedom.
+ing to a classical driving laser field, while the harmonic            However, the exact solution of the Heisenberg EOM for
+modes q ≥ 2 are in the vacuum |0q ⟩. The HHG medium                   the dipole moment is involved [45, 46], and does not allow
+is initially in the ground state of the system Hamiltonian            to gain intuitive insights into the dynamics. This is due
+HS such that HS |ḡ⟩ = Eg |ḡ⟩ is the eigenstate of lowest            to the backactions between the light and matter onto each
+energy Eg . The total initial state is therefore given by             other. The light field induces a charge dynamics which in
+                                                                      turn changes the field, which again influences the charge
+              |Ψ(0)⟩ = |α⟩ ⊗ |{0q }⟩ ⊗ |ḡ⟩ ,           (5)           dynamics, and consequently approximations are needed
+                N                                                     in this hierarchy. In any case, the presence of the intense
+where |{0q }⟩ = q≥2 |0q ⟩ is the initial state of all har-            driving field allows to perform approximations based on
+monics.                                                               physical arguments such that an expression for the time-
+  Now, our aim is to compute field observables, such as               dependent dipole moment can be obtained.
+two-time averages. In the Heisenberg picture the opera-                  For the EOM of the dipole moment operator it is im-
+tors acting on the field are time-dependent O(t, t′ ), and            portant to note that the charge distribution is driven
+the expectation values are evaluated over the initial state           by an intense classical light field, which can be included
+                                                                      in the Hamiltonian by means of the classical electric
+                ⟨O(t, t′ )⟩ = Tr[O(t, t′ )ρ(0)],               (6)    field Ecl (t) coupled to the dipole moment operator (for
+                                                                      a derivation of this classical interaction Hamiltonian we
+where ρ(0) is the initial state of the total system (for the
+                                                                      refer to Appendix A 2)
+pure state in Eq. (5) it is given by ρ(0) = |Ψ(0)⟩⟨Ψ(0)|),
+and the trace is performed over matter and field degrees                                             N
+of freedom. The time-dependent field operator in the                                 HI,cl (t) = −
+                                                                                                     X
+                                                                                                           di · Ecl (t),      (10)
+Heisenberg picture is given by
+                                                                                                     i=1
+
+                aq,λ (t) = U † (t)aq,λ (0)U (t),               (7)    where the classical electric field is given by
+where U (t) is the time-evolution operator governed by
+                                                                           Ecl (t) = Tr[EQ (t)ρ(0)] = E1,λ sin[ωt − φ],       (11)
+the total Hamiltonian. To obtain the Heisenberg equa-
+tion of motion (EOM), we differentiate (7) and find (see
+                                                                      where E1,λ = 2ℏg|α|ϵ1,λ is the classical electric field am-
+Appendix A 1 for a detailed derivation)
+                                                                      plitude and φ = arg(α) is the phase of the coherent state
+                                        N                             amplitude α = |α|eiφ of the driving laser. In analogy to
+   d                                √ X                               the Heisenberg EOM for the field operator, the differen-
+      aq,λ (t) = −iωq,λ aq,λ (t) + g q     ϵq,λ · di (t),      (8)
+   dt                                  i=1                            tial equation for the dipole moment is given by
+
+where di (t) = U † (t)di (0)U (t) is the dipole moment                             d          i
+                                                                                      di (t) = U † (t)[H(t), di ]U (t),       (12)
+operator
+p         in the Heisenberg picture and g ≡ g̃/ℏ =                                 dt         ℏ
+   ω/(2V ℏϵ0 ). Solving the EOM of the field operator we
+find                                                                  where now H(t) is the total Hamiltonian including the
+                                                                      semi-classical interaction HI,cl (t).
+   aq,λ (t) =aq,λ e−iωq,λ t                                     (9)      To solve the EOM we need to solve the commutator
+                     Z t                     N                        with the total Hamiltonian, which turns out to be a dif-
+                  √                       ′ X
+                                                                      ficult task due to the aforementioned backaction of the
+             +g q         dt′ e−iωq,λ (t−t )   ϵq,λ · di (t′ ).
+                        t0                  i=1
+                                                                      light field and charge. However, owing to the fact that
+                                                                      the classical light field is of high intensity we can neglect
+   The first term in the expression is the evolution of the           the contribution of the backaction, and only consider the
+free field, without the presence of any charge distribu-              semi-classical interaction of the classical field with the
+tion, while the second term is the contribution to the                dipole moment [46]. Thus, the Hamiltonian in the com-
+scattered field due to the presence of a time-dependent               mutator of Eq. (12) is approximated by the semi-classical
+                                                                                                                                   5
+
+Hamiltonian                                                                 We further emphasize that photon detection theory is
+                                                                         particularly important for measuring the power spectrum
+                                            N
+                                            X                            of a light field, which can be shown to be strongly re-
+   Hsc (t) = HS + HI,cl (t) = HS −                di · Ecl (t).   (13)   lated to the auto-correlation function of the underlying
+                                            i=1
+                                                                         process [5]. For stationary random processes, the auto-
+  This semi-classical Hamiltonian is the conventional one                correlation function of the process and its power spectral
+used to describe the process of HHG in the semi-classical                density form a Fourier transform pair, and is known as
+theory [9]. Therefore, instead of explicitly solving the                 the Wiener-Khintchine theorem [53, 54]. However, not
+exact Heisenberg EOM for the dipole moment, we use the                   all light fields are stationary such that a time-dependent
+formal solution in this approximate semi-classical frame                 spectrum, introduced by Eberly and Wódkiewicz, is the
+                                                                         proper ”physical spectrum” [55]. Furthermore, it is in-
+                               †
+                     di (t) = Usc (t)di (0)Usc (t),               (14)   herently related to the filter bandwidth used in the spe-
+                                                                         cific experimental implementation to measure the spec-
+with the semi-classical propagator                                       trum.
+                                                                            Therefore, for the transient processes considered in this
+                             i t ′
+                              Z             
+                                           ′                             work, there are two approaches to characterize the spec-
+           Usc (t) = T exp −      dt Hsc (t ) ,                   (15)
+                             ℏ t0                                        trum of the field: (i) we measure all photons emitted at
+                                                                         some frequency ω, given a narrow spectral filter and col-
+where T indicates time-ordering. Now, we are equipped                    lecting over a long enough temporal average (”quasi sta-
+with everything to look at the coherence properties of the               tionary case”), or (ii) we have a broader filter and mea-
+harmonic radiation. We have the Heisenberg operators                     sure the time-dependent spectrum of light [55, 56]. Note
+for the field in Eq. (9), with the time-dependent dipole                 that the time-dependent physical spectrum by Eberly
+moment source term. We have used the intense driving                     and Wódkiewicz is equivalent to the power spectrum
+field to our advantage, and consider the dipole moment                   based on the Wiener-Khintchine theorem in the case of
+to be essentially driven by the semi-classical interaction               an ideal (zero bandwidth) spectral filter for stationary
+only, which encodes all the non-linearity of the HHG pro-                fields [55].
+cess in the dipole oscillations. We shall now proceed by                    Together with the quantum optical description of HHG
+computing the field correlation functions, allowing us to                in the Heisenberg picture from Sec. II, we can compute
+gain further insights into the distinction of the classical              the first order correlation function and hence the HHG
+and quantum signatures of the field observables.                         spectrum. We will discuss the different contributions
+                                                                         to the scattered field, i.e. the coherent and incoherent
+                                                                         emission, as well as the role of the single, few and many
+ III.    Quantum theory of optical coherence in high                     atom picture. This provides further insights on why semi-
+                   harmonic generation                                   classical approaches have been successful for decades, and
+                                                                         how non-classical signatures appear in the observations.
+  Of special interest for characterizing the radiation field
+are the first-order and second-order correlation functions.
+For a single mode they are respectively given by                         A.   First order correlations and the HHG spectrum
+        (1)                  †
+    G         (t, t + τ ) ∝ a (t)a(t + τ ) ,                      (16)
+        (2)                  †    †                                         To obtain the first order field correlation function, we
+    G         (t, t + τ ) ∝ a (t)a (t + τ )a(t + τ )a(t) ,        (17)   shall relate the scattered field to the source of the ra-
+                                                                         diation, such that the correlation functions can be ex-
+and are related to the spectrum, and the photon statis-
+                                                                         pressed in terms of atomic operators. Then, we can solve
+tics, respectively. The field operators a(†) (t) in the two-
+                                                                         the atomic dynamics driven by a classical intense field
+time averages are defined in the Heisenberg representa-
+                                                                         with established methods from strongly laser driven sys-
+tion. The field correlation functions are given in normal
+                                                                         tems [57, 58].
+ordering due to its relation to the type of measurement
+                                                                            To compute field expectation values we first decompose
+using photodetection, where it can be shown that every
+                                                                         the electric field operator in the Heisenberg picture into,
+measurement using photodetection must be represented
+                                                                         EQ (t) = E(+) (t) + E(−) (t), with a positive and negative
+in normal ordering [5]. It is noteworthy, that the theory
+                                                                         field component
+of photon detection and photon counting is well under-
+stood with a rich history in quantum optics [1–3, 47–51],                                              X√
+and especially the quantum theory of optical coherence                                E(+) (t) = iℏg         qϵq,λ aq,λ (t),    (18)
+by Glauber was developed based on photon detection                                                     q,λ
+and field correlation functions [1–3]. Note that in par-                                        h        i†
+allel E. C. G. Sudarshan developed a quantum theoretic                                E(−) (t) = E(+) (t) ,                     (19)
+approach to optical coherence based on phase-space dis-
+tributions [52].                                                         with the Heisenberg operator aq (t) from Eq. (9), which
+                                                                                                                                             6
+
+allows to write the field operator as
+                                    (+)
+                  E(+) (t) = Ef (t) + E(+)
+                                       s (t),                          (20)
+
+with
+              (+)
+                                 X√
+            Ef (t) = iℏg                  qϵq,λ aq,λ e−iωq,λ t ,       (21)
+                                  q,λ
+
+and
+                                          Z t
+                          X                                     ′
+       E(+)
+        s (t) = iℏg
+                    2
+                                 qϵq,λ          dt′ e−iωq,λ (t−t )     (22)
+                          q,λ              t0
+
+                        N
+                        X
+                    ×         ϵq,λ · di (t′ ).
+                        i=1
+
+            (+)
+  Here, Ef (t) describes the evolution of the free field
+                                                (+)
+in the absence of sources, and Es (t) is the source field
+radiated by the atomic scatterer. From now on, we im-
+plicitly assume that the driving field is linearly polarized
+such that only one polarization component contributes
+to the dynamics, and we therefore omit the polarization                        FIG. 2. In (a) we show the expectation value of the total scat-
+                                                                                               (+)             (+)
+index λ in the remainder of the manuscript. Yet, we note
+                                                                                                        P
+                                                                               tered field ⟨Es (t)⟩ ≡ q ⟨Es,q (t)⟩, and in (b) the Fourier
+that the theory allows to consider arbitrary polarization                      transform (FT) of the scattered field from (a). The FT of the
+configurations of the fields (for a recent quantum optical                     field in (a) shows the typical characteristics of an HHG spec-
+approach using structured light we refer to Ref. [59]).                        trum. The field parameters were chosen as E0 = 0.053 a.u.
+   We can now compute normal-ordered correlation func-                         and ωL = 0.057 a.u., while for the atomic ionization potential
+tions, such as field                                                           Ip = 0.5 a.u., corresponding to that of hydrogen.
+
+             G(1) (t1 , t2 ) ≡ ⟨E (−) (t1 )E (+) (t2 )⟩ ,              (23)
+                                                                               is in full agreement and represents classical coherent ra-
+and intensity correlations                                                     diation. In Fig. 2 (a) we present the expectation value of
+                                                                               the scattered field summed over all harmonic frequencies,
+   G(2) (t1 , t2 ) ≡ ⟨E (−) (t1 )E (−) (t2 )E (+) (t2 )E (+) (t1 )⟩ .              (+)       P      (+)
+                                                                                ⟨Es (t)⟩ ≡ q ⟨Es,q (t)⟩. It shows the expected domi-
+                                                                   (24)        nant oscillation on the fundamental driving frequency, in
+                                                                               addition to the anharmonic contributions to the oscilla-
+  However, first, we want to consider the mean value of                        tions of the scattered field. The corresponding classical
+the scattered field. Since the harmonics are initially in                      spectrum is obtained from the Fourier transform of the
+the vacuum, the only contribution to the field is given by                     time-dependent field, and shown in Fig. 2 (b), with the
+the source term                                                                well known structure of a generic HHG spectrum. It in-
+                                        N
+                                        X                                      cludes the HHG plateau as well as the typical cut-off.
+   lim ⟨E(+)           2
+         s,q (t)⟩ = iℏg qϵq                   ϵq · ⟨di (ωq )⟩ e−iωq t , (25)      Nevertheless, this essentially (semi)-classical picture is
+  t→∞                                                                          not complete. Due to the quantum mechanical nature of
+                                        i=1
+                                                                               the dipole moment operator we have a probabilistic pro-
+where we have only considered Rthe scattered field of the                      cess, and the oscillator amplitude can in principle acquire
+                                   ∞
+q-th harmonic and ⟨di (ωq )⟩ = −∞ dt ⟨di (t)⟩ eiωq t is the                    a stochastic component. Therefore, in general, the HHG
+Fourier component of the time-dependent dipole moment                          spectrum should not be calculated from the mean value
+expectation value. As expected, it shows that the field                        of the scattered field, but from the Fourier transform of
+components oscillate at the harmonic frequencies ωq , in                       the auto-correlation function in Eq. (23). Hence, we con-
+agreement with the established semi-classical result for                       sider the first order correlation function of one harmonic
+classical coherent harmonic radiation [9]. The dynami-                         mode
+cal picture is given by coherent emission from the induced
+dipole moment, and the high-order components are given                                  G(1) (t, t + τ ) = ℏ2 g 2 q a†q (t)aq (t + τ ) .   (26)
+by the non-linear oscillations of the dipole. In comparison
+with the classical and the semi-classical picture, which                         Using the field correlation function, we shall now com-
+are given by a dipole oscillator or the dipole moment ex-                      pute the proper HHG spectrum, and study the coherence
+pectation value, respectively, this quantum optical result                     properties of the harmonic radiation. Using Eq. (9) we
+                                                                                                                                                     7
+
+have                                                                                     Fourier transform of the time-dependent dipole moment
+                                           Z t          Z t+τ                            expectation value. This is akin to the HHG spectrum
+⟨a†q (t)aq (t + τ )⟩ = g 2 qe−iωq τ               dt1              dt2 e−iωq (t1 −t2 )   on the semi-classical description, and we shall see below
+                                             t0             t0                           its fundamental connection. Furthermore, we see that in
+            N
+            X                                                                            addition to the coherent contribution of the dipole ex-
+      ×           ⟨ḡ| [ϵq · di (t1 )][ϵq · dj (t2 )] |ḡ⟩ ,                     (27)    pectation value, there is an incoherent contribution from
+          i,j=1                                                                          the correlations of the two-time dipole moment fluctua-
+                                                                                         tions around the mean. While the coherent contribution
+where we have used that the field of the harmonic modes                                  to the field gives essentially the same result as a classical
+q ≥ 2 are initially in the vacuum, and therefore the ex-                                 dipole undergoing non-linear oscillations, or like estab-
+pectation value of the free evolution vanishes. We can see                               lished semi-classical models, it is expected that the inco-
+that the first order correlation function of the harmonic                                herent part leads to deviations from the classical picture.
+radiation, and consequently also the HHG spectrum, is                                    This is because the typical classical and semi-classical
+determined by the dipole moment correlations. This in-                                   models do not go beyond mean field descriptions, while
+volves dipole correlations between different emitters i and                              the incoherent part due to the dipole fluctuations takes
+j, as well as correlations at different times from the same                              into account the full probabilistic quantum nature of the
+emitter. Since the main goal of this work is to intro-                                   process.
+duce the concepts and methods of the quantum optical                                        We are now ready to compute the HHG spectrum using
+approach to optical coherence for HHG by building the                                    the first order correlation function [5, 60, 61]. Therefore,
+general theory, we mainly focus on atomic gas targets.                                   we will make use of the Wiener-Khintchine theorem for
+All notions of field correlations functions developed in                                 fluctuating processes [53, 54], stating that for station-
+this work can later be used for all other target systems.                                ary random processes the power spectral density S(ω)
+   To get an idea about the first order correlation func-                                and the first order auto-correlation function G(1) (t, t + τ )
+tion, we consider the simplest scenario of uncorrelated                                  are a Fourier transform pair. Consequently, we con-
+atoms such that the dipole moments of different electrons                                sider the long time limit of the auto-correlation function
+are independent. We further consider the single atom                                     limt→∞ G(1) (t, t + τ ) ≡ G(1) (τ ), and assume that the
+picture N = 1, which, however, is justified due to the                                   emitted field becomes quasi-stationary in the sense that
+agreement with semi-classical perspective of HHG [45],                                   the two-time average only depends on the time-difference.
+and it will become clear in Sec. III E how the many atom                                 This is justified when the driving pulse consists of enough
+case differs. Therefore, we have for the expectation value                               field cycles, such that the time of averaging does not de-
+of the matter part in Eq. (27), along the laser polariza-                                pend on the temporal location within the pulse. The
+tion direction, ϵq · di (t) ≡ di (t);                                                    Wiener-Khintchine theorem, together with the results
+  ⟨d(t1 )d(t2 )⟩ = ⟨d(t1 )⟩ ⟨d(t2 )⟩ + ⟨∆d(t1 )∆d(t2 )⟩ ,                        (28)    from Eq. (29), can then be used to compute the cor-
+                                                                                         responding HHG spectrum S(ω), and is given by
+where we have defined the fluctuations of the dipole                                                        Z ∞                             
+around its mean ∆d(t) ≡ d(t) − ⟨d(t)⟩. Consequently,                                                   1                     (1)         iωτ
+                                                                                              S(ω) = Re           dτ lim G (t, t + τ )e           (33)
+the first order correlation function can be decomposed                                                 π       0      t→∞
+into two terms                                                                                      = Scoh (ω) + Sinc (ω),                        (34)
+                                              (1)                  (1)
+             lim G(1) (t, t + τ ) ≡ Gcoh (τ ) + Ginc (τ ),                       (29)    which alike is decomposed into a coherent and an inco-
+            t→∞
+                                                                                         herent contribution. We shall first look at the coherent
+where we have considered the long time limit as t → ∞,                                   part of the power spectrum and find that
+and we have defined
+                                                                                                                               Z ∞
+                                                                                                      ℏ2 g 4 q 2
+                                                                                                                                                 
+                                  Z ∞                  2                                                                   2
+     (1)                                                                                  Scoh (ω) =             |⟨d(ωq )⟩| Re      dτ ei(ω−ωq )τ (35)
+   Gcoh (τ ) ≡ ℏ2 g 4 q 2 e−iωq τ     dte−iωq t ⟨d(t)⟩   (30)                                            π                       0
+                                            −∞
+                                                                                                                        2
+                                                        2                                          = ℏ2 g 4 q 2 |⟨d(ωq )⟩| δ(ω − ωq ).            (36)
+                   = ℏ2 g 4 q 2 e−iωq τ |⟨d(ωq )⟩| ,                             (31)
+and                                                                                         It shows that the HHG spectrum consists of peaks at
+                                       Z ∞          Z ∞                                  frequencies ωq = qω, with a weight given by the Fourier
+      (1)
+  Ginc (τ ) ≡ ℏ2 g 4 q 2 e−iωq τ              dt1                dt2 e−iωq (t1 −t2 )     transform of the time dependent dipole moment expec-
+                                         −∞             −∞                               tation value, while the dipole moment takes into account
+                × ⟨∆d(t1 )∆d(t2 )⟩ ,                                             (32)    the symmetry of the process leading to the observation
+                                                                                         of only odd harmonics due to conservation of parity and
+which are the coherent and incoherent contribution to the                                energy [62]. In Fig. 3 (a) we show the coherent contribu-
+first order correlation function, respectively. We have fur-                             tion to the spectrum from Eq. (35), exhibiting the well
+ther assumed that the initial time t0 → ∞ is way before                                  known plateau and cut-off structure as well as peaks at
+the pulse starts. We can see that the coherent contribu-                                 odd multiple of the driving frequency. The width of the
+tion to the first order correlation is determined by the                                 peaks in the harmonic spectrum is determined by the
+                                                                                                                                              8
+
+Fourier components of the dipole moment expectation                                    Using that G(1) (τ ) = e−iωq τ G(1) (0) in the long time
+value, in which the envelope of the driving field can be                            limit, as we can see from Eq. (30) and (32), we find
+taken into account to mimic the bandwidth of the driving
+field [34, 37].                                                                                        lim g (1) (t, t + τ ) = 1,          (42)
+   We shall make a few comments on how we obtained                                                    t→∞
+
+the HHG spectrum. In Eq. (29) we have considered                                    showing that HHG possess first order optical coherence,
+the long-time limit of the auto-correlation function, such                          and implies that harmonic radiation shows Young type
+that we can consider the light field obtained from the                              interference in which the amplitudes of two fields are su-
+dipole source as ”quasi-stationary”, in the sense that for                          perposed and interfere [63, 64].
+long enough driving pulses the emission does not change.
+Consequently, the auto-correlation function, as given in
+Eq. (30) and Eq. (32), only depends on the time differ-                                    C.   Connection to previous approaches
+ence τ . Further, in Eq. (26) we have considered the cor-
+relation function G(1) (t, t + τ ) only for a given harmonic
+                                                                                       In this section, we shall make a little detour to com-
+mode q, which corresponds to the implicit assumption
+                                                                                    ment on an interesting observation with respect to the
+that the spectral measurement includes a narrow band-
+                                                                                    previous quantum optical approaches to HHG [34, 35,
+width filter (in the ideal case infinitesimally small, cor-
+                                                                                    65]. Our observation for the coherent contribution to
+responding to a delta function). The ”quasi-stationary”
+                                                                                    the spectrum is in agreement with the previous quantum
+limit, together with the narrow bandwidth filter, allows
+                                                                                    optical theory of HHG within the Schrödinger picture,
+to use of the Wiener-Khintchine theorem for calculating
+                                                                                    in which an approximate solution of the time-dependent
+the HHG spectrum since it is equivalent to the time-
+                                                                                    state of the field was derived [34, 35]. This is obtained in
+dependent spectrum by Eberly and Wódkiewicz in this
+                                                                                    the limit of negligible ground state population of the elec-
+case [55].
+                                                                                    tron, corresponding to vanishing dipole moment correla-
+                                                                                    tions [45]. In this picture the approximate Hamiltonian
+           B.     First order coherence in HHG                                      of the light-matter interaction, after unitary transforma-
+                                                                                    tion into a suitable frame [34], is given by
+   Having computed the first order field correlation func-                                         Happ. (t) = − ⟨d(t)⟩ · EQ (t),          (43)
+tion in the previous section, we shall now look at the
+first order coherence property of the generated harmon-                             where ⟨d(t)⟩ = ⟨g| d(t) |g⟩ is the time-dependent dipole
+ics. For the first order correlation function it holds that                         moment expectation value evaluated in the electronic
+                          2                                                         ground state of a single atom. This simplified interac-
+        G(1) (t1 , t2 )       ≤ G(1) (t1 , t1 )G(1) (t2 , t2 ) ,             (37)   tion Hamiltonian has the crucial difference to Eq. (3),
+                                                                                    that instead of the dipole moment operator, the expec-
+and a field is said to possesses first order optical coher-                         tation value of the dipole moment is coupled to the field.
+ence when the equality holds. Defining the normalized                               This implies that the final field state propagated by this
+correlation function                                                                Hamiltonian Happ. (t) can be obtained analytically exact,
+                                       G(1) (t1 , t2 )                              giving rise to an expression linear in the field operators.
+      g (1) (t1 , t2 ) ≡                                       1/2
+                                                                     ,       (38)   The corresponding solution for the same initial state as
+                              G(1) (t1 , t1 )G(1) (t2 , t2 )                        in Eq. (5) is given by a product of coherent states
+the condition of first order optical coherence is given by                                                             qc
+                                                                                                                       O
+                                                                                                     |Φ⟩ = |α + χ1 ⟩         |χq ⟩ ,       (44)
+                              g (1) (t1 , t2 ) = 1.                          (39)                                      q=2
+
+  Now, for the correlation function of the harmonics in                             where the coherent state amplitudes are given by
+Eq. (26), we have to compute                                                                               Z ∞
+                                                                                                       √
+                                     ⟨a†q (t1 )aq (t2 )⟩                                        χq = g q       dt ⟨d(t)⟩ e−iωq t .         (45)
+  g (1) (t1 , t2 ) =                                                 1/2
+                                                                         ,   (40)                             −∞
+                       ⟨a†q (t1 )aq (t1 )⟩ ⟨a†q (t2 )aq (t2 )⟩
+                                                                                       The underlying assumption to obtain this expression
+which boils down to consider dipole moment expectation                              are negligible dipole moment fluctuations, and we can
+values. Considering t1 = t, and t2 = t + τ as well as the                           see that only the coherent contribution to the spectrum
+long time limit from Eq. (29), we have for the normalized                           is reproduced, which corresponds to vanishing dipole mo-
+first order correlation function                                                    ment correlations at different times [36, 42]. The observa-
+                                                                                    tion that under these approximations the result is given
+                                     (1)            (1)
+                                  Gcoh (τ ) + Ginc (τ )                             by a product of coherent states [34], there is a widely
+                g (1) (τ ) =                                   .             (41)
+                                     (1)            (1)
+                                  Gcoh (0) + Ginc (0)                               implemented approximation in quantum optical HHG,
+                                                                                    namely that coherent input states (coherent drive and
+                                                                                                                              9
+
+
+
+
+FIG. 3. Here we show in (a) the coherent spectrum Scoh (ω) from Eq. (35), in (b) the incoherent spectrum Sinc (ω) from Eq. (49).
+In (c) the total spectrum of both contributions are summed (with the individual contributions in faded colors). In (d) we show
+the incoherent part of the spectrum Sinc (ω) for a few specific electron canonical momenta p. The field parameters are the same
+as those in Fig. 2.
+
+
+vacuum for the harmonics), are mapped to coherent out-            to classical coherent radiation. The previous section III C
+put states [34]. Even in the case of non-classical driving        has shown the relation to the quantum state of the field,
+fields [33, 59, 65, 66] this approximation is used for the        showing that the result is essentially classical by means
+derivation of the final field state.                              of product coherent states. The results of this section go
+   Since the presence of these dipole moment correlations         beyond the regime in which coherent input states map to
+is directly linked to the population transfer during the          coherent output states, as often assumed in the quantum
+electron dynamics, it was shown that higher order con-            optics approach to HHG [34, 65].
+tributions beyond the mean field evolution arise if the              Now, we shall go beyond the classical regime and con-
+depletion of the electronic ground state is taken into ac-        sider the incoherent contribution to the field arising from
+count [36]. On the level of the quantum state, this leads         the dipole moment fluctuations. Evaluating the two-time
+to entanglement and squeezing across all modes [36]. We           dipole moment fluctuations in Eq. (28), we find
+note that everything that comes now goes beyond this                                     Z
+assumption of vanishing dipole fluctuations, and explic-             ⟨∆d(t1 )∆d(t2 )⟩ = dv ⟨g| d(t1 ) |v⟩ ⟨v| d(t2 ) |g⟩ , (46)
+itly includes the dipole moment correlations, such that
+we are independent of the approximation and the under-            where we have used the R resolution of the identity for the
+lying assumptions in these derivations.                           electron 1 = |g⟩⟨g| + dv |v⟩⟨v|. Note that we have ne-
+                                                                  glected bound excited states of the electron since those
+                                                                  can normally be neglected in the process of HHG, al-
+      D.   Including dipole moment correlations                   though the presence of a cavity [32] or an initial super-
+                                                                  position state can change the situation [67], and excited
+                                                                  electronic states can become relevant. This can now be
+   In Sec. III A we have discussed the coherent contribu-         used to compute the incoherent contribution to the first
+tion to the HHG spectrum, originating from the dipole             order correlation function
+moment expectation value representing a classical charge                                        Z
+current. We have shown that the coherent contribution is                (1)        2 4 2 −iωq τ
+                                                                      Ginc (τ ) ≡ ℏ g q e         dv dgv (ωq )d∗vg (ωq ), (47)
+the same as in the semi-classical model, and corresponds
+                                                                                                                                               10
+
+which is given by the Fourier transform of the time-              We can see from Eq. (27) that in the expression for the
+dependent transition matrix elements between the                  first-order field correlation function, the two-time dipole
+ground and continuum states                                       correlation function between different dipoles of the N
+                        Z ∞                                       charges appears. We can evaluate the double sum and
+            dgv (ωq ) ≡     dt dgv (t)e−iωq t , (48)              partition into two parts, such that
+                           −∞
+                                                                     N
+                                                                     X                                     N
+                                                                                                           X
+where we have defined dgv (t) = ⟨g| d(t) |v⟩. Finally, the                  ⟨ḡ| di (t1 )dj (t2 ) |ḡ⟩ =         ⟨ḡ| di (t1 )di (t2 ) |ḡ⟩   (50)
+incoherent contribution to the spectrum reads                       i,j=1                                  i=1
+                                  Z                                                         X N
+                                                                                            N X
+  Sinc (ω) = ℏ2 g 4 q 2 δ(ω − ωq ) dv dgv (ωq )d∗vg (ωq ). (49)                         +              ⟨ḡ| di (t1 )dj (t2 ) |ḡ⟩ ,
+                                                                                            i̸=j j=1
+
+   We can now show the incoherent contribution plus the
+                                                                  where we have considered the dipole moment along the
+total spectrum in Fig. 3 (b) and (c), respectively. While
+                                                                  laser polarization direction, ϵq · di (t) ≡ di (t). We have
+the coherent contribution in (a) shows the signatures of
+                                                                  separated the double sum in such a way that the first
+a typical HHG spectrum, there is a striking difference to
+                                                                  term corresponds to N independent emitters, each given
+the incoherent part. In contrast to the coherent emis-
+                                                                  by the same expression as obtained in the previous sec-
+sion, the incoherent spectrum does not exhibit well de-
+                                                                  tion, and the second term takes into account dipole mo-
+fined peaks and is a few orders of magnitude higher. The
+                                                                  ment correlations between the different atoms [21, 45, 60].
+absence of the peaks can be understood from the absence
+                                                                  Inspecting these two terms, we find that both scale very
+of the dipole moment expectation value evaluated in the
+                                                                  differently with the number of atoms N . While the first
+ground state, which includes the selection rule of energy
+                                                                  term is of order O(N ), the second term scales as O(N 2 ),
+and parity conservation. In contrast, the incoherent con-
+                                                                  such that in the conventional experimental setting of
+tribution in Eq. (49) involves the time-dependent dipole
+                                                                  N ≫ 1 the second term is much larger than the first
+transition matrix elements between ground and contin-
+                                                                  term. Nevertheless, we proceed with the general expres-
+uum states. Due to the average over all continuum states
+                                                                  sion and further analyze the different contributions.
+in Eq. (49) the incoherent contribution looses its peaks,
+which can be seen in Fig. 3 (d) where we show the inco-              We shall first look at the second term in Eq. (50), and
+herent contribution originating from specific continuum           factorize the expectation value of the operator product
+state |v⟩. The contribution from a single continuum state
+again shows a peaked structure for states close to the ion-          ⟨ḡ| di (t1 )dj (t2 ) |ḡ⟩ ≈ ⟨gi | di (t1 ) |gi ⟩ gj dj (t2 ) gj ,
+ization threshold. This is in agreement with the results                                                                              (51)
+presented in Ref. [30], in which electronic expectation
+values lead to a conventional HHG spectrum, while tran-           which is of course not correct in general. However, factor-
+sitions between bound states give rise to an exponentially        ization of the dipole moment correlations between differ-
+decaying spectrum without well defined peaks. These               ent atoms is valid if the initial state of the system factor-
+                                                                                                          NN
+two contributions correspond to the dipole moment ex-             izes between all charges, e.g. |ḡ⟩ = i=1 |gi ⟩, such that
+pectation value and the transitions matrix elements with          the expectation values factorizes and Eq. (51) becomes
+continuum states in our work, respectively. We suspect            an equality. This is in general given in HHG experiment
+that averaging over all bound states in Ref. [30] similarly       in gases, where the individual atoms are uncorrelated.
+yield a spectrum without peaks. However, it remains to            However, in more complex targets such as solid state ma-
+discuss that apparently the total HHG spectrum exhibits           terials [68, 69], systems with initial correlations [31, 70]
+no peaks (see Fig. 3 (c) black curve), which is due to the        or non-trivial topology [71, 72] this assumption about the
+dominant incoherent contribution.                                 initial state does not necessarily hold.
+   Here, it is important to note that we have shown the              Now, evaluating the double sum in Eq. (50) for uncor-
+response of a single emitter, albeit HHG experiments in-          related emitters explicitly, we have
+volve many atoms emitting harmonic radiation. In the
+next section we will show that the appearance of well de-                       N X
+                                                                                X N
+
+fined peaks in experimental HHG spectra is due to the                                      ⟨gi | di (t1 ) |gi ⟩ gj dj (t2 ) gj                (52)
+many atom regime, and the different scaling of the con-                         i̸=j j=1
+tributions with respect to the number of atoms N .                                          = N (N − 1) ⟨d(t1 )⟩ ⟨d(t2 )⟩ ,
+
+                                                                  where ⟨d(t)⟩ = ⟨g| d(t) |g⟩, and assuming that the expec-
+       E.    Single atom vs. many atom regime                     tation value is independent of the specific emitter. This
+                                                                  assumption, which is similar to the dipole approximation
+   In the previous sections, we have so far discussed the         in which each atom experience the same field, the contri-
+case of a single atom, although the general theory de-            bution of each electron is the same and we can therefore
+rived in section II allows to include N different emitters.       drop the subscript. Under the same assumptions, the
+                                                                                                                                              11
+
+first term in Eq. (50) can be written as                                  are important, such that we do not perform the approx-
+                                                                          imation in Eq, (55), and we find the following first order
+    N
+    X                                                                     correlation functions
+          ⟨ḡ| di (t1 )di (t2 ) |ḡ⟩ = N ⟨g| d(t1 )d(t2 ) |g⟩ .    (53)
+                                                                                               (1)                  (1)
+    i=1                                                                                      Gcoh,N (τ ) = N 2 Gcoh (τ ),                  (56)
+                                                                                              (1)             (1)
+   In summary, after evaluating the sum over the N differ-                                   Ginc,N (τ ) = N Ginc (τ ),                    (57)
+ent emitters, we found that the incoherent contribution
+                                                                          for the coherent and incoherent contribution, respec-
+(Eq. (53)) scales linear in the number of atoms, while the
+                                                                          tively. For the incoherent contribution we have again
+coherent contribution (Eq. (52)) scales quadratic with
+                                                                          used the re-writing of the dipole correlations alike in
+N . Considering that usually a large number of atoms
+                                                                          Eq. (28), while the first term cancels with the second term
+interacts with the driving laser we have N 2 ≫ N , such
+                                                                          in Eq. (52) and the dipole fluctuations remain. Since the
+that the coherent contribution to the spectrum normally
+                                                                          many atom case has this simple relationship with the sin-
+dominates the incoherent contribution. It is the N vs.
+                                                                          gle atom case, we do not need to compute the spectrum
+N 2 scaling of the different contributions why the semi-
+                                                                          from the auto-correlation function again.
+classical picture of HHG was so tremendously successful
+                                                                             We can conclude that in the many atom case, with-
+over decades: under normal experimental situations the
+                                                                          out correlations between the different emitters, the many
+coherent part of the scattered field dictates the spectrum.
+                                                                          atom response can essentially be obtained from the sin-
+   It remains to discuss the role of the two-time cor-
+                                                                          gle atom picture [45]. They only differ by the different
+relations in Eq. (53), which also sheds light onto the
+                                                                          scaling of the coherent and incoherent contribution to
+Schrödinger picture approach to HHG [34, 36]. It was
+                                                                          the scattered field, such that in conventional experimen-
+shown that the spectrum is equivalent with the semi-
+                                                                          tal configurations with N ≫ 1 the coherent contribution
+classical picture in the case of, (i) vanishing dipole mo-
+                                                                          to the spectrum dominates the incoherent contribution
+ment correlations at two-times, (ii) when uncorrelated
+                                                                          Scoh (ω) ≫ Sinc (ω). It might be this reason why the semi-
+atoms are assumed in order to factorize the initial state,
+                                                                          classical approach of HHG was so successful over decades
+and (iii) if a large number of emitters is considered such
+                                                                          without the need for a full quantum optical framework
+that the coherent part dominates due to the N 2 scaling.
+                                                                          when it comes to the description of the experimentally
+We note that even in the presence of temporal dipole mo-
+                                                                          recorded spectra. The bottom line of this is that the
+ment correlations, the state is essentially classical due to
+                                                                          coherent contribution corresponds to classical radiation,
+the dominance of N 2 ≫ N . This suggest that in this
+                                                                          while the incoherent part is the more interesting one.
+regime the final state is given by a product of coherent
+                                                                          However, the interesting incoherent contribution is over-
+states as discussed in Sec. III C. Furthermore, in the case
+                                                                          ruled by the many atoms response participating in the
+of negligible dipole moment correlations for a single emit-
+                                                                          process.
+ter, we can improperly factorize this two-time average of
+Eq. (53), and have
+                                                                                       IV.     Second order correlations
+               ⟨g| d(t1 )d(t2 ) |g⟩ ≈ ⟨d(t1 )⟩ ⟨d(t2 )⟩ .          (54)
+                                                                            So far, we have looked at the first order correlations of
+   This assumption would then ultimately lead to the fol-
+                                                                          the field, which is related to the HHG spectrum. Now,
+lowing approximate expression for the total contribution
+                                                                          we shall look at the second order correlation function
+of N emitters
+     N                                                                       G(2) (t1 , t2 ) ≡ ⟨E (−) (t1 )E (−) (t2 )E (+) (t2 )E (+) (t1 )⟩ ,
+                                                                                                                                             (58)
+     X
+            ⟨ḡ| di (t1 )dj (t2 ) |ḡ⟩ ≈ N 2 ⟨d(t1 )⟩ ⟨d(t2 )⟩ ,   (55)
+    i,j=1
+                                                                          which can be re-written in terms of the normally ordered
+                   2                                                      intensity correlation function
+which is the N scaling of the coherent contribution, and
+aligns with the phenomenologically introduced N emitter                                   G(2) (t1 , t2 ) = ⟨: I(t1 )I(t2 ) :⟩ ,           (59)
+case considered in previous work [34, 35].
+   Finally, we can now look at the difference to the first-               where : : indicates normal ordering, such that all creation
+order correlations between the single and many atom                       operators are written on the left while all annihilation op-
+case, and how it influences the spectrum. The simplest                    erators are on the right, and I(t) is the intensity operator
+and trivial case is the one in which all assumptions and                  I(t) = ηn(t), where η takes into account all details about
+approximations leading to Eq. (55) are applied, which                     the relation of intensity and photon number, and n(t) is
+only differs from the single atom case in Eq. (30) by the                 the photon number operator at time t. The second order
+factor of N 2 . In this situation the single atom picture                 correlation function is essentially an intensity correlation
+is essentially the same as the many atom picture, and is                  measurement, where the experiment measures the joint
+the same as the classical case [45]. The more interesting                 photocurrent of photons at time t1 = t and of photons
+case is the study in which the dipole moment correlations                 at time t2 = t + τ . Such a configuration was introduced
+                                                                                                                                                              12
+
+by Hanbury Brown and Twiss (HBT), showing first sig-                            showing that the intensity correlations can only decrease
+natures of photon bunching of chaotic light [14]. Such a                        over time. With this we can summarize the classical
+HBT-configuration for an intensity correlation measure-                         properties of the second order correlation function
+ment is shown in Fig. 1 (c).                                                                                  (2)            (2)
+   In this section we are interested in measuring the in-                                                    gcl (0) ≥ gcl (τ ),                             (69)
+tensity correlation of the harmonics by correlating the                                                       (2)
+                                                                                                             gcl (0) ≥ 1,                                    (70)
+intensity measurements from two detectors with a time
+delay τ . The intensity correlation for a single harmonic                       which originated from the fact that the classical intensity
+mode is hence given by                                                          observables commute. A violation of these inequalities is
+                                                                                a witness of non-classical properties in the corresponding
+ G(2) (t, t + τ ) = ⟨: Iq (t)Iq (t + τ ) :⟩                              (60)   measurement. The property of the normalized intensity
+                     =η     2
+                                a†q (t)a†q (t + τ )aq (t + τ )aq (t)   , (61)   correlation function at vanishing time-delay is referred
+                                                                                to as photon bunching and antibunching for g (2) (0) > 1
+for which we have defined the time-dependent intensity                          and g (2) (0) < 1, respectively. When g (2) (0) = 1 there
+operator Iq (t) ≡ η U † (t)a†q aq U (t) = η a†q (t)aq (t). A di-                are no correlations and the photons arrive at random.
+mensionless measure of such an intensity correlation is                         While photon bunching is the property of photons to
+given by the normalized intensity correlation function                          arrive more likely together, antibunching signatures de-
+                                                                                scribe the case where the probability of detecting two
+                 ⟨: I(t)I(t + τ ) :⟩                                            photons at the same time goes to zero, independent of
+      g (2) (τ ) =                                                       (62)
+                 ⟨I(t)⟩ ⟨I(t + τ )⟩                                             the field intensity. The case of g (2) (0) = 0, i.e. the ab-
+                   ⟨a† (t)a† (t + τ )a(t + τ )a(t)⟩                             sence of intensity correlations at equal time is a single
+                = †                                 .                    (63)   photon signature [15]. The effect of photon antibunching
+                 ⟨a (t)a(t)⟩ ⟨a† (t + τ )a(t + τ )⟩
+                                                                                received a lot of attention since it cannot be described us-
+   Before going into the details of the intensity correla-                      ing semi-classical methods, and therefore is a phenomena
+tions in HHG, we shall first consider generic statements                        which requires the quantized electromagnetic field. The
+for the variance of the classical intensity [∆I(t)]2 =                          absence of joint photon detection counts is thus also used
+ [I(t) − ⟨I(t)⟩]2 , which implies that                                          as a tool for the verification of single photon sources [73].
+
+                                                           2
+              [∆I(t)]2 = I 2 (t) − ⟨I(t)⟩ ≥ 0,                           (64)
+                                                                                            A.     Intensity correlations in HHG
+is positive semi-definite, with the consequence that
+                                                   2
+                                                                                   Having established the notion of classifying classical
+                                I 2 (t) ≥ ⟨I(t)⟩ .                       (65)   from non-classical signatures in the second order correla-
+                                                                                tion function, we can proceed by looking at the intensity
+   We use this to provide a classical relation for the inten-                   correlation of the harmonics. Using the second order cor-
+sity correlation, which are then used to witness eventual                       relation function from Eq. (58) we can write
+non-classicality in the intensity correlation measurement
+of the harmonics from the quantum optical picture. For                            G(2) (t, t + τ ) = ℏ4 g 4 q 2 a†q (t)a†q (t + τ )aq (t + τ )aq (t)
+a classical description without a commutator structure,
+we have                                                                                             ≡ ℏ4 g 4 q 2 ⟨N (t, τ )⟩ .                               (71)
+
+                      (2)             ⟨I(t)I(t + τ )⟩                              Like in the calculations for the first order correlation,
+                     gcl (τ ) =                         .                (66)   we only consider the contribution of the scattered field in
+                                     ⟨I(t)⟩ ⟨I(t + τ )⟩
+                                                                                Eq. (22) due to the initial vacuum state of the harmon-
+  For vanishing time delay τ = 0 we find that                                   ics. For the two-time average of the normal ordered field
+                                                                                operators, we find
+                                                       2
+                (2)               I 2 (t)  ⟨I(t)⟩                                                      Z t     Z t+τ     Z t+τ     Z t
+              gcl (0) =                2 ≥        2 = 1,                 (67)                      4 2
+                                 ⟨I(t)⟩    ⟨I(t)⟩                                   ⟨N (t, τ )⟩ = g q      dt1       dt2       dt3     dt4
+                                                                                                              t0        t0              t0            t0
+stating that for classical radiation the intensity correla-                                        ×e      −iωq (t1 +t2 −t3 −t4 )
+                                                                                                                                    D(t1 , t2 , t3 , t4 ),   (72)
+tion at vanishing time delay is always greater or equal
+to one. We can also look at non-vanishing time-delays                           where we have defined the dipole correlation term
+for which we consider [I(t) − I(t + τ )]2 ≥ 0, and use                                                       N
+that under the assumption of a stationary signal we have                                                     X
+                                                                                 D(t1 , t2 , t3 , t4 ) ≡               Tr [(ϵq · di (t1 ))(ϵq · dj (t2 ))
+ I 2 (t) = I 2 (t + τ ) . Then, we find that I 2 (t) ≥
+                                                                                                           i,j,k,l=1
+⟨I(t)I(t + τ )⟩, which implies that for classical radiation
+                                                                                                           ×(ϵq · dk (t3 ))(ϵq · dl (t4 ))ρS (t0 )] , (73)
+     (2)             I 2 (t)         ⟨I(t)I(t + τ )⟩           (2)
+    gcl (0) =               2    ≥             2       = gcl (τ ),       (68)   where ρS (t0 ) is the initial state of the system. If we
+                 ⟨I(t)⟩                 ⟨I(t)⟩                                  again only consider the dipole along the laser polarization
+                                                                                                                             13
+
+direction, ϵq · di (t) ≡ di (t), within the N = 1 single atom       ion. Then, in order to emit another photon, the electron
+picture, we now have                                                needs to undergo the whole 3-steps of ionization, prop-
+                                                                    agation and recombination for the next emission event.
+            D(t) = ⟨g| d(t1 )d(t2 )d(t3 )d(t4 ) |g⟩ ,       (74)    Since this process is not instantaneous, the electron does
+                                                                    not emit two photons at the same time, leading to anti-
+where we have used ρS (t0 ) = |g⟩⟨g|, and introduced the            bunching signatures. It implies that there are hardly ever
+tuple over the different time arguments t ≡ (t1 , t2 , t3 , t4 ).   two photons emitted at the same time, independent of
+In analogy to the decomposition of the 2nd order dipole             the driving intensity. Furthermore, we can see a decrease
+moment in Eq. (28), we can write                                    in the anti-correlation measure on average (increase of
+                                                                    the averaged g (2) function over time) for increasing time-
+          D(t) = ⟨d(t1 )d(t2 )⟩ ⟨d(t3 )d(t4 )⟩              (75)
+                                                                    delay. This indicates the expected property that for long
+                 + ⟨∆[d(t1 )d(t2 )]∆[d(t3 )d(t4 )]⟩ ,               time delays the photon correlations decrease, and will
+                                                                    eventually become uncorrelated (g (2) = 1) in the long
+where we have defined
+                                                                    time limit. Comparing with the classical properties of
+      ∆[d(t1 )d(t2 )] ≡ d(t1 )d(t2 ) − ⟨d(t1 )d(t2 )⟩ .     (76)    the second order correlation function, given in Eq. (69)
+                                                                    and Eq. (70), we can see that the intensity correlations
+   We can see that the 4th order dipole moment is com-              obtained from HHG violate both inequalities. First, the
+posed out of the product of two dipole correlation terms,           anti-bunching signatures via g (2) (0) < 1, and second the
+and a term including the fluctuations of the dipole cor-            increase of the correlation function (in the temporal av-
+relations ∆[d(t1 )d(t2 )]. Now, equipped with expressions           erage) compared to the correlations at vanishing time-
+for the second order correlation function, we can look at           delay g (2) (0) < g (2) (τ ). We further note that the sec-
+the normalized correlation function of a given harmonic             ond order correlation function at vanishing time-delay is
+                                                                    closely related to the photon number distribution of the
+                              ⟨: Iq (t)Iq (t + τ ) :⟩               field, often compressed in the measure given by the Man-
+               g (2) (τ ) =                           ,     (77)
+                              ⟨Iq (t)⟩ ⟨Iq (t + τ )⟩                del Q-parameter [74]. The Q-parameter is a measure of
+                                                                    the deviation of the variance of the photon number dis-
+for which we normalize the second order correlations to             tribution from the variance of a Poisson process. The
+the intensity average at the two different times. This can          Poisson distribution (Q = 0) is obtained from coherent
+in fact be written in terms of the first and second order           states in which the variance of the distribution is equal
+correlation function                                                to the mean. The case of Q < 0, and Q > 0, corresponds
+                                                                    to sub-Poissonian and super-Poissonian distributions, re-
+                                 G(2) (t, t + τ )
+               g (2) (τ ) =                           ,     (78)    spectively. Here, only the sub-Poissonian statistics cor-
+                              G(1) (t + τ )G(1) (t)                 responds to non-classical signatures in which the vari-
+                                                                    ance of the photon number distribution is smaller than its
+where we can use the results from Sec. III D for the
+                                                                    mean (and vice versa for super-Poissonian distributions).
+denominator
+                                                                    However, we emphasize that photon anti-bunching and
+                                (1)           (1)
+                G(1) (t) = Gcoh (t) + Ginc (t).             (79)    sub-Poissonian statistics share common signatures, but
+                                                                    are ultimately different and should not be confused [75].
+   With the expression of the 4th order dipole moment in               Finally, we want to stress that this is the first obser-
+Eq. (74), for which a more detailed derivation is given in          vation of non-classical photon correlations in the process
+the Supplementary Material (SM), we can now compute                 of HHG. While previous work has shown photon bunch-
+the g (2) -function for varying time-delay τ . We solve the         ing [76], which can be explained by classical theory, we
+second order correlation function G(2) (t, t + τ ) numeri-          show the first anti-bunching signatures in HHG without
+cally, such that all orders of the dipole moment correla-           a classical counterpart.
+tions are taken into account. The normalized intensity
+correlation g (2) (τ ) for the harmonic modes emitted from
+one cycle of the driving field t = T = 2π/ω, are shown in                           B.   Many atom picture
+Fig. 4 (a)-(c) for different harmonic orders. The first im-
+portant and interesting observation is that we find pho-               So far, we have studied the single atom scenario, and
+ton anti-bunching across all harmonic orders, with val-             therefore only a single emitter will contribute to the
+ues close to perfect single photon emission for vanishing           emission of harmonics and intensity correlation function.
+                                         (2)
+time-delay. For instance, we have g11 (0) ≈ 5 × 10−3 ,              Akin to the first-order correlation function, we are now
+       (2)
+and g13 (0) ≈ 3 × 10−3 , for the harmonics 11 and 13,               interested in the many atom case. In particular because
+respectively. This observation of anti-bunching signa-              this is the regime of current HHG experiments, and con-
+tures can also be understood from the intuitive 3-step              sequently shows if the non-classical signatures will sur-
+model of the trajectory approach to HHG [9, 19]. Once               vive realistic conditions. In the following we will consider
+an electron is ionized and accelerated in the continuum, it         the case of N indistinguishable emitters.
+emits the harmonic photon upon recombination with the                  We shall first look at the higher order dipole moment
+                                                                                                                                                    14
+
+
+
+
+FIG. 4. We show the normalized second order correlation function g (2) (τ ) for a few odd harmonics in the plateau (a) q ∈
+{11, 13, 15} and (b) q ∈ {17, 19}, while in (c) q ∈ {21, 23} near the cut-off. The time-delay τ is taken to be after one complete
+cycle of the driving laser field T = 2π/ω. Here, we have used the same driving field conditions to those in Fig. 2.
+
+
+expectation value in Eq. (73) for the N atom case along                           emitters, we have
+the laser polarization direction
+                                                                                        X        N
+                                                                                                 X
+                                                                                                           ⟨di (t1 )dj (t2 )dk (t3 )dl (t4 )⟩   (82)
+       N
+       X                                                                             i̸={j,k,l} j,k,l,=1
+               ⟨ḡ| di (t1 )dj (t2 )dk (t3 )dl (t4 ) |ḡ⟩                                   N!
+   i,j,k,l=1
+                                                                                      =            ⟨d(t1 )⟩ ⟨d(t2 )⟩ ⟨d(t3 )⟩ ⟨d(t4 )⟩ + O(N 3 ),
+                                                                                          (N − 4)!
+                   N
+                   X
+               =         ⟨di (t1 )di (t2 )di (t3 )di (t4 )⟩                (80)   where we have neglected terms of order O(N 3 ) since
+                   i=1                                                            HHG experiments are typically performed in the N ≫ 1
+                     X          N
+                                X                                                 regime such that the major contribution comes from the
+               +                         ⟨di (t1 )dj (t2 )dk (t3 )dl (t4 )⟩ ,     coherent part. The coherent contribution, in which all
+                   i̸={j,k,l} j,k,l,=1                                            dipole moment expectation values are evaluated indepen-
+                                                                                  dently, scales as O(N 4 ). In the SM we show the next
+                                                                                  leading terms in the expansion with respect to N . In-
+where i ̸= {j, k, l} indicates that i is not equal to j, k, l                     terestingly, the coherent contribution is even more domi-
+at the same time. The first term is the contribution                              nant in the higher order correlation functions when con-
+from each of the N emitters individually, and the second                          sidering the many atom regime. This suggests that it is
+term takes into account the correlations between differ-                          hard to detect non-classical signatures in the second order
+ent emitters. We again observe that the first term scales                         correlation function in the typical experimental regimes.
+as O(N ), while the second term scales as O(N 4 ). Now,                           However, this again holds for the uncorrelated state of
+we consider the same assumptions of Sec. III E which                              the N emitters, and interesting deviations from this are
+includes: (i) an uncorrelated initial state of the emitters                       expected to occur when driving HHG in correlated ma-
+such that the dipole moment between different emitters                            terials [31], or solid state materials in which a violation
+factorize, and (ii) each emitter experiences the same driv-                       of the Cauchy-Schwarz inequality was observed [77, 78].
+ing field such that the subscript can be dropped due to                              In order to discuss the influence of the many atom
+the indistinguishability of the atoms. We thus have for                           emission on the intensity correlation, we show in Fig. 5
+the first term in Eq. (80)                                                        the g (2) (τ ) function for different values for the number
+                                                                                  of atoms log10 N ∈ {1.0, 2.7, 3.4, 4.1, 4.8, 5.5, 6.7, 7.0}. As
+                                                                                  expected, the second order correlation function increases
+N
+X                                                                                 for increasing number of uncorrelated emitters until it ap-
+      ⟨di (t1 )di (t2 )di (t3 )di (t4 )⟩ = N ⟨d(t1 )d(t2 )d(t3 )d(t4 )⟩ ,         proaches unity for very large N . This is attributed to the
+i=1                                                                               different scalings of the coherent and incoherent contri-
+                                                                           (81)   butions, where the former has the N 4 scaling whereas the
+                                                                                  latter scales at most with O(N 3 ). The limit of g (2) (τ ) = 1
+                                                                                  is the well known signature of classical coherent radia-
+which is similar to the term evaluated in the single atom                         tion due to oscillating charge currents, here given by the
+case with a linear scaling for the number of atoms N . For                        dipole moment expectation value in the coherent contri-
+the second term, including the correlations between the                           bution.
+                                                                                                                       15
+
+
+
+
+FIG. 5. We show the normalized intensity correlation g (2) (τ ) for different harmonic orders q = 13 in (a), q = 19 in (b)
+and q = 23 in (c) for varying number of emitters N . The atom number increases for increasing color brightness including
+log10 N ∈ {2.0, 2.7, 3.4, 4.1, 4.8, 5.5, 6.7, 7.0}. The same field conditions as those in Fig. 2 are considered here.
+
+
+                     V.   Discussion                           Ref. [36], revealing entanglement and squeezing in the
+                                                               process of HHG if such contributions are taken into ac-
+   In this work we have introduced the notion of opti-         count. These insights allow to take a different look at
+cal coherence in the process of HHG, and formulated a          the approximations involved in previous quantum opti-
+quantum optical theory for field correlation functions.        cal approaches to HHG. A variety of theoretical work
+This was achieved by developing a Heisenberg picture           has considered the case in which coherent input states
+approach for the field operators aq (t) of the harmonic        are mapped to coherent output states [34, 35, 65], which
+modes. The Heisenberg picture allowed for a convenient         are related, among other approximations, to neglecting
+way to obtain two-time averages of observables, such           dipole moment correlations as emphasized in Sec. III C
+as field correlation functions. Since the computation of       or Ref. [79]. We have seen that in order to get the clas-
+the field correlation functions did not involve specific as-   sical result, aka product coherent states in the output
+sumptions about the HHG medium, the framework in-              field, we have to assume (i) uncorrelated emitters (as
+troduced in this work is applicable to all intense laser       shown in Sec. III E), and (ii) vanishing dipole moment
+driven systems, and all driving laser configurations in-       fluctuations from a single emitter at different times [36].
+cluding structured light.                                      Therefore, including dipole correlations is necessary for
+                                                               observing quantum signatures in the harmonic radiation,
+                                                               even in the single atom case. However, the presence of
+                    A.    Conclusions                          many atoms leads to a coherent (classical) contribution
+                                                               which predominates the incoherent (quantum) contribu-
+                                                               tion. This implies, that even in the presence of non-
+   With the general theory established in this work, we
+                                                               classical signatures, typical experiments are probably un-
+were able to compute field correlation functions for the
+                                                               able to reveal them.
+process of HHG. In particular, we have seen how the
+HHG spectrum is constituted, and observed photon anti-            We have then studied the second order correlation
+correlations in HHG. These were obtained from the first        function, which is related to the intensity correlation
+and second order correlation function, respectively. For       measurements in a HBT configuration [14]. In the g (2) (τ )
+both cases we have further studied the scenario of single,     correlation measure, we found clear signatures of non-
+few and many emitters.                                         classicality in the photon correlations by means of anti-
+   In more detail, we have observed that the deviation         correlated photon emission. With this, we have reported
+from the classical HHG spectrum is given by the inco-          the first indication of photon anti-bunching in the HHG
+herent contribution originating from dipole moment fluc-       emission process over a wide range of harmonic modes.
+tuations, while the coherent contribution reproduces the       This is particularly interesting because there is yet only
+semi-classical result. We have further shown that these        a limited number of reported genuine quantum signa-
+incoherent contributions are difficult to observe in con-      tures in the HHG process, compared to many signatures
+ventional HHG experiments where many atoms N con-              explainable with classical theory (see Ref. [28] for an
+tribute to the process. This is due to the scaling problem     overview on classical and quantum signatures in HHG).
+of the incoherent contribution compared to the coher-          Reporting on photon anti-bunching paves the way to
+ent part, which grow as O(N ) and O(N 2 ), respectively.       study the non-classical emission characteristics of HHG
+The deviation from the classical result due to the dipole      with the potential to be a versatile single photon source
+correlations is in agreement with the results reported in      covering a wide range of frequencies.
+                                                                                                                            16
+
+                        B.   Outlook                             can only occur from spontaneous emission, and there is
+                                                                 no stimulated emission due to the absence of photons in
+   This work has introduced the quantum theory of cor-           this mode. Since spontaneous emission is incoherent, this
+relation functions and optical coherence in HHG. This            is in contrast to the aforementioned coherent emission. It
+allows for extensive further exploration of the interplay        seems that the incoherent contribution to the scattered
+between strong laser fields with matter from the perspec-        field can help so solve this apparent discrepancy, and an-
+tive of revealing non-classical signatures in the radiation      swer the question whether harmonic radiation originates
+properties. Since the method in this work is comple-             from dipole currents of dipole transitions.
+mentary to the previously considered Schrödinger pic-
+ture, it allows to uncover the underlying quantum sig-
+natures from a different viewpoint. Instead of focusing,              2.   Study the correlation and coherence properties
+and solving for the quantum state of the field, we empha-
+size on the observer perspective of measurable quantities,          With the methods provided in this work, we can now
+such as two-time averages and correlation functions of the       study the coherence properties of the high harmonic radi-
+field. This paves the way for further studies of the rapidly     ation from a quantum optical perspective in more detail.
+emerging field at the intersection of quantum optics and         This includes the detailed study of the precise measure-
+strong field driven dynamics and attosecond science [28].        ment conditions and the corresponding spectra. Impor-
+Possible future directions are outlined in the following         tant aspects on that matter are the nature of averaging
+together with an emphasis on the respective challenges.          at the detector [78], the precise properties of the spec-
+                                                                 tral analyzers in the measurements of the spectrum [55],
+                                                                 and all the subtleties when considering time-dependent
+         1.   The role of the incoherent contribution            and transient phenomena [55, 56, 80, 81]. These will be
+                                                                 particularly relevant in attosecond pump-probe schemes
+   In Sec. III D, we have seen that the incoherent contri-       and time-resolved analysis, taking into account the tran-
+bution to the first order correlation function is the origin     sient nature of the time-dependent processes in attosec-
+of non-classical signatures in the HHG spectrum (or the          ond science. In addition, it allows to take into account
+quantum state as shown in Ref. [36]). Since the inco-            the experimental settings for studying the influence of
+herent contribution is due to the dipole moment fluc-            telegraph noise, such as random-phase or frequency noise
+tuations, we expect that analyzing such dipole correla-          from the laser fluctuations, on the spectrum [82, 83].
+tions will provide further signatures of non-classicality           Furthermore, recent experiments have shown inter-
+in HHG. This includes, but is not limited to, resonance          esting signatures in the intensity cross-correlation be-
+effects due to the presence of cavities [32] or initial coher-   tween two different harmonics in laser driven semiconduc-
+ence in the atomic state [24, 67]. Going beyond atomic           tors [77, 78]. These correlations show a violation of the
+systems has already been proven to leave imprints in the         Cauchy-Schwarz inequality and highlight the presence of
+harmonic properties when considering correlated mate-            entanglement between these two field modes. We expect
+rials [31, 38]. Although the imprinted signatures in the         that, within the approach established in this work, fur-
+field presented in Ref. [31] are classical, we expect to         ther insights into the cross correlations can be obtained.
+find additional quantum signatures in the field correla-         However, we note that all the details concerning photon
+tion functions. However, the challenge for experimentally        detection and photon counting for ultrashort light pulses
+witnessing these signatures remains due to the different         remain largely unexplored, and averages of field observ-
+scaling of the coherent and incoherent contribution with         ables need to be obtained with care [78].
+N 2 and N , respectively. From the perspective of witness-          Finally, beyond the first order coherence property of
+ing quantum signatures it would be of great interest to          the harmonics analyzed in Sec. III B, higher order coher-
+experimentally separate the coherent from the incoher-           ence of the field can be studied. For instance, if second
+ent contribution to the field, which respectively result in      order coherence is given by g (2) (τ ) = 1. However, for
+the classical and non-classical field characteristics in the     the second order correlation function there is the immi-
+correlation functions.                                           nent challenge in the ability to detect the non-classical
+   From a fundamental perspective, there is a mainly             nature by means of the photon anti-bunching signatures.
+overlooked aspect about the emission of high order har-          The challenge in measuring a non-classical g (2) function
+monic photons. It is a general consensus that, in the            lies in the presence of many atoms participating in the
+semi-classical picture, the harmonic emission originates         process of light scattering in HHG. In the example of
+from a dipole oscillator, which is backed up by the              resonance fluorescence, the observation of anti-bunching
+quantum optical description introduced in Ref. [34]. In          was due to the photon emission by just a single atom on
+Sec. III A we have provided further evidence for this pic-       average [15], and the atom can only emit a single pho-
+ture if only the coherent dipole contribution is consid-         ton at a time. However, for many emitters the situation
+ered. However, there is one piece missing in the picture.        changes dramatically due to the probabilistic nature of
+Since the initial states of the harmonic modes are in the        the emission process, and each atom can emit at a differ-
+vacuum, the generation of photons via dipole transitions         ent time, leading to a vanishing anti-bunching signature.
+                                                                                                                            17
+
+The same holds for the process of HHG, and it is either          and considered the case of atomic gas targets. In the re-
+a matter of isolating the photon emission from a single          spective subsection III E and IV B the many atom case
+atom or to consider material systems in which the under-         was discussed, where we have assumed uncorrelated emit-
+lying emission dynamics is different.                            ters (which is usually the case for atomic gas targets).
+                                                                 Since we have seen that the interesting departures from
+                                                                 the classical results appear due to dipole moment cor-
+        3.   Generalization to arbitrary driving fields          relations, we emphasize on the importance of studying
+                                                                 correlated materials. In particular, solid state systems
+                                                                 featuring strong correlations have been shown to leave its
+   Recent studies have focused on inducing non-classical
+                                                                 signatures in the quantum optical state of HHG [31, 38].
+signatures in the harmonic radiation by using non-
+                                                                 We therefore expect that field correlation functions are
+classical driving fields, such as squeezed states [33, 59,
+                                                                 sensitive to the correlations or non-trivial topology of the
+65, 84] or photon number states [65, 66]. It was shown
+                                                                 matter system driven by intense light fields.
+that a squeezed driving field can induce squeezing in
+the harmonic field modes [33], or that squeezed driving
+fields allow for harmonic emission in classical forbidden                            Acknowledgments
+regimes [59]. In all of the aforementioned theoretical ap-
+proaches, the approximations outlined in Sec. III C have
+                                                                    P.S. would like to express his gratitude to Alexan-
+been applied, by means of assuming that coherent input
+                                                                 der Carmele for the introduction to quantum op-
+states are mapped to coherent output states when decom-
+                                                                 tical methods and the perspetive of the observer.
+posing the arbitrary driving field in the coherent state
+                                                                 P.S. acknowledges funding from the European Union’s
+basis. In contrast, the approach presented in this work
+                                                                 Horizon 2020 research and innovation programe un-
+is independent of such approximations and can evaluate
+                                                                 der the Marie Sklodowska-Curie grant agreement
+the field expectation values for any initial driving field.
+                                                                 No 847517. ICFO group acknowledges support from:
+However, special care needs to be taken when consider-
+                                                                 Ministerio de Ciencia y Innovation Agencia Estatal
+ing the classically driven electron dynamics, which poses
+                                                                 de Investigaciones (R&D project CEX2019-000910-S,
+limitations on the semi-classical picture when driven by
+                                                                 AEI/10.13039/501100011033, Plan National FIDEUA
+non-classical light [85].
+                                                                 PID2019-106901GB-I00, FPI), Fundació Privada Cellex,
+                                                                 Fundació Mir-Puig, and from Generalitat de Catalunya
+                                                                 (AGAUR Grant No. 2017 SGR 1341, CERCA pro-
+                   4.   Correlated materials                     gram), and MICIIN with funding from European Union
+                                                                 NextGenerationEU(PRTR-C17.I1) and by Generalitat
+  The analysis in Sec. III and IV studied the first and          de Catalunya and EU Horizon 2020 FET-OPEN OPTO-
+second order correlation function in HHG, respectively,          logic (Grant No 899794) and ERC AdG NOQIA.
+
+
+
+
+ [1] R. J. Glauber, The quantum theory of optical coherence,     [10] B. Mollow, Power spectrum of light scattered by two-level
+     Physical Review 130, 2529 (1963).                                systems, Physical Review 188 (1969).
+ [2] R. J. Glauber, Coherent and incoherent states of the ra-    [11] C. Cohen-Tannoudji and S. Reynaud, Dressed-atom de-
+     diation field, Physical Review 131, 2766 (1963).                 scription of resonance fluorescence and absorption spec-
+ [3] R. J. Glauber, Photon correlations, Physical Review Let-         tra of a multi-level atom in an intense laser beam, Jour-
+     ters 10, 84 (1963).                                              nal of Physics B: Atomic and Molecular Physics 10, 345
+ [4] R. J. Glauber, Nobel lecture: One hundred years of light         (1977).
+     quanta, Reviews of Modern Physics 78, 1267 (2006).          [12] S. H. Autler and C. H. Townes, Stark effect in rapidly
+ [5] L. Mandel and E. Wolf, Optical coherence and quantum             varying fields, Physical Review 100, 703 (1955).
+     optics (Cambridge university press, 1995).                  [13] M. O. Scully and M. S. Zubairy, Quantum optics (Cam-
+ [6] H. J. Carmichael, Statistical methods in quantum op-             bridge university press, 1997).
+     tics 1: master equations and Fokker-Planck equations        [14] R. H. Brown and R. Q. Twiss, Correlation between pho-
+     (Springer Science & Business Media, 2013).                       tons in two coherent beams of light, Nature 177, 27
+ [7] H. Kimble and L. Mandel, Theory of resonance fluores-            (1956).
+     cence, Physical Review A 13, 2123 (1976).                   [15] H. J. Kimble, M. Dagenais, and L. Mandel, Photon anti-
+ [8] W. Heitler, The quantum theory of radiation (Courier             bunching in resonance fluorescence, Physical Review Let-
+     Corporation, 1984).                                              ters 39, 691 (1977).
+ [9] M. Lewenstein, P. Balcou, M. Y. Ivanov, A. L’huillier,      [16] T. Brabec and F. Krausz, Intense few-cycle laser fields:
+     and P. B. Corkum, Theory of high-harmonic generation             Frontiers of nonlinear optics, Reviews of Modern Physics
+     by low-frequency laser fields, Physical Review A 49, 2117        72, 545 (2000).
+     (1994).                                                     [17] M. Ferray, A. L’Huillier, X. Li, L. Lompre, G. Mainfray,
+                                                                      and C. Manus, Multiple-harmonic conversion of 1064 nm
+                                                                                                                                 18
+
+     radiation in rare gases, Journal of Physics B: Atomic,        [35] J. Rivera-Dean, T. Lamprou, E. Pisanty, P. Stam-
+     Molecular and Optical Physics 21, L31 (1988).                      mer, A. F. Ordóñez, A. S. Maxwell, M. F. Ciappina,
+[18] A. L’Huillier and P. Balcou, High-order harmonic gener-            M. Lewenstein, and P. Tzallas, Strong laser fields and
+     ation in rare gases with a 1-ps 1053-nm laser, Physical            their power to generate controllable high-photon-number
+     Review Letters 70, 774 (1993).                                     coherent-state superpositions, Physical Review A 105,
+[19] P. B. Corkum, Plasma perspective on strong field mul-              033714 (2022).
+     tiphoton ionization, Physical review letters 71, 1994         [36] P. Stammer, J. Rivera-Dean, A. S. Maxwell, T. Lam-
+     (1993).                                                            prou, J. Argüello-Luengo, P. Tzallas, M. F. Ciappina,
+[20] D.-S. Guo and T. Aberg, Quantum electrodynamical ap-               and M. Lewenstein, Entanglement and squeezing of the
+     proach to multiphoton ionisation in the high-intensity h           optical field modes in high harmonic generation, Physical
+     field, Journal of Physics A: Mathematical and General              Review Letters 132, 143603 (2024).
+     21, 4577 (1988).                                              [37] P. Stammer, J. Rivera-Dean, A. Maxwell, T. Lamprou,
+[21] H. Xu, Non-perturbative theory of harmonic generation              A. Ordóñez, M. F. Ciappina, P. Tzallas, and M. Lewen-
+     under a high-intensity laser field, Zeitschrift für Physik        stein, Quantum electrodynamics of intense laser-matter
+     D Atoms, Molecules and Clusters 28, 27 (1993).                     interactions: a tool for quantum state engineering, PRX
+[22] G. Compagno, K. Dietz, and F. Persico, Qed theory of               Quantum 4, 010201 (2023).
+     harmonic emission by a strongly driven atom, Journal of       [38] C. S. Lange, T. Hansen, and L. B. Madsen, Electron-
+     Physics B: Atomic, Molecular and Optical Physics 27,               correlation-induced nonclassicality of light from high-
+     4779 (1994).                                                       order harmonic generation, Physical Review A 109,
+[23] W. Becker, A. Lohr, M. Kleber, and M. Lewenstein, A                033110 (2024).
+     unified theory of high-harmonic generation: Application       [39] I. Gonoskov, R. Sondenheimer, C. Hünecke, D. Kar-
+     to polarization properties of the harmonics, Physical Re-          tashov, U. Peschel, and S. Gräfe, Nonclassical light gener-
+     view A 56, 645 (1997).                                             ation and control from laser-driven semiconductor intra-
+[24] F. Gauthey, C. H. Keitel, P. L. Knight, and A. Maquet,             band excitations, Physical Review B 109, 125110 (2024).
+     Role of initial coherence in the generation of harmon-        [40] J. Rivera-Dean, P. Stammer, A. S. Maxwell, T. Lamprou,
+     ics and sidebands from a strongly driven two-level atom,           A. F. Ordóñez, E. Pisanty, P. Tzallas, M. Lewenstein, and
+     Physical Review A 52, 525 (1995).                                  M. F. Ciappina, Nonclassical states of light after high-
+[25] J. H. Eberly, Q. Su, and J. Javanainen, High-order har-            harmonic generation in semiconductors: A bloch-based
+     monic production in multiphoton ionization, JOSA B 6,              perspective, Physical Review B 109, 035203 (2024).
+     1289 (1989).                                                  [41] C. S. Lange, T. Hansen, and L. B. Madsen, Exci-
+[26] J. Eberly, Q. Su, J. Javanainen, K. Kulander, B. Shore,            tonic enhancement of squeezed light in quantum-optical
+     and L. Roso-Franco, High-order harmonic generation                 high-harmonic generation from a mott insulator, arXiv
+     during multiphoton ionization of gases, Journal of Mod-            preprint arXiv:2503.15932 (2025).
+     ern Optics 36, 829 (1989).                                    [42] P. Stammer, Theory of entanglement and measurement
+[27] J. Eberly, Q. Su, and J. Javanainen, Nonlinear light scat-         in high-order harmonic generation, Physical Review A
+     tering accompanying multiphoton ionization, Physical re-           106, L050402 (2022).
+     view letters 62, 881 (1989).                                  [43] K. Wódkiewicz and J. Eberly, Markovian and non-
+[28] L. Cruz-Rodriguez, D. Dey, A. Freibert, and P. Stam-               markovian behavior in two-level atom fluorescence, An-
+     mer, Quantum phenomena in attosecond science, Nature               nals of Physics 101, 574 (1976).
+     Reviews Physics 6, 691 (2024).                                [44] A. Ishkhanyan and V. Krainov, The markoff approxima-
+[29] P. Stammer, J. Rivera-Dean, T. Lamprou, E. Pisanty,                tion for high harmonic generation during laser–atom in-
+     M. F. Ciappina, P. Tzallas, and M. Lewenstein, High                teraction, Laser Physics Letters 18, 046001 (2021).
+     photon number entangled states and coherent state su-         [45] B. Sundaram and P. W. Milonni, High-order harmonic
+     perposition from the extreme ultraviolet to the far in-            generation: simplified model and relevance of single-
+     frared, Physical Review Letters 128, 123603 (2022).                atom theories to experiment, Physical Review A 41, 6571
+[30] A. Gorlach, O. Neufeld, N. Rivera, O. Cohen, and                   (1990).
+     I. Kaminer, The quantum-optical nature of high har-           [46] D. Diestler, Harmonic generation:                 quantum-
+     monic generation, Nature communications 11, 4598                   electrodynamical theory of the harmonic photon-number
+     (2020).                                                            spectrum, Physical Review A—Atomic, Molecular, and
+[31] A. Pizzi, A. Gorlach, N. Rivera, A. Nunnenkamp, and                Optical Physics 78, 033814 (2008).
+     I. Kaminer, Light emission from strongly driven many-         [47] M. D. Srinivas and E. B. Davies, Photon counting prob-
+     body systems, Nature Physics 19, 551 (2023).                       abilities in quantum optics, Optica Acta: International
+[32] S. Yi, N. D. Klimkin, G. G. Brown, O. Smirnova,                    Journal of Optics 28, 981 (1981).
+     S. Patchkovskii, I. Babushkin, and M. Ivanov, Genera-         [48] M. Rousseau, A new quantum mechanical derivation of
+     tion of massively entangled bright states of light during          the photocounting distribution, Journal of Physics A:
+     harmonic generation in resonant media, Physical Review             Mathematical and General 10, 1043 (1977).
+     X 15, 011023 (2025).                                          [49] B. Mollow, Quantum theory of field attenuation, Physical
+[33] M. E. Tzur, M. Birk, A. Gorlach, I. Kaminer, M. Krüger,           Review 168, 1896 (1968).
+     and O. Cohen, Generation of squeezed high-order har-          [50] P. Kelley and W. Kleiner, Theory of electromagnetic field
+     monics, Physical Review Research 6, 033079 (2024).                 measurement and photoelectron counting, Physical Re-
+[34] M. Lewenstein, M. F. Ciappina, E. Pisanty, J. Rivera-              view 136, A316 (1964).
+     Dean, P. Stammer, T. Lamprou, and P. Tzallas, Gener-          [51] J. Grochmalicki and M. Lewenstein, Are squeezed states
+     ation of optical schrödinger cat states in intense laser–         necessary? a case study of photon detection based on
+     matter interactions, Nature Physics 17, 1104 (2021).               quantum interference, Physics reports 208, 189 (1991).
+                                                                                                                                19
+
+[52] E. Sudarshan, Equivalence of semiclassical and quantum        [71] R. Silva, Á. Jiménez-Galán, B. Amorim, O. Smirnova,
+     mechanical descriptions of statistical light beams, Phys-          and M. Ivanov, Topological strong-field physics on sub-
+     ical Review Letters 10, 277 (1963).                                laser-cycle timescale, Nature Photonics 13, 849 (2019).
+[53] N. Wiener, Generalized harmonic analysis, Acta mathe-         [72] A. Jiménez-Galán, R. Silva, O. Smirnova, and M. Ivanov,
+     matica 55, 117 (1930).                                             Lightwave control of topological properties in 2d materi-
+[54] A. Khintchine, Korrelationstheorie der stationären                als for sub-cycle and non-resonant valley manipulation,
+     stochastischen prozesse, Mathematische Annalen 109,                Nature Photonics 14, 728 (2020).
+     604 (1934).                                                   [73] S. Scheel, Single-photon sources–an introduction, Journal
+[55] J. Eberly and K. Wodkiewicz, The time-dependent phys-              of Modern Optics 56, 141 (2009).
+     ical spectrum of light, JOSA 67, 1252 (1977).                 [74] L. Mandel, Sub-poissonian photon statistics in resonance
+[56] J. Eberly, C. Kunasz, and K. Wodkiewicz, Time-                     fluorescence, Optics letters 4, 205 (1979).
+     dependent spectrum of resonance fluorescence, Journal of      [75] X. T. Zou and L. Mandel, Photon-antibunching and
+     Physics B: Atomic and Molecular Physics 13, 217 (1980).            sub-poissonian photon statistics, Phys. Rev. A 41, 475
+[57] K. Amini, J. Biegert, F. Calegari, A. Chacón, M. F.               (1990).
+     Ciappina, A. Dauphin, D. K. Efimov, C. F. de Moris-           [76] S. Lemieux, S. A. Jalil, D. Purschke, N. Boroumand,
+     son Faria, K. Giergiel, P. Gniewek, et al., Symphony               D. Villeneuve, A. Naumov, T. Brabec, and G. Vampa,
+     on strong field approximation, Reports on Progress in              Photon bunching in high-harmonic emission controlled
+     Physics 82, 116001 (2019).                                         by quantum light, arXiv preprint arXiv:2404.05474
+[58] O. Smirnova and M. Ivanov, Multielectron high harmonic             (2024).
+     generation: simple man on a complex plane, Attosecond         [77] D. Theidel, V. Cotte, R. Sondenheimer, V. Shiriaeva,
+     and XUV Physics: Ultrafast Dynamics and Spectroscopy               M. Froidevaux, V. Severin, A. Merdji-Larue, P. Mosel,
+     , 201 (2014).                                                      S. Fröhlich, K.-A. Weber, et al., Evidence of the quan-
+[59] J. Rivera-Dean, P. Stammer, M. Ciappina, and                       tum optical nature of high-harmonic generation, PRX
+     M. Lewenstein, Non-classicality induces recombination in           Quantum 5, 040319 (2024).
+     high-harmonic generation with circularly polarized fields,    [78] J. van der Veen and D. F. James, Errors in quantum
+     arXiv preprint arXiv:2411.11042 (2024).                            state identification with ultrashort pulses, arXiv preprint
+[60] J. Eberly and M. Fedorov, Spectrum of light scattered co-          arXiv:2503.22817 (2025).
+     herently or incoherently by a collection of atoms, Physical   [79] C. S. Lange and L. B. Madsen, Hierarchy of approxima-
+     Review A 45, 4706 (1992).                                          tions for describing quantum light from high-harmonic
+[61] J. D. Cresser, Theory of the spectrum of the quantised             generation: A fermi-hubbard-model study, Physical Re-
+     light field, Physics Reports 94, 47 (1983).                        view A 111, 013113 (2025).
+[62] M. D. Perry and J. K. Crane, High-order harmonic emis-        [80] N. Lu, P. Berman, Y. Bai, J. Golub, and T. Mossberg,
+     sion from mixed fields, Physical Review A 48, R4051                Time-dependent spectrum of resonance fluorescence for
+     (1993).                                                            atoms prepared in pure dressed states, Physical Review
+[63] Y. Nabekawa, T. Shimizu, T. Okino, K. Furusawa,                    A 34, 319 (1986).
+     H. Hasegawa, K. Yamanouchi, and K. Midorikawa, Inter-         [81] K.-H. Brenner and K. Wodkiewicz, The time-dependent
+     ferometric autocorrelation of an attosecond pulse train            physical spectrum of light and the wigner distribution
+     in the single-cycle regime, Physical review letters 97,            function, Optics Communications 43, 103 (1982).
+     153904 (2006).                                                [82] K. Wodkiewicz, B. Shore, and J. Eberly, Noise in strong
+[64] Y. Nabekawa, T. Shimizu, Y. Furukawa, E. J. Takahashi,             laser-atom interactions: Frequency fluctuations and non-
+     and K. Midorikawa, Interferometry of attosecond pulse              exponential correlations, Physical Review A 30, 2390
+     trains in the extreme ultraviolet wavelength region, Phys-         (1984).
+     ical review letters 102, 213904 (2009).                       [83] J. Eberly, K. Wodkiewicz, and B. Shore, Noise in strong
+[65] A. Gorlach, M. E. Tzur, M. Birk, M. Krüger, N. Rivera,            laser-atom interactions: Phase telegraph noise, Physical
+     O. Cohen, and I. Kaminer, High-harmonic generation                 Review A 30, 2381 (1984).
+     driven by quantum light, Nature Physics 19, 1689 (2023).      [84] A. Rasputnyi, Z. Chen, M. Birk, O. Cohen, I. Kaminer,
+[66] P. Stammer, Absence of quantum optical coherence in                M. Krüger, D. Seletskiy, M. Chekhova, and F. Tani, High-
+     high harmonic generation, Physical Review Research 6,              harmonic generation by a bright squeezed vacuum, Na-
+     L032033 (2024).                                                    ture Physics , 1 (2024).
+[67] J. Rivera-Dean, H. Crispin, P. Stammer, T. Lamprou,           [85] P. Stammer, On the limitations of the semi-classical pic-
+     E. Pisanty, M. Krüger, P. Tzallas, M. Lewenstein, and             ture in high harmonic generation, Nature Physics 20,
+     M. Ciappina, Squeezed states of light after high-order             1040 (2024).
+     harmonic generation in excited atomic systems, Physical       [86] O. Smirnova and M. Ivanov, Multielectron high harmonic
+     Review A 110, 063118 (2024).                                       generation: Simple man on a complex plane, in Attosec-
+[68] S. Ghimire and D. A. Reis, High-harmonic generation                ond and XUV Physics (John Wiley & Sons, Ltd, 2014)
+     from solids, Nature physics 15, 10 (2019).                         Chap. 7, pp. 201–256.
+[69] E. Goulielmakis and T. Brabec, High harmonic gener-           [87] B. Podolsky and L. Pauling, The Momentum Distribu-
+     ation in condensed matter, Nature Photonics 16, 411                tion in Hydrogen-Like Atoms, Physical Review 34, 109
+     (2022).                                                            (1929).
+[70] R. Silva, I. V. Blinov, A. N. Rubtsov, O. Smirnova,
+     and M. Ivanov, High-harmonic spectroscopy of ultrafast
+     many-body dynamics in strongly correlated systems, Na-
+     ture Photonics 12, 266 (2018).
+                                                                                                                                            20
+
+                            APPENDIX                                           where di (t) = U † (t)di U (t) is the dipole
+                                                                                                                        p moment in the
+                                                                               Heisenberg picture, and g ≡ g̃/ℏ = ω/(2V ℏϵ0 ). The
+                                                                               solution to this differential equation is given by
+A.       Details on the Heisenberg equations of motion
+                                                                                 aq,λ (t) =aq,λ (0)e−iωq,λ t                             (A11)
+1.     Derivation of the Heisenberg equation of motion                                                Z t                    N
+                                                                                                  √                       ′ X
+                     for the field operator                                                   +g q        dt′ e−iωq,λ (t−t )   ϵq,λ · di (t′ ),
+                                                                                                        0                      i=1
+
+  The equation of motion of the annihilation operator                          which coincides with Eq. (9) of the main text. We
+aq,λ (t) in (8) can be obtained by using the Heisenberg                        note that the field operator at the initial time in the
+equation                                                                       Heisenberg picture corresponds to the operator in the
+                                                                               Schrödinger picture aq,λ (0) ≡ aq,λ .
+                d            i
+                   aq,λ (t) = [H(t), aq,λ (t)]                        (A1)
+                dt           ℏ
+                             i                                                 2.   Heisenberg picture for the dipole moment with
+                            = U † (t) [H, aq,λ ] U (t),               (A2)
+                             ℏ                                                              the semi-classical interaction
+
+where the Hamiltonian H is given in (1). We now need
+                                                                                 For the dynamics of the time-dependent dipole mo-
+to evaluate the commutator
+                                                                               ment di (t) in Eq. (9) we consider the corresponding
+                                                                               Heisenberg EOM
+                    [H, aq,λ ] = [HF + HI , aq,λ ] ,                  (A3)
+                                                                                              d          i
+with the field and interaction Hamiltonian given by                                              di (t) = U † (t) [H, di ] U (t),       (A12)
+                                                                                              dt         ℏ
+                             qc
+                           2 X                                                 where we again have the Hamiltonian H = HF +HS +HI
+                                     ℏωq,λ a†q,λ aq,λ ,
+                           X
+                    HF =                                              (A4)     from Eq. (1). In order to evaluate the commutator with
+                           λ=1 q=1                                             the Hamiltonian we first introduce a suitable reference
+                              N
+                              X                                                frame via unitary transformation into the co-rotating
+                    HI = −          di · EQ ,                         (A5)     frame of HF , and of the initial coherent state |α⟩ of the
+                              i=1                                              driving laser field to the vacuum by using the unitary
+                                                                               displacement operator D† (α) |α⟩ = |0⟩. Thereby, we ob-
+where we have the electric field operator                                      tain an additional semi-classical interaction Hamiltonian
+                    X√                                                       (compare with Eq. (10) of the main text)
+         EQ = −ig̃        qϵq,λ a†q,λ − aq,λ .                        (A6)
+                                                                                                               N
+                            q,λ                                                                                X
+                                                                                               HI,cl (t) = −         di · Ecl (t),      (A13)
+  Using the commutation relation for the bosonic field                                                         i=1
+
+operators                                                                      where the classical electric field is given by Ecl (t) =
+               h              i                                                Tr[EQ (t)ρ(0)], with the total Hamiltonian in the new
+                 aq,λ , a†p,λ′ = δλ,λ′ δqp ,     (A7)                          frame
+
+we find that the commutator in (A3) is given by                                                   H = HS + HI + HI,cl .                 (A14)
+
+                                                 N                                Now, we are in a position to perform approximations
+                                                 X     √                       based on the situation under consideration. Since we are
+ [HF + HI , aq,λ ] = −ℏωq,λ aq,λ − ig̃                     qϵq,λ · di . (A8)
+                                                 i=1
+                                                                               interested in the case of intense driving laser fields, the
+                                                                               interaction with the classical electric field is much larger
+   Inserting this into the Heisenberg equation of motion                       than the interaction with the quantized field. Therefore,
+in Eq. (A1), we obtain                                                         we only consider the semi-classical interaction HI,cl (t),
+                                                                               and omit the contribution from the backaction of the
+     d                                                                         quantized interaction on the electron dynamics. Thus,
+        aq,λ (t) = −iωq,λ U † (t)aq,λ U (t)                           (A9)     the Heisenberg EOM reduce to
+     dt
+                           N
+                     √ X                                                            d          i
+                   +g q        ϵq,λ · U † (t)di U (t)                                  di (t) = U † (t) [HS + HI,cl (t), di ] U (t),    (A15)
+                           i=1
+                                                                                    dt         ℏ
+                                                N                              which is the dynamics governed by the well-known semi-
+                                     √ X
+                = −iωq,λ aq,λ (t) + g q  ϵq,λ · di (t), (A10)                  classical Hamiltonian Hsc (t) = HS + HI,cl (t). Therefore,
+                                                i=1                            instead of explicitly solving the Heisenberg EOM for the
+                                                                                                            21
+
+dipole moment, we consider the generic solution under   where we have defined the semi-classical propagator
+the semi-classical Hamiltonian
+                                                                                 i t ′
+                                                                                  Z              
+                                                               Usc (t) = T exp −      dt Hsc (t′ ) .     (A17)
+                                                                                 ℏ t0
+
+                        †
+                                                          This corresponds to the solution Eq. (14) of the main
+              di (t) = Usc (t)di (0)Usc (t),   (A16)    text.
+                                                                                                                      22
+
+                                            SUPPLEMENTARY MATERIAL
+
+
+            A.   Computing the scattered field and the coherent contribution to the HHG spectrum
+
+  The coherent contribution to the HHG spectrum both require to compute the Fourier transform of the time-
+dependent dipole moment (we will assume linear polarization in the following), i.e.
+                                                  Z t
+                                        ⟨d(ω)⟩ =                  ˆ 2 )⟩,
+                                                      dt2 e−iωt2 ⟨d(t                                 (A1)
+                                                           t0
+
+for which, in atomic units (ℏ = 1, me = 1, |e| = 1), the time-dependent dipole moment reads as [9, 86];
+                               Z    Z t2
+                  ⟨ˆd(t2 )⟩ = i dp       dt2 ⟨g| ˆ
+                                                d|p + Acl (t2 )⟩e−iS(p,t2 ,t1 ) Ecl (t1 )⟨p + A(t1 )| ˆ
+                                                                                                     d|g⟩ + c.c.,   (A2)
+                                        0
+
+where S(p, t2 , t1 ) denotes the semi-classical action
+                                                     1 t2 
+                                                      Z
+                                                                         2
+                                    S(p, t2 , t1 ) =      dτ p + Acl (τ ) + Ip (t2 − t1 ).                          (A3)
+                                                     2 t1
+  In the numerical analysis, we used the following formula for the matrix elements of the dipole operator taken for
+hydrogenic 1s-type of orbitals [87];
+                                                                √
+                                                            8i     2κ5 p
+                                          d(p) = ⟨p|d̂|g⟩ =              ,                                    (A4)
+                                                            π (p + κ2 )2
+                                                                 2
+
+
+where Ip = 2κ2 . The steps in the numerical analysis are as follows:
+    • First, a grid of Nels = 2000 elements of momentum values p, was defined within the range p ∈ [−3, 3].
+    • For each value of p, the time integral in Eq. (A2) was computed using the quad function of the Scipy package.
+      The electric field was defined as Ecl (t) = E0 cos(ωL t), where E0 = 0.053 a.u. and ωL = 0.057 a.u., corresponding
+      to an intensity of I = 1014 W/cm2 and a wavelength λ = 800 nm, respectively. The algorithm implemented by
+      the quad used 1000 iterations, which was enough to ensure convergence of the integrals. The time integration
+      was performed over the range t2 ∈ [0, 16π/ωL ], corresponding to a total of 8 optical cycles. The time grid was
+      set with 2⌈16π/ωL ⌉ elements.
+    • After solving the integral for each p, denoted as d(p, t), the integral over momentum was approximated using
+      the trapezoidal method
+                                                 Z                2000
+                                                                  X
+                                         ˆ 2 )⟩ = dp d(p, t) ≈
+                                        ⟨d(t                           d(pi , t)∆p,                          (A5)
+                                                                      i=0
+
+      where ∆p = |pi+1 − pi | was chosen to be a constant.
+   The results of this analysis are shown in Fig. 6 (a), where two distinct regions can be observed: a red-shaded region
+corresponding to a warm-up period where the integral does not exhibit the periodic structure observed later. This
+region was neglected in subsequent calculations. For later calculations, only the results starting from one optical cycle
+after the warm-up period were considered, effectively working with a field composed of 7 optical cycles
+   The dipole shown in Fig. 6 (a) was subsequently used to compute other physical observables, such as the HHG
+spectra. To achieve this, the computed data—consisting of 2⌈16π/ωL ⌉ points—was interpolated using the interp1d
+function of the Scipy package. This allowed for a smooth representation of the dipole moment over time. This
+interpolated function was used to perform a Fast Fourier Transform (FFT) within the green dashed region in Fig.6 (a),
+using a total of NFFT = 10000 points. The resulting HHG spectrum is shown in Fig. 6 (b). The spectrum exhibits
+peaks located at odd harmonic orders. In the plateau region, additional contributions from other frequencies are
+noticeable, while beyond the cutoff (approximately the 21st harmonic order), the harmonic peaks become more
+sharply defined.
+   This calculation was repeated using different definitions of the p interval, either by modifying the upper and
+lower limits or by changing the number of elements within the interval. Specifically, we selected ranges that yielded
+convergent results, even for shallow regions of p. This analysis is shown in Fig. 7 (a), where both the limits of the
+range p ∈ [−plim , plim ] and the number of elements Nels are varied. In panel (b), the upper and lower limits were fixed
+at plim = ±3, while only the number of elements Nels iwas varied.
+                                                                                                                           23
+
+
+
+
+FIG. 6. In (a), the dipole computed with the steps mentioned in the text. The red region corresponds to the warm up part of
+the integral, while the green region is the one we kept for computing the HHG spectrum shown in (b). Although initially we
+considered a total of 8 optical cycles, the HHG spectrum uses a total of 7 optical cycles.
+
+
+
+
+FIG. 7. In (a), the HHG spectrum has been computed for p ∈ [−plim , plim ], where the number of elements in the range has
+been set to Nels = 1000 for plim = 2, Nels = 3000 for plim = 3, Nels = 5000 for plim = 5 and Nels = 7000 for plim = 7. In (b),
+the value of plim has been fixed to 3, while the values of Nels change in each case.
+
+
+                                B.   Computing the incoherent part of the spectrum
+
+  The incoherent part of the spectrum is defined as
+                                                 Z
+                                       Sinc (ω) ∝ dv dgv (ωq )d∗gv (ωq )δω,ωq ,                                          (B1)
+
+where we have that
+                                                         Z ∞
+                                             dgv (ω) =         dt ⟨g| ˆ
+                                                                     d(t)|v⟩e−iωq t ,                                    (B2)
+                                                         −∞
+
+where, in turn, and according to Refs. [36, 37];
+
+                                          ⟨g| ˆ
+                                             d(t)|v⟩ = e−iS(p,t,t0 ) ⟨g| ˆ
+                                                                        d|p + Acl (t)⟩.                                  (B3)
+
+  The numerical procedure used to compute the incoherent part of the HHG spectrum is as follows:
+   • For each value of p ∈ [−plim , plim ] (using Nels = 2000 uniformly distributed points, consistent with the values
+     used in Fig. 6 (a)), we compute the dgv (t) function according to Eq. (B3).
+                                                                                                                                                                         24
+
+    • For each dvg (t), we perform its FFT (prior interpolation of the function) with NFFT = 10000 points. The
+      corresponding d∗gv (ω) was obtained by performing the complex conjugate of the computed values. The incoher-
+      ent contribution to the HHG spectrum was then calculated by performing the integral in Eq. (B1) using the
+      trapezoidal method, similar to the approach for the coherent contribution.
+  Here, we chose plim = 3, as it was sufficient enough to find convergence of the results. However, it is worth
+highlighting that different values were chosen for this value in the second-order autocorrelation function analysis
+(plim = 5 and Nels = 2500), as were needed for better convergence of the integrals.
+
+
+                                             C.         Analysis of the second-order correlation functions
+
+  The numerical methods employed to compute the second-order autocorrelation function stem as direct extension
+to those used for the analysis of the coherent and incoherent contributions to the spectra. The main difference
+stems on the particular expressions under consideration. Here, we focus on providing a more explicit version of the
+(unnormalized) second-order autocorrelation function.
+
+
+                                                                          1.     Further analysis
+
+  We start with the exact expression of Eq. (72) in the main manuscript
+                                Z t     Z t+τ     Z t+τ     Z t
+                            4 2
+             ⟨N (t, τ )⟩ = g q      dt1       dt2       dt3     dt4 e−iωq (t1 +t2 −t3 −t4 ) ⟨d(t1 )d(t2 )d(t3 )d(t4 )⟩ .                                              (C1)
+                                                   t0          t0          t0          t0
+
+  First, we substitute ti = ti − τ for i = 2, 3, such that
+                                   Z t     Z t     Z t     Z t
+             ⟨N (t, τ )⟩ = g 4 q 2     dt1     dt2     dt3     dt4 e−iωq (t1 +t2 −t3 −t4 ) ⟨d(t1 )d(t2 + τ )d(t3 + τ )d(t4 )⟩ ,                                       (C2)
+                                              t0          t0         t0         t0
+
+the different lower bound t0 − τ is omitted and replaced with t0 since the laser is off before the initial time when
+t0 → ∞. In the exponential the τ cancels due to the different sign for the t2 and the t3 integration. We do now
+consider the higher order dipole expectation value, and use the cyclic property of the trace (with ρ0 = |g⟩⟨g| the initial
+atomic state);
+ Tr[d(t1 )d(t2 + τ )d(t3 + τ )d(t4 )ρ0 ] = Tr[d(t4 )ρ0 d(t1 )d(t2 + τ )d(t3 + τ )]                                                 (C3)
+                                                       Z
+ = ⟨g| d(t4 ) |g⟩⟨g| d(t1 )d(t2 + τ )d(t3 + τ ) |g⟩ + dv ⟨v| d(t4 ) |g⟩⟨g| d(t1 )d(t2 + τ )d(t3 + τ ) |v⟩                          (C4)
+                                                             Z
+ = ⟨g| d(t4 ) |g⟩⟨g| d(t1 ) |g⟩⟨g| d(t2 + τ )d(t3 + τ ) |g⟩ + dv ⟨g| d(t4 ) |g⟩⟨g| d(t1 ) |v⟩⟨v| d(t2 + τ )d(t3 + τ ) |g⟩          (C5)
+   Z                                                              Z     Z
+ + dv ⟨v| d(t4 ) |g⟩⟨g| d(t1 ) |g⟩⟨g| d(t2 + τ )d(t3 + τ ) |v⟩ + dv dv ′ ⟨v| d(t4 ) |g⟩⟨g| d(t1 ) |v ′ ⟩⟨v ′ | d(t2 + τ )d(t3 + τ ) |v⟩ .
+                                                                                                                                                                      (C6)
+  Considering the full expression from above, we find (omitting the g 4 q 2 pre-factor)
+                     (1)
+⟨N (t, τ )⟩ =     Gcoh (t)G(1) (t + τ )                                                                                                   (C7)
+                  Z t     Z t     Z t     Z t                                   Z                                                             
+                                                    −iωq (t1 +t2 −t3 −t4 )
+                +     dt1     dt2     dt3     dt4 e                        2 Re    dv ⟨g| d(t4 ) |g⟩⟨g| d(t1 ) |v⟩⟨v| d(t2 + τ )d(t3 + τ ) |g⟩
+                     t0          t0          t0          t0
+                                                                                                                                                                      (C8)
+                    Z t         Z t         Z t         Z t                                 Z         Z
+                +         dt1         dt2         dt3         dt4 e−iωq (t1 +t2 −t3 −t4 )       dv        dv ′ ⟨v| d(t4 ) |g⟩⟨g| d(t1 ) |v ′ ⟩⟨v ′ | d(t2 + τ )d(t3 + τ ) |v⟩ .
+                     t0          t0          t0          t0
+                                                                                                                                                                      (C9)
+                                                                                                (1)                   (1)
+   Note that in the first term we have for G(1) (t + τ ) = Gcoh (t + τ ) + Ginc (t + τ ), the coherent and incoherent
+contribution, respectively. Here we are interested in the sub-cycle intensity correlations, and we therefore consider a
+”quasi stationary limit” in which the harmonic emission is already build up by considering t = T = 2π/ω being a full
+cycle of the field. More specifically, we focus on Eqs. (C8) and (C9) of the main text, as Eq. (C7) depends on the
+first-order autocorrelation function which we already know how to compute.
+                                                                                                                                            25
+
+                                                        2.   Analysis of Eq. (C9)
+
+   We begin this analysis by looking at Eq. (C9), which is the more complicated one. The lessons learned here will
+then be applied to compute Eq. (C8). From (C9), we are mostly interested in the momentum integrations as they are
+the ones we can simplify the most. More specifically, we can write
+                        Z   Z
+f (t1 , t2 , t3 , t4 ) = dv1 dv2 dv1 g (t4 )d∗v2 g (t1 )⟨v2 |d(t2 )d(t3 )|v1 ⟩
+                        Z   Z                                                    Z   Z   Z
+                       = dv1 dv2 dv1 g (t4 )dv2 g (t1 )dv2 ,g (t2 )dv1 ,g (t3 ) + dv1 dv2 dv3 dv1 g (t4 )d∗v2 g (t1 )dv2 ,v3 (t2 )dv3 ,v1 (t3 ),
+                                              ∗                     ∗
+
+
+                                                                                                                                        (C10)
+where the continuum-continuum matrix elements can be written as [37];
+                                             Z  Z
+                              dv2 ,v3 (t2 ) = dv dv ′ b∗v2 (v, t2 )bv3 (v ′ , t2 )⟨v|r|v ′ ⟩,                                           (C11)
+
+with bv (v ′ , t) denoting the probability amplitude of finding an electron in the continuum with kinetic momentum v ′ ,
+when it initially had momentum v. More explicitly, its expression is given by
+                                                                          ′
+                                                    bv (v ′ , t) = e−iS(v ,t,t0 ) δ(v ′ − v).                                           (C12)
+
+  Inserting Eq. (C12) into Eq. (C11) and applying the chain rule, we arrive to
+                                                                                             
+                               dv2 ,v3 (t2 ) = ∆r(v2 , t2 , t0 )δ(v2 − v3 ) + i∂v2 δ(v2 − v3 ) ,                                        (C13)
+
+such that the whole expression explicitly reads
+                   Z     Z      Z                         h                                                 i
+               I = dv1 dv2 dv3 dv1 ,g (t4 )d∗v2 ,g (t1 ) ∆r(v2 , t2 , t0 )δ(v2 − v3 ) + i∂v2 δ(v2 − v3 )
+                                                                                                
+
+                                          h                                                i
+                                       × ∆r(v3 , t3 , t0 )δ(v3 − v1 ) + i∂v3 δ(v3 − v1 )                                                (C14)
+                   Z     Z      Z
+                 = dv1 dv2 dv3 dv1 ,g (t4 )d∗v2 ,g (t1 )∆r(v2 , t2 , t0 )∆r(v3 , t3 , t0 )δ(v2 − v3 )δ(v3 − v1 )                        (C15)
+                      Z      Z     Z
+                   + i dv1 dv2 dv3 dv1 ,g (t4 )d∗v2 ,g (t1 )∆r(v2 , t2 , t0 )δ(v2 − v3 )∂v3 δ(v3 − v1 )
+                                                                                                         
+                                                                                                                                        (C16)
+                      Z      Z     Z
+                   + i dv1 dv2 dv3 dv1 ,g (t4 )d∗v2 ,g (t1 )∆r(v3 , t3 , t0 )δ(v3 − v1 )∂v2 δ(v2 − v3 )
+                                                                                                         
+                                                                                                                                        (C17)
+                     Z      Z     Z
+                   − dv1 dv2 dv3 dv1 ,g (t4 )d∗v2 ,g (t1 )∂v3 δ(v3 − v1 ) ∂v2 δ(v2 − v3 ) .
+                                                                                              
+                                                                                                                                        (C18)
+
+                     ≡ I1 + I2 + I3 + I4 .                                                                                              (C19)
+
+  Let us evaluate each of the terms in Eqs. (C15) to (C18) separately. For the first, we trivially get
+                                    Z
+                               I1 = dv3 dv3 ,g (t4 )d∗v3 ,g (t1 )∆r(v3 , t2 , t0 )∆r(v3 , t3 , t0 ),                                    (C20)
+
+which in case of setting al values of t to be equal, we find it is a real-valued quantity since I1 = I1∗ .
+ For Eq. (C16), we first perform the integral over v2 , as we get a Dirac delta without any kind of derivatives in front
+                                  Z      Z
+                           I2 = i dv1 dv3 dv1 ,g (t4 )d∗v3 ,g (t1 )∆r(v3 , t2 , t0 )∂v3 δ(v3 − v1 ) ,
+                                                                                                  
+                                                                                                                  (C21)
+
+and next, we follow the integration order and do the integral with respect to v3 applying the integration by parts
+method. This results in
+                                        Z
+                                 I2 = −i dv1 ∂v1 dv1 ,g (t4 ) d∗v1 ,g (t1 )∆r(v1 , t2 , t0 ) .
+                                                                                           
+                                                                                                            (C22)
+                                                                                                                                               26
+
+  For Eq. (C17), we start by performing the integral with respect to v1 , for similar reasons as before
+                               Z     Z
+                         I3 = i dv2 dv3 dv3 ,g (t4 )d∗v2 ,g (t1 )∆r(v3 , t3 , t0 )∂v2 δ(v2 − v3 )
+                                                                                                
+
+                               Z                 Z
+                                       ∗
+                                                                                                 
+                            = i dv2 dv2 ,g (t1 ) dv3 dv3 ,g (t4 )∆r(v3 , t3 , t0 )∂v2 δ(v2 − v3 )                                          (C23)
+                               Z
+                            = i dv2 d∗v2 ,g (t1 )∂v2 dv2 ,g (t4 )∆r(v2 , t3 , t0 ) ,
+                                                                                 
+
+
+where in moving from the first to the second equality we took the derivative with respect to v2 out, and then integrate
+over v3 . As we have seen, if we set all times to be equal, we observe that I2 = I3∗ . Although this is not the case, later
+on we have to perform some integrals with respect to time, which will make the term real-valued.
+   Finally, for Eq. (C18), we integrate first over v1 , which is the integral for which we have a Dirac delta only. This
+leads to
+                                       Z      Z
+                               I4 = − dv2 dv3 d∗v2 ,g (t1 )∂v3 dv3 ,g (t4 ) ∂v2 δ(v2 − v3 ) ,
+                                                                                        
+                                                                                                                    (C24)
+
+and now we do the integral over v2 , to get
+                                                         Z
+                                                             dv3 ∂v3 dv3 ,g (t4 ) ∂v3 d∗v3 ,g (t1 ) .
+                                                                                                
+                                                  I4 =                                                                                     (C25)
+
+
+                                                             3.   Analysis of Eq. (C8)
+
+   From the analysis we have done thus far, analytical expression for Eq. (C8) are more straightforward. From
+this contribution, we are only interested in the real part, although here we evaluate the complete integral without
+distinguishing between real or imaginary parts, and make this distinction in the numerical analysis. The momentum
+integral in this case is given by
+                       Z
+                  I = dv1 d(t4 )d∗v1 ,g (t1 ) ⟨v1 | d(t2 )d(t3 ) |g⟩
+                       Z                                           Z                   Z                               (C26)
+                                  ∗                                         ∗
+                    = dv1 d(t4 )dv1 ,g (t1 )dv1 ,g (t2 )d(t3 ) + dv1 d(t4 )dv1 ,g (t1 ) dv2 dv1 ,v2 (t2 )dv2 ,g (t3 ),
+
+where in going from the first to the second equality we have introduced the identity. In the second equality, the first
+term is computed numerically, while for the second one we have to do some analytics first to reduce the number of
+integrals. Specifically, using Eq. (C13), we can write the integral with respect to v2 as follows
+                   Z                                                                   Z
+                                                                                                                          
+                      dv2 dv1 ,v2 (t2 )dv2 ,g (t3 ) = ∆r(v1 , t2 , t0 )dv1 ,g (t3 ) + i dv2 dv2 ,g (t3 )∂v1 δ(v1 − v2 )       (C27)
+                                                                                           Z                               
+                                                    = ∆r(v1 , t2 , t0 )dv1 ,g (t3 ) + i∂v1      dv2 dv2 ,g (t3 )δ(v1 − v2 )   (C28)
+                                                                                                      
+                                                    = ∆r(v1 , t2 , t0 )dv1 ,g (t3 ) + i∂v1 dv1 ,g (t3 ) ,                     (C29)
+and therefore the total integral reads
+    Z                                          Z                                                        Z
+I = dv1 d(t4 )d∗v1 ,g (t1 )dv1 ,g (t2 )d(t3 ) + dv1 d(t4 )d∗v1 ,g (t1 )∆r(v1 , t2 , t0 )dv1 ,g (t3 ) + i dv1 d(t4 )d∗v1 ,g (t1 )∂v1 dv1 ,g (t3 ) .
+                                                                                                                                               
+
+                                                                                                                                           (C30)
+
+
+                                        4.      Normalized second order correlation function
+
+   A more useful measure of the second order correlation function (the intensity correlation function) is the normalized
+version of it. This has the advantage of being a dimensionless measure independent of the order of magnitude of the
+intensities. Therefore, we consider
+                                                ⟨: I(t)I(t + τ ) :⟩    a†q (t)a†q (t + τ )aq (t + τ )aq (t)
+                                 g (2) (τ ) =                       = †                                       .                            (C31)
+                                                ⟨I(t)⟩ ⟨I(t + τ )⟩   ⟨aq (t)aq (t)⟩ ⟨a†q (t + τ )aq (t + τ )⟩
+                                                                                                                                          27
+
+   The enumerator we have discussed above, and found expressions ready to be solved numerically. The denominator
+is simple, and known already since it is given by the first order correlation function at equal time. We therefore have
+                                                                                 2
+                                                         "Z                                             #
+                                                                             t       Z
+            ⟨I(t)⟩ = a†q (t)aq (t) = G(1) (t, t) = ℏ2 g 4 q 2                    dt1 e−iωq t1 ⟨d(t1 )⟩   +   dvdgv (ωq )d∗vg (ωq ) ,   (C32)
+                                                                            t0
+
+
+where
+                                                                   Z t
+                                                     dgv (ωq ) =          dtq dgv (t1 )e−iωq t1 .                                      (C33)
+                                                                     t0
+
+
+
+                    D.     Higher order dipole moment correlations in the many atom regime
+
+  The next leading terms in Eq. (82) are given by
+                               N
+                     X         X                                                    N!
+                                         ⟨di (t1 )dj (t2 )dk (t3 )dl (t4 )⟩ =              ⟨d(t1 )⟩ ⟨d(t2 )⟩ ⟨d(t3 )⟩ ⟨d(t4 )⟩         (D1)
+                                                                                  (N − 4)!
+                   i̸={j,k,l} j,k,l,=1
+                                  N!
+                             +            [⟨d(t3 )⟩ ⟨d(t4 )⟩ ⟨d(t1 )d(t2 )⟩ + ⟨d(t2 )⟩ ⟨d(t4 )⟩ ⟨d(t1 )d(t3 )⟩                         (D2)
+                               (N − 3)!
+                             + ⟨d(t2 )⟩ ⟨d(t3 )⟩ ⟨d(t1 )d(t4 )⟩ + ⟨d(t1 )⟩ ⟨d(t4 )⟩ ⟨d(t2 )d(t3 )⟩                                     (D3)
+                                                                                                                     2
+                             + ⟨d(t2 )⟩ ⟨d(t3 )⟩ ⟨d(t2 )d(t4 )⟩ + ⟨d(t1 )⟩ ⟨d(t2 )⟩ ⟨d(t3 )d(t4 )⟩] + O(N ),                           (D4)
+
+which includes all partitions into two dipole moment expectation values, and a dipole correlation function while
+preserving the time-ordering of the arguments.
+

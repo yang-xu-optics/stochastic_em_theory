@@ -1,0 +1,506 @@
+                                                         Attosecond pulse synthesis from high-order harmonic generation in intense squeezed light
+                                                                                         ShiJun Wang1,2 , XuanYang Lai1,3∗ , and XiaoJun Liu1†
+                                                        1 State Key Laboratory of Magnetic Resonance and Atomic and Molecular Physics, Wuhan Institute of Physics and Mathematics,
+                                                        Innovation Academy for Precision Measurement Science and Technology, Chinese Academy of Sciences, Wuhan 430071, China
+                                                                     2 School of Physical Sciences, University of Chinese Academy of Sciences, Beijing 100049, China
+                                                                                     3 Wuhan Institute of Quantum Technology, Wuhan, 430206, China
+                                                                                                           (Dated: June 18, 2024)
+                                                                    High-order harmonic generation (HHG) provides a broad spectral bandwidth for synthesizing attosecond
+                                                                 pulses. However, in the current HHG schemes, only part of the harmonics can be phase-locked, which limits
+                                                                 the ability to achieve shorter attosecond pulses. Here, we study attosecond pulse synthesis from HHG of an
+
+
+
+
+arXiv:2406.10443v1 [physics.optics] 14 Jun 2024
+                                                                 atom driven by an intense quantum light, i.e., squeezed light. It is interestingly found that the harmonics in the
+                                                                 whole spectrum can be phase-locked and, by using these harmonics, the width of the synthesized attosecond
+                                                                 pulse is greatly reduced. By developing strong-field approximation theory in squeezed light, the physics of the
+                                                                 phase-locked harmonic generation throughout the HHG spectrum is revealed and is found to be independent
+                                                                 of the target system. Furthermore, we uncover the dependence of the synthesized attosecond pulse width on
+                                                                 the squeezing parameter of the squeezed light. Our findings provide a robust tool for obtaining phase-locked
+                                                                 harmonics throughout the HHG spectrum for synthesizing short attosecond pulses.
+
+
+                                                                        I.   INTRODUCTION                                   laser intensity and the harmonic order [14, 15]. For any given
+                                                                                                                            laser parameter, only a fraction of the harmonics within the
+                                                                                                                            plateau satisfy the phase-matching conditions for generating
+                                                     Attosecond pulses are central to the observation and inves-            single-trajectory harmonics, which restricts obtaining more
+                                                  tigation of transient physical phenomena of attosecond time-              phase-locked harmonics. On the other hand, another scheme
+                                                  resolved valence and core-electron dynamics [1–4]. Presently,             has been proposed to control the “short” and “long” trajecto-
+                                                  attosecond pulses are mainly synthesized from high-order har-             ries at the single-atom level using an orthogonally polarized
+                                                  monic generation (HHG) of an atom subjected to a strong                   two-color field [19–22]. In this method, the electron trajecto-
+                                                  laser field [5, 6]. The corresponding HHG spectrum, hav-                  ries are steered in the polarization plane to either return to the
+                                                  ing a plateau structure followed by a cutoff, provides a broad            core or not, thereby allowing control over the relative contri-
+                                                  spectral bandwidth from extreme ultraviolet to soft x-rays for
+                                                                                                                            bution of the short and long trajectories. However, this method
+                                                  synthesizing attosecond pulses [7, 8]. However, to produce an             of manipulating electron trajectories is also most effective for
+                                                  attosecond pulse from the HHG, different harmonics should
+                                                                                                                            some harmonics. Thus, achieving a broader or even the entire
+                                                  also be phase-locked [9–11]. Unfortunately, it has been found             phase-locked HHG spectrum for generating a shorter attosec-
+                                                  that the phase locking occurs in the cutoff region, while the
+                                                                                                                            ond pulse remains an ongoing challenge.
+                                                  harmonic phase in the broad plateau region of the HHG spec-
+                                                  trum is random [11, 12]. This discrepancy results from the                   In this work, we demonstrate a novel scheme that can real-
+                                                  fact that the harmonics in the plateau region are contributed             ize a short attosecond pulse synthesis from the entire phase-
+                                                  by two different (“short” and “long”) electron trajectories               locked HHG spectrum of an atom driven by intense squeezed
+                                                  [11, 13, 14], whereas these trajectories approximately merge              light. In quantum optics, squeezed light is a typical non-
+                                                  into a single trajectory in the cutoff region. Therefore, only            classical state of light [23]. With the recent development of
+                                                  the phase-locked harmonics in the cutoff region are suitable              laser technology, strong squeezed lights have become exper-
+                                                  for attosecond pulse synthesis, limiting the ability to achieve           imentally accessible [24–27], and their intensities are grad-
+                                                  short attosecond pulses.                                                  ually approaching the requirements of strong-field physics.
+                                                     To synthesize a shorter attosecond pulse from the HHG,                 This progress of the laser technology has sparked interest in
+                                                  it is necessary to lock the phase of the harmonics over a                 exploring the interaction between quantum lights and atoms
+                                                  wider spectral range. One valid approach is to select either              [28–33]. Here, we use intense squeezed light to interact
+                                                  the “short” or “long” trajectory harmonics in the plateau re-             with an atom to study the attosecond pulse synthesis from
+                                                  gion. Currently, this single-trajectory harmonic selection can            the HHG. Our result shows that the harmonics in the whole
+                                                  be achieved using a macroscopic phase-matching technique                  HHG spectrum can be phase-locked and, by using these har-
+                                                  based on the coherent superposition of different atomic har-              monics, the width of the attosecond pulse synthesized from
+                                                  monics [14, 15], and it has also been demonstrated that a rel-            these phase-locked harmonics is greatly reduced. The de-
+                                                  atively short attosecond pulse can be produced with this tech-            tailed analysis shows that the phase-locking of the harmonics
+                                                  nique [10, 11, 16–18]. However, it is important to note that              is attributed to the suppression of the long-trajectory contri-
+                                                  the phase-matching conditions are closely related to both the             bution and the underlying physics is revealed by developing
+                                                                                                                            strong-field approximation (SFA) theory in squeezed light.
+                                                                                                                            Furthermore, we uncover the dependence of the attosecond
+                                                                                                                            pulse width on the squeezing parameter of the squeezed light.
+                                                  ∗ xylai@wipm.ac.cn                                                        Finally, the experimental feasibility of our scheme for gener-
+                                                  † xjliu@wipm.ac.cn                                                        ating short attosecond pulses in intense squeezed light is dis-
+                                                                                                                                                                        2
+
+cussed.                                                                             where Eα (t) is the classical field component of the co-
+   This paper is organized as follows. In Sec. II, we briefly                       herent state |α i = αx + iαy and is expressed as Eα (t) =
+introduce the theoretical method for the HHG of an atom in
+                                                                                                                                    
+                                                                                    hα | Ê(t) |α i ẑ = −Eαx sin(ω t) + Eαy cos(ω t) ẑ along the ẑ di-
+intense squeezed light. In Sec. III, we present the HHG spec-                       rection. In this work, we use a phase-squeezed coherent state
+tra and the corresponding attosecond pulses. Subsequently,                          light |γ , ri with squeezing parameter r. According to the na-
+we reveal the influence of the squeezed light on the length of                      ture of the Husimi distribution of the phase-squeezed coher-
+the attoscond pulse. Finally, our conclusion is given in Sec.                       ent state [35], the electric field quasiprobability distribution
+IV. Throughout this paper, atomic units (a.u.) are used unless                      Q̃(Eα ) is given by
+explicitly stated otherwise.
+                                                                                                                                      (Eαy −Eγy )2
+                                                                                                                     1            −
+                                                                                                                                        2|Evf |2
+                                                                                            Q̃(Eα ) = q           e                                  δ (Eαx − Eγx ),   (5)
+                     II. THEORETICAL METHODS                                                           2π |Evf |2
+
+   In theory, the interaction of an atom with quantum light                         where |Evf |2 = ε20ωV sinh2 (r) is the electric field fluctuation am-
+is described by the following fully-quantum time-dependent                          plitude of the squeezed light.
+Schrödinger equation (TDSE) [23]                                                      To derive the HHG from the electron density matrix, we cal-
+                                                                                    culate the expectationR value of the dipole moment D(t) [23]:
+                     ∂ ρ (t)                        
+                                                                                    D(t) = Tr[zρe (t)] = d 2 Eα Q̃(Eα )DEα (t), where DEα (t) =
+                 i           = [ Ĥ0 − r · Ê + Ĥ f , ρ (t)],                (1)
+                       ∂t                                                           hφEα (t)|z|φEα (t)i denotes the expectation value of the dipole
+                                                                                    moment for a coherent state |α i. Then, the nth-order har-
+where ρ (t) is the density matrix of the quantum light-atom
+                                                                                    monic can be obtained from the Fourier transform of the
+system, Ĥ0 = p2 /2 + U(r) is the Hamiltonian of the atomic
+                                                                                    dipole moment:
+system with the Coulomb potential U(r), Ĥ f = ω â† â is
+the quantized electromagnetic field Hamiltonian with the                                          ω2
+                                                                                                          Z tf                               Z
+creation  operator â† and the annihilation operator â, Ê =                       D(nω ) =                     D(t)e−inω t dt =                d 2 Eα Q̃(Eα )DEα (nω ),
+ r
+     ω                                                                                         t f − ti    ti
+           â − â† is the quantized electric field operator with
+                   
+i                                                                                                                                                                      (6)
+   2ε0V
+vacuum permittivity ε0 and quantum normalization volume V ,                                                      2       Rt
+and −r · Ê is the interaction term in the dipole approximation.                    where DEα (nω ) = t fω−ti ti f DEα (t)e−inω t dt is the amplitude of
+The initial density matrix ρ0 = |φ i hφ | ⊗ ρlight , where |φ i de-                 the nth-order harmonic in a coherent light |α i. Eq. (6) indi-
+notes the ground state of the atom and ρlight is the density                        cates that the final harmonic amplitude in the squeezed light
+matrix of the quantum light field. Using the positive P repre-                      is equal to the superposition of the harmonics from different
+sentation, ρlight can be expanded as follows [34, 35]:                              coherent lights. After obtaining the HHG amplitude, we can
+                                                                                    calculate the attosecond pulse by superimposing harmonics in
+                                                |α i hβ | 2 2
+                              Z
+                                                                                    any given energy range:
+                 ρlight =         P(α , β ∗ )            d αd β ,             (2)
+                                                 hβ |α i
+                                                                                                                                                     2
+
+where |α i and |β irepresentthecoherent                                                                 I(t) = ∑ D(nω )einω t .                                     (7)
+                                       states of light and
+                                       2                                                                                      n
+P(α , β ∗ ) = 41π exp − |α −4β |           Q     α +β
+                                                   2        with a Husimi distri-
+                                                                                    In practice, a one-dimensional √   model atom with a soft-core
+bution Q(α ) of quantum light state.
+   Next, we solve Eq. (1) for the evolution of the electron den-                    Coulomb potential U(x) = −1/ x2 + a is used for simplicity.
+sity matrix using the linearity of the density matrix equation.                     When the soft-core parameter a = 0.482, its ionization poten-
+After inserting                                                                     tial I p is about 24.59 eV, which corresponds to the ground state
+           q Eq. (2) into Eq. (1) and considering the rela-                         of the He atom.
+tion Eα = ε20ωV α , the density matrix of the electron at time t
+is given by [28, 30]:
+                          Z                                                                       III. RESULTS AND DISCUSSION
+            ρe (t) =          d 2 Eα Q̃(Eα ) |φEα (t)i hφEα (t)| ,            (3)
+                                                                                       Figure 1(a) presents the HHG spectra obtained with co-
+                                       q                                          herent light |γ i (solid orange curve) and squeezed light |γ , ri
+where Q̃(Eα ) = lim ε20ωV Q                     ε0 V
+                                                2ω Eα       denotes an electric-    (solid blue curve), respectively. Both spectra show a plateau
+                        V →∞
+                                                                                    structure with a sharp cutoff around I p +3.17U p ≈ 40ω , where
+field quasiprobability distribution of quantum light and
+                                                                                    U p is the ponderomotive energy [36–38]. Using the obtained
+|φEα (t)i represents the electron wave function in coherent-
+                                                                                    harmonics, we first illustrate the attosecond pulses synthe-
+state (classical) light. Here, |φEα (t)i is obtained by solving
+                                                                                    sized from the 39th to 53rd order harmonics in the cutoff re-
+the TDSE:
+                                                                                    gion (marked with gray arrow) in Figs. 1(c1) and (c2). For the
+                ∂                                                                   coherent light, the pulse width is about 281 attoseconds (as),
+            i      |φEα (t)i = [Ĥ0 − r · Eα (t)] |φEα (t)i ,                 (4)   while it is slightly reduced to about 239 as for the squeezed
+                ∂t
+                                                                                                                                                                                                                                                  3
+
+
+
+
+  Intensity (arb.units)
+                                                                                                                                                                              3
+                                4       (a)
+
+
+                                                                                                                                                         p rad)
+                           10                                                                          Coherent                Squeezed                                           (a)
+                                                                                                                                                                                                                             Cutoff
+                                                                                                                                                                              2
+                                0
+                           10
+
+
+
+                                                                                                                                                            Phase (
+                                                                                                                                                                              1
+                            -4                                                                                                                                                                           Coherent
+                           10
+                                                                                                                                                                              0
+                                                                                                                                                                                                         Squeezed
+                            -8
+                           10
+                                                                                                                                                                             -1
+                                    0            10            20           30                                    40          50           60                                     15    20         25      30     35     40      45         50
+                                                                    Harmonic order (                         n)                                                                                    Harmonic order (    n)
+                           1.2                                                                       1.2                                                                                                                                    1.0
+                                    (b1) Coherent                                                          (c1) Coherent
+
+
+
+
+  Intensity (arb. units)
+                                                                                                                                                                             50   (b) Coherent
+
+
+
+
+                                                                            Intensity (arb. units)
+                           0.8                                                                       0.8
+                                                                                                                                                                             40
+                           0.4                                                                       0.4                                                 n)
+                                                                                                                           281 as                                                                                                           0.5
+
+
+
+
+                                                                                                                                                          Harmonic order (
+                           0.0                                                                       0.0                                                                     30
+                             5.3          5.4    5.5   5.6     5.7    5.8                              5.4    5.5       5.6   5.7    5.8   5.9
+                                                                                                                                                                             20
+                           1.2                                                                       1.2                                                                                                                                    0.0
+                                    (b2) Squeezed                                                          (c2) Squeezed
+                           0.8                                                                       0.8                                                                      5.0            5.5           6.0         6.5            7.0
+                                                                                                                                                                                                                                            1.0
+                                                       75 as                                                 239 as            230 as
+                           0.4                                                                       0.4                                                                     50   (c) Squeezed
+
+                           0.0                                                                       0.0                                                                     40
+                             5.3          5.4    5.5   5.6     5.7    5.8                              5.4    5.5       5.6   5.7    5.8   5.9                                                                                              0.5
+                                                                                                                                                                             30
+                                                Time (o.c.)                                                            Time (o.c.)
+                                                                                                                                                                             20
+                                                                                                                                                                                                                                            0.0
+
+
+FIG. 1: (a) HHG spectra obtained with a coherent light |γ i (solid                                                                                                            5.0            5.5           6.0         6.5            7.0
+
+                                                                                                                                                                                                        Time (o.c.)
+orange curve) and a squeezed light |γ , ri (solid blue curve). (b1)
+and (c1) Normalized temporal profile of attosecond pulses synthe-
+sized from the 15th to 53rd and the 39th to 53rd order harmonics                                                                                 FIG. 2: (a) The harmonic phases as a function of the harmonic or-
+for the coherent light. In (b2) and (c2), the solid blue curves are the                                                                          ders in the coherent light (orange orthogon) and squeezed light (blue
+same as that in (b1) and (c1), but for the squeezed light, while the                                                                             circle), respectively. (b) and (c) The corresponding time-frequency
+red dashed-dotted curves denote the synthesized attosecond pulses                                                                                spectra of the HHG.
+after removing the quadratic component of the harmonic phases. For
+more details, see the text. In our simulation, the γ is chosen to cor-
+respond to an average light intensity of about I = 2 × 1014 W/cm2 ,                                                                              Surprisingly, however, even after considering the broader
+corresponding to the peak electric field E0 = |Eγx +iγy | = 0.0756 a.u.                                                                          spectral bandwidth, the pulse width in Fig. 1(b2) is still larger
+with Eγx = 0 a.u. and Eγy = 0.0756 a.u. The squeezing parameter r
+                                                                                                                                                 than that in Fig. 1(c2). This abnormal result is due to a linear
+is given by sinh2 (r) = 0.0016|γ |2 and accordingly, the electric field                                                                          frequency chirp in time caused by the quadratic spectral phase
+fluctuation amplitude Evf = 0.04E0 . The laser field with a wave-
+                                                                                                                                                 variation [16, 39, 40]. Fortunately, this quadratic component
+length λ = 800 nm has a trapezoidal profile, ramping up and down
+over two cycles and remaining constant over six cycles.
+                                                                                                                                                 can now be completely removed experimentally by manipulat-
+                                                                                                                                                 ing the chirp [18, 39–41]. Thus, we recalculate the attosecond
+                                                                                                                                                 pulses in squeezed light after removing the quadratic compo-
+                                                                                                                                                 nent of the harmonic phases (see the red dashed-dotted curves
+light [see the blue solid curve in (c2)]. On the other hand, we
+                                                                                                                                                 in Figs. 1(b2) and (c2)). In this case, the pulse width decreases
+use the whole HHG above threshold (n > I p /ω ≈ 15 [36–38]
+                                                                                                                                                 slightly to 230 as in (c2), while it is greatly reduced to 75 as
+marked with purple arrow), and the corresponding attosecond
+                                                                                                                                                 in (b2).
+pulses are shown in Figs. 1(b1) and (b2). For coherent light,
+                                                                                                                                                    To understand the phase change for different laser fields in
+the temporal profile is rather broad with several peaks and
+                                                                                                                                                 Fig. 2(a), we perform the time-frequency analysis of the re-
+thus no well-defined attosecond pulse can be obtained, which
+                                                                                                                                                 sulting HHG [42]. For the coherent light in Fig. 2(b), there are
+is consistent with previous results [10, 11]. In contrast, for
+                                                                                                                                                 arc structures from the short and long trajectories [42]. In ad-
+the squeezed light, an attosecond pulse with a relatively broad
+                                                                                                                                                 dition, there is a relatively weak structure, which arises from
+width is generated (see the blue solid curve). In the follow-
+                                                                                                                                                 multi-return trajectories [43]. The interference of these trajec-
+ing, we will understand the effect of the squeezed light on the
+                                                                                                                                                 tories leads to the random change of the harmonic phase in
+attosecond pulse synthesis and show how to obtain a shorter
+                                                                                                                                                 the plateau region shown in Fig. 2(a) [11, 12, 14]. However,
+attosecond pulse under the squeezed light.
+                                                                                                                                                 for the squeezed light in Fig. 2(c), only the left part of the
+   Considering that the temporal structure of attosecond
+                                                                                                                                                 arc can be observed, while the right part of the arc structure
+pulses is affected by the harmonic phase [10], we show in                                                                                        and other weak structures are suppressed. Thus, the short-
+Fig. 2(a) the phases of the HHG obtained with coherent and
+                                                                                                                                                 trajectory contribution becomes dominant, and accordingly,
+squeezed lights, respectively. For coherent light, the phase                                                                                     the phase distribution shows a quadratic structure [16, 39, 40],
+changes smoothly with harmonic order in the cutoff region,
+                                                                                                                                                 just as shown in Fig. 2(a).
+while the phase change in the plateau region is random. A
+                                                                                                                                                    Furthermore, to gain insight into the suppression of the
+similar result can be found in Ref. [11]. Thus, only the har-
+                                                                                                                                                 long-trajectory harmonics in squeezed light, we turn to the
+monics in the cutoff region can be used to produce the attosec-
+                                                                                                                                                 SFA theory [44]. According to the SFA theory, the harmonic
+ond pulse [see Fig. 1(c1)]. In contrast, for squeezed light, the
+                                                                                                                                                 amplitude in coherent light can be written mainly as the super-
+harmonic phases change smoothly in the whole HHG spectra
+                                                                                                                                                 position of the contributions from the short and long electron
+and show approximately a simple quadratic structure. Thus,                                                                                                                             k       ′
+all harmonics are phase-locked [39] and can be used to synthe-                                                                                   trajectories: DEα (nω ) = ∑k akEα eiSEα (p,t,t ) , where k denotes
+size attosecond pulses [see the blue solid curve in Fig. 1(b2)].                                                                                 different trajectory with weight akEα and phase SEk α (p,t,t ′ ).
+                                                                                                                                                                                                 4
+
+                                                                                                                     90
+
+
+
+
+                                                                                            Pulse width (as)
+                    -10
+                                                          Short trajectory
+                                                                                                                     85
+                                                          Long trajectory
+                    -40
+                                                                                                                     80
+
+
+
+
+     Phase (rad)
+                    -70                                                                                              75
+                                                                                                                                                                                      (a)
+
+                                                                                                                     70
+                   -100                                                                                                    0 0.02     0.03       0.04        0.05   0.06     0.07    0.08
+
+                                                                                                                                                    E (E a.u.)
+                                                                                                                                                        vf    0
+
+
+
+
+                                                                                            Intensity (arb. units)
+                   -130                                                                                                   8
+                                                                                                                     10
+                                                                                                                                                                    Cutoff
+                                                                                                                          4
+                                                                                                                     10
+                   -160
+
+                                                                                                                     10
+                                                                                                                          0         E =0.08E
+                                                                                                                                     vf      0
+
+                          20       25       30       35      40       45     50
+                                                                                                                          -4
+                                                                                                                                    E =0.05E
+                                                                                                                                     vf      0
+
+
+                                        Harmonic order (    n)                                                       10
+                                                                                                                                    E =0.02E
+                                                                                                                                     vf      0
+                                                                                                                          -8                                                          (b)
+                                                                                                                     10
+
+                                                                                                                           0        10         20            30      40         50          60
+FIG. 3: Phase of the long and short electron trajectories for HHG.
+The solid red curve and the dashed-dotted blue curve denote the har-                                                                             Harmonic order (     n)
+monic phase in a coherent light with a determined electric field E0 .
+The shaded regions correspond to the phase distribution caused by                       FIG. 4: (a) The dependence of the attosecond pulse width on the
+the electric field quasiprobability distribution Q̃(Eα ) of the squeezed                electric field fluctuation amplitude Evf of the squeezed light. The
+light.                                                                                  attosecond pulse is synthesised from 15th to 53rd order harmonics
+                                                                                        after removing the quadratic component of the harmonic phases. (b)
+                                                                                        The HHG spectra obtained with different Evf .
+This phase is equal to the action accumulated by the electron
+along the corresponding trajectory. For a given harmonic or-
+der, the values of the canonical momentum p, the ionization                             electron trajectory and is therefore independent on the target
+time t, and the reconbination time t ′ of each trajectory can                           system. Similarly, for the multi-return trajectories with longer
+be obtained by solving saddle-point equations [44, 45]. Sub-                            excursion time [43], their harmonic amplitudes are also sup-
+stituting DEα (nω ) into Eq. (6), we obtain the final harmonic                          pressed in squeezed light.
+amplitude in squeezed light:
+                                                                                           Next, we investigate the dependence of the attosecond pulse
+                                   Z
+                                                               k       ′                width on the electric field fluctuation amplitude Evf of the
+                    D(nω ) = ∑         d 2 Eα Q̃(Eα )akEα eiSEα (p,t,t ) .        (8)   squeezed light in Eq. (5). Figure 4(a) shows the width of the
+                               k                                                        attosecond pulse as a function of Evf . As Evf increases, the
+According to this equation, the final amplitude of the long                             width of the attosecond pulse first decreases slightly and then
+or short trajectories is affected by the phase distribution with                        increases. The smallest width can reach to 73 as, when Evf
+respect to the electric field Eα .                                                      is about 0.03E0. The reason for the non-monotonic changes
+   In Fig. 3 we present the phase of the short and long trajec-                         of the width is that initially the increase of Evf can more ef-
+tories as a function of the harmonic order in the coherent and                          fectively suppress the long-trajectory contribution, leading to
+squeezed lights, respectively. For coherent light with a deter-                         the generation of a shorter attosecond pulse. However, as Evf
+mined electric field E0 , the phase of the short and long trajec-                       is further increased, the phase distribution of the short trajec-
+tories is described by the solid red curve and the dashed-dotted                        tories near the cutoff also becomes broader; see Fig. 3. Due
+blue curve. However, for squeezed light, due to the electric                            to destructive interference, the corresponding harmonic am-
+field quasiprobability distribution of Q̃(Eα ) in Eq. (8), there                        plitude is suppressed [see Fig. 4(b)]. Therefore, the spectral
+is a phase distribution for both short and long trajectories.                           bandwidth available for synthesizing attosecond pulses be-
+Here, we consider the full width at half maximum (FWHM)                                 comes narrow, resulting in an increase in the pulse width.
+of the electric field distribution and the corresponding phase                             Finally, we discuss the experimental feasibility of our
+distribution is marked by the shaded regions in Fig. 3. It                              scheme for synthesizing short attosecond pulses from HHG
+is interesting to note that the phase distribution of the long                          in squeezed light. In our scheme, intense squeezed light
+trajectory becomes broad, while for the short trajectories, it                          is required for HHG. Currently, a relatively weak squeezed
+is rather small, especially in the plateau region. The reason                           light can be generated by combining a strong coherent beam
+is that the electron trajectory phase can be approximated by                            with a bright squeezed vacuum beam [23, 48]. To obtain in-
+[46, 47]: SEα (p,t,t ′ ) ≈ −τ Eα2 /4ω 2, where τ is the excursion                       tense squeezed light used in our work, the intensity of the
+time. For the long trajectory with long τ , its phase is sensi-                         bright squeezed vacuum beam should be increased. For in-
+tive to the change of the electric field, leading to the broad                          tense squeezed light with, e.g., Evf = 0.03E0, the intensity of
+phase distribution. In contrast, for the short trajectory, the                          the bright squeezed vacuum beam is about Ivf = 12 ε0 cEvf    2 =
+                                                                                                −4               11        2
+value of τ is small, resulting in the small phase distribution.                         9 × 10 I0 = 1.8 × 10 W/cm [30]. Currently, a bright
+As a result, the harmonic amplitude of the long trajectories                            squeezed vacuum femtosecond beam with an energy E of 350
+with broad phase distribution is suppressed due to destructive                          nJ, a width of τ p =140 fs and a spot diameter of d =18.5 µ m
+interference. This result is only related to the nature of the                          can be achieved experimentally [27]. Accordingly, its inten-
+                                                                                                                                             5
+
+sity is about 4E /(πτ p d 2 ) = 9.3 × 1011 W/cm2 [49], which            phase distribution in intense squeezed light, and this process
+is larger than Ivf . Therefore, the intense squeezed light that         is independent on the target system. Thus, our scheme, as
+meets the requirements of our scheme could be generated un-             demonstrated in this work, provides a robust tool for obtaining
+der the current experimental conditions.                                phase-locked harmonics throughout the HHG spectrum for
+                                                                        synthesizing short attosecond pulses, and could be extended
+                                                                        to other attosecond pulse generation systems, such as attosec-
+                       IV.   CONCLUSION                                 ond pulse generation from solid-state HHG [50].
+
+   In summary, we have studied the attosecond pulse synthe-
+sis from the HHG in intense squeezed light by solving fully-
+quantum TDSE. Our result shows that the harmonics in the                                         Acknowledgments
+whole HHG spectrum can be phase-locked, and the width of
+the attosecond pulse synthesized from these phase-locked har-              We thank Dr. Cheng Gong and Dr. Lu Wang for help-
+monics is greatly reduced. The time-frequency analysis of the           ful discussion. This work is supported by the National
+HHG reveals that the phase-locking of the harmonics is due to           Key Program for S&T Research and Development (No.
+the suppression of the long-trajectory harmonics in the whole           2019YFA0307702), the National Natural Science Foundation
+spectrum. By developing the SFA theory in squeezed light, the           of China (Nos. 11922413, 12121004, and 12274420), and
+suppression of the long-trajectory contribution is attributed to        CAS Project for Young Scientists in Basic Research (No.
+the destructive interference of the trajectories with a broad           YSBR-055).
+
+
+
+
+ [1] F. Krausz,and M. Ivanov,              ”Attosecond physics,”             monic oscillators,” Phys. Rev. A 53, 3456-3468 (1996).
+     Rev. Mod. Phys. 81, 163-234 (2009).                                [13] M. Lewenstein, P. Balcou, M. Yu. Ivanov, A. L’Huillier and
+ [2] P. B. Corkum, and F. Krausz, ”Attosecond science,”                      P. B. Corkum, ”Theory of high-harmonic generation by low-
+     Nat. Phys. 3, 381-387 (2007).                                           frequency laser fields,” Phys. Rev. A 49, 2117-2132 (1994).
+ [3] H. Kapteyn, O. Cohen, I. Christov, and M. Murnane, ”Har-           [14] M. Lewenstein, P. Saliéres, and A. L’Huillier, ”Phase of
+     nessing attosecond science in the quest for coherent X-rays,”           the atomic polarization in high-order harmonic generation,”
+     Science 317, 775-778 (2007).                                            Phys. Rev. A 52, 4747-4754 (1995).
+ [4] M. Chini, K. Zhao, and Z. H. Chang, ”The generation, char-         [15] P. Saliéres,       A. L’Huillier,       and M. Lewenstein,
+     acterization and applications of broadband isolated attosecond          ”Coherence         control     of      high-order    harmonics,”
+     pulses,” Nat. Photon. 8, 178-186 (2014).                                Phys. Rev. Lett. 74, 3776-3779 (1995).
+ [5] M. Hentschel, R. Kienberger, Ch. Spielmann, G. A. Rei-             [16] Y. Mairesse, A. de Bohan, L. J. Frasinski, H. Merdji, L. C. Dinu,
+     der, N. Milosevic, T. Brabec, P. Corkum, U. Heinz-                      P. Monchicourt, P. Breger, M. Kovačev, R. Taı̈eb, B. Carré, H.
+     mann, M. Drescher, and F. Krausz, ”Attosecond metrology,”               G. Muller, P. Agostini, P. Saliéres, ”Attosecond synchronization
+     Nature (London) 414, 509-513 (2001).                                    of high-harmonic soft x-rays,” Science 302, 1540-1543 (2003).
+ [6] P. M. Paul, E. S. Toma, P. Breger, G. Mullot, F. Augé, Ph.        [17] Y. Mairesse, A. de Bohan, L. J. Frasinski, H. Merdji,
+     Balcou, H. G. Muller, and P. Agostini, ”Observation of a                L. C. Dinu, P. Monchicourt, P. Breger, M. Kovačev,
+     train of attosecond pulses from high harmonic generation,”              T. Auguste, B. Carré, H. G. Muller, P. Agostini, and
+     Science 292, 1689-1692 (2001).                                          P. Saliéres, ”Optimization of attosecond pulse generation,”
+ [7] T. Popmintchev, M. C. Chen, D. Popmintchev, P. Arpin, S.                Phys. Rev. Lett. 93, 163901 (2004).
+     Brown, S. Alisauskas, G. Andriukaitis, T. Balciunas, O. D.         [18] G. Sansone, E. Benedetti, F. Calegari, C. Vozzi, L. Avaldi, R.
+     Mücke, A. Pugzlys, A. Baltuska, B. Shim, S. E. Schrauth,               Flammini, L. Poletto, P. Villoresi, C. Altucci, R. Velotta, S.
+     A. Gaeta, C. Hernndez-Garcĺa, L. Plaja, A. Becker, A. Jaron-           Stagira, S. De Silvestri, and M. Nisoli, ”Isolated single-cycle
+     Becker, M. M. Murnane, and H. C. Kapteyn, ”Bright coherent              attosecond pulses,” Science 314, 443-446, (2006).
+     ultrahigh harmonics in the keV X-ray regime from mid-infrared      [19] I. J. Kim, C. M. Kim, H. T. Kim, G. H. Lee, Y. S. Lee, J. Y. Park,
+     femtosecond lasers,” Science 336, 1287-1291 (2012).                     D. J. Cho, and C. H. Nam, ”Highly efficient high-harmonic
+ [8] J. X. Gao, J. Q. Wu, Z. Y. Lou, F. Yang, J. Y. Qian, Y. J. Peng,        generation in an orthogonally polarized two-color laserfField,”
+     Y. X. Leng, Y. H. Zheng, Z. N. Zeng, and R. X. Li, ”High-               Phys. Rev. Lett. 94, 243901 (2005).
+     order harmonic generation in an x-ray range from laser-induced     [20] L. Brugnera, D. J. Hoffmann, T. Siegel, F. Frank, Amelle Zaı̈r,
+     multivalent ions of noble gas,” Optica 9, 1003-1008 (2022).             J. W. G. Tisch, and J. P. Marangos, ”Trajectory selection in high
+ [9] A. E. Siegmann, Lasers (University Science Books, Mill Valley,          harmonic generation by controlling the phase between orthog-
+     CA, 1986).                                                              onal two-color fields,” Phys. Rev. Lett. 107, 153902 (2011).
+[10] M. B. Gaarde, K. J. Schafer, ”Space-time consid-                   [21] C. M. Kim, I. J. Kim, and C. H. Nam, ”Generation of a strong
+     erations in the phase locking of high harmonics,”                       attosecond pulse train with an orthogonally polarized two-color
+     Phys. Rev. Lett. 89, 213901 (2002).                                     laser field,” Phys. Rev. A 72, 033817 (2005).
+[11] P. Antoine, A. L’Huillier, and M. Lewenstein, ”At-                 [22] C. M. Kim and C. H. Nam, ”Selection of an electron path of
+     tosecond Pulse Trains Using High-Order Harmonics,”                      high-order harmonic generation in a two-colour femtosecond
+     Phys. Rev. Lett. 77, 1234-1237 (1996).                                  laser field,” J. Phys. B 39, 3199-3209 (2006).
+[12] Ph. Balcou, A. L’Huillier, and D. Escande, ”High-order har-        [23] M. O. Scully and M. S. Zubairy, Quantum Optics, (Cambridge
+     monic generation processes in classical and quantum anhar-              University Press, New York, 1997).
+                                                                                                                                                6
+
+[24] Y. Qu and S. Singh, ”Photon correlation effects in second har-           Phys. Rev. Lett. 70, 1599-1602 (1993).
+     monic generation,” Opt. Commun. 90, 111-114 (1992).                 [39] K. J. Schafer, K. C. Kulander, ”High harmonic generation from
+[25] T. S. Iskhakov, A. M. Pérez, K. Y. Spasibko, M. V. Chekhova,            ultrafast pump lasers,” Phys. Rev. Lett. 78, 638-641 (1997).
+     and G. Leuchs, ”Superbunched bright squeezed vacuum state,”         [40] K. T. Kim, K. S. Kang, M. N. Park, T. Imran, G. Umesh, and C.
+     Opt. Lett. 37, 1919-1921 (2012).                                         H. Nam, ”Self-compression of attosecond high-order harmonic
+[26] A. M. Pérez, T. Sh. Iskhakov, P. Sharapova, S. Lemieux,                 pulses,” Phys. Rev. Lett. 99, 223904 (2007).
+     O. V. Tikhonova, M. V. Chekhova, and G. Leuchs,                     [41] C. Bourassin-Bouchet, S. d. Rossi, J. Wang, E. Meltchakov, A.
+     ”Bright squeezed-vacuum source with 1.1 spatial mode,”                   Giglia, N. Mahne, S. Nannarone, and F. Delmotte, ”Shaping of
+     Opt. Lett. 39, 2403-2406 (2014).                                         single-cycle sub-50-attosecond pulses with multilayer mirrors,”
+[27] M. A. Finger, T. S. Iskhakov, N. Y. Joly, M. V. Chekhova, and            New J. Phys. 14, 023040 (2012).
+     P. S. J. Russell, ”Raman-free, noble-gasfilled photonic-crystal     [42] Juan J. Carrera, X. M. Tong, and Shih-I Chu, ”Creation and
+     fiber source for ultrafast, very bright twin-beam squeezed vac-          control of a single coherent attosecond xuv pulse by few-cycle
+     uum,” Phys. Rev. Lett. 115, 143602 (2015).                               intense laser pulses,” Phys. Rev. A 74, 023404 (2006).
+[28] A. Gorlach, M. E. Tzur, M. Birk, M. Krüger, N. Rivera, O.          [43] P. C. Li, Y. L. Sheu, C. Laughlin and S. Chu, ”Dy-
+     Cohen, and I. Kaminer, ”High harmonic generation driven by               namical origin of near- and below-threshold harmonic gen-
+     quantum light,” Nat. Phys. 19, 1689-1696 (2023).                         eration of Cs in an intense mid-infrared laser field,”
+[29] M. Khalaf and I. Kaminer, ”Compton scattering driven by in-              Nat. Commun. 6, 7178 (2015).
+     tense quantum light,” Sci. Adv. 9, eade0932 (2023).                 [44] D. B. Milos̆ević and W. Becker, ”Role of long
+[30] M. E. Tzur, M. Birk, A. Gorlach, M. Krúger, I. Kaminer, and O.          quantum orbits in high-order harmonic generation,”
+     Cohen, ”Photon-statistics force in ultrafast electron dynamics,”          Phys. Rev. A 66, 063417 (2002).
+     Nat. Photon. 17, 501-509 (2023).                                    [45] S. Odz̆ak and D. B. Milos̆ević, ”High-order harmonic
+[31] Y. Q. Fang, F. X. Sun, Q. Y. He, and Y. Q. Liu, ”Strong-                 generation in the presence of a static electric field,”
+     field ionization of hydrogen atoms with quantum light,”                   Phys. Rev. A 72, 033407 (2005).
+     Phys. Rev. Lett. 130, 253201 (2023).                                [46] P. Saliéres, B. Carré, L. Le Déroff, F. Grasbon, G. G. Paulus, H.
+[32] S. J. Wang, and X. Y. Lai, ”High-order above-threshold                   Walther, R. Kopold, W. Becker, D. B. Milošević, A. Sanpera,
+     ionization of an atom in intense quantum light,”                         and M. Lewenstein, ”Feynman’s path-integral approach for
+     Phys. Rev. A 108, 063101 (2023).                                         intense-laser-atom interactions,” Science 292, 902-905 (2001).
+[33] M. E. Tzur, and O. Cohen, ”Motion of charged particles in           [47] T. Auguste, P. Saliéres, A. S. Wyatt, A. Monmayrant, I.
+     bright squeezed vacuum,” Light: Sci. Appl. 13, 41 (2024).                A. Walmsley, E. Cormier, A. Zaı̈r, M. Holler, A. Guan-
+[34] P. D. Drummond and C. W. Gardiner,                        ”Gen-          dalini, F. Schapper, J. Biegert, L. Gallmann, and U.
+     eralised     P-representations       in     quantum      optics,”        Keller, ”Theoretical and experimental analysis of quan-
+     J. Phys. A: Math. Gen. 13, 2353-2368 (1980).                             tum path interferences in high-order harmonic generation,”
+[35] M. S. Kim, F. A. M. De Oliveira, and P. L. Knight, ”Proper-              Phys. Rev. A 80, 033817 (2009).
+     ties of squeezed number states and squeezed thermal states,”        [48] M. G. A. Paris, ”Displacement operator by beam splitter,”
+     Phys. Rev. A, 40, 2494-2503 (1989).                                       Phys. Lett. A 217, 78-80 (1996).
+[36] J. L. Krause, K. J. Schafer, and K. C. Kulander, ”High-order        [49] Z. H. Chang, Fundamentals of Attosecond Optics (CRC Press,
+     harmonic generation from atoms and ions in the high intensity            Boca Raton, FL, 2016).
+     regime,” Phys. Rev. Lett. 68, 3535-3538 (1992).                     [50] J. Li, J. Lu, A. Chew, S. Han, J.L. Li, Y. Wu, H.
+[37] P. B. Corkum, ”Plasma perspective on strong field multiphoton            Wang, S. Ghimire and Z. H. Chang, ”Attosecond science
+     ionization,” Phys. Rev. Lett. 71, 1994-1997 (1993).                      based on high harmonic generation from gases and solids,”
+[38] K. J. Schafer, B. Yang, L. F. DiMauro, and K. C. Kulander,               Nat. Commun 11, 2748 (2020).
+     ”Above threshold ionization beyond the high harmonic cutoff,”
+

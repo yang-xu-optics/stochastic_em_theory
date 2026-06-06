@@ -1,0 +1,565 @@
+                                                     Theory of entanglement and measurement in high harmonic generation
+
+                                                                                               Philipp Stammer1, ∗
+                                                                       1
+                                                                         ICFO – Institut de Ciencies Fotoniques, The Barcelona Institute
+                                                                       of Science and Technology, 08860 Castelldefels (Barcelona), Spain
+                                                                                          (Dated: December 12, 2022)
+                                                           Quantum information science and intense laser matter interaction are two apparently unrelated
+                                                        fields. Here, we introduce the notion of quantum information theory to intense laser driven processes
+                                                        by providing the quantum mechanical description of measurement protocols for high harmonic gen-
+                                                        eration in atoms. This allows to conceive new protocols for quantum state engineering of light.
+                                                        We explicitly evaluate conditioning experiments on individual optical field modes, and provide the
+                                                        corresponding quantum operation for coherent states. The associated positive operator-valued mea-
+                                                        sures are obtained, and give rise to the quantum theory of measurement for the generation of high
+                                                        dimensional entangled states, and coherent state superposition with controllable non-classical fea-
+
+
+
+
+arXiv:2203.04354v3 [quant-ph] 9 Dec 2022
+                                                        tures on the attosecond timescale. This establish the use of intense laser driven processes as a novel
+                                                        quantum technology platform for quantum information processing.
+
+
+                                              Introduction. In the process of high harmonic gen-             protocols [29], describing open quantum systems [30] or
+                                           eration (HHG), coherent radiation of higher order har-            quantum control [31]. But, these methods play a new
+                                           monics of the driving laser frequency is generated [1, 2].        role in the description of the interaction of an intense
+                                           The transfer of coherence, and energy, from the intense           laser field with matter. A quantum operation Φn (·) is
+                                           laser source to the harmonic field modes (initially in the        a completely positive map of one quantum state to an-
+                                           vacuum) is achieved by a highly nonlinear interaction of          other ρ 7→ ρn = Φn (ρ)/P (n), and describe how the state
+                                           the driving field with the HHG medium, in which the               ρ changes during a process with outcome n, which oc-
+                                           electron is used as an intermediary between the optical           curs with probability P (n) = Tr[Φn (ρ)]. The represen-
+                                           modes. Until recently this was mainly described in semi-          tation theorem for quantum operations states that the
+                                           classical terms, in which only the electronic degrees of          operation is expressed asP Φn (ρ) = Mn ρMn† , with linear
+                                           freedom are quantized [1], although there have been early         operators Mn satisfying n Mn† Mn = 1 [27]. The op-
+                                           approaches to introduce a fully quantized description of          erators Mn correspond to generalized measurement op-
+                                           the HHG process [3–9]. However, recent advances in the            erations, which for the special case of projective (von
+                                           quantum optical analysis of HHG has established a new             Neumann) measurements are given by projection opera-
+                                           direction in the investigation of strong field physics. This      tors Mn = |nihn|. This concept of quantum operations
+                                           allows to study the quantum mechanical properties of the          naturally leads to the notion of measurement theory via
+                                           harmonic radiation, or to take into account the backac-           positive operator-valued measure (POVM), in which each
+                                           tion on the driving field [10–23]. In particular, it was          possible measurement outcome n is associated to a posi-
+                                           shown that conditioning procedures on processes induced           tive operator En = Mn† Mn . These operators are the ele-
+                                           by intense laser-matter interaction can lead to the gen-          ments of the set {En } defining the POVM, and allow to
+                                           eration of high-photon number controllable non-classical          construct all possible operations which can be performed
+                                           field states in a broad spectral range [16–20].                   on a quantum system. It will be shown, that within this
+                                              However, a complete description of these measurement           framework, conditioning measurements on the electron
+                                           processes is missing thus far, and to make use of the full        allow to generate massive, and controllable, entangled
+                                           power of such protocols for quantum state engineering in          and superposition states of the optical field in intense
+                                           optical quantum technologies [24–26] the corresponding            laser matter interaction.
+                                           theory is needed. One goal in this direction is to con-              The main goal of the present work is to ultimately
+                                           struct the quantum theory of measurement for HHG, and             connect the domain of strong field physics with quantum
+                                           to obtain the generic structure of the entangled states of        information science by introducing the relevant quantum
+                                           the electron and the field modes in strong field processes.       formalism of measurements. This allows to derive the
+                                           Both is presented in the present work by introducing the          quantum operations for the measurement scheme intro-
+                                           natural language in which measurements are described.             duced in [18], and to proof that the corresponding mea-
+                                           This is done by providing the necessary measurement               surement operators are elements of a POVM. Is is further
+                                           operations, and corresponding positive operator-valued            shown under which conditions these generalized measure-
+                                           measure [27, 28]. The notion of measurement opera-                ment operations reduce to the projection operators phe-
+                                           tions is well known in quantum information science, and           nomenologically introduced in [16, 17] to describe the
+                                           has lead to many advances ranging from light-engineering          generation of optical cat states. The derived measure-
+                                                                                                             ment operations for conditioning schemes in HHG allow
+                                                                                                             to perform quantum state engineering protocols, to antic-
+                                                                                                             ipate the generation of novel stats of light with previously
+                                           ∗ philipp.stammer@icfo.eu
+                                                                                                             inaccessible photon numbers, frequencies, and timescales.
+                                                                                                                                  2
+
+                                                                                                µ
+   Entanglement in strong field physics. To describe the           field in the state |φµ i = KEX   |φi i. This is the generic en-
+entangled state of the total system including the elec-            tangled state between the optical field and the electron in
+tron of a single atom and the optical field after strong           intense laser matter interaction. We only assumed an ini-
+field light matter interaction we consider an initially un-        tial pure state of the field in tensor product form, but no
+correlated state |ψ(t0 )i = |φi i |gi. The initial state of        further specification was introduced. The state is written
+the optical field |φi i = ⊗q |φq i is assumed to be pure,          in the form where experimental conditioning schemes on
+and that the modes q are uncorrelated, while the electron          the matter part (electronic ground state, excitation or
+is initially in the ground state |gi. The formal solution          ionization) becomes apparent.
+of the Schrödinger equation describing the interaction is            Entanglement in high harmonic generation. Since
+given by                                                           HHG is one of the most prominent processes in intense
+                                                                   laser matter interaction, we shall now describe the en-
+                  |ψ(t)i = U (t, t0 ) |φi i |gi .           (1)    tanglement between the different optical field modes, i.e.
+  In general, the field and the atom are correlated af-            between the fundamental and the harmonic modes, in
+ter the interaction, and neither the total state |ψ(t)i 6=         more detail. To account for the process of HHG a con-
+|φ(t)i ⊗ |(t)i, where |(t)i describes the state of the elec-     ditioning measurement on the electron has to be per-
+tron, nor the optical field modes |φ(t)i 6= ⊗q |φq (t)i are        formed. Namely, we project onto the electronic ground
+described as a product state after the interaction. To             state ΠHHG = |gihg|. This can, for instance, be done
+make the correlation between the field and the electron            by considering only the processes where no electron was
+more apparent we introduce the identity on the electronic          detected, and assuming that the excited state population
+subspace                                                           is negligible. In all remaining events, the electron is in
+                                        Z                          the ground state, and the corresponding state is given
+                       X                                           by ΠHHG |ψi = |φg i |gi . This conditioning effectively
+          1 = |gihg| +      |λµ ihλµ | + dv |vihv| ,       (2)
+                                                                   eliminates all idle processes which do not correspond to
+                          µ
+                                                                   HHG. Since the object of interest is the optical field state
+where |λµ i are the excited electronic bound states, and           |φg i, we trace over the electronic degrees of freedom. To
+|vi are the continuum states with electron momentum v.             describe the entanglement between the different optical
+The state (1) can now be written as                                field modes we shall now analyze the optical state in more
+                                 X µ                               detail
+        |ψ(t)i =KHHG |φi i |gi +    KEX |φi i |λµ i   (3)
+                                       µ                                  |φg i = KHHG |φi i = hg| U (t, t0 ) |gi [⊗q |φq i].   (5)
+                     Z
+                 +       dvKAT I (v) |φi i |vi ,                      To model the HHG process we need to solve KHHG ,
+                                                                   which is done by assuming that the intense driving laser
+where KHHG = hg| U (t, t0 ) |gi, KEX  µ
+                                         = hλµ | U (t, t0 ) |gi,   can be described by a single mode pure coherent state
+and KAT I (v) = hv| U (t, t0 ) |gi are the operators solely        |φ1 i = |αi, while the harmonic modes q ∈ {2, ..., N }
+acting on the optical field state. The first term corre-           are initially in the vacuum |{0q }i = ⊗q≥2 |0q i such that
+sponds to the electron conditioned on the ground state             the initial field state is given by |φi i = |αi ⊗ |{0q }i.
+|gi leading to HHG [16], while the third term corresponds          The assumption of having a pure coherent state for
+to an electron in a continuum state |vi leading to the             the driving field mode implies that experimental real-
+process of above-threshold ionization (ATI) [22, 32]. The          izations need to operate with a phase-stabilized laser
+second term, corresponding to the electron being in an             source. A single mode field to describe the pulsed laser
+excited bound state |λµ i is usually considered to be small        is used since the measurement scheme does not discrim-
+compared to the contribution of HHG and ATI. However,              inate between the individual modes of the driving field.
+bound state resonances can lead to important contribu-             The electron is assumed to be initially in the ground
+tions in strong field ionization [33–35] or high harmonic          state |gi. The Hamiltonian describing the interaction
+generation [36, 37], and are therefore included in the             of a single electron with the optical field in the length-
+present analysis. Hence, the interaction of the intense            gauge, and within the dipole approximation is given by
+laser field with the atom leads to the entangled state (3)         HI (t) = −d(t) · E, where the electric field operator
+                                                                                  PN √
+                                                                   E(t) = −iκ q=1 q b†q eiqωt − bq e−iqωt is coupled to
+                                                                                                               
+in which the electron is either found in the ground state,
+                                                                                                            †
+in an excited state or in a continuum state after the in-          the dipole moment operator d(t) = Usc      (t, t0 )dUsc (t, t0 ).
+teraction                                                          The time-dependent dipole moment operator is in the in-
+                       X               Z                           teraction
+                                                                         h Rpicture of the i semi-classical frame Usc (t, t0 ) =
+     |ψi = |φg i |gi +   |φµ i |λµ i + dv |φv i |vi ,        (4)                t
+                                                                   T exp −i t0 dτ Hsc (τ ) , with respect to the Hamiltonian
+                         µ
+                                                                   Hsc (t) = Ha − d · Ecl (t). This is exactly the Hamil-
+where |φg i = KHHG |φi i, and |φv i = KAT I (v) |φi i are          tonian for the semi-classical description of intense laser
+the optical field states corresponding to the electron con-        fields interacting with a single electron, where Ha =
+ditioned on HHG or ATI, respectively. The term corre-              p2 /2+V (r) is the pure atomic Hamiltonian, and Ecl (t) =
+sponding to an electronic excitation is associated to the          hφi | E(t) |φi i = iκ(αe−iωt − α∗ eiωt ) is the classical part
+                                                                                                                                                    3
+
+of the initial optical field. A detailed derivation of the               of atoms which contribute in a phase-matched way [16].
+interaction Hamiltonian HI (t) can be found in [16, 17].                 Furthermore, macroscopic effects on the high harmonic
+To now describe the time evolution of the optical field                  generation mechanism itself, e.g. focal averaging, can be
+governed by the Hamiltonian HI (t), and conditioned on                   included in the computation of the time-dependent dipole
+HHG, it remains to solve                                                 moment expectation value hdi (t). This is also where the
+                          Z t                                          microscopic details of the HHG medium is included, and
+     KHHG = hg| T exp i        dt0 d(t0 ) · E(t0 ) |gi . (6)             sophisticated numerical or analytical tools known from
+                                 t0                                      semi-classical HHG theory are needed [38].
+                                                                            However, the induced time-dependent dipole moment
+  Assuming that there are no correlations between dipole                 hd(t)i = hg| d(t) |gi makes the respective shifts of the
+moments [3], it was shown [16, 17], that this can be ap-                 modes correlated. In fact, the actual mode which is pop-
+proximated by coupling the dipole moment expectation                     ulated during the HHG process is a wavepacket mode
+value to the electric field instead of the dipole moment                 taking into account these correlations [16, 18], and can
+operator itself, such that                                               be described by the corresponding number states |ñi. To
+                          Z t                                          account for the process of HHG, we express the state in
+        KHHG ≃ T exp i            0      0       0
+                                dt hdi (t ) · E(t ) , (7)                (9) in terms of the number states of the wavepacket mode
+                                  t0                                                                X
+                                                                                            |φg i =   hñ|φg i |ñi .         (10)
+where hdi (t) = hg| d(t) |gi = h(t)| d |(t)i is the dipole                                            ñ
+moment expectation value. The electronic state |(t)i =
+                                                                            We can now consider two mutual exclusive events,
+Usc (t, t0 ) |gi is given by the conventional solution of HHG
+                                                                         which is either emitting harmonic radiation or not.
+in the semi-classical description [1]. The operator in (7)
+                                                                         If harmonic radiation is generated the wavepacket de-
+can now be obtained exactly by noting that the electric
+                                                                         scribed by |ñi is excited, and of course, if no harmonics
+field operator E(t) is linear in the creation- and anni-
+                                                                         are generated the wavepacket is in its vacuum state 0̃ .
+hilation operators, and the solution is given by a mul-
+                                                                         We can therefore define the set of operators
+timode displacement operator D(χ) = exp χb† − χ∗ b
+[16–18, 20]                                                                                  Añ = {Π0̃ , Πñ6=0 },                               (11)
+                                N
+                                Y                                        which either projects on the sub-space of all possible ex-
+                   KHHG =              eiϕq D(χq ),                (8)   citation of the wavepacket mode
+                                q=1                                                                  X
+                                                                                            Πñ6=0 =    |ñihñ| ,             (12)
+where the shift of the fundamental mode and the har-                                                         ñ6=0
+monic modes account for the depletion of the driving
+                                                                         or on its vacuum state
+laser amplitude due to the generation of coherent radi-
+ation in the harmonic modes with amplitudes χq . The                                              Π0̃ = 0̃ 0̃ .                                   (13)
+state (up to a phase) is then given by
+                                                                            This constitute the POVM elements for conditioning
+                  N
+                  Y                                N
+                                                   O                     between the generation of harmonic radiation, and no
+        |φg i =         D(χq ) |φi i = |α + χ1 i         |χq i ,   (9)   excitation of the corresponding wavepacket mode. We
+                  q=1                              q=2                   shall now consider the more interesting case in which
+                                                                         harmonic radiation is generated, i.e. where an excitation
+and the shift of the individual field modes χq =                         of the wavepacket mode is present. Projecting on Πñ6=0
+     √
+−iκ q hdi (qω) is given by the respective Fourier compo-                 we obtain
+nent of the time dependent    dipole moment expectation                                                    X
+value hdi (qω) = dt hdi (t)eiqωt . The coherent prop-                              |φHH i = Πñ6=0 |φg i =    hñ|φg i |ñi . (14)
+                    R
+erties of the fundamental laser are transferred to the                                                               ñ6=0
+harmonic modes by virtue of the non-linear interaction                                   P
+                                                                           We use that ñ6=0 |ñihñ| = 1 − 0̃ 0̃ , and that the
+with the electron, and that the harmonic modes are de-
+                                                                         vacuum state of the wavepacket mode is given by the
+scribed by coherent states is due to the fact that the
+                                                                         state of the field prior to the interaction with the atomic
+source for the coherent radiation is related to the elec-
+                                                                         medium
+tron dipole moment expectation value which acts as a
+                                                                                                               N
+classical charge current. Note that we have so far con-                                                        O
+sidered a single atom interacting with the intense laser                                      0̃ = |αi               |0q i ,                      (15)
+field, which is applicable under the assumption of vanish-                                                     q=2
+
+ing interatomic correlations [3]. However, the concepts                  such that the state in (14) is given by
+and methods introduced in the following are applicable
+                                                                                                  N                            N
+for generic χq , and extending to the more realistic sce-                                         O                            O
+nario where many atoms contribute to the HHG pro-                            |φHH i = |α + χ1 i         |χq i − ξ |αi                ξq |0q i ,   (16)
+cess we can multiply the displacement χq by the number                                            q=2                          q=2
+                                                                                                                                    4
+
+where ξ = hα|α + χ1 i, and ξq = h0q |χq i. This is the                         HHG
+entangled state between all modes of the optical field in
+the process of HHG, and is heralded by the emission of
+harmonic radiation. The number of modes which are en-
+tangled is on the order of the harmonic cutoff O(N ), and
+presents a massively entangled state of many field modes
+(N > 10). A first characterization of this state in terms of
+the linear entropy for different partitions can be found in      FIG. 1. Schematic illustration of the conditioning experiment
+[18]. Note that this entangled state is naturally generated      in HHG. The initial product state |αi ⊗Q      |{0q≥2 }i of the op-
+by the emission of harmonic radiation, and no particular         tical field mode is shifted via KHHG ≃ q D(χq ), and cor-
+measurement has to be performed on the optical modes             related (via the wavepacket mode |ñi). Performing a condi-
+if ionization and excitation events are eliminated. The          tioning measurement on the harmonic modes |{χq }i leads to
+generation of harmonic radiation by itself serves as the         the quantum operation Φχ   ñ6=0 [·] on the initial coherent state
+origin of this entangled optical field state due to the inter-   of the driving laser.
+action with the atomic medium, and the corresponding
+correlations induced between the different field modes.
+However, the crucial part is to experimentally separate          with measurement operator
+the process of HHG from all other idle processes such                                                          Y
+as ionization or excitation, i.e. implementing the projec-              Mñ6χ̃=0 = h{χ̃q0 }| Πñ6=0 |{χq0 }i            D(χq ).   (19)
+                                                                                                               q6=q 0
+tion ΠHHG . This can be done by measuring the electrons
+which might get ionized, and neglecting all cases in which          This measurement operator takes into account the shift
+an electron was detected, i.e. only considering the cases        of the field modes due to the interaction with the HHG
+where no ionization takes place. Alternatively, as done          medium via D(χq ), and the conditioning in terms of Πñ6=0
+in [16, 17], the harmonic radiation can be measured to-          from the POVM in (11). The schematic illustration of the
+gether with a subsequent post-processing procedure in            experimental conditioning scheme can be seen in Fig. 1.
+which only those events are taken into account in which          This allows to define the new POVM corresponding to
+the shift of the harmonic intensity is anti-correlated to        the possible measurement operation in terms of coherent
+the intensity of the fundamental mode. This likewise al-         states |{χ̃q0 }i performed on M field modes in HHG
+lows to separate HHG from all idle processes. The draw-
+back of this scheme is that some fraction of the optical                              n         †             o
+                                                                           XHHG = Eνχ̃ = Mνχ̃ Mνχ̃ ν ∈ Añ ,          (20)
+field needs to be detected, and is thus inevitably interact-
+ing with additional optical devices leading to decoherence
+and amplitude reduction. Nonetheless, this scheme is             with POVM elements Eνχ̃ , which satisfy the completeness
+very powerful to generate non-classical optical cat states       relation
+with high photon numbers [16–19].                                          1
+                                                                               Z Y            X     †
+                                                                                      2
+     Quantum operations in HHG. In the following we in-                             d   χ̃q 0   Mνχ̃ Mνχ̃ = 1,       (21)
+                                                                        π N −M    0
+troduce the quantum theory of measurement to describe                                q         ν∈Añ
+conditioning experiments in HHG. This can be seen as a
+                                                                 where we sum over ν ∈ Añ , the elements of the HHG
+new class of quantum state engineering protocols of light.
+                                                                 wavepacket POVM in (11). The measurement opera-
+Suppose we perform a post-selection measurement on the
+state ρHH = |φHH ihφHH | from HHG (16). In particular,           tion introduced in (17) is of general kind, and permits
+we perform a measurement on M field modes (denoted by            to analyze various conditioning schemes in the process
+q 0 ), and post-select on the coherent states |{χ̃q0 }i. The     of HHG. It allows to consider different initial states of
+state of the remaining N − M field modes accordingly             the optical field, e.g. HHG driven by multiple laser
+reads ρ0 = h{χ̃q0 }| ρHH |{χ̃q0 }i. Let us therefor define       modes, non-classical or mixed states. Note that for dif-
+                                                                 ferent driving
+                                                                            Q laser fields the operation (9) on the modes
+a quantum operation Φχ̃ñ6=0 [·], which corresponds to this      KHHG ≃ q D(χq ), due to the interaction with the HHG
+post-selection measurement on the modes q 0 , and is act-        medium, is in general different. However, the quantum
+ing on the initial state of the remaining modes described        operation (17) establishes the connection of the photonic
+by ρ0 = Trq0 [|φi ihφi |]. This quantum operation for con-       platform of HHG towards quantum information process-
+ditioning in the process of HHG reads                            ing for light engineering protocols in terms of coherent
+                                    χ̃
+                                            
+                                                 χ̃
+                                                       †        states. In the following we will show how this can be
+                    χ̃            M      ρ     M
+                   Φñ6=0 [ρ0 ]     ñ6=0 0      ñ6=0           used to generate new quantum states of light.
+        ρ0 7→ ρ0 =      χ̃
+                                =        h           i ,  (17)      High dimensional entangled states. With the general
+                     Pñ6=0                 χ̃
+                                     Tr Eñ6=0 ρ0                quantum operation introduced above we shall now pro-
+                                                                 vide the explicit scheme to generate high dimensional
+where we have defined the effect
+                                                                 and controllable entangled states from HHG. For in-
+                                 †
+                                                                 stance, the measurement in (17) can be performed on
+                        
+              Eñ6χ̃=0 = Mñ6χ̃=0 Mñ6χ̃=0 ,             (18)
+                                                                 the fundamental mode only (q 0 = 1), such that ρΩ =
+                                                                                                                                                   5
+                                                                                           PN         2
+hα + χ1 | ρHH |α + χ1 i. The corresponding quantum op-                       where Ω = q=2 |χq | . Applying this operation on the
+eration Φα+χ    1
+           ñ6=0 [·] on the harmonic modes read (up to nor-                  initial state of the driving laser Φχñ6=0 [|αihα|] = |ΨihΨ|, we
+malization)                                                                  obtain the pure state
+
+      |{0q }ih{0q }| 7→ ρΩ = Φα+χ                                                       |Ψi = |α + χ1 i − hα|α + χ1 i e−Ω |αi ,                  (29)
+                              ñ6=0 [|{0q }ih{0q }|]
+                                   1
+                                                                      (22)
+                                                                             which can interpolate between an optical kitten or cat
+with the corresponding measurement operator acting on
+                                                                             state with non-classical signatures in the corresponding
+the initial vacuum state of the harmonic modes
+                                                                             Wigner function [16, 17]. Note that similar operation
+               X                                       N
+                                                       Y                     can be performed on other field modes in order to gen-
+   Mñ6α+χ1
+        =0 =           hα + χ1 |ñi hñ|α + χ1 i             D(χq )          erate optical cat states towards the XUV regime [18],
+               ñ6=0                                   q=2                   which shows the applicability of these conditioning exper-
+             h                            N
+                                         iY                                  iments on HHG for the generation of non-classical field
+                         2
+            = 1 − e−|χ1 | |{0q }ih{0q }|    D(χq ).                   (23)   states over a broad spectral region. The influence of the
+                                                       q=2                   harmonic modes, which can be considered as an envi-
+                                                                             ronment on which conditioning measurements are per-
+  The resulting state of the harmonic modes under this                       formed, is captured in the decoherence factor Ω. The
+measurement operation can be expressed as the pure                           measurement operation in (28) consists of two contribu-
+state |ΨΩ i = Mñ6α+χ
+                   =0 |{0q }i, and is given by
+                      1                                                      tions. First, the displacement operation for the initial
+                                                                             coherent state taking into account the depletion of the
+               N                          N                                  fundamental mode due to HHG, and second, the opera-
+                                      2            1     2
+                                                                             tor Pñχ = 1 − e−Ω |αihα|, which reflects the conditioning
+               O                          O
+     |ΨΩ i =         |χq i − e−|χ1 |            e− 2 |χq | |0q i .    (24)
+               q=2                        q=2                                processes. This conditioning operation does not consti-
+                                                                             tute a projective measurement since (Pñχ )2 6= Pñχ . But,
+   This is a high dimensional entangled state of the har-                    we observe that for a small decoherence factor Ω the op-
+monic field modes. It can be particularly interesting                        erator Pñχ is indeed given by a projective measurement,
+when considering the regime of small harmonic conver-                        such that (Pñχ )2 = Pñχ = 1 − |αihα|. This is the projec-
+sion efficiency, i.e. |χq | < 1, such that the coherent                      tive measurement phenomenologically introduced in [16],
+state of a single harmonic mode can be approximated as                       to interpret the measured Wigner function after an ex-
+|χq i ≃ |0q i + χq |1q i. The state (24) can then be written                 perimental conditioning procedure on HHG [20]. Note
+               2
+up to O(|χq | ), and reads                                                   that this projection is performed on the sub-space which
+                                                                             is ”orthogonal” to the initial state, i.e. the identity sub-
+                     N                                                       tracted by the initial state of the fundamental mode. In
+                                  ⊗(q−2)               ⊗(N −q)
+                     X
+          |ΨΩ i =            χq |0i        |1q i |0i             .    (25)   [18] it was shown that the environmental induced deco-
+                       q=2                                                   herence factor scales as Ω ∝ O(1/N ) with the harmonic
+                                                                             cutoff N . Since the harmonic cutoff usually extends to-
+   Now, considering three harmonic modes {q, r, s}, the                      wards values of N > 10, this scheme of generating opti-
+field has the form of a W -state [39]                                        cal cat states with large amplitudes is robust against this
+                                                                             source of decoherence.
+  |ΨΩ3 i = χq |1q 0r 0s i + χr |0q 1r 0s i + χs |0q 0r 1s i .         (26)      However, we observe that the measurement operator
+                                                                             (28) corresponds to the set of operators {Mνχ̃ }, where
+  Since the optical field in the process of HHG can be
+tailored in an accurate way it allows for very precise co-                                   Mνχ̃ = h{χ̃q }| Πν |{χq }i D(χ1 ),                  (30)
+herent control of the light engineering protocols, and ac-
+cordingly also on the multipartite entangled states.                         which form the POVM defined by the set {Eνχ̃ } with
+  Generation of optical cat states. To further explore                       POVM elements
+the use of the quantum operation introduced above for                                                   †
+                                                                                             Eνχ̃ = Mνχ̃ Mνχ̃ ,             (31)
+generating non-classical field states, we consider the case
+in which all harmonic modes q 0 ≥ 2 are measured in                          satisfying the completeness relation
+(17). The resulting operation on the initial state of the
+fundamental mode reads                                                                   1
+                                                                                                Z N
+                                                                                                  Y              X              †
+                                                                                                        d2 χ̃q           Mνχ̃        Mνχ̃ = 1.   (32)
+                 |αihα| 7→ ρ = Φχñ6=0 [|αihα|] ,                     (27)             π N −1     q=2            ν∈Añ
+
+
+with the measurement operator                                                   This proofs that the derived measurement operators
+                                                                             {Mνχ̃ } belong to a POVM, and provides the mathematical
+            Mñ6χ=0 = h{χq }| Πñ6=0 |{χq }i D(χ1 )                          structure of the conditioning schemes given in [16–18].
+                                                                                Discussion. We introduced the quantum theory of
+                    = 1 − e−Ω |αihα| D(χ1 ),
+                                       
+                                                                      (28)   measurement to the process of HHG, which establishes
+                                                                                                                                   6
+
+the connection between the two mainly unrelated fields             of the quantum mechanical properties in intense laser
+of quantum information science and intense laser mat-              matter interaction from atoms to complex materials, and
+ter interaction. Using the general quantum operation in            how new quantum states of light with the use for modern
+terms of coherent states allows to conceive new light engi-        quantum technologies can be generated [20, 21].
+neering protocols for the generation of high dimensional,             Acknowledgments. I thank Javier Rivera-Dean and
+and controllable, optical entangled states. Using attosec-         Maciej Lewenstein for stimulating discussions about
+ond physics as a novel platform for quantum information            entanglement in strong field driven processes, and Paris
+processing brings the advantage of the intrinsic ultra-            Tzallas for helpful comments on the manuscript. This
+fast time-scale, together with the high degree of coherent         project has received funding from the European Union’s
+control of the HHG mechanism by complex polarization               Horizon 2020 research and innovation programme
+states or spatial modes of the driving field [40–43]. This         under the Marie Sklodowska-Curie grant agreement
+allows to tailor the continuous-variable non-classical field       No 847517. ICFO group acknowledges support from:
+states in the desired way for quantum information pro-             ERC AdG NOQIA; Agencia Estatal de Investigación
+cessing protocols [44–49], quantum computation [50] or             (R&D project CEX2019-000910-S, funded by MCIN/
+quantum key distribution [51]. Furthermore, the entan-             AEI/10.13039/501100011033, Plan National FIDEUA
+gled coherent state can be used for quantum metrology              PID2019-106901GB-I00, FPI, QUANTERA MAQS
+[52], or in correlation experiments towards the use for            PCI2019-111828-2, Proyectos de I+D+I “Retos Colabo-
+fundamental tests of quantum theory by violating Bell-             ración” QUSPIN RTC2019-007196-7); Fundació Cellex;
+type inequalities [53–56], whereas the optical cat states          Fundació Mir-Puig; Generalitat de Catalunya through
+allow for spectroscopy with non-classical states of light          the CERCA program, AGAUR Grant No. 2017 SGR
+[57–59]. Considering that HHG from more complex ma-                134, QuantumCAT U16-011424, co-funded by ERDF
+terials such as solids or plasma [60–64], strongly corre-          Operational Program of Catalonia 2014-2020; EU Hori-
+lated [65], or topological systems [66–70] follows very            zon 2020 FET-OPEN OPTOLogic (Grant No 899794);
+similar mechanism anticipates for further investigation            National Science Centre, Poland (Symfonia Grant No.
+of the non-classical properties from the interaction with          2016/20/W/ST4/00314); Marie Sklodowska-Curie grant
+such materials. In particular, entanglement in strong              STREDCH No 101029393; “La Caixa” Junior Leaders
+field driven processes, for instance, between the ion and          fellowships (ID100010434) and EU Horizon 2020 under
+ionized electron [71], or in two-electron ionization [72] are      Marie Sklodowska-Curie grant agreement No 847648
+of current interest. The connection to quantum informa-            (LCF/BQ/PI19/11690013,         LCF/BQ/PI20/11760031,
+tion science will ultimately help to answer the question           LCF/BQ/PR20/11770012, LCF/BQ/PR21/11840013).
+
+
+
+
+ [1] M. Lewenstein, P. Balcou, M. Y. Ivanov, A. L’huillier,             view A, 56(1):645, 1997.
+     and P. B. Corkum. Theory of high-harmonic generation           [9] D.J. Diestler.        Harmonic generation:         Quantum-
+     by low-frequency laser fields. Phys. Rev. A, 49(3):2117,           electrodynamical theory of the harmonic photon-number
+     1994.                                                              spectrum. Physical Review A, 78(3):033814, 2008.
+ [2] P. Salieres, A. L’huillier, P. Antoine, and M. Lewenstein.    [10] I.K. Kominis, G. Kolliopoulos, D. Charalambidis, and
+     Study of the spatial and temporal coherence of high order          P. Tzallas. Quantum-optical nature of the recollision
+     harmonics. arXiv preprint quant-ph/9710060, 1997.                  process in high-order-harmonic generation. Phys. Rev.
+ [3] B. Sundaram and P. W. Milonni. High-order harmonic                 A, 89(6):063827, 2014.
+     generation: simplified model and relevance of single-atom     [11] I.A. Gonoskov, N. Tsatrafyllis, I.K. Kominis, and
+     theories to experiment. Phys. Rev. A, 41(11):6571, 1990.           P. Tzallas. Quantum optical signatures in strong-field
+ [4] J.H. Eberly and M.V. Fedorov. Spectrum of light scat-              laser physics: Infrared photon counting in high-order-
+     tered coherently or incoherently by a collection of atoms.         harmonic generation. Sci. Rep., 6(1):1–9, 2016.
+     Physical Review A, 45(7):4706, 1992.                          [12] N. Tsatrafyllis, I.K. Kominis, I.A. Gonoskov, and P. Tza-
+ [5] H. Xu. Non-perturbative theory of harmonic generation              llas. High-order harmonics measured by the photon
+     under a high-intensity laser field. Zeitschrift für Physik        statistics of the infrared driving-field exiting the atomic
+     D Atoms, Molecules and Clusters, 28(1):27–36, 1993.                medium. Nat. Comm., 8(1):1–6, 2017.
+ [6] G. Compagno, K. Dietz, and F. Persico. Qed theory             [13] N. Tsatrafyllis, S. Kühn, M. Dumergue, P. Foldi, S. Ka-
+     of harmonic emission by a strongly driven atom. Jour-              haly, E. Cormier, I.A. Gonoskov, B. Kiss, K. Varju,
+     nal of Physics B: Atomic, Molecular and Optical Physics,           S. Varro, et al. Quantum optical signatures in a strong
+     27(19):4779, 1994.                                                 laser pulse after interaction with semiconductors. Phys.
+ [7] F.I. Gauthey, C. H. Keitel, P. L. Knight, and A. Maquet.           Rev. Lett., 122(19):193602, 2019.
+     Role of initial coherence in the generation of harmon-        [14] Á. Gombkötő, S. Varró, P. Mati, and P. Földi. High-order
+     ics and sidebands from a strongly driven two-level atom.           harmonic generation as induced by a quantized field:
+     Physical Review A, 52(1):525, 1995.                                phase-space picture. Physical Review A, 101(1):013418,
+ [8] W. Becker, A. Lohr, M. Kleber, and M. Lewenstein. A                2020.
+     unified theory of high-harmonic generation: Application       [15] A. Gorlach, O. Neufeld, N. Rivera, O. Cohen, and
+     to polarization properties of the harmonics. Physical Re-          I. Kaminer. The quantum-optical nature of high har-
+                                                                                                                                  7
+
+     monic generation. Nat. Comm., 11(1):1–11, 2020.                [32] W. Becker, F. Grasbon, R. Kopold, D.B. Milošević, G.G.
+[16] M. Lewenstein, M.F. Ciappina, E. Pisanty, J. Rivera-                Paulus, and H. Walther. Above-threshold ionization:
+     Dean, P. Stammer, Th. Lamprou, and P. Tzallas. Gen-                 From classical features to quantum effects. Advances in
+     eration of optical schrödinger cat states in intense laser–        Atomic Molecular and Optical Physics, 48:35–98, 2002.
+     matter interactions. Nature Physics, 17(10):1104–1108,         [33] R.R. Freeman, P.H. Bucksbaum, H. Milchberg,
+     2021.                                                               S. Darack, D. Schumacher, and M.E. Geusic. Above-
+[17] J. Rivera-Dean, Th. Lamprou, E. Pisanty, P. Stam-                   threshold ionization with subpicosecond laser pulses.
+     mer, A. F. Ordóñez, A. S. Maxwell, M. F. Ciappina,                Physical review letters, 59(10):1092, 1987.
+     M. Lewenstein, and P. Tzallas. Strong laser fields and         [34] M.D. Perry, A. Szoke, and K.C. Kulander. Resonantly
+     their power to generate controllable high-photon-number             enhanced above-threshold ionization of helium. Physical
+     coherent-state superpositions. Phys. Rev. A, 105:033714,            review letters, 63(10):1058, 1989.
+     Mar 2022.                                                      [35] P. Stammer, S. Patchkovskii, and F. Morales. Evidence of
+[18] P. Stammer, J. Rivera-Dean, Th. Lamprou, E. Pisanty,                ac-stark-shifted resonances in intense two-color circularly
+     M. F. Ciappina, P. Tzallas, and M. Lewenstein. High                 polarized laser fields. Physical Review A, 101(3):033405,
+     photon number entangled states and coherent state su-               2020.
+     perposition from the extreme ultraviolet to the far in-        [36] Á. Jiménez-Galán, N. Zhavoronkov, M. Schloz,
+     frared. Phys. Rev. Lett., 128:123603, Mar 2022.                     F. Morales, and M. Ivanov.             Time-resolved high
+[19] J. Rivera-Dean, P. Stammer, E. Pisanty, Th. Lamprou,                harmonic spectroscopy of dynamical symmetry breaking
+     P. Tzallas, M. Lewenstein, and M. F. Ciappina. New                  in bi-circular laser fields: the role of rydberg states.
+     schemes for creating large optical schrödinger cat states          Optics Express, 25(19):22880–22896, 2017.
+     using strong laser fields. Journal of Computational Elec-      [37] N.    Mayer,      S.    Beaulieu,     A.   Jimenez-Galan,
+     tronics, pages 1–13, 2021.                                          S. Patchkovskii, O. Kornilov, D. Descamps, S. Pe-
+[20] Philipp Stammer, Javier Rivera-Dean, Andrew Maxwell,                tit, O. Smirnova, Y. Mairesse, and M. Ivanov. Role of
+     Theocharis Lamprou, Andres Ordóñez, Marcelo F Ciap-               spin-orbit coupling in high-order harmonic generation
+     pina, Paraskevas Tzallas, and Maciej Lewenstein. Quan-              revealed by super-cycle rydberg trajectories. arXiv
+     tum electrodynamics of ultra-intense laser-matter inter-            preprint arXiv:2112.02981, 2021.
+     actions. arXiv:2206.04308, 2022.                               [38] Gregory SJ Armstrong, Margarita A Khokhlova, Marie
+[21] M Lewenstein, N Baldelli, U Bhattacharya, J Biegert,                Labeye, Andrew S Maxwell, Emilio Pisanty, and Marco
+     MF Ciappina, U Elu, T Grass, PT Grochowski, A John-                 Ruberti. Dialogue on analytical and ab initio methods in
+     son, Th Lamprou, et al. Attosecond physics and quantum              attoscience. The European Physical Journal D, 75(7):1–
+     information science. arXiv:2208.14769, 2022.                        31, 2021.
+[22] Javier Rivera-Dean, Philipp Stammer, Andrew S                  [39] W. Dür, G. Vidal, and J. I. Cirac. Three qubits can be
+     Maxwell, Theocharis Lamprou, Paraskevas Tzallas, Ma-                entangled in two inequivalent ways. Physical Review A,
+     ciej Lewenstein, and Marcelo F Ciappina. Light-matter               62(6):062314, 2000.
+     entanglement after above-threshold ionization processes        [40] A. Fleischer, O. Kfir, T. Diskin, P. Sidorenko, and O. Co-
+     in atoms. arXiv:2208.05245, 2022.                                   hen. Spin angular momentum and tunable polarization
+[23] Á. Gombkötő, P. Földi, and S. Varró. Quantum-optical           in high-harmonic generation. Nat. Phot., 8(7):543–549,
+     description of photon statistics and cross correlations             2014.
+     in high-order harmonic generation. Physical Review A,          [41] M. Ivanov and E. Pisanty. High-harmonic generation:
+     104(3):033703, 2021.                                                taking control of polarization. 2014.
+[24] J. L. O’brien, A. Furusawa, and J. Vučković. Photonic        [42] Á. Jiménez-Galán, N. Zhavoronkov, D. Ayuso,
+     quantum technologies. Nature Photonics, 3(12):687–695,              F. Morales, S. Patchkovskii, M. Schloz, E. Pisanty,
+     2009.                                                               O. Smirnova, and M. Ivanov. Control of attosecond
+[25] I.A. Walmsley. Quantum optics: Science and technology               light polarization in two-color bicircular fields. Physical
+     in a new light. Science, 348(6234):525–530, 2015.                   Review A, 97(2):023409, 2018.
+[26] A. Acı́n, I. Bloch, H. Buhrman, T. Calarco, C. Eichler,        [43] D. D. Hickstein, F. J. Dollar, P. Grychtol, J. L. Ellis,
+     J. Eisert, D. Esteve, N. Gisin, S. J. Glaser, F. Jelezko,           R. Knut, C. Hernández-Garcı́a, D. Zusin, C. Gentry,
+     et al. The quantum technologies roadmap: a european                 J. M. Shaw, T. Fan, et al. Non-collinear generation of
+     community view. New Journal of Physics, 20(8):080201,               angularly isolated circularly polarized high harmonics.
+     2018.                                                               Nature Photonics, 9(11):743–750, 2015.
+[27] K. Kraus, A. Böhm, J. D. Dollard, and W.H. Wootters.          [44] S. Lloyd and S. L. Braunstein. Quantum computation
+     States, effects, and operations: fundamental notions of             over continuous variables. In Quantum information with
+     quantum theory. lectures in mathematical physics at the             continuous variables, pages 9–17. Springer, 1999.
+     university of texas at austin. Lecture notes in physics,       [45] H. Jeong, M.S. Kim, and J. Lee. Quantum-information
+     190, 1983.                                                          processing for a coherent superposition state via a
+[28] M. A. Nielsen and I. Chuang. Quantum computation and                mixedentangled coherent channel. Physical Review A,
+     quantum information, 2002.                                          64(5):052308, 2001.
+[29] C. C. Gerry and P. L. Knight. Introductory quantum             [46] A. Gilchrist, K. Nemoto, W. J. Munro, T. C. Ralph,
+     optics. Cambridge university press, 2005.                           S. Glancy, S. L. Braunstein, and G. J. Milburn.
+[30] H.Peter. Breuer and F. Petruccione. The theory of open              Schrödinger cats and their power for quantum informa-
+     quantum systems. Oxford University Press on Demand,                 tion processing. Journal of Optics B: Quantum and Semi-
+     2002.                                                               classical Optics, 6(8):S828, 2004.
+[31] H. M. Wiseman and G. J. Milburn. Quantum measure-              [47] A. Ourjoumtsev, R. Tualle-Brouri, J. Laurat, and
+     ment and control. Cambridge university press, 2009.                 P. Grangier. Generating optical schrödinger kittens for
+                                                                                                                              8
+
+     quantum information processing. Science, 312(5770):83–           113(7):073901, 2014.
+     86, 2006.                                                   [61] G. Vampa, T.J. Hammond, N. Thiré, B.E. Schmidt,
+[48] C. Weedbrook, S. Pirandola, R. Garcı́a-Patrón, N. J.            F. Légaré, C.R. McDonald, T. Brabec, and P.B. Corkum.
+     Cerf, T. C. Ralph, J. H. Shapiro, and S. Lloyd. Gaus-            Linking high harmonics from gases and solids. Nature,
+     sian quantum information. Reviews of Modern Physics,             522(7557):462–464, 2015.
+     84(2):621, 2012.                                            [62] E. N. Osika, A. Chacón, L. Ortmann, N. Suárez, J. A.
+[49] B. Vlastakis, G. Kirchmair, Z. Leghtas, S. E. Nigg,              Pérez-Hernández, B. Szafran, M. F. Ciappina, F. Sols,
+     L. Frunzio, S. M. Girvin, M. Mirrahimi, M. H. Devoret,           A. S. Landsman, and M. Lewenstein. Wannier-bloch ap-
+     and R. J. Schoelkopf. Deterministically encoding quan-           proach to localization in high-harmonics generation in
+     tum information using 100-photon schrödinger cat states.        solids. Physical Review X, 7(2):021017, 2017.
+     Science, 342(6158):607–610, 2013.                           [63] S. Ghimire and D. A. Reis. High-harmonic generation
+[50] T. C. Ralph, A. Gilchrist, G. J. Milburn, W. J. Munro,           from solids. Nature physics, 15(1):10–16, 2019.
+     and S. Glancy. Quantum computation with optical co-         [64] Th. Lamprou, R. Lopez-Martens, S. Haessler, I. Lion-
+     herent states. Phys. Rev. A, 68(4):042319, 2003.                 tos, S. Kahaly, J. Rivera-Dean, P. Stammer, E. Pisanty,
+[51] P. Jouguet, S. Kunz-Jacques, A. Leverrier, P. Grangier,          M. F. Ciappina, M. Lewenstein, et al. Quantum-optical
+     and E. Diamanti. Experimental demonstration of long-             spectrometry in relativistic laser–plasma interactions us-
+     distance continuous-variable quantum key distribution.           ing the high-harmonic generation process: A proposal.
+     Nat. Phot., 7(5):378–381, 2013.                                  In Photonics, volume 8, page 192, 2021.
+[52] J. Joo, W. J. Munro, and T. P. Spiller. Quantum metrol-     [65] REF Silva, Igor V Blinov, Alexey N Rubtsov,
+     ogy with entangled coherent states. Phys. Rev. Lett.,            O Smirnova, and M Ivanov. High-harmonic spectroscopy
+     107(8):083601, 2011.                                             of ultrafast many-body dynamics in strongly correlated
+[53] A. Gilchrist, P. Deuar, and M.D. Reid. Contradiction             systems. Nature Photonics, 12(5):266–270, 2018.
+     of quantum mechanics with local hidden variables for        [66] D. Bauer and K. K. Hansen. High-harmonic generation in
+     quadrature phase amplitude measurements. Physical re-            solids with and without topological edge states. Physical
+     view letters, 80(15):3169, 1998.                                 review letters, 120(17):177401, 2018.
+[54] A. Gilchrist, P. Deuar, and M.D. Reid. Contradiction        [67] C. Jürß and D. Bauer.         High-harmonic generation
+     of quantum mechanics with local hidden variables for             in su-schrieffer-heeger chains.      Physical Review B,
+     quadrature phase measurements on pair-coherent states            99(19):195428, 2019.
+     and squeezed macroscopic superpositions of coherent         [68] R.E.F. Silva,      Á. Jiménez-Galán,     B. Amorim,
+     states. Physical Review A, 60(6):4259, 1999.                     O. Smirnova, and M. Ivanov.           Topological strong-
+[55] J. Wenger, M. Hafezi, F. Grosshans, R. Tualle-Brouri,            field physics on sub-laser-cycle timescale.        Nature
+     and P. Grangier. Maximal violation of bell inequalities          Photonics, 13(12):849–854, 2019.
+     using continuous-variable measurements. Phys. Rev. A,       [69] A. Chacón, D. Kim, W. Zhu, S. P. Kelly, A. Dauphin,
+     67(1):012105, 2003.                                              E. Pisanty, A. S. Maxwell, A. Picón, M. F. Ciap-
+[56] R. Garcı́a-Patrón, J. Fiurášek, N. J. Cerf, J. Wenger,        pina, D. E. Kim, et al. Circular dichroism in higher-
+     R. Tualle-Brouri, and P. Grangier. Proposal for a                order harmonic generation: Heralding topological phases
+     loophole-free bell test using homodyne detection. Physi-         and transitions in chern insulators. Physical Review B,
+     cal review letters, 93(13):130409, 2004.                         102(13):134115, 2020.
+[57] M. Kira, S. W. Koch, R. P. Smith, A. E. Hunter, and         [70] N. Baldelli, U. Bhattacharya, D. González-Cuadra,
+     S. T. Cundiff. Quantum spectroscopy with schrödinger-           M. Lewenstein, and T. Graß. Detecting majorana
+     cat states. Nature Physics, 7(10):799–804, 2011.                 zero modes via strong field dynamics. arXiv preprint
+[58] K. E. Dorfman, F. Schlawin, and S. Mukamel. Nonlinear            arXiv:2202.03547, 2022.
+     optical signals and spectroscopy with quantum light. Rev.   [71] L.-M. Koll, L. Maikowski, L. Drescher, T. Witting, and
+     Mod. Phys., 88(4):045008, 2016.                                  M.J.J. Vrakking. Experimental control of quantum-
+[59] S. Mukamel, M. Freyberger, W. Schleich, M. Bellini,              mechanical entanglement in an attosecond pump-probe
+     A. Zavatta, G. Leuchs, C. Silberhorn, R. W. Boyd, L. L.          experiment. Physical Review Letters, 128(4):043201,
+     Sánchez-Soto, A. Stefanov, et al. Roadmap on quantum            2022.
+     light spectroscopy. Journal of Physics B: Atomic, Molec-    [72] A. S. Maxwell, L. B. Madsen, and M. Lewenstein. Entan-
+     ular and Optical Physics, 53(7):072002, 2020.                    glement of orbital angular momentum in non-sequential
+[60] G. Vampa, C.R. McDonald, G. Orlando, D.D. Klug, P.B.             double ionization. arXiv preprint arXiv:2111.10148,
+     Corkum, and T. Brabec. Theoretical analysis of high-             2021.
+     harmonic generation in solids. Physical review letters,
+

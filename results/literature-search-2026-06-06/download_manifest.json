@@ -1,0 +1,2763 @@
+{
+  "generated": "2026-06-06",
+  "criteria": "explicit squeezed/quantum-light HHG or strong-field physics; BSV characterization for stochastic/g2/modes; non-Gaussian pump-depleted/ultrafast quantum nonlinear optics; excludes generic THz/OR unless squeezed/quantum-pump specific",
+  "selected_count": 38,
+  "downloaded_count": 35,
+  "skipped_count": 0,
+  "failed_count": 2,
+  "selected": [
+    {
+      "title": "Two-Color Bright Squeezed Vacuum",
+      "year": "2009",
+      "dest": "raw/sources/Agafonov et al. - 2009 - Two-Color Bright Squeezed Vacuum.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/0910.4831",
+        "https://arxiv.org/pdf/0910.4831v4"
+      ],
+      "metadata": {
+        "title": "Two-Color Bright Squeezed Vacuum",
+        "year": "2009",
+        "date": "2009-10-26",
+        "doi": "10.1103/PhysRevA.82.011801",
+        "arxiv": "0910.4831v4",
+        "authors": [
+          "Ivan N. Agafonov",
+          "Maria V. Chekhova",
+          "Gerd Leuchs"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/0910.4831v4",
+        "abstract": "In a strongly pumped non-degenerate traveling-wave OPA, we produce two-color squeezed vacuum with up to millions of photons per pulse. Our approach to registering this macroscopic quantum state is direct detection of a large number of transverse and longitudinal modes, which is achieved by making the detection time and area much larger than the coherence time and area, respectively. Using this approach, we obtain a record value of twin-beam squeezing for direct detection of bright squeezed vacuum. This makes direct detection of macroscopic squeezed vacuum a practical tool for quantum information applications.",
+        "cited_by_count": null,
+        "relevance_score": 7,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "squeezed vacuum"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/0910.4831",
+          "https://arxiv.org/pdf/0910.4831v4"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Super-bunched bright squeezed vacuum state",
+      "year": "2012",
+      "dest": "raw/sources/Iskhakov et al. - 2012 - Super-bunched bright squeezed vacuum state.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/1202.1682",
+        "https://arxiv.org/pdf/1202.1682v1"
+      ],
+      "metadata": {
+        "title": "Super-bunched bright squeezed vacuum state",
+        "year": "2012",
+        "date": "2012-02-08",
+        "doi": null,
+        "arxiv": "1202.1682v1",
+        "authors": [
+          "T. Sh. Iskhakov",
+          "A. Perez",
+          "K. Yu. Spasibko",
+          "M. V. Chekhova",
+          "G. Leuchs"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/1202.1682v1",
+        "abstract": "In this paper we experimentally study the statistical properties of a bright squeezed vacuum state containing up to 10^13 photons per mode (10 uJ per pulse), produced via high gain parametric down conversion (PDC). The effects of bunching and superbunching of photons were observed for a single mode PDC radiation by second-order intensity correlation function measurements with analog detectors.",
+        "cited_by_count": null,
+        "relevance_score": 7,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "squeezed vacuum"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/1202.1682",
+          "https://arxiv.org/pdf/1202.1682v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Spatially single-mode source of bright squeezed vacuum",
+      "year": "2014",
+      "dest": "raw/sources/Pérez et al. - 2014 - Spatially single-mode source of bright squeezed vacuum.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/1402.2771",
+        "https://arxiv.org/pdf/1402.2771v1"
+      ],
+      "metadata": {
+        "title": "Spatially single-mode source of bright squeezed vacuum",
+        "year": "2014",
+        "date": "2014-02-12",
+        "doi": "10.1364/OL.39.002403",
+        "arxiv": "1402.2771v1",
+        "authors": [
+          "A. M. Pérez",
+          "T. Sh. Iskhakov",
+          "P. Sharapova",
+          "S. Lemieux",
+          "O. V. Tikhonova",
+          "M. V. Chekhova",
+          "G. Leuchs"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/1402.2771v1",
+        "abstract": "Bright squeezed vacuum, a macroscopic nonclassical state of light, can be obtained at the output of a strongly pumped non-seeded traveling-wave optical parametric amplifier (OPA). By constructing the OPA of two consecutive crystals separated by a large distance we make the squeezed vacuum spatially single-mode without a significant decrease in the brightness or squeezing.",
+        "cited_by_count": null,
+        "relevance_score": 7,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "squeezed vacuum"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/1402.2771",
+          "https://arxiv.org/pdf/1402.2771v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Nonlinear interferometer for tailoring the frequency spectrum of bright squeezed vacuum",
+      "year": "2015",
+      "dest": "raw/sources/Iskhakov et al. - 2015 - Nonlinear interferometer for tailoring the frequency spectrum of bright squeezed vacuum.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/1503.03406",
+        "https://arxiv.org/pdf/1503.03406v1"
+      ],
+      "metadata": {
+        "title": "Nonlinear interferometer for tailoring the frequency spectrum of bright squeezed vacuum",
+        "year": "2015",
+        "date": "2015-03-11",
+        "doi": "10.1080/09500340.2015.1080315",
+        "arxiv": "1503.03406v1",
+        "authors": [
+          "T. Sh. Iskhakov",
+          "S. Lemieux",
+          "A. Perez",
+          "R. W. Boyd",
+          "G. Leuchs",
+          "M. Chekhova"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/1503.03406v1",
+        "abstract": "We propose a method for tailoring the frequency spectrum of bright squeezed vacuum by generating it in a nonlinear interferometer, consisting of two down-converting nonlinear crystals separated by a dispersive medium. Due to a faster dispersive spreading of higher-order Schmidt modes, the spectral width of the radiation at the output is reduced as the length of the dispersive medium is increased. Preliminary results show 30\\% spectral narrowing.",
+        "cited_by_count": null,
+        "relevance_score": 8,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "schmidt modes",
+          "squeezed vacuum"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/1503.03406",
+          "https://arxiv.org/pdf/1503.03406v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Properties of bright squeezed vacuum at increasing brightness",
+      "year": "2020",
+      "dest": "raw/sources/Sharapova et al. - 2020 - Properties of bright squeezed vacuum at increasing brightness.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/1905.10109",
+        "http://link.aps.org/pdf/10.1103/PhysRevResearch.2.013371",
+        "http://arxiv.org/pdf/1905.10109.pdf",
+        "http://arxiv.org/abs/1905.10109",
+        "https://arxiv.org/pdf/1905.10109v2"
+      ],
+      "metadata": {
+        "title": "Properties of bright squeezed vacuum at increasing brightness",
+        "year": 2020,
+        "date": "2020-03-27",
+        "doi": "10.1103/physrevresearch.2.013371",
+        "arxiv": "1905.10109v2",
+        "authors": [
+          "Polina R. Sharapova",
+          "Gaetano Frascella",
+          "Matvei Riabinin",
+          "A. M. Pérez",
+          "О. В. Тихонова",
+          "Samuel Lemieux",
+          "Robert W. Boyd",
+          "Gerd Leuchs",
+          "Maria V. Chekhova"
+        ],
+        "venue": "Physical Review Research",
+        "url": "https://doi.org/10.1103/physrevresearch.2.013371",
+        "abstract": "This work provides a theoretical approach to describe the spatial properties of bright squeezed vacuum. The model describes these using Schmidt modes and captures the modal structure and the effects of strong pumping.",
+        "cited_by_count": 59,
+        "relevance_score": 8,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "schmidt modes",
+          "squeezed vacuum"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/1905.10109",
+          "http://link.aps.org/pdf/10.1103/PhysRevResearch.2.013371",
+          "http://arxiv.org/pdf/1905.10109.pdf",
+          "http://arxiv.org/abs/1905.10109",
+          "https://arxiv.org/pdf/1905.10109v2"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Pump depletion in parametric down-conversion with low pump energies",
+      "year": "2020",
+      "dest": "raw/sources/Flórez et al. - 2020 - Pump depletion in parametric down-conversion with low pump energies.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2003.07483"
+      ],
+      "metadata": {
+        "title": "Pump depletion in parametric down-conversion with low pump energies",
+        "year": "2020",
+        "date": "2020-03-17",
+        "doi": "10.1364/OL.394925",
+        "arxiv": "2003.07483",
+        "authors": [
+          "Jefferson Flórez",
+          "Jeff S. Lundeen",
+          "Maria V. Chekhova"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2003.07483",
+        "abstract": "We report the efficient generation of high-gain parametric down-conversion, including pump depletion, with pump powers as low as 100 $μ$W (energies $0.1$~$μ$J/pulse) and conversion efficiencies up to 33\\%. In our simple configuration, the pump beam is tightly focused into a bulk periodically poled lithium niobate crystal placed in free space. We also observe a change in the photon number statistics for both the pump and down-converted beams as the pump power increases to reach the depleted pump regime. The experimental results are a clear signature of the interplay between the pump and the down-converted beams in highly efficient parametric down-conversion sources.",
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2003.07483"
+        ],
+        "relevance_score": null,
+        "relevance_reasons": [
+          "manual arXiv recovery"
+        ],
+        "source": "manual_arxiv_recovery"
+      }
+    },
+    {
+      "title": "Efficient simulation of ultrafast quantum nonlinear optics with matrix product states",
+      "year": "2021",
+      "dest": "raw/sources/Yanagimoto et al. - 2021 - Efficient simulation of ultrafast quantum nonlinear optics with matrix product states.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2102.05902",
+        "http://arxiv.org/pdf/2102.05902.pdf",
+        "http://arxiv.org/abs/2102.05902",
+        "http://export.arxiv.org/pdf/2102.05902",
+        "https://opg.optica.org/viewmedia.cfm?URI=optica-8-10-1306",
+        "https://arxiv.org/pdf/2102.05902v1"
+      ],
+      "metadata": {
+        "title": "Efficient simulation of ultrafast quantum nonlinear optics with matrix product states",
+        "year": 2021,
+        "date": "2021-09-07",
+        "doi": "10.1364/optica.423044",
+        "arxiv": "2102.05902v1",
+        "authors": [
+          "Ryotatsu Yanagimoto",
+          "Edwin Ng",
+          "Logan G. Wright",
+          "Tatsuhiro Onodera",
+          "Hideo Mabuchi"
+        ],
+        "venue": "Optica",
+        "url": "https://doi.org/10.1364/optica.423044",
+        "abstract": "Ultrashort pulses propagating in nonlinear nanophotonic waveguides can simultaneously leverage both temporal and spatial field confinement, promising a route towards single-photon nonlinearities in an all-photonic platform. In this multimode quantum regime, however, faithful numerical simulations of pulse dynamics naïvely require a representation of the state in an exponentially large Hilbert space. Here, we employ a time-domain, matrix product state (MPS) representation to enable efficient simulations by exploiting the entanglement structure of the system. To extract physical insight from these simulations, we develop an algorithm to unravel the MPS quantum state into constituent temporal supermodes, enabling, e.g., access to the phase-space portraits of arbitrary pulse waveforms. As a demonstration, we perform exact numerical simulations of a Kerr soliton in the quantum regime. We observe the development of non-classical Wigner-function negativity in the solitonic mode as well as quantum corrections to the semiclassical dynamics of the pulse. A similar analysis of <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"> <mml:mrow class=\"MJX-TeXAtom-ORD\"> <mml:msup> <mml:mi>χ</mml:mi> <mml:mrow class=\"MJX-TeXAtom-ORD\"> <mml:mo stretchy=\"false\">(</mml:mo> <mml:mn>2</mml:mn> <mml:mo stretchy=\"false\">)</mml:mo> </mml:mrow> </mml:msup> </mml:mrow> </mml:math> simultons reveals a unique entanglement structure between the fundamental and second harmonics. Our approach is also readily compatible with quantum trajectory theory, allowing full quantum treatment of propagation loss and decoherence. We expect this work to establish the MPS technique as part of a unified engineering framework for the emerging field of broadband quantum photonics.",
+        "cited_by_count": 12,
+        "relevance_score": 7,
+        "relevance_reasons": [
+          "matrix product states",
+          "quantum nonlinear optics"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2102.05902",
+          "http://arxiv.org/pdf/2102.05902.pdf",
+          "http://arxiv.org/abs/2102.05902",
+          "http://export.arxiv.org/pdf/2102.05902",
+          "https://opg.optica.org/viewmedia.cfm?URI=optica-8-10-1306",
+          "https://arxiv.org/pdf/2102.05902v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Classical model of spontaneous parametric down-conversion",
+      "year": "2022",
+      "dest": "raw/sources/Kulkarni et al. - 2022 - Classical model of spontaneous parametric down-conversion.pdf",
+      "urls": [
+        "http://link.aps.org/pdf/10.1103/PhysRevResearch.4.033098"
+      ],
+      "metadata": {
+        "title": "Classical model of spontaneous parametric down-conversion",
+        "year": 2022,
+        "date": "2022-08-03",
+        "doi": "10.1103/physrevresearch.4.033098",
+        "arxiv": null,
+        "authors": [
+          "Girish Kulkarni",
+          "Jeremy Rioux",
+          "Boris Braverman",
+          "Maria V. Chekhova",
+          "Robert W. Boyd"
+        ],
+        "venue": "Physical Review Research",
+        "url": "https://doi.org/10.1103/physrevresearch.4.033098",
+        "abstract": "We model spontaneous parametric down-conversion (SPDC) as classical difference frequency generation (DFG) of the pump field and a hypothetical stochastic ``vacuum'' seed field. We analytically show that the second-order spatiotemporal correlations of the field generated from the DFG process replicate those of the signal field from SPDC. Specifically, for low gain, the model is consistent with the quantum calculation of the signal photon's reduced density matrix; and for high gain, the model's predictions are in good agreement with our experimental measurements of the far-field intensity profile, orbital angular momentum spectrum, and wavelength spectrum of the SPDC field for increasing pump strengths. We further theoretically show that the model successfully captures second-order SU(1,1) interference and induced coherence effects in both gain regimes. Intriguingly, the model also correctly predicts the linear scaling of the interference visibility with object transmittance in the low-gain regime---a feature that is often regarded as a quintessential signature of the nonclassicality of induced coherence. Our model may not only lead to fundamental insights into the classical-quantum divide in the context of SPDC and induced coherence, but can also be a useful theoretical tool for numerous experiments and applications based on SPDC.",
+        "cited_by_count": 31,
+        "relevance_score": 5,
+        "relevance_reasons": [
+          "parametric down-conversion",
+          "stochastic"
+        ],
+        "pdf_urls": [
+          "http://link.aps.org/pdf/10.1103/PhysRevResearch.4.033098"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Theory of entanglement and measurement in high harmonic generation",
+      "year": "2022",
+      "dest": "raw/sources/Stammer - 2022 - Theory of entanglement and measurement in high harmonic generation.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2203.04354"
+      ],
+      "metadata": {
+        "title": "Theory of entanglement and measurement in high harmonic generation",
+        "year": "2022",
+        "date": "2022-03-08",
+        "doi": "10.1103/PhysRevA.106.L050402",
+        "arxiv": "2203.04354",
+        "authors": [
+          "Philipp Stammer"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2203.04354",
+        "abstract": "Quantum information science and intense laser matter interaction are two apparently unrelated fields. Here, we introduce the notion of quantum information theory to intense laser driven processes by providing the quantum mechanical description of measurement protocols for high harmonic generation in atoms. This allows to conceive new protocols for quantum state engineering of light. We explicitly evaluate conditioning experiments on individual optical field modes, and provide the corresponding quantum operation for coherent states. The associated positive operator-valued measures are obtained, and give rise to the quantum theory of measurement for the generation of high dimensional entangled states, and coherent state superposition with controllable non-classical features on the attosecond timescale. This establish the use of intense laser driven processes as a novel quantum technology platform for quantum information processing.",
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2203.04354"
+        ],
+        "relevance_score": null,
+        "relevance_reasons": [
+          "manual arXiv recovery"
+        ],
+        "source": "manual_arxiv_recovery"
+      }
+    },
+    {
+      "title": "Attosecond pulse synthesis from high-order harmonic generation in intense squeezed light",
+      "year": "2024",
+      "dest": "raw/sources/Wang et al. - 2024 - Attosecond pulse synthesis from high-order harmonic generation in intense squeezed light.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2406.10443"
+      ],
+      "metadata": {
+        "title": "Attosecond pulse synthesis from high-order harmonic generation in intense squeezed light",
+        "year": "2024",
+        "date": "2024-06-14",
+        "doi": "10.48550/arXiv.2406.10443",
+        "arxiv": "2406.10443",
+        "authors": [
+          "ShiJun Wang",
+          "XuanYang Lai",
+          "XiaoJun Liu"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2406.10443",
+        "abstract": "High-order harmonic generation (HHG) provides a broad spectral bandwidth for synthesizing attosecond pulses. However, in the current HHG schemes, only part of the harmonics can be phase-locked, which limits the ability to achieve shorter attosecond pulses. Here, we study attosecond pulse synthesis from HHG of an atom driven by an intense quantum light, i.e., squeezed light. It is interestingly found that the harmonics in the whole spectrum can be phase-locked and, by using these harmonics, the width of the synthesized attosecond pulse is greatly reduced. By developing strong-field approximation theory in squeezed light, the physics of the phase-locked harmonic generation throughout the HHG spectrum is revealed and is found to be independent of the target system. Furthermore, we uncover the dependence of the synthesized attosecond pulse width on the squeezing parameter of the squeezed light. Our findings provide a robust tool for obtaining phase-locked harmonics throughout the HHG spectrum for synthesizing short attosecond pulses.",
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2406.10443"
+        ],
+        "relevance_score": null,
+        "relevance_reasons": [
+          "manual arXiv recovery"
+        ],
+        "source": "manual_arxiv_recovery"
+      }
+    },
+    {
+      "title": "Entanglement and Squeezing of the Optical Field Modes in High Harmonic Generation",
+      "year": "2024",
+      "dest": "raw/sources/Stammer et al. - 2024 - Entanglement and Squeezing of the Optical Field Modes in High Harmonic Generation.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2310.15030",
+        "https://upcommons.upc.edu/bitstreams/cec306b3-b012-4d12-b49c-0622b01d10ce/download",
+        "https://arxiv.org/pdf/2310.15030v1"
+      ],
+      "metadata": {
+        "title": "Entanglement and Squeezing of the Optical Field Modes in High Harmonic Generation",
+        "year": 2024,
+        "date": "2024-04-05",
+        "doi": "10.1103/physrevlett.132.143603",
+        "arxiv": "2310.15030v1",
+        "authors": [
+          "Philipp Stammer",
+          "Javier Rivera-Dean",
+          "Andrew Maxwell",
+          "Theocharis Lamprou",
+          "Javier Argüello-Luengo",
+          "P. Tzallas",
+          "Marcelo F. Ciappina",
+          "Maciej Lewenstein"
+        ],
+        "venue": "Physical Review Letters",
+        "url": "https://doi.org/10.1103/physrevlett.132.143603",
+        "abstract": "Squeezed optical fields are a powerful resource for a variety of investigations in basic research and technology. However, the generation of intense squeezed light is challenging. Here, we show that intense squeezed light can be produced using strongly laser driven atoms and the so far unrelated process of high harmonic generation. We demonstrate that when the intensity of the driving field significantly depletes the ground state of the atoms, leading to dipole moment correlations, the quantum state of the driving field and the generated high harmonics are entangled and squeezed. Furthermore, we analyze how the resulting quadrature squeezing of the fundamental laser mode after the interaction can be controlled. The findings open the way for the generation of high intensity squeezed light states for a wide range of applications.",
+        "cited_by_count": 52,
+        "relevance_score": 11,
+        "relevance_reasons": [
+          "high harmonic",
+          "squeezed light",
+          "squeezed+hhg"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2310.15030",
+          "https://upcommons.upc.edu/bitstreams/cec306b3-b012-4d12-b49c-0622b01d10ce/download",
+          "https://arxiv.org/pdf/2310.15030v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "High harmonic generation from an atom in a squeezed-vacuum environment",
+      "year": "2024",
+      "dest": "raw/sources/Wang et al. - 2024 - High harmonic generation from an atom in a squeezed-vacuum environment.pdf",
+      "urls": [
+        "http://link.aps.org/pdf/10.1103/PhysRevResearch.6.033010"
+      ],
+      "metadata": {
+        "title": "High harmonic generation from an atom in a squeezed-vacuum environment",
+        "year": 2024,
+        "date": null,
+        "doi": "10.1103/physrevresearch.6.033010",
+        "arxiv": null,
+        "authors": [
+          "ShiJun Wang",
+          "ShaoGang Yu",
+          "XuanYang Lai",
+          "XiaoJun Liu"
+        ],
+        "venue": "Physical Review Research",
+        "url": "https://doi.org/10.1103/physrevresearch.6.033010",
+        "abstract": " We investigate high harmonic generation (HHG) of an atom in the presence of squeezed vacuum of a single harmonic mode. Based on a fully quantum time-dependent Schrödinger equation, we derive an analytical formula for the harmonic amplitude. Our simulations of the HHG spectrum with this formula show that the harmonic amplitude of the corresponding squeezed mode can undergo significant changes with different parameters of the squeezed vacuum. Using the time-frequency analysis method, the physics underlying the effects of the vacuum quantum fluctuation (VQF) on the harmonic generation is revealed, which is found to be consistent with the explanation of Fermi's golden rule. Our work establishes a profound connection between harmonic generation and VQF, and may provide an unconventional approach to manipulating harmonic emission. \n           \n             \n             \n               \n                 Published by the American Physical Society \n                 2024 \n               \n             \n           ",
+        "cited_by_count": 8,
+        "relevance_score": 11,
+        "relevance_reasons": [
+          "high harmonic",
+          "squeezed vacuum",
+          "squeezed+hhg"
+        ],
+        "pdf_urls": [
+          "http://link.aps.org/pdf/10.1103/PhysRevResearch.6.033010"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Highly Squeezed States in Ring Resonators: Beyond the Undepleted Pump Approximation",
+      "year": "2024",
+      "dest": "raw/sources/Vendromin et al. - 2024 - Highly Squeezed States in Ring Resonators Beyond the Undepleted Pump Approximation.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2404.15563",
+        "http://arxiv.org/pdf/2404.15563.pdf",
+        "http://arxiv.org/abs/2404.15563"
+      ],
+      "metadata": {
+        "title": "Highly Squeezed States in Ring Resonators: Beyond the Undepleted Pump Approximation",
+        "year": 2024,
+        "date": "2024-04-23",
+        "doi": "10.48550/arxiv.2404.15563",
+        "arxiv": null,
+        "authors": [
+          "Colin Vendromin",
+          "Yan Liu",
+          "Zhenshan Yang",
+          "J. E. Sipe"
+        ],
+        "venue": "arXiv (Cornell University)",
+        "url": "http://arxiv.org/abs/2404.15563",
+        "abstract": "We present a multimode theory of squeezed state generation in resonant systems valid for arbitrary pump power and including pump depletion. The Hamiltonian is written in terms of asymptotic-in and -out fields from scattering theory, capable of describing a general interaction. As an example we consider the lossy generation of a highly squeezed state by an effective second-order interaction in a silicon nitride ring resonator point-coupled to a waveguide. We calculate the photon number, Schmidt number, and the second-order correlation function of the generated state in the waveguide. The treatment we present provides a path forward to study the deterministic generation of non-Gaussian states in resonant systems.",
+        "cited_by_count": 1,
+        "relevance_score": 7,
+        "relevance_reasons": [
+          "non-gaussian",
+          "pump depletion",
+          "pump depletion PDC"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2404.15563",
+          "http://arxiv.org/pdf/2404.15563.pdf",
+          "http://arxiv.org/abs/2404.15563"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Photon bunching in high-harmonic emission controlled by quantum light",
+      "year": "2024",
+      "dest": "raw/sources/Lemieux et al. - 2024 - Photon bunching in high-harmonic emission controlled by quantum light.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2404.05474",
+        "http://arxiv.org/pdf/2404.05474.pdf",
+        "http://arxiv.org/abs/2404.05474",
+        "https://nrc-publications.canada.ca/eng/view/author/version/?id=6d75103d-7f61-4303-80eb-55251284c067"
+      ],
+      "metadata": {
+        "title": "Photon bunching in high-harmonic emission controlled by quantum light",
+        "year": 2024,
+        "date": "2024-04-08",
+        "doi": "10.48550/arxiv.2404.05474",
+        "arxiv": null,
+        "authors": [
+          "Samuel Lemieux",
+          "Sohail A. Jalil",
+          "David N. Purschke",
+          "Neda Boroumand",
+          "D. M. Villeneuve",
+          "A. Naumov",
+          "Thomas Brabec",
+          "Giulio Vampa"
+        ],
+        "venue": "arXiv (Cornell University)",
+        "url": "http://arxiv.org/abs/2404.05474",
+        "abstract": "Attosecond spectroscopy comprises several techniques to probe matter through electrons and photons. One frontier of attosecond methods is to reveal complex phenomena arising from quantum-mechanical correlations in the matter system, in the photon fields and among them. Recent theories have laid the groundwork for understanding how quantum-optical properties affect high-field photonics, such as strong-field ionization and acceleration of electrons in quantum-optical fields, and how entanglement between the field modes arises during the interaction. Here we demonstrate a new experimental approach that transduces some properties of a quantum-optical state through a strong-field nonlinearity. We perturb high-harmonic emission from a semiconductor with a bright squeezed vacuum field resulting in the emission of sidebands of the high-harmonics with super-Poissonian statistics, indicating that the emitted photons are bunched. Our results suggest that perturbing strong-field dynamics with quantum-optical states is a viable way to coherently control the generation of these states at short wavelengths, such as extreme ultraviolet or soft X-rays. Quantum correlations will be instrumental to advance attosecond spectroscopy and imaging beyond the classical limits.",
+        "cited_by_count": 2,
+        "relevance_score": 18,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed vacuum",
+          "squeezed+hhg",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2404.05474",
+          "http://arxiv.org/pdf/2404.05474.pdf",
+          "http://arxiv.org/abs/2404.05474",
+          "https://nrc-publications.canada.ca/eng/view/author/version/?id=6d75103d-7f61-4303-80eb-55251284c067"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Squeezed states of light after high-order harmonic generation in excited atomic systems",
+      "year": "2024",
+      "dest": "raw/sources/Rivera-Dean et al. - 2024 - Squeezed states of light after high-order harmonic generation in excited atomic systems.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2408.07577",
+        "https://kclpure.kcl.ac.uk/ws/files/319101294/PhysRevA.110.063118.AAM.pdf",
+        "https://kclpure.kcl.ac.uk/portal/files/319101294/PhysRevA.110.063118.AAM.pdf",
+        "http://publicatio.bibl.u-szeged.hu/35687/1/35662837.pdf",
+        "https://arxiv.org/pdf/2408.07577v2"
+      ],
+      "metadata": {
+        "title": "Squeezed states of light after high-order harmonic generation in excited atomic systems",
+        "year": 2024,
+        "date": "2024-12-23",
+        "doi": "10.1103/physreva.110.063118",
+        "arxiv": "2408.07577v2",
+        "authors": [
+          "Javier Rivera-Dean",
+          "H. B. Crispin",
+          "Philipp Stammer",
+          "Theocharis Lamprou",
+          "Emilio Pisanty",
+          "Michael Krüger",
+          "P. Tzallas",
+          "Maciej Lewenstein",
+          "Marcelo F. Ciappina"
+        ],
+        "venue": "Physical review. A/Physical review, A",
+        "url": "https://doi.org/10.1103/physreva.110.063118",
+        "abstract": "High-harmonic generation (HHG) has recently emerged as a promising method for generating nonclassical states of light with frequencies spanning from the infrared up to the extreme ultraviolet regime. In this work, we theoretically investigate the generation of squeezed states of light through HHG processes in atomic systems that were initially driven to their first excited state. Our study reveals significant single-mode squeezing in both the driving field and low-order harmonic modes. Additionally, we characterize two-mode squeezing features in the generated states, both between fundamental and harmonic modes, and among the harmonic modes themselves. Using these correlations, we demonstrate the generation of optical Schr\\\"odinger kitten states through heralding measurements, specifically via photon subtraction in one of the modes influenced by two-mode squeezing.",
+        "cited_by_count": 11,
+        "relevance_score": 10,
+        "relevance_reasons": [
+          "high-order harmonic",
+          "squeezed+hhg"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2408.07577",
+          "https://kclpure.kcl.ac.uk/ws/files/319101294/PhysRevA.110.063118.AAM.pdf",
+          "https://kclpure.kcl.ac.uk/portal/files/319101294/PhysRevA.110.063118.AAM.pdf",
+          "http://publicatio.bibl.u-szeged.hu/35687/1/35662837.pdf",
+          "https://arxiv.org/pdf/2408.07577v2"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Benchmarking Atomic Ionization Driven by Strong Quantum Light",
+      "year": "2025",
+      "dest": "raw/sources/Mao et al. - 2025 - Benchmarking Atomic Ionization Driven by Strong Quantum Light.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2512.15458",
+        "https://arxiv.org/pdf/2512.15458v1"
+      ],
+      "metadata": {
+        "title": "Benchmarking Atomic Ionization Driven by Strong Quantum Light",
+        "year": "2025",
+        "date": "2025-12-17",
+        "doi": null,
+        "arxiv": "2512.15458v1",
+        "authors": [
+          "Yi-Jia Mao",
+          "En-Rui Zhou",
+          "Yang Li",
+          "Pei-Lun He",
+          "Feng He"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2512.15458v1",
+        "abstract": "The recently available high-intensity quantum light pulses provide novel tools for controlling light-matter interactions. However, the rigor of the theoretical frameworks currently used to describe the interaction of strong quantum light with atoms and molecules remains unverified. Here, we establish a rigorous benchmark by solving the fully quantized time-dependent Schrödinger equation for an atom exposed to bright squeezed vacuum light. Our \\textit{ab initio} simulations reveal a critical limitation of the widely used $Q$-representation: although it accurately reproduces the total photoelectron spectrum after tracing over photon states, it completely fails to capture the electron-photon joint energy spectrum. To overcome this limitation, we develop a general theoretical framework based on the Feynman path integral that properly incorporates the electron-photon quantum entanglement. Our results provide both quantitative benchmarks and fundamental theoretical insights for the emerging field of strong-field quantum optics.",
+        "cited_by_count": null,
+        "relevance_score": 12,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed vacuum",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2512.15458",
+          "https://arxiv.org/pdf/2512.15458v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Effect of photon quantum statistics on electrons in above-threshold ionization",
+      "year": "2025",
+      "dest": "raw/sources/Lyu et al. - 2025 - Effect of photon quantum statistics on electrons in above-threshold ionization.pdf",
+      "urls": [
+        "http://link.aps.org/pdf/10.1103/PhysRevResearch.7.L012072"
+      ],
+      "metadata": {
+        "title": "Effect of photon quantum statistics on electrons in above-threshold ionization",
+        "year": 2025,
+        "date": "2025-03-18",
+        "doi": "10.1103/physrevresearch.7.l012072",
+        "arxiv": null,
+        "authors": [
+          "Zijian Lyu",
+          "Feng-Xiao Sun",
+          "Yiqi Fang",
+          "Qiongyi He",
+          "Yunquan Liu"
+        ],
+        "venue": "Physical Review Research",
+        "url": "https://doi.org/10.1103/physrevresearch.7.l012072",
+        "abstract": "Strong field physics and quantum optics, two prosperous fields in modern science, have recently been connected with each other. Here, we study the quantum effect of bright squeezed vacuum light and thermal light on above-threshold ionization. With quantum strong-field approximation theory, we reveal a decoherence phenomenon caused by the statistics of photons, in which above-threshold ionization could be degenerated into a classical-like picture under the effect of quantum light. This represents a direct transition from the wavelike nature to the particlelike behavior of photoelectrons. We also reveal the ionization enhancement effect of the bunched light in photoionization from the perspective of autocorrelation function <a:math xmlns:a=\"http://www.w3.org/1998/Math/MathML\"><a:msup><a:mi>g</a:mi><a:mrow><a:mo>(</a:mo><a:mi>n</a:mi><a:mo>)</a:mo></a:mrow></a:msup></a:math>. The number distributions of electrons ionized by different quantum light fields are studied, and it is shown that the photon number distribution can be mapped onto the photoelectron number distribution. This finding enables the production of bunched electrons with strong-field ionization with quantum light.",
+        "cited_by_count": 9,
+        "relevance_score": 10,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed vacuum",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "http://link.aps.org/pdf/10.1103/PhysRevResearch.7.L012072"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Excitonic Enhancement of Squeezed Light in Quantum-Optical High-Harmonic Generation From a Mott Insulator",
+      "year": "2025",
+      "dest": "raw/sources/Lange et al. - 2025 - Excitonic Enhancement of Squeezed Light in Quantum-Optical High-Harmonic Generation From a Mott Insulator.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2503.15932",
+        "https://arxiv.org/pdf/2503.15932v1"
+      ],
+      "metadata": {
+        "title": "Excitonic Enhancement of Squeezed Light in Quantum-Optical High-Harmonic Generation From a Mott Insulator",
+        "year": "2025",
+        "date": "2025-03-20",
+        "doi": null,
+        "arxiv": "2503.15932v1",
+        "authors": [
+          "Christian Saugbjerg Lange",
+          "Thomas Hansen",
+          "Lars Bojer Madsen"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2503.15932v1",
+        "abstract": "The strong-field induced generation of nonclassical states of light is not only a subject of fundamental research but also has potential usage in quantum information science and technology. The emerging field of strong-field quantum optics has developed ways of generating nonclassical states of light from the process of high-harmonic generation (HHG) at much wider frequency ranges and intensities than is typical for quantum optics. So far, however, no clear nonclassical signal at a distinct and unambiguous frequency has been predicted. Here, we study the response from an exciton in a Mott-insulating system, using the extended Hubbard model. We find that the exciton plays a key role in the nonclassical response and generates squeezing at the exciton energy. We relate this nonclassical response to the nonvanishing time correlations of the current operator in the system. Our work defines a direction for experimental work to search for squeezed light from HHG in a spectrally confined region defined by the exciton energy.",
+        "cited_by_count": null,
+        "relevance_score": 11,
+        "relevance_reasons": [
+          "squeezed light",
+          "squeezed+hhg",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2503.15932",
+          "https://arxiv.org/pdf/2503.15932v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "High-Harmonic Generation in a Crystal Driven by Quantum Light",
+      "year": "2025",
+      "dest": "raw/sources/Gothelf et al. - 2025 - High-Harmonic Generation in a Crystal Driven by Quantum Light.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2502.11803",
+        "http://arxiv.org/pdf/2502.11803.pdf",
+        "http://arxiv.org/abs/2502.11803",
+        "https://arxiv.org/pdf/2502.11803.pdf",
+        "https://arxiv.org/abs/2502.11803",
+        "https://arxiv.org/pdf/2502.11803v2"
+      ],
+      "metadata": {
+        "title": "High-Harmonic Generation in a Crystal Driven by Quantum Light",
+        "year": 2025,
+        "date": "2025-02-17",
+        "doi": "10.48550/arxiv.2502.11803",
+        "arxiv": "2502.11803v2",
+        "authors": [
+          "Rasmus Vesterager Gothelf",
+          "Christian Saugbjerg Lange",
+          "Lars Bojer Madsen"
+        ],
+        "venue": "ArXiv.org",
+        "url": "http://arxiv.org/abs/2502.11803",
+        "abstract": "We study intraband high-harmonic generation (HHG) in a crystal driven by quantum light. Previous theoretical studies have developed a framework based on coherent state expansions in terms of P distributions to consider nonclassical driving fields for HHG in atoms. Here, we adapt this framework to the context of solids and consider an intraband model of ZnO. We investigate the effect of the quantum optical nature of the driving field on the harmonic spectra including the cutoff and the intensity scaling of the harmonics with driving field intensity. Based on analytical calculations in the Floquet limit, we explain why driving with thermal light or bright-squeezed vacuum (BSV) produces a much higher cutoff than when driving with fields described by coherent or Fock states. Further, we derive an expression for the generated time-dependent electric field and its fluctuations and find that it inherits characteristics of the driving field. Finally, we discuss the limitations of an approximative positive P representation, which is introduced to be able to reduce the numerical complexity for Fock and BSV driving fields.",
+        "cited_by_count": 0,
+        "relevance_score": 16,
+        "relevance_reasons": [
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed vacuum",
+          "squeezed+hhg"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2502.11803",
+          "http://arxiv.org/pdf/2502.11803.pdf",
+          "http://arxiv.org/abs/2502.11803",
+          "https://arxiv.org/pdf/2502.11803.pdf",
+          "https://arxiv.org/abs/2502.11803",
+          "https://arxiv.org/pdf/2502.11803v2"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Kerr-induced non-Gaussianity of ultrafast bright squeezed vacuum",
+      "year": "2025",
+      "dest": "raw/sources/Rasputnyi et al. - 2025 - Kerr-induced non-Gaussianity of ultrafast bright squeezed vacuum.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2512.17797",
+        "https://arxiv.org/pdf/2512.17797v1"
+      ],
+      "metadata": {
+        "title": "Kerr-induced non-Gaussianity of ultrafast bright squeezed vacuum",
+        "year": "2025",
+        "date": "2025-12-19",
+        "doi": null,
+        "arxiv": "2512.17797v1",
+        "authors": [
+          "Andrei Rasputnyi",
+          "Ilya Karuseichyk",
+          "Gerd Leuchs",
+          "Denis Seletskiy",
+          "Maria Chekhova"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2512.17797v1",
+        "abstract": "Non-Gaussian states of light are a critical resource for fault-tolerant quantum computing and enhanced metrology, but are typically faint and often obtained via post-selection. Here, we demonstrate the deterministic generation of a bright non-Gaussian state by introducing a Kerr nonlinearity to a macroscopic state of light called bright squeezed vacuum (BSV). To characterize the resulting state, we use a single-shot f-2f interferometer to sample its Husimi function. We observe a clear transformation from a 2D Gaussian distribution to an 'S'-shaped non-Gaussian profile, which is the direct statistical evidence of the intensity-dependent nonlinear phase. The negativity of the Wigner function, which is an intrinsic property of any pure non-Gaussian state, cannot be observed because BSV is a mixed state even under minute optical loss. However, we show that BSV can be considered as a mixture of pure squeezed coherent states, for some of which Kerr-induced Wigner-function negativity is quite tolerant to loss. This work bridges the gap between quantum optics and ultrafast nonlinear optics, opening a path to quantum applications that require high photon flux.",
+        "cited_by_count": null,
+        "relevance_score": 15,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "non-gaussian",
+          "non-gaussian nonlinear",
+          "squeezed vacuum"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2512.17797",
+          "https://arxiv.org/pdf/2512.17797v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Non-Gaussian states via pump-depleted SPDC",
+      "year": "2025",
+      "dest": "raw/sources/Vendromin et al. - 2025 - Non-Gaussian states via pump-depleted SPDC.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2510.06498",
+        "http://arxiv.org/pdf/2510.06498.pdf",
+        "http://arxiv.org/abs/2510.06498",
+        "https://arxiv.org/pdf/2510.06498v1"
+      ],
+      "metadata": {
+        "title": "Non-Gaussian states via pump-depleted SPDC",
+        "year": 2025,
+        "date": "2025-10-07",
+        "doi": "10.48550/arxiv.2510.06498",
+        "arxiv": "2510.06498v1",
+        "authors": [
+          "Colin Vendromin",
+          "Samuel E. Fontaine",
+          "J. E. Sipe"
+        ],
+        "venue": "ArXiv.org",
+        "url": "http://arxiv.org/abs/2510.06498",
+        "abstract": "We develop a model for non-Gaussian state generation via spontaneous parametric down-conversion (SPDC) in InGaP microring resonators. The nonlinear Hamiltonian is written in terms of the asymptotic fields for the system, which includes a phantom channel to handle scattering loss. The full ket for the system is written as a Gaussian unitary acting on a residual non-Gaussian ket, which is vacuum initially and evolves according to a non-Gaussian Hamiltonian. We show that for realistic parameters we can access the pump depletion regime, where the Wigner function for the residual non-Gaussian ket has negativity. But we find that the non-Gaussian features for the full ket could be unobservable due to the large amount of squeezing required to lead to pump depletion. We show that a potential solution in the low-loss regime is to implement an inverse Gaussian unitary on the accessible modes to remove most of the squeezing and reveal the non-Gaussian features. This work provides a foundation for modeling pump-depleted SPDC in integrated lossy microring resonators, opening a path toward a scalable on-chip non-Gaussian source.",
+        "cited_by_count": 0,
+        "relevance_score": 15,
+        "relevance_reasons": [
+          "non-gaussian",
+          "non-gaussian nonlinear",
+          "parametric down-conversion",
+          "pump depletion",
+          "pump depletion PDC"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2510.06498",
+          "http://arxiv.org/pdf/2510.06498.pdf",
+          "http://arxiv.org/abs/2510.06498",
+          "https://arxiv.org/pdf/2510.06498v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Observation of a displaced squeezed state in high-harmonic generation",
+      "year": "2025",
+      "dest": "raw/sources/Theidel et al. - 2025 - Observation of a displaced squeezed state in high-harmonic generation.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2411.02311",
+        "https://arxiv.org/pdf/2411.02311v2"
+      ],
+      "metadata": {
+        "title": "Observation of a displaced squeezed state in high-harmonic generation",
+        "year": 2025,
+        "date": "2025-07-14",
+        "doi": "10.1103/6r6n-pxfp",
+        "arxiv": "2411.02311v2",
+        "authors": [
+          "David Theidel",
+          "Viviane Cotte",
+          "Philip Heinzel",
+          "Houssna Griguer",
+          "Mateusz Weis",
+          "René Sondenheimer",
+          "H. Merdji"
+        ],
+        "venue": "Physical Review Research",
+        "url": "https://doi.org/10.1103/6r6n-pxfp",
+        "abstract": "High-harmonic generation (HHG) and quantum optics are historically two distant fields of science. HHG as a central technique to generate attosecond pulses via atoms, molecules, or solids has been mostly treated as a classical source of light. Entanglement and squeezing of HHG light would open fascinating perspectives in quantum technology, with the emergence of a field of basic and applied research: attosecond quantum optics. Here, we measure entanglement in a tripartite solid-state HHG system through the violation of a Cauchy-Schwarz inequality. Displaced squeezing is experimentally observed and supported by numerical simulations with excellent agreement to the data. The Schmidt number is estimated, which indicates a low-dimensional multimode structure for each harmonic, an important property for most quantum technologies. At the applied level, the semiconductor HHG source is scalable, integrable, operates at room temperature with compact lasers, and thus represents a useful and exploitable resource in quantum photonics.",
+        "cited_by_count": 3,
+        "relevance_score": 7,
+        "relevance_reasons": [
+          "squeezed+hhg"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2411.02311",
+          "https://arxiv.org/pdf/2411.02311v2"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Propagation of intense squeezed vacuum light in non-linear media",
+      "year": "2025",
+      "dest": "raw/sources/Rivera-Dean et al. - 2025 - Propagation of intense squeezed vacuum light in non-linear media.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2509.19608",
+        "https://arxiv.org/pdf/2509.19608v3"
+      ],
+      "metadata": {
+        "title": "Propagation of intense squeezed vacuum light in non-linear media",
+        "year": "2025",
+        "date": "2025-09-23",
+        "doi": null,
+        "arxiv": "2509.19608v3",
+        "authors": [
+          "Javier Rivera-Dean",
+          "Deeksha Kanti",
+          "Philipp Stammer",
+          "Stefanos Carlström",
+          "Nikolaos Tsatrafyllis",
+          "Misha Yu Ivanov",
+          "Maciej Lewenstein",
+          "Paraskevas Tzallas"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2509.19608v3",
+        "abstract": "Recent developments in quantum light engineering have enabled the use of infrared bright squeezed vacuum (BSV) femtosecond pulses in highly nonlinear optics, particularly strong field physics and high-harmonic generation. However, theoretical studies were focused on the microscopic interaction with a single atom, neglecting the crucial macroscopic aspect of light propagation through the media. This raises a key question: How does BSV propagates in strongly light-driven nonlinear media and how this affects the generation of non-linear optical signals? We address this question by introducing a fully quantized framework that accounts for the propagation in gas media. We find that atomic ionization caused by strong BSV fluctuations and the associated infrared photon losses introduce decoherence effects that can substantially limit the propagation length in the medium, reduce the harmonic yield, and decrease the number of emitted harmonics at high intensities. However, these effects are not detrimental. We identify conditions under which propagation-induced decoherence is minimized while the generated harmonics remain clearly detectable--an issue of particular importance for future studies exploring the connection between strong-field physics and quantum optics. Our results lay the foundation for future studies of BSV in strong-field physics, nonlinear optics, and ultrafast science, and establish a basis for exploring its propagation through all states of matter in a fully quantized framework.",
+        "cited_by_count": null,
+        "relevance_score": 18,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed vacuum",
+          "squeezed+hhg",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2509.19608",
+          "https://arxiv.org/pdf/2509.19608v3"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Quantum Dial for High-Harmonic Generation",
+      "year": "2025",
+      "dest": "raw/sources/Wang et al. - 2025 - Quantum Dial for High-Harmonic Generation.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2509.13518",
+        "https://arxiv.org/pdf/2509.13518v2",
+        "https://www.researchsquare.com/article/rs-7633423/latest.pdf"
+      ],
+      "metadata": {
+        "title": "Quantum Dial for High-Harmonic Generation",
+        "year": "2025",
+        "date": "2025-09-16",
+        "doi": "10.21203/rs.3.rs-7633423/v1",
+        "arxiv": "2509.13518v2",
+        "authors": [
+          "Lu Wang",
+          "Andrew M. Parks",
+          "Adam Thorpe",
+          "Graeme Bart",
+          "Giulio Vampa",
+          "Thomas Brabec"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2509.13518v2",
+        "abstract": "High-harmonic generation (HHG) is a highly nonlinear optical process that typically requires an intense laser to trigger emissions at integer multiples of the driving field frequency. However, the strong fields required for conventional HHG inevitably perturb the system, limiting its use as a nondestructive spectroscopic probe. Recent advances in bright squeezed vacuum (BSV) sources have created opportunities to drive HHG with quantum fields alone. In this work, we demonstrate a regime in which the light-matter interactions can be controlled and tuned using a weak classical field, whose pulse energy is two orders of magnitude lower than that in standard HHG-perturbed by an even weaker quantum field such as BSV. This approach opens new avenues for nonlinear spectroscopy of materials while substantially suppressing strong laser-induced damage, distortions, and heating. We show that a BSV pulse containing less than 5% of the classical driving energy can act as an 'optical dial', allowing tuning of the nonlinear emission spectrum, emission angular dependence, and ionization.",
+        "cited_by_count": null,
+        "relevance_score": 9,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "squeezed vacuum",
+          "squeezed+hhg"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2509.13518",
+          "https://arxiv.org/pdf/2509.13518v2",
+          "https://www.researchsquare.com/article/rs-7633423/latest.pdf"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Solid-State High-Order Harmonic Generation: Emerging Frontiers in Ultrafast and Quantum Light Science",
+      "year": "2025",
+      "dest": "raw/sources/Ciappina - 2025 - Solid-State High-Order Harmonic Generation Emerging Frontiers in Ultrafast and Quantum Light Science.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2510.15207"
+      ],
+      "metadata": {
+        "title": "Solid-State High-Order Harmonic Generation: Emerging Frontiers in Ultrafast and Quantum Light Science",
+        "year": "2025",
+        "date": "2025-10-17",
+        "doi": "10.48550/arXiv.2510.15207",
+        "arxiv": "2510.15207",
+        "authors": [
+          "Marcelo F. Ciappina"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2510.15207",
+        "abstract": "High-order harmonic generation (HHG) in solids has emerged as a versatile platform for exploring ultrafast and quantum-coherent phenomena in condensed matter. Recent advances reveal Berry-phase and topological effects in harmonic emission, strong-field control of excitons and lattice motion, the generation of nonclassical light states driven by quantum and squeezed fields, and the emergence of orbital-angular-momentum transfer in solid-state high-harmonic generation. Nanostructured and hybrid plasmonic-semiconductor platforms enable enhanced and spectrally tunable HHG, while interferometric and cryogenic setups allow attosecond-resolved phase measurements. On the theoretical side, multiband and topological models incorporating dephasing, propagation, and electron-hole coherence effects have deepened our understanding of the interplay between interband and intraband dynamics. These developments establish solid-state HHG as a bridge between ultrafast spectroscopy, quantum optics, and material science, paving the way toward quantum-engineered attosecond sources and coherent control of light-matter interactions in solids.",
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2510.15207"
+        ],
+        "relevance_score": null,
+        "relevance_reasons": [
+          "manual arXiv recovery"
+        ],
+        "source": "manual_arxiv_recovery"
+      }
+    },
+    {
+      "title": "Structured Squeezed Light Allows for High-Harmonic Generation in Classical Forbidden Geometries",
+      "year": "2025",
+      "dest": "raw/sources/Rivera-Dean et al. - 2025 - Structured Squeezed Light Allows for High-Harmonic Generation in Classical Forbidden Geometries.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2411.11042",
+        "https://arxiv.org/pdf/2411.11042v3"
+      ],
+      "metadata": {
+        "title": "Structured Squeezed Light Allows for High-Harmonic Generation in Classical Forbidden Geometries",
+        "year": 2025,
+        "date": null,
+        "doi": "10.1103/4hdl-bdwj",
+        "arxiv": "2411.11042v3",
+        "authors": [
+          "J. Rivera-Dean",
+          "P. Stammer",
+          "M. F. Ciappina",
+          "M. Lewenstein"
+        ],
+        "venue": "Physical Review Letters",
+        "url": "https://doi.org/10.1103/4hdl-bdwj",
+        "abstract": "High-harmonic generation (HHG) is a nonlinear process in which a strong driving field interacts with a material, resulting in the frequency up-conversion of the driver into its high-order harmonics. This process is highly sensitive to the field's polarization: circular polarization, for instance, inhibits HHG. In this work, we demonstrate that the use of non-classical structured light enables HHG in this otherwise prohibitive configuration for classical drivers. We consider circularly polarized light with non-classical fluctuations, introduced via squeezing along one polarization direction, and show that these non-classical features prompt the HHG process. We find that the spectral properties of the emitted harmonics depend on the type of squeezing applied and, by analyzing the inner electron dynamics, we relate the observed differences to modifications of the HHG three-step mechanism induced by the specific squeezing type. This approach opens new pathways for integrating quantum optics in HHG, providing novel means of controlling the light-matter interaction dynamics.",
+        "cited_by_count": 9,
+        "relevance_score": 11,
+        "relevance_reasons": [
+          "high-order harmonic",
+          "squeezed light",
+          "squeezed+hhg"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2411.11042",
+          "https://arxiv.org/pdf/2411.11042v3"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Theory of quantum optics and optical coherence in high harmonic generation",
+      "year": "2025",
+      "dest": "raw/sources/Stammer et al. - 2025 - Theory of quantum optics and optical coherence in high harmonic generation.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2504.13287"
+      ],
+      "metadata": {
+        "title": "Theory of quantum optics and optical coherence in high harmonic generation",
+        "year": "2025",
+        "date": "2025-04-17",
+        "doi": "10.48550/arXiv.2504.13287",
+        "arxiv": "2504.13287",
+        "authors": [
+          "Philipp Stammer",
+          "Javier Rivera-Dean",
+          "Maciej Lewenstein"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2504.13287",
+        "abstract": "Optical coherence encodes information about the correlations of the electromagnetic field. In combination with quantum optical approaches, it allows for the study of the correlations between photons. Since the pioneering papers of Glauber, studies of optical coherence have facilitated many fundamental insights into non-classical signatures of light emission processes, with wide applicability in modern quantum technologies. However, when it comes to the photon up-conversion process of high-order harmonic generation the description has focused on semi-classical methods for decades. In this work, we overcome this limitation and establish a quantum optical theory of field correlations for the process of high harmonic generation (HHG). In effect, we introduce the notion of optical coherence at the intersection of quantum optics and strong laser-driven processes, and obtain the harmonic field correlation functions. In particular, we focus on the first and second order field correlation, which allow to understand the origin of the classical properties of the HHG spectrum, and its departure into the quantum regime. Further, we develop the theory for two-time intensity correlation functions of the harmonic field, and demonstrate the onset of anti-bunching signatures in HHG. We study the correlation functions in the regime of a single, few and many emitters in atomic HHG, showing the transition from quantum to classical signatures in the correlations. Since the theory is generic, it can be extended to multi-time correlation functions of any order, and allows to consider the interaction of light with arbitrary material systems.",
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2504.13287"
+        ],
+        "relevance_score": null,
+        "relevance_reasons": [
+          "manual arXiv recovery"
+        ],
+        "source": "manual_arxiv_recovery"
+      }
+    },
+    {
+      "title": "Tunneling driven by quantum light described via field Bohmian trajectories",
+      "year": "2025",
+      "dest": "raw/sources/Kim et al. - 2025 - Tunneling driven by quantum light described via field Bohmian trajectories.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2507.15972",
+        "https://arxiv.org/pdf/2507.15972v1"
+      ],
+      "metadata": {
+        "title": "Tunneling driven by quantum light described via field Bohmian trajectories",
+        "year": "2025",
+        "date": "2025-07-21",
+        "doi": null,
+        "arxiv": "2507.15972v1",
+        "authors": [
+          "Sangwon Kim",
+          "Seongjin Ahn",
+          "Denis V. Seletskiy",
+          "Andrey S. Moskalenko"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2507.15972v1",
+        "abstract": "Recent realization of an intense quantum light, namely bright squeezed vacuum, opened a new perspective on quantum light-matter interaction. Several theoretical works have appeared based on coherent state expansions of quantum state of light to investigate non-classical driving of high-harmonic generation in atomic gases and solids, or free-electron dynamics, but their predictions surprisingly coincide with what one could expect from essentially classical interpretations of the light statistics. A deeper theoretical insight into the underlying physics is necessary for understanding of observed experimental findings and predicting emerging effects relying on this new configuration. Here we present a theoretical framework to describe tunneling driven by quantum light, where the properties of such light are captured by a statistical ensemble of classical fields via a hydrodynamic, also referred to as Bohmian, formulation. Generalizing the quasiclassical theory of non-adiabatic tunneling driven by classical light, a single tunneling event is described by a bundle of tunneling solutions, each driven by a classical field corresponding to one realization in the ensemble. Quantum statistics of light are thus imprinted on the measured current. Fully quantum description of light via the Bohmian trajectories of its field provides a perfect fit to the description of the electron (under-) above-barrier dynamics in terms of (complex quasiclassical) real classical trajectories, resulting in a consistent and elegant theoretical approach. To illustrate this, we consider BSV-induced electron transport from the tip to the surface in the tunneling microscope configuration demonstrating the transition from the multiphoton to the direct tunneling regime.",
+        "cited_by_count": null,
+        "relevance_score": 17,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed vacuum",
+          "squeezed+hhg"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2507.15972",
+          "https://arxiv.org/pdf/2507.15972v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Edge states and quantum optical high-harmonic generation from topological insulators",
+      "year": "2026",
+      "dest": "raw/sources/Lange et al. - 2026 - Edge states and quantum optical high-harmonic generation from topological insulators.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2602.16454",
+        "https://arxiv.org/pdf/2602.16454v1"
+      ],
+      "metadata": {
+        "title": "Edge states and quantum optical high-harmonic generation from topological insulators",
+        "year": "2026",
+        "date": "2026-02-18",
+        "doi": null,
+        "arxiv": "2602.16454v1",
+        "authors": [
+          "Christian Saugbjerg Lange",
+          "Lars Bojer Madsen"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2602.16454v1",
+        "abstract": "The strong-field process of high-harmonic generation (HHG) has, in recent years, been treated from a quantum optical perspective in the emerging research area of strong-field quantum optics. These investigations show that HHG radiation is, in general, in a nonclassical state of light. However, the quantum optical treatment of HHG from topological nontrivial materials is missing. Here, we aim to address this gap in current knowledge and consider the quantum optical HHG response from the Su-Schrieffer-Heeger model, a finite chain of atoms with both a topologically trivial and nontrivial insulating phase, the latter supporting edge states. We find that HHG from both topological phases is squeezed at the band-gap frequency. Interestingly, while the harmonic spectrum discriminates the two topological phases of the system, the degree of squeezing only discriminates the phases for smaller chain lengths. We attribute this difference to a relative increase in overlap between bulk and edge states in the topological nontrivial phase for smaller systems. Our findings reveal how the strength of dipole couplings governs the nonclassical HHG response and define new research questions on topologically protected generation of quantum light in strong-field physics.",
+        "cited_by_count": null,
+        "relevance_score": 14,
+        "relevance_reasons": [
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed+hhg",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2602.16454",
+          "https://arxiv.org/pdf/2602.16454v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Fluctuation-induced symmetry breaking in high harmonic generation for bicircular quantum light",
+      "year": "2026",
+      "dest": "raw/sources/Stammer et al. - 2026 - Fluctuation-induced symmetry breaking in high harmonic generation for bicircular quantum light.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2603.24377",
+        "http://arxiv.org/pdf/2603.24377.pdf",
+        "http://arxiv.org/abs/2603.24377",
+        "https://arxiv.org/pdf/2603.24377v2"
+      ],
+      "metadata": {
+        "title": "Fluctuation-induced symmetry breaking in high harmonic generation for bicircular quantum light",
+        "year": 2026,
+        "date": "2026-03-25",
+        "doi": "10.48550/arxiv.2603.24377",
+        "arxiv": "2603.24377v2",
+        "authors": [
+          "Philipp Stammer",
+          "Camilo Granados",
+          "Javier Rivera-Dean"
+        ],
+        "venue": "ArXiv.org",
+        "url": "http://arxiv.org/abs/2603.24377",
+        "abstract": "Symmetries are ubiquitous in physics and play a pivotal role in light-matter interactions, where they determine the selection rules governing allowed atomic transitions and define the associated conserved quantities. For the up-conversion process of high harmonic generation, the symmetries of the driving field determine the allowed frequencies and the polarization properties of the resulting harmonics. As a consequence, it is possible to establish classical selection rules when the process is driven by coherent radiation. In this work, we show that fluctuation-induced symmetry breaking in the driving field leads to the appearance of otherwise forbidden harmonics. This is achieved by considering bicircular quantum light, and demonstrate that the enhanced quantum fluctuations due to squeezing in the driving field break the classical selection rules. To this end, we develop a quantum optical description of the dynamical symmetries in the process of high harmonic generation, revealing corrections to the classical selection rules. Moreover, we show that the new harmonics show squeezing-like signatures in their photon statistics, allowing them to be clearly distinguished from classical thermal fluctuations.",
+        "cited_by_count": 0,
+        "relevance_score": 18,
+        "relevance_reasons": [
+          "high harmonic",
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed+hhg"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2603.24377",
+          "http://arxiv.org/pdf/2603.24377.pdf",
+          "http://arxiv.org/abs/2603.24377",
+          "https://arxiv.org/pdf/2603.24377v2"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Heralded ultrafast generation of macroscopic quantum states in matter with bright squeezed vacuum light",
+      "year": "2026",
+      "dest": "raw/sources/Imai - 2026 - Heralded ultrafast generation of macroscopic quantum states in matter with bright squeezed vacuum light.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2605.30224",
+        "https://arxiv.org/pdf/2605.30224v1"
+      ],
+      "metadata": {
+        "title": "Heralded ultrafast generation of macroscopic quantum states in matter with bright squeezed vacuum light",
+        "year": "2026",
+        "date": "2026-05-28",
+        "doi": null,
+        "arxiv": "2605.30224v1",
+        "authors": [
+          "Shohei Imai"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2605.30224v1",
+        "abstract": "We show that bright squeezed vacuum light, combined with a single-shot quadrature measurement of the post-interaction light, enables the ultrafast generation of macroscopic quantum states in matter. Although in the weak-coupling regime multiphoton quantum light leaves the unconditional matter state as a classical mixture due to light--matter entanglement, quadrature-based heralding prepares the matter in a Gaussian-weighted quantum superposition. For an ensemble of resonantly electric-dipole-coupled two-level systems, this heralding dynamics acts as a Gaussian filter with respect to the electric polarization, with brighter squeezed-vacuum light accelerating the preparation of the zero-eigenvalue Dicke state. Counter-rotating terms further drive a stroboscopic transition from this Dicke state to a cat-like state. Our results open a route to ultrafast engineering of macroscopic quantum matter with strong-field quantum light.",
+        "cited_by_count": null,
+        "relevance_score": 14,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed vacuum",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2605.30224",
+          "https://arxiv.org/pdf/2605.30224v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Interferometrically Enhanced Asymmetry in Strong-field Ionization with Bright Squeezed Vacuum",
+      "year": "2026",
+      "dest": "raw/sources/Singh et al. - 2026 - Interferometrically Enhanced Asymmetry in Strong-field Ionization with Bright Squeezed Vacuum.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2604.12646",
+        "https://arxiv.org/pdf/2604.12646.pdf",
+        "https://arxiv.org/abs/2604.12646",
+        "https://arxiv.org/pdf/2604.12646v1"
+      ],
+      "metadata": {
+        "title": "Interferometrically Enhanced Asymmetry in Strong-field Ionization with Bright Squeezed Vacuum",
+        "year": 2026,
+        "date": "2026-04-14",
+        "doi": "10.48550/arxiv.2604.12646",
+        "arxiv": "2604.12646v1",
+        "authors": [
+          "G. Singh",
+          "T. Rook",
+          "J. Rivera-Dean",
+          "C. Figueira de Morisson Faria"
+        ],
+        "venue": "ArXiv.org",
+        "url": "https://arxiv.org/abs/2604.12646",
+        "abstract": "We demonstrate that quantum light statistics can be used to control strong-field ionization at the tunneling step. Using a bichromatic linearly polarized field composed of a strong coherent driver and a weak bright squeezed vacuum (BSV), we show through simulation that photoelectron momentum distributions (PMDs) exhibit asymmetries that exceed those obtained with classical fields of comparable intensity by orders of magnitude. This enhancement is uniquely linked to the nonclassical statistics of the BSV field. A semiclassical analysis based on the strong-field approximation (SFA) reveals that the effect originates from fluctuations in the instantaneous field amplitude, which strongly modify the tunneling ionization probability while leaving the electron's continuum dynamics essentially unchanged. This selective control enables reconstruction of ionization pathways and provides a robust route to extract sub-cycle dynamics from strong-field observables.",
+        "cited_by_count": 0,
+        "relevance_score": 16,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed vacuum",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2604.12646",
+          "https://arxiv.org/pdf/2604.12646.pdf",
+          "https://arxiv.org/abs/2604.12646",
+          "https://arxiv.org/pdf/2604.12646v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Nonclassical Cutoff Fluctuations in Squeezed-Light-Driven High-Harmonic Generation",
+      "year": "2026",
+      "dest": "raw/sources/Khurelbaatar et al. - 2026 - Nonclassical Cutoff Fluctuations in Squeezed-Light-Driven High-Harmonic Generation.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2605.21925",
+        "https://arxiv.org/pdf/2605.21925v1"
+      ],
+      "metadata": {
+        "title": "Nonclassical Cutoff Fluctuations in Squeezed-Light-Driven High-Harmonic Generation",
+        "year": "2026",
+        "date": "2026-05-21",
+        "doi": null,
+        "arxiv": "2605.21925v1",
+        "authors": [
+          "Tsendsuren Khurelbaatar",
+          "R. T. Sang",
+          "Igor Litvinyuk"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2605.21925v1",
+        "abstract": "Strong-field high-harmonic generation (HHG) is conventionally described semiclassically, with the driving laser treated as a classical field. This approximation becomes insufficient in nanoscale interaction geometries, where extreme spatial confinement raises the vacuum-field amplitude to the ~10^-2 level relative to the driving-field amplitude. When the quantum fluctuations of the driving field are redistributed between conjugate quadratures by squeezing, they can be directly imprinted onto macroscopic HHG observables. To model this interaction, we employ a Wigner phase-space approach that maps the quantum-optical driver onto a stochastic ensemble of time-dependent Schrodinger equation realizations. Although each realization remains classically simulable, the sub-vacuum quadrature covariance structure of squeezed states cannot be reproduced by any field admitting a non-negative Glauber-Sudarshan P-representation. Within this single-mode Gaussian framework, we show that amplitude squeezing suppresses the shot-to-shot variance of the HHG cutoff below the standard quantum limit (SQL). To leading order in the vacuum-to-driver ratio, the normalized cutoff variance decays exponentially with the squeezing parameter, independent of the absolute vacuum-field amplitude and therefore robust against uncertainties in the effective nanoscale mode volume. A subleading phase-noise contribution from the anti-squeezed quadrature produces a variance minimum near r_opt ~ 1.6, providing a concrete experimental target. These results establish the HHG cutoff variance ratio as a nonlinear, self-calibrating Heisenberg witness in which sub-SQL scaling directly reflects the redistribution of quantum uncertainty in the driving field.",
+        "cited_by_count": null,
+        "relevance_score": 9,
+        "relevance_reasons": [
+          "squeezed+hhg",
+          "stochastic",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2605.21925",
+          "https://arxiv.org/pdf/2605.21925v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Nonlinear atomic tunnelling boosted by bright squeezed vacuum",
+      "year": "2026",
+      "dest": "raw/sources/Jiang et al. - 2026 - Nonlinear atomic tunnelling boosted by bright squeezed vacuum.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2604.05783",
+        "https://www.nature.com/articles/s41586-026-10485-9.pdf",
+        "https://arxiv.org/pdf/2604.05783.pdf",
+        "https://arxiv.org/abs/2604.05783",
+        "https://arxiv.org/pdf/2604.05783v2"
+      ],
+      "metadata": {
+        "title": "Nonlinear atomic tunnelling boosted by bright squeezed vacuum",
+        "year": 2026,
+        "date": "2026-05-20",
+        "doi": "10.1038/s41586-026-10485-9",
+        "arxiv": "2604.05783v2",
+        "authors": [
+          "Zhejun Jiang",
+          "Shengzhe Pan",
+          "J C Chen",
+          "Mingyu Zhu",
+          "Chenhao Zhao",
+          "Yue Wang",
+          "Ru Zhang",
+          "Jianshi Lu",
+          "Lulu Han",
+          "Suwen Xiong",
+          "Dian Wu",
+          "Wenxue Li",
+          "Shicheng Jiang",
+          "Hongcheng Ni",
+          "Jian Wu"
+        ],
+        "venue": "Nature",
+        "url": "https://doi.org/10.1038/s41586-026-10485-9",
+        "abstract": "Nonlinear optical processes, mediated by multiphoton interactions rather than single-photon response, are routinely exploited to enable a range of light-based functionalities in devices and applications. Nonlinear effects are enhanced by higher-intensity fields, which is a limiting strategy owing to potential radiation damage. An alternative strategy relies on the fluctuation redistribution typical of quantum light1–4, but experimental demonstrations at the most fundamental level have been limited. Here we report experimental nonlinear tunnelling ionization of isolated atoms, a pivotal nonlinear process that drives high-harmonic generation and forms the basis of attosecond science, boosted by quantum light—bright squeezed vacuum (BSV). A BSV light with an average pulse energy of 300 nJ achieves an effective intensity equivalent to that of a coherent light with 7.1 μJ, demonstrating a more than 20-fold quantum boost in the nonlinear effect from BSV light. This boost is revealed by matching the peaks of the photoelectron momentum spectra produced by the BSV and coherent light as measured by angular streaking. Furthermore, we demonstrate control of the effective intensity of the BSV by tuning the correlation function at fixed average pulse energy, establishing a robust method to tailor nonlinear processes by quantum statistics rather than classical intensity scaling. These findings may facilitate the development of quantum-controlled strong-field dynamics using tailored quantum light sources. Bright squeezed vacuum light boosts nonlinear atomic tunnelling ionization more than 20-fold compared with coherent light, enabling quantum control of strong-field processes without increasing classical intensity.",
+        "cited_by_count": 1,
+        "relevance_score": 20,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed vacuum",
+          "squeezed+hhg",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2604.05783",
+          "https://www.nature.com/articles/s41586-026-10485-9.pdf",
+          "https://arxiv.org/pdf/2604.05783.pdf",
+          "https://arxiv.org/abs/2604.05783",
+          "https://arxiv.org/pdf/2604.05783v2"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Quantum Optical Signatures of Band Topology in Solid-State High Harmonics",
+      "year": "2026",
+      "dest": "raw/sources/Ilin et al. - 2026 - Quantum Optical Signatures of Band Topology in Solid-State High Harmonics.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2604.20388"
+      ],
+      "metadata": {
+        "title": "Quantum Optical Signatures of Band Topology in Solid-State High Harmonics",
+        "year": 2026,
+        "date": "2026-04-22",
+        "doi": "10.48550/arxiv.2604.20388",
+        "arxiv": null,
+        "authors": [
+          "Denis Ilin",
+          "Alexander S. Solntsev",
+          "Ivan Iorsh"
+        ],
+        "venue": "arXiv (Cornell University)",
+        "url": "https://doi.org/10.48550/arxiv.2604.20388",
+        "abstract": "We develop a general theory of high-harmonic generation (HHG) in solid-state systems, based on a weak-correlation expansion of photonic and matter degrees of freedom. Unlike standard HHG theories, which treat light-matter dynamics through the Schrodinger equation, our approach employs density-matrix evolution, naturally capturing the mixed-state character of both the field and the matter - a critical aspect for describing complex solid-state band structures. We show explicitly that the properties of the emitted fields are governed by the quantum statistics and quantum geometry of the underlying solid. Taking the Su-Schrieffer-Heeger (SSH) model in a one-sided optical cavity as a paradigmatic example and considering the dual regime, we demonstrate that in the topological phase a system exhibits a stronger HHG response and stronger quantum-light signatures than in the trivial phase. Furthermore, we show that cavity-matter interaction gives rise to squeezed high-harmonic quantum light, whose properties are directly imprinted by the current-current fluctuations in the material system. Crucially, the observed squeezing does not rely on a separate quartic Kerr mechanism. In the mesoscopic regime, the genuine quantum Kerr term is higher order in light-matter coupling strength and negligible, while the relevant non-classical effect is governed by current-current fluctuations encoded in the complex susceptibility of the material. This work establishes a direct link between band topology and photon statistics, opening new avenues for topology-sensitive quantum light generation and photon statistics based spectroscopy of solid-state systems.",
+        "cited_by_count": 1,
+        "relevance_score": 15,
+        "relevance_reasons": [
+          "high harmonic",
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed+hhg"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2604.20388"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Strong-field ionization of atoms with bright squeezed vacuum light",
+      "year": "2026",
+      "dest": "raw/sources/Liu et al. - 2026 - Strong-field ionization of atoms with bright squeezed vacuum light.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2604.06703",
+        "http://arxiv.org/pdf/2604.06703.pdf",
+        "http://arxiv.org/abs/2604.06703",
+        "https://arxiv.org/pdf/2604.06703v1"
+      ],
+      "metadata": {
+        "title": "Strong-field ionization of atoms with bright squeezed vacuum light",
+        "year": 2026,
+        "date": "2026-04-08",
+        "doi": "10.48550/arxiv.2604.06703",
+        "arxiv": "2604.06703v1",
+        "authors": [
+          "Haodong Liu",
+          "Xiaoxiao Long",
+          "Peizeng Li",
+          "Zijian Lyu",
+          "Yunquan Liu"
+        ],
+        "venue": "arXiv (Cornell University)",
+        "url": "http://arxiv.org/abs/2604.06703",
+        "abstract": "Strong-field ionization is the cornerstone of attosecond physics, which has been extensively studied under coherent-state driving. Recently, the interface between attosecond physics and quantum optics has emerged as a new frontier. Yet, owing to experimental limitations, the role of the quantum nature of light in atomic strong-field ionization has remained unexplored. Here, we demonstrate strong-field ionization of xenon atoms driven by bright squeezed vacuum (BSV) with average pulse energy up to 10 \\textmu J. We show that, as a nonclassical state with zero mean field and strong intensity fluctuations, BSV selectively enhances the spider-like holographic structures in the photoelectron momentum distributions. Using a quantum-light-corrected quantum-trajectory Monte Carlo (q-QTMC) model, we attribute this effect to the intrinsic coherence of trajectory pairs emitted within the same subcycle field fluctuation. These dynamically correlated paths exhibit enhanced phase stability and remain robust against dephasing, whereas asynchronous paths are filtered out by field noise. Our results reveal a quantum-fluctuation-induced mechanism for coherence protection in strong-field processes, positioning BSV as an effective coherence filter and establishing a new regime of quantum-enabled noise-resilient ultrafast dynamics.",
+        "cited_by_count": 0,
+        "relevance_score": 10,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "squeezed vacuum",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2604.06703",
+          "http://arxiv.org/pdf/2604.06703.pdf",
+          "http://arxiv.org/abs/2604.06703",
+          "https://arxiv.org/pdf/2604.06703v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Symmetry breaking by quantum light in solid-state high-harmonic generation",
+      "year": "2026",
+      "dest": "raw/sources/Stammer et al. - 2026 - Symmetry breaking by quantum light in solid-state high-harmonic generation.pdf",
+      "urls": [
+        "https://arxiv.org/pdf/2605.28236",
+        "https://arxiv.org/pdf/2605.28236v1"
+      ],
+      "metadata": {
+        "title": "Symmetry breaking by quantum light in solid-state high-harmonic generation",
+        "year": "2026",
+        "date": "2026-05-27",
+        "doi": null,
+        "arxiv": "2605.28236v1",
+        "authors": [
+          "P. Stammer",
+          "J. Rivera-Dean",
+          "D. Kim",
+          "A. Chacón",
+          "W. Gao",
+          "C. Granados"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2605.28236v1",
+        "abstract": "Symmetry governs nonlinear interactions in condensed matter systems, particularly in high-harmonic generation (HHG), the interplay between the driving field and crystal symmetries dictate the properties of the emitted harmonics. A central open question is how quantum fluctuations of light modify these symmetry-imposed selection rules in solid state systems. Here, we address this by studying the nonlinear response of graphene and Molybdenum disulfide (MoS$_2$) to circular polarized quantum light, where both materials with distinct rotational symmetries and corresponding classical selection rules. We show that the quantum fluctuations break the dynamical symmetry of the driving field while preserving the crystal symmetry, which enables the generation of classically forbidden harmonics by breaking the corresponding selection rules. These results establish quantum states of light as a new degree of control over harmonic generation in solids, opening routes toward all-optical symmetry engineering of the quantum optical harmonic properties towards attosecond pulse generation.",
+        "cited_by_count": null,
+        "relevance_score": 9,
+        "relevance_reasons": [
+          "quantum light",
+          "quantum-light strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2605.28236",
+          "https://arxiv.org/pdf/2605.28236v1"
+        ],
+        "source": "search_manifest"
+      }
+    }
+  ],
+  "downloaded": [
+    {
+      "title": "Two-Color Bright Squeezed Vacuum",
+      "year": "2009",
+      "file": "raw/sources/Agafonov et al. - 2009 - Two-Color Bright Squeezed Vacuum.pdf",
+      "url": "https://arxiv.org/pdf/0910.4831",
+      "metadata": {
+        "title": "Two-Color Bright Squeezed Vacuum",
+        "year": "2009",
+        "date": "2009-10-26",
+        "doi": "10.1103/PhysRevA.82.011801",
+        "arxiv": "0910.4831v4",
+        "authors": [
+          "Ivan N. Agafonov",
+          "Maria V. Chekhova",
+          "Gerd Leuchs"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/0910.4831v4",
+        "abstract": "In a strongly pumped non-degenerate traveling-wave OPA, we produce two-color squeezed vacuum with up to millions of photons per pulse. Our approach to registering this macroscopic quantum state is direct detection of a large number of transverse and longitudinal modes, which is achieved by making the detection time and area much larger than the coherence time and area, respectively. Using this approach, we obtain a record value of twin-beam squeezing for direct detection of bright squeezed vacuum. This makes direct detection of macroscopic squeezed vacuum a practical tool for quantum information applications.",
+        "cited_by_count": null,
+        "relevance_score": 7,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "squeezed vacuum"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/0910.4831",
+          "https://arxiv.org/pdf/0910.4831v4"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Super-bunched bright squeezed vacuum state",
+      "year": "2012",
+      "file": "raw/sources/Iskhakov et al. - 2012 - Super-bunched bright squeezed vacuum state.pdf",
+      "url": "https://arxiv.org/pdf/1202.1682",
+      "metadata": {
+        "title": "Super-bunched bright squeezed vacuum state",
+        "year": "2012",
+        "date": "2012-02-08",
+        "doi": null,
+        "arxiv": "1202.1682v1",
+        "authors": [
+          "T. Sh. Iskhakov",
+          "A. Perez",
+          "K. Yu. Spasibko",
+          "M. V. Chekhova",
+          "G. Leuchs"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/1202.1682v1",
+        "abstract": "In this paper we experimentally study the statistical properties of a bright squeezed vacuum state containing up to 10^13 photons per mode (10 uJ per pulse), produced via high gain parametric down conversion (PDC). The effects of bunching and superbunching of photons were observed for a single mode PDC radiation by second-order intensity correlation function measurements with analog detectors.",
+        "cited_by_count": null,
+        "relevance_score": 7,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "squeezed vacuum"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/1202.1682",
+          "https://arxiv.org/pdf/1202.1682v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Spatially single-mode source of bright squeezed vacuum",
+      "year": "2014",
+      "file": "raw/sources/Pérez et al. - 2014 - Spatially single-mode source of bright squeezed vacuum.pdf",
+      "url": "https://arxiv.org/pdf/1402.2771",
+      "metadata": {
+        "title": "Spatially single-mode source of bright squeezed vacuum",
+        "year": "2014",
+        "date": "2014-02-12",
+        "doi": "10.1364/OL.39.002403",
+        "arxiv": "1402.2771v1",
+        "authors": [
+          "A. M. Pérez",
+          "T. Sh. Iskhakov",
+          "P. Sharapova",
+          "S. Lemieux",
+          "O. V. Tikhonova",
+          "M. V. Chekhova",
+          "G. Leuchs"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/1402.2771v1",
+        "abstract": "Bright squeezed vacuum, a macroscopic nonclassical state of light, can be obtained at the output of a strongly pumped non-seeded traveling-wave optical parametric amplifier (OPA). By constructing the OPA of two consecutive crystals separated by a large distance we make the squeezed vacuum spatially single-mode without a significant decrease in the brightness or squeezing.",
+        "cited_by_count": null,
+        "relevance_score": 7,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "squeezed vacuum"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/1402.2771",
+          "https://arxiv.org/pdf/1402.2771v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Nonlinear interferometer for tailoring the frequency spectrum of bright squeezed vacuum",
+      "year": "2015",
+      "file": "raw/sources/Iskhakov et al. - 2015 - Nonlinear interferometer for tailoring the frequency spectrum of bright squeezed vacuum.pdf",
+      "url": "https://arxiv.org/pdf/1503.03406",
+      "metadata": {
+        "title": "Nonlinear interferometer for tailoring the frequency spectrum of bright squeezed vacuum",
+        "year": "2015",
+        "date": "2015-03-11",
+        "doi": "10.1080/09500340.2015.1080315",
+        "arxiv": "1503.03406v1",
+        "authors": [
+          "T. Sh. Iskhakov",
+          "S. Lemieux",
+          "A. Perez",
+          "R. W. Boyd",
+          "G. Leuchs",
+          "M. Chekhova"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/1503.03406v1",
+        "abstract": "We propose a method for tailoring the frequency spectrum of bright squeezed vacuum by generating it in a nonlinear interferometer, consisting of two down-converting nonlinear crystals separated by a dispersive medium. Due to a faster dispersive spreading of higher-order Schmidt modes, the spectral width of the radiation at the output is reduced as the length of the dispersive medium is increased. Preliminary results show 30\\% spectral narrowing.",
+        "cited_by_count": null,
+        "relevance_score": 8,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "schmidt modes",
+          "squeezed vacuum"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/1503.03406",
+          "https://arxiv.org/pdf/1503.03406v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Properties of bright squeezed vacuum at increasing brightness",
+      "year": "2020",
+      "file": "raw/sources/Sharapova et al. - 2020 - Properties of bright squeezed vacuum at increasing brightness.pdf",
+      "url": "https://arxiv.org/pdf/1905.10109",
+      "metadata": {
+        "title": "Properties of bright squeezed vacuum at increasing brightness",
+        "year": 2020,
+        "date": "2020-03-27",
+        "doi": "10.1103/physrevresearch.2.013371",
+        "arxiv": "1905.10109v2",
+        "authors": [
+          "Polina R. Sharapova",
+          "Gaetano Frascella",
+          "Matvei Riabinin",
+          "A. M. Pérez",
+          "О. В. Тихонова",
+          "Samuel Lemieux",
+          "Robert W. Boyd",
+          "Gerd Leuchs",
+          "Maria V. Chekhova"
+        ],
+        "venue": "Physical Review Research",
+        "url": "https://doi.org/10.1103/physrevresearch.2.013371",
+        "abstract": "This work provides a theoretical approach to describe the spatial properties of bright squeezed vacuum. The model describes these using Schmidt modes and captures the modal structure and the effects of strong pumping.",
+        "cited_by_count": 59,
+        "relevance_score": 8,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "schmidt modes",
+          "squeezed vacuum"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/1905.10109",
+          "http://link.aps.org/pdf/10.1103/PhysRevResearch.2.013371",
+          "http://arxiv.org/pdf/1905.10109.pdf",
+          "http://arxiv.org/abs/1905.10109",
+          "https://arxiv.org/pdf/1905.10109v2"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Pump depletion in parametric down-conversion with low pump energies",
+      "year": "2020",
+      "file": "raw/sources/Flórez et al. - 2020 - Pump depletion in parametric down-conversion with low pump energies.pdf",
+      "url": "https://arxiv.org/pdf/2003.07483",
+      "metadata": {
+        "title": "Pump depletion in parametric down-conversion with low pump energies",
+        "year": "2020",
+        "date": "2020-03-17",
+        "doi": "10.1364/OL.394925",
+        "arxiv": "2003.07483",
+        "authors": [
+          "Jefferson Flórez",
+          "Jeff S. Lundeen",
+          "Maria V. Chekhova"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2003.07483",
+        "abstract": "We report the efficient generation of high-gain parametric down-conversion, including pump depletion, with pump powers as low as 100 $μ$W (energies $0.1$~$μ$J/pulse) and conversion efficiencies up to 33\\%. In our simple configuration, the pump beam is tightly focused into a bulk periodically poled lithium niobate crystal placed in free space. We also observe a change in the photon number statistics for both the pump and down-converted beams as the pump power increases to reach the depleted pump regime. The experimental results are a clear signature of the interplay between the pump and the down-converted beams in highly efficient parametric down-conversion sources.",
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2003.07483"
+        ],
+        "relevance_score": null,
+        "relevance_reasons": [
+          "manual arXiv recovery"
+        ],
+        "source": "manual_arxiv_recovery"
+      }
+    },
+    {
+      "title": "Efficient simulation of ultrafast quantum nonlinear optics with matrix product states",
+      "year": "2021",
+      "file": "raw/sources/Yanagimoto et al. - 2021 - Efficient simulation of ultrafast quantum nonlinear optics with matrix product states.pdf",
+      "url": "https://arxiv.org/pdf/2102.05902",
+      "metadata": {
+        "title": "Efficient simulation of ultrafast quantum nonlinear optics with matrix product states",
+        "year": 2021,
+        "date": "2021-09-07",
+        "doi": "10.1364/optica.423044",
+        "arxiv": "2102.05902v1",
+        "authors": [
+          "Ryotatsu Yanagimoto",
+          "Edwin Ng",
+          "Logan G. Wright",
+          "Tatsuhiro Onodera",
+          "Hideo Mabuchi"
+        ],
+        "venue": "Optica",
+        "url": "https://doi.org/10.1364/optica.423044",
+        "abstract": "Ultrashort pulses propagating in nonlinear nanophotonic waveguides can simultaneously leverage both temporal and spatial field confinement, promising a route towards single-photon nonlinearities in an all-photonic platform. In this multimode quantum regime, however, faithful numerical simulations of pulse dynamics naïvely require a representation of the state in an exponentially large Hilbert space. Here, we employ a time-domain, matrix product state (MPS) representation to enable efficient simulations by exploiting the entanglement structure of the system. To extract physical insight from these simulations, we develop an algorithm to unravel the MPS quantum state into constituent temporal supermodes, enabling, e.g., access to the phase-space portraits of arbitrary pulse waveforms. As a demonstration, we perform exact numerical simulations of a Kerr soliton in the quantum regime. We observe the development of non-classical Wigner-function negativity in the solitonic mode as well as quantum corrections to the semiclassical dynamics of the pulse. A similar analysis of <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\"> <mml:mrow class=\"MJX-TeXAtom-ORD\"> <mml:msup> <mml:mi>χ</mml:mi> <mml:mrow class=\"MJX-TeXAtom-ORD\"> <mml:mo stretchy=\"false\">(</mml:mo> <mml:mn>2</mml:mn> <mml:mo stretchy=\"false\">)</mml:mo> </mml:mrow> </mml:msup> </mml:mrow> </mml:math> simultons reveals a unique entanglement structure between the fundamental and second harmonics. Our approach is also readily compatible with quantum trajectory theory, allowing full quantum treatment of propagation loss and decoherence. We expect this work to establish the MPS technique as part of a unified engineering framework for the emerging field of broadband quantum photonics.",
+        "cited_by_count": 12,
+        "relevance_score": 7,
+        "relevance_reasons": [
+          "matrix product states",
+          "quantum nonlinear optics"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2102.05902",
+          "http://arxiv.org/pdf/2102.05902.pdf",
+          "http://arxiv.org/abs/2102.05902",
+          "http://export.arxiv.org/pdf/2102.05902",
+          "https://opg.optica.org/viewmedia.cfm?URI=optica-8-10-1306",
+          "https://arxiv.org/pdf/2102.05902v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Theory of entanglement and measurement in high harmonic generation",
+      "year": "2022",
+      "file": "raw/sources/Stammer - 2022 - Theory of entanglement and measurement in high harmonic generation.pdf",
+      "url": "https://arxiv.org/pdf/2203.04354",
+      "metadata": {
+        "title": "Theory of entanglement and measurement in high harmonic generation",
+        "year": "2022",
+        "date": "2022-03-08",
+        "doi": "10.1103/PhysRevA.106.L050402",
+        "arxiv": "2203.04354",
+        "authors": [
+          "Philipp Stammer"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2203.04354",
+        "abstract": "Quantum information science and intense laser matter interaction are two apparently unrelated fields. Here, we introduce the notion of quantum information theory to intense laser driven processes by providing the quantum mechanical description of measurement protocols for high harmonic generation in atoms. This allows to conceive new protocols for quantum state engineering of light. We explicitly evaluate conditioning experiments on individual optical field modes, and provide the corresponding quantum operation for coherent states. The associated positive operator-valued measures are obtained, and give rise to the quantum theory of measurement for the generation of high dimensional entangled states, and coherent state superposition with controllable non-classical features on the attosecond timescale. This establish the use of intense laser driven processes as a novel quantum technology platform for quantum information processing.",
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2203.04354"
+        ],
+        "relevance_score": null,
+        "relevance_reasons": [
+          "manual arXiv recovery"
+        ],
+        "source": "manual_arxiv_recovery"
+      }
+    },
+    {
+      "title": "Entanglement and Squeezing of the Optical Field Modes in High Harmonic Generation",
+      "year": "2024",
+      "file": "raw/sources/Stammer et al. - 2024 - Entanglement and Squeezing of the Optical Field Modes in High Harmonic Generation.pdf",
+      "url": "https://arxiv.org/pdf/2310.15030",
+      "metadata": {
+        "title": "Entanglement and Squeezing of the Optical Field Modes in High Harmonic Generation",
+        "year": 2024,
+        "date": "2024-04-05",
+        "doi": "10.1103/physrevlett.132.143603",
+        "arxiv": "2310.15030v1",
+        "authors": [
+          "Philipp Stammer",
+          "Javier Rivera-Dean",
+          "Andrew Maxwell",
+          "Theocharis Lamprou",
+          "Javier Argüello-Luengo",
+          "P. Tzallas",
+          "Marcelo F. Ciappina",
+          "Maciej Lewenstein"
+        ],
+        "venue": "Physical Review Letters",
+        "url": "https://doi.org/10.1103/physrevlett.132.143603",
+        "abstract": "Squeezed optical fields are a powerful resource for a variety of investigations in basic research and technology. However, the generation of intense squeezed light is challenging. Here, we show that intense squeezed light can be produced using strongly laser driven atoms and the so far unrelated process of high harmonic generation. We demonstrate that when the intensity of the driving field significantly depletes the ground state of the atoms, leading to dipole moment correlations, the quantum state of the driving field and the generated high harmonics are entangled and squeezed. Furthermore, we analyze how the resulting quadrature squeezing of the fundamental laser mode after the interaction can be controlled. The findings open the way for the generation of high intensity squeezed light states for a wide range of applications.",
+        "cited_by_count": 52,
+        "relevance_score": 11,
+        "relevance_reasons": [
+          "high harmonic",
+          "squeezed light",
+          "squeezed+hhg"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2310.15030",
+          "https://upcommons.upc.edu/bitstreams/cec306b3-b012-4d12-b49c-0622b01d10ce/download",
+          "https://arxiv.org/pdf/2310.15030v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Highly Squeezed States in Ring Resonators: Beyond the Undepleted Pump Approximation",
+      "year": "2024",
+      "file": "raw/sources/Vendromin et al. - 2024 - Highly Squeezed States in Ring Resonators Beyond the Undepleted Pump Approximation.pdf",
+      "url": "https://arxiv.org/pdf/2404.15563",
+      "metadata": {
+        "title": "Highly Squeezed States in Ring Resonators: Beyond the Undepleted Pump Approximation",
+        "year": 2024,
+        "date": "2024-04-23",
+        "doi": "10.48550/arxiv.2404.15563",
+        "arxiv": null,
+        "authors": [
+          "Colin Vendromin",
+          "Yan Liu",
+          "Zhenshan Yang",
+          "J. E. Sipe"
+        ],
+        "venue": "arXiv (Cornell University)",
+        "url": "http://arxiv.org/abs/2404.15563",
+        "abstract": "We present a multimode theory of squeezed state generation in resonant systems valid for arbitrary pump power and including pump depletion. The Hamiltonian is written in terms of asymptotic-in and -out fields from scattering theory, capable of describing a general interaction. As an example we consider the lossy generation of a highly squeezed state by an effective second-order interaction in a silicon nitride ring resonator point-coupled to a waveguide. We calculate the photon number, Schmidt number, and the second-order correlation function of the generated state in the waveguide. The treatment we present provides a path forward to study the deterministic generation of non-Gaussian states in resonant systems.",
+        "cited_by_count": 1,
+        "relevance_score": 7,
+        "relevance_reasons": [
+          "non-gaussian",
+          "pump depletion",
+          "pump depletion PDC"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2404.15563",
+          "http://arxiv.org/pdf/2404.15563.pdf",
+          "http://arxiv.org/abs/2404.15563"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Photon bunching in high-harmonic emission controlled by quantum light",
+      "year": "2024",
+      "file": "raw/sources/Lemieux et al. - 2024 - Photon bunching in high-harmonic emission controlled by quantum light.pdf",
+      "url": "https://arxiv.org/pdf/2404.05474",
+      "metadata": {
+        "title": "Photon bunching in high-harmonic emission controlled by quantum light",
+        "year": 2024,
+        "date": "2024-04-08",
+        "doi": "10.48550/arxiv.2404.05474",
+        "arxiv": null,
+        "authors": [
+          "Samuel Lemieux",
+          "Sohail A. Jalil",
+          "David N. Purschke",
+          "Neda Boroumand",
+          "D. M. Villeneuve",
+          "A. Naumov",
+          "Thomas Brabec",
+          "Giulio Vampa"
+        ],
+        "venue": "arXiv (Cornell University)",
+        "url": "http://arxiv.org/abs/2404.05474",
+        "abstract": "Attosecond spectroscopy comprises several techniques to probe matter through electrons and photons. One frontier of attosecond methods is to reveal complex phenomena arising from quantum-mechanical correlations in the matter system, in the photon fields and among them. Recent theories have laid the groundwork for understanding how quantum-optical properties affect high-field photonics, such as strong-field ionization and acceleration of electrons in quantum-optical fields, and how entanglement between the field modes arises during the interaction. Here we demonstrate a new experimental approach that transduces some properties of a quantum-optical state through a strong-field nonlinearity. We perturb high-harmonic emission from a semiconductor with a bright squeezed vacuum field resulting in the emission of sidebands of the high-harmonics with super-Poissonian statistics, indicating that the emitted photons are bunched. Our results suggest that perturbing strong-field dynamics with quantum-optical states is a viable way to coherently control the generation of these states at short wavelengths, such as extreme ultraviolet or soft X-rays. Quantum correlations will be instrumental to advance attosecond spectroscopy and imaging beyond the classical limits.",
+        "cited_by_count": 2,
+        "relevance_score": 18,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed vacuum",
+          "squeezed+hhg",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2404.05474",
+          "http://arxiv.org/pdf/2404.05474.pdf",
+          "http://arxiv.org/abs/2404.05474",
+          "https://nrc-publications.canada.ca/eng/view/author/version/?id=6d75103d-7f61-4303-80eb-55251284c067"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Squeezed states of light after high-order harmonic generation in excited atomic systems",
+      "year": "2024",
+      "file": "raw/sources/Rivera-Dean et al. - 2024 - Squeezed states of light after high-order harmonic generation in excited atomic systems.pdf",
+      "url": "https://arxiv.org/pdf/2408.07577",
+      "metadata": {
+        "title": "Squeezed states of light after high-order harmonic generation in excited atomic systems",
+        "year": 2024,
+        "date": "2024-12-23",
+        "doi": "10.1103/physreva.110.063118",
+        "arxiv": "2408.07577v2",
+        "authors": [
+          "Javier Rivera-Dean",
+          "H. B. Crispin",
+          "Philipp Stammer",
+          "Theocharis Lamprou",
+          "Emilio Pisanty",
+          "Michael Krüger",
+          "P. Tzallas",
+          "Maciej Lewenstein",
+          "Marcelo F. Ciappina"
+        ],
+        "venue": "Physical review. A/Physical review, A",
+        "url": "https://doi.org/10.1103/physreva.110.063118",
+        "abstract": "High-harmonic generation (HHG) has recently emerged as a promising method for generating nonclassical states of light with frequencies spanning from the infrared up to the extreme ultraviolet regime. In this work, we theoretically investigate the generation of squeezed states of light through HHG processes in atomic systems that were initially driven to their first excited state. Our study reveals significant single-mode squeezing in both the driving field and low-order harmonic modes. Additionally, we characterize two-mode squeezing features in the generated states, both between fundamental and harmonic modes, and among the harmonic modes themselves. Using these correlations, we demonstrate the generation of optical Schr\\\"odinger kitten states through heralding measurements, specifically via photon subtraction in one of the modes influenced by two-mode squeezing.",
+        "cited_by_count": 11,
+        "relevance_score": 10,
+        "relevance_reasons": [
+          "high-order harmonic",
+          "squeezed+hhg"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2408.07577",
+          "https://kclpure.kcl.ac.uk/ws/files/319101294/PhysRevA.110.063118.AAM.pdf",
+          "https://kclpure.kcl.ac.uk/portal/files/319101294/PhysRevA.110.063118.AAM.pdf",
+          "http://publicatio.bibl.u-szeged.hu/35687/1/35662837.pdf",
+          "https://arxiv.org/pdf/2408.07577v2"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Benchmarking Atomic Ionization Driven by Strong Quantum Light",
+      "year": "2025",
+      "file": "raw/sources/Mao et al. - 2025 - Benchmarking Atomic Ionization Driven by Strong Quantum Light.pdf",
+      "url": "https://arxiv.org/pdf/2512.15458",
+      "metadata": {
+        "title": "Benchmarking Atomic Ionization Driven by Strong Quantum Light",
+        "year": "2025",
+        "date": "2025-12-17",
+        "doi": null,
+        "arxiv": "2512.15458v1",
+        "authors": [
+          "Yi-Jia Mao",
+          "En-Rui Zhou",
+          "Yang Li",
+          "Pei-Lun He",
+          "Feng He"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2512.15458v1",
+        "abstract": "The recently available high-intensity quantum light pulses provide novel tools for controlling light-matter interactions. However, the rigor of the theoretical frameworks currently used to describe the interaction of strong quantum light with atoms and molecules remains unverified. Here, we establish a rigorous benchmark by solving the fully quantized time-dependent Schrödinger equation for an atom exposed to bright squeezed vacuum light. Our \\textit{ab initio} simulations reveal a critical limitation of the widely used $Q$-representation: although it accurately reproduces the total photoelectron spectrum after tracing over photon states, it completely fails to capture the electron-photon joint energy spectrum. To overcome this limitation, we develop a general theoretical framework based on the Feynman path integral that properly incorporates the electron-photon quantum entanglement. Our results provide both quantitative benchmarks and fundamental theoretical insights for the emerging field of strong-field quantum optics.",
+        "cited_by_count": null,
+        "relevance_score": 12,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed vacuum",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2512.15458",
+          "https://arxiv.org/pdf/2512.15458v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Excitonic Enhancement of Squeezed Light in Quantum-Optical High-Harmonic Generation From a Mott Insulator",
+      "year": "2025",
+      "file": "raw/sources/Lange et al. - 2025 - Excitonic Enhancement of Squeezed Light in Quantum-Optical High-Harmonic Generation From a Mott Insulator.pdf",
+      "url": "https://arxiv.org/pdf/2503.15932",
+      "metadata": {
+        "title": "Excitonic Enhancement of Squeezed Light in Quantum-Optical High-Harmonic Generation From a Mott Insulator",
+        "year": "2025",
+        "date": "2025-03-20",
+        "doi": null,
+        "arxiv": "2503.15932v1",
+        "authors": [
+          "Christian Saugbjerg Lange",
+          "Thomas Hansen",
+          "Lars Bojer Madsen"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2503.15932v1",
+        "abstract": "The strong-field induced generation of nonclassical states of light is not only a subject of fundamental research but also has potential usage in quantum information science and technology. The emerging field of strong-field quantum optics has developed ways of generating nonclassical states of light from the process of high-harmonic generation (HHG) at much wider frequency ranges and intensities than is typical for quantum optics. So far, however, no clear nonclassical signal at a distinct and unambiguous frequency has been predicted. Here, we study the response from an exciton in a Mott-insulating system, using the extended Hubbard model. We find that the exciton plays a key role in the nonclassical response and generates squeezing at the exciton energy. We relate this nonclassical response to the nonvanishing time correlations of the current operator in the system. Our work defines a direction for experimental work to search for squeezed light from HHG in a spectrally confined region defined by the exciton energy.",
+        "cited_by_count": null,
+        "relevance_score": 11,
+        "relevance_reasons": [
+          "squeezed light",
+          "squeezed+hhg",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2503.15932",
+          "https://arxiv.org/pdf/2503.15932v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "High-Harmonic Generation in a Crystal Driven by Quantum Light",
+      "year": "2025",
+      "file": "raw/sources/Gothelf et al. - 2025 - High-Harmonic Generation in a Crystal Driven by Quantum Light.pdf",
+      "url": "https://arxiv.org/pdf/2502.11803",
+      "metadata": {
+        "title": "High-Harmonic Generation in a Crystal Driven by Quantum Light",
+        "year": 2025,
+        "date": "2025-02-17",
+        "doi": "10.48550/arxiv.2502.11803",
+        "arxiv": "2502.11803v2",
+        "authors": [
+          "Rasmus Vesterager Gothelf",
+          "Christian Saugbjerg Lange",
+          "Lars Bojer Madsen"
+        ],
+        "venue": "ArXiv.org",
+        "url": "http://arxiv.org/abs/2502.11803",
+        "abstract": "We study intraband high-harmonic generation (HHG) in a crystal driven by quantum light. Previous theoretical studies have developed a framework based on coherent state expansions in terms of P distributions to consider nonclassical driving fields for HHG in atoms. Here, we adapt this framework to the context of solids and consider an intraband model of ZnO. We investigate the effect of the quantum optical nature of the driving field on the harmonic spectra including the cutoff and the intensity scaling of the harmonics with driving field intensity. Based on analytical calculations in the Floquet limit, we explain why driving with thermal light or bright-squeezed vacuum (BSV) produces a much higher cutoff than when driving with fields described by coherent or Fock states. Further, we derive an expression for the generated time-dependent electric field and its fluctuations and find that it inherits characteristics of the driving field. Finally, we discuss the limitations of an approximative positive P representation, which is introduced to be able to reduce the numerical complexity for Fock and BSV driving fields.",
+        "cited_by_count": 0,
+        "relevance_score": 16,
+        "relevance_reasons": [
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed vacuum",
+          "squeezed+hhg"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2502.11803",
+          "http://arxiv.org/pdf/2502.11803.pdf",
+          "http://arxiv.org/abs/2502.11803",
+          "https://arxiv.org/pdf/2502.11803.pdf",
+          "https://arxiv.org/abs/2502.11803",
+          "https://arxiv.org/pdf/2502.11803v2"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Kerr-induced non-Gaussianity of ultrafast bright squeezed vacuum",
+      "year": "2025",
+      "file": "raw/sources/Rasputnyi et al. - 2025 - Kerr-induced non-Gaussianity of ultrafast bright squeezed vacuum.pdf",
+      "url": "https://arxiv.org/pdf/2512.17797",
+      "metadata": {
+        "title": "Kerr-induced non-Gaussianity of ultrafast bright squeezed vacuum",
+        "year": "2025",
+        "date": "2025-12-19",
+        "doi": null,
+        "arxiv": "2512.17797v1",
+        "authors": [
+          "Andrei Rasputnyi",
+          "Ilya Karuseichyk",
+          "Gerd Leuchs",
+          "Denis Seletskiy",
+          "Maria Chekhova"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2512.17797v1",
+        "abstract": "Non-Gaussian states of light are a critical resource for fault-tolerant quantum computing and enhanced metrology, but are typically faint and often obtained via post-selection. Here, we demonstrate the deterministic generation of a bright non-Gaussian state by introducing a Kerr nonlinearity to a macroscopic state of light called bright squeezed vacuum (BSV). To characterize the resulting state, we use a single-shot f-2f interferometer to sample its Husimi function. We observe a clear transformation from a 2D Gaussian distribution to an 'S'-shaped non-Gaussian profile, which is the direct statistical evidence of the intensity-dependent nonlinear phase. The negativity of the Wigner function, which is an intrinsic property of any pure non-Gaussian state, cannot be observed because BSV is a mixed state even under minute optical loss. However, we show that BSV can be considered as a mixture of pure squeezed coherent states, for some of which Kerr-induced Wigner-function negativity is quite tolerant to loss. This work bridges the gap between quantum optics and ultrafast nonlinear optics, opening a path to quantum applications that require high photon flux.",
+        "cited_by_count": null,
+        "relevance_score": 15,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "non-gaussian",
+          "non-gaussian nonlinear",
+          "squeezed vacuum"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2512.17797",
+          "https://arxiv.org/pdf/2512.17797v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Non-Gaussian states via pump-depleted SPDC",
+      "year": "2025",
+      "file": "raw/sources/Vendromin et al. - 2025 - Non-Gaussian states via pump-depleted SPDC.pdf",
+      "url": "https://arxiv.org/pdf/2510.06498",
+      "metadata": {
+        "title": "Non-Gaussian states via pump-depleted SPDC",
+        "year": 2025,
+        "date": "2025-10-07",
+        "doi": "10.48550/arxiv.2510.06498",
+        "arxiv": "2510.06498v1",
+        "authors": [
+          "Colin Vendromin",
+          "Samuel E. Fontaine",
+          "J. E. Sipe"
+        ],
+        "venue": "ArXiv.org",
+        "url": "http://arxiv.org/abs/2510.06498",
+        "abstract": "We develop a model for non-Gaussian state generation via spontaneous parametric down-conversion (SPDC) in InGaP microring resonators. The nonlinear Hamiltonian is written in terms of the asymptotic fields for the system, which includes a phantom channel to handle scattering loss. The full ket for the system is written as a Gaussian unitary acting on a residual non-Gaussian ket, which is vacuum initially and evolves according to a non-Gaussian Hamiltonian. We show that for realistic parameters we can access the pump depletion regime, where the Wigner function for the residual non-Gaussian ket has negativity. But we find that the non-Gaussian features for the full ket could be unobservable due to the large amount of squeezing required to lead to pump depletion. We show that a potential solution in the low-loss regime is to implement an inverse Gaussian unitary on the accessible modes to remove most of the squeezing and reveal the non-Gaussian features. This work provides a foundation for modeling pump-depleted SPDC in integrated lossy microring resonators, opening a path toward a scalable on-chip non-Gaussian source.",
+        "cited_by_count": 0,
+        "relevance_score": 15,
+        "relevance_reasons": [
+          "non-gaussian",
+          "non-gaussian nonlinear",
+          "parametric down-conversion",
+          "pump depletion",
+          "pump depletion PDC"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2510.06498",
+          "http://arxiv.org/pdf/2510.06498.pdf",
+          "http://arxiv.org/abs/2510.06498",
+          "https://arxiv.org/pdf/2510.06498v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Observation of a displaced squeezed state in high-harmonic generation",
+      "year": "2025",
+      "file": "raw/sources/Theidel et al. - 2025 - Observation of a displaced squeezed state in high-harmonic generation.pdf",
+      "url": "https://arxiv.org/pdf/2411.02311",
+      "metadata": {
+        "title": "Observation of a displaced squeezed state in high-harmonic generation",
+        "year": 2025,
+        "date": "2025-07-14",
+        "doi": "10.1103/6r6n-pxfp",
+        "arxiv": "2411.02311v2",
+        "authors": [
+          "David Theidel",
+          "Viviane Cotte",
+          "Philip Heinzel",
+          "Houssna Griguer",
+          "Mateusz Weis",
+          "René Sondenheimer",
+          "H. Merdji"
+        ],
+        "venue": "Physical Review Research",
+        "url": "https://doi.org/10.1103/6r6n-pxfp",
+        "abstract": "High-harmonic generation (HHG) and quantum optics are historically two distant fields of science. HHG as a central technique to generate attosecond pulses via atoms, molecules, or solids has been mostly treated as a classical source of light. Entanglement and squeezing of HHG light would open fascinating perspectives in quantum technology, with the emergence of a field of basic and applied research: attosecond quantum optics. Here, we measure entanglement in a tripartite solid-state HHG system through the violation of a Cauchy-Schwarz inequality. Displaced squeezing is experimentally observed and supported by numerical simulations with excellent agreement to the data. The Schmidt number is estimated, which indicates a low-dimensional multimode structure for each harmonic, an important property for most quantum technologies. At the applied level, the semiconductor HHG source is scalable, integrable, operates at room temperature with compact lasers, and thus represents a useful and exploitable resource in quantum photonics.",
+        "cited_by_count": 3,
+        "relevance_score": 7,
+        "relevance_reasons": [
+          "squeezed+hhg"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2411.02311",
+          "https://arxiv.org/pdf/2411.02311v2"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Propagation of intense squeezed vacuum light in non-linear media",
+      "year": "2025",
+      "file": "raw/sources/Rivera-Dean et al. - 2025 - Propagation of intense squeezed vacuum light in non-linear media.pdf",
+      "url": "https://arxiv.org/pdf/2509.19608",
+      "metadata": {
+        "title": "Propagation of intense squeezed vacuum light in non-linear media",
+        "year": "2025",
+        "date": "2025-09-23",
+        "doi": null,
+        "arxiv": "2509.19608v3",
+        "authors": [
+          "Javier Rivera-Dean",
+          "Deeksha Kanti",
+          "Philipp Stammer",
+          "Stefanos Carlström",
+          "Nikolaos Tsatrafyllis",
+          "Misha Yu Ivanov",
+          "Maciej Lewenstein",
+          "Paraskevas Tzallas"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2509.19608v3",
+        "abstract": "Recent developments in quantum light engineering have enabled the use of infrared bright squeezed vacuum (BSV) femtosecond pulses in highly nonlinear optics, particularly strong field physics and high-harmonic generation. However, theoretical studies were focused on the microscopic interaction with a single atom, neglecting the crucial macroscopic aspect of light propagation through the media. This raises a key question: How does BSV propagates in strongly light-driven nonlinear media and how this affects the generation of non-linear optical signals? We address this question by introducing a fully quantized framework that accounts for the propagation in gas media. We find that atomic ionization caused by strong BSV fluctuations and the associated infrared photon losses introduce decoherence effects that can substantially limit the propagation length in the medium, reduce the harmonic yield, and decrease the number of emitted harmonics at high intensities. However, these effects are not detrimental. We identify conditions under which propagation-induced decoherence is minimized while the generated harmonics remain clearly detectable--an issue of particular importance for future studies exploring the connection between strong-field physics and quantum optics. Our results lay the foundation for future studies of BSV in strong-field physics, nonlinear optics, and ultrafast science, and establish a basis for exploring its propagation through all states of matter in a fully quantized framework.",
+        "cited_by_count": null,
+        "relevance_score": 18,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed vacuum",
+          "squeezed+hhg",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2509.19608",
+          "https://arxiv.org/pdf/2509.19608v3"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Quantum Dial for High-Harmonic Generation",
+      "year": "2025",
+      "file": "raw/sources/Wang et al. - 2025 - Quantum Dial for High-Harmonic Generation.pdf",
+      "url": "https://arxiv.org/pdf/2509.13518",
+      "metadata": {
+        "title": "Quantum Dial for High-Harmonic Generation",
+        "year": "2025",
+        "date": "2025-09-16",
+        "doi": "10.21203/rs.3.rs-7633423/v1",
+        "arxiv": "2509.13518v2",
+        "authors": [
+          "Lu Wang",
+          "Andrew M. Parks",
+          "Adam Thorpe",
+          "Graeme Bart",
+          "Giulio Vampa",
+          "Thomas Brabec"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2509.13518v2",
+        "abstract": "High-harmonic generation (HHG) is a highly nonlinear optical process that typically requires an intense laser to trigger emissions at integer multiples of the driving field frequency. However, the strong fields required for conventional HHG inevitably perturb the system, limiting its use as a nondestructive spectroscopic probe. Recent advances in bright squeezed vacuum (BSV) sources have created opportunities to drive HHG with quantum fields alone. In this work, we demonstrate a regime in which the light-matter interactions can be controlled and tuned using a weak classical field, whose pulse energy is two orders of magnitude lower than that in standard HHG-perturbed by an even weaker quantum field such as BSV. This approach opens new avenues for nonlinear spectroscopy of materials while substantially suppressing strong laser-induced damage, distortions, and heating. We show that a BSV pulse containing less than 5% of the classical driving energy can act as an 'optical dial', allowing tuning of the nonlinear emission spectrum, emission angular dependence, and ionization.",
+        "cited_by_count": null,
+        "relevance_score": 9,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "squeezed vacuum",
+          "squeezed+hhg"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2509.13518",
+          "https://arxiv.org/pdf/2509.13518v2",
+          "https://www.researchsquare.com/article/rs-7633423/latest.pdf"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Solid-State High-Order Harmonic Generation: Emerging Frontiers in Ultrafast and Quantum Light Science",
+      "year": "2025",
+      "file": "raw/sources/Ciappina - 2025 - Solid-State High-Order Harmonic Generation Emerging Frontiers in Ultrafast and Quantum Light Science.pdf",
+      "url": "https://arxiv.org/pdf/2510.15207",
+      "metadata": {
+        "title": "Solid-State High-Order Harmonic Generation: Emerging Frontiers in Ultrafast and Quantum Light Science",
+        "year": "2025",
+        "date": "2025-10-17",
+        "doi": "10.48550/arXiv.2510.15207",
+        "arxiv": "2510.15207",
+        "authors": [
+          "Marcelo F. Ciappina"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2510.15207",
+        "abstract": "High-order harmonic generation (HHG) in solids has emerged as a versatile platform for exploring ultrafast and quantum-coherent phenomena in condensed matter. Recent advances reveal Berry-phase and topological effects in harmonic emission, strong-field control of excitons and lattice motion, the generation of nonclassical light states driven by quantum and squeezed fields, and the emergence of orbital-angular-momentum transfer in solid-state high-harmonic generation. Nanostructured and hybrid plasmonic-semiconductor platforms enable enhanced and spectrally tunable HHG, while interferometric and cryogenic setups allow attosecond-resolved phase measurements. On the theoretical side, multiband and topological models incorporating dephasing, propagation, and electron-hole coherence effects have deepened our understanding of the interplay between interband and intraband dynamics. These developments establish solid-state HHG as a bridge between ultrafast spectroscopy, quantum optics, and material science, paving the way toward quantum-engineered attosecond sources and coherent control of light-matter interactions in solids.",
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2510.15207"
+        ],
+        "relevance_score": null,
+        "relevance_reasons": [
+          "manual arXiv recovery"
+        ],
+        "source": "manual_arxiv_recovery"
+      }
+    },
+    {
+      "title": "Structured Squeezed Light Allows for High-Harmonic Generation in Classical Forbidden Geometries",
+      "year": "2025",
+      "file": "raw/sources/Rivera-Dean et al. - 2025 - Structured Squeezed Light Allows for High-Harmonic Generation in Classical Forbidden Geometries.pdf",
+      "url": "https://arxiv.org/pdf/2411.11042",
+      "metadata": {
+        "title": "Structured Squeezed Light Allows for High-Harmonic Generation in Classical Forbidden Geometries",
+        "year": 2025,
+        "date": null,
+        "doi": "10.1103/4hdl-bdwj",
+        "arxiv": "2411.11042v3",
+        "authors": [
+          "J. Rivera-Dean",
+          "P. Stammer",
+          "M. F. Ciappina",
+          "M. Lewenstein"
+        ],
+        "venue": "Physical Review Letters",
+        "url": "https://doi.org/10.1103/4hdl-bdwj",
+        "abstract": "High-harmonic generation (HHG) is a nonlinear process in which a strong driving field interacts with a material, resulting in the frequency up-conversion of the driver into its high-order harmonics. This process is highly sensitive to the field's polarization: circular polarization, for instance, inhibits HHG. In this work, we demonstrate that the use of non-classical structured light enables HHG in this otherwise prohibitive configuration for classical drivers. We consider circularly polarized light with non-classical fluctuations, introduced via squeezing along one polarization direction, and show that these non-classical features prompt the HHG process. We find that the spectral properties of the emitted harmonics depend on the type of squeezing applied and, by analyzing the inner electron dynamics, we relate the observed differences to modifications of the HHG three-step mechanism induced by the specific squeezing type. This approach opens new pathways for integrating quantum optics in HHG, providing novel means of controlling the light-matter interaction dynamics.",
+        "cited_by_count": 9,
+        "relevance_score": 11,
+        "relevance_reasons": [
+          "high-order harmonic",
+          "squeezed light",
+          "squeezed+hhg"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2411.11042",
+          "https://arxiv.org/pdf/2411.11042v3"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Theory of quantum optics and optical coherence in high harmonic generation",
+      "year": "2025",
+      "file": "raw/sources/Stammer et al. - 2025 - Theory of quantum optics and optical coherence in high harmonic generation.pdf",
+      "url": "https://arxiv.org/pdf/2504.13287",
+      "metadata": {
+        "title": "Theory of quantum optics and optical coherence in high harmonic generation",
+        "year": "2025",
+        "date": "2025-04-17",
+        "doi": "10.48550/arXiv.2504.13287",
+        "arxiv": "2504.13287",
+        "authors": [
+          "Philipp Stammer",
+          "Javier Rivera-Dean",
+          "Maciej Lewenstein"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2504.13287",
+        "abstract": "Optical coherence encodes information about the correlations of the electromagnetic field. In combination with quantum optical approaches, it allows for the study of the correlations between photons. Since the pioneering papers of Glauber, studies of optical coherence have facilitated many fundamental insights into non-classical signatures of light emission processes, with wide applicability in modern quantum technologies. However, when it comes to the photon up-conversion process of high-order harmonic generation the description has focused on semi-classical methods for decades. In this work, we overcome this limitation and establish a quantum optical theory of field correlations for the process of high harmonic generation (HHG). In effect, we introduce the notion of optical coherence at the intersection of quantum optics and strong laser-driven processes, and obtain the harmonic field correlation functions. In particular, we focus on the first and second order field correlation, which allow to understand the origin of the classical properties of the HHG spectrum, and its departure into the quantum regime. Further, we develop the theory for two-time intensity correlation functions of the harmonic field, and demonstrate the onset of anti-bunching signatures in HHG. We study the correlation functions in the regime of a single, few and many emitters in atomic HHG, showing the transition from quantum to classical signatures in the correlations. Since the theory is generic, it can be extended to multi-time correlation functions of any order, and allows to consider the interaction of light with arbitrary material systems.",
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2504.13287"
+        ],
+        "relevance_score": null,
+        "relevance_reasons": [
+          "manual arXiv recovery"
+        ],
+        "source": "manual_arxiv_recovery"
+      }
+    },
+    {
+      "title": "Tunneling driven by quantum light described via field Bohmian trajectories",
+      "year": "2025",
+      "file": "raw/sources/Kim et al. - 2025 - Tunneling driven by quantum light described via field Bohmian trajectories.pdf",
+      "url": "https://arxiv.org/pdf/2507.15972",
+      "metadata": {
+        "title": "Tunneling driven by quantum light described via field Bohmian trajectories",
+        "year": "2025",
+        "date": "2025-07-21",
+        "doi": null,
+        "arxiv": "2507.15972v1",
+        "authors": [
+          "Sangwon Kim",
+          "Seongjin Ahn",
+          "Denis V. Seletskiy",
+          "Andrey S. Moskalenko"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2507.15972v1",
+        "abstract": "Recent realization of an intense quantum light, namely bright squeezed vacuum, opened a new perspective on quantum light-matter interaction. Several theoretical works have appeared based on coherent state expansions of quantum state of light to investigate non-classical driving of high-harmonic generation in atomic gases and solids, or free-electron dynamics, but their predictions surprisingly coincide with what one could expect from essentially classical interpretations of the light statistics. A deeper theoretical insight into the underlying physics is necessary for understanding of observed experimental findings and predicting emerging effects relying on this new configuration. Here we present a theoretical framework to describe tunneling driven by quantum light, where the properties of such light are captured by a statistical ensemble of classical fields via a hydrodynamic, also referred to as Bohmian, formulation. Generalizing the quasiclassical theory of non-adiabatic tunneling driven by classical light, a single tunneling event is described by a bundle of tunneling solutions, each driven by a classical field corresponding to one realization in the ensemble. Quantum statistics of light are thus imprinted on the measured current. Fully quantum description of light via the Bohmian trajectories of its field provides a perfect fit to the description of the electron (under-) above-barrier dynamics in terms of (complex quasiclassical) real classical trajectories, resulting in a consistent and elegant theoretical approach. To illustrate this, we consider BSV-induced electron transport from the tip to the surface in the tunneling microscope configuration demonstrating the transition from the multiphoton to the direct tunneling regime.",
+        "cited_by_count": null,
+        "relevance_score": 17,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed vacuum",
+          "squeezed+hhg"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2507.15972",
+          "https://arxiv.org/pdf/2507.15972v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Edge states and quantum optical high-harmonic generation from topological insulators",
+      "year": "2026",
+      "file": "raw/sources/Lange et al. - 2026 - Edge states and quantum optical high-harmonic generation from topological insulators.pdf",
+      "url": "https://arxiv.org/pdf/2602.16454",
+      "metadata": {
+        "title": "Edge states and quantum optical high-harmonic generation from topological insulators",
+        "year": "2026",
+        "date": "2026-02-18",
+        "doi": null,
+        "arxiv": "2602.16454v1",
+        "authors": [
+          "Christian Saugbjerg Lange",
+          "Lars Bojer Madsen"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2602.16454v1",
+        "abstract": "The strong-field process of high-harmonic generation (HHG) has, in recent years, been treated from a quantum optical perspective in the emerging research area of strong-field quantum optics. These investigations show that HHG radiation is, in general, in a nonclassical state of light. However, the quantum optical treatment of HHG from topological nontrivial materials is missing. Here, we aim to address this gap in current knowledge and consider the quantum optical HHG response from the Su-Schrieffer-Heeger model, a finite chain of atoms with both a topologically trivial and nontrivial insulating phase, the latter supporting edge states. We find that HHG from both topological phases is squeezed at the band-gap frequency. Interestingly, while the harmonic spectrum discriminates the two topological phases of the system, the degree of squeezing only discriminates the phases for smaller chain lengths. We attribute this difference to a relative increase in overlap between bulk and edge states in the topological nontrivial phase for smaller systems. Our findings reveal how the strength of dipole couplings governs the nonclassical HHG response and define new research questions on topologically protected generation of quantum light in strong-field physics.",
+        "cited_by_count": null,
+        "relevance_score": 14,
+        "relevance_reasons": [
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed+hhg",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2602.16454",
+          "https://arxiv.org/pdf/2602.16454v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Fluctuation-induced symmetry breaking in high harmonic generation for bicircular quantum light",
+      "year": "2026",
+      "file": "raw/sources/Stammer et al. - 2026 - Fluctuation-induced symmetry breaking in high harmonic generation for bicircular quantum light.pdf",
+      "url": "https://arxiv.org/pdf/2603.24377",
+      "metadata": {
+        "title": "Fluctuation-induced symmetry breaking in high harmonic generation for bicircular quantum light",
+        "year": 2026,
+        "date": "2026-03-25",
+        "doi": "10.48550/arxiv.2603.24377",
+        "arxiv": "2603.24377v2",
+        "authors": [
+          "Philipp Stammer",
+          "Camilo Granados",
+          "Javier Rivera-Dean"
+        ],
+        "venue": "ArXiv.org",
+        "url": "http://arxiv.org/abs/2603.24377",
+        "abstract": "Symmetries are ubiquitous in physics and play a pivotal role in light-matter interactions, where they determine the selection rules governing allowed atomic transitions and define the associated conserved quantities. For the up-conversion process of high harmonic generation, the symmetries of the driving field determine the allowed frequencies and the polarization properties of the resulting harmonics. As a consequence, it is possible to establish classical selection rules when the process is driven by coherent radiation. In this work, we show that fluctuation-induced symmetry breaking in the driving field leads to the appearance of otherwise forbidden harmonics. This is achieved by considering bicircular quantum light, and demonstrate that the enhanced quantum fluctuations due to squeezing in the driving field break the classical selection rules. To this end, we develop a quantum optical description of the dynamical symmetries in the process of high harmonic generation, revealing corrections to the classical selection rules. Moreover, we show that the new harmonics show squeezing-like signatures in their photon statistics, allowing them to be clearly distinguished from classical thermal fluctuations.",
+        "cited_by_count": 0,
+        "relevance_score": 18,
+        "relevance_reasons": [
+          "high harmonic",
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed+hhg"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2603.24377",
+          "http://arxiv.org/pdf/2603.24377.pdf",
+          "http://arxiv.org/abs/2603.24377",
+          "https://arxiv.org/pdf/2603.24377v2"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Heralded ultrafast generation of macroscopic quantum states in matter with bright squeezed vacuum light",
+      "year": "2026",
+      "file": "raw/sources/Imai - 2026 - Heralded ultrafast generation of macroscopic quantum states in matter with bright squeezed vacuum light.pdf",
+      "url": "https://arxiv.org/pdf/2605.30224",
+      "metadata": {
+        "title": "Heralded ultrafast generation of macroscopic quantum states in matter with bright squeezed vacuum light",
+        "year": "2026",
+        "date": "2026-05-28",
+        "doi": null,
+        "arxiv": "2605.30224v1",
+        "authors": [
+          "Shohei Imai"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2605.30224v1",
+        "abstract": "We show that bright squeezed vacuum light, combined with a single-shot quadrature measurement of the post-interaction light, enables the ultrafast generation of macroscopic quantum states in matter. Although in the weak-coupling regime multiphoton quantum light leaves the unconditional matter state as a classical mixture due to light--matter entanglement, quadrature-based heralding prepares the matter in a Gaussian-weighted quantum superposition. For an ensemble of resonantly electric-dipole-coupled two-level systems, this heralding dynamics acts as a Gaussian filter with respect to the electric polarization, with brighter squeezed-vacuum light accelerating the preparation of the zero-eigenvalue Dicke state. Counter-rotating terms further drive a stroboscopic transition from this Dicke state to a cat-like state. Our results open a route to ultrafast engineering of macroscopic quantum matter with strong-field quantum light.",
+        "cited_by_count": null,
+        "relevance_score": 14,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed vacuum",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2605.30224",
+          "https://arxiv.org/pdf/2605.30224v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Interferometrically Enhanced Asymmetry in Strong-field Ionization with Bright Squeezed Vacuum",
+      "year": "2026",
+      "file": "raw/sources/Singh et al. - 2026 - Interferometrically Enhanced Asymmetry in Strong-field Ionization with Bright Squeezed Vacuum.pdf",
+      "url": "https://arxiv.org/pdf/2604.12646",
+      "metadata": {
+        "title": "Interferometrically Enhanced Asymmetry in Strong-field Ionization with Bright Squeezed Vacuum",
+        "year": 2026,
+        "date": "2026-04-14",
+        "doi": "10.48550/arxiv.2604.12646",
+        "arxiv": "2604.12646v1",
+        "authors": [
+          "G. Singh",
+          "T. Rook",
+          "J. Rivera-Dean",
+          "C. Figueira de Morisson Faria"
+        ],
+        "venue": "ArXiv.org",
+        "url": "https://arxiv.org/abs/2604.12646",
+        "abstract": "We demonstrate that quantum light statistics can be used to control strong-field ionization at the tunneling step. Using a bichromatic linearly polarized field composed of a strong coherent driver and a weak bright squeezed vacuum (BSV), we show through simulation that photoelectron momentum distributions (PMDs) exhibit asymmetries that exceed those obtained with classical fields of comparable intensity by orders of magnitude. This enhancement is uniquely linked to the nonclassical statistics of the BSV field. A semiclassical analysis based on the strong-field approximation (SFA) reveals that the effect originates from fluctuations in the instantaneous field amplitude, which strongly modify the tunneling ionization probability while leaving the electron's continuum dynamics essentially unchanged. This selective control enables reconstruction of ionization pathways and provides a robust route to extract sub-cycle dynamics from strong-field observables.",
+        "cited_by_count": 0,
+        "relevance_score": 16,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed vacuum",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2604.12646",
+          "https://arxiv.org/pdf/2604.12646.pdf",
+          "https://arxiv.org/abs/2604.12646",
+          "https://arxiv.org/pdf/2604.12646v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Nonclassical Cutoff Fluctuations in Squeezed-Light-Driven High-Harmonic Generation",
+      "year": "2026",
+      "file": "raw/sources/Khurelbaatar et al. - 2026 - Nonclassical Cutoff Fluctuations in Squeezed-Light-Driven High-Harmonic Generation.pdf",
+      "url": "https://arxiv.org/pdf/2605.21925",
+      "metadata": {
+        "title": "Nonclassical Cutoff Fluctuations in Squeezed-Light-Driven High-Harmonic Generation",
+        "year": "2026",
+        "date": "2026-05-21",
+        "doi": null,
+        "arxiv": "2605.21925v1",
+        "authors": [
+          "Tsendsuren Khurelbaatar",
+          "R. T. Sang",
+          "Igor Litvinyuk"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2605.21925v1",
+        "abstract": "Strong-field high-harmonic generation (HHG) is conventionally described semiclassically, with the driving laser treated as a classical field. This approximation becomes insufficient in nanoscale interaction geometries, where extreme spatial confinement raises the vacuum-field amplitude to the ~10^-2 level relative to the driving-field amplitude. When the quantum fluctuations of the driving field are redistributed between conjugate quadratures by squeezing, they can be directly imprinted onto macroscopic HHG observables. To model this interaction, we employ a Wigner phase-space approach that maps the quantum-optical driver onto a stochastic ensemble of time-dependent Schrodinger equation realizations. Although each realization remains classically simulable, the sub-vacuum quadrature covariance structure of squeezed states cannot be reproduced by any field admitting a non-negative Glauber-Sudarshan P-representation. Within this single-mode Gaussian framework, we show that amplitude squeezing suppresses the shot-to-shot variance of the HHG cutoff below the standard quantum limit (SQL). To leading order in the vacuum-to-driver ratio, the normalized cutoff variance decays exponentially with the squeezing parameter, independent of the absolute vacuum-field amplitude and therefore robust against uncertainties in the effective nanoscale mode volume. A subleading phase-noise contribution from the anti-squeezed quadrature produces a variance minimum near r_opt ~ 1.6, providing a concrete experimental target. These results establish the HHG cutoff variance ratio as a nonlinear, self-calibrating Heisenberg witness in which sub-SQL scaling directly reflects the redistribution of quantum uncertainty in the driving field.",
+        "cited_by_count": null,
+        "relevance_score": 9,
+        "relevance_reasons": [
+          "squeezed+hhg",
+          "stochastic",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2605.21925",
+          "https://arxiv.org/pdf/2605.21925v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Nonlinear atomic tunnelling boosted by bright squeezed vacuum",
+      "year": "2026",
+      "file": "raw/sources/Jiang et al. - 2026 - Nonlinear atomic tunnelling boosted by bright squeezed vacuum.pdf",
+      "url": "https://arxiv.org/pdf/2604.05783",
+      "metadata": {
+        "title": "Nonlinear atomic tunnelling boosted by bright squeezed vacuum",
+        "year": 2026,
+        "date": "2026-05-20",
+        "doi": "10.1038/s41586-026-10485-9",
+        "arxiv": "2604.05783v2",
+        "authors": [
+          "Zhejun Jiang",
+          "Shengzhe Pan",
+          "J C Chen",
+          "Mingyu Zhu",
+          "Chenhao Zhao",
+          "Yue Wang",
+          "Ru Zhang",
+          "Jianshi Lu",
+          "Lulu Han",
+          "Suwen Xiong",
+          "Dian Wu",
+          "Wenxue Li",
+          "Shicheng Jiang",
+          "Hongcheng Ni",
+          "Jian Wu"
+        ],
+        "venue": "Nature",
+        "url": "https://doi.org/10.1038/s41586-026-10485-9",
+        "abstract": "Nonlinear optical processes, mediated by multiphoton interactions rather than single-photon response, are routinely exploited to enable a range of light-based functionalities in devices and applications. Nonlinear effects are enhanced by higher-intensity fields, which is a limiting strategy owing to potential radiation damage. An alternative strategy relies on the fluctuation redistribution typical of quantum light1–4, but experimental demonstrations at the most fundamental level have been limited. Here we report experimental nonlinear tunnelling ionization of isolated atoms, a pivotal nonlinear process that drives high-harmonic generation and forms the basis of attosecond science, boosted by quantum light—bright squeezed vacuum (BSV). A BSV light with an average pulse energy of 300 nJ achieves an effective intensity equivalent to that of a coherent light with 7.1 μJ, demonstrating a more than 20-fold quantum boost in the nonlinear effect from BSV light. This boost is revealed by matching the peaks of the photoelectron momentum spectra produced by the BSV and coherent light as measured by angular streaking. Furthermore, we demonstrate control of the effective intensity of the BSV by tuning the correlation function at fixed average pulse energy, establishing a robust method to tailor nonlinear processes by quantum statistics rather than classical intensity scaling. These findings may facilitate the development of quantum-controlled strong-field dynamics using tailored quantum light sources. Bright squeezed vacuum light boosts nonlinear atomic tunnelling ionization more than 20-fold compared with coherent light, enabling quantum control of strong-field processes without increasing classical intensity.",
+        "cited_by_count": 1,
+        "relevance_score": 20,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed vacuum",
+          "squeezed+hhg",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2604.05783",
+          "https://www.nature.com/articles/s41586-026-10485-9.pdf",
+          "https://arxiv.org/pdf/2604.05783.pdf",
+          "https://arxiv.org/abs/2604.05783",
+          "https://arxiv.org/pdf/2604.05783v2"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Quantum Optical Signatures of Band Topology in Solid-State High Harmonics",
+      "year": "2026",
+      "file": "raw/sources/Ilin et al. - 2026 - Quantum Optical Signatures of Band Topology in Solid-State High Harmonics.pdf",
+      "url": "https://arxiv.org/pdf/2604.20388",
+      "metadata": {
+        "title": "Quantum Optical Signatures of Band Topology in Solid-State High Harmonics",
+        "year": 2026,
+        "date": "2026-04-22",
+        "doi": "10.48550/arxiv.2604.20388",
+        "arxiv": null,
+        "authors": [
+          "Denis Ilin",
+          "Alexander S. Solntsev",
+          "Ivan Iorsh"
+        ],
+        "venue": "arXiv (Cornell University)",
+        "url": "https://doi.org/10.48550/arxiv.2604.20388",
+        "abstract": "We develop a general theory of high-harmonic generation (HHG) in solid-state systems, based on a weak-correlation expansion of photonic and matter degrees of freedom. Unlike standard HHG theories, which treat light-matter dynamics through the Schrodinger equation, our approach employs density-matrix evolution, naturally capturing the mixed-state character of both the field and the matter - a critical aspect for describing complex solid-state band structures. We show explicitly that the properties of the emitted fields are governed by the quantum statistics and quantum geometry of the underlying solid. Taking the Su-Schrieffer-Heeger (SSH) model in a one-sided optical cavity as a paradigmatic example and considering the dual regime, we demonstrate that in the topological phase a system exhibits a stronger HHG response and stronger quantum-light signatures than in the trivial phase. Furthermore, we show that cavity-matter interaction gives rise to squeezed high-harmonic quantum light, whose properties are directly imprinted by the current-current fluctuations in the material system. Crucially, the observed squeezing does not rely on a separate quartic Kerr mechanism. In the mesoscopic regime, the genuine quantum Kerr term is higher order in light-matter coupling strength and negligible, while the relevant non-classical effect is governed by current-current fluctuations encoded in the complex susceptibility of the material. This work establishes a direct link between band topology and photon statistics, opening new avenues for topology-sensitive quantum light generation and photon statistics based spectroscopy of solid-state systems.",
+        "cited_by_count": 1,
+        "relevance_score": 15,
+        "relevance_reasons": [
+          "high harmonic",
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed+hhg"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2604.20388"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Strong-field ionization of atoms with bright squeezed vacuum light",
+      "year": "2026",
+      "file": "raw/sources/Liu et al. - 2026 - Strong-field ionization of atoms with bright squeezed vacuum light.pdf",
+      "url": "https://arxiv.org/pdf/2604.06703",
+      "metadata": {
+        "title": "Strong-field ionization of atoms with bright squeezed vacuum light",
+        "year": 2026,
+        "date": "2026-04-08",
+        "doi": "10.48550/arxiv.2604.06703",
+        "arxiv": "2604.06703v1",
+        "authors": [
+          "Haodong Liu",
+          "Xiaoxiao Long",
+          "Peizeng Li",
+          "Zijian Lyu",
+          "Yunquan Liu"
+        ],
+        "venue": "arXiv (Cornell University)",
+        "url": "http://arxiv.org/abs/2604.06703",
+        "abstract": "Strong-field ionization is the cornerstone of attosecond physics, which has been extensively studied under coherent-state driving. Recently, the interface between attosecond physics and quantum optics has emerged as a new frontier. Yet, owing to experimental limitations, the role of the quantum nature of light in atomic strong-field ionization has remained unexplored. Here, we demonstrate strong-field ionization of xenon atoms driven by bright squeezed vacuum (BSV) with average pulse energy up to 10 \\textmu J. We show that, as a nonclassical state with zero mean field and strong intensity fluctuations, BSV selectively enhances the spider-like holographic structures in the photoelectron momentum distributions. Using a quantum-light-corrected quantum-trajectory Monte Carlo (q-QTMC) model, we attribute this effect to the intrinsic coherence of trajectory pairs emitted within the same subcycle field fluctuation. These dynamically correlated paths exhibit enhanced phase stability and remain robust against dephasing, whereas asynchronous paths are filtered out by field noise. Our results reveal a quantum-fluctuation-induced mechanism for coherence protection in strong-field processes, positioning BSV as an effective coherence filter and establishing a new regime of quantum-enabled noise-resilient ultrafast dynamics.",
+        "cited_by_count": 0,
+        "relevance_score": 10,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "squeezed vacuum",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2604.06703",
+          "http://arxiv.org/pdf/2604.06703.pdf",
+          "http://arxiv.org/abs/2604.06703",
+          "https://arxiv.org/pdf/2604.06703v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Symmetry breaking by quantum light in solid-state high-harmonic generation",
+      "year": "2026",
+      "file": "raw/sources/Stammer et al. - 2026 - Symmetry breaking by quantum light in solid-state high-harmonic generation.pdf",
+      "url": "https://arxiv.org/pdf/2605.28236",
+      "metadata": {
+        "title": "Symmetry breaking by quantum light in solid-state high-harmonic generation",
+        "year": "2026",
+        "date": "2026-05-27",
+        "doi": null,
+        "arxiv": "2605.28236v1",
+        "authors": [
+          "P. Stammer",
+          "J. Rivera-Dean",
+          "D. Kim",
+          "A. Chacón",
+          "W. Gao",
+          "C. Granados"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2605.28236v1",
+        "abstract": "Symmetry governs nonlinear interactions in condensed matter systems, particularly in high-harmonic generation (HHG), the interplay between the driving field and crystal symmetries dictate the properties of the emitted harmonics. A central open question is how quantum fluctuations of light modify these symmetry-imposed selection rules in solid state systems. Here, we address this by studying the nonlinear response of graphene and Molybdenum disulfide (MoS$_2$) to circular polarized quantum light, where both materials with distinct rotational symmetries and corresponding classical selection rules. We show that the quantum fluctuations break the dynamical symmetry of the driving field while preserving the crystal symmetry, which enables the generation of classically forbidden harmonics by breaking the corresponding selection rules. These results establish quantum states of light as a new degree of control over harmonic generation in solids, opening routes toward all-optical symmetry engineering of the quantum optical harmonic properties towards attosecond pulse generation.",
+        "cited_by_count": null,
+        "relevance_score": 9,
+        "relevance_reasons": [
+          "quantum light",
+          "quantum-light strong-field"
+        ],
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2605.28236",
+          "https://arxiv.org/pdf/2605.28236v1"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "A classical model of spontaneous parametric down-conversion",
+      "year": "2022",
+      "file": "raw/sources/Kulkarni et al. - 2022 - A classical model of spontaneous parametric down-conversion.pdf",
+      "url": "https://arxiv.org/pdf/2201.03842",
+      "metadata": {
+        "title": "A classical model of spontaneous parametric down-conversion",
+        "year": "2022",
+        "date": "2022-01-11",
+        "doi": "10.1103/PhysRevResearch.4.033098",
+        "arxiv": "2201.03842",
+        "authors": [
+          "Girish Kulkarni",
+          "Jeremy Rioux",
+          "Boris Braverman",
+          "Maria V. Chekhova",
+          "Robert. W. Boyd"
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2201.03842",
+        "abstract": "We model spontaneous parametric down-conversion (SPDC) as classical difference frequency generation (DFG) of the pump field and a hypothetical stochastic \"vacuum\" seed field. We analytically show that the second-order spatiotemporal correlations of the field generated from the DFG process replicate those of the signal field from SPDC. Specifically, for low gain, the model is consistent with the quantum calculation of the signal photon's reduced density matrix; and for high gain, the model's predictions are in good agreement with our experimental measurements of the far-field intensity profile, orbital angular momentum spectrum, and wavelength spectrum of the SPDC field for increasing pump strengths. We further theoretically show that the model successfully captures second-order SU(1,1) interference and induced coherence effects in both gain regimes. Intriguingly, the model also correctly predicts the linear scaling of the interference visibility with object transmittance in the low-gain regime -- a feature that is often regarded as a quintessential signature of the nonclassicality of induced coherence. Our model may not only lead to novel fundamental insights into the classical-quantum divide in the context of SPDC and induced coherence, but can also be a useful theoretical tool for numerous experiments and applications based on SPDC.",
+        "pdf_urls": [
+          "https://arxiv.org/pdf/2201.03842"
+        ],
+        "source": "retry_arxiv"
+      }
+    },
+    {
+      "title": "Attosecond pulse synthesis from high-order harmonic generation in intense squeezed light",
+      "year": "2024",
+      "file": "raw/sources/Wang et al. - 2024 - Attosecond pulse synthesis from high-order harmonic generation in intense squeezed light.pdf",
+      "url": "https://export.arxiv.org/pdf/2406.10443v1",
+      "metadata": {
+        "title": "Attosecond pulse synthesis from high-order harmonic generation in intense squeezed light",
+        "year": "2024",
+        "doi": "10.48550/arXiv.2406.10443",
+        "arxiv": "2406.10443",
+        "authors": [
+          "Wang et al."
+        ],
+        "venue": "arXiv",
+        "url": "https://arxiv.org/abs/2406.10443",
+        "pdf_urls": [
+          "https://export.arxiv.org/pdf/2406.10443v1"
+        ],
+        "source": "retry_export_arxiv"
+      }
+    }
+  ],
+  "skipped": [],
+  "failed": [
+    {
+      "title": "High harmonic generation from an atom in a squeezed-vacuum environment",
+      "year": "2024",
+      "dest": "raw/sources/Wang et al. - 2024 - High harmonic generation from an atom in a squeezed-vacuum environment.pdf",
+      "urls": [
+        "http://link.aps.org/pdf/10.1103/PhysRevResearch.6.033010"
+      ],
+      "error": "CalledProcessError: Command '['curl', '-L', '-sS', '--fail', '--retry', '2', '--connect-timeout', '15', '--max-time', '120', '-A', 'Mozilla/5.0 (Macintosh; Intel Mac OS X) stochastic-em-literature-search/0.2', '-o', '/Users/simontsui/Desktop/Research/Projects/stochastic_em_theory/results/literature-search-2026-06-06/download_tmp/Wang et al. - 2024 - High harmonic generation from an atom in a squeezed-vacuum environment.pdf.part', 'http://link.aps.org/pdf/10.1103/PhysRevResearch.6.033010']' returned non-zero exit status 56.",
+      "metadata": {
+        "title": "High harmonic generation from an atom in a squeezed-vacuum environment",
+        "year": 2024,
+        "date": null,
+        "doi": "10.1103/physrevresearch.6.033010",
+        "arxiv": null,
+        "authors": [
+          "ShiJun Wang",
+          "ShaoGang Yu",
+          "XuanYang Lai",
+          "XiaoJun Liu"
+        ],
+        "venue": "Physical Review Research",
+        "url": "https://doi.org/10.1103/physrevresearch.6.033010",
+        "abstract": " We investigate high harmonic generation (HHG) of an atom in the presence of squeezed vacuum of a single harmonic mode. Based on a fully quantum time-dependent Schrödinger equation, we derive an analytical formula for the harmonic amplitude. Our simulations of the HHG spectrum with this formula show that the harmonic amplitude of the corresponding squeezed mode can undergo significant changes with different parameters of the squeezed vacuum. Using the time-frequency analysis method, the physics underlying the effects of the vacuum quantum fluctuation (VQF) on the harmonic generation is revealed, which is found to be consistent with the explanation of Fermi's golden rule. Our work establishes a profound connection between harmonic generation and VQF, and may provide an unconventional approach to manipulating harmonic emission. \n           \n             \n             \n               \n                 Published by the American Physical Society \n                 2024 \n               \n             \n           ",
+        "cited_by_count": 8,
+        "relevance_score": 11,
+        "relevance_reasons": [
+          "high harmonic",
+          "squeezed vacuum",
+          "squeezed+hhg"
+        ],
+        "pdf_urls": [
+          "http://link.aps.org/pdf/10.1103/PhysRevResearch.6.033010"
+        ],
+        "source": "search_manifest"
+      }
+    },
+    {
+      "title": "Effect of photon quantum statistics on electrons in above-threshold ionization",
+      "year": "2025",
+      "dest": "raw/sources/Lyu et al. - 2025 - Effect of photon quantum statistics on electrons in above-threshold ionization.pdf",
+      "urls": [
+        "http://link.aps.org/pdf/10.1103/PhysRevResearch.7.L012072"
+      ],
+      "error": "CalledProcessError: Command '['curl', '-L', '-sS', '--fail', '--retry', '2', '--connect-timeout', '15', '--max-time', '120', '-A', 'Mozilla/5.0 (Macintosh; Intel Mac OS X) stochastic-em-literature-search/0.2', '-o', '/Users/simontsui/Desktop/Research/Projects/stochastic_em_theory/results/literature-search-2026-06-06/download_tmp/Lyu et al. - 2025 - Effect of photon quantum statistics on electrons in above-threshold ionization.pdf.part', 'http://link.aps.org/pdf/10.1103/PhysRevResearch.7.L012072']' returned non-zero exit status 56.",
+      "metadata": {
+        "title": "Effect of photon quantum statistics on electrons in above-threshold ionization",
+        "year": 2025,
+        "date": "2025-03-18",
+        "doi": "10.1103/physrevresearch.7.l012072",
+        "arxiv": null,
+        "authors": [
+          "Zijian Lyu",
+          "Feng-Xiao Sun",
+          "Yiqi Fang",
+          "Qiongyi He",
+          "Yunquan Liu"
+        ],
+        "venue": "Physical Review Research",
+        "url": "https://doi.org/10.1103/physrevresearch.7.l012072",
+        "abstract": "Strong field physics and quantum optics, two prosperous fields in modern science, have recently been connected with each other. Here, we study the quantum effect of bright squeezed vacuum light and thermal light on above-threshold ionization. With quantum strong-field approximation theory, we reveal a decoherence phenomenon caused by the statistics of photons, in which above-threshold ionization could be degenerated into a classical-like picture under the effect of quantum light. This represents a direct transition from the wavelike nature to the particlelike behavior of photoelectrons. We also reveal the ionization enhancement effect of the bunched light in photoionization from the perspective of autocorrelation function <a:math xmlns:a=\"http://www.w3.org/1998/Math/MathML\"><a:msup><a:mi>g</a:mi><a:mrow><a:mo>(</a:mo><a:mi>n</a:mi><a:mo>)</a:mo></a:mrow></a:msup></a:math>. The number distributions of electrons ionized by different quantum light fields are studied, and it is shown that the photon number distribution can be mapped onto the photoelectron number distribution. This finding enables the production of bunched electrons with strong-field ionization with quantum light.",
+        "cited_by_count": 9,
+        "relevance_score": 10,
+        "relevance_reasons": [
+          "bright squeezed vacuum",
+          "quantum light",
+          "quantum-light strong-field",
+          "squeezed vacuum",
+          "strong-field"
+        ],
+        "pdf_urls": [
+          "http://link.aps.org/pdf/10.1103/PhysRevResearch.7.L012072"
+        ],
+        "source": "search_manifest"
+      }
+    }
+  ]
+}

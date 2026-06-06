@@ -1,0 +1,491 @@
+                                                   Tunneling driven by quantum light described via field Bohmian trajectories
+
+                                                           Sangwon Kim,1 Seongjin Ahn,1, 2, ∗ Denis V. Seletskiy,3 and Andrey S. Moskalenko1, †
+                                                                          1
+                                                                            Department of Physics, KAIST, Daejeon 34141, Republic of Korea
+                                                                2
+                                                                    Research Center for Natural Sciences, KAIST, Daejeon 34141, Republic of Korea
+                                                                                   3
+                                                                                     femtoQ Lab, Department of Engineering Physics,
+                                                                               Polytechnique Montréal, Montréal, QC, H3T 1J4, Canada
+                                                                                                 (Dated: July 23, 2025)
+                                                            Recent realization of an intense quantum light, namely bright squeezed vacuum, opened a new
+                                                         perspective on quantum light-matter interaction. Several theoretical works have appeared based
+                                                         on coherent state expansions of quantum state of light to investigate non-classical driving of high-
+                                                         harmonic generation in atomic gases and solids, or free-electron dynamics, but their predictions
+                                                         surprisingly coincide with what one could expect from essentially classical interpretations of the light
+                                                         statistics. A deeper theoretical insight into the underlying physics is necessary for understanding
+
+
+
+
+arXiv:2507.15972v1 [quant-ph] 21 Jul 2025
+                                                         of observed experimental findings and predicting emerging effects relying on this new configuration.
+                                                         Here we present a theoretical framework to describe tunneling driven by quantum light, where the
+                                                         properties of such light are captured by a statistical ensemble of classical fields via a hydrodynamic,
+                                                         also referred to as Bohmian, formulation. Generalizing the quasiclassical theory of non-adiabatic
+                                                         tunneling driven by classical light, a single tunneling event is described by a bundle of tunneling
+                                                         solutions, each driven by a classical field corresponding to one realization in the ensemble. Quantum
+                                                         statistics of light are thus imprinted on the measured current. Fully quantum description of light via
+                                                         the Bohmian trajectories of its field provides a perfect fit to the description of the electron (under-)
+                                                         above-barrier dynamics in terms of (complex quasiclassical) real classical trajectories, resulting in
+                                                         a consistent and elegant theoretical approach. To illustrate this, we consider BSV-induced electron
+                                                         transport from the tip to the surface in the tunneling microscope configuration demonstrating the
+                                                         transition from the multiphoton to the direct tunneling regime.
+
+
+                                              Introduction—Interaction between light and matter                sources could be considered as a coherent field [31, 32],
+                                            has always been a subject of prospering research over the          with quantum corrections being negligible with respect
+                                            past decades, advancing fundamental physical knowledge             to the instantaneous mean value of the field.
+                                            whereas also leading to numerous technological advances.              Meanwhile, ultrafast quantum optics has seen remark-
+                                            The process of high-harmonic generation (HHG) [1–4] is             able advances in the development of quantum light
+                                            arguably one of the most striking, enabling sources of             sources with macroscopic photon occupations. Partic-
+                                            extreme ultraviolet (XUV) emission [5], attosecond light           ular attention was devoted to the squeezed vacuum light
+                                            pulses [6, 7], attosecond science [8–10] and spectroscopy          [33–35], since it represents a scalable resource in terms
+                                            [11–13].                                                           of photon numbers or “brightness”. It was clear that
+                                                                                                               the so-called bright squeezed vacuum (BSV) light pulses
+                                               To build on the thriving impact of the HHG phe-
+                                                                                                               would open a realm of strong-field physics driven by
+                                            nomenon, many theoretical descriptions followed to elu-
+                                                                                                               quantum light, requiring quantum description of light in
+                                            cidate its underlying principles. HHG is a strong-field
+                                                                                                               light-matter interaction, but on the practical side this
+                                            physics phenomenon, which requires description of light-
+                                                                                                               has remained elusive until recently.
+                                            matter interaction in the non-perturbative regime. Pio-
+                                            neering theoretical works [14, 15] culminated in the sem-             In parallel, there were consistent attempts to develop
+                                            inal “three-step” model [16, 17], which successfully de-           theories [36] that adopt quantum electrodynamics to
+                                            scribed the atomic HHG process as a sequence of electron           elaborate the classical driving field as a multi-mode co-
+                                            liberation via the tunnel ionization process, its classical        herent state. In this fully quantum framework, pho-
+                                            motion under an applied optical field, and recollision with        toemission from the electronic system reveals its non-
+                                            the parent ion. This theoretical framework was successful          classical properties: emitted photons representing fre-
+                                            enough to explain some key characteristics of HHG, such            quency comb structures spanning the entire HHG fre-
+                                            as the frequency plateau and cutoff [18, 19]. Further, the         quency spectrum [37], entanglement between all har-
+                                            theory was advanced to describe the electron dynamics              monic field modes [38–40], and the generation of highly
+                                            fully quantum-mechanically, recovering the predictions             non-classical states such as Schrödinger’s cat state [41].
+                                            of the three-step model [20]. Subsequent studies paid              These findings indicated that already classical driving
+                                            attention to quantum properties of the involved matter             fields can induce quantum photonic effects, and even
+                                            part [21–24], including extension to solid-state systems           more intriguing outcomes would emerge when the matter
+                                            [25–30], while treatment of light remained classical, con-         is driven by genuinely quantum light.
+                                            stituting the so-called semi-classical light-matter inter-            Recently, generation of BSV with more than 1013
+                                            action. This was justified since light from the utilized           photons per few-femtosecond pulse was demonstrated
+                                                                                                                             2
+                                                                      √
+[42, 43]. This motivated theoretical proposals to inves-        iP̂ )/ 2 is the annihilation operator. X̂ and P̂ are opera-
+tigate the electron dynamics [44, 45] and HHG driven            tors for two orthogonal quadratures such that [X̂, P̂ ] = i.
+by non-classical light such as BSV [46, 47], squeezed co-       Squeezed vaccum states are introduced by the application
+                                                                of the squeezing operator Ŝ(z) = exp 21 zâ†2 − 12 z ∗ â2 to
+                                                                                                                           
+herent light [47], or by Fock states [46, 48]. Then, in
+2024, HHG driven by BSV could be studied also experi-           the vacuum state |0⟩, |z; 0⟩ ≡ Ŝ(z)|0⟩, where z = reiϕ
+mentally [49]. These developments call now for a deeper         denotes the squeezing factor and r > 0. In the X rep-
+theoretical understanding of interacting quantum light          resentation for the resulting (stationary) wave function
+and matter with resulting phenomena.                            of the squeezed vacuum state in the rotating reference
+   Especially, it is of value to get a more profound and in-    frame (Heisenberg picture), we get
+tuitive picture of the tunneling induced by quantum light                                                 
+than currently available following the above-mentioned                                             c− 1 2
+                                                                              ψ(X) = ψ(0) exp −         X ,                 (1)
+works. Moreover, it happens that it is possible to avoid                                           c+ 2
+approximations in the description of quantum light used
+in these works, equivalent to assuming of a positive P -        where c± = cosh r ±eiϕ sinh r. In the Schrödinger picture
+distribution and neglecting quantum fluctuations with re-       we have |ψ(t)⟩ = p   |ze−2iωt ; 0⟩. The average ⟨Ê⟩ of the
+spect to the amplitudes of the involved coherent states         electric field Ê = ℏω/ε0 V P̂ in this state vanishes for
+[50], paving the way for a more complete quantum pic-           all times, whereas its variance ⟨(Ê − ⟨Ê⟩)2 ⟩(t) ∝ ⟨P̂ 2 ⟩(t)
+ture. In this work, we outline such a formalism, based on       is finite and oscillates with time. Here, ε0 denotes the
+an exact decomposition of quantum light into a bundle           vacuum permittivity and V is the quantization volume.
+of deterministic field trajectories.                               Bohmian mechanics [57], which is also known as a
+   System—We consider a gold tip and surface with tun-          hydrodynamic formulation of quantum mechanics [65],
+neling energy barrier ∆U = 5 eV. The BSV is used to             describes the quantum randomness of an observable in
+drive the tunneling of electrons through the gap between        terms of a probability distribution. As the state of the
+the tip and surface. See Fig. 1(a) for the schematic di-        light mode propagates, the probability is redistributed
+agram of the setup. This choice of geometry [51–54] is          along the associated probability flux. In the X represen-
+to confine the interested direction of tunneling, only col-     tation, the probability distribution is given as ρ(X, t) =
+lecting one-sided transport of electrons from the tip to        |ψ(X, t)|2 for the wavefunction ψ(X, t) = ⟨X|ψ(t)⟩. The
+the surface. The size of the gap is considered to be a few      distribution satisfies the continuity equation ∂t ρ(X, t) =
+nanometers.                                                     −∂X J(X, t), where J(X, t) = ωIm [ψ ∗ (X, t)∂X ψ(X, t)]
+   Bohmian description of quantum light—Generally,              is the probability flux. As in the usual hydrodynamic
+quantum light can be described either in the Heisenberg         theory, the probability flux is proportional to the den-
+picture via its operator properties or in the Schrödinger      sity and the “velocity” of the probability, i.e., J(X, t) ≡
+picture representing its state in a certain basis, resulting    ρ(X, t)v(X, t), so that
+in the Fock-state and various phase-space representations                                                          
+[46, 50, 55, 56]. However, with the coupling to quantum                                J(X, t)           ∂X ψ(X, t)
+                                                                    Ẋ(t) = v(X, t) ≡            = ωIm                . (2)
+matter, operating in the total light-matter Hilbert space                               ρ(X, t)           ψ(X, t)
+is challenging so that approximations were required, as
+we mentioned above. An elegant way to avoid those ap-           For a given initial position X(ti ), which is a random vari-
+proximations, while neglecting backaction to the strong         able following the initial probability distribution ρ(X, ti ),
+driving field, is provided by the Bohmian formalism [57],       the trajectory X(t) satisfying Eq. (2) indicates a proba-
+which is here, perhaps somewhat surprisingly, applied to        bility flow line. Redistribution of initial positions along
+capture the quantum dynamics of the light modes as we           these lines determines the probability distribution ρ(X, t)
+outline below. Interestingly, this formalism was shown to       at any time t. The dynamics of the P quadrature, deter-
+be useful for investigating strong-field electron dynamics      mining the electric field, is found as P (t) = Ẋ(t)/ω. For
+[58, 59], observing transition between ionization regimes       a squeezed vacuum, it is given by [66]
+during the HHG process [60] and testing the definitions
+                                                                                                           c(t′ ) dt′
+                                                                                                      Rt
+                                                                                                −ω
+of tunneling time and exit position [61–64]. However,                 P (t) = −c(t)X(ti )e    ti
+                                                                                                       ,                    (3)
+those works dealt with classical light, whereas it was the                            sin(ϕ − 2ωt) sinh(2r)
+electron dynamics that was described by Bohmian tra-                   c(t) = −                                  .          (4)
+                                                                                cos(ϕ − 2ωt) sinh(2r) + cosh(2r)
+jectories.
+   For simplicity, we restrict our consideration to a single-   Assuming that there is no backaction of the electron to
+frequency mode, corresponding to the central frequency          the field, we can select ti arbitrarily, fixing the initial
+ω of the applied quantum light pulse. We also assume            distribution ρ(X, ti ) = |⟨X|ze−2iωti ; 0⟩|2 . Here,
+a fixed linear polarization of the mode. Its Hamiltonian                                             1/2
+corresponds to a simple harmonic oscillator and reads                                        cr (t)                     2
+                                                                             ρ(X, t) =                       e−cr (t)X ,    (5)
+Ĥ = ℏω(â† â + 21 ) = ℏω(P̂ 2 + X̂ 2 )/2, where â = (X̂ +                                   π
+                                                                                                                                3
+
+                    (a)                                                                                            (d)
+                                              Im t         Re t
+
+
+                                                     x
+
+
+
+
+                    (b)                                                                                            (c)
+
+
+FIG. 1. (a) Schematic diagram of the setup. A squeezed vacuum state of light drives electronic transport in a metal tip–surface
+system. The blue curve depicts the complex trajectory of the tunneling electron, starting with an imaginary time under the
+barrier and going over to a usual classical trajectory in real time as the electron exits into the classically allowed region. (b)
+Dynamics of the P quadrature (proportional to the electric field) following from Eq. (3) for several values of the squeezing
+parameter r and an initial realization of the X quadrature, X(ti ) = −2.32. (c) Phase-space portrait of the field dynamics
+for r = 1. This plot shares the vertical axis with (b) and the horizontal axis with (d). As time evolves, the state trajectory
+follows a clockwise path, exemplified by the selected realization, where it sequentially passes through the points marked by the
+circle, triangle, square, and cross. The markers correspond to those in (b) and (d), in the same order. (d) Distribution ρ(X, t)
+(pseudocolor plot) and Bohmian trajectories X(t) (lines) for the same parameters.
+
+
+where cr (t) = Re [c− (t)/c+ (t)] is given by                      alizations of the field from the bundle. It is known that
+                                                                   tunneling caused by classical fields, e.g., within the three-
+                                   1                               step model, can be typically well captured by a quasiclas-
+        cr (t) =                                    .      (6)
+                   cos(ϕ − 2ωt) sinh(2r) + cosh(2r)                sical description. In the non-adiabatic regime, when the
+                                                                   electron gains energy as moving under the barrier, this
+Figure 1(c) displays a phase-space portrait correspond-            can be described by a generalization of the WKB the-
+ing to the dynamics of P (t) and X(t). Even for small              ory [68] provided by the imaginary time method [69, 70].
+squeezing, the portrait drastically deviates from that of          However, this method did not work for the asymmetric
+a classical harmonic oscillator. In particular, X does not         field profiles as in Fig. 1(b), in contrast to a more general
+change sign over time for any given realization, but it            formulation developed in Ref. [71] that we apply below.
+always has a counterpart with the opposite sign. The                  The quasiclassical wavefunction of an electron at a po-
+latter fact is also valid for P , even though it exhibits an-      sition x, and a time t is approximated by
+harmonic oscillations around zero, with the anharmonic-
+ity increasing with r. Thus, in fact, mean values of both                                                 i
+                                                                                        ψel (x, t) ∝ e ℏ S(x,t) ,              (7)
+X and P vanish at any time t, as expected for purely
+quantum light.                                                     where the action
+   Based on the parameters relevant to the experimen-
+                                                                                            Z t
+tal observation of vacuum fluctuations [67], we choose
+                                                                                S(x, t) =         L(x′ , ẋ′ , t′ )dt′ − Et0   (8)
+ω = 0.0285
+       p a.u. corresponding
+                       √            to 0.775 eV, whereas we                                  t0
+select ℏω/ε0 V = 2 × 10−8 a.u., similar to Ref. [45].
+This unravels the squeezed vacuum state into a bun-                represents the general solution [68, 72] of the Hamilton-
+dle of classical realizations of the electric field E(t) =
+p                                                                  Jacobi equation. Whereas x and t are real, t0 is gen-
+   ℏω/ε0 V P (t), such as illustrated in Fig. 1(b). As             erally complex, as well as x′ and t′ . Here E = H|t=t0
+r increases, their temporal shape becomes sawtooth                 is the Hamiltonian of the electron at time t0 , when the
+with abrupt changes around time moments tn satisfying              electron is starting its motion under the energy barrier
+ωtn /2π = (2n + 1) /4, n ∈ Z.                                      inside the gap. Since the kinetic energy there is negative,
+   Quasiclassical non-adiabatic tunneling theory—When              the electron velocity is necessarily complex. We assume
+the BSV field is applied to induce electronic tunneling,           a constant static potential barrier U (x′ ) = −∆U Θ(−x′ ),
+we can consider the corresponding process as resulting             where Θ(x) denotes the Heaviside step function, in the
+from tunneling events caused by each of the classical re-          relevant spatial region above the surface and a classi-
+                                                                                                                                                                                                     4
+
+                 4.5                                                                                                    ρ (Xi )             P(Xi )           ρ (Xi ) P(Xi )
+                                    r = 12
+                                    r = 13                                                                         −8   −6        −4   −2     0      2   4       6      8
+                                                                                                             10−4                                                           100
+                 3.5                r = 14
+                                                                                                                  −9
+                                                                                                             10
+
+
+
+ Distance (nm)
+                                                                                                                                                                            10−8
+                                                                                                             10−14
+                 2.5                                                                                                                                                        10−16
+                                                                                                             10−19
+                                                                                                                                                         r = 12
+                                                                                                             10−24                                                          10−24
+
+
+
+
+                                                                                       Probability density                                                                          Tunneling probability
+                                                                                                              10−4                                                          100
+                 1.5       t = τ0                                                                                 −9
+                                                                                                             10
+                                                                                                                                                                            10−8
+                                                                                                             10−14
+                                                                                                                                                                            10−16
+                 0.5                                                                                         10−19
+                    0.2              0.4        0.6      0.8       1.0    1.2                                                                            r = 15
+                                                      ωt/2π                                                  10−24                                                          10−24
+                                                                                                              10−4                                                          100
+                                                                                                             10−9
+FIG. 2. Trajectories of the released electrons in the classically                                                                                                           10−8
+allowed region for several values of the squeezing factor r and                                              10−14
+the optimal initial realization X(ti ) = Xpeak (visualized in                                                                                                               10−16
+                                                                                                             10−19
+Fig. 3). Full red line shows the trajectory for r = 12 and                                                                                                r = 18
+                                                                                                             10−24                                                          10−24
+X(ti ) = Xpeak , whereas the set of trajectories corresponds to                                                   −8    −6        −4   −2     0      2   4     6        8
+less optimal realizations X(ti ) = Xl defined by ρ(Xl )P(Xl ) =                                                                             Xi/σ
+(1 − l/20)ρ(Xpeak )P(Xpeak ) for l = 1, 2, · · · , 19. As l increases
+(reflected in the color fading of the lines), the deviations from
+the trajectory with X(ti ) = Xpeak grow. Red dotted line                               FIG. 3. Probability distribution ρ (Xi ) of initial realiza-
+indicates t = τ0 for all of the trajectories.                                          tions for the X quadrature, tunneling probability P (Xi ) and
+                                                                                       ρ (Xi ) P (Xi ) for several values of the squeezing factor. σ de-
+                                                                                       notes the standard deviation of ρ(Xi ), points Xi = Xpeak
+cal realization of the quantum light E(t) enters the La-                               where ρ (Xi ) P (Xi ) is maximized are indicated by purple
+                                                                                       crosses and the area corresponding to the integral in Eq. (12)
+grangian L as a driving field so that
+                                                                                       is colored in blue.
+                      1
+                        mẋ′2 + ex′ E(t′ ) − U (x′ ),
+                          L(x′ , ẋ′ , t′ ) =         (9)
+                      2
+                                                                                       after the barrier, are very close to the vertical edges of
+where e denotes the electron charge and m is the mass                                  the temporal profile of the electric field [cf. Fig. 1(b)]:
+of the electron.                                                                                                        
+   Euler-Lagrange equations of motion (EOMs) deter-                                                       2π 1         n
+                                                                                                   τ0 =         +ε+        , n∈Z.              (11)
+mined by L need to be supplemented by additional con-                                                     ω 4          2
+ditions to get a closed solution, keeping in mind that                                 Here 0 < ε ≪ 1 for all relevant realizations and consid-
+t0 is also unknown and that the relevant quantities are                                ered values of r. Due to the periodicity, it is sufficient
+complex-valued. Two of them (four in terms of real vari-                               to limit the consideration to n = 0. τ0 does not coincide
+ables) are boundary conditions:                                                        with the position of the peak of the field, being shifted
+                                x′ (t′ = t0 ) = 0,     x′ (t′ = t) = x.         (10)   toward the nodal point with respect to it. We took into
+                                                                                       account that because of the asymmetric geometrical con-
+Since at t = t0 under the barrier we have H|t=t0p= −∆U ,                               figuration of the system, only the electrons propagating
+additionally we have condition ẋ′ (t = t0 ) = i 2∆U/m                                 from the tip to the surface have to be considered, but
+(implying two conditions in terms of real variables). Solv-                            not vice versa. This means that the force experienced by
+ing the EOMs with the above conditions allows finding                                  the electron F = −|e|E(τ0 ) at t = τ0 should be positive,
+of S(x, t) as well as t0 (x, t). However, when we are inter-                           implying E(τ0 ) ∝ P (τ0 ) < 0. Additionally, one has to
+ested in the tunneling probability with exponential accu-                              take into account that there are two types of realizations
+racy, we should additionally demand ∂t Im S(x, t) = 0 at                               depending on the sign of X [cf. Fig. 1(c)]: X > 0 and
+any relevant x and t, meaning Im[mẋ′ (t′ = t)] = 0 in the                             X < 0. Only the case X < 0, as selected in Fig. 1(b),
+classically allowed region after the barrier [71, 73, 74].                             matters because otherwise the force flips its sign shortly
+Since Im x = 0 and we may also select t = 0 due to                                     after the emergence of the electron and it is immediately
+∂t Im S(x, t) = 0, following from the Hamilton-Jacobi                                  dragged back towards the tip. In contrast, for X < 0 the
+equation, this extra condition fixes the values of t0 and                              temporal profile is such that the electron in the classical
+S ≡ Sopt . As a result, with exponential accuracy, we can                              region propagates toward the surface without changing
+                                                  2
+determine the tunneling probability as P = e− ℏ Im Sopt .                              the direction of motion, as can be seen in Fig. 2.
+   We find that the real time moments τ0 = Re t0 , at                                     Trajectory-averaged tunneling probability—To find the
+which we can think the real optimal trajectory to emerge                               resulting probability of tunneling Ptot induced by the
+                                                                                                                                                           5
+
+       100                                                                                    other parameters are fixed, the dependence Ptot (γpeak )
+               0.5
+                                                                              r = 25          smoothly changes its character when γpeak is on the or-
+                                                                                              der of unity. Thus, we see that the classification based
+                                         Xpeak /σ                            Epeak (V/m)
+    10−5                                   0                                                  on the value of the Keldysh parameter can be generalized
+                                                                                  1013        to the drivings by quantum light.
+                                          −1
+Ptot                                                                                             Conclusion and outlook—We have demonstrated that
+   10−10                                  −2                                      1010        representing quantum light as a bundle of deterministic
+                                                                                              Bohmian field trajectories enables a rigorous framework
+                                          −3                                                  for treating such light in light-matter interaction prob-
+                                                                                  107         lems. In particular, our results show that this approach
+        −15
+   10                                     −4
+                     r = 11                    5         10   15        20      25 r          can be excellently combined with the non-adiabatic qua-
+          10   1
+                          10   0
+                                               10   −1
+                                                              10   −2
+                                                                                10−3          siclassical description of tunneling, generalizing the cor-
+                                                    γpeak                                     responding description established for the case of classi-
+                                                                                              cal light. Especially in cases of asymmetry in terms of
+FIG. 4. Dependence of the total tunneling probability of the
+                                                                                              the tunneling direction, as for the tunneling-microscope
+electron Ptot evaluated based on Eq. (12) on the effective                                    or asymmetric nano-antenna configurations, our theory
+Keldysh parameter γpeak introduced in Eq. (13). From left                                     provides an efficient solution path with a clear view of
+to right, the corresponding squeezing factor increases from                                   the process. It may serve as a platform to consider
+r = 11 to r = 25. The inset illustrates the dependences of                                    optically-induced tunneling experiments driven with ar-
+Xpeak and Epeak on r, where purple markers are shared with                                    bitrary quantum states of light. Moreover, our frame-
+Fig. 3.                                                                                       work to treat interaction with quantum light is capable
+                                                                                              of bridging any semi-classical theories, such as the time-
+                                                                                              dependent Schrödinger equation or its Bohmian coun-
+quantum light, we need to average the tunneling proba-
+                                                                                              terpart, which describe electron motion under classical
+bility for each particular field realization P(Xi ) over the
+                                                                                              driving, with their fully quantum analogues. Further de-
+probability distribution ρ(Xi ):
+                                                                                              velopment of the presented approach should open up the
+                                   Z 0                                                        possibility of studying the interaction between quantum
+                     Ptot =                P(Xi )ρ(Xi ) dXi ,                          (12)   light and matter from various perspectives, such as driv-
+                                    −∞
+                                                                                              ing with multi-mode quantum light or generating quan-
+where we took only negative Xi into account, as ex-                                           tum entanglement between light and matter.
+plained above. According to Eq. (5), ρ(Xi ) is Gaussian.                                        This research was supported by the KAIST C2 and
+We denote its standard deviation as σ = e−r . Depen-                                          UP Projects. D.V.S. acknowledges funding by the Euro-
+dence of P(Xi ), ρ(Xi ) and their product on Xi are shown                                     pean Union’s Horizon Europe Research and Innovation
+in Fig. 3 for the interval within 8σ. Whereas P(Xi ) in-                                      Programme under agreement 101070700 (project MI-
+creases with the magnitude of Xi , ρ(Xi ) decreases, so                                       RAQLS). A.S.M. acknowledges funding by the Deutsche
+that the function P(Xi )ρ(Xi ) integrated in Eq. (12) has                                     Forschungsgemeinschaft (DFG)–Project No. 425217212–
+a maximum at a certain value of Xi , which we denote                                          SFB 1432.
+as Xpeak . Epeak is the maximum value of E correspond-
+ing to this realization, reached periodically with period
+π/ω. As r increases, Xpeak /σ becomes smaller but never
+reaches 0. In contrast, Epeak increases exponentially with                                      ∗
+r, as can be expected (see inset of Fig. 4). In connection                                         seongjin.ahn@kaist.ac.kr
+                                                                                                †
+                                                                                                   moskalenko@kaist.ac.kr
+with that, it is useful to introduce the effective Keldysh
+                                                                                               [1] A. McPherson, G. Gibson, H. Jara, U. Johann, T. S. Luk,
+parameter [75–77] as                                                                               I. A. McIntyre, K. Boyer, and C. K. Rhodes, Studies of
+                              √                                                                    multiphoton production of vacuum-ultraviolet radiation
+                             ω 2m∆U                                                                in the rare gases, J. Opt. Soc. Am. B 4, 595 (1987).
+                   γpeak =             .              (13)
+                              eEpeak                                                           [2] M. Ferray, A. L’Huillier, X. F. Li, L. A. Lompre, G. Main-
+                                                                                                   fray, and C. Manus, Multiple-harmonic conversion of
+   Dependence of Ptot on γpeak and r, calculated after                                             1064 nm radiation in rare gases, J. Phys. B 21, L31
+Eq. (12), is depicted in Fig. 4. We can recall that for                                            (1988).
+classical harmonic driving, values of the Keldysh param-                                       [3] S. Ghimire, A. D. DiChiara, E. Sistrunk, P. Agostini,
+eter γ allow to classify the induced process as direct                                             L. F. DiMauro, and D. A. Reis, Observation of high-order
+                                                                                                   harmonic generation in a bulk crystal, Nat. Phys. 7, 138
+tunneling (γ ≪ 1), multiphoton transition (γ ≫ 1) or                                               (2011).
+non-adiabatic, photon-assisted tunneling bridging both                                         [4] T. T. Luu, Z. Yin, A. Jain, T. Gaumnitz, Y. Pertot,
+regimes. We can also see in Fig. 4 that as r and Epeak                                             J. Ma, and H. J. Wörner, Extreme–ultraviolet high–
+increase, whereas γpeak correspondingly decreases and                                              harmonic generation in liquids, Nat. Commun. 9, 3723
+                                                                                                                               6
+
+     (2018).                                                           mintchev, M. M. Murnane, H. C. Kapteyn, A. Jaron-
+ [5] S. Han, H. Kim, Y. W. Kim, Y.-J. Kim, S. Kim, I.-Y.               Becker, A. Becker, and L. Plaja, Zeptosecond high har-
+     Park, and S.-W. Kim, High-harmonic generation by field            monic keV X-ray waveforms driven by midinfrared laser
+     enhanced femtosecond pulses in metal-sapphire nanos-              pulses, Phys. Rev. Lett. 111, 033002 (2013).
+     tructure, Nat. Commun. 7, 13105 (2016).                      [25] G. Vampa, C. R. McDonald, G. Orlando, D. D. Klug,
+ [6] P. M. Paul, E. S. Toma, P. Breger, G. Mullot, F. Augé,           P. B. Corkum, and T. Brabec, Theoretical analysis of
+     P. Balcou, H. G. Muller, and P. Agostini, Observation of a        high-harmonic generation in solids, Phys. Rev. Lett. 113,
+     train of attosecond pulses from high harmonic generation,         073901 (2014).
+     Science 292, 1689 (2001).                                    [26] O. Schubert, M. Hohenleutner, F. Langer, B. Urbanek,
+ [7] M. Hentschel, R. Kienberger, C. Spielmann, G. A. Rei-             C. Lange, U. Huttner, D. Golde, T. Meier, M. Kira,
+     der, N. Milosevic, T. Brabec, P. Corkum, U. Heinzmann,            S. W. Koch, and R. Huber, Sub-cycle control of tera-
+     M. Drescher, and F. Krausz, Attosecond metrology, Na-             hertz high-harmonic generation by dynamical bloch os-
+     ture (London) 414, 509 (2001).                                    cillations, Nat. Photon. 8, 119 (2014).
+ [8] F. Krausz and M. Ivanov, Attosecond physics, Rev. Mod.       [27] G. Ndabashimiye, S. Ghimire, M. Wu, D. A. Browne,
+     Phys. 81, 163 (2009).                                             K. J. Schafer, M. B. Gaarde, and D. A. Reis, Solid-state
+ [9] P. B. Corkum and F. Krausz, Attosecond science, Nat.              harmonics beyond the atomic limit, Nature (London)
+     Phys. 3, 381 (2007).                                              534, 520 (2016).
+[10] D. M. Villeneuve, Attosecond science, Contemp. Phys.         [28] M. Wu, D. A. Browne, K. J. Schafer, and M. B. Gaarde,
+     59, 47 (2018).                                                    Multilevel perspective on high-order harmonic generation
+[11] E. Goulielmakis, V. S. Yakovlev, A. L. Cavalieri,                 in solids, Phys. Rev. A 94, 063403 (2016).
+     M. Uiberacker, V. Pervak, A. Apolonski, R. Kienberger,       [29] S. Ghimire and D. A. Reis, High-harmonic generation
+     U. Kleineberg, and F. Krausz, Attosecond control and              from solids, Nat. Phys. 15, 10 (2019).
+     measurement: Lightwave electronics, Science 317, 769         [30] L. Yue and M. B. Gaarde, Introduction to theory of high-
+     (2007).                                                           harmonic generation in solids: tutorial, J. Opt. Soc. Am.
+[12] P. Eckle, M. Smolarski, P. Schlup, J. Biegert, A. Staudte,        B 39, 535 (2022).
+     M. Schöffler, H. G. Muller, R. Dörner, and U. Keller,      [31] R. J. Glauber, The quantum theory of optical coherence,
+     Attosecond angular streaking, Nat. Phys. 4, 565 (2008).           Phys. Rev. 130, 2529 (1963).
+[13] T. T. Luu, M. Garg, S. Y. Kruchinin, A. Moulet, M. T.        [32] R. J. Glauber, Coherent and incoherent states of the ra-
+     Hassan, and E. Goulielmakis, Extreme ultraviolet high-            diation field, Phys. Rev. 131, 2766 (1963).
+     harmonic spectroscopy of solids, Nature (London) 521,        [33] L. Davidovich, Sub-Poissonian processes in quantum op-
+     498 (2015).                                                       tics, Rev. Mod. Phys. 68, 127 (1996).
+[14] J. L. Krause, K. J. Schafer, and K. C. Kulander, Cal-        [34] M. Chekhova, G. Leuchs, and M. Żukowski, Bright
+     culation of photoemission from atoms subject to intense           squeezed vacuum: Entanglement of macroscopic light
+     laser fields, Phys. Rev. A 45, 4998 (1992).                       beams, Opt. Commun. 337, 27 (2015).
+[15] J. L. Krause, K. J. Schafer, and K. C. Kulander, High-       [35] U. L. Andersen, T. Gehring, C. Marquardt, and
+     order harmonic generation from atoms and ions in the              G. Leuchs, 30 years of squeezed light generation, Physica
+     high intensity regime, Phys. Rev. Lett. 68, 3535 (1992).          Scripta 91, 053001 (2016).
+[16] P. B. Corkum, Plasma perspective on strong field multi-      [36] L. Cruz-Rodriguez, D. Dey, A. Freibert, and P. Stammer,
+     photon ionization, Phys. Rev. Lett. 71, 1994 (1993).              Quantum phenomena in attosecond science, Nat. Rev.
+[17] K. J. Schafer, B. Yang, L. F. DiMauro, and K. C. Ku-              Phys. 6, 691 (2024).
+     lander, Above threshold ionization beyond the high har-      [37] A. Gorlach, O. Neufeld, N. Rivera, O. Cohen, and
+     monic cutoff, Phys. Rev. Lett. 70, 1599 (1993).                   I. Kaminer, The quantum-optical nature of high har-
+[18] A. L’Huillier, M. Lewenstein, P. Salières, P. Balcou,            monic generation, Nat. Commun. 11, 4598 (2020).
+     M. Y. Ivanov, J. Larsson, and C. G. Wahlström, High-        [38] P. Stammer, J. Rivera-Dean, A. S. Maxwell, T. Lam-
+     order harmonic-generation cutoff, Phys. Rev. A 48,                prou, J. Argüello-Luengo, P. Tzallas, M. F. Ciappina,
+     R3433 (1993).                                                     and M. Lewenstein, Entanglement and squeezing of the
+[19] C. Winterfeldt, C. Spielmann, and G. Gerber, Collo-               optical field modes in high harmonic generation, Phys.
+     quium: Optimal control of high-harmonic generation,               Rev. Lett. 132, 143603 (2024).
+     Rev. Mod. Phys. 80, 117 (2008).                              [39] J. Sloan, A. Gorlach, M. E. Tzur, N. Rivera, O. Cohen,
+[20] M. Lewenstein, P. Balcou, M. Y. Ivanov, A. L’Huillier,            I. Kaminer, and M. Soljačić, Entangling extreme ultravi-
+     and P. B. Corkum, Theory of high-harmonic generation              olet photons through strong field pair generation (2023),
+     by low-frequency laser fields, Phys. Rev. A 49, 2117              arXiv:2309.16466 [quant-ph].
+     (1994).                                                      [40] C. S. Lange, T. Hansen, and L. B. Madsen, Electron-
+[21] W. Becker, A. Lohr, M. Kleber, and M. Lewenstein, A               correlation-induced nonclassicality of light from high-
+     unified theory of high-harmonic generation: Application           order harmonic generation, Phys. Rev. A 109, 033110
+     to polarization properties of the harmonics, Phys. Rev.           (2024).
+     A 56, 645 (1997).                                            [41] M. Lewenstein, M. F. Ciappina, E. Pisanty, J. Rivera-
+[22] Y. I. Salamin, S. Hu, K. Z. Hatsagortsyan, and C. H.              Dean, P. Stammer, T. Lamprou, and P. Tzallas, Gener-
+     Keitel, Relativistic high-power laser–matter interactions,        ation of optical Schrödinger cat states in intense laser–
+     Phys. Rep. 427, 41 (2006).                                        matter interactions, Nat. Phys. 17, 1104 (2021).
+[23] O. E. Alon, V. Averbukh, and N. Moiseyev, Selection          [42] K. Y. Spasibko, D. A. Kopylov, V. L. Krutyanskiy, T. V.
+     rules for the high harmonic generation spectra, Phys.             Murzina, G. Leuchs, and M. V. Chekhova, Multiphoton
+     Rev. Lett. 80, 3743 (1998).                                       effects enhanced due to ultrafast photon-number fluctu-
+[24] C. Hernández-Garcı́a, J. A. Pérez-Hernández, T. Pop-
+                                                                                                                                 7
+
+     ations, Phys. Rev. Lett. 119, 223603 (2017).                      063405 (2016).
+[43] M. Manceau, K. Y. Spasibko, G. Leuchs, R. Filip, and         [60] P.-C. Li, Y.-L. Sheu, H. Z. Jooya, X.-X. Zhou,
+     M. V. Chekhova, Indefinite-mean pareto photon distri-             and S.-I. Chu, Exploration of laser-driven electron-
+     bution from amplified quantum noise, Phys. Rev. Lett.             multirescattering dynamics in high-order harmonic gen-
+     123, 123606 (2019).                                               eration, Sci. Rep. 6, 32763 (2016).
+[44] M. E. Tzur, M. Birk, A. Gorlach, M. Krüger, I. Kaminer,     [61] I. A. Ivanov, C. H. Nam, and K. T. Kim, Exit point in the
+     and O. Cohen, Photon-statistics force in ultrafast elec-          strong field ionization process, Sci. Rep. 7, 39919 (2017).
+     tron dynamics, Nat. Photonics 17, 501 (2023).                [62] N. Douguet and K. Bartschat, Dynamics of tunneling
+[45] M. E. Tzur and O. Cohen, Motion of charged particles in           ionization using Bohmian mechanics, Phys. Rev. A 97,
+     bright squeezed vacuum, Light Sci. Appl. 13, 41 (2024).           013402 (2018).
+[46] A. Gorlach, M. E. Tzur, M. Birk, M. Krüger, N. Rivera,      [63] T. Moon, K. Bartschat, and N. Douguet, Strong-field
+     O. Cohen, and I. Kaminer, High-harmonic generation                ionization phenomena revealed by quantum trajectories,
+     driven by quantum light, Nat. Phys. 19, 1689 (2023).              Phys. Rev. Lett. 133, 073201 (2024).
+[47] M. E. Tzur, M. Birk, A. Gorlach, I. Kaminer, M. Krüger,     [64] V. Sharoglazova, M. Puplauskis, C. Mattschas,
+     and O. Cohen, Generation of squeezed high-order har-              C. Toebes, and J. Klaers, Energy–speed relationship
+     monics, Phys. Rev. Res. 6, 033079 (2024).                         of quantum particles challenges Bohmian mechanics,
+[48] P. Stammer, Absence of quantum optical coherence in               Nature (London) 643, 67 (2025).
+     high harmonic generation, Phys. Rev. Res. 6, L032033         [65] E. Madelung, Quantentheorie in hydrodynamischer form,
+     (2024).                                                           Z. Phys. 40, 322 (1927).
+[49] A. Rasputnyi, Z. Chen, M. Birk, O. Coehn, , I. Kaminer,      [66] A. Garcia-Chung and H. G. Laguna, What Bohmian me-
+     M. Krüger, D. Seletskiy, M. V. Chekhova, and F. Tani,            chanic says about arrival times of 1d vacuum squeezed
+     High-harmonic generation by a bright squeezed vacuum,             states (2025), arXiv:2502.05734 [quant-ph].
+     Nat. Phys. 20, 1960 (2024).                                  [67] C. Riek, D. V. Seletskiy, A. S. Moskalenko, J. F. Schmidt,
+[50] W. P. Schleich, Quantum Optics in Phase Space (Wiley-             P. Krauspe, S. Eckart, S. Eggert, G. Burkard, and
+     VCH Verlag, Weinheim, Germany, 2001).                             A. Leitenstorfer, Direct sampling of electric-field vacuum
+[51] B. Ma and M. Krüger, Strong-field theory of attosec-             fluctuations, Science 350, 420 (2015).
+     ond tunneling microscopy, Phys. Rev. Lett. 133, 236901       [68] L. D. Landau and E. M. Lifshitz, Quantum Mechan-
+     (2024).                                                           ics: Non-Relativistic Theory, 3rd ed. (Pergamon, Oxford,
+[52] H. Y. Kim, M. Garg, S. Mandal, L. Seiffert, T. Fennel,            1977).
+     and E. Goulielmakis, Attosecond field emission, Nature       [69] A. M. Perelomov, V. S. Popov, and M. V. Terent’ev,
+     (London) 613, 662 (2023).                                         Ionization of atoms in an alternating electric field, Sov.
+[53] J. Heimerl, A. Mikhaylov, S. Meier, H. Höllerer,                 Phys. JETP 23, 924 (1966).
+     I. Kaminer, M. Chekhova, and P. Hommelhoff, Multi-           [70] V. S. Popov, Imaginary-time method in quantum me-
+     photon electron emission with non-classical light, Nat.           chanics and field theory, Phys. At. Nucl. 68, 686 (2005).
+     Phys. 20, 945 (2024).                                        [71] S. Kim, T. Schmude, G. Burkard, and A. S. Moskalenko,
+[54] T. Siday, J. Hayes, F. Schiegl, F. Sandner, P. Menden,            Quasiclassical theory of non-adiabatic tunneling in
+     V. Bergbauer, M. Zizlsperger, S. Nerreter, S. Lingl,              nanocontacts induced by phase-controlled ultrashort
+     J. Repp, J. Wilhelm, M. A. Huber, Y. A. Gerasimenko,              light pulses, New J. Phys. 23, 083006 (2021).
+     and R. Huber, All-optical subcycle microscopy on atomic      [72] S. T. Epstein, General solutions of the Hamilton-Jacobi
+     length scales, Nature (London) 629, 329 (2024).                   equation, Am. J. Phys. 32, 688 (1964).
+[55] G. Yang, M. Kizmann, A. Leitenstorfer, and A. S.             [73] A. S. Moskalenko, S. D. Ganichev, V. I. Perel’, and I. N.
+     Moskalenko, Subcycle tomography of quantum light                  Yassievich, Magnetic field effect on tunnel ionization of
+     (2023), arXiv:2307.12812 [quant-ph].                              deep impurities by far-infrared radiation, Physica B 273,
+[56] G. Yang, S. Sharma, and A. S. Moskalenko, Electro-                1007 (1999).
+     optic sampling of the electric-field operator for ultra-     [74] A. S. Moskalenko, V. I. Perel’, and I. N. Yassievich, Effect
+     broadband pulses of gaussian quantum light (2025),                of a magnetic field on thermally stimulated ionization
+     arXiv:2506.01730 [quant-ph].                                      of impurity centers in semiconductors by submillimeter
+[57] D. Bohm, A suggested interpretation of the quantum the-           radiation, JETP 90, 217 (2000).
+     ory in terms of “hidden” variables. I, Phys. Rev. 85, 166    [75] L. V. Keldysh, Ionization in the field of a strong electro-
+     (1952); A suggested interpretation of the quantum the-            magnetic wave, Sov. Phys. JETP 20, 1307 (1965).
+     ory in terms of “hidden” variables. II, 85, 180 (1952).      [76] V. S. Popov, Tunnel and multiphoton ionization of atoms
+[58] H. Z. Jooya, D. A. Telnov, P.-C. Li, and S.-I. Chu, Explo-        and ions in a strong laser field (Keldysh theory), Phys.
+     ration of the subcycle multiphoton ionization dynamics            Usp. 47, 855 (2004).
+     and transient electron density structures with Bohmian       [77] S. V Popruzhenko, Keldysh theory of strong field ioniza-
+     trajectories, Phys. Rev. A 91, 063412 (2015).                     tion: history, applications, difficulties and perspectives,
+[59] H. Z. Jooya, D. A. Telnov, and S.-I. Chu, Exploration             J. Phys. B: At. Mol. Opt. Phys. 47, 204001 (2014).
+     of the electron multiple recollision dynamics in intense
+     laser fields with Bohmian trajectories, Phys. Rev. A 93,
+
