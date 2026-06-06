@@ -106,3 +106,14 @@ Append-only chronological record. New entries should use:
 - Updated the index, HHG gas model, stochastic/quantum correspondence page,
   non-Gaussian novelty cautions, simulation roadmap, research agenda, overview,
   and manuscript outline.
+
+## [2026-06-06] simulation | Paper One Correspondence HHG Spec
+
+- Added [[simulations/paper-one-correspondence-hhg-simulation-spec]] as the
+  implementation-facing simulation spec for the correspondence-first HHG paper.
+- Scoped paper-one simulations to exact input-field validation, mode-filtered
+  `g^(2)`, source-model-aware BSV ensembles, HHG intensity-level observables,
+  ATI/photon-statistics validation, squeezed-emission-mode boundary modeling,
+  per-shot metadata records, and explicit claim-ladder labels.
+- Kept non-Gaussian output certification, THz models, and macroscopic HHG
+  propagation outside the first simulation implementation.

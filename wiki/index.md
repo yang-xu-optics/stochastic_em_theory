@@ -44,6 +44,10 @@ before answering project questions or changing wiki pages.
 
 - [[simulations/simulation-roadmap]]: staged numerical implementation plan,
   validation tests, and result conventions.
+- [[simulations/paper-one-correspondence-hhg-simulation-spec]]: paper-one
+  simulation specification for squeezed-field validation, mode-filtered
+  `g^(2)`, HHG intensity observables, ATI photon-statistics validation, and
+  squeezed emitted-mode boundary modeling.
 
 ## Manuscript
 
