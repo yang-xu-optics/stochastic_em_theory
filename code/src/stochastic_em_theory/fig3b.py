@@ -32,7 +32,7 @@ DRIVER_SAMPLING = "single_mode_husimi_q_fig3b"
 HARMONIC_WINDOW_HALF_WIDTH = 0.35
 HARMONIC_BACKGROUND_INNER_WIDTH = 0.55
 HARMONIC_BACKGROUND_OUTER_WIDTH = 0.95
-HARMONIC_DISPLAY_FLOOR = 1.0e-12
+HARMONIC_DISPLAY_MIN_NORMALIZED = 3.0e-3
 
 
 class Fig3BDriverState(str, Enum):
@@ -339,7 +339,7 @@ def _harmonic_yield_rows_from_spectrum_rows(
     window_half_width: float = HARMONIC_WINDOW_HALF_WIDTH,
     background_inner_width: float = HARMONIC_BACKGROUND_INNER_WIDTH,
     background_outer_width: float = HARMONIC_BACKGROUND_OUTER_WIDTH,
-    display_floor: float = HARMONIC_DISPLAY_FLOOR,
+    display_min_normalized: float = HARMONIC_DISPLAY_MIN_NORMALIZED,
 ) -> list[dict[str, object]]:
     if window_half_width <= 0.0:
         raise ValueError("window_half_width must be positive")
@@ -347,8 +347,8 @@ def _harmonic_yield_rows_from_spectrum_rows(
         raise ValueError("background_inner_width must exceed window_half_width")
     if background_outer_width <= background_inner_width:
         raise ValueError("background_outer_width must exceed background_inner_width")
-    if display_floor <= 0.0:
-        raise ValueError("display_floor must be positive")
+    if display_min_normalized < 0.0:
+        raise ValueError("display_min_normalized must be non-negative")
 
     rows_by_state: dict[str, list[dict[str, object]]] = {}
     for row in rows:
@@ -389,6 +389,11 @@ def _harmonic_yield_rows_from_spectrum_rows(
             raw_peak_normalized = float(normalized_intensity[peak_index])
             harmonic_yield = max(raw_peak - background_mean, 0.0)
             harmonic_yield_normalized = max(raw_peak_normalized - background_normalized, 0.0)
+            display_intensity = (
+                harmonic_yield_normalized * display_offset
+                if harmonic_yield_normalized >= display_min_normalized
+                else float("nan")
+            )
             first_row = state_rows[0]
             yield_rows.append(
                 {
@@ -398,11 +403,12 @@ def _harmonic_yield_rows_from_spectrum_rows(
                     "raw_peak_intensity": raw_peak,
                     "local_background_intensity": background_mean,
                     "normalized_intensity": harmonic_yield_normalized,
-                    "display_intensity": max(harmonic_yield_normalized, display_floor) * display_offset,
+                    "display_intensity": display_intensity,
                     "display_offset": display_offset,
                     "window_half_width": float(window_half_width),
                     "background_inner_width": float(background_inner_width),
                     "background_outer_width": float(background_outer_width),
+                    "display_min_normalized": float(display_min_normalized),
                     "mean_cutoff_order": float(first_row["mean_cutoff_order"]),
                     "normalized_intensity_cv": float(first_row["normalized_intensity_cv"]),
                     "spectrum_model": str(first_row["spectrum_model"]),
@@ -702,6 +708,7 @@ def run_gorlach_2023_fig3b_proxy(
         "window_half_width",
         "background_inner_width",
         "background_outer_width",
+        "display_min_normalized",
         "mean_cutoff_order",
         "normalized_intensity_cv",
         "spectrum_model",
@@ -720,7 +727,7 @@ def run_gorlach_2023_fig3b_proxy(
         "window_half_width": float(HARMONIC_WINDOW_HALF_WIDTH),
         "background_inner_width": float(HARMONIC_BACKGROUND_INNER_WIDTH),
         "background_outer_width": float(HARMONIC_BACKGROUND_OUTER_WIDTH),
-        "display_floor": float(HARMONIC_DISPLAY_FLOOR),
+        "display_min_normalized": float(HARMONIC_DISPLAY_MIN_NORMALIZED),
     }
     parameters = {
         "shots": int(shots),
@@ -757,8 +764,8 @@ def run_gorlach_2023_fig3b_proxy(
             "Single-mode Husimi-Q coherent-response sampling with a local TDSE dipole-acceleration "
             "spectrum library and a shared all-driver-state normalization benchmark for a closer "
             "Gorlach et al. 2023 Fig. 3b reproduction. The main PNG plots odd-harmonic peak "
-            "yields after local off-harmonic background subtraction; still not the authors' exact "
-            "source-data reconstruction."
+            "yields after local off-harmonic background subtraction and applies a shared normalized "
+            "display floor; still not the authors' exact source-data reconstruction."
         )
     else:
         notes = (
