@@ -1,0 +1,427 @@
+{
+  "generated": "2026-06-06",
+  "scope": "squeezed-vacuum stochastic EM, HHG, THz OR/plasma, non-Gaussian nonlinear optics",
+  "queries": [
+    {
+      "cluster": "hhg-bsv",
+      "dbs": [
+        "openalex",
+        "semantic",
+        "arxiv"
+      ],
+      "query": "\"bright squeezed vacuum\" \"high harmonic generation\""
+    },
+    {
+      "cluster": "hhg-quantum-light",
+      "dbs": [
+        "openalex",
+        "semantic",
+        "arxiv"
+      ],
+      "query": "\"quantum light\" \"high harmonic generation\""
+    },
+    {
+      "cluster": "hhg-squeezed",
+      "dbs": [
+        "openalex",
+        "semantic",
+        "arxiv"
+      ],
+      "query": "\"squeezed\" \"high harmonic generation\""
+    },
+    {
+      "cluster": "strong-field-bsv",
+      "dbs": [
+        "openalex",
+        "semantic",
+        "arxiv"
+      ],
+      "query": "\"bright squeezed vacuum\" \"strong-field\""
+    },
+    {
+      "cluster": "thz-bsv",
+      "dbs": [
+        "openalex",
+        "semantic",
+        "arxiv"
+      ],
+      "query": "\"bright squeezed vacuum\" terahertz"
+    },
+    {
+      "cluster": "thz-plasma-quantum",
+      "dbs": [
+        "openalex",
+        "semantic",
+        "arxiv"
+      ],
+      "query": "\"quantum\" terahertz \"laser-induced plasma\""
+    },
+    {
+      "cluster": "thz-optical-rectification-squeezed",
+      "dbs": [
+        "openalex",
+        "semantic",
+        "arxiv"
+      ],
+      "query": "\"squeezed vacuum\" \"optical rectification\""
+    },
+    {
+      "cluster": "or-quantum",
+      "dbs": [
+        "openalex",
+        "semantic"
+      ],
+      "query": "\"quantum\" \"optical rectification\" terahertz"
+    },
+    {
+      "cluster": "stochastic-squeezed",
+      "dbs": [
+        "openalex",
+        "semantic",
+        "arxiv"
+      ],
+      "query": "\"stochastic\" \"squeezed vacuum\" optics"
+    },
+    {
+      "cluster": "classical-bsv",
+      "dbs": [
+        "openalex",
+        "semantic",
+        "arxiv"
+      ],
+      "query": "\"classical model\" \"broadband squeezed vacuum\""
+    },
+    {
+      "cluster": "broadband-bsv-nonlinear",
+      "dbs": [
+        "openalex",
+        "semantic",
+        "arxiv"
+      ],
+      "query": "\"broadband squeezed vacuum\" \"nonlinear optics\""
+    },
+    {
+      "cluster": "g2-bsv",
+      "dbs": [
+        "openalex",
+        "semantic"
+      ],
+      "query": "\"bright squeezed vacuum\" \"g(2)\""
+    },
+    {
+      "cluster": "nongaussian-pulsed",
+      "dbs": [
+        "openalex",
+        "semantic",
+        "arxiv"
+      ],
+      "query": "\"non-Gaussian\" \"pulsed squeezing\""
+    },
+    {
+      "cluster": "pump-depletion-pdc",
+      "dbs": [
+        "openalex",
+        "semantic",
+        "arxiv"
+      ],
+      "query": "\"pump depletion\" \"parametric down-conversion\" \"non-Gaussian\""
+    },
+    {
+      "cluster": "gaussian-interaction-frame",
+      "dbs": [
+        "openalex",
+        "semantic",
+        "arxiv"
+      ],
+      "query": "\"Gaussian interaction frame\" \"nonlinear optics\""
+    },
+    {
+      "cluster": "mps-ultrafast-quantum-nonlinear",
+      "dbs": [
+        "openalex",
+        "semantic",
+        "arxiv"
+      ],
+      "query": "\"matrix product states\" \"ultrafast\" \"quantum nonlinear optics\""
+    }
+  ],
+  "errors": [
+    {
+      "db": "openalex",
+      "cluster": "hhg-bsv",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.openalex.org/works?search=%22bright+squeezed+vacuum%22+%22high+harmonic+generation%22&filter=is_oa%3Atrue%2Chas_abstract%3Atrue&sort=relevance_score%3Adesc&per_page=8&select=id%2Cids%2Cdoi%2Ctitle%2Cdisplay_name%2Cpublication_year%2Cpublication_date%2Ctype%2Cauthorships%2Cprimary_location%2Clocations%2Cbest_oa_location%2Copen_access%2Cabstract_inverted_index%2Ccited_by_count%2Clanding_page_url&mailto=research%40example.com"
+    },
+    {
+      "db": "semantic",
+      "cluster": "hhg-bsv",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=bright+squeezed+vacuum+high+harmonic+generation&limit=8&fields=paperId%2CexternalIds%2Curl%2Ctitle%2Cabstract%2Cyear%2Cvenue%2CpublicationDate%2Cauthors%2CcitationCount%2CisOpenAccess%2CopenAccessPdf%2CpublicationTypes%2Cjournal%2Ctldr"
+    },
+    {
+      "db": "openalex",
+      "cluster": "hhg-quantum-light",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.openalex.org/works?search=%22quantum+light%22+%22high+harmonic+generation%22&filter=is_oa%3Atrue%2Chas_abstract%3Atrue&sort=relevance_score%3Adesc&per_page=8&select=id%2Cids%2Cdoi%2Ctitle%2Cdisplay_name%2Cpublication_year%2Cpublication_date%2Ctype%2Cauthorships%2Cprimary_location%2Clocations%2Cbest_oa_location%2Copen_access%2Cabstract_inverted_index%2Ccited_by_count%2Clanding_page_url&mailto=research%40example.com"
+    },
+    {
+      "db": "semantic",
+      "cluster": "hhg-quantum-light",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=quantum+light+high+harmonic+generation&limit=8&fields=paperId%2CexternalIds%2Curl%2Ctitle%2Cabstract%2Cyear%2Cvenue%2CpublicationDate%2Cauthors%2CcitationCount%2CisOpenAccess%2CopenAccessPdf%2CpublicationTypes%2Cjournal%2Ctldr"
+    },
+    {
+      "db": "openalex",
+      "cluster": "hhg-squeezed",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.openalex.org/works?search=%22squeezed%22+%22high+harmonic+generation%22&filter=is_oa%3Atrue%2Chas_abstract%3Atrue&sort=relevance_score%3Adesc&per_page=8&select=id%2Cids%2Cdoi%2Ctitle%2Cdisplay_name%2Cpublication_year%2Cpublication_date%2Ctype%2Cauthorships%2Cprimary_location%2Clocations%2Cbest_oa_location%2Copen_access%2Cabstract_inverted_index%2Ccited_by_count%2Clanding_page_url&mailto=research%40example.com"
+    },
+    {
+      "db": "semantic",
+      "cluster": "hhg-squeezed",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=squeezed+high+harmonic+generation&limit=8&fields=paperId%2CexternalIds%2Curl%2Ctitle%2Cabstract%2Cyear%2Cvenue%2CpublicationDate%2Cauthors%2CcitationCount%2CisOpenAccess%2CopenAccessPdf%2CpublicationTypes%2Cjournal%2Ctldr"
+    },
+    {
+      "db": "openalex",
+      "cluster": "strong-field-bsv",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.openalex.org/works?search=%22bright+squeezed+vacuum%22+%22strong-field%22&filter=is_oa%3Atrue%2Chas_abstract%3Atrue&sort=relevance_score%3Adesc&per_page=8&select=id%2Cids%2Cdoi%2Ctitle%2Cdisplay_name%2Cpublication_year%2Cpublication_date%2Ctype%2Cauthorships%2Cprimary_location%2Clocations%2Cbest_oa_location%2Copen_access%2Cabstract_inverted_index%2Ccited_by_count%2Clanding_page_url&mailto=research%40example.com"
+    },
+    {
+      "db": "semantic",
+      "cluster": "strong-field-bsv",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=bright+squeezed+vacuum+strong-field&limit=8&fields=paperId%2CexternalIds%2Curl%2Ctitle%2Cabstract%2Cyear%2Cvenue%2CpublicationDate%2Cauthors%2CcitationCount%2CisOpenAccess%2CopenAccessPdf%2CpublicationTypes%2Cjournal%2Ctldr"
+    },
+    {
+      "db": "openalex",
+      "cluster": "thz-bsv",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.openalex.org/works?search=%22bright+squeezed+vacuum%22+terahertz&filter=is_oa%3Atrue%2Chas_abstract%3Atrue&sort=relevance_score%3Adesc&per_page=8&select=id%2Cids%2Cdoi%2Ctitle%2Cdisplay_name%2Cpublication_year%2Cpublication_date%2Ctype%2Cauthorships%2Cprimary_location%2Clocations%2Cbest_oa_location%2Copen_access%2Cabstract_inverted_index%2Ccited_by_count%2Clanding_page_url&mailto=research%40example.com"
+    },
+    {
+      "db": "semantic",
+      "cluster": "thz-bsv",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=bright+squeezed+vacuum+terahertz&limit=8&fields=paperId%2CexternalIds%2Curl%2Ctitle%2Cabstract%2Cyear%2Cvenue%2CpublicationDate%2Cauthors%2CcitationCount%2CisOpenAccess%2CopenAccessPdf%2CpublicationTypes%2Cjournal%2Ctldr"
+    },
+    {
+      "db": "openalex",
+      "cluster": "thz-plasma-quantum",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.openalex.org/works?search=%22quantum%22+terahertz+%22laser-induced+plasma%22&filter=is_oa%3Atrue%2Chas_abstract%3Atrue&sort=relevance_score%3Adesc&per_page=8&select=id%2Cids%2Cdoi%2Ctitle%2Cdisplay_name%2Cpublication_year%2Cpublication_date%2Ctype%2Cauthorships%2Cprimary_location%2Clocations%2Cbest_oa_location%2Copen_access%2Cabstract_inverted_index%2Ccited_by_count%2Clanding_page_url&mailto=research%40example.com"
+    },
+    {
+      "db": "semantic",
+      "cluster": "thz-plasma-quantum",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=quantum+terahertz+laser-induced+plasma&limit=8&fields=paperId%2CexternalIds%2Curl%2Ctitle%2Cabstract%2Cyear%2Cvenue%2CpublicationDate%2Cauthors%2CcitationCount%2CisOpenAccess%2CopenAccessPdf%2CpublicationTypes%2Cjournal%2Ctldr"
+    },
+    {
+      "db": "openalex",
+      "cluster": "thz-optical-rectification-squeezed",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.openalex.org/works?search=%22squeezed+vacuum%22+%22optical+rectification%22&filter=is_oa%3Atrue%2Chas_abstract%3Atrue&sort=relevance_score%3Adesc&per_page=8&select=id%2Cids%2Cdoi%2Ctitle%2Cdisplay_name%2Cpublication_year%2Cpublication_date%2Ctype%2Cauthorships%2Cprimary_location%2Clocations%2Cbest_oa_location%2Copen_access%2Cabstract_inverted_index%2Ccited_by_count%2Clanding_page_url&mailto=research%40example.com"
+    },
+    {
+      "db": "semantic",
+      "cluster": "thz-optical-rectification-squeezed",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=squeezed+vacuum+optical+rectification&limit=8&fields=paperId%2CexternalIds%2Curl%2Ctitle%2Cabstract%2Cyear%2Cvenue%2CpublicationDate%2Cauthors%2CcitationCount%2CisOpenAccess%2CopenAccessPdf%2CpublicationTypes%2Cjournal%2Ctldr"
+    },
+    {
+      "db": "openalex",
+      "cluster": "or-quantum",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.openalex.org/works?search=%22quantum%22+%22optical+rectification%22+terahertz&filter=is_oa%3Atrue%2Chas_abstract%3Atrue&sort=relevance_score%3Adesc&per_page=8&select=id%2Cids%2Cdoi%2Ctitle%2Cdisplay_name%2Cpublication_year%2Cpublication_date%2Ctype%2Cauthorships%2Cprimary_location%2Clocations%2Cbest_oa_location%2Copen_access%2Cabstract_inverted_index%2Ccited_by_count%2Clanding_page_url&mailto=research%40example.com"
+    },
+    {
+      "db": "semantic",
+      "cluster": "or-quantum",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=quantum+optical+rectification+terahertz&limit=8&fields=paperId%2CexternalIds%2Curl%2Ctitle%2Cabstract%2Cyear%2Cvenue%2CpublicationDate%2Cauthors%2CcitationCount%2CisOpenAccess%2CopenAccessPdf%2CpublicationTypes%2Cjournal%2Ctldr"
+    },
+    {
+      "db": "openalex",
+      "cluster": "stochastic-squeezed",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.openalex.org/works?search=%22stochastic%22+%22squeezed+vacuum%22+optics&filter=is_oa%3Atrue%2Chas_abstract%3Atrue&sort=relevance_score%3Adesc&per_page=8&select=id%2Cids%2Cdoi%2Ctitle%2Cdisplay_name%2Cpublication_year%2Cpublication_date%2Ctype%2Cauthorships%2Cprimary_location%2Clocations%2Cbest_oa_location%2Copen_access%2Cabstract_inverted_index%2Ccited_by_count%2Clanding_page_url&mailto=research%40example.com"
+    },
+    {
+      "db": "semantic",
+      "cluster": "stochastic-squeezed",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=stochastic+squeezed+vacuum+optics&limit=8&fields=paperId%2CexternalIds%2Curl%2Ctitle%2Cabstract%2Cyear%2Cvenue%2CpublicationDate%2Cauthors%2CcitationCount%2CisOpenAccess%2CopenAccessPdf%2CpublicationTypes%2Cjournal%2Ctldr"
+    },
+    {
+      "db": "openalex",
+      "cluster": "classical-bsv",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.openalex.org/works?search=%22classical+model%22+%22broadband+squeezed+vacuum%22&filter=is_oa%3Atrue%2Chas_abstract%3Atrue&sort=relevance_score%3Adesc&per_page=8&select=id%2Cids%2Cdoi%2Ctitle%2Cdisplay_name%2Cpublication_year%2Cpublication_date%2Ctype%2Cauthorships%2Cprimary_location%2Clocations%2Cbest_oa_location%2Copen_access%2Cabstract_inverted_index%2Ccited_by_count%2Clanding_page_url&mailto=research%40example.com"
+    },
+    {
+      "db": "semantic",
+      "cluster": "classical-bsv",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=classical+model+broadband+squeezed+vacuum&limit=8&fields=paperId%2CexternalIds%2Curl%2Ctitle%2Cabstract%2Cyear%2Cvenue%2CpublicationDate%2Cauthors%2CcitationCount%2CisOpenAccess%2CopenAccessPdf%2CpublicationTypes%2Cjournal%2Ctldr"
+    },
+    {
+      "db": "openalex",
+      "cluster": "broadband-bsv-nonlinear",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.openalex.org/works?search=%22broadband+squeezed+vacuum%22+%22nonlinear+optics%22&filter=is_oa%3Atrue%2Chas_abstract%3Atrue&sort=relevance_score%3Adesc&per_page=8&select=id%2Cids%2Cdoi%2Ctitle%2Cdisplay_name%2Cpublication_year%2Cpublication_date%2Ctype%2Cauthorships%2Cprimary_location%2Clocations%2Cbest_oa_location%2Copen_access%2Cabstract_inverted_index%2Ccited_by_count%2Clanding_page_url&mailto=research%40example.com"
+    },
+    {
+      "db": "semantic",
+      "cluster": "broadband-bsv-nonlinear",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=broadband+squeezed+vacuum+nonlinear+optics&limit=8&fields=paperId%2CexternalIds%2Curl%2Ctitle%2Cabstract%2Cyear%2Cvenue%2CpublicationDate%2Cauthors%2CcitationCount%2CisOpenAccess%2CopenAccessPdf%2CpublicationTypes%2Cjournal%2Ctldr"
+    },
+    {
+      "db": "openalex",
+      "cluster": "g2-bsv",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.openalex.org/works?search=%22bright+squeezed+vacuum%22+%22g%282%29%22&filter=is_oa%3Atrue%2Chas_abstract%3Atrue&sort=relevance_score%3Adesc&per_page=8&select=id%2Cids%2Cdoi%2Ctitle%2Cdisplay_name%2Cpublication_year%2Cpublication_date%2Ctype%2Cauthorships%2Cprimary_location%2Clocations%2Cbest_oa_location%2Copen_access%2Cabstract_inverted_index%2Ccited_by_count%2Clanding_page_url&mailto=research%40example.com"
+    },
+    {
+      "db": "semantic",
+      "cluster": "g2-bsv",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=bright+squeezed+vacuum+g%282%29&limit=8&fields=paperId%2CexternalIds%2Curl%2Ctitle%2Cabstract%2Cyear%2Cvenue%2CpublicationDate%2Cauthors%2CcitationCount%2CisOpenAccess%2CopenAccessPdf%2CpublicationTypes%2Cjournal%2Ctldr"
+    },
+    {
+      "db": "openalex",
+      "cluster": "nongaussian-pulsed",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.openalex.org/works?search=%22non-Gaussian%22+%22pulsed+squeezing%22&filter=is_oa%3Atrue%2Chas_abstract%3Atrue&sort=relevance_score%3Adesc&per_page=8&select=id%2Cids%2Cdoi%2Ctitle%2Cdisplay_name%2Cpublication_year%2Cpublication_date%2Ctype%2Cauthorships%2Cprimary_location%2Clocations%2Cbest_oa_location%2Copen_access%2Cabstract_inverted_index%2Ccited_by_count%2Clanding_page_url&mailto=research%40example.com"
+    },
+    {
+      "db": "semantic",
+      "cluster": "nongaussian-pulsed",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=non-Gaussian+pulsed+squeezing&limit=8&fields=paperId%2CexternalIds%2Curl%2Ctitle%2Cabstract%2Cyear%2Cvenue%2CpublicationDate%2Cauthors%2CcitationCount%2CisOpenAccess%2CopenAccessPdf%2CpublicationTypes%2Cjournal%2Ctldr"
+    },
+    {
+      "db": "openalex",
+      "cluster": "pump-depletion-pdc",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.openalex.org/works?search=%22pump+depletion%22+%22parametric+down-conversion%22+%22non-Gaussian%22&filter=is_oa%3Atrue%2Chas_abstract%3Atrue&sort=relevance_score%3Adesc&per_page=8&select=id%2Cids%2Cdoi%2Ctitle%2Cdisplay_name%2Cpublication_year%2Cpublication_date%2Ctype%2Cauthorships%2Cprimary_location%2Clocations%2Cbest_oa_location%2Copen_access%2Cabstract_inverted_index%2Ccited_by_count%2Clanding_page_url&mailto=research%40example.com"
+    },
+    {
+      "db": "semantic",
+      "cluster": "pump-depletion-pdc",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=pump+depletion+parametric+down-conversion+non-Gaussian&limit=8&fields=paperId%2CexternalIds%2Curl%2Ctitle%2Cabstract%2Cyear%2Cvenue%2CpublicationDate%2Cauthors%2CcitationCount%2CisOpenAccess%2CopenAccessPdf%2CpublicationTypes%2Cjournal%2Ctldr"
+    },
+    {
+      "db": "openalex",
+      "cluster": "gaussian-interaction-frame",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.openalex.org/works?search=%22Gaussian+interaction+frame%22+%22nonlinear+optics%22&filter=is_oa%3Atrue%2Chas_abstract%3Atrue&sort=relevance_score%3Adesc&per_page=8&select=id%2Cids%2Cdoi%2Ctitle%2Cdisplay_name%2Cpublication_year%2Cpublication_date%2Ctype%2Cauthorships%2Cprimary_location%2Clocations%2Cbest_oa_location%2Copen_access%2Cabstract_inverted_index%2Ccited_by_count%2Clanding_page_url&mailto=research%40example.com"
+    },
+    {
+      "db": "semantic",
+      "cluster": "gaussian-interaction-frame",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=Gaussian+interaction+frame+nonlinear+optics&limit=8&fields=paperId%2CexternalIds%2Curl%2Ctitle%2Cabstract%2Cyear%2Cvenue%2CpublicationDate%2Cauthors%2CcitationCount%2CisOpenAccess%2CopenAccessPdf%2CpublicationTypes%2Cjournal%2Ctldr"
+    },
+    {
+      "db": "openalex",
+      "cluster": "mps-ultrafast-quantum-nonlinear",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.openalex.org/works?search=%22matrix+product+states%22+%22ultrafast%22+%22quantum+nonlinear+optics%22&filter=is_oa%3Atrue%2Chas_abstract%3Atrue&sort=relevance_score%3Adesc&per_page=8&select=id%2Cids%2Cdoi%2Ctitle%2Cdisplay_name%2Cpublication_year%2Cpublication_date%2Ctype%2Cauthorships%2Cprimary_location%2Clocations%2Cbest_oa_location%2Copen_access%2Cabstract_inverted_index%2Ccited_by_count%2Clanding_page_url&mailto=research%40example.com"
+    },
+    {
+      "db": "semantic",
+      "cluster": "mps-ultrafast-quantum-nonlinear",
+      "error": "URLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)'))",
+      "url": "https://api.semanticscholar.org/graph/v1/paper/search?query=matrix+product+states+ultrafast+quantum+nonlinear+optics&limit=8&fields=paperId%2CexternalIds%2Curl%2Ctitle%2Cabstract%2Cyear%2Cvenue%2CpublicationDate%2Cauthors%2CcitationCount%2CisOpenAccess%2CopenAccessPdf%2CpublicationTypes%2Cjournal%2Ctldr"
+    },
+    {
+      "db": "arxiv",
+      "cluster": "hhg-bsv",
+      "error": "InvalidURL(\"URL can't contain control characters. '/api/query?search_query=all:bright+squeezed+vacuum AND all:high+harmonic+generation&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')\")",
+      "url": "https://export.arxiv.org/api/query?search_query=all:bright+squeezed+vacuum AND all:high+harmonic+generation&start=0&max_results=6&sortBy=relevance&sortOrder=descending"
+    },
+    {
+      "db": "arxiv",
+      "cluster": "hhg-quantum-light",
+      "error": "InvalidURL(\"URL can't contain control characters. '/api/query?search_query=all:quantum+light AND all:high+harmonic+generation&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')\")",
+      "url": "https://export.arxiv.org/api/query?search_query=all:quantum+light AND all:high+harmonic+generation&start=0&max_results=6&sortBy=relevance&sortOrder=descending"
+    },
+    {
+      "db": "arxiv",
+      "cluster": "hhg-squeezed",
+      "error": "InvalidURL(\"URL can't contain control characters. '/api/query?search_query=all:squeezed AND all:high+harmonic+generation&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')\")",
+      "url": "https://export.arxiv.org/api/query?search_query=all:squeezed AND all:high+harmonic+generation&start=0&max_results=6&sortBy=relevance&sortOrder=descending"
+    },
+    {
+      "db": "arxiv",
+      "cluster": "strong-field-bsv",
+      "error": "InvalidURL(\"URL can't contain control characters. '/api/query?search_query=all:bright+squeezed+vacuum AND all:strong-field&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')\")",
+      "url": "https://export.arxiv.org/api/query?search_query=all:bright+squeezed+vacuum AND all:strong-field&start=0&max_results=6&sortBy=relevance&sortOrder=descending"
+    },
+    {
+      "db": "arxiv",
+      "cluster": "thz-bsv",
+      "error": "InvalidURL(\"URL can't contain control characters. '/api/query?search_query=all:bright+squeezed+vacuum AND all:terahertz&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')\")",
+      "url": "https://export.arxiv.org/api/query?search_query=all:bright+squeezed+vacuum AND all:terahertz&start=0&max_results=6&sortBy=relevance&sortOrder=descending"
+    },
+    {
+      "db": "arxiv",
+      "cluster": "thz-plasma-quantum",
+      "error": "InvalidURL(\"URL can't contain control characters. '/api/query?search_query=all:quantum AND all:terahertz AND all:laser-induced+plasma&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')\")",
+      "url": "https://export.arxiv.org/api/query?search_query=all:quantum AND all:terahertz AND all:laser-induced+plasma&start=0&max_results=6&sortBy=relevance&sortOrder=descending"
+    },
+    {
+      "db": "arxiv",
+      "cluster": "thz-optical-rectification-squeezed",
+      "error": "InvalidURL(\"URL can't contain control characters. '/api/query?search_query=all:squeezed+vacuum AND all:optical+rectification&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')\")",
+      "url": "https://export.arxiv.org/api/query?search_query=all:squeezed+vacuum AND all:optical+rectification&start=0&max_results=6&sortBy=relevance&sortOrder=descending"
+    },
+    {
+      "db": "arxiv",
+      "cluster": "stochastic-squeezed",
+      "error": "InvalidURL(\"URL can't contain control characters. '/api/query?search_query=all:stochastic AND all:squeezed+vacuum AND all:optics&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')\")",
+      "url": "https://export.arxiv.org/api/query?search_query=all:stochastic AND all:squeezed+vacuum AND all:optics&start=0&max_results=6&sortBy=relevance&sortOrder=descending"
+    },
+    {
+      "db": "arxiv",
+      "cluster": "classical-bsv",
+      "error": "InvalidURL(\"URL can't contain control characters. '/api/query?search_query=all:classical+model AND all:broadband+squeezed+vacuum&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')\")",
+      "url": "https://export.arxiv.org/api/query?search_query=all:classical+model AND all:broadband+squeezed+vacuum&start=0&max_results=6&sortBy=relevance&sortOrder=descending"
+    },
+    {
+      "db": "arxiv",
+      "cluster": "broadband-bsv-nonlinear",
+      "error": "InvalidURL(\"URL can't contain control characters. '/api/query?search_query=all:broadband+squeezed+vacuum AND all:nonlinear+optics&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')\")",
+      "url": "https://export.arxiv.org/api/query?search_query=all:broadband+squeezed+vacuum AND all:nonlinear+optics&start=0&max_results=6&sortBy=relevance&sortOrder=descending"
+    },
+    {
+      "db": "arxiv",
+      "cluster": "nongaussian-pulsed",
+      "error": "InvalidURL(\"URL can't contain control characters. '/api/query?search_query=all:non-Gaussian AND all:pulsed+squeezing&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')\")",
+      "url": "https://export.arxiv.org/api/query?search_query=all:non-Gaussian AND all:pulsed+squeezing&start=0&max_results=6&sortBy=relevance&sortOrder=descending"
+    },
+    {
+      "db": "arxiv",
+      "cluster": "pump-depletion-pdc",
+      "error": "InvalidURL(\"URL can't contain control characters. '/api/query?search_query=all:pump+depletion AND all:parametric+down-conversion AND all:non-Gaussian&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')\")",
+      "url": "https://export.arxiv.org/api/query?search_query=all:pump+depletion AND all:parametric+down-conversion AND all:non-Gaussian&start=0&max_results=6&sortBy=relevance&sortOrder=descending"
+    },
+    {
+      "db": "arxiv",
+      "cluster": "gaussian-interaction-frame",
+      "error": "InvalidURL(\"URL can't contain control characters. '/api/query?search_query=all:Gaussian+interaction+frame AND all:nonlinear+optics&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')\")",
+      "url": "https://export.arxiv.org/api/query?search_query=all:Gaussian+interaction+frame AND all:nonlinear+optics&start=0&max_results=6&sortBy=relevance&sortOrder=descending"
+    },
+    {
+      "db": "arxiv",
+      "cluster": "mps-ultrafast-quantum-nonlinear",
+      "error": "InvalidURL(\"URL can't contain control characters. '/api/query?search_query=all:matrix+product+states AND all:ultrafast AND all:quantum+nonlinear+optics&start=0&max_results=6&sortBy=relevance&sortOrder=descending' (found at least ' ')\")",
+      "url": "https://export.arxiv.org/api/query?search_query=all:matrix+product+states AND all:ultrafast AND all:quantum+nonlinear+optics&start=0&max_results=6&sortBy=relevance&sortOrder=descending"
+    }
+  ],
+  "candidates": []
+}
