@@ -27,12 +27,15 @@ TDSE_SPECTRUM_MODEL = "tdse_dipole_acceleration"
 PROXY_FREQUENCY_GRID = "odd_harmonic_order_grid"
 TDSE_FREQUENCY_GRID = "raw_fft_harmonic_order_grid"
 HARMONIC_YIELD_FREQUENCY_GRID = "odd_harmonic_window_yield_grid"
+CLEANED_PEAK_FREQUENCY_GRID = "background_subtracted_raw_peak_window_grid"
 FIELD_NORMALIZATION = "field_amplitude = base_field_amplitude_au * sqrt(|alpha|^2 / mean(|alpha|^2))"
 DRIVER_SAMPLING = "single_mode_husimi_q_fig3b"
 HARMONIC_WINDOW_HALF_WIDTH = 0.35
 HARMONIC_BACKGROUND_INNER_WIDTH = 0.55
 HARMONIC_BACKGROUND_OUTER_WIDTH = 0.95
 HARMONIC_DISPLAY_MIN_NORMALIZED = 3.0e-3
+CLEANED_PEAK_WINDOW_HALF_WIDTH = 0.35
+CLEANED_PEAK_DISPLAY_MIN_NORMALIZED = 1.0e-3
 
 
 class Fig3BDriverState(str, Enum):
@@ -425,6 +428,98 @@ def _harmonic_yield_rows_from_spectrum_rows(
     return yield_rows
 
 
+def _nearest_odd_harmonic_order(order: float) -> float:
+    nearest = int(round((order - 1.0) / 2.0) * 2 + 1)
+    return float(max(nearest, 1))
+
+
+def _cleaned_peak_rows_from_spectrum_rows(
+    rows: list[dict[str, object]],
+    *,
+    peak_window_half_width: float = CLEANED_PEAK_WINDOW_HALF_WIDTH,
+    background_inner_width: float = HARMONIC_BACKGROUND_INNER_WIDTH,
+    background_outer_width: float = HARMONIC_BACKGROUND_OUTER_WIDTH,
+    display_min_normalized: float = CLEANED_PEAK_DISPLAY_MIN_NORMALIZED,
+) -> list[dict[str, object]]:
+    if peak_window_half_width <= 0.0:
+        raise ValueError("peak_window_half_width must be positive")
+    if background_inner_width <= peak_window_half_width:
+        raise ValueError("background_inner_width must exceed peak_window_half_width")
+    if background_outer_width <= background_inner_width:
+        raise ValueError("background_outer_width must exceed background_inner_width")
+    if display_min_normalized < 0.0:
+        raise ValueError("display_min_normalized must be non-negative")
+
+    rows_by_state: dict[str, list[dict[str, object]]] = {}
+    for row in rows:
+        rows_by_state.setdefault(str(row["driver_state"]), []).append(row)
+
+    display_rows: list[dict[str, object]] = []
+    for state in Fig3BDriverState:
+        state_rows = rows_by_state.get(state.value, [])
+        if not state_rows:
+            continue
+
+        orders = np.array([float(row["harmonic_order"]) for row in state_rows], dtype=np.float64)
+        mean_intensity = np.array([float(row["mean_intensity"]) for row in state_rows], dtype=np.float64)
+        normalized_intensity = np.array([float(row["normalized_intensity"]) for row in state_rows], dtype=np.float64)
+        display_offset = float(state_rows[0]["display_offset"])
+
+        for row, order, mean_value, normalized_value in zip(
+            state_rows, orders, mean_intensity, normalized_intensity, strict=True
+        ):
+            nearest_odd = _nearest_odd_harmonic_order(float(order))
+            distance = abs(float(order) - nearest_odd)
+            background_distance = np.abs(orders - nearest_odd)
+            background_mask = (background_distance >= background_inner_width) & (
+                background_distance <= background_outer_width
+            )
+            background_mean = float(np.median(mean_intensity[background_mask])) if np.any(background_mask) else 0.0
+            background_normalized = (
+                float(np.median(normalized_intensity[background_mask])) if np.any(background_mask) else 0.0
+            )
+            cleaned_mean = max(float(mean_value) - background_mean, 0.0)
+            cleaned_normalized = max(float(normalized_value) - background_normalized, 0.0)
+            in_peak_window = distance <= peak_window_half_width
+            display_intensity = (
+                cleaned_normalized * display_offset
+                if in_peak_window and cleaned_normalized >= display_min_normalized
+                else float("nan")
+            )
+            display_rows.append(
+                {
+                    "driver_state": state.value,
+                    "harmonic_order": float(order),
+                    "nearest_harmonic_order": nearest_odd,
+                    "mean_intensity": cleaned_mean,
+                    "raw_intensity": float(mean_value),
+                    "local_background_intensity": background_mean,
+                    "normalized_intensity": cleaned_normalized,
+                    "raw_normalized_intensity": float(normalized_value),
+                    "local_background_normalized_intensity": background_normalized,
+                    "display_intensity": display_intensity,
+                    "display_offset": display_offset,
+                    "in_peak_window": bool(in_peak_window),
+                    "peak_window_half_width": float(peak_window_half_width),
+                    "background_inner_width": float(background_inner_width),
+                    "background_outer_width": float(background_outer_width),
+                    "display_min_normalized": float(display_min_normalized),
+                    "mean_cutoff_order": float(row["mean_cutoff_order"]),
+                    "normalized_intensity_cv": float(row["normalized_intensity_cv"]),
+                    "spectrum_model": str(row["spectrum_model"]),
+                    "frequency_grid": CLEANED_PEAK_FREQUENCY_GRID,
+                    "raw_frequency_grid": str(row["frequency_grid"]),
+                    "tdse_amplitude_bin_count": int(row["tdse_amplitude_bin_count"]),
+                    "tdse_library_field_amplitude_min_au": float(row["tdse_library_field_amplitude_min_au"]),
+                    "tdse_library_field_amplitude_max_au": float(row["tdse_library_field_amplitude_max_au"]),
+                    "claim_level": str(row["claim_level"]),
+                    "mechanism": str(row["mechanism"]),
+                    "processing": "raw_peak_window_minus_local_background",
+                }
+            )
+    return display_rows
+
+
 def _plot_fig3b_proxy(*, csv_path: Path, output_path: Path) -> Path:
     import csv
 
@@ -438,14 +533,19 @@ def _plot_fig3b_proxy(*, csv_path: Path, output_path: Path) -> Path:
     spectrum_model = first_rows[0].get("spectrum_model", PROXY_SPECTRUM_MODEL) if first_rows else PROXY_SPECTRUM_MODEL
     frequency_grid = first_rows[0].get("frequency_grid", PROXY_FREQUENCY_GRID) if first_rows else PROXY_FREQUENCY_GRID
     title_model = "TDSE dipole-acceleration" if spectrum_model == TDSE_SPECTRUM_MODEL else "proxy"
-    title_grid = "harmonic-yield" if frequency_grid == HARMONIC_YIELD_FREQUENCY_GRID else "raw-grid"
+    title_grid = {
+        CLEANED_PEAK_FREQUENCY_GRID: "cleaned peak-window",
+        HARMONIC_YIELD_FREQUENCY_GRID: "harmonic-yield",
+    }.get(frequency_grid, "raw-grid")
     fig, ax = plt.subplots(figsize=(7.8, 4.4), constrained_layout=True)
     for state in Fig3BDriverState:
         style = STATE_STYLES[state]
         rows = rows_by_state[state.value]
         orders = [float(row["harmonic_order"]) for row in rows]
         display = [float(row["display_intensity"]) for row in rows]
-        ax.plot(orders, display, color=style.color, marker="o", markersize=2.0, lw=1.3, label=style.label)
+        marker = "o" if frequency_grid == HARMONIC_YIELD_FREQUENCY_GRID else None
+        markersize = 2.0 if frequency_grid == HARMONIC_YIELD_FREQUENCY_GRID else 0.0
+        ax.plot(orders, display, color=style.color, marker=marker, markersize=markersize, lw=1.2, label=style.label)
 
     ax.set_yscale("log")
     ax.set_xlim(0, 151)
@@ -674,6 +774,7 @@ def run_gorlach_2023_fig3b_proxy(
 
     csv_path = output_dir / "gorlach_2023_fig3b_proxy_spectra.csv"
     harmonic_yield_csv_path = output_dir / "gorlach_2023_fig3b_harmonic_yields.csv"
+    display_spectrum_csv_path = output_dir / "gorlach_2023_fig3b_display_spectrum.csv"
     summary_path = output_dir / "gorlach_2023_fig3b_proxy_summary.json"
     figure_path = output_dir / "gorlach_2023_fig3b_proxy.png"
     parameter_path = output_dir / "parameters.yaml"
@@ -721,13 +822,44 @@ def run_gorlach_2023_fig3b_proxy(
         "mechanism",
         "processing",
     ]
+    display_spectrum_fieldnames = [
+        "driver_state",
+        "harmonic_order",
+        "nearest_harmonic_order",
+        "mean_intensity",
+        "raw_intensity",
+        "local_background_intensity",
+        "normalized_intensity",
+        "raw_normalized_intensity",
+        "local_background_normalized_intensity",
+        "display_intensity",
+        "display_offset",
+        "in_peak_window",
+        "peak_window_half_width",
+        "background_inner_width",
+        "background_outer_width",
+        "display_min_normalized",
+        "mean_cutoff_order",
+        "normalized_intensity_cv",
+        "spectrum_model",
+        "frequency_grid",
+        "raw_frequency_grid",
+        "tdse_amplitude_bin_count",
+        "tdse_library_field_amplitude_min_au",
+        "tdse_library_field_amplitude_max_au",
+        "claim_level",
+        "mechanism",
+        "processing",
+    ]
     display_processing = {
-        "frequency_grid": HARMONIC_YIELD_FREQUENCY_GRID,
-        "mode": "odd_harmonic_peak_minus_local_background",
-        "window_half_width": float(HARMONIC_WINDOW_HALF_WIDTH),
+        "frequency_grid": CLEANED_PEAK_FREQUENCY_GRID,
+        "mode": "raw_peak_window_minus_local_background",
+        "peak_window_half_width": float(CLEANED_PEAK_WINDOW_HALF_WIDTH),
         "background_inner_width": float(HARMONIC_BACKGROUND_INNER_WIDTH),
         "background_outer_width": float(HARMONIC_BACKGROUND_OUTER_WIDTH),
-        "display_min_normalized": float(HARMONIC_DISPLAY_MIN_NORMALIZED),
+        "display_min_normalized": float(CLEANED_PEAK_DISPLAY_MIN_NORMALIZED),
+        "harmonic_yield_frequency_grid": HARMONIC_YIELD_FREQUENCY_GRID,
+        "harmonic_yield_display_min_normalized": float(HARMONIC_DISPLAY_MIN_NORMALIZED),
     }
     parameters = {
         "shots": int(shots),
@@ -763,9 +895,10 @@ def run_gorlach_2023_fig3b_proxy(
         notes = (
             "Single-mode Husimi-Q coherent-response sampling with a local TDSE dipole-acceleration "
             "spectrum library and a shared all-driver-state normalization benchmark for a closer "
-            "Gorlach et al. 2023 Fig. 3b reproduction. The main PNG plots odd-harmonic peak "
-            "yields after local off-harmonic background subtraction and applies a shared normalized "
-            "display floor; still not the authors' exact source-data reconstruction."
+            "Gorlach et al. 2023 Fig. 3b reproduction. The main PNG plots a cleaned raw-bin "
+            "peak-window spectrum after local off-harmonic background subtraction and applies a "
+            "shared normalized display floor; still not the authors' exact source-data "
+            "reconstruction."
         )
     else:
         notes = (
@@ -777,6 +910,8 @@ def run_gorlach_2023_fig3b_proxy(
     write_csv(csv_path, rows, fieldnames)
     harmonic_yield_rows = _harmonic_yield_rows_from_spectrum_rows(rows, max_order=max_order)
     write_csv(harmonic_yield_csv_path, harmonic_yield_rows, harmonic_yield_fieldnames)
+    display_spectrum_rows = _cleaned_peak_rows_from_spectrum_rows(rows)
+    write_csv(display_spectrum_csv_path, display_spectrum_rows, display_spectrum_fieldnames)
     write_manifest(parameter_path, parameters)
     write_json(
         summary_path,
@@ -785,13 +920,14 @@ def run_gorlach_2023_fig3b_proxy(
             "parameters": parameters,
             "state_summaries": state_summaries,
             "harmonic_yield_row_count": len(harmonic_yield_rows),
+            "display_spectrum_row_count": len(display_spectrum_rows),
             "claim_level": ClaimLevel.HHG_INTENSITY_PREDICTION.value,
             "mechanism": mechanism,
             "source_refs": source_refs,
             "notes": notes,
         },
     )
-    _plot_fig3b_proxy(csv_path=harmonic_yield_csv_path, output_path=figure_path)
+    _plot_fig3b_proxy(csv_path=display_spectrum_csv_path, output_path=figure_path)
     write_manifest(
         manifest_path,
         {
@@ -817,6 +953,7 @@ def run_gorlach_2023_fig3b_proxy(
             "outputs": {
                 "spectra_csv": csv_path.name,
                 "harmonic_yields_csv": harmonic_yield_csv_path.name,
+                "display_spectrum_csv": display_spectrum_csv_path.name,
                 "summary_json": summary_path.name,
                 "figure_png": figure_path.name,
                 "parameter_yaml": parameter_path.name,
