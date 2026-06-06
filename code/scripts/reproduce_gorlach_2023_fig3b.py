@@ -6,11 +6,15 @@ from pathlib import Path
 from stochastic_em_theory.fig3b import run_gorlach_2023_fig3b_proxy
 
 
+REPO_ROOT = Path(__file__).resolve().parents[2]
+DEFAULT_OUTPUT_DIR = REPO_ROOT / "results" / "gorlach-2023-fig3b-proxy"
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Reproduce Gorlach et al. 2023 Fig. 3b with the local stochastic-field HHG proxy."
     )
-    parser.add_argument("--output-dir", type=Path, default=Path("../results/gorlach-2023-fig3b-proxy"))
+    parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
     parser.add_argument("--shots", type=int, default=50_000)
     parser.add_argument("--seed", type=int, default=20230603)
     parser.add_argument("--base-field-amplitude-au", type=float, default=0.08)
