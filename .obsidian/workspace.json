@@ -183,6 +183,9 @@
   },
   "active": "8ad97e7375a24d50",
   "lastOpenFiles": [
+    "raw/sources/Yanagimoto et al. - 2024 - Mesoscopic ultrafast nonlinear optics—The emergenc.pdf",
+    "raw/sources/Yanagimoto et al. - 2022 - Onset of non-Gaussian quantum physics in pulsed squeezing with mesoscopic fields.pdf",
+    "raw/sources/Jankowski et al. - 2024 - Ultrafast second-order nonlinear photonics—from cl.pdf",
     "wiki/sources/ravi-2014-thz-generation-optical-rectification.md",
     "raw/sources/900736523-MIT.pdf",
     "wiki/sources/wang-2026-quantum-thz-plasma-bsv.md",
@@ -205,8 +208,6 @@
     "raw/sources/Unconfirmed 217052.crdownload",
     "raw/sources/Sun et al. - 2022 - Terahertz generation from laser-induced plasma.pdf",
     "raw/sources/Schuh et al. - 2013 - Quantum theory of terahertz emission due to ultrashort pulse ionization of gases.pdf",
-    "raw/sources/Wang et al. - 2026 - Broadband quantum terahertz wave generation in laser-induced plasmas.pdf",
-    "raw/sources/Gorlach et al. - 2023 - High-harmonic generation driven by quantum light.pdf",
     "paper/outline.md",
     "paper/README.md",
     "results/README.md",
@@ -217,7 +218,6 @@
     "wiki/models/hhg-gas-model.md",
     "wiki/theory/squeezed-vacuum-g2-proof-plan.md",
     "wiki/theory/stochastic-quantum-optics-correspondence.md",
-    "wiki/research-agenda.md",
-    "wiki/overview.md"
+    "wiki/research-agenda.md"
   ]
 }
