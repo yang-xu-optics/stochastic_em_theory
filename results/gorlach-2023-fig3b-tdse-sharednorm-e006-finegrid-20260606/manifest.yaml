@@ -1,0 +1,95 @@
+run_id: gorlach-2023-fig3b-tdse-sharednorm-e006-finegrid-20260606
+created: '2026-06-06'
+claim_level: hhg_intensity_prediction
+mechanism: quantum_light_hhg_tdse_dipole_acceleration
+source_model:
+  representation: Husimi-Q coherent-state sampling
+  driver_states:
+  - coherent
+  - fock
+  - thermal
+  - bsv
+  field_normalization: field_amplitude = base_field_amplitude_au * sqrt(|alpha|^2
+    / mean(|alpha|^2))
+  coherent_response: tdse_dipole_acceleration
+code_entrypoint: stochastic_em_theory.fig3b.run_gorlach_2023_fig3b_proxy
+git_commit: aefae249f6f49c61bc669447546df9ce301348ad
+parameter_file: parameters.yaml
+random_seeds:
+- 20230603
+observable: ensemble_mean_tdse_hhg_spectrum_by_driver_state
+units: atomic units for fields and energies; dimensionless harmonic order
+parameters:
+  shots: 50000
+  seed: 20230603
+  base_field_amplitude_au: 0.06
+  omega_au: 0.057
+  ionization_potential_au: 0.7924
+  max_order: 151
+  mean_photon_number: 100.0
+  fock_n: 100
+  bsv_r: 2.0
+  bsv_phase: 0.0
+  nonlinearity_power: 6.0
+  spectrum_model: tdse_dipole_acceleration
+  frequency_grid: raw_fft_harmonic_order_grid
+  normalization_min_harmonic_order: 13.901754385964912
+  normalization_scope: shared_all_driver_states
+  normalization_benchmark_intensity: 81.99525742603997
+  tdse_amplitude_bins: 11
+  tdse:
+    amplitude_bins: 11
+    x_min: -80.0
+    x_max: 80.0
+    grid_points: 1024
+    softening: 0.816
+    dt_au: 0.06
+    ramp_cycles: 5.0
+    flat_cycles: 15.0
+    ground_state_iterations: 220
+    ground_state_dt_au: 0.08
+    carrier_phase: 0.0
+    min_harmonic_order: 5.0
+    normalization_min_harmonic_order: 13.901754385964912
+    absorber_start_au: 75.0
+    absorber_strength: 0.0005
+    spectrum_model: tdse_dipole_acceleration
+    frequency_grid: raw_fft_harmonic_order_grid
+    amplitude_bin_count: 11
+    field_amplitude_min_au: 0.00010221851426811915
+    field_amplitude_max_au: 0.25554717819727235
+    field_amplitude_values_au:
+    - 0.00010221851426811915
+    - 0.03652385075314291
+    - 0.055521833153117636
+    - 0.05878460096666928
+    - 0.060897969122975
+    - 0.06303990111321292
+    - 0.0663456407599203
+    - 0.0791815623043867
+    - 0.09951940300355376
+    - 0.12920852257660415
+    - 0.25554717819727235
+    max_harmonic_order: 151.0
+    harmonic_order_points: 3650
+    harmonic_order_spacing: 0.03999888280921127
+    time_steps: 45931
+    dx_au: 0.15625
+  driver_sampling: single_mode_husimi_q_fig3b
+  field_normalization: field_amplitude = base_field_amplitude_au * sqrt(|alpha|^2
+    / mean(|alpha|^2))
+source_refs:
+- 'Nature Fig. 3b image and source-data link: https://www.nature.com/articles/s41567-023-02127-y'
+- 'Public source data archive: https://static-content.springer.com/esm/art%3A10.1038%2Fs41567-023-02127-y/MediaObjects/41567_2023_2127_MOESM2_ESM.zip'
+- 'Local Fig. 3 source data archive: raw/assets/gorlach-2023-fig3-source-data/41567_2023_2127_MOESM2_ESM.zip'
+- 'Local supplement: raw/sources/Gorlach et al. - 2023 - High-harmonic generation
+  driven by quantum light.pdf'
+- 'Wiki source summary: wiki/sources/gorlach-2023-hhg-driven-quantum-light-supplement.md'
+notes: Single-mode Husimi-Q coherent-response sampling with a local TDSE dipole-acceleration
+  spectrum library for a closer Gorlach et al. 2023 Fig. 3b reproduction; still not
+  the authors' exact source-data reconstruction.
+outputs:
+  spectra_csv: gorlach_2023_fig3b_proxy_spectra.csv
+  summary_json: gorlach_2023_fig3b_proxy_summary.json
+  figure_png: gorlach_2023_fig3b_proxy.png
+  parameter_yaml: parameters.yaml
