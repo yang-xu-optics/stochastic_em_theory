@@ -1,0 +1,1794 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "facets": {},
+    "total-results": 3359384,
+    "items": [
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              2,
+              26
+            ]
+          ],
+          "date-time": "2026-02-26T17:40:45Z",
+          "timestamp": 1772127645737,
+          "version": "3.50.1"
+        },
+        "description": "Supplemental Information for 10.1021/acs.jctc.8b01291",
+        "reference-count": 0,
+        "publisher": "American Chemical Society (ACS)",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "DOI": "10.1021/acs.jctc.8b01291.s001",
+        "type": "component",
+        "created": {
+          "date-parts": [
+            [
+              2020,
+              4,
+              9
+            ]
+          ],
+          "date-time": "2020-04-09T15:27:17Z",
+          "timestamp": 1586446037000
+        },
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Ultrafast ab Initio Quantum Chemistry Using Matrix Product States"
+        ],
+        "prefix": "10.1021",
+        "member": "316",
+        "deposited": {
+          "date-parts": [
+            [
+              2020,
+              4,
+              9
+            ]
+          ],
+          "date-time": "2020-04-09T15:27:17Z",
+          "timestamp": 1586446037000
+        },
+        "score": 44.347477,
+        "resource": {
+          "primary": {
+            "URL": "https://pubs.acs.org/doi/suppl/10.1021/acs.jctc.8b01291/suppl_file/ct8b01291_si_001.pdf"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              null
+            ]
+          ]
+        },
+        "references-count": 0,
+        "URL": "https://doi.org/10.1021/acs.jctc.8b01291.s001",
+        "relation": {
+          "is-component-of": [
+            {
+              "id-type": "doi",
+              "id": "10.1021/acs.jctc.8b01291",
+              "asserted-by": "object"
+            }
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              5,
+              19
+            ]
+          ],
+          "date-time": "2026-05-19T18:20:50Z",
+          "timestamp": 1779214850781,
+          "version": "3.51.4"
+        },
+        "reference-count": 73,
+        "publisher": "Optica Publishing Group",
+        "issue": "10",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2021,
+                  10,
+                  5
+                ]
+              ],
+              "date-time": "2021-10-05T00:00:00Z",
+              "timestamp": 1633392000000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.1364/OA_License_v1#VOR-OA"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2021,
+                  10,
+                  5
+                ]
+              ],
+              "date-time": "2021-10-05T00:00:00Z",
+              "timestamp": 1633392000000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://opg.optica.org/policies/opg-tdm-policy.json"
+          }
+        ],
+        "funder": [
+          {
+            "DOI": "10.13039/100000183",
+            "name": "Army Research Office",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "W911NF-16-1-0086"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "W911NF-16-1-0086"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/100000183",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          },
+          {
+            "DOI": "10.13039/100000001",
+            "name": "National Science Foundation",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "CCF-1918549"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "CCF-1918549"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/100000001",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          },
+          {
+            "DOI": "10.13039/100000001",
+            "name": "National Science Foundation",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "PHY-2011363"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "PHY-2011363"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/100000001",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "opg.optica.org"
+          ],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Optica"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2021,
+              10,
+              20
+            ]
+          ]
+        },
+        "abstract": "<jats:p>Ultrashort pulses propagating in nonlinear nanophotonic waveguides can simultaneously leverage both temporal and spatial field confinement, promising a route towards single-photon nonlinearities in an all-photonic platform. In this multimode quantum regime, however, faithful numerical simulations of pulse dynamics naïvely require a representation of the state in an exponentially large Hilbert space. Here, we employ a time-domain, matrix product state (MPS) representation to enable efficient simulations by exploiting the entanglement structure of the system. To extract physical insight from these simulations, we develop an algorithm to unravel the MPS quantum state into constituent temporal supermodes, enabling, e.g., access to the phase-space portraits of arbitrary pulse waveforms. As a demonstration, we perform exact numerical simulations of a Kerr soliton in the quantum regime. We observe the development of non-classical Wigner-function negativity in the solitonic mode as well as quantum corrections to the semiclassical dynamics of the pulse. A similar analysis of <jats:inline-formula>\n      <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" display=\"inline\">\n\t<mml:mrow class=\"MJX-TeXAtom-ORD\">\n\t  <mml:msup>\n\t    <mml:mi>χ</mml:mi>\n\t    <mml:mrow class=\"MJX-TeXAtom-ORD\">\n\t      <mml:mo stretchy=\"false\">(</mml:mo>\n\t      <mml:mn>2</mml:mn>\n\t      <mml:mo stretchy=\"false\">)</mml:mo>\n\t    </mml:mrow>\n\t  </mml:msup>\n\t</mml:mrow>\n      </mml:math>\n    </jats:inline-formula> simultons reveals a unique entanglement structure between the fundamental and second harmonics. Our approach is also readily compatible with quantum trajectory theory, allowing full quantum treatment of propagation loss and decoherence. We expect this work to establish the MPS technique as part of a unified engineering framework for the emerging field of broadband quantum photonics.</jats:p>",
+        "DOI": "10.1364/optica.423044",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2021,
+              9,
+              7
+            ]
+          ],
+          "date-time": "2021-09-07T19:30:08Z",
+          "timestamp": 1631043008000
+        },
+        "page": "1306",
+        "update-policy": "https://doi.org/10.1364/crossmark_policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 12,
+        "title": [
+          "Efficient simulation of ultrafast quantum nonlinear optics with matrix product states"
+        ],
+        "prefix": "10.1364",
+        "volume": "8",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-9609-0076",
+            "authenticated-orcid": true,
+            "given": "Ryotatsu",
+            "family": "Yanagimoto",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Stanford University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Edwin",
+            "family": "Ng",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Stanford University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Logan G.",
+            "family": "Wright",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Cornell University"
+              },
+              {
+                "name": "NTT Research, Inc."
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Tatsuhiro",
+            "family": "Onodera",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Cornell University"
+              },
+              {
+                "name": "NTT Research, Inc."
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Hideo",
+            "family": "Mabuchi",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Stanford University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "285",
+        "published-online": {
+          "date-parts": [
+            [
+              2021,
+              10,
+              5
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "optica-8-10-1306-R1",
+            "doi-asserted-by": "publisher",
+            "first-page": "613",
+            "DOI": "10.1038/nphoton.2013.177",
+            "volume": "7",
+            "year": "2013",
+            "journal-title": "Nat. Photonics"
+          },
+          {
+            "key": "optica-8-10-1306-R2",
+            "doi-asserted-by": "publisher",
+            "first-page": "031033",
+            "DOI": "10.1103/PhysRevX.6.031033",
+            "volume": "6",
+            "author": "Tsang",
+            "year": "2016",
+            "journal-title": "Phys. Rev. X"
+          },
+          {
+            "key": "optica-8-10-1306-R3",
+            "doi-asserted-by": "publisher",
+            "first-page": "165",
+            "DOI": "10.1038/nphoton.2007.22",
+            "volume": "1",
+            "author": "Gisin",
+            "year": "2007",
+            "journal-title": "Nat. Photonics"
+          },
+          {
+            "key": "optica-8-10-1306-R4",
+            "doi-asserted-by": "publisher",
+            "first-page": "687",
+            "DOI": "10.1038/nphoton.2009.229",
+            "volume": "3",
+            "author": "O’Brien",
+            "year": "2009",
+            "journal-title": "Nat. Photonics"
+          },
+          {
+            "key": "optica-8-10-1306-R5",
+            "doi-asserted-by": "publisher",
+            "first-page": "685",
+            "DOI": "10.1038/nphoton.2014.192",
+            "volume": "8",
+            "author": "Chang",
+            "year": "2014",
+            "journal-title": "Nat. Photonics"
+          },
+          {
+            "key": "optica-8-10-1306-R6",
+            "doi-asserted-by": "publisher",
+            "first-page": "1460",
+            "DOI": "10.1126/science.abe8770",
+            "volume": "370",
+            "author": "Zhong",
+            "year": "2020",
+            "journal-title": "Science"
+          },
+          {
+            "key": "optica-8-10-1306-R7",
+            "doi-asserted-by": "publisher",
+            "first-page": "1536",
+            "DOI": "10.1364/OPTICA.4.001536",
+            "volume": "4",
+            "author": "Zhang",
+            "year": "2017",
+            "journal-title": "Optica"
+          },
+          {
+            "key": "optica-8-10-1306-R8",
+            "doi-asserted-by": "publisher",
+            "first-page": "1438",
+            "DOI": "10.1364/OPTICA.5.001438",
+            "volume": "5",
+            "author": "Wang",
+            "year": "2018",
+            "journal-title": "Optica"
+          },
+          {
+            "key": "optica-8-10-1306-R9",
+            "doi-asserted-by": "publisher",
+            "first-page": "1654",
+            "DOI": "10.1364/OPTICA.403931",
+            "volume": "7",
+            "author": "Lu",
+            "year": "2020",
+            "journal-title": "Optica"
+          },
+          {
+            "key": "optica-8-10-1306-R10",
+            "doi-asserted-by": "publisher",
+            "first-page": "6763",
+            "DOI": "10.1364/OL.406152",
+            "volume": "45",
+            "author": "Placke",
+            "year": "2020",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "key": "optica-8-10-1306-R11",
+            "doi-asserted-by": "publisher",
+            "first-page": "153906",
+            "DOI": "10.1103/PhysRevLett.122.153906",
+            "volume": "122",
+            "author": "Ramelow",
+            "year": "2019",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-8-10-1306-R12",
+            "doi-asserted-by": "publisher",
+            "first-page": "042322",
+            "DOI": "10.1103/PhysRevA.101.042322",
+            "volume": "101",
+            "author": "Heuck",
+            "year": "2020",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-8-10-1306-R13",
+            "doi-asserted-by": "publisher",
+            "first-page": "1361",
+            "DOI": "10.1364/OPTICA.6.001361",
+            "volume": "6",
+            "author": "Bruch",
+            "year": "2019",
+            "journal-title": "Optica"
+          },
+          {
+            "key": "optica-8-10-1306-R14",
+            "doi-asserted-by": "publisher",
+            "first-page": "40",
+            "DOI": "10.1364/OPTICA.7.000040",
+            "volume": "7",
+            "author": "Jankowski",
+            "year": "2020",
+            "journal-title": "Optica"
+          },
+          {
+            "key": "optica-8-10-1306-R15",
+            "doi-asserted-by": "publisher",
+            "first-page": "1685",
+            "DOI": "10.1364/OE.20.001685",
+            "volume": "20",
+            "author": "Zhang",
+            "year": "2012",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "key": "optica-8-10-1306-R16",
+            "doi-asserted-by": "publisher",
+            "first-page": "240503",
+            "DOI": "10.1103/PhysRevLett.124.240503",
+            "volume": "124",
+            "author": "Yanagimoto",
+            "year": "2020",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-8-10-1306-R17",
+            "doi-asserted-by": "publisher",
+            "first-page": "87",
+            "DOI": "10.1038/nature03804",
+            "volume": "436",
+            "author": "Birnbaum",
+            "year": "2005",
+            "journal-title": "Nature"
+          },
+          {
+            "key": "optica-8-10-1306-R18",
+            "doi-asserted-by": "publisher",
+            "first-page": "993",
+            "DOI": "10.1364/OE.24.000993",
+            "volume": "24",
+            "author": "Javanainen",
+            "year": "2016",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "key": "optica-8-10-1306-R20",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1017/CBO9780511783616",
+            "volume-title": "The Quantum Theory of Nonlinear Optics",
+            "author": "Drummond",
+            "year": "2014"
+          },
+          {
+            "key": "optica-8-10-1306-R21",
+            "doi-asserted-by": "publisher",
+            "first-page": "040502",
+            "DOI": "10.1103/PhysRevLett.93.040502",
+            "volume": "93",
+            "author": "Vidal",
+            "year": "2004",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-8-10-1306-R22",
+            "doi-asserted-by": "publisher",
+            "first-page": "96",
+            "DOI": "10.1016/j.aop.2010.09.012",
+            "volume": "326",
+            "author": "Schollwöck",
+            "year": "2011",
+            "journal-title": "Ann. Phys."
+          },
+          {
+            "key": "optica-8-10-1306-R23",
+            "doi-asserted-by": "publisher",
+            "first-page": "117",
+            "DOI": "10.1016/j.aop.2014.06.013",
+            "volume": "349",
+            "author": "Orús",
+            "year": "2014",
+            "journal-title": "Ann. Phys."
+          },
+          {
+            "key": "optica-8-10-1306-R24",
+            "doi-asserted-by": "publisher",
+            "first-page": "150403",
+            "DOI": "10.1103/PhysRevLett.105.150403",
+            "volume": "105",
+            "author": "Muth",
+            "year": "2010",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-8-10-1306-R25",
+            "doi-asserted-by": "publisher",
+            "first-page": "020505",
+            "DOI": "10.1103/PhysRevLett.109.020505",
+            "volume": "109",
+            "author": "Daley",
+            "year": "2012",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-8-10-1306-R26",
+            "doi-asserted-by": "publisher",
+            "first-page": "062304",
+            "DOI": "10.1103/PhysRevA.97.062304",
+            "volume": "97",
+            "author": "Lubasch",
+            "year": "2018",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-8-10-1306-R27",
+            "doi-asserted-by": "publisher",
+            "first-page": "1743",
+            "DOI": "10.1038/s41467-017-01416-4",
+            "volume": "8",
+            "author": "Manzoni",
+            "year": "2017",
+            "journal-title": "Nat. Commun."
+          },
+          {
+            "key": "optica-8-10-1306-R28",
+            "doi-asserted-by": "publisher",
+            "first-page": "031011",
+            "DOI": "10.1103/PhysRevX.10.031011",
+            "volume": "10",
+            "author": "Mahmoodian",
+            "year": "2020",
+            "journal-title": "Phys. Rev. X"
+          },
+          {
+            "key": "optica-8-10-1306-R29",
+            "doi-asserted-by": "publisher",
+            "first-page": "1882",
+            "DOI": "10.1103/PhysRev.177.1882",
+            "volume": "177",
+            "author": "Cahill",
+            "year": "1969",
+            "journal-title": "Phys. Rev."
+          },
+          {
+            "key": "optica-8-10-1306-R30",
+            "doi-asserted-by": "publisher",
+            "first-page": "513",
+            "DOI": "10.1103/RevModPhys.77.513",
+            "volume": "77",
+            "author": "Braunstein",
+            "year": "2005",
+            "journal-title": "Rev. Mod. Phys."
+          },
+          {
+            "key": "optica-8-10-1306-R31",
+            "doi-asserted-by": "publisher",
+            "first-page": "012310",
+            "DOI": "10.1103/PhysRevA.64.012310",
+            "volume": "64",
+            "author": "Gottesman",
+            "year": "2001",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-8-10-1306-R32",
+            "volume-title": "Quantum Computation and Quantum Information",
+            "author": "Nielsen",
+            "year": "2000"
+          },
+          {
+            "key": "optica-8-10-1306-R33",
+            "doi-asserted-by": "publisher",
+            "first-page": "150501",
+            "DOI": "10.1103/PhysRevLett.111.150501",
+            "volume": "111",
+            "author": "Humphreys",
+            "year": "2013",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-8-10-1306-R34",
+            "doi-asserted-by": "publisher",
+            "first-page": "041017",
+            "DOI": "10.1103/PhysRevX.5.041017",
+            "volume": "5",
+            "author": "Brecht",
+            "year": "2015",
+            "journal-title": "Phys. Rev. X"
+          },
+          {
+            "key": "optica-8-10-1306-R35",
+            "doi-asserted-by": "publisher",
+            "first-page": "373",
+            "DOI": "10.1126/science.aay2645",
+            "volume": "366",
+            "author": "Asavanant",
+            "year": "2019",
+            "journal-title": "Science"
+          },
+          {
+            "key": "optica-8-10-1306-R36",
+            "doi-asserted-by": "publisher",
+            "first-page": "534",
+            "DOI": "10.1364/OPTICA.5.000534",
+            "volume": "5",
+            "author": "Ansari",
+            "year": "2018",
+            "journal-title": "Optica"
+          },
+          {
+            "key": "optica-8-10-1306-R37",
+            "doi-asserted-by": "publisher",
+            "first-page": "8",
+            "DOI": "10.1364/OPTICA.4.000008",
+            "volume": "4",
+            "author": "Lukens",
+            "year": "2017",
+            "journal-title": "Optica"
+          },
+          {
+            "key": "optica-8-10-1306-R38",
+            "doi-asserted-by": "publisher",
+            "first-page": "109",
+            "DOI": "10.1038/nphoton.2013.340",
+            "volume": "8",
+            "author": "Roslund",
+            "year": "2014",
+            "journal-title": "Nat. Photonics"
+          },
+          {
+            "key": "optica-8-10-1306-R39",
+            "doi-asserted-by": "publisher",
+            "first-page": "025001",
+            "DOI": "10.1103/RevModPhys.91.025001",
+            "volume": "91",
+            "author": "Chitambar",
+            "year": "2019",
+            "journal-title": "Rev. Mod. Phys."
+          },
+          {
+            "key": "optica-8-10-1306-R40",
+            "doi-asserted-by": "publisher",
+            "first-page": "052350",
+            "DOI": "10.1103/PhysRevA.98.052350",
+            "volume": "98",
+            "author": "Albarelli",
+            "year": "2018",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-8-10-1306-R41",
+            "volume-title": "Nonlinear Fiber Optics",
+            "author": "Agrawal",
+            "year": "2019"
+          },
+          {
+            "key": "optica-8-10-1306-R42",
+            "doi-asserted-by": "publisher",
+            "first-page": "147902",
+            "DOI": "10.1103/PhysRevLett.91.147902",
+            "volume": "91",
+            "author": "Vidal",
+            "year": "2003",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-8-10-1306-R43",
+            "doi-asserted-by": "publisher",
+            "first-page": "305",
+            "DOI": "10.1088/1367-2630/8/12/305",
+            "volume": "8",
+            "author": "García-Ripoll",
+            "year": "2006",
+            "journal-title": "New J. Phys."
+          },
+          {
+            "key": "optica-8-10-1306-R44",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1017/CBO9780511813948",
+            "volume-title": "Quantum Measurement and Control",
+            "author": "Wiseman",
+            "year": "2009"
+          },
+          {
+            "key": "optica-8-10-1306-R45",
+            "doi-asserted-by": "publisher",
+            "first-page": "5729",
+            "DOI": "10.1103/PhysRevA.40.5729",
+            "volume": "40",
+            "author": "Haus",
+            "year": "1989",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-8-10-1306-R46",
+            "doi-asserted-by": "publisher",
+            "first-page": "3836",
+            "DOI": "10.1103/PhysRevA.43.3836",
+            "volume": "43",
+            "author": "Wright",
+            "year": "1991",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-8-10-1306-R47",
+            "volume-title": "Optical Solitons",
+            "author": "Kivshar",
+            "year": "2003"
+          },
+          {
+            "key": "optica-8-10-1306-R48",
+            "doi-asserted-by": "publisher",
+            "first-page": "2390",
+            "DOI": "10.1364/JOSAB.10.002390",
+            "volume": "10",
+            "author": "Werner",
+            "year": "1993",
+            "journal-title": "J. Opt. Soc. Am. B"
+          },
+          {
+            "key": "optica-8-10-1306-R49",
+            "doi-asserted-by": "publisher",
+            "first-page": "1605",
+            "DOI": "10.1103/PhysRev.130.1605",
+            "volume": "130",
+            "author": "Lieb",
+            "year": "1963",
+            "journal-title": "Phys. Rev."
+          },
+          {
+            "key": "optica-8-10-1306-R50",
+            "doi-asserted-by": "publisher",
+            "first-page": "083065",
+            "DOI": "10.1088/1367-2630/12/8/083065",
+            "volume": "12",
+            "author": "Muth",
+            "year": "2010",
+            "journal-title": "New J. Phys."
+          },
+          {
+            "key": "optica-8-10-1306-R51",
+            "doi-asserted-by": "publisher",
+            "first-page": "013602",
+            "DOI": "10.1103/PhysRevA.82.013602",
+            "volume": "82",
+            "author": "Muth",
+            "year": "2010",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-8-10-1306-R52",
+            "doi-asserted-by": "publisher",
+            "first-page": "59",
+            "DOI": "10.1016/j.cpc.2017.12.015",
+            "volume": "225",
+            "author": "Jaschke",
+            "year": "2018",
+            "journal-title": "Comput. Phys. Commun."
+          },
+          {
+            "key": "optica-8-10-1306-R53",
+            "doi-asserted-by": "publisher",
+            "first-page": "P05001",
+            "DOI": "10.1088/1742-5468/2011/05/P05001",
+            "volume": "2011",
+            "author": "Bauer",
+            "year": "2011",
+            "journal-title": "J. Stat. Mech."
+          },
+          {
+            "key": "optica-8-10-1306-R54",
+            "doi-asserted-by": "publisher",
+            "first-page": "1956",
+            "DOI": "10.1103/PhysRevA.60.1956",
+            "volume": "60",
+            "author": "Sornborger",
+            "year": "1999",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-8-10-1306-R55",
+            "doi-asserted-by": "publisher",
+            "first-page": "eaan8083",
+            "DOI": "10.1126/science.aan8083",
+            "volume": "361",
+            "author": "Kippenberg",
+            "year": "2018",
+            "journal-title": "Science"
+          },
+          {
+            "key": "optica-8-10-1306-R56",
+            "doi-asserted-by": "publisher",
+            "first-page": "2632",
+            "DOI": "10.1364/OL.32.002632",
+            "volume": "32",
+            "author": "El-Ganainy",
+            "year": "2007",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "key": "optica-8-10-1306-R57",
+            "doi-asserted-by": "publisher",
+            "first-page": "063837",
+            "DOI": "10.1103/PhysRevA.85.063837",
+            "volume": "85",
+            "author": "Alexeeva",
+            "year": "2012",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-8-10-1306-R58",
+            "doi-asserted-by": "publisher",
+            "first-page": "1460",
+            "DOI": "10.1364/OPTICA.3.001460",
+            "volume": "3",
+            "author": "Clements",
+            "year": "2016",
+            "journal-title": "Optica"
+          },
+          {
+            "key": "optica-8-10-1306-R59",
+            "doi-asserted-by": "publisher",
+            "first-page": "58",
+            "DOI": "10.1103/PhysRevLett.73.58",
+            "volume": "73",
+            "author": "Reck",
+            "year": "1994",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-8-10-1306-R60",
+            "doi-asserted-by": "publisher",
+            "first-page": "3",
+            "DOI": "10.1140/epjst/e2012-01532-4",
+            "volume": "203",
+            "author": "Olivares",
+            "year": "2012",
+            "journal-title": "Eur. Phys. J. Spec. Top."
+          },
+          {
+            "key": "optica-8-10-1306-R61",
+            "doi-asserted-by": "publisher",
+            "first-page": "386",
+            "DOI": "10.1364/JOSAB.7.000386",
+            "volume": "7",
+            "author": "Haus",
+            "year": "1990",
+            "journal-title": "J. Opt. Soc. Am. B"
+          },
+          {
+            "key": "optica-8-10-1306-R62",
+            "doi-asserted-by": "publisher",
+            "first-page": "1841",
+            "DOI": "10.1103/PhysRevLett.58.1841",
+            "volume": "58",
+            "author": "Carter",
+            "year": "1987",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-8-10-1306-R63",
+            "doi-asserted-by": "publisher",
+            "first-page": "854",
+            "DOI": "10.1103/PhysRevA.40.854",
+            "volume": "40",
+            "author": "Lai",
+            "year": "1989",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-8-10-1306-R64",
+            "doi-asserted-by": "publisher",
+            "first-page": "043859",
+            "DOI": "10.1103/PhysRevA.98.043859",
+            "volume": "98",
+            "author": "Di Mauro Villari",
+            "year": "2018",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-8-10-1306-R65",
+            "doi-asserted-by": "publisher",
+            "first-page": "1339",
+            "DOI": "10.1080/09500340108232466",
+            "volume": "48",
+            "author": "Korolkova",
+            "year": "2001",
+            "journal-title": "J. Mod. Opt."
+          },
+          {
+            "key": "optica-8-10-1306-R66",
+            "doi-asserted-by": "publisher",
+            "first-page": "4192",
+            "DOI": "10.1103/PhysRevA.46.4192",
+            "volume": "46",
+            "author": "Singer",
+            "year": "1992",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-8-10-1306-R67",
+            "doi-asserted-by": "publisher",
+            "first-page": "396",
+            "DOI": "10.1088/1464-4266/6/10/003",
+            "volume": "6",
+            "author": "Kenfack",
+            "year": "2004",
+            "journal-title": "J. Opt. B"
+          },
+          {
+            "key": "optica-8-10-1306-R68",
+            "doi-asserted-by": "publisher",
+            "first-page": "035001",
+            "DOI": "10.1088/2515-7647/ab87fc",
+            "volume": "2",
+            "author": "Helt",
+            "year": "2020",
+            "journal-title": "J. Phys. Photon."
+          },
+          {
+            "key": "optica-8-10-1306-R69",
+            "doi-asserted-by": "publisher",
+            "first-page": "30",
+            "DOI": "10.1364/JOSAB.7.000030",
+            "volume": "7",
+            "author": "Shirasaki",
+            "year": "1990",
+            "journal-title": "J. Opt. Soc. Am. B"
+          },
+          {
+            "key": "optica-8-10-1306-R70",
+            "doi-asserted-by": "publisher",
+            "first-page": "R1107",
+            "DOI": "10.1103/PhysRevA.56.R1107",
+            "volume": "56",
+            "author": "Drummond",
+            "year": "1997",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-8-10-1306-R71",
+            "doi-asserted-by": "publisher",
+            "first-page": "1189",
+            "DOI": "10.1364/OL.16.001189",
+            "volume": "16",
+            "author": "Raymer",
+            "year": "1991",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "key": "optica-8-10-1306-R72",
+            "doi-asserted-by": "publisher",
+            "first-page": "407",
+            "DOI": "10.1016/0375-9601(94)00989-3",
+            "volume": "197",
+            "author": "Buryak",
+            "year": "1995",
+            "journal-title": "Phys. Lett. A"
+          },
+          {
+            "key": "optica-8-10-1306-R73",
+            "doi-asserted-by": "publisher",
+            "first-page": "63",
+            "DOI": "10.1016/S0370-1573(02)00196-5",
+            "volume": "370",
+            "author": "Buryak",
+            "year": "2002",
+            "journal-title": "Phys. Rep."
+          },
+          {
+            "key": "optica-8-10-1306-R74",
+            "doi-asserted-by": "publisher",
+            "first-page": "032314",
+            "DOI": "10.1103/PhysRevA.65.032314",
+            "volume": "65",
+            "author": "Vidal",
+            "year": "2002",
+            "journal-title": "Phys. Rev. Lett."
+          }
+        ],
+        "container-title": [
+          "Optica"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://opg.optica.org/viewmedia.cfm?URI=optica-8-10-1306",
+            "content-type": "application/pdf",
+            "content-version": "vor",
+            "intended-application": "syndication"
+          },
+          {
+            "URL": "https://opg.optica.org/viewmedia.cfm?URI=optica-8-10-1306&seq=0",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2024,
+              8,
+              6
+            ]
+          ],
+          "date-time": "2024-08-06T19:28:22Z",
+          "timestamp": 1722972502000
+        },
+        "score": 43.802647,
+        "resource": {
+          "primary": {
+            "URL": "https://opg.optica.org/abstract.cfm?URI=optica-8-10-1306"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2021,
+              10,
+              5
+            ]
+          ]
+        },
+        "references-count": 73,
+        "journal-issue": {
+          "issue": "10",
+          "published-online": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          }
+        },
+        "URL": "https://doi.org/10.1364/optica.423044",
+        "ISSN": [
+          "2334-2536"
+        ],
+        "issn-type": [
+          {
+            "value": "2334-2536",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2021,
+              10,
+              5
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "Optica Publishing Group",
+            "name": "publisher",
+            "label": "This article is maintained by"
+          },
+          {
+            "value": "https://doi.org/10.1364/OPTICA.423044",
+            "name": "articlelink",
+            "label": "Crossref DOI link to publisher maintained version"
+          },
+          {
+            "value": "research-article",
+            "name": "content_type",
+            "label": "Article type"
+          },
+          {
+            "value": "Screened by Similarity Check",
+            "name": "cross_check",
+            "label": "Similarity check"
+          },
+          {
+            "value": "Yes",
+            "order": 0,
+            "name": "peer_reviewed",
+            "label": "Peer reviewed",
+            "group": {
+              "name": "peer_review",
+              "label": "Peer review"
+            }
+          },
+          {
+            "value": "Single blind",
+            "order": 1,
+            "name": "review_process",
+            "label": "Review process",
+            "group": {
+              "name": "peer_review",
+              "label": "Peer review"
+            }
+          },
+          {
+            "value": "22 February 2021",
+            "order": 0,
+            "name": "received",
+            "label": "Received",
+            "group": {
+              "name": "publication_history",
+              "label": "Publication History"
+            }
+          },
+          {
+            "value": "6 September 2021",
+            "order": 1,
+            "name": "accepted",
+            "label": "Accepted",
+            "group": {
+              "name": "publication_history",
+              "label": "Publication History"
+            }
+          },
+          {
+            "value": "5 October 2021",
+            "order": 2,
+            "name": "published",
+            "label": "Published",
+            "group": {
+              "name": "publication_history",
+              "label": "Publication History"
+            }
+          },
+          {
+            "value": "© 2021 Optical Society of America under the terms of the OSA Open Access Publishing Agreement",
+            "name": "copyright",
+            "label": "Copyright"
+          }
+        ]
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              9,
+              6
+            ]
+          ],
+          "date-time": "2024-09-06T01:06:27Z",
+          "timestamp": 1725584787615
+        },
+        "publisher-location": "Boston, MA",
+        "reference-count": 0,
+        "publisher": "Springer US",
+        "isbn-type": [
+          {
+            "type": "print",
+            "value": "9781461350514"
+          },
+          {
+            "type": "electronic",
+            "value": "9781461503873"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2003
+            ]
+          ]
+        },
+        "DOI": "10.1007/978-1-4615-0387-3_4",
+        "type": "book-chapter",
+        "created": {
+          "date-parts": [
+            [
+              2011,
+              6,
+              3
+            ]
+          ],
+          "date-time": "2011-06-03T00:14:58Z",
+          "timestamp": 1307060098000
+        },
+        "page": "91-108",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Ultrafast Diffractive X-Ray Optics"
+        ],
+        "prefix": "10.1007",
+        "author": [
+          {
+            "given": "B. W.",
+            "family": "Adams",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "297",
+        "container-title": [
+          "Nonlinear Optics, Quantum Optics, and Ultrafast Phenomena with X-Rays"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "http://link.springer.com/content/pdf/10.1007/978-1-4615-0387-3_4",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2014,
+              1,
+              9
+            ]
+          ],
+          "date-time": "2014-01-09T10:58:17Z",
+          "timestamp": 1389265097000
+        },
+        "score": 34.139748,
+        "resource": {
+          "primary": {
+            "URL": "http://link.springer.com/10.1007/978-1-4615-0387-3_4"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2003
+            ]
+          ]
+        },
+        "ISBN": [
+          "9781461350514",
+          "9781461503873"
+        ],
+        "references-count": 0,
+        "URL": "https://doi.org/10.1007/978-1-4615-0387-3_4",
+        "published": {
+          "date-parts": [
+            [
+              2003
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              31
+            ]
+          ],
+          "date-time": "2024-10-31T01:16:21Z",
+          "timestamp": 1730337381242,
+          "version": "3.28.0"
+        },
+        "publisher-location": "Washington, D.C.",
+        "reference-count": 5,
+        "publisher": "OSA",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2013
+            ]
+          ]
+        },
+        "DOI": "10.1364/qim.2013.w6.17",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2013,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2013-07-01T14:23:22Z",
+          "timestamp": 1372688602000
+        },
+        "page": "W6.17",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Matrix product states for quantum metrology"
+        ],
+        "prefix": "10.1364",
+        "author": [
+          {
+            "given": "Marcin",
+            "family": "Jarzyna",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Rafał",
+            "family": "Demkowicz-Dobrzański",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "285",
+        "reference": [
+          {
+            "key": "QIM-2013-W6.17-R1",
+            "doi-asserted-by": "crossref",
+            "first-page": "3439",
+            "DOI": "10.1103/PhysRevLett.72.3439",
+            "volume": "72",
+            "author": "Braunstein",
+            "year": "1994",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "QIM-2013-W6.17-R2",
+            "doi-asserted-by": "crossref",
+            "first-page": "406",
+            "DOI": "10.1038/nphys1958",
+            "volume": "7",
+            "author": "Escher",
+            "year": "2011",
+            "journal-title": "Nature Physics"
+          },
+          {
+            "key": "QIM-2013-W6.17-R3",
+            "doi-asserted-by": "crossref",
+            "first-page": "1063",
+            "DOI": "10.1038/ncomms2067",
+            "volume": "3",
+            "author": "Demkowicz-Dobrzański",
+            "year": "2012",
+            "journal-title": "Nature Communications"
+          },
+          {
+            "key": "QIM-2013-W6.17-R4",
+            "doi-asserted-by": "crossref",
+            "first-page": "443",
+            "DOI": "10.1007/BF02099178",
+            "volume": "144",
+            "author": "Fannes",
+            "year": "1992",
+            "journal-title": "Commun. Math. Phys."
+          },
+          {
+            "key": "QIM-2013-W6.17-R5",
+            "doi-asserted-by": "crossref",
+            "first-page": "094423",
+            "DOI": "10.1103/PhysRevB.73.094423",
+            "volume": "73",
+            "author": "Verstraete",
+            "year": "2006",
+            "journal-title": "Phys. Rev. B"
+          }
+        ],
+        "event": {
+          "name": "Quantum Information and Measurement",
+          "start": {
+            "date-parts": [
+              [
+                2013
+              ]
+            ]
+          },
+          "sponsor": [
+            "The Optical Society"
+          ],
+          "location": "Rochester, New York",
+          "acronym": "QIM"
+        },
+        "container-title": [
+          "The Rochester Conferences on Coherence and Quantum Optics and the Quantum Information and Measurement meeting"
+        ],
+        "link": [
+          {
+            "URL": "https://www.osapublishing.org/viewmedia.cfm?URI=QIM-2013-W6.17&seq=0",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2022,
+              1,
+              27
+            ]
+          ],
+          "date-time": "2022-01-27T00:05:47Z",
+          "timestamp": 1643241947000
+        },
+        "score": 33.89402,
+        "resource": {
+          "primary": {
+            "URL": "https://opg.optica.org/abstract.cfm?URI=QIM-2013-W6.17"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2013
+            ]
+          ]
+        },
+        "references-count": 5,
+        "URL": "https://doi.org/10.1364/qim.2013.w6.17",
+        "published": {
+          "date-parts": [
+            [
+              2013
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              9,
+              6
+            ]
+          ],
+          "date-time": "2024-09-06T01:06:27Z",
+          "timestamp": 1725584787289
+        },
+        "publisher-location": "Boston, MA",
+        "reference-count": 0,
+        "publisher": "Springer US",
+        "isbn-type": [
+          {
+            "type": "print",
+            "value": "9781461350514"
+          },
+          {
+            "type": "electronic",
+            "value": "9781461503873"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2003
+            ]
+          ]
+        },
+        "DOI": "10.1007/978-1-4615-0387-3_2",
+        "type": "book-chapter",
+        "created": {
+          "date-parts": [
+            [
+              2011,
+              6,
+              3
+            ]
+          ],
+          "date-time": "2011-06-03T00:14:58Z",
+          "timestamp": 1307060098000
+        },
+        "page": "19-33",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Nonlinear Optics of Free Electrons"
+        ],
+        "prefix": "10.1007",
+        "author": [
+          {
+            "given": "B. W.",
+            "family": "Adams",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "297",
+        "container-title": [
+          "Nonlinear Optics, Quantum Optics, and Ultrafast Phenomena with X-Rays"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "http://link.springer.com/content/pdf/10.1007/978-1-4615-0387-3_2",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2014,
+              1,
+              9
+            ]
+          ],
+          "date-time": "2014-01-09T10:58:17Z",
+          "timestamp": 1389265097000
+        },
+        "score": 33.281372,
+        "resource": {
+          "primary": {
+            "URL": "http://link.springer.com/10.1007/978-1-4615-0387-3_2"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2003
+            ]
+          ]
+        },
+        "ISBN": [
+          "9781461350514",
+          "9781461503873"
+        ],
+        "references-count": 0,
+        "URL": "https://doi.org/10.1007/978-1-4615-0387-3_2",
+        "published": {
+          "date-parts": [
+            [
+              2003
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2025,
+              8,
+              6
+            ]
+          ],
+          "date-time": "2025-08-06T13:40:24Z",
+          "timestamp": 1754487624786
+        },
+        "publisher-location": "Boston, MA",
+        "reference-count": 0,
+        "publisher": "Springer US",
+        "isbn-type": [
+          {
+            "type": "print",
+            "value": "9781461350514"
+          },
+          {
+            "type": "electronic",
+            "value": "9781461503873"
+          }
+        ],
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2003,
+                  1,
+                  1
+                ]
+              ],
+              "date-time": "2003-01-01T00:00:00Z",
+              "timestamp": 1041379200000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "http://www.springer.com/tdm"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2003
+            ]
+          ]
+        },
+        "DOI": "10.1007/978-1-4615-0387-3",
+        "type": "book",
+        "created": {
+          "date-parts": [
+            [
+              2011,
+              6,
+              3
+            ]
+          ],
+          "date-time": "2011-06-03T00:14:58Z",
+          "timestamp": 1307060098000
+        },
+        "source": "Crossref",
+        "is-referenced-by-count": 18,
+        "title": [
+          "Nonlinear Optics, Quantum Optics, and Ultrafast Phenomena with X-Rays"
+        ],
+        "prefix": "10.1007",
+        "member": "297",
+        "language": "en",
+        "link": [
+          {
+            "URL": "http://link.springer.com/content/pdf/10.1007/978-1-4615-0387-3.pdf",
+            "content-type": "application/pdf",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "http://link.springer.com/content/pdf/10.1007/978-1-4615-0387-3",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2019,
+              4,
+              6
+            ]
+          ],
+          "date-time": "2019-04-06T11:17:16Z",
+          "timestamp": 1554549436000
+        },
+        "score": 33.087635,
+        "resource": {
+          "primary": {
+            "URL": "http://link.springer.com/10.1007/978-1-4615-0387-3"
+          }
+        },
+        "editor": [
+          {
+            "given": "Bernhard W.",
+            "family": "Adams",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "editor",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "issued": {
+          "date-parts": [
+            [
+              2003
+            ]
+          ]
+        },
+        "ISBN": [
+          "9781461350514",
+          "9781461503873"
+        ],
+        "references-count": 0,
+        "URL": "https://doi.org/10.1007/978-1-4615-0387-3",
+        "published": {
+          "date-parts": [
+            [
+              2003
+            ]
+          ]
+        }
+      }
+    ],
+    "items-per-page": 6,
+    "query": {
+      "start-index": 0,
+      "search-terms": null
+    }
+  }
+}

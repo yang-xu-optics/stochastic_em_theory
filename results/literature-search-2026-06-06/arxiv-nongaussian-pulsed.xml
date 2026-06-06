@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/XXtLjeouVtzKyaVkDj+FXGymLkA</id>
+  <title>arXiv Query: search_query=all:non-Gaussian AND all:"pulsed squeezing"&amp;id_list=&amp;start=0&amp;max_results=8</title>
+  <updated>2026-06-06T15:52:58Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:non-Gaussian+AND+all:%22pulsed+squeezing%22&amp;start=0&amp;max_results=8&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>8</opensearch:itemsPerPage>
+  <opensearch:totalResults>3</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2111.13799v1</id>
+    <title>Onset of non-Gaussian quantum physics in pulsed squeezing with mesoscopic fields</title>
+    <updated>2021-11-27T02:49:10Z</updated>
+    <link href="https://arxiv.org/abs/2111.13799v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2111.13799v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study the emergence of non-Gaussian quantum features in pulsed squeezed light generation with a mesoscopic number (i.e., dozens to hundreds) of pump photons. Due to the strong optical nonlinearities necessarily involved in this regime, squeezing occurs alongside significant pump depletion, compromising the predictions made by conventional semiclassical models for squeezing. Furthermore, nonlinear interactions among multiple frequency modes render the system dynamics exponentially intractable in naïve quantum models, requiring a more sophisticated modeling framework. To this end, we construct a nonlinear Gaussian approximation to the squeezing dynamics, defining a "Gaussian interaction frame" (GIF) in which non-Gaussian quantum dynamics can be isolated and concisely described using a few dominant (i.e., principal) supermodes. Numerical simulations of our model reveal non-Gaussian distortions of squeezing in the mesoscopic regime, largely associated with signal-pump entanglement. We argue that the state of the art in nonlinear nanophotonics is quickly approaching this regime, providing an all-optical platform for experimental studies of the semiclassical-to-quantum transition in a rich paradigm of coherent, multimode nonlinear dynamics. Mesoscopic pulsed squeezing thus provides an intriguing case study of the rapid rise in dynamic complexity associated with semiclassical-to-quantum crossover, which we view as a correlate of the emergence of new information-processing capacities in the quantum regime.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-11-27T02:49:10Z</published>
+    <arxiv:comment>The first two authors contributed equally to this work; 16 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Optica 9, 379 (2022)</arxiv:journal_ref>
+    <author>
+      <name>Ryotatsu Yanagimoto</name>
+    </author>
+    <author>
+      <name>Edwin Ng</name>
+    </author>
+    <author>
+      <name>Atsushi Yamamura</name>
+    </author>
+    <author>
+      <name>Tatsuhiro Onodera</name>
+    </author>
+    <author>
+      <name>Logan G. Wright</name>
+    </author>
+    <author>
+      <name>Marc Jankowski</name>
+    </author>
+    <author>
+      <name>M. M. Fejer</name>
+    </author>
+    <author>
+      <name>Peter L. McMahon</name>
+    </author>
+    <author>
+      <name>Hideo Mabuchi</name>
+    </author>
+    <arxiv:doi>10.1364/OPTICA.447782</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1364/OPTICA.447782" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1907.08004v2</id>
+    <title>Distillation of Squeezing using a pulsed engineered PDC source</title>
+    <updated>2020-10-06T08:09:55Z</updated>
+    <link href="https://arxiv.org/abs/1907.08004v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1907.08004v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Hybrid quantum information processing combines the advantages of discrete and continues variable protocols by realizing protocols consisting of photon counting and homodyne measurements. However, the mode structure of pulsed sources and the properties of the detection schemes often require the use optical filters in order to combine both detection methods in a common experiment. This limits the efficiency and the overall achievable squeezing of the experiment. In our work, we use photon subtraction to implement the distillation of pulsed squeezed states originating from a genuinely spatially and temporally single-mode parametric down-conversion source in non-linear waveguides. Due to the distillation, we witness an improvement of $0.17~\mathrm{dB}$ from an initial squeezing value of $-1.648 \pm 0.002~\mathrm{dB}$, while achieving a purity of $0.58$, and confirm the non-Gaussianity of the distilled state via the higher-order cumulants. With this, we demonstrate the source's suitability for scalable hybrid quantum network applications with pulsed quantum light.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-07-18T11:50:18Z</published>
+    <arxiv:comment>$©$ 2020 Optical Society of America. Users may use, reuse, and build upon the article, or use the article for text or data mining, so long as such uses are for non-commercial purposes and appropriate attribution is maintained. All other rights are reserved</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Optics Express Vol. 28, Issue 21, pp. 30784-30796 (2020)</arxiv:journal_ref>
+    <author>
+      <name>Thomas Dirmeier</name>
+    </author>
+    <author>
+      <name>Johannes Tiedau</name>
+    </author>
+    <author>
+      <name>Imran Khan</name>
+    </author>
+    <author>
+      <name>Vahid Ansari</name>
+    </author>
+    <author>
+      <name>Christian R. Müller</name>
+    </author>
+    <author>
+      <name>Christine Silberhorn</name>
+    </author>
+    <author>
+      <name>Christoph Marquardt</name>
+    </author>
+    <author>
+      <name>Gerd Leuchs</name>
+    </author>
+    <arxiv:doi>10.1364/OE.402178</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1364/OE.402178" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1311.0943v1</id>
+    <title>Generation of picosecond pulsed coherent state superpositions</title>
+    <updated>2013-11-05T01:30:08Z</updated>
+    <link href="https://arxiv.org/abs/1311.0943v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1311.0943v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present the generation of approximated coherent state superpositions - referred to as Schrödinger cat states - by the process of subtracting single photons from picosecond pulsed squeezed states of light at 830 nm. The squeezed vacuum states are produced by spontaneous parametric down-conversion (SPDC) in a periodically poled KTiOPO4 crystal while the single photons are probabilistically subtracted using a beamsplitter and a single photon detector. The resulting states are fully characterized with time-resolved homodyne quantum state tomography. Varying the pump power of the SPDC, we generated different states which exhibit non-Gaussian behavior.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-11-05T01:30:08Z</published>
+    <arxiv:comment>17 pages, 8 figures, 3 tables</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Ruifang Dong</name>
+    </author>
+    <author>
+      <name>Anders Tipsmark</name>
+    </author>
+    <author>
+      <name>Amine Laghaout</name>
+    </author>
+    <author>
+      <name>Leonid A. Krivitsky</name>
+    </author>
+    <author>
+      <name>Miroslav Ježek</name>
+    </author>
+    <author>
+      <name>Ulrik L. Andersen</name>
+    </author>
+    <arxiv:doi>10.1364/JOSAB.31.001192</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1364/JOSAB.31.001192" title="doi"/>
+  </entry>
+</feed>

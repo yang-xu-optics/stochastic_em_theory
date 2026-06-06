@@ -1,0 +1,2708 @@
+{
+  "meta": {
+    "count": 3,
+    "db_response_time_ms": 29,
+    "page": 1,
+    "per_page": 10,
+    "groups_count": null,
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W4386694424",
+      "doi": "https://doi.org/10.48550/arxiv.2309.04845",
+      "title": "Classical Model for Broadband Squeezed Vacuum Driving Two-Photon Absorption or Sum Frequency Generation",
+      "display_name": "Classical Model for Broadband Squeezed Vacuum Driving Two-Photon Absorption or Sum Frequency Generation",
+      "relevance_score": 17.0297,
+      "publication_year": 2023,
+      "publication_date": "2023-09-09",
+      "ids": {
+        "openalex": "https://openalex.org/W4386694424",
+        "doi": "https://doi.org/10.48550/arxiv.2309.04845"
+      },
+      "language": "en",
+      "primary_location": {
+        "id": "pmh:oai:arXiv.org:2309.04845",
+        "is_oa": true,
+        "landing_page_url": "http://arxiv.org/abs/2309.04845",
+        "pdf_url": "https://arxiv.org/pdf/2309.04845",
+        "source": {
+          "id": "https://openalex.org/S4306400194",
+          "display_name": "arXiv (Cornell University)",
+          "issn_l": null,
+          "issn": null,
+          "is_oa": true,
+          "is_in_doaj": false,
+          "is_core": false,
+          "host_organization": "https://openalex.org/I205783295",
+          "host_organization_name": "Cornell University",
+          "host_organization_lineage": [
+            "https://openalex.org/I205783295"
+          ],
+          "host_organization_lineage_names": [],
+          "type": "repository"
+        },
+        "license": "cc-by",
+        "license_id": "https://openalex.org/licenses/cc-by",
+        "version": "submittedVersion",
+        "is_accepted": false,
+        "is_published": false,
+        "raw_source_name": "",
+        "raw_type": "text"
+      },
+      "type": "preprint",
+      "indexed_in": [
+        "arxiv",
+        "datacite"
+      ],
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2309.04845",
+        "any_repository_has_fulltext": true
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5086999377",
+            "display_name": "Michael G. Raymer",
+            "orcid": "https://orcid.org/0000-0002-1661-7182"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": true,
+          "raw_author_name": "Raymer, Michael G.",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5043238995",
+            "display_name": "Tiemo Landes",
+            "orcid": "https://orcid.org/0000-0001-5147-5338"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Landes, Tiemo",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        }
+      ],
+      "institutions": [],
+      "countries_distinct_count": 0,
+      "institutions_distinct_count": 2,
+      "corresponding_author_ids": [
+        "https://openalex.org/A5086999377"
+      ],
+      "corresponding_institution_ids": [],
+      "apc_list": null,
+      "apc_paid": null,
+      "fwci": null,
+      "has_fulltext": true,
+      "cited_by_count": 0,
+      "citation_normalized_percentile": null,
+      "cited_by_percentile_year": null,
+      "biblio": {
+        "volume": null,
+        "issue": null,
+        "first_page": null,
+        "last_page": null
+      },
+      "is_retracted": false,
+      "is_paratext": false,
+      "is_xpac": false,
+      "primary_topic": {
+        "id": "https://openalex.org/T11788",
+        "display_name": "Nonlinear Optical Materials Studies",
+        "score": 0.9965000152587891,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2204",
+          "display_name": "Biomedical Engineering"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/22",
+          "display_name": "Engineering"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      "topics": [
+        {
+          "id": "https://openalex.org/T11788",
+          "display_name": "Nonlinear Optical Materials Studies",
+          "score": 0.9965000152587891,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2204",
+            "display_name": "Biomedical Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T11177",
+          "display_name": "Spectroscopy and Quantum Chemical Studies",
+          "score": 0.9958999752998352,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3107",
+            "display_name": "Atomic and Molecular Physics, and Optics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10566",
+          "display_name": "Laser-Matter Interactions and Applications",
+          "score": 0.9954000115394592,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3107",
+            "display_name": "Atomic and Molecular Physics, and Optics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "keywords": [
+        {
+          "id": "https://openalex.org/keywords/physics",
+          "display_name": "Physics",
+          "score": 0.7913976907730103
+        },
+        {
+          "id": "https://openalex.org/keywords/vacuum-state",
+          "display_name": "Vacuum state",
+          "score": 0.6558775901794434
+        },
+        {
+          "id": "https://openalex.org/keywords/photon",
+          "display_name": "Photon",
+          "score": 0.6242286562919617
+        },
+        {
+          "id": "https://openalex.org/keywords/qed-vacuum",
+          "display_name": "QED vacuum",
+          "score": 0.5731232166290283
+        },
+        {
+          "id": "https://openalex.org/keywords/vacuum-energy",
+          "display_name": "Vacuum energy",
+          "score": 0.5361921787261963
+        },
+        {
+          "id": "https://openalex.org/keywords/quantum-optics",
+          "display_name": "Quantum optics",
+          "score": 0.4975424110889435
+        },
+        {
+          "id": "https://openalex.org/keywords/squeezed-coherent-state",
+          "display_name": "Squeezed coherent state",
+          "score": 0.4894229471683502
+        },
+        {
+          "id": "https://openalex.org/keywords/quantum-fluctuation",
+          "display_name": "Quantum fluctuation",
+          "score": 0.4820481240749359
+        },
+        {
+          "id": "https://openalex.org/keywords/quantum-mechanics",
+          "display_name": "Quantum mechanics",
+          "score": 0.4614950120449066
+        },
+        {
+          "id": "https://openalex.org/keywords/quantum-entanglement",
+          "display_name": "Quantum entanglement",
+          "score": 0.4465197026729584
+        },
+        {
+          "id": "https://openalex.org/keywords/scaling",
+          "display_name": "Scaling",
+          "score": 0.42000287771224976
+        },
+        {
+          "id": "https://openalex.org/keywords/two-photon-absorption",
+          "display_name": "Two-photon absorption",
+          "score": 0.4176817536354065
+        },
+        {
+          "id": "https://openalex.org/keywords/quantum-electrodynamics",
+          "display_name": "Quantum electrodynamics",
+          "score": 0.3610267639160156
+        },
+        {
+          "id": "https://openalex.org/keywords/quantum",
+          "display_name": "Quantum",
+          "score": 0.33553773164749146
+        },
+        {
+          "id": "https://openalex.org/keywords/coherent-states",
+          "display_name": "Coherent states",
+          "score": 0.2825618386268616
+        },
+        {
+          "id": "https://openalex.org/keywords/laser",
+          "display_name": "Laser",
+          "score": 0.08586698770523071
+        }
+      ],
+      "concepts": [
+        {
+          "id": "https://openalex.org/C121332964",
+          "wikidata": "https://www.wikidata.org/wiki/Q413",
+          "display_name": "Physics",
+          "level": 0,
+          "score": 0.7913976907730103
+        },
+        {
+          "id": "https://openalex.org/C70662872",
+          "wikidata": "https://www.wikidata.org/wiki/Q766202",
+          "display_name": "Vacuum state",
+          "level": 2,
+          "score": 0.6558775901794434
+        },
+        {
+          "id": "https://openalex.org/C159317903",
+          "wikidata": "https://www.wikidata.org/wiki/Q3198",
+          "display_name": "Photon",
+          "level": 2,
+          "score": 0.6242286562919617
+        },
+        {
+          "id": "https://openalex.org/C159691708",
+          "wikidata": "https://www.wikidata.org/wiki/Q348294",
+          "display_name": "QED vacuum",
+          "level": 3,
+          "score": 0.5731232166290283
+        },
+        {
+          "id": "https://openalex.org/C6947382",
+          "wikidata": "https://www.wikidata.org/wiki/Q1143773",
+          "display_name": "Vacuum energy",
+          "level": 2,
+          "score": 0.5361921787261963
+        },
+        {
+          "id": "https://openalex.org/C68717125",
+          "wikidata": "https://www.wikidata.org/wiki/Q735602",
+          "display_name": "Quantum optics",
+          "level": 2,
+          "score": 0.4975424110889435
+        },
+        {
+          "id": "https://openalex.org/C194269254",
+          "wikidata": "https://www.wikidata.org/wiki/Q661063",
+          "display_name": "Squeezed coherent state",
+          "level": 4,
+          "score": 0.4894229471683502
+        },
+        {
+          "id": "https://openalex.org/C141886431",
+          "wikidata": "https://www.wikidata.org/wiki/Q1193821",
+          "display_name": "Quantum fluctuation",
+          "level": 3,
+          "score": 0.4820481240749359
+        },
+        {
+          "id": "https://openalex.org/C62520636",
+          "wikidata": "https://www.wikidata.org/wiki/Q944",
+          "display_name": "Quantum mechanics",
+          "level": 1,
+          "score": 0.4614950120449066
+        },
+        {
+          "id": "https://openalex.org/C121040770",
+          "wikidata": "https://www.wikidata.org/wiki/Q215675",
+          "display_name": "Quantum entanglement",
+          "level": 3,
+          "score": 0.4465197026729584
+        },
+        {
+          "id": "https://openalex.org/C99844830",
+          "wikidata": "https://www.wikidata.org/wiki/Q102441924",
+          "display_name": "Scaling",
+          "level": 2,
+          "score": 0.42000287771224976
+        },
+        {
+          "id": "https://openalex.org/C101075120",
+          "wikidata": "https://www.wikidata.org/wiki/Q231917",
+          "display_name": "Two-photon absorption",
+          "level": 3,
+          "score": 0.4176817536354065
+        },
+        {
+          "id": "https://openalex.org/C3079626",
+          "wikidata": "https://www.wikidata.org/wiki/Q234881",
+          "display_name": "Quantum electrodynamics",
+          "level": 1,
+          "score": 0.3610267639160156
+        },
+        {
+          "id": "https://openalex.org/C84114770",
+          "wikidata": "https://www.wikidata.org/wiki/Q46344",
+          "display_name": "Quantum",
+          "level": 2,
+          "score": 0.33553773164749146
+        },
+        {
+          "id": "https://openalex.org/C152026323",
+          "wikidata": "https://www.wikidata.org/wiki/Q1032070",
+          "display_name": "Coherent states",
+          "level": 3,
+          "score": 0.2825618386268616
+        },
+        {
+          "id": "https://openalex.org/C520434653",
+          "wikidata": "https://www.wikidata.org/wiki/Q38867",
+          "display_name": "Laser",
+          "level": 2,
+          "score": 0.08586698770523071
+        },
+        {
+          "id": "https://openalex.org/C33923547",
+          "wikidata": "https://www.wikidata.org/wiki/Q395",
+          "display_name": "Mathematics",
+          "level": 0,
+          "score": 0.0
+        },
+        {
+          "id": "https://openalex.org/C2524010",
+          "wikidata": "https://www.wikidata.org/wiki/Q8087",
+          "display_name": "Geometry",
+          "level": 1,
+          "score": 0.0
+        }
+      ],
+      "mesh": [],
+      "locations_count": 2,
+      "locations": [
+        {
+          "id": "pmh:oai:arXiv.org:2309.04845",
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2309.04845",
+          "pdf_url": "https://arxiv.org/pdf/2309.04845",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "",
+          "raw_type": "text"
+        },
+        {
+          "id": "doi:10.48550/arxiv.2309.04845",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.48550/arxiv.2309.04845",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": null,
+          "raw_type": "article"
+        }
+      ],
+      "best_oa_location": {
+        "id": "pmh:oai:arXiv.org:2309.04845",
+        "is_oa": true,
+        "landing_page_url": "http://arxiv.org/abs/2309.04845",
+        "pdf_url": "https://arxiv.org/pdf/2309.04845",
+        "source": {
+          "id": "https://openalex.org/S4306400194",
+          "display_name": "arXiv (Cornell University)",
+          "issn_l": null,
+          "issn": null,
+          "is_oa": true,
+          "is_in_doaj": false,
+          "is_core": false,
+          "host_organization": "https://openalex.org/I205783295",
+          "host_organization_name": "Cornell University",
+          "host_organization_lineage": [
+            "https://openalex.org/I205783295"
+          ],
+          "host_organization_lineage_names": [],
+          "type": "repository"
+        },
+        "license": "cc-by",
+        "license_id": "https://openalex.org/licenses/cc-by",
+        "version": "submittedVersion",
+        "is_accepted": false,
+        "is_published": false,
+        "raw_source_name": "",
+        "raw_type": "text"
+      },
+      "sustainable_development_goals": [
+        {
+          "score": 0.7599999904632568,
+          "display_name": "Affordable and clean energy",
+          "id": "https://metadata.un.org/sdg/7"
+        }
+      ],
+      "awards": [
+        {
+          "id": "https://openalex.org/G4561173858",
+          "display_name": null,
+          "funder_award_id": "RAISE-TAQS",
+          "funder_id": "https://openalex.org/F4320306076",
+          "funder_display_name": "National Science Foundation"
+        },
+        {
+          "id": "https://openalex.org/G838980356",
+          "display_name": null,
+          "funder_award_id": "1839216",
+          "funder_id": "https://openalex.org/F4320306076",
+          "funder_display_name": "National Science Foundation"
+        }
+      ],
+      "funders": [
+        {
+          "id": "https://openalex.org/F4320306076",
+          "display_name": "National Science Foundation",
+          "ror": "https://ror.org/021nxhr62"
+        }
+      ],
+      "has_content": {
+        "pdf": true,
+        "grobid_xml": false
+      },
+      "content_urls": {
+        "pdf": "https://content.openalex.org/works/W4386694424.pdf"
+      },
+      "referenced_works_count": 0,
+      "referenced_works": [],
+      "related_works": [
+        "https://openalex.org/W2592166728",
+        "https://openalex.org/W3179032011",
+        "https://openalex.org/W2502603851",
+        "https://openalex.org/W1602886050",
+        "https://openalex.org/W1527599714",
+        "https://openalex.org/W1577334783",
+        "https://openalex.org/W4281627394",
+        "https://openalex.org/W1983089509",
+        "https://openalex.org/W2950146180",
+        "https://openalex.org/W2131470169"
+      ],
+      "abstract_inverted_index": {
+        "We": [
+          0
+        ],
+        "address": [
+          1
+        ],
+        "theoretically": [
+          2
+        ],
+        "the": [
+          3,
+          15,
+          60,
+          66,
+          70,
+          77,
+          83,
+          94,
+          110,
+          118,
+          122,
+          126,
+          130,
+          134
+        ],
+        "question": [
+          4
+        ],
+        "of": [
+          5,
+          12,
+          17,
+          53,
+          76,
+          88,
+          97,
+          112,
+          121,
+          136
+        ],
+        "classical": [
+          6,
+          61
+        ],
+        "stochastic": [
+          7,
+          62
+        ],
+        "fields": [
+          8
+        ],
+        "mimicking": [
+          9
+        ],
+        "quantum": [
+          10
+        ],
+        "states": [
+          11
+        ],
+        "light": [
+          13,
+          124
+        ],
+        "in": [
+          14,
+          23,
+          81,
+          129
+        ],
+        "context": [
+          16
+        ],
+        "nonlinear": [
+          18,
+          21
+        ],
+        "spectroscopy": [
+          19
+        ],
+        "and": [
+          20,
+          28,
+          85,
+          99,
+          114,
+          125,
+          133
+        ],
+        "optics,": [
+          22
+        ],
+        "particular": [
+          24
+        ],
+        "two-photon": [
+          25
+        ],
+        "absorption": [
+          26
+        ],
+        "(TPA)": [
+          27
+        ],
+        "sum-frequency": [
+          29
+        ],
+        "generation": [
+          30
+        ],
+        "(SFG)": [
+          31
+        ],
+        "driven": [
+          32
+        ],
+        "by": [
+          33,
+          139
+        ],
+        "weak": [
+          34
+        ],
+        "or": [
+          35
+        ],
+        "bright": [
+          36,
+          140
+        ],
+        "broadband": [
+          37
+        ],
+        "squeezed": [
+          38,
+          89,
+          123,
+          141
+        ],
+        "vacuum": [
+          39
+        ],
+        "with": [
+          40
+        ],
+        "time-frequency": [
+          41
+        ],
+        "entanglement": [
+          42
+        ],
+        "between": [
+          43
+        ],
+        "photons.": [
+          44
+        ],
+        "Upon": [
+          45
+        ],
+        "using": [
+          46
+        ],
+        "a": [
+          47
+        ],
+        "well-defined": [
+          48
+        ],
+        "but": [
+          49
+        ],
+        "ad": [
+          50
+        ],
+        "hoc": [
+          51
+        ],
+        "subtraction": [
+          52
+        ],
+        "vacuum-energy": [
+          54
+        ],
+        "terms": [
+          55
+        ],
+        "(renormalization),": [
+          56
+        ],
+        "we": [
+          57
+        ],
+        "find": [
+          58
+        ],
+        "that": [
+          59
+        ],
+        "model": [
+          63
+        ],
+        "yields": [
+          64
+        ],
+        "exactly": [
+          65
+        ],
+        "same": [
+          67
+        ],
+        "predictions": [
+          68,
+          92
+        ],
+        "as": [
+          69,
+          107,
+          109
+        ],
+        "full": [
+          71
+        ],
+        "quantum-field": [
+          72
+        ],
+        "theory": [
+          73
+        ],
+        "for": [
+          74
+        ],
+        "all": [
+          75
+        ],
+        "phenomena": [
+          78
+        ],
+        "considered": [
+          79
+        ],
+        "here,": [
+          80
+        ],
+        "both": [
+          82
+        ],
+        "low-gain": [
+          84
+        ],
+        "high-gain": [
+          86
+        ],
+        "regimes": [
+          87
+        ],
+        "vacuum.": [
+          90,
+          142
+        ],
+        "Such": [
+          91
+        ],
+        "include": [
+          93
+        ],
+        "linear-flux": [
+          95
+        ],
+        "scaling": [
+          96
+        ],
+        "TPA": [
+          98,
+          113
+        ],
+        "SFG": [
+          100,
+          137
+        ],
+        "rates": [
+          101,
+          116
+        ],
+        "at": [
+          102
+        ],
+        "low": [
+          103
+        ],
+        "incident": [
+          104
+        ],
+        "photon": [
+          105
+        ],
+        "flux,": [
+          106
+        ],
+        "well": [
+          108
+        ],
+        "dependence": [
+          111
+        ],
+        "SHG": [
+          115
+        ],
+        "on": [
+          117
+        ],
+        "relative": [
+          119
+        ],
+        "linewidths": [
+          120
+        ],
+        "ground-to-final-state": [
+          127
+        ],
+        "transition": [
+          128
+        ],
+        "material": [
+          131
+        ],
+        "system,": [
+          132
+        ],
+        "spectrum": [
+          135
+        ],
+        "generated": [
+          138
+        ]
+      },
+      "counts_by_year": [],
+      "updated_date": "2026-04-21T08:09:41.155169",
+      "created_date": "2023-09-14T00:00:00"
+    },
+    {
+      "id": "https://openalex.org/W4406956487",
+      "doi": "https://doi.org/10.1021/acs.jpclett.4c02955",
+      "title": "The Quantum Information Science Challenge for Chemistry",
+      "display_name": "The Quantum Information Science Challenge for Chemistry",
+      "relevance_score": 5.361643,
+      "publication_year": 2025,
+      "publication_date": "2025-01-29",
+      "ids": {
+        "openalex": "https://openalex.org/W4406956487",
+        "doi": "https://doi.org/10.1021/acs.jpclett.4c02955",
+        "pmid": "https://pubmed.ncbi.nlm.nih.gov/39879081"
+      },
+      "language": "en",
+      "primary_location": {
+        "id": "doi:10.1021/acs.jpclett.4c02955",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1021/acs.jpclett.4c02955",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S123480357",
+          "display_name": "The Journal of Physical Chemistry Letters",
+          "issn_l": "1948-7185",
+          "issn": [
+            "1948-7185"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310320006",
+          "host_organization_name": "American Chemical Society",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320006"
+          ],
+          "host_organization_lineage_names": [
+            "American Chemical Society"
+          ],
+          "type": "journal"
+        },
+        "license": "cc-by-nc-nd",
+        "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "The Journal of Physical Chemistry Letters",
+        "raw_type": "journal-article"
+      },
+      "type": "review",
+      "indexed_in": [
+        "crossref",
+        "pubmed"
+      ],
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "hybrid",
+        "oa_url": "https://doi.org/10.1021/acs.jpclett.4c02955",
+        "any_repository_has_fulltext": true
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5029838157",
+            "display_name": "Gregory D. Scholes",
+            "orcid": "https://orcid.org/0000-0003-3336-7960"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I20089843",
+              "display_name": "Princeton University",
+              "ror": "https://ror.org/00hx57361",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I20089843"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Gregory D. Scholes",
+          "raw_affiliation_strings": [
+            "Department of Chemistry",
+            "Princeton University",
+            "Department of Chemistry, Princeton University, Princeton, New Jersey 08544, United States"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-3336-7960",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Chemistry",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "Princeton University",
+              "institution_ids": [
+                "https://openalex.org/I20089843"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Chemistry, Princeton University, Princeton, New Jersey 08544, United States",
+              "institution_ids": [
+                "https://openalex.org/I20089843"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5076241774",
+            "display_name": "Alexandra Olaya-Castro",
+            "orcid": "https://orcid.org/0000-0003-0801-3597"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I45129253",
+              "display_name": "University College London",
+              "ror": "https://ror.org/02jx3x895",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I124357947",
+                "https://openalex.org/I45129253"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Alexandra Olaya-Castro",
+          "raw_affiliation_strings": [
+            "Department of Physics and Astronomy, University College London, Gower Street, London WC1E 6BT, United Kingdom"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-0801-3597",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Physics and Astronomy, University College London, Gower Street, London WC1E 6BT, United Kingdom",
+              "institution_ids": [
+                "https://openalex.org/I45129253"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5085637107",
+            "display_name": "Shaul Mukamel",
+            "orcid": "https://orcid.org/0000-0002-6015-3135"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I204250578",
+              "display_name": "University of California, Irvine",
+              "ror": "https://ror.org/04gyf1771",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I204250578"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I2803209242",
+              "display_name": "University of California System",
+              "ror": "https://ror.org/00pjdza24",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I2803209242"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Shaul Mukamel",
+          "raw_affiliation_strings": [
+            "Department of Chemistry",
+            "University of California,",
+            "Department of Chemistry, University of California, Irvine, California 92697-2025, United States"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-6015-3135",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Chemistry",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "University of California,",
+              "institution_ids": [
+                "https://openalex.org/I2803209242"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Chemistry, University of California, Irvine, California 92697-2025, United States",
+              "institution_ids": [
+                "https://openalex.org/I204250578"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5052145152",
+            "display_name": "Adam Kirrander",
+            "orcid": "https://orcid.org/0000-0002-3347-8137"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I40120149",
+              "display_name": "University of Oxford",
+              "ror": "https://ror.org/052gg0110",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I40120149"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Adam Kirrander",
+          "raw_affiliation_strings": [
+            "Department of Chemistry, University of Oxford, South Parks Road, Oxford OX1 3QZ, United Kingdom"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-3347-8137",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Chemistry, University of Oxford, South Parks Road, Oxford OX1 3QZ, United Kingdom",
+              "institution_ids": [
+                "https://openalex.org/I40120149"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5025302981",
+            "display_name": "Kang-Kuen Ni",
+            "orcid": "https://orcid.org/0000-0002-0537-0719"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I136199984",
+              "display_name": "Harvard University",
+              "ror": "https://ror.org/03vek6s52",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I136199984"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Kang-Kuen Ni",
+          "raw_affiliation_strings": [
+            "Department of Chemistry and Chemical Biology, Harvard University, 12 Oxford St, Cambridge, Massachusetts 02138, United States"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-0537-0719",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Chemistry and Chemical Biology, Harvard University, 12 Oxford St, Cambridge, Massachusetts 02138, United States",
+              "institution_ids": [
+                "https://openalex.org/I136199984"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5056764420",
+            "display_name": "Gordon J. Hedley",
+            "orcid": "https://orcid.org/0000-0002-1825-6296"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I7882870",
+              "display_name": "University of Glasgow",
+              "ror": "https://ror.org/00vtgdb53",
+              "country_code": "GB",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I7882870"
+              ]
+            }
+          ],
+          "countries": [
+            "GB"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Gordon J. Hedley",
+          "raw_affiliation_strings": [
+            "School of Chemistry, University of Glasgow, Joseph Black Building, University Avenue, Glasgow G12 8QQ, United Kingdom"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0002-1825-6296",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Chemistry, University of Glasgow, Joseph Black Building, University Avenue, Glasgow G12 8QQ, United Kingdom",
+              "institution_ids": [
+                "https://openalex.org/I7882870"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5086739959",
+            "display_name": "Natia L. Frank",
+            "orcid": "https://orcid.org/0000-0003-0945-1492"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I134113660",
+              "display_name": "University of Nevada, Reno",
+              "ror": "https://ror.org/01keh0577",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I134113660"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Natia L. Frank",
+          "raw_affiliation_strings": [
+            "Department of Chemistry, College of Science",
+            "University of Nevada",
+            "Department of Chemistry, College of Science, University of Nevada, Reno, Nevada 89557, United States"
+          ],
+          "raw_orcid": "https://orcid.org/0000-0003-0945-1492",
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Chemistry, College of Science",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "University of Nevada",
+              "institution_ids": [
+                "https://openalex.org/I134113660"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Chemistry, College of Science, University of Nevada, Reno, Nevada 89557, United States",
+              "institution_ids": [
+                "https://openalex.org/I134113660"
+              ]
+            }
+          ]
+        }
+      ],
+      "institutions": [],
+      "countries_distinct_count": 2,
+      "institutions_distinct_count": 7,
+      "corresponding_author_ids": [
+        "https://openalex.org/A5029838157",
+        "https://openalex.org/A5076241774"
+      ],
+      "corresponding_institution_ids": [
+        "https://openalex.org/I20089843",
+        "https://openalex.org/I45129253"
+      ],
+      "apc_list": null,
+      "apc_paid": null,
+      "fwci": 20.5394,
+      "has_fulltext": true,
+      "cited_by_count": 22,
+      "citation_normalized_percentile": {
+        "value": 0.99598756,
+        "is_in_top_1_percent": true,
+        "is_in_top_10_percent": true
+      },
+      "cited_by_percentile_year": {
+        "min": 99,
+        "max": 100
+      },
+      "biblio": {
+        "volume": "16",
+        "issue": "5",
+        "first_page": "1376",
+        "last_page": "1396"
+      },
+      "is_retracted": false,
+      "is_paratext": false,
+      "is_xpac": false,
+      "primary_topic": {
+        "id": "https://openalex.org/T11177",
+        "display_name": "Spectroscopy and Quantum Chemical Studies",
+        "score": 0.9983999729156494,
+        "subfield": {
+          "id": "https://openalex.org/subfields/3107",
+          "display_name": "Atomic and Molecular Physics, and Optics"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/31",
+          "display_name": "Physics and Astronomy"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      "topics": [
+        {
+          "id": "https://openalex.org/T11177",
+          "display_name": "Spectroscopy and Quantum Chemical Studies",
+          "score": 0.9983999729156494,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3107",
+            "display_name": "Atomic and Molecular Physics, and Optics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10020",
+          "display_name": "Quantum Information and Cryptography",
+          "score": 0.9962000250816345,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1702",
+            "display_name": "Artificial Intelligence"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10622",
+          "display_name": "Quantum Mechanics and Applications",
+          "score": 0.9945999979972839,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3107",
+            "display_name": "Atomic and Molecular Physics, and Optics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "keywords": [
+        {
+          "id": "https://openalex.org/keywords/chemistry",
+          "display_name": "Chemistry",
+          "score": 0.41778963804244995
+        },
+        {
+          "id": "https://openalex.org/keywords/data-science",
+          "display_name": "Data science",
+          "score": 0.3963145613670349
+        },
+        {
+          "id": "https://openalex.org/keywords/nanotechnology",
+          "display_name": "Nanotechnology",
+          "score": 0.3815280497074127
+        },
+        {
+          "id": "https://openalex.org/keywords/computer-science",
+          "display_name": "Computer science",
+          "score": 0.3712884783744812
+        },
+        {
+          "id": "https://openalex.org/keywords/materials-science",
+          "display_name": "Materials science",
+          "score": 0.1944759488105774
+        }
+      ],
+      "concepts": [
+        {
+          "id": "https://openalex.org/C185592680",
+          "wikidata": "https://www.wikidata.org/wiki/Q2329",
+          "display_name": "Chemistry",
+          "level": 0,
+          "score": 0.41778963804244995
+        },
+        {
+          "id": "https://openalex.org/C2522767166",
+          "wikidata": "https://www.wikidata.org/wiki/Q2374463",
+          "display_name": "Data science",
+          "level": 1,
+          "score": 0.3963145613670349
+        },
+        {
+          "id": "https://openalex.org/C171250308",
+          "wikidata": "https://www.wikidata.org/wiki/Q11468",
+          "display_name": "Nanotechnology",
+          "level": 1,
+          "score": 0.3815280497074127
+        },
+        {
+          "id": "https://openalex.org/C41008148",
+          "wikidata": "https://www.wikidata.org/wiki/Q21198",
+          "display_name": "Computer science",
+          "level": 0,
+          "score": 0.3712884783744812
+        },
+        {
+          "id": "https://openalex.org/C192562407",
+          "wikidata": "https://www.wikidata.org/wiki/Q228736",
+          "display_name": "Materials science",
+          "level": 0,
+          "score": 0.1944759488105774
+        }
+      ],
+      "mesh": [],
+      "locations_count": 5,
+      "locations": [
+        {
+          "id": "doi:10.1021/acs.jpclett.4c02955",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1021/acs.jpclett.4c02955",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S123480357",
+            "display_name": "The Journal of Physical Chemistry Letters",
+            "issn_l": "1948-7185",
+            "issn": [
+              "1948-7185"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310320006",
+            "host_organization_name": "American Chemical Society",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310320006"
+            ],
+            "host_organization_lineage_names": [
+              "American Chemical Society"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by-nc-nd",
+          "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "The Journal of Physical Chemistry Letters",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmid:39879081",
+          "is_oa": false,
+          "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/39879081",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306525036",
+            "display_name": "PubMed",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I1299303238",
+            "host_organization_name": "National Institutes of Health",
+            "host_organization_lineage": [
+              "https://openalex.org/I1299303238"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "The journal of physical chemistry letters",
+          "raw_type": null
+        },
+        {
+          "id": "pmh:oai:escholarship.org:ark:/13030/qt2mp5g4w6",
+          "is_oa": true,
+          "landing_page_url": "https://escholarship.org/uc/item/2mp5g4w6",
+          "pdf_url": "https://escholarship.org/content/qt2mp5g4w6/qt2mp5g4w6.pdf",
+          "source": {
+            "id": "https://openalex.org/S4306400115",
+            "display_name": "eScholarship (California Digital Library)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I2801248553",
+            "host_organization_name": "California Digital Library",
+            "host_organization_lineage": [
+              "https://openalex.org/I2801248553"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by-nc-nd",
+          "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "The Journal of Physical Chemistry Letters, vol 16, iss 5",
+          "raw_type": "article"
+        },
+        {
+          "id": "pmh:oai:pubmedcentral.nih.gov:11808782",
+          "is_oa": true,
+          "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/11808782",
+          "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11808782/pdf/jz4c02955.pdf",
+          "source": {
+            "id": "https://openalex.org/S2764455111",
+            "display_name": "PubMed Central",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I1299303238",
+            "host_organization_name": "National Institutes of Health",
+            "host_organization_lineage": [
+              "https://openalex.org/I1299303238"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by-nc-nd",
+          "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "J Phys Chem Lett",
+          "raw_type": "Text"
+        },
+        {
+          "id": "pmh:ark:/13030/qt2mp5g4w6",
+          "is_oa": false,
+          "landing_page_url": null,
+          "pdf_url": null,
+          "source": null,
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": null
+        }
+      ],
+      "best_oa_location": {
+        "id": "doi:10.1021/acs.jpclett.4c02955",
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1021/acs.jpclett.4c02955",
+        "pdf_url": null,
+        "source": {
+          "id": "https://openalex.org/S123480357",
+          "display_name": "The Journal of Physical Chemistry Letters",
+          "issn_l": "1948-7185",
+          "issn": [
+            "1948-7185"
+          ],
+          "is_oa": false,
+          "is_in_doaj": false,
+          "is_core": true,
+          "host_organization": "https://openalex.org/P4310320006",
+          "host_organization_name": "American Chemical Society",
+          "host_organization_lineage": [
+            "https://openalex.org/P4310320006"
+          ],
+          "host_organization_lineage_names": [
+            "American Chemical Society"
+          ],
+          "type": "journal"
+        },
+        "license": "cc-by-nc-nd",
+        "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true,
+        "raw_source_name": "The Journal of Physical Chemistry Letters",
+        "raw_type": "journal-article"
+      },
+      "sustainable_development_goals": [],
+      "awards": [
+        {
+          "id": "https://openalex.org/G2343628175",
+          "display_name": null,
+          "funder_award_id": "CHE-2403812",
+          "funder_id": "https://openalex.org/F4320337393",
+          "funder_display_name": "Division of Chemistry"
+        },
+        {
+          "id": "https://openalex.org/G4340512890",
+          "display_name": null,
+          "funder_award_id": "EP/V004921/1",
+          "funder_id": "https://openalex.org/F4320334627",
+          "funder_display_name": "Engineering and Physical Sciences Research Council"
+        },
+        {
+          "id": "https://openalex.org/G7855925985",
+          "display_name": null,
+          "funder_award_id": "EP/V048805/1",
+          "funder_id": "https://openalex.org/F4320334627",
+          "funder_display_name": "Engineering and Physical Sciences Research Council"
+        }
+      ],
+      "funders": [
+        {
+          "id": "https://openalex.org/F4320306076",
+          "display_name": "National Science Foundation",
+          "ror": "https://ror.org/021nxhr62"
+        },
+        {
+          "id": "https://openalex.org/F4320314731",
+          "display_name": "UK Research and Innovation",
+          "ror": "https://ror.org/001aqnf71"
+        },
+        {
+          "id": "https://openalex.org/F4320334627",
+          "display_name": "Engineering and Physical Sciences Research Council",
+          "ror": "https://ror.org/0439y7842"
+        },
+        {
+          "id": "https://openalex.org/F4320337393",
+          "display_name": "Division of Chemistry",
+          "ror": "https://ror.org/01ar8dr59"
+        }
+      ],
+      "has_content": {
+        "pdf": false,
+        "grobid_xml": false
+      },
+      "content_urls": null,
+      "referenced_works_count": 140,
+      "referenced_works": [
+        "https://openalex.org/W1564993719",
+        "https://openalex.org/W1571385165",
+        "https://openalex.org/W1574801731",
+        "https://openalex.org/W1785928710",
+        "https://openalex.org/W1809124301",
+        "https://openalex.org/W1933218096",
+        "https://openalex.org/W1964843870",
+        "https://openalex.org/W1966254161",
+        "https://openalex.org/W1972507693",
+        "https://openalex.org/W1979571930",
+        "https://openalex.org/W1980438315",
+        "https://openalex.org/W1980799223",
+        "https://openalex.org/W1986407511",
+        "https://openalex.org/W1989362775",
+        "https://openalex.org/W2008844584",
+        "https://openalex.org/W2014394792",
+        "https://openalex.org/W2016900947",
+        "https://openalex.org/W2017430205",
+        "https://openalex.org/W2026354169",
+        "https://openalex.org/W2027720795",
+        "https://openalex.org/W2030572740",
+        "https://openalex.org/W2034920898",
+        "https://openalex.org/W2036954193",
+        "https://openalex.org/W2041599892",
+        "https://openalex.org/W2044111627",
+        "https://openalex.org/W2050438262",
+        "https://openalex.org/W2058468006",
+        "https://openalex.org/W2062574221",
+        "https://openalex.org/W2062948337",
+        "https://openalex.org/W2063444467",
+        "https://openalex.org/W2073618294",
+        "https://openalex.org/W2078433831",
+        "https://openalex.org/W2081002200",
+        "https://openalex.org/W2130117852",
+        "https://openalex.org/W2132894395",
+        "https://openalex.org/W2150743182",
+        "https://openalex.org/W2153706317",
+        "https://openalex.org/W2155751707",
+        "https://openalex.org/W2167656187",
+        "https://openalex.org/W2180431983",
+        "https://openalex.org/W2263840126",
+        "https://openalex.org/W2338302371",
+        "https://openalex.org/W2397541514",
+        "https://openalex.org/W2406980188",
+        "https://openalex.org/W2433371754",
+        "https://openalex.org/W2519383683",
+        "https://openalex.org/W2565032834",
+        "https://openalex.org/W2581529227",
+        "https://openalex.org/W2582751752",
+        "https://openalex.org/W2604003743",
+        "https://openalex.org/W2757156083",
+        "https://openalex.org/W2784702147",
+        "https://openalex.org/W2788907925",
+        "https://openalex.org/W2794365091",
+        "https://openalex.org/W2803647110",
+        "https://openalex.org/W2808319042",
+        "https://openalex.org/W2888990130",
+        "https://openalex.org/W2896284271",
+        "https://openalex.org/W2901948856",
+        "https://openalex.org/W2909493982",
+        "https://openalex.org/W2910915889",
+        "https://openalex.org/W2912390706",
+        "https://openalex.org/W2942471473",
+        "https://openalex.org/W2975384469",
+        "https://openalex.org/W2976938114",
+        "https://openalex.org/W2984034491",
+        "https://openalex.org/W2985338394",
+        "https://openalex.org/W3000326939",
+        "https://openalex.org/W3020947059",
+        "https://openalex.org/W3021630065",
+        "https://openalex.org/W3037132996",
+        "https://openalex.org/W3037637275",
+        "https://openalex.org/W3037737784",
+        "https://openalex.org/W3039533824",
+        "https://openalex.org/W3082827756",
+        "https://openalex.org/W3087824261",
+        "https://openalex.org/W3092105643",
+        "https://openalex.org/W3098464343",
+        "https://openalex.org/W3099897605",
+        "https://openalex.org/W3102257504",
+        "https://openalex.org/W3111506327",
+        "https://openalex.org/W3119802212",
+        "https://openalex.org/W3122350627",
+        "https://openalex.org/W3132819796",
+        "https://openalex.org/W3134639658",
+        "https://openalex.org/W3136931931",
+        "https://openalex.org/W3155408861",
+        "https://openalex.org/W3182864983",
+        "https://openalex.org/W3193583571",
+        "https://openalex.org/W3194211638",
+        "https://openalex.org/W3200463768",
+        "https://openalex.org/W3205681353",
+        "https://openalex.org/W3209836850",
+        "https://openalex.org/W4206995144",
+        "https://openalex.org/W4211058570",
+        "https://openalex.org/W4221036870",
+        "https://openalex.org/W4221163192",
+        "https://openalex.org/W4226344249",
+        "https://openalex.org/W4229439293",
+        "https://openalex.org/W4242282425",
+        "https://openalex.org/W4246202617",
+        "https://openalex.org/W4255864513",
+        "https://openalex.org/W4280579500",
+        "https://openalex.org/W4281711308",
+        "https://openalex.org/W4287447913",
+        "https://openalex.org/W4289538694",
+        "https://openalex.org/W4292202276",
+        "https://openalex.org/W4292648297",
+        "https://openalex.org/W4306704017",
+        "https://openalex.org/W4308459804",
+        "https://openalex.org/W4309643658",
+        "https://openalex.org/W4313649264",
+        "https://openalex.org/W4320351231",
+        "https://openalex.org/W4321598151",
+        "https://openalex.org/W4323825273",
+        "https://openalex.org/W4367668909",
+        "https://openalex.org/W4376609835",
+        "https://openalex.org/W4379015419",
+        "https://openalex.org/W4384500234",
+        "https://openalex.org/W4384825128",
+        "https://openalex.org/W4388456710",
+        "https://openalex.org/W4388479544",
+        "https://openalex.org/W4388485122",
+        "https://openalex.org/W4389069211",
+        "https://openalex.org/W4389080389",
+        "https://openalex.org/W4389152632",
+        "https://openalex.org/W4389298728",
+        "https://openalex.org/W4391471644",
+        "https://openalex.org/W4391992580",
+        "https://openalex.org/W4392337872",
+        "https://openalex.org/W4392718095",
+        "https://openalex.org/W4393381837",
+        "https://openalex.org/W4394578410",
+        "https://openalex.org/W4394755930",
+        "https://openalex.org/W4396948747",
+        "https://openalex.org/W4399325557",
+        "https://openalex.org/W4400665760",
+        "https://openalex.org/W4401390496",
+        "https://openalex.org/W4402319877",
+        "https://openalex.org/W4403656286"
+      ],
+      "related_works": [
+        "https://openalex.org/W4387497383",
+        "https://openalex.org/W2948807893",
+        "https://openalex.org/W2899084033",
+        "https://openalex.org/W2778153218",
+        "https://openalex.org/W2748952813",
+        "https://openalex.org/W1531601525",
+        "https://openalex.org/W4391375266",
+        "https://openalex.org/W2078814861",
+        "https://openalex.org/W2527526854",
+        "https://openalex.org/W1976181487"
+      ],
+      "abstract_inverted_index": {
+        "We": [
+          0,
+          52
+        ],
+        "discuss": [
+          1
+        ],
+        "the": [
+          2,
+          5,
+          30,
+          38,
+          62
+        ],
+        "goals": [
+          3
+        ],
+        "and": [
+          4,
+          25,
+          33,
+          42,
+          57,
+          89
+        ],
+        "need": [
+          6
+        ],
+        "for": [
+          7
+        ],
+        "quantum": [
+          8
+        ],
+        "information": [
+          9
+        ],
+        "science": [
+          10
+        ],
+        "(QIS)": [
+          11
+        ],
+        "in": [
+          12,
+          54,
+          58,
+          66,
+          78
+        ],
+        "chemistry.": [
+          13
+        ],
+        "It": [
+          14
+        ],
+        "is": [
+          15,
+          72
+        ],
+        "important": [
+          16
+        ],
+        "to": [
+          17,
+          23,
+          50
+        ],
+        "identify": [
+          18
+        ],
+        "concretely": [
+          19
+        ],
+        "how": [
+          20
+        ],
+        "QIS": [
+          21,
+          85
+        ],
+        "matters": [
+          22
+        ],
+        "chemistry,": [
+          24
+        ],
+        "we": [
+          26,
+          90
+        ],
+        "articulate": [
+          27
+        ],
+        "some": [
+          28
+        ],
+        "of": [
+          29,
+          75,
+          96
+        ],
+        "most": [
+          31
+        ],
+        "pressing": [
+          32
+        ],
+        "interesting": [
+          34
+        ],
+        "research": [
+          35,
+          47,
+          77,
+          98
+        ],
+        "questions": [
+          36,
+          48
+        ],
+        "at": [
+          37
+        ],
+        "interface": [
+          39
+        ],
+        "between": [
+          40
+        ],
+        "chemistry": [
+          41,
+          79
+        ],
+        "QIS,": [
+          43
+        ],
+        "that": [
+          44,
+          80
+        ],
+        "is,": [
+          45
+        ],
+        "\"chemistry-centric\"": [
+          46
+        ],
+        "relevant": [
+          49
+        ],
+        "QIS.": [
+          51
+        ],
+        "propose": [
+          53
+        ],
+        "what": [
+          55,
+          59
+        ],
+        "ways": [
+          56
+        ],
+        "new": [
+          60
+        ],
+        "directions": [
+          61
+        ],
+        "field": [
+          63
+        ],
+        "should": [
+          64
+        ],
+        "innovate,": [
+          65
+        ],
+        "particular": [
+          67
+        ],
+        "where": [
+          68
+        ],
+        "a": [
+          69,
+          84,
+          93
+        ],
+        "chemical": [
+          70
+        ],
+        "perspective": [
+          71,
+          86
+        ],
+        "essential.": [
+          73
+        ],
+        "Examples": [
+          74
+        ],
+        "recent": [
+          76
+        ],
+        "inspire": [
+          81
+        ],
+        "scrutiny": [
+          82
+        ],
+        "from": [
+          83
+        ],
+        "are": [
+          87
+        ],
+        "provided,": [
+          88
+        ],
+        "conclude": [
+          91
+        ],
+        "with": [
+          92
+        ],
+        "wish": [
+          94
+        ],
+        "list": [
+          95
+        ],
+        "open": [
+          97
+        ],
+        "problems.": [
+          99
+        ]
+      },
+      "counts_by_year": [
+        {
+          "year": 2026,
+          "cited_by_count": 14
+        },
+        {
+          "year": 2025,
+          "cited_by_count": 8
+        }
+      ],
+      "updated_date": "2026-06-06T09:05:17.133730",
+      "created_date": "2025-10-10T00:00:00"
+    },
+    {
+      "id": "https://openalex.org/W4403587627",
+      "doi": "https://doi.org/10.48550/arxiv.2409.04264",
+      "title": "NSF-UKRI Bilateral Workshop: Quantum Information Science in Chemistry",
+      "display_name": "NSF-UKRI Bilateral Workshop: Quantum Information Science in Chemistry",
+      "relevance_score": 0.4705152,
+      "publication_year": 2024,
+      "publication_date": "2024-09-06",
+      "ids": {
+        "openalex": "https://openalex.org/W4403587627",
+        "doi": "https://doi.org/10.48550/arxiv.2409.04264"
+      },
+      "language": "en",
+      "primary_location": {
+        "id": "pmh:oai:arXiv.org:2409.04264",
+        "is_oa": true,
+        "landing_page_url": "http://arxiv.org/abs/2409.04264",
+        "pdf_url": "https://arxiv.org/pdf/2409.04264",
+        "source": {
+          "id": "https://openalex.org/S4306400194",
+          "display_name": "arXiv (Cornell University)",
+          "issn_l": null,
+          "issn": null,
+          "is_oa": true,
+          "is_in_doaj": false,
+          "is_core": false,
+          "host_organization": "https://openalex.org/I205783295",
+          "host_organization_name": "Cornell University",
+          "host_organization_lineage": [
+            "https://openalex.org/I205783295"
+          ],
+          "host_organization_lineage_names": [],
+          "type": "repository"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "submittedVersion",
+        "is_accepted": false,
+        "is_published": false,
+        "raw_source_name": "",
+        "raw_type": null
+      },
+      "type": "preprint",
+      "indexed_in": [
+        "arxiv",
+        "datacite"
+      ],
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2409.04264",
+        "any_repository_has_fulltext": true
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5029838157",
+            "display_name": "Gregory D. Scholes",
+            "orcid": "https://orcid.org/0000-0003-3336-7960"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": true,
+          "raw_author_name": "Scholes, Gregory D",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5076241774",
+            "display_name": "Alexandra Olaya-Castro",
+            "orcid": "https://orcid.org/0000-0003-0801-3597"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Olaya-Castro, Alexandra",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5085637107",
+            "display_name": "Shaul Mukamel",
+            "orcid": "https://orcid.org/0000-0002-6015-3135"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Mukamel, Shaul",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5052145152",
+            "display_name": "Adam Kirrander",
+            "orcid": "https://orcid.org/0000-0002-3347-8137"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Kirrander, Adam",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5025302981",
+            "display_name": "Kang-Kuen Ni",
+            "orcid": "https://orcid.org/0000-0002-0537-0719"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Ni, Kang-Kuen",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5056764420",
+            "display_name": "Gordon J. Hedley",
+            "orcid": "https://orcid.org/0000-0002-1825-6296"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Hedley, Gordon",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5086739959",
+            "display_name": "Natia L. Frank",
+            "orcid": "https://orcid.org/0000-0003-0945-1492"
+          },
+          "institutions": [],
+          "countries": [],
+          "is_corresponding": false,
+          "raw_author_name": "Frank, Natia",
+          "raw_affiliation_strings": [],
+          "affiliations": []
+        }
+      ],
+      "institutions": [],
+      "countries_distinct_count": 0,
+      "institutions_distinct_count": 7,
+      "corresponding_author_ids": [
+        "https://openalex.org/A5029838157"
+      ],
+      "corresponding_institution_ids": [],
+      "apc_list": null,
+      "apc_paid": null,
+      "fwci": null,
+      "has_fulltext": true,
+      "cited_by_count": 0,
+      "citation_normalized_percentile": null,
+      "cited_by_percentile_year": null,
+      "biblio": {
+        "volume": null,
+        "issue": null,
+        "first_page": null,
+        "last_page": null
+      },
+      "is_retracted": false,
+      "is_paratext": false,
+      "is_xpac": false,
+      "primary_topic": {
+        "id": "https://openalex.org/T12327",
+        "display_name": "Various Chemistry Research Topics",
+        "score": 0.4009999930858612,
+        "subfield": {
+          "id": "https://openalex.org/subfields/1606",
+          "display_name": "Physical and Theoretical Chemistry"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/16",
+          "display_name": "Chemistry"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      "topics": [
+        {
+          "id": "https://openalex.org/T12327",
+          "display_name": "Various Chemistry Research Topics",
+          "score": 0.4009999930858612,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1606",
+            "display_name": "Physical and Theoretical Chemistry"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/16",
+            "display_name": "Chemistry"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T13297",
+          "display_name": "History and advancements in chemistry",
+          "score": 0.35420000553131104,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1606",
+            "display_name": "Physical and Theoretical Chemistry"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/16",
+            "display_name": "Chemistry"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "keywords": [
+        {
+          "id": "https://openalex.org/keywords/chemistry",
+          "display_name": "Chemistry",
+          "score": 0.43918001651763916
+        },
+        {
+          "id": "https://openalex.org/keywords/nanotechnology",
+          "display_name": "Nanotechnology",
+          "score": 0.3690932095050812
+        },
+        {
+          "id": "https://openalex.org/keywords/engineering-physics",
+          "display_name": "Engineering physics",
+          "score": 0.35825157165527344
+        },
+        {
+          "id": "https://openalex.org/keywords/physics",
+          "display_name": "Physics",
+          "score": 0.25698912143707275
+        },
+        {
+          "id": "https://openalex.org/keywords/materials-science",
+          "display_name": "Materials science",
+          "score": 0.17201542854309082
+        }
+      ],
+      "concepts": [
+        {
+          "id": "https://openalex.org/C185592680",
+          "wikidata": "https://www.wikidata.org/wiki/Q2329",
+          "display_name": "Chemistry",
+          "level": 0,
+          "score": 0.43918001651763916
+        },
+        {
+          "id": "https://openalex.org/C171250308",
+          "wikidata": "https://www.wikidata.org/wiki/Q11468",
+          "display_name": "Nanotechnology",
+          "level": 1,
+          "score": 0.3690932095050812
+        },
+        {
+          "id": "https://openalex.org/C61696701",
+          "wikidata": "https://www.wikidata.org/wiki/Q770766",
+          "display_name": "Engineering physics",
+          "level": 1,
+          "score": 0.35825157165527344
+        },
+        {
+          "id": "https://openalex.org/C121332964",
+          "wikidata": "https://www.wikidata.org/wiki/Q413",
+          "display_name": "Physics",
+          "level": 0,
+          "score": 0.25698912143707275
+        },
+        {
+          "id": "https://openalex.org/C192562407",
+          "wikidata": "https://www.wikidata.org/wiki/Q228736",
+          "display_name": "Materials science",
+          "level": 0,
+          "score": 0.17201542854309082
+        }
+      ],
+      "mesh": [],
+      "locations_count": 2,
+      "locations": [
+        {
+          "id": "pmh:oai:arXiv.org:2409.04264",
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2409.04264",
+          "pdf_url": "https://arxiv.org/pdf/2409.04264",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "",
+          "raw_type": null
+        },
+        {
+          "id": "doi:10.48550/arxiv.2409.04264",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.48550/arxiv.2409.04264",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": null,
+          "raw_type": "article"
+        }
+      ],
+      "best_oa_location": {
+        "id": "pmh:oai:arXiv.org:2409.04264",
+        "is_oa": true,
+        "landing_page_url": "http://arxiv.org/abs/2409.04264",
+        "pdf_url": "https://arxiv.org/pdf/2409.04264",
+        "source": {
+          "id": "https://openalex.org/S4306400194",
+          "display_name": "arXiv (Cornell University)",
+          "issn_l": null,
+          "issn": null,
+          "is_oa": true,
+          "is_in_doaj": false,
+          "is_core": false,
+          "host_organization": "https://openalex.org/I205783295",
+          "host_organization_name": "Cornell University",
+          "host_organization_lineage": [
+            "https://openalex.org/I205783295"
+          ],
+          "host_organization_lineage_names": [],
+          "type": "repository"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "submittedVersion",
+        "is_accepted": false,
+        "is_published": false,
+        "raw_source_name": "",
+        "raw_type": null
+      },
+      "sustainable_development_goals": [],
+      "awards": [
+        {
+          "id": "https://openalex.org/G2343628175",
+          "display_name": null,
+          "funder_award_id": "CHE-2403812",
+          "funder_id": "https://openalex.org/F4320337393",
+          "funder_display_name": "Division of Chemistry"
+        },
+        {
+          "id": "https://openalex.org/G3310095984",
+          "display_name": "Conference: NSF/UKRI Bilateral Workshop on Quantum Information Science in Chemistry",
+          "funder_award_id": "2403812",
+          "funder_id": "https://openalex.org/F4320306076",
+          "funder_display_name": "National Science Foundation"
+        },
+        {
+          "id": "https://openalex.org/G3330119427",
+          "display_name": null,
+          "funder_award_id": "EPSRC",
+          "funder_id": "https://openalex.org/F4320306076",
+          "funder_display_name": "National Science Foundation"
+        }
+      ],
+      "funders": [
+        {
+          "id": "https://openalex.org/F4320306076",
+          "display_name": "National Science Foundation",
+          "ror": "https://ror.org/021nxhr62"
+        },
+        {
+          "id": "https://openalex.org/F4320309292",
+          "display_name": "Princeton University",
+          "ror": "https://ror.org/00hx57361"
+        },
+        {
+          "id": "https://openalex.org/F4320314731",
+          "display_name": "UK Research and Innovation",
+          "ror": "https://ror.org/001aqnf71"
+        },
+        {
+          "id": "https://openalex.org/F4320332172",
+          "display_name": "Directorate for Mathematical and Physical Sciences",
+          "ror": "https://ror.org/029b7h395"
+        },
+        {
+          "id": "https://openalex.org/F4320334627",
+          "display_name": "Engineering and Physical Sciences Research Council",
+          "ror": "https://ror.org/0439y7842"
+        },
+        {
+          "id": "https://openalex.org/F4320337393",
+          "display_name": "Division of Chemistry",
+          "ror": "https://ror.org/01ar8dr59"
+        }
+      ],
+      "has_content": {
+        "pdf": false,
+        "grobid_xml": false
+      },
+      "content_urls": null,
+      "referenced_works_count": 0,
+      "referenced_works": [],
+      "related_works": [
+        "https://openalex.org/W4387497383",
+        "https://openalex.org/W2948807893",
+        "https://openalex.org/W2899084033",
+        "https://openalex.org/W2778153218",
+        "https://openalex.org/W2748952813",
+        "https://openalex.org/W1531601525",
+        "https://openalex.org/W4391375266",
+        "https://openalex.org/W2078814861",
+        "https://openalex.org/W2527526854",
+        "https://openalex.org/W1976181487"
+      ],
+      "abstract_inverted_index": {
+        "This": [
+          0
+        ],
+        "document": [
+          1
+        ],
+        "summarizes": [
+          2
+        ],
+        "the": [
+          3,
+          9,
+          15,
+          40,
+          52,
+          66,
+          73
+        ],
+        "context": [
+          4
+        ],
+        "and": [
+          5,
+          45,
+          48,
+          54,
+          72
+        ],
+        "main": [
+          6
+        ],
+        "outcomes": [
+          7
+        ],
+        "of": [
+          8,
+          69
+        ],
+        "discussions": [
+          10
+        ],
+        "that": [
+          11
+        ],
+        "took": [
+          12
+        ],
+        "place": [
+          13
+        ],
+        "during": [
+          14
+        ],
+        "NSF-UKRI": [
+          16
+        ],
+        "bilateral": [
+          17
+        ],
+        "workshop": [
+          18,
+          35
+        ],
+        "on": [
+          19,
+          26
+        ],
+        "Quantum": [
+          20
+        ],
+        "Information": [
+          21
+        ],
+        "Science": [
+          22,
+          42
+        ],
+        "in": [
+          23,
+          30
+        ],
+        "Chemistry,": [
+          24
+        ],
+        "held": [
+          25
+        ],
+        "12-13": [
+          27
+        ],
+        "February": [
+          28
+        ],
+        "2024,": [
+          29
+        ],
+        "Alexandria,": [
+          31
+        ],
+        "Virginia": [
+          32
+        ],
+        "(US).": [
+          33
+        ],
+        "The": [
+          34
+        ],
+        "was": [
+          36
+        ],
+        "jointly": [
+          37
+        ],
+        "funded": [
+          38
+        ],
+        "by": [
+          39
+        ],
+        "National": [
+          41
+        ],
+        "Foundation": [
+          43
+        ],
+        "(NSF)": [
+          44
+        ],
+        "UK": [
+          46
+        ],
+        "Research": [
+          47,
+          57
+        ],
+        "Innovation": [
+          49
+        ],
+        "(UKRI)": [
+          50
+        ],
+        "through": [
+          51
+        ],
+        "Engineering": [
+          53
+        ],
+        "Physical": [
+          55
+        ],
+        "Sciences": [
+          56
+        ],
+        "Council": [
+          58
+        ],
+        "(EPSRC).": [
+          59
+        ],
+        "It": [
+          60
+        ],
+        "brought": [
+          61
+        ],
+        "together": [
+          62
+        ],
+        "scientific": [
+          63
+        ],
+        "delegations": [
+          64
+        ],
+        "from": [
+          65
+        ],
+        "United": [
+          67,
+          74
+        ],
+        "States": [
+          68
+        ],
+        "America": [
+          70
+        ],
+        "(US)": [
+          71
+        ],
+        "Kingdom": [
+          75
+        ],
+        "(UK).": [
+          76
+        ]
+      },
+      "counts_by_year": [],
+      "updated_date": "2026-04-21T08:09:41.155169",
+      "created_date": "2025-10-10T00:00:00"
+    }
+  ],
+  "group_by": []
+}

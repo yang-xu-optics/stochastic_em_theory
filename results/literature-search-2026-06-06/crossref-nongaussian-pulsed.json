@@ -1,0 +1,2876 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "facets": {},
+    "total-results": 1908663,
+    "items": [
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              31
+            ]
+          ],
+          "date-time": "2024-10-31T00:33:32Z",
+          "timestamp": 1730334812971,
+          "version": "3.28.0"
+        },
+        "publisher-location": "Washington, D.C.",
+        "reference-count": 6,
+        "publisher": "OSA",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2006
+            ]
+          ]
+        },
+        "DOI": "10.1364/ls.2006.ltug3",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2013,
+              5,
+              14
+            ]
+          ],
+          "date-time": "2013-05-14T16:17:19Z",
+          "timestamp": 1368548239000
+        },
+        "page": "LTuG3",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Measurement of Conditional Squeezing for non-Gaussian fields"
+        ],
+        "prefix": "10.1364",
+        "author": [
+          {
+            "given": "Justin",
+            "family": "Vines",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Reeta",
+            "family": "Vyas",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Surendra",
+            "family": "Singh",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "285",
+        "reference": [
+          {
+            "key": "LS-2006-LTuG3-R2",
+            "doi-asserted-by": "crossref",
+            "first-page": "2770",
+            "DOI": "10.1103/PhysRevLett.86.2770",
+            "volume": "86",
+            "author": "Deng",
+            "year": "2001",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "LS-2006-LTuG3-R3",
+            "doi-asserted-by": "crossref",
+            "first-page": "1855",
+            "DOI": "10.1103/PhysRevLett.85.1855",
+            "volume": "85",
+            "author": "Carmichael",
+            "year": "2000",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "LS-2006-LTuG3-R4",
+            "doi-asserted-by": "crossref",
+            "first-page": "3149",
+            "DOI": "10.1103/PhysRevLett.85.3149",
+            "volume": "85",
+            "author": "Foster",
+            "year": "2000",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "LS-2006-LTuG3-R5",
+            "doi-asserted-by": "crossref",
+            "first-page": "063808",
+            "DOI": "10.1103/PhysRevA.67.063808",
+            "volume": "67",
+            "author": "Siddiqui",
+            "year": "2003",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "LS-2006-LTuG3-R6",
+            "doi-asserted-by": "crossref",
+            "first-page": "2391",
+            "DOI": "10.1103/PhysRevA.54.2391",
+            "volume": "54",
+            "author": "Vyas",
+            "year": "1996",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "LS-2006-LTuG3-R7",
+            "doi-asserted-by": "crossref",
+            "first-page": "043806",
+            "DOI": "10.1103/PhysRevA.64.043806",
+            "volume": "64",
+            "author": "Erenso",
+            "year": "2001",
+            "journal-title": "Phys. Rev. A"
+          }
+        ],
+        "event": {
+          "name": "Laser Science",
+          "start": {
+            "date-parts": [
+              [
+                2006
+              ]
+            ]
+          },
+          "sponsor": [
+            "The Optical Society"
+          ],
+          "location": "Rochester, New York",
+          "acronym": "LS"
+        },
+        "container-title": [
+          "Frontiers in Optics"
+        ],
+        "link": [
+          {
+            "URL": "https://www.osapublishing.org/viewmedia.cfm?URI=LS-2006-LTuG3&seq=0",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2022,
+              1,
+              26
+            ]
+          ],
+          "date-time": "2022-01-26T17:02:53Z",
+          "timestamp": 1643216573000
+        },
+        "score": 26.974058,
+        "resource": {
+          "primary": {
+            "URL": "https://opg.optica.org/abstract.cfm?URI=LS-2006-LTuG3"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2006
+            ]
+          ]
+        },
+        "references-count": 6,
+        "URL": "https://doi.org/10.1364/ls.2006.ltug3",
+        "published": {
+          "date-parts": [
+            [
+              2006
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              21
+            ]
+          ],
+          "date-time": "2026-04-21T00:45:40Z",
+          "timestamp": 1776732340283,
+          "version": "3.51.2"
+        },
+        "reference-count": 79,
+        "publisher": "Optica Publishing Group",
+        "issue": "4",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2022,
+                  4,
+                  5
+                ]
+              ],
+              "date-time": "2022-04-05T00:00:00Z",
+              "timestamp": 1649116800000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.1364/OA_License_v2#VOR-OA"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2022,
+                  4,
+                  5
+                ]
+              ],
+              "date-time": "2022-04-05T00:00:00Z",
+              "timestamp": 1649116800000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://opg.optica.org/policies/opg-tdm-policy.json"
+          }
+        ],
+        "funder": [
+          {
+            "DOI": "10.13039/100000001",
+            "name": "National Science Foundation",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "CCF-1918549"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "CCF-1918549"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/100000001",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          },
+          {
+            "DOI": "10.13039/100000001",
+            "name": "National Science Foundation",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "PHY-2011363"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "PHY-2011363"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/100000001",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          },
+          {
+            "DOI": "10.13039/100000183",
+            "name": "Army Research Office",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "W911NF-16-1-0086"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "W911NF-16-1-0086"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/100000183",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "opg.optica.org"
+          ],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Optica"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2022,
+              4,
+              20
+            ]
+          ]
+        },
+        "abstract": "<jats:p>We study the emergence of non-Gaussian quantum features in pulsed squeezed light generation with a mesoscopic number (i.e., dozens to hundreds) of pump photons. Due to the strong optical nonlinearities necessarily involved in this regime, squeezing occurs alongside significant pump depletion, compromising the predictions made by conventional semiclassical models for squeezing. Furthermore, nonlinear interactions among multiple frequency modes render the system dynamics exponentially intractable in naïve quantum models, requiring a more sophisticated modeling framework. To this end, we construct a nonlinear Gaussian approximation to the squeezing dynamics, defining a “Gaussian interaction frame” in which non-Gaussian quantum dynamics can be isolated and concisely described using a few dominant (i.e., principal) supermodes. Numerical simulations of our model reveal non-Gaussian distortions of squeezing in the mesoscopic regime, largely associated with signal-pump entanglement. We argue that state of the art in nonlinear nanophotonics is quickly approaching this regime, providing an all-optical platform for experimental studies of the semiclassical-to-quantum transition in a rich paradigm of coherent, multimode nonlinear dynamics. Mesoscopic pulsed squeezing, thus, provides an intriguing case study of the rapid rise in dynamic complexity associated with semiclassical-to-quantum crossover, which we view as a correlate of the emergence of new information processing capacities in the quantum regime.</jats:p>",
+        "DOI": "10.1364/optica.447782",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              11
+            ]
+          ],
+          "date-time": "2022-03-11T22:00:06Z",
+          "timestamp": 1647036006000
+        },
+        "page": "379",
+        "update-policy": "https://doi.org/10.1364/crossmark_policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 20,
+        "title": [
+          "Onset of non-Gaussian quantum physics in pulsed squeezing with mesoscopic fields"
+        ],
+        "prefix": "10.1364",
+        "volume": "9",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-9609-0076",
+            "authenticated-orcid": true,
+            "given": "Ryotatsu",
+            "family": "Yanagimoto",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "name": "Stanford University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Edwin",
+            "family": "Ng",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Stanford University"
+              },
+              {
+                "name": "NTT Research, Inc."
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Atsushi",
+            "family": "Yamamura",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Stanford University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Tatsuhiro",
+            "family": "Onodera",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "NTT Research, Inc."
+              },
+              {
+                "name": "Cornell University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Logan G.",
+            "family": "Wright",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "NTT Research, Inc."
+              },
+              {
+                "name": "Cornell University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-1845-7415",
+            "authenticated-orcid": true,
+            "given": "Marc",
+            "family": "Jankowski",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Stanford University"
+              },
+              {
+                "name": "NTT Research, Inc."
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "M. M.",
+            "family": "Fejer",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Stanford University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Peter L.",
+            "family": "McMahon",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Cornell University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Hideo",
+            "family": "Mabuchi",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "name": "Stanford University"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "285",
+        "published-online": {
+          "date-parts": [
+            [
+              2022,
+              4,
+              5
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "optica-9-4-379-R1",
+            "volume-title": "Quantum Computation and Quantum Information",
+            "author": "Nielsen",
+            "year": "2000"
+          },
+          {
+            "key": "optica-9-4-379-R2",
+            "doi-asserted-by": "publisher",
+            "first-page": "165",
+            "DOI": "10.1038/nphoton.2007.22",
+            "volume": "1",
+            "author": "Gisin",
+            "year": "2007",
+            "journal-title": "Nat. Photonics"
+          },
+          {
+            "key": "optica-9-4-379-R3",
+            "doi-asserted-by": "publisher",
+            "first-page": "222",
+            "DOI": "10.1038/nphoton.2011.35",
+            "volume": "5",
+            "author": "Giovannetti",
+            "year": "2011",
+            "journal-title": "Nat. Photonics"
+          },
+          {
+            "key": "optica-9-4-379-R4",
+            "doi-asserted-by": "publisher",
+            "first-page": "141",
+            "DOI": "10.1038/306141a0",
+            "volume": "306",
+            "author": "Walls",
+            "year": "1983",
+            "journal-title": "Nature"
+          },
+          {
+            "key": "optica-9-4-379-R5",
+            "doi-asserted-by": "publisher",
+            "first-page": "053001",
+            "DOI": "10.1088/0031-8949/91/5/053001",
+            "volume": "91",
+            "author": "Andersen",
+            "year": "2016",
+            "journal-title": "Phys. Scr."
+          },
+          {
+            "key": "optica-9-4-379-R6",
+            "doi-asserted-by": "publisher",
+            "first-page": "706",
+            "DOI": "10.1126/science.282.5389.706",
+            "volume": "282",
+            "author": "Furusawa",
+            "year": "1998",
+            "journal-title": "Science"
+          },
+          {
+            "key": "optica-9-4-379-R7",
+            "doi-asserted-by": "publisher",
+            "first-page": "3663",
+            "DOI": "10.1103/PhysRevLett.68.3663",
+            "volume": "68",
+            "author": "Ou",
+            "year": "1992",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-9-4-379-R8",
+            "doi-asserted-by": "publisher",
+            "first-page": "110501",
+            "DOI": "10.1103/PhysRevLett.97.110501",
+            "volume": "97",
+            "author": "Menicucci",
+            "year": "2006",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-9-4-379-R9",
+            "doi-asserted-by": "publisher",
+            "first-page": "373",
+            "DOI": "10.1126/science.aay2645",
+            "volume": "366",
+            "author": "Asavanant",
+            "year": "2019",
+            "journal-title": "Science"
+          },
+          {
+            "key": "optica-9-4-379-R10",
+            "doi-asserted-by": "publisher",
+            "first-page": "1460",
+            "DOI": "10.1126/science.abe8770",
+            "volume": "370",
+            "author": "Zhong",
+            "year": "2020",
+            "journal-title": "Science"
+          },
+          {
+            "key": "optica-9-4-379-R11",
+            "doi-asserted-by": "publisher",
+            "first-page": "54",
+            "DOI": "10.1038/s41586-021-03202-1",
+            "volume": "591",
+            "author": "Arrazola",
+            "year": "2021",
+            "journal-title": "Nature"
+          },
+          {
+            "key": "optica-9-4-379-R12",
+            "doi-asserted-by": "publisher",
+            "first-page": "073601",
+            "DOI": "10.1103/PhysRevLett.100.073601",
+            "volume": "100",
+            "author": "Pezzé",
+            "year": "2008",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-9-4-379-R13",
+            "doi-asserted-by": "publisher",
+            "first-page": "613",
+            "DOI": "10.1038/nphoton.2013.177",
+            "volume": "7",
+            "year": "2013",
+            "journal-title": "Nat. Photonics"
+          },
+          {
+            "key": "optica-9-4-379-R14",
+            "doi-asserted-by": "publisher",
+            "first-page": "371",
+            "DOI": "10.1088/1367-2630/9/10/371",
+            "volume": "9",
+            "author": "Vahlbruch",
+            "year": "2007",
+            "journal-title": "New J. Phys."
+          },
+          {
+            "key": "optica-9-4-379-R15",
+            "doi-asserted-by": "publisher",
+            "first-page": "657",
+            "DOI": "10.1109/TIT.1978.1055958",
+            "volume": "24",
+            "author": "Yuen",
+            "year": "1978",
+            "journal-title": "IEEE Trans. Inf. Theory"
+          },
+          {
+            "key": "optica-9-4-379-R16",
+            "doi-asserted-by": "publisher",
+            "first-page": "022309",
+            "DOI": "10.1103/PhysRevA.61.022309",
+            "volume": "61",
+            "author": "Hillery",
+            "year": "2000",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-9-4-379-R17",
+            "doi-asserted-by": "publisher",
+            "first-page": "2566",
+            "DOI": "10.1103/PhysRevLett.59.2566",
+            "volume": "59",
+            "author": "Slusher",
+            "year": "1987",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-9-4-379-R18",
+            "doi-asserted-by": "publisher",
+            "first-page": "620",
+            "DOI": "10.1364/OL.20.000620",
+            "volume": "20",
+            "author": "Anderson",
+            "year": "1995",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "key": "optica-9-4-379-R19",
+            "doi-asserted-by": "publisher",
+            "first-page": "031063",
+            "DOI": "10.1103/PhysRevX.10.031063",
+            "volume": "10",
+            "author": "Triginer",
+            "year": "2020",
+            "journal-title": "Phys. Rev. X"
+          },
+          {
+            "key": "optica-9-4-379-R20",
+            "doi-asserted-by": "publisher",
+            "first-page": "013603",
+            "DOI": "10.1103/PhysRevLett.106.013603",
+            "volume": "106",
+            "author": "Eckstein",
+            "year": "2011",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-9-4-379-R21",
+            "doi-asserted-by": "publisher",
+            "first-page": "4264",
+            "DOI": "10.1364/OL.394925",
+            "volume": "45",
+            "author": "Flórez",
+            "year": "2020",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "key": "optica-9-4-379-R22",
+            "doi-asserted-by": "publisher",
+            "first-page": "240503",
+            "DOI": "10.1103/PhysRevLett.124.240503",
+            "volume": "124",
+            "author": "Yanagimoto",
+            "year": "2020",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-9-4-379-R23",
+            "doi-asserted-by": "publisher",
+            "first-page": "041017",
+            "DOI": "10.1103/PhysRevX.5.041017",
+            "volume": "5",
+            "author": "Brecht",
+            "year": "2015",
+            "journal-title": "Phys. Rev. X"
+          },
+          {
+            "key": "optica-9-4-379-R24",
+            "doi-asserted-by": "publisher",
+            "first-page": "1627",
+            "DOI": "10.1103/PhysRevA.56.1627",
+            "volume": "56",
+            "author": "Grice",
+            "year": "1997",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-9-4-379-R25",
+            "doi-asserted-by": "publisher",
+            "first-page": "534",
+            "DOI": "10.1364/OPTICA.5.000534",
+            "volume": "5",
+            "author": "Ansari",
+            "year": "2018",
+            "journal-title": "Optica"
+          },
+          {
+            "key": "optica-9-4-379-R26",
+            "doi-asserted-by": "publisher",
+            "first-page": "40",
+            "DOI": "10.1364/OPTICA.7.000040",
+            "volume": "7",
+            "author": "Jankowski",
+            "year": "2020",
+            "journal-title": "Optica"
+          },
+          {
+            "key": "optica-9-4-379-R27",
+            "doi-asserted-by": "publisher",
+            "first-page": "042005",
+            "DOI": "10.1088/2515-7647/ac1729",
+            "volume": "3",
+            "author": "Jankowski",
+            "year": "2021",
+            "journal-title": "J. Phys. Photon."
+          },
+          {
+            "key": "optica-9-4-379-R28",
+            "doi-asserted-by": "publisher",
+            "first-page": "1306",
+            "DOI": "10.1364/OPTICA.423044",
+            "volume": "8",
+            "author": "Yanagimoto",
+            "year": "2021",
+            "journal-title": "Optica"
+          },
+          {
+            "key": "optica-9-4-379-R29",
+            "doi-asserted-by": "publisher",
+            "first-page": "042307",
+            "DOI": "10.1103/PhysRevA.79.042307",
+            "volume": "79",
+            "author": "Leung",
+            "year": "2009",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-9-4-379-R30",
+            "doi-asserted-by": "publisher",
+            "first-page": "013822",
+            "DOI": "10.1103/PhysRevA.85.013822",
+            "volume": "85",
+            "author": "Hafezi",
+            "year": "2012",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-9-4-379-R31",
+            "doi-asserted-by": "publisher",
+            "first-page": "R1107",
+            "DOI": "10.1103/PhysRevA.56.R1107",
+            "volume": "56",
+            "author": "Drummond",
+            "year": "1997",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-9-4-379-R32",
+            "doi-asserted-by": "publisher",
+            "first-page": "396",
+            "DOI": "10.1088/1464-4266/6/10/003",
+            "volume": "6",
+            "author": "Kenfack",
+            "year": "2004",
+            "journal-title": "J. Opt. B"
+          },
+          {
+            "key": "optica-9-4-379-R33",
+            "doi-asserted-by": "publisher",
+            "first-page": "030204",
+            "DOI": "10.1103/PRXQuantum.2.030204",
+            "volume": "2",
+            "author": "Walschaers",
+            "year": "2021",
+            "journal-title": "PRX Quantum"
+          },
+          {
+            "key": "optica-9-4-379-R35",
+            "doi-asserted-by": "publisher",
+            "first-page": "063819",
+            "DOI": "10.1103/PhysRevA.73.063819",
+            "volume": "73",
+            "author": "Wasilewski",
+            "year": "2006",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-9-4-379-R36",
+            "doi-asserted-by": "publisher",
+            "first-page": "721",
+            "DOI": "10.1080/09500340600777805",
+            "volume": "54",
+            "author": "Lvovsky",
+            "year": "2007",
+            "journal-title": "J. Mod. Opt."
+          },
+          {
+            "key": "optica-9-4-379-R37",
+            "doi-asserted-by": "publisher",
+            "first-page": "053038",
+            "DOI": "10.1088/1367-2630/15/5/053038",
+            "volume": "15",
+            "author": "Christ",
+            "year": "2013",
+            "journal-title": "New J. Phys."
+          },
+          {
+            "key": "optica-9-4-379-R38",
+            "doi-asserted-by": "publisher",
+            "first-page": "062305",
+            "DOI": "10.1103/PhysRevA.73.062305",
+            "volume": "73",
+            "author": "Shapiro",
+            "year": "2006",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-9-4-379-R39",
+            "doi-asserted-by": "publisher",
+            "first-page": "1784",
+            "DOI": "10.1103/PhysRevLett.82.1784",
+            "volume": "82",
+            "author": "Lloyd",
+            "year": "1999",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-9-4-379-R40",
+            "doi-asserted-by": "publisher",
+            "first-page": "513",
+            "DOI": "10.1103/RevModPhys.77.513",
+            "volume": "77",
+            "author": "Braunstein",
+            "year": "2005",
+            "journal-title": "Rev. Mod. Phys."
+          },
+          {
+            "key": "optica-9-4-379-R41",
+            "doi-asserted-by": "publisher",
+            "first-page": "11684D",
+            "DOI": "10.1117/12.2576098",
+            "volume": "11684",
+            "author": "Yanagimoto",
+            "year": "2021",
+            "journal-title": "Proc. SPIE"
+          },
+          {
+            "key": "optica-9-4-379-R42",
+            "doi-asserted-by": "publisher",
+            "first-page": "3",
+            "DOI": "10.1140/epjst/e2012-01532-4",
+            "volume": "203",
+            "author": "Olivares",
+            "year": "2012",
+            "journal-title": "Eur. Phys. J. Spec. Top."
+          },
+          {
+            "key": "optica-9-4-379-R43",
+            "doi-asserted-by": "publisher",
+            "first-page": "621",
+            "DOI": "10.1103/RevModPhys.84.621",
+            "volume": "84",
+            "author": "Weedbrook",
+            "year": "2012",
+            "journal-title": "Rev. Mod. Phys."
+          },
+          {
+            "key": "optica-9-4-379-R44",
+            "doi-asserted-by": "publisher",
+            "first-page": "103601",
+            "DOI": "10.1103/PhysRevLett.125.103601",
+            "volume": "125",
+            "author": "Gouzien",
+            "year": "2020",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-9-4-379-R45",
+            "doi-asserted-by": "publisher",
+            "first-page": "033508",
+            "DOI": "10.1103/PhysRevA.105.033508",
+            "volume": "105",
+            "author": "Onodera",
+            "year": "2018",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-9-4-379-R46",
+            "doi-asserted-by": "publisher",
+            "first-page": "052317",
+            "DOI": "10.1103/PhysRevA.97.052317",
+            "volume": "97",
+            "author": "Zhuang",
+            "year": "2018",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-9-4-379-R47",
+            "doi-asserted-by": "publisher",
+            "first-page": "052350",
+            "DOI": "10.1103/PhysRevA.98.052350",
+            "volume": "98",
+            "author": "Albarelli",
+            "year": "2018",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-9-4-379-R48",
+            "doi-asserted-by": "publisher",
+            "first-page": "033063",
+            "DOI": "10.1103/PhysRevResearch.1.033063",
+            "volume": "1",
+            "author": "Killoran",
+            "year": "2019",
+            "journal-title": "Phys. Rev. Res."
+          },
+          {
+            "key": "optica-9-4-379-R49",
+            "doi-asserted-by": "publisher",
+            "first-page": "012319",
+            "DOI": "10.1103/PhysRevA.98.012319",
+            "volume": "98",
+            "author": "Fan",
+            "year": "2018",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-9-4-379-R50",
+            "doi-asserted-by": "publisher",
+            "first-page": "090503",
+            "DOI": "10.1103/PhysRevLett.122.090503",
+            "volume": "122",
+            "author": "Gessner",
+            "year": "2019",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-9-4-379-R51",
+            "doi-asserted-by": "publisher",
+            "first-page": "062113",
+            "DOI": "10.1103/PhysRevA.96.062113",
+            "volume": "96",
+            "author": "Tezak",
+            "year": "2017",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-9-4-379-R52",
+            "doi-asserted-by": "publisher",
+            "first-page": "1654",
+            "DOI": "10.1364/OPTICA.403931",
+            "volume": "7",
+            "author": "Lu",
+            "year": "2020",
+            "journal-title": "Optica"
+          },
+          {
+            "key": "optica-9-4-379-R53",
+            "doi-asserted-by": "publisher",
+            "first-page": "160501",
+            "DOI": "10.1103/PhysRevLett.124.160501",
+            "volume": "124",
+            "author": "Heuck",
+            "year": "2020",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-9-4-379-R54",
+            "doi-asserted-by": "publisher",
+            "first-page": "6194",
+            "DOI": "10.1103/PhysRevA.43.6194",
+            "volume": "43",
+            "author": "Kinsler",
+            "year": "1991",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-9-4-379-R55",
+            "doi-asserted-by": "publisher",
+            "first-page": "063840",
+            "DOI": "10.1103/PhysRevA.90.063840",
+            "volume": "90",
+            "author": "Quesada",
+            "year": "2014",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-9-4-379-R56",
+            "doi-asserted-by": "publisher",
+            "first-page": "109",
+            "DOI": "10.1016/j.cpc.2018.02.004",
+            "volume": "227",
+            "author": "Krämer",
+            "year": "2018",
+            "journal-title": "Comput. Phys. Commun"
+          },
+          {
+            "key": "optica-9-4-379-R57",
+            "doi-asserted-by": "publisher",
+            "first-page": "24010",
+            "DOI": "10.1364/OE.22.024010",
+            "volume": "22",
+            "author": "Navarrete-Benlloch",
+            "year": "2014",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "key": "optica-9-4-379-R58",
+            "doi-asserted-by": "publisher",
+            "first-page": "053850",
+            "DOI": "10.1103/PhysRevA.91.053850",
+            "volume": "91",
+            "author": "Degenfeld-Schonburg",
+            "year": "2015",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-9-4-379-R59",
+            "doi-asserted-by": "publisher",
+            "first-page": "R4344",
+            "DOI": "10.1103/PhysRevA.52.R4344",
+            "volume": "52",
+            "author": "Veits",
+            "year": "1995",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-9-4-379-R60",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1017/CBO9780511783616",
+            "volume-title": "The Quantum Theory of Nonlinear Optics",
+            "author": "Drummond",
+            "year": "2014"
+          },
+          {
+            "key": "optica-9-4-379-R61",
+            "doi-asserted-by": "publisher",
+            "first-page": "4202",
+            "DOI": "10.1103/PhysRevA.52.4202",
+            "volume": "52",
+            "author": "Werner",
+            "year": "1995",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-9-4-379-R62",
+            "doi-asserted-by": "publisher",
+            "first-page": "035001",
+            "DOI": "10.1088/2515-7647/ab87fc",
+            "volume": "2",
+            "author": "Helt",
+            "year": "2020",
+            "journal-title": "J. Phys. Photon."
+          },
+          {
+            "key": "optica-9-4-379-R63",
+            "doi-asserted-by": "publisher",
+            "first-page": "033519",
+            "DOI": "10.1103/PhysRevA.102.033519",
+            "volume": "102",
+            "author": "Quesada",
+            "year": "2020",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-9-4-379-R64",
+            "volume-title": "Nonlinear Fiber Optics",
+            "author": "Agrawal",
+            "year": "2019"
+          },
+          {
+            "key": "optica-9-4-379-R65",
+            "doi-asserted-by": "publisher",
+            "first-page": "147902",
+            "DOI": "10.1103/PhysRevLett.91.147902",
+            "volume": "91",
+            "author": "Vidal",
+            "year": "2003",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-9-4-379-R66",
+            "doi-asserted-by": "publisher",
+            "first-page": "305",
+            "DOI": "10.1088/1367-2630/8/12/305",
+            "volume": "8",
+            "author": "García-Ripoll",
+            "year": "2006",
+            "journal-title": "New J. Phys."
+          },
+          {
+            "key": "optica-9-4-379-R68",
+            "doi-asserted-by": "publisher",
+            "first-page": "123",
+            "DOI": "10.1140/epjd/e2009-00299-9",
+            "volume": "56",
+            "author": "Patera",
+            "year": "2010",
+            "journal-title": "Eur. Phys. J. D"
+          },
+          {
+            "key": "optica-9-4-379-R69",
+            "doi-asserted-by": "publisher",
+            "first-page": "064002",
+            "DOI": "10.1088/1402-4896/ab6153",
+            "volume": "95",
+            "author": "Raymer",
+            "year": "2020",
+            "journal-title": "Phys. Scr."
+          },
+          {
+            "key": "optica-9-4-379-R70",
+            "doi-asserted-by": "publisher",
+            "first-page": "061801",
+            "DOI": "10.1103/PhysRevA.74.061801",
+            "volume": "74",
+            "author": "de Valcárcel",
+            "year": "2006",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-9-4-379-R71",
+            "doi-asserted-by": "publisher",
+            "first-page": "033418",
+            "DOI": "10.1103/PhysRevA.80.033418",
+            "volume": "80",
+            "author": "Stanojevic",
+            "year": "2009",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "optica-9-4-379-R72",
+            "doi-asserted-by": "publisher",
+            "first-page": "157",
+            "DOI": "10.1038/nphys3214",
+            "volume": "11",
+            "author": "Weber",
+            "year": "2015",
+            "journal-title": "Nat. Phys."
+          },
+          {
+            "key": "optica-9-4-379-R73",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1093/oso/9780195101676.001.0001",
+            "volume-title": "Introduction to Mesoscopic Physics",
+            "author": "Imry",
+            "year": "1997"
+          },
+          {
+            "key": "optica-9-4-379-R74",
+            "doi-asserted-by": "publisher",
+            "first-page": "143601",
+            "DOI": "10.1103/PhysRevLett.116.143601",
+            "volume": "116",
+            "author": "Harder",
+            "year": "2016",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-9-4-379-R75",
+            "doi-asserted-by": "publisher",
+            "first-page": "22",
+            "DOI": "10.1016/j.optcom.2014.02.047",
+            "volume": "327",
+            "author": "Antonosyan",
+            "year": "2014",
+            "journal-title": "Opt. Commun."
+          },
+          {
+            "key": "optica-9-4-379-R76",
+            "doi-asserted-by": "publisher",
+            "first-page": "737",
+            "DOI": "10.1038/nphoton.2008.228",
+            "volume": "2",
+            "author": "Ferrera",
+            "year": "2008",
+            "journal-title": "Nat. Photonics"
+          },
+          {
+            "key": "optica-9-4-379-R77",
+            "doi-asserted-by": "publisher",
+            "first-page": "1347",
+            "DOI": "10.1364/OPTICA.5.001347",
+            "volume": "5",
+            "author": "Liu",
+            "year": "2018",
+            "journal-title": "Optica"
+          },
+          {
+            "key": "optica-9-4-379-R80",
+            "doi-asserted-by": "publisher",
+            "first-page": "093602",
+            "DOI": "10.1103/PhysRevLett.120.093602",
+            "volume": "120",
+            "author": "Leroux",
+            "year": "2018",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-9-4-379-R81",
+            "doi-asserted-by": "publisher",
+            "first-page": "093601",
+            "DOI": "10.1103/PhysRevLett.120.093601",
+            "volume": "120",
+            "author": "Qin",
+            "year": "2018",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-9-4-379-R82",
+            "doi-asserted-by": "publisher",
+            "first-page": "153906",
+            "DOI": "10.1103/PhysRevLett.122.153906",
+            "volume": "122",
+            "author": "Ramelow",
+            "year": "2019",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "optica-9-4-379-R84",
+            "doi-asserted-by": "publisher",
+            "first-page": "1536",
+            "DOI": "10.1364/OPTICA.4.001536",
+            "volume": "4",
+            "author": "Zhang",
+            "year": "2017",
+            "journal-title": "Optica"
+          }
+        ],
+        "container-title": [
+          "Optica"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://opg.optica.org/viewmedia.cfm?URI=optica-9-4-379",
+            "content-type": "application/pdf",
+            "content-version": "vor",
+            "intended-application": "syndication"
+          },
+          {
+            "URL": "https://opg.optica.org/viewmedia.cfm?URI=optica-9-4-379&seq=0",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2024,
+              8,
+              6
+            ]
+          ],
+          "date-time": "2024-08-06T19:29:58Z",
+          "timestamp": 1722972598000
+        },
+        "score": 26.771828,
+        "resource": {
+          "primary": {
+            "URL": "https://opg.optica.org/abstract.cfm?URI=optica-9-4-379"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2022,
+              4,
+              5
+            ]
+          ]
+        },
+        "references-count": 79,
+        "journal-issue": {
+          "issue": "4",
+          "published-online": {
+            "date-parts": [
+              [
+                2022
+              ]
+            ]
+          },
+          "published-print": {
+            "date-parts": [
+              [
+                2022
+              ]
+            ]
+          }
+        },
+        "URL": "https://doi.org/10.1364/optica.447782",
+        "ISSN": [
+          "2334-2536"
+        ],
+        "issn-type": [
+          {
+            "value": "2334-2536",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2022,
+              4,
+              5
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "Optica Publishing Group",
+            "name": "publisher",
+            "label": "This article is maintained by"
+          },
+          {
+            "value": "https://doi.org/10.1364/OPTICA.447782",
+            "name": "articlelink",
+            "label": "Crossref DOI link to publisher maintained version"
+          },
+          {
+            "value": "research-article",
+            "name": "content_type",
+            "label": "Article type"
+          },
+          {
+            "value": "Screened by Similarity Check",
+            "name": "cross_check",
+            "label": "Similarity check"
+          },
+          {
+            "value": "Yes",
+            "order": 0,
+            "name": "peer_reviewed",
+            "label": "Peer reviewed",
+            "group": {
+              "name": "peer_review",
+              "label": "Peer review"
+            }
+          },
+          {
+            "value": "Single blind",
+            "order": 1,
+            "name": "review_process",
+            "label": "Review process",
+            "group": {
+              "name": "peer_review",
+              "label": "Peer review"
+            }
+          },
+          {
+            "value": "5 November 2021",
+            "order": 0,
+            "name": "received",
+            "label": "Received",
+            "group": {
+              "name": "publication_history",
+              "label": "Publication History"
+            }
+          },
+          {
+            "value": "11 March 2022",
+            "order": 1,
+            "name": "accepted",
+            "label": "Accepted",
+            "group": {
+              "name": "publication_history",
+              "label": "Publication History"
+            }
+          },
+          {
+            "value": "5 April 2022",
+            "order": 2,
+            "name": "published",
+            "label": "Published",
+            "group": {
+              "name": "publication_history",
+              "label": "Publication History"
+            }
+          },
+          {
+            "value": "© 2022 Optica Publishing Group under the terms of the Optica Open Access Publishing Agreement",
+            "name": "copyright",
+            "label": "Copyright"
+          }
+        ]
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              6,
+              4
+            ]
+          ],
+          "date-time": "2026-06-04T23:42:16Z",
+          "timestamp": 1780616536634,
+          "version": "3.54.1"
+        },
+        "reference-count": 62,
+        "publisher": "American Physical Society (APS)",
+        "issue": "7",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2025,
+                  2,
+                  21
+                ]
+              ],
+              "date-time": "2025-02-21T00:00:00Z",
+              "timestamp": 1740096000000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://link.aps.org/licenses/aps-default-license"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  2,
+                  21
+                ]
+              ],
+              "date-time": "2026-02-21T00:00:00Z",
+              "timestamp": 1771632000000
+            },
+            "content-version": "am",
+            "delay-in-days": 365,
+            "URL": "https://link.aps.org/licenses/aps-default-accepted-manuscript-license"
+          }
+        ],
+        "funder": [
+          {
+            "DOI": "10.13039/100000015",
+            "name": "U.S. Department of Energy",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "DOE 1F- 60579"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "DOE 1F- 60579"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/100000015",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          },
+          {
+            "DOI": "10.13039/100000893",
+            "name": "Simons Foundation",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "669487"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "669487"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/100000893",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "journals.aps.org"
+          ],
+          "crossmark-restriction": true
+        },
+        "short-container-title": [
+          "Phys. Rev. Lett."
+        ],
+        "accepted": {
+          "date-parts": [
+            [
+              2025,
+              1,
+              22
+            ]
+          ]
+        },
+        "DOI": "10.1103/physrevlett.134.073603",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2025,
+              2,
+              21
+            ]
+          ],
+          "date-time": "2025-02-21T10:07:38Z",
+          "timestamp": 1740132458000
+        },
+        "update-policy": "https://doi.org/10.1103/crossmark-policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 4,
+        "title": [
+          "Non-Gaussian Generalized Two-Mode Squeezing: Applications to Two-Ensemble Spin Squeezing and Beyond"
+        ],
+        "prefix": "10.1103",
+        "volume": "134",
+        "author": [
+          {
+            "ORCID": "https://orcid.org/0000-0002-9775-6407",
+            "authenticated-orcid": true,
+            "given": "Mikhail",
+            "family": "Mamaev",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "id": [
+                  {
+                    "id": "https://ror.org/024mw5h28",
+                    "id-type": "ROR",
+                    "asserted-by": "publisher"
+                  }
+                ],
+                "name": "University of Chicago"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-0162-3261",
+            "authenticated-orcid": true,
+            "given": "Martin",
+            "family": "Koppenhöfer",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "id": [
+                  {
+                    "id": "https://ror.org/0083ncs46",
+                    "id-type": "ROR",
+                    "asserted-by": "publisher"
+                  }
+                ],
+                "name": "Fraunhofer Institute for Applied Solid State Physics IAF"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-4777-4305",
+            "authenticated-orcid": true,
+            "given": "Andrew",
+            "family": "Pocklington",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "id": [
+                  {
+                    "id": "https://ror.org/024mw5h28",
+                    "id-type": "ROR",
+                    "asserted-by": "publisher"
+                  }
+                ],
+                "name": "University of Chicago"
+              },
+              {
+                "id": [
+                  {
+                    "id": "https://ror.org/024mw5h28",
+                    "id-type": "ROR",
+                    "asserted-by": "publisher"
+                  }
+                ],
+                "name": "University of Chicago"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-7297-9068",
+            "authenticated-orcid": true,
+            "given": "Aashish A.",
+            "family": "Clerk",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "id": [
+                  {
+                    "id": "https://ror.org/024mw5h28",
+                    "id-type": "ROR",
+                    "asserted-by": "publisher"
+                  }
+                ],
+                "name": "University of Chicago"
+              }
+            ],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "16",
+        "published-online": {
+          "date-parts": [
+            [
+              2025,
+              2,
+              21
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "PhysRevLett.134.073603Cc1R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.96.010401",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc2R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/RevModPhys.89.035002",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc3R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/RevModPhys.90.035005",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc4R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/j.physrep.2011.08.003",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc5R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.47.5138",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc6R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.104.073602",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc7R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/nature08919",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc8R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/nature08988",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc9R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1126/science.1250147",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc10R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.92.023603",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc11R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/nature16176",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc12R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1126/science.aad9958",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc13R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.122.223203",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc14R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/s41567-022-01653-5",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc15R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.131.063401",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc16R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/s41586-023-06472-z",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc17R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/s41586-023-06360-6",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc18R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/s41586-023-06414-9",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc19R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/s41567-023-02310-1",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc20R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.87.012107",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc21R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.111.070403",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc22R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.90.043818",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc23R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1140/epjd/e2013-40528-0",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc24R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.116.030801",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc25R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/s41467-020-17471-3",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc26R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.21468/SciPostPhys.14.3.050",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc27R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/RevModPhys.92.035005",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc28R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/0030-4018(89)90113-2",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc29R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.110.120402",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc30R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevX.12.011015",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc31R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.121.130503",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc32R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1088/1367-2630/ace1a0",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc33R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1088/1751-8121/ab5d4d",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc34R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1080/23746149.2016.1230476",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc35R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/nphoton.2011.35",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc37R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1088/0305-4470/35/13/307",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc38R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.94.052108",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc39R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.119.130504",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc40R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PRXQuantum.5.040305",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc41R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1126/science.aaa2085",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc42R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/s41586-024-07294-3",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc43R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.35.1659",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc45R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevResearch.2.033504",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc46R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.96.053602",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc47R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.132.033601",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc48R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.83.052312",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc49R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.81.015804",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc50R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/s41567-024-02407-1",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc51R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/nphys2245",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc52R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.123.063603",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc54R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1143/JPSJ.17.1100",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc55R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.100.013856",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc56R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.110.156402",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc57R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.121.070403",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc58R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevX.2.031016",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc59R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1002/andp.201400124",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc60R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/nature22980",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc61R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1126/science.abf5389",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc62R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.115.093604",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc63R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.131.060802",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc64R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.116.053601",
+            "type": "journal-article"
+          },
+          {
+            "key": "PhysRevLett.134.073603Cc65R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1126/science.aaf3397",
+            "type": "journal-article"
+          }
+        ],
+        "container-title": [
+          "Physical Review Letters"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://link.aps.org/accepted/10.1103/PhysRevLett.134.073603",
+            "content-type": "application/pdf",
+            "content-version": "am",
+            "intended-application": "unspecified"
+          },
+          {
+            "URL": "https://link.aps.org/article/10.1103/PhysRevLett.134.073603",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "syndication"
+          },
+          {
+            "URL": "http://harvest.aps.org/v2/journals/articles/10.1103/PhysRevLett.134.073603/fulltext",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2025,
+              8,
+              5
+            ]
+          ],
+          "date-time": "2025-08-05T16:03:34Z",
+          "timestamp": 1754409814000
+        },
+        "score": 25.352547,
+        "resource": {
+          "primary": {
+            "URL": "https://link.aps.org/doi/10.1103/PhysRevLett.134.073603"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2025,
+              2,
+              21
+            ]
+          ]
+        },
+        "references-count": 62,
+        "journal-issue": {
+          "issue": "7",
+          "published-print": {
+            "date-parts": [
+              [
+                2025,
+                2
+              ]
+            ]
+          }
+        },
+        "URL": "https://doi.org/10.1103/physrevlett.134.073603",
+        "ISSN": [
+          "0031-9007",
+          "1079-7114"
+        ],
+        "issn-type": [
+          {
+            "value": "0031-9007",
+            "type": "print"
+          },
+          {
+            "value": "1079-7114",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2025,
+              2,
+              21
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "2024-07-18",
+            "name": "date_received",
+            "label": "Date Received",
+            "group": {
+              "name": "publication_dates",
+              "label": "Publication dates"
+            }
+          },
+          {
+            "value": "© 2025 American Physical Society",
+            "name": "copyright_statement",
+            "label": "Copyright statement",
+            "group": {
+              "name": "copyright",
+              "label": "copyright"
+            }
+          },
+          {
+            "value": "2025",
+            "name": "copyright_year",
+            "label": "Copyright year",
+            "group": {
+              "name": "copyright",
+              "label": "copyright"
+            }
+          },
+          {
+            "value": "American Physical Society",
+            "name": "copyright_holder",
+            "label": "Copyright holder",
+            "group": {
+              "name": "copyright",
+              "label": "copyright"
+            }
+          }
+        ],
+        "article-number": "073603"
+      },
+      {
+        "institution": [
+          {
+            "name": "Optica Open"
+          }
+        ],
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              22
+            ]
+          ],
+          "date-time": "2026-04-22T08:40:29Z",
+          "timestamp": 1776847229189,
+          "version": "3.51.2"
+        },
+        "posted": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              22
+            ]
+          ]
+        },
+        "reference-count": 0,
+        "publisher": "Optica Publishing Group",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  4,
+                  22
+                ]
+              ],
+              "date-time": "2026-04-22T00:00:00Z",
+              "timestamp": 1776816000000
+            },
+            "content-version": "unspecified",
+            "delay-in-days": 0,
+            "URL": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "abstract": "<jats:p>Gaussian states evolving under time-dependent quadratic Hamiltonians are completely characterized by a single complex ray Z(t) obeying the classical Hill equation with a conserved symplectic Wronskian. The associated curvature coordinate Gamma(t) =Ζ´(t)/Z(t) transforms under the symplectic monodromy matrix M by a Mobius transformation acting on the upper half-plane Im(Gamma) &gt; 0. We show that whenever |Tr(M)| &gt; 2, the Gaussian squeezing parameter r is exactly one half the hyperbolic translation length l = 2 cosh^{-1}(|Tr(M)|/2) of the induced Mobius map. We further show that the same hyperbolic distance ell is the universal growth coordinate of all exponentially growing single-mode Gaussian observables: quadrature variances and photon number grow or decay exponentially with n ell after n drive periods. Because ell depends only on Tr(M), the entire squeezing spectrum may be extracted from the trace of a classical 2x2 transfer matrix, avoiding explicit time-ordered propagation of quantum density operators or covariance matrices. Parametric amplification is thereby identified not merely as a geometric phenomenon but as a computationally efficient design principle for driven quantum amplifiers. The result is illustrated for both the parametrically driven oscillator and a composite multi-element amplifier, where covariance growth rates match the geometric prediction exactly.&lt;p&gt;&lt;/p&gt;</jats:p>",
+        "DOI": "10.1364/opticaopen.32051823.v1",
+        "type": "posted-content",
+        "created": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              22
+            ]
+          ],
+          "date-time": "2026-04-22T07:43:48Z",
+          "timestamp": 1776843828000
+        },
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Hyperbolic Distance Governs Gaussian Quantum Squeezing"
+        ],
+        "prefix": "10.1364",
+        "author": [
+          {
+            "given": "Kenneth",
+            "family": "Menard",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "285",
+        "link": [
+          {
+            "URL": "https://ndownloader.figshare.com/files/63856257",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              22
+            ]
+          ],
+          "date-time": "2026-04-22T07:43:48Z",
+          "timestamp": 1776843828000
+        },
+        "score": 25.12025,
+        "resource": {
+          "primary": {
+            "URL": "https://preprints.opticaopen.org/articles/preprint/Hyperbolic_Distance_Governs_Gaussian_Quantum_Squeezing/32051823/1"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              22
+            ]
+          ]
+        },
+        "references-count": 0,
+        "URL": "https://doi.org/10.1364/opticaopen.32051823.v1",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              22
+            ]
+          ]
+        },
+        "subtype": "preprint"
+      },
+      {
+        "institution": [
+          {
+            "name": "Optica Open"
+          }
+        ],
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              22
+            ]
+          ],
+          "date-time": "2026-04-22T08:40:29Z",
+          "timestamp": 1776847229209,
+          "version": "3.51.2"
+        },
+        "posted": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              22
+            ]
+          ]
+        },
+        "reference-count": 0,
+        "publisher": "Optica Publishing Group",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2026,
+                  4,
+                  22
+                ]
+              ],
+              "date-time": "2026-04-22T00:00:00Z",
+              "timestamp": 1776816000000
+            },
+            "content-version": "unspecified",
+            "delay-in-days": 0,
+            "URL": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "abstract": "<jats:p>Gaussian states evolving under time-dependent quadratic Hamiltonians are completely characterized by a single complex ray Z(t) obeying the classical Hill equation with a conserved symplectic Wronskian. The associated curvature coordinate Gamma(t) =Ζ´(t)/Z(t) transforms under the symplectic monodromy matrix M by a Mobius transformation acting on the upper half-plane Im(Gamma) &gt; 0. We show that whenever |Tr(M)| &gt; 2, the Gaussian squeezing parameter r is exactly one half the hyperbolic translation length l = 2 cosh^{-1}(|Tr(M)|/2) of the induced Mobius map. We further show that the same hyperbolic distance ell is the universal growth coordinate of all exponentially growing single-mode Gaussian observables: quadrature variances and photon number grow or decay exponentially with n ell after n drive periods. Because ell depends only on Tr(M), the entire squeezing spectrum may be extracted from the trace of a classical 2x2 transfer matrix, avoiding explicit time-ordered propagation of quantum density operators or covariance matrices. Parametric amplification is thereby identified not merely as a geometric phenomenon but as a computationally efficient design principle for driven quantum amplifiers. The result is illustrated for both the parametrically driven oscillator and a composite multi-element amplifier, where covariance growth rates match the geometric prediction exactly.&lt;p&gt;&lt;/p&gt;</jats:p>",
+        "DOI": "10.1364/opticaopen.32051823",
+        "type": "posted-content",
+        "created": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              22
+            ]
+          ],
+          "date-time": "2026-04-22T07:43:47Z",
+          "timestamp": 1776843827000
+        },
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Hyperbolic Distance Governs Gaussian Quantum Squeezing"
+        ],
+        "prefix": "10.1364",
+        "author": [
+          {
+            "given": "Kenneth",
+            "family": "Menard",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "285",
+        "link": [
+          {
+            "URL": "https://ndownloader.figshare.com/files/63856257",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              22
+            ]
+          ],
+          "date-time": "2026-04-22T07:43:47Z",
+          "timestamp": 1776843827000
+        },
+        "score": 24.967903,
+        "resource": {
+          "primary": {
+            "URL": "https://preprints.opticaopen.org/articles/preprint/Hyperbolic_Distance_Governs_Gaussian_Quantum_Squeezing/32051823"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              22
+            ]
+          ]
+        },
+        "references-count": 0,
+        "URL": "https://doi.org/10.1364/opticaopen.32051823",
+        "published": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              22
+            ]
+          ]
+        },
+        "subtype": "preprint"
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2025,
+              10,
+              26
+            ]
+          ],
+          "date-time": "2025-10-26T15:02:21Z",
+          "timestamp": 1761490941803,
+          "version": "3.28.0"
+        },
+        "reference-count": 30,
+        "publisher": "IEEE",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2019,
+                  12,
+                  1
+                ]
+              ],
+              "date-time": "2019-12-01T00:00:00Z",
+              "timestamp": 1575158400000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2019,
+                  12,
+                  1
+                ]
+              ],
+              "date-time": "2019-12-01T00:00:00Z",
+              "timestamp": 1575158400000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-029"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2019,
+                  12,
+                  1
+                ]
+              ],
+              "date-time": "2019-12-01T00:00:00Z",
+              "timestamp": 1575158400000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-037"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2019,
+              12
+            ]
+          ]
+        },
+        "DOI": "10.1109/gcwkshps45667.2019.9024548",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2020,
+              3,
+              6
+            ]
+          ],
+          "date-time": "2020-03-06T17:06:31Z",
+          "timestamp": 1583514391000
+        },
+        "page": "1-6",
+        "source": "Crossref",
+        "is-referenced-by-count": 6,
+        "title": [
+          "Improving QKD for Entangled States with Low Squeezing via Non-Gaussian Operations"
+        ],
+        "prefix": "10.1109",
+        "author": [
+          {
+            "given": "Eduardo",
+            "family": "Villasenor",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Robert",
+            "family": "Malaney",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "ref30",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.88.057902"
+          },
+          {
+            "key": "ref10",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1088/0034-4885/70/8/R03",
+            "article-title": "Entanglement purification and quantum error correction",
+            "volume": "70",
+            "author": "dür",
+            "year": "2007",
+            "journal-title": "Reports on Progress in Physics"
+          },
+          {
+            "key": "ref11",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.89.137903"
+          },
+          {
+            "key": "ref12",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1134/S0032946007010012"
+          },
+          {
+            "key": "ref13",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/nphoton.2010.1"
+          },
+          {
+            "key": "ref14",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.87.022308"
+          },
+          {
+            "key": "ref15",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/RevModPhys.84.621"
+          },
+          {
+            "key": "ref16",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.73.042310"
+          },
+          {
+            "key": "ref17",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.82.062316"
+          },
+          {
+            "key": "ref18",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.92.153601"
+          },
+          {
+            "key": "ref19",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/GLOCOMW.2018.8644254"
+          },
+          {
+            "key": "ref28",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.95.090503"
+          },
+          {
+            "key": "ref4",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.59.2555"
+          },
+          {
+            "key": "ref27",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.97.190503"
+          },
+          {
+            "key": "ref3",
+            "first-page": "1",
+            "article-title": "An introduction to entanglement measures",
+            "volume": "7",
+            "author": "plenio",
+            "year": "2007",
+            "journal-title": "Quantum Info Comput"
+          },
+          {
+            "key": "ref6",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.99.012325"
+          },
+          {
+            "key": "ref29",
+            "article-title": "Discrete-modulation continuous-variable quantum key distribution enhanced by quantum scissors",
+            "author": "ghalaii",
+            "year": "2019",
+            "journal-title": "arXiv 1907 13405"
+          },
+          {
+            "key": "ref5",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.117.110801"
+          },
+          {
+            "key": "ref8",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.101.253601"
+          },
+          {
+            "key": "ref7",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.73.063804"
+          },
+          {
+            "key": "ref2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.82.1784"
+          },
+          {
+            "key": "ref9",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.53.2046"
+          },
+          {
+            "key": "ref1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/RevModPhys.77.513"
+          },
+          {
+            "key": "ref20",
+            "article-title": "Photonic engineering for CVQKD over Earth-satellite channels",
+            "author": "he",
+            "year": "2019",
+            "journal-title": "IEEE International Conference on Communications (ICC)"
+          },
+          {
+            "key": "ref22",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1364/JOSAB.35.000174"
+          },
+          {
+            "key": "ref21",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.64.063818"
+          },
+          {
+            "key": "ref24",
+            "article-title": "Longdistance continuous-variable quantum key distribution with quantum scissors",
+            "author": "ghalaii",
+            "year": "2018",
+            "journal-title": "arXiv 1808 01617"
+          },
+          {
+            "key": "ref23",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.100.022315"
+          },
+          {
+            "key": "ref26",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.96.080502"
+          },
+          {
+            "key": "ref25",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1063/1.3131295"
+          }
+        ],
+        "event": {
+          "name": "2019 IEEE Globecom Workshops (GC Wkshps)",
+          "start": {
+            "date-parts": [
+              [
+                2019,
+                12,
+                9
+              ]
+            ]
+          },
+          "location": "Waikoloa, HI, USA",
+          "end": {
+            "date-parts": [
+              [
+                2019,
+                12,
+                13
+              ]
+            ]
+          }
+        },
+        "container-title": [
+          "2019 IEEE Globecom Workshops (GC Wkshps)"
+        ],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx7/9006988/9024317/09024548.pdf?arnumber=9024548",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2022,
+              7,
+              15
+            ]
+          ],
+          "date-time": "2022-07-15T03:18:34Z",
+          "timestamp": 1657855114000
+        },
+        "score": 24.787806,
+        "resource": {
+          "primary": {
+            "URL": "https://ieeexplore.ieee.org/document/9024548/"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2019,
+              12
+            ]
+          ]
+        },
+        "references-count": 30,
+        "URL": "https://doi.org/10.1109/gcwkshps45667.2019.9024548",
+        "published": {
+          "date-parts": [
+            [
+              2019,
+              12
+            ]
+          ]
+        }
+      }
+    ],
+    "items-per-page": 6,
+    "query": {
+      "start-index": 0,
+      "search-terms": null
+    }
+  }
+}

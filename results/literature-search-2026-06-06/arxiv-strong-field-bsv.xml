@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/GuFeBbuxryatmIC6qwfcksbuuGk</id>
+  <title>arXiv Query: search_query=all:"bright squeezed vacuum" AND all:strong-field&amp;id_list=&amp;start=0&amp;max_results=8</title>
+  <updated>2026-06-06T15:52:27Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22bright+squeezed+vacuum%22+AND+all:strong-field&amp;start=0&amp;max_results=8&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>8</opensearch:itemsPerPage>
+  <opensearch:totalResults>16</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2604.12646v1</id>
+    <title>Interferometrically Enhanced Asymmetry in Strong-field Ionization with Bright Squeezed Vacuum</title>
+    <updated>2026-04-14T12:17:14Z</updated>
+    <link href="https://arxiv.org/abs/2604.12646v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.12646v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We demonstrate that quantum light statistics can be used to control strong-field ionization at the tunneling step. Using a bichromatic linearly polarized field composed of a strong coherent driver and a weak bright squeezed vacuum (BSV), we show through simulation that photoelectron momentum distributions (PMDs) exhibit asymmetries that exceed those obtained with classical fields of comparable intensity by orders of magnitude. This enhancement is uniquely linked to the nonclassical statistics of the BSV field. A semiclassical analysis based on the strong-field approximation (SFA) reveals that the effect originates from fluctuations in the instantaneous field amplitude, which strongly modify the tunneling ionization probability while leaving the electron's continuum dynamics essentially unchanged. This selective control enables reconstruction of ionization pathways and provides a robust route to extract sub-cycle dynamics from strong-field observables.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.atom-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-14T12:17:14Z</published>
+    <arxiv:comment>5 pages main paper, 14 pages including references and supplementary material; 7 figures in total</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>G. Singh</name>
+    </author>
+    <author>
+      <name>T. Rook</name>
+    </author>
+    <author>
+      <name>J. Rivera-Dean</name>
+    </author>
+    <author>
+      <name>C. Figueira de Morisson Faria</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.06703v1</id>
+    <title>Strong-field ionization of atoms with bright squeezed vacuum light</title>
+    <updated>2026-04-08T05:42:14Z</updated>
+    <link href="https://arxiv.org/abs/2604.06703v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.06703v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Strong-field ionization is the cornerstone of attosecond physics, which has been extensively studied under coherent-state driving. Recently, the interface between attosecond physics and quantum optics has emerged as a new frontier. Yet, owing to experimental limitations, the role of the quantum nature of light in atomic strong-field ionization has remained unexplored. Here, we demonstrate strong-field ionization of xenon atoms driven by bright squeezed vacuum (BSV) with average pulse energy up to 10 \textmu J. We show that, as a nonclassical state with zero mean field and strong intensity fluctuations, BSV selectively enhances the spider-like holographic structures in the photoelectron momentum distributions. Using a quantum-light-corrected quantum-trajectory Monte Carlo (q-QTMC) model, we attribute this effect to the intrinsic coherence of trajectory pairs emitted within the same subcycle field fluctuation. These dynamically correlated paths exhibit enhanced phase stability and remain robust against dephasing, whereas asynchronous paths are filtered out by field noise. Our results reveal a quantum-fluctuation-induced mechanism for coherence protection in strong-field processes, positioning BSV as an effective coherence filter and establishing a new regime of quantum-enabled noise-resilient ultrafast dynamics.</summary>
+    <category term="physics.atom-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-08T05:42:14Z</published>
+    <arxiv:primary_category term="physics.atom-ph"/>
+    <author>
+      <name>Haodong Liu</name>
+    </author>
+    <author>
+      <name>Xiaoxiao Long</name>
+    </author>
+    <author>
+      <name>Peizeng Li</name>
+    </author>
+    <author>
+      <name>Zijian Lyu</name>
+    </author>
+    <author>
+      <name>Yunquan Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.16831v1</id>
+    <title>Motion of charged particles in bright squeezed vacuum</title>
+    <updated>2023-05-26T11:19:01Z</updated>
+    <link href="https://arxiv.org/abs/2305.16831v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.16831v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The motion of laser-driven electrons quivers with an average energy termed pondermotive energy. We explore electron dynamics driven by bright squeezed vacuum (BSV), finding that BSV induces width oscillations, akin to electron quivering in laser light, with an equivalent ponderomotive energy. In the case of bound electrons, width oscillations may lead to tunnel ionization with noisy sub-cycle structure. Our results are foundational for strong-field and free-electron quantum optics, as they shed light on tunnel ionization, high harmonic generation, and nonlinear Compton scattering in BSV.</summary>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-26T11:19:01Z</published>
+    <arxiv:primary_category term="physics.optics"/>
+    <author>
+      <name>Matan Even Tzur</name>
+    </author>
+    <author>
+      <name>Oren Cohen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.30224v1</id>
+    <title>Heralded ultrafast generation of macroscopic quantum states in matter with bright squeezed vacuum light</title>
+    <updated>2026-05-28T16:55:17Z</updated>
+    <link href="https://arxiv.org/abs/2605.30224v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.30224v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that bright squeezed vacuum light, combined with a single-shot quadrature measurement of the post-interaction light, enables the ultrafast generation of macroscopic quantum states in matter. Although in the weak-coupling regime multiphoton quantum light leaves the unconditional matter state as a classical mixture due to light--matter entanglement, quadrature-based heralding prepares the matter in a Gaussian-weighted quantum superposition. For an ensemble of resonantly electric-dipole-coupled two-level systems, this heralding dynamics acts as a Gaussian filter with respect to the electric polarization, with brighter squeezed-vacuum light accelerating the preparation of the zero-eigenvalue Dicke state. Counter-rotating terms further drive a stroboscopic transition from this Dicke state to a cat-like state. Our results open a route to ultrafast engineering of macroscopic quantum matter with strong-field quantum light.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-28T16:55:17Z</published>
+    <arxiv:comment>21 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Shohei Imai</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.05783v2</id>
+    <title>Nonlinear atomic tunnelling boosted by bright squeezed vacuum</title>
+    <updated>2026-05-20T16:26:08Z</updated>
+    <link href="https://arxiv.org/abs/2604.05783v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.05783v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Nonlinear optical processes, mediated by multiphoton interactions rather than single-photon response, are routinely exploited to enable a range of light-based functionalities in devices and applications. Nonlinear effects are enhanced through higher intensity fields, which is a limiting strategy owing to potential radiation damage. An alternative strategy relies on the fluctuation redistribution typical of quantum light, but experimental demonstrations at the most fundamental level have been limited. Here we report experimental nonlinear tunnelling ionization of isolated atoms, a pivotal nonlinear process that drives high-harmonic generation and forms the basis of attosecond science, boosted by quantum light -- bright squeezed vacuum (BSV). A BSV light with an average pulse energy of 300 nJ achieves an effective intensity equivalent to that of a coherent light with 7.1 {\textmu}J, demonstrating a more than 20-fold quantum boost in nonlinear effect from BSV light. This boost is revealed by matching the peaks of the photoelectron momentum spectra produced by the BSV and coherent light using angular streaking. Furthermore, we demonstrate control of the effective intensity of the BSV by tuning the correlation function at fixed average pulse energy, establishing a robust method to tailor nonlinear processes via quantum statistics rather than classical intensity scaling. These findings may facilitate the development of quantum-controlled strong-field dynamics using tailored quantum light sources.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.atom-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-07T12:20:49Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Nature (2026)</arxiv:journal_ref>
+    <author>
+      <name>Zhejun Jiang</name>
+    </author>
+    <author>
+      <name>Shengzhe Pan</name>
+    </author>
+    <author>
+      <name>Jianqi Chen</name>
+    </author>
+    <author>
+      <name>Mingyu Zhu</name>
+    </author>
+    <author>
+      <name>Chenhao Zhao</name>
+    </author>
+    <author>
+      <name>Yiwen Wang</name>
+    </author>
+    <author>
+      <name>Ru Zhang</name>
+    </author>
+    <author>
+      <name>Jianshi Lu</name>
+    </author>
+    <author>
+      <name>Lulu Han</name>
+    </author>
+    <author>
+      <name>Suwen Xiong</name>
+    </author>
+    <author>
+      <name>Dian Wu</name>
+    </author>
+    <author>
+      <name>Wenxue Li</name>
+    </author>
+    <author>
+      <name>Shicheng Jiang</name>
+    </author>
+    <author>
+      <name>Hongcheng Ni</name>
+    </author>
+    <author>
+      <name>Jian Wu</name>
+    </author>
+    <arxiv:doi>10.1038/s41586-026-10485-9</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41586-026-10485-9" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.19608v3</id>
+    <title>Propagation of intense squeezed vacuum light in non-linear media</title>
+    <updated>2025-11-04T09:01:15Z</updated>
+    <link href="https://arxiv.org/abs/2509.19608v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.19608v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent developments in quantum light engineering have enabled the use of infrared bright squeezed vacuum (BSV) femtosecond pulses in highly nonlinear optics, particularly strong field physics and high-harmonic generation. However, theoretical studies were focused on the microscopic interaction with a single atom, neglecting the crucial macroscopic aspect of light propagation through the media. This raises a key question: How does BSV propagates in strongly light-driven nonlinear media and how this affects the generation of non-linear optical signals? We address this question by introducing a fully quantized framework that accounts for the propagation in gas media. We find that atomic ionization caused by strong BSV fluctuations and the associated infrared photon losses introduce decoherence effects that can substantially limit the propagation length in the medium, reduce the harmonic yield, and decrease the number of emitted harmonics at high intensities. However, these effects are not detrimental. We identify conditions under which propagation-induced decoherence is minimized while the generated harmonics remain clearly detectable--an issue of particular importance for future studies exploring the connection between strong-field physics and quantum optics. Our results lay the foundation for future studies of BSV in strong-field physics, nonlinear optics, and ultrafast science, and establish a basis for exploring its propagation through all states of matter in a fully quantized framework.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.atom-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-23T21:55:34Z</published>
+    <arxiv:comment>Updated some of the results using more accurate models for describing strong-field ionization. Right now, the text consists on 18 pages (8 main text + 10 Appendix), 7 Figures (4 main text + 3 Appendix). Comments are welcome</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Javier Rivera-Dean</name>
+    </author>
+    <author>
+      <name>Deeksha Kanti</name>
+    </author>
+    <author>
+      <name>Philipp Stammer</name>
+    </author>
+    <author>
+      <name>Stefanos Carlström</name>
+    </author>
+    <author>
+      <name>Nikolaos Tsatrafyllis</name>
+    </author>
+    <author>
+      <name>Misha Yu Ivanov</name>
+    </author>
+    <author>
+      <name>Maciej Lewenstein</name>
+    </author>
+    <author>
+      <name>Paraskevas Tzallas</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.15458v1</id>
+    <title>Benchmarking Atomic Ionization Driven by Strong Quantum Light</title>
+    <updated>2025-12-17T13:59:28Z</updated>
+    <link href="https://arxiv.org/abs/2512.15458v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.15458v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The recently available high-intensity quantum light pulses provide novel tools for controlling light-matter interactions. However, the rigor of the theoretical frameworks currently used to describe the interaction of strong quantum light with atoms and molecules remains unverified. Here, we establish a rigorous benchmark by solving the fully quantized time-dependent Schrödinger equation for an atom exposed to bright squeezed vacuum light. Our \textit{ab initio} simulations reveal a critical limitation of the widely used $Q$-representation: although it accurately reproduces the total photoelectron spectrum after tracing over photon states, it completely fails to capture the electron-photon joint energy spectrum. To overcome this limitation, we develop a general theoretical framework based on the Feynman path integral that properly incorporates the electron-photon quantum entanglement. Our results provide both quantitative benchmarks and fundamental theoretical insights for the emerging field of strong-field quantum optics.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-17T13:59:28Z</published>
+    <arxiv:comment>6 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Yi-Jia Mao</name>
+    </author>
+    <author>
+      <name>En-Rui Zhou</name>
+    </author>
+    <author>
+      <name>Yang Li</name>
+    </author>
+    <author>
+      <name>Pei-Lun He</name>
+    </author>
+    <author>
+      <name>Feng He</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.09284v1</id>
+    <title>Wave packet motion in a quantized electromagnetic field: Analytic results</title>
+    <updated>2026-04-10T12:55:14Z</updated>
+    <link href="https://arxiv.org/abs/2604.09284v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.09284v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We investigate the dynamics of a charged particle interacting with a multimode quantized electromagnetic field and obtain an analytic solution for the full electron--field system. This framework enables the calculation of position expectation values and uncertainties for arbitrary wave packets and field states, allowing us to identify quantum corrections to the corresponding classical motion. While the corrections to the position expectation value are weak and largely insensitive to the quantum state of the field, the wave packet broadening exhibits a pronounced dependence on the field state. In particular, the quantum uncertainty of the radiation is directly imprinted onto the spatial uncertainty of the particle. We illustrate these effects for Gaussian wave packets interacting with coherent, Fock, and squeezed states, including bright squeezed vacuum. The interaction with a finite-duration laser pulse is also analyzed as a multimode example. Our results provide a transparent analytic route toward understanding how quantum fluctuations of light influence electron dynamics in strong-field settings.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-10T12:55:14Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Szabolcs Hack</name>
+    </author>
+    <author>
+      <name>Béla Gábor Pusztai</name>
+    </author>
+    <author>
+      <name>Krisztina Joós</name>
+    </author>
+    <author>
+      <name>Sándor Varró</name>
+    </author>
+    <author>
+      <name>Attila Czirják</name>
+    </author>
+    <author>
+      <name>Péter Földi</name>
+    </author>
+  </entry>
+</feed>

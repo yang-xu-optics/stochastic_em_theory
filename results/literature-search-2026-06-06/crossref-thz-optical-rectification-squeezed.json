@@ -1,0 +1,1620 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "facets": {},
+    "total-results": 1351451,
+    "items": [
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              2,
+              14
+            ]
+          ],
+          "date-time": "2026-02-14T06:01:04Z",
+          "timestamp": 1771048864531,
+          "version": "3.50.1"
+        },
+        "reference-count": 22,
+        "publisher": "American Physical Society (APS)",
+        "issue": "6",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  1996,
+                  12,
+                  1
+                ]
+              ],
+              "date-time": "1996-12-01T00:00:00Z",
+              "timestamp": 849398400000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "http://link.aps.org/licenses/aps-default-license"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Phys. Rev. A"
+        ],
+        "DOI": "10.1103/physreva.54.5327",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2002,
+              7,
+              27
+            ]
+          ],
+          "date-time": "2002-07-27T02:27:51Z",
+          "timestamp": 1027736871000
+        },
+        "page": "5327-5333",
+        "source": "Crossref",
+        "is-referenced-by-count": 12,
+        "title": [
+          "Generation of atomic-squeezed states in an optical cavity with an injected squeezed vacuum"
+        ],
+        "prefix": "10.1103",
+        "volume": "54",
+        "author": [
+          {
+            "given": "Arup",
+            "family": "Banerjee",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "16",
+        "published-online": {
+          "date-parts": [
+            [
+              1996,
+              12,
+              1
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "PhysRevA.54.5327Cc1R1",
+            "doi-asserted-by": "crossref",
+            "first-page": "1962",
+            "DOI": "10.1103/PhysRevA.39.1962",
+            "volume": "39",
+            "author": "G. M. Palma",
+            "year": "1989",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "PhysRevA.54.5327Cc2R1",
+            "doi-asserted-by": "crossref",
+            "first-page": "7759",
+            "DOI": "10.1103/PhysRevA.44.7759",
+            "volume": "44",
+            "author": "Z. Ficek",
+            "year": "1991",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "PhysRevA.54.5327Cc3R1",
+            "doi-asserted-by": "crossref",
+            "first-page": "6797",
+            "DOI": "10.1103/PhysRevA.46.R6797",
+            "volume": "46",
+            "author": "D. J. Wineland",
+            "year": "1992",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "PhysRevA.54.5327Cc3R2",
+            "doi-asserted-by": "crossref",
+            "first-page": "67",
+            "DOI": "10.1103/PhysRevA.50.67",
+            "volume": "50",
+            "author": "D. J. Wineland",
+            "year": "1994",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "PhysRevA.54.5327Cc4R1",
+            "doi-asserted-by": "crossref",
+            "first-page": "3782",
+            "DOI": "10.1103/PhysRevA.41.3782",
+            "volume": "41",
+            "author": "G. S. Agarwal",
+            "year": "1990",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "PhysRevA.54.5327Cc5R1",
+            "doi-asserted-by": "crossref",
+            "first-page": "3796",
+            "DOI": "10.1103/PhysRevA.40.3796",
+            "volume": "40",
+            "author": "A. S. Parkins",
+            "year": "1989",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "PhysRevA.54.5327Cc5R2",
+            "doi-asserted-by": "crossref",
+            "first-page": "5765",
+            "DOI": "10.1103/PhysRevA.42.5765",
+            "volume": "42",
+            "author": "A. S. Parkins",
+            "year": "1990",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "PhysRevA.54.5327Cc6R1",
+            "doi-asserted-by": "crossref",
+            "first-page": "240",
+            "DOI": "10.1103/PhysRevLett.63.240",
+            "volume": "63",
+            "author": "M. G. Raizen",
+            "year": "1989",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "PhysRevA.54.5327Cc6R2",
+            "doi-asserted-by": "crossref",
+            "first-page": "2499",
+            "DOI": "10.1103/PhysRevLett.64.2499",
+            "volume": "64",
+            "author": "Zhu",
+            "year": "1990",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "PhysRevA.54.5327Cc7R1",
+            "doi-asserted-by": "crossref",
+            "first-page": "89",
+            "DOI": "10.1088/0954-8998/2/2/001",
+            "volume": "2",
+            "author": "C. M. Savage",
+            "year": "1990",
+            "journal-title": "Quantum Opt."
+          },
+          {
+            "key": "PhysRevA.54.5327Cc7R2",
+            "doi-asserted-by": "crossref",
+            "first-page": "758",
+            "DOI": "10.1103/PhysRevA.48.758",
+            "volume": "48",
+            "author": "A. S. Parkins",
+            "year": "1993",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "PhysRevA.54.5327Cc8R1",
+            "doi-asserted-by": "crossref",
+            "first-page": "2008",
+            "DOI": "10.1364/JOSAB.9.002008",
+            "volume": "9",
+            "author": "P. R. Rice",
+            "year": "1992",
+            "journal-title": "J. Opt. Soc. Am. B"
+          },
+          {
+            "key": "PhysRevA.54.5327Cc8R2",
+            "doi-asserted-by": "crossref",
+            "first-page": "4354",
+            "DOI": "10.1103/PhysRevA.46.4354",
+            "volume": "46",
+            "author": "J. I. Cirac",
+            "year": "1992",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "PhysRevA.54.5327Cc8R3",
+            "doi-asserted-by": "crossref",
+            "first-page": "2472",
+            "DOI": "10.1103/PhysRevA.52.2472",
+            "volume": "52",
+            "author": "A. Banerjee",
+            "year": "1995",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "PhysRevA.54.5327Cc9R1",
+            "doi-asserted-by": "crossref",
+            "first-page": "99",
+            "DOI": "10.1103/PhysRev.93.99",
+            "volume": "93",
+            "author": "R. H. Dicke",
+            "year": "1954",
+            "journal-title": "Phys. Rev."
+          },
+          {
+            "key": "PhysRevA.54.5327Cc10R1",
+            "doi-asserted-by": "crossref",
+            "first-page": "883",
+            "DOI": "10.1103/PhysRevA.2.883",
+            "volume": "2",
+            "author": "R. H. Lehemberg",
+            "year": "1970",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "PhysRevA.54.5327Cc11R1",
+            "doi-asserted-by": "crossref",
+            "first-page": "2095",
+            "DOI": "10.1103/PhysRevLett.58.2059",
+            "volume": "58",
+            "author": "E. Yablonovitch",
+            "year": "1987",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "PhysRevA.54.5327Cc12R1",
+            "doi-asserted-by": "crossref",
+            "first-page": "2339",
+            "DOI": "10.1080/09500349314552371",
+            "volume": "40",
+            "author": "Z. Ficek",
+            "year": "1993",
+            "journal-title": "J. Mod. Opt."
+          },
+          {
+            "key": "PhysRevA.54.5327Cc13R1",
+            "first-page": "4963",
+            "volume": "49",
+            "author": "G. S. Agarwal",
+            "year": "1994",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "PhysRevA.54.5327Cc14R1",
+            "doi-asserted-by": "crossref",
+            "first-page": "3020",
+            "DOI": "10.1103/PhysRevLett.68.3020",
+            "volume": "68",
+            "author": "E. S. Polzik",
+            "year": "1992",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "PhysRevA.54.5327Cc15R1",
+            "doi-asserted-by": "crossref",
+            "first-page": "1727",
+            "DOI": "10.1103/PhysRevLett.67.1727",
+            "volume": "67",
+            "author": "G. Rempe",
+            "year": "1991",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "PhysRevA.54.5327Cc16R1",
+            "doi-asserted-by": "crossref",
+            "first-page": "5695",
+            "DOI": "10.1103/PhysRevA.42.5695",
+            "volume": "42",
+            "author": "F. Seminara",
+            "year": "1990",
+            "journal-title": "Phys. Rev. A"
+          }
+        ],
+        "container-title": [
+          "Physical Review A"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "http://link.aps.org/article/10.1103/PhysRevA.54.5327",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "syndication"
+          },
+          {
+            "URL": "http://harvest.aps.org/v2/journals/articles/10.1103/PhysRevA.54.5327/fulltext",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2017,
+              12,
+              10
+            ]
+          ],
+          "date-time": "2017-12-10T04:45:03Z",
+          "timestamp": 1512881103000
+        },
+        "score": 26.624502,
+        "resource": {
+          "primary": {
+            "URL": "https://link.aps.org/doi/10.1103/PhysRevA.54.5327"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              1996,
+              12,
+              1
+            ]
+          ]
+        },
+        "references-count": 22,
+        "journal-issue": {
+          "issue": "6",
+          "published-print": {
+            "date-parts": [
+              [
+                1996,
+                12
+              ]
+            ]
+          }
+        },
+        "URL": "https://doi.org/10.1103/physreva.54.5327",
+        "ISSN": [
+          "1050-2947",
+          "1094-1622"
+        ],
+        "issn-type": [
+          {
+            "value": "1050-2947",
+            "type": "print"
+          },
+          {
+            "value": "1094-1622",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              1996,
+              12,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              31
+            ]
+          ],
+          "date-time": "2024-10-31T00:54:06Z",
+          "timestamp": 1730336046932,
+          "version": "3.28.0"
+        },
+        "publisher-location": "Washington, D.C.",
+        "reference-count": 3,
+        "publisher": "Optica Publishing Group",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              1990
+            ]
+          ]
+        },
+        "abstract": "<jats:p>Squeezing with degenerate parametric amplification sacrifices the power needed for the pump.<jats:sup>1</jats:sup> Squeezing by using the third- order nonlinearity does not necessarily sacrifice the pump power, because it remains at the same frequency as the squeezed radiation. Because the third-order nonlinearity is weak, long interaction lengths must be used, i.e., optical fibers. Past experiments with quasi excitation in optical fibers were plagued by stimulated Brillouin scattering (SBS) and guided acoustic wave acoustic Brillouin scattering (GAWBS).<jats:sup>2</jats:sup> The use of pulses raises the peak power and the SBS threshold, allowing use of shorter fibers. A Mach-Zehnder interferometer configuration separates the pump from the squeezed vacuum.<jats:sup>3</jats:sup> This has two advantages: the pump power can be reused as the local oscillator power, and the squeezed radiation can be measured closer to zero frequency (30 kHz) because the pump fluctuations are absent.</jats:p>",
+        "DOI": "10.1364/oam.1990.fbb4",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2023,
+              2,
+              17
+            ]
+          ],
+          "date-time": "2023-02-17T14:41:41Z",
+          "timestamp": 1676644901000
+        },
+        "page": "FBB4",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Squeezed pulse vacuum from fiber-ring interferometer"
+        ],
+        "prefix": "10.1364",
+        "author": [
+          {
+            "given": "K.",
+            "family": "Bergman",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "H. A.",
+            "family": "Haus",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "285",
+        "reference": [
+          {
+            "key": "OAM-1990-FBB4-R1",
+            "doi-asserted-by": "publisher",
+            "first-page": "2520",
+            "DOI": "10.1103/PhysRevLett.57.2520",
+            "volume": "57",
+            "author": "Wu",
+            "year": "1986",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "OAM-1990-FBB4-R2",
+            "doi-asserted-by": "publisher",
+            "first-page": "5244",
+            "DOI": "10.1103/PhysRevB.31.5244",
+            "volume": "31",
+            "author": "Shelby",
+            "year": "1985",
+            "journal-title": "Phys. Rev. B"
+          },
+          {
+            "key": "OAM-1990-FBB4-R3",
+            "doi-asserted-by": "publisher",
+            "first-page": "30",
+            "DOI": "10.1364/JOSAB.7.000030",
+            "volume": "7",
+            "author": "Shirasaki",
+            "year": "1990",
+            "journal-title": "J. Opt. Soc. Am. B"
+          }
+        ],
+        "event": {
+          "name": "OSA Annual Meeting",
+          "start": {
+            "date-parts": [
+              [
+                1990
+              ]
+            ]
+          },
+          "sponsor": [
+            "The Optical Society"
+          ],
+          "location": "Boston, Massachusetts",
+          "acronym": "OAM"
+        },
+        "container-title": [
+          "Optical Society of America Annual Meeting"
+        ],
+        "link": [
+          {
+            "URL": "https://opg.optica.org/viewmedia.cfm?URI=OAM-1990-FBB4&seq=0",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2023,
+              2,
+              17
+            ]
+          ],
+          "date-time": "2023-02-17T14:41:42Z",
+          "timestamp": 1676644902000
+        },
+        "score": 26.565674,
+        "resource": {
+          "primary": {
+            "URL": "https://opg.optica.org/abstract.cfm?URI=OAM-1990-FBB4"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              1990
+            ]
+          ]
+        },
+        "references-count": 3,
+        "URL": "https://doi.org/10.1364/oam.1990.fbb4",
+        "published": {
+          "date-parts": [
+            [
+              1990
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              31
+            ]
+          ],
+          "date-time": "2024-10-31T00:47:31Z",
+          "timestamp": 1730335651963,
+          "version": "3.28.0"
+        },
+        "publisher-location": "Washington, D.C.",
+        "reference-count": 2,
+        "publisher": "Optica Publishing Group",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              1988
+            ]
+          ]
+        },
+        "abstract": "<jats:p>Gardiner<jats:sup>1</jats:sup> treated the problem of the decay of two-level systems in a squeezed vacuum. To a good approximation, he found that the Maxwell-Bloch equations are modified simply by having different inphase and inquadrature relation rates. Resonance fluorescence<jats:sup>2</jats:sup> and probe absorption have been studied in such a vacuum. We describe nondegenerate four-wave mixing as derived using standard Fourier series methods but with two transverse decay constants. For a highly squeezed vacuum, we find sharp resonances in the probe absorption coefficient and suppression of population pulsation contributions. These resonances are very sensitive to changes in the pump/vacuum relative phase. We average the probe absorption and coupling coefficients over pump spatial holes and solve the coupled mode equations to find the four-wave mixing reflection coefficient. We find that the reflectivity peaks and dips are smaller than in unsqueezed vacuum.</jats:p>",
+        "DOI": "10.1364/oam.1988.tul7",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2023,
+              2,
+              21
+            ]
+          ],
+          "date-time": "2023-02-21T18:54:04Z",
+          "timestamp": 1677005644000
+        },
+        "page": "TUL7",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Nondegenerate four-wave mixing in a squeezed vacuum"
+        ],
+        "prefix": "10.1364",
+        "author": [
+          {
+            "given": "Sunghyuck",
+            "family": "An",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Murray",
+            "family": "Sargent",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "285",
+        "reference": [
+          {
+            "key": "OAM-1988-TUL7-R1",
+            "doi-asserted-by": "publisher",
+            "first-page": "1917",
+            "DOI": "10.1103/PhysRevLett.56.1917",
+            "volume": "56",
+            "author": "Gardiner",
+            "year": "1986",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "OAM-1988-TUL7-R2",
+            "doi-asserted-by": "publisher",
+            "first-page": "2539",
+            "DOI": "10.1103/PhysRevLett.58.2539",
+            "volume": "58",
+            "author": "Carmichael",
+            "year": "1987",
+            "journal-title": "Phys. Rev. Lett."
+          }
+        ],
+        "event": {
+          "name": "OSA Annual Meeting",
+          "start": {
+            "date-parts": [
+              [
+                1988
+              ]
+            ]
+          },
+          "sponsor": [
+            "The Optical Society"
+          ],
+          "location": "Santa Clara, California",
+          "acronym": "OAM"
+        },
+        "container-title": [
+          "Annual Meeting Optical Society of America"
+        ],
+        "link": [
+          {
+            "URL": "https://opg.optica.org/viewmedia.cfm?URI=OAM-1988-TUL7&seq=0",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2023,
+              2,
+              21
+            ]
+          ],
+          "date-time": "2023-02-21T18:54:05Z",
+          "timestamp": 1677005645000
+        },
+        "score": 26.380407,
+        "resource": {
+          "primary": {
+            "URL": "https://opg.optica.org/abstract.cfm?URI=OAM-1988-TUL7"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              1988
+            ]
+          ]
+        },
+        "references-count": 2,
+        "URL": "https://doi.org/10.1364/oam.1988.tul7",
+        "published": {
+          "date-parts": [
+            [
+              1988
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              29
+            ]
+          ],
+          "date-time": "2022-03-29T02:48:48Z",
+          "timestamp": 1648522128427
+        },
+        "reference-count": 31,
+        "publisher": "Elsevier BV",
+        "issue": "16",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2014,
+                  8,
+                  1
+                ]
+              ],
+              "date-time": "2014-08-01T00:00:00Z",
+              "timestamp": 1406851200000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "elsevier.com",
+            "sciencedirect.com"
+          ],
+          "crossmark-restriction": true
+        },
+        "short-container-title": [
+          "Optik"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2014,
+              8
+            ]
+          ]
+        },
+        "DOI": "10.1016/j.ijleo.2014.03.013",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2014,
+              5,
+              17
+            ]
+          ],
+          "date-time": "2014-05-17T07:45:16Z",
+          "timestamp": 1400312716000
+        },
+        "page": "4497-4500",
+        "update-policy": "http://dx.doi.org/10.1016/elsevier_cm_policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 1,
+        "title": [
+          "Analytical investigation on interactions among squeezed vacuum and coherent state, coherent vacuum and squeezed state, and among phase squeezed and amplitude squeezed states of light"
+        ],
+        "prefix": "10.1016",
+        "volume": "125",
+        "author": [
+          {
+            "given": "Saibal",
+            "family": "Mitra",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Sourangshu",
+            "family": "Mukhopadhyay",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "78",
+        "reference": [
+          {
+            "key": "10.1016/j.ijleo.2014.03.013_bib0005",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1109/68.43368",
+            "article-title": "1Gb/s PSK homodyne transmission system using phaselocked semiconductor lasers",
+            "author": "Kahn",
+            "year": "1989",
+            "journal-title": "IEEE Photon. Technol. Lett."
+          },
+          {
+            "key": "10.1016/j.ijleo.2014.03.013_bib0010",
+            "doi-asserted-by": "crossref",
+            "first-page": "30",
+            "DOI": "10.1049/el:19860021",
+            "article-title": "Coherentlightwave transmission over 150km fiber lengths at 400Mbits/s and 1Gbit/s data rates using phase modulation",
+            "volume": "22",
+            "author": "Linke",
+            "year": "1986",
+            "journal-title": "Electron. Lett."
+          },
+          {
+            "key": "10.1016/j.ijleo.2014.03.013_bib0015",
+            "doi-asserted-by": "crossref",
+            "first-page": "2409",
+            "DOI": "10.1103/PhysRevLett.55.2409",
+            "article-title": "Observation of squeezed states generated by four-wave mixing in an optical cavity",
+            "volume": "55",
+            "author": "Slusher",
+            "year": "1985",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "10.1016/j.ijleo.2014.03.013_bib0020",
+            "doi-asserted-by": "crossref",
+            "first-page": "691",
+            "DOI": "10.1103/PhysRevLett.57.691",
+            "article-title": "Broad-band parametric deamplification of quantumnoise in an optical fiber",
+            "volume": "57",
+            "author": "Shelby",
+            "year": "1986",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "10.1016/j.ijleo.2014.03.013_bib0025",
+            "doi-asserted-by": "crossref",
+            "first-page": "2520",
+            "DOI": "10.1103/PhysRevLett.57.2520",
+            "article-title": "Generation of squeezed states by parametric down conversion",
+            "volume": "57",
+            "author": "Wu",
+            "year": "1986",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "10.1016/j.ijleo.2014.03.013_bib0030",
+            "first-page": "161",
+            "article-title": "Observation of squeezed noise produced by forward four-wave mixing in sodium vapor",
+            "volume": "3",
+            "author": "Maeda",
+            "year": "1986",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "key": "10.1016/j.ijleo.2014.03.013_bib0035",
+            "doi-asserted-by": "crossref",
+            "first-page": "2566",
+            "DOI": "10.1103/PhysRevLett.59.2566",
+            "article-title": "Pulsed squeezed light",
+            "volume": "59",
+            "author": "Slusher",
+            "year": "1987",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "10.1016/j.ijleo.2014.03.013_bib0040",
+            "doi-asserted-by": "crossref",
+            "first-page": "153",
+            "DOI": "10.1103/PhysRevLett.66.153",
+            "article-title": "Squeezed optical solitons",
+            "volume": "66",
+            "author": "Rosenbluh",
+            "year": "1991",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "10.1016/j.ijleo.2014.03.013_bib0045",
+            "doi-asserted-by": "crossref",
+            "first-page": "2446",
+            "DOI": "10.1103/PhysRevLett.81.2446",
+            "article-title": "Photon-number squeezed solitons from an asymmetric fiber-optic Sagnac interferometer",
+            "volume": "81",
+            "author": "Schmitt",
+            "year": "1998",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "10.1016/j.ijleo.2014.03.013_bib0050",
+            "doi-asserted-by": "crossref",
+            "first-page": "1390",
+            "DOI": "10.1364/OL.23.001390",
+            "article-title": "Amplitude-squeezed solitons from an asymmetric fiber interferometer",
+            "volume": "23",
+            "author": "Krylov",
+            "year": "1998",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "key": "10.1016/j.ijleo.2014.03.013_bib0055",
+            "doi-asserted-by": "crossref",
+            "first-page": "984",
+            "DOI": "10.1364/OL.24.000984",
+            "article-title": "Amplitude squeezing of light by means of a phase sensitive fiber parametric amplifier",
+            "volume": "24",
+            "author": "Levandovsky",
+            "year": "1999",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "key": "10.1016/j.ijleo.2014.03.013_bib0060",
+            "doi-asserted-by": "crossref",
+            "first-page": "1000",
+            "DOI": "10.1103/PhysRevLett.58.1000",
+            "article-title": "Observation of amplitude squeezing in a constant-current-driven semiconductor laser",
+            "volume": "58",
+            "author": "Machida",
+            "year": "1987",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "10.1016/j.ijleo.2014.03.013_bib0065",
+            "doi-asserted-by": "crossref",
+            "first-page": "2555",
+            "DOI": "10.1103/PhysRevLett.59.2555",
+            "article-title": "Observation of quantum noise reduction on twin laser beams",
+            "volume": "59",
+            "author": "Heidmann",
+            "year": "1987",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "issue": "22",
+            "key": "10.1016/j.ijleo.2014.03.013_bib0070",
+            "doi-asserted-by": "crossref",
+            "first-page": "2867",
+            "DOI": "10.1103/PhysRevLett.66.2867",
+            "article-title": "Squeezed photon-number noise and sub-Poissonian electrical partition noise in a semiconductor laser",
+            "volume": "66",
+            "author": "Richardson",
+            "year": "1991",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "issue": "24",
+            "key": "10.1016/j.ijleo.2014.03.013_bib0075",
+            "doi-asserted-by": "crossref",
+            "first-page": "3807",
+            "DOI": "10.1103/PhysRevLett.72.3807",
+            "article-title": "Bright squeezed light from a singly-resonant frequency doubler",
+            "volume": "72",
+            "author": "Paschotta",
+            "year": "1994",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "issue": "25",
+            "key": "10.1016/j.ijleo.2014.03.013_bib0080",
+            "doi-asserted-by": "crossref",
+            "first-page": "25763",
+            "DOI": "10.1364/OE.19.025763",
+            "article-title": "Squeezed light at 1550nm with a quantum noise reduction of 12.3dB",
+            "volume": "19",
+            "author": "Mehmet",
+            "year": "2011",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "issue": "3",
+            "key": "10.1016/j.ijleo.2014.03.013_bib0085",
+            "doi-asserted-by": "crossref",
+            "first-page": "0336",
+            "DOI": "10.1103/PhysRevLett.100.033602",
+            "article-title": "Observation of squeezed light with 10dB quantum noise reduction",
+            "volume": "100",
+            "author": "Vahlbruch",
+            "year": "2008",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "issue": "7",
+            "key": "10.1016/j.ijleo.2014.03.013_bib0090",
+            "doi-asserted-by": "crossref",
+            "first-page": "4321",
+            "DOI": "10.1364/OE.15.004321",
+            "article-title": "Observation of −9dB quadrature squeezing with improvement of phase stability in homodyne measurement",
+            "volume": "15",
+            "author": "Takeno",
+            "year": "2007",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "key": "10.1016/j.ijleo.2014.03.013_bib0095",
+            "first-page": "0223",
+            "article-title": "Secure quantum key distribution using squeezed states",
+            "volume": "63",
+            "author": "Gottesman",
+            "year": "2011",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "10.1016/j.ijleo.2014.03.013_bib0100",
+            "doi-asserted-by": "crossref",
+            "first-page": "140401",
+            "DOI": "10.1103/PhysRevLett.100.140401",
+            "article-title": "Quantum spin dynamics of mode-squeezed Luttinger liquids in two-component atomic gases",
+            "volume": "100",
+            "author": "Widera",
+            "year": "2008",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "10.1016/j.ijleo.2014.03.013_bib0105",
+            "doi-asserted-by": "crossref",
+            "first-page": "706",
+            "DOI": "10.1126/science.282.5389.706",
+            "article-title": "Unconditional quantum teleportation",
+            "volume": "282",
+            "author": "Furusawa",
+            "year": "1998",
+            "journal-title": "Science"
+          },
+          {
+            "key": "10.1016/j.ijleo.2014.03.013_bib0110",
+            "doi-asserted-by": "crossref",
+            "first-page": "032302",
+            "DOI": "10.1103/PhysRevA.67.032302",
+            "article-title": "Experimental investigation of continuous-variable quantum teleportation",
+            "volume": "67",
+            "author": "Bowen",
+            "year": "2003",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "10.1016/j.ijleo.2014.03.013_bib0115",
+            "doi-asserted-by": "crossref",
+            "first-page": "2153",
+            "DOI": "10.1103/PhysRevLett.59.2153",
+            "article-title": "Squeezed-light-enhanced polarization interferometer",
+            "volume": "59",
+            "author": "Grangier",
+            "year": "1987",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "10.1016/j.ijleo.2014.03.013_bib0120",
+            "doi-asserted-by": "crossref",
+            "first-page": "3020",
+            "DOI": "10.1103/PhysRevLett.68.3020",
+            "article-title": "Spectroscopy with squeezed light",
+            "volume": "68",
+            "author": "Polzik",
+            "year": "1992",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "issue": "11",
+            "key": "10.1016/j.ijleo.2014.03.013_bib0125",
+            "doi-asserted-by": "crossref",
+            "first-page": "2304",
+            "DOI": "10.1364/JOSAB.12.002304",
+            "article-title": "Squeezed vacuum from a monolithic optical parametric oscillator",
+            "volume": "12",
+            "author": "Breitenbach",
+            "year": "1995",
+            "journal-title": "J. Opt. Soc. Am. B"
+          },
+          {
+            "issue": "5",
+            "key": "10.1016/j.ijleo.2014.03.013_bib0130",
+            "doi-asserted-by": "crossref",
+            "first-page": "411",
+            "DOI": "10.1016/j.ijleo.2010.02.023",
+            "article-title": "Analytical approach of using squeezed state formation of light for conducting all-optical noise free XOR and NOT logic operation",
+            "volume": "122",
+            "author": "Pal",
+            "year": "2011",
+            "journal-title": "Optik"
+          },
+          {
+            "issue": "21",
+            "key": "10.1016/j.ijleo.2014.03.013_bib0135",
+            "doi-asserted-by": "crossref",
+            "first-page": "1943",
+            "DOI": "10.1016/j.ijleo.2010.09.047",
+            "article-title": "Analytical approach of using squeezed state formation of light for conducting all-optical noise free NAND logic operation",
+            "volume": "122",
+            "author": "Pal",
+            "year": "2011",
+            "journal-title": "Optik"
+          },
+          {
+            "issue": "1",
+            "key": "10.1016/j.ijleo.2014.03.013_bib0140",
+            "doi-asserted-by": "crossref",
+            "first-page": "91",
+            "DOI": "10.1016/j.ijleo.2011.11.031",
+            "article-title": "Analytical approach of using squeezed state formation of light for developing a highly noise reduced all-optical 1-bit memory cell",
+            "volume": "124",
+            "author": "Pal",
+            "year": "2013",
+            "journal-title": "Optik"
+          },
+          {
+            "issue": "20",
+            "key": "10.1016/j.ijleo.2014.03.013_bib0145",
+            "doi-asserted-by": "crossref",
+            "first-page": "4586",
+            "DOI": "10.1016/j.ijleo.2013.01.065",
+            "article-title": "An analytical investigation on the interactions between a squeezed and a coherent optical signal",
+            "volume": "124",
+            "author": "Mitra",
+            "year": "2013",
+            "journal-title": "Optik"
+          },
+          {
+            "key": "10.1016/j.ijleo.2014.03.013_bib0150",
+            "doi-asserted-by": "crossref",
+            "first-page": "153",
+            "DOI": "10.1088/0954-8998/1/2/006",
+            "article-title": "Squeezed state of light",
+            "volume": "1",
+            "author": "Teich",
+            "year": "1989",
+            "journal-title": "Quant. Opt."
+          },
+          {
+            "key": "10.1016/j.ijleo.2014.03.013_bib0155",
+            "series-title": "Quantum Optics an Introduction",
+            "author": "Fox",
+            "year": "2006"
+          }
+        ],
+        "container-title": [
+          "Optik"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0030402614003799?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0030402614003799?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2018,
+              11,
+              2
+            ]
+          ],
+          "date-time": "2018-11-02T10:43:48Z",
+          "timestamp": 1541155428000
+        },
+        "score": 25.919958,
+        "resource": {
+          "primary": {
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0030402614003799"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2014,
+              8
+            ]
+          ]
+        },
+        "references-count": 31,
+        "journal-issue": {
+          "issue": "16",
+          "published-print": {
+            "date-parts": [
+              [
+                2014,
+                8
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "S0030402614003799"
+        ],
+        "URL": "https://doi.org/10.1016/j.ijleo.2014.03.013",
+        "ISSN": [
+          "0030-4026"
+        ],
+        "issn-type": [
+          {
+            "value": "0030-4026",
+            "type": "print"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2014,
+              8
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "Elsevier",
+            "name": "publisher",
+            "label": "This article is maintained by"
+          },
+          {
+            "value": "Analytical investigation on interactions among squeezed vacuum and coherent state, coherent vacuum and squeezed state, and among phase squeezed and amplitude squeezed states of light",
+            "name": "articletitle",
+            "label": "Article Title"
+          },
+          {
+            "value": "Optik",
+            "name": "journaltitle",
+            "label": "Journal Title"
+          },
+          {
+            "value": "https://doi.org/10.1016/j.ijleo.2014.03.013",
+            "name": "articlelink",
+            "label": "CrossRef DOI link to publisher maintained version"
+          },
+          {
+            "value": "article",
+            "name": "content_type",
+            "label": "Content Type"
+          },
+          {
+            "value": "Copyright © 2014 Elsevier GmbH. All rights reserved.",
+            "name": "copyright",
+            "label": "Copyright"
+          }
+        ]
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              31
+            ]
+          ],
+          "date-time": "2024-10-31T00:44:41Z",
+          "timestamp": 1730335481069,
+          "version": "3.28.0"
+        },
+        "publisher-location": "Washington, D.C.",
+        "reference-count": 2,
+        "publisher": "Optica Publishing Group",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              1988
+            ]
+          ]
+        },
+        "abstract": "<jats:p>An experimental study of enhancement of interferometric sensitivity using squeezed vacuum fluctuations is described. By operating an interferometer at the dark fringe, large laser powers can be used for high sensitivity. It is possible to enhance the interferometric sensitivity beyond the shot-noise limit in the dark fringe arrangement by using an electrooptic modulator in the interferometer to vary the phase periodically away from the dark fringe. A detector at the dark output port can then operate at the shot-noise limit and detect phase imbalance at the sensitivity determined by power level at the bright output port.<jats:sup>1</jats:sup> This shot-noise limit can be reduced further by illuminating the dark input port with squeezed vacuum, as demonstrated recently in balanced output port experiments.<jats:sup>2,3</jats:sup> However, there are interesting limits to the sensitivity improvement expected in the dark fringe case.<jats:sup>1</jats:sup> The experimental arrangement includes a polarization interferometer illuminated with 100 mW of 1.064-<jats:italic>μ</jats:italic>m wavelength light from a Nd:YAG cw laser. Squeezed vacuum is generated by a KTP optical parametric amplifier. Experimental progress is reported at sensitivities in the nanoradian polarization rotation range.</jats:p>",
+        "DOI": "10.1364/oam.1988.mm6",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2023,
+              2,
+              21
+            ]
+          ],
+          "date-time": "2023-02-21T11:58:39Z",
+          "timestamp": 1676980719000
+        },
+        "page": "MM6",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Squeezed vacuum enhanced interferometry at the dark fringe"
+        ],
+        "prefix": "10.1364",
+        "author": [
+          {
+            "given": "P.",
+            "family": "Granger",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "R. E.",
+            "family": "Slusher",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "A.",
+            "family": "Laporta",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "285",
+        "reference": [
+          {
+            "key": "OAM-1988-MM6-R2",
+            "doi-asserted-by": "publisher",
+            "first-page": "278",
+            "DOI": "10.1103/PhysRevLett.59.278",
+            "volume": "59",
+            "author": "Xiao",
+            "year": "1987",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "OAM-1988-MM6-R3",
+            "doi-asserted-by": "publisher",
+            "first-page": "2153",
+            "DOI": "10.1103/PhysRevLett.59.2153",
+            "volume": "59",
+            "author": "Grangier",
+            "year": "1987",
+            "journal-title": "Phys. Rev. Lett."
+          }
+        ],
+        "event": {
+          "name": "OSA Annual Meeting",
+          "start": {
+            "date-parts": [
+              [
+                1988
+              ]
+            ]
+          },
+          "sponsor": [
+            "The Optical Society"
+          ],
+          "location": "Santa Clara, California",
+          "acronym": "OAM"
+        },
+        "container-title": [
+          "Annual Meeting Optical Society of America"
+        ],
+        "link": [
+          {
+            "URL": "https://opg.optica.org/viewmedia.cfm?URI=OAM-1988-MM6&seq=0",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2023,
+              2,
+              21
+            ]
+          ],
+          "date-time": "2023-02-21T11:58:41Z",
+          "timestamp": 1676980721000
+        },
+        "score": 25.591702,
+        "resource": {
+          "primary": {
+            "URL": "https://opg.optica.org/abstract.cfm?URI=OAM-1988-MM6"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              1988
+            ]
+          ]
+        },
+        "references-count": 2,
+        "URL": "https://doi.org/10.1364/oam.1988.mm6",
+        "published": {
+          "date-parts": [
+            [
+              1988
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2022,
+              10,
+              12
+            ]
+          ],
+          "date-time": "2022-10-12T08:16:55Z",
+          "timestamp": 1665562615327
+        },
+        "reference-count": 0,
+        "publisher": "Shanghai Institute of Optics and Fine Mechanics",
+        "issue": "9",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Chin. Opt. Lett.",
+          "中国光学快报"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2012
+            ]
+          ]
+        },
+        "DOI": "10.3788/col201210.091901",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2012,
+              8,
+              13
+            ]
+          ],
+          "date-time": "2012-08-13T02:02:00Z",
+          "timestamp": 1344823320000
+        },
+        "page": "091901-91904",
+        "source": "Crossref",
+        "is-referenced-by-count": 1,
+        "title": [
+          "Phase-sensitive reflection of squeezed vacuum field in optical cavity"
+        ],
+        "prefix": "10.3788",
+        "volume": "10",
+        "author": [
+          {
+            "given": "Ke Di",
+            "family": "Ke Di",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Xudong Yu",
+            "family": "Xudong Yu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Fengyu Cheng",
+            "family": "Fengyu Cheng",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Jing Zhang",
+            "family": "Jing Zhang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "2099",
+        "container-title": [
+          "Chinese Optics Letters"
+        ],
+        "original-title": [
+          "Phase-sensitive reflection of squeezed vacuum field in optical cavity"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://www.researching.cn/ArticlePdf/m00005/2012/10/9/COL201210091901.pdf",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2022,
+              10,
+              12
+            ]
+          ],
+          "date-time": "2022-10-12T07:51:21Z",
+          "timestamp": 1665561081000
+        },
+        "score": 25.56606,
+        "resource": {
+          "primary": {
+            "URL": "https://www.researching.cn/ArticlePdf/m00005/2012/10/9/COL201210091901.pdf"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2012
+            ]
+          ]
+        },
+        "references-count": 0,
+        "journal-issue": {
+          "issue": "9",
+          "published-print": {
+            "date-parts": [
+              [
+                2012
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "OJ120516000086u2x4A7"
+        ],
+        "URL": "https://doi.org/10.3788/col201210.091901",
+        "ISSN": [
+          "1671-7694"
+        ],
+        "issn-type": [
+          {
+            "value": "1671-7694",
+            "type": "print"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2012
+            ]
+          ]
+        }
+      }
+    ],
+    "items-per-page": 6,
+    "query": {
+      "start-index": 0,
+      "search-terms": null
+    }
+  }
+}

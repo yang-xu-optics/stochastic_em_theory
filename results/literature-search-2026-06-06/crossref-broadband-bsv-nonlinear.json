@@ -1,0 +1,1767 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "facets": {},
+    "total-results": 1416412,
+    "items": [
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              8,
+              5
+            ]
+          ],
+          "date-time": "2024-08-05T23:32:24Z",
+          "timestamp": 1722900744854
+        },
+        "reference-count": 0,
+        "publisher": "AIP",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2000
+            ]
+          ]
+        },
+        "DOI": "10.1063/1.1291633",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2003,
+              2,
+              6
+            ]
+          ],
+          "date-time": "2003-02-06T14:30:54Z",
+          "timestamp": 1044541854000
+        },
+        "page": "635-641",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Nonlinear two-photon interaction of radiators with broadband squeezed vacuum"
+        ],
+        "prefix": "10.1063",
+        "volume": "519",
+        "author": [
+          {
+            "given": "N. A.",
+            "family": "Enaki",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "317",
+        "event": {
+          "name": "Third tohwa university international conference on statistical physics",
+          "location": "Fukuoka (Japan)"
+        },
+        "container-title": [
+          "AIP Conference Proceedings"
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2023,
+              4,
+              20
+            ]
+          ],
+          "date-time": "2023-04-20T08:45:47Z",
+          "timestamp": 1681980347000
+        },
+        "score": 35.962257,
+        "resource": {
+          "primary": {
+            "URL": "https://pubs.aip.org/aip/acp/article/519/1/635-641/578157"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2000
+            ]
+          ]
+        },
+        "references-count": 0,
+        "URL": "https://doi.org/10.1063/1.1291633",
+        "ISSN": [
+          "0094-243X"
+        ],
+        "issn-type": [
+          {
+            "type": "print",
+            "value": "0094-243X"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2000
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2023,
+              8,
+              26
+            ]
+          ],
+          "date-time": "2023-08-26T04:50:14Z",
+          "timestamp": 1693025414565
+        },
+        "reference-count": 23,
+        "publisher": "Elsevier BV",
+        "issue": "1-2",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  1991,
+                  4,
+                  1
+                ]
+              ],
+              "date-time": "1991-04-01T00:00:00Z",
+              "timestamp": 670464000000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Optics Communications"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              1991,
+              4
+            ]
+          ]
+        },
+        "DOI": "10.1016/0030-4018(91)90204-q",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2002,
+              10,
+              17
+            ]
+          ],
+          "date-time": "2002-10-17T08:58:30Z",
+          "timestamp": 1034845110000
+        },
+        "page": "130-136",
+        "source": "Crossref",
+        "is-referenced-by-count": 16,
+        "title": [
+          "Effect of a broadband squeezed vacuum on two-atom spontaneous emission"
+        ],
+        "prefix": "10.1016",
+        "volume": "82",
+        "author": [
+          {
+            "given": "Z.",
+            "family": "Ficek",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "78",
+        "reference": [
+          {
+            "issue": "nos. 6/7",
+            "key": "10.1016/0030-4018(91)90204-Q_BIB1_1",
+            "volume": "34",
+            "year": "1987",
+            "journal-title": "J. Mod. Opt."
+          },
+          {
+            "issue": "no. 10",
+            "key": "10.1016/0030-4018(91)90204-Q_BIB1_2",
+            "volume": "4",
+            "year": "1987",
+            "journal-title": "J. Opt. Soc. Am. B"
+          },
+          {
+            "key": "10.1016/0030-4018(91)90204-Q_BIB2",
+            "doi-asserted-by": "crossref",
+            "first-page": "1917",
+            "DOI": "10.1103/PhysRevLett.56.1917",
+            "volume": "56",
+            "author": "Gardiner",
+            "year": "1986",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "10.1016/0030-4018(91)90204-Q_BIB3_1",
+            "doi-asserted-by": "crossref",
+            "first-page": "2539",
+            "DOI": "10.1103/PhysRevLett.58.2539",
+            "volume": "58",
+            "author": "Carmichael",
+            "year": "1987",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "10.1016/0030-4018(91)90204-Q_BIB3_2",
+            "doi-asserted-by": "crossref",
+            "first-page": "821",
+            "DOI": "10.1080/09500348714550771",
+            "volume": "34",
+            "year": "1987",
+            "journal-title": "J. Mod. Optics"
+          },
+          {
+            "key": "10.1016/0030-4018(91)90204-Q_BIB4",
+            "doi-asserted-by": "crossref",
+            "first-page": "4657",
+            "DOI": "10.1103/PhysRevA.38.4657",
+            "volume": "38",
+            "author": "Ritsch",
+            "year": "1988",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "10.1016/0030-4018(91)90204-Q_BIB5",
+            "doi-asserted-by": "crossref",
+            "first-page": "131",
+            "DOI": "10.1088/0953-4075/22/1/015",
+            "volume": "22",
+            "author": "Shumovsky",
+            "year": "1989",
+            "journal-title": "J. Phys. B"
+          },
+          {
+            "key": "10.1016/0030-4018(91)90204-Q_BIB6",
+            "first-page": "1195",
+            "author": "Wahiddin",
+            "year": "1989"
+          },
+          {
+            "key": "10.1016/0030-4018(91)90204-Q_BIB7",
+            "doi-asserted-by": "crossref",
+            "first-page": "1962",
+            "DOI": "10.1103/PhysRevA.39.1962",
+            "volume": "39",
+            "author": "Palma",
+            "year": "1989",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "10.1016/0030-4018(91)90204-Q_BIB8_1",
+            "doi-asserted-by": "crossref",
+            "first-page": "267",
+            "DOI": "10.1016/0030-4018(89)90113-2",
+            "volume": "69",
+            "author": "Agarwal",
+            "year": "1989",
+            "journal-title": "Optics Comm."
+          },
+          {
+            "key": "10.1016/0030-4018(91)90204-Q_BIB8_2",
+            "doi-asserted-by": "crossref",
+            "first-page": "3782",
+            "DOI": "10.1103/PhysRevA.41.3782",
+            "volume": "41",
+            "year": "1990",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "10.1016/0030-4018(91)90204-Q_BIB9",
+            "doi-asserted-by": "crossref",
+            "first-page": "611",
+            "DOI": "10.1103/PhysRevA.42.611",
+            "volume": "42",
+            "author": "Ficek",
+            "year": "1990",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "10.1016/0030-4018(91)90204-Q_BIB10",
+            "volume": "Vol. 70",
+            "author": "Agarwal",
+            "year": "1974"
+          },
+          {
+            "key": "10.1016/0030-4018(91)90204-Q_BIB11",
+            "doi-asserted-by": "crossref",
+            "first-page": "4882",
+            "DOI": "10.1103/PhysRevA.34.4882",
+            "volume": "34",
+            "author": "Milburn",
+            "year": "1986",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "10.1016/0030-4018(91)90204-Q_BIB12",
+            "doi-asserted-by": "crossref",
+            "first-page": "1710",
+            "DOI": "10.1364/JOSAB.4.001710",
+            "volume": "4",
+            "author": "Ford",
+            "year": "1987",
+            "journal-title": "J. Opt. Soc. Am. B"
+          },
+          {
+            "key": "10.1016/0030-4018(91)90204-Q_BIB13",
+            "doi-asserted-by": "crossref",
+            "first-page": "131",
+            "DOI": "10.1016/0030-4018(89)90157-0",
+            "volume": "73",
+            "author": "Palma",
+            "year": "1989",
+            "journal-title": "Optics Comm."
+          },
+          {
+            "key": "10.1016/0030-4018(91)90204-Q_BIB14",
+            "doi-asserted-by": "crossref",
+            "first-page": "1683",
+            "DOI": "10.1364/JOSAB.4.001683",
+            "volume": "4",
+            "author": "Gardiner",
+            "year": "1987",
+            "journal-title": "J. Opt. Soc. Am. B"
+          },
+          {
+            "key": "10.1016/0030-4018(91)90204-Q_BIB15",
+            "doi-asserted-by": "crossref",
+            "first-page": "669",
+            "DOI": "10.1063/1.1725188",
+            "volume": "40",
+            "author": "Stephen",
+            "year": "1964",
+            "journal-title": "J. Chem. Phys."
+          },
+          {
+            "key": "10.1016/0030-4018(91)90204-Q_BIB16",
+            "doi-asserted-by": "crossref",
+            "first-page": "883",
+            "DOI": "10.1103/PhysRevA.2.883",
+            "volume": "2",
+            "author": "Lehmberg",
+            "year": "1970",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "10.1016/0030-4018(91)90204-Q_BIB17",
+            "doi-asserted-by": "crossref",
+            "first-page": "1096",
+            "DOI": "10.1103/PhysRevA.10.1096",
+            "volume": "10",
+            "author": "Milonni",
+            "year": "1974",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "10.1016/0030-4018(91)90204-Q_BIB18",
+            "doi-asserted-by": "crossref",
+            "first-page": "99",
+            "DOI": "10.1103/PhysRev.93.99",
+            "volume": "93",
+            "author": "Dicke",
+            "year": "1954",
+            "journal-title": "Phys. Rev."
+          },
+          {
+            "key": "10.1016/0030-4018(91)90204-Q_BIB19",
+            "doi-asserted-by": "crossref",
+            "first-page": "3068",
+            "DOI": "10.1103/PhysRevA.31.3068",
+            "volume": "31",
+            "author": "Caves",
+            "year": "1985",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "10.1016/0030-4018(91)90204-Q_BIB20",
+            "doi-asserted-by": "crossref",
+            "first-page": "6026",
+            "DOI": "10.1103/PhysRevA.39.6026",
+            "volume": "39",
+            "author": "Ekert",
+            "year": "1989",
+            "journal-title": "Phys. Rev. A"
+          }
+        ],
+        "container-title": [
+          "Optics Communications"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:003040189190204Q?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:003040189190204Q?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2019,
+              4,
+              7
+            ]
+          ],
+          "date-time": "2019-04-07T04:57:59Z",
+          "timestamp": 1554613079000
+        },
+        "score": 35.665848,
+        "resource": {
+          "primary": {
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/003040189190204Q"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              1991,
+              4
+            ]
+          ]
+        },
+        "references-count": 23,
+        "journal-issue": {
+          "issue": "1-2",
+          "published-print": {
+            "date-parts": [
+              [
+                1991,
+                4
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "003040189190204Q"
+        ],
+        "URL": "https://doi.org/10.1016/0030-4018(91)90204-q",
+        "ISSN": [
+          "0030-4018"
+        ],
+        "issn-type": [
+          {
+            "value": "0030-4018",
+            "type": "print"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              1991,
+              4
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2022,
+              4,
+              2
+            ]
+          ],
+          "date-time": "2022-04-02T19:24:01Z",
+          "timestamp": 1648927441998
+        },
+        "reference-count": 16,
+        "publisher": "Elsevier BV",
+        "issue": "1-2",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  1991,
+                  4,
+                  1
+                ]
+              ],
+              "date-time": "1991-04-01T00:00:00Z",
+              "timestamp": 670464000000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Optics Communications"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              1991,
+              4
+            ]
+          ]
+        },
+        "DOI": "10.1016/0030-4018(91)90183-e",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2002,
+              10,
+              17
+            ]
+          ],
+          "date-time": "2002-10-17T12:58:30Z",
+          "timestamp": 1034859510000
+        },
+        "page": "17-22",
+        "source": "Crossref",
+        "is-referenced-by-count": 4,
+        "title": [
+          "Successive photon emission from a two-level atom in a broadband squeezed vacuum"
+        ],
+        "prefix": "10.1016",
+        "volume": "82",
+        "author": [
+          {
+            "given": "B.N.",
+            "family": "Jagatap",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "S.V.",
+            "family": "Lawande",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "78",
+        "reference": [
+          {
+            "key": "10.1016/0030-4018(91)90183-E_BIB1",
+            "first-page": "3761",
+            "volume": "A31",
+            "author": "Collet",
+            "year": "1985",
+            "journal-title": "Phys. Rev."
+          },
+          {
+            "key": "10.1016/0030-4018(91)90183-E_BIB2",
+            "doi-asserted-by": "crossref",
+            "first-page": "1917",
+            "DOI": "10.1103/PhysRevLett.56.1917",
+            "volume": "56",
+            "author": "Gardiner",
+            "year": "1986",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "10.1016/0030-4018(91)90183-E_BIB3",
+            "doi-asserted-by": "crossref",
+            "first-page": "821",
+            "DOI": "10.1080/09500348714550771",
+            "volume": "34",
+            "author": "Carmichael",
+            "year": "1987",
+            "journal-title": "J. Mod. Opt."
+          },
+          {
+            "key": "10.1016/0030-4018(91)90183-E_BIB4",
+            "doi-asserted-by": "crossref",
+            "first-page": "2539",
+            "DOI": "10.1103/PhysRevLett.58.2539",
+            "volume": "58",
+            "author": "Carmichael",
+            "year": "1987",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "10.1016/0030-4018(91)90183-E_BIB5",
+            "doi-asserted-by": "crossref",
+            "first-page": "522",
+            "DOI": "10.1016/0030-4018(87)90282-3",
+            "volume": "64",
+            "author": "Ritsch",
+            "year": "1987",
+            "journal-title": "Optics Comm."
+          },
+          {
+            "key": "10.1016/0030-4018(91)90183-E_BIB6",
+            "doi-asserted-by": "crossref",
+            "first-page": "1683",
+            "DOI": "10.1364/JOSAB.4.001683",
+            "volume": "B4",
+            "author": "Gardiner",
+            "year": "1987",
+            "journal-title": "J. Opt. Soc. Am."
+          },
+          {
+            "key": "10.1016/0030-4018(91)90183-E_BIB7",
+            "doi-asserted-by": "crossref",
+            "first-page": "3867",
+            "DOI": "10.1103/PhysRevA.37.3867",
+            "volume": "A37",
+            "author": "Parkins",
+            "year": "1988",
+            "journal-title": "Phys. Rev."
+          },
+          {
+            "key": "10.1016/0030-4018(91)90183-E_BIB8",
+            "doi-asserted-by": "crossref",
+            "first-page": "1097",
+            "DOI": "10.1103/PhysRevLett.61.1097",
+            "volume": "61",
+            "author": "Ritsch",
+            "year": "1988",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "10.1016/0030-4018(91)90183-E_BIB9",
+            "first-page": "131",
+            "volume": "B22",
+            "author": "Shumovsky",
+            "year": "1989",
+            "journal-title": "J. Phys."
+          },
+          {
+            "key": "10.1016/0030-4018(91)90183-E_BIB10",
+            "doi-asserted-by": "crossref",
+            "first-page": "4083",
+            "DOI": "10.1103/PhysRevA.41.4083",
+            "volume": "A41",
+            "author": "D'souza",
+            "year": "1990",
+            "journal-title": "Phys. Rev."
+          },
+          {
+            "key": "10.1016/0030-4018(91)90183-E_BIB11",
+            "doi-asserted-by": "crossref",
+            "first-page": "441",
+            "DOI": "10.1209/0295-5075/1/9/004",
+            "volume": "1",
+            "author": "Cohen Tannoudji",
+            "year": "1986",
+            "journal-title": "Europhys. Lett."
+          },
+          {
+            "key": "10.1016/0030-4018(91)90183-E_BIB12",
+            "doi-asserted-by": "crossref",
+            "first-page": "198",
+            "DOI": "10.1103/PhysRevA.35.198",
+            "volume": "A35",
+            "author": "Zoller",
+            "year": "1987",
+            "journal-title": "Phys. Rev."
+          },
+          {
+            "key": "10.1016/0030-4018(91)90183-E_BIB13",
+            "doi-asserted-by": "crossref",
+            "first-page": "3010",
+            "DOI": "10.1103/PhysRevA.39.3010",
+            "volume": "A3",
+            "author": "Poorati",
+            "year": "1989",
+            "journal-title": "Phys. Rev."
+          },
+          {
+            "key": "10.1016/0030-4018(91)90183-E_BIB14",
+            "doi-asserted-by": "crossref",
+            "first-page": "215",
+            "DOI": "10.1103/PhysRevA.40.215",
+            "volume": "A40",
+            "author": "Kim",
+            "year": "1989",
+            "journal-title": "Phys. Rev."
+          },
+          {
+            "key": "10.1016/0030-4018(91)90183-E_BIB15",
+            "doi-asserted-by": "crossref",
+            "first-page": "2529",
+            "DOI": "10.1103/PhysRev.130.2529",
+            "volume": "130",
+            "author": "Glauber",
+            "year": "1963",
+            "journal-title": "Phys. Rev."
+          },
+          {
+            "key": "10.1016/0030-4018(91)90183-E_BIB16",
+            "doi-asserted-by": "crossref",
+            "first-page": "2766",
+            "DOI": "10.1103/PhysRev.131.2766",
+            "volume": "131",
+            "author": "Glauber",
+            "year": "1963",
+            "journal-title": "Phys. Rev."
+          }
+        ],
+        "container-title": [
+          "Optics Communications"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:003040189190183E?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:003040189190183E?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2019,
+              4,
+              7
+            ]
+          ],
+          "date-time": "2019-04-07T08:58:18Z",
+          "timestamp": 1554627498000
+        },
+        "score": 33.956223,
+        "resource": {
+          "primary": {
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/003040189190183E"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              1991,
+              4
+            ]
+          ]
+        },
+        "references-count": 16,
+        "journal-issue": {
+          "issue": "1-2",
+          "published-print": {
+            "date-parts": [
+              [
+                1991,
+                4
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "003040189190183E"
+        ],
+        "URL": "https://doi.org/10.1016/0030-4018(91)90183-e",
+        "ISSN": [
+          "0030-4018"
+        ],
+        "issn-type": [
+          {
+            "value": "0030-4018",
+            "type": "print"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              1991,
+              4
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              31
+            ]
+          ],
+          "date-time": "2024-10-31T00:02:03Z",
+          "timestamp": 1730332923278,
+          "version": "3.28.0"
+        },
+        "publisher-location": "Washington, D.C.",
+        "reference-count": 9,
+        "publisher": "Optica Publishing Group",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2022
+            ]
+          ]
+        },
+        "abstract": "<jats:p>We characterize broadband parametric down conversion at low and high gain regimes. Two-photon absorption is measured at high gain, and sum-frequency generation is used to investigate the transition to high gain, and spectrally resolve two-photon interactions.</jats:p>",
+        "DOI": "10.1364/cleo_qels.2022.fm3b.2",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2022,
+              8,
+              8
+            ]
+          ],
+          "date-time": "2022-08-08T20:44:30Z",
+          "timestamp": 1659991470000
+        },
+        "page": "FM3B.2",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "The Transition from Linear to Quadratic Flux Scaling in Nonlinear Optical Processes with Variable Brightness Broadband Squeezed Vacuum"
+        ],
+        "prefix": "10.1364",
+        "author": [
+          {
+            "given": "Tiemo",
+            "family": "Landes",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Sofiane",
+            "family": "Merkouche",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Markus",
+            "family": "Allgaier",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Brian J.",
+            "family": "Smith",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Michael G.",
+            "family": "Raymer",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "285",
+        "reference": [
+          {
+            "key": "CLEO_QELS-2022-FM3B.2-R1",
+            "doi-asserted-by": "publisher",
+            "first-page": "25582",
+            "DOI": "10.1021/jp066767g",
+            "volume": "110",
+            "author": "Lee",
+            "year": "2006",
+            "journal-title": "The J. Phys. Chem. B"
+          },
+          {
+            "key": "CLEO_QELS-2022-FM3B.2-R2",
+            "doi-asserted-by": "publisher",
+            "first-page": "033701",
+            "DOI": "10.1103/PhysRevA.103.033701",
+            "volume": "103",
+            "author": "Tabakaev",
+            "year": "2021",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "CLEO_QELS-2022-FM3B.2-R3",
+            "doi-asserted-by": "publisher",
+            "first-page": "7869",
+            "DOI": "10.1021/acs.jpca.7b06450",
+            "volume": "121",
+            "author": "Villabona-Monsalve",
+            "year": "2017",
+            "journal-title": "The J. Phys. Chem. A"
+          },
+          {
+            "key": "CLEO_QELS-2022-FM3B.2-R4",
+            "doi-asserted-by": "publisher",
+            "first-page": "044012",
+            "DOI": "10.1103/PhysRevApplied.15.044012",
+            "volume": "15",
+            "author": "Parzuchowski",
+            "year": "2021",
+            "journal-title": "Phys. Rev. Appl."
+          },
+          {
+            "key": "CLEO_QELS-2022-FM3B.2-R5",
+            "doi-asserted-by": "publisher",
+            "first-page": "033154",
+            "DOI": "10.1103/PhysRevResearch.3.033154",
+            "volume": "3",
+            "author": "Landes",
+            "year": "2021",
+            "journal-title": "Phys. Rev. Res."
+          },
+          {
+            "key": "CLEO_QELS-2022-FM3B.2-R6",
+            "doi-asserted-by": "publisher",
+            "first-page": "20022",
+            "DOI": "10.1364/OE.422544",
+            "volume": "29",
+            "author": "Landes",
+            "year": "2021",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "key": "CLEO_QELS-2022-FM3B.2-R7",
+            "doi-asserted-by": "publisher",
+            "first-page": "7507",
+            "DOI": "10.1364/OE.20.007507",
+            "volume": "20",
+            "author": "Spasibko",
+            "year": "2012",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "key": "CLEO_QELS-2022-FM3B.2-R8",
+            "doi-asserted-by": "publisher",
+            "first-page": "043813",
+            "DOI": "10.1103/PhysRevA.76.043813",
+            "volume": "76",
+            "author": "Dayan",
+            "year": "2007",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "CLEO_QELS-2022-FM3B.2-R9",
+            "doi-asserted-by": "publisher",
+            "first-page": "043602",
+            "DOI": "10.1103/PhysRevLett.94.043602",
+            "volume": "94",
+            "author": "Dayan",
+            "year": "2005",
+            "journal-title": "Phys. Rev. Lett."
+          }
+        ],
+        "event": {
+          "name": "CLEO: QELS_Fundamental Science",
+          "start": {
+            "date-parts": [
+              [
+                2022
+              ]
+            ]
+          },
+          "sponsor": [
+            "The Optical Society"
+          ],
+          "location": "San Jose, California",
+          "acronym": "CLEO_QELS"
+        },
+        "container-title": [
+          "Conference on Lasers and Electro-Optics"
+        ],
+        "link": [
+          {
+            "URL": "https://opg.optica.org/viewmedia.cfm?URI=CLEO_QELS-2022-FM3B.2&seq=0",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2022,
+              8,
+              8
+            ]
+          ],
+          "date-time": "2022-08-08T20:44:31Z",
+          "timestamp": 1659991471000
+        },
+        "score": 33.87556,
+        "resource": {
+          "primary": {
+            "URL": "https://opg.optica.org/abstract.cfm?URI=CLEO_QELS-2022-FM3B.2"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2022
+            ]
+          ]
+        },
+        "references-count": 9,
+        "URL": "https://doi.org/10.1364/cleo_qels.2022.fm3b.2",
+        "published": {
+          "date-parts": [
+            [
+              2022
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              2,
+              7
+            ]
+          ],
+          "date-time": "2026-02-07T22:48:33Z",
+          "timestamp": 1770504513301,
+          "version": "3.49.0"
+        },
+        "reference-count": 18,
+        "publisher": "Informa UK Limited",
+        "issue": "12",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Journal of Modern Optics"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2007,
+              8,
+              15
+            ]
+          ]
+        },
+        "DOI": "10.1080/09500340601177070",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2007,
+              9,
+              7
+            ]
+          ],
+          "date-time": "2007-09-07T05:09:12Z",
+          "timestamp": 1189141752000
+        },
+        "page": "1759-1777",
+        "source": "Crossref",
+        "is-referenced-by-count": 13,
+        "title": [
+          "Coherently driven two-level atom coupled to a broadband squeezed vacuum"
+        ],
+        "prefix": "10.1080",
+        "volume": "54",
+        "author": [
+          {
+            "given": "Sintayehu",
+            "family": "Tesfa",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "301",
+        "reference": [
+          {
+            "key": "CIT0001",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.56.1917"
+          },
+          {
+            "key": "CIT0002",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1080/09500348714550771"
+          },
+          {
+            "key": "CIT0003",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1209/0295-5075/10/3/009"
+          },
+          {
+            "key": "CIT0004",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1080/09500349808231707"
+          },
+          {
+            "key": "CIT0005",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1088/1464-4266/4/3/368"
+          },
+          {
+            "key": "CIT0006",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1080/09500340108232462"
+          },
+          {
+            "key": "CIT0007",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.41.4083"
+          },
+          {
+            "key": "CIT0008",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.42.6873"
+          },
+          {
+            "key": "CIT0009",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.37.3867"
+          },
+          {
+            "key": "CIT0010",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.58.2539"
+          },
+          {
+            "key": "CIT0011",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/0030-4018(95)00161-Z"
+          },
+          {
+            "key": "CIT0012",
+            "first-page": "1555",
+            "volume": "43",
+            "author": "Keitel CH",
+            "year": "1996",
+            "journal-title": "Opt."
+          },
+          {
+            "key": "CIT0013",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.53.4439"
+          },
+          {
+            "key": "CIT0014",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.53.3633"
+          },
+          {
+            "key": "CIT0015",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.53.2846"
+          },
+          {
+            "key": "CIT0016",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRev.188.1969"
+          },
+          {
+            "key": "CIT0017",
+            "volume-title": "Quantum Statistical Properties of Radiation",
+            "author": "Louisell WH",
+            "year": "1973"
+          },
+          {
+            "key": "CIT0018",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/S0370-1573(02)00368-X"
+          }
+        ],
+        "container-title": [
+          "Journal of Modern Optics"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "http://www.tandfonline.com/doi/pdf/10.1080/09500340601177070",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2016,
+              12,
+              14
+            ]
+          ],
+          "date-time": "2016-12-14T21:49:52Z",
+          "timestamp": 1481752192000
+        },
+        "score": 33.672745,
+        "resource": {
+          "primary": {
+            "URL": "http://www.tandfonline.com/doi/abs/10.1080/09500340601177070"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2007,
+              8,
+              15
+            ]
+          ]
+        },
+        "references-count": 18,
+        "journal-issue": {
+          "issue": "12",
+          "published-print": {
+            "date-parts": [
+              [
+                2007,
+                8,
+                15
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "10.1080/09500340601177070"
+        ],
+        "URL": "https://doi.org/10.1080/09500340601177070",
+        "ISSN": [
+          "0950-0340",
+          "1362-3044"
+        ],
+        "issn-type": [
+          {
+            "value": "0950-0340",
+            "type": "print"
+          },
+          {
+            "value": "1362-3044",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2007,
+              8,
+              15
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              9,
+              6
+            ]
+          ],
+          "date-time": "2024-09-06T19:49:03Z",
+          "timestamp": 1725652143933
+        },
+        "publisher-location": "Berlin, Heidelberg",
+        "reference-count": 28,
+        "publisher": "Springer Berlin Heidelberg",
+        "isbn-type": [
+          {
+            "type": "print",
+            "value": "9783642749537"
+          },
+          {
+            "type": "electronic",
+            "value": "9783642749513"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              1989
+            ]
+          ]
+        },
+        "DOI": "10.1007/978-3-642-74951-3_4",
+        "type": "book-chapter",
+        "created": {
+          "date-parts": [
+            [
+              2012,
+              1,
+              16
+            ]
+          ],
+          "date-time": "2012-01-16T09:54:10Z",
+          "timestamp": 1326707650000
+        },
+        "page": "28-39",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Photon Statistics of Broadband Squeezed Vacuum"
+        ],
+        "prefix": "10.1007",
+        "author": [
+          {
+            "given": "P.",
+            "family": "Kumar",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "J.",
+            "family": "Huang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "297",
+        "reference": [
+          {
+            "key": "4_CR1",
+            "unstructured": "For references see the squeezed states feature issue: J. Opt. Soc. Am. B4, (1987)."
+          },
+          {
+            "key": "4_CR2",
+            "doi-asserted-by": "publisher",
+            "first-page": "278",
+            "DOI": "10.1103/PhysRevLett.59.278",
+            "volume": "59",
+            "author": "M Xiao",
+            "year": "1987",
+            "unstructured": "M. Xiao, L.-A. Wu, and H. J. Kimble, Phys. Rev. Lett. 59, 278 (1987)",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "4_CR3",
+            "doi-asserted-by": "publisher",
+            "first-page": "2153",
+            "DOI": "10.1103/PhysRevLett.59.2153",
+            "volume": "59",
+            "author": "P Grangier",
+            "year": "1987",
+            "unstructured": "P. Grangier, R. E. Slusher, B. Yurke, and A. LaPorta, Phys. Rev. Lett. 59, 2153 (1987).",
+            "journal-title": "Phys. Rev. Lett"
+          },
+          {
+            "key": "4_CR4",
+            "doi-asserted-by": "publisher",
+            "first-page": "476",
+            "DOI": "10.1364/OL.13.000476",
+            "volume": "13",
+            "author": "M Xiao",
+            "year": "1988",
+            "unstructured": "M. Xiao, L.-A. Wu, and H. J. Kimble, Opt. Lett. 13, 476 (1988).",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "key": "4_CR5",
+            "first-page": "179",
+            "volume": "IT-25",
+            "author": "HP Yuen",
+            "year": "1978",
+            "unstructured": "H. P. Yuen and J. H. Shapiro, IEEE Trans. Info. Th. IT-25, 179 (1978).",
+            "journal-title": "IEEE Trans. Info. Th."
+          },
+          {
+            "key": "4_CR6",
+            "doi-asserted-by": "publisher",
+            "first-page": "236",
+            "DOI": "10.1364/OL.12.000236",
+            "volume": "12",
+            "author": "B Yurke",
+            "year": "1987",
+            "unstructured": "B. Yurke and E. A. Whittaker, Opt. Lett. 12, 236 (1987).",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "key": "4_CR7",
+            "doi-asserted-by": "publisher",
+            "first-page": "789",
+            "DOI": "10.1364/OL.12.000789",
+            "volume": "12",
+            "author": "HP Yuen",
+            "year": "1987",
+            "unstructured": "H. P. Yuen, Opt. Lett. 12, 789 (1987)",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "key": "4_CR8",
+            "doi-asserted-by": "publisher",
+            "first-page": "2176",
+            "DOI": "10.1103/PhysRevLett.56.2176",
+            "volume": "56",
+            "author": "HP Yuen",
+            "year": "1986",
+            "unstructured": "H. P. Yuen, Phys. Rev. Lett. 56, 2176 (1986)",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "4_CR9",
+            "doi-asserted-by": "publisher",
+            "first-page": "125",
+            "DOI": "10.1103/PhysRevA.37.125",
+            "volume": "37",
+            "author": "G Björk",
+            "year": "1988",
+            "unstructured": "G. Björk and Y. Yamamoto, Phys. Rev. A 37, 125 (1988).",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "4_CR10",
+            "doi-asserted-by": "publisher",
+            "first-page": "2555",
+            "DOI": "10.1103/PhysRevLett.59.2555",
+            "volume": "59",
+            "author": "A Heidmann",
+            "year": "1987",
+            "unstructured": "A. Heidmann, R. J. Horowicz, S. Reynaud, E. Giacobino, C. Fabre, and G. Gamy, Phys. Rev. Lett. 59, 2555 (1987)",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "4_CR11",
+            "doi-asserted-by": "publisher",
+            "first-page": "1000",
+            "DOI": "10.1103/PhysRevLett.58.1000",
+            "volume": "58",
+            "author": "S Machida",
+            "year": "1987",
+            "unstructured": "S. Machida, Y. Yamamoto, and Y. Itaya, Phys. Rev. Lett. 58, 1000 (1987).",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "4_CR12",
+            "unstructured": "J. Huang and P. Kumar, submitted to Phys. Rev. A."
+          },
+          {
+            "key": "4_CR13",
+            "unstructured": "R. S. Bondurant, B. S. Thesis, MIT, 1978, unpublished;"
+          },
+          {
+            "key": "4_CR14",
+            "doi-asserted-by": "publisher",
+            "first-page": "574",
+            "DOI": "10.1038/326574a0",
+            "volume": "326",
+            "author": "W Schleich",
+            "year": "1987",
+            "unstructured": "W. Schleich and J. A. Wheeler, Nature 326, 574 (1987).",
+            "journal-title": "Nature"
+          },
+          {
+            "key": "4_CR15",
+            "doi-asserted-by": "crossref",
+            "first-page": "2226",
+            "DOI": "10.1103/PhysRevA.13.2226",
+            "volume": "A13",
+            "author": "HP Yuen",
+            "year": "1976",
+            "unstructured": "H. P. Yuen, Phys. Rev. A13, 2226 (1976)",
+            "journal-title": "Phys. Rev."
+          },
+          {
+            "key": "4_CR16",
+            "doi-asserted-by": "crossref",
+            "first-page": "1715",
+            "DOI": "10.1364/JOSAB.4.001715",
+            "volume": "B4",
+            "author": "W Schleich",
+            "year": "1987",
+            "unstructured": "W. Schleich and J. A. Wheeler, J. Opt. Soc. Am. B4, 1715 (1987)",
+            "journal-title": "J. Opt. Soc. Am."
+          },
+          {
+            "key": "4_CR17",
+            "doi-asserted-by": "publisher",
+            "first-page": "5866",
+            "DOI": "10.1103/PhysRevA.36.5866",
+            "volume": "36",
+            "author": "A Vourdas",
+            "year": "1987",
+            "unstructured": "A. Vourdas and R. M. Weiner, Phys. Rev. A 36, 5866 (1987)",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "4_CR18",
+            "doi-asserted-by": "publisher",
+            "first-page": "750",
+            "DOI": "10.1103/PhysRevA.38.750",
+            "volume": "38",
+            "author": "GS Agarwal",
+            "year": "1988",
+            "unstructured": "G. S. Agarwal and G. Adam, Phys. Rev. A 38, 750 (1988).",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "4_CR19",
+            "doi-asserted-by": "publisher",
+            "first-page": "2520",
+            "DOI": "10.1103/PhysRevLett.57.2520",
+            "volume": "57",
+            "author": "L-A Wu",
+            "year": "1986",
+            "unstructured": "L.-A. Wu, H. J. Kimble, J. L. Hall, and H. Wu, Phys. Rev. Lett. 57, 2520 (1986).",
+            "journal-title": "Phys. Rev. Lett"
+          },
+          {
+            "key": "4_CR20",
+            "first-page": "97",
+            "volume-title": "Optical Communications",
+            "author": "RM Gagliardi",
+            "year": "1976",
+            "unstructured": "R. M. Gagliardi and S. Karp, Optical Communications (Wiley, New York, 1976), p. 97–98."
+          },
+          {
+            "key": "4_CR21",
+            "doi-asserted-by": "publisher",
+            "first-page": "2766",
+            "DOI": "10.1103/PhysRev.131.2766",
+            "volume": "131",
+            "author": "RJ Glauber",
+            "year": "1963",
+            "unstructured": "R. J. Glauber, Phys. Rev. 131, 2766 (1963)",
+            "journal-title": "Phys. Rev."
+          },
+          {
+            "key": "4_CR22",
+            "doi-asserted-by": "publisher",
+            "first-page": "277",
+            "DOI": "10.1103/PhysRevLett.10.277",
+            "volume": "10",
+            "author": "ECG Sudarshan",
+            "year": "1963",
+            "unstructured": "E. C. G. Sudarshan, Phys. Rev. Lett. 10, 277 (1963).",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "4_CR23",
+            "doi-asserted-by": "publisher",
+            "first-page": "141",
+            "DOI": "10.1038/306141a0",
+            "volume": "306",
+            "author": "DF Walls",
+            "year": "1983",
+            "unstructured": "D. F. Walls, Nature 306, 141 (1983).",
+            "journal-title": "Nature"
+          },
+          {
+            "key": "4_CR24",
+            "first-page": "202",
+            "volume-title": "Quantum Detection and Estimation Theory",
+            "author": "CW Helstrom",
+            "year": "1978",
+            "unstructured": "C. W. Helstrom, Quantum Detection and Estimation Theory (Academic, New york, 1978), p. 202–204."
+          },
+          {
+            "key": "4_CR25",
+            "doi-asserted-by": "publisher",
+            "first-page": "173",
+            "DOI": "10.1016/0030-4018(84)90342-0",
+            "volume": "50",
+            "author": "CW Gardiner",
+            "year": "1985",
+            "unstructured": "C. W. Gardiner and C. M. Savage, Opt. Commun. 50, 173 (1985).",
+            "journal-title": "Opt. Commun"
+          },
+          {
+            "key": "4_CR26",
+            "doi-asserted-by": "crossref",
+            "first-page": "300",
+            "DOI": "10.1103/PhysRevA.32.300",
+            "volume": "A32",
+            "author": "B Yurke",
+            "year": "1985",
+            "unstructured": "B. Yurke, Phys. Rev. A32, 300 (1985).",
+            "journal-title": "Phys. Rev."
+          },
+          {
+            "key": "4_CR27",
+            "doi-asserted-by": "publisher",
+            "first-page": "801",
+            "DOI": "10.1049/el:19850565",
+            "volume": "21",
+            "author": "K Kikuchi",
+            "year": "1985",
+            "unstructured": "K. Kikuchi, T. Okoshi, and A. Hirose, Electron. Lett. 21, 801 (1985)",
+            "journal-title": "Electron. Lett"
+          },
+          {
+            "key": "4_CR28",
+            "first-page": "P117",
+            "volume": "A4",
+            "author": "MG Stapelbroek",
+            "year": "1987",
+            "unstructured": "M. G. Stapelbroek, J. Opt. Soc. Am. A4, P117 (1987).",
+            "journal-title": "J. Opt. Soc. Am"
+          }
+        ],
+        "container-title": [
+          "Springer Proceedings in Physics",
+          "Quantum Optics V"
+        ],
+        "link": [
+          {
+            "URL": "http://link.springer.com/content/pdf/10.1007/978-3-642-74951-3_4.pdf",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2020,
+              11,
+              25
+            ]
+          ],
+          "date-time": "2020-11-25T02:18:58Z",
+          "timestamp": 1606270738000
+        },
+        "score": 33.10535,
+        "resource": {
+          "primary": {
+            "URL": "http://link.springer.com/10.1007/978-3-642-74951-3_4"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              1989
+            ]
+          ]
+        },
+        "ISBN": [
+          "9783642749537",
+          "9783642749513"
+        ],
+        "references-count": 28,
+        "URL": "https://doi.org/10.1007/978-3-642-74951-3_4",
+        "ISSN": [
+          "0930-8989",
+          "1867-4941"
+        ],
+        "issn-type": [
+          {
+            "type": "print",
+            "value": "0930-8989"
+          },
+          {
+            "type": "electronic",
+            "value": "1867-4941"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              1989
+            ]
+          ]
+        }
+      }
+    ],
+    "items-per-page": 6,
+    "query": {
+      "start-index": 0,
+      "search-terms": null
+    }
+  }
+}

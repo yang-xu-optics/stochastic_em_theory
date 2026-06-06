@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/k79WGDjHlDhRCgUpi3W2lJhIEWc</id>
+  <title>arXiv Query: search_query=all:"bright squeezed vacuum" AND all:g OR (all:2)&amp;id_list=&amp;start=0&amp;max_results=8</title>
+  <updated>2026-06-06T15:52:54Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22bright+squeezed+vacuum%22+AND+(all:g+OR+all:2)&amp;start=0&amp;max_results=8&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>8</opensearch:itemsPerPage>
+  <opensearch:totalResults>26</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1202.1682v1</id>
+    <title>Super-bunched bright squeezed vacuum state</title>
+    <updated>2012-02-08T12:55:44Z</updated>
+    <link href="https://arxiv.org/abs/1202.1682v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1202.1682v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper we experimentally study the statistical properties of a bright squeezed vacuum state containing up to 10^13 photons per mode (10 uJ per pulse), produced via high gain parametric down conversion (PDC). The effects of bunching and superbunching of photons were observed for a single mode PDC radiation by second-order intensity correlation function measurements with analog detectors.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-02-08T12:55:44Z</published>
+    <arxiv:comment>4 pages, 3 figures, submitted to Optics Letters</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>T. Sh. Iskhakov</name>
+    </author>
+    <author>
+      <name>A. Perez</name>
+    </author>
+    <author>
+      <name>K. Yu. Spasibko</name>
+    </author>
+    <author>
+      <name>M. V. Chekhova</name>
+    </author>
+    <author>
+      <name>G. Leuchs</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1402.2771v1</id>
+    <title>Spatially single-mode source of bright squeezed vacuum</title>
+    <updated>2014-02-12T09:39:36Z</updated>
+    <link href="https://arxiv.org/abs/1402.2771v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1402.2771v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Bright squeezed vacuum, a macroscopic nonclassical state of light, can be obtained at the output of a strongly pumped non-seeded traveling-wave optical parametric amplifier (OPA). By constructing the OPA of two consecutive crystals separated by a large distance we make the squeezed vacuum spatially single-mode without a significant decrease in the brightness or squeezing.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-02-12T09:39:36Z</published>
+    <arxiv:comment>5 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>A. M. Pérez</name>
+    </author>
+    <author>
+      <name>T. Sh. Iskhakov</name>
+    </author>
+    <author>
+      <name>P. Sharapova</name>
+    </author>
+    <author>
+      <name>S. Lemieux</name>
+    </author>
+    <author>
+      <name>O. V. Tikhonova</name>
+    </author>
+    <author>
+      <name>M. V. Chekhova</name>
+    </author>
+    <author>
+      <name>G. Leuchs</name>
+    </author>
+    <arxiv:doi>10.1364/OL.39.002403</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1364/OL.39.002403" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0910.4831v4</id>
+    <title>Two-Color Bright Squeezed Vacuum</title>
+    <updated>2010-07-02T16:36:00Z</updated>
+    <link href="https://arxiv.org/abs/0910.4831v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0910.4831v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In a strongly pumped non-degenerate traveling-wave OPA, we produce two-color squeezed vacuum with up to millions of photons per pulse. Our approach to registering this macroscopic quantum state is direct detection of a large number of transverse and longitudinal modes, which is achieved by making the detection time and area much larger than the coherence time and area, respectively. Using this approach, we obtain a record value of twin-beam squeezing for direct detection of bright squeezed vacuum. This makes direct detection of macroscopic squeezed vacuum a practical tool for quantum information applications.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-10-26T08:54:57Z</published>
+    <arxiv:comment>4 pages, 4 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. A 82, 011801(R) (2010)</arxiv:journal_ref>
+    <author>
+      <name>Ivan N. Agafonov</name>
+    </author>
+    <author>
+      <name>Maria V. Chekhova</name>
+    </author>
+    <author>
+      <name>Gerd Leuchs</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevA.82.011801</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevA.82.011801" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1503.03406v1</id>
+    <title>Nonlinear interferometer for tailoring the frequency spectrum of bright squeezed vacuum</title>
+    <updated>2015-03-11T16:30:03Z</updated>
+    <link href="https://arxiv.org/abs/1503.03406v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1503.03406v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We propose a method for tailoring the frequency spectrum of bright squeezed vacuum by generating it in a nonlinear interferometer, consisting of two down-converting nonlinear crystals separated by a dispersive medium. Due to a faster dispersive spreading of higher-order Schmidt modes, the spectral width of the radiation at the output is reduced as the length of the dispersive medium is increased. Preliminary results show 30\% spectral narrowing.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-03-11T16:30:03Z</published>
+    <arxiv:comment>9 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>T. Sh. Iskhakov</name>
+    </author>
+    <author>
+      <name>S. Lemieux</name>
+    </author>
+    <author>
+      <name>A. Perez</name>
+    </author>
+    <author>
+      <name>R. W. Boyd</name>
+    </author>
+    <author>
+      <name>G. Leuchs</name>
+    </author>
+    <author>
+      <name>M. Chekhova</name>
+    </author>
+    <arxiv:doi>10.1080/09500340.2015.1080315</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1080/09500340.2015.1080315" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1905.10109v2</id>
+    <title>Properties of bright squeezed vacuum at increasing brightness</title>
+    <updated>2019-12-03T10:51:26Z</updated>
+    <link href="https://arxiv.org/abs/1905.10109v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1905.10109v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Bright squeezed vacuum (BSV) is a non-classical macroscopic state of light, which can be generated through high-gain parametric down-conversion or four-wave mixing. Although BSV is an important tool in quantum optics and has a lot of applications, its theoretical description is still not complete. In particular, the existing description in terms of Schmidt modes fails to explain the spectral broadening observed in experiment as the mean number of photons increases. On the other hand, the semi-classical description accounting for the broadening does not allow to decouple the intermodal photon-number correlations. In this work, we present a new generalized theoretical approach to describe the spatial properties of BSV. This approach is based on exchanging the $(\textbf{k},t)$ and $(ω,z)$ representations and solving a system of integro-differential equations. Our approach predicts correctly the dynamics of the Schmidt modes and the broadening of the spectrum with the increase in the BSV mean photon number due to a stronger pumping. Moreover, the model succesfully describes various properties of a widely used experimental configuration with two crystals and an air gap between them, namely an SU(1,1) interferometer. In particular, it predicts the narrowing of the intensity distribution, the reduction and shift of the side lobes, and the decline in the interference visibility as the mean photon number increases due to stronger pumping. The presented experimental results confirm the validity of the new approach. The model can be easily extended to the case of frequency spectrum, frequency Schmidt modes and other experimental configurations.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-05-24T09:35:23Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. Research 2, 013371 (2020)</arxiv:journal_ref>
+    <author>
+      <name>P. R. Sharapova</name>
+    </author>
+    <author>
+      <name>G. Frascella</name>
+    </author>
+    <author>
+      <name>M. Riabinin</name>
+    </author>
+    <author>
+      <name>A. M. Perez</name>
+    </author>
+    <author>
+      <name>O. V. Tikhonova</name>
+    </author>
+    <author>
+      <name>S. Lemieux</name>
+    </author>
+    <author>
+      <name>R. W. Boyd</name>
+    </author>
+    <author>
+      <name>G. Leuchs</name>
+    </author>
+    <author>
+      <name>M. V. Chekhova</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevResearch.2.013371</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevResearch.2.013371" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.15337v2</id>
+    <title>High Harmonic Generation by Bright Squeezed Vacuum</title>
+    <updated>2024-04-09T12:08:09Z</updated>
+    <link href="https://arxiv.org/abs/2403.15337v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.15337v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We observe non-perturbative high harmonic generation in solids driven by a macroscopic quantum state of light, bright squeezed vacuum (BSV), which we generate in a single spatiotemporal mode. The BSV-driven process is considerably more efficient in the generation of high harmonics than classical light of the same mean intensity. Due to its broad photon-number distribution, covering states from $0$ to $2 \times 10^{13}$ photons per pulse, and sub-cycle electric field fluctuations over $\pm1\hbox{V}/\hbox{Å}$, BSV provides access to free carrier dynamics within a much broader range of peak intensities than accessible with classical light. Our findings contribute to recent developments of quantum optics with extreme intensities, moving beyond its traditional focus on low photon numbers, and providing a new method for exploring extreme nonlinearities in solids.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-22T16:46:23Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Andrei Rasputnyi</name>
+    </author>
+    <author>
+      <name>Zhaopin Chen</name>
+    </author>
+    <author>
+      <name>Michael Birk</name>
+    </author>
+    <author>
+      <name>Oren Cohen</name>
+    </author>
+    <author>
+      <name>Ido Kaminer</name>
+    </author>
+    <author>
+      <name>Michael Krüger</name>
+    </author>
+    <author>
+      <name>Denis Seletskiy</name>
+    </author>
+    <author>
+      <name>Maria Chekhova</name>
+    </author>
+    <author>
+      <name>Francesco Tani</name>
+    </author>
+    <arxiv:doi>10.1038/s41567-024-02659-x</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41567-024-02659-x" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.12646v1</id>
+    <title>Interferometrically Enhanced Asymmetry in Strong-field Ionization with Bright Squeezed Vacuum</title>
+    <updated>2026-04-14T12:17:14Z</updated>
+    <link href="https://arxiv.org/abs/2604.12646v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.12646v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We demonstrate that quantum light statistics can be used to control strong-field ionization at the tunneling step. Using a bichromatic linearly polarized field composed of a strong coherent driver and a weak bright squeezed vacuum (BSV), we show through simulation that photoelectron momentum distributions (PMDs) exhibit asymmetries that exceed those obtained with classical fields of comparable intensity by orders of magnitude. This enhancement is uniquely linked to the nonclassical statistics of the BSV field. A semiclassical analysis based on the strong-field approximation (SFA) reveals that the effect originates from fluctuations in the instantaneous field amplitude, which strongly modify the tunneling ionization probability while leaving the electron's continuum dynamics essentially unchanged. This selective control enables reconstruction of ionization pathways and provides a robust route to extract sub-cycle dynamics from strong-field observables.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.atom-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-14T12:17:14Z</published>
+    <arxiv:comment>5 pages main paper, 14 pages including references and supplementary material; 7 figures in total</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>G. Singh</name>
+    </author>
+    <author>
+      <name>T. Rook</name>
+    </author>
+    <author>
+      <name>J. Rivera-Dean</name>
+    </author>
+    <author>
+      <name>C. Figueira de Morisson Faria</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.17797v1</id>
+    <title>Kerr-induced non-Gaussianity of ultrafast bright squeezed vacuum</title>
+    <updated>2025-12-19T17:01:39Z</updated>
+    <link href="https://arxiv.org/abs/2512.17797v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.17797v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Non-Gaussian states of light are a critical resource for fault-tolerant quantum computing and enhanced metrology, but are typically faint and often obtained via post-selection. Here, we demonstrate the deterministic generation of a bright non-Gaussian state by introducing a Kerr nonlinearity to a macroscopic state of light called bright squeezed vacuum (BSV). To characterize the resulting state, we use a single-shot f-2f interferometer to sample its Husimi function. We observe a clear transformation from a 2D Gaussian distribution to an 'S'-shaped non-Gaussian profile, which is the direct statistical evidence of the intensity-dependent nonlinear phase. The negativity of the Wigner function, which is an intrinsic property of any pure non-Gaussian state, cannot be observed because BSV is a mixed state even under minute optical loss. However, we show that BSV can be considered as a mixture of pure squeezed coherent states, for some of which Kerr-induced Wigner-function negativity is quite tolerant to loss. This work bridges the gap between quantum optics and ultrafast nonlinear optics, opening a path to quantum applications that require high photon flux.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-19T17:01:39Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Andrei Rasputnyi</name>
+    </author>
+    <author>
+      <name>Ilya Karuseichyk</name>
+    </author>
+    <author>
+      <name>Gerd Leuchs</name>
+    </author>
+    <author>
+      <name>Denis Seletskiy</name>
+    </author>
+    <author>
+      <name>Maria Chekhova</name>
+    </author>
+  </entry>
+</feed>

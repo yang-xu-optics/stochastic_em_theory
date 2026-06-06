@@ -1,0 +1,1952 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "facets": {},
+    "total-results": 1994171,
+    "items": [
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              6,
+              1
+            ]
+          ],
+          "date-time": "2026-06-01T20:57:58Z",
+          "timestamp": 1780347478736,
+          "version": "3.54.1"
+        },
+        "reference-count": 38,
+        "publisher": "Elsevier BV",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2023,
+                  6,
+                  1
+                ]
+              ],
+              "date-time": "2023-06-01T00:00:00Z",
+              "timestamp": 1685577600000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2023,
+                  6,
+                  1
+                ]
+              ],
+              "date-time": "2023-06-01T00:00:00Z",
+              "timestamp": 1685577600000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/legal/tdmrep-license"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2023,
+                  6,
+                  1
+                ]
+              ],
+              "date-time": "2023-06-01T00:00:00Z",
+              "timestamp": 1685577600000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-017"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2023,
+                  6,
+                  1
+                ]
+              ],
+              "date-time": "2023-06-01T00:00:00Z",
+              "timestamp": 1685577600000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-037"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2023,
+                  6,
+                  1
+                ]
+              ],
+              "date-time": "2023-06-01T00:00:00Z",
+              "timestamp": 1685577600000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-012"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2023,
+                  6,
+                  1
+                ]
+              ],
+              "date-time": "2023-06-01T00:00:00Z",
+              "timestamp": 1685577600000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-029"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2023,
+                  6,
+                  1
+                ]
+              ],
+              "date-time": "2023-06-01T00:00:00Z",
+              "timestamp": 1685577600000
+            },
+            "content-version": "stm-asf",
+            "delay-in-days": 0,
+            "URL": "https://doi.org/10.15223/policy-004"
+          }
+        ],
+        "funder": [
+          {
+            "DOI": "10.13039/501100001809",
+            "name": "National Natural Science Foundation of China",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "2021A1515010084"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "2021A1515010084"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/501100001809",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          },
+          {
+            "DOI": "10.13039/501100001809",
+            "name": "National Natural Science Foundation of China",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "61975130"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "61975130"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/501100001809",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          },
+          {
+            "DOI": "10.13039/501100021171",
+            "name": "Basic and Applied Basic Research Foundation of Guangdong Province",
+            "doi-asserted-by": "publisher",
+            "id": [
+              {
+                "id": "10.13039/501100021171",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "elsevier.com",
+            "sciencedirect.com"
+          ],
+          "crossmark-restriction": true
+        },
+        "short-container-title": [
+          "Optics Communications"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2023,
+              6
+            ]
+          ]
+        },
+        "DOI": "10.1016/j.optcom.2023.129289",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2023,
+              2,
+              2
+            ]
+          ],
+          "date-time": "2023-02-02T21:17:32Z",
+          "timestamp": 1675372652000
+        },
+        "page": "129289",
+        "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 3,
+        "special_numbering": "C",
+        "title": [
+          "Anomalous interaction of Pearcey Gaussian pulse in saturable nonlinear media"
+        ],
+        "prefix": "10.1016",
+        "volume": "536",
+        "author": [
+          {
+            "given": "Xiang",
+            "family": "Zhang",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-5943-9577",
+            "authenticated-orcid": false,
+            "given": "Changshui",
+            "family": "Chen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Lifu",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "78",
+        "reference": [
+          {
+            "issue": "18",
+            "key": "10.1016/j.optcom.2023.129289_b1",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1103/PhysRevLett.115.180403",
+            "article-title": "Propagation dynamics of a light beam in a fractional Schrödinger equation",
+            "volume": "115",
+            "author": "Zhang",
+            "year": "2015",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "issue": "18",
+            "key": "10.1016/j.optcom.2023.129289_b2",
+            "doi-asserted-by": "crossref",
+            "first-page": "23740",
+            "DOI": "10.1364/OE.26.023740",
+            "article-title": "Dynamics of Gaussian beam modeled by fractional Schrödinger equation with a variable coefficient",
+            "volume": "26",
+            "author": "Zang",
+            "year": "2018",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "issue": "4",
+            "key": "10.1016/j.optcom.2023.129289_b3",
+            "doi-asserted-by": "crossref",
+            "first-page": "651",
+            "DOI": "10.1364/JOSAA.4.000651",
+            "article-title": "Exact solutions for nondiffracting beams",
+            "volume": "4",
+            "author": "Durnin",
+            "year": "1987",
+            "journal-title": "I. the Scalar Theory, J. Opt. Soc. Am. A"
+          },
+          {
+            "issue": "15",
+            "key": "10.1016/j.optcom.2023.129289_b4",
+            "doi-asserted-by": "crossref",
+            "first-page": "1499",
+            "DOI": "10.1103/PhysRevLett.58.1499",
+            "article-title": "Diffraction-free beams",
+            "volume": "58",
+            "author": "Durnin",
+            "year": "1987",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "issue": "8",
+            "key": "10.1016/j.optcom.2023.129289_b5",
+            "doi-asserted-by": "crossref",
+            "first-page": "979",
+            "DOI": "10.1364/OL.32.000979",
+            "article-title": "Accelerating finite energy Airy beams",
+            "volume": "32",
+            "author": "Siviloglou",
+            "year": "2007",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "issue": "3",
+            "key": "10.1016/j.optcom.2023.129289_b6",
+            "doi-asserted-by": "crossref",
+            "first-page": "207",
+            "DOI": "10.1364/OL.33.000207",
+            "article-title": "Ballistic dynamics of Airy beams",
+            "volume": "33",
+            "author": "Siviloglou",
+            "year": "2008",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "issue": "10",
+            "key": "10.1016/j.optcom.2023.129289_b7",
+            "doi-asserted-by": "crossref",
+            "first-page": "1157",
+            "DOI": "10.1364/OPTICA.4.001157",
+            "article-title": "Dynamics of the optical swallowtail catastrophe",
+            "volume": "4",
+            "author": "Zannotti",
+            "year": "2017",
+            "journal-title": "Optica"
+          },
+          {
+            "issue": "3",
+            "key": "10.1016/j.optcom.2023.129289_b8",
+            "doi-asserted-by": "crossref",
+            "first-page": "3786",
+            "DOI": "10.1364/OE.416134",
+            "article-title": "Swallowtail-type diffraction catastrophe beams",
+            "volume": "29",
+            "author": "Teng",
+            "year": "2021",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "issue": "5",
+            "key": "10.1016/j.optcom.2023.129289_b9",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1088/1367-2630/aa6ecd",
+            "article-title": "Optical catastrophes of the swallowtail and butterfly beams",
+            "volume": "19",
+            "author": "Zannotti",
+            "year": "2017",
+            "journal-title": "New J. Phys."
+          },
+          {
+            "issue": "5",
+            "key": "10.1016/j.optcom.2023.129289_b10",
+            "doi-asserted-by": "crossref",
+            "first-page": "686",
+            "DOI": "10.1364/OPTICA.6.000686",
+            "article-title": "Airy beams and accelerating waves: an overview of recent advances",
+            "volume": "6",
+            "author": "Efremidis",
+            "year": "2019",
+            "journal-title": "Optica"
+          },
+          {
+            "key": "10.1016/j.optcom.2023.129289_b11",
+            "doi-asserted-by": "crossref",
+            "first-page": "311",
+            "DOI": "10.1080/14786444608561335",
+            "article-title": "The structure of an electromagnetic field in the neighborhood of a cusp of a caustic",
+            "volume": "37",
+            "author": "Pearcey",
+            "year": "1946",
+            "journal-title": "Phil. Mag."
+          },
+          {
+            "issue": "17",
+            "key": "10.1016/j.optcom.2023.129289_b12",
+            "doi-asserted-by": "crossref",
+            "first-page": "18955",
+            "DOI": "10.1364/OE.20.018955",
+            "article-title": "Auto-focusing and self-healing of Pearcey beams",
+            "volume": "20",
+            "author": "Ring",
+            "year": "2012",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "issue": "8",
+            "key": "10.1016/j.optcom.2023.129289_b13",
+            "doi-asserted-by": "crossref",
+            "first-page": "1523",
+            "DOI": "10.1364/JOSAA.33.001523",
+            "article-title": "Symmetric form-invariant dual Pearcey beams",
+            "volume": "33",
+            "author": "Ren",
+            "year": "2016",
+            "journal-title": "J. Opt. Soc. Amer. A"
+          },
+          {
+            "issue": "15",
+            "key": "10.1016/j.optcom.2023.129289_b14",
+            "doi-asserted-by": "crossref",
+            "first-page": "3626",
+            "DOI": "10.1364/OL.43.003626",
+            "article-title": "Focusing properties of circle Pearcey beams",
+            "volume": "43",
+            "author": "Chen",
+            "year": "2018",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "issue": "10",
+            "key": "10.1016/j.optcom.2023.129289_b15",
+            "doi-asserted-by": "crossref",
+            "first-page": "2461",
+            "DOI": "10.1364/OL.425889",
+            "article-title": "Symmetric Pearcey Gaussian beams",
+            "volume": "46",
+            "author": "Wu",
+            "year": "2021",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "issue": "19",
+            "key": "10.1016/j.optcom.2023.129289_b16",
+            "doi-asserted-by": "crossref",
+            "first-page": "5496",
+            "DOI": "10.1364/OL.404277",
+            "article-title": "Partially coherent Pearcey–Gauss beams",
+            "volume": "45",
+            "author": "Zhou",
+            "year": "2020",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "issue": "11",
+            "key": "10.1016/j.optcom.2023.129289_b17",
+            "doi-asserted-by": "crossref",
+            "first-page": "16270",
+            "DOI": "10.1364/OE.424489",
+            "article-title": "Accelerating trajectory manipulation of symmetric Pearcey Gaussian beam in a uniformly moving parabolic potential",
+            "volume": "29",
+            "author": "Lin",
+            "year": "2021",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "issue": "13",
+            "key": "10.1016/j.optcom.2023.129289_b18",
+            "doi-asserted-by": "crossref",
+            "first-page": "17482",
+            "DOI": "10.1364/OE.27.017482",
+            "article-title": "Dynamics of breathers-like circular Pearcey Gaussian waves in a Kerr medium",
+            "volume": "27",
+            "author": "Zhang",
+            "year": "2019",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "issue": "16",
+            "key": "10.1016/j.optcom.2023.129289_b19",
+            "doi-asserted-by": "crossref",
+            "first-page": "26048",
+            "DOI": "10.1364/OE.435518",
+            "article-title": "Dual-focusing behavior of a one-dimensional quadratically chirped Pearcey-Gaussian beam",
+            "volume": "29",
+            "author": "Zang",
+            "year": "2021",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "key": "10.1016/j.optcom.2023.129289_b20",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1016/j.rinp.2020.102932",
+            "article-title": "Propagation of the Pearcey pulse with a linear chirp",
+            "volume": "16",
+            "author": "Li",
+            "year": "2020",
+            "journal-title": "Results Phys."
+          },
+          {
+            "key": "10.1016/j.optcom.2023.129289_b21",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1016/j.rinp.2020.103255",
+            "article-title": "The supercontinuum generation with Pearcey-Gaussian pulses in an optical fiber",
+            "volume": "18",
+            "author": "Chen",
+            "year": "2020",
+            "journal-title": "Results Phys."
+          },
+          {
+            "issue": "5",
+            "key": "10.1016/j.optcom.2023.129289_b22",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1002/andp.202100479",
+            "article-title": "Controllable dispersive wave radiation from Pearcey Gaussian pulses",
+            "volume": "534",
+            "author": "Zhang",
+            "year": "2022",
+            "journal-title": "Ann. Phys. (Berlin, Ger.)"
+          },
+          {
+            "issue": "13",
+            "key": "10.1016/j.optcom.2023.129289_b23",
+            "doi-asserted-by": "crossref",
+            "first-page": "14406",
+            "DOI": "10.1364/OE.24.014406",
+            "article-title": "Propagation dynamics of super-Gaussian beams in fractional Schrödinger equation: from linear to nonlinear regimes",
+            "volume": "24",
+            "author": "Zhang",
+            "year": "2016",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "issue": "24",
+            "key": "10.1016/j.optcom.2023.129289_b24",
+            "doi-asserted-by": "crossref",
+            "first-page": "23706",
+            "DOI": "10.1364/OE.19.023706",
+            "article-title": "Self-accelerating optical beams in highly nonlocal nonlinear media",
+            "volume": "19",
+            "author": "Bekenstein",
+            "year": "2011",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "key": "10.1016/j.optcom.2023.129289_b25",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1103/PhysRevLett.109.203902",
+            "article-title": "Fully vectorial accelerating diffraction-free Helmholtz beams",
+            "volume": "109",
+            "author": "Aleahmad",
+            "year": "2012",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "10.1016/j.optcom.2023.129289_b26",
+            "doi-asserted-by": "crossref",
+            "first-page": "395",
+            "DOI": "10.1038/nphoton.2009.95",
+            "article-title": "Nonlinear generation and manipulation of Airy beams",
+            "volume": "3",
+            "author": "Ellenbogen",
+            "year": "2009",
+            "journal-title": "Nat. Photonics"
+          },
+          {
+            "key": "10.1016/j.optcom.2023.129289_b27",
+            "doi-asserted-by": "crossref",
+            "first-page": "17298",
+            "DOI": "10.1364/OE.19.017298",
+            "article-title": "Soliton shedding from Airy pulses in Kerr media",
+            "volume": "19",
+            "author": "Fattal",
+            "year": "2011",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "issue": "6",
+            "key": "10.1016/j.optcom.2023.129289_b28",
+            "doi-asserted-by": "crossref",
+            "first-page": "7160",
+            "DOI": "10.1364/OE.22.007160",
+            "article-title": "Interactions of Airy beams, nonlinear accelerating beams, and induced solitons in Kerr and saturable nonlinear media",
+            "volume": "22",
+            "author": "Zhang",
+            "year": "2014",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "issue": "22",
+            "key": "10.1016/j.optcom.2023.129289_b29",
+            "doi-asserted-by": "crossref",
+            "first-page": "4585",
+            "DOI": "10.1364/OL.38.004585",
+            "article-title": "Soliton pair generation in the interactions of airy and nonlinear accelerating beams",
+            "volume": "38",
+            "author": "Zhang",
+            "year": "2013",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "issue": "18",
+            "key": "10.1016/j.optcom.2023.129289_b30",
+            "doi-asserted-by": "crossref",
+            "first-page": "22104",
+            "DOI": "10.1364/OE.25.022104",
+            "article-title": "Interactions between self-accelerating beams in photorefractive media",
+            "volume": "25",
+            "author": "Zhang",
+            "year": "2017",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "issue": "1",
+            "key": "10.1016/j.optcom.2023.129289_b31",
+            "doi-asserted-by": "crossref",
+            "first-page": "9814",
+            "DOI": "10.1038/srep09814",
+            "article-title": "Solitons shedding from Airy beams and bound states of breathing airy solitons in nonlocal nonlinear media",
+            "volume": "5",
+            "author": "Shen",
+            "year": "2015",
+            "journal-title": "Sci. Rep."
+          },
+          {
+            "issue": "8",
+            "key": "10.1016/j.optcom.2023.129289_b32",
+            "doi-asserted-by": "crossref",
+            "first-page": "8501",
+            "DOI": "10.1364/OE.24.008501",
+            "article-title": "Control on the anomalous interactions of Airy beams in nematic liquid crystals",
+            "volume": "24",
+            "author": "Shen",
+            "year": "2016",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "issue": "20",
+            "key": "10.1016/j.optcom.2023.129289_b33",
+            "doi-asserted-by": "crossref",
+            "first-page": "27936",
+            "DOI": "10.1364/OE.27.027936",
+            "article-title": "Anomalous interaction of Airy beams in the fractional nonlinear Schrödinger equation",
+            "volume": "27",
+            "author": "Zhang",
+            "year": "2019",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "issue": "3–4",
+            "key": "10.1016/j.optcom.2023.129289_b34",
+            "doi-asserted-by": "crossref",
+            "first-page": "231",
+            "DOI": "10.1016/j.physleta.2006.11.090",
+            "article-title": "Stable counter-rotating vortex pairs in saturable media",
+            "volume": "364",
+            "author": "Desyatnikov",
+            "year": "2007",
+            "journal-title": "Phys. Lett. A"
+          },
+          {
+            "issue": "9",
+            "key": "10.1016/j.optcom.2023.129289_b35",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1088/2040-8986/aa77d9",
+            "article-title": "Pearcey solitons in curved nonlinear photonic caustic lattices",
+            "volume": "19",
+            "author": "Zannotti",
+            "year": "2017",
+            "journal-title": "J. Opt."
+          },
+          {
+            "key": "10.1016/j.optcom.2023.129289_b36",
+            "doi-asserted-by": "crossref",
+            "first-page": "199",
+            "DOI": "10.1088/0031-8949/52/2/010",
+            "article-title": "Filamentation instability and localization of finite amplitude optical pulses in saturable nonlinear media",
+            "volume": "52",
+            "author": "Shukla",
+            "year": "1995",
+            "journal-title": "Phys. Scr."
+          },
+          {
+            "key": "10.1016/j.optcom.2023.129289_b37",
+            "series-title": "Nonlinear Fiber Optics",
+            "author": "Agrawal",
+            "year": "2007"
+          },
+          {
+            "issue": "19",
+            "key": "10.1016/j.optcom.2023.129289_b38",
+            "doi-asserted-by": "crossref",
+            "first-page": "34835",
+            "DOI": "10.1364/OE.471329",
+            "article-title": "Controllable focusing behavior of chirped Pearcey-Gaussian pulses under time-dependent potentials",
+            "volume": "30",
+            "author": "Zhang",
+            "year": "2022",
+            "journal-title": "Opt. Express"
+          }
+        ],
+        "container-title": [
+          "Optics Communications"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0030401823000342?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0030401823000342?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2025,
+              9,
+              21
+            ]
+          ],
+          "date-time": "2025-09-21T13:09:37Z",
+          "timestamp": 1758460177000
+        },
+        "score": 29.0662,
+        "resource": {
+          "primary": {
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0030401823000342"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2023,
+              6
+            ]
+          ]
+        },
+        "references-count": 38,
+        "alternative-id": [
+          "S0030401823000342"
+        ],
+        "URL": "https://doi.org/10.1016/j.optcom.2023.129289",
+        "ISSN": [
+          "0030-4018"
+        ],
+        "issn-type": [
+          {
+            "value": "0030-4018",
+            "type": "print"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2023,
+              6
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "Elsevier",
+            "name": "publisher",
+            "label": "This article is maintained by"
+          },
+          {
+            "value": "Anomalous interaction of Pearcey Gaussian pulse in saturable nonlinear media",
+            "name": "articletitle",
+            "label": "Article Title"
+          },
+          {
+            "value": "Optics Communications",
+            "name": "journaltitle",
+            "label": "Journal Title"
+          },
+          {
+            "value": "https://doi.org/10.1016/j.optcom.2023.129289",
+            "name": "articlelink",
+            "label": "CrossRef DOI link to publisher maintained version"
+          },
+          {
+            "value": "article",
+            "name": "content_type",
+            "label": "Content Type"
+          },
+          {
+            "value": "© 2023 Elsevier B.V. All rights reserved.",
+            "name": "copyright",
+            "label": "Copyright"
+          }
+        ],
+        "article-number": "129289"
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              4,
+              13
+            ]
+          ],
+          "date-time": "2024-04-13T05:55:05Z",
+          "timestamp": 1712987705105
+        },
+        "edition-number": "1",
+        "reference-count": 0,
+        "publisher": "Cambridge University Press",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2012,
+                  6,
+                  5
+                ]
+              ],
+              "date-time": "2012-06-05T00:00:00Z",
+              "timestamp": 1338854400000
+            },
+            "content-version": "unspecified",
+            "delay-in-days": 7984,
+            "URL": "https://www.cambridge.org/core/terms"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2012,
+                  6,
+                  5
+                ]
+              ],
+              "date-time": "2012-06-05T00:00:00Z",
+              "timestamp": 1338854400000
+            },
+            "content-version": "unspecified",
+            "delay-in-days": 7984,
+            "URL": "https://www.cambridge.org/core/terms"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              1990,
+              7,
+              27
+            ]
+          ]
+        },
+        "DOI": "10.1017/cbo9781139167994.020",
+        "type": "other",
+        "created": {
+          "date-parts": [
+            [
+              2012,
+              6,
+              15
+            ]
+          ],
+          "date-time": "2012-06-15T06:19:12Z",
+          "timestamp": 1339741152000
+        },
+        "page": "319-320",
+        "source": "Crossref",
+        "is-referenced-by-count": 2,
+        "title": [
+          "Gaussian beam optics"
+        ],
+        "prefix": "10.1017",
+        "member": "56",
+        "container-title": [
+          "The Elements of Nonlinear Optics"
+        ],
+        "link": [
+          {
+            "URL": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/98F2E66FED1669F50D447641A8191B9B",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2022,
+              10,
+              14
+            ]
+          ],
+          "date-time": "2022-10-14T21:50:17Z",
+          "timestamp": 1665784217000
+        },
+        "score": 27.945137,
+        "resource": {
+          "primary": {
+            "URL": "https://www.cambridge.org/core/product/identifier/CBO9781139167994A070/type/book_part"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              1990,
+              7,
+              27
+            ]
+          ]
+        },
+        "references-count": 0,
+        "URL": "https://doi.org/10.1017/cbo9781139167994.020",
+        "published": {
+          "date-parts": [
+            [
+              1990,
+              7,
+              27
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              9,
+              5
+            ]
+          ],
+          "date-time": "2024-09-05T14:18:28Z",
+          "timestamp": 1725545908012
+        },
+        "reference-count": 0,
+        "publisher": "SPIE",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2005,
+              9,
+              16
+            ]
+          ]
+        },
+        "DOI": "10.1117/12.622044",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2005,
+              10,
+              7
+            ]
+          ],
+          "date-time": "2005-10-07T22:00:32Z",
+          "timestamp": 1128722432000
+        },
+        "page": "59491F",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Gaussian beam diffraction in inhomogeneous media: solution in frame of complex geometrical optics"
+        ],
+        "prefix": "10.1117",
+        "volume": "5949",
+        "author": [
+          {
+            "given": "Yu. A.",
+            "family": "Kravtsov",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "P.",
+            "family": "Berczynski",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "189",
+        "event": {
+          "name": "Congress on Optics and Optoelectronics",
+          "location": "Warsaw, Poland"
+        },
+        "container-title": [
+          "SPIE Proceedings",
+          "Nonlinear Optics Applications"
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2016,
+              5,
+              26
+            ]
+          ],
+          "date-time": "2016-05-26T04:34:42Z",
+          "timestamp": 1464237282000
+        },
+        "score": 27.657272,
+        "resource": {
+          "primary": {
+            "URL": "http://proceedings.spiedigitallibrary.org/proceeding.aspx?doi=10.1117/12.622044"
+          }
+        },
+        "editor": [
+          {
+            "given": "Miroslaw A.",
+            "family": "Karpierz",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "editor",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Allan D.",
+            "family": "Boardman",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "editor",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "George I.",
+            "family": "Stegeman",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "editor",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "issued": {
+          "date-parts": [
+            [
+              2005,
+              9,
+              16
+            ]
+          ]
+        },
+        "references-count": 0,
+        "URL": "https://doi.org/10.1117/12.622044",
+        "ISSN": [
+          "0277-786X"
+        ],
+        "issn-type": [
+          {
+            "type": "print",
+            "value": "0277-786X"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2005,
+              9,
+              16
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              31
+            ]
+          ],
+          "date-time": "2024-10-31T00:19:40Z",
+          "timestamp": 1730333980152,
+          "version": "3.28.0"
+        },
+        "publisher-location": "Washington, D.C.",
+        "reference-count": 6,
+        "publisher": "OSA",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2017
+            ]
+          ]
+        },
+        "DOI": "10.1364/fio.2017.jtu3a.96",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2017,
+              9,
+              12
+            ]
+          ],
+          "date-time": "2017-09-12T12:40:19Z",
+          "timestamp": 1505220019000
+        },
+        "page": "JTu3A.96",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Nonlinear interaction of ultrafast hollow Gaussian beams"
+        ],
+        "prefix": "10.1364",
+        "author": [
+          {
+            "given": "Amrit",
+            "family": "Chaitanya",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "N. Apurv",
+            "family": "Chaitanya",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "J.",
+            "family": "Banerji",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "G. K.",
+            "family": "Samanta",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "285",
+        "reference": [
+          {
+            "key": "FiO-2017-JTu3A.96-R1",
+            "doi-asserted-by": "crossref",
+            "first-page": "1084",
+            "DOI": "10.1364/OL.28.001084",
+            "volume": "28",
+            "author": "Cai",
+            "year": "2003",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "key": "FiO-2017-JTu3A.96-R2",
+            "doi-asserted-by": "crossref",
+            "first-page": "8185",
+            "DOI": "10.1103/PhysRevA.45.8185",
+            "volume": "45",
+            "author": "Allen",
+            "year": "1992",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "FiO-2017-JTu3A.96-R3",
+            "doi-asserted-by": "crossref",
+            "first-page": "55",
+            "DOI": "10.1007/s00340-013-5572-5",
+            "volume": "115",
+            "author": "Wei",
+            "year": "2014",
+            "journal-title": "Appl. Phys. B"
+          },
+          {
+            "key": "FiO-2017-JTu3A.96-R4",
+            "doi-asserted-by": "crossref",
+            "first-page": "211103",
+            "DOI": "10.1063/1.4983788",
+            "volume": "110",
+            "author": "Chaitanya",
+            "year": "2017",
+            "journal-title": "Applied Physics Letters (AIP)"
+          },
+          {
+            "key": "FiO-2017-JTu3A.96-R5",
+            "doi-asserted-by": "crossref",
+            "first-page": "2614",
+            "DOI": "10.1364/OL.40.002614",
+            "volume": "40",
+            "author": "Chaitanya",
+            "year": "2015",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "key": "FiO-2017-JTu3A.96-R6",
+            "doi-asserted-by": "crossref",
+            "first-page": "32464",
+            "DOI": "10.1038/srep32464",
+            "volume": "6",
+            "author": "Chaitanya",
+            "year": "2016",
+            "journal-title": "Sci. Rep."
+          }
+        ],
+        "event": {
+          "name": "Frontiers in Optics",
+          "start": {
+            "date-parts": [
+              [
+                2017
+              ]
+            ]
+          },
+          "sponsor": [
+            "The Optical Society"
+          ],
+          "location": "Washington, D.C.",
+          "acronym": "FiO"
+        },
+        "container-title": [
+          "Frontiers in Optics 2017"
+        ],
+        "link": [
+          {
+            "URL": "https://www.osapublishing.org/viewmedia.cfm?URI=FiO-2017-JTu3A.96&seq=0",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2022,
+              1,
+              26
+            ]
+          ],
+          "date-time": "2022-01-26T16:04:26Z",
+          "timestamp": 1643213066000
+        },
+        "score": 27.600555,
+        "resource": {
+          "primary": {
+            "URL": "https://opg.optica.org/abstract.cfm?URI=FiO-2017-JTu3A.96"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2017
+            ]
+          ]
+        },
+        "references-count": 6,
+        "URL": "https://doi.org/10.1364/fio.2017.jtu3a.96",
+        "published": {
+          "date-parts": [
+            [
+              2017
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              5,
+              3
+            ]
+          ],
+          "date-time": "2024-05-03T14:59:12Z",
+          "timestamp": 1714748352363
+        },
+        "reference-count": 0,
+        "publisher": "Society of Photo-Optical Instrumentation Engineers",
+        "isbn-type": [
+          {
+            "value": "9780819496355",
+            "type": "print"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "DOI": "10.1117/3.1002081.ap1",
+        "type": "book-chapter",
+        "created": {
+          "date-parts": [
+            [
+              2015,
+              8,
+              14
+            ]
+          ],
+          "date-time": "2015-08-14T21:38:39Z",
+          "timestamp": 1439588319000
+        },
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Gaussian Beams"
+        ],
+        "prefix": "10.1117",
+        "member": "189",
+        "container-title": [
+          "Field Guide to Nonlinear Optics"
+        ],
+        "language": "en",
+        "deposited": {
+          "date-parts": [
+            [
+              2015,
+              8,
+              14
+            ]
+          ],
+          "date-time": "2015-08-14T21:38:57Z",
+          "timestamp": 1439588337000
+        },
+        "score": 27.59658,
+        "resource": {
+          "primary": {
+            "URL": "http://ebooks.spiedigitallibrary.org/content.aspx?bookid=651&sectionid=43385370"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              null
+            ]
+          ]
+        },
+        "ISBN": [
+          "9780819496355"
+        ],
+        "references-count": 0,
+        "URL": "https://doi.org/10.1117/3.1002081.ap1"
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              3,
+              6
+            ]
+          ],
+          "date-time": "2026-03-06T16:45:47Z",
+          "timestamp": 1772815547674,
+          "version": "3.50.1"
+        },
+        "reference-count": 31,
+        "publisher": "Elsevier BV",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2016,
+                  7,
+                  1
+                ]
+              ],
+              "date-time": "2016-07-01T00:00:00Z",
+              "timestamp": 1467331200000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "elsevier.com",
+            "sciencedirect.com"
+          ],
+          "crossmark-restriction": true
+        },
+        "short-container-title": [
+          "Optics &amp; Laser Technology"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2016,
+              7
+            ]
+          ]
+        },
+        "DOI": "10.1016/j.optlastec.2016.01.026",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2016,
+              1,
+              29
+            ]
+          ],
+          "date-time": "2016-01-29T01:19:51Z",
+          "timestamp": 1454030391000
+        },
+        "page": "40-45",
+        "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 21,
+        "special_numbering": "C",
+        "title": [
+          "Nonlinear interaction of intense hypergeometric Gaussian subfamily laser beams in plasma"
+        ],
+        "prefix": "10.1016",
+        "volume": "81",
+        "author": [
+          {
+            "given": "H.",
+            "family": "Sobhani",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "M.",
+            "family": "Vaziri (Khamedi)",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "H.",
+            "family": "Rooholamininejad",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "A.R.",
+            "family": "Bahrampour",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "78",
+        "reference": [
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib1",
+            "doi-asserted-by": "crossref",
+            "first-page": "393",
+            "DOI": "10.1140/epjd/e2009-00250-2",
+            "volume": "55",
+            "author": "Naumova",
+            "year": "2009",
+            "journal-title": "Eur. Phys. J. D"
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib2",
+            "doi-asserted-by": "crossref",
+            "first-page": "R2531",
+            "DOI": "10.1103/PhysRevE.57.R2531",
+            "volume": "57",
+            "author": "Yu",
+            "year": "1998",
+            "journal-title": "Phys. Rev. E"
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib3",
+            "doi-asserted-by": "crossref",
+            "first-page": "1553",
+            "DOI": "10.1126/science.2321016",
+            "volume": "247",
+            "author": "Suckewer",
+            "year": "1990",
+            "journal-title": "Science"
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib4",
+            "doi-asserted-by": "crossref",
+            "first-page": "742",
+            "DOI": "10.1364/OL.32.000742",
+            "volume": "32",
+            "author": "Kotlyar",
+            "year": "2007",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib5",
+            "doi-asserted-by": "crossref",
+            "first-page": "262",
+            "DOI": "10.1364/JOSAA.25.000262",
+            "volume": "25",
+            "author": "Kotlyar",
+            "year": "2008",
+            "journal-title": "J. Opt. Soc. Am. A"
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib6",
+            "doi-asserted-by": "crossref",
+            "first-page": "11264",
+            "DOI": "10.1364/OE.19.011264",
+            "volume": "19",
+            "author": "Bernardo",
+            "year": "2011",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib7",
+            "doi-asserted-by": "crossref",
+            "first-page": "1603",
+            "DOI": "10.1016/j.optlastec.2011.11.041",
+            "volume": "44",
+            "author": "Li",
+            "year": "2012",
+            "journal-title": "Opt. Laser Technol."
+          },
+          {
+            "issue": "12",
+            "key": "10.1016/j.optlastec.2016.01.026_bib8",
+            "doi-asserted-by": "crossref",
+            "first-page": "125002",
+            "DOI": "10.1088/1054-660X/24/12/125002",
+            "volume": "24",
+            "author": "Tang",
+            "year": "2014",
+            "journal-title": "Laser Phys."
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib9",
+            "doi-asserted-by": "crossref",
+            "first-page": "065702",
+            "DOI": "10.1088/1464-4258/11/6/065702",
+            "volume": "11",
+            "author": "Khonina",
+            "year": "2009",
+            "journal-title": "J. Opt. A: Pure Appl. Opt."
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib10",
+            "doi-asserted-by": "crossref",
+            "first-page": "024201",
+            "DOI": "10.1117/1.3533031",
+            "volume": "50",
+            "author": "Chen",
+            "year": "2011",
+            "journal-title": "Opt. Eng."
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib11",
+            "doi-asserted-by": "crossref",
+            "first-page": "3053",
+            "DOI": "10.1364/OL.32.003053",
+            "volume": "32",
+            "author": "Karimi",
+            "year": "2007",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib12",
+            "doi-asserted-by": "crossref",
+            "first-page": "21069",
+            "DOI": "10.1364/OE.16.021069",
+            "volume": "16",
+            "author": "Karimi",
+            "year": "2008",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib13",
+            "doi-asserted-by": "crossref",
+            "first-page": "3727",
+            "DOI": "10.1103/PhysRevA.41.3727",
+            "volume": "41",
+            "author": "Cichitelli",
+            "year": "1990",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib14",
+            "doi-asserted-by": "crossref",
+            "first-page": "135",
+            "DOI": "10.1017/S0263034600181169",
+            "volume": "18",
+            "author": "Hora",
+            "year": "2000",
+            "journal-title": "Laser Part. Beams"
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib15",
+            "doi-asserted-by": "crossref",
+            "first-page": "4483",
+            "DOI": "10.1016/j.optcom.2012.05.065",
+            "volume": "285",
+            "author": "Kant",
+            "year": "2012",
+            "journal-title": "Opt. Commun."
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib16",
+            "doi-asserted-by": "crossref",
+            "first-page": "102304",
+            "DOI": "10.1063/1.4757982",
+            "volume": "19",
+            "author": "Zhu",
+            "year": "2012",
+            "journal-title": "Phys. Plasmas"
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib17",
+            "first-page": "149",
+            "volume": "56",
+            "author": "Kant",
+            "year": "2011",
+            "journal-title": "Nukleonika"
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib18",
+            "doi-asserted-by": "crossref",
+            "first-page": "042101",
+            "DOI": "10.1063/1.4870080",
+            "volume": "21",
+            "author": "Nanda",
+            "year": "2014",
+            "journal-title": "Phys. Plasmas"
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib19",
+            "doi-asserted-by": "crossref",
+            "first-page": "505",
+            "DOI": "10.1016/j.physleta.2006.11.025",
+            "volume": "362",
+            "author": "Konar",
+            "year": "2007",
+            "journal-title": "Phys. Lett. A"
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib20",
+            "doi-asserted-by": "crossref",
+            "first-page": "3157",
+            "DOI": "10.1016/j.optcom.2009.04.049",
+            "volume": "282",
+            "author": "Takale",
+            "year": "2009",
+            "journal-title": "Opt. Commun."
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib21",
+            "doi-asserted-by": "crossref",
+            "first-page": "035503",
+            "DOI": "10.1088/0031-8949/88/03/035503",
+            "volume": "88",
+            "author": "Khamedi",
+            "year": "2013",
+            "journal-title": "Phys. Scr."
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib22",
+            "doi-asserted-by": "crossref",
+            "first-page": "2773",
+            "DOI": "10.1103/PhysRevA.36.2773",
+            "volume": "36",
+            "author": "Sprangle",
+            "year": "1987",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib23",
+            "series-title": "Computer Applications in Plasma Science and Engineering",
+            "first-page": "10",
+            "author": "Drobot",
+            "year": "1991"
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib24",
+            "doi-asserted-by": "crossref",
+            "first-page": "8185",
+            "DOI": "10.1103/PhysRevA.45.8185",
+            "volume": "45",
+            "author": "Allen",
+            "year": "1992",
+            "journal-title": "Phys. Rev. A"
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib25",
+            "series-title": "Self-Focusing of Laser Beams in Dielectrics, Plasmas and Semiconductors",
+            "first-page": "9",
+            "author": "Sodha",
+            "year": "1974"
+          },
+          {
+            "issue": "18",
+            "key": "10.1016/j.optlastec.2016.01.026_bib26",
+            "doi-asserted-by": "crossref",
+            "first-page": "2713",
+            "DOI": "10.1080/09500340500347121",
+            "volume": "52",
+            "author": "Steuernagel",
+            "year": "2005",
+            "journal-title": "J. Mod. Opt."
+          },
+          {
+            "issue": "12",
+            "key": "10.1016/j.optlastec.2016.01.026_bib27",
+            "doi-asserted-by": "crossref",
+            "first-page": "123051",
+            "DOI": "10.1088/1367-2630/16/12/123051",
+            "volume": "16",
+            "author": "Zhang",
+            "year": "2014",
+            "journal-title": "New J. Phys."
+          },
+          {
+            "issue": "12",
+            "key": "10.1016/j.optlastec.2016.01.026_bib28",
+            "doi-asserted-by": "crossref",
+            "first-page": "120702",
+            "DOI": "10.1063/1.4903536",
+            "volume": "21",
+            "author": "Yu",
+            "year": "2014",
+            "journal-title": "Phys. Plasmas"
+          },
+          {
+            "issue": "3",
+            "key": "10.1016/j.optlastec.2016.01.026_bib29",
+            "doi-asserted-by": "crossref",
+            "first-page": "35001",
+            "DOI": "10.1209/0295-5075/108/35001",
+            "volume": "108",
+            "author": "Vaziri",
+            "year": "2014",
+            "journal-title": "EuroPhys. Lett."
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib30",
+            "doi-asserted-by": "crossref",
+            "first-page": "035001",
+            "DOI": "10.1103/PhysRevLett.105.035001",
+            "volume": "105",
+            "author": "Ali",
+            "year": "2010",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "10.1016/j.optlastec.2016.01.026_bib31",
+            "doi-asserted-by": "crossref",
+            "first-page": "2627",
+            "DOI": "10.1016/j.physleta.2012.07.017",
+            "volume": "376",
+            "author": "Tang",
+            "year": "2012",
+            "journal-title": "Phys. Lett. A"
+          }
+        ],
+        "container-title": [
+          "Optics &amp; Laser Technology"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0030399215302802?httpAccept=text/xml",
+            "content-type": "text/xml",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://api.elsevier.com/content/article/PII:S0030399215302802?httpAccept=text/plain",
+            "content-type": "text/plain",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2018,
+              9,
+              15
+            ]
+          ],
+          "date-time": "2018-09-15T22:27:44Z",
+          "timestamp": 1537050464000
+        },
+        "score": 26.172815,
+        "resource": {
+          "primary": {
+            "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0030399215302802"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2016,
+              7
+            ]
+          ]
+        },
+        "references-count": 31,
+        "alternative-id": [
+          "S0030399215302802"
+        ],
+        "URL": "https://doi.org/10.1016/j.optlastec.2016.01.026",
+        "ISSN": [
+          "0030-3992"
+        ],
+        "issn-type": [
+          {
+            "value": "0030-3992",
+            "type": "print"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2016,
+              7
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "Elsevier",
+            "name": "publisher",
+            "label": "This article is maintained by"
+          },
+          {
+            "value": "Nonlinear interaction of intense hypergeometric Gaussian subfamily laser beams in plasma",
+            "name": "articletitle",
+            "label": "Article Title"
+          },
+          {
+            "value": "Optics & Laser Technology",
+            "name": "journaltitle",
+            "label": "Journal Title"
+          },
+          {
+            "value": "https://doi.org/10.1016/j.optlastec.2016.01.026",
+            "name": "articlelink",
+            "label": "CrossRef DOI link to publisher maintained version"
+          },
+          {
+            "value": "article",
+            "name": "content_type",
+            "label": "Content Type"
+          },
+          {
+            "value": "Copyright © 2016 Elsevier Ltd. All rights reserved.",
+            "name": "copyright",
+            "label": "Copyright"
+          }
+        ]
+      }
+    ],
+    "items-per-page": 6,
+    "query": {
+      "start-index": 0,
+      "search-terms": null
+    }
+  }
+}

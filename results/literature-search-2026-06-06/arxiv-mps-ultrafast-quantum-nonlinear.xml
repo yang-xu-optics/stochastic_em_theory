@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/TaewZDwGbCj5R879x4HLgDlQpBU</id>
+  <title>arXiv Query: search_query=all:"matrix product states" AND all:ultrafast AND all:"quantum nonlinear optics"&amp;id_list=&amp;start=0&amp;max_results=8</title>
+  <updated>2026-06-06T15:53:09Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22matrix+product+states%22+AND+(all:ultrafast+AND+all:%22quantum+nonlinear+optics%22)&amp;start=0&amp;max_results=8&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>8</opensearch:itemsPerPage>
+  <opensearch:totalResults>1</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2102.05902v1</id>
+    <title>Efficient simulation of ultrafast quantum nonlinear optics with matrix product states</title>
+    <updated>2021-02-11T09:15:24Z</updated>
+    <link href="https://arxiv.org/abs/2102.05902v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2102.05902v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ultra-short pulses propagating in nonlinear nanophotonic waveguides can simultaneously leverage both temporal and spatial field confinement, promising a route towards single-photon nonlinearities in an all-photonic platform. In this multimode quantum regime, however, faithful numerical simulations of pulse dynamics naïvely require a representation of the state in an exponentially large Hilbert space. Here, we employ a time-domain, matrix product state (MPS) representation to enable efficient simulations by exploiting the entanglement structure of the system. In order to extract physical insight from these simulations, we develop an algorithm to unravel the MPS quantum state into constituent temporal supermodes, enabling, e.g., access to the phase-space portraits of arbitrary pulse waveforms. As a demonstration, we perform exact numerical simulations of a Kerr soliton in the quantum regime. We observe the development of non-classical Wigner-function negativity in the solitonic mode as well as quantum corrections to the semiclassical dynamics of the pulse. A similar analysis of $χ^{(2)}$ simultons reveals a unique entanglement structure between the fundamental and second harmonic. Our approach is also readily compatible with quantum trajectory theory, allowing full quantum treatment of propagation loss and decoherence. We expect this work to establish the MPS technique as part of a unified engineering framework for the emerging field of broadband quantum photonics.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-02-11T09:15:24Z</published>
+    <arxiv:comment>12 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Optica 8, 1306 (2021)</arxiv:journal_ref>
+    <author>
+      <name>Ryotatsu Yanagimoto</name>
+    </author>
+    <author>
+      <name>Edwin Ng</name>
+    </author>
+    <author>
+      <name>Logan G. Wright</name>
+    </author>
+    <author>
+      <name>Tatsuhiro Onodera</name>
+    </author>
+    <author>
+      <name>Hideo Mabuchi</name>
+    </author>
+    <arxiv:doi>10.1364/OPTICA.423044</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1364/OPTICA.423044" title="doi"/>
+  </entry>
+</feed>

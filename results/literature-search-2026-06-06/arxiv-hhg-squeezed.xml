@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/iLV2+XWmFgRnTgGBpKfnFoSJz3I</id>
+  <title>arXiv Query: search_query=all:squeezed AND all:"high harmonic generation"&amp;id_list=&amp;start=0&amp;max_results=8</title>
+  <updated>2026-06-06T15:52:23Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:squeezed+AND+all:%22high+harmonic+generation%22&amp;start=0&amp;max_results=8&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>8</opensearch:itemsPerPage>
+  <opensearch:totalResults>37</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2310.15030v1</id>
+    <title>Entanglement and squeezing of the optical field modes in high harmonic generation</title>
+    <updated>2023-10-23T15:28:38Z</updated>
+    <link href="https://arxiv.org/abs/2310.15030v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.15030v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Squeezing of optical fields, used as a powerful resource for many applications, and the radiation properties in the process of high harmonic generation have thus far been considered separately. In this Letter, we want to clarify that the joint quantum state of all the optical field modes in the process of high harmonic generation is in general entangled and squeezed. We show that this is already the case in the simplest scenario of driving uncorrelated atoms by a classical laser light field. The previous observation of product coherent states after the high harmonic generation process is a consequence of the assumption that the ground state depletion can be neglected, which is related to vanishing dipole moment correlations. Furthermore, we analyze how the resulting quadrature squeezing in the fundamental laser mode after the interaction can be controlled and explicitly show that all field modes are entangled.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.atom-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-23T15:28:38Z</published>
+    <arxiv:comment>4 pages (2 figures)</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. Lett. 132, 143603 (2024)</arxiv:journal_ref>
+    <author>
+      <name>Philipp Stammer</name>
+    </author>
+    <author>
+      <name>Javier Rivera-Dean</name>
+    </author>
+    <author>
+      <name>Andrew S. Maxwell</name>
+    </author>
+    <author>
+      <name>Theocharis Lamprou</name>
+    </author>
+    <author>
+      <name>Javier Argüello-Luengo</name>
+    </author>
+    <author>
+      <name>Paraskevas Tzallas</name>
+    </author>
+    <author>
+      <name>Marcelo F. Ciappina</name>
+    </author>
+    <author>
+      <name>Maciej Lewenstein</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevLett.132.143603</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevLett.132.143603" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.02311v2</id>
+    <title>Observation of a Multimode Displaced Squeezed State in High-Harmonic Generation</title>
+    <updated>2024-12-09T13:33:49Z</updated>
+    <link href="https://arxiv.org/abs/2411.02311v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.02311v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>High harmonic generation is a resource of extremely broad frequency combs of ultrashort light pulses. The non-classical nature of this new quantum source has been recently evidenced in semiconductors by showing that high harmonic generation generates multimode squeezed states of light. Applications in quantum information science require the knowledge of the mode structure of the created states, defining how the quantum properties distribute over the spectral modes. To achieve that, an effective Schmidt decomposition of the reduced photonic state is performed on a tripartite harmonic set by simultaneously measuring the second- and third-order intensity correlation function. The Schmidt number is estimated which indicates an almost single-mode structure for each harmonic, a useful resource in quantum technology. By modelling our data with a displaced squeezed state, we retrieve the dependencies of the measured correlation as a function of the high harmonic driving laser intensity. The effective high-harmonic mode distribution is retrieved, and the strength of the contributing squeezing modes is estimated. Additionally, we demonstrate a significant violation of a Cauchy-Schwarz-type inequality for three biseparable partitions by multiple standard deviations. Our results confirm non-classicality of the high-harmonic generation process in semiconductors. The source operates at room temperature with compact lasers, and it could become a useful resource for future applications in quantum technologies.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-04T17:37:40Z</published>
+    <arxiv:comment>25 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>David Theidel</name>
+    </author>
+    <author>
+      <name>Viviane Cotte</name>
+    </author>
+    <author>
+      <name>Philip Heinzel</name>
+    </author>
+    <author>
+      <name>Houssna Griguer</name>
+    </author>
+    <author>
+      <name>Mateusz Weis</name>
+    </author>
+    <author>
+      <name>René Sondenheimer</name>
+    </author>
+    <author>
+      <name>Hamed Merdji</name>
+    </author>
+    <arxiv:doi>10.1103/6r6n-pxfp</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/6r6n-pxfp" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.15337v2</id>
+    <title>High Harmonic Generation by Bright Squeezed Vacuum</title>
+    <updated>2024-04-09T12:08:09Z</updated>
+    <link href="https://arxiv.org/abs/2403.15337v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.15337v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We observe non-perturbative high harmonic generation in solids driven by a macroscopic quantum state of light, bright squeezed vacuum (BSV), which we generate in a single spatiotemporal mode. The BSV-driven process is considerably more efficient in the generation of high harmonics than classical light of the same mean intensity. Due to its broad photon-number distribution, covering states from $0$ to $2 \times 10^{13}$ photons per pulse, and sub-cycle electric field fluctuations over $\pm1\hbox{V}/\hbox{Å}$, BSV provides access to free carrier dynamics within a much broader range of peak intensities than accessible with classical light. Our findings contribute to recent developments of quantum optics with extreme intensities, moving beyond its traditional focus on low photon numbers, and providing a new method for exploring extreme nonlinearities in solids.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-22T16:46:23Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Andrei Rasputnyi</name>
+    </author>
+    <author>
+      <name>Zhaopin Chen</name>
+    </author>
+    <author>
+      <name>Michael Birk</name>
+    </author>
+    <author>
+      <name>Oren Cohen</name>
+    </author>
+    <author>
+      <name>Ido Kaminer</name>
+    </author>
+    <author>
+      <name>Michael Krüger</name>
+    </author>
+    <author>
+      <name>Denis Seletskiy</name>
+    </author>
+    <author>
+      <name>Maria Chekhova</name>
+    </author>
+    <author>
+      <name>Francesco Tani</name>
+    </author>
+    <arxiv:doi>10.1038/s41567-024-02659-x</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41567-024-02659-x" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.07577v2</id>
+    <title>Squeezed states of light after high-harmonic generation in excited atomic systems</title>
+    <updated>2025-01-06T20:45:10Z</updated>
+    <link href="https://arxiv.org/abs/2408.07577v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.07577v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>High-harmonic generation (HHG) has recently emerged as a promising method for generating non-classical states of light with frequencies spanning from the infrared up to the extreme ultraviolet regime. In this work, we theoretically investigate the generation of squeezed states of light through HHG processes in atomic systems that had been initially driven to their first excited state. Our study reveals significant single-mode squeezing in both the driving field and low-order harmonic modes. Additionally, we characterize two-mode squeezing features in the generated states, both between fundamental and harmonic modes, and among the harmonic modes themselves. Using these correlations, we demonstrate the generation of optical Schrödinger kitten states through heralding measurements, specifically via photon subtraction in one of the modes influenced by two-mode squeezing.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-14T14:18:10Z</published>
+    <arxiv:comment>17 pages (10 main text + 7 appendix), 6 figures (4 main text + 2 appendix). Comments are welcome. In v2 we have modified the text accordingly to the comments received by the anonymous reviewers of Physical Review A. We have also updated the references that have been already published</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Physical Review A 110, 063118 (2024)</arxiv:journal_ref>
+    <author>
+      <name>J. Rivera-Dean</name>
+    </author>
+    <author>
+      <name>H. B. Crispin</name>
+    </author>
+    <author>
+      <name>P. Stammer</name>
+    </author>
+    <author>
+      <name>Th. Lamprou</name>
+    </author>
+    <author>
+      <name>E. Pisanty</name>
+    </author>
+    <author>
+      <name>M. Krüger</name>
+    </author>
+    <author>
+      <name>P. Tzallas</name>
+    </author>
+    <author>
+      <name>M. Lewenstein</name>
+    </author>
+    <author>
+      <name>M. F. Ciappina</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevA.110.063118</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevA.110.063118" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.21925v1</id>
+    <title>Nonclassical Cutoff Fluctuations in Squeezed-Light-Driven High-Harmonic Generation</title>
+    <updated>2026-05-21T02:49:13Z</updated>
+    <link href="https://arxiv.org/abs/2605.21925v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.21925v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Strong-field high-harmonic generation (HHG) is conventionally described semiclassically, with the driving laser treated as a classical field. This approximation becomes insufficient in nanoscale interaction geometries, where extreme spatial confinement raises the vacuum-field amplitude to the ~10^-2 level relative to the driving-field amplitude. When the quantum fluctuations of the driving field are redistributed between conjugate quadratures by squeezing, they can be directly imprinted onto macroscopic HHG observables. To model this interaction, we employ a Wigner phase-space approach that maps the quantum-optical driver onto a stochastic ensemble of time-dependent Schrodinger equation realizations. Although each realization remains classically simulable, the sub-vacuum quadrature covariance structure of squeezed states cannot be reproduced by any field admitting a non-negative Glauber-Sudarshan P-representation. Within this single-mode Gaussian framework, we show that amplitude squeezing suppresses the shot-to-shot variance of the HHG cutoff below the standard quantum limit (SQL). To leading order in the vacuum-to-driver ratio, the normalized cutoff variance decays exponentially with the squeezing parameter, independent of the absolute vacuum-field amplitude and therefore robust against uncertainties in the effective nanoscale mode volume. A subleading phase-noise contribution from the anti-squeezed quadrature produces a variance minimum near r_opt ~ 1.6, providing a concrete experimental target. These results establish the HHG cutoff variance ratio as a nonlinear, self-calibrating Heisenberg witness in which sub-SQL scaling directly reflects the redistribution of quantum uncertainty in the driving field.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-21T02:49:13Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Tsendsuren Khurelbaatar</name>
+    </author>
+    <author>
+      <name>R. T. Sang</name>
+    </author>
+    <author>
+      <name>Igor Litvinyuk</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.11042v3</id>
+    <title>Structured squeezed light allows for high-harmonic generation in classical forbidden geometries</title>
+    <updated>2025-07-03T07:32:07Z</updated>
+    <link href="https://arxiv.org/abs/2411.11042v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.11042v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>High-harmonic generation (HHG) is a nonlinear process in which a strong driving field interacts with a material, resulting in the frequency up-conversion of the driver into its high-order harmonics. This process is highly sensitive to the field's polarization: circular polarization, for instance, inhibits HHG. In this work, we demonstrate that the use of non-classical structured light enables HHG in this otherwise prohibitive configuration for classical drivers. We consider circularly polarized light with non-classical fluctuations, introduced via squeezing along one polarization direction, and show that these non-classical features prompt the HHG process. We find that the spectral properties of the emitted harmonics depend on the type of squeezing applied and, by analyzing the inner electron dynamics, we relate the observed differences to modifications of the HHG three-step mechanism induced by the specific squeezing type. This approach opens new pathways for integrating quantum optics in HHG, providing novel means of controlling the light-matter interaction dynamics.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.atom-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-17T11:19:44Z</published>
+    <arxiv:comment>30 pages (8 main text + 22 Supplementary Material), 16 figures (5 main text + 11 Supplementary Material). Comments are welcome. The latest version corresponds to the final revised version of the manuscript</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Physical Review Letters 135, 013801 (2025)</arxiv:journal_ref>
+    <author>
+      <name>J. Rivera-Dean</name>
+    </author>
+    <author>
+      <name>P. Stammer</name>
+    </author>
+    <author>
+      <name>M. F. Ciappina</name>
+    </author>
+    <author>
+      <name>M. Lewenstein</name>
+    </author>
+    <arxiv:doi>10.1103/4hdl-bdwj</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/4hdl-bdwj" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.15932v1</id>
+    <title>Excitonic Enhancement of Squeezed Light in Quantum-Optical High-Harmonic Generation From a Mott Insulator</title>
+    <updated>2025-03-20T08:15:33Z</updated>
+    <link href="https://arxiv.org/abs/2503.15932v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.15932v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The strong-field induced generation of nonclassical states of light is not only a subject of fundamental research but also has potential usage in quantum information science and technology. The emerging field of strong-field quantum optics has developed ways of generating nonclassical states of light from the process of high-harmonic generation (HHG) at much wider frequency ranges and intensities than is typical for quantum optics. So far, however, no clear nonclassical signal at a distinct and unambiguous frequency has been predicted. Here, we study the response from an exciton in a Mott-insulating system, using the extended Hubbard model. We find that the exciton plays a key role in the nonclassical response and generates squeezing at the exciton energy. We relate this nonclassical response to the nonvanishing time correlations of the current operator in the system. Our work defines a direction for experimental work to search for squeezed light from HHG in a spectrally confined region defined by the exciton energy.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-20T08:15:33Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Christian Saugbjerg Lange</name>
+    </author>
+    <author>
+      <name>Thomas Hansen</name>
+    </author>
+    <author>
+      <name>Lars Bojer Madsen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.24377v2</id>
+    <title>Fluctuation-induced symmetry breaking in high harmonic generation for bicircular quantum light</title>
+    <updated>2026-04-02T13:57:18Z</updated>
+    <link href="https://arxiv.org/abs/2603.24377v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.24377v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Symmetries are ubiquitous in physics and play a pivotal role in light-matter interactions, where they determine the selection rules governing allowed atomic transitions and define the associated conserved quantities. For the up-conversion process of high harmonic generation, the symmetries of the driving field determine the allowed frequencies and the polarization properties of the resulting harmonics. As a consequence, it is possible to establish classical selection rules when the process is driven by coherent radiation. In this work, we show that fluctuation-induced symmetry breaking in the driving field leads to the appearance of otherwise forbidden harmonics. This is achieved by considering bicircular quantum light, and demonstrate that the enhanced quantum fluctuations due to squeezing in the driving field break the classical selection rules. To this end, we develop a quantum optical description of the dynamical symmetries in the process of high harmonic generation, revealing corrections to the classical selection rules. Moreover, we show that the new harmonics show squeezing-like signatures in their photon statistics, allowing them to be clearly distinguished from classical thermal fluctuations.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-25T14:58:01Z</published>
+    <arxiv:comment>In v2, Eq. (10) has been corrected. 17 pages (7 main text + 10 Supplementary Material), 9 figures (3 main text + 6 Supplementary Material). Comments are welcome</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Philipp Stammer</name>
+    </author>
+    <author>
+      <name>Camilo Granados</name>
+    </author>
+    <author>
+      <name>Javier Rivera-Dean</name>
+    </author>
+  </entry>
+</feed>

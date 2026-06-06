@@ -1,0 +1,2644 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "facets": {},
+    "total-results": 4104607,
+    "items": [
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              30
+            ]
+          ],
+          "date-time": "2024-10-30T23:41:34Z",
+          "timestamp": 1730331694851,
+          "version": "3.28.0"
+        },
+        "publisher-location": "Washington, D.C.",
+        "reference-count": 6,
+        "publisher": "Optica Publishing Group",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "abstract": "<jats:p>We present the first observation of non-perturbative high-harmonic generation driven by nonclassical light, namely bright squeezed vacuum. Compared to classical light, bright squeezed vacuum leads to higher efficiency, different power scaling, and unique photon-number distributions.</jats:p>",
+        "DOI": "10.1364/cleo_fs.2024.fm4b.3",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2024,
+              9,
+              5
+            ]
+          ],
+          "date-time": "2024-09-05T17:16:20Z",
+          "timestamp": 1725556580000
+        },
+        "page": "FM4B.3",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "High Harmonic Generation by Bright Squeezed Vacuum"
+        ],
+        "prefix": "10.1364",
+        "author": [
+          {
+            "given": "Andrei",
+            "family": "Rasputnyi",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Michael",
+            "family": "Birk",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Zhaopin",
+            "family": "Chen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Oren",
+            "family": "Cohen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Michael",
+            "family": "Krüger",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Ido",
+            "family": "Kaminer",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Maria",
+            "family": "Chekhova",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Francesco",
+            "family": "Tani",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "285",
+        "reference": [
+          {
+            "key": "CLEO_FS-2024-FM4B.3-R1",
+            "doi-asserted-by": "publisher",
+            "first-page": "381",
+            "DOI": "10.1038/nphys620",
+            "volume": "3",
+            "author": "Corkum",
+            "year": "2007",
+            "journal-title": "Nat. Physics"
+          },
+          {
+            "key": "CLEO_FS-2024-FM4B.3-R2",
+            "doi-asserted-by": "publisher",
+            "first-page": "15170",
+            "DOI": "10.1038/ncomms15170",
+            "volume": "8",
+            "author": "Tsatrafyllis",
+            "year": "2017",
+            "journal-title": "Nat Commun"
+          },
+          {
+            "key": "CLEO_FS-2024-FM4B.3-R3",
+            "doi-asserted-by": "publisher",
+            "first-page": "4598",
+            "DOI": "10.1038/s41467-020-18218-w",
+            "volume": "11",
+            "author": "Gorlach",
+            "year": "2020",
+            "journal-title": "Nat Commun"
+          },
+          {
+            "key": "CLEO_FS-2024-FM4B.3-R4",
+            "doi-asserted-by": "publisher",
+            "first-page": "1104",
+            "DOI": "10.1038/s41567-021-01317-w",
+            "volume": "17",
+            "author": "Lewenstein",
+            "year": "2021",
+            "journal-title": "Nat. Phys."
+          },
+          {
+            "key": "CLEO_FS-2024-FM4B.3-R5",
+            "doi-asserted-by": "publisher",
+            "first-page": "1689",
+            "DOI": "10.1038/s41567-023-02127-y",
+            "volume": "19",
+            "author": "Gorlach",
+            "year": "2023",
+            "journal-title": "Nat. Phys."
+          },
+          {
+            "key": "CLEO_FS-2024-FM4B.3-R6",
+            "doi-asserted-by": "publisher",
+            "first-page": "465",
+            "DOI": "10.1364/OL.448352",
+            "volume": "47",
+            "author": "Cutipa",
+            "year": "2022",
+            "journal-title": "Opt. Lett."
+          }
+        ],
+        "event": {
+          "name": "CLEO: Fundamental Science",
+          "start": {
+            "date-parts": [
+              [
+                2024
+              ]
+            ]
+          },
+          "sponsor": [
+            "The Optical Society"
+          ],
+          "location": "Charlotte, North Carolina",
+          "acronym": "CLEO_FS"
+        },
+        "container-title": [
+          "CLEO 2024"
+        ],
+        "link": [
+          {
+            "URL": "https://opg.optica.org/viewmedia.cfm?URI=CLEO_FS-2024-FM4B.3&seq=0",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2024,
+              9,
+              5
+            ]
+          ],
+          "date-time": "2024-09-05T17:16:21Z",
+          "timestamp": 1725556581000
+        },
+        "score": 45.37004,
+        "resource": {
+          "primary": {
+            "URL": "https://opg.optica.org/abstract.cfm?URI=CLEO_FS-2024-FM4B.3"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        },
+        "references-count": 6,
+        "URL": "https://doi.org/10.1364/cleo_fs.2024.fm4b.3",
+        "published": {
+          "date-parts": [
+            [
+              2024
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              6,
+              3
+            ]
+          ],
+          "date-time": "2026-06-03T08:44:45Z",
+          "timestamp": 1780476285137,
+          "version": "3.54.1"
+        },
+        "reference-count": 68,
+        "publisher": "Springer Science and Business Media LLC",
+        "issue": "12",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2024,
+                  10,
+                  2
+                ]
+              ],
+              "date-time": "2024-10-02T00:00:00Z",
+              "timestamp": 1727827200000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "https://creativecommons.org/licenses/by/4.0"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2024,
+                  10,
+                  2
+                ]
+              ],
+              "date-time": "2024-10-02T00:00:00Z",
+              "timestamp": 1727827200000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://creativecommons.org/licenses/by/4.0"
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "link.springer.com"
+          ],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Nat. Phys."
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2024,
+              12
+            ]
+          ]
+        },
+        "abstract": "<jats:title>Abstract</jats:title><jats:p>High-harmonic generation has been driving the development of attosecond science and sources. More recently, high-harmonic generation in solids has been adopted by other communities as a method to study material properties. However, so far high-harmonic generation has only been driven by classical light, despite theoretical proposals to do so with quantum states of light. Here we observe non-perturbative high-harmonic generation in solids driven by a macroscopic quantum state of light, a bright squeezed vacuum, which we generate in a single spatiotemporal mode. The process driven by a bright squeezed vacuum is considerably more efficient in the generation of high harmonics than classical light of the same mean intensity. Due to its broad photon-number distribution, covering states from 0 to 2 × 10<jats:sup>13</jats:sup> photons per pulse, and strong subcycle electric field fluctuations, a bright squeezed vacuum gives access to free carrier dynamics within a much broader range of peak intensities than accessible with classical light.</jats:p>",
+        "DOI": "10.1038/s41567-024-02659-x",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              2
+            ]
+          ],
+          "date-time": "2024-10-02T10:02:19Z",
+          "timestamp": 1727863339000
+        },
+        "page": "1960-1965",
+        "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 55,
+        "title": [
+          "High-harmonic generation by a bright squeezed vacuum"
+        ],
+        "prefix": "10.1038",
+        "volume": "20",
+        "author": [
+          {
+            "given": "Andrei",
+            "family": "Rasputnyi",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Zhaopin",
+            "family": "Chen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Michael",
+            "family": "Birk",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "given": "Oren",
+            "family": "Cohen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-2691-1892",
+            "authenticated-orcid": false,
+            "given": "Ido",
+            "family": "Kaminer",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-6188-9179",
+            "authenticated-orcid": false,
+            "given": "Michael",
+            "family": "Krüger",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-3480-4595",
+            "authenticated-orcid": false,
+            "given": "Denis",
+            "family": "Seletskiy",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0002-3399-2101",
+            "authenticated-orcid": false,
+            "given": "Maria",
+            "family": "Chekhova",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-6482-0647",
+            "authenticated-orcid": false,
+            "given": "Francesco",
+            "family": "Tani",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "vocabulary": "crossref",
+                "role": "author"
+              }
+            ]
+          }
+        ],
+        "member": "297",
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              2
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "2659_CR1",
+            "doi-asserted-by": "crossref",
+            "first-page": "L31",
+            "DOI": "10.1088/0953-4075/21/3/001",
+            "volume": "21",
+            "author": "M Ferray",
+            "year": "1988",
+            "unstructured": "Ferray, M. et al. Multiple-harmonic conversion of 1064 nm radiation in rare gases. J. Phys. B 21, L31–L35 (1988).",
+            "journal-title": "J. Phys. B"
+          },
+          {
+            "key": "2659_CR2",
+            "doi-asserted-by": "crossref",
+            "first-page": "595",
+            "DOI": "10.1364/JOSAB.4.000595",
+            "volume": "4",
+            "author": "A McPherson",
+            "year": "1987",
+            "unstructured": "McPherson, A. et al. Studies of multiphoton production of vacuum-ultraviolet radiation in the rare gases. J. Opt. Soc. Am. B 4, 595–601 (1987).",
+            "journal-title": "J. Opt. Soc. Am. B"
+          },
+          {
+            "key": "2659_CR3",
+            "doi-asserted-by": "crossref",
+            "first-page": "163",
+            "DOI": "10.1103/RevModPhys.81.163",
+            "volume": "81",
+            "author": "F Krausz",
+            "year": "2009",
+            "unstructured": "Krausz, F. & Ivanov, M. Attosecond physics. Rev. Mod. Phys. 81, 163–234 (2009).",
+            "journal-title": "Rev. Mod. Phys."
+          },
+          {
+            "key": "2659_CR4",
+            "doi-asserted-by": "crossref",
+            "first-page": "1287",
+            "DOI": "10.1126/science.1218497",
+            "volume": "336",
+            "author": "T Popmintchev",
+            "year": "2012",
+            "unstructured": "Popmintchev, T. et al. Bright coherent ultrahigh harmonics in the keV X-ray regime from mid-infrared femtosecond lasers. Science 336, 1287–1291 (2012).",
+            "journal-title": "Science"
+          },
+          {
+            "key": "2659_CR5",
+            "volume": "9",
+            "author": "TT Luu",
+            "year": "2018",
+            "unstructured": "Luu, T. T. et al. Extreme-ultraviolet high-harmonic generation in liquids. Nat. Commun. 9, 3723 (2018).",
+            "journal-title": "Nat. Commun."
+          },
+          {
+            "key": "2659_CR6",
+            "doi-asserted-by": "crossref",
+            "first-page": "34348",
+            "DOI": "10.1364/OE.496686",
+            "volume": "31",
+            "author": "A Mondal",
+            "year": "2023",
+            "unstructured": "Mondal, A. et al. High-harmonic generation in liquids with few-cycle pulses: effect of laser-pulse duration on the cut-off energy. Opt. Express 31, 34348–34361 (2023).",
+            "journal-title": "Opt. Express"
+          },
+          {
+            "key": "2659_CR7",
+            "doi-asserted-by": "crossref",
+            "first-page": "138",
+            "DOI": "10.1038/nphys1847",
+            "volume": "7",
+            "author": "S Ghimire",
+            "year": "2011",
+            "unstructured": "Ghimire, S. et al. Observation of high-order harmonic generation in a bulk crystal. Nat. Phys. 7, 138–141 (2011).",
+            "journal-title": "Nat. Phys."
+          },
+          {
+            "key": "2659_CR8",
+            "doi-asserted-by": "crossref",
+            "first-page": "193603",
+            "DOI": "10.1103/PhysRevLett.115.193603",
+            "volume": "115",
+            "author": "G Vampa",
+            "year": "2015",
+            "unstructured": "Vampa, G. et al. All-optical reconstruction of crystal band structure. Phys. Rev. Lett. 115, 193603 (2015).",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "2659_CR9",
+            "doi-asserted-by": "crossref",
+            "first-page": "411",
+            "DOI": "10.1038/s41566-022-00988-y",
+            "volume": "16",
+            "author": "E Goulielmakis",
+            "year": "2022",
+            "unstructured": "Goulielmakis, E. & Brabec, T. High harmonic generation in condensed matter. Nat. Photon. 16, 411–421 (2022).",
+            "journal-title": "Nat. Photon."
+          },
+          {
+            "key": "2659_CR10",
+            "doi-asserted-by": "crossref",
+            "first-page": "131104",
+            "DOI": "10.1063/1.2783480",
+            "volume": "91",
+            "author": "RA Ganeev",
+            "year": "2007",
+            "unstructured": "Ganeev, R. A., Elouga Bom, L. B. & Ozaki, T. High-order harmonic generation from plasma plume pumped by 400 nm wavelength laser. Appl. Phys. Lett. 91, 131104 (2007).",
+            "journal-title": "Appl. Phys. Lett."
+          },
+          {
+            "key": "2659_CR11",
+            "doi-asserted-by": "crossref",
+            "first-page": "1225",
+            "DOI": "10.1126/science.aac9755",
+            "volume": "350",
+            "author": "D Popmintchev",
+            "year": "2015",
+            "unstructured": "Popmintchev, D. et al. Ultraviolet surprise: efficient soft X-ray high-harmonic generation in multiply ionized plasmas. Science 350, 1225–1231 (2015).",
+            "journal-title": "Science"
+          },
+          {
+            "key": "2659_CR12",
+            "doi-asserted-by": "crossref",
+            "first-page": "015009",
+            "DOI": "10.1088/2399-6528/aa74f6",
+            "volume": "1",
+            "author": "C Marceau",
+            "year": "2017",
+            "unstructured": "Marceau, C., Hammond, T. J., Naumov, A. Y., Corkum, P. B. & Villeneuve, D. M. Wavelength scaling of high harmonic generation for 267 nm, 400 nm and 800 nm driving laser pulses. J. Phys. Commun. 1, 015009 (2017).",
+            "journal-title": "J. Phys. Commun."
+          },
+          {
+            "key": "2659_CR13",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1038/ncomms11493",
+            "volume": "7",
+            "author": "SM Teichmann",
+            "year": "2016",
+            "unstructured": "Teichmann, S. M., Silva, F., Cousin, S. L., Hemmer, M. & Biegert, J. 0.5-keV soft X-ray attosecond continua. Nat. Commun. 7, 11493 (2016).",
+            "journal-title": "Nat. Commun."
+          },
+          {
+            "key": "2659_CR14",
+            "doi-asserted-by": "crossref",
+            "first-page": "5383",
+            "DOI": "10.1364/OL.39.005383",
+            "volume": "39",
+            "author": "SL Cousin",
+            "year": "2014",
+            "unstructured": "Cousin, S. L. et al. High-flux table-top soft X-ray source driven by sub-2-cycle, CEP stable, 1.85-μm 1-kHz pulses for carbon K-edge spectroscopy. Opt. Lett. 39, 5383–5386 (2014).",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "key": "2659_CR15",
+            "doi-asserted-by": "crossref",
+            "first-page": "1689",
+            "DOI": "10.1126/science.1059413",
+            "volume": "292",
+            "author": "PM Paul",
+            "year": "2001",
+            "unstructured": "Paul, P. M. et al. Observation of a train of attosecond pulses from high harmonic generation. Science 292, 1689–1692 (2001).",
+            "journal-title": "Science"
+          },
+          {
+            "key": "2659_CR16",
+            "doi-asserted-by": "crossref",
+            "first-page": "509",
+            "DOI": "10.1038/35107000",
+            "volume": "414",
+            "author": "M Hentschel",
+            "year": "2001",
+            "unstructured": "Hentschel, M. et al. Attosecond metrology. Nature 414, 509–513 (2001).",
+            "journal-title": "Nature"
+          },
+          {
+            "key": "2659_CR17",
+            "doi-asserted-by": "crossref",
+            "first-page": "157404",
+            "DOI": "10.1103/PhysRevLett.124.157404",
+            "volume": "124",
+            "author": "S Imai",
+            "year": "2020",
+            "unstructured": "Imai, S., Ono, A. & Ishihara, S. High harmonic generation in a correlated electron system. Phys. Rev. Lett. 124, 157404 (2020).",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "2659_CR18",
+            "doi-asserted-by": "crossref",
+            "first-page": "385",
+            "DOI": "10.1038/s41586-021-03466-7",
+            "volume": "593",
+            "author": "CP Schmid",
+            "year": "2021",
+            "unstructured": "Schmid, C. P. et al. Tunable non-integer high-harmonic generation in a topological insulator. Nature 593, 385–390 (2021).",
+            "journal-title": "Nature"
+          },
+          {
+            "key": "2659_CR19",
+            "doi-asserted-by": "crossref",
+            "first-page": "620",
+            "DOI": "10.1038/s41566-022-01050-7",
+            "volume": "16",
+            "author": "C Heide",
+            "year": "2022",
+            "unstructured": "Heide, C. et al. Probing topological phase transitions using high-harmonic generation. Nat. Photon. 16, 620–624 (2022).",
+            "journal-title": "Nat. Photon."
+          },
+          {
+            "key": "2659_CR20",
+            "doi-asserted-by": "crossref",
+            "first-page": "047401",
+            "DOI": "10.1103/PhysRevLett.128.047401",
+            "volume": "128",
+            "author": "C Shao",
+            "year": "2022",
+            "unstructured": "Shao, C. et al. High-harmonic generation approaching the quantum critical point of strongly correlated systems. Phys. Rev. Lett. 128, 047401 (2022).",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "2659_CR21",
+            "doi-asserted-by": "crossref",
+            "first-page": "572",
+            "DOI": "10.1038/nature14652",
+            "volume": "523",
+            "author": "M Hohenleutner",
+            "year": "2015",
+            "unstructured": "Hohenleutner, M. et al. Real-time observation of interfering crystal electrons in high-harmonic generation. Nature 523, 572–575 (2015).",
+            "journal-title": "Nature"
+          },
+          {
+            "key": "2659_CR22",
+            "doi-asserted-by": "crossref",
+            "first-page": "781",
+            "DOI": "10.1038/nphys2033",
+            "volume": "7",
+            "author": "P Tzallas",
+            "year": "2011",
+            "unstructured": "Tzallas, P., Skantzakis, E., Nikolopoulos, L. A. A., Tsakiris, G. D. & Charalambidis, D. Extreme-ultraviolet pump–probe studies of one-femtosecond-scale electron dynamics. Nat. Phys. 7, 781–784 (2011).",
+            "journal-title": "Nat. Phys."
+          },
+          {
+            "key": "2659_CR23",
+            "doi-asserted-by": "crossref",
+            "first-page": "498",
+            "DOI": "10.1038/nature14456",
+            "volume": "521",
+            "author": "TT Luu",
+            "year": "2015",
+            "unstructured": "Luu, T. T. et al. Extreme ultraviolet high-harmonic spectroscopy of solids. Nature 521, 498–502 (2015).",
+            "journal-title": "Nature"
+          },
+          {
+            "key": "2659_CR24",
+            "doi-asserted-by": "crossref",
+            "first-page": "10760",
+            "DOI": "10.1021/acs.chemrev.6b00453",
+            "volume": "117",
+            "author": "M Nisoli",
+            "year": "2017",
+            "unstructured": "Nisoli, M., Decleva, P., Calegari, F., Palacios, A. & Martín, F. Attosecond electron dynamics in molecules. Chem. Rev. 117, 10760–10825 (2017).",
+            "journal-title": "Chem. Rev."
+          },
+          {
+            "key": "2659_CR25",
+            "doi-asserted-by": "crossref",
+            "first-page": "55",
+            "DOI": "10.1038/s41586-020-2429-z",
+            "volume": "583",
+            "author": "H Lakhotia",
+            "year": "2020",
+            "unstructured": "Lakhotia, H. et al. Laser picoscopy of valence electrons in solids. Nature 583, 55–59 (2020).",
+            "journal-title": "Nature"
+          },
+          {
+            "key": "2659_CR26",
+            "doi-asserted-by": "crossref",
+            "first-page": "e2207766119",
+            "DOI": "10.1073/pnas.2207766119",
+            "volume": "119",
+            "author": "J Alcalà",
+            "year": "2022",
+            "unstructured": "Alcalà, J. et al. High-harmonic spectroscopy of quantum phase transitions in a high-Tc superconductor. Proc. Natl Acad. Sci. USA 119, e2207766119 (2022).",
+            "journal-title": "Proc. Natl Acad. Sci. USA"
+          },
+          {
+            "key": "2659_CR27",
+            "doi-asserted-by": "crossref",
+            "first-page": "66",
+            "DOI": "10.1038/s41586-023-06828-5",
+            "volume": "626",
+            "author": "AJ Uzan-Narovlansky",
+            "year": "2024",
+            "unstructured": "Uzan-Narovlansky, A. J. et al. Observation of interband Berry phase in laser-driven crystals. Nature 626, 66–71 (2024).",
+            "journal-title": "Nature"
+          },
+          {
+            "key": "2659_CR28",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1038/s41467-020-18218-w",
+            "volume": "11",
+            "author": "A Gorlach",
+            "year": "2020",
+            "unstructured": "Gorlach, A., Neufeld, O., Rivera, N., Cohen, O. & Kaminer, I. The quantum-optical nature of high harmonic generation. Nat. Commun. 11, 4598 (2020).",
+            "journal-title": "Nat. Commun."
+          },
+          {
+            "key": "2659_CR29",
+            "unstructured": "Sloan, J. et al. Entangling extreme ultraviolet photons through strong field pair generation. Preprint at https://arxiv.org/abs/2309.16466 (2023)."
+          },
+          {
+            "key": "2659_CR30",
+            "unstructured": "Yi, S., Babushkin, I., Smirnova, O. & Ivanov, M. Generation of massively entangled bright states of light during harmonic generation in resonant media. Preprint at https://arxiv.org/abs/2401.02817 (2024)."
+          },
+          {
+            "key": "2659_CR31",
+            "doi-asserted-by": "crossref",
+            "first-page": "143603",
+            "DOI": "10.1103/PhysRevLett.132.143603",
+            "volume": "132",
+            "author": "P Stammer",
+            "year": "2024",
+            "unstructured": "Stammer, P. et al. Entanglement and squeezing of the optical field modes in high harmonic generation. Phys. Rev. Lett. 132, 143603 (2024).",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "2659_CR32",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1038/ncomms15170",
+            "volume": "8",
+            "author": "N Tsatrafyllis",
+            "year": "2017",
+            "unstructured": "Tsatrafyllis, N., Kominis, I. K., Gonoskov, I. A. & Tzallas, P. High-order harmonics measured by the photon statistics of the infrared driving-field exiting the atomic medium. Nat. Commun. 8, 15170 (2017).",
+            "journal-title": "Nat. Commun."
+          },
+          {
+            "key": "2659_CR33",
+            "doi-asserted-by": "crossref",
+            "first-page": "193602",
+            "DOI": "10.1103/PhysRevLett.122.193602",
+            "volume": "122",
+            "author": "N Tsatrafyllis",
+            "year": "2019",
+            "unstructured": "Tsatrafyllis, N. et al. Quantum optical signatures in a strong laser pulse after interaction with semiconductors. Phys. Rev. Lett. 122, 193602 (2019).",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "2659_CR34",
+            "doi-asserted-by": "crossref",
+            "first-page": "1104",
+            "DOI": "10.1038/s41567-021-01317-w",
+            "volume": "17",
+            "author": "M Lewenstein",
+            "year": "2021",
+            "unstructured": "Lewenstein, M. et al. Generation of optical Schrödinger cat states in intense laser–matter interactions. Nat. Phys. 17, 1104–1108 (2021).",
+            "journal-title": "Nat. Phys."
+          },
+          {
+            "key": "2659_CR35",
+            "doi-asserted-by": "crossref",
+            "first-page": "1689",
+            "DOI": "10.1038/s41567-023-02127-y",
+            "volume": "19",
+            "author": "A Gorlach",
+            "year": "2023",
+            "unstructured": "Gorlach, A. et al. High-harmonic generation driven by quantum light. Nat. Phys. 19, 1689–1696 (2023).",
+            "journal-title": "Nat. Phys."
+          },
+          {
+            "key": "2659_CR36",
+            "doi-asserted-by": "crossref",
+            "first-page": "501",
+            "DOI": "10.1038/s41566-023-01209-w",
+            "volume": "17",
+            "author": "M Even Tzur",
+            "year": "2023",
+            "unstructured": "Even Tzur, M. et al. Photon-statistics force in ultrafast electron dynamics. Nat. Photon. 17, 501–509 (2023).",
+            "journal-title": "Nat. Photon."
+          },
+          {
+            "key": "2659_CR37",
+            "doi-asserted-by": "crossref",
+            "first-page": "110801",
+            "DOI": "10.1103/PhysRevLett.117.110801",
+            "volume": "117",
+            "author": "H Vahlbruch",
+            "year": "2016",
+            "unstructured": "Vahlbruch, H., Mehmet, M., Danzmann, K. & Schnabel, R. Detection of 15 dB squeezed states of light and their application for the absolute calibration of photoelectric quantum efficiency. Phys. Rev. Lett. 117, 110801 (2016).",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "2659_CR38",
+            "doi-asserted-by": "crossref",
+            "first-page": "545",
+            "DOI": "10.1038/nphys2681",
+            "volume": "9",
+            "author": "N Bruno",
+            "year": "2013",
+            "unstructured": "Bruno, N. et al. Displacement of entanglement back and forth between the micro and macro domains. Nat. Phys. 9, 545–548 (2013).",
+            "journal-title": "Nat. Phys."
+          },
+          {
+            "key": "2659_CR39",
+            "doi-asserted-by": "crossref",
+            "first-page": "541",
+            "DOI": "10.1038/nphys2682",
+            "volume": "9",
+            "author": "AI Lvovsky",
+            "year": "2013",
+            "unstructured": "Lvovsky, A. I., Ghobadi, R., Chandra, A., Prasad, A. S. & Simon, C. Observation of micro–macro entanglement of light. Nat. Phys. 9, 541–544 (2013).",
+            "journal-title": "Nat. Phys."
+          },
+          {
+            "key": "2659_CR40",
+            "doi-asserted-by": "crossref",
+            "first-page": "96",
+            "DOI": "10.1016/j.optcom.2014.07.046",
+            "volume": "337",
+            "author": "A Laghaout",
+            "year": "2015",
+            "unstructured": "Laghaout, A., Neergaard-Nielsen, J. S. & Andersen, U. L. Assessments of macroscopicity for quantum optical states. Opt. Commun. 337, 96–101 (2015).",
+            "journal-title": "Opt. Commun."
+          },
+          {
+            "key": "2659_CR41",
+            "doi-asserted-by": "crossref",
+            "first-page": "223603",
+            "DOI": "10.1103/PhysRevLett.119.223603",
+            "volume": "119",
+            "author": "KY Spasibko",
+            "year": "2017",
+            "unstructured": "Spasibko, K. Y. et al. Multiphoton effects enhanced due to ultrafast photon-number fluctuations. Phys. Rev. Lett. 119, 223603 (2017).",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "2659_CR42",
+            "doi-asserted-by": "crossref",
+            "first-page": "123606",
+            "DOI": "10.1103/PhysRevLett.123.123606",
+            "volume": "123",
+            "author": "M Manceau",
+            "year": "2019",
+            "unstructured": "Manceau, M., Spasibko, K. Y., Leuchs, G., Filip, R. & Chekhova, M. V. Indefinite-mean Pareto photon distribution from amplified quantum noise. Phys. Rev. Lett. 123, 123606 (2019).",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "2659_CR43",
+            "doi-asserted-by": "crossref",
+            "first-page": "143602",
+            "DOI": "10.1103/PhysRevLett.115.143602",
+            "volume": "115",
+            "author": "MA Finger",
+            "year": "2015",
+            "unstructured": "Finger, M. A., Iskhakov, T. S., Joly, N. Y., Chekhova, M. V. & Russell, P. S. J. Raman-free, noble-gas-filled photonic-crystal fiber source for ultrafast, very bright twin-beam squeezed vacuum. Phys. Rev. Lett. 115, 143602 (2015).",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "2659_CR44",
+            "doi-asserted-by": "crossref",
+            "first-page": "150502",
+            "DOI": "10.1103/PhysRevLett.109.150502",
+            "volume": "109",
+            "author": "TS Iskhakov",
+            "year": "2012",
+            "unstructured": "Iskhakov, T. S., Agafonov, I. N., Chekhova, M. V. & Leuchs, G. Polarization-entangled light pulses of 105 photons. Phys. Rev. Lett. 109, 150502 (2012).",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "2659_CR45",
+            "doi-asserted-by": "crossref",
+            "first-page": "270504",
+            "DOI": "10.1103/PhysRevLett.127.270504",
+            "volume": "127",
+            "author": "S Virally",
+            "year": "2021",
+            "unstructured": "Virally, S., Cusson, P. & Seletskiy, D. V. Enhanced electro-optic sampling with quantum probes. Phys. Rev. Lett. 127, 270504 (2021).",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "2659_CR46",
+            "doi-asserted-by": "crossref",
+            "first-page": "1919",
+            "DOI": "10.1364/OL.37.001919",
+            "volume": "37",
+            "author": "TS Iskhakov",
+            "year": "2012",
+            "unstructured": "Iskhakov, T. S., Pérez, A. M., Spasibko, K. Y., Chekhova, M. V. & Leuchs, G. Superbunched bright squeezed vacuum state. Opt. Lett. 37, 1919–1921 (2012).",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "key": "2659_CR47",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Heimerl, J. et al. Multiphoton electron emission with non-classical light. Nat. Phys. 20, 945–950 (2024).",
+            "DOI": "10.1038/s41567-024-02472-6"
+          },
+          {
+            "key": "2659_CR48",
+            "unstructured": "Lemieux, S. et al. Photon bunching in high-harmonic emission controlled by quantum light. Preprint at https://arxiv.org/abs/2404.05474 (2024)."
+          },
+          {
+            "key": "2659_CR49",
+            "doi-asserted-by": "crossref",
+            "first-page": "41",
+            "DOI": "10.1038/s41377-024-01381-w",
+            "volume": "13",
+            "author": "M Even Tzur",
+            "year": "2024",
+            "unstructured": "Even Tzur, M. & Cohen, O. Motion of charged particles in bright squeezed vacuum. Light Sci. Appl. 13, 41 (2024).",
+            "journal-title": "Light Sci. Appl."
+          },
+          {
+            "key": "2659_CR50",
+            "unstructured": "Hegazi, A., Tzur, M. E. & Cohen, O. Quantum state of high harmonics driven by quantum light: dynamical symmetries and selection rules. In 9th International Conference on Attosecond Science and Technology (2023)."
+          },
+          {
+            "key": "2659_CR51",
+            "doi-asserted-by": "crossref",
+            "first-page": "033079",
+            "DOI": "10.1103/PhysRevResearch.6.033079",
+            "volume": "6",
+            "author": "ME Tzur",
+            "year": "2024",
+            "unstructured": "Tzur, M. E. et al. Generation of squeezed high-order harmonics. Phys. Rev. Res. 6, 033079 (2024).",
+            "journal-title": "Phys. Rev. Res."
+          },
+          {
+            "key": "2659_CR52",
+            "doi-asserted-by": "crossref",
+            "first-page": "420",
+            "DOI": "10.1126/science.aac9788",
+            "volume": "350",
+            "author": "C Riek",
+            "year": "2015",
+            "unstructured": "Riek, C. et al. Direct sampling of electric-field vacuum fluctuations. Science 350, 420–423 (2015).",
+            "journal-title": "Science"
+          },
+          {
+            "key": "2659_CR53",
+            "doi-asserted-by": "crossref",
+            "first-page": "376",
+            "DOI": "10.1038/nature21024",
+            "volume": "541",
+            "author": "C Riek",
+            "year": "2017",
+            "unstructured": "Riek, C. et al. Subcycle quantum electrodynamics. Nature 541, 376–379 (2017).",
+            "journal-title": "Nature"
+          },
+          {
+            "key": "2659_CR54",
+            "first-page": "1307",
+            "volume": "20",
+            "author": "LV Keldysh",
+            "year": "1965",
+            "unstructured": "Keldysh, L. V. Ionization in the field of a strong electromagnetic wave. Sov. Phys. JETP 20, 1307–1314 (1965).",
+            "journal-title": "Sov. Phys. JETP"
+          },
+          {
+            "key": "2659_CR55",
+            "doi-asserted-by": "crossref",
+            "first-page": "419",
+            "DOI": "10.1080/00150197408234114",
+            "volume": "8",
+            "author": "S Kase",
+            "year": "1974",
+            "unstructured": "Kase, S. & Ohi, K. Optical absorption and interband Faraday rotation in LiTaO3 and LiNbO3. Ferroelectrics 8, 419–420 (1974).",
+            "journal-title": "Ferroelectrics"
+          },
+          {
+            "key": "2659_CR56",
+            "doi-asserted-by": "crossref",
+            "first-page": "713",
+            "DOI": "10.1038/s42254-022-00522-7",
+            "volume": "4",
+            "author": "R Weissenbilder",
+            "year": "2022",
+            "unstructured": "Weissenbilder, R. et al. How to optimize high-order harmonic generation in gases. Nat. Rev. Phys. 4, 713–722 (2022).",
+            "journal-title": "Nat. Rev. Phys."
+          },
+          {
+            "key": "2659_CR57",
+            "doi-asserted-by": "crossref",
+            "first-page": "245402",
+            "DOI": "10.1088/1361-6455/ac43f5",
+            "volume": "54",
+            "author": "T-J Shao",
+            "year": "2021",
+            "unstructured": "Shao, T.-J., Hu, F. & Chen, H.-B. Spontaneous polarization effects on solid high harmonic generation in ferroelectric lithium niobate crystals. J. Phys. B 54, 245402 (2021).",
+            "journal-title": "J. Phys. B"
+          },
+          {
+            "key": "2659_CR58",
+            "doi-asserted-by": "crossref",
+            "first-page": "851",
+            "DOI": "10.1021/acsphotonics.9b00019",
+            "volume": "6",
+            "author": "YW Kim",
+            "year": "2019",
+            "unstructured": "Kim, Y. W. et al. Spectral interference in high harmonic generation from solids. ACS Photon. 6, 851–857 (2019).",
+            "journal-title": "ACS Photon."
+          },
+          {
+            "key": "2659_CR59",
+            "doi-asserted-by": "crossref",
+            "first-page": "582",
+            "DOI": "10.1007/s00339-016-0120-x",
+            "volume": "122",
+            "author": "Q Meng",
+            "year": "2016",
+            "unstructured": "Meng, Q., Zhang, B., Zhong, S. & Zhu, L. Damage threshold of lithium niobate crystal under single and multiple femtosecond laser pulses: theoretical and experimental study. Appl. Phys. A 122, 582 (2016).",
+            "journal-title": "Appl. Phys. A"
+          },
+          {
+            "key": "2659_CR60",
+            "doi-asserted-by": "crossref",
+            "first-page": "3883",
+            "DOI": "10.1103/PhysRevLett.82.3883",
+            "volume": "82",
+            "author": "A-C Tien",
+            "year": "1999",
+            "unstructured": "Tien, A.-C., Backus, S., Kapteyn, H., Murnane, M. & Mourou, G. Short-pulse laser damage in transparent materials as a function of pulse duration. Phys. Rev. Lett. 82, 3883–3886 (1999).",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "2659_CR61",
+            "doi-asserted-by": "crossref",
+            "first-page": "094104",
+            "DOI": "10.1103/PhysRevB.84.094104",
+            "volume": "84",
+            "author": "B Chimier",
+            "year": "2011",
+            "unstructured": "Chimier, B. et al. Damage and ablation thresholds of fused-silica in femtosecond regime. Phys. Rev. B 84, 094104 (2011).",
+            "journal-title": "Phys. Rev. B"
+          },
+          {
+            "key": "2659_CR62",
+            "doi-asserted-by": "crossref",
+            "first-page": "1695",
+            "DOI": "10.1007/s00339-004-2684-0",
+            "volume": "79",
+            "author": "S Mao",
+            "year": "2004",
+            "unstructured": "Mao, S. et al. Dynamics of femtosecond laser interactions with dielectrics. Appl. Phys. A 79, 1695–1709 (2004).",
+            "journal-title": "Appl. Phys. A"
+          },
+          {
+            "key": "2659_CR63",
+            "doi-asserted-by": "crossref",
+            "first-page": "2643",
+            "DOI": "10.1103/PhysRevB.61.2643",
+            "volume": "61",
+            "author": "K Sokolowski-Tinten",
+            "year": "2000",
+            "unstructured": "Sokolowski-Tinten, K. & von der Linde, D. Generation of dense electron–hole plasmas in silicon. Phys. Rev. B 61, 2643–2650 (2000).",
+            "journal-title": "Phys. Rev. B"
+          },
+          {
+            "key": "2659_CR64",
+            "doi-asserted-by": "crossref",
+            "first-page": "1322",
+            "DOI": "10.1364/OPTICA.498746",
+            "volume": "10",
+            "author": "MA Sirotin",
+            "year": "2023",
+            "unstructured": "Sirotin, M. A. et al. Direct ultrafast carrier imaging in a perovskite microlaser with optical coherence microscopy. Optica 10, 1322–1330 (2023).",
+            "journal-title": "Optica"
+          },
+          {
+            "key": "2659_CR65",
+            "doi-asserted-by": "crossref",
+            "unstructured": "Kira, M. & Koch, S. W. Spectroscopy and Quantum-Optical Correlations 457–479 (Cambridge Univ. Press, 2011).",
+            "DOI": "10.1017/CBO9781139016926.024"
+          },
+          {
+            "key": "2659_CR66",
+            "doi-asserted-by": "crossref",
+            "first-page": "799",
+            "DOI": "10.1038/nphys2091",
+            "volume": "7",
+            "author": "M Kira",
+            "year": "2011",
+            "unstructured": "Kira, M., Koch, S. W., Smith, R. P., Hunter, A. E. & Cundiff, S. T. Quantum spectroscopy with Schrödinger-cat states. Nat. Phys. 7, 799–804 (2011).",
+            "journal-title": "Nat. Phys."
+          },
+          {
+            "key": "2659_CR67",
+            "doi-asserted-by": "crossref",
+            "first-page": "2403",
+            "DOI": "10.1364/OL.39.002403",
+            "volume": "39",
+            "author": "AM Pérez",
+            "year": "2014",
+            "unstructured": "Pérez, A. M. et al. Bright squeezed-vacuum source with 1.1 spatial mode. Opt. Lett. 39, 2403–2406 (2014).",
+            "journal-title": "Opt. Lett."
+          },
+          {
+            "key": "2659_CR68",
+            "doi-asserted-by": "crossref",
+            "first-page": "115164",
+            "DOI": "10.1103/PhysRevB.94.115164",
+            "volume": "94",
+            "author": "TT Luu",
+            "year": "2016",
+            "unstructured": "Luu, T. T. & Wörner, H. J. High-order harmonic generation in solids: a unifying approach. Phys. Rev. B 94, 115164 (2016).",
+            "journal-title": "Phys. Rev. B"
+          }
+        ],
+        "container-title": [
+          "Nature Physics"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://www.nature.com/articles/s41567-024-02659-x.pdf",
+            "content-type": "application/pdf",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://www.nature.com/articles/s41567-024-02659-x",
+            "content-type": "text/html",
+            "content-version": "vor",
+            "intended-application": "text-mining"
+          },
+          {
+            "URL": "https://www.nature.com/articles/s41567-024-02659-x.pdf",
+            "content-type": "application/pdf",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2024,
+              12,
+              15
+            ]
+          ],
+          "date-time": "2024-12-15T01:02:01Z",
+          "timestamp": 1734224521000
+        },
+        "score": 39.14145,
+        "resource": {
+          "primary": {
+            "URL": "https://www.nature.com/articles/s41567-024-02659-x"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              2
+            ]
+          ]
+        },
+        "references-count": 68,
+        "journal-issue": {
+          "issue": "12",
+          "published-print": {
+            "date-parts": [
+              [
+                2024,
+                12
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "2659"
+        ],
+        "URL": "https://doi.org/10.1038/s41567-024-02659-x",
+        "ISSN": [
+          "1745-2473",
+          "1745-2481"
+        ],
+        "issn-type": [
+          {
+            "value": "1745-2473",
+            "type": "print"
+          },
+          {
+            "value": "1745-2481",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              10,
+              2
+            ]
+          ]
+        },
+        "assertion": [
+          {
+            "value": "4 July 2024",
+            "order": 1,
+            "name": "received",
+            "label": "Received",
+            "group": {
+              "name": "ArticleHistory",
+              "label": "Article History"
+            }
+          },
+          {
+            "value": "2 September 2024",
+            "order": 2,
+            "name": "accepted",
+            "label": "Accepted",
+            "group": {
+              "name": "ArticleHistory",
+              "label": "Article History"
+            }
+          },
+          {
+            "value": "2 October 2024",
+            "order": 3,
+            "name": "first_online",
+            "label": "First Online",
+            "group": {
+              "name": "ArticleHistory",
+              "label": "Article History"
+            }
+          },
+          {
+            "value": "The authors declare no competing interests.",
+            "order": 1,
+            "name": "Ethics",
+            "group": {
+              "name": "EthicsHeading",
+              "label": "Competing interests"
+            }
+          }
+        ]
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              3,
+              9
+            ]
+          ],
+          "date-time": "2026-03-09T17:54:03Z",
+          "timestamp": 1773078843241,
+          "version": "3.50.1"
+        },
+        "reference-count": 42,
+        "publisher": "American Physical Society (APS)",
+        "issue": "3",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2024,
+                  7,
+                  1
+                ]
+              ],
+              "date-time": "2024-07-01T00:00:00Z",
+              "timestamp": 1719792000000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://creativecommons.org/licenses/by/4.0/"
+          }
+        ],
+        "funder": [
+          {
+            "DOI": "10.13039/501100001809",
+            "name": "National Natural Science Foundation of China",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "12121004"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "12121004"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/501100001809",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          },
+          {
+            "DOI": "10.13039/501100001809",
+            "name": "National Natural Science Foundation of China",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "12274420"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "12274420"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/501100001809",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          },
+          {
+            "DOI": "10.13039/501100001809",
+            "name": "National Natural Science Foundation of China",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "11922413"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "11922413"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/501100001809",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          },
+          {
+            "DOI": "10.13039/501100002367",
+            "name": "Chinese Academy of Sciences",
+            "doi-asserted-by": "publisher",
+            "award": [
+              "YSBR-055"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "YSBR-055"
+                ]
+              }
+            ],
+            "id": [
+              {
+                "id": "10.13039/501100002367",
+                "id-type": "DOI",
+                "asserted-by": "publisher"
+              }
+            ]
+          },
+          {
+            "name": "National Key Program for S&T Research and Development",
+            "award": [
+              "2019YFA0307702"
+            ],
+            "award-info": [
+              {
+                "award-number": [
+                  "2019YFA0307702"
+                ]
+              }
+            ]
+          }
+        ],
+        "content-domain": {
+          "domain": [
+            "journals.aps.org"
+          ],
+          "crossmark-restriction": true
+        },
+        "short-container-title": [
+          "Phys. Rev. Research"
+        ],
+        "accepted": {
+          "date-parts": [
+            [
+              2024,
+              6,
+              5
+            ]
+          ]
+        },
+        "abstract": "<jats:p>We investigate high harmonic generation (HHG) of an atom in the presence of squeezed vacuum of a single harmonic mode. Based on a fully quantum time-dependent Schrödinger equation, we derive an analytical formula for the harmonic amplitude. Our simulations of the HHG spectrum with this formula show that the harmonic amplitude of the corresponding squeezed mode can undergo significant changes with different parameters of the squeezed vacuum. Using the time-frequency analysis method, the physics underlying the effects of the vacuum quantum fluctuation (VQF) on the harmonic generation is revealed, which is found to be consistent with the explanation of Fermi's golden rule. Our work establishes a profound connection between harmonic generation and VQF, and may provide an unconventional approach to manipulating harmonic emission.</jats:p>\n          <jats:sec>\n            <jats:title/>\n            <jats:supplementary-material>\n              <jats:permissions>\n                <jats:copyright-statement>Published by the American Physical Society</jats:copyright-statement>\n                <jats:copyright-year>2024</jats:copyright-year>\n              </jats:permissions>\n            </jats:supplementary-material>\n          </jats:sec>",
+        "DOI": "10.1103/physrevresearch.6.033010",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              1
+            ]
+          ],
+          "date-time": "2024-07-01T14:30:00Z",
+          "timestamp": 1719844200000
+        },
+        "update-policy": "https://doi.org/10.1103/crossmark-policy",
+        "source": "Crossref",
+        "is-referenced-by-count": 7,
+        "title": [
+          "High harmonic generation from an atom in a squeezed-vacuum environment"
+        ],
+        "prefix": "10.1103",
+        "volume": "6",
+        "author": [
+          {
+            "given": "ShiJun",
+            "family": "Wang",
+            "sequence": "first",
+            "affiliation": [
+              {
+                "id": [
+                  {
+                    "id": "https://ror.org/00zky9d41",
+                    "id-type": "ROR",
+                    "asserted-by": "publisher"
+                  }
+                ],
+                "name": "Wuhan Institute of Physics and Mathematics"
+              },
+              {
+                "id": [
+                  {
+                    "id": "https://ror.org/05qbk4x57",
+                    "id-type": "ROR",
+                    "asserted-by": "publisher"
+                  }
+                ],
+                "name": "University of Chinese Academy of Sciences"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-8262-8317",
+            "authenticated-orcid": true,
+            "given": "ShaoGang",
+            "family": "Yu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "id": [
+                  {
+                    "id": "https://ror.org/00zky9d41",
+                    "id-type": "ROR",
+                    "asserted-by": "publisher"
+                  }
+                ],
+                "name": "Wuhan Institute of Physics and Mathematics"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0001-5841-292X",
+            "authenticated-orcid": true,
+            "given": "XuanYang",
+            "family": "Lai",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "id": [
+                  {
+                    "id": "https://ror.org/00zky9d41",
+                    "id-type": "ROR",
+                    "asserted-by": "publisher"
+                  }
+                ],
+                "name": "Wuhan Institute of Physics and Mathematics"
+              },
+              {
+                "name": "Wuhan Institute of Quantum Technology"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "ORCID": "https://orcid.org/0000-0003-0448-6063",
+            "authenticated-orcid": true,
+            "given": "XiaoJun",
+            "family": "Liu",
+            "sequence": "additional",
+            "affiliation": [
+              {
+                "id": [
+                  {
+                    "id": "https://ror.org/00zky9d41",
+                    "id-type": "ROR",
+                    "asserted-by": "publisher"
+                  }
+                ],
+                "name": "Wuhan Institute of Physics and Mathematics"
+              }
+            ],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "16",
+        "published-online": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              1
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "PhysRevResearch.6.033010Cc1R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1088/0953-4075/21/3/001"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc2R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.92.033001"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc3R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.66.021801"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc4R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.82.1668"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc5R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/nature03183"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc6R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/nature08253"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc7R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1126/science.1059413"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc8R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/RevModPhys.81.163"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc9R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1126/science.108836"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc10R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/S1049-250X(03)80007-1"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc11R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.76.043407"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc12R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/ncomms15170"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc13R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/s41467-020-18218-w"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc14R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/s41567-021-01317-w"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc15R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.128.123603"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc16R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/s41567-022-01910-7"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc17R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/s41566-023-01209-w"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc18R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/s41567-023-02127-y"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc19R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PRXQuantum.4.010201"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc20R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.132.143603"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc22R1",
+            "volume-title": "The Quantum Vacuum: An Introduction to Quantum Electrodynamics",
+            "author": "P. W. Milonni",
+            "year": "1993"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc23R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1126/science.abl5818"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc24R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/nature02772"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc25R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.71.1994"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc26R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.49.2117"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc28R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/306141a0"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc29R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/j.physrep.2017.04.001"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc30R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.57.2520"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc31R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1126/science.282.5389.706"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc32R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.55.2409"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc33R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.123.113602"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc34R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.117.110801"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc35R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.112.073602"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc36R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevApplied.7.024021"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc37R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/387471a0"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc38R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/S0301-0104(97)00063-3"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc39R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.68.3535"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc40R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.64.021403"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc42R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.105.033714"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc43R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/RevModPhys.87.347"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc44R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.106.023001"
+          },
+          {
+            "key": "PhysRevResearch.6.033010Cc45R1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/nphoton.2015.181"
+          }
+        ],
+        "container-title": [
+          "Physical Review Research"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://link.aps.org/article/10.1103/PhysRevResearch.6.033010",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "syndication"
+          },
+          {
+            "URL": "http://harvest.aps.org/v2/journals/articles/10.1103/PhysRevResearch.6.033010/fulltext",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2024,
+              11,
+              13
+            ]
+          ],
+          "date-time": "2024-11-13T01:14:13Z",
+          "timestamp": 1731460453000
+        },
+        "score": 35.176365,
+        "resource": {
+          "primary": {
+            "URL": "https://link.aps.org/doi/10.1103/PhysRevResearch.6.033010"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              1
+            ]
+          ]
+        },
+        "references-count": 42,
+        "journal-issue": {
+          "issue": "3",
+          "published-print": {
+            "date-parts": [
+              [
+                2024,
+                7
+              ]
+            ]
+          }
+        },
+        "URL": "https://doi.org/10.1103/physrevresearch.6.033010",
+        "ISSN": [
+          "2643-1564"
+        ],
+        "issn-type": [
+          {
+            "value": "2643-1564",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2024,
+              7,
+              1
+            ]
+          ]
+        },
+        "article-number": "033010"
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              9,
+              5
+            ]
+          ],
+          "date-time": "2024-09-05T14:01:05Z",
+          "timestamp": 1725544865816
+        },
+        "reference-count": 3,
+        "publisher": "IEEE",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2017,
+              6
+            ]
+          ]
+        },
+        "DOI": "10.1109/cleoe-eqec.2017.8087303",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2017,
+              11,
+              2
+            ]
+          ],
+          "date-time": "2017-11-02T17:38:45Z",
+          "timestamp": 1509644325000
+        },
+        "page": "1-1",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Optical harmonic generation from bright squeezed vacuum"
+        ],
+        "prefix": "10.1109",
+        "author": [
+          {
+            "given": "Kirill Yu.",
+            "family": "Spasibko",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Denis A.",
+            "family": "Kopylov",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Victor L.",
+            "family": "Krutyanskiy",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Tatiana V.",
+            "family": "Murzina",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Gerd",
+            "family": "Leuchs",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Maria V.",
+            "family": "Chekhova",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "ref3",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1364/OL.41.002827"
+          },
+          {
+            "key": "ref2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.36.1288"
+          },
+          {
+            "key": "ref1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.1.1445"
+          }
+        ],
+        "event": {
+          "name": "2017 Conference on Lasers and Electro-Optics Europe & European Quantum Electronics Conference (CLEO/Europe-EQEC)",
+          "start": {
+            "date-parts": [
+              [
+                2017,
+                6,
+                25
+              ]
+            ]
+          },
+          "location": "Munich, Germany",
+          "end": {
+            "date-parts": [
+              [
+                2017,
+                6,
+                29
+              ]
+            ]
+          }
+        },
+        "container-title": [
+          "2017 Conference on Lasers and Electro-Optics Europe &amp; European Quantum Electronics Conference (CLEO/Europe-EQEC)"
+        ],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx7/8068289/8086161/08087303.pdf?arnumber=8087303",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2017,
+              11,
+              30
+            ]
+          ],
+          "date-time": "2017-11-30T15:51:19Z",
+          "timestamp": 1512057079000
+        },
+        "score": 34.669067,
+        "resource": {
+          "primary": {
+            "URL": "http://ieeexplore.ieee.org/document/8087303/"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2017,
+              6
+            ]
+          ]
+        },
+        "references-count": 3,
+        "URL": "https://doi.org/10.1109/cleoe-eqec.2017.8087303",
+        "published": {
+          "date-parts": [
+            [
+              2017,
+              6
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              9,
+              4
+            ]
+          ],
+          "date-time": "2024-09-04T22:34:41Z",
+          "timestamp": 1725489281244
+        },
+        "reference-count": 4,
+        "publisher": "IEEE",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              1996
+            ]
+          ]
+        },
+        "DOI": "10.1109/eqec.1996.561518",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2005,
+              8,
+              24
+            ]
+          ],
+          "date-time": "2005-08-24T14:47:54Z",
+          "timestamp": 1124894874000
+        },
+        "page": "10-10",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Quantum Statistics of Bright Squeezed Light and Squeezed Vacuum"
+        ],
+        "prefix": "10.1109",
+        "author": [
+          {
+            "given": "G.",
+            "family": "Breitenbach",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "S.",
+            "family": "Schiller",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "J.",
+            "family": "Mlynek",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "ref3",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/326574a0"
+          },
+          {
+            "journal-title": "Opt Comm",
+            "year": "0",
+            "author": "leonhardt",
+            "key": "ref2"
+          },
+          {
+            "key": "ref1a",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.70.1244"
+          },
+          {
+            "key": "ref1b",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1364/JOSAB.12.002304"
+          }
+        ],
+        "event": {
+          "name": "EQEC'96. 1996 European Quantum Electronic Conference",
+          "start": {
+            "date-parts": [
+              [
+                1996,
+                9,
+                8
+              ]
+            ]
+          },
+          "location": "Hamburg, Germany",
+          "end": {
+            "date-parts": [
+              [
+                1996,
+                9,
+                13
+              ]
+            ]
+          }
+        },
+        "container-title": [
+          "EQEC 96 1996 European Quantum Electronic Conference EQEC-96"
+        ],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx3/3983/12220/00561518.pdf?arnumber=561518",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2017,
+              3,
+              10
+            ]
+          ],
+          "date-time": "2017-03-10T07:23:29Z",
+          "timestamp": 1489130609000
+        },
+        "score": 31.443039,
+        "resource": {
+          "primary": {
+            "URL": "http://ieeexplore.ieee.org/document/561518/"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              1996
+            ]
+          ]
+        },
+        "references-count": 4,
+        "URL": "https://doi.org/10.1109/eqec.1996.561518",
+        "published": {
+          "date-parts": [
+            [
+              1996
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2023,
+              10,
+              25
+            ]
+          ],
+          "date-time": "2023-10-25T06:56:52Z",
+          "timestamp": 1698217012450
+        },
+        "reference-count": 22,
+        "publisher": "IOP Publishing",
+        "issue": "6",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Europhys. Lett."
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              1993,
+              11,
+              20
+            ]
+          ]
+        },
+        "DOI": "10.1209/0295-5075/24/6/004",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2007,
+              7,
+              26
+            ]
+          ],
+          "date-time": "2007-07-26T03:43:13Z",
+          "timestamp": 1185421393000
+        },
+        "page": "449-454",
+        "source": "Crossref",
+        "is-referenced-by-count": 34,
+        "title": [
+          "Bright Squeezed Light by Second-Harmonic Generation in a Monolithic Resonator"
+        ],
+        "prefix": "10.1209",
+        "volume": "24",
+        "author": [
+          {
+            "given": "P",
+            "family": "Kürz",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "R",
+            "family": "Paschotta",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "K",
+            "family": "Fiedler",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "J",
+            "family": "Mlynek",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "266",
+        "published-online": {
+          "date-parts": [
+            [
+              2007,
+              7,
+              25
+            ]
+          ]
+        },
+        "reference": [
+          {
+            "key": "1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.59.278"
+          },
+          {
+            "key": "2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.59.2153"
+          },
+          {
+            "key": "3",
+            "doi-asserted-by": "publisher",
+            "first-page": "2153",
+            "DOI": "10.1103/PhysRevLett.59.2153",
+            "volume": "59",
+            "author": "Polzik E S",
+            "year": "1987",
+            "journal-title": "Phys. Rev. Lett."
+          },
+          {
+            "key": "4",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/BF00325016"
+          },
+          {
+            "key": "5",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.57.2520"
+          },
+          {
+            "key": "6",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.64.2897"
+          },
+          {
+            "key": "7",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.42.556"
+          },
+          {
+            "key": "8",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/0030-4018(82)90283-8"
+          },
+          {
+            "key": "9",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.27.392"
+          },
+          {
+            "key": "10",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.30.895"
+          },
+          {
+            "key": "11",
+            "doi-asserted-by": "publisher",
+            "first-page": "256",
+            "DOI": "10.1364/OL.8.000256",
+            "volume": "8",
+            "author": "Lugiato L A",
+            "year": "1983",
+            "journal-title": "Opt. Lett.",
+            "ISSN": "http://id.crossref.org/issn/0146-9592",
+            "issn-type": "print"
+          },
+          {
+            "key": "12",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.38.4931"
+          },
+          {
+            "key": "13",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/0030-4018(90)90375-4"
+          },
+          {
+            "key": "14",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1007/BF00325009"
+          },
+          {
+            "key": "15",
+            "author": "Schiller S",
+            "year": "1993"
+          },
+          {
+            "key": "16",
+            "doi-asserted-by": "publisher",
+            "first-page": "1786",
+            "DOI": "10.1364/OL.18.001786",
+            "volume": "18",
+            "author": "Fiedler K",
+            "year": "1993",
+            "journal-title": "Opt. Lett.",
+            "ISSN": "http://id.crossref.org/issn/0146-9592",
+            "issn-type": "print"
+          },
+          {
+            "key": "17",
+            "author": "Paschotta R",
+            "journal-title": "Appl. Phys."
+          },
+          {
+            "key": "18",
+            "doi-asserted-by": "publisher",
+            "first-page": "211",
+            "DOI": "10.1080/713820531",
+            "volume": "28",
+            "author": "Drummond P D",
+            "year": "1981",
+            "journal-title": "Opt. Acta",
+            "ISSN": "http://id.crossref.org/issn/0030-3909",
+            "issn-type": "print"
+          },
+          {
+            "key": "19",
+            "first-page": "146",
+            "author": "Kürz P",
+            "year": "1991"
+          },
+          {
+            "key": "20",
+            "doi-asserted-by": "publisher",
+            "first-page": "992",
+            "DOI": "10.1364/OL.16.000992",
+            "volume": "16",
+            "author": "Gerstenberger D C",
+            "year": "1991",
+            "journal-title": "Opt. Lett.",
+            "ISSN": "http://id.crossref.org/issn/0146-9592",
+            "issn-type": "print"
+          },
+          {
+            "key": "21",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevA.40.1385"
+          },
+          {
+            "key": "22",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.66.1115"
+          }
+        ],
+        "container-title": [
+          "Europhysics Letters (EPL)"
+        ],
+        "link": [
+          {
+            "URL": "https://iopscience.iop.org/article/10.1209/0295-5075/24/6/004/pdf",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2020,
+              3,
+              12
+            ]
+          ],
+          "date-time": "2020-03-12T14:55:20Z",
+          "timestamp": 1584024920000
+        },
+        "score": 31.116621,
+        "resource": {
+          "primary": {
+            "URL": "https://iopscience.iop.org/article/10.1209/0295-5075/24/6/004"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              1993,
+              11,
+              20
+            ]
+          ]
+        },
+        "references-count": 22,
+        "journal-issue": {
+          "issue": "6",
+          "published-print": {
+            "date-parts": [
+              [
+                1993,
+                11,
+                20
+              ]
+            ]
+          }
+        },
+        "URL": "https://doi.org/10.1209/0295-5075/24/6/004",
+        "ISSN": [
+          "0295-5075",
+          "1286-4854"
+        ],
+        "issn-type": [
+          {
+            "value": "0295-5075",
+            "type": "print"
+          },
+          {
+            "value": "1286-4854",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              1993,
+              11,
+              20
+            ]
+          ]
+        }
+      }
+    ],
+    "items-per-page": 6,
+    "query": {
+      "start-index": 0,
+      "search-terms": null
+    }
+  }
+}

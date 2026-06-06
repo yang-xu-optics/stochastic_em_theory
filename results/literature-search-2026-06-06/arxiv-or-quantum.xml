@@ -1,0 +1,274 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/iONw9oefFtn5ZsG5l8CInGJhoD8</id>
+  <title>arXiv Query: search_query=all:quantum AND all:"optical rectification" AND all:terahertz&amp;id_list=&amp;start=0&amp;max_results=8</title>
+  <updated>2026-06-06T15:52:40Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:quantum+AND+(all:%22optical+rectification%22+AND+all:terahertz)&amp;start=0&amp;max_results=8&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>8</opensearch:itemsPerPage>
+  <opensearch:totalResults>9</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2411.09421v1</id>
+    <title>A 2D van der Waals Material for Terahertz Emission with Giant Optical Rectification</title>
+    <updated>2024-11-14T13:16:12Z</updated>
+    <link href="https://arxiv.org/abs/2411.09421v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.09421v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Exfoliation and stacking of two-dimensional (2D) van der Waals (vdW) crystals have created unprecedented opportunities in the discovery of quantum phases. A major obstacle to the advancement of this field is the limited spectroscopic access due to a mismatch in sample sizes (1 - 10 micrometer) and wavelengths (0.1 - 1 millimeter) of electromagnetic radiation relevant to their low-energy excitations. Here, we introduce a new member of the 2D vdW material family: a terahertz (THz) emitter. We show intense and broadband THz generation from the vdW ferroelectric semiconductor NbOI2 with optical rectification efficiency over one-order-of-magnitude higher than that of the current standard THz emitter, ZnTe. The NbOI2 THz emitter can be easily integrated into vdW heterostructures for on-chip near-field THz spectroscopy of a target vdW material/device. Our approach provides a general spectroscopic tool for the rapidly expanding field of 2D vdW materials and quantum matter.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-14T13:16:12Z</published>
+    <arxiv:comment>18 pages, 3 figures, 15 pages of Supplementary Information</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>Taketo Handa</name>
+    </author>
+    <author>
+      <name>Chun-Ying Huang</name>
+    </author>
+    <author>
+      <name>Yiliu Li</name>
+    </author>
+    <author>
+      <name>Nicholas Olsen</name>
+    </author>
+    <author>
+      <name>Daniel G. Chica</name>
+    </author>
+    <author>
+      <name>David D. Xu</name>
+    </author>
+    <author>
+      <name>Felix Sturm</name>
+    </author>
+    <author>
+      <name>James W. McIver</name>
+    </author>
+    <author>
+      <name>Xavier Roy</name>
+    </author>
+    <author>
+      <name>Xiaoyang Zhu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.15651v1</id>
+    <title>Photonics-integrated terahertz transmission lines</title>
+    <updated>2024-06-21T21:08:25Z</updated>
+    <link href="https://arxiv.org/abs/2406.15651v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.15651v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern communication and sensing technologies rely on connecting the optical domain with the microwave domain. Terahertz technologies, spanning increased frequencies from 100 GHz to 10 THz, are critical for providing larger bandwidths and faster switching capabilities. Despite progress in high-frequency electronic sources and detectors, these technologies lack a direct link to the optical domain, and face challenges with increasing frequencies (&gt; 1 THz). Nonlinear processes, such as optical rectification, offer potential solutions for terahertz generation but are currently limited to discrete components based on bulk nonlinear crystals, missing out miniaturisation opportunities from integration of optical circuits with terahertz ones. We address this challenge by integrating phase-matched terahertz transmission lines with photonic circuits in a single hybrid architecture on the thin-film lithium niobate~(TFLN) platform. This design demonstrates phase-matched, broadband terahertz emission spanning four octaves (200 GHz to 3.5 THz) through broadband down-conversion of optical signals at telecommunication wavelengths. The micron-sized transmission lines provide terahertz field confinement with minimal radiative loss, enabling compact THz cavities embedded in integrated photonic circuits. This integration is crucial for leveraging photonics' advantages in low-noise, low-loss, and high-speed operations for terahertz generation. Our platform can readily be integrated with other mature photonics components, such as electro-optic modulators, frequency comb sources, or femtosecond sources to pave the way for compact, power-efficient, and frequency-agile broadband sources with applications in telecommunications, spectroscopy, quantum electrodynamics and optical computing.</summary>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.app-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-21T21:08:25Z</published>
+    <arxiv:comment>14 pages, 4 figures, 19 pages supplementary information</arxiv:comment>
+    <arxiv:primary_category term="physics.optics"/>
+    <author>
+      <name>Y. Lampert</name>
+    </author>
+    <author>
+      <name>A. Shams-Ansari</name>
+    </author>
+    <author>
+      <name>A. Gaier</name>
+    </author>
+    <author>
+      <name>A. Tomasino</name>
+    </author>
+    <author>
+      <name>S. Rajabali</name>
+    </author>
+    <author>
+      <name>L. Magalhaes</name>
+    </author>
+    <author>
+      <name>M. Lončar</name>
+    </author>
+    <author>
+      <name>I. -C. Benea-Chelmus</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2103.09768v1</id>
+    <title>Direct observation of terahertz frequency comb generationin difference-frequency quantum cascade lasers</title>
+    <updated>2021-03-17T16:45:09Z</updated>
+    <link href="https://arxiv.org/abs/2103.09768v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2103.09768v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Terahertz quantum cascade laser sources based on intra-cavity difference frequency generation from mid-IR devices are an important asset for applications in rotational molecular spectroscopy and sensing, beingthe only electrically pumped device able to operate in the 0.6-6 THz range without the need of bulky andexpensive liquid helium cooling. Here we present comb operation obtained by intra-cavity mixing of adistributed feedback laser at λ = 6.5 μm and a Fabry-Pérot device at around λ = 6.9 μm. The resultingultra-broadband THz emission extends from 1.8 to 3.3 THz, with a total output power of 8 μW at 78K.The THz emission has been characterized by multi-heterodyne detection with a primary frequencystandard referenced THz comb, obtained by optical rectification of near infrared pulses. The down-converted beatnotes, simultaneously acquired, confirm an equally spaced THz emission down to 1 MHzaccuracy. In the next future this setup can be used for Fourier transform based evaluation of the phaserelation among the emitted THz modes, paving the way to room-temperature, compact and field-deployable metrological grade THz frequency combs.</summary>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2021-03-17T16:45:09Z</published>
+    <arxiv:primary_category term="physics.optics"/>
+    <arxiv:journal_ref>Applied Sciences, 11(4), 1416, 2021</arxiv:journal_ref>
+    <author>
+      <name>Luigi Consolino</name>
+    </author>
+    <author>
+      <name>Malik Nafa</name>
+    </author>
+    <author>
+      <name>Michele De Regis</name>
+    </author>
+    <author>
+      <name>Francesco Cappelli</name>
+    </author>
+    <author>
+      <name>Saverio Bartalini</name>
+    </author>
+    <author>
+      <name>Akio Ito</name>
+    </author>
+    <author>
+      <name>Masahiro Hitaka</name>
+    </author>
+    <author>
+      <name>Tatsuo Dougakiuchi</name>
+    </author>
+    <author>
+      <name>Tadataka Edamura</name>
+    </author>
+    <author>
+      <name>Paolo De Natale</name>
+    </author>
+    <author>
+      <name>Kazuue Fujita</name>
+    </author>
+    <arxiv:doi>10.3390/app11041416</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3390/app11041416" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2204.11725v1</id>
+    <title>Terahertz waveform synthesis from integrated lithium niobate circuits</title>
+    <updated>2022-04-25T15:32:43Z</updated>
+    <link href="https://arxiv.org/abs/2204.11725v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2204.11725v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Bridging the "terahertz (THz) gap" relies upon synthesizing arbitrary waveforms in the THz domain enabling applications that require both narrow band sources for sensing and few-cycle drives for classical and quantum objects. However, realization of custom-tailored waveforms needed for these applications is currently hindered due to limited flexibility for optical rectification of femtosecond pulses in bulk crystals. Here, we experimentally demonstrate that thin-film lithium niobate (TFLN) circuits provide a versatile solution for such waveform synthesis through combining the merits of complex integrated architectures, low-loss distribution of pump pulses on-chip, and an efficient optical rectification. Our distributed pulse phase-matching scheme grants shaping the temporal, spectral, phase, amplitude, and farfield characteristics of the emitted THz field through designer on-chip components. This strictly circumvents prior limitations caused by the phase-delay mismatch in conventional systems and relaxes the requirement for cumbersome spectral pre-engineering of the pumping light. We provide a toolbox of basic blocks that produce broadband emission up to 680 GHz with adaptable phase and coherence properties by using near-infrared pump pulse energies below 100 pJ.</summary>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2022-04-25T15:32:43Z</published>
+    <arxiv:comment>10 pages, 4 figures, submitted to Nature Communications</arxiv:comment>
+    <arxiv:primary_category term="physics.optics"/>
+    <author>
+      <name>Alexa Herter</name>
+    </author>
+    <author>
+      <name>Amirhassan Shams-Ansari</name>
+    </author>
+    <author>
+      <name>Francesca Fabiana Settembrini</name>
+    </author>
+    <author>
+      <name>Hana K. Warner</name>
+    </author>
+    <author>
+      <name>Jérôme Faist</name>
+    </author>
+    <author>
+      <name>Marko Lončar</name>
+    </author>
+    <author>
+      <name>Ileana-Cristina Benea-Chelmus</name>
+    </author>
+    <arxiv:doi>10.1038/s41467-022-35517-6</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41467-022-35517-6" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1608.05319v1</id>
+    <title>Multi-octave spectrally tunable strong-field Terahertz laser</title>
+    <updated>2016-08-18T16:17:15Z</updated>
+    <link href="https://arxiv.org/abs/1608.05319v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1608.05319v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The ideal laser source for the emerging research field of nonlinear Terahertz (THz) spectroscopy should offer radiation with a large versatility and deliver both ultra-intense multi-octave spanning single-cycle pulses and user-selectable multi-cycle pulses at narrow linewidth. The absence of such a table-top source has hampered advances in numerous THz disciplines including imaging, nonlinear photonics and spectroscopy, selective out-of-equilibrium excitation of condensed matter and quantum systems. Here we introduce a highly versatile table-top THz laser platform providing single-cycle GV/m transients as well as spectrally narrow pulses tunable in bandwidth and central frequency across 5 octaves with hundreds of MV/m field strength. The compact scheme is based on optical rectification of a temporally modulated laser beam in organic crystals. It allows for the selection of THz oscillation cycles from 1 to &gt;50 and central frequency tuning range from 0.5 to 7 THz by directly changing the modulation period of the driving laser. The versatility of the THz source is demonstrated by providing a broadband 5-octave spanning spectrum as well as a spectrally narrow line tunable across the full optical rectification phase-matching band with a minimum width of dv=30 GHz, corresponding to dE=0.13 meV and lambda^-1=1.1 cm-1. The presented table-top source shows performances similar or even beyond to that of a large-scale THz electron accelerator facility but offering in addition versatile multi-color and advanced femtosecond pump-probe opportunities at ultralow timing jitter.</summary>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-08-18T16:17:15Z</published>
+    <arxiv:primary_category term="physics.optics"/>
+    <author>
+      <name>Carlo Vicario</name>
+    </author>
+    <author>
+      <name>Andrey V. Ovchinnikov</name>
+    </author>
+    <author>
+      <name>Oleg V. Chefonov</name>
+    </author>
+    <author>
+      <name>Christoph P. Hauri</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0908.0472v1</id>
+    <title>Efficient low-power terahertz generation via on-chip triply-resonant nonlinear frequency mixing</title>
+    <updated>2009-08-04T15:28:52Z</updated>
+    <link href="https://arxiv.org/abs/0908.0472v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0908.0472v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Achieving efficient terahertz (THz) generation using compact turn-key sources operating at room temperature and modest power levels represents one of the critical challeges that must be overcome to realize truly practical applications based on THz. Up to now, the most efficient approaches to THz generation at room temperature -- relying mainly on optical rectification schemes -- require intricate phase-matching set-ups and powerful lasers. Here we show how the unique light-confining properties of triply-resonant photonic resonators can be tailored to enable dramatic enhancements of the conversion efficiency of THz generation via nonlinear frequency down-conversion processes. We predict that this approach can be used to reduce up to three orders of magnitude the pump powers required to reach quantum-limited conversion efficiency of THz generation in nonlinear optical material systems. Furthermore, we propose a realistic design readily accesible experimentally, both for fabrication and demonstration of optimal THz conversion efficiency at sub-W power levels.</summary>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2009-08-04T15:28:52Z</published>
+    <arxiv:primary_category term="physics.optics"/>
+    <author>
+      <name>J. Bravo-Abad</name>
+    </author>
+    <author>
+      <name>A. W. Rodriguez</name>
+    </author>
+    <author>
+      <name>J. D. Joannopoulos</name>
+    </author>
+    <author>
+      <name>P. T. Rakich</name>
+    </author>
+    <author>
+      <name>S. G. Johnson</name>
+    </author>
+    <author>
+      <name>M. Soljacic</name>
+    </author>
+    <arxiv:doi>10.1063/1.3359429</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1063/1.3359429" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.14196v1</id>
+    <title>Room-temperature high-average-power strong-field terahertz source based on industrial high-repetition-rate femtosecond laser</title>
+    <updated>2025-04-19T06:18:56Z</updated>
+    <link href="https://arxiv.org/abs/2504.14196v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.14196v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Free-space strong-field terahertz (THz) pulses, generated via optical rectification of femtosecond lasers in nonlinear crystals, are pivotal in various applications. However, conventional Ti:sapphire lasers struggle to produce high-average-power THz due to their limited output power. While kilowatt ytterbium lasers are increasingly adopted, their application in THz generation faces challenges: low optical-to-THz conversion efficiency (attributed to long pulse durations and low energy) and crystal damage under high pumping power. Here, we report a high-average-power strong-field THz source using a lithium niobate crystal pumped by a 1030-nm, 570-fs, 1-mJ, 50-kHz ytterbium femtosecond laser with tilted pulse front pumping (TPFP). By systematically optimizing TPFP implementations and comparing grating- and echelon-type configurations, we achieve a THz source with 64.5 mW average power at 42-W, 50-kHz pumping, and a focused peak electric field of 525 kV/cm at 0.83-mJ, 1-kHz operation. Additionally, we observe Zeeman torque signals in cobalt-iron ferromagnetic nanofilms. This high-repetition-rate, high-average-power THz system, combined with its potential capabilities in high signal-to-noise spectroscopy and imaging, promises transformative impacts in quantum matter manipulation, non-destructive testing, and biomedicine.</summary>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-19T06:18:56Z</published>
+    <arxiv:comment>15 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="physics.optics"/>
+    <author>
+      <name>Deyin Kong</name>
+    </author>
+    <author>
+      <name>Yichen Su</name>
+    </author>
+    <author>
+      <name>Cheng Song</name>
+    </author>
+    <author>
+      <name>Xiaojun Wu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.19654v2</id>
+    <title>Valley resolved optical spectroscopy and coherent excitation of quantum Hall edge states in graphene</title>
+    <updated>2025-06-28T00:22:11Z</updated>
+    <link href="https://arxiv.org/abs/2506.19654v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.19654v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We show that chiral edge states in graphene under Quantum Hall effect conditions can be selectively probed and excited by terahertz or infrared radiation with single-quasiparticle sensitivity without affecting bulk states. Moreover, valley-selective excitation of edge states is possible with high fidelity. The underlying physical mechanism is the inevitable violation of adiabaticity and inversion symmetry breaking for electron states near the edge. This leads to the formation of Landau level-specific and valley-specific absorbance spectral peaks that are spectrally well separated from each other and from absorption by the bulk states, and have different polarization selection rules. Furthermore, inversion symmetry breaking enables coherent driving of chiral edge photocurrents due to second-order nonlinear optical rectification which becomes allowed in the electric dipole approximation.</summary>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-24T14:16:14Z</published>
+    <arxiv:comment>11 pages, 9 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mes-hall"/>
+    <author>
+      <name>Ashutosh Singh</name>
+    </author>
+    <author>
+      <name>Maria Sebastian</name>
+    </author>
+    <author>
+      <name>Mikhail Tokman</name>
+    </author>
+    <author>
+      <name>Alexey Belyanin</name>
+    </author>
+  </entry>
+</feed>

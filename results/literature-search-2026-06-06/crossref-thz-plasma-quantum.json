@@ -1,0 +1,1401 @@
+{
+  "status": "ok",
+  "message-type": "work-list",
+  "message-version": "1.0.0",
+  "message": {
+    "facets": {},
+    "total-results": 3771057,
+    "items": [
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              1,
+              17
+            ]
+          ],
+          "date-time": "2026-01-17T08:47:07Z",
+          "timestamp": 1768639627225,
+          "version": "3.49.0"
+        },
+        "reference-count": 35,
+        "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+        "issue": "1",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2011,
+                  1,
+                  1
+                ]
+              ],
+              "date-time": "2011-01-01T00:00:00Z",
+              "timestamp": 1293840000000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "IEEE J. Select. Topics Quantum Electron."
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2011,
+              1
+            ]
+          ]
+        },
+        "DOI": "10.1109/jstqe.2010.2047007",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2010,
+              5,
+              26
+            ]
+          ],
+          "date-time": "2010-05-26T18:46:07Z",
+          "timestamp": 1274899567000
+        },
+        "page": "183-190",
+        "source": "Crossref",
+        "is-referenced-by-count": 146,
+        "title": [
+          "Terahertz Wave Air Photonics: Terahertz Wave Generation and Detection With Laser-Induced Gas Plasma"
+        ],
+        "prefix": "10.1109",
+        "volume": "17",
+        "author": [
+          {
+            "given": "Jianming",
+            "family": "Dai",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Jingle",
+            "family": "Liu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Xi-Cheng",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "ref33",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1088/0953-4075/29/15/016"
+          },
+          {
+            "key": "ref32",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1063/1.3291676"
+          },
+          {
+            "key": "ref31",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.103.235002"
+          },
+          {
+            "key": "ref30",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1063/1.1560564"
+          },
+          {
+            "key": "ref35",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/nphoton.2010.165"
+          },
+          {
+            "key": "ref34",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1063/1.3068501"
+          },
+          {
+            "key": "ref10",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1364/OL.29.001120"
+          },
+          {
+            "key": "ref11",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1364/OL.30.002805"
+          },
+          {
+            "key": "ref12",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.96.075005"
+          },
+          {
+            "key": "ref13",
+            "doi-asserted-by": "crossref",
+            "first-page": "99",
+            "DOI": "10.12693/APhysPolA.107.99",
+            "article-title": "Efficient terahertz pulse generation in laser-induced gas plasmas",
+            "volume": "107",
+            "author": "lffler",
+            "year": "2005",
+            "journal-title": "Acta Phys Pol A"
+          },
+          {
+            "key": "ref14",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1364/OL.27.001944"
+          },
+          {
+            "key": "ref15",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.100.255006"
+          },
+          {
+            "key": "ref16",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.99.135002"
+          },
+          {
+            "key": "ref17",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.98.235002"
+          },
+          {
+            "key": "ref18",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/S0009-2614(99)00668-5"
+          },
+          {
+            "key": "ref19",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.97.103903"
+          },
+          {
+            "key": "ref28",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1063/1.2814063"
+          },
+          {
+            "key": "ref4",
+            "doi-asserted-by": "crossref",
+            "first-page": "266s",
+            "DOI": "10.1088/0268-1242/20/7/018",
+            "article-title": "THz imaging and sensing for security applications&#x2014;Explosives, weapons and drugs",
+            "volume": "20",
+            "author": "federici",
+            "year": "2005",
+            "journal-title": "Semicond Sci Technol"
+          },
+          {
+            "key": "ref27",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1364/OE.18.002872"
+          },
+          {
+            "key": "ref3",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/nphoton.2007.3"
+          },
+          {
+            "key": "ref6",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/JSTQE.2007.914602"
+          },
+          {
+            "key": "ref29",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/JSTQE.2007.913395"
+          },
+          {
+            "key": "ref5",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.99.043901"
+          },
+          {
+            "key": "ref8",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.71.2725"
+          },
+          {
+            "key": "ref7",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1364/OL.33.002767"
+          },
+          {
+            "key": "ref2",
+            "doi-asserted-by": "crossref",
+            "DOI": "10.1007/978-3-540-45601-8",
+            "author": "mittleman",
+            "year": "2003",
+            "journal-title": "Sensing With Terahertz Radiation"
+          },
+          {
+            "key": "ref9",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1364/OL.25.001210"
+          },
+          {
+            "key": "ref1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/nmat708"
+          },
+          {
+            "key": "ref20",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1038/nphoton.2008.153"
+          },
+          {
+            "key": "ref22",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.102.093001"
+          },
+          {
+            "key": "ref21",
+            "first-page": "138",
+            "article-title": "an efficient propagation scheme for the time-dependent schrodinger equation in the velocity gauge",
+            "volume": "9",
+            "author": "muller",
+            "year": "1999",
+            "journal-title": "Laser Phys"
+          },
+          {
+            "key": "ref24",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.103.023902"
+          },
+          {
+            "key": "ref23",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.103.023001"
+          },
+          {
+            "key": "ref26",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1364/OL.23.000067"
+          },
+          {
+            "key": "ref25",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1063/1.2828709"
+          }
+        ],
+        "container-title": [
+          "IEEE Journal of Selected Topics in Quantum Electronics"
+        ],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx5/2944/5708486/05466119.pdf?arnumber=5466119",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2021,
+              10,
+              11
+            ]
+          ],
+          "date-time": "2021-10-11T00:43:57Z",
+          "timestamp": 1633913037000
+        },
+        "score": 30.364204,
+        "resource": {
+          "primary": {
+            "URL": "http://ieeexplore.ieee.org/document/5466119/"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2011,
+              1
+            ]
+          ]
+        },
+        "references-count": 35,
+        "journal-issue": {
+          "issue": "1"
+        },
+        "URL": "https://doi.org/10.1109/jstqe.2010.2047007",
+        "ISSN": [
+          "1077-260X",
+          "1558-4542"
+        ],
+        "issn-type": [
+          {
+            "value": "1077-260X",
+            "type": "print"
+          },
+          {
+            "value": "1558-4542",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2011,
+              1
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2022,
+              4,
+              5
+            ]
+          ],
+          "date-time": "2022-04-05T15:36:11Z",
+          "timestamp": 1649172971727
+        },
+        "reference-count": 22,
+        "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+        "issue": "9",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2013,
+                  9,
+                  1
+                ]
+              ],
+              "date-time": "2013-09-01T00:00:00Z",
+              "timestamp": 1377993600000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "https://ieeexplore.ieee.org/Xplorehelp/downloads/license-information/IEEE.html"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "IEEE J. Quantum Electron."
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2013,
+              9
+            ]
+          ]
+        },
+        "DOI": "10.1109/jqe.2013.2275019",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2013,
+              7,
+              26
+            ]
+          ],
+          "date-time": "2013-07-26T18:43:55Z",
+          "timestamp": 1374864235000
+        },
+        "page": "785-789",
+        "source": "Crossref",
+        "is-referenced-by-count": 2,
+        "title": [
+          "Terahertz Radiation Generated by Laser Induced Plasma in Photoconductive Antenna"
+        ],
+        "prefix": "10.1109",
+        "volume": "49",
+        "author": [
+          {
+            "given": "Lei",
+            "family": "Hou",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Suguo",
+            "family": "Chen",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Zhijin",
+            "family": "Yan",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Wei",
+            "family": "Shi",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "ref10",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1002/0471724254"
+          },
+          {
+            "key": "ref11",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1002/0471724254"
+          },
+          {
+            "key": "ref12",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1002/0471724254"
+          },
+          {
+            "key": "ref13",
+            "first-page": "8254",
+            "article-title": "Interactions of electromagnetic wave and Langmuir wave in an inhomogeneous plasma",
+            "volume": "58",
+            "author": "zhou",
+            "year": "2009",
+            "journal-title": "Chinese Physical Society"
+          },
+          {
+            "key": "ref14",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.94.095003"
+          },
+          {
+            "key": "ref15",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1063/1.863326"
+          },
+          {
+            "key": "ref16",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.62.2680"
+          },
+          {
+            "key": "ref17",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1002/0471724254"
+          },
+          {
+            "key": "ref18",
+            "author": "liu",
+            "year": "2008",
+            "journal-title": "Semiconductor Physics"
+          },
+          {
+            "key": "ref19",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1063/1.116356"
+          },
+          {
+            "key": "ref4",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1063/1.3611397"
+          },
+          {
+            "key": "ref3",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1364/OL.36.000223"
+          },
+          {
+            "key": "ref6",
+            "first-page": "61101-1",
+            "article-title": "Asynchronous optical sampling terahertz time-domain spectroscopy for ultrahigh spectral resolution and rapid data acquisition",
+            "volume": "87",
+            "author": "takeshi",
+            "year": "2009",
+            "journal-title": "Appl Phys Lett"
+          },
+          {
+            "key": "ref5",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/3.777228"
+          },
+          {
+            "key": "ref8",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1143/JJAP.39.96"
+          },
+          {
+            "key": "ref7",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1109/3.135314"
+          },
+          {
+            "key": "ref2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1364/OL.15.000323"
+          },
+          {
+            "key": "ref1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1063/1.95174"
+          },
+          {
+            "key": "ref9",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.92.075002"
+          },
+          {
+            "key": "ref20",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1063/1.117511"
+          },
+          {
+            "key": "ref22",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1364/OL.32.002297"
+          },
+          {
+            "key": "ref21",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1063/1.99560"
+          }
+        ],
+        "container-title": [
+          "IEEE Journal of Quantum Electronics"
+        ],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx7/3/6572827/06570530.pdf?arnumber=6570530",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2021,
+              11,
+              29
+            ]
+          ],
+          "date-time": "2021-11-29T20:26:19Z",
+          "timestamp": 1638217579000
+        },
+        "score": 29.82978,
+        "resource": {
+          "primary": {
+            "URL": "http://ieeexplore.ieee.org/document/6570530/"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2013,
+              9
+            ]
+          ]
+        },
+        "references-count": 22,
+        "journal-issue": {
+          "issue": "9"
+        },
+        "URL": "https://doi.org/10.1109/jqe.2013.2275019",
+        "ISSN": [
+          "0018-9197",
+          "1558-1713"
+        ],
+        "issn-type": [
+          {
+            "value": "0018-9197",
+            "type": "print"
+          },
+          {
+            "value": "1558-1713",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2013,
+              9
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2026,
+              3,
+              16
+            ]
+          ],
+          "date-time": "2026-03-16T12:45:09Z",
+          "timestamp": 1773665109291,
+          "version": "3.50.1"
+        },
+        "reference-count": 0,
+        "publisher": "IOP Publishing",
+        "issue": "11",
+        "license": [
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2016,
+                  11,
+                  29
+                ]
+              ],
+              "date-time": "2016-11-29T00:00:00Z",
+              "timestamp": 1480377600000
+            },
+            "content-version": "tdm",
+            "delay-in-days": 0,
+            "URL": "http://iopscience.iop.org/info/page/text-and-data-mining"
+          },
+          {
+            "start": {
+              "date-parts": [
+                [
+                  2016,
+                  11,
+                  29
+                ]
+              ],
+              "date-time": "2016-11-29T00:00:00Z",
+              "timestamp": 1480377600000
+            },
+            "content-version": "vor",
+            "delay-in-days": 0,
+            "URL": "http://iopscience.iop.org/page/copyright"
+          }
+        ],
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Quantum Electron."
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2016,
+              11,
+              30
+            ]
+          ]
+        },
+        "DOI": "10.1070/qel16199",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2016,
+              11,
+              9
+            ]
+          ],
+          "date-time": "2016-11-09T08:59:14Z",
+          "timestamp": 1478681954000
+        },
+        "page": "1023-1030",
+        "source": "Crossref",
+        "is-referenced-by-count": 19,
+        "title": [
+          "Terahertz radiation in laser-induced charge separation in the irradiated plasma target"
+        ],
+        "prefix": "10.1070",
+        "volume": "46",
+        "author": [
+          {
+            "given": "A S",
+            "family": "Kuratov",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "A V",
+            "family": "Brantov",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Yu M",
+            "family": "Aliev",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "V Yu",
+            "family": "Bychenkov",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "266",
+        "published-online": {
+          "date-parts": [
+            [
+              2016,
+              11,
+              29
+            ]
+          ]
+        },
+        "container-title": [
+          "Quantum Electronics"
+        ],
+        "link": [
+          {
+            "URL": "http://stacks.iop.org/1063-7818/46/i=11/a=1023/pdf",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2023,
+              1,
+              8
+            ]
+          ],
+          "date-time": "2023-01-08T00:36:34Z",
+          "timestamp": 1673138194000
+        },
+        "score": 29.297844,
+        "resource": {
+          "primary": {
+            "URL": "http://stacks.iop.org/1063-7818/46/i=11/a=1023?key=crossref.255e1dd5ea2aef8f64a381bdea460443"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2016,
+              11,
+              29
+            ]
+          ]
+        },
+        "references-count": 0,
+        "journal-issue": {
+          "issue": "11",
+          "published-print": {
+            "date-parts": [
+              [
+                2016,
+                11,
+                30
+              ]
+            ]
+          }
+        },
+        "URL": "https://doi.org/10.1070/qel16199",
+        "ISSN": [
+          "1063-7818",
+          "1468-4799"
+        ],
+        "issn-type": [
+          {
+            "value": "1063-7818",
+            "type": "print"
+          },
+          {
+            "value": "1468-4799",
+            "type": "electronic"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2016,
+              11,
+              29
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2023,
+              7,
+              11
+            ]
+          ],
+          "date-time": "2023-07-11T16:53:51Z",
+          "timestamp": 1689094431217
+        },
+        "reference-count": 0,
+        "publisher": "Shanghai Institute of Optics and Fine Mechanics",
+        "issue": "10",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Chin. Opt. Lett.",
+          "中国光学快报"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2013
+            ]
+          ]
+        },
+        "DOI": "10.3788/col201311.101402",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2013,
+              12,
+              10
+            ]
+          ],
+          "date-time": "2013-12-10T01:49:34Z",
+          "timestamp": 1386640174000
+        },
+        "page": "101402",
+        "source": "Crossref",
+        "is-referenced-by-count": 3,
+        "title": [
+          "Influence of optical wavelength on terahertz radiation from laser-induced air plasma"
+        ],
+        "prefix": "10.3788",
+        "volume": "11",
+        "author": [
+          {
+            "given": "Siqing",
+            "family": "Wu",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Jinsong",
+            "family": "Liu",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Shenglie",
+            "family": "Wang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "Yanan",
+            "family": "Zeng",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "2099",
+        "container-title": [
+          "Chinese Optics Letters"
+        ],
+        "original-title": [
+          "Influence of optical wavelength on terahertz radiation from laser-induced air plasma"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://www.researching.cn/ArticlePdf/m00005/2013/11/10/COL201311101402.pdf",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2022,
+              10,
+              12
+            ]
+          ],
+          "date-time": "2022-10-12T07:49:21Z",
+          "timestamp": 1665560961000
+        },
+        "score": 28.1089,
+        "resource": {
+          "primary": {
+            "URL": "https://www.researching.cn/ArticlePdf/m00005/2013/11/10/COL201311101402.pdf"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2013
+            ]
+          ]
+        },
+        "references-count": 0,
+        "journal-issue": {
+          "issue": "10",
+          "published-print": {
+            "date-parts": [
+              [
+                2013
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "OJc1c7ffb636c55deb"
+        ],
+        "URL": "https://doi.org/10.3788/col201311.101402",
+        "ISSN": [
+          "1671-7694"
+        ],
+        "issn-type": [
+          {
+            "value": "1671-7694",
+            "type": "print"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2013
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2022,
+              10,
+              12
+            ]
+          ],
+          "date-time": "2022-10-12T08:18:15Z",
+          "timestamp": 1665562695033
+        },
+        "reference-count": 0,
+        "publisher": "Shanghai Institute of Optics and Fine Mechanics",
+        "issue": "S2",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "short-container-title": [
+          "Chin. Opt. Lett.",
+          "中国光学快报"
+        ],
+        "published-print": {
+          "date-parts": [
+            [
+              2014
+            ]
+          ]
+        },
+        "DOI": "10.3788/col201412.s23202",
+        "type": "journal-article",
+        "created": {
+          "date-parts": [
+            [
+              2016,
+              3,
+              25
+            ]
+          ],
+          "date-time": "2016-03-25T06:49:46Z",
+          "timestamp": 1458888586000
+        },
+        "page": "S23202",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Simulation on terahertz emission from air plasma induced by circularly polarized few-cycle laser pulses"
+        ],
+        "prefix": "10.3788",
+        "volume": "12",
+        "author": [
+          {
+            "given": "Fengchao",
+            "family": "Wang",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "2099",
+        "container-title": [
+          "Chinese Optics Letters"
+        ],
+        "original-title": [
+          "Simulation on terahertz emission from air plasma induced by circularly polarized few-cycle laser pulses"
+        ],
+        "language": "en",
+        "link": [
+          {
+            "URL": "https://www.researching.cn/ArticlePdf/m00005/2014/12/s2/COL201412S23202.pdf",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2022,
+              10,
+              12
+            ]
+          ],
+          "date-time": "2022-10-12T07:48:06Z",
+          "timestamp": 1665560886000
+        },
+        "score": 28.102648,
+        "resource": {
+          "primary": {
+            "URL": "https://www.researching.cn/ArticlePdf/m00005/2014/12/s2/COL201412S23202.pdf"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2014
+            ]
+          ]
+        },
+        "references-count": 0,
+        "journal-issue": {
+          "issue": "S2",
+          "published-print": {
+            "date-parts": [
+              [
+                2014
+              ]
+            ]
+          }
+        },
+        "alternative-id": [
+          "OJ563f1ae11eb29d0b"
+        ],
+        "URL": "https://doi.org/10.3788/col201412.s23202",
+        "ISSN": [
+          "1671-7694"
+        ],
+        "issn-type": [
+          {
+            "value": "1671-7694",
+            "type": "print"
+          }
+        ],
+        "published": {
+          "date-parts": [
+            [
+              2014
+            ]
+          ]
+        }
+      },
+      {
+        "indexed": {
+          "date-parts": [
+            [
+              2024,
+              9,
+              4
+            ]
+          ],
+          "date-time": "2024-09-04T03:02:18Z",
+          "timestamp": 1725418938007
+        },
+        "reference-count": 7,
+        "publisher": "IEEE",
+        "content-domain": {
+          "domain": [],
+          "crossmark-restriction": false
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2014,
+              9
+            ]
+          ]
+        },
+        "DOI": "10.1109/irmmw-thz.2014.6956075",
+        "type": "proceedings-article",
+        "created": {
+          "date-parts": [
+            [
+              2014,
+              11,
+              26
+            ]
+          ],
+          "date-time": "2014-11-26T10:15:07Z",
+          "timestamp": 1416996907000
+        },
+        "page": "1-2",
+        "source": "Crossref",
+        "is-referenced-by-count": 0,
+        "title": [
+          "Terahertz wave emission from laser-induced micro-plasma"
+        ],
+        "prefix": "10.1109",
+        "author": [
+          {
+            "given": "F.",
+            "family": "Buccheri",
+            "sequence": "first",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          },
+          {
+            "given": "X.-C.",
+            "family": "Zhang",
+            "sequence": "additional",
+            "affiliation": [],
+            "role": [
+              {
+                "role": "author",
+                "vocabulary": "crossref"
+              }
+            ]
+          }
+        ],
+        "member": "263",
+        "reference": [
+          {
+            "key": "3",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1364/OL.25.001210"
+          },
+          {
+            "key": "2",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1364/OL.30.002805"
+          },
+          {
+            "key": "1",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1016/S1369-7021(12)70020-2"
+          },
+          {
+            "key": "7",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.108.123903"
+          },
+          {
+            "key": "6",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevE.49.671"
+          },
+          {
+            "key": "5",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1364/OL.29.001120"
+          },
+          {
+            "key": "4",
+            "doi-asserted-by": "publisher",
+            "DOI": "10.1103/PhysRevLett.96.075005"
+          }
+        ],
+        "event": {
+          "name": "2014 39th International Conference on Infrared, Millimeter, and Terahertz waves (IRMMW-THz)",
+          "start": {
+            "date-parts": [
+              [
+                2014,
+                9,
+                14
+              ]
+            ]
+          },
+          "location": "Tucson, AZ, USA",
+          "end": {
+            "date-parts": [
+              [
+                2014,
+                9,
+                19
+              ]
+            ]
+          }
+        },
+        "container-title": [
+          "2014 39th International Conference on Infrared, Millimeter, and Terahertz waves (IRMMW-THz)"
+        ],
+        "link": [
+          {
+            "URL": "http://xplorestaging.ieee.org/ielx7/6927585/6955975/06956075.pdf?arnumber=6956075",
+            "content-type": "unspecified",
+            "content-version": "vor",
+            "intended-application": "similarity-checking"
+          }
+        ],
+        "deposited": {
+          "date-parts": [
+            [
+              2017,
+              3,
+              23
+            ]
+          ],
+          "date-time": "2017-03-23T22:48:32Z",
+          "timestamp": 1490309312000
+        },
+        "score": 27.866055,
+        "resource": {
+          "primary": {
+            "URL": "http://ieeexplore.ieee.org/document/6956075/"
+          }
+        },
+        "issued": {
+          "date-parts": [
+            [
+              2014,
+              9
+            ]
+          ]
+        },
+        "references-count": 7,
+        "URL": "https://doi.org/10.1109/irmmw-thz.2014.6956075",
+        "published": {
+          "date-parts": [
+            [
+              2014,
+              9
+            ]
+          ]
+        }
+      }
+    ],
+    "items-per-page": 6,
+    "query": {
+      "start-index": 0,
+      "search-terms": null
+    }
+  }
+}

@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/wPwask3WDWw0oqQTARVk8QbzTFM</id>
+  <title>arXiv Query: search_query=all:"bright squeezed vacuum" AND all:"high harmonic generation"&amp;id_list=&amp;start=0&amp;max_results=8</title>
+  <updated>2026-06-06T15:52:16Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=all:%22bright+squeezed+vacuum%22+AND+all:%22high+harmonic+generation%22&amp;start=0&amp;max_results=8&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>8</opensearch:itemsPerPage>
+  <opensearch:totalResults>10</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2403.15337v2</id>
+    <title>High Harmonic Generation by Bright Squeezed Vacuum</title>
+    <updated>2024-04-09T12:08:09Z</updated>
+    <link href="https://arxiv.org/abs/2403.15337v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.15337v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We observe non-perturbative high harmonic generation in solids driven by a macroscopic quantum state of light, bright squeezed vacuum (BSV), which we generate in a single spatiotemporal mode. The BSV-driven process is considerably more efficient in the generation of high harmonics than classical light of the same mean intensity. Due to its broad photon-number distribution, covering states from $0$ to $2 \times 10^{13}$ photons per pulse, and sub-cycle electric field fluctuations over $\pm1\hbox{V}/\hbox{Å}$, BSV provides access to free carrier dynamics within a much broader range of peak intensities than accessible with classical light. Our findings contribute to recent developments of quantum optics with extreme intensities, moving beyond its traditional focus on low photon numbers, and providing a new method for exploring extreme nonlinearities in solids.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-22T16:46:23Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <author>
+      <name>Andrei Rasputnyi</name>
+    </author>
+    <author>
+      <name>Zhaopin Chen</name>
+    </author>
+    <author>
+      <name>Michael Birk</name>
+    </author>
+    <author>
+      <name>Oren Cohen</name>
+    </author>
+    <author>
+      <name>Ido Kaminer</name>
+    </author>
+    <author>
+      <name>Michael Krüger</name>
+    </author>
+    <author>
+      <name>Denis Seletskiy</name>
+    </author>
+    <author>
+      <name>Maria Chekhova</name>
+    </author>
+    <author>
+      <name>Francesco Tani</name>
+    </author>
+    <arxiv:doi>10.1038/s41567-024-02659-x</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41567-024-02659-x" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.16831v1</id>
+    <title>Motion of charged particles in bright squeezed vacuum</title>
+    <updated>2023-05-26T11:19:01Z</updated>
+    <link href="https://arxiv.org/abs/2305.16831v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.16831v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The motion of laser-driven electrons quivers with an average energy termed pondermotive energy. We explore electron dynamics driven by bright squeezed vacuum (BSV), finding that BSV induces width oscillations, akin to electron quivering in laser light, with an equivalent ponderomotive energy. In the case of bound electrons, width oscillations may lead to tunnel ionization with noisy sub-cycle structure. Our results are foundational for strong-field and free-electron quantum optics, as they shed light on tunnel ionization, high harmonic generation, and nonlinear Compton scattering in BSV.</summary>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-26T11:19:01Z</published>
+    <arxiv:primary_category term="physics.optics"/>
+    <author>
+      <name>Matan Even Tzur</name>
+    </author>
+    <author>
+      <name>Oren Cohen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.05783v2</id>
+    <title>Nonlinear atomic tunnelling boosted by bright squeezed vacuum</title>
+    <updated>2026-05-20T16:26:08Z</updated>
+    <link href="https://arxiv.org/abs/2604.05783v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.05783v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Nonlinear optical processes, mediated by multiphoton interactions rather than single-photon response, are routinely exploited to enable a range of light-based functionalities in devices and applications. Nonlinear effects are enhanced through higher intensity fields, which is a limiting strategy owing to potential radiation damage. An alternative strategy relies on the fluctuation redistribution typical of quantum light, but experimental demonstrations at the most fundamental level have been limited. Here we report experimental nonlinear tunnelling ionization of isolated atoms, a pivotal nonlinear process that drives high-harmonic generation and forms the basis of attosecond science, boosted by quantum light -- bright squeezed vacuum (BSV). A BSV light with an average pulse energy of 300 nJ achieves an effective intensity equivalent to that of a coherent light with 7.1 {\textmu}J, demonstrating a more than 20-fold quantum boost in nonlinear effect from BSV light. This boost is revealed by matching the peaks of the photoelectron momentum spectra produced by the BSV and coherent light using angular streaking. Furthermore, we demonstrate control of the effective intensity of the BSV by tuning the correlation function at fixed average pulse energy, establishing a robust method to tailor nonlinear processes via quantum statistics rather than classical intensity scaling. These findings may facilitate the development of quantum-controlled strong-field dynamics using tailored quantum light sources.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.atom-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-07T12:20:49Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Nature (2026)</arxiv:journal_ref>
+    <author>
+      <name>Zhejun Jiang</name>
+    </author>
+    <author>
+      <name>Shengzhe Pan</name>
+    </author>
+    <author>
+      <name>Jianqi Chen</name>
+    </author>
+    <author>
+      <name>Mingyu Zhu</name>
+    </author>
+    <author>
+      <name>Chenhao Zhao</name>
+    </author>
+    <author>
+      <name>Yiwen Wang</name>
+    </author>
+    <author>
+      <name>Ru Zhang</name>
+    </author>
+    <author>
+      <name>Jianshi Lu</name>
+    </author>
+    <author>
+      <name>Lulu Han</name>
+    </author>
+    <author>
+      <name>Suwen Xiong</name>
+    </author>
+    <author>
+      <name>Dian Wu</name>
+    </author>
+    <author>
+      <name>Wenxue Li</name>
+    </author>
+    <author>
+      <name>Shicheng Jiang</name>
+    </author>
+    <author>
+      <name>Hongcheng Ni</name>
+    </author>
+    <author>
+      <name>Jian Wu</name>
+    </author>
+    <arxiv:doi>10.1038/s41586-026-10485-9</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41586-026-10485-9" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.15087v3</id>
+    <title>On the limitations of the semi-classical picture in high harmonic generation</title>
+    <updated>2024-09-12T19:59:27Z</updated>
+    <link href="https://arxiv.org/abs/2308.15087v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.15087v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The recent progress in the quantum optical formulation of the process of high harmonic generation has reached a point where the successful semi-classical model shows its limitations. So far the light source which drives the process was considered to be provided by a laser, in agreement with the classical picture. However, quantum optics allows to consider light fields beyond the classical realm, such as bright squeezed vacuum of photon number states. Both field states have vanishing mean electric field amplitudes, but can still lead to the generation of high harmonic radiation for sufficiently high intensities. This poses new questions about the range of validity of the semi-classical picture, and allows to extend the domain of questions which could possibly be asked.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.atom-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-29T07:51:04Z</published>
+    <arxiv:comment>3 pages, slightly extended version</arxiv:comment>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Nature Physics 20, 1040-1042 (2024)</arxiv:journal_ref>
+    <author>
+      <name>Philipp Stammer</name>
+    </author>
+    <arxiv:doi>10.1038/s41567-024-02579-w</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1038/s41567-024-02579-w" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.13518v2</id>
+    <title>Quantum Dial for High-Harmonic Generation</title>
+    <updated>2025-12-03T20:07:04Z</updated>
+    <link href="https://arxiv.org/abs/2509.13518v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.13518v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>High-harmonic generation (HHG) is a highly nonlinear optical process that typically requires an intense laser to trigger emissions at integer multiples of the driving field frequency. However, the strong fields required for conventional HHG inevitably perturb the system, limiting its use as a nondestructive spectroscopic probe. Recent advances in bright squeezed vacuum (BSV) sources have created opportunities to drive HHG with quantum fields alone. In this work, we demonstrate a regime in which the light-matter interactions can be controlled and tuned using a weak classical field, whose pulse energy is two orders of magnitude lower than that in standard HHG-perturbed by an even weaker quantum field such as BSV. This approach opens new avenues for nonlinear spectroscopy of materials while substantially suppressing strong laser-induced damage, distortions, and heating. We show that a BSV pulse containing less than 5% of the classical driving energy can act as an 'optical dial', allowing tuning of the nonlinear emission spectrum, emission angular dependence, and ionization.</summary>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-16T20:28:15Z</published>
+    <arxiv:primary_category term="physics.optics"/>
+    <author>
+      <name>Lu Wang</name>
+    </author>
+    <author>
+      <name>Andrew M. Parks</name>
+    </author>
+    <author>
+      <name>Adam Thorpe</name>
+    </author>
+    <author>
+      <name>Graeme Bart</name>
+    </author>
+    <author>
+      <name>Giulio Vampa</name>
+    </author>
+    <author>
+      <name>Thomas Brabec</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.11803v2</id>
+    <title>High-Harmonic Generation in a Crystal Driven by Quantum Light</title>
+    <updated>2025-02-21T10:18:19Z</updated>
+    <link href="https://arxiv.org/abs/2502.11803v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.11803v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study intraband high-harmonic generation (HHG) in a crystal driven by quantum light. Previous theoretical studies have developed a framework based on coherent state expansions in terms of P distributions to consider nonclassical driving fields for HHG in atoms. Here, we adapt this framework to the context of solids and consider an intraband model of ZnO. We investigate the effect of the quantum optical nature of the driving field on the harmonic spectra including the cutoff and the intensity scaling of the harmonics with driving field intensity. Based on analytical calculations in the Floquet limit, we explain why driving with thermal light or bright-squeezed vacuum (BSV) produces a much higher cutoff than when driving with fields described by coherent or Fock states. Further, we derive an expression for the generated time-dependent electric field and its fluctuations and find that it inherits characteristics of the driving field. Finally, we discuss the limitations of an approximative positive P representation, which is introduced to be able to reduce the numerical complexity for Fock and BSV driving fields.</summary>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-17T13:48:14Z</published>
+    <arxiv:primary_category term="quant-ph"/>
+    <arxiv:journal_ref>Phys. Rev. A 111, 063105, (2025)</arxiv:journal_ref>
+    <author>
+      <name>Rasmus Vesterager Gothelf</name>
+    </author>
+    <author>
+      <name>Christian Saugbjerg Lange</name>
+    </author>
+    <author>
+      <name>Lars Bojer Madsen</name>
+    </author>
+    <arxiv:doi>10.1103/PhysRevA.111.063105</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1103/PhysRevA.111.063105" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.09427v1</id>
+    <title>Measuring and controlling the birth of quantum attosecond pulses</title>
+    <updated>2025-02-13T15:48:43Z</updated>
+    <link href="https://arxiv.org/abs/2502.09427v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.09427v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The generation and control of extreme ultraviolet (XUV) radiation by high harmonic generation (HHG) have advanced ultrafast science, providing direct insights into electron dynamics on their natural time scale. Attosecond science has established the capability to resolve ultrafast quantum phenomena in matter by characterizing and controlling the classical properties of the high harmonics. Recent theoretical proposals have introduced novel schemes for generating and manipulating XUV HHG with distinct quantum features, paving the way to attosecond quantum optics. In this work, we transfer fundamental concepts in quantum optics into attosecond science. By driving the HHG process with a combination of an infrared bright squeezed vacuum (BSV, a non-classical state of light), and a strong coherent field, we imprint the quantum correlations of the input BSV onto both the ultrafast electron wavefunction and the harmonics' field. Performing in-situ HHG interferometry provides an insight into the underlying sub-cycle dynamics, revealing squeezing in the statistical properties of one of the most fundamental strong-field phenomena -- field induced tunneling. Our measurement allows the reconstruction of the quantum state of the harmonics through homodyne-like tomography, resolving correlated fluctuations in the harmonic field that mirror those of the input BSV. By controlling the delay between the two driving fields, we manipulate the photon statistics of the emitted attosecond pulses with sub-cycle accuracy. The ability to measure and control quantum correlations in both electrons and XUV attosecond pulses establishes a foundation for attosecond electrodynamics, manipulating the quantum state of electrons and photons with sub-cycle precision.</summary>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-13T15:48:43Z</published>
+    <arxiv:primary_category term="physics.optics"/>
+    <author>
+      <name>Matan Even Tzur</name>
+    </author>
+    <author>
+      <name>Chen Mor</name>
+    </author>
+    <author>
+      <name>Noa Yaffe</name>
+    </author>
+    <author>
+      <name>Michael Birk</name>
+    </author>
+    <author>
+      <name>Andrei Rasputnyi</name>
+    </author>
+    <author>
+      <name>Omer Kneller</name>
+    </author>
+    <author>
+      <name>Ido Nisim</name>
+    </author>
+    <author>
+      <name>Ido Kaminer</name>
+    </author>
+    <author>
+      <name>Michael Krüger</name>
+    </author>
+    <author>
+      <name>Nirit Dudovich</name>
+    </author>
+    <author>
+      <name>Oren Cohen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.18362v1</id>
+    <title>Attosecond-resolved quantum fluctuations of light and matter</title>
+    <updated>2025-11-23T09:17:01Z</updated>
+    <link href="https://arxiv.org/abs/2511.18362v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.18362v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Until recently, attosecond optical spectroscopy and quantum optics evolved along non-overlapping directions. In attosecond science, attosecond pulses have been regarded as classical waves, applied to probe electron dynamics on their natural time scale. Here, we transfer fundamental concepts of quantum optics into attosecond physics, enabling control of both the properties of the XUV attosecond pulses and the quantum fluctuations of matter on attosecond time scales. By combining bright squeezed vacuum (BSV) with a strong laser field to drive high-harmonic generation, we transfer the quantum properties of the BSV onto the resulting XUV attosecond pulses. Applying advanced attosecond interferometry, we reconstruct the quantum state of the XUV high harmonics and their associated attosecond pulses with attosecond precision. Finally, we resolve the squeezing of the electron's wavepacket during one of the most fundamental strong-field phenomena - field induced tunneling. The ability to measure and control quantum correlations in both electrons and XUV attosecond pulses establishes a foundation for attosecond quantum electrodynamics, manipulating the quantum state of electrons and photons with sub-cycle precision.</summary>
+    <category term="physics.optics" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="quant-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-23T09:17:01Z</published>
+    <arxiv:primary_category term="physics.optics"/>
+    <author>
+      <name>Matan Even Tzur</name>
+    </author>
+    <author>
+      <name>Chen Mor</name>
+    </author>
+    <author>
+      <name>Noa Yaffe</name>
+    </author>
+    <author>
+      <name>Michael Birk</name>
+    </author>
+    <author>
+      <name>Andrei Rasputnyi</name>
+    </author>
+    <author>
+      <name>Omer Kneller</name>
+    </author>
+    <author>
+      <name>Ido Nisim</name>
+    </author>
+    <author>
+      <name>Ido Kaminer</name>
+    </author>
+    <author>
+      <name>Maria Chekhova</name>
+    </author>
+    <author>
+      <name>Michael Krueger</name>
+    </author>
+    <author>
+      <name>Misha Ivanov</name>
+    </author>
+    <author>
+      <name>Nirit Dudovich</name>
+    </author>
+    <author>
+      <name>Oren Cohen</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,1867 @@
+{
+  "meta": {
+    "count": 1,
+    "db_response_time_ms": 41,
+    "page": 1,
+    "per_page": 10,
+    "groups_count": null,
+    "cost_usd": 0.001
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W4389072156",
+      "doi": "https://doi.org/10.48550/arxiv.2311.13775",
+      "title": "Mesoscopic ultrafast nonlinear optics -- The emergence of multimode quantum non-Gaussian physics",
+      "display_name": "Mesoscopic ultrafast nonlinear optics -- The emergence of multimode quantum non-Gaussian physics",
+      "relevance_score": 2.3738835,
+      "publication_year": 2023,
+      "publication_date": "2023-11-23",
+      "ids": {
+        "openalex": "https://openalex.org/W4389072156",
+        "doi": "https://doi.org/10.48550/arxiv.2311.13775"
+      },
+      "language": "en",
+      "primary_location": {
+        "id": "pmh:oai:arXiv.org:2311.13775",
+        "is_oa": true,
+        "landing_page_url": "http://arxiv.org/abs/2311.13775",
+        "pdf_url": "https://arxiv.org/pdf/2311.13775",
+        "source": {
+          "id": "https://openalex.org/S4306400194",
+          "display_name": "arXiv (Cornell University)",
+          "issn_l": null,
+          "issn": null,
+          "is_oa": true,
+          "is_in_doaj": false,
+          "is_core": false,
+          "host_organization": "https://openalex.org/I205783295",
+          "host_organization_name": "Cornell University",
+          "host_organization_lineage": [
+            "https://openalex.org/I205783295"
+          ],
+          "host_organization_lineage_names": [],
+          "type": "repository"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "submittedVersion",
+        "is_accepted": false,
+        "is_published": false,
+        "raw_source_name": null,
+        "raw_type": "text"
+      },
+      "type": "preprint",
+      "indexed_in": [
+        "arxiv",
+        "datacite"
+      ],
+      "open_access": {
+        "is_oa": true,
+        "oa_status": "green",
+        "oa_url": "https://arxiv.org/pdf/2311.13775",
+        "any_repository_has_fulltext": true
+      },
+      "authorships": [
+        {
+          "author_position": "first",
+          "author": {
+            "id": "https://openalex.org/A5020194542",
+            "display_name": "Ryotatsu Yanagimoto",
+            "orcid": "https://orcid.org/0000-0002-9609-0076"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I205783295",
+              "display_name": "Cornell University",
+              "ror": "https://ror.org/05bnh6r87",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I205783295"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I97018004",
+              "display_name": "Stanford University",
+              "ror": "https://ror.org/00f54p054",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I97018004"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": true,
+          "raw_author_name": "Yanagimoto, Ryotatsu",
+          "raw_affiliation_strings": [
+            "Physics & Informatics Laboratories, NTT Research, Inc., Sunnyvale, California 94085, USA",
+            "E. L. Ginzton Laboratory, Stanford University, Stanford, California 94305, USA",
+            "School of Applied and Engineering Physics, Cornell University, Ithaca, New York 14853, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Physics & Informatics Laboratories, NTT Research, Inc., Sunnyvale, California 94085, USA",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "E. L. Ginzton Laboratory, Stanford University, Stanford, California 94305, USA",
+              "institution_ids": [
+                "https://openalex.org/I97018004"
+              ]
+            },
+            {
+              "raw_affiliation_string": "School of Applied and Engineering Physics, Cornell University, Ithaca, New York 14853, USA",
+              "institution_ids": [
+                "https://openalex.org/I205783295"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5101736799",
+            "display_name": "Edwin Ng",
+            "orcid": "https://orcid.org/0000-0002-3695-1698"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I97018004",
+              "display_name": "Stanford University",
+              "ror": "https://ror.org/00f54p054",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I97018004"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Ng, Edwin",
+          "raw_affiliation_strings": [
+            "Physics & Informatics Laboratories, NTT Research, Inc., Sunnyvale, California 94085, USA",
+            "E. L. Ginzton Laboratory, Stanford University, Stanford, California 94305, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Physics & Informatics Laboratories, NTT Research, Inc., Sunnyvale, California 94085, USA",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "E. L. Ginzton Laboratory, Stanford University, Stanford, California 94305, USA",
+              "institution_ids": [
+                "https://openalex.org/I97018004"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5043463542",
+            "display_name": "Marc Jankowski",
+            "orcid": "https://orcid.org/0000-0003-1845-7415"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I97018004",
+              "display_name": "Stanford University",
+              "ror": "https://ror.org/00f54p054",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I97018004"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Jankowski, Marc",
+          "raw_affiliation_strings": [
+            "Physics & Informatics Laboratories, NTT Research, Inc., Sunnyvale, California 94085, USA",
+            "E. L. Ginzton Laboratory, Stanford University, Stanford, California 94305, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Physics & Informatics Laboratories, NTT Research, Inc., Sunnyvale, California 94085, USA",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "E. L. Ginzton Laboratory, Stanford University, Stanford, California 94305, USA",
+              "institution_ids": [
+                "https://openalex.org/I97018004"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5060270473",
+            "display_name": "Rajveer Nehra",
+            "orcid": "https://orcid.org/0000-0002-0165-2188"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I122411786",
+              "display_name": "California Institute of Technology",
+              "ror": "https://ror.org/05dxps055",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I122411786"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I24603500",
+              "display_name": "University of Massachusetts Amherst",
+              "ror": "https://ror.org/0072zz521",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I24603500"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Nehra, Rajveer",
+          "raw_affiliation_strings": [
+            "Department of Physics, University of Massachusetts-Amherst, Amherst, Massachusetts 01003, USA",
+            "Department of Electrical and Computer Engineering, University of Massachusetts-Amherst, Amherst, Massachusetts 01003, USA",
+            "Department of Electrical Engineering, California Institute of Technology, Pasadena, California 91125, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Physics, University of Massachusetts-Amherst, Amherst, Massachusetts 01003, USA",
+              "institution_ids": [
+                "https://openalex.org/I24603500"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Electrical and Computer Engineering, University of Massachusetts-Amherst, Amherst, Massachusetts 01003, USA",
+              "institution_ids": [
+                "https://openalex.org/I24603500"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Department of Electrical Engineering, California Institute of Technology, Pasadena, California 91125, USA",
+              "institution_ids": [
+                "https://openalex.org/I122411786"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5062514178",
+            "display_name": "Timothy P. McKenna",
+            "orcid": "https://orcid.org/0000-0001-8132-7336"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I97018004",
+              "display_name": "Stanford University",
+              "ror": "https://ror.org/00f54p054",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I97018004"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "McKenna, Timothy P.",
+          "raw_affiliation_strings": [
+            "E. L. Ginzton Laboratory, Stanford University, Stanford, California 94305, USA",
+            "Physics & Informatics Laboratories, NTT Research, Inc., Sunnyvale, California 94085, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "E. L. Ginzton Laboratory, Stanford University, Stanford, California 94305, USA",
+              "institution_ids": [
+                "https://openalex.org/I97018004"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Physics & Informatics Laboratories, NTT Research, Inc., Sunnyvale, California 94085, USA",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5002721065",
+            "display_name": "Tatsuhiro Onodera",
+            "orcid": "https://orcid.org/0000-0002-6912-6504"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I205783295",
+              "display_name": "Cornell University",
+              "ror": "https://ror.org/05bnh6r87",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I205783295"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Onodera, Tatsuhiro",
+          "raw_affiliation_strings": [
+            "School of Applied and Engineering Physics, Cornell University, Ithaca, New York 14853, USA",
+            "Physics & Informatics Laboratories, NTT Research, Inc., Sunnyvale, California 94085, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Applied and Engineering Physics, Cornell University, Ithaca, New York 14853, USA",
+              "institution_ids": [
+                "https://openalex.org/I205783295"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Physics & Informatics Laboratories, NTT Research, Inc., Sunnyvale, California 94085, USA",
+              "institution_ids": []
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5032729465",
+            "display_name": "Logan G. Wright",
+            "orcid": "https://orcid.org/0000-0001-7696-1260"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I205783295",
+              "display_name": "Cornell University",
+              "ror": "https://ror.org/05bnh6r87",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I205783295"
+              ]
+            },
+            {
+              "id": "https://openalex.org/I32971472",
+              "display_name": "Yale University",
+              "ror": "https://ror.org/03v76x132",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I32971472"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Wright, Logan G.",
+          "raw_affiliation_strings": [
+            "School of Applied and Engineering Physics, Cornell University, Ithaca, New York 14853, USA",
+            "Physics & Informatics Laboratories, NTT Research, Inc., Sunnyvale, California 94085, USA",
+            "Departments of Applied Physics, Yale University, New Haven, Connecticut 06511, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "School of Applied and Engineering Physics, Cornell University, Ithaca, New York 14853, USA",
+              "institution_ids": [
+                "https://openalex.org/I205783295"
+              ]
+            },
+            {
+              "raw_affiliation_string": "Physics & Informatics Laboratories, NTT Research, Inc., Sunnyvale, California 94085, USA",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "Departments of Applied Physics, Yale University, New Haven, Connecticut 06511, USA",
+              "institution_ids": [
+                "https://openalex.org/I32971472"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5089821617",
+            "display_name": "Ryan Hamerly",
+            "orcid": "https://orcid.org/0000-0003-4976-2236"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I126820664",
+              "display_name": "Vassar College",
+              "ror": "https://ror.org/022x6qg61",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I126820664"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Hamerly, Ryan",
+          "raw_affiliation_strings": [
+            "Physics & Informatics Laboratories, NTT Research, Inc., Sunnyvale, California 94085, USA",
+            "Research Laboratory of Electronics, MIT, 50 Vassar Street, Cambridge, MA 02139, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Physics & Informatics Laboratories, NTT Research, Inc., Sunnyvale, California 94085, USA",
+              "institution_ids": []
+            },
+            {
+              "raw_affiliation_string": "Research Laboratory of Electronics, MIT, 50 Vassar Street, Cambridge, MA 02139, USA",
+              "institution_ids": [
+                "https://openalex.org/I126820664"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5003143232",
+            "display_name": "Alireza Marandi",
+            "orcid": "https://orcid.org/0000-0002-0470-0050"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I122411786",
+              "display_name": "California Institute of Technology",
+              "ror": "https://ror.org/05dxps055",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I122411786"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Marandi, Alireza",
+          "raw_affiliation_strings": [
+            "Department of Electrical Engineering, California Institute of Technology, Pasadena, California 91125, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "Department of Electrical Engineering, California Institute of Technology, Pasadena, California 91125, USA",
+              "institution_ids": [
+                "https://openalex.org/I122411786"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "middle",
+          "author": {
+            "id": "https://openalex.org/A5069035222",
+            "display_name": "M. M. Fejer",
+            "orcid": "https://orcid.org/0000-0002-5512-1905"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I97018004",
+              "display_name": "Stanford University",
+              "ror": "https://ror.org/00f54p054",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I97018004"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Fejer, M. M.",
+          "raw_affiliation_strings": [
+            "E. L. Ginzton Laboratory, Stanford University, Stanford, California 94305, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "E. L. Ginzton Laboratory, Stanford University, Stanford, California 94305, USA",
+              "institution_ids": [
+                "https://openalex.org/I97018004"
+              ]
+            }
+          ]
+        },
+        {
+          "author_position": "last",
+          "author": {
+            "id": "https://openalex.org/A5045698402",
+            "display_name": "Hideo Mabuchi",
+            "orcid": "https://orcid.org/0000-0002-5156-7678"
+          },
+          "institutions": [
+            {
+              "id": "https://openalex.org/I97018004",
+              "display_name": "Stanford University",
+              "ror": "https://ror.org/00f54p054",
+              "country_code": "US",
+              "type": "education",
+              "lineage": [
+                "https://openalex.org/I97018004"
+              ]
+            }
+          ],
+          "countries": [
+            "US"
+          ],
+          "is_corresponding": false,
+          "raw_author_name": "Mabuchi, Hideo",
+          "raw_affiliation_strings": [
+            "E. L. Ginzton Laboratory, Stanford University, Stanford, California 94305, USA"
+          ],
+          "affiliations": [
+            {
+              "raw_affiliation_string": "E. L. Ginzton Laboratory, Stanford University, Stanford, California 94305, USA",
+              "institution_ids": [
+                "https://openalex.org/I97018004"
+              ]
+            }
+          ]
+        }
+      ],
+      "institutions": [],
+      "countries_distinct_count": 1,
+      "institutions_distinct_count": 11,
+      "corresponding_author_ids": [
+        "https://openalex.org/A5020194542"
+      ],
+      "corresponding_institution_ids": [
+        "https://openalex.org/I205783295",
+        "https://openalex.org/I97018004"
+      ],
+      "apc_list": null,
+      "apc_paid": null,
+      "fwci": null,
+      "has_fulltext": true,
+      "cited_by_count": 1,
+      "citation_normalized_percentile": null,
+      "cited_by_percentile_year": null,
+      "biblio": {
+        "volume": null,
+        "issue": null,
+        "first_page": null,
+        "last_page": null
+      },
+      "is_retracted": false,
+      "is_paratext": false,
+      "is_xpac": false,
+      "primary_topic": {
+        "id": "https://openalex.org/T10299",
+        "display_name": "Photonic and Optical Devices",
+        "score": 0.9998000264167786,
+        "subfield": {
+          "id": "https://openalex.org/subfields/2208",
+          "display_name": "Electrical and Electronic Engineering"
+        },
+        "field": {
+          "id": "https://openalex.org/fields/22",
+          "display_name": "Engineering"
+        },
+        "domain": {
+          "id": "https://openalex.org/domains/3",
+          "display_name": "Physical Sciences"
+        }
+      },
+      "topics": [
+        {
+          "id": "https://openalex.org/T10299",
+          "display_name": "Photonic and Optical Devices",
+          "score": 0.9998000264167786,
+          "subfield": {
+            "id": "https://openalex.org/subfields/2208",
+            "display_name": "Electrical and Electronic Engineering"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/22",
+            "display_name": "Engineering"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10988",
+          "display_name": "Advanced Fiber Laser Technologies",
+          "score": 0.9998000264167786,
+          "subfield": {
+            "id": "https://openalex.org/subfields/3107",
+            "display_name": "Atomic and Molecular Physics, and Optics"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/31",
+            "display_name": "Physics and Astronomy"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        },
+        {
+          "id": "https://openalex.org/T10020",
+          "display_name": "Quantum Information and Cryptography",
+          "score": 0.9994999766349792,
+          "subfield": {
+            "id": "https://openalex.org/subfields/1702",
+            "display_name": "Artificial Intelligence"
+          },
+          "field": {
+            "id": "https://openalex.org/fields/17",
+            "display_name": "Computer Science"
+          },
+          "domain": {
+            "id": "https://openalex.org/domains/3",
+            "display_name": "Physical Sciences"
+          }
+        }
+      ],
+      "keywords": [
+        {
+          "id": "https://openalex.org/keywords/mesoscopic-physics",
+          "display_name": "Mesoscopic physics",
+          "score": 0.635626494884491
+        },
+        {
+          "id": "https://openalex.org/keywords/physics",
+          "display_name": "Physics",
+          "score": 0.6055988073348999
+        },
+        {
+          "id": "https://openalex.org/keywords/quantum-optics",
+          "display_name": "Quantum optics",
+          "score": 0.5641474723815918
+        },
+        {
+          "id": "https://openalex.org/keywords/nonlinear-optics",
+          "display_name": "Nonlinear optics",
+          "score": 0.5135524272918701
+        },
+        {
+          "id": "https://openalex.org/keywords/nanophotonics",
+          "display_name": "Nanophotonics",
+          "score": 0.5068920254707336
+        },
+        {
+          "id": "https://openalex.org/keywords/quantum-technology",
+          "display_name": "Quantum technology",
+          "score": 0.4981343746185303
+        },
+        {
+          "id": "https://openalex.org/keywords/photonics",
+          "display_name": "Photonics",
+          "score": 0.4935070276260376
+        },
+        {
+          "id": "https://openalex.org/keywords/nonlinear-system",
+          "display_name": "Nonlinear system",
+          "score": 0.44407525658607483
+        },
+        {
+          "id": "https://openalex.org/keywords/quantum-imaging",
+          "display_name": "Quantum imaging",
+          "score": 0.4347284436225891
+        },
+        {
+          "id": "https://openalex.org/keywords/quantum",
+          "display_name": "Quantum",
+          "score": 0.4173097610473633
+        },
+        {
+          "id": "https://openalex.org/keywords/statistical-physics",
+          "display_name": "Statistical physics",
+          "score": 0.3695903420448303
+        },
+        {
+          "id": "https://openalex.org/keywords/quantum-mechanics",
+          "display_name": "Quantum mechanics",
+          "score": 0.34815025329589844
+        },
+        {
+          "id": "https://openalex.org/keywords/open-quantum-system",
+          "display_name": "Open quantum system",
+          "score": 0.336210161447525
+        },
+        {
+          "id": "https://openalex.org/keywords/optics",
+          "display_name": "Optics",
+          "score": 0.25132885575294495
+        }
+      ],
+      "concepts": [
+        {
+          "id": "https://openalex.org/C177731217",
+          "wikidata": "https://www.wikidata.org/wiki/Q2622244",
+          "display_name": "Mesoscopic physics",
+          "level": 2,
+          "score": 0.635626494884491
+        },
+        {
+          "id": "https://openalex.org/C121332964",
+          "wikidata": "https://www.wikidata.org/wiki/Q413",
+          "display_name": "Physics",
+          "level": 0,
+          "score": 0.6055988073348999
+        },
+        {
+          "id": "https://openalex.org/C68717125",
+          "wikidata": "https://www.wikidata.org/wiki/Q735602",
+          "display_name": "Quantum optics",
+          "level": 2,
+          "score": 0.5641474723815918
+        },
+        {
+          "id": "https://openalex.org/C78854221",
+          "wikidata": "https://www.wikidata.org/wiki/Q756033",
+          "display_name": "Nonlinear optics",
+          "level": 3,
+          "score": 0.5135524272918701
+        },
+        {
+          "id": "https://openalex.org/C27289702",
+          "wikidata": "https://www.wikidata.org/wiki/Q2475861",
+          "display_name": "Nanophotonics",
+          "level": 2,
+          "score": 0.5068920254707336
+        },
+        {
+          "id": "https://openalex.org/C190463098",
+          "wikidata": "https://www.wikidata.org/wiki/Q2081419",
+          "display_name": "Quantum technology",
+          "level": 4,
+          "score": 0.4981343746185303
+        },
+        {
+          "id": "https://openalex.org/C20788544",
+          "wikidata": "https://www.wikidata.org/wiki/Q467054",
+          "display_name": "Photonics",
+          "level": 2,
+          "score": 0.4935070276260376
+        },
+        {
+          "id": "https://openalex.org/C158622935",
+          "wikidata": "https://www.wikidata.org/wiki/Q660848",
+          "display_name": "Nonlinear system",
+          "level": 2,
+          "score": 0.44407525658607483
+        },
+        {
+          "id": "https://openalex.org/C22984246",
+          "wikidata": "https://www.wikidata.org/wiki/Q7269058",
+          "display_name": "Quantum imaging",
+          "level": 5,
+          "score": 0.4347284436225891
+        },
+        {
+          "id": "https://openalex.org/C84114770",
+          "wikidata": "https://www.wikidata.org/wiki/Q46344",
+          "display_name": "Quantum",
+          "level": 2,
+          "score": 0.4173097610473633
+        },
+        {
+          "id": "https://openalex.org/C121864883",
+          "wikidata": "https://www.wikidata.org/wiki/Q677916",
+          "display_name": "Statistical physics",
+          "level": 1,
+          "score": 0.3695903420448303
+        },
+        {
+          "id": "https://openalex.org/C62520636",
+          "wikidata": "https://www.wikidata.org/wiki/Q944",
+          "display_name": "Quantum mechanics",
+          "level": 1,
+          "score": 0.34815025329589844
+        },
+        {
+          "id": "https://openalex.org/C190474826",
+          "wikidata": "https://www.wikidata.org/wiki/Q2495111",
+          "display_name": "Open quantum system",
+          "level": 3,
+          "score": 0.336210161447525
+        },
+        {
+          "id": "https://openalex.org/C120665830",
+          "wikidata": "https://www.wikidata.org/wiki/Q14620",
+          "display_name": "Optics",
+          "level": 1,
+          "score": 0.25132885575294495
+        }
+      ],
+      "mesh": [],
+      "locations_count": 2,
+      "locations": [
+        {
+          "id": "pmh:oai:arXiv.org:2311.13775",
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2311.13775",
+          "pdf_url": "https://arxiv.org/pdf/2311.13775",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "doi:10.48550/arxiv.2311.13775",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.48550/arxiv.2311.13775",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": null,
+          "raw_type": "article-journal"
+        }
+      ],
+      "best_oa_location": {
+        "id": "pmh:oai:arXiv.org:2311.13775",
+        "is_oa": true,
+        "landing_page_url": "http://arxiv.org/abs/2311.13775",
+        "pdf_url": "https://arxiv.org/pdf/2311.13775",
+        "source": {
+          "id": "https://openalex.org/S4306400194",
+          "display_name": "arXiv (Cornell University)",
+          "issn_l": null,
+          "issn": null,
+          "is_oa": true,
+          "is_in_doaj": false,
+          "is_core": false,
+          "host_organization": "https://openalex.org/I205783295",
+          "host_organization_name": "Cornell University",
+          "host_organization_lineage": [
+            "https://openalex.org/I205783295"
+          ],
+          "host_organization_lineage_names": [],
+          "type": "repository"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "submittedVersion",
+        "is_accepted": false,
+        "is_published": false,
+        "raw_source_name": null,
+        "raw_type": "text"
+      },
+      "sustainable_development_goals": [
+        {
+          "id": "https://metadata.un.org/sdg/7",
+          "display_name": "Affordable and clean energy",
+          "score": 0.8899999856948853
+        }
+      ],
+      "awards": [
+        {
+          "id": "https://openalex.org/G1523888516",
+          "display_name": null,
+          "funder_award_id": "FA9550-",
+          "funder_id": "https://openalex.org/F4320338279",
+          "funder_display_name": "Air Force Office of Scientific Research"
+        },
+        {
+          "id": "https://openalex.org/G1834540682",
+          "display_name": null,
+          "funder_award_id": "1846273",
+          "funder_id": "https://openalex.org/F4320306076",
+          "funder_display_name": "National Science Foundation"
+        },
+        {
+          "id": "https://openalex.org/G2296916099",
+          "display_name": null,
+          "funder_award_id": "ECCS-1",
+          "funder_id": "https://openalex.org/F4320306076",
+          "funder_display_name": "National Science Foundation"
+        },
+        {
+          "id": "https://openalex.org/G2335928686",
+          "display_name": null,
+          "funder_award_id": "1918549",
+          "funder_id": "https://openalex.org/F4320306076",
+          "funder_display_name": "National Science Foundation"
+        },
+        {
+          "id": "https://openalex.org/G2782114941",
+          "display_name": null,
+          "funder_award_id": "PHY-2011363",
+          "funder_id": "https://openalex.org/F4320306076",
+          "funder_display_name": "National Science Foundation"
+        },
+        {
+          "id": "https://openalex.org/G3546024384",
+          "display_name": "Quantum Input-Output Modeling in the Ultra-Fast Domain: Theoretical Foundations and Experimental Validation",
+          "funder_award_id": "2011363",
+          "funder_id": "https://openalex.org/F4320306076",
+          "funder_display_name": "National Science Foundation"
+        },
+        {
+          "id": "https://openalex.org/G5213755973",
+          "display_name": null,
+          "funder_award_id": "FA9550-23-1-0755",
+          "funder_id": "https://openalex.org/F4320338279",
+          "funder_display_name": "Air Force Office of Scientific Research"
+        },
+        {
+          "id": "https://openalex.org/G5524522455",
+          "display_name": null,
+          "funder_award_id": "DARPA",
+          "funder_id": "https://openalex.org/F4320338281",
+          "funder_display_name": "Army Research Office"
+        },
+        {
+          "id": "https://openalex.org/G5809100787",
+          "display_name": null,
+          "funder_award_id": "FA9550",
+          "funder_id": "https://openalex.org/F4320338279",
+          "funder_display_name": "Air Force Office of Scientific Research"
+        },
+        {
+          "id": "https://openalex.org/G6049016606",
+          "display_name": null,
+          "funder_award_id": "ECCS-1846273",
+          "funder_id": "https://openalex.org/F4320306076",
+          "funder_display_name": "National Science Foundation"
+        },
+        {
+          "id": "https://openalex.org/G6395146923",
+          "display_name": null,
+          "funder_award_id": "1846273",
+          "funder_id": "https://openalex.org/F4320337392",
+          "funder_display_name": "Division of Electrical, Communications and Cyber Systems"
+        },
+        {
+          "id": "https://openalex.org/G6606551169",
+          "display_name": null,
+          "funder_award_id": "D23AP00158",
+          "funder_id": "https://openalex.org/F4320332180",
+          "funder_display_name": "Defense Advanced Research Projects Agency"
+        },
+        {
+          "id": "https://openalex.org/G7001139843",
+          "display_name": null,
+          "funder_award_id": "W911NF-23-1-0048",
+          "funder_id": "https://openalex.org/F4320338281",
+          "funder_display_name": "Army Research Office"
+        },
+        {
+          "id": "https://openalex.org/G7098565209",
+          "display_name": null,
+          "funder_award_id": "CCF-1918549",
+          "funder_id": "https://openalex.org/F4320306076",
+          "funder_display_name": "National Science Foundation"
+        },
+        {
+          "id": "https://openalex.org/G7452299184",
+          "display_name": null,
+          "funder_award_id": "W911NF",
+          "funder_id": "https://openalex.org/F4320338281",
+          "funder_display_name": "Army Research Office"
+        },
+        {
+          "id": "https://openalex.org/G8998121839",
+          "display_name": null,
+          "funder_award_id": "911NF",
+          "funder_id": "https://openalex.org/F4320338281",
+          "funder_display_name": "Army Research Office"
+        }
+      ],
+      "funders": [
+        {
+          "id": "https://openalex.org/F4320306076",
+          "display_name": "National Science Foundation",
+          "ror": "https://ror.org/021nxhr62"
+        },
+        {
+          "id": "https://openalex.org/F4320332180",
+          "display_name": "Defense Advanced Research Projects Agency",
+          "ror": "https://ror.org/02caytj08"
+        },
+        {
+          "id": "https://openalex.org/F4320337392",
+          "display_name": "Division of Electrical, Communications and Cyber Systems",
+          "ror": "https://ror.org/01krpsy48"
+        },
+        {
+          "id": "https://openalex.org/F4320338279",
+          "display_name": "Air Force Office of Scientific Research",
+          "ror": "https://ror.org/011e9bt93"
+        },
+        {
+          "id": "https://openalex.org/F4320338281",
+          "display_name": "Army Research Office",
+          "ror": "https://ror.org/05epdh915"
+        }
+      ],
+      "has_content": {
+        "pdf": true,
+        "grobid_xml": false
+      },
+      "content_urls": {
+        "pdf": "https://content.openalex.org/works/W4389072156.pdf"
+      },
+      "referenced_works_count": 206,
+      "referenced_works": [
+        "https://openalex.org/W758189419",
+        "https://openalex.org/W1521266393",
+        "https://openalex.org/W1620088716",
+        "https://openalex.org/W1646581451",
+        "https://openalex.org/W1692753665",
+        "https://openalex.org/W1912660616",
+        "https://openalex.org/W1940239272",
+        "https://openalex.org/W1968129320",
+        "https://openalex.org/W1968812970",
+        "https://openalex.org/W1971377088",
+        "https://openalex.org/W1971407024",
+        "https://openalex.org/W1971575720",
+        "https://openalex.org/W1979029367",
+        "https://openalex.org/W1980291018",
+        "https://openalex.org/W1981131802",
+        "https://openalex.org/W1982012919",
+        "https://openalex.org/W1984004232",
+        "https://openalex.org/W1990885998",
+        "https://openalex.org/W1992249201",
+        "https://openalex.org/W1993259627",
+        "https://openalex.org/W1999178363",
+        "https://openalex.org/W1999766050",
+        "https://openalex.org/W2000383488",
+        "https://openalex.org/W2000620350",
+        "https://openalex.org/W2000629309",
+        "https://openalex.org/W2000991915",
+        "https://openalex.org/W2004357503",
+        "https://openalex.org/W2009121572",
+        "https://openalex.org/W2011916608",
+        "https://openalex.org/W2017115637",
+        "https://openalex.org/W2023155169",
+        "https://openalex.org/W2023183642",
+        "https://openalex.org/W2027301026",
+        "https://openalex.org/W2027602182",
+        "https://openalex.org/W2030172717",
+        "https://openalex.org/W2031724308",
+        "https://openalex.org/W2032561607",
+        "https://openalex.org/W2033364080",
+        "https://openalex.org/W2033666272",
+        "https://openalex.org/W2037522026",
+        "https://openalex.org/W2038366371",
+        "https://openalex.org/W2038674186",
+        "https://openalex.org/W2042414709",
+        "https://openalex.org/W2042664047",
+        "https://openalex.org/W2044922368",
+        "https://openalex.org/W2049736146",
+        "https://openalex.org/W2053451295",
+        "https://openalex.org/W2055170306",
+        "https://openalex.org/W2056908124",
+        "https://openalex.org/W2062584998",
+        "https://openalex.org/W2065292811",
+        "https://openalex.org/W2068557577",
+        "https://openalex.org/W2071090470",
+        "https://openalex.org/W2074087427",
+        "https://openalex.org/W2077246318",
+        "https://openalex.org/W2082999983",
+        "https://openalex.org/W2085897129",
+        "https://openalex.org/W2086450879",
+        "https://openalex.org/W2087197664",
+        "https://openalex.org/W2090973546",
+        "https://openalex.org/W2093856853",
+        "https://openalex.org/W2094730671",
+        "https://openalex.org/W2099265531",
+        "https://openalex.org/W2104574026",
+        "https://openalex.org/W2105538507",
+        "https://openalex.org/W2113891479",
+        "https://openalex.org/W2119456834",
+        "https://openalex.org/W2128960304",
+        "https://openalex.org/W2129625751",
+        "https://openalex.org/W2134974742",
+        "https://openalex.org/W2142739935",
+        "https://openalex.org/W2156857373",
+        "https://openalex.org/W2163525631",
+        "https://openalex.org/W2177218873",
+        "https://openalex.org/W2239513139",
+        "https://openalex.org/W2247185128",
+        "https://openalex.org/W2299422187",
+        "https://openalex.org/W2344013912",
+        "https://openalex.org/W2533968486",
+        "https://openalex.org/W2538025098",
+        "https://openalex.org/W2562845586",
+        "https://openalex.org/W2588067191",
+        "https://openalex.org/W2599232429",
+        "https://openalex.org/W2607083824",
+        "https://openalex.org/W2757790364",
+        "https://openalex.org/W2759406670",
+        "https://openalex.org/W2764347725",
+        "https://openalex.org/W2781738013",
+        "https://openalex.org/W2806759896",
+        "https://openalex.org/W2884201361",
+        "https://openalex.org/W2898683060",
+        "https://openalex.org/W2899558822",
+        "https://openalex.org/W2901923388",
+        "https://openalex.org/W2920934058",
+        "https://openalex.org/W2922262472",
+        "https://openalex.org/W2950216490",
+        "https://openalex.org/W2962826404",
+        "https://openalex.org/W2963489520",
+        "https://openalex.org/W2963755523",
+        "https://openalex.org/W2964152311",
+        "https://openalex.org/W2972805988",
+        "https://openalex.org/W2974385401",
+        "https://openalex.org/W2975461635",
+        "https://openalex.org/W2979650628",
+        "https://openalex.org/W2987566926",
+        "https://openalex.org/W2995189065",
+        "https://openalex.org/W2996008180",
+        "https://openalex.org/W3005337276",
+        "https://openalex.org/W3005685782",
+        "https://openalex.org/W3005827139",
+        "https://openalex.org/W3011856141",
+        "https://openalex.org/W3012189437",
+        "https://openalex.org/W3030018865",
+        "https://openalex.org/W3036974043",
+        "https://openalex.org/W3042557754",
+        "https://openalex.org/W3044792097",
+        "https://openalex.org/W3087930822",
+        "https://openalex.org/W3091970844",
+        "https://openalex.org/W3093874665",
+        "https://openalex.org/W3098587343",
+        "https://openalex.org/W3099841274",
+        "https://openalex.org/W3100135560",
+        "https://openalex.org/W3100626041",
+        "https://openalex.org/W3101027029",
+        "https://openalex.org/W3101118225",
+        "https://openalex.org/W3103454495",
+        "https://openalex.org/W3103600063",
+        "https://openalex.org/W3104359509",
+        "https://openalex.org/W3104982881",
+        "https://openalex.org/W3105263846",
+        "https://openalex.org/W3105491497",
+        "https://openalex.org/W3106111886",
+        "https://openalex.org/W3106404574",
+        "https://openalex.org/W3110594610",
+        "https://openalex.org/W3127046935",
+        "https://openalex.org/W3128605999",
+        "https://openalex.org/W3130725666",
+        "https://openalex.org/W3134798533",
+        "https://openalex.org/W3135824144",
+        "https://openalex.org/W3156125365",
+        "https://openalex.org/W3157892791",
+        "https://openalex.org/W3161599935",
+        "https://openalex.org/W3165898261",
+        "https://openalex.org/W3172292618",
+        "https://openalex.org/W3188932886",
+        "https://openalex.org/W3196616295",
+        "https://openalex.org/W3207759764",
+        "https://openalex.org/W3207915344",
+        "https://openalex.org/W3208312302",
+        "https://openalex.org/W3213669959",
+        "https://openalex.org/W3214498523",
+        "https://openalex.org/W3216502336",
+        "https://openalex.org/W3217191677",
+        "https://openalex.org/W3217720033",
+        "https://openalex.org/W4205419181",
+        "https://openalex.org/W4210678178",
+        "https://openalex.org/W4210930070",
+        "https://openalex.org/W4214950768",
+        "https://openalex.org/W4225289749",
+        "https://openalex.org/W4226029236",
+        "https://openalex.org/W4240078651",
+        "https://openalex.org/W4240308178",
+        "https://openalex.org/W4246690417",
+        "https://openalex.org/W4247009238",
+        "https://openalex.org/W4249046091",
+        "https://openalex.org/W4250505890",
+        "https://openalex.org/W4256118328",
+        "https://openalex.org/W4287112065",
+        "https://openalex.org/W4287189770",
+        "https://openalex.org/W4288498152",
+        "https://openalex.org/W4289688984",
+        "https://openalex.org/W4295924750",
+        "https://openalex.org/W4302275615",
+        "https://openalex.org/W4306758171",
+        "https://openalex.org/W4317717743",
+        "https://openalex.org/W4320724871",
+        "https://openalex.org/W4321749278",
+        "https://openalex.org/W4322507172",
+        "https://openalex.org/W4323318352",
+        "https://openalex.org/W4353044863",
+        "https://openalex.org/W4360847955",
+        "https://openalex.org/W4361292260",
+        "https://openalex.org/W4362472957",
+        "https://openalex.org/W4365150807",
+        "https://openalex.org/W4366682863",
+        "https://openalex.org/W4372291698",
+        "https://openalex.org/W4376865104",
+        "https://openalex.org/W4379382849",
+        "https://openalex.org/W4381569914",
+        "https://openalex.org/W4381803372",
+        "https://openalex.org/W4382241556",
+        "https://openalex.org/W4383176281",
+        "https://openalex.org/W4384069024",
+        "https://openalex.org/W4384115512",
+        "https://openalex.org/W4384154911",
+        "https://openalex.org/W4384561879",
+        "https://openalex.org/W4385268626",
+        "https://openalex.org/W4385359163",
+        "https://openalex.org/W4385544543",
+        "https://openalex.org/W4385727101",
+        "https://openalex.org/W4386644150",
+        "https://openalex.org/W4388184924",
+        "https://openalex.org/W4388514451",
+        "https://openalex.org/W4388585722",
+        "https://openalex.org/W4400110714",
+        "https://openalex.org/W4401611306"
+      ],
+      "related_works": [
+        "https://openalex.org/W3137452254",
+        "https://openalex.org/W2963563009",
+        "https://openalex.org/W2625071374",
+        "https://openalex.org/W2787730491",
+        "https://openalex.org/W4365398674",
+        "https://openalex.org/W1981122241",
+        "https://openalex.org/W1846954",
+        "https://openalex.org/W3147300869",
+        "https://openalex.org/W1936398590",
+        "https://openalex.org/W2013349605"
+      ],
+      "abstract_inverted_index": {
+        "Over": [
+          0
+        ],
+        "the": [
+          1,
+          48,
+          68,
+          92,
+          110,
+          121,
+          131,
+          151,
+          207
+        ],
+        "last": [
+          2
+        ],
+        "few": [
+          3,
+          53
+        ],
+        "decades,": [
+          4
+        ],
+        "nonlinear": [
+          5,
+          22,
+          42,
+          59,
+          128,
+          240
+        ],
+        "optics": [
+          6,
+          129
+        ],
+        "has": [
+          7
+        ],
+        "become": [
+          8
+        ],
+        "significantly": [
+          9
+        ],
+        "more": [
+          10
+        ],
+        "nonlinear,": [
+          11
+        ],
+        "traversing": [
+          12
+        ],
+        "nearly": [
+          13
+        ],
+        "a": [
+          14,
+          28,
+          52,
+          84,
+          227
+        ],
+        "billionfold": [
+          15
+        ],
+        "improvement": [
+          16
+        ],
+        "in": [
+          17,
+          24,
+          41,
+          126,
+          161,
+          181,
+          185,
+          214,
+          237
+        ],
+        "energy": [
+          18
+        ],
+        "efficiency,": [
+          19
+        ],
+        "with": [
+          20,
+          91
+        ],
+        "ultrafast": [
+          21,
+          238
+        ],
+        "nanophotonics": [
+          23,
+          43
+        ],
+        "particular": [
+          25
+        ],
+        "emerging": [
+          26
+        ],
+        "as": [
+          27,
+          226,
+          229
+        ],
+        "frontier": [
+          29,
+          236
+        ],
+        "for": [
+          30,
+          137,
+          168
+        ],
+        "combining": [
+          31
+        ],
+        "both": [
+          32,
+          139
+        ],
+        "spatial": [
+          33
+        ],
+        "and": [
+          34,
+          78,
+          106,
+          133,
+          141,
+          154,
+          165,
+          195,
+          201,
+          212,
+          216,
+          219
+        ],
+        "temporal": [
+          35
+        ],
+        "engineering.": [
+          36
+        ],
+        "At": [
+          37
+        ],
+        "present,": [
+          38
+        ],
+        "cutting-edge": [
+          39
+        ],
+        "experiments": [
+          40
+        ],
+        "place": [
+          44
+        ],
+        "us": [
+          45
+        ],
+        "just": [
+          46
+        ],
+        "above": [
+          47
+        ],
+        "mesoscopic": [
+          49,
+          170
+        ],
+        "regime,": [
+          50
+        ],
+        "where": [
+          51
+        ],
+        "hundred": [
+          54
+        ],
+        "photons": [
+          55
+        ],
+        "suffice": [
+          56
+        ],
+        "to": [
+          57,
+          63,
+          109,
+          144,
+          157,
+          192,
+          197,
+          224,
+          232
+        ],
+        "trigger": [
+          58
+        ],
+        "saturation.": [
+          60
+        ],
+        "In": [
+          61,
+          116
+        ],
+        "contrast": [
+          62
+        ],
+        "classical": [
+          64,
+          140
+        ],
+        "or": [
+          65
+        ],
+        "deep-quantum": [
+          66
+        ],
+        "optics,": [
+          67
+        ],
+        "mesoscale": [
+          69,
+          132,
+          208
+        ],
+        "is": [
+          70,
+          222
+        ],
+        "characterized": [
+          71
+        ],
+        "by": [
+          72
+        ],
+        "dynamical": [
+          73
+        ],
+        "interactions": [
+          74
+        ],
+        "between": [
+          75
+        ],
+        "mean-field,": [
+          76
+        ],
+        "Gaussian,": [
+          77
+        ],
+        "non-Gaussian": [
+          79,
+          199
+        ],
+        "quantum": [
+          80,
+          114,
+          142,
+          186,
+          239
+        ],
+        "features,": [
+          81
+        ],
+        "all": [
+          82
+        ],
+        "within": [
+          83
+        ],
+        "close": [
+          85
+        ],
+        "hierarchy": [
+          86
+        ],
+        "of": [
+          87,
+          96,
+          113
+        ],
+        "scales.": [
+          88
+        ],
+        "When": [
+          89
+        ],
+        "combined": [
+          90
+        ],
+        "inherent": [
+          93
+        ],
+        "multimode": [
+          94,
+          127
+        ],
+        "complexity": [
+          95
+        ],
+        "optical": [
+          97
+        ],
+        "fields,": [
+          98
+        ],
+        "such": [
+          99
+        ],
+        "hybrid": [
+          100
+        ],
+        "quantum-classical": [
+          101
+        ],
+        "dynamics": [
+          102,
+          194
+        ],
+        "present": [
+          103,
+          209
+        ],
+        "theoretical,": [
+          104
+        ],
+        "experimental,": [
+          105
+        ],
+        "engineering": [
+          107
+        ],
+        "challenges": [
+          108,
+          160,
+          211
+        ],
+        "contemporary": [
+          111
+        ],
+        "framework": [
+          112
+        ],
+        "optics.": [
+          115,
+          241
+        ],
+        "this": [
+          117,
+          220,
+          234
+        ],
+        "review,": [
+          118
+        ],
+        "we": [
+          119,
+          173,
+          230
+        ],
+        "highlight": [
+          120
+        ],
+        "unique": [
+          122
+        ],
+        "physics": [
+          123,
+          204
+        ],
+        "that": [
+          124
+        ],
+        "emerges": [
+          125
+        ],
+        "at": [
+          130,
+          206
+        ],
+        "outline": [
+          134
+        ],
+        "key": [
+          135
+        ],
+        "principles": [
+          136
+        ],
+        "exploiting": [
+          138
+        ],
+        "features": [
+          143
+        ],
+        "engineer": [
+          145
+        ],
+        "novel": [
+          146
+        ],
+        "functionalities.": [
+          147
+        ],
+        "We": [
+          148
+        ],
+        "briefly": [
+          149
+        ],
+        "survey": [
+          150
+        ],
+        "experimental": [
+          152
+        ],
+        "landscape": [
+          153
+        ],
+        "draw": [
+          155
+        ],
+        "attention": [
+          156
+        ],
+        "outstanding": [
+          158
+        ],
+        "technical": [
+          159
+        ],
+        "materials,": [
+          162
+        ],
+        "dispersion": [
+          163
+        ],
+        "engineering,": [
+          164
+        ],
+        "device": [
+          166
+        ],
+        "design": [
+          167
+        ],
+        "accessing": [
+          169
+        ],
+        "operation.": [
+          171
+        ],
+        "Finally,": [
+          172
+        ],
+        "speculate": [
+          174
+        ],
+        "on": [
+          175
+        ],
+        "how": [
+          176
+        ],
+        "these": [
+          177
+        ],
+        "capabilities": [
+          178
+        ],
+        "might": [
+          179
+        ],
+        "usher": [
+          180
+        ],
+        "some": [
+          182
+        ],
+        "new": [
+          183,
+          235
+        ],
+        "paradigms": [
+          184
+        ],
+        "photonics,": [
+          187
+        ],
+        "from": [
+          188
+        ],
+        "quantum-augmented": [
+          189
+        ],
+        "information": [
+          190
+        ],
+        "processing": [
+          191
+        ],
+        "nonclassical-light-driven": [
+          193
+        ],
+        "phenomena": [
+          196
+        ],
+        "all-optical": [
+          198
+        ],
+        "measurement": [
+          200
+        ],
+        "sensing.": [
+          202
+        ],
+        "The": [
+          203
+        ],
+        "unlocked": [
+          205
+        ],
+        "significant": [
+          210
+        ],
+        "opportunities": [
+          213
+        ],
+        "theory": [
+          215
+        ],
+        "experiment": [
+          217
+        ],
+        "alike,": [
+          218
+        ],
+        "review": [
+          221
+        ],
+        "intended": [
+          223
+        ],
+        "serve": [
+          225
+        ],
+        "guidepost": [
+          228
+        ],
+        "begin": [
+          231
+        ],
+        "navigate": [
+          233
+        ]
+      },
+      "counts_by_year": [
+        {
+          "year": 2024,
+          "cited_by_count": 1
+        }
+      ],
+      "updated_date": "2026-04-21T08:09:41.155169",
+      "created_date": "2025-10-10T00:00:00"
+    }
+  ],
+  "group_by": []
+}
