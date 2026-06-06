@@ -350,7 +350,7 @@ def _plot_fig3b_proxy(*, csv_path: Path, output_path: Path) -> Path:
     ax.set_yscale("log")
     ax.set_xlim(0, 151)
     ax.set_xlabel("Harmonic order")
-    ax.set_ylabel("Emission energy (normalized, offset)")
+    ax.set_ylabel("Emission energy (shared normalized, offset)")
     ax.set_title(f"Gorlach et al. 2023 Fig. 3b {title_model} reproduction")
     ax.legend(frameon=False, loc="upper left", bbox_to_anchor=(1.01, 1.0), borderaxespad=0.0)
     ax.grid(alpha=0.2)
@@ -510,7 +510,9 @@ def run_gorlach_2023_fig3b_proxy(
         mean_spectrum = np.mean(spectra, axis=0)
         std_spectrum = np.std(spectra, axis=0, ddof=1) if shots > 1 else np.zeros_like(mean_spectrum)
         normalization_mask = orders >= normalization_min_harmonic_order
-        normalization_values_by_state.append(mean_spectrum[normalization_mask] if np.any(normalization_mask) else mean_spectrum)
+        normalization_values_by_state.append(
+            mean_spectrum[normalization_mask] if np.any(normalization_mask) else mean_spectrum
+        )
         spectra_by_state[state] = Fig3BStateSpectrum(
             sampled_intensity=sampled_intensity,
             field_amplitudes_au=field_amplitudes,
@@ -625,8 +627,9 @@ def run_gorlach_2023_fig3b_proxy(
     if model is Fig3BSpectrumModel.TDSE:
         notes = (
             "Single-mode Husimi-Q coherent-response sampling with a local TDSE dipole-acceleration "
-            "spectrum library for a closer Gorlach et al. 2023 Fig. 3b reproduction; still not "
-            "the authors' exact source-data reconstruction."
+            "spectrum library and a shared all-driver-state normalization benchmark for a closer "
+            "Gorlach et al. 2023 Fig. 3b reproduction; still not the authors' exact source-data "
+            "reconstruction."
         )
     else:
         notes = (
