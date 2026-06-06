@@ -52,6 +52,9 @@ before answering project questions or changing wiki pages.
   spec for coherent, Fock, thermal, and BSV HHG spectra using single-mode
   Husimi-Q coherent-response sampling with a local TDSE dipole-acceleration
   spectrum library.
+- [[simulations/gorlach-2023-fig-iv2-bsv-threshold]]: supplementary Fig. IV.2
+  reproduction spec for the BSV HHG intensity threshold in a 1D model Ne atom
+  using a TDSE dipole-acceleration response library.
 
 ## Manuscript
 
