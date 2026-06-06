@@ -117,3 +117,20 @@ Append-only chronological record. New entries should use:
   per-shot metadata records, and explicit claim-ladder labels.
 - Kept non-Gaussian output certification, THz models, and macroscopic HHG
   propagation outside the first simulation implementation.
+
+## [2026-06-06] simulation | Paper One Simulation Pipeline
+
+- Implemented the paper-one Python simulation package under `code/`.
+- Added single-mode squeezed-vacuum Wigner validation with normally ordered
+  `g^(2)` correction and naive-estimator comparison.
+- Added mode-filtered equal-mode squeezed-vacuum validation.
+- Added BSV source-model metadata and HHG intensity-level ensemble pipeline
+  with explicit claim-ladder and mechanism-family labels.
+- Added per-shot driver, ionization-proxy, cutoff-proxy, and harmonic-phase
+  records for later bunching, cutoff-fluctuation, and symmetry diagnostics.
+- Added coherent, thermal, and BSV ATI/photon-statistics validation with
+  ionization-rate and electron-number bunching proxies.
+- Added the Wang-style squeezed emitted-mode environment boundary model as a
+  selected-harmonic mechanism separate from BSV pump sampling.
+- Verified the package with `python -m pytest -q` and the paper-one smoke run
+  writing temporary outputs under `results/tmp/paper-one-final-smoke`.
