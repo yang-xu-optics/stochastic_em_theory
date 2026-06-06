@@ -1,4 +1,5 @@
 import csv
+import json
 
 import numpy as np
 import yaml
@@ -50,7 +51,20 @@ def test_ati_statistics_benchmark_writes_manifest_and_rows(tmp_path) -> None:
 
     assert [row["statistics"] for row in rows] == ["coherent", "thermal", "bsv"]
     assert float(rows[0]["estimated_g2"]) < float(rows[1]["estimated_g2"]) < float(rows[2]["estimated_g2"])
+    assert all("ionization_yield_enhancement" in row for row in rows)
+    assert np.isclose(float(rows[0]["ionization_yield_enhancement"]), 1.0)
+    assert float(rows[1]["ionization_yield_enhancement"]) > 0.0
+    assert float(rows[2]["ionization_yield_enhancement"]) > float(rows[1]["ionization_yield_enhancement"])
     assert all(row["mechanism"] == MechanismFamily.ATI_PHOTON_STATISTICS.value for row in rows)
+
+    summary = json.loads(result.summary_path.read_text())
+    assert summary["mean_field_amplitude_au"] == 0.035
+    assert summary["ionization_potential_au"] == 0.7924
+    assert summary["shots"] == 80_000
+    assert summary["mean_intensity_target"] == 0.035**2
+    assert summary["ionization_yield_enhancement_order"] == [
+        float(row["ionization_yield_enhancement"]) for row in rows
+    ]
 
     manifest = yaml.safe_load(result.manifest_path.read_text())
     assert manifest["mechanism"] == MechanismFamily.ATI_PHOTON_STATISTICS.value

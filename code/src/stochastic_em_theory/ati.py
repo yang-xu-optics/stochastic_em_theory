@@ -112,6 +112,12 @@ def run_ati_statistics_benchmark(
             }
         )
 
+    coherent_rate = float(rows[0]["mean_ionization_rate_proxy"])
+    if coherent_rate <= 0:
+        raise ValueError("coherent ionization-rate proxy must be positive")
+    for row in rows:
+        row["ionization_yield_enhancement"] = float(row["mean_ionization_rate_proxy"]) / coherent_rate
+
     csv_path = output_dir / "ati_statistics.csv"
     summary_path = output_dir / "ati_statistics_summary.json"
     manifest_path = output_dir / "manifest.yaml"
@@ -124,6 +130,7 @@ def run_ati_statistics_benchmark(
             "mean_intensity",
             "estimated_g2",
             "mean_ionization_rate_proxy",
+            "ionization_yield_enhancement",
             "electron_number_bunching_proxy",
             "mechanism",
         ],
@@ -133,8 +140,13 @@ def run_ati_statistics_benchmark(
         {
             "rows": len(rows),
             "mechanism": MechanismFamily.ATI_PHOTON_STATISTICS.value,
+            "mean_field_amplitude_au": mean_field_amplitude_au,
+            "ionization_potential_au": ionization_potential_au,
+            "shots": shots,
+            "mean_intensity_target": mean_intensity,
             "statistics_order": [row["statistics"] for row in rows],
             "g2_order": [row["estimated_g2"] for row in rows],
+            "ionization_yield_enhancement_order": [row["ionization_yield_enhancement"] for row in rows],
         },
     )
     write_manifest(
