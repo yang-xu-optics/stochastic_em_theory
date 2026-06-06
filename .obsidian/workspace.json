@@ -183,6 +183,7 @@
   },
   "active": "8ad97e7375a24d50",
   "lastOpenFiles": [
+    "docs/superpowers/plans",
     "docs/superpowers/specs/2026-06-06-correspondence-first-hhg-paper-design.md",
     "docs/superpowers/specs",
     "docs/superpowers",
@@ -217,7 +218,6 @@
     "results/README.md",
     "code/README.md",
     "wiki/simulations/simulation-roadmap.md",
-    "wiki/models/thz-plasma-emission-model.md",
-    "wiki/models/thz-optical-rectification-model.md"
+    "wiki/models/thz-plasma-emission-model.md"
   ]
 }
