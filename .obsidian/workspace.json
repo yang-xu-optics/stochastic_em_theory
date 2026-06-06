@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/log.md",
+                "file": "wiki/simulations/simulation-roadmap.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "log"
+              "title": "simulation-roadmap"
             }
           }
         ]
@@ -183,6 +183,9 @@
   },
   "active": "893432ee7b2df883",
   "lastOpenFiles": [
+    "wiki/log.md",
+    "wiki/overview.md",
+    "wiki/research-agenda.md",
     "results/ingest-2026-06-06-missing-aps/README.md",
     "wiki/sources/lyu-2025-photon-statistics-ati.md",
     "wiki/sources/wang-2024-hhg-atom-squeezed-vacuum-environment.md",
@@ -215,9 +218,6 @@
     "wiki/sources/kim-2025-tunneling-driven-by-quantum-light-described-via-field.md",
     "wiki/sources/stammer-2025-theory-of-quantum-optics-and-optical-coherence-in.md",
     "wiki/sources/rivera-dean-2025-structured-squeezed-light-allows-for-hhg-in-classical.md",
-    "wiki/sources/ciappina-2025-solid-state-hhg-emerging-frontiers-in-ultrafast-and.md",
-    "wiki/sources/wang-2025-quantum-dial-for-hhg.md",
-    "wiki/sources/rivera-dean-2025-propagation-of-intense-squeezed-vacuum-light-in-non.md",
     "results/literature-search-2026-06-06/extracted_text/wang-et-al-2024-attosecond-pulse-synthesis-from-high-order-harmonic-generation-in-intense-squeezed-light.txt"
   ]
 }
