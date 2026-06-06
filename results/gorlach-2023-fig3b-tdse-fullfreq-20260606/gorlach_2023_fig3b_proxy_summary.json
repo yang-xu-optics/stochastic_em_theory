@@ -78,7 +78,7 @@
     "bsv": {
       "cutoff_order_p95": 117.86828793071625,
       "cutoff_order_p99": 194.05511146744016,
-      "display_offset": 150.0,
+      "display_offset": 1000000000.0,
       "mean_alpha_abs2": 14.284071388284998,
       "mean_cutoff_order": 41.28939862737791,
       "mean_field_amplitude_au": 0.06495231073777746,
@@ -102,7 +102,7 @@
     "fock": {
       "cutoff_order_p95": 45.92413792684285,
       "cutoff_order_p99": 47.93786466616268,
-      "display_offset": 6.0,
+      "display_offset": 1000.0,
       "mean_alpha_abs2": 100.93516403969235,
       "mean_cutoff_order": 41.28939862737793,
       "mean_field_amplitude_au": 0.0799010272325746,
@@ -114,7 +114,7 @@
     "thermal": {
       "cutoff_order_p95": 96.6107720763252,
       "cutoff_order_p99": 140.47397802195246,
-      "display_offset": 30.0,
+      "display_offset": 1000000.0,
       "mean_alpha_abs2": 100.85170576015847,
       "mean_cutoff_order": 41.28939862737793,
       "mean_field_amplitude_au": 0.07086373672239772,

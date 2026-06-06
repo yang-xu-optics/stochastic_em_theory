@@ -74,7 +74,9 @@ The TDSE output CSV should include frequency-resolved rows on the FFT harmonic
 order grid, not only odd harmonic samples. The CSV should include raw
 matched-intensity spectra and a display column with vertical offsets for a
 Fig. 3b-like plot. The display offsets are only for visual comparison and must
-not be interpreted as absolute emitted energy differences.
+not be interpreted as absolute emitted energy differences. The current plot
+uses decade-scale offsets for readability: coherent `1`, Fock `1e3`, thermal
+`1e6`, and BSV `1e9`.
 
 ## Model Equations And Units
 
@@ -160,5 +162,5 @@ The first full-frequency upgraded local run is stored at
 `results/gorlach-2023-fig3b-tdse-fullfreq-20260606/`. It uses 50,000
 stochastic shots, 11 TDSE amplitude bins, a `[-80, 80]` bohr grid with 768
 points, `dt = 0.08` a.u., a 5-cycle ramp / 15-cycle flat-top / 5-cycle ramp
-pulse, a complex absorber starting at 75 bohr, and 3,650 harmonic-order FFT
-points per driver state.
+pulse, a complex absorber starting at 75 bohr, 3,650 harmonic-order FFT
+points per driver state, and decade-separated display offsets.

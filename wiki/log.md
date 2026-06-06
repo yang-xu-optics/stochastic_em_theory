@@ -169,3 +169,12 @@ Append-only chronological record. New entries should use:
   stochastic shots, 11 TDSE amplitude bins, 3,650 harmonic-order points per
   driver state, a manifest, parameter file, CSV spectra, and a Fig. 3b-style
   PNG.
+
+## [2026-06-06] simulation | Fig 3b Display Offset Adjustment
+
+- Increased the Fig. 3b plot-only display offsets to coherent `1`, Fock `1e3`,
+  thermal `1e6`, and BSV `1e9` so the four TDSE spectra are visually separated
+  on the logarithmic axis.
+- Regenerated `results/gorlach-2023-fig3b-tdse-fullfreq-20260606/`; the
+  `mean_intensity` and `normalized_intensity` columns remain the data-bearing
+  spectra, while `display_intensity` is the vertically offset plotting column.

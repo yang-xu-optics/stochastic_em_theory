@@ -13,7 +13,7 @@ source_model:
     / mean(|alpha|^2))
   coherent_response: tdse_dipole_acceleration
 code_entrypoint: stochastic_em_theory.fig3b.run_gorlach_2023_fig3b_proxy
-git_commit: 4774df4295b10479b0af89596451d2e948021cb8
+git_commit: 9530db230bbbdd82dabdc158736b4cc6c07c0746
 parameter_file: parameters.yaml
 random_seeds:
 - 20230603
