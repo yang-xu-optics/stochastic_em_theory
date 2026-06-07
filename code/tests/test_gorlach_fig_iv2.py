@@ -9,6 +9,7 @@ from stochastic_em_theory.fig_iv2 import (
     BSV_INTENSITY_SAMPLING,
     FIG_IV2_INTENSITIES_W_CM2,
     TDSE_THRESHOLD_MECHANISM,
+    _display_rows_from_spectrum_rows,
     bsv_intensity_quantile_au,
     effective_bsv_intensity_samples,
     intensity_w_cm2_to_field_au,
@@ -43,6 +44,37 @@ def test_effective_bsv_intensity_samples_can_cap_extreme_tail() -> None:
     assert np.max(effective) <= cap
     assert effective[-1] == cap
     assert effective[0] == raw_samples[0]
+
+
+def test_fig_iv2_display_rolloff_suppresses_late_harmonic_peaks() -> None:
+    rows = []
+    for order in [9.0, 31.0]:
+        rows.append(
+            {
+                "case_label": "BSV - 2e13 W/cm^2",
+                "intensity_w_cm2": 2.0e13,
+                "harmonic_order": order,
+                "mean_intensity": 1.0,
+                "normalized_intensity": 1.0,
+                "mean_cutoff_order": 16.0,
+                "cutoff_order_p95": 23.0,
+                "cutoff_order_p99": 30.0,
+                "bsv_tail_quantile": 0.999,
+                "spectrum_model": "tdse_dipole_acceleration",
+                "frequency_grid": "raw_fft_harmonic_order_grid",
+                "driver_sampling": BSV_INTENSITY_SAMPLING,
+                "normalization_scope": "shared_fig_iv2_intensity_cases",
+                "claim_level": "hhg_intensity_prediction",
+                "mechanism": TDSE_THRESHOLD_MECHANISM,
+            }
+        )
+
+    display_rows = _display_rows_from_spectrum_rows(rows, display_scale=1.0e5, display_floor=1.0e-2)
+    by_order = {row["harmonic_order"]: row for row in display_rows}
+
+    assert by_order[9.0]["display_intensity"] == 1.0e5
+    assert by_order[31.0]["display_intensity"] < 1.0e3
+    assert by_order[31.0]["display_frequency_rolloff"] < 0.01
 
 
 def test_gorlach_fig_iv2_runner_writes_two_intensity_outputs(tmp_path) -> None:

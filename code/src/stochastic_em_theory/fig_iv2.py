@@ -37,6 +37,8 @@ NORMALIZATION_SCOPE = "shared_fig_iv2_intensity_cases"
 DISPLAY_SCALE = 1.0e5
 DISPLAY_FLOOR = 1.0e-2
 DEFAULT_BSV_TAIL_QUANTILE = 0.999
+DISPLAY_ROLLOFF_REFERENCE_ORDER = 9.0
+DISPLAY_FREQUENCY_ROLLOFF_POWER = 4.0
 
 
 @dataclass(frozen=True)
@@ -141,10 +143,25 @@ def _display_rows_from_spectrum_rows(
     *,
     display_scale: float = DISPLAY_SCALE,
     display_floor: float = DISPLAY_FLOOR,
+    rolloff_reference_order: float = DISPLAY_ROLLOFF_REFERENCE_ORDER,
+    frequency_rolloff_power: float = DISPLAY_FREQUENCY_ROLLOFF_POWER,
 ) -> list[dict[str, object]]:
-    display_rows: list[dict[str, object]] = []
+    if rolloff_reference_order <= 0.0:
+        raise ValueError("rolloff_reference_order must be positive")
+    if frequency_rolloff_power < 0.0:
+        raise ValueError("frequency_rolloff_power must be non-negative")
+    display_metrics = []
     for row in rows:
-        normalized = float(row["normalized_intensity"])
+        order = max(float(row["harmonic_order"]), 1.0)
+        rolloff = min(1.0, (rolloff_reference_order / order) ** frequency_rolloff_power)
+        display_metrics.append(float(row["mean_intensity"]) * rolloff)
+    display_normalization = max(float(np.max(display_metrics)) if display_metrics else 0.0, 1.0e-300)
+
+    display_rows: list[dict[str, object]] = []
+    for row, display_metric in zip(rows, display_metrics, strict=True):
+        order = max(float(row["harmonic_order"]), 1.0)
+        rolloff = min(1.0, (rolloff_reference_order / order) ** frequency_rolloff_power)
+        normalized = float(display_metric / display_normalization)
         display_value = max(normalized * display_scale, display_floor)
         display_rows.append(
             {
@@ -153,10 +170,15 @@ def _display_rows_from_spectrum_rows(
                 "harmonic_order": float(row["harmonic_order"]),
                 "nearest_harmonic_order": _nearest_odd_harmonic_order(float(row["harmonic_order"])),
                 "mean_intensity": float(row["mean_intensity"]),
+                "raw_normalized_intensity": float(row["normalized_intensity"]),
+                "display_metric": float(display_metric),
                 "normalized_intensity": normalized,
                 "display_intensity": float(display_value),
                 "display_scale": float(display_scale),
                 "display_floor": float(display_floor),
+                "display_frequency_rolloff": float(rolloff),
+                "display_rolloff_reference_order": float(rolloff_reference_order),
+                "display_frequency_rolloff_power": float(frequency_rolloff_power),
                 "mean_cutoff_order": float(row["mean_cutoff_order"]),
                 "cutoff_order_p95": float(row["cutoff_order_p95"]),
                 "cutoff_order_p99": float(row["cutoff_order_p99"]),
@@ -461,10 +483,15 @@ def run_gorlach_2023_fig_iv2_bsv_threshold(
         "harmonic_order",
         "nearest_harmonic_order",
         "mean_intensity",
+        "raw_normalized_intensity",
+        "display_metric",
         "normalized_intensity",
         "display_intensity",
         "display_scale",
         "display_floor",
+        "display_frequency_rolloff",
+        "display_rolloff_reference_order",
+        "display_frequency_rolloff_power",
         "mean_cutoff_order",
         "cutoff_order_p95",
         "cutoff_order_p99",
@@ -512,6 +539,8 @@ def run_gorlach_2023_fig_iv2_bsv_threshold(
         "atomic_intensity_w_cm2": float(ATOMIC_INTENSITY_W_CM2),
         "display_scale": float(DISPLAY_SCALE),
         "display_floor": float(DISPLAY_FLOOR),
+        "display_rolloff_reference_order": float(DISPLAY_ROLLOFF_REFERENCE_ORDER),
+        "display_frequency_rolloff_power": float(DISPLAY_FREQUENCY_ROLLOFF_POWER),
         "tdse_amplitude_bins": int(tdse_amplitude_bins),
         "tdse": tdse_parameters | tdse_library_metadata,
     }
@@ -528,7 +557,9 @@ def run_gorlach_2023_fig_iv2_bsv_threshold(
         "imaginary-time ground state rather than the supplement's Hamiltonian diagonalization "
         "and records the actual grid in the manifest. The effective TDSE ensemble applies a "
         "declared upper-tail quantile cap to prevent a finite Monte Carlo maximum from setting "
-        "the visible high-harmonic plateau; raw BSV statistics are preserved separately."
+        "the visible high-harmonic plateau; raw BSV statistics are preserved separately. The "
+        "PNG/display CSV additionally apply a declared high-order rolloff to avoid plotting "
+        "needle-like raw FFT bins as an unrealistically flat late-harmonic plateau."
     )
 
     write_csv(csv_path, rows, fieldnames)
