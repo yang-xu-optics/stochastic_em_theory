@@ -11,6 +11,7 @@ import numpy as np
 matplotlib.use("Agg")
 
 import matplotlib.pyplot as plt
+from scipy.special import erfinv
 
 from stochastic_em_theory.claim_ladder import ClaimLevel
 from stochastic_em_theory.fig3b import (
@@ -35,13 +36,15 @@ OBSERVABLE = "ensemble_mean_bsv_tdse_hhg_threshold_spectrum"
 NORMALIZATION_SCOPE = "shared_fig_iv2_intensity_cases"
 DISPLAY_SCALE = 1.0e5
 DISPLAY_FLOOR = 1.0e-2
+DEFAULT_BSV_TAIL_QUANTILE = 0.999
 
 
 @dataclass(frozen=True)
 class FigIV2CaseSpectrum:
     intensity_w_cm2: float
     case_label: str
-    sampled_intensity_au: np.ndarray
+    raw_sampled_intensity_au: np.ndarray
+    effective_sampled_intensity_au: np.ndarray
     field_amplitudes_au: np.ndarray
     cutoff_orders: np.ndarray
     mean_spectrum: np.ndarray
@@ -68,6 +71,30 @@ def sample_bsv_intensity_au(
         raise ValueError("shots must be positive")
     samples = rng.gamma(shape=0.5, scale=2.0 * mean_intensity_au, size=shots)
     return np.asarray(samples, dtype=np.float64)
+
+
+def bsv_intensity_quantile_au(*, mean_intensity_au: float, quantile: float) -> float:
+    if mean_intensity_au <= 0.0:
+        raise ValueError("mean_intensity_au must be positive")
+    if not (0.0 < quantile < 1.0):
+        raise ValueError("quantile must be between 0 and 1")
+    return float(2.0 * mean_intensity_au * erfinv(quantile) ** 2)
+
+
+def effective_bsv_intensity_samples(
+    raw_samples: np.ndarray,
+    *,
+    mean_intensity_au: float,
+    tail_quantile: float | None,
+) -> np.ndarray:
+    if raw_samples.ndim != 1:
+        raise ValueError("raw_samples must be one-dimensional")
+    if np.any(raw_samples < 0.0):
+        raise ValueError("raw_samples must be non-negative")
+    if tail_quantile is None:
+        return raw_samples.astype(np.float64, copy=True)
+    cap = bsv_intensity_quantile_au(mean_intensity_au=mean_intensity_au, quantile=tail_quantile)
+    return np.minimum(raw_samples, cap).astype(np.float64)
 
 
 def _coerce_spectrum_model(model: str) -> str:
@@ -97,10 +124,16 @@ def _sample_case_fields(
     intensity_w_cm2: float,
     shots: int,
     rng: np.random.Generator,
-) -> tuple[np.ndarray, np.ndarray]:
+    bsv_tail_quantile: float | None,
+) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
     mean_field = intensity_w_cm2_to_field_au(intensity_w_cm2)
-    sampled_intensity = sample_bsv_intensity_au(mean_intensity_au=mean_field**2, shots=shots, rng=rng)
-    return sampled_intensity, np.sqrt(sampled_intensity).astype(np.float64)
+    raw_sampled_intensity = sample_bsv_intensity_au(mean_intensity_au=mean_field**2, shots=shots, rng=rng)
+    effective_sampled_intensity = effective_bsv_intensity_samples(
+        raw_sampled_intensity,
+        mean_intensity_au=mean_field**2,
+        tail_quantile=bsv_tail_quantile,
+    )
+    return raw_sampled_intensity, effective_sampled_intensity, np.sqrt(effective_sampled_intensity).astype(np.float64)
 
 
 def _display_rows_from_spectrum_rows(
@@ -127,6 +160,7 @@ def _display_rows_from_spectrum_rows(
                 "mean_cutoff_order": float(row["mean_cutoff_order"]),
                 "cutoff_order_p95": float(row["cutoff_order_p95"]),
                 "cutoff_order_p99": float(row["cutoff_order_p99"]),
+                "bsv_tail_quantile": row["bsv_tail_quantile"],
                 "spectrum_model": str(row["spectrum_model"]),
                 "frequency_grid": str(row["frequency_grid"]),
                 "driver_sampling": str(row["driver_sampling"]),
@@ -208,6 +242,7 @@ def run_gorlach_2023_fig_iv2_bsv_threshold(
     tdse_normalization_min_harmonic_order: float = 1.0,
     tdse_absorber_start_au: float | None = 75.0,
     tdse_absorber_strength: float = 5.0e-4,
+    bsv_tail_quantile: float | None = DEFAULT_BSV_TAIL_QUANTILE,
 ) -> RunArtifacts:
     if shots <= 0:
         raise ValueError("shots must be positive")
@@ -219,6 +254,8 @@ def run_gorlach_2023_fig_iv2_bsv_threshold(
         raise ValueError("ionization_potential_au must be positive")
     if tdse_min_harmonic_order < 0.0:
         raise ValueError("tdse_min_harmonic_order must be non-negative")
+    if bsv_tail_quantile is not None and not (0.0 < bsv_tail_quantile < 1.0):
+        raise ValueError("bsv_tail_quantile must be between 0 and 1")
 
     intensities = _ordered_intensities(intensities_w_cm2)
     spectrum_model_name = _coerce_spectrum_model(spectrum_model)
@@ -226,15 +263,21 @@ def run_gorlach_2023_fig_iv2_bsv_threshold(
     output_dir = ensure_output_dir(output_dir)
     rng = np.random.default_rng(seed)
 
-    sampled_cases: dict[float, tuple[str, np.ndarray, np.ndarray]] = {}
+    sampled_cases: dict[float, tuple[str, np.ndarray, np.ndarray, np.ndarray]] = {}
     all_field_amplitudes: list[np.ndarray] = []
     for intensity_w_cm2 in intensities:
-        sampled_intensity, field_amplitudes = _sample_case_fields(
+        raw_sampled_intensity, effective_sampled_intensity, field_amplitudes = _sample_case_fields(
             intensity_w_cm2=intensity_w_cm2,
             shots=shots,
             rng=rng,
+            bsv_tail_quantile=bsv_tail_quantile,
         )
-        sampled_cases[intensity_w_cm2] = (_case_label(intensity_w_cm2), sampled_intensity, field_amplitudes)
+        sampled_cases[intensity_w_cm2] = (
+            _case_label(intensity_w_cm2),
+            raw_sampled_intensity,
+            effective_sampled_intensity,
+            field_amplitudes,
+        )
         all_field_amplitudes.append(field_amplitudes)
 
     tdse_library_amplitudes: np.ndarray | None = None
@@ -270,7 +313,12 @@ def run_gorlach_2023_fig_iv2_bsv_threshold(
 
     spectra_by_case: dict[float, FigIV2CaseSpectrum] = {}
     normalization_values: list[np.ndarray] = []
-    for intensity_w_cm2, (case_label, sampled_intensity, field_amplitudes) in sampled_cases.items():
+    for intensity_w_cm2, (
+        case_label,
+        raw_sampled_intensity,
+        effective_sampled_intensity,
+        field_amplitudes,
+    ) in sampled_cases.items():
         cutoff_orders = _cutoff_orders_from_field(
             field_amplitudes_au=field_amplitudes,
             omega_au=omega_au,
@@ -301,7 +349,8 @@ def run_gorlach_2023_fig_iv2_bsv_threshold(
         spectra_by_case[intensity_w_cm2] = FigIV2CaseSpectrum(
             intensity_w_cm2=intensity_w_cm2,
             case_label=case_label,
-            sampled_intensity_au=sampled_intensity,
+            raw_sampled_intensity_au=raw_sampled_intensity,
+            effective_sampled_intensity_au=effective_sampled_intensity,
             field_amplitudes_au=field_amplitudes,
             cutoff_orders=cutoff_orders,
             mean_spectrum=mean_spectrum,
@@ -317,15 +366,24 @@ def run_gorlach_2023_fig_iv2_bsv_threshold(
     case_summaries: dict[str, dict[str, float]] = {}
     for intensity_w_cm2 in intensities:
         case = spectra_by_case[intensity_w_cm2]
-        sampled_intensity = case.sampled_intensity_au
+        raw_sampled_intensity = case.raw_sampled_intensity_au
+        effective_sampled_intensity = case.effective_sampled_intensity_au
         cutoff_orders = case.cutoff_orders
-        intensity_g2 = float(np.mean(sampled_intensity**2) / np.mean(sampled_intensity) ** 2)
+        raw_intensity_g2 = float(np.mean(raw_sampled_intensity**2) / np.mean(raw_sampled_intensity) ** 2)
+        effective_intensity_g2 = float(
+            np.mean(effective_sampled_intensity**2) / np.mean(effective_sampled_intensity) ** 2
+        )
+        clipped_fraction = float(np.mean(effective_sampled_intensity < raw_sampled_intensity))
         mean_peak_field = intensity_w_cm2_to_field_au(intensity_w_cm2)
         case_summaries[case.case_label] = {
             "intensity_w_cm2": float(intensity_w_cm2),
             "mean_peak_field_amplitude_au": float(mean_peak_field),
-            "sampled_mean_intensity_au": float(np.mean(sampled_intensity)),
-            "sampled_intensity_g2": intensity_g2,
+            "raw_sampled_mean_intensity_au": float(np.mean(raw_sampled_intensity)),
+            "effective_sampled_mean_intensity_au": float(np.mean(effective_sampled_intensity)),
+            "raw_intensity_g2": raw_intensity_g2,
+            "effective_intensity_g2": effective_intensity_g2,
+            "tail_capped_sample_fraction": clipped_fraction,
+            "bsv_tail_quantile": None if bsv_tail_quantile is None else float(bsv_tail_quantile),
             "mean_cutoff_order": float(np.mean(cutoff_orders)),
             "std_cutoff_order": float(np.std(cutoff_orders, ddof=1)) if shots > 1 else 0.0,
             "cutoff_order_p95": float(np.quantile(cutoff_orders, 0.95)),
@@ -349,7 +407,10 @@ def run_gorlach_2023_fig_iv2_bsv_threshold(
                     "mean_cutoff_order": case_summaries[case.case_label]["mean_cutoff_order"],
                     "cutoff_order_p95": case_summaries[case.case_label]["cutoff_order_p95"],
                     "cutoff_order_p99": case_summaries[case.case_label]["cutoff_order_p99"],
-                    "intensity_g2": intensity_g2,
+                    "raw_intensity_g2": raw_intensity_g2,
+                    "effective_intensity_g2": effective_intensity_g2,
+                    "tail_capped_sample_fraction": clipped_fraction,
+                    "bsv_tail_quantile": None if bsv_tail_quantile is None else float(bsv_tail_quantile),
                     "spectrum_model": spectrum_model_name,
                     "frequency_grid": frequency_grid,
                     "tdse_amplitude_bin_count": tdse_bin_count,
@@ -380,7 +441,10 @@ def run_gorlach_2023_fig_iv2_bsv_threshold(
         "mean_cutoff_order",
         "cutoff_order_p95",
         "cutoff_order_p99",
-        "intensity_g2",
+        "raw_intensity_g2",
+        "effective_intensity_g2",
+        "tail_capped_sample_fraction",
+        "bsv_tail_quantile",
         "spectrum_model",
         "frequency_grid",
         "tdse_amplitude_bin_count",
@@ -404,6 +468,7 @@ def run_gorlach_2023_fig_iv2_bsv_threshold(
         "mean_cutoff_order",
         "cutoff_order_p95",
         "cutoff_order_p99",
+        "bsv_tail_quantile",
         "spectrum_model",
         "frequency_grid",
         "driver_sampling",
@@ -441,6 +506,7 @@ def run_gorlach_2023_fig_iv2_bsv_threshold(
         "spectrum_model": spectrum_model_name,
         "frequency_grid": frequency_grid,
         "driver_sampling": BSV_INTENSITY_SAMPLING,
+        "bsv_tail_quantile": None if bsv_tail_quantile is None else float(bsv_tail_quantile),
         "normalization_scope": NORMALIZATION_SCOPE,
         "normalization_benchmark_intensity": float(normalization),
         "atomic_intensity_w_cm2": float(ATOMIC_INTENSITY_W_CM2),
@@ -460,7 +526,9 @@ def run_gorlach_2023_fig_iv2_bsv_threshold(
         "with g2 approximately 3, and each coherent component is evaluated with the selected "
         "response model before incoherent ensemble averaging. The TDSE path uses the local "
         "imaginary-time ground state rather than the supplement's Hamiltonian diagonalization "
-        "and records the actual grid in the manifest."
+        "and records the actual grid in the manifest. The effective TDSE ensemble applies a "
+        "declared upper-tail quantile cap to prevent a finite Monte Carlo maximum from setting "
+        "the visible high-harmonic plateau; raw BSV statistics are preserved separately."
     )
 
     write_csv(csv_path, rows, fieldnames)
@@ -490,6 +558,7 @@ def run_gorlach_2023_fig_iv2_bsv_threshold(
                 "representation": "single-mode BSV random-phase intensity distribution",
                 "driver_sampling": BSV_INTENSITY_SAMPLING,
                 "intensity_distribution": "Gamma(shape=1/2, scale=2*mean_intensity_au)",
+                "bsv_tail_quantile": None if bsv_tail_quantile is None else float(bsv_tail_quantile),
                 "coherent_response": spectrum_model_name,
             },
             "atom_model": {

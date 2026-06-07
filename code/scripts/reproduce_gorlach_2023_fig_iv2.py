@@ -3,7 +3,11 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from stochastic_em_theory.fig_iv2 import FIG_IV2_INTENSITIES_W_CM2, run_gorlach_2023_fig_iv2_bsv_threshold
+from stochastic_em_theory.fig_iv2 import (
+    DEFAULT_BSV_TAIL_QUANTILE,
+    FIG_IV2_INTENSITIES_W_CM2,
+    run_gorlach_2023_fig_iv2_bsv_threshold,
+)
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -38,6 +42,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--tdse-normalization-min-harmonic-order", type=float, default=1.0)
     parser.add_argument("--tdse-absorber-start-au", type=float, default=75.0)
     parser.add_argument("--tdse-absorber-strength", type=float, default=5.0e-4)
+    parser.add_argument("--bsv-tail-quantile", type=float, default=DEFAULT_BSV_TAIL_QUANTILE)
     return parser
 
 
@@ -68,6 +73,7 @@ def main() -> int:
         tdse_normalization_min_harmonic_order=args.tdse_normalization_min_harmonic_order,
         tdse_absorber_start_au=args.tdse_absorber_start_au,
         tdse_absorber_strength=args.tdse_absorber_strength,
+        bsv_tail_quantile=args.bsv_tail_quantile,
     )
     print(artifacts.csv_path)
     print(artifacts.summary_path)
