@@ -9,6 +9,8 @@ from stochastic_em_theory.fig_iv2 import (
     BSV_INTENSITY_SAMPLING,
     FIG_IV2_INTENSITIES_W_CM2,
     TDSE_THRESHOLD_MECHANISM,
+    bsv_intensity_quantile_au,
+    effective_bsv_intensity_samples,
     intensity_w_cm2_to_field_au,
     run_gorlach_2023_fig_iv2_bsv_threshold,
     sample_bsv_intensity_au,
@@ -31,6 +33,18 @@ def test_bsv_intensity_sampler_has_mean_and_g2_of_single_mode_bsv() -> None:
     assert np.isclose(float(np.mean(samples**2) / np.mean(samples) ** 2), 3.0, rtol=0.04)
 
 
+def test_effective_bsv_intensity_samples_can_cap_extreme_tail() -> None:
+    mean_intensity_au = intensity_w_cm2_to_field_au(2.0e13) ** 2
+    raw_samples = np.array([0.1, 1.0, 10.0, 100.0]) * mean_intensity_au
+    cap = bsv_intensity_quantile_au(mean_intensity_au=mean_intensity_au, quantile=0.99)
+
+    effective = effective_bsv_intensity_samples(raw_samples, mean_intensity_au=mean_intensity_au, tail_quantile=0.99)
+
+    assert np.max(effective) <= cap
+    assert effective[-1] == cap
+    assert effective[0] == raw_samples[0]
+
+
 def test_gorlach_fig_iv2_runner_writes_two_intensity_outputs(tmp_path) -> None:
     artifacts = run_gorlach_2023_fig_iv2_bsv_threshold(
         output_dir=tmp_path,
@@ -41,6 +55,7 @@ def test_gorlach_fig_iv2_runner_writes_two_intensity_outputs(tmp_path) -> None:
         ionization_potential_au=0.7924,
         max_order=39,
         spectrum_model="proxy",
+        bsv_tail_quantile=0.999,
     )
 
     figure_path = tmp_path / "gorlach_2023_fig_iv2_bsv_threshold.png"
@@ -66,6 +81,7 @@ def test_gorlach_fig_iv2_runner_writes_two_intensity_outputs(tmp_path) -> None:
     assert all(row["mechanism"] == TDSE_THRESHOLD_MECHANISM for row in rows)
     assert all(row["driver_sampling"] == BSV_INTENSITY_SAMPLING for row in rows)
     assert all(row["normalization_scope"] == "shared_fig_iv2_intensity_cases" for row in rows)
+    assert all(row["bsv_tail_quantile"] == "0.999" for row in rows)
 
     high_order_rows = {float(row["intensity_w_cm2"]): row for row in rows if float(row["harmonic_order"]) == 39.0}
     assert float(high_order_rows[2.0e13]["mean_intensity"]) > float(high_order_rows[1.0e13]["mean_intensity"])
@@ -74,6 +90,12 @@ def test_gorlach_fig_iv2_runner_writes_two_intensity_outputs(tmp_path) -> None:
     assert summary["intensities_w_cm2"] == list(FIG_IV2_INTENSITIES_W_CM2)
     assert summary["parameters"]["spectrum_model"] == "smooth_cutoff_proxy"
     assert summary["parameters"]["driver_sampling"] == BSV_INTENSITY_SAMPLING
+    assert summary["parameters"]["bsv_tail_quantile"] == 0.999
+    assert summary["case_summaries"]["BSV - 2e13 W/cm^2"]["raw_intensity_g2"] > 2.5
+    assert (
+        summary["case_summaries"]["BSV - 2e13 W/cm^2"]["effective_intensity_g2"]
+        < summary["case_summaries"]["BSV - 2e13 W/cm^2"]["raw_intensity_g2"]
+    )
     assert summary["case_summaries"]["BSV - 2e13 W/cm^2"]["cutoff_order_p99"] > 30.0
     assert (
         summary["case_summaries"]["BSV - 2e13 W/cm^2"]["cutoff_order_p99"]
