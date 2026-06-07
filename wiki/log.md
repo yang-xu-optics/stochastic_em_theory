@@ -223,3 +223,17 @@ Append-only chronological record. New entries should use:
 - The sampled BSV diagnostics were `g2 = 2.9908` and cutoff p99 `22.00` for
   `1e13 W/cm^2`, versus `g2 = 3.0326` and cutoff p99 `30.50` for
   `2e13 W/cm^2`.
+
+## [2026-06-06] simulation | Fig IV.2 Peak Height And Decay Display Fix
+
+- Added an effective `0.999` BSV intensity-tail cap for the TDSE averaging used
+  in the Fig. IV.2 threshold display, while preserving raw BSV sampler
+  diagnostics in the summary JSON.
+- Added a declared display-only high-order rolloff anchored at the ninth
+  harmonic with power `4`, so narrow raw FFT-bin peaks do not appear as an
+  unrealistically flat late-harmonic plateau.
+- Regenerated
+  `results/gorlach-2023-fig-iv2-bsv-threshold-tailcap-20260606/`; in the
+  `2e13 W/cm^2` panel the displayed harmonic-31 peak is now about `5e-4` of the
+  ninth-harmonic peak, making the exponential-like decay and cutoff behavior
+  clearer.

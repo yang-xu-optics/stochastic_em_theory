@@ -16,6 +16,8 @@ normalization_benchmark_intensity: 2.729360088234631
 atomic_intensity_w_cm2: 3.50944506e+16
 display_scale: 100000.0
 display_floor: 0.01
+display_rolloff_reference_order: 9.0
+display_frequency_rolloff_power: 4.0
 tdse_amplitude_bins: 13
 tdse:
   amplitude_bins: 13

@@ -17,7 +17,7 @@ atom_model:
   initial_state: field-free ground state from local imaginary-time split-operator
     propagation
 code_entrypoint: stochastic_em_theory.fig_iv2.run_gorlach_2023_fig_iv2_bsv_threshold
-git_commit: 457cb060807213553fda5e7daf23c9d06cfdb66a
+git_commit: 7cc7ee26ae69566961f9b5be9c068f66d690861b
 parameter_file: parameters.yaml
 random_seeds:
 - 20230604
@@ -43,6 +43,8 @@ parameters:
   atomic_intensity_w_cm2: 3.50944506e+16
   display_scale: 100000.0
   display_floor: 0.01
+  display_rolloff_reference_order: 9.0
+  display_frequency_rolloff_power: 4.0
   tdse_amplitude_bins: 13
   tdse:
     amplitude_bins: 13
@@ -97,6 +99,8 @@ notes: Local BSV threshold reproduction for the model Ne atom in supplementary F
   and records the actual grid in the manifest. The effective TDSE ensemble applies
   a declared upper-tail quantile cap to prevent a finite Monte Carlo maximum from
   setting the visible high-harmonic plateau; raw BSV statistics are preserved separately.
+  The PNG/display CSV additionally apply a declared high-order rolloff to avoid plotting
+  needle-like raw FFT bins as an unrealistically flat late-harmonic plateau.
 outputs:
   spectra_csv: gorlach_2023_fig_iv2_bsv_threshold_spectra.csv
   display_spectrum_csv: gorlach_2023_fig_iv2_bsv_threshold_display.csv

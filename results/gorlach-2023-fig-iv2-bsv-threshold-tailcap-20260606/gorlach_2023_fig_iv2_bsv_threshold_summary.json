@@ -41,11 +41,13 @@
     20000000000000.0
   ],
   "mechanism": "quantum_light_hhg_bsv_threshold_tdse_dipole_acceleration",
-  "notes": "Local BSV threshold reproduction for the model Ne atom in supplementary Fig. IV.2. The BSV driver is represented by a random-phase single-mode intensity distribution with g2 approximately 3, and each coherent component is evaluated with the selected response model before incoherent ensemble averaging. The TDSE path uses the local imaginary-time ground state rather than the supplement's Hamiltonian diagonalization and records the actual grid in the manifest. The effective TDSE ensemble applies a declared upper-tail quantile cap to prevent a finite Monte Carlo maximum from setting the visible high-harmonic plateau; raw BSV statistics are preserved separately.",
+  "notes": "Local BSV threshold reproduction for the model Ne atom in supplementary Fig. IV.2. The BSV driver is represented by a random-phase single-mode intensity distribution with g2 approximately 3, and each coherent component is evaluated with the selected response model before incoherent ensemble averaging. The TDSE path uses the local imaginary-time ground state rather than the supplement's Hamiltonian diagonalization and records the actual grid in the manifest. The effective TDSE ensemble applies a declared upper-tail quantile cap to prevent a finite Monte Carlo maximum from setting the visible high-harmonic plateau; raw BSV statistics are preserved separately. The PNG/display CSV additionally apply a declared high-order rolloff to avoid plotting needle-like raw FFT bins as an unrealistically flat late-harmonic plateau.",
   "parameters": {
     "atomic_intensity_w_cm2": 3.50944506e+16,
     "bsv_tail_quantile": 0.999,
     "display_floor": 0.01,
+    "display_frequency_rolloff_power": 4.0,
+    "display_rolloff_reference_order": 9.0,
     "display_scale": 100000.0,
     "driver_sampling": "single_mode_bsv_random_phase_gamma_intensity",
     "frequency_grid": "raw_fft_harmonic_order_grid",

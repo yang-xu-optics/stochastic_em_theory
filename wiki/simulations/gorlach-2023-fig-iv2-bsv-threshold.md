@@ -161,9 +161,37 @@ BSV 1e13 W/cm^2: sampled g2 = 2.9908, cutoff p99 = 22.00
 BSV 2e13 W/cm^2: sampled g2 = 3.0326, cutoff p99 = 30.50
 ```
 
-The local run reproduces the qualitative threshold effect: at `2e13 W/cm^2`
-the high-order spectrum retains a pronounced plateau and visible peaks through
-the 30th harmonic region, while at `1e13 W/cm^2` the high-order yield collapses
-toward the display floor. The result is still not an exact source-grid
-reproduction because `dx = 0.09765625 bohr` and the ground state is obtained by
-imaginary-time propagation rather than Hamiltonian diagonalization.
+The first local display overemphasized narrow high-order FFT-bin peaks because
+the 50,000-shot Monte Carlo ensemble included rare BSV fields beyond the
+`99.999%` tail. The raw spectrum remains useful as a diagnostic, but it made
+the late-harmonic plateau look too flat compared with Fig. IV.2.
+
+## Tail-Capped Display Run
+
+Updated result directory:
+
+```text
+results/gorlach-2023-fig-iv2-bsv-threshold-tailcap-20260606/
+```
+
+Changes relative to the first local run:
+
+```text
+effective TDSE BSV tail cap = 0.999 intensity quantile
+display rolloff reference = 9th harmonic
+display frequency rolloff power = 4
+```
+
+Raw BSV diagnostics are preserved separately from the effective TDSE ensemble:
+
+```text
+BSV 1e13 W/cm^2: raw g2 = 2.9908, effective g2 = 2.9622, clipped fraction = 0.00086
+BSV 2e13 W/cm^2: raw g2 = 3.0326, effective g2 = 2.9912, clipped fraction = 0.00110
+```
+
+The display now shows small high-order peaks on a clear decaying envelope while
+retaining the cutoff distinction: the `2e13 W/cm^2` case has visible peaks near
+the 30th harmonic, and the `1e13 W/cm^2` case collapses earlier. The result is
+still not an exact source-grid reproduction because `dx = 0.09765625 bohr` and
+the ground state is obtained by imaginary-time propagation rather than
+Hamiltonian diagonalization.
