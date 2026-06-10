@@ -265,3 +265,16 @@ Append-only chronological record. New entries should use:
   fractions; main PNG now plots continuous raw-bin spectra; new optional
   published-overlay figure; fig IV.2 defaults aligned to the same grid.
 - New production run: `results/gorlach-2023-fig3b-tdse-calibrated-20260609/`.
+
+## [2026-06-09] simulation | Demonstration Notebook For g2 And Quantum-Light HHG
+
+- Added `code/notebooks/stochastic_g2_and_hhg.ipynb` (generated and kept in
+  sync by `code/notebooks/build_stochastic_g2_and_hhg_notebook.py`, executed
+  end-to-end with the project venv kernel). Part (a): Wigner sampling plus the
+  symmetric-to-normal ordering correction reproduces `g2(0) = 3 + 1/<n>` for
+  single-mode squeezed vacuum across `r = 0.25..2.5`, plus coherent (`1`),
+  thermal (`2`), and equal-mode BSV (`1 + 2/M + 1/(M sinh^2 r)`) cross-checks;
+  the naive Wigner intensity-moment estimate is shown failing. Part (b):
+  notebook-fidelity Husimi-Q + 1D TDSE ensemble (20,000 shots, 9 library
+  amplitudes, `E0 = 0.038 a.u.`) reproduces the Fig. 3b state ordering and
+  overlays the published source-data curves for the coherent and BSV drivers.
