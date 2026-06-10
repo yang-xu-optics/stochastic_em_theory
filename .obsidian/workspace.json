@@ -11,14 +11,12 @@
             "id": "893432ee7b2df883",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "CLAUDE.md",
-                "mode": "source",
-                "source": false
+                "file": "results/gorlach-2023-fig-iv2-bsv-threshold-20260606/gorlach_2023_fig_iv2_bsv_threshold.png"
               },
-              "icon": "lucide-file",
-              "title": "CLAUDE"
+              "icon": "lucide-image",
+              "title": "gorlach_2023_fig_iv2_bsv_threshold"
             }
           }
         ]
@@ -194,8 +192,8 @@
   },
   "active": "893432ee7b2df883",
   "lastOpenFiles": [
-    "AGENTS.md",
     "CLAUDE.md",
+    "AGENTS.md",
     "paper/outline.md",
     "results/gorlach-2023-fig3b-proxy/gorlach_2023_fig3b_proxy.png",
     "results/gorlach-2023-fig3b-proxy/gorlach_2023_fig3b_proxy_summary.json",
