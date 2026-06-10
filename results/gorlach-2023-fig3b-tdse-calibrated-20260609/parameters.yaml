@@ -1,0 +1,76 @@
+shots: 50000
+seed: 20230603
+base_field_amplitude_au: 0.038
+omega_au: 0.057
+ionization_potential_au: 0.7924
+max_order: 151
+mean_photon_number: 100.0
+fock_n: 100
+bsv_r: 3.0
+bsv_phase: 0.0
+nonlinearity_power: 6.0
+spectrum_model: tdse_dipole_acceleration
+frequency_grid: raw_fft_harmonic_order_grid
+normalization_min_harmonic_order: 13.901754385964912
+normalization_scope: shared_all_driver_states
+normalization_benchmark_intensity: 60.555384201991714
+tdse_amplitude_bins: 17
+tdse:
+  amplitude_bins: 17
+  tail_cap_quantile: 0.999
+  tail_cap_field_amplitude_au: 0.10901653580938014
+  x_min: -100.0
+  x_max: 100.0
+  grid_points: 2048
+  softening: 0.816
+  dt_au: 0.03
+  ramp_cycles: 5.0
+  flat_cycles: 15.0
+  ground_state_iterations: 2000
+  ground_state_dt_au: 0.05
+  carrier_phase: 0.0
+  min_harmonic_order: 1.0
+  normalization_min_harmonic_order: 13.901754385964912
+  absorber_start_au: 75.0
+  absorber_strength: 0.0005
+  spectrum_model: tdse_dipole_acceleration
+  frequency_grid: raw_fft_harmonic_order_grid
+  amplitude_bin_count: 17
+  field_amplitude_min_au: 5.345461253579595e-05
+  field_amplitude_max_au: 0.10901653580938014
+  field_amplitude_values_au:
+  - 5.345461253579595e-05
+  - 0.01592074350528476
+  - 0.02746599021161724
+  - 0.034706654258958525
+  - 0.036385391531465264
+  - 0.03740242875245225
+  - 0.03824417492162872
+  - 0.03905558788411584
+  - 0.03992446489151687
+  - 0.04103264352653661
+  - 0.043069330888227314
+  - 0.048757115072631474
+  - 0.05625453963540939
+  - 0.06507735612862783
+  - 0.07635281625766953
+  - 0.09374667898254127
+  - 0.10901653580938014
+  max_harmonic_order: 151.0
+  harmonic_order_points: 3750
+  harmonic_order_spacing: 0.03999931823754821
+  time_steps: 91861
+  dx_au: 0.09765625
+display_processing:
+  frequency_grid: background_subtracted_raw_peak_window_grid
+  mode: raw_peak_window_minus_local_background
+  peak_window_half_width: 0.35
+  background_inner_width: 0.55
+  background_outer_width: 0.95
+  display_min_normalized: 0.001
+  harmonic_yield_frequency_grid: odd_harmonic_window_yield_grid
+  harmonic_yield_display_min_normalized: 0.003
+driver_sampling: single_mode_husimi_q_fig3b
+field_normalization: field_amplitude = base_field_amplitude_au * sqrt(|alpha|^2 /
+  mean(|alpha|^2))
+published_reference_csv: /Users/simontsui/Desktop/Research/Projects/stochastic_em_theory/results/gorlach-2023-fig3b-published-reference/fig3b_published_curves.csv

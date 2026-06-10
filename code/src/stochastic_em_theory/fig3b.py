@@ -520,6 +520,73 @@ def _cleaned_peak_rows_from_spectrum_rows(
     return display_rows
 
 
+PUBLISHED_STATE_NAMES: dict[Fig3BDriverState, str] = {
+    Fig3BDriverState.COHERENT: "Coherent state",
+    Fig3BDriverState.FOCK: "Number state",
+    Fig3BDriverState.THERMAL: "Thermal light",
+    Fig3BDriverState.BSV: "Squeezed Vacuum",
+}
+
+
+def _plot_published_overlay(
+    *,
+    csv_path: Path,
+    published_reference_csv: Path,
+    output_path: Path,
+    reference_order_min: float = 8.0,
+    reference_order_max: float = 10.0,
+) -> Path:
+    """Overlay local ensemble-mean spectra on the published Fig. 3b source-data curves.
+
+    Both curves are normalized to their peak inside the shared reference
+    harmonic-order window so shapes and cutoffs can be compared directly.
+    """
+
+    import csv
+
+    local: dict[str, list[tuple[float, float]]] = {}
+    with csv_path.open(newline="") as handle:
+        for row in csv.DictReader(handle):
+            local.setdefault(row["driver_state"], []).append(
+                (float(row["harmonic_order"]), float(row["mean_intensity"]))
+            )
+    published: dict[str, list[tuple[float, float]]] = {}
+    with published_reference_csv.open(newline="") as handle:
+        for row in csv.DictReader(handle):
+            published.setdefault(row["state"], []).append(
+                (float(row["harmonic_order"]), float(row["intensity"]))
+            )
+
+    def normalized(points: list[tuple[float, float]]) -> tuple[np.ndarray, np.ndarray]:
+        data = np.array(sorted(points), dtype=np.float64)
+        window = (data[:, 0] >= reference_order_min) & (data[:, 0] <= reference_order_max)
+        reference = float(np.max(data[window, 1])) if np.any(window) else float(np.max(data[:, 1]))
+        return data[:, 0], data[:, 1] / max(reference, 1.0e-300)
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    fig, axes = plt.subplots(2, 2, figsize=(11.0, 7.4), sharex=True, constrained_layout=True)
+    for ax, state in zip(axes.flat, Fig3BDriverState, strict=False):
+        published_name = PUBLISHED_STATE_NAMES[state]
+        if state.value in local:
+            orders, values = normalized(local[state.value])
+            ax.semilogy(orders, values, color=STATE_STYLES[state].color, lw=0.8, label="local TDSE ensemble")
+        if published_name in published:
+            orders, values = normalized(published[published_name])
+            ax.semilogy(orders, values, color="black", lw=0.8, alpha=0.7, label="published source data")
+        ax.set_title(f"{STATE_STYLES[state].label} vs published '{published_name}'", fontsize=10)
+        ax.set_xlim(0, 60)
+        ax.set_ylim(1.0e-10, 1.0e2)
+        ax.grid(alpha=0.2)
+        ax.legend(fontsize=8, frameon=False)
+    for ax in axes[1]:
+        ax.set_xlabel("Harmonic order")
+    for ax in axes[:, 0]:
+        ax.set_ylabel("Intensity (normalized at 9th harmonic)")
+    fig.savefig(output_path, dpi=220, bbox_inches="tight")
+    plt.close(fig)
+    return output_path
+
+
 def _plot_fig3b_proxy(*, csv_path: Path, output_path: Path) -> Path:
     import csv
 
@@ -564,31 +631,33 @@ def run_gorlach_2023_fig3b_proxy(
     output_dir: Path,
     shots: int = 50_000,
     seed: int = 20230603,
-    base_field_amplitude_au: float = 0.08,
+    base_field_amplitude_au: float = 0.038,
     omega_au: float = 0.057,
     ionization_potential_au: float = 0.7924,
     max_order: int = 151,
     mean_photon_number: float = 100.0,
     fock_n: int = 100,
-    bsv_r: float = 2.0,
+    bsv_r: float = 3.0,
     bsv_phase: float = 0.0,
     nonlinearity_power: float = 6.0,
     spectrum_model: Fig3BSpectrumModel | str = Fig3BSpectrumModel.TDSE,
-    tdse_amplitude_bins: int = 7,
-    tdse_x_min: float = -60.0,
-    tdse_x_max: float = 60.0,
-    tdse_grid_points: int = 512,
+    tdse_amplitude_bins: int = 17,
+    tdse_x_min: float = -100.0,
+    tdse_x_max: float = 100.0,
+    tdse_grid_points: int = 2048,
     tdse_softening: float = 0.8160,
-    tdse_dt_au: float = 0.12,
-    tdse_ramp_cycles: float = 1.0,
-    tdse_flat_cycles: float = 2.0,
-    tdse_ground_state_iterations: int = 120,
-    tdse_ground_state_dt_au: float = 0.08,
+    tdse_dt_au: float = 0.03,
+    tdse_ramp_cycles: float = 5.0,
+    tdse_flat_cycles: float = 15.0,
+    tdse_ground_state_iterations: int = 2000,
+    tdse_ground_state_dt_au: float = 0.05,
     tdse_carrier_phase: float = 0.0,
     tdse_min_harmonic_order: float = 1.0,
     tdse_normalization_min_harmonic_order: float | None = None,
     tdse_absorber_start_au: float | None = 75.0,
     tdse_absorber_strength: float = 5.0e-4,
+    tdse_tail_cap_quantile: float = 0.999,
+    published_reference_csv: Path | None = None,
 ) -> RunArtifacts:
     """Run a local stochastic-field reproduction of Nature Fig. 3b."""
 
@@ -602,6 +671,8 @@ def run_gorlach_2023_fig3b_proxy(
     frequency_grid = TDSE_FREQUENCY_GRID if model is Fig3BSpectrumModel.TDSE else PROXY_FREQUENCY_GRID
     if tdse_min_harmonic_order < 0:
         raise ValueError("tdse_min_harmonic_order must be non-negative")
+    if not 0.0 < tdse_tail_cap_quantile <= 1.0:
+        raise ValueError("tdse_tail_cap_quantile must be in (0, 1]")
     normalization_min_harmonic_order = (
         float(tdse_normalization_min_harmonic_order)
         if tdse_normalization_min_harmonic_order is not None
@@ -638,8 +709,12 @@ def run_gorlach_2023_fig3b_proxy(
         "field_amplitude_min_au": 0.0,
         "field_amplitude_max_au": 0.0,
     }
+    combined_field_amplitudes = np.concatenate(all_field_amplitudes)
+    tail_cap_field_amplitude_au = float(np.quantile(combined_field_amplitudes, tdse_tail_cap_quantile))
     tdse_parameters = {
         "amplitude_bins": int(tdse_amplitude_bins),
+        "tail_cap_quantile": float(tdse_tail_cap_quantile),
+        "tail_cap_field_amplitude_au": tail_cap_field_amplitude_au,
         "x_min": float(tdse_x_min),
         "x_max": float(tdse_x_max),
         "grid_points": int(tdse_grid_points),
@@ -658,7 +733,7 @@ def run_gorlach_2023_fig3b_proxy(
 
     if model is Fig3BSpectrumModel.TDSE:
         orders, tdse_library_amplitudes, tdse_library_spectra, tdse_library_metadata = _build_tdse_library(
-            field_amplitudes_au=np.concatenate(all_field_amplitudes),
+            field_amplitudes_au=np.minimum(combined_field_amplitudes, tail_cap_field_amplitude_au),
             bins=tdse_amplitude_bins,
             omega_au=omega_au,
             max_order=max_order,
@@ -743,6 +818,7 @@ def run_gorlach_2023_fig3b_proxy(
             "std_cutoff_order": float(np.std(cutoff_orders, ddof=1)) if shots > 1 else 0.0,
             "cutoff_order_p95": float(np.quantile(cutoff_orders, 0.95)),
             "cutoff_order_p99": float(np.quantile(cutoff_orders, 0.99)),
+            "tail_capped_sample_fraction": float(np.mean(field_amplitudes > tail_cap_field_amplitude_au)),
             "display_offset": float(style.display_offset),
             "normalization_benchmark_intensity": float(normalization),
             "tdse_library_field_amplitude_min_au": tdse_library_min,
@@ -883,6 +959,7 @@ def run_gorlach_2023_fig3b_proxy(
         "display_processing": display_processing,
         "driver_sampling": DRIVER_SAMPLING,
         "field_normalization": FIELD_NORMALIZATION,
+        "published_reference_csv": None if published_reference_csv is None else str(published_reference_csv),
     }
     source_refs = [
         "Nature Fig. 3b image and source-data link: https://www.nature.com/articles/s41567-023-02127-y",
@@ -927,7 +1004,14 @@ def run_gorlach_2023_fig3b_proxy(
             "notes": notes,
         },
     )
-    _plot_fig3b_proxy(csv_path=display_spectrum_csv_path, output_path=figure_path)
+    _plot_fig3b_proxy(csv_path=csv_path, output_path=figure_path)
+    overlay_path: Path | None = None
+    if published_reference_csv is not None and Path(published_reference_csv).exists():
+        overlay_path = _plot_published_overlay(
+            csv_path=csv_path,
+            published_reference_csv=Path(published_reference_csv),
+            output_path=output_dir / "gorlach_2023_fig3b_published_overlay.png",
+        )
     write_manifest(
         manifest_path,
         {
@@ -956,6 +1040,7 @@ def run_gorlach_2023_fig3b_proxy(
                 "display_spectrum_csv": display_spectrum_csv_path.name,
                 "summary_json": summary_path.name,
                 "figure_png": figure_path.name,
+                "published_overlay_png": None if overlay_path is None else overlay_path.name,
                 "parameter_yaml": parameter_path.name,
             },
         },

@@ -104,6 +104,12 @@ def soft_core_potential(x: FloatArray, *, softening: float) -> FloatArray:
     return (-1.0 / np.sqrt(x**2 + softening**2)).astype(np.float64)
 
 
+def soft_core_potential_gradient(x: FloatArray, *, softening: float) -> FloatArray:
+    if softening <= 0:
+        raise ValueError("softening must be positive")
+    return (x / np.power(x**2 + softening**2, 1.5)).astype(np.float64)
+
+
 def complex_absorbing_potential(
     x: FloatArray,
     *,
@@ -188,11 +194,17 @@ def acceleration_expectation(
     grid: SoftCoreGrid,
     potential: FloatArray,
     field_au: float,
+    potential_gradient: FloatArray | None = None,
 ) -> float:
     if psi.shape != grid.x.shape or potential.shape != grid.x.shape:
         raise ValueError("psi, potential, and grid.x must have matching shape")
     density = np.abs(psi) ** 2
-    d_v_dx = np.gradient(potential, grid.dx, edge_order=2)
+    if potential_gradient is None:
+        d_v_dx = np.gradient(potential, grid.dx, edge_order=2)
+    else:
+        if potential_gradient.shape != grid.x.shape:
+            raise ValueError("potential_gradient and grid.x must have matching shape")
+        d_v_dx = potential_gradient
     acceleration_density = -(d_v_dx + field_au) * density
     return float(np.sum(acceleration_density) * grid.dx)
 
@@ -230,6 +242,7 @@ def tdse_acceleration_trace(
 
     grid = SoftCoreGrid.create(x_min=x_min, x_max=x_max, points=grid_points)
     potential = soft_core_potential(grid.x, softening=softening)
+    potential_gradient = soft_core_potential_gradient(grid.x, softening=softening)
     absorber = (
         complex_absorbing_potential(
             grid.x,
@@ -264,6 +277,7 @@ def tdse_acceleration_trace(
             grid=grid,
             potential=potential,
             field_au=field_au,
+            potential_gradient=potential_gradient,
         )
         psi = split_operator_step(
             psi=psi,

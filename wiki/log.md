@@ -237,3 +237,31 @@ Append-only chronological record. New entries should use:
   `2e13 W/cm^2` panel the displayed harmonic-31 peak is now about `5e-4` of the
   ninth-harmonic peak, making the exponential-like decay and cutoff behavior
   clearer.
+
+## [2026-06-09] simulation | Fig 3b Grid-Artifact Diagnosis And Calibrated Pipeline Fix
+
+- Extracted the published Fig. 3b curves directly from the authors' MATLAB
+  figure in the local source-data archive
+  (`code/scripts/extract_gorlach_2023_fig3b_reference.py` writing
+  `results/gorlach-2023-fig3b-published-reference/fig3b_published_curves.csv`),
+  giving an exact reference for the reproduction instead of a qualitative one.
+- Diagnosed why the previous `e006-finegrid` reproduction was poor: the
+  `[-80, 80]` bohr TDSE grid leaves only 5 bohr of complex absorber beyond
+  the 75-bohr onset, so ionized wavepackets wrap around the periodic boundary
+  and rescatter, leaving a fake harmonic comb at `~1e-2` of the 9th-harmonic
+  level out to order 80+ for every driver state. On a `[-100, 100]` bohr,
+  2,048-point grid with `dt = 0.03` a.u. and a converged ground state the same
+  band falls to `~1e-8`.
+- Calibrated the mean driving field against the published coherent curve:
+  `E0 = 0.038 a.u.` (about `5.1e13 W/cm^2`) matches the published
+  9th-harmonic resonance, plateau, and cutoff near order 25; `E0 = 0.06`
+  overshoots.
+- Pipeline changes in `code/`: analytic soft-core gradient in the
+  dipole-acceleration expectation; production-faithful TDSE defaults
+  (`[-100, 100]` bohr, 2,048 points, `dt = 0.03`, 5/15/5-cycle pulse, 2,000
+  imaginary-time ground-state iterations); `bsv_r = 3.0` so the BSV mean
+  photon number matches the coherent/Fock value of 100; 17 amplitude bins
+  with a `0.999` quantile tail cap on the TDSE library and per-state clipped
+  fractions; main PNG now plots continuous raw-bin spectra; new optional
+  published-overlay figure; fig IV.2 defaults aligned to the same grid.
+- New production run: `results/gorlach-2023-fig3b-tdse-calibrated-20260609/`.

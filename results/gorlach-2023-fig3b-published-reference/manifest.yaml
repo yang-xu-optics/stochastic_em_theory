@@ -1,0 +1,16 @@
+run_id: gorlach-2023-fig3b-published-reference
+created: '2026-06-09'
+code_entrypoint: code/scripts/extract_gorlach_2023_fig3b_reference.py
+git_commit: 69352a71ea16dc5482939534b30a95b668580f9c
+source_fig: raw/assets/gorlach-2023-fig3-source-data/HHG BSV Data - 16 05 2023/Dot
+  fig files/Figure 3b/Spectra.fig
+states:
+- Coherent state
+- Number state
+- Squeezed Vacuum
+- Thermal light
+notes: Published Fig. 3b line series extracted from the authors' MATLAB figure. Intensities
+  include the authors' per-state display offsets; only curve shapes, harmonic comb
+  structure, and cutoffs are comparable across states.
+outputs:
+  curves_csv: fig3b_published_curves.csv
