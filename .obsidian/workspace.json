@@ -190,8 +190,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "893432ee7b2df883",
+  "active": "8ad97e7375a24d50",
   "lastOpenFiles": [
+    "wiki/simulations/thz-plasma-photocurrent-bsv-simulation.md",
     "results/gorlach-2023-fig3b-tdse-calibrated-20260609/gorlach_2023_fig3b_proxy.png",
     "results/gorlach-2023-fig3b-tdse-20260606/gorlach_2023_fig3b_proxy.png",
     "results/gorlach-2023-fig3b-tdse-calibrated-20260609/gorlach_2023_fig3b_published_overlay.png",
@@ -219,7 +220,6 @@
     "results/gorlach-2023-fig3b-tdse-sharednorm-e006-finegrid-20260606/tmp_floor_0.001.png",
     "results/gorlach-2023-fig3b-tdse-sharednorm-e006-finegrid-20260606/tmp_floor_0.003.png",
     "results/gorlach-2023-fig3b-tdse-sharednorm-e006-finegrid-20260606/tmp_floor_0.01.png",
-    "results/gorlach-2023-fig3b-tdse-sharednorm-e006-finegrid-20260606/gorlach_2023_fig3b_proxy.png",
     "wiki/simulations/gorlach-2023-fig3b-proxy-reproduction.md",
     "wiki/simulations/simulation-roadmap.md",
     "wiki/log.md",
