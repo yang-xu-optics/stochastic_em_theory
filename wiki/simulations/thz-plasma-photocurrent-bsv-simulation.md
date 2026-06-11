@@ -90,8 +90,11 @@ Default parameters:
 ```text
 lambda0 = 800 nm  (w0 = 0.057 a.u.), second harmonic at 2 w0
 E_w0 = 0.05 a.u.  (~8.8e13 W/cm^2)
-rms 2w field = 0.15 E_w0  (per-state mean-intensity normalization,
-                           as in the Fig. 3b runner)
+fixed per-photon field scale E_unit = 0.15 E_w0 / sqrt(nbar + 1), so the
+photon-carrying states (Q-mean photon number nbar + 1) carry rms 2w field
+0.15 E_w0 and the vacuum control sits a factor nbar + 1 lower in power.
+A per-state mean-intensity normalization is wrong here: it would amplify
+the vacuum mode to full power and destroy the noise-floor interpretation.
 Ip = 0.579 a.u.   (Ar, 15.76 eV)
 Gaussian envelope, field FWHM = 80 fs, window = 65536 * 0.5 a.u. ≈ 792 fs
 dt = 0.5 a.u., low-pass cutoff nu_c = 80 THz with smooth rolloff
@@ -123,9 +126,14 @@ Convergence checks:
 - BSV with squeezing rotated by pi (anti-squeezed along the THz-inactive
   cos quadrature): strongly suppressed THz yield at identical `g^(2)(0)`.
 - Vacuum 2w control: lowest yield, sets the sampling noise floor.
-- Energy fluctuation ratio `<U^2>/<U>^2` near `3` for the THz-active BSV case
-  (energy ∝ active-quadrature power, chi-squared-1-like), near 1 for
-  coherent.
+- Energy fluctuation ratio `<U^2>/<U>^2` for the THz-active BSV case: at
+  least `3` (energy ∝ active-quadrature power, chi-squared-1-like) and in
+  practice far larger, because the exponential field sensitivity of the
+  tunneling rate lets rare anti-squeezed-tail shots dominate the yield. The
+  same mechanism makes the mean BSV THz energy exceed the coherent reference
+  at matched mean photon number — the THz analogue of fluctuation-enhanced
+  BSV HHG. The coherent reference stays modestly above 1 (few-photon vacuum
+  noise on both quadratures, amplified by the same ionization nonlinearity).
 
 ## Outputs
 

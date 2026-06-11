@@ -87,9 +87,11 @@ md(r"""
 ## Parameters
 
 Atomic units internally; time displayed in fs, frequency in THz.
-The fundamental is fixed and classical; the $2\omega$ mode is stochastic with its
-mean square field normalized per driver state (same mean-intensity matching used in
-the Fig. 3b HHG runner).
+The fundamental is fixed and classical; the $2\omega$ mode is stochastic with a
+**fixed per-photon field scale** $E_{\rm unit} = 0.15\,E_{\omega}/\sqrt{\bar n + 1}$:
+the photon-carrying states ($\langle|\beta|^2\rangle_Q = \bar n + 1$) then carry an
+rms second-harmonic field of $0.15\,E_\omega$, while the vacuum control sits a factor
+$\bar n + 1$ lower in power, as a noise floor should.
 """)
 
 code(r"""
@@ -176,14 +178,24 @@ def g2_from_q_samples(beta: np.ndarray) -> tuple[float, float]:
     return n, g2_numerator / n**2 if n > 0.05 else float("nan")
 
 CASES = ["coherent", "bsv_active", "bsv_inactive", "vacuum"]
-beta_by_case = {case: sample_driver(case, SHOTS) for case in CASES}
+# large characterization ensembles for the g2 diagnostic; the plasma runs on a subset
+SHOTS_CHARACTERIZATION = 400_000
+beta_char = {case: sample_driver(case, SHOTS_CHARACTERIZATION) for case in CASES}
+beta_by_case = {case: beta_char[case][:SHOTS] for case in CASES}
 
 targets = {"coherent": 1.0, "bsv_active": 3 + 1 / NBAR, "bsv_inactive": 3 + 1 / NBAR,
            "vacuum": float("nan")}
-print(f"{'case':>13} {'<n> est':>9} {'g2 est':>8} {'g2 target':>10}")
+driver_g2 = {}
+print(f"{'case':>13} {'<n> est':>9} {'g2 est':>8} {'+/-':>7} {'g2 target':>10}")
 for case in CASES:
-    n_est, g2_est = g2_from_q_samples(beta_by_case[case])
-    print(f"{case:>13} {n_est:>9.3f} {g2_est:>8.3f} {targets[case]:>10.3f}")
+    n_est, g2_est = g2_from_q_samples(beta_char[case])
+    batch_g2 = [g2_from_q_samples(chunk)[1] for chunk in np.array_split(beta_char[case], 20)]
+    if np.all(np.isnan(batch_g2)):
+        se = float("nan")
+    else:
+        se = float(np.nanstd(batch_g2, ddof=1) / np.sqrt(20))
+    driver_g2[case] = {"n_est": n_est, "g2_est": g2_est, "g2_se": se}
+    print(f"{case:>13} {n_est:>9.3f} {g2_est:>8.3f} {se:>7.3f} {targets[case]:>10.3f}")
 
 fig, axes = plt.subplots(1, 4, figsize=(13, 3.2), sharex=True, sharey=True)
 for ax, case in zip(axes, CASES):
@@ -234,8 +246,14 @@ def tunneling_rate(abs_field: np.ndarray) -> np.ndarray:
         rate = ADK_PREFACTOR / safe * np.exp(-ADK_EXPONENT / safe)
     return np.where(abs_field > 1.0e-6, rate, 0.0)
 
+# Fixed per-photon field scale: the photon-carrying states (<|beta|^2>_Q = nbar + 1)
+# then have rms 2w field = RMS_2W_FRACTION * E_FUND_AU, while the vacuum control sits
+# a factor (nbar + 1) lower in power. A per-state normalization would wrongly amplify
+# the vacuum mode to full power.
+E_UNIT = RMS_2W_FRACTION * E_FUND_AU / np.sqrt(NBAR + 1.0)
+
 def run_case(beta: np.ndarray, n_example_shots: int = 3) -> dict:
-    s_scale = RMS_2W_FRACTION * E_FUND_AU / np.sqrt(np.mean(np.abs(beta) ** 2))
+    s_scale = E_UNIT
     sum_w = np.zeros(N_T)
     sumsq_w = np.zeros(N_T)
     sum_spec = np.zeros(keep.sum(), dtype=np.complex128)
@@ -352,7 +370,7 @@ for ax, case in zip(axes.flat, CASES):
     ax.fill_between(
         freqs_keep,
         np.maximum(mean_int - res["std_intensity_spectrum"], floor),
-        mean_int + res["std_intensity_spectrum"],
+        np.maximum(mean_int + res["std_intensity_spectrum"], floor),
         alpha=0.3, color="#377eb8", label=r"$\pm 1\sigma$ of $|\hat E(\nu)|^2$",
     )
     ax.semilogy(freqs_keep, np.maximum(mean_int, floor), color="#377eb8", lw=1.2,
@@ -367,6 +385,7 @@ for ax in axes[:, 0]:
     ax.set_ylabel("spectral intensity (arb. units)")
 axes[0, 0].legend(fontsize=8, frameon=False)
 axes[0, 0].set_xlim(0, NU_PLOT_THZ)
+axes[0, 0].set_ylim(floor * 0.3, None)
 fig.suptitle("THz spectrum: coherent vs total, with per-shot fluctuation band")
 plt.show()
 """)
@@ -375,12 +394,15 @@ md(r"""
 ## THz pulse-energy statistics
 
 Shot-to-shot distribution of the THz pulse energy $U = \int E_{\rm THz}^2\,dt$ and its
-classical fluctuation ratio $\langle U^2\rangle/\langle U\rangle^2$. For the THz-active
-BSV case the energy follows the anti-squeezed quadrature power (approximately
-$\chi^2_1$), so the ratio approaches 3 — *bunched, thermal-like* THz energy
-statistics from a quadrature-noise-driven plasma, consistent with the Wang 2026
-prediction. This is a statement about the stochastic ensemble, not a measured THz
-photon correlation.
+classical fluctuation ratio $\langle U^2\rangle/\langle U\rangle^2$. If the THz field
+were *linear* in the active quadrature, the THz-active BSV case would follow the
+anti-squeezed quadrature power ($\chi^2_1$-like, ratio $\to 3$). The tunneling rate is
+exponentially field-sensitive, so rare anti-squeezed-tail shots ionize far more and
+dominate the yield: the ratio is strongly **enhanced beyond 3**, and the mean BSV
+yield exceeds the coherent reference at matched mean photon number — the THz analogue
+of BSV-fluctuation-enhanced HHG, consistent with the enhancement and the strongly
+bunched, thermal-like THz statistics predicted by Wang 2026. This is a statement about
+the stochastic ensemble, not a measured THz photon correlation.
 """)
 
 code(r"""
@@ -431,8 +453,8 @@ summary = {
         "envelope_fwhm_fs": ENVELOPE_FWHM_FS, "lowpass_cutoff_thz": NU_CUT_THZ,
         "shots": SHOTS, "seed": SEED,
     },
-    "driver_g2": {case: dict(zip(("n_est", "g2_est"), g2_from_q_samples(beta_by_case[case])))
-                  for case in CASES},
+    "driver_g2": driver_g2,
+    "characterization_shots": SHOTS_CHARACTERIZATION,
     "g2_targets": {case: targets[case] for case in CASES},
     "thz_energy_stats": energy_stats,
     "peak_mean_waveform": peak_mean,
@@ -481,8 +503,10 @@ md(r"""
   THz generation is a phase-sensitive probe of the squeezing ellipse, beyond what
   $g^{(2)}(0)$ alone can distinguish.
 - **Statistics:** the THz-active BSV energy distribution is strongly bunched
-  ($\langle U^2\rangle/\langle U\rangle^2 \approx 3$, $\chi^2_1$-like), consistent with
-  the thermal-like THz output predicted by Wang 2026.
+  ($\langle U^2\rangle/\langle U\rangle^2 \gg 3$): the exponential field sensitivity of
+  tunneling ionization lets the anti-squeezed-quadrature tail dominate the yield, which
+  both enhances the mean THz energy over the coherent reference at matched $\bar n$ and
+  produces the strongly super-Poissonian, thermal-like output predicted by Wang 2026.
 """)
 
 notebook = nbf.v4.new_notebook(
