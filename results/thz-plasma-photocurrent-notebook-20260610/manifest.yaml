@@ -1,0 +1,32 @@
+run_id: thz-plasma-photocurrent-notebook-20260610
+created: '2026-06-10'
+code_entrypoint: code/notebooks/thz_plasma_stochastic.ipynb
+generator: code/notebooks/build_thz_plasma_stochastic_notebook.py
+git_commit: 404d7bd5dcae92748634db1a34160860bcdf6141
+random_seeds:
+- 20260610
+observable: thz_waveform_spectrum_mean_and_fluctuation_plus_driver_g2
+mechanism: two_color_plasma_photocurrent_coherent_plus_stochastic_2w
+representation: Husimi-Q sampling of the 2w mode; antinormal-ordering-corrected g2
+units: atomic units internally; fs and THz axes; THz field in arbitrary units
+parameters:
+  omega_au: 0.057
+  fundamental_field_au: 0.05
+  rms_2w_fraction: 0.15
+  ionization_potential_au: 0.579
+  bsv_r: 1.5
+  nbar: 4.533830997888882
+  dt_au: 0.5
+  time_points: 65536
+  envelope_fwhm_fs: 80.0
+  lowpass_cutoff_thz: 80.0
+  shots: 4000
+  seed: 20260610
+source_refs:
+- wiki/simulations/thz-plasma-photocurrent-bsv-simulation.md
+- wiki/sources/wang-2026-quantum-thz-plasma-bsv.md
+- wiki/sources/sun-2022-thz-laser-induced-plasma.md
+- wiki/sources/schuh-2013-thz-ionization-gases.md
+notes: 'Local single-point photocurrent model: no propagation, phase matching, plasma
+  dispersion, or far-field omega^2 factor; quasistatic ADK-like rate; energy fluctuation
+  ratio is a classical ensemble statistic, not a THz photon g2.'

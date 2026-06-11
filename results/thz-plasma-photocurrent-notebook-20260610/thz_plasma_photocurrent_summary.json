@@ -1,0 +1,78 @@
+{
+  "driver_g2": {
+    "bsv_active": {
+      "g2_est": 3.1031364938296666,
+      "n_est": 4.60921864246633
+    },
+    "bsv_inactive": {
+      "g2_est": 3.034865967845714,
+      "n_est": 4.3528703922458245
+    },
+    "coherent": {
+      "g2_est": 1.0035778959560844,
+      "n_est": 4.462672615669728
+    },
+    "vacuum": {
+      "g2_est": NaN,
+      "n_est": 0.0029395039531501244
+    }
+  },
+  "g2_targets": {
+    "bsv_active": 3.220564022008239,
+    "bsv_inactive": 3.220564022008239,
+    "coherent": 1.0,
+    "vacuum": NaN
+  },
+  "parameters": {
+    "bsv_r": 1.5,
+    "dt_au": 0.5,
+    "envelope_fwhm_fs": 80.0,
+    "fundamental_field_au": 0.05,
+    "ionization_potential_au": 0.579,
+    "lowpass_cutoff_thz": 80.0,
+    "nbar": 4.533830997888882,
+    "omega_au": 0.057,
+    "rms_2w_fraction": 0.15,
+    "seed": 20260610,
+    "shots": 4000,
+    "time_points": 65536
+  },
+  "peak_mean_waveform": {
+    "bsv_active": 4.9406777738055856e-09,
+    "bsv_inactive": 2.487574059526967e-08,
+    "coherent": 8.217442011010521e-07,
+    "vacuum": 1.300652489899988e-08
+  },
+  "peak_std_waveform": {
+    "bsv_active": 3.737012328689936e-06,
+    "bsv_inactive": 1.0299561071088069e-06,
+    "coherent": 6.272632475712279e-07,
+    "vacuum": 1.6872210014994453e-06
+  },
+  "thz_energy_stats": {
+    "bsv_active": {
+      "batch_se": 1.5338225330511228e-09,
+      "fluctuation_ratio": 134.8338029683677,
+      "mean": 9.890669597364379e-09,
+      "std": 1.144217547467052e-07
+    },
+    "bsv_inactive": {
+      "batch_se": 8.796043814385174e-11,
+      "fluctuation_ratio": 59.421591735276415,
+      "mean": 7.699006948339129e-10,
+      "std": 5.884660389906161e-09
+    },
+    "coherent": {
+      "batch_se": 2.0419512661443592e-11,
+      "fluctuation_ratio": 5.561726997511422,
+      "mean": 6.947999555466699e-10,
+      "std": 1.483967628874751e-09
+    },
+    "vacuum": {
+      "batch_se": 2.2762511330714158e-10,
+      "fluctuation_ratio": 50.43480406662293,
+      "mean": 2.053089310201328e-09,
+      "std": 1.4435248027317916e-08
+    }
+  }
+}
