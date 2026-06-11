@@ -2,7 +2,7 @@ run_id: thz-plasma-photocurrent-notebook-20260610
 created: '2026-06-10'
 code_entrypoint: code/notebooks/thz_plasma_stochastic.ipynb
 generator: code/notebooks/build_thz_plasma_stochastic_notebook.py
-git_commit: 274627119456507a76cc5f5633a944cf9138082e
+git_commit: 178d85016a7026ef394e0e2c64128a7ad4252380
 random_seeds:
 - 20260610
 observable: thz_waveform_spectrum_mean_and_fluctuation_plus_driver_g2
@@ -14,8 +14,8 @@ parameters:
   fundamental_field_au: 0.05
   rms_2w_fraction: 0.15
   ionization_potential_au: 0.579
-  bsv_r: 1.5
-  nbar: 4.533830997888882
+  bsv_r: 10.5
+  nbar: 329703933.1208036
   dt_au: 0.5
   time_points: 65536
   envelope_fwhm_fs: 80.0
