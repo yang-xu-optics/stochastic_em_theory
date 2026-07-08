@@ -1,16 +1,18 @@
 ## Aim of the project
-We would like to extend our current work on programmable electric field induced second harmonic generation in silicon nitride waveguide(published in https://www.nature.com/articles/s41586-025-09620-9) to resonator structures. The hope is to use the resonant enhancement of racetrack resonator structures to achieve greater conversion efficiencies than channel waveguides. We want to achieve a broadband second harmonic with fundamental harmonic ranging from 1520 nm to 1600 nm through modal phase matching (TM00 FH to TM ) 
-  
-**Dispersion:**  I used Ansys Lumerical to simulate the dispersion of straight waveguides for varying widths and different FH wavelengths from 1520 nm to 1600 nm (the range of our Santec tunable laser).  Use the dispersion model found here ([https://refractiveindex.info/?shelf=main&book=Si3N4&page=Luke](https://refractiveindex.info/?shelf=main&book=Si3N4&page=Luke)).  The thickness of our nitrides was initially set to 800 nm and the claddings were SiO2.  
-  
-**Bus/Resonator Coupling**:  A challenge of achieving double resonance (among other things) is aligning the resonance frequencies of the FH and SH modes.  By over-coupling the FH, we will have an extremely wide FH resonance, meaning it is very likely that we will be able to get some overlap between the FH and SH modes.  So the main advantage of our resonant enhancement is high SH power confinement.  Additionally, should we do SPDC experiments on these devices, we can do a wide bandwidth of non-degenerate SPDC processes.  
-  
-The coupling distance and gap depends on the widths of the bus and resonant waveguides.  It generally seems that coupling gaps below 300 nm are challenging because of the high aspect ratio and fabrication imperfections.  This motivates using narrower waveguides for the bus and resonator, as this allows higher coupling coefficients.  For reasons that seem a bit less scientific, their group seems to think that coupling lengths greater than 500 um are a bad idea, so we scanned that parameter from 200 um to 450 um.  
-  
-**Resonator Shape:**  I use an effective index model to calculate the mode shape of different straight and circular bends.  I then calculate the mode overlap between these two modes, allowing me to estimate the leakage out of the fundamental SH mode at the bends.  From this, I conclude that bending radii between 100 um and 150 um are ideal.  Half the resonators have Euler bends, while the other half have circular bends.  We use racetrack couplers, as these are easier to model in simulation (and experimentally, it will be easier to pole the straight sections than a circular resonator).  For some structures, we use a 1.5 um wide waveguide at the top and 1.1 um wide waveguide at the coupler, so we could couple with a larger waveguide separation between the bus and ring while poling the stop with a longer poling period.  We used 74 um long tapers after the bends.  
-  
-While the exact material stack is a bit uncertain, we expect an undoped Si substrate (a bit non-ideal), 2um of bottom oxide, 800 nm of LPCVD SiN, and 4-5um of top oxide (which we can thin in the CNF).  We expect a loaded Q factor of ~ 1million for the SH.
+We would like to extend our current work on programmable electric field induced second harmonic generation in silicon nitride waveguide(published in https://www.nature.com/articles/s41586-025-09620-9) to resonator structures. The hope is to use the resonant enhancement of racetrack resonator structures to achieve greater conversion efficiencies than channel waveguides. We want to achieve a broadband second harmonic with fundamental harmonic ranging from 1520 nm to 1600 nm through modal phase matching (TM00 FH to TM20 SH) since the minimum poling period we can print on the device is around 10 microns. We should only use our poling programmability to adjust for minor phase mismatch between FH and SH. We should use Tidy3D for the entire simulation. 
+
+## Relevant ideas
+**Dispersion:**  simulate the dispersion of straight waveguides for varying widths and different FH wavelengths from 1520 nm to 1600 nm (the range of our Santec tunable laser).  Use the dispersion model found here ([https://refractiveindex.info/?shelf=main&book=Si3N4&page=Luke](https://refractiveindex.info/?shelf=main&book=Si3N4&page=Luke)).  The thickness of our nitrides was initially set to 800 nm and the claddings were SiO2.  
+
 ## Step 1: Design the waveguide and determine mode overlap
+We expect a Si substrate, 2um of bottom silicon oxide, 800 nm of LPCVD SiN, and 1 um of top silicon oxide cladding.  Start the width of the waveguide from 1 um. Run the mode solver simulation and check if the modal overlap between the FH (TM00 from 1520 nm to 1600 nm) and the SH (TM20 from 760 nm to 800 nm) is good for second harmonic generation. 
+
+Then scan the width of the waveguide such that the waveguide geometry can match the propagation constant of the FH wave (TM00) at 1560 nm and the SH (TM20) at 780 nm. Perform the same scan for a 700 nm-thick SiN too. 
 ## Step 2: Determining the poling period on a straight waveguide
+Now use the material dispersion of SiN and compute the modal dispersion of the FH and SH wave respectively. Then for the FH from 1520 nm to 1600 nm, compute and the corresponding periodic poling period we need to impose onto the device to compensate for the phase mismatch.  
 ## Step 3: Mode and loss at bending
+
 ## Step 4: Work on the input and output coupling section
+**Bus/Resonator Coupling**:  A challenge of achieving double resonance (among other things) is aligning the resonance frequencies of the FH and SH modes.  By over-coupling the FH, we will have an extremely wide FH resonance, meaning it is very likely that we will be able to get some overlap between the FH and SH modes.  So the main advantage of our resonant enhancement is high SH power confinement.  
+
+For now, we scan the coupling gaps between from 300 um to 450 um.  
