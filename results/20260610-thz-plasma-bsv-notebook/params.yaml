@@ -1,0 +1,14 @@
+seed: 20260610
+lambda_w_nm: 800.0
+intensity_w_Wcm2: 100000000000000.0
+fwhm_fs: 35.0
+r: 1.0
+squeeze_phase: 0.0
+intensity_ratio: 0.02
+Ip_au: 0.579
+nu_coll_au: 0.0005
+n_shots: 400
+n_wigner: 2000000
+t_span_fs: 200.0
+dt_au: 0.4
+thz_cut_THz: 60.0

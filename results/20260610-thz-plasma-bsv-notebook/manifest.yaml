@@ -1,0 +1,11 @@
+run_id: 20260610-thz-plasma-bsv-notebook
+created: '2026-06-10'
+code_entrypoint: code/notebooks/thz_plasma_bsv_photocurrent.ipynb
+git_commit: d922695b04746126039db4a77bd98c96322a4f07
+parameter_file: params.yaml
+random_seeds:
+- 20260610
+observable: driving-field g2(0); ensemble mean/std THz waveform; ensemble-averaged
+  THz spectrum (total, coherent part); classical THz energy-fluctuation ratio
+notes: coherent 800 nm + BSV 400 nm photocurrent model; g2_drive=3.7218 (analytic
+  3.7241); g2_THz_classical=20.176; max|<E>|/max(sigma)=0.008

@@ -20,8 +20,19 @@
               "icon": "lucide-file",
               "title": "outline"
             }
+          },
+          {
+            "id": "1607d614e34f883c",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -181,6 +192,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "karpathywiki:Ingest current file": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -191,8 +203,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "893432ee7b2df883",
+  "active": "1607d614e34f883c",
   "lastOpenFiles": [
+    "paper/outline.md",
     "results/gorlach-2023-fig3b-proxy/gorlach_2023_fig3b_proxy.png",
     "results/gorlach-2023-fig3b-proxy/gorlach_2023_fig3b_proxy_summary.json",
     "results/gorlach-2023-fig3b-proxy/parameters.yaml",
@@ -206,7 +219,6 @@
     "results/gorlach-2023-fig-iv2-bsv-threshold-tailcap-20260606/parameters.yaml",
     "results/gorlach-2023-fig-iv2-bsv-threshold-tailcap-20260606/gorlach_2023_fig_iv2_bsv_threshold_display.csv",
     "paper/README.md",
-    "paper/outline.md",
     "docs/superpowers/plans/2026-06-06-paper-one-simulation-implementation.md",
     "results/gorlach-2023-fig-iv2-bsv-threshold-20260606/gorlach_2023_fig_iv2_bsv_threshold.png",
     "results/tmp/fig-iv2-tdse-smoke/gorlach_2023_fig_iv2_bsv_threshold.png",

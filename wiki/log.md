@@ -3,7 +3,7 @@ title: Wiki Log
 type: synthesis
 status: active
 created: 2026-06-06
-updated: 2026-06-06
+updated: 2026-06-18
 tags: [log]
 source_count: 54
 confidence: high
@@ -237,3 +237,85 @@ Append-only chronological record. New entries should use:
   `2e13 W/cm^2` panel the displayed harmonic-31 peak is now about `5e-4` of the
   ninth-harmonic peak, making the exponential-like decay and cutoff behavior
   clearer.
+
+## [2026-06-10] simulation | THz Plasma BSV Photocurrent Notebook
+
+- Added the Stage-5 simulation spec
+  [[simulations/thz-plasma-bsv-photocurrent-notebook]] and implemented
+  `code/notebooks/thz_plasma_bsv_photocurrent.ipynb`: a local photocurrent
+  model (quasi-static tunneling rate, damped Brunel current, band-limited
+  `dJ/dt`) driven by a strong coherent 800 nm pulse plus a weak 400 nm BSV
+  second harmonic, following the Wang 2026 coherent-plus-BSV setting with
+  Sun 2022 photocurrent template.
+- Driving-field validation: Wigner sampling with ordering corrections gave
+  `g2(0) = 3.7218` versus analytic `3 + 1/<n> = 3.7241` at `r = 1`
+  (`2e6` samples); plasma dynamics used a separate 400-shot Husimi-Q
+  coherent-amplitude ensemble (diagonal approximation, seed `20260610`).
+- Symmetry result: the ensemble-mean THz field vanished within Monte Carlo
+  error (`max|<E_THz>| / max sigma = 0.008` against a `1/sqrt(N) = 0.05`
+  floor), while the ensemble-averaged spectrum stayed finite and above the
+  matched coherent two-color baseline: incoherent broadband THz, as
+  anticipated by the model page symmetry check.
+- Classical THz energy statistics came out strongly superbunched:
+  `g2_THz = <U^2>/<U>^2 = 20.2` (bootstrap 95% CI 10.4-28.1), well above the
+  linearized fixed-density quadrature value 3, because the exponential
+  ionization nonlinearity lets rare anti-squeezed outlier shots dominate
+  (mean energy ~15x the median). Recorded as a candidate non-Gaussian-path
+  regime indicator, not a converged value.
+- Outputs and manifest written to
+  `results/20260610-thz-plasma-bsv-notebook/` (figures, `params.yaml`,
+  `manifest.yaml`).
+
+## [2026-06-18] paper | PRA/PR Research Manuscript Framing
+
+- Updated `paper/outline.md` with a submission-oriented framing recommendation
+  for Physical Review A and Physical Review Research.
+- Decision: treat the first paper as a correspondence-first HHG manuscript,
+  not a full HHG-plus-THz omnibus paper.
+- Recommended main structure: introduction, stochastic field representation
+  and detection model, squeezed-vacuum photon-statistics benchmark, nonlinear
+  HHG/ionization response model, matched-statistics results, limitations, and a
+  concise THz outlook.
+- Figure strategy: map each figure to a claim level, with THz shown only as an
+  outlook panel unless complete symmetry-breaking and validation results are
+  available.
+
+## [2026-06-18] paper | Combined HHG And Plasma THz Manuscript Structure
+
+- Revised `paper/outline.md` to make BSV-induced plasma THz emission a co-equal
+  main result with HHG, superseding the earlier framing that kept THz only as
+  outlook.
+- New through-line: one quantum-optics-consistent stochastic BSV drive ensemble
+  is validated once, then applied to HHG and coherent-plus-BSV plasma
+  photocurrent THz emission.
+- Optical rectification is now demoted to a concise outlook/comparison because
+  the direct squeezed-vacuum `chi^(2)` source remains derivation-led, whereas
+  plasma THz has a source-backed model, notebook spec, and symmetry result.
+- Updated the figure map to include plasma THz baselines, coherent versus
+  incoherent spectral decomposition, and cross-channel diagnostic comparisons.
+
+## [2026-06-18] paper | Abstract Value Proposition
+
+- Updated `paper/outline.md` abstract notes to explain why the stochastic-field
+  framework is useful relative to direct quantum simulation.
+- Framing: the method does not replace quantum mechanics; it translates selected
+  quantum-optical input correlations into a sampled drive ensemble that can feed
+  established HHG and plasma-response solvers while preserving operator-ordering
+  and detection-model corrections.
+- Added an explicit limitation that heavy-tailed stochastic outputs alone do
+  not certify emitted quantum non-Gaussian light.
+
+## [2026-06-18] paper | Bunching Baseline Motivation
+
+- Updated `paper/outline.md` and
+  [[theory/non-gaussian-output-novelty]] with the interpretive motivation that
+  HHG or THz photon bunching is not by itself a uniquely quantum-mechanical
+  emitted-field witness.
+- Framing: bunching and superbunching can arise from positive stochastic
+  intensity fluctuations, detector-mode averaging, and nonlinear source
+  filtering, whereas antibunching, entanglement, Wigner negativity, or explicit
+  non-Gaussian witnesses require stronger output-state evidence.
+- Paper motivation sharpened: the stochastic-field model provides a quantitative
+  null model for deciding which observed HHG/THz correlations follow from BSV
+  input statistics and which remain candidates for genuinely quantum output
+  physics.

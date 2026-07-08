@@ -55,6 +55,10 @@ before answering project questions or changing wiki pages.
 - [[simulations/gorlach-2023-fig-iv2-bsv-threshold]]: supplementary Fig. IV.2
   reproduction spec for the BSV HHG intensity threshold in a 1D model Ne atom
   using a TDSE dipole-acceleration response library.
+- [[simulations/thz-plasma-bsv-photocurrent-notebook]]: Stage-5 plasma
+  photocurrent notebook spec for coherent-plus-BSV THz generation with
+  driving-field `g^(2)(0)` validation, ensemble mean/fluctuation THz
+  waveforms, and ensemble-averaged spectra.
 
 ## Manuscript
 

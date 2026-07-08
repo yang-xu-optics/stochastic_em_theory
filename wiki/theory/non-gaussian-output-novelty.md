@@ -51,6 +51,24 @@ non-Gaussian quantum feature:
   conditional states that cannot be represented as Gaussian states
 ```
 
+## Bunching Is Not A Standalone Nonclassicality Witness
+
+Photon bunching or superbunching in HHG, THz emission, ATI yields, or other
+strong-field observables should not be treated as a uniquely quantum-mechanical
+output signature by itself. Classical thermal light, positive phase-space
+representations of squeezed or bright squeezed vacuum, detector-mode averaging,
+and nonlinear filtering of shot-to-shot intensity fluctuations can all produce
+`g^(2) > 1`.
+
+This does not make bunching uninteresting. It makes bunching a baseline problem:
+one must first ask how much of the observed correlation is already explained by
+the input BSV statistics and the nonlinear response function. The stochastic
+field model is therefore useful as a null model and calibration layer. Any
+claim of genuinely nonclassical emitted radiation should then go beyond
+bunching alone, for example through antibunching, entanglement, squeezing with
+a specified mode basis, Wigner negativity, a non-Gaussian witness, or a
+conditional-state measurement.
+
 ## Mechanisms That Could Create Non-Gaussian HHG Or THz Output
 
 1. Pump depletion and backaction:
