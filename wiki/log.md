@@ -3,7 +3,7 @@ title: Wiki Log
 type: synthesis
 status: active
 created: 2026-06-06
-updated: 2026-06-18
+updated: 2026-08-26
 tags: [log]
 source_count: 54
 confidence: high
@@ -319,3 +319,16 @@ Append-only chronological record. New entries should use:
   null model for deciding which observed HHG/THz correlations follow from BSV
   input statistics and which remain candidates for genuinely quantum output
   physics.
+
+## [2026-08-26] query | Machine Learning Integration Roadmap
+
+- Added [[simulations/machine-learning-integration-roadmap]] to separate the
+  analytic stochastic source and detection map from any learned nonlinear
+  response model.
+- Prioritized an uncertainty-aware surrogate for the existing TDSE response
+  library and tail-aware active learning for rare BSV events.
+- Proposed a second-stage joint HHG-plasma-THz Bayesian inference problem in
+  which HHG constrains high-field tails while THz constrains phase and
+  symmetry.
+- Recorded data-splitting, ensemble-closure, uncertainty-calibration, and claim
+  boundary requirements for ML-assisted simulations.

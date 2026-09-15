@@ -3,7 +3,7 @@ title: Wiki Index
 type: synthesis
 status: active
 created: 2026-06-06
-updated: 2026-06-06
+updated: 2026-08-26
 tags: [index]
 source_count: 54
 confidence: high
@@ -59,6 +59,9 @@ before answering project questions or changing wiki pages.
   photocurrent notebook spec for coherent-plus-BSV THz generation with
   driving-field `g^(2)(0)` validation, ensemble mean/fluctuation THz
   waveforms, and ensemble-averaged spectra.
+- [[simulations/machine-learning-integration-roadmap]]: physics-separated ML
+  roadmap for response surrogates, tail-aware active learning, and joint
+  HHG-THz inference of squeezed-field parameters.
 
 ## Manuscript
 
