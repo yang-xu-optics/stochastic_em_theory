@@ -196,9 +196,10 @@
   },
   "active": "893432ee7b2df883",
   "lastOpenFiles": [
+    "Untitled.md",
+    "paper/outline.md",
     "SiN resonator simulation plan.md",
     "SiN resonator simulation plan 1.md",
-    "paper/outline.md",
     "results/gorlach-2023-fig3b-proxy/gorlach_2023_fig3b_proxy.png",
     "results/gorlach-2023-fig3b-proxy/gorlach_2023_fig3b_proxy_summary.json",
     "results/gorlach-2023-fig3b-proxy/parameters.yaml",
@@ -240,7 +241,6 @@
     "wiki/sources/al-2024-attosecond-pulse-synthesis-from-hhg-in-intense-squeezed.md",
     "wiki/sources/kulkarni-2022-a-classical-model-of-spontaneous-pdc.md",
     "wiki/sources/stammer-2026-symmetry-breaking-by-quantum-light-in-solid-state.md",
-    "wiki/sources/liu-2026-strong-field-ionization-of-atoms-with-bsv-light.md",
-    "wiki/sources/jiang-2026-nonlinear-atomic-tunnelling-boosted-by-bsv.md"
+    "wiki/sources/liu-2026-strong-field-ionization-of-atoms-with-bsv-light.md"
   ]
 }
