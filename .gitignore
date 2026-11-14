@@ -1,11 +1,20 @@
+# OS / editor
 .DS_Store
+
+# Python
 __pycache__/
 *.py[cod]
+*.egg-info/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
 .venv/
 venv/
 .ipynb_checkpoints/
+
+# Scratch outputs (smoke runs, experiments not meant to be kept)
 results/tmp/
 
+# Obsidian per-machine UI state (open tabs, pane layout); changes on every click
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json

@@ -1,6 +1,7 @@
 # AGENTS.md
 
-Codex operating schema for this research workspace.
+Operating schema for coding agents (Codex, Claude Code) in this research
+workspace. This file is the single canonical copy; `CLAUDE.md` only imports it.
 
 This project follows the LLM Wiki pattern described by Andrej Karpathy:
 https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
@@ -25,22 +26,35 @@ claims:
 ## Directory Contract
 
 - `raw/`: immutable source layer. Put papers, articles, notes, downloaded
-  figures, and datasets here. Codex may read this folder but must not alter
-  source files once added.
+  figures, and datasets here. Agents may read this folder but must not alter,
+  rename, or delete source files once added.
 - `raw/sources/`: source documents, preferably with stable filenames.
 - `raw/assets/`: figures and other downloaded media referenced by sources.
-- `wiki/`: Codex-maintained knowledge layer. This is the working synthesis.
+- `wiki/`: agent-maintained knowledge layer. This is the working synthesis.
 - `wiki/index.md`: content index. Read this first for research queries.
 - `wiki/log.md`: append-only chronological work log.
+- `wiki/project-status-review.md`: latest evaluation of progress, result
+  quality, and publication strategy. Read it before planning new work.
 - `wiki/theory/`: mathematical correspondence, proofs, definitions,
   conventions, and open theoretical issues.
 - `wiki/models/`: physical models for HHG and THz mechanisms.
 - `wiki/simulations/`: numerical roadmaps, experiment specifications, and
   validation criteria.
+- `wiki/sources/`: one source-summary page per unique document in
+  `raw/sources/`.
 - `code/`: implementation workspace for samplers, simulations, notebooks, and
   tests.
-- `results/`: generated outputs, figures, run manifests, and processed data.
+- `results/`: generated outputs.
+- `results/runs/`: one directory per simulation run, each with a manifest.
+  `results/runs/README.md` is the run index and records which runs are
+  current, superseded, or not usable for the paper.
+- `results/figures/`: paper-ready figures only.
+- `results/literature/`: literature-search API dumps, download manifests, and
+  text extracted from source PDFs.
+- `results/tmp/`: scratch outputs; ignored by git.
 - `paper/`: manuscript outline, drafts, figure plans, and submission notes.
+- `archive/`: historical planning documents and notes that do not belong to
+  this project. Nothing here is maintained; do not treat it as current.
 
 Do not create a duplicate folder if an equivalent one exists. Prefer updating
 the closest existing page over adding a near-duplicate page.

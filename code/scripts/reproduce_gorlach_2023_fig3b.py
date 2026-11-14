@@ -7,7 +7,7 @@ from stochastic_em_theory.fig3b import run_gorlach_2023_fig3b_proxy
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_OUTPUT_DIR = REPO_ROOT / "results" / "gorlach-2023-fig3b-proxy"
+DEFAULT_OUTPUT_DIR = REPO_ROOT / "results" / "runs" / "gorlach-2023-fig3b-proxy"
 
 
 def build_parser() -> argparse.ArgumentParser:

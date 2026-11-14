@@ -11,7 +11,7 @@ from stochastic_em_theory.fig_iv2 import (
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_OUTPUT_DIR = REPO_ROOT / "results" / "gorlach-2023-fig-iv2-bsv-threshold"
+DEFAULT_OUTPUT_DIR = REPO_ROOT / "results" / "runs" / "gorlach-2023-fig-iv2-bsv-threshold"
 
 
 def build_parser() -> argparse.ArgumentParser:

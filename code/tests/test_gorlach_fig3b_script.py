@@ -39,7 +39,7 @@ def test_gorlach_fig3b_script_default_output_is_repo_results_even_from_other_cwd
     repo_root = Path(__file__).resolve().parents[2]
     code_root = repo_root / "code"
     script = code_root / "scripts" / "reproduce_gorlach_2023_fig3b.py"
-    default_output = repo_root / "results" / "gorlach-2023-fig3b-proxy"
+    default_output = repo_root / "results" / "runs" / "gorlach-2023-fig3b-proxy"
     if default_output.exists():
         pytest.skip(f"default output path already exists: {default_output}")
 

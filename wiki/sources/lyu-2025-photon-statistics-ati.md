@@ -23,7 +23,7 @@ related:
 - DOI: 10.1103/PhysRevResearch.7.L012072.
 - Raw source: [PhysRevResearch.7.L012072.pdf](<../../raw/sources/PhysRevResearch.7.L012072.pdf>)
 - Extracted text:
-  [physrevresearch-7-l012072.txt](<../../results/ingest-2026-06-06-missing-aps/extracted_text/physrevresearch-7-l012072.txt>)
+  [physrevresearch-7-l012072.txt](<../../results/literature/ingest-2026-06-06-missing-aps/extracted_text/physrevresearch-7-l012072.txt>)
 - Ingest date: 2026-06-06.
 
 ## Core Result
