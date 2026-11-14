@@ -1,0 +1,407 @@
+                                                 Multiphoton Effects Enhanced Due to Ultrafast Photon-Number Fluctuations
+
+                                                                    Kirill Yu. Spasibko,1, 2 Denis A. Kopylov,3 Victor L. Krutyanskiy,3, 4
+                                                                    Tatiana V. Murzina,3 Gerd Leuchs,1, 2 and Maria V. Chekhova1, 2, 3
+                                                            1
+                                                               Max Planck Institute for the Science of Light, Staudtstrasse 2, 91058 Erlangen, Germany
+                                                                   2
+                                                                     University of Erlangen-Nürnberg, Staudtstrasse 7/B2, 91058 Erlangen, Germany
+                                                                          3
+                                                                            Department of Physics, M.V.Lomonosov Moscow State University,
+                                                                                        Leninskie Gory, 119991 Moscow, Russia
+                                                    4
+                                                      Institute for Quantum Optics and Quantum Information ÖAW, Technikerstr. 21a, 6020 Innsbruck, Austria
+
+
+
+                                               Multi-photon processes are the essence of non-                 Enhancement due to intensity fluctuations has been
+                                            linear optics. Optical harmonics generation [1]                demonstrated for the second-harmonic generation [10, 11]
+arXiv:1705.07159v1 [quant-ph] 19 May 2017
+
+
+
+
+                                            and multi-photon absorption [2], ionization [3],               and recently, also for two-photon absorption [13] from
+                                            polymerization [4] or spectroscopy [5] are widely              thermal light, for which g (n) = n!. Instead of thermal
+                                            used in practical applications. Generally, the rate            light, one can use multimode laser light [8, 9] as the lat-
+                                            of an n-photon effect scales as the n-th order au-             ter has intensity fluctuations due to the contributions of
+                                            tocorrelation function of the incident light [6–13],           different temporal modes. In fact, pulsed light is more ef-
+                                            which is high for light with strong photon-number              ficient for n-photon processes than continuous-wave light
+                                            fluctuations. Therefore ‘noisy’ light sources are              with the same mean intensity for the same reason: it has
+                                            much more efficient for multi-photon effects than              strong intensity modulation.
+                                            coherent sources with the same mean power,                        Nevertheless, in practice one always observes multipho-
+                                            pulse duration and repetition rate. Here we gen-               ton effects with coherent light, for which g (n) = 1. The
+                                            erate optical harmonics of order 2-4 from bright               reason is that thermal light with high intensity is hard to
+                                            squeezed vacuum (BSV) [14–17], a state of light                produce; thermal radiation used in Refs. [10, 11, 13] was
+                                            consisting of only quantum noise with no coherent              obtained from a below-threshold laser, which is not very
+                                            component. We observe up to two orders of mag-                 bright. Another standard source of thermal light, rotat-
+                                            nitude enhancement in the generation of optical                ing ground glass disc, not only suffers from low bright-
+                                            harmonics due to ultrafast photon-number fluc-                 ness, but also has very slow intensity fluctuations. As
+                                            tuations. This feature is especially important for             an efficient source, one would desire a bright pulsed one
+                                            the nonlinear optics of fragile structures where               with each pulse having ultrafast intensity fluctuations.
+                                            the use of a ‘noisy’ pump can considerably in-                    Exceptionally interesting in this connection is bright
+                                            crease the effect without overcoming the damage                squeezed vacuum (BSV) produced via high-gain para-
+                                            threshold.                                                     metric down-conversion (PDC). It can be extremely
+                                               In any multi-photon process, one example being the          bright — up to hundreds of mW mean power [19, 20]
+                                            generation of optical harmonics, a certain number of pho-      — and has highly fluctuating photon number. In fact,
+                                            tons of the initial radiation get annihilated to produce       this state has no coherent component and only consists
+                                            the effect. For this reason, the output signal of an n-        of quantum noise. Taken separately, signal and idler BSV
+                                            photon process scales as the normally ordered n-th or-         beams have thermal statistics; but whenever they are in-
+                                            der moment of the incident photon number, h: N n :i ≡          distinguishable, the statistics shows ‘superbunched’ be-
+                                            h(a† )n an i [6, 7], similar to the rate of n-photon coinci-   havior with g (n) = (2n − 1)!! [21–23]. This makes BSV
+                                            dences [18] in a quantum optics experiment. It follows         extremely efficient for multi-photon effects [12], as one
+                                            that the rate R(n) of an n-photon effect scales as the n-th    can see from Fig. 1a showing g (n) (n) for the cases of co-
+                                            order normalized autocorrelation function of the incident      herent (black), thermal (red) and BSV (blue) light.
+                                            light, g (n) ≡ h: N n :i/hN in ,                                  BSV intensity fluctuations are not only strong; they
+                                                                                                           can be extremely fast as well. Due to the broad spec-
+                                                                  R(n) ∼ g (n) F n ,                (1)    trum, whose bandwidth can reach 100-150 THz [24–26],
+                                                                                                           BSV generated through PDC has correlation times as
+                                            where F ∼ hN i is the input photon flux.
+                                                                                                           short as a few femtoseconds. For pulsed broadband BSV
+                                               According to Eq. (1), one can define the statistical ef-
+                                                                                                           the intensity will fluctuate not only from pulse to pulse,
+                                            ficiency of an n-photon effect [8–10] as
+                                                                                                           but also within a single pulse. Although pulse-to-pulse
+                                                                             R(n)                          fluctuations could be, in principle, mimicked by modu-
+                                                                   ξ (n) ≡        .                 (2)    lating the beam, fluctuations within the pulse can not.
+                                                                             Fn
+                                                                                                              The latter makes BSV an extremely valuable source
+                                            In this form the efficiency follows the changes in the         for nonlinear effects. Any nonlinear effect with ultra-
+                                            statistics of the input radiation and does not depend on       short response time will ‘feel’ the fast photon-number
+                                            its photon flux. Clearly, it should scale with the n-th        fluctuations of BSV and its efficiency will be therefore
+                                            order normalized intensity correlation function.               dramatically enhanced. In our experiment, we demon-
+                                                                                                                                 2
+
+
+
+
+FIG. 1. (a) The normalized correlation function determining the enhancement of an n-photon effect as a function of n in the case
+of coherent (black), thermal (red) and BSV (blue) light used as a pump. (b) The experimental setup. Bright squeezed vacuum
+is obtained via high-gain PDC in a BBO crystal and filtered spatially with a slit and spectrally with a 4f-system containing two
+diffraction gratings (DG), two lenses and a slit. After the filtering, a small part of BSV is tapped off for monitoring the mean
+photon number per pulse and the statistics, and the rest is tightly focused on the surface of a lithium niobate crystal (LiNbO3 ).
+The second, third, and fourth optical harmonics are generated without phase matching, filtered from the BSV radiation with
+short-pass (SP) filters and registered by a detector. (c) Measured dependence of the SH (red), TH (green) and FH (blue)
+photon flux on the pump flux with the pump being BSV (filled squares) and pseudo-coherent light obtained from BSV through
+post-selection (empty circles). In each case the flux is corrected for the detection and transmission losses. Theoretical fits with
+the quadratic, cubic, and quartic functions (lines) show the correct power dependence for each harmonic.
+
+
+
+                                                                              (n)    (n)   (n)   (n)            (n)
+strate this enhancement in the generation of the second                   n ABSV /Aps gBSV /gps              ηmax
+(SH), third (TH) and fourth (FH) optical harmonics.                       2 2.86 ± 0.08 2.94 ± 0.06 (3.2 ± 0.3) × 10−7 %
+   The experimental setup is shown in Fig. 1b. For the                    3 13.6 ± 0.8 14.5 ± 0.6 (1.38 ± 0.12) × 10−9 %
+generation of optical harmonics we use broadband BSV                      4    71 ± 6      63 ± 2   (4.9 ± 0.7) × 10−10 %
+radiation around the frequency degeneracy (1600 nm)
+[20] produced in a beta barium borate (BBO) crystal                TABLE I. Characteristics of the obtained harmonic genera-
+(see Methods). After spatial and spectral filtering, BSV           tion from BSV: statistical enhancement with respect to the
+                                                                                             (n)    (n)
+is tightly focused on the surface of a lithium niobate             pseudo-coherent source (ABSV /Aps ) (left), the ratios of the
+                                                                                                        (n)     (n)
+(LiNbO3 ) crystal, where SH, TH, and FH are gener-                 corresponding correlation functions gBSV /gps (center) and
+ated without phase-matching. The radiation of optical                                                       (n)
+                                                                   maximal harmonic generation efficiency ηmax ≡ Fnω /F from
+harmonics is separated from BSV first by short-pass fil-           Fig. 1c (right).
+ters and then by different bandpass filters. The photon
+number in each pulse of the harmonics radiation is mea-
+sured with an avalanche photodiode or with a charge-               eration takes place if the PDC power is high. This pro-
+integrating detector based on a Si PIN photodiode [16].            cess is more likely to happen for strongest pulses; there-
+   For monitoring and controlling the statistics of BSV            fore [27, 28] it reduces photon-number fluctuations and
+radiation, we tap off its small part and measure the               leads to a decrease in g (n) . We use this fact to control
+numbers of photons in each pulse with an infrared                  the statistics of BSV: by changing the phase matching
+charge-integrating detector under narrowband filtering             and, correspondingly, by making BSV radiation weaker
+(see Methods).                                                     or stronger, we make g (n) higher or lower, respectively
+   The values of normalized correlation functions mea-             (see Methods for more details).
+sured for BSV indeed coincide, within the measurement                 For each optical harmonic, we measure the dependence
+accuracy, with the theoretical predictions (see Methods).          of the output photon flux on the BSV flux, spectrally
+However, these values can be achieved not at the highest           filtered to a bandwidth of 3.3 nm. Panel c in Fig. 1 shows
+possible power of BSV. The reason is that inside the BBO           these dependences by red, green, and blue filled squares
+crystal producing PDC, incoherent second-harmonic gen-             for the second, third, and fourth harmonics, respectively.
+                                                                                                                               3
+
+   The statistical efficiencies ξ (n) , according to Eq. 2,
+can be obtained from the fits with the quadratic, cubic,
+and quartic dependencies, fn (x) = A(n) xn , n = 2, 3, 4,
+shown by solid lines. This has to be compared with
+the ‘standard’ situation where the harmonics are gener-
+ated from coherent light. In the absence of a coherent
+source with exactly the same wavelength, pulse dura-
+tion, and repetition rate as the BSV radiation, we create
+a pseudo-coherent source. To this end, we reduce the
+photon-number fluctuations of BSV using post-selection
+(see Methods). By imposing a condition on the pho-
+ton number in the tapped off beam to be within certain
+boundaries, we also reduce the photon-number fluctua-
+tions in the transmitted beam [29], so that the intensity
+correlation functions for the post-selected pulses reach
+almost unity. The power dependences for different har-
+monics generation from this pseudo-coherent source are
+plotted in Fig. 1c by empty circles, with the same colours
+as in the case of BSV, and also fitted by power depen-
+dences (lines). One can see that the statistical efficiency
+is indeed considerably higher for BSV than for pseudo-
+coherent light. The enhancement factors are shown in
+Table I (second column), together with the ratios of the
+correlation functions for BSV and the pseudo-coherent
+light source (third column). As expected, there is agree-
+ment between the two.
+   To compare the efficiency of harmonics generation from
+degenerate BSV with the one from thermal light, we scan
+the BSV wavelength around the degeneracy point 1600
+nm and measure the rates of the SHG, around 800 nm,
+                                                               FIG. 2. SHG (a), THG (b) and FHG (c) statistical efficiencies
+of the THG, around 533 nm, and of the FHG, around
+                                                               ξ (n) (points) as well as the corresponding correlation functions
+400 nm. The generation efficiencies, calculated accord-        (lines) measured versus the BSV wavelength.
+ing to Eq. 2, are plotted in Fig. 2, together with the
+corresponding correlation functions of BSV. By scanning
+the wavelength we pass from BSV with thermal statis-
+tics (far from the degeneracy point) to BSV with the           harmonic generation scales as the n-th order normalized
+superbunched statistics (around the degeneracy point).         correlation function, the data presented in all three pan-
+The efficiency follows the correlation function, and we        els of Fig. 3 generally follow a linear fit ξ (n) ∼ g (n) (lines).
+observe an enhancement by factors of 2, 2.5, and 4 for            We see that the photon-number ‘noise’ dramatically
+SHG, THG, and FHG with BSV compared to thermal                 increases the efficiency of optical harmonic generation.
+light, respectively.                                           It turns out that the generated harmonics are even ‘nois-
+   The scaling of the harmonic generation efficiency with      ier’ [30]. Indeed, the second-order normalized correlation
+the normalized correlation functions is demonstrated by                    (2)
+                                                               function gnω for the n-th harmonics is, by definition,
+Fig. 3, which shows the efficiencies of SHG (left), THG
+(middle) and FHG (right) from BSV measured as func-                                                2
+                                                                                       (2)     h: Nnω  :i
+tions of the second-, third-, and fourth-order correla-                               gnω  ≡          2
+                                                                                                          .                  (3)
+                                                                                                hNnω i
+tion functions, respectively. To vary the values of the
+correlation functions we change the orientation of the         The normal ordering can be omitted due to the high mean
+BBO crystal, which changes the BSV generation effi-            photon number hNnω i. Then, from Eq. (1), we get [11,
+ciency and hence the statistics of the BSV through the         31]
+second-harmonic generation in the same BBO crystal, see
+                                                                                                  (2n)
+Methods.                                                                                (2)      gω
+   In all measurements shown in Fig. 3, the optical har-                               gnω  =     (n)
+                                                                                                         .                   (4)
+                                                                                                (gω )2
+monics are generated from broadband BSV, with the typ-
+ical times of intensity fluctuations being 80 fs. At the       Thus, the correlation functions for the harmonics can
+same time, g (n) were measured under 2.5 nm filtering          be estimated from the ones for the pump. Note that
+(see Methods).                                                 the obtained result is valid for any type of the pump
+   Because the statistical efficiency ξ (n) of an n-th order   statistics.
+                                                                                                                            4
+
+
+
+
+FIG. 3. Statistical efficiencies ξ (n) of SHG (left), THG (middle) and FHG (right) from broadband BSV show linear dependences
+on the corresponding correlation functions, measured with narrowband filtering. The correlation functions are varied by
+changing the orientation of the BBO crystal and hence the efficiency of BSV generation (see Methods). Low values of the
+correlation functions are obtained with the BSV generated efficiently, so that the second-harmonic generation in BBO reduces
+the photon-number fluctuations. In the opposite case, with inefficient BSV generation, its superbunched statistics is almost
+perfectly preserved, and the correlation functions are high.
+
+
+
+   The bars in Fig. 4 show the theoretically predicted             beneficial for the nonlinear optics of fragile structures.
+values of the second-order normalized correlation func-            Indeed, in our experiment we generate harmonics with-
+tion (bunching parameter) for all three optical harmon-            out phase-matching from extremely low powers (from a
+ics generated from superbunched (colored) and thermal              few nW to tens of µW). According to Fig. 1, to achieve
+(shaded) BSV. The expected values are very high and                the same rate of a four-photon effect one can use BSV
+range from 6, for SHG from thermal light [11, 32], to 184,         with the mean power reduced about three times com-
+for FHG from superbunched BSV. The experimental re-                pared to the case of coherent pumping. This can help to
+                                                                   dramatically increase the sensitivity while being consid-
+                                                                   erably below the damage threshold.
+                                                                      An important feature of BSV is the time scale of its
+                                                                   photon-number fluctuations. Here we have demonstrated
+                                                                   a bandwidth of 9 THz, corresponding to times of 80 fs,
+                                                                   but one can achieve times at least an order of magnitude
+                                                                   shorter. Such behaviour cannot be mimicked by any ex-
+                                                                   ternal intensity modulation. Moreover, although here for
+                                                                   simplicity we used a single spatial mode, the multimode
+                                                                   spatial structure of PDC will not change its ‘noisy’ be-
+                                                                   haviour and one can use the whole frequency and angular
+                                                                   spectrum of BSV for exciting multiphoton effects.
+                                                             (2)
+                                                                      Finally, the observation of extremely strong photon
+FIG. 4. Measured second-order autocorrelation functions gnω        bunching in the radiation of optical harmonics from BSV
+for the harmonics generated from BSV with superbunched             is very interesting in connection with the intensely dis-
+(filled circles) and thermal (empty circles) statistics show ex-
+                                                                   cussed topic of extreme events and ‘rogue waves’ [33],
+tremely high fluctuations of the harmonic radiation, which
+increase with the number of the harmonic. The theoretical
+                                                                   observed for processes with ‘heavy-tailed’ probability dis-
+values are shown by filled and shaded colour bars, respec-         tributions. To the best of our knowledge, the observed
+tively.                                                            g (2) = 110±20 considerably exceeds all values reported in
+                                                                   the literature [34] and indicates a photon-number proba-
+                                                                   bility distribution with a very ‘heavy tail’. The perspec-
+sults are shown by black circles on each bar. The correla-         tive of observing multi-photon effects from such radia-
+tion function was measured by registering coincidences in          tion is even more interesting; however, it would require
+a Hanbury Brown-Twiss setup (see Methods). The data,               a higher sensitivity than the one of our experiments.
+in good agreement with the theory, show a huge increase               Acknowledgments. We acknowledge the financial
+of fluctuations in the generated optical harmonics.                support of the joint DFG-RFBR project CH1591/2-
+   These results, obtained for one particular case of opti-        1 - 16-52-12031 NNIOa and of the G-RISC program,
+cal harmonic generation, show that BSV is an extremely             projects P-2017a-19, P-2016a-5, P-2016a-6.
+useful source for multi-photon effects in general. Among              Author contributions. K.Yu.S., D.A.K. and V.L.K.
+other applications, the use of BSV as a pump will be               carried out the experimental work and contributed to the
+                                                                                                                       5
+
+analysis of the data; M.V.C., T.V.M. and G.L. initiated       after post-selection to be measurable (Fig. 7). The mini-
+and supervised the project; all authors discussed the re-     mal values of correlation functions obtained this way are
+sults and contributed to the writing of the manuscript.       g (2) = 1.01±0.002, g (3) = 1.02±0.003, g (4) = 1.1±0.007.
+   Methods                                                    After post-selection, the flux of each optical harmonic is
+   BSV generation and controlling its statistics.             linear in the corresponding correlation function; Fig. 8
+We produce broadband BSV radiation in a 10 mm BBO             shows THG as an example.
+crystal using as a pump the amplified radiation of a Ti-         Correlation functions for BSV are measured un-
+sapphire laser with the wavelength 800 nm, the pulse du-      der narrowband filtering, the bandwidth ranging from 4.5
+ration 1.6 ps, and the repetition rate 5 kHz. The pump        nm to 2.5 nm. Otherwise, intensity fluctuations within
+is focused into the crystal by a cylindrical lens with a      each pulse lead to multimode detection and therefore to
+focal length of 700 mm, so that the beam remains unfo-        the reduction of the correlation functions. We measure
+cused in the plane of the optic axis and the pump walk-       the photon number in each BSV pulse using a charge-
+off [19] is not pronounced. The crystal is cut at 19.9◦       integrating detector with the same design as the one used
+degrees to the optic axis, which provides type-I collinear    in the visible range, but based on an InGaAs PIN pho-
+phase-matching around the degenerate wavelength 1600          todiode Hamamatsu G12180-020A. The detector has a
+nm [20]. After the crystal we cut off the pump by dichroic    dynamic range from few thousands to several millions
+mirrors and two FEL1200 long-pass filters. A slit is used     of photons per pulse, a quantum efficiency of 85% at
+to filter BSV to a single spatial mode. The spectral fil-     1600 nm, and the electronic noise equivalent to 1600
+tering is made by a 4f-monochromator, which allows the        photons per pulse. It produces electronic pulses with
+wavelength to be scanned from 1550 nm to 1650 nm and          the area S = KN , where N is the input number of
+the bandwidth around the degenerate wavelength 1600           photons and K = 5.0 ± 0.4 pV × s. The correlation
+nm to be changed. Although the bandwidth of unfiltered        functions are calculated Pfrom nthe data using the formula
+                                                              g (n) = M n−1 i Sin / [ i Si ] , where Si is the area of
+                                                                             P
+BSV is 400 nm [20], the largest bandwidth allowed by
+filtering is 75 nm.                                           each electronic pulse and M is the number of pulses.
+                                                              Here, one can use a single detector and ignore the normal
+   We found out that BSV in the BBO crystal expe-             ordering in the correlation function definition due to the
+riences further sum frequency generation, 1600 nm →           large mean number of photons in BSV.
+800 nm. This process acts on BSV as a nonlinear ab-              Generation of optical harmonics. In the genera-
+sorber. It reduces fluctuations by absorbing more pho-        tion of all optical harmonics, we focus BSV on the sur-
+tons from higher energy bursts [27, 28]. The contribution     face of a 1 mm thick lithium niobate crystal slab by a
+of this process can be tuned by tilting the crystal closer    lens with the focal length 3.1 mm and numerical aperture
+or further from the exact phase-matching position. Us-        0.68. Because the Rayleigh length (7µm) is much smaller
+ing this method we change the statistics of BSV and can       than the crystal length, harmonic generation in the bulk
+reduce its correlation functions to g (2) = 1.55 ± 0.05,      is suppressed due to the Gouy phase, and for more ef-
+g (3) = 3.5 ± 0.2, and g (4) = 7.1 ± 0.5. The dependence of   ficient harmonic generation the beam waist is placed on
+g (2) on the crystal orientation is shown in Fig. 5.          the crystal surface [35]. The crystal optic axis is in the
+   With the crystal oriented far from the exact phase         plane of the slab; this orientation does not provide phase
+matching, the strong photon-number fluctuations of BSV        matching for any harmonic generation. The polarization
+are maintained, and the measured correlation functions        of the BSV as well as of all harmonics is along the op-
+                                       (2)
+reach their theoretical values: gBSV = 2.97 ± 0.06,           tic axis, which means that the interaction involves the
+  (3)                        (4)                              z components of all nonlinear susceptibilities, which are
+gBSV = 14.8 ± 0.6, and gBSV = 108 ± 9 (Fig. 6). At the
+same time, the highest values of g (n) can be only achieved   the largest for LiNbO3 . For the filtering of optical har-
+with the mean power of BSV not higher than 4 mW be-           monics, the following filters are used: three FGB25 and
+fore spatial and spectral filtering, which is not enough      FBH800-40 for SH, two FGS900A and MF530-43 for TH,
+for FHG after all filtering losses. The fourth harmonic is    and two FGS900A and FBH400-40 for FH.
+therefore produced with a reduced value of g (4) = 69 ± 2.       Measurement of the second-order correlation
+                                                              function for the optical harmonics. For each har-
+   Obtaining pseudo-coherent light by post-                   monic generated from BSV after narrowband filtering,
+selection. For controlling the statistics of BSV, we tap      the correlation function g (2) is measured with a Hanbury
+off about 0.6% of its power on a beam sampler. For each       Brown – Twiss setup. The harmonic radiation is col-
+pulse, we record the number of photons in the reflected       limated by a lens with the focal length 3.1 mm, split
+BSV beam and in the harmonic radiation. From the ob-          using a zero-order wave plate and a Glan prism, and
+tained dataset we choose only pulses in which the number      fed in two gated single-photon Perkin&Elmer SPCM-
+of photons in BSV lies within certain boundaries. Only        AQRH-16 counters. The photocounts are sent to a co-
+for those pulses the data on the harmonics are further        incidence circuit and
+processed. This way we restrict the BSV fluctuations and                          Pthe 1correlation
+                                                                                           P 2  function c,1,2
+                                                                                                              is found as
+                                                              g (2) = M i Nic /
+                                                                          P
+                                                                                      i Ni    i Ni , where Ni      = 0, 1
+mimic the generation of optical harmonics from coherent       are the numbers of coincidences and counts in detectors
+light. We choose this post-selection ‘window’ to be as        1 and 2, respectively, for different pulses and M is the
+small as possible, but large enough for the harmonic flux     number of pulses.
+                                                                                                                               6
+
+
+
+
+ [1] Franken, P.A., Hill, A.E., Peters, C.W. & Weinreich, G.          uum state. Opt. Lett. 37, 1919–1921 (2012).
+     Generation of Optical Harmonics. Phys. Rev. Lett. 7 118–    [24] Strekalov, D., Matsko, A.B., Savchenkov, A.A., &
+     119 (1961).                                                      Maleki, L. Quantum-correlation metrology with bipho-
+ [2] Denk, W., Strickler, J.H. & Webb, W.W. Two-Photon                tons: where is the limit? J. Mod. Opt. 52, 2233–2243
+     Laser Scanning Fluorescence Microscopy. Science 248,             (2005).
+     73–76 (1990).                                               [25] Tiihonen, M. et al.. Ultrabroad gain in an optical
+ [3] Delone, N.B. & Krainov, V.P. Multiphoton Processes in            parametric generator with periodically poled KTiOPO4 ,
+     Atoms (Springer, Berlin, 2000).                                  Appl. Phys. B 85, 73–77 (2006).
+ [4] Gattass, R.R. & Mazur, E. Femtosecond laser microma-        [26] Katamadze, K.G., et al. Broadband biphotons in a single
+     chining in transparent materials. Nat. Photonics 2 219–          spatial mode. Phys. Rev. A 92, 023812 (2015).
+     225 (2008).                                                 [27] Krasinski, J, & Dinev, S. Influence of nonlinear effects
+ [5] Shen, Y.R. The Principles of Nonlinear Optics, (John             on the statistical properties of a high power density laser
+     Wiley & Sons, New York, 1984).                                   beam. Optics Comm. 18, 424–426 (1976).
+ [6] Mollow, B.R. Two-Photon Absorption and Field Corre-         [28] Leuchs, G. Photon Statistics, Antibunching and
+     lation Functions. Phys. Rev. 175 1555–1563 (1968).               Squeezed States. NATO Science Series: B 135, 329–360
+ [7] Agarwal, G.S. Field-Correlation Effects in Multiphoton           (1986).
+     Absorption Processes. Phys. Rev. A 1 1445–1459 (1970).      [29] Iskhakov, T.Sh., et al. Low-noise macroscopic twin
+ [8] Lecompte, C., Mainfray, G., Manus, C. & Sanchez, F.              beams, Phys. Rev. A 93, 043849 (2016).
+     Laser temporal-coherence effects on multiphoton ioniza-     [30] Ducuing, J. & Bloembergen, N. Statistical Fluctuations
+     tion processes Phys. Rev. A 11 1009–1015 (1975).                 in Nonlinear Optical Processes. Phys. Rev. 133, A1493–
+ [9] Delone, N.B. & Masalov, A.V. Multiphoton detectors of            A1502 (1964).
+     laser radiation. Opt. Quant. Electron. 12 291–301 (1980).   [31] Teich, M.C. & Wolga, G.J. Multiple-Photon Processes
+[10] Qu, Y. & Singh, S. Photon correlation effects in second          and Higher Order Correlation Functions. Phys. Rev. Lett.
+     harmonic generation. Opt. Comm. 90 111-114 (1992).               16, 625–628 (1966).
+[11] Qu, Y. & Singh, S. Measurements of photon statistics        [32] Allevi, A. & Bondani, M. Direct detection of super-
+     in second-harmonic generation. Phys. Rev. A 51, 2530–            thermal photon-number statistics in second-harmonic
+     2536 (1995).                                                     generation. Opt. Lett. 40, 3089–3092 (2015).
+[12] Popov, A.M. & Tikhonova, O.V. The Ionization of Atoms       [33] Dudley, J.M., Dias, F., Erkintalo, M., & Genty, G. Insta-
+     in an Intense Nonclassical Electromagnetic Field. J. Exp.        bilities, breathers and rogue waves in optics. Nat. Pho-
+     Theor. Phys. 95, 844–850 (2002).                                 tonics 8, 755–764 (2014).
+[13] Jechow, A. et al. Enhanced two-photon excited fluores-      [34] Meuret, S., et al. Photon Bunching in Cathodolumines-
+     cence from imaging agents using true thermal light. Nat.         cence. Phys. Rev. Lett. 114, 197401 (2015).
+     Photonics 7, 973–976 (2013).                                [35] Rostovtseva, V.V., Saltiel, S.M., Sukhorukov, A.P., &
+[14] Corzo, N., Marino, A. M., Jones, K. M. & Lett, P.                Tunkin, V.G.. Generation of higher optical harmonics in
+     D. Multi-spatial-mode single-beam quadrature squeezed            focused beams. Sov. J. Quantum Electron. 10 616–620
+     states of light from four-wave mixing in hot rubidium            (1980).
+     vapor. Opt. Express 19, 21358–21369 (2011).
+[15] Jedrkiewicz, O. et al. Detection of Sub-Shot-Noise Spa-
+     tial Correlation in High-Gain Parametric Down Conver-
+     sion. Phys. Rev. Lett. 93, 243601 (2004).
+[16] Iskhakov, T.Sh., Chekhova, M.V. & Leuchs, G. Gen-
+     eration and direct detection of broadband mesoscopic
+     polarization-squeezed vacuum. Phys. Rev. Lett. 102,
+     183602 (2009).
+[17] Agafonov, I.N., Chekhova, M.V. & Leuchs, G. Two-color
+     bright squeezed vacuum. Phys. Rev. A 82, 011801 (2010).
+[18] Glauber, R.J. The Quantum Theory of Optical Coher-
+     ence. Phys. Rev. 130, 2529–2539 (1963).
+[19] Pérez, A.M. et al. Giant narrowband twin-beam genera-
+     tion along the pump-energy propagation direction. Nat.
+     Commun. 6, 7707 (2015).
+[20] Spasibko, K.Yu. et al. Ring-shaped spectra of parametric
+     downconversion and entangled photons that never meet.
+     Opt. Lett. 41, 2827–2830 (2016).
+[21] Janszky, J. & Yushin, Y. Many-photon processes with
+     the participation of squeezed light. Phys. Rev. A 36,
+     1288–1292 (1987).
+[22] Boitier, F. et al. Photon extrabunching in ultrabright
+     twin beams measured by two-photon counting in a semi-
+     conductor. Nat. Commun. 2, 425 (2011).
+[23] Iskhakov, T.Sh. et al. Superbunched bright squeezed vac-
+                                                                                                                          7
+
+
+
+
+FIG. 5. The measured second-order correlation function g (2) for BSV depends on the angle of the BBO optic axis with respect
+to the pump direction, due to the unwanted second harmonic generated in the BBO crystal. Inset: due to the same effect, the
+g (2) also depends on the pump power.
+
+
+
+
+                       FIG. 6. The fourth-order correlation function g (4) versus the BSV wavelength.
+                                                                                                                             8
+
+
+
+
+FIG. 7. The third-order correlation function g (3) for the post-selected data decreases almost to unity when the post-selection
+window for BSV signal becomes narrower (solid line). At the same time, the number of TH counts for a chosen pulses, within
+this window, decreases (dashed line). The low number of counts makes the harmonic flux measurable only with big errors.
+
+
+
+
+          FIG. 8. The TH flux for post-selected pulses linearly depends on the third-order correlation function g (3) .
+

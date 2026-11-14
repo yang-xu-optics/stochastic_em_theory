@@ -1,0 +1,1837 @@
+                      Sub-cycle metrology of bright quantum light
+S. Gholam-Mirzaei1*, M. T. Weil1,2,4*, D. N. Purschke1,3, K. M. Kowalczyk1, A. Staudte1, D. M.
+      Villeneuve1, P. B. Corkum1, J. S. Lundeen2,4, T. J. Hammond5, and G. Vampa1.
+
+   1
+   Joint Attosecond Science Laboratory (JASLab), National Research Council of Canada and
+   University of Ottawa, Ottawa, ON, Canada
+   2
+       Department of Physics, University of Ottawa, Ottawa ON K1N 6N5, Canada
+   3
+       Laboratory for Laser Energetics, University of Rochester, Rochester NY, 14623-1299, USA
+   4
+       Nexus for Quantum Technologies, University of Ottawa, Ottawa ON K1N 6N5, Canada
+   5
+       Department of Physics, University of Windsor, Windsor ON N9B 3P4, Canada
+   * These authors contributed equally to this work.
+
+
+In quantum optics, quantization of the electromagnetic field typically occurs in a finite
+volume – a cavity – which results in discrete frequency modes where photons are created,
+annihilated and exchanged between such modes1,2. As a result, evolution of quantum optical
+states is periodic in the carrier wave of the field, measurement protocols return cycle-
+averaged information3, and any sub-cycle evolution that is foundational to many light-matter
+interactions, especially at high field strengths4-10, remains hidden. Adapting an attosecond
+technique11-13, here we capture the electric-field evolution of a quantum optical state,
+femtosecond bright squeezed vacuum14, with sub-cycle precision. We find that it consists of
+many stochastic, time-localized bursts within each pump pulse whose phase randomly
+switches between two values. We exploit the random phase flips to generate quantum
+random bit sequences with a generation rate that can reach petahertz frequencies. In
+addition, the sub-cycle resolution allows us to measure coherence functions of the waveforms
+between any two times, which we explain with a superposition of time-limited modes15. These
+results bridge attosecond metrology and quantum optics and pave the way to measuring
+quantum light-matter interactions as they evolve on a few-femtosecond time scale, and
+integrate quantum randomness in petahertz electronics9,10.
+
+Sub-cycle dynamics characterize many light-matter interactions, especially with intense light,
+where tunnel or multi-photon ionization initiate high-order harmonic emission4,5 and light-induced
+currents in dielectrics6-8, and enables optoelectronic operations at petahertz rates9,10. These strong-
+
+
+                                                  1
+field processes have been shown to generate quantum correlations within the matter system16-18,
+while some evidence suggests that quantum-optical correlations are created as well19. Thus, time-
+resolved metrology of quantum-optical states with sub-laser cycle temporal resolution is desirable
+to understanding strong-field quantum-optical interactions.
+
+Sub-cycle quantum-optical metrology was developed in a series of pioneering works, where the
+vacuum fluctuations at mid-infrared and terahertz frequencies were resolved with sub-cycle
+precision20,21 along with their delay-dependent first-order correlation22. This is in stark contrast to
+established measurement methods that integrate over the duration of the temporal modes with a
+matched local oscillator and hence extract multi-cycle averaged information about the quantum
+properties of the light3,23,24. Theoretical proposals to extend this method, relying on electro-optic
+sampling, to allow simultaneous measurement of both field quadratures were also put forth25,26.
+These advancements would enable sub-cycle quantum state tomography of any arbitrary state.
+
+Motivated by the need to develop sub-cycle quantum-optical metrology of higher frequency fields
+typically employed in strong-field interactions, here we extend an attosecond technique, solid-state
+Tunneling Ionization with a Perturbation for the Time-domain Observation of an Electric field
+(TIPTOE)11,12, to measure the electric field of femtosecond bright squeezed vacuum (BSV) as it
+evolves within each laser pulse13. We show that nonlinear photoexcitation in a silicon-based image
+sensor provides direct time-domain access to the ensemble statistics of stochastic waveforms,
+which are composed of temporally localized bursts. We characterize the properties of these bursts,
+extract two-dimensional time-resolved correlation functions, and demonstrate that the phase of
+each burst assumes one of two values separated by π; i.e., a bimodal distribution characteristic of
+squeezed vacuum. Assigning a logical value to the quantum random phase of each burst in a laser
+shot enables extraction of binary sequences that pass standard statistical tests, thus demonstrating
+a route toward quantum random number generation (QRNG) approaching petahertz bandwidth.
+The ability to resolve the oscillating electric field of quantum light brings quantum optical
+phenomena into the sub-cycle time domain, where the quantum behavior of light becomes a
+directly measurable, high-bandwidth resource for certified randomness generation.
+
+Results and discussion
+
+
+
+
+                                                  2
+The experiment is sketched in Fig. 1a and detailed in the Methods section. A Bright squeezed
+vacuum (BSV) beam, centered at a wavelength of 1.6 µm, is generated via high-gain spontaneous
+parametric down-conversion in two BBO crystals placed in series, pumped by 50 fs pulses at a
+center wavelength of 800 nm and repetition rate of 1 kHz14. The BSV intensity averaged over
+1,000 shots is ~0.42 MW/cm², corresponding to an average pulse energy of 1.5 nJ. The histogram
+of the BSV pulse energies is shown in Fig. 1b, yielding a shot-averaged same-time second-order
+                        (2)
+correlation function27 𝑔𝑔𝐵𝐵𝐵𝐵𝐵𝐵 (0) = 2.08.
+
+To measure the electric field, the BSV is overlapped spatially and temporally with a gate pulse on
+a silicon CMOS sensor, with the BSV contributing, on average, ~1% of the total intensity at the
+detector. The gate is a coherent pulse at the same wavelength, obtained from the degenerate output
+of a commercial optical parametric amplifier and compressed to 16 fs. Nonlinear absorption of the
+gate pulse through either multi-photon or tunnelling excitation generates conduction-band carriers
+(i.e., silicon is transparent at 1.6 µm) in a short temporal window, which is estimated to be 12 fs,
+or 2.25 cycles (see “nonlinear detection and field mapping” in Methods). The histogram of the
+                                                      (2)
+nonlinear signal is shown in Fig. 1c, yielding 𝑔𝑔𝑁𝑁𝑁𝑁 (0) = 1.01. The BSV field perturbs the
+instantaneous absorption rate, producing a phase-sensitive signal that is linear in the BSV electric
+field. A small crossing angle between the beams introduces a spatially varying delay across the
+sensor, resulting in vertical interference-like fringes, that directly map the instantaneous electric
+field of the BSV, 𝐸𝐸(𝑡𝑡), convolved with the duration of the nonlinear signal11,28, in a single-shot
+image. The phase of 𝐸𝐸(𝑡𝑡) is measured relative to the phase of the gate. The phase of the gate is
+locked to the phase of the pump, because the coherent reference is obtained from a self-phase
+modulation process of the pump. The absolute phase of 𝐸𝐸(𝑡𝑡) can be measured by tagging the
+carrier-envelope phase of the gate at every shot11, although this is not done here. In addition, since
+the setup is not interferometrically stable, two reference beams at 800 nm co-propagating with
+the BSV and gate pulses, respectively, are interfered in a separate region of the sensor to track
+the path-length jitter between laser shots. This information is used to assign a consistent phase
+to each BSV shot, apart from a factor of π radians. To ensure that spatial properties of the
+wavefronts do not affect the interference pattern, the gate beam is spatially filtered and both beams
+are collimated. The electric field is retrieved via Fourier-domain filtering of the recorded pattern
+(see Supplementary Information).
+
+
+                                                  3
+Once 𝐸𝐸(𝑡𝑡) is reconstructed for each shot, we analyze the temporal envelope |𝐸𝐸(𝑡𝑡)|². In contrast to
+coherent laser pulses, BSV does not produce a single deterministic pulse, but rather stochastic
+emission bursts within the pump envelope. These independent bursts arise from amplification of
+independent vacuum fluctuations. We employ a nonlinear iterative curve-fitting procedure and
+find that, of the 10,000 shots, 52% are single-burst, 41% exhibit two bursts, and the remainder
+contain three or more bursts. Representative single- and two-burst waveforms are shown in Fig.
+1d, each for 25 shots. The darker solid lines are the mean envelopes of each group. Several
+features are apparent. First, the nodes of subsequent laser shots are largely fixed in time, while the
+field amplitude fluctuates randomly (the field amplitude of each shot in the figure is normalized,
+but the power fluctuations are apparent in Fig. 1b). The fixed-node structure indicates that the
+observed bursts are phase-locked to the gate, which carries the same phase of the pump. This
+is because in parametric oscillators the pump selects the quadrature to amplify from an
+initial vacuum state, that contains all possible phases. As a result, the phase of the squeezed
+vacuum is linked to half the phase of its pump, up to a sign (a constant factor of π/4 is not
+measured in the experiment)29. The temporal structure of the envelopes is analyzed below.
+
+Envelope analysis
+
+In addition to determining the number of bursts within each shot, the nonlinear iterative curve-
+fitting procedure is used to extract the amplitude, duration, and emission time of the envelopes
+of such bursts. Figures 2a-c show two-dimensional histograms of the amplitudes of the bursts
+in the single-burst, two-bursts and three-bursts shots, respectively, as a function of the
+emission time. A competition between the single- and multi-burst shots is apparent, with
+single-burst shots being on average stronger and emitted near the center of the emission
+window (which likely corresponds to the time-dependent gain profile), while multi-burst shots
+are more likely to be lower in amplitude and emitted near the tails of the emission window. A
+two-dimensional histogram of the amplitudes of adjacent bursts in the multi-burst shots is
+shown in Fig. 2d. A small correlation is apparent, with the strongest bursts being associated
+with the weakest adjacent ones. Supplementary Figure 5b shows a plot of the fitted duration
+of the bursts. The median temporal width is 17 fs (full-width at half-maximum), longer than
+the 10 fs estimated from the spectral bandwidth30, likely due to temporal chirp and slight
+convolution with the duration of the nonlinear gate. Analysis of emission times (Fig. 2e) reveals a
+
+                                                  4
+median separation of 26 fs between successive bursts, indicating partial temporal overlap. This
+overlap region gives rise to interference effects in the reconstructed fields, as discussed below. The
+minimum separation also explains the amplitude correlation of Fig. 2d, since the strongest bursts
+are emitted in the middle of the gain window, pushing the adjacent burst to the very tail of the gain
+window, where the gain is minimal.
+
+Remarkably, the observed temporal structure is consistent with a modal description based on
+Whittaker–Shannon time-limited modes15 rather than conventional Schmidt modes. While
+temporal Schmidt modes are delocalized in time over a duration on the order of the pump pulse,
+Whittaker-Shannon modes are localized in time with minimal mutual overlap, providing a
+convenient basis for describing the emission of bursts in femtosecond parametric amplification.
+The measured burst durations, minimum separations, and coherence functions (see below)
+quantitatively agree with this time-confined modal structure (see Supplementary Information).
+Although single-burst31 and multi-burst32 emission in BSV has been measured recently, to our
+knowledge our work constitutes the first application of a temporally localized modal basis to
+understanding measurements of broadband squeezed vacuum.
+
+                                                                                    (2)
+The photon-number distribution of all bursts is shown in Fig. 2f. It has a 𝑔𝑔𝑖𝑖 (0) = 2.94. The
+       (2)
+high 𝑔𝑔𝑖𝑖 (0) indicates that the bursts represent independent stochastic degrees of freedom rather
+than a deterministic substructure of a single extended mode. The stochastic independence of
+                                                                          (2)
+the bursts is further confirmed by the fact that the burst-resolved 𝑔𝑔𝑖𝑖 (0) is significantly larger
+                          (2)
+than the shot-resolved 𝑔𝑔𝐵𝐵𝐵𝐵𝐵𝐵 (0) reported in Fig. 1b. As we show below, the reduction in the shot-
+             (2)
+resolved 𝑔𝑔𝐵𝐵𝐵𝐵𝐵𝐵 (0) is due to averaging of the independent fluctuations of all the bursts within a laser
+shot, which decreases the shot-to-shot power fluctuations, akin to how modal averaging affects the
+                                                         (2)
+𝑔𝑔(2) (0) of squeezed vacuum33. Finally, given that 𝑔𝑔𝑖𝑖 (0) of the bursts is nearly equal to that of
+single-mode squeezed vacuum, 𝑔𝑔(2) (0) = 3, these bursts may map to temporally localized modes
+as suggested by the Whittaker-Shannon decomposition.
+
+The stochastic independence of each temporal burst can be harnessed for extracting quantum
+information at multi-THz rates, as we show below.
+
+Quantum random number generation
+
+                                                    5
+Having analyzed the modal structure of BSV, we now turn our attention to the phase of the carrier
+wave. Squeezed vacuum is known to exhibit a pump-locked phase that randomly flips by π radians,
+producing a bimodal phase distribution that can be binarized into random bits and utilized for
+Quantum Random Number Generation (QRNG)29,34. To demonstrate this concept, we extract the
+carrier phase of adjacent temporal bursts in the multi-burst shots, 𝜙𝜙𝑖𝑖 and 𝜙𝜙𝑖𝑖+1, using the nonlinear
+iterative curve-fitting procedure. While the first step of the curve-fitting procedure determines
+the envelope parameters as discussed above, the second step determines the phases 𝜙𝜙𝑖𝑖 and
+𝜙𝜙𝑖𝑖+1 which characterize the carrier oscillation of each burst in the femtosecond BSV field (see
+Supplementary Information). The resulting histogram of 𝛥𝛥𝛥𝛥 = 𝜙𝜙𝑖𝑖+1 − 𝜙𝜙𝑖𝑖 (Fig. 3a) is distinctly
+bimodal, with two equally likely phases separated by π radians; i.e., the field of one burst can
+randomly flip sign relative to the other. Four randomly selected shots from each of the two clusters
+are presented in panel b. When the signs of the two bursts are equal (𝛥𝛥𝛥𝛥 = 5.5 rads or ~7π/4
+rads, left panels), their overlap region exhibits constructive interference, producing a continuous
+carrier oscillation across both bursts despite the envelope displaying two distinct maxima (these
+shots are indeed not equivalent to single-burst shots). In contrast, when 𝛥𝛥𝛥𝛥 = 2.2 rads (or ~ 3π/4
+rads, right panels), the carrier oscillation reverses sign in the overlap region, resulting in a sharp
+phase discontinuity.
+
+The discrete π phase symmetry observed here reflects spontaneous symmetry breaking in
+parametric amplification and constitutes a quantum source of randomness. This phase randomness
+has, so far, been demonstrated to occur inside optical parametric oscillators when the pump is
+periodically reset29,34, and between laser shots in travelling-wave parametric amplification 31. The
+case of shot-to-shot uncorrelated phase symmetry is shown in Fig. 3c where a short pump pulse
+tends to support amplification of primarily one burst per shot. In contrast, our demonstration
+supports uncorrelated phase symmetry between temporal bursts separated by only 25 fs within a
+single pump pulse.
+
+Grouping the phase histogram in two distinct phase classes (red and blue bars in Fig. 3a), logical
+values can be assigned to the relative random phase of each burst pair in a laser shot, as indicated
+at the bottom of Fig. 3d. The resulting sequence from the stream of 4,569 bits passes all NIST
+statistical randomness tests allowed by the length of the sequence35 (see Supplementary
+Information). As shown in Fig. 3d, using a longer pump pulse to support the amplification of many
+
+                                                   6
+localized bursts (i.e., more than two per shot on average) and/or binarizing the absolute phase of
+each burst rather than the relative phase of adjacent bursts, will allow for the encoding of more
+than one bit in each laser shot. This capability illustrates how direct time-domain access to
+quantum phase symmetry can enable randomness extraction at near-PHz rates, thus paving the
+way for integrating quantum random number generators in PHz electronics9,10.
+
+Time-dependent coherence
+
+Direct access to the electric field 𝐸𝐸(𝑡𝑡) enables evaluation of coherence functions in the time
+domain, rather than in frequency space or through commonly employed time-integrated
+measurements. Using the measured waveforms, we define the two-dimensional time-resolved
+first- and second-order coherence functions15, 𝑔𝑔(1) (𝑡𝑡1 , 𝑡𝑡2 ) = ⟨𝐸𝐸 ∗(𝑡𝑡1 )𝐸𝐸(𝑡𝑡2 )⟩/�〈𝐼𝐼(𝑡𝑡1 )〉〈𝐼𝐼(𝑡𝑡2 )〉 and
+𝑔𝑔(2) (𝑡𝑡1 , 𝑡𝑡2 ) = ⟨𝐼𝐼(𝑡𝑡1 )𝐼𝐼(𝑡𝑡2 )⟩/[〈𝐼𝐼(𝑡𝑡1 )〉〈𝐼𝐼(𝑡𝑡2 )〉],   directly from the entire dataset (10,000 shots) (see
+Supplementary Information). Here, ⟨⋯ ⟩ indicates an average over the shots. 𝑔𝑔(1)(𝑡𝑡1 , 𝑡𝑡2 ) and
+𝑔𝑔(2) (𝑡𝑡1 , 𝑡𝑡2 ) are a measure of field and intensity correlations, respectively, between times 𝑡𝑡1 and 𝑡𝑡2 ,
+
+which are referenced to the gate field, and thus correspond to two different times in the optical
+cycle of the BSV. Therefore, these correlation functions provide absolute timing information
+about the evolution of coherence. As the electric field at any time t is known with every laser shot,
+this measurement technique also provides access to any higher-order correlations 𝑔𝑔(𝑛𝑛) (𝑡𝑡1 , 𝑡𝑡2 )
+without the need for a separate delay line or additional probe pulses. This would be particularly
+useful for studying the sub-cycle dynamics of non-Gaussian processes36,37.
+
+Figure 4a shows �𝑔𝑔(1)(𝑡𝑡1 , 𝑡𝑡2 )�. The width of the distribution along any vertical or horizontal lineout
+determines the coherence length, which is ~ 40 fs (FWHM) near the center of the envelope, but
+increases in its wings. Figure 4c, instead, displays 𝑔𝑔(2)(𝑡𝑡1 , 𝑡𝑡2 ). Near the center of the pulse (𝑡𝑡1 =
+𝑡𝑡2 = 0), the same-time correlation reaches a value of 3, consistent with the intensity fluctuations of
+
+single-mode squeezed vacuum. However, it steadily drops to 2 along the same-time diagonal (𝑡𝑡1 =
+𝑡𝑡2 ≠ 0); the value commonly associated with thermal noise and two-mode squeezing1,33. As we
+
+show in the Supplementary Information, this behavior is due to the time-confined burst structure:
+near the center of the pump pulse, where parametric gain is maximal, a single dominant temporal
+burst governs the emission, and 𝑔𝑔(2) (0,0) correspondingly approaches this single-burst value.
+In the temporal wings of the pump pulse, the gain decreases and additional weaker bursts can be
+
+
+                                                                          7
+generated. When two statistically independent bursts overlap in time, their intensity fluctuations
+partially average, reducing 𝑔𝑔(2) (𝑡𝑡1 = 𝑡𝑡2 ) to 2, as similarly understood for modal averaging33, and
+consistent with the time-unresolved measurement reported in Fig. 1b. A similar effect has been
+measured in the spectral domain, where the contribution of multiple spectral “modes” was shown
+to decrease 𝑔𝑔(2) (ω) in the tails of the spectrum38. Because the emission times of the bursts
+fluctuate randomly from shot to shot, the overlap region shifts across the tails of the pulse,
+producing a smooth decrease of 𝑔𝑔(2) (𝑡𝑡1 = 𝑡𝑡2 ) towards 2. The measured lower bound 𝑔𝑔(2) (𝑡𝑡1 = 𝑡𝑡2 )
+≥ 2 indicates that, at any given time, at most two bursts significantly overlap. This is consistent
+with the observed relation between the mean mode duration and their average temporal separation.
+As presented in Fig. 4b,d, the agreement with the two-time coherence functions expected from a
+Whittaker-Shannon decomposition is remarkable, despite their analytical form relying on the low-
+gain parametric down-conversion Hamiltonian (photon pair production regime). Deviations from
+experiments may be due to experimental imperfections and may also provide an indication of high-
+gain corrections39. The parameters used in the calculations are presented in the Supplementary
+Information.
+
+Conclusion
+
+We have demonstrated single-shot sub-cycle reconstruction of the electric field of a
+multimode bright squeezed vacuum state using solid-state TIPTOE. The emission is
+characterized, largely, by statistically independent temporal bursts that are well-localized in
+time and that behave like single-mode squeezed vacuum. The measurement of temporally
+localized bursts provides the first application of the recently proposed Whittaker-Shannon
+decomposition of femtosecond squeezed vacuum. We define and analyze two-dimensional
+time-dependent coherence functions that reveal a time-resolved structure that is inaccessible
+to standard time-averaged measurements. Such functions can be used to reveal and control
+femtosecond to attosecond-fast quantum correlations and statistical properties as they develop
+in real time during high-field and attosecond interactions in matter.
+
+The stochastic localized waveforms reveal a bimodal phase-difference distribution
+characteristic of squeezed vacuum that we exploited to generate a stream of quantum random
+bits. Combining femtosecond squeezed light sources with high temporal-mode capacity (i.e.
+
+
+                                                   8
+longer pump pulse durations) and attosecond-precision field sampling extends this concept toward
+scalable QRNG approaching petahertz rates. This direction connects attosecond metrology to
+quantum information science and establishes a platform where the quantum behavior of light
+becomes a directly measurable, high-bandwidth resource for certified randomness generation. The
+convenient use of standard image sensors allows PHz-QRNG at telecom wavelengths.
+
+
+
+
+Materials and Methods
+Experimental setup
+
+A schematic of the experimental setup is shown in Extended Data Fig. 1. A Ti:sapphire
+regenerative amplifier (Coherent Legend) delivers pulses centered at 800 nm with a duration of 50
+fs (FWHM) at a repetition rate of 1 kHz. Approximately 1.1 mJ of pulse energy is used to pump a
+commercial optical parametric amplifier (Light Conversion TOPAS).
+
+In the degenerate OPA configuration, cross-polarized signal and idler beams are generated at 1.6
+µm. The signal beam is selected as the coherent arm in TIPTOE using a wire-grid polarizer and
+subsequently spectrally broadened by focusing into a 2 mm-thick YAG plate. The central portion
+of the broadened spectrum is selected using a spatial filtering aperture.
+
+Approximately 30 µJ of pump pulse energy is directed to the generation of bright squeezed vacuum
+(BSV) centered at 1.6 µm via high-gain spontaneous parametric down-conversion in a Type-I
+phase-matching geometry. The nonlinear medium consists of two 2 mm-thick, uncoated β-barium
+borate (BBO) crystals arranged in tandem, separated by ~20 cm. Prior to the crystals, the pump
+beam is telescoped to a beam diameter of approximately 0.5 mm to achieve the desired intensity
+for high parametric gain. A variable neutral density filter is used to control the pump energy
+incident on the crystals. Approximately 1.5 nJ of average BSV energy was used for TIPTOE. The
+tandem configuration of the BBO crystals serves not only to increase gain, but also to restrict the
+spatial and spectral mode content of the emitted radiation14. In particular, the second crystal
+preferentially amplifies a subset of the spatial modes generated in the first crystal, resulting in
+partial mode filtering.
+
+
+
+
+                                                 9
+The BSV and coherent reference beams are combined non-collinearly with a small crossing angle
+(𝜃𝜃 < 6°) in the horizontal plane. This geometry produces a spatially varying time delay 𝜏𝜏(𝑥𝑥)
+across the detector, given by τ(𝑥𝑥) ≈ (𝑥𝑥/𝑐𝑐) sin(𝜃𝜃), where x is the horizontal coordinate on the
+sensor and c is the speed of light. This mapping enables single-shot acquisition of the temporal
+waveform E(t) along the spatial axis of the camera. The beams are weakly focused onto a silicon
+CMOS sensor (FLIR Blackfly BFS-U3-28S5M-C) to ensure a nearly uniform intensity distribution
+across the interaction region while maintaining sufficient peak intensity for nonlinear excitation.
+At the CMOS sensor, the BSV beam is ∼ 3.3 mm in diameter (1/e2). This is extracted from the
+vertical width of the envelope of the TIPTOE fringes shown in Supplementary Figure S2b (see
+“isolating the BSV signal” in the Supplementary Information).
+
+The sub-cycle path-length jitter between the coherent reference and the BSV arms is measured at
+each shot by sending 800 nm reference signals from each arm onto a separate area of the detector.
+In the coherent reference arm, this reference beam is obtained by frequency doubling the
+broadened OPA signal beam in a 50 µm-thick BBO crystal. In the BSV arm, this is the residual
+BSV pump. The 1.6 µm and 800 nm signals are split by a reflective neutral density filter (OD 0.02)
+after they are combined on a common path, ensuring that the crossing angles of the two 1.6 µm
+beams (black lines, TIPTOE path) and of the two 800 nm beams (red lines, references path) are
+identical. A bandpass filter at 800 nm in the reference arm and a long-pass filter at 1.6 µm in the
+TIPTOE arm ensure proper separation of the two wavelengths in these arms. Because the BSV
+pump is much brighter than the frequency doubled coherent reference, a variable neutral density
+filter wheel (OD 2) is placed on the common reference path, sending the former beam through the
+high density region of the wheel, and allowing the latter through the transparent region. The
+interference of the two reference beams yields vertical fringes whose phase is used during the data
+analysis to correct for the path-length jitter. Because the jitter is measured with 800 nm
+wavelength, and that a path-length shift of an integer multiple of a wavelength is indistinguishable
+from no difference at all, the jitter is known only up to a half-wavelength of the BSV. Thus, all
+BSV fields of different laser shots are known up to a sign. However, within the same laser shot,
+the relative phase between the temporal bursts is a legitimate observable as it is unaffected by path-
+length jitter. Because of the identical crossing angle to the TIPTOE beams, the fringe spacing is
+half that of the TIPTOE signal.
+
+
+                                                 10
+Nonlinear detection and field mapping
+
+Silicon is transparent at λ = 1.6 µm. Carrier excitation therefore occurs via a nonlinear process,
+with the excitation rate depending nonlinearly and monotonically on the instantaneous electric
+field of the incident light. In the absence of the BSV, the coherent reference alone produces a
+nonlinear signal that varies slowly in space, according to its slowly varying envelope. When the
+BSV is present, its electric field interferes with the reference field, modifying the instantaneous
+field amplitude 𝐸𝐸𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡 (𝑡𝑡) = 𝐸𝐸𝑟𝑟𝑟𝑟𝑟𝑟 (𝑡𝑡) + 𝐸𝐸𝐵𝐵𝐵𝐵𝐵𝐵 (𝑡𝑡).
+
+Because the excitation rate depends nonlinearly on |𝐸𝐸𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡𝑡 (𝑡𝑡)|, the presence of the BSV modulates
+the carrier generation rate in a manner sensitive to both the amplitude and phase of 𝐸𝐸𝐵𝐵𝐵𝐵𝐵𝐵 (𝑡𝑡). When
+the nonlinear excitation is confined to a time window shorter than one optical cycle of the carrier
+wave, this modulation provides a direct mapping of the instantaneous electric field of the BSV
+onto the measured signal. These general principles of TIPTOE have been described elsewhere11,12.
+
+The noncollinear geometry combined with the nonlinear detection results in vertical interference-
+like fringes on the camera. These fringes correspond to oscillations of the instantaneous electric
+field of the BSV as a function of delay. Each camera frame therefore contains the full temporal
+waveform 𝐸𝐸𝐵𝐵𝐵𝐵𝐵𝐵 (𝑡𝑡) of a single realization of the squeezed vacuum field.
+
+
+
+Stability and temporal resolution
+
+The coherent reference and BSV share the same absolute phase. The coherent reference is the
+signal beam of a white-light seeded OPA. Thus, provided the white-light generation is stable, 𝜙𝜙𝑠𝑠 =
+𝜙𝜙800 , apart from a constant factor. The BSV has the phase of the pump, apart from a random sign
+and a constant factor of π/41,29. Thus, passive phase stability between the fields is ensured.
+Interferometric stability of the setup, on the other hand, is independently verified as described
+above.
+
+The temporal resolution of the measurement, which determines the minimum burst duration that
+can be measured, is given by the effective duration of the nonlinear excitation window, governed
+by both the reference pulse duration and the nonlinear response. Nonlinear absorption of the 16 fs
+
+
+                                                                 11
+reference pulse is measured to scale with I1.7 (I is the intensity of the reference on the camera, and
+1.7 is the measured order of nonlinearity). Therefore, the effective gating window is estimated to
+be ~ 12 fs.
+
+
+
+Data availability: All data used in the analysis is available from the authors upon reasonable
+request.
+Code availability: All code used in the analysis is available from the authors upon reasonable
+request.
+
+
+
+References
+1      Gerry, C. C. & Knight, P. L. Introductory Quantum Optics. (Cambridge university press,
+       2023).
+2      Loudon, R. The Quantum Theory of Light. (Oxford university press, 2000).
+3      Lvovsky, A. I. & Raymer, M. G. Continuous-variable optical quantum-state tomography.
+       Rev. Mod. Phys. 81, 299-332 (2009).
+4      Ferray, M. et al. Multiple-harmonic conversion of 1064 nm radiation in rare gases. J.
+       Phys. B: At. Mol. Opt. Phys. 21, L31-L35 (1988).
+5      Ghimire, S. & Reis, D. A. High-harmonic generation from solids. Nat. Phys. 15, 10-16
+       (2019).
+6      Schiffrin, A. et al. Optical-field-induced current in dielectrics. Nature 493, 70-74 (2013).
+7      Schultze, M. et al. Controlling dielectrics with the electric field of light. Nature 493, 75-
+       78 (2013).
+8      Schötz, J. et al. The emergence of macroscopic currents in photoconductive sampling of
+       optical fields. Nat. Commun. 13, 962 (2022).
+9      Hui, D. et al. Ultrafast optical switching and data encoding on synthesized light fields.
+       Sci. Adv. 9, eadf1015 (2023).
+10     Heide, C., Keathley, P. D. & Kling, M. F. Petahertz electronics. Nat. Rev. Phys. 6, 648-
+       662 (2024).
+11     Park, S. B. et al. Direct sampling of a light wave in air. Optica 5, 402-408 (2018).
+12     Liu, Y. et al. All-optical sampling of few-cycle infrared pulses using tunneling in a solid.
+       Phot. Res. 9, 929-936 (2021).
+13     Liu, Y., Beetar, J. E., Nesper, J., Gholam-Mirzaei, S. & Chini, M. Single-shot
+       measurement of few-cycle optical waveforms on a chip. Nat. Photonics 16, 109-112
+       (2022).
+14     Pérez, A. et al. Bright squeezed-vacuum source with 1.1 spatial mode. Opt. Lett. 39,
+       2403-2406 (2014).
+15     Drago, C. & Sipe, J. Deconstructing squeezed light: Schmidt decomposition versus the
+       Whittaker-Shannon interpolation. Phys. Rev. A 110, 023710 (2024).
+16     Niikura, H. et al. Probing molecular dynamics with attosecond resolution using correlated
+       wave packet pairs. Nature 421, 826-829 (2003).
+
+
+                                                 12
+17   Koll, L.-M., Maikowski, L., Drescher, L., Witting, T. & Vrakking, M. J. Experimental
+     control of quantum-mechanical entanglement in an attosecond pump-probe experiment.
+     Phys. Rev. Lett. 128, 043201 (2022).
+18   Laurell, H. et al. Measuring the quantum state of photoelectrons. Nat. Photonics 19, 352-
+     357 (2025).
+19   Theidel, D. et al. Observation of a displaced squeezed state in high-harmonic generation.
+     Phys. Rev. Res. 7, 033223 (2025).
+20   Riek, C. et al. Direct sampling of electric-field vacuum fluctuations. Science 350, 420-
+     423 (2015).
+21   Riek, C. et al. Subcycle quantum electrodynamics. Nature 541, 376-379 (2017).
+22   Benea-Chelmus, I.-C., Settembrini, F. F., Scalari, G. & Faist, J. Electric field correlation
+     measurements on the electromagnetic vacuum state. Nature 568, 202-206 (2019).
+23   Smithey, D. T., Beck, M., Raymer, M. G. & Faridani, A. Measurement of the Wigner
+     distribution and the density matrix of a light mode using optical homodyne tomography:
+     Application to squeezed states and the vacuum. Phys. Rev. Lett. 70, 1244 (1993).
+24   Slusher, R. E., Hollberg, L. W., Yurke, B., Mertz, J. C. & Valley, J. F. Observation of
+     Squeezed States Generated by Four-Wave Mixing in an Optical Cavity. Phys. Rev. Lett.
+     55, 2409-2412 (1985).
+25   Hubenschmid, E., Guedes, T. L. & Burkard, G. Optical time-domain quantum state
+     tomography on a subcycle scale. Phys. Rev. X 14, 041032 (2024).
+26   Yang, G., Kizmann, M., Leitenstorfer, A. & Moskalenko, A. S. Subcycle tomography of
+     quantum light. Phys. Rev. A 113, 043703 (2026).
+27   Hanbury Brown, R. & Twiss, R. Q. The Question of Correlation between Photons in
+     Coherent Light Rays. Nature 178, 1447-1448 (1956).
+28   Hammond, T. et al. Near-field imaging for single-shot waveform measurements. J. Phys.
+     B: At. Mol. Opt. Phys. 51, 065603 (2018).
+29   Marandi, A., Leindecker, N. C., Vodopyanov, K. L. & Byer, R. L. All-optical quantum
+     random bit generation from intrinsically binary phase of parametric oscillators. Opt.
+     Express 20, 19322-19330 (2012).
+30   Lemieux, S. et al. Photon bunching in high-harmonic emission controlled by quantum
+     light. Nat. Photonics 19, 767-771 (2025).
+31   Kern, Y. et al. Single-shot pulse retrieval of femtosecond bright squeezed vacuum.
+     Optica 13, 395-399 (2026).
+32   Zacharias, T. et al. Quantum Frequency Resolved Optical Gating of Few-Cycle Squeezed
+     Vacuum. arXiv preprint arXiv:2604.07637 (2026).
+33   Christ, A., Laiho, K., Eckstein, A., Cassemiro, K. N. & Silberhorn, C. Probing multimode
+     squeezing with correlation functions. New J. Phys. 13, 033027 (2011).
+34   Roques-Carmes, C. et al. Biasing the quantum vacuum to control macroscopic
+     probability distributions. Science 381, 205-209 (2023).
+35   Bassham, L. E. et al. A Statistical Test Suite for Random and Pseudorandom Number
+     Generators for Cryptographic Applications (National Institute of Standards &
+     Technology, 2010).
+36   Virally, S., Cusson, P. & Seletskiy, D. V. Enhanced electro-optic sampling with quantum
+     probes. Phys. Rev. Lett. 127, 270504 (2021).
+37   Stevens, M. J. et al. High-order temporal coherences of chaotic and laser light. Opt.
+     Express 18, 1430-1437 (2010).
+
+
+                                              13
+38     Sh. Iskhakov, T., Pérez, A., Yu. Spasibko, K., Chekhova, M. & Leuchs, G. Superbunched
+       bright squeezed vacuum state. Opt. Lett. 37, 1919-1921 (2012).
+39     Thekkadath, G. et al. Gain-induced group delay in spontaneous parametric down-
+       conversion. Phys. Rev. Lett. 133, 203601 (2024).
+40     Manceau, M., Spasibko, K. Y., Leuchs, G., Filip, R. & Chekhova, M. V. Indefinite-mean
+       pareto photon distribution from amplified quantum noise. Phys. Rev. Lett. 123, 123606
+       (2019).
+
+
+Acknowledgments: The authors acknowledge G. Thekkadath, F. Bouchard, D. England, P.
+Bustard and B. Sussman for insightful discussions, and D. Crane and R. Kroeker for technical
+support.
+Funding: S.G.-M and P.B.C acknowledge support from Army Research Office through grant
+No. W911NF-24-1-0214. G.V. acknowledges support from the Quantum Sensing Program of the
+National Research Council Canada, and from the Natural Sciences and Engineering Research
+Council through grant RGPIN-2021-04286. G.V., P.B.C., A.S. and J.L. acknowledge support
+from the Joint Center for Extreme Photonics (JCEP). M.W. acknowledges support from a
+Canada Graduate Research Scholarship – Doctoral (NSERC). T. J. H acknowledges support
+from the Natural Sciences and Engineering Research Council grant RGPIN-2019-06877. D.N.P.
+acknowledges support from the Natural Sciences and Engineering Research Council postdoctoral
+fellowship (PDF - 578397 – 2023).
+Author contributions:
+Conceptualization: SGM, MW, DNP, GV
+Methodology: SGM, MW, TJH, KK, DNP, GV
+Investigation: SGM, MW, TJH, GV
+Formal Analysis: MW, GV, KK, DNP, SGM
+Visualization: MW
+Funding acquisition: AS, PBC, JL, GV
+Supervision: AS, PBC, JL, GV
+Writing – original draft: SGM, MW, GV
+Writing – review & editing: SGM, MW, TJH, KK, DNP, AS, DV, PBC, JL, GV
+
+Competing     interests:   Authors   declare   that   they   have   no   competing    interests.
+
+Materials & Correspondence: Correspondence and material requests should be addressed to G.
+V. (gvampa@uottawa.ca).
+
+
+
+
+                                               14
+15
+Fig. 1: TIPTOE measurement of femtosecond Bright-Squeezed Vacuum.
+a, Schematics of the experiment. A BSV (blurred, light red line) perturbs the instantaneous
+absorption rate of a coherent gate pulse (solid, dark red line), increasing or decreasing carrier
+generation depending on the relative phase of the two fields. The two beams interfere at a small
+crossing angle on a Si-based CMOS detector generating a horizontal interference pattern that
+nearly directly maps the time-dependent BSV electric field of each laser shot. b, Photon number
+histogram of the femtosecond BSV showing the characteristic heavy-tail distribution. Photon
+numbers are estimated by equating the mean measured BSV power and the mean time-integrated
+intensity of each TIPTOE shot. c, The normalized power histogram of the nonlinear absorption
+signal from the gate pulse alone. The zero-time (average) second-order coherence function value
+(g(2)(0)) for both beams is listed above their respective distributions. d, The top panel shows the
+electric field of 25 shots of single-burst BSV overlayed in-time, as measured with TIPTOE. The
+bottom panel shows 25 shots of multi-burst BSV overlayed in-time. The solid curves represent
+the mean envelope of the two sets of measured fields. The envelopes are shifted to the mean
+emission time of single-burst shots. The phase is relative to the phase of the gate.
+
+
+
+
+                                                16
+a                                                d
+
+
+
+
+b
+
+
+
+
+                                                e
+
+
+
+
+c
+
+
+
+
+ f
+
+
+
+
+Fig. 2: Modal analysis of BSV.
+a-c, Amplitude vs. emission time distributions for single-burst, two-burst, and three-burst BSV,
+respectively. d, Distribution of the amplitudes of adjacent burst pairs. e, Distribution of emission
+times of adjacent burst pairs (i.e., bursts i and i+1 of the i-th burst pair in each shot). The
+emission time of the first burst in each pair (t0,i) is plotted against the time-delay of each pair
+
+                                                 17
+(Δt0=t0,i+1-t0,i). The marginal distribution along each axis of the histograms is shown in orange in
+a-c and in green in d, e on the top and right of each panel. f, The burst-resolved photon number
+distribution of both single and multi-burst BSV as measured via TIPTOE. The dashed curve
+depicts the expected photon number distribution for single-mode BSV40. The zero-time burst-
+average second-order coherence function value is shown at the top of the distribution. The inset
+illustrates how each burst is labelled within a given shot. The distributions shown consider the
+shots whose fits were deemed successful by the iterative curve-fitting procedure (see
+Supplementary Information).
+
+
+
+
+                                                 18
+19
+Fig. 3: Binarization of BSV bursts phase difference.
+a, The bi-modal histogram of the phase difference between adjacent bursts, Δ𝜙𝜙. The mean error
+on the fitted phase-difference is 0.04 rads for the burst-pairs in the red peak and is 0.03 rads for
+those in the blue peak, and thus the finite width of either peak in the bi-modal distribution may
+be physical in origin. The red and blue peaks are located at approximately 2.2 rads and 2.2 + π
+rads, respectively. b, Four representative shots of BSV from the blue (red) peak in the bi-modal
+distribution of panel A are shown in the left (right) panel. The markers correspond to
+experimentally measured data, the solid blue and red curves represent the envelope of the
+measured field, and the black curve depicts the results of the curve-fitting procedure. Recall that
+the sign of the amplitude is not retrieved in the measurement. Only one possible sign for the shot
+is shown for clarity. c, BSV generated from a temporally short pump will primarily exhibit a
+single burst. The carrier-phase is locked to that of the pump, up to a sign-flip. d, A longer pump
+pulse supports multi-burst BSV. Each of the bursts maintains a phase relationship with the pump,
+as in the single-burst case. Binarization of multi-burst BSV can be done using either the phase of
+each burst (top) or using the inter-burst phase difference (bottom). Measuring the phase from a
+stream of many-burst BSV will allow for random number generation at unprecedented ~ 200
+THz rates, given by the duration of the bursts. Note that the inter-burst phase difference in d is
+shown to be exactly π rads or 2π (0) rads for clarity.
+
+
+
+
+                                                20
+                        a                               b
+
+
+
+
+                        c                               d
+
+
+
+
+Fig. 4: Time-resolved quantum coherence functions.
+a, The absolute value of the measured first-order coherence function �𝑔𝑔(1)(𝑡𝑡1 , 𝑡𝑡2 )� of the generated
+femtosecond BSV. b, The theoretical �𝑔𝑔(1) (𝑡𝑡1 , 𝑡𝑡2 )� calculated using the Whittaker-Shannon
+decomposition. c, The measured second-order coherence function 𝑔𝑔(2)(𝑡𝑡1 , 𝑡𝑡2 ) of the generated
+BSV. d, The theoretical 𝑔𝑔(2) (𝑡𝑡1 , 𝑡𝑡2 ) calculated using the Whittaker-Shannon decomposition.
+
+
+
+
+                                                   21
+                         800nm, 1kHz                                                                                                                                              0                                          1.0
+                                                                       1.6µ m, 330µ J                                                                                                     BSV + Coherent pump
+        Coherent         1.8mJ, 50fs                Light Conversion
+
+
+
+
+                                                                                                                                                     Vertical pixels coord.
+        Legend                                      TOPAS-PRIME                         SF                                                                                    200
+
+
+                                                                                               YAG 2mm Plano-convex lens                                                                                                     0.5
+                                                                                 200µ m BBO (spectral broadening)                                                             400
+
+
+
+                                                                                                                                                                              600
+                             f= 1m
+                           AR coating                                                                                                                                                                                        0.0
+                                                                                                                                                                                      0        200      400      600
+                           560-1050nm                                                                                                                                                      Horizontal pixels coord.
+
+                                                                                                                                                                    0
+                                                                                                                                                                                  Reference
+                                                                                                                                                                                                                             0.08
+
+
+
+
+                                                                                                                           Vertical pixels coord .
+                      2 x 2mm BBO                                                                  LP
+        f = -50mm                       f = 300mm
+        AR coating                         CaF2                                                                                                      200
+                                                                                                                                                                                                                             0.04
+         560-1050nm
+                                                                                                          800nm BP
+
+                                                                                             2 x OD 2.0
+                                                                                                                                                     400                                                                     0.00
+                                                                                                                                                                              0                     250                500
+                                                                                                                                                                                           Horizontal pixels coord .
+
+
+
+Extended Data Fig. 1: Extended experimental setup.
+PBS: polarizing beam splitter, SHG: second harmonic generation, ND: neutral density filter, f:
+focal length, PDC: parametric down conversion, BSV: bright squeezed vacuum, OD: optical
+density filter, LP: long pass filter, BP: band pass filter.
+
+
+
+
+                                                                         22
+                          Supplementary Information for
+                      Sub-cycle metrology of bright quantum light
+
+S. Gholam-Mirzaei1*, M. T. Weil1,2,4*, D. N. Purschke1,3, K. M. Kowalczyk1, A. Staudte1, D. M.
+        Villeneuve1, P. B. Corkum1, J. S. Lundeen2,4, T. J. Hammond5, and G. Vampa1.
+
+   1
+   Joint Attosecond Science Laboratory (JASLab), National Research Council of Canada and
+   University of Ottawa, Ottawa, ON, Canada
+   2
+       Department of Physics, University of Ottawa, Ottawa ON K1N 6N5, Canada
+   3
+       Laboratory for Laser Energetics, University of Rochester, Rochester NY, 14623-1299, USA
+   4
+       Nexus for Quantum Technologies, University of Ottawa, Ottawa ON K1N 6N5, Canada
+   5
+       Department of Physics, University of Windsor, Windsor ON N9B 3P4, Canada
+   * These authors contributed equally to this work.
+   Corresponding author: gvampa@uottawa.ca
+
+
+
+
+This file contains:
+
+   Supplementary Discussion:
+      1. Isolating the BSV signal
+      2. Correcting the BSV phase
+      3. Curve-fitting procedure
+      4. Single-burst and multi-burst BSV: envelope analysis
+      5. Simulation of overlapping Gaussian bursts
+      6. Single-mode BSV photon statistics
+      7. Quantum coherence functions and the overlap of BSV bursts
+      8. Whittaker-Shannon decomposition of two-crystal BSV
+      9. Towards PHz quantum random number generation
+
+   Supplementary Equations 1 to 32
+
+   Supplementary Figures 1 to 10
+
+
+
+
+                                                                                             1
+Isolating the BSV signal
+
+     The real-space interference of the 1.6 𝜇𝜇m coherent pump and the weak BSV perturbation, as
+well as the interference of the 800 nm reference beams is captured directly on the Si-based
+CMOS sensor. In its raw form, the signal strength is in analog-to-digital units and the axes
+defining the dimensions of the interference are the pixel coordinates. In Fig. S1a, the raw signal
+collected on the detector according to the methods described in the previous section is shown.
+The 1.6 𝜇𝜇m interference pattern is shown in the upper-left and, as expected, the real-space fringe
+spacing is twice that of the 800 nm interference pattern – as depicted by the two inset panels of
+the figure.
+
+
+     The first step to extracting 𝐸𝐸𝐵𝐵𝐵𝐵𝐵𝐵 (𝑡𝑡) is to perform a Fourier transform of the raw signal along
+the x-direction (this represents the time axis). The result of this 1D transformation is shown in
+Fig. S1b where we find five distinct vertical bands corresponding to the DC offset (white
+region), the 1.6 𝜇𝜇m fringes (positive frequency signal highlighted by the blue region), and the
+800 nm fringes (positive frequency signal highlighted by the green region). We note that the
+elongated horizontal features seen in the 1D transformation correspond to damage spots and/or
+diffraction from dust particles.
+
+
+     We then perform an inverse Fourier transformation (IFT, again, along the horizontal axis)
+of each of the three regions of interest (ROI) shown in Fig. S1b, the results of which are shown
+in Fig. S2, a-c. Panel a corresponds to the IFT of the white ROI and represents the real-space
+envelope of the nonlinear absorption from the coherent reference (left beam) and of linear
+absorption of both reference beams (right beam). Performing an integral over, for example, the
+Gaussian-like feature in the upper-left of panel a allows one to track the fluctuations of the
+nonlinear absorption signal, which is related to the OPA coherent pump. In contrast, panels b and
+c correspond to the real part of the IFT of the blue and green ROIs, respectively. The real part of
+𝐸𝐸𝐵𝐵𝐵𝐵𝐵𝐵 (𝑡𝑡) can be read directly from the fringes shown in panel b. In combination with the
+imaginary part of the IFT (not shown in Fig. S2), the full complex BSV waveform is obtained.
+The BSV signal used in the following analysis is the average over the vertical axis of a region of
+high-visibility fringes found from such IFT (see the orange region depicted in panel b). An
+analogous procedure is used for extracting the complex reference signal. In this case, a lineout is
+
+                                                                                                       2
+used (see the yellow line in panel c). The reconstructed field is obtained up to an overall scaling
+factor set by the reference field amplitude. Absolute field calibration can in principle be achieved
+through independent characterization of the nonlinear response function of the detector but is not
+required for extracting phase statistics and correlation functions.
+
+
+     We calibrate the time axis according to the spacing between the positive and negative
+frequency peaks in the spectrum of the 800 nm reference signal, as presented in Fig. S2d. Since
+the fringe spacing corresponds to one period of 800 nm, the two peaks (orange 'x' markers in
+panel d) are separated in angular frequency by 2 × 𝜔𝜔800 . The step size in the time-domain can be
+defined using the product of the number of points between such peaks and this angular frequency
+spacing [rad/s], divided by 2π rad. Using the calibrated time axis, we can then study the
+temporal structure of the BSV field. A sample shot of this measured field is shown in panel e.
+
+
+     For further analysis, each BSV field is windowed to remove the ringing at either end of the
+time axis. This is expected when transforming between truncated spaces, as we do in processing
+the raw TIPTOE signals. The BSV field is also normalized to the envelope of the OPA pump-
+induced nonlinearity which is extracted from a lineout of the corresponding region in the IFT of
+the DC offset (see, for example, the upper-left region of panel a). The time-axis for all figures in
+the main text and in the Supplementary Information is shifted by the mean emission time found
+from the single-burst BSV analysis as described in the following subsections.
+
+
+Correcting the BSV phase
+
+     Correction for the relative phase of the BSV between shots using the measured reference
+signal is used at this stage. For every shot, we subtract half the phase of the pump measured at
+the positive spatial-frequency peak from the complex BSV field (the factor of two comes from
+the ratio of the known frequencies of the pump and PDC). This correction ensures that we may
+perform shot-to-shot comparisons of the measured BSV field without seeing the effects of the
+overall phase noise to which the entire setup is subject, up to a sign.
+
+
+
+
+                                                                                                      3
+Curve-fitting procedure
+
+     To study the temporal structure of the measured BSV fields, we employ a nonlinear iterative
+curve-fitting procedure analogous to that used in standard signal processing for extracting an
+unknown number of signal peaks, of a given shape, from the overall spectral data1. Here, the
+signal peaks for the measured BSV field manifest as localized bursts within each shot, as
+introduced in the manuscript. As we are interested in studying not only the local (i.e., burst-
+resolved) structure of the envelope of the BSV field, but also the carrier oscillation, we require a
+slightly modified approach. The general idea is as follows: given a measured BSV field, we can
+first decompose its envelope into the sum of some number of Gaussians and then fit the carrier
+phase to the real part of the waveform assuming the number and position of the underlying
+Gaussian bursts are fixed. While this seems straightforward, the number of underlying Gaussian
+bursts, their overlap, and the relative phase between them complicates the process. It is for this
+reason that we rely on a rather involved, and iterative scheme as described in the steps below.
+
+Step 1: Fitting the envelope. For a given BSV field, the intensity envelope is fit using a model
+sum of n Gaussian envelopes. For example, for 𝑛𝑛 bursts, the fit model is explicitly the following,
+                                            𝑛𝑛                                  2
+                                                                    �𝑡𝑡 − 𝑡𝑡0,𝑖𝑖 �
+                                   𝑦𝑦(𝑡𝑡) = � 𝐴𝐴2𝑖𝑖 exp �−2 ln(2)                  �,                   (1)
+                                                                         𝜎𝜎𝑖𝑖2
+                                            𝑖𝑖
+
+where the fit parameters 𝐴𝐴𝑖𝑖 , 𝑡𝑡0,𝑖𝑖 , and σ𝑖𝑖 are, respectively, the amplitude, emission time, and half-
+width at half-maximum of the electric field of the 𝑖𝑖-th burst. The FWHM of the envelope
+reported in the main text and in Fig. S4, S5, and S6 corresponds to 𝜎𝜎𝐼𝐼,𝑖𝑖 = √2𝜎𝜎𝑖𝑖 .
+
+Step 2: Fitting the phase. Using the results of step 1, the real part of the BSV field can be fit to a
+superposition of sinusoids to extract the burst-dependent carrier phase relationships. For
+example, for 𝑛𝑛 bursts, the fit model is explicitly the following,
+                             𝑛𝑛                                 2
+                                                �𝑡𝑡 − 𝑡𝑡0,𝑖𝑖 �
+                   𝑦𝑦(𝑡𝑡) = � 𝐴𝐴𝑖𝑖 exp �− ln(2)                � cos(𝜔𝜔0 𝑡𝑡 + 𝐶𝐶𝑡𝑡 2 + 𝜙𝜙𝑖𝑖 ) .         (2)
+                                                     𝜎𝜎𝑖𝑖2
+                              𝑖𝑖
+
+     During this step, the number of underlying bursts and their precise emission times 𝑡𝑡0,𝑖𝑖 are
+fixed from the output of step 1. The amplitudes, {𝐴𝐴𝑖𝑖 }, and widths, {𝜎𝜎𝑖𝑖 }, are given relatively tight
+bounds of ±15% with respect to the values found in step 1. The breathing room given to the
+
+
+                                                                                                            4
+amplitude and width parameters ensures that the regions of overlap between multiple bursts can
+be properly fit. Parameter C allows for a small chirp and is fixed, after an initial calibration
+procedure (see below). The center frequency 𝜔𝜔0 is also fixed, after an initial calibration
+procedure. The parameters of interest in this step are the bursts’ absolute phases, {𝜙𝜙𝑖𝑖 }.
+
+Step 3: Evaluation of the fit error. The mean fit error (MFE) is the root-mean-squared-error
+evaluated using the difference between the resulting fit of step 2 and the real part of the given
+BSV field, expressed as a percentage of the amplitude of the BSV envelope. Using this metric,
+we can compare the performance of the first two steps for a given fit model containing 𝑛𝑛
+underlying bursts1.
+
+
+     The iterative nature of the fit procedure is realized by looping over the steps 1 and 2 until
+the change in the MFE is less than 0.5%. After each iteration of steps 1 and 2, the number of
+underlying bursts in the fit model increases by one. The threshold on the change in MFE is used
+to ensure that our fitting procedure does not overfit the measured field. In other words, the
+addition of another burst in the fit model is only justified if it decreases the MFE by more than
+0.5%. After each iteration, we also verify that no individual burst is located within one HWHM
+(i.e., 𝜎𝜎𝑖𝑖 ) of another burst in the final fit. This is to ensure that the algorithm does not attempt to
+overlay two bursts exactly on top of one another.
+
+
+     The final fit for each BSV field is then the fit produced by the last iteration which satisfied
+these two conditions. At the end of the procedure, 5163 shots are found to have one burst, 4097
+shots are found to have two bursts, and 740 shots are found to have three-or-more bursts. After
+thresholding the single-burst and multi-burst sets based on MFE (see more below), we find 3916
+successful single-burst fits and 3881 successful multi-burst fits. The 3881 successful multi-burst
+fits correspond to 8450 individual bursts.
+
+Calibrating the center frequency and the chirp. We calibrate the center frequency 𝜔𝜔0 of our
+fitting algorithm by performing an initial two-step least-squares fit on a subset of single-burst
+shots. For this initial calibration step, we run all the BSV shots through a simple peak-finding
+algorithm to filter out those with only one peak in the envelope. The height threshold for the
+peak-finding algorithm is set to a low value such that even a small, secondary peak will result in
+
+                                                                                                            5
+a shot being labelled as multi-burst. This ensures that the remaining subset of single-burst shots,
+as found by this initial step, can be fit directly to a sinusoidal waveform with a single-peak
+Gaussian envelope. This subset of approximately single-burst shots is then fed into our iterative
+algorithm (although, in this case, there is only one iteration) with the center frequency as a fit
+parameter.
+
+
+     The result of this calibration step is a distribution of center frequencies from the fits of this
+subset of single-burst BSV shots. The median value of this distribution is then used as the fixed
+center frequency for the full curve-fitting procedure. The fixed parameter value is ω0 ∼
+1.27 rad/fs. It is crucial for the center frequency to be fixed to avoid coupling with the absolute
+phases during step 2. A mean error of 0.02 rad/fs is found for the center frequency fit
+parameter.
+
+
+     While a simple peak-finding algorithm can be used to identify the number of underlying
+bursts in some cases (e.g., when the bursts are well-separated), we have found that it is
+insufficient in cases when there is significant burst overlap and/or when the underlying bursts do
+not exhibit a stark phase shift between one another. For this reason, all the BSV shots collected
+(i.e., even those which were initially identified as single-burst by the peak-finding algorithm) are
+analyzed using the iterative curve-fitting procedure following this calibration step.
+
+
+     Finally, an analogous calibration step is used to identify the fixed chirp value to be used in
+the iterative curve-fitting procedure. The fixed parameter value is 𝐶𝐶 ∼ −1 × 10−5 fs −2 which
+indicates that there is a low level of chirp in our measured BSV field. This low amount of chirp
+is expected from the optical setup. The mean error of 5 × 10−5 fs−2 is found for the chirp fit
+parameter, thus indicating that the fit performance is rather insensitive to the precise value of 𝐶𝐶,
+so long that the value is near zero.
+
+General settings. The method used for performing the nonlinear least-squares fit at each step of
+the above procedure is Trust Region Reflective2. The maximum number of function evaluations
+used during each nonlinear least-squares fit is 10000 × 𝑛𝑛 where 𝑛𝑛 is the number of underlying
+bursts in the fit model. Global search techniques such as differential evolution methods3 were
+
+
+                                                                                                         6
+also considered but increased the run-time and showed little improvement in the mean fit error
+distribution. For this reason, we believe an iterative nonlinear least-squares fitting procedure like
+the one applied in this work is more apt for analyzing large TIPTOE datasets.
+
+
+      We consider a successful fit as one whose MFE is below a given error threshold. These are
+the shots used in the envelope analysis histograms to provide a representative picture of the
+measured BSV. We find that the MFE distribution for both single-burst and multi-burst results
+exhibit a heavy-tail towards higher MFE values indicating that some, albeit a low-percentage, do
+not fit well to the models used. This could be for a variety of reasons: (i) the fixed center
+frequency (or chirp) from the calibration step does not accurately match that of the specific shot,
+(ii) the amplitude of the specific shot is sufficiently low that the noise floor becomes an issue.
+We set the fit success threshold for our analysis to the standard metric of Median + 1.5 × MAD
+where MAD is the median absolute deviation of the distribution4.
+
+
+      An ISO 5807 flowchart showing the logical sequence of the calibration and general iterative
+curve-fitting procedure which we use is shown in Fig. S3. The first iteration of the curve-fitting
+procedure (i.e., 𝑛𝑛 = 1 bursts in the fit model) uses an initial guess 𝑦𝑦0 = {𝐴𝐴1 , 𝑡𝑡0,1 , σ1 } consisting
+of the amplitude and emission time of the main peak determined by a peak-finding algorithm.
+The initial width is set to 15 fs. For iterations beyond the first (i.e., 𝑛𝑛 = 𝑚𝑚 > 1 bursts in the fit
+model), the initial guess 𝑦𝑦0′ = {𝐴𝐴1 , 𝑡𝑡0,1 , σ1 , 𝐴𝐴2 , 𝑡𝑡0,2 , σ2 , . . . 𝐴𝐴𝑚𝑚 , 𝑡𝑡0,𝑚𝑚 , σ𝑚𝑚 } consists of the fit
+parameters found in the previous iteration (describing the first to (𝑚𝑚 − 1)-th burst), as well as
+the parameters estimated from the envelope of the residual – the difference in envelope of the
+BSV field and the fit from the previous iteration. In other words, to obtain an initial guess for the
+amplitude and emission time of the 𝑚𝑚-th mode in the 𝑚𝑚-th iteration, the residual is calculated
+and fed to a simple peak-finding algorithm. The initial width is, again, 15 fs.
+
+
+Single-burst and multi-burst BSV: envelope analysis
+
+      We ran our 10,000-shot dataset through the nonlinear iterative curve-fitting procedure and
+found 5163 shots were single-burst. The distributions of the fit parameters for the single-burst
+shots whose MFE is below the error threshold (see previous subsection) are shown in Fig. S4.
+Panel a shows the distribution of MFE, while panels b-e show the distribution of the fit
+
+                                                                                                                          7
+parameters. The absolute phase distribution shown in panel c is wrapped between [0, 2π). The
+phase clusters around an offset, i.e. the phase is fixed (apart from a sign that cannot be resolved
+with our 800 nm reference, see above), as expected for BSV.
+
+
+     The distribution of the fit parameters for the multi-burst shots is presented in the main text.
+Figure S5a shows the distribution of the MFE, panel b shows the distribution of the FWHM of
+adjacent bursts, while panel c shows the distribution of the absolute phase. A similar clustering is
+seen in the phase of the multi-burst shots.
+
+
+Simulation of overlapping Gaussian bursts
+
+     We test the performance of our nonlinear iterative curve-fitting procedure against three
+simulated datasets. The first test is against 10,000 single-burst shots, each of which with
+amplitude, emission time, and absolute phase selected from uniform distributions spanning the
+range of physical values expected from our experiment. The width (or HWHM) of the simulated
+pulses is selected from a normal distribution centered at 7 fs and with a standard deviation of
+1 fs. This corresponds to an intensity FWHM of approximately 10 fs which is on the order of the
+measured σ𝐼𝐼 discussed in the manuscript.
+
+
+     As can be seen in Fig. S6a, the iterative curve-fitting procedure finds that each simulated
+shot is, in fact, single-burst. In other words, it does not succumb to overfitting and assigning
+multiple bursts to truly single-burst signals. The mean fit error distribution for the single-burst
+dataset is almost entirely within the zero bin of the histogram in panel b. This low error is
+corroborated by the negligible normalized root-mean-squared error (NRMSE) for each fit
+parameter shown in panel c.
+
+
+     The second dataset consists of 10,000 two-burst shots whose amplitudes, widths, emission
+times, and absolute phases are all selected from the same distributions as in the first test. The
+only added condition is that the simulated bursts are separated by at least the mean width (i.e.,
+for this simulation 7 fs). From panel a, we see that the iterative curve-fitting procedure correctly
+labels 90% of the shots as two-burst while 10% are identified as single-burst. In other words, the
+curve-fitting algorithm found that, for 10% of the shots, adding an additional burst to the fit
+
+                                                                                                       8
+model did not drop the MFE by more than 0.5% and/or it was not able to add an additional burst
+without the two bursts being within one HWHM of one another. For the 10% of the dataset that
+are identified as single-burst shots, the ratio of the maximum amplitude max(𝐴𝐴1 , 𝐴𝐴2 ) to the
+minimum amplitude min(𝐴𝐴1 , 𝐴𝐴2 ) is, on average, ∼ 11. This indicates that one burst in the
+simulation dominates the overall shot which may explain why the curve-fitting algorithm fails to
+identify both bursts. The amplitude distribution of BSV is not uniform so large amplitude ratios
+as described here should be far less common (see Fig. 2d of the main text). As depicted in panel
+b, the addition of a second potentially overlapping burst in the simulation results in an increase in
+the width of the MFE distribution. Importantly, however, this distribution is still limited to
+approximately 1.5% thus indicating a high-level fit performance overall.
+
+
+     For the shots that were correctly labelled as two-burst, we see an increase in the NRMSE
+for each fit parameter over the single-burst case. The NRMSE for the emission time and absolute
+phase are each below 0.3% indicating that the iterative curve-fitting procedure, even in the two-
+burst case, can effectively extract these fit parameters. The highest NRMSE value is for the
+width (3.48%) of each burst.
+
+
+     Finally, for the last test, we simulate 10,000 three-burst shots, again, whose amplitudes,
+widths, emission times, and absolute phases are all selected from the same distributions as in the
+other two tests. Unsurprisingly, we find a reduction in the overall performance of the curve-
+fitting procedure. The number of correctly labelled shots reduces from 90% in the two-burst test,
+to 71% in the three-burst test. An increase in the width of the MFE distribution and a marginal
+increase in the NRMSE for each fit parameter are found in those shots which are correctly
+labelled.
+
+
+     Importantly, the only physically motivated feature of these simulations is that the width
+distribution is not uniform across a range of values but rather favors a mean value (in this case
+7 fs). The distributions sampled for all other fit parameters are uniform. This implies that the
+unique features found in our envelope analysis of the measured BSV (e.g., the exponential,
+heavy-tail distribution of amplitudes, the clustering of the phase, etc.) are due to the temporal
+structure of the BSV itself, rather than methods used to analyze it.
+
+                                                                                                    9
+Single-mode BSV photon statistics
+
+       The probability of detecting 2𝑚𝑚 photons in a squeezed vacuum field is described by the
+well-known probability distribution5,
+
+                                           (2𝑚𝑚)! (tanh 𝑟𝑟)2𝑚𝑚
+                                𝑃𝑃(2𝑚𝑚) = 2𝑚𝑚                  ,                                (3)
+                                         2 (𝑚𝑚!)2 cosh 𝑟𝑟
+
+and the probability of detecting 2𝑚𝑚 + 1 photons is,
+
+                                         𝑃𝑃(2𝑚𝑚 + 1) = 0.                                       (4)
+The exact form of this distribution is useful for describing the photon statistics of weakly
+squeezed fields with low mean photon numbers, but for truly bright fields it is computationally
+challenging to apply due to overflow limits and stability in the leading factorial term. Instead, we
+use an approximation of the probability envelope to study the statistics of brightly squeezed
+vacuum.
+
+
+       We begin by recognizing the definition of the binomial coefficient,
+                                         𝑛𝑛        𝑛𝑛!
+                                        � �=                ,                                   (5)
+                                         𝑘𝑘  𝑘𝑘! (𝑛𝑛 − 𝑘𝑘)!
+where we let 𝑛𝑛 = 2𝑚𝑚 and 𝑘𝑘 = 𝑚𝑚 to find,
+                                          2𝑚𝑚 (2𝑚𝑚)!
+                                         � �=        .                                          (6)
+                                          𝑚𝑚  (𝑚𝑚!)2
+The even number probability distribution 𝑃𝑃(2𝑚𝑚) can be written in terms of the binomial
+coefficient,
+                                              1   2𝑚𝑚 (tanh 𝑟𝑟)2𝑚𝑚
+                                𝑃𝑃(2𝑚𝑚) =        �   �             ,                            (7)
+                                             22𝑚𝑚 𝑚𝑚    cosh 𝑟𝑟
+whose asymptotic form can be found by applying Stirling’s approximation,
+                                              1  22𝑚𝑚 (tanh 𝑟𝑟)2𝑚𝑚
+                                𝑃𝑃(2𝑚𝑚) →      �      �
+                                           22𝑚𝑚 √𝜋𝜋𝜋𝜋      cosh 𝑟𝑟
+                                                        2𝑚𝑚
+                                            1 (tanh 𝑟𝑟)
+                                        =                   .                                   (8)
+                                          √𝜋𝜋𝜋𝜋 cosh 𝑟𝑟
+The gain parameter 𝑟𝑟 is defined with respect to the mean photon number 〈𝑛𝑛〉,
+
+
+                                                                                                  10
+                                          〈𝑛𝑛〉 = sinh2 (𝑟𝑟) ,                                     (9)
+
+such that cosh2 (𝑟𝑟) = 〈𝑛𝑛〉 + 1 ≈ 〈𝑛𝑛〉 or cosh 𝑟𝑟 ≈ �〈𝑛𝑛〉, for large 𝑛𝑛. The hyperbolic tangent in the
+numerator can be approximated in a similar manner,
+
+                                                              1
+                                      tanh 𝑟𝑟 = �1 −
+                                                           cosh2 (𝑟𝑟)
+
+                                                         1
+                                               ≈ �1 −        .                                   (10)
+                                                        〈𝑛𝑛〉
+
+Raising the above to the power of 2𝑚𝑚 gives,
+
+                                                2𝑚𝑚
+                                                            1 𝑚𝑚
+                                     (tanh 𝑟𝑟) = �1 −           �
+                                                           ⟨𝑛𝑛⟩
+                                                        1 𝑚𝑚
+                                     = exp �ln ��1 −        � ��
+                                                       ⟨𝑛𝑛⟩
+                                                            1
+                                      = exp �𝑚𝑚 ln �1 −        ��
+                                                          ⟨𝑛𝑛⟩
+                                                     𝑚𝑚
+                                         ≈ exp �− � ,                                            (11)
+                                                    ⟨𝑛𝑛⟩
+where the natural logarithm has been approximated by its first-order Taylor series around
+1/〈𝑛𝑛〉 = 0. Substituting into the overall probability distribution, we find,
+                                                   1                 𝑚𝑚
+                                 𝑃𝑃(2𝑚𝑚) =                 exp �−        �,                      (12)
+                                               �𝜋𝜋𝜋𝜋〈𝑛𝑛〉            ⟨𝑛𝑛⟩
+
+or in terms of 𝑛𝑛,
+
+                                                 2             𝑛𝑛
+                                  𝑃𝑃(𝑛𝑛) = �           exp �−       �.                           (13)
+                                               π𝑛𝑛⟨𝑛𝑛⟩        2⟨𝑛𝑛⟩
+
+The probability envelope in the limit of large photon numbers is then given by 𝑃𝑃envelope =
+0.5 × �𝑃𝑃(𝑛𝑛 = even) + 𝑃𝑃(𝑛𝑛 = odd)� = 0.5 × 𝑃𝑃(𝑛𝑛) as adjacent even and odd bins average to
+half the value of the even bin. Using this definition, we find the form commonly used to describe
+BSV statistics6,
+                                                  1                  𝑛𝑛
+                                𝑃𝑃envelope =               exp �−         �.                     (14)
+                                               �2π𝑛𝑛⟨𝑛𝑛⟩            2⟨𝑛𝑛⟩
+
+
+
+
+                                                                                                   11
+        In Fig. 2f, we plot this envelope with ⟨𝑛𝑛⟩ = 0.8 × 1010 photons determined from the
+separately measured average BSV shot energy of 1.5 nJ, which converts to an average BSV burst
+energy of 1 nJ (since there are ~1.5 bursts per shot on average). The normalized fluctuations
+measured by TIPTOE are linearly proportional to the true fluctuations of the perturbative field.
+Therefore, we scale the measured BSV burst energy distribution to the experimental value of
+1 nJ and then convert it to a photon number scale to get the distribution shown in Fig. 2f.
+
+
+Quantum coherence functions and the overlap of BSV bursts
+
+        The decrease of 𝑔𝑔(2) (𝑡𝑡1 , 𝑡𝑡2 ) from the expected value of 3 for single-mode BSV to 2 in the
+same-time (i.e., 𝑡𝑡1 = 𝑡𝑡2 ) wings of Fig. 4c can be ascribed to the overlap of, on average, two
+independent bursts. To probe this effect directly, we scan a window of varying width along the
+same-time diagonal of the second-order coherence function and calculate both the burst-averaged
+ (2)                               (2)
+𝑔𝑔𝑖𝑖,w (0) and the shot-averaged 𝑔𝑔BSV,w (0) over the finite duration. This is in contrast to the
+                      (2)          (2)
+reported values for 𝑔𝑔𝑖𝑖 (0) and 𝑔𝑔BSV (0) which consider the entire temporal range.
+
+        The effect of the window in this sample calculation is two-fold. First, only those bursts
+whose emission time is within the finite temporal range of the window are included in the
+calculation. Equivalently, the wings of neighboring bursts do not affect the windowed coherence
+value unless the emission time of the that burst too falls within the window. In this way, the
+window width tunes the amount of overlap present at a given time. Second, the integration is
+over the burst(s) intensity envelope(s) as given by the burst envelope analysis and is performed
+only over the range of the window. In the shot-averaged calculation, multiple bursts in a single
+shot means the sum of the integral over each burst is taken and thus the effect of their overlap
+                                                                                                 (2)
+plays a role. Each shot contributes a single value to the mean in the overall windowed 𝑔𝑔BSV,w (0).
+However, in the burst-averaged calculation, multiple bursts in a single shot means the integral
+                                                                                           (2)
+over each burst contributes a value separately to the mean in the overall windowed 𝑔𝑔𝑖𝑖,w (0).
+
+        In Fig. S7, a and b, we find that for a window width less than or equal to ~30 fs, the
+                  (2)                              (2)
+burst-averaged 𝑔𝑔𝑖𝑖,w (0) and the shot-averaged 𝑔𝑔BSV,w (0) agree. This width corresponds to the
+average separation of BSV bursts found from the envelope analysis. Therefore, for windows
+
+                                                                                                       12
+shorter than ~30 fs, each shot contains on average a single burst, so the two calculations are
+                                                                             (2)
+equivalent. However, beyond this width the shot-averaged 𝑔𝑔BSV,w (0) decreases as the wings of
+neighboring bursts begin to seep into the window, the burst overlap increases on average, and the
+                                                                                            (2)
+overall degree of coherence decreases. In contrast, the burst-averaged 𝑔𝑔𝑖𝑖,w (0) increases as more
+individual bursts contribute their stochastic fluctuations to the final mean – this can be thought of
+as filling in the characteristic heavy-tail distribution.
+
+         For window widths greater than ~50 fs, the two coherence values begin to converge
+towards different values as this is approximately the sum of the average separation of BSV bursts
+                                                                                                       (2)
+and the average burst intensity envelope width. At these ranges, the burst-averaged 𝑔𝑔𝑖𝑖,w (0)
+converges towards 3 indicative of stochastic, mode-like behavior. In contrast, the shot-averaged
+ (2)
+𝑔𝑔BSV,w (0) converges towards slightly above 2 because each shot contains on average 1.5 bursts.
+                    (2)
+This agrees with 𝑔𝑔BSV (0) which uses the full envelope of the measured BSV field.
+
+
+Whittaker-Shannon decomposition of two-crystal BSV
+
+Brief background. Recently, the work presented in ref.7 applied the methods of the Whittaker-
+Shannon interpolation to BSV and found that it provides a localized description of the temporal
+structure compared to the more commonly used Schmidt mode decomposition5. The general idea
+is as follows: first, assume the squeezed state takes the following form,
+                                 𝛽𝛽
+                      |Ψ⟩ = exp � � 𝑑𝑑𝑡𝑡1 𝑑𝑑𝑡𝑡2 𝛾𝛾̅ (𝑡𝑡1 , 𝑡𝑡2 )𝑎𝑎�† (𝑡𝑡1 )𝑎𝑎�† (𝑡𝑡2 ) − H.c.� |𝑣𝑣⟩,         (15)
+                                 2
+
+where γ�(𝑡𝑡1 , 𝑡𝑡2 ) is the temporal analogue of the more commonly used Joint Spectral Amplitude
+(JSA) or γ(ω1 , ω2 ), and |𝑣𝑣⟩ denotes the vacuum state. The two-dimensional function γ�(𝑡𝑡1 , 𝑡𝑡2 ) is
+called the Joint Temporal Amplitude (JTA) and is related to the JSA via a two-dimensional
+Fourier transformation. The parameter |β| controls the squeezing strength.
+
+
+       If the JSA is approximately band-limited, it is essentially nonzero outside of the range
+ω1 , ω2 ∈ [−Ω/2, Ω/2], where Ω > 0, then the JTA can be decomposed according to the
+Whittaker-Shannon sampling theorem. That is, a time-dependent function 𝑓𝑓(̅ 𝑡𝑡) can be
+
+
+
+                                                                                                              13
+approximated by the sum of its value at specific times 𝑛𝑛τ, where τ = 2π/Ω, and with sinc-
+dependent weights,
+                                                                                (𝑡𝑡 − 𝑛𝑛𝑛𝑛)𝜋𝜋
+                                         𝑓𝑓(̅ 𝑡𝑡) = � 𝑓𝑓(̅ 𝑛𝑛𝑛𝑛)sinc �                        �.             (16)
+                                                                                     𝜏𝜏
+                                                        𝑛𝑛
+
+The Whittaker-Shannon modes are then defined as the following,
+                                                             1              π(𝑡𝑡 − 𝑛𝑛τ)
+                                              χ�𝑛𝑛 (𝑡𝑡) =         sinc �                �.                   (17)
+                                                             √τ                  τ
+Applying the Whittaker-Shannon sampling theorem to the JTA gives the following
+representation,
+
+                                   γ�WS (𝑡𝑡1 , 𝑡𝑡2 ) ≈ τ � γ�(𝑛𝑛τ, 𝑚𝑚τ) χ�𝑛𝑛 (𝑡𝑡1 )χ�𝑚𝑚 (𝑡𝑡2 ),              (18)
+                                                             𝑛𝑛,𝑚𝑚
+
+which is the decomposition of the JTA in terms of the Whittaker-Shannon modes.
+
+
+      The two main results of ref.7 which we are interested in here are, first, the decomposition of
+the first- and second-order time-dependent (non-normalized) correlation functions given by Eq.
+6.6 and 6.7 in ref.7, respectively. To write these explicitly,
+
+                                        𝐺𝐺̅ (1) (𝑡𝑡1 , 𝑡𝑡2 ) = 𝝌𝝌
+                                                               � † (𝑡𝑡1 ) sinh2 (𝑷𝑷) 𝛘𝛘�(𝑡𝑡2 ),              (19)
+
+and
+                  𝐺𝐺̅ (2) (𝑡𝑡1 , 𝑡𝑡2 ) = |𝝌𝝌� 𝑇𝑇 (𝑡𝑡1 )𝑼𝑼 sinh(𝑷𝑷) cosh(𝑷𝑷) 𝛘𝛘�(𝑡𝑡2 )|2
+                                                                                                        2
+                                      +𝐺𝐺̅ (1) (𝑡𝑡1 , 𝑡𝑡1 )𝐺𝐺̅ (1) (𝑡𝑡2 , 𝑡𝑡2 ) + �𝐺𝐺̅ (1) (𝑡𝑡1 , 𝑡𝑡2 )� .   (20)
+
+      This is where the set of displaced Whittaker-Shannon modes χ�𝑛𝑛 (𝑡𝑡) forms the column vector
+�(𝑡𝑡) at a specific time 𝑡𝑡. In this formalism, 𝑷𝑷 and 𝑼𝑼 are related by the left polar decomposition
+𝝌𝝌
+of 𝛃𝛃 where β𝑛𝑛𝑛𝑛 = βτγ�(𝑛𝑛τ, 𝑚𝑚τ) (see ref.7 or ref.8 for more information).
+
+
+      Second, the authors find a packet expansion of the same-time first-order correlation
+function 𝐺𝐺̅ (1) (𝑡𝑡1 = 𝑡𝑡2 ). The decomposition is as follows,
+
+
+                                            𝐺𝐺̅ (1) (𝑡𝑡1 = 𝑡𝑡2 ) = � Γ𝑛𝑛2 |𝜌𝜌̅𝑛𝑛 (𝑡𝑡)|2 ,                    (21)
+                                                                          𝑛𝑛
+
+
+
+
+                                                                                                              14
+which is particularly useful as 𝐺𝐺̅ (1) (𝑡𝑡1 = 𝑡𝑡2 ) represents the photon density of the pulse. This
+result is analogous to the expansion of the photon density in terms of Schmidt modes. With
+respect to the width of the pump, however, the functions {ρ�𝑛𝑛 (𝑡𝑡)} remain relatively localized in
+comparison to the well-known Schmidt modes which become highly nonlocal as the order
+increases (for an in-depth comparison, see ref.7).
+
+Derivation of the JSA for the two-crystal setup. We begin by examining the case of a single
+crystal before generalizing the result to include two crystals separated by an air gap. Below, we
+follow the general procedure provided in ref.9 for deriving the JSA of BSV in a nonlinear
+interferometer.
+
+
+     We consider a classical Gaussian pump with field 𝐸𝐸0,𝑝𝑝 exp�−𝑡𝑡 2 /2τ𝑝𝑝 2 � 𝑒𝑒 𝑖𝑖(𝑘𝑘𝑝𝑝 𝑟𝑟−ω𝑝𝑝 𝑡𝑡) . Under
+plane-wave expansion of the signal and idler fields, the Hamiltonian describing PDC generation
+in a χ(2) crystal is given by the following,
+                                                                              𝑡𝑡 2
+                                                                         −
+             𝐻𝐻 ∝ 𝑖𝑖 � 𝑑𝑑𝒌𝒌𝑠𝑠 𝑑𝑑𝒌𝒌𝑖𝑖 𝑑𝑑 3 𝒓𝒓𝜒𝜒 (2) (𝒓𝒓)𝐸𝐸0,𝑝𝑝 𝑒𝑒             2τ𝑝𝑝 2
+                                                                                      𝐴𝐴𝒌𝒌𝑠𝑠 𝐴𝐴𝒌𝒌𝑖𝑖 𝑒𝑒 𝑖𝑖(Δ𝒌𝒌⋅𝒓𝒓−Δω𝑡𝑡) 𝑎𝑎𝒌𝒌†𝑠𝑠 𝑎𝑎𝒌𝒌†𝑖𝑖 + H.c.   (22)
+
+where Δ𝒌𝒌 = 𝒌𝒌𝑝𝑝 − 𝒌𝒌𝑠𝑠 − 𝒌𝒌𝑖𝑖 and Δω = ω𝑝𝑝 − ω𝑠𝑠 − ω𝑖𝑖 (49). In the collinear propagation
+approximation, the transverse components of the wavevectors in the Hamiltonian can be
+neglected. For the pump wavevector, for example, this approximation implies |𝒌𝒌𝑝𝑝 ⋅ 𝒓𝒓| ≈ 𝑘𝑘𝑝𝑝𝑧𝑧 𝑧𝑧
+where 𝑘𝑘𝑝𝑝𝑧𝑧 = 𝑛𝑛�ω𝑝𝑝 �ω𝑝𝑝 /𝑐𝑐 (i.e., is a function dependent on ω𝑝𝑝 ). We drop the 𝑧𝑧 on the
+longitudinal components for notational simplicity. As such, the highly nested integral in the
+Hamiltonian becomes an integral over angular frequency and 𝑧𝑧. Following the work presented in
+ref.9, we make the zero-energy mismatch approximation such that the pump pulse with
+bandwidth Ω𝑝𝑝 = 1/τ𝑝𝑝 takes the following form in frequency space,
+                                                                                                                         2
+                                                                                                            �𝜔𝜔−𝜔𝜔𝑝𝑝 �
+                                                                                                       −             2
+                       𝐹𝐹𝐹𝐹�𝐸𝐸𝑝𝑝 � = 𝐸𝐸0,𝑝𝑝 𝑒𝑒 𝑖𝑖𝑘𝑘𝑝𝑝 𝑧𝑧 � 𝑑𝑑𝑑𝑑𝑑𝑑(𝜔𝜔 − 𝜔𝜔𝑠𝑠 − 𝜔𝜔𝑖𝑖 )𝑒𝑒                        2Ω𝑝𝑝
+                                                                                                                             𝑒𝑒 −𝑖𝑖𝑖𝑖𝑖𝑖
+                                                                         (Δω)2
+                                                                     −
+                                                                         2Ω𝑝𝑝 2 −𝑖𝑖(ω𝑠𝑠 +ω𝑖𝑖 )𝑡𝑡
+                                          = 𝐸𝐸0,𝑝𝑝 𝑒𝑒 𝑖𝑖𝑘𝑘𝑝𝑝 𝑧𝑧 𝑒𝑒                𝑒𝑒                    ,                                       (23)
+
+
+
+
+                                                                                                                                                 15
+which is now a function of the signal and idler frequencies. We assume 𝜒𝜒 (2) (𝒓𝒓) varies only along
+the depth of the nonlinear medium z. Substituting this into the Hamiltonian, we arrive at the final
+form,
+                                                                         (Δ𝜔𝜔)2
+                                                                     −
+                                                                         2Ω𝑝𝑝 2 (2) (𝑧𝑧)𝑒𝑒 𝑖𝑖Δ𝑘𝑘𝑘𝑘 †       †
+                                                                                                                          (24)
+                        𝐻𝐻 ∝ 𝑖𝑖𝐸𝐸0,𝑝𝑝 � 𝑑𝑑𝜔𝜔𝑠𝑠 𝑑𝑑𝜔𝜔𝑖𝑖 𝑑𝑑𝑑𝑑𝑒𝑒                    𝜒𝜒                𝑎𝑎𝜔𝜔𝑠𝑠 𝑎𝑎𝜔𝜔 𝑖𝑖
+                                                                                                                 + H.c.
+
+                                                           (2)
+For a single crystal, we have χ(2) (𝑧𝑧) = χ1 for 𝑧𝑧 ∈ [−𝐿𝐿, 0]. The integral over 𝑧𝑧 is then solved
+straightforwardly,
+                                                                 0
+                                                       (2)
+                      � 𝑑𝑑𝑑𝑑χ(2) (𝑧𝑧)𝑒𝑒 𝑖𝑖Δ𝑘𝑘𝑘𝑘 = χ1 � 𝑑𝑑𝑑𝑑𝑒𝑒 𝑖𝑖Δ𝑘𝑘𝑘𝑘
+                                                             −𝐿𝐿
+                                                      (2)   1
+                                                   = χ1         �1 − 𝑒𝑒 −𝑖𝑖Δ𝑘𝑘𝑘𝑘 �
+                                                          𝑖𝑖Δ𝑘𝑘
+                                                      (2)         Δ𝑘𝑘𝑘𝑘 −𝑖𝑖Δ𝑘𝑘𝑘𝑘
+                                                   = χ1 𝐿𝐿sinc �        � 𝑒𝑒 2 ,                                          (25)
+                                                                    2
+
+and thus, the JSA is proportional to,
+                                                                                      (Δω)2
+                                                             Δ𝑘𝑘𝑘𝑘 − 2Ω 2 −𝑖𝑖Δ𝑘𝑘𝑘𝑘
+                                      γ(ω𝑠𝑠 , ω𝑖𝑖 ) ∝ sinc �      � 𝑒𝑒 𝑝𝑝 𝑒𝑒  2 .                                         (26)
+                                                              2
+
+     Under these approximations, we can generalize the single crystal solution to the two-crystal
+solution by treating the effect of the air gap as a mere additional phase shift due to the
+longitudinal wavevector mismatch over the thickness 𝐿𝐿air 10. Since χ(2) for air is negligible, the
+integral over all 𝑧𝑧 is replaced by the sum of two integrals, one for each crystal, with the second
+integral picking up the additional phase mismatch factor,
+
+                                               0                                            𝐿𝐿
+                                     (2)                             (2)
+      � 𝑑𝑑𝑑𝑑χ(2) (𝑧𝑧)𝑒𝑒 𝑖𝑖Δ𝑘𝑘𝑘𝑘 → χ1 � 𝑑𝑑𝑑𝑑𝑒𝑒 𝑖𝑖Δ𝑘𝑘𝑘𝑘 + χ2 𝑒𝑒 𝑖𝑖Δ𝑘𝑘air𝐿𝐿air � 𝑑𝑑𝑑𝑑𝑒𝑒 𝑖𝑖Δ𝑘𝑘𝑘𝑘
+                                       −𝐿𝐿                                                 0
+                                   (2)       Δ𝑘𝑘𝑘𝑘 −𝑖𝑖Δ𝑘𝑘𝑘𝑘
+                                = χ1 𝐿𝐿sinc �     � 𝑒𝑒 2
+                                                       2
+                                                (2)                        Δ𝑘𝑘𝑘𝑘 𝑖𝑖Δ𝑘𝑘𝑘𝑘
+                                              +χ2 𝑒𝑒 𝑖𝑖Δ𝑘𝑘air𝐿𝐿air 𝐿𝐿sinc �     � 𝑒𝑒 2                                    (27)
+                                                                                      2
+
+
+Assuming the two crystals are of the same uniaxial material, with the second having its crystal
+                                                             (2)                (2)
+axis flipped with respect to the first, then χ2 = −χ1 and the final expression simplifies to:
+
+                                            Δ𝑘𝑘𝑘𝑘     (2)
+                                                              Δ𝑘𝑘𝑘𝑘
+                                                                    (2)
+                                                                                            Δ𝑘𝑘𝑘𝑘
+ � 𝑑𝑑𝑑𝑑χ(2) (𝑧𝑧)𝑒𝑒 𝑖𝑖Δ𝑘𝑘𝑘𝑘 → 𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿 �         � �χ1 𝑒𝑒 −𝑖𝑖 2 + χ2 𝑒𝑒 𝑖𝑖Δ𝑘𝑘air𝐿𝐿air 𝑒𝑒 𝑖𝑖 2 �
+                                             2
+                                                                                                                           16
+                          (2)           Δ𝑘𝑘𝑘𝑘           Δ𝑘𝑘𝑘𝑘+Δ𝑘𝑘air 𝐿𝐿air             Δ𝑘𝑘𝑘𝑘+Δ𝑘𝑘air 𝐿𝐿air                        Δ𝑘𝑘air 𝐿𝐿air
+                       = χ1 𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿 �      � �𝑒𝑒 𝑖𝑖�        2
+                                                                           �
+                                                                             − 𝑒𝑒 −𝑖𝑖�        2
+                                                                                                          �
+                                                                                                            � 𝑒𝑒 −𝑖𝑖Δ𝑘𝑘𝑘𝑘 𝑒𝑒 −𝑖𝑖� 2 �
+                                          2
+                             (2)           Δ𝑘𝑘𝑘𝑘 −𝑖𝑖�Δ𝑘𝑘𝑘𝑘�
+                       = 2𝑖𝑖χ1 𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿𝐿 �     � 𝑒𝑒         2
+                                             2
+                                          Δ𝑘𝑘𝑘𝑘 + Δ𝑘𝑘air 𝐿𝐿air −𝑖𝑖�Δ𝑘𝑘𝑘𝑘+Δ𝑘𝑘air𝐿𝐿air�
+                               × sin �                           � 𝑒𝑒              2          .                                          (28)
+                                                   2
+
+The JSA for this setup is then proportional to,
+                                            (Δω)2
+                                  Δ𝑘𝑘𝑘𝑘 − 2Ω 2      Δ𝑘𝑘𝑘𝑘 + Δ𝑘𝑘air 𝐿𝐿air −𝑖𝑖�Δ𝑘𝑘𝑘𝑘+Δ𝑘𝑘air𝐿𝐿air� −𝑖𝑖Δ𝑘𝑘𝑘𝑘
+       γ(ω𝑠𝑠 , ω𝑖𝑖 ) ∝ 𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠 �      � 𝑒𝑒 𝑝𝑝 sin �                    � 𝑒𝑒        2          𝑒𝑒 2 .                                (29)
+                                   2                        2
+For our setup, we have two crystals of length 𝐿𝐿 = 2 mm separated by an air gap of length 𝐿𝐿air ≈
+19 cm. The pump width is set to 50 fs in the calculations.
+
+
+Estimating 𝑔𝑔̅ (1) (𝑡𝑡1 , 𝑡𝑡2 ) and 𝑔𝑔̅ (2) (𝑡𝑡1 , 𝑡𝑡2 ) for two-crystal BSV. Using the JSA found in the previous
+subsection, we can transform it to the time-domain to define the approximate JTA (and the Joint
+Temporal Intensity, JTI) of our setup. We set the bandlimit to the range around the degenerate
+frequency where the modulus squared of the JSA (the Joint Spectral Intensity, JSI) is greater than
+1% of its maximum value, such that we capture the non-negligible frequency content of the JSA.
+The value of the bandlimit is ∼ 0.81 rad/fs or 0.13 PHz. The Whittaker-Shannon mode spacing
+and duration (FWHM) are then approximately 7.8 fs and 9.4 fs, respectively.
+
+
+     To apply the results of ref.7, we need to set the squeezing parameter β to ensure we are in
+the same squeezing regime as our experiment. Given that our BSV contains on the order of 1010
+photons per pulse, we tune β until the integral over the photon density 𝐺𝐺̅ (1) (𝑡𝑡1 = 𝑡𝑡2 ) is ∼
+1 × 1010 . This is equivalent to tuning β until the sum over the weighting factors ∑𝑛𝑛 Γ𝑛𝑛2 is equal
+to ∼ 1 × 1010 . The precise β used was 24.15.
+
+
+     We use the extended Sellmeier equations for BBO to calculate the wavelength-dependent
+refractive index in the JSA11. In addition, we define the time-zero using the reference frame of
+the BSV rather than the pump by shifting the JTA by the theoretical relative group delay,
+                                                                   𝐿𝐿
+                                                        Δ𝑡𝑡g =        Δ𝑛𝑛 .                                                          (30)
+                                                                   𝑐𝑐 g
+
+
+
+
+                                                                                                                                         17
+We perform this shift in the frequency domain by multiplying the derived JSA by an additional
+linear phase with slope Δ𝑡𝑡g .
+
+
+Throughout this analysis, we use normalized JSA and JTI distributions. Figure S8, a and b, show
+|γ(ω𝑠𝑠 , ω𝑖𝑖 )|2 and |γ�(𝑡𝑡1 , 𝑡𝑡2 )|2, respectively. The values sampled according to the Whittaker-
+Shannon sampling theorem are shown in c while the reconstruction using these sampled values
+according to Equation 18 is given in d. Using the expansion of the same-time first-order
+coherence function we decompose the photon density into constituent packet expansions as
+described in ref.7 This is shown in Fig. S9a along with the contributions from the five most
+dominant packets as defined by the weighting factors Γ𝑛𝑛2 . The distribution of Γ𝑛𝑛2 is plotted in the
+bar chart of b. We estimate the width of each packet whose Γ𝑛𝑛2 is above 10% of the maximum
+weighting factor (i.e., Γ02 ) by fitting it to a Gaussian function. We find the mean packet width to
+be (15.77 ± 0.05) fs which agrees with the ~17 fs width of the BSV bursts measured
+experimentally. In addition, the general behavior of both decreasing packet amplitude and
+increasing packet overlap near the wings of the photon density curve are corroborated by the
+experimental data. Importantly, these results do not show shot-to-shot statistics but are rather a
+decomposition of the state.
+
+
+      We can estimate the normalized first- and second-order time-dependent correlation
+functions according to the typical definitions,
+                                                                     𝐺𝐺̅ (1) (𝑡𝑡1 , 𝑡𝑡2 )
+                                 𝑔𝑔̅ (1) (𝑡𝑡1 , 𝑡𝑡2 ) =                                                  (31)
+                                                          �𝐺𝐺̅ (1) (𝑡𝑡1 , 𝑡𝑡1 )𝐺𝐺̅ (1) (𝑡𝑡2 , 𝑡𝑡2 )
+and
+                                                                    𝐺𝐺̅ (2) (𝑡𝑡1 , 𝑡𝑡2 )
+                                 𝑔𝑔̅ (2) (𝑡𝑡1 , 𝑡𝑡2 ) =                                            .     (32)
+                                                          𝐺𝐺̅ (1) (𝑡𝑡1 , 𝑡𝑡1 )𝐺𝐺̅ (1) (𝑡𝑡2 , 𝑡𝑡2 )
+
+The measurement of such time-resolved correlations is shown in the main manuscript.
+Importantly, for comparison between the real part (imaginary part or phase) of the theoretical
+𝑔𝑔̅ (1) (𝑡𝑡1 , 𝑡𝑡2 ) and the experimental first-order coherence function, it must be multiplied by the
+carrier phase which would have been removed by taking the Fourier transform of the JSA over
+the bandwidth centered at the degenerate frequency (i.e., the Fourier shift theorem). The second-
+order coherence function is insensitive to this additional carrier phase term.
+
+                                                                                                          18
+Towards PHz quantum random number generation
+
+Randomness tests. The inherent randomness in the phase of each temporal burst in BSV, in
+combination with the femtosecond timescale of our measurement scheme, paves the way for
+QRNG at unprecedented PHz rates. Here, we provide an example of how the phase-difference
+between adjacent temporal bursts in a BSV dataset can be binarized to produce a stream of
+random bits. We then verify the randomness of our bitstream by feeding it to the NIST Test Suite
+– a statistical package which searches for non-randomness within a supposedly random sequence
+using a variety of tests12.
+
+
+        From the 3881 multi-burst BSV shots, we have 3273 two-burst, 528 three-burst, and 80
+four-burst shots. We are interested in the phase-difference between adjacent burst pairs within
+these shots. Each two-burst shot provides one phase-difference value while each three-burst and
+four-burst shot provide two and three phase-difference values, respectively. This corresponds to
+𝑁𝑁 = 4569 individual phase-difference values which we then binarize. The phase-difference of
+adjacent temporal bursts is found to cluster into two main peaks, separated by π rads (see main
+text for more information). We assign any phase-difference within π/2 rads of the peak near π a
+bit value of 1, and any other phase-difference a bit value of 0. This results in a bitstream
+containing 2241 0s and 2328 1s. This corresponds to a sample proportion of 𝑝𝑝1 =
+2328 / 4569 = 0.51 which is within statistical error of the expected value 𝑝𝑝1 = 0.5 (where the
+statistical error is the inverse square root of the total number of bits13, here σstats = 1/√4569 ≈
+0.01). While this verifies that our sequence satisfies basic statistical randomness, further
+investigation using the NIST Test Suite is required to rule out underlying non-randomness.
+
+
+        Figure S10 shows the result of seven statistical tests performed by the NIST Test Suite. If
+the computed P-value is greater than or equal to the minimum threshold called the significance
+level, α, the sequence is considered random with a confidence of 100 × (1 − α). The NIST Test
+Suite uses a significance level of α = 0.01 meaning a sequence will only pass as “random” if the
+confidence is at least 99%. Here, the P-value signifies the probability that an ideal RNG would
+have produced a bitstream “less random” than the bitstream being evaluated assuming a certain
+
+
+                                                                                                  19
+type of non-randomness which is test-dependent (the formal definition of the P-value relates to
+the null hypothesis and can be found at ref.12).
+
+
+         The Frequency (Monobit) Test evaluates the proportion of 0s and 1s for the binary
+sequence, and compares it to the expected proportion for a truly random sequence of length N.
+The sequence must first pass this test before it can pass any subsequent test for randomness. By
+extension, the Frequency Test within a block evaluates the frequency of 1s within an M-bit
+block of the sequence. Assuming the sequence is random, there should be approximately M/2 1s
+within the block. The sequence is divided into 𝒩𝒩 non-overlapping blocks, and any unused bits
+are discarded. The block size is chosen such that 𝑀𝑀 ≥ 20, 𝑀𝑀 ≥ 0.01 × 𝑁𝑁, and 𝒩𝒩 < 100. The
+frequency of 1s is then evaluated within each block. To continue, the Runs Test counts the
+number of uninterrupted sequences of 0s or 1s (i.e., the number of runs) within the total
+sequence. It monitors the oscillation between 0s and 1s to ensure the rate is not far more or far
+less than what would be expected for a random sequence. The Longest Run of Ones in a Block
+Test is similar to the Runs Test but performed within M-bit blocks of the total sequence. Next,
+the Approximate Entropy Test evaluates the frequency of overlapping blocks with lengths 𝑀𝑀
+and 𝑀𝑀 + 1 and compares it to that of a random sequence. Finally, the Cumulative Sums Test
+calculates the cumulative sum of partial sequences within the total sequence and determines if it
+is larger or smaller than that expected from a random sequence. The detailed step-by-step
+procedure, the precise test statistic, and the reference distribution for each of the tests are given
+in the NIST documentation12. We do not test the randomness of our bitstream using the other
+tests in the NIST Test Suite which require more than N bits to function. Acquiring a dataset
+containing a much larger number of multi-burst BSV shots will allow one to apply these other
+tests.
+
+
+Reaching PHz rates. While our current setup allows us to measure primarily single- and two-
+burst BSV, a longer pump pulse will allow us to measure more temporal bursts per shot. Using
+the binarization procedure described here, we extract one bit of information for each temporal
+burst pair in every BSV shot. A sequence of shots containing purely two-burst BSV then
+provides one bit of information at the rate of the pump system used to generate the squeezed
+light. However, as the number of bursts per shot increases beyond two, the rate of bit generation
+
+                                                                                                    20
+within each shot reaches the PHz scale. This is because the burst spacing is on the order of
+femtoseconds. If one can resolve the phase of each burst within each shot, as we have
+demonstrated, then one can generate random bit sequences in near-PHz bursts (the time between
+each burst of bits would still be limited by the pump rate). This will result in quantum random-
+number generation with a temporal resolution and rate that was previously unattainable in
+electronics and other photonics approaches.
+
+
+
+
+                                                                                                   21
+References
+
+
+1     O’Haver, T. Handbook of Scientific Signal Processing (University of Maryland, 2025).
+2     Branch, M. A., Coleman, T. F. & Li, Y. A subspace, interior, and conjugate gradient
+      method for large-scale bound-constrained minimization problems. SIAM J. Sci. Comput.
+      21, 1-23 (1999).
+3     Qiang, J. & Mitchell, C. A Unified Differential Evolution Algorithm for Global
+      Optimization. (Ernest Orlando Lawrence Berkeley National Laboratory, Berkeley, CA
+      (US), 2014).
+4     Croarkin, C. & Tobias, P. e-Handbook of statistical methods. (NIST/SEMATECH,
+      2012).
+5     Gerry, C. C. & Knight, P. L. Introductory quantum optics. (Cambridge university press,
+      2023).
+6     Manceau, M., Spasibko, K. Y., Leuchs, G., Filip, R. & Chekhova, M. V. Indefinite-mean
+      pareto photon distribution from amplified quantum noise. Phys. Rev. Lett. 123, 123606
+      (2019).
+7     Drago, C. & Sipe, J. Deconstructing squeezed light: Schmidt decomposition versus the
+      Whittaker-Shannon interpolation. Phys. Rev. A 110, 023710 (2024).
+8     Kranias, J., Drago, C., Vendromin, C. & Sipe, J. Photodetection of Squeezed Light: a
+      Whittaker-Shannon Analysis. arXiv preprint arXiv:2511.04657 (2025).
+9     Sharapova, P., Tikhonova, O., Lemieux, S., Boyd, R. & Chekhova, M. Bright squeezed
+      vacuum in a nonlinear interferometer: Frequency and temporal Schmidt-mode
+      description. Phys. Rev. A 97, 053827 (2018).
+10    Riabinin, M., Sharapova, P. & Meier, T., Bright correlated twin-beam generation and
+      radiation shaping in high-gain parametric down-conversion with anisotropy. Optics
+      Express 29, 21876–21890 (2021).
+11    Zhang, D., Kong, Y. & Zhang, J.-y. Optical parametric properties of 532-nm-pumped
+      beta-barium-borate near the infrared absorption edge. Opt. Commun. 184, 485-491
+      (2000).
+12    Bassham, L. E. et al. A Statistical Test Suite for Random and Pseudorandom Number
+      Generators for Cryptographic Applications (National Institute of Standards &
+      Technology, 2010).
+13    Roques-Carmes, C. et al. Biasing the quantum vacuum to control macroscopic
+      probability distributions. Science 381, 205-209 (2023).
+14    Waskom, M. L. Seaborn: statistical data visualization. J. Open Source Softw. 6, 3021
+      (2021).
+
+
+
+
+                                                                                          22
+ a
+                                                            (i)
+
+
+
+                                                            (ii)
+
+
+
+
+ b
+
+
+
+
+Fig. S1: Raw signal of TIPTOE interference on CMOS sensor
+a, The real-space regions of interference of the two 800 nm beams (bottom-right) and two
+1.6 𝜇𝜇m beams (top-left). The inset panels (i) and (ii) correspond to zoomed-in, normalized
+regions of each interference pattern as marked by the black and white dashed boxes, respectively.
+The fringe spacing in (ii) is half than in (i), as expected. b, The result of a 1D Fourier
+transformation along the horizontal real-space axis. The white band denotes the DC offset signal
+while the blue and green bands denote the 1.6 μm and the 800 nm interference signals,
+respectively.
+
+                                                                                              23
+  a
+
+
+
+
+  b                                          c
+
+
+
+
+  d
+
+
+
+
+  e
+
+
+
+
+Fig. S2: Isolation of the weak BSV signal
+The result of a 1D inverse Fourier transformation of the DC offset ROI (white region, panel a),
+of the TIPTOE interference ROI (blue region, panel b), and of the reference interference signal
+
+                                                                                              24
+ROI (green region, panel C), shown in Fig. S1b. In a, the left beam corresponds to the nonlinear
+absorption signal of the coherent pump, while the right beam is the overlap of the individual
+reference beams, but not their interference. In b, the real-space fringe pattern is used to directly
+read off the weak BSV temporal waveform by taking an average over the set of rows between
+the orange lines. In c, the real-space fringe pattern defines the reference lineout taken along the
+yellow line. d, The mean angular frequency spectrum of 100 reference signals. The spacing
+between the two peaks (orange ‘x’ markers) is used to calibrate the time axis (see text for more
+information). e, A sample shot of the real part of the measured BSV temporal waveform.
+
+
+
+
+                                                                                                  25
+                                                                       Ca libra tion
+                                                                         single- bur st BSV
+
+                                             Sta rt                                                      End                        End
+                                      Calibr at ion of cent er                                   Calibr at ion of cent er     Nonlinear it er at ive
+                                      f r equency and chir p                                     f r equency and chir p         cur ve- f it t ing
+
+
+
+
+          Ge ne ra l
+          M - bur st BSV
+
+
+              Sta rt                         Input                                                    Output                    Output
+                                        I nit ial guess
+        Nonlinear it er at ive                                                                  Cent er f r equency                                    and
+                                    and bounds f or
+           cur ve- f it t ing                                                                         and chir p
+                                                 bur st                                                                             f or
+
+
+
+                                                                                                                                           No
+
+
+             Input                       Ste p 1                                                    Ste p 2                   Condition
+        I nit ial guess          Fitting the e nv e lope                                      Fitting the pha s e
+    and bounds f or                                                                                                                  and
+                 bur st              Eq. 1 wit h          bur st s                              Eq. 2 wit h        bur st s
+
+
+
+
+                                                                                                                                           Ye s
+                                                                           Upda te
+                                                                 Num . bur st s:
+                                                                 I nit ial guess:
+
+
+
+
+Fig. S3: Nonlinear iterative curve-fitting flowchart
+An ISO 5807 flowchart depicting the logical sequence and decision-making steps used in the
+iterative curve-fitting procedure. For more information on the implementation of each step in the
+flowchart, see the section on curve-fitting procedure in the Supplementary Discussion.
+
+
+
+
+                                                                                                                                                             26
+a                              b                           c
+
+
+
+
+d                              e
+
+
+
+
+Fig. S4: Single-burst BSV envelope analysis
+a, The distribution of the MFE for the single-burst shots. The grey region corresponds to shots
+beyond the error threshold of Median + 1.5 × MAD = 9.72%. b, The distribution of the
+normalized amplitude of those shots below the error threshold. c, The distribution of the absolute
+phase of those shots below the error threshold. d, The distribution of the width of those shots
+below the error threshold. e, The distribution of the emission time of those shots below the error
+threshold.
+
+
+
+
+                                                                                               27
+a                                    b
+
+
+
+
+c
+
+
+
+
+Fig. S5: Multi-burst BSV envelope analysis
+a, The distribution of the MFE for the multi-burst shots. The grey region corresponds to shots
+beyond the error threshold of Median + 1.5 × MAD = 7.75%. b, The distribution of the FWHM
+width of the intensity envelopes of adjacent burst pairs. c, The distribution of the absolute phase
+for adjacent burst pairs. The distribution of the other fit parameters is presented in the main text.
+Plotting done with the seaborn package14.
+
+
+
+
+                                                                                                  28
+a                                                              b
+
+
+
+
+c
+
+
+
+
+Fig. S6: Simulation tests for evaluating the performance of the iterative curve-fitting
+procedure
+a, The distribution of the number of bursts in each shot, as estimated by feeding three different
+10,000 shot simulation datasets to the iterative curve-fitting algorithm. The y-axis shows the
+number of simulated bursts in each dataset while the x-axis shows the number of shots found
+with each number of bursts, as defined by the colors in the legend. b, The distribution of the
+MFE for the three simulation datasets. The scale is logarithmic as all three sets cluster closely to
+the zero MFE bin, but there is noticeable change in the width of the distributions with increasing
+number of simulated bursts (see text for more information). c, The variation in percent error
+between the fit parameters and the true parameters as a function of the number of bursts. The
+number in the top-right of each subplot is the normalized root-mean-square error defined as a
+percentage of the range.
+
+
+
+
+                                                                                                  29
+        a Shot-average                           b Burst-average
+
+
+
+
+Fig. S7: Windowed shot-average and burst-average coherence
+                                                                   (2)
+a, The windowed shot-average second-order coherence function 𝑔𝑔BSV,w (0) for varying window
+                                                                           (2)
+widths. b, The windowed burst-average second-order coherence function 𝑔𝑔𝑖𝑖,𝑤𝑤 (0) for varying
+window widths.
+
+
+
+
+                                                                                                30
+   a                                              b
+
+
+
+
+   c                                             d
+
+
+
+
+Fig. S8: Whittaker-Shannon decomposition of two-crystal BSV
+a, The magnitude squared of the Joint Spectral Amplitude of our two-crystal BSV setup as
+described in the text. b, The Joint Temporal Intensity calculated from the 2D Fourier transform
+of the JSA. c, The sampled Joint Temporal Intensity. d, The reconstruction of the Joint Temporal
+Intensity using the sampled positions shown in c and the formula given in Equation 18.
+
+
+
+
+                                                                                             31
+     a                                               b
+
+
+
+
+     c                                               d
+
+
+
+
+Fig. S9: Whittaker-Shannon modes and packets
+a, The same-time first-order correlation function and its underlying packets. b, The distribution
+of the packet weights, normalized by the weight of the n = 0 packet. c, The distribution of the
+approximate packet widths. d, A sample of Whittaker-Shannon modes demonstrating their
+spacing of τ and widths.
+
+
+
+
+                                                                                                32
+Fig. S10: Statistical tests for randomness
+The bitstream generated from the phase-difference between bursts in multi-burst BSV was tested
+using the NIST Test Suite. The results of seven statistical tests are shown in the figure. The
+significance level used by the NIST Test Suite is α = 0.01 which is denoted by the dashed
+orange line. For more information on the tests used, see the section on Towards PHz quantum
+random number generation in the Supplementary Discussion.
+
+
+
+
+                                                                                            33
+

@@ -1,0 +1,449 @@
+                                                                            Attosecond metrology of bright quantum light
+
+                                                                       P. Stammer,1, 2, ∗ J. Rivera-Dean,3 E. Pisanty,4 and M. Lewenstein1
+                                              1 ICFO – Institut de Ciencies Fotoniques, The Barcelona Institute of Science and Technology, 08860 Castelldefels (Barcelona), Spain
+                                                                            2 Atominstitut, Technische Universität Wien, 1020 Vienna, Austria
+                                                  3 Department of Physics and Astronomy, University College London, Gower Street, London WC1E 6BT, United Kingdom
+                                                                             4 Attosecond Quantum Physics Laboratory, Department of Physics,
+                                                                             King’s College London, Strand Campus, London WC2R 2LS, UK
+                                                                                                  (Dated: July 8, 2026)
+                                                           Attosecond metrology is the ability to measure ultrafast optical light-wave oscillations, yet its ap-
+                                                        proach has been limited to classical fields. Hence, the influence of the fluctuations of a quantum field
+                                                        on attosecond measurements has remained unexplored. Here, we close this gap by showing that the
+                                                        attosecond streaking measurement of bright quantum light is sensitive to quantum fluctuations of the
+                                                        optical field on the attosecond timescale. The distinct sub-cycle modulations allow to extract the prop-
+                                                        erties of the squeezed field quadrature in regimes where conventional state tomography approaches
+                                                        reach their limitation. With the full quantum optical attosecond streaking scheme developed here,
+                                                        we provide a certification method that can measure quantum squeezing below the shot noise limit,
+                                                        thereby overcoming the problem of tomographically measuring bright quantum light. This opens the
+                                                        way towards quantum optical metrology of field fluctuations with attosecond temporal resolution.
+
+
+                                              Introduction.– Attosecond streaking is the ability to              ety of advanced experimental techniques for measuring
+arXiv:2607.06395v1 [quant-ph] 7 Jul 2026
+
+
+
+
+                                           perform ultrafast metrology of optical light-wave oscil-              the field fluctuations, such as homodyne detection for
+                                           lations and to reconstruct isolated attosecond pulses [1–             measuring the field quadratures [16–19], and to recon-
+                                           3]. In essence, the technique of attosecond streaking                 struct phase-space distributions [20]. Of particular in-
+                                           maps the temporal profile of an attosecond burst of                   terest are squeezed states of light due to their wide ap-
+                                           light onto the distribution of photoelectron energies [4],            plicability in optical quantum technologies [21, 22]. This
+                                           which encodes the information for the retrieval of the                includes, for instance, the ability to perform ultrasen-
+                                           pulse [5, 6].                                                         sitive measurements for the detection of gravitational
+                                              The basic principle underlying attosecond streaking                waves [23, 24] or quantum sensing [25], and is partic-
+                                           is the ionization of a photoelectron by a short extreme-              ularly useful for continuous-variable quantum informa-
+                                           ultraviolet (XUV) attosecond burst, in which the elec-                tion processing [26, 27] or quantum communication [28].
+                                           tron interacts with an infrared (IR) streaking field. The             The usefulness of squeezed light, compared to classi-
+                                           streaking field drives the electron in the continuum, and             cal coherent laser light, originates from the significantly
+                                           measuring its momentum distribution encodes informa-                  different quantum fluctuations, where one of the field
+                                           tion about the ionization time [7], the characteristics of            quadratures exhibits fluctuations below the shot noise
+                                           the XUV pulse [2, 8, 9], and about the IR field [10].                 vacuum limit [29, 30]. Yet, the existing schemes to tomo-
+                                           Classically, the streaking field adds a momentum shift                graphically measure genuine quantum squeezing below
+                                           to the electron at the instant of ionization via the XUV              the shot noise limit are restricted to moderate field in-
+                                           pulse [4, 8], allowing for the measurement of the optical             tensities. This is due to the inherent scaling problem be-
+                                           light-wave oscillations [10]. From the semi-classical per-            tween the signal and reference field and limited by prac-
+                                           spective [8, 9], in which the quantum state of the electron           tical means due to detector efficiencies [31–34]. There-
+                                           describes a wavepacket in the continuum, the distribu-                fore, the current certification approaches of bright quan-
+                                           tion encodes the information of the oscillating laser field           tum light sources usually rely on the measurement of
+                                           acting as an attosecond phase gate on the wavepacket                  the equal time intensity correlation function g(2) (0). The
+                                           released by the XUV pulse. In fact, the semi-classical                observation of a super-Poissonian photon number dis-
+                                           theory of attosecond streaking has led to a tremendous                tributions, with its typical long tail in the intensity distri-
+                                           progress in attosecond science [4, 11–14].                            bution, is usually associated to squeezing [30]. Yet, these
+                                              However, the existing description of attosecond                    measurements can not certify quantum squeezing since
+                                           streaking is limited to classical fields, and the quantum             there exist classical counterparts having the same distri-
+                                           nature of light has thus far been ignored [15]. On the                bution. In particular when the field is in a multi-mode
+                                           other hand, quantum optics studies the interactions of                squeezed state, the g(2) (0) measurement can show sim-
+                                           individual photons with matter, with the quantum na-                  ilar values as a thermal state. This results in the im-
+                                           ture encoded in the fluctuations and correlations of the              minent need for a solution to detect and certify bright
+                                           field. To retrieve this information there exists a vari-              squeezed light.
+                                                                                                                    In this work we overcome this limitation and intro-
+                                                                                                                 duce a new approach to measure the quantum fluctua-
+                                           ∗ philipp.stammer@icfo.eu
+                                                                                                                 tions of light on the attosecond time-scale. This is possi-
+                                                                                                                                     2
+
+                                                                   The light field can be in a classical state, for instance de-
+                                                                   scribed by the coherent state |α⟩, or quantum state such
+                                                                   as a bright squeezed vacuum |ξ ⟩. To this end, we de-
+                                                                   rive analytical expressions for the delay-dependent at-
+                                                                   tosecond streaking trace, revealing the ability to mea-
+                                                                   sure quantum fluctuations of light on the attosecond
+                                                                   time-scale.
+                                                                      Before deriving the general expressions, it is intuitive
+                                                                   to revisit the streaking measurement for a classical co-
+                                                                   herent field [9, 69, 70]. Therefore, we consider the inter-
+                                                                   action of a linearly polarized XUV pulse with the elec-
+                                                                   tonic system in the initial stationary bound state |ψ(t0 )⟩,
+                                                                   and the pulse generates a single-electron wavepacket
+                                                                   |ψ(t)⟩ due to photoionization. The classical XUV pulse
+                                                                   has the electric field E X (t) = Re[E X (t)e−iΩt ], where
+                                                                   E X (t) is the complex envelope with central frequency
+                                                                   Ω. The electron wavepacket launched into the contin-
+                                                                   uum will be detected with asymptotic momentum p
+                                                                   with probability |⟨p|ψ(t)⟩|2 , such that the photoelectron
+                                                                   spectrum in the absence of a streaking field is given
+                                                                   by S0 (p) = |⟨p|ψ(t)⟩|2 . Now, in the presence of a
+                                                                   classical coherent laser field Eα (t) = ⟨α| EQ (t) |α⟩ =
+                                                                   Re[Eα (t)e−iωt ], which is delayed by τ with respect to
+                                                                   the ionizing XUV pulse, the spectrogram, Sα (p, τ ) =
+FIG. 1. Streaking of a bright squeezed vacuum field.               | Mα (p, τ )|2 , can be written in terms of the streaking am-
+Schematic illustration of the quantum optical attosecond           plitude (atomic units used throughout)
+streaking, where the IR streaking field consists of quantum                                Z
+light such as a bright squeezed vacuum and is delayed by τ                  Mα (p, τ ) =       dt E X (t + τ ) Gα (p, t)ei∆ p t ,   (1)
+with respect to the coherent XUV pulse. The distinct subcycle
+modulations in the streaking trace reveal the field fluctuations   where Gα (p, t) = D (p + Aα (t)) exp[iΦα (p, t)] is the IR
+and allow for measurement of quadrature squeezing.
+                                                                   dependent gate function with the transition dipole mo-
+                                                                   ment D (k(t)) = ⟨k(t)| d |ψ(t0 )⟩, and the Volkov phase
+                                                                                     Z ∞                            
+                                                                                            ′           ′   1 2 ′
+ble due to the recent advances in strong-field quantum                 Φα (p, t) = −     dt p · Aα (t ) + Aα (t ) , (2)
+optics [35], and particularly the development of bright                               t                     2
+squeezed light sources [36–41], challenging the semi-
+                                                                   with the classical vector potential Aα (t) corresponding
+classical perspective of strong-field phenomena [42–45].
+                                                                   to the coherent field Eα (t) = −∂Aα (t)/∂t. We have
+Of special interest is the process of high harmonic gener-
+ation (HHG), in which a strong IR field generates a fre-           further defined the energy difference ∆ p = (|p|2 −
+quency comb leading to the emission of attosecond XUV              |p0 |2 )/2, between the measured electron p with momen-
+bursts [4, 46, 47]. While the quantum optical under-               tum p and initial momentum |p0 | = 2(Ω + E0 ) after
+standing of HHG has led to new insights about the prop-            the single photon ionization from the stationary ground
+erties of the harmonics [48–62], the applications towards          state with energy E0 < 0.
+quantum optical measurement schemes and techniques                    Now, instead of the interaction with the classical laser
+is thus far limited [63–66]. In particular, the imminent           Eα (t), we consider the coupling of the system to the
+challenge of quantum state tomography of bright quan-              quantized electromagnetic field [71]. Therefore, we con-
+tum states of light [67, 68], in which conventional meth-          sider the dipole coupling of the electron to the field
+ods of homodyne detection reach their limitations, is              H I (t) = −d · E Q (t), where the time-dependent electric
+yet unresolved. This leads to a gap in certifying the              field operator includes the relevant modes of the streak-
+squeezing properties of intense quantum fields of light.           ing process
+The scheme introduced here overcomes this problem,                                                           
+by using the attosecond streaking technique to certify                       EQ (t) = −i g0 a† eiωt + gb† eiΩt + h. c.,    (3)
+the presence of squeezing in bright quantum light (see
+Fig. 1).                                                           where a† and b† are the creation operators of the IR and
+   Quantum optical theory of attosecond metrology.– In the         XUV field, with frequencies ω and Ω as well as cou-
+following we present the formalism to describe attosec-            pling constants g0 and g, respectively. The field oper-
+ond streaking measurements of an arbitrary light field.            ator is given in the rotating frame with respect to the
+                                                                                                                                             3
+
+free-field Hamiltonian HF = ωa† a + Ωb† b. Going be-              most interesting insights are obtained when explicitly
+yond the existing semi-classical descriptions of attosec-         writing the field state in terms of its phase-space dis-
+ond streaking [15], we further need to define the quan-           tribution [20], which furthermore allows to explicitly
+tum states of the relevant fields. For the XUV pulse, we          solve the expression of the streaking trace in Eq. (4) for
+consider the field to be in a coherent state | β X ⟩, while       arbitrary quantum states of light. To this end, we ex-
+the IR streaking field is in an arbitrary quantum state           press the initial field state in terms of its generalized P-
+ρ IR . Note that the coherent state of the XUV pulse cor-         representation [73], P(α, β∗ ), such that
+responds to the modeR described by excitations of the
+field operator b† =       dtϕb (t)E X† (t), with the tempo-                                                      P(α, β∗ )
+                                                                                          Z           Z
+                                                                           ρ F ( t0 ) =       d2 α        d2 β             |α⟩⟨ β∗ | .    (8)
+ral mode ϕb (t) corresponding to the XUV pulse. The                                                               ⟨ β∗ |α⟩
+continuous mode operators E X† (t) can be understood as
+the excitations corresponding to the total XUV photons               With this we can write the exact quantum optical
+NX = ⟨E X† (t)E X (t)⟩ = ∑i n̄i ϕi∗ (t)ϕi (t) for the orthonor-   streaking trace as
+mal set of temporal modes ϕi (t) with corresponding                                Z          Z
+mean photon occupation number n̄i in each mode [72].                SQ (p, τ ) =       d2 α       d2 β P(α, β∗ ) Mα (p, τ ) Mβ∗ ∗ (p, τ ),
+To obtain the quantum optical streaking trace (QOST)                                                                                      (9)
+we are essentially interested in the probability of find-
+ing the electron with asymptotic momentum p, when                 where Mα (p, τ ) are the semi-classical streaking ampli-
+driven by an arbitrary quantum state of the IR streaking          tudes. This is the exact expression of the streaking
+field. Taking into account the quantum state of the light         trace for an arbitrary IR streaking field, where the quan-
+field, the QOST is obtained from                                  tum nature and its fluctuations are manifested through
+                                                                  the initial IR phase-space distribution PIR (α, β∗ ), and
+               SQ (p, τ ) = Tr [|p⟩⟨p| ρ∞ (τ )] ,           (4)   the interference of the streaking amplitudes Mα (p, τ ).
+                                                                  The interference of the different contributions allows
+where the trace is taken over the electron and field de-
+                                                                  to measure the quantum fluctuations of light on the
+grees of freedom with the projection on the final elec-
+                                                                  sub-femtosecond time-scale. The striking difference be-
+tron momentum |p⟩⟨p| for the electron measurement.
+                                                                  tween the semi-classical streaking trace for a classical co-
+We have further defined the joint light-matter quantum
+state                                                             herent field Sα (p, τ ) = | Mα (p, τ )|2 and the quantum op-
+                                                                  tical version SQ (p, τ ) in Eq. (9), is the presence of inter-
+             ρ∞ (τ ) = lim U (t; τ )ρ(0)U † (t; τ )               ferences between different classical streaking channels
+                        t→∞                                 (5)   in the latter, corresponding to streaking amplitudes with
+                                   †
+                     = U∞ (τ )ρ(0)U∞ ( τ ),                       fields α ̸= β∗ . The phase-space distribution of the IR
+                                                                  quantum state, PIR (α, β∗ ), is given by the generalized
+which parametrically depends on the XUV-IR delay τ,               P-representation [73], which has the advantage to be a
+and gives the joint state of the asymptotic evolution un-         unique, positive and finite distribution function [74–76].
+der the unitary U (t; τ ) containing the interaction. The         Now, to get a better understanding of the physical pro-
+initial state of the electron plus field is given by              cess we take into account the large photon numbers of
+                                                                  the IR field, and consider the quasi-classical limit of the
+              ρ(0) = |ψ(t0 )⟩⟨ψ(t0 )| ⊗ ρ F (t0 ),          (6)   positive P function [44, 63, 64, 77, 78]. With this, we can
+                                                                  write the quantum optical streaking trace as
+where the electronic state |ψ(t0 )⟩ is the state from the
+known semi-classical picture, and we have extended the                                            Z
+approach by introducing the initial quantum state of                         SQ (p, τ ) =             d2 αQ(α)| Mα (p, τ )|2 ,           (10)
+the field ρ F (t0 ). An instrumental example is given in
+the particular case of a pure initial field state, such that      where Q(α) = π1 ⟨α| ρ IR |α⟩ is the Husimi distribution
+ρ F (t0 ) = |Φ(t0 )⟩⟨Φ(t0 )|, and hence the general expres-       of the IR state. Although the quasi-classical limit does
+sion of the streaking trace in Eq. (4) simplifies to              not lead to interference effects between different contri-
+                                                                  butions of α ̸= β∗ , the quantum noise is still taken into
+         SQ (p, τ ) = |⟨p| U∞ (τ ) |ψ(t0 )⟩ |Φ(t0 )⟩|2 ,    (7)   account via Q(α). Furthermore, it was shown that for
+                                                                  strong field processes the difference between the aver-
+where we defined the long-time limit of the evolution             ages via P(α, β∗ ) and Q(α) do not differ due to the ex-
+operator U∞ (τ ) ≡ limt→∞ U (t; τ ). Here, we can already         ponential decay of the coherent state overlaps [57].
+see the significant difference that appears when consid-             This formalism enables us not only to perform the
+ering the quantum optical streaking process, namely,              measurement of quantum noise on the attosecond time-
+instead of computing |⟨p|ψ(t)⟩|2 for the the electron             scale, but can further be seen as a new approach for state
+wavefunction only, we have in Eq. (7) the additional              tomography of bright quantum light, resolving the long-
+possibility of interference due to the properties of the          standing certification problem of intense squeezed light
+initial quantum optical state of the field. However, the          sources [31]. In the following, we discuss the features
+                                                                                                                               4
+
+
+
+
+                                                                 FIG. 3. Attosecond streaking trace of bright quantum light.
+                                                                 Quantum optical streaking trace for a displaced squeezed state
+                                                                 D (α) |ξ ⟩ with amplitude squeezing in (a) and phase squeezing
+                                                                 in (b). The squeezing intensity of Isq = 5 × 10−5 a.u. is the
+                                                                 same for all cases. For the amplitude and phase squeezed state
+                                                                 we considered the ratio of Icoh /Isq ∼ 6, for the intensity from
+                                                                 the coherent and the squeezed contribution.
+FIG. 2. Attosecond streaking a bright squeezed vacuum
+field. Quantum optical streaking trace of a BSV field show-
+ing distinct sub-cycle 2ω oscillations around a vanishing mean
+value of the streaking field with prominent quantum fluctu-      squeezed field has reduced quadrature fluctuations at
+ations. Here, we set the squeezing intensity of the streaking    the zeros of the mean field oscillations. These character-
+field (ω = 0.057 a.u.) to Isqu = 5 × 10−5 a.u., using helium     istics of the quadrature fluctuations are translated to the
+(I p = 0.904 a.u.) for the atomic system, and used a coherent    variance of the quantum optical streaking trace, directly
+XUV pulse of Ω = 3.3 a.u. and IR pulse duration (FWHM) of        showing the ability to witness the quantum fluctuations.
+5 fs.
+                                                                    In summary, although the streaking trace in Eq. (10)
+                                                                 samples over the quantum noise distribution Q(α), the
+                                                                 fluctuations of the IR streaking fields are still present in
+of this new scheme and its implications on the ability to
+                                                                 the shot-to-shot data providing a direct measurement of
+measure the quantum fluctuations of light.
+                                                                 the underlying quantum fluctuations. In the following
+   Quantum optical attosecond streaking trace.– The general      the show how the quantum optical streaking trace al-
+expression of Eq. (9), allows to compute the QOST for            lows to measure quantum fluctuations of light.
+arbitrary IR fields. Hence, we show in Fig. 2 the QOST
+for a bright squeezed vacuum (BSV) field |ξ ⟩, widely               Measuring the quantum noise of light.– All approaches
+used experimentally to drive strong field processes with         to detect bright quantum light are thus far limited to
+quantum light [37–39]. We can see that the squeezing in          the measurement of the g(2) (0) function, where values
+the IR field significantly modifies the streaking trace via      above that of thermal fluctuations g(2) (0) > 2, indicate
+distinct 2ω oscillations, and delay-depend field fluctua-        a super-Poissonian photon number distribution with its
+tions. The increased fluctuations occur when the XUV             long tail typical for squeezed light. In fact, for a perfect
+burst probes the IR streaking field at instances τ when          and pure BSV field the second-order correlation func-
+the field is oriented along the anti-squeezed quadrature,        tion reaches g(2) (0) = 3. However, there also exist clas-
+while the minima in the width of the streaking trace
+                                                                 sical fields having the same g(2) function, such that the
+probe the field along the quantum squeezed quadrature.
+Interestingly, the mean oscillations vanish for the BSV          broad photon number distribution and large g(2) values
+streaking field [42], due to the absence of a classical av-      are no unambiguous squeezing signature. For instance,
+erage electric field Eα [Eα (t)] = 0, where the ensemble         the broad photon number distribution also appears for
+Eα [·] is taken over the distribution of coherent states in      classical fields with anti-squeezing in one quadrature
+the initial IR field.                                            while the conjugate quadrate has fluctuations above the
+   To further understand the implications on the attosec-        vacuum limit, such that the g(2) (0) measurement alone
+ond streaking measurement for different IR quantum               is no direct evidence for quantum light. In consequence,
+fields, we show in Fig. 3 (a) and (b) the streaking trace        the existing measurements [37–41], although indicating
+of an amplitude and phase squeezed state, respectively.          super-Poissonian statistics, are inconclusive about quan-
+Both fields have a definite phase-reference due to the           tum squeezing and do not serve as a full quantum state
+displacement in phase-space, leading to coherent mean            reconstruction method. In the following, we show that a
+field oscillations such that Eα [Eα (t)] ̸= 0, and follow        squeezed field has distinct signatures compared to clas-
+the mean value of the classical streaking field with fre-        sical light fields.
+quency ω. However, both fields have significantly dif-             Therefore, we are now interested to understand the
+ferent modulations in their variance due to the fluc-            contribution of the field fluctuations in the field quadra-
+tuations being distributed differently along the field           tures. Thus, we consider a model that incorporates the
+quadratures. While the amplitude squeezed field has its          anti-squeezed quadrature in a classical streaking field.
+minimal fluctuations at the intensity maxima, the phase          For amplitude squeezing the IR vector potential is con-
+                                                                                                                                 5
+
+                                                                     cal field Acl = f (t) A0 cos(ωt), with non-trivial modu-
+                                                                     lations in their distribution. This can be seen in Fig. 4 (b)
+                                                                     and (d), where we show the difference of the streak-
+                                                                     ing trace variance ∆Var = Varam/ph − Varcl , between
+                                                                     the amplitude (Aam ) or phase squeezed (Aph ) field with
+                                                                     that of the classical field Acl . We can directly see that
+                                                                     the presence of the anti-squeezed fluctuations leads to a
+                                                                     larger variance in the streaking trace compared to that
+                                                                     of a classical coherent field.
+                                                                        Conclusion.– In this work we open the path towards
+                                                                     new certification methods of bright quantum light us-
+                                                                     ing attosecond metrology techniques. We have demon-
+                                                                     strated that the measurement of the quantum optical
+                                                                     streaking trace is sensitive to the fluctuations of bright
+FIG. 4. Physical origin of the variance distribution for anti-       quantum light. The main prediction of this work is
+squeezed light. Streaking trace at fixed time-delay τ for the        that the streaking trace allows to measure quantum
+classical fields resembling the amplitude and phase-squeezed         squeezing with distinct features from classical light.
+vector potential. For (a) and (b) the field Aam (t), while for (c)   The proposed scheme is already compatible with cur-
+and (d) the field Aph (t) was considered.
+                                                                     rent state of the art experiments using bright squeezed
+                                                                     vacuum sources, providing an alternative approach to-
+                                                                     wards quantum tomography in otherwise inaccessible
+sidered to be                                                        regimes. Here, it is interesting to note that the time-
+                                                                     delay τ between the XUV pulse and IR streaking field
+                                                                     share a similar role than the relative phase ϕ between
+     Aam (t) = f (t) [ A0 cos(ωt) + A IR cos(ωt)] ,          (11)    the signal field and the local oscillator in a homodyne
+                                                                     measurement configuration [15]. This particular simi-
+which effectively introduces an increase in the CEP                  larity allows the streaking measurement to observe the
+phase, like the increasing variance in the conjugate                 sub-cycle attosecond quantum fluctuations of light.
+phase quadrature. For the phase squeezed streaking
+field we used
+                                                                                          Acknowledgments
+
+            Aph (t) = f (t) ( A0 + A IR ) cos(ωt),           (12)
+                                                                        P.S. gratefully acknowledges stimulating discussions
+                                                                     with Anne L’Huillier. ICFO group acknowledges sup-
+leading to an increase in field amplitude while keeping              port from: Ministerio de Ciencia y Innovation Agen-
+the phase is fixed. Now, we consider these two classi-               cia Estatal de Investigaciones (R&D project CEX2019-
+cal fields, that incorporate the anti-squeezed quadrature            000910-S, AEI/10.13039/501100011033, Plan National
+of the field, and compute the streaking trace. In partic-            FIDEUA PID2019-106901GB-I00, FPI), Fundació Pri-
+ular, we evaluate the streaking trace and its variance at            vada Cellex, Fundació Mir-Puig, and from Generali-
+a fixed time-delay as shown in Fig. 4. For the ampli-                tat de Catalunya (AGAUR Grant No. 2017 SGR 1341,
+tude squeezed field Aam (t) this is done at τ = 0, where             CERCA program), and MICIIN with funding from Eu-
+the symmetry in Fig. 4 (a) reflects the symmetry of the              ropean Union NextGenerationEU(PRTR-C17.I1) and by
+sampling of A IR . For phase squeezing Aph (t) the streak-           Generalitat de Catalunya and EU Horizon 2020 FET-
+ing trace is sampled at τ ≈ 0.78 fs, when the vector po-             OPEN OPTOlogic (Grant No 899794) and ERC AdG
+tential is zero. In this case, a change in A IR keeps the            NOQIA. J.R.-D. acknowledges funding from UK Engi-
+phase constant wile the amplitudes shifts to the posi-               neering and Physical Sciences Research Council (EP-
+tive or negative direction leading to the asymmetry in               SRC) Funding, Grant UKRI2300 - Attosecond Photoelec-
+Fig. 4 (c). However, what we can see is that these fields            tron Imaging with Quantum Light. E.P. acknowledges
+lead to distinct streaking traces compared to a classi-              Royal Society funding under URF\R1\211390.
+
+
+
+
+ [1] M. Hentschel, R. Kienberger, C. Spielmann, G. A. Rei-                X-ray pulses approaching the attosecond frontier, Science
+     der, N. Milosevic, T. Brabec, P. Corkum, U. Heinzmann,               291, 1923 (2001).
+     M. Drescher, and F. Krausz, Attosecond metrology, Na-            [3] R. Kienberger, E. Goulielmakis, M. Uiberacker, A. Bal-
+     ture 414, 509 (2001).                                                tuska, V. Yakovlev, F. Bammer, A. Scrinzi, T. Wester-
+ [2] M. Drescher, M. Hentschel, R. Kienberger, G. Tempea,                 walbesloh, U. Kleineberg, U. Heinzmann, et al., Atomic
+     C. Spielmann, G. A. Reider, P. B. Corkum, and F. Krausz,             transient recorder, Nature 427, 817 (2004).
+                                                                                                                                   6
+
+ [4] F. Krausz and M. Ivanov, Attosecond physics, Reviews of              (2012).
+     Modern Physics 81, 163 (2009).                                  [27] S. L. Braunstein and P. Van Loock, Quantum information
+ [5] Y. Mairesse and F. Quéré, Frequency-resolved optical               with continuous variables, Reviews of Modern Physics
+     gating for complete reconstruction of attosecond bursts,             77, 513 (2005).
+     Physical Review A—Atomic, Molecular, and Optical                [28] V. C. Usenko, A. Acı́n, R. Alléaume, U. L. Andersen,
+     Physics 71, 011401 (2005).                                           E. Diamanti, T. Gehring, A. A. Hajomer, F. Kanitschar,
+ [6] F. Quéré, Y. Mairesse, and J. Itatani, Temporal characteri-        C. Pacher, S. Pirandola, et al., Continuous-variable quan-
+     zation of attosecond xuv fields, Journal of Modern Optics            tum communication, Reviews of Modern Physics 98,
+     52, 339 (2005).                                                      015003 (2026).
+ [7] M. Schultze, M. Fieß, N. Karpowicz, J. Gagnon, M. Korb-         [29] D. F. Walls, Squeezed states of light, Nature 306, 141
+     man, M. Hofstetter, S. Neppl, A. L. Cavalieri, Y. Komni-             (1983).
+     nos, T. Mercouris, et al., Delay in photoemission, Science      [30] G. Breitenbach, S. Schiller, and J. Mlynek, Measurement
+     328, 1658 (2010).                                                    of the quantum states of squeezed light, Nature 387, 471
+ [8] J. Itatani, F. Quéré, G. L. Yudin, M. Y. Ivanov, F. Krausz,        (1997).
+     and P. B. Corkum, Attosecond streak camera, Physical re-        [31] M. G. Raymer and M. Beck, 7 experimental quantum state
+     view letters 88, 173903 (2002).                                      tomography of optical fields and ultrafast statistical sam-
+ [9] M. Kitzler, N. Milosevic, A. Scrinzi, F. Krausz, and                 pling, in Quantum State Estimation (Springer, 2004) pp.
+     T. Brabec, Quantum theory of attosecond xuv pulse mea-               235–295.
+     surement by laser dressed photoionization, Physical re-         [32] J. Tiedau, E. Meyer-Scott, T. Nitsche, S. Barkhofen, T. J.
+     view letters 88, 173904 (2002).                                      Bartley, and C. Silberhorn, A high dynamic range optical
+[10] E. Goulielmakis, M. Uiberacker, R. Kienberger, A. Bal-               detector for measuring single photons and bright light,
+     tuska, V. Yakovlev, A. Scrinzi, T. Westerwalbesloh,                  Optics express 27, 1 (2019).
+     U. Kleineberg, U. Heinzmann, M. Drescher, et al., Direct        [33] E. Knyazev, K. Y. Spasibko, M. V. Chekhova, and F. Y.
+     measurement of light waves, Science 305, 1267 (2004).                Khalili, Quantum tomography enhanced through para-
+[11] P. B. Corkum and F. Krausz, Attosecond science, Nature               metric amplification, New Journal of Physics 20, 013005
+     Physics 3, 381 (2007).                                               (2018).
+[12] A. L’Huillier, Nobel lecture: The route to attosecond           [34] Y.-D. Yoon, C. Roh, G. Gwak, and Y.-S. Ra, Effi-
+     pulses, Rev. Mod. Phys. 96, 030503 (2024).                           cient ultrafast homodyne detection of quantum light,
+[13] P. Agostini, Nobel lecture: Genesis and applications of at-          arXiv:2605.14858 (2026).
+     tosecond pulse trains, Rev. Mod. Phys. 96, 030501 (2024).       [35] P. Stammer, J. Rivera-Dean, P. Tzallas, M. F. Ciappina, and
+[14] F. Krausz, Nobel lecture: Sub-atomic motions, Rev. Mod.              M. Lewenstein, Colloquium: Quantum optics of intense
+     Phys. 96, 030502 (2024).                                             light–matter interaction, arXiv:2510.19045 (2025).
+[15] P. Stammer, Photons and Information – A modern approach to      [36] K. Y. Spasibko, D. A. Kopylov, V. L. Krutyanskiy, T. V.
+     strong-field quantum optics, Ph.D. thesis, ICFO (2026).              Murzina, G. Leuchs, and M. V. Chekhova, Multiphoton
+[16] H. M. Wiseman and G. J. Milburn, Quantum theory of                   Effects Enhanced due to Ultrafast Photon-Number Fluc-
+     field-quadrature measurements, Physical review A 47,                 tuations, Phys. Rev. Lett. 119, 223603 (2017).
+     642 (1993).                                                     [37] A. Rasputnyi, Z. Chen, M. Birk, O. Cohen, I. Kaminer,
+[17] G. Breitenbach and S. Schiller, Homodyne tomography of               M. Krüger, D. Seletskiy, M. Chekhova, and F. Tani, High-
+     classical and non-classical light, Journal of Modern Optics          harmonic generation by a bright squeezed vacuum, Na-
+     44, 2207 (1997).                                                     ture Physics 20, 1960 (2024).
+[18] U. Leonhardt and H. Paul, Measuring the quantum state           [38] J. Heimerl, A. Mikhaylov, S. Meier, H. Höllerer,
+     of light, Progress in Quantum Electronics 19, 89 (1995).             I. Kaminer, M. Chekhova, and P. Hommelhoff, Multipho-
+[19] A. I. Lvovsky and M. G. Raymer, Continuous-variable                  ton electron emission with non-classical light, Nat. Phys.
+     optical quantum-state tomography, Reviews of Modern                  20, 945 (2024).
+     Physics 81, 299 (2009).                                         [39] J. Heimerl, A. Rasputnyi, J. Pölloth, S. Meier,
+[20] W. P. Schleich, Quantum optics in phase space (John Wiley &          M. Chekhova, and P. Hommelhoff, Quantum light
+     Sons, 2015).                                                         drives electrons strongly at metal needle tips, Nature
+[21] J. P. Dowling and K. P. Seshadreesan, Quantum optical                Physics 21, 1899 (2025).
+     technologies for metrology, sensing, and imaging, Journal       [40] S. Lemieux, S. A. Jalil, D. N. Purschke, N. Boroumand,
+     of Lightwave Technology 33, 2359 (2015).                             T. Hammond, D. Villeneuve, A. Naumov, T. Brabec, and
+[22] J. P. Dowling and G. J. Milburn, Quantum technology: the             G. Vampa, Photon bunching in high-harmonic emission
+     second quantum revolution, Philos. Trans. A Math. Phys.              controlled by quantum light, Nature Photonics 19, 767
+     Eng. Sci. 361, 1655 (2003).                                          (2025).
+[23] C. M. Caves, Quantum-mechanical noise in an interfer-           [41] Y. Kern, I. Nisim, M. Birk, A. Rasputnyi, D. Behar,
+     ometer, Physical Review D 23, 1693 (1981).                           Z. Chen, I. Kaminer, P. Sidorenko, O. Cohen, and
+[24] R. Schnabel, N. Mavalvala, D. E. McClelland, and P. K.               M. Krüger, Single-shot pulse retrieval of femtosecond
+     Lam, Quantum metrology for gravitational wave astron-                bright squeezed vacuum, Optica 13, 395 (2026).
+     omy, Nature Communications 1, 121 (2010).                       [42] P. Stammer, On the limitations of the semi-classical pic-
+[25] B. J. Lawrie, P. D. Lett, A. M. Marino, and R. C. Pooser,            ture in high harmonic generation, Nature Physics 20, 1040
+     Quantum sensing with squeezed light, Acs Photonics 6,                (2024).
+     1307 (2019).                                                    [43] L. Cruz-Rodriguez, D. Dey, A. Freibert, and P. Stammer,
+[26] C. Weedbrook, S. Pirandola, R. Garcı́a-Patrón, N. J. Cerf,          Quantum phenomena in attosecond science, Nat. Rev.
+     T. C. Ralph, J. H. Shapiro, and S. Lloyd, Gaussian quan-             Phys. 6, 691 (2024).
+     tum information, Reviews of Modern Physics 84, 621              [44] J. Rivera-Dean, P. Stammer, M. Ciappina, and M. Lewen-
+                                                                                                                                    7
+
+     stein, Structured squeezed light allows for high-harmonic           Lett. 135, 043603 (2025).
+     generation in classical forbidden geometries, Phys. Rev.       [61] S. de-la Peña, O. Neufeld, M. Even Tzur, O. Cohen, H. Ap-
+     Lett. 135, 013801 (2025).                                           pel, and A. Rubio, Quantum electrodynamics in high-
+[45] P. Stammer, C. Granados, and J. Rivera-Dean,                        harmonic generation: Multitrajectory ehrenfest and ex-
+     Fluctuation-induced symmetry breaking in high                       act quantum analysis, J. Chem. Theory Comput. 21, 283
+     harmonic generation for bicircular quantum light,                   (2025).
+     arXiv:2603.24377 (2026).                                       [62] N. Boroumand, A. Thorpe, G. Bart, L. Wang, D. N.
+[46] M. Lewenstein, P. Balcou, M. Y. Ivanov, A. L’huillier, and          Purschke, G. Vampa, and T. Brabec, Quantum engineer-
+     P. B. Corkum, Theory of high-harmonic generation by                 ing of high harmonic generation, arXiv:2505.22536 (2025).
+     low-frequency laser fields, Physical Review A 49, 2117         [63] J. Rivera-Dean, L. Petrovic, M. Lewenstein, and P. Stam-
+     (1994).                                                             mer, Attosecond quantum optical interferometry, Reports
+[47] P. Antoine, A. L’huillier, and M. Lewenstein, Attosecond            on Progress in Physics 89, 047901 (2026).
+     pulse trains using high–order harmonics, Physical Re-          [64] P. Stammer, J. Rivera-Dean, M. F. Ciappina, and
+     view Letters 77, 1234 (1996).                                       M. Lewenstein, Weak measurement in strong laser field
+[48] M. Lewenstein, M. F. Ciappina, E. Pisanty, J. Rivera-Dean,          physics, arXiv:2508.09048 (2025).
+     P. Stammer, T. Lamprou, and P. Tzallas, Generation of op-      [65] T. Lamprou, J. Rivera-Dean, P. Stammer, M. Lewenstein,
+     tical Schrödinger cat states in intense laser–matter inter-        and P. Tzallas, Nonlinear optics using intense optical co-
+     actions, Nature Physics 17, 1104 (2021).                            herent state superpositions, Phys. Rev. Lett. 134, 013601
+[49] A. Gorlach, O. Neufeld, N. Rivera, O. Cohen, and                    (2025).
+     I. Kaminer, The quantum-optical nature of high harmonic        [66] J. Dubois, V. Cotte, R. Taı̈eb, C. Lévêque, J. Caillat,
+     generation, Nat. Commun. 11, 4598 (2020).                           P. Dave, P. Salières, D. Bresteau, C. Bourassin-Bouchet,
+[50] P. Stammer, J. Rivera-Dean, A. S. Maxwell, T. Lam-                  A. L’Huillier, et al., Quantum optical photoelectron inter-
+     prou, J. Argüello-Luengo, P. Tzallas, M. F. Ciappina, and          ferometry, arXiv:2606.13447 (2026).
+     M. Lewenstein, Entanglement and squeezing of the opti-         [67] F. A. Mele, A. A. Mele, L. Bittel, J. Eisert, V. Giovannetti,
+     cal field modes in high harmonic generation, Phys. Rev.             L. Lami, L. Leone, and S. F. Oliviero, Learning quantum
+     Lett. 132, 143603 (2024).                                           states of continuous-variable systems, Nature Physics , 1
+[51] S. Yi, N. D. Klimkin, G. G. Brown, O. Smirnova,                     (2025).
+     S. Patchkovskii, I. Babushkin, and M. Ivanov, Generation       [68] A. Rasputnyi, I. Karuseichyk, G. Leuchs, F. Tani, D. Selet-
+     of massively entangled bright states of light during har-           skiy, and M. Chekhova, Kerr-induced non-gaussianity of
+     monic generation in resonant media, Physical Review X               a bright ultrafast quantum state, Optica 13, 1232 (2026).
+     15, 011023 (2025).                                             [69] V. S. Yakovlev, F. Bammer, and A. Scrinzi, Attosecond
+[52] C. S. Lange, T. Hansen, and L. B. Madsen, Electron-                 streaking measurements, Journal of Modern Optics 52,
+     correlation-induced nonclassicality of light from high-             395 (2005).
+     order harmonic generation, Physical Review A 109,              [70] V. S. Yakovlev, J. Gagnon, N. Karpowicz, and F. Krausz,
+     033110 (2024).                                                      Attosecond streaking enables the measurement of quan-
+[53] C. S. Lange and L. B. Madsen, Hierarchy of approxima-               tum phase, Physical Review Letters 105, 073001 (2010).
+     tions for describing quantum light from high-harmonic          [71] P. Stammer, J. Rivera-Dean, A. Maxwell, T. Lamprou,
+     generation: A fermi-hubbard-model study, Physical Re-               A. Ordóñez, M. F. Ciappina, P. Tzallas, and M. Lewen-
+     view A 111, 013113 (2025).                                          stein, Quantum electrodynamics of intense laser-matter
+[54] P. Stammer, J. Rivera-Dean, T. Lamprou, E. Pisanty, M. F.           interactions: a tool for quantum state engineering, PRX
+     Ciappina, P. Tzallas, and M. Lewenstein, High photon                Quantum 4, 010201 (2023).
+     number entangled states and coherent state superposition       [72] C. Fabre and N. Treps, Modes and states in quantum op-
+     from the extreme ultraviolet to the far infrared, Physical          tics, Reviews of Modern Physics 92, 035005 (2020).
+     Review Letters 128, 123603 (2022).                             [73] P. D. Drummond and C. W. Gardiner, Generalised P-
+[55] Á. Gombkötő, P. Földi, and S. Varró, Quantum-optical           representations in quantum optics, J. Phys. A 13, 2353
+     description of photon statistics and cross correlations in          (1980).
+     high-order harmonic generation, Phys. Rev. A 104, 033703       [74] A. Gilchrist, C. Gardiner, and P. Drummond, Positive p
+     (2021).                                                             representation: Application and validity, Physical Review
+[56] P. Stammer, J. Rivera-Dean, and M. Lewenstein, Theory of            A 55, 3014 (1997).
+     quantum optics and optical coherence in high harmonic          [75] M. Kim, F. De Oliveira, and P. Knight, Properties of
+     generation, arXiv:2504.13287 (2025).                                squeezed number states and squeezed thermal states,
+[57] Y.-B. Wang and X.-B. Bian, High-order harmonic gener-               Physical Review A 40, 2494 (1989).
+     ation in quantum light by a generalized von Neumann            [76] M. Olsen and A. Bradley, Numerical representation of
+     lattice method, Phys. Rev. A 111, 043111 (2025).                    quantum states in the positive-p and wigner representa-
+[58] A. Pizzi, A. Gorlach, N. Rivera, A. Nunnenkamp, and                 tions, Optics Communications 282, 3924 (2009).
+     I. Kaminer, Light emission from strongly driven many-          [77] A. Gorlach, M. E. Tzur, M. Birk, M. Krüger, N. Rivera,
+     body systems, Nature Physics 19, 551 (2023).                        O. Cohen, and I. Kaminer, High-harmonic generation
+[59] P. Stammer, J. Rivera-Dean, and M. Lewenstein,                      driven by quantum light, Nature Physics 19, 1689 (2023).
+     Photon anti-bunching in high harmonic generation,              [78] R. V. Gothelf, L. B. Madsen, and C. S. Lange, Limitations
+     arXiv:2606.17620 (2026).                                            of an approximative phase-space description in strong-
+[60] C. S. Lange, T. Hansen, and L. B. Madsen, Excitonic En-             field quantum optics, Physical Review A 113, 063107
+     hancement of Squeezed Light in Quantum-Optical High-                (2026).
+     Harmonic Generation from a Mott Insulator, Phys. Rev.
+

@@ -1,0 +1,727 @@
+                                                   Paraxial Theory of Direct Electro-Optic Sampling of the Quantum Vacuum
+
+                                                                A.S. Moskalenko,∗ C. Riek, D.V. Seletskiy, G. Burkard, and A. Leitenstorfer
+                                                                             Department of Physics and Center for Applied Photonics,
+                                                                              University of Konstanz, D-78457 Konstanz, Germany
+                                                                                             (Dated: April 3, 2018)
+                                                            Direct detection of vacuum fluctuations and analysis of sub-cycle quantum properties of the
+                                                         electric field are explored by a paraxial quantum theory of ultrafast electro-optic sampling. The
+                                                         feasibility of such experiments is demonstrated by realistic calculations adopting a thin ZnTe electro-
+                                                         optic crystal and stable few-femtosecond laser pulses. We show that nonlinear mixing of a short
+                                                         near-infrared probe pulse with multi-terahertz vacuum field modes leads to an increase of the sig-
+                                                         nal variance with respect to the shot noise level. The vacuum contribution increases significantly
+                                                         for appropriate length of the nonlinear crystal, short probe pulse durations, tight focusing, and
+arXiv:1508.06953v1 [quant-ph] 27 Aug 2015
+
+
+
+
+                                                         sufficiently large number of photons per probe pulse. If the vacuum input is squeezed, the signal
+                                                         variance depends on the probe delay. Temporal positions with noise level below the pure vacuum
+                                                         may be traced with a sub-cycle accuracy.
+
+                                                         PACS numbers: 42.50.Ct, 42.50.Lc, 42.65.Re, 78.20.Jq
+
+
+                                               Finite fluctuation amplitudes in the ground state of
+                                            empty space represent the ultimate hallmark of the quan-
+                                            tum nature of the electromagnetic radiation field. These
+                                            vacuum fluctuations manifest themselves indirectly in a
+                                            number of phenomena that are accessible to spectroscopy
+                                            such as the spontaneous decay of excited atomic states as
+                                            well as the Lamb shift [1] in atoms [2] and in quantum-
+                                            mechanical electric circuits [3]. Access to the quantum
+                                            aspects of electromagnetic radiation is provided by the             FIG. 1. (color online) Electro-optic sampling setup and geom-
+                                            analysis of photon correlation [4, 5] or homodyning [6–             etry. (a) The incoming near-infrared (NIR) probe and multi-
+                                            11] measurements. However, these approaches require                 THz signal fields mix in the electro-optic crystal (EOX). The
+                                            amplification of the quantum field under study to finite            NIR (blue) spatial mode amplitude is depicted by the con-
+                                            intensity and averaging of the information over multiple            tour plot whereas a sampled THz (red) spatial mode is in-
+                                            optical cycles.                                                     dicated by wave fronts. Bottom left corner: time profiles of
+                                                                                                                the NIR intensity envelope INIR(t) and a representative multi-
+                                               On the other side, precise determination of voltage or
+                                                                                                                THz vacuum field ETHz(t). After collimation by a lens (L),
+                                            electric field amplitude as a function of time represents           the
+                                                                                                                   modified NIR field is analyzed using a quarter-wave plate
+                                            a fundamental task in science and engineering. Opti-                 λ
+                                                                                                                     , a Wollaston prism (WP) and balanced detectors (Ds ,Dz )
+                                                                                                                 4 a
+                                            cal techniques have to be applied when detecting electric           measuring the difference in the photon flux for the split com-
+                                            fields oscillating in the terahertz (THz) range and above.          ponents. (b) Spatial directions determining the electro-optic
+                                            Those approaches involve probing with ultrashort laser              effect in the zincblende-type EOX and the following ellipsom-
+                                            pulses of a temporal duration on the order of half an os-           etry analysis.
+                                            cillation period at the highest frequencies under study.
+                                            Far-infrared electric transients [12, 13] can be charac-
+                                            terized by photoconductive switching [14]. Electro-optic            [23]. Even vacuum fluctuations may be sampled without
+                                            sampling in free space [15–17] allows field-resolved detec-         amplification by broadband probing of electric field am-
+                                            tion at high sensitivity in the entire far- and mid-infrared        plitudes in the multi-THz region with few-femtosecond
+                                            spectral range [18, 19]. Direct studies of the complex-             laser pulses of moderate energy content.
+                                            valued susceptibilities of materials and the elementary                We consider the geometry of electro-optic sampling
+                                            dynamics in condensed matter may be performed with                  shown in Fig. 1. An ultrashort near-infrared (NIR) wave
+                                            these methods [20, 21]. The time integral of near-infrared          packet with electric field Ep propagates along the [110]
+                                            to visible electric-field wave packets is accessible with at-       axis of an electro-optic crystal (EOX) [23, 24]. Its wave
+                                            tosecond streaking [22]. So far, all those techniques were          vector kω is perpendicular to the z-axis ez of the EOX.
+                                            restricted to the classical field amplitude.                        We select Ep k ez [25]. In this configuration, the second-
+                                               In this Letter, we demonstrate theoretically that the            order nonlinear mixing of Ep (t) with an incident THz
+                                            quantum properties of light may be accessed directly in             field ÊTHz (t) induces nonlinear polarization in the EOX
+                                            the time domain, i.e. with sub-cycle temporal resolution.           plane with the components (for details, see Ref. [25])
+                                            Our considerations are based on the realistic example
+                                            of electro-optic detection with zincblende-type materials               P̂s(2) (t) = −0 dÊTHz ,s (t)Ep (t),   P̂z(2) (t) = 0 .   (1)
+                                                                                                                                  2
+
+0 is the vacuum permittivity. The coupling constant               is the RI at Ω, whereas n and ng are the RI and the
+d = −n4 r41 can be determined from the electro-optic               group RI c0 ∂kω /∂ω at ω = ωc , respectively. Going be-
+coefficient r41 and refractive index (RI) n at the cen-            yond Ref. 17 where an expression similar to Eq. (5) was
+tral frequency ωc of Ep [26–28]. In general, both fields           derived for the case of plane waves in order to establish
+                        (2)                                        a classical theory of electro-optic sampling, Eqs. (4) and
+ÊTHz ≡ ÊTHz ,s and P̂s in Eq. (1) are quantized, whereas
+Ep = Ep,z = hÊp,z i denotes the classical part of the             (5) include the transverse spatial dependence of the fields,
+probe field. We neglect the effect of quantum mechan-              the quantized form of the signal as well as the contribu-
+ical fluctuations of the probe field on P̂(2) , assuming a         tion of quantum fluctuations at the probe frequencies.
+sufficiently large Ep .                                            These points are crucial for our further analysis.
+   The nonlinear polarization P̂(2) generated by the wave              From Eq. (4), we see that the nonlinear mixing of the
+mixing in the EOX represents a source in the inhomoge-             probe and THz components generates a new field prop-
+neous wave equation describing propagation of the elec-            agating in the same direction and polarized perpendic-
+                                                                   ular to the probe. For the analysis of the polarization
+tric field Ê in the EOX. The fields F̂ = Ê, P̂(2) prop-
+agating in the forward direction rk (see Fig. 1) can be            state of the modified probe, we consider the field√com-
+                            R∞              i(k r −ωt)             ponents in the coordinate frame ea = (ez ∓ es )/ 2 ro-
+decomposed as F̂(r, t) = −∞dω F̂(r; ω)e ω k            , where                                          b
+                                                                   tated by 45◦ with respect to the ez,s frame [Fig. 1(b)],
+kω = ωnω /c0 . c0 and nω are the velocity of light and the                                      √
+                                                                   Êa0 (Y) = Ep (Y) 1 ± iφ̂(Y) / 2 + δ Êa0 (Y) . Here φ̂(Y) =
+                                                                                    
+frequency-dependent RI of the EOX, respectively. Using               b                                        b
+the paraxial approximation [29, 30], the inhomogeneous             iÊ (2) (Y)/Ep (Y) must be small for the frequency range
+wave equation reads                                                of the probe.
+     "                 #                                              The ellipsometry setup used in typical experiments is
+                    ∂                  ω2                          explained in Fig. 1(a). We consider its effects at the exit
+       ∆⊥ + 2ikω          Ê(r; ω) = − 2 P̂(2) (r; ω) ,    (2)
+                   ∂rk                0 c0                        surface of the EOX. This simplification is justified when
+                                                                   all probe photons are detected without spatial filtering.
+                                     2        2
+where r⊥ = (rs , rz ) and ∆⊥ = ∂r∂     ∂
+                                   2 + ∂r 2 . From Eq. (1)
+                                                                   The first step of the analysis consists in describing the
+            (2)              R ∞
+                                   s     z
+                                                                   action of the quarter-wave plate with axes oriented along
+we obtain P̂s (r; ω) = −0 d −∞ dΩ ÊTHz (r; Ω)Ep (r; ω −          ea and eb such that it phase-shifts the a-component of
+   i(k +k     −k )r
+Ω)e Ω ω−Ω ω k . The electric field of the probe beam               the field by π/2: Êa00 (Y) = iÊa0 (Y), Êb00 (Y) = Êb0 (Y).
+provides a solution of the homogeneous part of Eq. (2)             The Wollaston prism splits the electric field into its z-
+which can be decomposed into Laguerre-Gaussian (LG)                and s-components:
+modes [31, 32] (see Ref. [25]). We adopt a probe pulse                                     π
+                                                                                       e±i 4 Ep (Y) 
+train with a fundamental Gaussian transverse mode of                     Êz00 (Y) =                 1 ∓ φ̂(Y) + δ Êz00 (Y) .
+                                                                                                              
+                                                                                            √                                    (6)
+                                                                           s                  2                      s
+amplitude αp (ω):
+                                                                   Finally, the photon numbers in both field components are
+            Ep (r; ω) = αp (ω)LG00 (r⊥ , rk ; kω ) .         (3)
+                                                                   detected and subtracted. The photon number operator
+A length l of the EOX much shorter than the Rayleigh               for the polarization α = z, s reads [34]
+range of a beam at the relevant THz frequencies Ω with                         Z ∞         Z
+                                                                                      η(ω)
+waist size w0 is assumed, i.e. l  kΩ w02 /2.                         N̂α = C      dω        d2 r⊥ Êα00† (r⊥; ω)Êα00 (r⊥; ω) , (7)
+                                                                                 0     }ω
+   The EOX is located at the beam waist, rk = 0, and
+has anti-reflection coating on its surfaces. Denoting              where C = 4πc0 n0 , the dagger denotes Hermitian
+F̂(r⊥ ; ω) ≡ F̂(r⊥ , rk = 0; ω) we find that at the exit from      conjugation and the spatial integral covers the entire
+the EOX, rk = l/2, the total electric field in the (110)           transverse profile of the probe beam. The frequency-
+plane is given by                                                  dependent quantum efficiency of the photodetector
+                                                                   η(ω) ≈ 1 over the detected frequency range but vanishes
+       Ê0 (Y) = Ep (Y)ez + Ê (2) (Y)es + δ Ê0 (Y) ,       (4)   quickly for ω → 0.
+                                                                      Inserting Eq. (6) into Eq. (7) and neglecting the
+where Y ≡ {r⊥ ; ω}. δ Ê0 (Y) = Êp (Y) − Ep (Y)ez denotes         second-order terms in δ Ê00 as well as the mixed terms
+the vacuum field contribution at the probe frequency ω             depending linearly both on δ Ê00 and on ÊTHz (contained
+in the vacuum picture [33]. The correction to the probe            in φ̂) [35], we obtain for the total detected quantum sig-
+field generated in the EOX is evaluated as                         nal
+                   Z ∞
+   Ê (2) (r⊥; ω) = dΩ ÊTHz (r⊥; Ω)Ep (r⊥ ; ω−Ω)ζω,Ω , (5)                         Ŝ ≡ N̂s − N̂z = Ŝeo + Ŝsn ,               (8)
+                 −∞
+                                          h              i         where the electro-optic signal (EOS) Ŝeo is
+                                         lΩ
+where the factor ζω,Ω = −id 2clω0 n sinc 2c  (nΩ − ng )      de-             Z      Z ∞
+                                                                                          η(ω)          h            i
+                                                                                 2
+                                                                                               |Ep (Y)|2 φ̂(Y) + H.c.
+                                           0
+                                                                     Ŝeo = C d r⊥ dω                                            (9)
+termines phase matching. Here sinc(x) ≡ sin(x)/x, nΩ                                 0     }ω
+                                                                                                                                        3
+
+and the shot noise (SN)
+        R 2 R ∞ η(ω) h ∗
+                          contribution Ŝsni reads                        15             (a)                                      (b)
+                                00                                        10
+Ŝsn = C d r⊥ 0 dω }ω Ep (Y)δ Ê+  (Y) + H.c. . Here
+                                                                           5
+                                                           00
+H.c. denotes the Hermitian conjugate and δ Ê+                (Y) =        0
+                                    √                                       0   50     100   150      10-5
+eiπ/4 [δ Ês00 (Y) + iδ Êz00 (Y)]/ 2 is the circular component
+of the probe field vacuum contribution [36]. Summing up                   8%
+the signals from both detectors, we obtain the expecta-                                  (c)
+tion value of the number of detected            photons per probe         4%
+                                  4πc0 n0 ∞
+                                              dω η(ω)         2
+                                                                                                      10-6
+                                          R
+pulse N = hN̂s + N̂z i =                          ω |αp (ω)| .
+                                                                                                             109   1010   1011   1012
+                                      }    0                              0%
+   Using Eqs. (3) and (5) in Eq. (9), we obtain                             0        5x109   1x1010
+                   Z                  Z ∞
+          dlN ωp 2             2
+  Ŝeo =             d r⊥ g00    (r⊥ ) dΩ ÊTHz(r⊥; Ω)R(Ω). (10)        FIG. 2. (color online) (a) Calculated integrand function
+              c0 n                      −∞
+                                                                        Ω (n/nΩ )|R(Ω)|2 entering Eq. (13). (b) Double-logarithmic
+                                                                        plot of the ratio ∆S/N in dependence on N . Black dotted
+g00 (r⊥ ) ≡ LG00 (r⊥ , rk = 0; kω ) = 2/π w0−1 exp(−r⊥2 /w02 )
+                                           p
+                                                                        (red dashed) line shows the bare SN (multi-THz vacuum) con-
+is a normalized Gaussian independent of ω and ωp =                      tribution. (c) Increase of (∆S − ∆Ssn )/∆Ssn with N . Param-
+R∞                            R∞
+ 0
+     dω η(ω)|αp (ω)|2 0 dω η(ω)          ω |αp (ω)|
+                                                    2
+                                                      is the aver-      eters are defined in the main text.
+age detected frequency. We hhave introduced             i     the re-
+                                          lΩ
+sponse function R(Ω) = sinc 2c0 (nΩ − ng ) f (Ω) with                                    2
+                                                                          Evaluating hŜeo  i for the multi-THz vacuum yields
+the normalized Hermitian            spectral autocorrelation func-                              2 R ∞
+tion f (Ω) = f+∗ (Ω) + f− (Ω) /2, where f± (Ω) =                                                    } 0 dΩ Ω (n/nΩ )|R(Ω)|2
+                                                                                     
+                                                                            2       2   3 lωp
+                                       .R                                hŜeo i = N n         r41                           (13)
+                                                                                                          4π 2 0 c0 nw02
+R∞                                        ∞
+     dω η(ω) αp∗ (ω)αp (ω ± Ω) 0 dω η(ω)|αp (ω)|2 .                                        c0
+ 0
+  Within the paraxial quantization [32], ÊTHz (r⊥ ; Ω) in              where we have used hâs,0,0 (Ω)â†s,0,0 (Ω0 )i = δ(Ω − Ω0 ),
+Eq. (10) is given by [25]                                               whereas the expectation values of other possible
+                        s                                               quadratic combinations of â†s,l,p and âs,l,p vanish. Note
+                      X      }Ω                  0                      that the second and third factors on the right-hand side
+  ÊTHz (r⊥ ; Ω) = −i                âs,l,p (Ω)glp (r⊥ ) (11)
+                          4π0 c0 nΩ                                    of Eq. (13) have the dimensions (m/V)2 and (V/m)2 , re-
+                        l,p
+                                                                        spectively. The latter can be interpreted as the square
+for Ω > 0, ÊTHz (r⊥ ; Ω < 0) = ÊTHz    †
+                                             (r⊥ ; −Ω). Here,           of the effective multi-THz rms (root mean square) vac-
+âs,l,p (Ω) annihilates a photon with frequency Ω, or-                  uum electric field filtered by the response function. The
+                                                                                     2
+bital quantum numbers l, p and polarization es . We                     former, ∝ r41  , determines how effectively this field is sam-
+have introduced the transverse mode functions glp      0
+                                                         (r⊥ ) ≡        pled for a fixed N .
+LGlp (r⊥ , rk = 0; kΩ ). In contrast to the probe beam, the                To illustrate the results, we assume the following real-
+waist size w00 characterizing these mode functions is a                 istic specifications of the sampling few-femtosecond NIR
+free parameter of the expansion (11). Inserting       Eq. (11)          laser pulse: center frequency 255 THz, spectral band-
+                                            √                           width 150 THz with rectangular spectral shape and flat
+into Eq. (10) and selecting w00 =      w
+                                     R 0 2 /   2,  we can   per-
+form the spatial integration using d2 r⊥ g00          0
+                                                (r⊥ )glp (r⊥ ) =        phase, leading to ωp = 247 THz, and waist size w0 =
+√ 1 δ δ . Then we obtain from Eq. (10)
+                                                                        3 µm [37]. We consider a l = 7 µm thick ZnTe EOX
+   πw0 l,0 p,0                                                          with r41 = 4 pm/V [38, 39], n = 2.76, ng = 2.9, and
+                          s                                             nΩ varying only slightly (from 2.55 to 2.59) for relevant
+           √ Z ∞              Ω                                       THz frequencies [25]. The resulting integrand function
+  Ŝeo = −i B   dΩ               âs,0,0 (Ω)R(Ω) − H.c. , (12)
+                   0          nΩ                                        entering Eq. (13) is shown in Fig. 2(a) (for details, see
+                                                                       Ref. [25]). Diffraction effects are taken into account by
+where B = (d2 l2 N 2 ωp2 }) (4π 2 0 c30 n2 w02 ).                      excluding wavelengths λ with λ/(2nΩ ) > w0 .
+   As an input, we now consider a THz quantum field                        Based on this input, we calculate the dependence of
+with no coherent (classical) contribution: hÊTHz i = 0,                the rms value of the signal ∆S = hŜ 2 i1/2 on the aver-
+e.g., a bare multi-THz vacuum. Then hŜi = 0 since                      age number N of photons in the sampling NIR pulse, as
+hŜsn i = 0 and φ̂ in Eq. (9) depends linearly on ÊTHz ,               shown in Fig. 2(b) on a double-logarithmic scale. Above
+thus also hŜeo i = 0. However, the variance of the sig-                a certain N , the EOS contribution of the multi-THz vac-
+nal does not vanish. If the range of detected THz fre-                  uum changes the typical SN scaling. The relative increase
+quencies, determined by R(Ω), does not overlap with the                 of the rms value of the signal with respect to the SN level,
+frequency content of the probe beam, the signal variance                (∆S − ∆Ssn )/∆Ssn , is depicted in Fig. 2(c) for moder-
+hŜ 2 i−hŜi2 = hŜ 2 i can be written as hŜ 2 i = hŜeo
+                                                       2       2
+                                                          i+hŜsn i.    ate N and with linear scaling. For even higher N , the
+Calculating the SN contribution using the paraxial quan-                vacuum contribution starts to dominate so that the de-
+                                                       2
+tization [32], we obtain the expected result hŜsn        i = N.        pendence saturates to the constant EOS level [Fig. 2(b)].
+                                                                                                                                    4
+                                                                                      R Ω2
+                                                                     √      1
+                                                                                             dΩ âs,0,0 (Ω)e−iλ + H.c. , with X̂ = X̂0
+                                                                                                                     
+                                                                         2(Ω2 −Ω1 )    Ω1
+
+                                                                     and Ŷ = X̂π/2 , normalized so that [X̂, Ŷ ] = i are in-
+                                                                     troduced. The error contours for PV as well as for SV
+                                                                     as described above and two different squeezing phases,
+                                                                     θ = 0 and θ = π, are featured in Fig. 3(b). The depen-
+                                                                                                                  2             2
+                                                                     dence of the normalized EOS variance hŜeo     isv (τ )/hŜeo i,
+                                                                                2
+                                                                     where hŜeo i is given by Eq. (13), on the time delay τ is
+                                                                     shown in Fig. 3(c) for the same states as in Fig. 3(b) and
+                                                                     sampling parameters used for the PV case. For specific
+                                                                     delay times, the EOS variance of the multi-THz SV is
+FIG. 3. (color online) (a) Frequency dependence of the
+                                                                     by 64% lower than the unsqueezed value of the PV state
+squeeze factor r. Squeezing correlates Ω and 2Ωc − Ω                 (for details, see Ref. [25]).
+modes (as indicated by arrows). (b) Error contour in the                We emphasize the cardinal difference between our find-
+complex-amplitude plane for PV (gray circle) and SV with             ings and similar-looking results obtained in the context
+θ = 0/θ = π (red/green ellipse with reduced uncertainty in the       of homodyning [45, 46]. In homodyning experiments, the
+phase/amplitude quadrature Y /X). (c) Normalized (with re-
+                                                                     signal is determined by the temporal overlap integral of
+spect to the constant PV level, solid black line) EOS variance
+in dependence on the time delay τ of the probe NIR pulse for         the complex amplitudes of the electric fields of an input
+SV with θ = 0/θ = π (solid red line / dashed green line).            state and a local oscillator, i.e. the information is essen-
+                                                                     tially averaged over multiple oscillation cycles of light. A
+                                                                     restricted frequency bandwidth has to be assumed to jus-
+                                                                     tify the slowly varying amplitude approximation under-
+Subtracting the SN contribution from the total signal
+                                                                     lying this approach. In contrast, electro-optic sampling
+variance, the bare EOS variance induced by the sampled
+                                                                     provides a true sub-cycle resolution of the probed multi-
+quantum field can be obtained and analyzed.
+                                                                     THz electric field. Moreover, registration of photons is
+  To elaborate on this point, we apply our the-                      transferred into the NIR, circumventing the lack of effi-
+ory to a multi-THz vacuum which is squeezed in                       cient single-photon detectors in the multi-THz frequency
+an interval around a central frequency Ωc .       The                range. Most importantly, the multi-THz quantum field
+corresponding state of light is obtained by ap-                      may be studied without the necessity to reduce or am-
+plying
+    h R the continuum     squeezing operator [40–42]i                plify its photon content - even if it remains in its ground
+     1 2Ωc            ∗
+               P                                     
+exp 2 0 dΩ αlp ξΩ âα,l,p (2Ωc − Ω)âα,l,p (Ω) − H.c.                state.
+to the multi-THz pure vacuum (PV) state considered                      In conclusion, we theoretically clarify the contribution
+above. Here the frequency-dependent squeezing param-                 of the quantum fluctuations of the multi-THz vacuum
+eter ξ(Ω) satisfies the condition ξ(Ω) = ξ(2Ωc − Ω).                 electric field to the signal in ultrabroadband electro-optic
+We assume that all spatial and polarization modes                    sampling by differentiating it from the trivial shot noise
+are squeezed equally. In this case, the EOS can be                   of the high-frequency gating pulse. The crucial aspects
+obtained from Eq. (12) applying the transformation                   are a strong localization of the sampling beam in space
+âs,0,0 (Ω) → âs,0,0 (Ω) cosh rΩ − â†s,0,0 (2Ωc − Ω)eiθΩ sinh rΩ   and time as it passes the nonlinear crystal, a large second-
+[40–42] and working in the vacuum picture. The ex-                   order nonlinear coefficient and proper phase matching
+pectation value of the signal remains zero. Evaluation               that might be further optimized selecting an even more
+of the EOS variance for the squeezed vacuum (SV),                    appropriate material than the thin piece of ZnTe we have
+    2
+hŜeo isv (τ ), is analogous to the PV case. However,                considered as an example. For a multi-THz squeezed vac-
+the SV EOS variance depends on the time delay τ                      uum, the possibility to trace the oscillations of the EOS
+of the NIR probe pulse leading to the transformation                 variance with the time delay of the probe pulse is pre-
+R(Ω) → R(Ω)e−iΩτ of the response function, a fact that               dicted. Positions occur where the noise remains signifi-
+was unimportant for handling the PV [cf. Eq. (13)].                  cantly below the level of unsqueezed vacuum. The same
+For a probe pulse symmetric with respect to t = τ , i.e.             formalism can be applied for the analysis of more complex
+Ep (t − τ ) = Ep (τ − t), we find R(Ω) = R0 (Ω)e−iΩτ ,               quantum fields in a time-resolved and non-destructive
+where R0 (Ω) is real-valued.                                         manner. Experimental implementation of these ideas
+   For our illustration we assume constant squeezing with            might open up a new chapter of quantum optics oper-
+ξ(Ω) ≡ ξ = reiθ in the frequency range [Ω1 , Ω2 ] with               ating predominantly in the time domain and with access
+Ωc = (Ω1 + Ω2 )/2, where r = |ξ| is the squeeze factor               to sub-cycle information on the quantum state of electro-
+[43, 44] and θ = Arg(ξ) is the squeezing phase [41]. No              magnetic radiation.
+squeezing occurs outside this range. In particular, we                  We acknowledge funding from the ERC via the Ad-
+use Ωc /(2π) = 40 THz, Ω2 − Ω1 = Ωc and sinh r = 2 [see              vanced Grant 290876 “UltraPhase” and by DFG within
+Fig. 3(a)]. Generalized quadrature operators [40] X̂λ =              SFB 767. We thank M. Kira for useful discussions.
+                                                                                                                                             5
+
+                                                                 [24] S. Namba, J. Opt. Soc. Am. 51, 76 (1961).
+                                                                 [25] See Supplemental Material at [URL will be inserted by
+                                                                      publisher] for details.
+  ∗
+     andrey.moskalenko@physik.uni-konstanz.de                    [26] G. New, Introduction to Nonlinear Optics (Cambridge
+ [1] J. J. Sakurai, Advanced Quantum Mechanics (Addison-              University Press, New York, 2011).
+     Wesley, 1967).                                              [27] P. E. Powers, Fundamentals of Nonlinear Optics (Taylor
+ [2] W. E. Lamb and R. C. Retherford, Phys. Rev. 72, 241              & Francis, Boca Raton, 2011).
+     (1947).                                                     [28] A. Yariv, Quantum Electronics (John Wiley & Sons, New
+ [3] A. Fragner, M. Goppl, J. M. Fink, M. Baur,                       York, 1989).
+     R. Bianchetti, P. J. Leek, A. Blais, and A. Wallraff,       [29] R. W. Boyd, Nonlinear Optics (Third Edition) (Aca-
+     Science 322, 1357 (2008).                                        demic Press, Burlington, 2008).
+ [4] R. Hanbury Brown and R. Q. Twiss, Nature (London)           [30] Y. R. Shen, Principles of nonlinear optics (Wiley-
+     177, 27 (1956).                                                  Interscience, New York, 1984).
+ [5] H. J. Kimble, M. Dagenais, and L. Mandel, Phys. Rev.        [31] L. Allen, M. W. Beijersbergen, R. J. C. Spreeuw, and
+     Lett. 39, 691 (1977).                                            J. P. Woerdman, Phys. Rev. A 45, 8185 (1992).
+ [6] J. Shapiro, H. P. Yuen, and A. Mata, IEEE Trans. Inf.       [32] G. F. Calvo, A. Picón, and E. Bagan, Phys. Rev. A 73,
+     Theory 25, 179 (1979).                                           013805 (2006).
+ [7] L. Mandel, Phys. Rev. Lett. 49, 136 (1982).                 [33] P. Knight and L. Allen, Concepts of Quantum Optics
+ [8] R. E. Slusher, L. W. Hollberg, B. Yurke, J. C. Mertz,            (Pergamon Press, Oxford, 1983).
+     and J. F. Valley, Phys. Rev. Lett. 55, 2409 (1985).         [34] Confer Ref. [47] for a case with a simpler transverse mode
+ [9] D. T. Smithey, M. Beck, M. G. Raymer, and A. Faridani,           structure.
+     Phys. Rev. Lett. 70, 1244 (1993).                           [35] The mixed terms were also neglected already in Eq. (1).
+[10] G. Breitenbach, S. Schiller, and J. Mlynek, Nature (Lon-
+                                                                      The second order terms in δ Ê00 (δ Êz00† δ Êz00 and δ Ês00† δ Ês00 )
+     don) 387, 471 (1997).
+                                                                      do not contribute to the expectation value of the signal,
+[11] C. Silberhorn, Contemp. Phys. 48, 143 (2007).
+                                                                      neither to its variance or any higher moments.
+[12] D. H. Auston, K. P. Cheung, and P. R. Smith, Appl.
+                                                                 [36] The phase shift is of no physical importance for the vac-
+     Phys. Lett. 45, 284 (1984).
+                                                                      uum field contribution.
+[13] Ch. Fattinger and D. Grischkowsky, Appl. Phys. Lett.
+                                                                 [37] D. Brida, G. Krauss, A. Sell, and A. Leitenstorfer, Laser
+     54, 490 (1989).
+                                                                      Photon. Rev. 8, 409 (2014).
+[14] D. H. Auston, Appl. Phys. Lett. 26, 101 (1975).
+                                                                 [38] A. Cingolani, M. Ferrara, and M. Lugarà, Solid State
+[15] Q. Wu and X. Zhang, Appl. Phys. Lett. 67, 3523 (1995).
+                                                                      Commun. 38, 819 (1981).
+[16] A. Nahata, A. S. Weling, and T. F. Heinz, Appl. Phys.
+                                                                 [39] A. Leitenstorfer, S. Hunsche, J. Shah, M. C. Nuss, and
+     Lett. 69, 2321 (1996).
+                                                                      W. H. Knox, Appl. Phys. Lett. 74, 1516 (1999).
+[17] G. Gallot and D. Grischkowsky, J. Opt. Soc. Am. B 16,
+                                                                 [40] S. Barnett and P. Radmore, Methods in Theoretical
+     1204 (1999).
+                                                                      Quantum Optics, Oxford Series in Optical and Imaging
+[18] K. Liu, J. Xu, and X.-C. Zhang, Appl. Phys. Lett. 85,
+                                                                      Sciences (Oxford University Press, New York, 2002).
+     863 (2004).
+                                                                 [41] W. Vogel and D. Welsch, Quantum Optics (Wiley, Wein-
+[19] C. Kübler, R. Huber, S. Tübel, and A. Leitenstorfer,
+                                                                      heim, 2006).
+     Appl. Phys. Lett. 85, 3360 (2004).
+                                                                 [42] K. J. Blow, R. Loudon, S. J. D. Phoenix, and T. J.
+[20] D. N. Basov, R. D. Averitt, D. van der Marel, M. Dressel,
+                                                                      Shepherd, Phys. Rev. A 42, 4102 (1990).
+     and K. Haule, Rev. Mod. Phys. 83, 471 (2011).
+                                                                 [43] C. M. Caves, Phys. Rev. D 23, 1693 (1981).
+[21] R. Ulbricht, E. Hendry, J. Shan, T. F. Heinz, and
+                                                                 [44] D. Walls and G. Milburn, Quantum Optics (Springer,
+     M. Bonn, Rev. Mod. Phys. 83, 543 (2011).
+                                                                      Berlin, 2008).
+[22] R. Kienberger, E. Goulielmakis, M. Uiberacker, A. Bal-
+                                                                 [45] M. E. Anderson, D. F. McAlister, M. G. Raymer, and
+     tuska, V. Yakovlev, F. Bammer, A. Scrinzi, T. Wester-
+                                                                      M. C. Gupta, J. Opt. Soc. Am. B 14, 3180 (1997).
+     walbesloh, U. Kleineberg, U. Heinzmann, M. Drescher,
+                                                                 [46] R. E. Slusher, P. Grangier, A. LaPorta, B. Yurke, and
+     and F. Krausz, Nature (London) 427, 817 (2004).
+                                                                      M. J. Potasek, Phys. Rev. Lett. 59, 2566 (1987).
+[23] P. C. M. Planken, H.-K. Nienhuys, H. J. Bakker, and
+                                                                 [47] M. G. Raymer, J. Cooper, H. J. Carmichael, M. Beck,
+     T. Wenckebach, J. Opt. Soc. Am. B 18, 313 (2001).
+                                                                      and D. T. Smithey, J. Opt. Soc. Am. B 12, 1801 (1995).
+                                                                                                                      1
+
+                                            Supplemental Material
+
+        Paraxial Theory of Direct Electro-Optic Sampling of the Quantum Vacuum
+                     A.S. Moskalenko, C. Riek, D.V. Seletskiy, G. Burkard, and A. Leitenstorfer
+
+
+                                  1.     GEOMETRY OF NONLINEAR MIXING
+
+  For the nonlinear mixing in the EOX, we select the orientation of Ep parallel to the z-axis. This choice of the
+polarization direction of the probe field ensures that the maximum signal is detected in the electro-optic detection
+scheme for a copropagating classical THz electric field polarized perpendicular to the probe electric field [S1]. In the
+experiment, adjustment is achieved by rotation of the EOX around the [110] axis for fixed, mutually perpendicular
+polarization directions of the probe and detected electric fields. Also, only one of two possible polarization modes of
+the detected field [the one perpendicular to the probe field, i.e. oriented parallel to the unit vector es in Fig. 1(b)]
+contributes to the signal in this geometry. There is no THz field generated by optical rectification of the probe for
+this orientation of the EOX.
+  The second-order nonlinear mixing of the probe field Ep (t) with the detected THz field ETHz (t) then induces
+nonlinear polarization in the EOX with the following components [S2–S4]:
+
+                                           Px(2) (t) = 40 dxyz ETHz ,y (t)Ep,z (t)                                (S1)
+
+and similarly for the y-component with the interchange of indices x ↔ y in Eq. (S1). Here 0 is the vacuum permittivity.
+                                                                                          (2)                  (2)
+For the zincblende-type EOX we adopt as an example, the tensor components dxyz ≡ χxyz /2 and dyxz ≡ χyxz /2 are
+both equal to the same constant denoted by d36 [S2–S4]. This coefficient is related to the constant r41 used for the
+description of the Pockels effect as d36 = −n4 r41 /4. n is the refractive index at the central frequency of the probe
+electric field. For the following discussion, it is convenient to introduce d = 4d36 = −n4 r41 . Writing Eq. (S1) as
+an instantaneous relation in the time domain we assume that the frequencies Ω of the THz field are lower than the
+frequencies ω of the probe field and that the second-order nonlinear coefficient can be considered constant in the
+frequency range determined by the spectral width of the probe field. The frequency dependence of the nonlinear
+coefficient can be easily included writing the corresponding equations in the frequency domain, similar to Ref. [S5]
+but taking care of the particular geometry. However, the discussion of the geometrical issues is more concise in the
+time domain whereas the effect of the frequency dependence of the nonlinear coefficient is finally not significant in
+our case.
+                                                                                      (2)      (2)         (2)
+   The nonlinear polarization induced in the (110) plane is given by P(2) = √12 (Py − Px )es , i.e. Pz = 0 and
+ (2)         (2)    (2)
+Ps = √12 (Py − Px ), using the unit vectors es and ez as a basis in this plane. Taking Eq. (S1), expressing also
+the components of the quantized THz field in this basis and neglecting the effect of quantum mechanical fluctuations
+of the probe beam on the induced nonlinear polarization, i.e. assuming a sufficiently strong probe field, we arrive at
+Eq. (1). Inclusion of the vacuum contribution for the probe beam at this place would mean taking into account mixed
+second-order corrections linearly dependent on both the vacuum fluctuations of the probe field and on the probed
+THz field. In our present consideration, we neglect such terms since they do not lead to significant effects.
+
+
+2.     LAGUERRE-GAUSSIAN MODES AND PARAXIAL ELECTROMAGNETIC FIELD QUANTIZATION
+
+   In electro-optic sampling, propagation of the NIR probe beam through the EOX can be well described within the
+paraxial approximation. The same approximation can be naturally used to describe the sampled multi-THz quantum
+fields. The corresponding expression for a quantized electric field within the paraxial approximation was derived in
+Ref. [S6]. In free space, with the propagation axis selected as shown in Fig. 1, it reads
+
+                                    XZ ∞
+                                            r
+                                                }Ω h                i(kr −Ωt)
+                                                                                                       i
+                      Ê(r, t) = −i      dk          eα âα,l,p (k)e k        LGlp (r⊥ , rk ; k) − H.c. ,       (S2)
+                                       0       4π0
+                                 α,l,p
+
+
+where âα,l,p (k) denotes the annihilation operator for a photon with absolute value of the wave vector k, frequency
+Ω = c0 k, orbital quantum numbers l, p, and polarization direction eα . The spatial mode functions are given by the
+                                                                                                                                                     2
+
+Laguerre-Gaussian (LG) modes LGlp (r⊥ , rk ; k) ≡ LGlp (r⊥ , ϕ, rk ; k) which can be written as [S6, S7]
+                            s                          √        !|l|                     !      "                                      #
+                                    2p!       1         2r⊥                    2r⊥2                2r⊥2              kr⊥2
+  LGlp (r⊥ , ϕ, rk ; k) =                                              L|l|
+                                                                        p                    exp − 2      + ilϕ + i         + iΦG (rk ) . (S3)
+                                π(|l| + p)! w(rk )     w(rk )                 w2 (rk )            w (rk )           2R(rk )
+                       q
+Here w(rk ) = w0                     2 (Ω) is the transverse mode radius at the longitudinal position r with w being the
+                           1 + rk2 /lR                                                                 k      0
+
+waist size of the probe beam (mode radius at rk = 0) and lR (Ω) = kw02 /2 denoting the Rayleigh range of the
+                             h             i
+                                  2
+beam at given k. R(rk ) = rk 1 + lR (Ω)/rk2 is the phase-front radius, ΦG (rk ) = −(2p + |l| + 1) arctan(rk /w0 ) is
+                             |l|
+the Gouy phase and Lp (x) are the associated Laguerre polynomials [S8]. The LG modes are normalized such that
+R 2π R ∞
+  0
+      dφ 0 dr⊥ r⊥ LG∗lp (r⊥ , φ, rk ; k)LGl0 p0 (r⊥ , φ, rk ; k) = δll0 δpp0 (for any k and rk ), where δij denotes the Kronecker
+delta. The annihilation and creation operators satisfy the continuum commutation relations [âα,l,p (k), âα0 ,l0 ,p0 (k 0 )] =
+[â†α,l,p (k), â†α0 ,l0 ,p0 (k 0 )] = 0 and [âα,l,p (k), â†α0 ,l0 ,p0 (k 0 )] = δαα0 δll0 δpp0 δ(k − k 0 ). Expressing the creation and annihilation
+operators as functions of frequency, whereby they satisfy [âα,l,p (Ω), âα0 ,l0 ,p0 (Ω0 )] = [â†α,l,p (Ω), â†Ω0 ,l0 ,p0 (k 0 )] = 0 and
+[âα,l,p (Ω), â†α0 ,l0 ,p0 (Ω0 )] = δαα0 δll0 δpp0 δ(Ω − Ω0 ), Eq. (S2) transforms into
+
+                                           XZ ∞
+                                                         r
+                                                              }Ω h                  i(k r −Ωt)
+                                                                                                                          i
+                            Ê(r, t) = −i             dΩ             eα âα,l,p (Ω)e Ω k       LGlp (r⊥ , rk ; kΩ ) − H.c. .                     (S4)
+                                                   0       4π0 c0
+                                         α,l,p
+
+By writing kΩ we have stressed that we consider k ≡ kΩ = Ω/c0 as a function of Ω in this expression. Note that
+the factor of 16π 3 in the denominator under the square root in Eq. (20) of Ref. [S6] needs to be replaced by 4π.
+This fact is confirmed by deriving the expression for the total energy operator of the electro-magnetic field and
+has been considered in Eq. (S2). From Eq. (S4), the total energy operator Ê is obtained in its correct form as
+     R∞
+Ê = 0 dΩ }Ω α,l,p â†α,l,p (Ω)âα,l,p (Ω).
+               P
+   In media with refractive index nΩ , the factor under the square root in Eq. (S4) should be additionally divided by
+nΩ [S9, pp. 391-392]. This measure again ensures a correct expression for the total energy operator of the field so
+that Eq. (S4) takes the form
+                                            s
+                              XZ ∞               }Ω      h
+                                                                         i(k r −Ωt)
+                                                                                                               i
+                Ê(r, t) = −i           dΩ                eα âα,l,p (Ω)e Ω k       LGlp (r⊥ , rk ; kΩ ) − H.c. . (S5)
+                                     0        4π0 c0 nΩ
+                                        α,l,p
+
+   When we consider a thin EOX located at the beam waist (rk = 0), we use LGlp (r⊥ , rk ; k) ≈ LGlp (r⊥ , rk = 0; k) ≡
+glp (r⊥ ), which are given by
+                                       s                √     !|l| 
+                                                                         2     2       
+                                             2p!     1    2r⊥      |l| 2r⊥       r⊥
+                           glp (r⊥ ) =                            Lp        exp − 2 + ilϕ .                       (S6)
+                                         π(|l| + p)! w0  w0            w02       w0
+
+The transverse modes glp (r⊥ ) ≡ glp (r⊥ , φ) are independent of k. They are normalized such that
+                                  Z 2π Z ∞
+                                                         ∗
+                                        dφ       dr⊥ r⊥ glp (r⊥ , φ)gl0 p0 (r⊥ , φ) = δl,l0 δp,p0 .
+                                                 0    0
+
+The fundamental (lowest-order) mode is Gaussian-shaped and given by
+                                                    r          2
+                                                      2 1       r
+                                        g00 (r⊥ ) =        exp − ⊥2 .                                                                            (S7)
+                                                      π w0      w0
+When the EOX is located at rk 6= 0, the same approximation applies and one can proceed similarly, just changing
+w0 → w(rk ) in the expressions for glp (r⊥ ).
+
+
+                                   3.    REFRACTIVE INDICES AND RESPONSE FUNCTION
+
+   In the paper we used a sampling few-femtosecond NIR laser pulse of the following specifications [S10]: center
+frequency ωc /(2π) = 255 THz, spectral bandwidth ∆ω/(2π) = 150 THz with rectangular spectral shape and flat
+                                                                                                                                                                                                                                                                                            3
+
+                                                                                 1 .0                                                                                                                                             1 .0
+
+
+
+
+                                  N I R p r o b e in te n s ity ( a r b . u .)
+
+
+
+
+                                                                                                                                                                                                                                            in te n s ity e n v e lo p e ( a r b . u .)
+                                                                                 0 .8                                                                                                                                             0 .8
+
+
+                                                                                 0 .6                                                                                                                                             0 .6
+                                                                                                                                                                                      F W H M = 5 .9 fs
+
+                                                                                 0 .4                                                                                                                                             0 .4
+
+
+                                                                                 0 .2                                                                                                                                             0 .2
+
+
+                                                                                 0 .0                                                                                                                                             0 .0
+                                                                                        -2 5   -2 0                                   -1 5   -1 0      -5           0       5             1 0           1 5   2 0           2 5
+                                                                                                                                                       tim e t (fs )
+
+FIG. S1. Temporal profile of the intensity (red line) and its envelope (blue line) of the NIR probe pulse used in our calculations.
+
+
+                                                                                   9                                          9
+                                                                                                                              8
+                                                                                                re fra c tiv e in d e x n
+
+
+
+
+                                                                                   8                                          7
+                                                                                                                              6
+                                                                                   7                                          5
+                                 re fra c tiv e in d e x n
+
+
+
+
+                                                                                                                              4
+                                                                                   6                                          3
+                                                                                                                              2
+                                                                                   5                                          1
+                                                                                                                              0
+                                                                                                                                  0          5        1 0       1 5             2 0             2 5
+                                                                                   4                                                             fre q u e n c y (T H z )
+                                                                                   3
+                                                                                   2
+                                                                                   1
+                                                                                   0
+                                                                                         0                                  5 0              1 0 0          1 5 0           2 0 0                     2 5 0         3 0 0                3 5 0
+                                                                                                                                                     fre q u e n c y (T H z )
+
+FIG. S2. Dispersion of the refractive index in the THz (solid red line) and NIR (dashed blue line) range. Inset shows the
+dispersion with a higher frequency resolution in the range of small THz frequencies.
+
+
+phase. The corresponding temporal profile of the NIR probe intensity is shown in Fig. S1. For such a pulse we get
+ωp = 247 THz, where ωp is defined in the text after Eq. (10). Notice that ωp ≈ ωc . However, there is a small difference
+in these quantities due to different averaging used in their definitions. This difference is of minor importance for our
+consideration. The normalized Hermitian spectral autocorrelation function f (Ω), as defined in the text after Eq. (10),
+can be found as
+                                                            
+                                                         |Ω|
+                                           f (Ω) = 1 −         H(∆ω − |Ω|),                                         (S8)
+                                                         ∆ω
+where H(x) denotes the Heaviside step function. For our example with a rectangular probe spectrum, f (Ω) takes the
+shape of an isosceles triangle with the vertex at Ω =
+                                                    h 0. In order to
+                                                                  i determine the response function R(Ω), we have to
+                                                   lΩ
+multiply f (Ω) by the phase-matching function sinc 2c 0
+                                                        (nΩ − ng ) . The latter requires knowledge about the refractive
+index nΩ in the THz range and group refractive index ng at the (NIR) central frequency ωc of the probe pulse.
+  Refractive index properties of a ZnTe crystal in the NIR frequency range are modelled by a Sellmeier formula [S11]
+
+                                                                                                                                         n2ω = A + [Bλ2 /(λ2 − c2 )],                                                                                                                     (S9)
+
+with λ = 2πc0 /Ω, A = 4.27, B = 3.01, and c2 = 0.142 [S12]. The corresponding frequency dependence is shown on
+the right side of Fig. S2. For the refractive index nΩ in the THz frequency range, we use the parametrization from
+                                                                                                                                            4
+
+
+                                                                       1 .0
+
+
+
+
+                              r e s p o n s e f u n c t i o n R ( Ω)
+                                                                       0 .8
+
+                                                                       0 .6
+
+                                                                       0 .4
+
+                                                                       0 .2
+
+                                                                       0 .0
+
+                                                                              0               5 0                1 0 0           1 5 0
+                                                                                         f r e q u e n c y Ω/ ( 2 π) ( T H z )
+FIG. S3. Calculated response function R(Ω) without the low-frequency cutoff (solid black line) and with the low-frequency
+cutoff (dashed red line).
+
+
+Ref. [S13]:
+                                                                               s                                       !
+                                                                                                 (}ωLO )2 − (}ωTO )2
+                                                                       nΩ = Re   1+                                     ∞ ,             (S10)
+                                                                                               (}ωTO )2 − (}Ω)2 − i}γΩ
+
+with }ωTO = 177 cm−1 , }ωLO = 206 cm−1 , γ = 3.01 cm−1 , and ∞ = 6.7. The corresponding frequency dependence
+is shown on the left side of Fig. S2. From these models we obtain the following values of the refractive index and
+the group refractive index at ωc =255 THz: n = 2.76 and ng = 2.9. It is important that these indices are almost
+constant in the neighborhood of ωc . Using the calculated nΩ and ng in the phase-matching function with l = 7 µm,
+the response function R(Ω) depicted in Fig. S3 results. As discussed in the text of the paper, we introduce a low-
+frequency cutoff excluding wavelengths λ with λ/(2nΩ ) > w0 , in order to take into account diffraction losses. The
+modified response function is also shown in Fig. S3. The resulting integrand function entering the integral in Eq. (13)
+is found in Fig. 2(a) of the paper. Note that without introducing the low-frequency cutoff we would get just a small
+increase of approximately 21% for the EOS variance calculated from Eq. (13).
+
+
+                     4.   EOS VARIANCE FOR THE SQUEEZED MULTI-THZ VACUUM
+
+                          2                                                                             2
+  For the EOS variance hŜeo isv (τ ) normalized with respect to the EOS variance of the pure vacuum hŜeo i, given by
+Eq. (13), we obtain
+                                2              2
+                                                               p
+                             hŜeo isv (τ )/hŜeo i = 1+2aM +2b M (M + 1) cos(θ − 2Ωc τ ).                       (S11)
+
+Here M = sinh r, a = Ia /I, and b = Ib /I, where
+                                                                                         Z ∞
+                                                                                  I=                dΩ %2 (Ω),                           (S12)
+                                                                                          0
+                                                                                         Z Ω2
+                                                                                  Ia =              dΩ %2 (Ω),                           (S13)
+                                                                                          Ω1
+                                                                                         Z Ω2
+                                                                                  Ib =              dΩ %(Ω)%(2Ωc − Ω),                   (S14)
+                                                                                          Ω1
+            p
+with %(Ω) = Ω/nΩ R0 (Ω). The real coefficients a and b generally satisfy the Cauchy-Bunyakovsky-Schwarz inequality
+                                                            2              2
+b ≤ a. Obviously, also a ≤ 1 is valid. The dependence of hŜeo isv (τ )/hŜeo i on the time delay τ is shown in Fig. 3(c)
+for the same states as in Fig. 3(b) and sampling parameters used for the pure vacuum case. We clearly see that
+                                                                                                                   5
+
+for certain delay times the EOS variance of the squeezed multi-THz vacuum can beat the uncertainty limit set by
+the pure vacuum state. Here, for M ≡ sinh r = 2, its minimum value constitutes ≈ 36% of the pure vacuum level.
+For the selected parameters, a slightly stronger suppression of the quantum noise down to 34% can be achieved by
+increasing M to ≈ 5.8, whereas the maximal noise is more than doubled. These values are generally determined by
+the coefficients a and b, introduced above, for which we have b < a < 1 in the considered case. Here, due to the
+limitation set by this inequality, a complete noise suppression in the EOS variance is impossible for any time delay.
+
+
+
+
+    ∗
+      andrey.moskalenko@physik.uni-konstanz.de
+ [S1] P. C. M. Planken, H.-K. Nienhuys, H. J. Bakker, and T. Wenckebach, J. Opt. Soc. Am. B 18, 313 (2001).
+ [S2] G. New, Introduction to Nonlinear Optics (Cambridge University Press, New York, 2011).
+ [S3] P. E. Powers, Fundamentals of Nonlinear Optics (Taylor & Francis, Boca Raton, 2011).
+ [S4] A. Yariv, Quantum Electronics (John Wiley & Sons, New York, 1989).
+ [S5] G. Gallot and D. Grischkowsky, J. Opt. Soc. Am. B 16, 1204 (1999).
+ [S6] G. F. Calvo, A. Picón, and E. Bagan, Phys. Rev. A 73, 013805 (2006).
+ [S7] L. Allen, M. W. Beijersbergen, R. J. C. Spreeuw, and J. P. Woerdman, Phys. Rev. A 45, 8185 (1992).
+ [S8] M. Abramowitz and I. Stegun, Handbook of Mathematical Functions: with Formulas, Graphs, and Mathematical Tables
+      (Dover, New York, 2012).
+ [S9] R. Loudon, The Quantum Theory of Light (Oxford University Press, New York, 2000).
+[S10] D. Brida, G. Krauss, A. Sell, and A. Leitenstorfer, Laser Photon. Rev. 8, 409 (2014).
+[S11] W. Sellmeier, Ann. Phys. (Berlin) 219, 272 (1871).
+[S12] D. T. F. Marple, J. Appl. Phys. 35, 539 (1964).
+[S13] A. Leitenstorfer et al., Appl. Phys. Lett. 74, 1516 (1999).
+

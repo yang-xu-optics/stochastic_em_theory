@@ -1,0 +1,570 @@
+                                                                           Photon anti-bunching in high harmonic generation
+
+                                                                        Philipp Stammer,1, 2, ∗ Javier Rivera-Dean,1, 3 and Maciej Lewenstein1
+                                                1 ICFO-Institut de Ciencies Fotoniques, The Barcelona Institute of Science and Technology, Castelldefels (Barcelona) 08860, Spain
+                                                                              2 Atominstitut, Technische Universität Wien, 1020 Vienna, Austria
+                                                         3 Department of Physics and Astronomy, University College London, Gower Street, London WC1E 6BT, UK
+                                                                                                    (Dated: June 17, 2026)
+                                                           Photon anti-bunching is the direct evidence for the existence of photons without having a classical
+                                                         counterpart. Unlike bunching of photons, which can have a semi-classical description, the effect
+                                                         of photon anti-bunching can only be understood with quantized electromagnetic fields. However,
+                                                         for the process of high harmonic generation (HHG), where many photons of the driving field are
+                                                         upconverted to a single photon of higher energy, there is yet no clear evidence for the presence of
+                                                         individual photon emission. The key result of this work is the prediction of photon anti-bunching
+                                                         in the process of HHG, marking it the first theoretical discovery of non-classicality in the temporal
+arXiv:2606.17620v1 [quant-ph] 16 Jun 2026
+
+
+
+
+                                                         correlations of HHG photons. While other non-classical signatures in HHG, such as sub-Poissonian
+                                                         statistics or squeezing, have been discussed for an ensemble of photons, the anti-bunching signature
+                                                         reported here is a signature of a single photon. This is achieved by using the recently developed
+                                                         Heisenberg picture approach for quantum optical HHG, revealing clear anti-bunching signatures in
+                                                         the intensity correlation function across the entire harmonic spectrum.
+
+
+                                               The concept of the photon was introduced, among                       At the other end of the photon number scale, there are
+                                            others, by Einstein to explain the photoelectric effect [1].          radiation fields consisting of millions of photons intense
+                                            Although the notion of the photon persists, the pho-                  enough to induce highly non-linear interaction in me-
+                                            toelectric effect is no direct evidence for the existence             dia [16, 17]. The non-perturbative interaction can lead
+                                            of photons since semi-classical descriptions can explain              to the upconversion process of high harmonic genera-
+                                            the phenomena [2]. While many typical quantum opti-                   tion (HHG), where many photons of the driving field are
+                                            cal problems have a semi-classical counterpart, the pho-              upconverted to a single harmonic photon, and the sheer
+                                            ton, nevertheless, is a central concept in modern quan-               number of photons dominated the believe that quan-
+                                            tum optics [3–5], and its notion is a key element in the              tum optical signatures are irrelevant at these intensities,
+                                            quantization of the electromagnetic field [6]. Further-               making the semi-classical description of HHG the domi-
+                                            more, and central for the rise of quantum optics, was                 nant approach [18, 19]. However, recent advances in the
+                                            the development of the quantum theory of optical coher-               full quantum optical description of HHG has initiated
+                                            ence [7–9], where the wave-particle nature of the elec-               growing interest in finding non-classical signatures in
+                                            tromagnetic field is considered from the perspective of               the harmonic radiation [20–23]. This lead to a variety of
+                                            correlation functions [10]. The measurement of field cor-             theoretical predictions ranging from entanglement be-
+                                            relation functions encodes the information of the fluctu-             tween the modes [24–27], to squeezing in the harmon-
+                                            ations of the field, and can give rise to genuine quan-               ics [26–29], while first experiments have shown that the
+                                            tum optical signatures without a semi-classical coun-                 exchange of photons can lead to the generation of op-
+                                            terpart [11, 12]. This includes the observation of anti-              tical cat states [20, 30], or that the field modes can be
+                                            correlated temporal photon detection in the second-                   entangled [31]. Relevant for this work is the property of
+                                            order correlation function g(2) (τ ), which is obtained               the harmonic photon statistics via the equal time corre-
+                                            from an intensity correlation measurement between two                 lation function g(2) (0), where previous work on the har-
+                                            detectors with time-delay τ (see Fig. 1). The increase of             monic photon number distribution has measured classi-
+                                            g(2) (0) < g(2) (τ ) for increasing time-delay, indicates the         cal super-Poissonian photon statistics [32], or predicted
+                                            non-classical signature of photon anti-bunching, which                a non-classical sub-Poissonian signature [21]. However,
+                                            was first predicted for the process of resonance fluores-             and despite these achievements, a discussion on the
+                                            cence [13], and subsequently measured from the emis-                  temporal photon correlations in the context of HHG is
+                                            sion of a single [14] or two atoms [15]. While the effect             missing thus far, particularly because the photon num-
+                                            of photon bunching, g(2) (0) > g(2) (τ ), is classical and            ber distribution is a physically distinct property than the
+                                            describes the tendency of the photons to arrive together,             temporal photon correlations encoded in the full g(2) (τ )
+                                            the property of anti-bunching is a genuine quantum ef-                function, where only the latter allows to infer on non-
+                                            fect of anti-correlated photon emission. Furthermore,                 classical anti-bunching [33]. Furthermore, there is yet
+                                            the signature of g(2) (0) = 0 indicates the presence of               no quantum signature of temporal correlations in the
+                                            a single photon [14].                                                 g(2) (τ ) function in strong field quantum optics.
+                                                                                                                    In this work, we present the first prediction of such
+                                                                                                                  non-classical anti-bunching photon correlations in the
+                                            ∗ philipp.stammer@icfo.eu
+                                                                                                                  process of HHG across the entire spectral range. This
+                                                                                                                                             2
+
+is achieved by using the Heisenberg picture approach
+developed in the companion paper [34], allowing to cal-
+culate the two-time intensity correlation function.
+   Heisenberg picture of HHG.— The properties of the fluc-
+tuations of the optical field are encoded in correlation
+functions [11], where the first-order correlation is related
+to the spectrum of the field, while the signature of pho-
+ton anti-bunching is encoded in the second-order field
+correlation. These are naturally formulated within the
+Heisenberg picture, where the field operators a(†) (t) are
+propagated in time. For the process of HHG, the Heisen-                FIG. 1. Schematics of an experimental HBT-configuration to
+berg picture got little to no attention so far [35, 36], and           measure the second-order field correlation function, g(2) (τ ),
+is re-introduced in the companion paper [34], where we                 by means of the intensity correlations between the detectors at
+formulate the quantum theory of optical coherence for                  time I (t) and I (t + τ ). While the equal time correlation func-
+HHG in the Heisenberg picture [34]. Now, considering                   tion g(2) (0) allows to infer on the photon number distribution,
+the typical strong field scenario where an intense laser               only the temporal correlation as a function of τ can conclude
+field, described by the coherent state |α⟩, interacts with             on photon anti-bunching via g(2) (0) < g(2) (τ ).
+an ensemble of N charges in the inital ground state |ḡ⟩ =
+⊗iN=1 | gi ⟩, the Hamiltonian is H = HF + HS + H I . The
+field and the interaction Hamiltonian are given by [37]                we have provided the detailed derivation together with
+               qc
+                                                                       an analysis of the first-order field correlation function
+                                                N
+       HF = ∑ h̄ωq a†q aq ,       H I = − ∑ d i · E Q ( t ),     (1)   G (1) (t1 , t2 ) = ⟨ E(−) (t1 ) E(+) (t2 )⟩ and corresponding
+                                                                                                                                √
+              q =1                             i =1                    spectrum S(ω ). Here, E(+) (t) = ih̄g ∑q qϵq aq (t)
+                                                                       is the positive component of the field operator with
+where the interaction couples the dipole di to the electric            E(−) (t) = [ E(+) (t)]† . It was shown that HHG in
+field operator
+                                                                       general exhibits first-order coherence, | G (1) (t1 , t2 )| =
+                          √              
+                                                                       [ G (1) (t1 , t1 ) G (1) (t2 , t2 )]1/2 , and how the HHG spectrum
+             EQ = −igh̄ ∑ q ϵq a†q − aq .               (2)
+                              q                                        is obtained when accounting for the probabilistic na-
+                                                                       ture of the dipole by using the Wiener-Khintchine the-
+   The system Hamiltonian HS is generic, and includes                  orem [38, 39], naturally leading to a coherent and inco-
+the Hamiltonian of the N charges, which could be                       herent HHG spectrum [21, 34, 40].
+the single-active electron of gas phase atoms or the                      Second-order correlation function in HHG.— In this
+charges in a solid state system. While the theory of                   work, we extend the quantum theory of optical coher-
+the Heisenberg picture formulated in Ref. [34] is valid                ence to the second-order field correlation function
+for all systems, in this work we consider an ensem-
+ble of N atoms. Given the Hamiltonian H, the time-                      G (2) (t1 , t2 ) = ⟨ E(−) (t1 ) E(−) (t2 ) E(+) (t2 ) E(+) (t1 )⟩ , (4)
+dependent field operator in the Heisenberg picture,
+aq (t) = U † (t) aq (0)U (t), can be solved explicitly (see            which can be re-written in terms of the normally or-
+Appendix A)                                                            dered intensity correlation G (2) (t1 , t2 ) = ⟨: I (t1 ) I (t2 ) :⟩.
+                                                                       Hence, the second-order correlation function is essen-
+      aq (t) = aq e−iωq t                                              tially an intensity correlation measurement, where the
+                                                 N                     experiment measures the joint photocurrent of photon
+                √
+                       Z t
+                                           ′                     (3)
+              +g q           dt′ e−iωq (t−t ) ∑ ϵq · di (t′ ).         detection at time t1 = t, and time t2 = t + τ. Such
+                        t0                      i =1                   a configuration was introduced by Hanbury Brown
+                                                                       and Twiss (HBT), showing photon bunching for chaotic
+   The dipole moment d(t) = U † (t)d(0)U (t), act-                     light [41]. Such a HBT-configuration for an intensity cor-
+ing as the source term for the scattered field, is ob-                 relation measurement is shown in Fig. 1, where the nor-
+tained from the respective Heisenberg equation of mo-                  malized intensity correlation
+tion [34]. Given the experimental situation of interest,
+where the driving field has typical values of |α| ∼ 106 ,                                               ⟨: I (t) I (t + τ ) :⟩
+                                                                                        g (2) ( τ ) =                          ,           (5)
+we can consider the dipole to be driven to zeroth or-                                                   ⟨ I (t)⟩ ⟨ I (t + τ )⟩
+der in the quantum optical field, such that d̃(t) =
+  † ( t ) d (0)U ( t ). Hence, the dipole operator is propa-
+Usc             sc                                                     is non-classical only for g(2) (τ ) < 1, and g(2) (τ ) ≥ 1
+gated by the semi-classical Hamiltonian Hsc (t) = HS +                 correspond to classical signatures [12, 42].
+H I,cl (t), where the classical interaction is H I,cl (t) =               We are now interested in obtaining the intensity corre-
+− ∑i di · Ecl(t), and the classical field is obtained from           lation function of the harmonics by correlating the mea-
+Ecl (t) = Tr EQ (t) |α⟩⟨α| . In the companion paper [34],              sured intensities from two detectors with a time-delay τ.
+                                                                                                                                                         3
+
+Using the second-order correlation function from Eq. (4)                                 This can in fact be written in terms of the first and
+we can write                                                                           second-order correlation function
+
+              G (2) (t, t + τ ) = h̄4 g4 q2 ⟨N (t, τ )⟩ ,                        (6)                                    G (2) (t, t + τ )
+                                                                                                     g (2) ( τ ) =                                 ,   (13)
+                                                                                                                     G (1) ( t + τ ) G (1) ( t )
+where we have defined the normal-ordered expecta-
+tion value of the harmonic field operators ⟨N (t, τ )⟩ =                               and we can use the results from the companion pa-
+                                                                                       per [34], that the first-order correlation function in the
+ ⟨ a†q (t) a†q (t + τ ) aq (t + τ ) aq (t)⟩. Taking into account that
+                                                                                       denominator can be written as (see Appendix A for de-
+the harmonics are initially in the vacuum |0q ⟩, we only                               tails)
+consider the contribution of the scattered field in Eq. (3)
+(second term), since the free-field contribution vanishes                                                               (1)
+                                                                                                      G (1) (t) = Gcoh (t) + Ginc (t).
+                                                                                                                                       (1)
+                                                                                                                                                       (14)
+in the vacuum (first term). For the two-time average of
+the normal ordered field operators, we find                                              Taking into account that there is no commutator struc-
+                          Z t           Z t+τ         Z t+τ         Z t                ture in classical intensity correlation measurements, it is
+                                                                                                      (2)              (2)                   (2)
+   ⟨N (t, τ )⟩ = g4 q2            dt1           dt2           dt3         dt4          known that, gcl (0) ≥ gcl (τ ) and gcl (0) ≥ 1, must
+                          t0        t0                 t0            t0          (7)   hold [12]. A violation of these inequalities is therefore a
+                       −iωq (t1 +t2 −t3 −t4 )                                          direct witness of non-classical temporal photon correla-
+                  ×e                             D(t1 , t2 , t3 , t4 ),
+                                                                                       tion properties. Now, with the expression of the 4th-
+where we have defined the dipole correlation term                                      order dipole correlation in Eq. (9), for which a more
+                                                                                       detailed derivation is given in the Supplementary Ma-
+                          N                                                            terial (SM), we can now compute the g(2) -function for
+  D(t1 , t2 , t3 , t4 ) ≡ ∑ Tr (ϵq · di (t1 ))(ϵq · d j (t2 ))
+                              
+                                                                                       varying time-delay τ. We solve the second-order corre-
+                        i,j,k,l                                                  (8)
+                                                                                      lation function G (2) (t, t + τ ) numerically, such that all
+                       ×(ϵq · dk (t3 ))(ϵq · dl (t4 ))ρS (t0 ) ,                       orders of the dipole moment correlations are taken into
+                                                                                       account. The normalized intensity correlations g(2) (τ )
+where ρS (t0 ) is the initial state of the system. If we only                          emitted from one cycle of the driving field t = T =
+consider the dipole along the laser polarization direc-                                2π/ω, are shown in Fig. 2 (a)-(c) for all higher har-
+tion, ϵq · di (t) ≡ di (t), within the N = 1 single atom                               monic orders q ∈ [11, 23]. Comparing the HHG inten-
+picture, we now have                                                                   sity correlation in Fig. 2 with the classical constraints,
+                                                                                       we make the first important discovery, and one key re-
+            D(t) = ⟨g| d(t1 )d(t2 )d(t3 )d(t4 ) |g⟩ ,                            (9)   sult of this Letter, namely that the high harmonic g(2) (τ )
+                                                                                       function violates both classical inequalities. First, via
+where we have used ρS (t0 ) = | g⟩⟨ g|, and intro-
+duced the tuple over the different time arguments                                      g(2) (0) < 1, and second the increase of the correlation
+t ≡ (t1 , t2 , t3 , t4 ). Using that the second-order dipole                           function compared to the correlations at vanishing time-
+correlation can be decomposed as ⟨d(t1 )d(t2 )⟩ =                                      delay g(2) (0) < g(2) (τ ). This provides the first quan-
+⟨d(t1 )⟩ ⟨d(t2 )⟩ + ⟨∆d(t1 )∆d(t2 )⟩, with the fluctuations                            tum signature of high harmonic emission in the tempo-
+around the mean ∆d(t) = d(t) − ⟨d(t)⟩, we can write                                    ral photon correlations, showing the property of photon
+for the 4th-order dipole correlation                                                   anti-bunching across all harmonic orders. For vanish-
+                                                                                       ing time delay, g(2) (0), the values are close to that of
+          D(t) = ⟨d(t1 )d(t2 )⟩ ⟨d(t3 )d(t4 )⟩                                         perfect single photon emission. For instance, we have
+                                                                                (10)    (2)                             (2)
+                 + ⟨∆[d(t1 )d(t2 )]∆[d(t3 )d(t4 )]⟩ ,                                  g11 (0) ≈ 5 × 10−3 , and g13 (0) ≈ 3 × 10−3 , for the har-
+                                                                                       monics 11 and 13, respectively. This constitutes the only
+where we have defined                                                                  discussion of temporal photon correlations in strong
+                                                                                       field quantum optics via the full g(2) (τ ), predicting non-
+      ∆[d(t1 )d(t2 )] ≡ d(t1 )d(t2 ) − ⟨d(t1 )d(t2 )⟩ .                         (11)   classical signatures. Furthermore, we can see a decrease
+                                                                                       in the anti-correlation measure for increasing time-delay
+   We can see that the 4th-order dipole correlation is                                 (increase of the g(2) (τ ) function over time). This indi-
+composed out of the product of two dipole correla-                                     cates the expected property that for large τ the photon
+tion terms, and a term including the fluctuations of the                               correlations decrease, and will eventually become un-
+dipole correlations ∆[d(t1 )d(t2 )]. Now, equipped with
+                                                                                       correlated (g(2) = 1) in the long time limit.
+the expression for the second-order correlation function,
+                                                                                          The phenomena of photon anti-bunching in HHG can
+we can look at the normalized correlation function of a
+                                                                                       intuitively be understood from the powerful picture of
+given harmonic
+                                                                                       the 3-step model and the corresponding electron trajec-
+                                                                                       tories [18, 43, 44]. Once an electron is ionized and ac-
+                                  ⟨: Iq (t) Iq (t + τ ) :⟩
+                g (2) ( τ ) =                              .                    (12)   celerated in the continuum, it emits the harmonic pho-
+                                  ⟨ Iq (t)⟩ ⟨ Iq (t + τ )⟩                             ton upon recombination with the ion. Then, in order to
+                                                                                                                                       4
+
+
+
+
+FIG. 2. We show the normalized second-order correlation function g(2) (τ ) for the relevant range of non-perturbative odd har-
+monics in the plateau (a) q ∈ {11, 13, 15} and (b) q ∈ {17, 19}, while in (c) q ∈ {21, 23} near the cut-off (for the low-order
+harmonics we refer to the Appendix B in which the same behavior is shown). The time-delay τ is taken to be after one complete
+cycle of the driving laser field T = 2π/ω, and evaluated at K = 50 delay times. The driving field parameters are E0 = 0.053 a.u.
+ω L = 0.057 a.u., and I p = 0.5 a.u., corresponding to that of hydrogen (see SM for details).
+
+
+emit another photon, the electron needs to undergo the            contribute to the emission of harmonics and intensity
+whole 3-steps of ionization, propagation and recombi-             correlation function. Akin to the first-order correlation
+nation for the next emission event. Since this process is         function discussed in Ref. [34], we are now interested in
+not instantaneous, the electron does not emit two pho-            the many atom case. In the following we will consider
+tons at the same time, leading to anti-bunching signa-            the case of N indistinguishable emitters, such that the
+tures. It implies that there are hardly ever two photons          higher order dipole correlation in Eq. (9) along the laser
+emitted at the same time, independent of the driving in-          polarization direction is given by (details can be found
+tensity. We therefore emphasize that the explanation us-          in the Appendix C)
+ing the 3-step model shows how fundamentally differ-
+ent HHG is from the general perturbative non-linear op-                  N
+tical response. However, note that the 3-step model is by              ∑          ⟨ḡ| di (t1 )d j (t2 )dk (t3 )dl (t4 ) |ḡ⟩     (15)
+itself not a quantum optical theory, but provides an intu-           i,j,k,l =1
+itive picture for understanding the anti-bunching phe-                       N!
+                                                                     =               ⟨d(t1 )⟩ ⟨d(t2 )⟩ ⟨d(t3 )⟩ ⟨d(t4 )⟩ + O( N 3 ).
+nomena, and shares the same intuition with the com-                       ( N − 4) !
+mon explanation of anti-bunching in resonance fluores-
+cence [13, 14]. In this case, after emission of a pho-               Interestingly, the coherent contribution is most dom-
+ton by a single atom, it can not emit a second photon             inant in the higher order correlation functions when
+before the atom gets excited again [45]. Nevertheless,            considering the many atom regime, with a O( N 4 ) scal-
+further analysis into the mechanism of this novel anti-           ing. While typical HHG experiments are conducted in
+bunching signature in HHG seems promising to un-                  the regime of many atoms, it promotes further inves-
+cover the full quantum optical emission dynamics of               tigation to uncover the non-classical emission charac-
+HHG photons on the attosecond time scale. Further-                teristics in HHG. This includes sub-Poissonian photon
+more, it is important to note that the presented inten-           statistics [21], and the predicted anti-bunching of this
+sity correlation function and associated anti-bunching,           work. Since the analysis of this work considered uncor-
+g(2) (0) < g(2) (τ ), is shown on the femtosecond time-           related emitters, and it has already been shown that the
+scale, implying that standard measuring techniques us-            emission characteristics from correlated systems can dif-
+ing photodetectors reach their limitations, and that al-          fer [51], collective quantum jumps seems to be a promis-
+ternative schemes using photon absorption techniques              ing direction [15, 52].
+with femtosecond resolution of the g(2) (τ ) function are            In order to discuss the influence of the many atom
+needed [46]. However, resolving the attosecond os-                emission on the intensity correlation, we show in Fig. 3
+cillations in g(2) (τ ) would require novel measurement           the g(2) (τ ) function for different values for the num-
+schemes, which will hopefully inspire further investiga-          ber of atoms N. As expected, the second-order correla-
+tion into combining attosecond techniques with quan-              tion function increases for increasing number of uncor-
+tum optical measurements [47–50].                                 related emitters until it approaches unity for very large
+                                                                  N. This is attributed to the different scalings of the co-
+  Many atom picture.— So far, we have studied the single          herent and incoherent contributions, where the former
+atom scenario, and therefore only a single emitter will           has the N 4 scaling whereas the latter scales at most with
+                                                                                                                                            5
+
+
+
+
+                                                                         FIG. 4. Mandel Q-parameter as a function of the harmonic or-
+                                                                         ders indicating sub-Poissonian photon statistics as Q < 0. The
+                                                                         Q-parameter is shown for increasing number of emitters N in-
+                                                                         cluding log10 N ∈ {2.0, 2.7, 3.4, 4.1, 4.8, 5.5, 6.7, 7.0}, where the
+                                                                         guiding line indicates a fixed emitter number, and the colors
+FIG. 3. Normalized intensity correlation g(2) (τ ) of the q = 13         are those from Fig. 2 for the respective harmonic order. The
+harmonic order for varying number of emitters N (harmonics               same field conditions as those in Fig. 2 are used.
+q = 19 and q = 23 are shown in Fig. 6 of the Appendix B). The
+atom number increases for increasing color brightness includ-
+ing log10 N ∈ {2.0, 2.7, 3.4, 4.1, 4.8, 5.5, 6.7, 7.0}. The same field
+conditions as those in Fig. 2 are considered.                            photon number distribution on the number of emitters.
+                                                                         Given the scaling with respect to the number of emitters
+                                                                         N, we find non-classical sub-Poissonian photon num-
+                                                                         ber distributions for an intermediate number of emit-
+O( N 3 ). The limit of g(2) (τ ) = 1 is the well known sig-              ters as shown in Fig. 4. Only in the thermodynamic
+nature of classical coherent radiation due to oscillating                limit of many emitters, we find that the Q-parameter
+charge currents, here given by the dipole moment ex-                     approaches zero, corresponding to the Poisson distribu-
+pectation value of the coherent contribution.                            tion. This is in contrast to the thermal like photon num-
+   Photon statistics in quantum HHG.— So far we have                     ber distribution reported in Ref. [21], where the positive
+presented the intensity correlation function in HHG,                     Q-parameter indicates super-Poissonian statistics.
+which we will now use to discuss the related measure                        To conclude the discussion on the photon number dis-
+of the photon number distribution of the field, encoded                  tribution, we emphasize that the property of photon
+in the Mandel Q-parameter [53]. The Q-parameter is                       anti-bunching and sub-Poissonian statistics share com-
+a measure for the deviation of the photon number dis-                    mon signatures, but are ultimately different [33]. In this
+tribution from that of a Poisson process. The Poisson                    work, we have shown both, anti-bunching in the emit-
+distribution (Q = 0) is obtained from coherent states                    ted harmonics as the first quantum signature of tempo-
+in which the variance of the distribution is equal to the                ral correlations in the photon emission process for HHG,
+mean. The case of Q < 0, and Q > 0, corresponds to                       as well as the signature of sub-Poissonian statistics in the
+sub-Poissonian and super-Poissonian distributions, re-                   distribution of the photon number.
+spectively. Here, only the sub-Poissonian statistics cor-
+                                                                            Discussion.— In conclusion, we have predicted the
+responds to non-classical signatures in which the vari-
+                                                                         first direct non-classical photon signature in the HHG
+ance of the photon number distribution is smaller than
+                                                                         emission process by means of anti-bunching in the tem-
+its mean (and vice versa for super-Poissonian distribu-
+                                                                         poral photon correlations, and is found for the entire
+tions). Given the results obtained for the second-order
+                                                                         harmonic spectrum. The anti-bunching signature is
+correlation function, showing photon anti-bunching in
+                                                                         clearly visible in the single atom emission, but also per-
+Fig. 2, we can infer that the photon number distribu-
+                                                                         sists in the few-body regime. Only when the atom num-
+tion of the harmonic field modes exhibit non-classical
+                                                                         ber is significantly large, the intensity correlation shows
+sub-Poissonian statistics. This is due to the relation Q =
+                                                                         a Poissonian property of random photon measurements.
+ ⟨n⟩ ( g(2) (0) − 1), and hence Q < 0 due to g(2) (0) < 1.               This raises the interest for conducting HHG experiments
+We therefore show the Mandel Q-parameter as a func-                      in the single or few-body emitter regime, for instance in
+tion of the harmonic order in Fig. 4, showing the afore-                 ultracold quantum gases [54] or using quantum simula-
+mentioned sub-Poissonian photon number distribution                      tors [55, 56], to observe the quantum nature of the tem-
+– a further indicator of non-classicality in the field. This             poral emission statistics. This would ultimately allow
+is in agreement with the findings in Ref. [21], where neg-               to gain further insights into the emission dynamics of
+ative Q parameters where shown for HHG.                                  HHG photons from quantum jumps [57], which can re-
+   Similarly to above, where we have discussed the                       veal anti-bunching signatures in the emission from more
+property of the g(2) -function with respect to the num-                  than one atom [15], with particular interest in the statis-
+ber of emitters N, we also show the dependence of the                    tics from collective effects such as correlated quantum
+                                                                                                                                     6
+
+jumps [52, 58]. The importance of the findings goes be-                                 ACKNOWLEDGMENTS
+yond the fundamental insights about the quantum na-
+ture of the HHG photon emission process. The phenom-                    P.S. would like to express his gratitude to Alexan-
+ena of anti-bunching itself is of significant interest be-            der Carmele for the introduction to quantum optical
+cause it is a deterministic non-event. Finally, we empha-             methods and the perspective of the observer. P.S.
+size on the importance to distinguish between photon                  acknowledges funding from the European Union’s
+anti-bunching, reported for the first time in this work               Horizon 2020 research and innovation programe un-
+for HHG, and sub-Poissonian statistics (as reported in                der the Marie Skłodowska-Curie grant agreement
+Ref. [21]). Although both notions are related, they are               No 847517. ICFO group acknowledges support from:
+not the same [33]. Since sub-Poissonian photon count-                 Ministerio de Ciencia y Innovation Agencia Estatal
+ing does not need to imply photon anti-bunching, we                   de Investigaciones (R&D project CEX2019-000910-S,
+stress that these two phenomena should not be con-                    AEI/10.13039/501100011033, Plan National FIDEUA
+fused. Hence, this work is the first presentation of non-             PID2019-106901GB-I00, FPI), Fundació Privada Cellex,
+classical photon correlations in their temporal statistics.           Fundació Mir-Puig, and from Generalitat de Catalunya
+                                                                      (AGAUR Grant No. 2017 SGR 1341, CERCA pro-
+                                                                      gram), and MICIIN with funding from European Union
+                                                                      NextGenerationEU(PRTR-C17.I1) and by Generalitat de
+                                                                      Catalunya and EU Horizon 2020 FET-OPEN OPTOlogic
+                                                                      (Grant No 899794) and ERC AdG NOQIA.
+
+
+
+
+ [1] A. Einstein, Über einem die erzeugung und verwandlung                Modern Physics 81, 163 (2009).
+     des lichtes betreffenden heuristischen gesichtspunkt, An-        [18] M. Lewenstein, P. Balcou, M. Y. Ivanov, A. L’huillier, and
+     nalen der physik 4 (1905).                                            P. B. Corkum, Theory of high-harmonic generation by
+ [2] W. E. Lamb Jr and M. O. Scully, The photoelectric effect with-        low-frequency laser fields, Physical Review A 49, 2117
+     out photons, Tech. Rep. (1968).                                       (1994).
+ [3] D. F. Walls and G. J. Milburn, Quantum optics (Springer          [19] K. Amini, J. Biegert, F. Calegari, A. Chacón, M. F. Ciap-
+     Science & Business Media, 2008).                                      pina, A. Dauphin, D. K. Efimov, C. F. de Morisson Faria,
+ [4] W. H. Louisell, Quantum statistical properties of radiation           K. Giergiel, P. Gniewek, et al., Symphony on strong field
+     (John Wiley and Sons, Inc., New York, 1973).                          approximation, Reports on Progress in Physics 82, 116001
+ [5] S. Haroche and J.-M. Raimond, Exploring the quantum:                  (2019).
+     atoms, cavities, and photons (Oxford university press, 2006).    [20] M. Lewenstein, M. F. Ciappina, E. Pisanty, J. Rivera-Dean,
+ [6] M. O. Scully and M. S. Zubairy, Quantum optics (Cam-                  P. Stammer, T. Lamprou, and P. Tzallas, Generation of op-
+     bridge university press, 1997).                                       tical schrödinger cat states in intense laser–matter inter-
+ [7] R. J. Glauber, Coherent and incoherent states of the radia-           actions, Nature Physics 17, 1104 (2021).
+     tion field, Phys. Rev. 131, 2766 (1963).                         [21] A. Gorlach, O. Neufeld, N. Rivera, O. Cohen, and
+ [8] R. J. Glauber, The quantum theory of optical coherence,               I. Kaminer, The quantum-optical nature of high harmonic
+     Phys. Rev. 130, 2529 (1963).                                          generation, Nat. Commun. 11, 4598 (2020).
+ [9] R. J. Glauber, Coherent and incoherent states of the radia-      [22] P. Stammer, J. Rivera-Dean, P. Tzallas, M. F. Ciappina, and
+     tion field, Physical Review 131, 2766 (1963).                         M. Lewenstein, Colloquium: Quantum optics of intense
+[10] R. J. Glauber, Photon correlations, Physical Review Let-              light–matter interaction, arXiv:2510.19045 (2025).
+     ters 10, 84 (1963).                                              [23] L. Cruz-Rodriguez, D. Dey, A. Freibert, and P. Stammer,
+[11] L. Mandel and E. Wolf, Coherence properties of optical                Quantum phenomena in attosecond science, Nat. Rev.
+     fields, Reviews of modern physics 37, 231 (1965).                     Phys. 6, 691 (2024).
+[12] L. Mandel and E. Wolf, Optical coherence and quantum op-         [24] P. Stammer, J. Rivera-Dean, T. Lamprou, E. Pisanty, M. F.
+     tics (Cambridge university press, 1995).                              Ciappina, P. Tzallas, and M. Lewenstein, High photon
+[13] H. Kimble and L. Mandel, Theory of resonance fluores-                 number entangled states and coherent state superposition
+     cence, Physical Review A 13, 2123 (1976).                             from the extreme ultraviolet to the far infrared, Physical
+[14] H. J. Kimble, M. Dagenais, and L. Mandel, Photon anti-                Review Letters 128, 123603 (2022).
+     bunching in resonance fluorescence, Physical Review Let-         [25] P. Stammer, Theory of entanglement and measurement in
+     ters 39, 691 (1977).                                                  high-order harmonic generation, Physical Review A 106,
+[15] W. M. Itano, J. Bergquist, and D. Wineland, Photon an-                L050402 (2022).
+     tibunching and sub-poissonian statistics from quantum            [26] S. Yi, N. D. Klimkin, G. G. Brown, O. Smirnova,
+     jumps in one and two atoms, Physical Review A 38, 559                 S. Patchkovskii, I. Babushkin, and M. Ivanov, Generation
+     (1988).                                                               of massively entangled bright states of light during har-
+[16] T. Brabec and F. Krausz, Intense few-cycle laser fields:              monic generation in resonant media, Physical Review X
+     Frontiers of nonlinear optics, Reviews of Modern Physics              15, 011023 (2025).
+     72, 545 (2000).                                                  [27] P. Stammer, J. Rivera-Dean, A. S. Maxwell, T. Lam-
+[17] F. Krausz and M. Ivanov, Attosecond physics, Reviews of               prou, J. Argüello-Luengo, P. Tzallas, M. F. Ciappina, and
+                                                                                                                                       7
+
+     M. Lewenstein, Entanglement and squeezing of the opti-                   suring photon bunching at ultrashort timescale by two-
+     cal field modes in high harmonic generation, Phys. Rev.                  photon absorption in semiconductors, Nature Physics 5,
+     Lett. 132, 143603 (2024).                                                267 (2009).
+[28] C. S. Lange, T. Hansen, and L. B. Madsen, Excitonic En-             [47] J. Rivera-Dean, L. Petrovic, M. Lewenstein, and P. Stam-
+     hancement of Squeezed Light in Quantum-Optical High-                     mer, Attosecond quantum optical interferometry, Reports
+     Harmonic Generation from a Mott Insulator, Phys. Rev.                    on Progress in Physics 89, 047901 (2026).
+     Lett. 135, 043603 (2025).                                           [48] T. Lamprou, J. Rivera-Dean, P. Stammer, M. Lewenstein,
+[29] M. E. Tzur, M. Birk, A. Gorlach, I. Kaminer, M. Krüger,                 and P. Tzallas, Nonlinear optics using intense optical co-
+     and O. Cohen, Generation of squeezed high-order har-                     herent state superpositions, Phys. Rev. Lett. 134, 013601
+     monics, Physical Review Research 6, 033079 (2024).                       (2025).
+[30] J. Rivera-Dean, T. Lamprou, E. Pisanty, P. Stammer, A. F.           [49] M. E. Tzur, C. Mor, N. Yaffe, M. Birk, A. Rasputnyi,
+     Ordóñez, A. S. Maxwell, M. F. Ciappina, M. Lewenstein,                 O. Kneller, I. Nisim, I. Kaminer, M. Krüger, N. Dudovich,
+     and P. Tzallas, Strong laser fields and their power to gen-              et al., Measuring and controlling the birth of quantum at-
+     erate controllable high-photon-number coherent-state su-                 tosecond pulses, arXiv:2502.09427 (2025).
+     perpositions, Physical Review A 105, 033714 (2022).                 [50] P. Stammer, J. Rivera-Dean, M. F. Ciappina, and
+[31] D. Theidel, V. Cotte, R. Sondenheimer, V. Shiriaeva,                     M. Lewenstein, Weak measurement in strong laser field
+     M. Froidevaux, V. Severin, A. Merdji-Larue, P. Mosel,                    physics, arXiv:2508.09048 (2025).
+     S. Fröhlich, K.-A. Weber, et al., Evidence of the quantum          [51] A. Pizzi, A. Gorlach, N. Rivera, A. Nunnenkamp, and
+     optical nature of high-harmonic generation, PRX Quan-                    I. Kaminer, Light emission from strongly driven many-
+     tum 5, 040319 (2024).                                                    body systems, Nature Physics 19, 551 (2023).
+[32] S. Lemieux, S. A. Jalil, D. N. Purschke, N. Boroumand,              [52] M. Lewenstein and J. Javanainen, Cooperative quantum
+     T. Hammond, D. Villeneuve, A. Naumov, T. Brabec, and                     jumps with two atoms, Physical review letters 59, 1289
+     G. Vampa, Photon bunching in high-harmonic emission                      (1987).
+     controlled by quantum light, Nature Photonics , 1 (2025).           [53] L. Mandel, Sub-poissonian photon statistics in resonance
+[33] X. T. Zou and L. Mandel, Photon-antibunching and sub-                    fluorescence, Optics letters 4, 205 (1979).
+     poissonian photon statistics, Phys. Rev. A 41, 475 (1990).          [54] P. Stammer, High harmonic generation from a Bose-
+[34] P. Stammer, J. Rivera-Dean, and M. Lewenstein, Theory of                 Einstein condensate, arXiv:2509.19022 (2025).
+     quantum optics and optical coherence in high harmonic               [55] J. Argüello-Luengo, J. Rivera-Dean, P. Stammer, A. S.
+     generation, arXiv:2504.13287 (2025).                                     Maxwell, D. M. Weld, M. F. Ciappina, and M. Lewenstein,
+[35] B. Sundaram and P. W. Milonni, High-order harmonic                       Analog simulation of high-harmonic generation in atoms,
+     generation: simplified model and relevance of single-                    PRX Quantum 5, 010328 (2024).
+     atom theories to experiment, Physical Review A 41, 6571             [56] J. Argüello-Luengo, J. Rivera-Dean, P. Stammer, M. F.
+     (1990).                                                                  Ciappina, and M. Lewenstein, Quantum kramers-
+[36] D. Diestler, Harmonic generation:                      quantum-          henneberger transformation, arXiv:2507.13006 (2025).
+     electrodynamical theory of the harmonic photon-number               [57] J. C. Bergquist, R. G. Hulet, W. M. Itano, and D. J.
+     spectrum, Physical Review A—Atomic, Molecular, and                       Wineland, Observation of quantum jumps in a single
+     Optical Physics 78, 033814 (2008).                                       atom, Physical Review Letters 57, 1699 (1986).
+[37] P. Stammer, J. Rivera-Dean, A. Maxwell, T. Lamprou,                 [58] M. Lewenstein, Quantum jump statistics for two-atom
+     A. Ordóñez, M. F. Ciappina, P. Tzallas, and M. Lewen-                  systems, IEEE journal of quantum electronics 24, 1403
+     stein, Quantum electrodynamics of intense laser-matter                   (2002).
+     interactions: a tool for quantum state engineering, PRX
+     Quantum 4, 010201 (2023).
+[38] N. Wiener, Generalized harmonic analysis, Acta mathe-
+                                                                                                   APPENDIX
+     matica 55, 117 (1930).
+[39] A. Khintchine, Korrelationstheorie der stationären
+     stochastischen prozesse, Mathematische Annalen 109,
+     604 (1934).
+[40] P. Stammer, Quantum stochastic analysis of non-linear                   Appendix A: Details on the Heisenberg picture and
+     driven light emission, arXiv:2508.09049 (2025).                                  first-order correlation function
+[41] R. H. Brown and R. Q. Twiss, Correlation between pho-
+     tons in two coherent beams of light, Nature 177, 27 (1956).
+[42] L. Mandel and E. Wolf, Photon statistics and classical                In this Appendix, we give a brief summary of the rel-
+     fields, Physical Review 149, 1033 (1966).                           evant results from the companion paper [34], where we
+[43] P. B. Corkum, Plasma perspective on strong field multi-             have provided the Heisenberg picture of quantum opti-
+     photon ionization, Physical review letters 71, 1994 (1993).         cal HHG, and introduced the quantum theory of optical
+[44] P. Salières, B. Carré, L. Le Déroff, F. Grasbon, G. G. Paulus,   coherence for the process. In particular, we discussed
+     H. Walther, R. Kopold, W. Becker, D. B. Milošević, A. San-
+                                                                         the first-order field correlation function
+     pera, and M. Lewenstein, Feynman’s Path-Integral Ap-
+     proach for Intense-Laser-Atom Interactions, Science 292,
+     902 (2001).                                                                     G (1) (t1 , t2 ) = ⟨ E(−) (t1 ) E(+) (t2 )⟩ ,   (A1)
+[45] H. J. Carmichael, Statistical Methods in Quantum Optics
+     1: Master Equations and Fokker-Planck Equations (Springer-
+     Verlag, Heidelberg, 2013).                                          where we considered the decomposition of the field op-
+[46] F. Boitier, A. Godard, E. Rosencher, and C. Fabre, Mea-             erator EQ (t) = E(+) (t) + E(−) (t), into a positive and
+                                                                                                                                                          8
+
+negative field component
+
+                                               √
+                    E(+) (t) = ih̄g ∑                qϵq aq (t),           (A2)
+                                           q
+                              h        i†
+                    E(−) (t) = E(+) (t) ,                                  (A3)
+
+with the time-dependent Heisenberg operator aq (t).
+These are the solutions of the Heisenberg equations of
+motion
+                                                                                  FIG. 5. Normalized second-order correlation function g(2) (τ )
+                                                      N                           for low-order harmonics q = {7, 9}. The time-delay τ is taken
+       d                          √
+          aq (t) = −iωq aq (t) + g q ∑ ϵq · di (t),                        (A4)   to be after one complete cycle of the driving laser field T =
+       dt                            i =1                                         2π/ω. The same field conditions as those in Fig. 2 are used.
+
+where di (t) = U † (t)di (0)U (t) is the dipole moment op-
+erator in the respective Heisenberg picture. Given the                            function are respectively given by
+solution of Eq. (A4), as expressed in Eq. (3), we can write
+the field operator as                                                                  (1)
+                                                                                                                            Z t
+                                                                                     Gcoh (t, t + τ ) = h̄2 g4 q2 e−iωq τ         dt1 ⟨d(t1 )⟩ e−iωq t1
+                                                                                                                             t0
+                                   (+)                  (+)
+                    E(+) (t) = E f         (t) + Es           ( t ),       (A5)                             Z t+τ
+                                                                                                        ×           dt2 ⟨d(t2 )⟩ eiωq t2 ,          (A10)
+                                                                                                             t0
+with                                                                                   (1)
+                                                                                                                            Z t
+                                                                                     Ginc (t, t + τ ) = h̄2 g4 q2 e−iωq τ         dt1 e−iωq t1      (A11)
+                                           √                                                                                 t0
+                                       ∑
+                 (+)                                       −iωq t
+                E f (t) = ih̄g                  qϵq aq e               ,   (A6)                             Z t+τ
+                                       q                                                                ×           dt2 eiωq t2 ⟨∆d(t1 )∆d(t2 )⟩ .
+                                                                                                             t0
+and
+                                                                                    An evaluation of the first-order correlation functions
+                                               Z t
+                                                                   ′              can be found in the companion paper [34], and in the
+                    (t) = ih̄g2 ∑ qϵq
+              (+)
+           Es                                        dt′ e−iωq (t−t )             Supplementary Material.
+                                   q            t0
+
+                             N
+                                                                           (A7)
+                          × ∑ ϵq · d i ( t ).    ′
+                            i =1
+                                                                                    Appendix B: Second-order correlation function for low
+                                                                                            order harmonics and many emitters
+           (+)
+  Here, E f      (t) describes the evolution of the free field                       In the main text, we have discussed the second-order
+                                (+)                                               correlation function in HHG, and in Fig. 2 we show
+in the absence of sources, and Es (t) is the source field
+radiated by the atomic emitter. Using the expression for                          the g(2) (τ ) function for the entire spectrum of non-
+the field operator in the definition of the first-order cor-                      perturbative harmonics starting from q ≥ 11 until the
+relation function in Eq. (A1), we find that it can be de-                         harmonic cut-off at q = 23. For completeness, we show
+composed into two terms                                                           the g(2) (τ ) also for the low-order harmonics in Fig. 5,
+                                                                                  indicating the same behavior and photon anti-bunching
+                            (1)                           (1)                     signature in HHG. Furthermore, in the main text we
+   G (1) (t, t + τ ) = Gcoh (t, t + τ ) + Ginc (t, t + τ ).                (A8)
+                                                                                  have shown the behavior of g(2) (τ ) for an increasing
+   This is obtained when decomposing the dipole mo-                               number of emitters for the q = 13 harmonic in Fig. 3.
+ment correlations, appearing due to the expectation                               For completeness, in Fig. 6 we show the many emitter
+value over the atomic degrees of freedom of the source                            scenario for the harmonics q = 19 and q = 23.
+term in Eq. (A7), into a mean field contribution and its
+fluctuations
+                                                                                             Appendix C: Many atom contribution
+ ⟨d(t1 )d(t2 )⟩ = ⟨d(t1 )⟩ ⟨d(t2 )⟩ + ⟨∆d(t1 )∆d(t2 )⟩ , (A9)
+                                                                                     In the following we show the derivation of the many-
+where we have defined the fluctuations of the dipole                              atom contributions to the higher-order dipole correla-
+around its mean ∆d(t) ≡ d(t) − ⟨d(t)⟩. Hence, the co-                             tions in Eq. (15) of the main text. We shall first look at
+herent and incoherence contribution to the correlation                            the higher order dipole moment expectation value in Eq.
+                                                                                                                                                                                9
+
+                                                                                                  different emitters. We find that the first term scales as
+                                                                                                  O( N ), while the second term scales as O( N 4 ). Now,
+                                                                                                  we consider the same assumptions of the main text
+                                                                                                  which includes [34]: (i) an uncorrelated initial state of
+                                                                                                  the emitters such that the dipole moment between dif-
+                                                                                                  ferent emitters factorize, and (ii) each emitter experi-
+                                                                                                  ences the same driving field such that the subscript can
+                                                                                                  be dropped due to the indistinguishability of the atoms.
+                                                                                                  We thus have for the first term in Eq. (C1)
+FIG. 6. Normalized intensity correlation g(2) (τ ) for harmonic
+orders q = 19 in (a) and q = 23 in (b) for varying num-                                            N
+ber of emitters N, showing the same behavior as Fig 3. The                                        ∑ ⟨di (t1 )di (t2 )di (t3 )di (t4 )⟩ = N ⟨d(t1 )d(t2 )d(t3 )d(t4 )⟩ ,
+atom number increases for increasing color brightness includ-                                     i =1
+ing log10 N ∈ {2.0, 2.7, 3.4, 4.1, 4.8, 5.5, 6.7, 7.0}. The same field                                                                                                        (C2)
+conditions as those in Fig. 2 are used.
+                                                                                                  which is similar to the term evaluated in the single atom
+                                                                                                  case with a linear scaling for the number of atoms N.
+(8) for the N atom case along the laser polarization di-
+                                                                                                  For the second term, including the correlations between
+rection
+                                                                                                  the emitters, we have
+        N
+       ∑          ⟨ḡ| di (t1 )d j (t2 )dk (t3 )dl (t4 ) |ḡ⟩                                                          N
+     i,j,k,l =1
+                                                                                                           ∑          ∑         d i ( t1 ) d j ( t2 ) d k ( t3 ) d l ( t4 )   (C3)
+                       N                                                                               i ̸={ j,k,l } j,k,l,=1
+                  = ∑ ⟨di (t1 )di (t2 )di (t3 )di (t4 )⟩                                   (C1)             N!
+                      i =1                                                                             =            ⟨d(t1 )⟩ ⟨d(t2 )⟩ ⟨d(t3 )⟩ ⟨d(t4 )⟩ + O( N 3 ),
+                                      N
+                                                                                                         ( N − 4) !
+                  +      ∑           ∑         d i ( t1 ) d j ( t2 ) d k ( t3 ) d l ( t4 ) ,      where we have neglected terms of order O( N 3 ) since
+                      i ̸={ j,k,l } j,k,l,=1                                                      HHG experiments are typically performed in the N ≫ 1
+                                                                                                  regime such that the major contribution comes from the
+where i ̸= { j, k, l } indicates that i is not equal to j, k, l                                   coherent part. The coherent contribution, in which all
+at the same time. The first term is the contribution                                              dipole moment expectation values are evaluated inde-
+from each of the N emitters individually, and the sec-                                            pendently, scales as O( N 4 ). In the Supplementary Ma-
+ond term takes into account the correlations between                                              terial we show the next leading terms in the expansion.
+

@@ -3,7 +3,7 @@ title: Gorlach Et Al 2023 HHG Driven By Quantum Light Supplement
 type: source-summary
 status: active
 created: 2026-06-06
-updated: 2026-06-06
+updated: 2026-11-14
 tags: [source, hhg, bsv, husimi-q, coherent-state-sampling]
 source_count: 2
 confidence: high
@@ -71,8 +71,9 @@ a(t) = -<psi | grad V(r) + E(t) | psi>
 
 ## Limitations And Cautions
 
-- The local files are duplicate copies of the supplementary information, not a
-  separate copy of the main article.
+- These two local files are duplicate copies of the supplementary
+  information. The main article was added on 2026-11-14 as a separate file;
+  see [[gorlach-2023-hhg-driven-by-quantum-light-main-article]].
 - The ensemble-of-coherent-responses method is well suited to intensity
   observables, but generated-field quantum states need additional care.
 

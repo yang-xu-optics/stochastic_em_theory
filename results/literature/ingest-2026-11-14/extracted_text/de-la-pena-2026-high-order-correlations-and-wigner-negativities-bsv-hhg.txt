@@ -1,0 +1,756 @@
+                                                                    High-order correlations and ultrafast Wigner negativities in
+                                                                     bright-squeezed-vacuum-driven high-harmonic generation
+                                                       Sebastián de-la-Peña,1, ∗ Heiko Appel,1 Marcelo F. Ciappina,2, 3, 4 Ofer Neufeld,5, † and Angel Rubio1, 6, ‡
+                                                                              1
+                                                                                 Max Planck Institute for the Structure and Dynamics of Matter,
+                                                                                         Luruper Chaussee 149, 22761 Hamburg, Germany
+                                                              2
+                                                                Department of Physics, Guangdong Technion-Israel Institute of Technology, Shantou 515063, China
+                                                                                   3
+                                                                                     Technion–Israel Institute of Technology, Haifa 32000, Israel
+                                                                   4
+                                                                     Guangdong Provincial Key Laboratory of Materials and Technologies for Energy Conversion,
+                                                                           Guangdong Technion-Israel Institute of Technology, Shantou 515063, China
+                                                                 5
+                                                                   Technion - Israel Institute of Technology, Schulich Faculty of Chemistry, 3200003 Haifa, Israel
+                                                          6
+                                                            Initiative for Computational Catalysis (ICC), Flatiron Institute, 162 5th Ave, New York, NY 10010, USA
+arXiv:2609.20559v1 [physics.optics] 17 Sep 2026
+
+
+
+
+                                                                                                     (Dated: September 18, 2026)
+
+
+
+
+                                                                                                      ABSTRACT
+
+                                                    High-harmonic generation (HHG) is a prototypical strong-field process in which intense light drives matter to emit
+                                                  radiation at integer multiples of the driving frequency. Extending HHG into the quantum-optical regime offers new
+                                                  opportunities to probe and control strongly nonlinear light–matter interactions using nonclassical states of light. Yet
+                                                  describing this regime requires a fully quantum treatment of the correlated electron–photon dynamics, which becomes
+                                                  computationally challenging for broadband, strongly squeezed fields. Here we solve the quantum-electrodynamical
+                                                  dynamics of a two-level system driven by bright squeezed vacuum in a converged multimode Hilbert space. Both the
+                                                  driving field and emitted harmonics are fully quantized, with the light–matter interaction treated nonperturbatively.
+                                                  This enables direct access to the multimode quantum state and its higher-order correlations beyond semiclassical
+                                                  sampling or perturbative descriptions. We show that squeezed-vacuum driving produces harmonic emission with
+                                                  qualitatively distinct second- and third-order photon correlations compared with coherent excitation. Moreover,
+                                                  back-action from the driven emitter strongly reshapes the incident squeezed field, generating pronounced Wigner-
+                                                  function negativities that evolve on attosecond timescales. Our results establish a fully quantum framework for
+                                                  broadband strong-field dynamics with squeezed light and provide a route to predicting and interpreting quantum-
+                                                  HHG experiments and their extension to more complex emitters.
+
+
+                                                                                                 I.   INTRODUCTION
+
+                                                     High-harmonic generation (HHG) is a strongly nonlinear process in which a low-frequency laser interacts with
+                                                  a material sample, be it gas [1, 2], liquid [3, 4], or solid [5]; resulting in the emission of higher harmonics of the
+                                                  incident field. HHG has enabled the development of new research areas, most notably attosecond metrology [6]
+                                                  and attosecond spectroscopy [7]. The theoretical description of HHG was first formulated within a semiclassical
+                                                  framework for the electron dynamics and the incident light, known as the three-step model [8]. This picture was
+                                                  subsequently developed using a quantum-mechanical description of the electron [9, 10], while the light field continued
+                                                  to be described within classical electromagnetic theory, thereby neglecting quantum-optical effects.
+
+                                                  However, recent works suggest that quantum-optical effects can be prominent in HHG under certain conditions,
+                                                  either in the emitted harmonics [11–22] or in the radiated field [23–36]. Particular interest has been raised by the
+                                                  case of bright squeezed vacuum (BSV), in which the radiated field has a vanishing average electric field amplitude at
+                                                  all times, while containing a nonzero number of photons and non-vanishing variance. Despite its recent use in both
+                                                  theoretical [25, 27, 34, 35] and experimental [29] studies, an open question remains as to whether BSV can give rise
+                                                  to quantum effects beyond the mere sampling of a probability distribution of light, i.e. truly quantum features such
+                                                  as entanglement and negative Wigner distributions. More specifically, although several approaches have been used
+
+
+                                                  ∗ sebastian.delapena@mpsd.mpg.de
+                                                                                                                † ofern@technion.ac.il
+                                                                                                                ‡ angel.rubio@mpsd.mpg.de
+                                                                                                                       2
+
+
+
+
+FIG. 1. Schematic depiction of a diamond nano-vacancy center (modelled by a two-level system) driven by a bright-squeezed
+laser pulse, depicted as oscillations of electric field quadratures, and emitting higher harmonics.
+
+
+to model HHG driven by nonclassical light, they treat the driving field as an ensemble of classical fields sampled
+from an appropriate distribution, and can therefore capture effects arising from the statistical properties of the field.
+However, such descriptions do not retain the full quantum correlations between the light and matter [28], and it
+therefore remains unclear whether the multimode quantum correlations of BSV give rise to HHG effects that cannot
+be reproduced by a semiclassical ensemble, particularly in the infinite-photon limit.
+
+Here, we propagate the quantum-electrodynamical (QED) Hamiltonian of a two-level system (TLS) driven by a BSV
+mode. The TLS is chosen as the simplest setting in which the theory can be benchmarked against an exact solution.
+At the same time, it can be viewed as a minimal two-band model of a solid near the Γ point, where the dynamics
+are restricted to a valence and a conduction state coupled by the driving field. Such reduced two-band descriptions
+are widely used to capture the essential interband dynamics underlying strong-field excitation and high-harmonic
+generation in solids. The model may also represent genuinely localized two-level systems, such as selected transitions
+in diamond NV centers [37] (see illustration in Fig. 1). We calculate the HHG emission spectrum and compare it with
+that obtained under classical coherent driving, as well as second- and third-order photon correlations. To propagate
+the equations of motion, we employ a squeezed picture for the driving mode [27], which allows us to reach the infinite-
+photon-number limit of BSV while retaining the self-consistent light-matter interaction throughout the propagation.
+This allows directly addressing the above questions since quantum optical correlations are kept in full. As the system
+evolves, we find that the Wigner distribution of the pump develops clear negative regions, with dynamics evolving
+on attosecond timescales. This provides a direct signature of the genuinely quantum back-action induced by BSV
+driving and motivates experimental approaches capable of probing these effects. More broadly, our framework treats
+quantized light and matter dynamics on equal footing, enabling the study of back-action on quantum driving fields,
+collective strong coupling in multi-emitter systems, and higher-order correlations between harmonic modes.
+
+
+                                            II.   THEORETICAL MODEL
+
+ We begin describing the QED Hamiltonian in the interaction picture for a two-level system coupled to a driving
+mode and a set of continuum emission modes,
+
+
+                                        ĤQED (t) = ĤTLS + Ĥdriv (t) + Ĥcont (t),                                 (1)
+
+where ĤTLS = (1 − σ̂z )∆ is the TLS Hamiltonian with ∆ being the energy gap, σ̂z a Pauli matrix, and
+
+                                                        r
+                                                          ωL h                          i
+                                      Ĥdriv (t) = σ̂x λ       âL e−iωL t + â†L eiωL t ,                           (2)
+                                                           2
+
+                                                              r
+                                                       X        ωη  −iωη t
+                                                                            + â†η eiωη t ,
+                                                                                         
+                                    Ĥcont (t) = σ̂x         λ      âη e                                            (3)
+                                                                2
+                                                       η∈D
+                                                                                                                               3
+
+are the driving-mode and the continuum-mode Hamiltonians, respectively. Here, ωL is the driving frequency, while
+                                                                                                                (†)
+ωη = ηωL is the frequency of the continuum mode labeled by η denoting the harmonic label. The operators âη and
+  (†)
+âL are the annihilation (creation) operators √for the continuum mode labeled by η and the driving mode, respectively.
+The light-matter coupling is given by λ = g ∆ω, where g is the spectral light-matter coupling (see SI) and ∆ω is
+frequency spacing. The sum over η is restricted to the relevant spectral domain D for each particular calculation (see
+SI). The initial state of the driving mode is a BSV, |ξ⟩L = Ŝ(ξ) |0⟩L , where ξ is the squeezing parameter and Ŝ(ξ) is
+the squeezing operator. The continuum of modes and the TLS are initiated in their respective ground-states.
+
+We perform the calculation such that the proper continuum limit ∆ω → 0 is taken, which consequently implies
+the light-matter coupling to vanish, λ → 0. This limit affects the driving and continuum Hamiltonians differently.
+For the continuum Hamiltonian, decreasing ∆ω simply increases the density of modes included in the calculation.
+For the driving Hamiltonian, however, the situation is different because it contains only a single mode. To take the
+continuum limit in this case, we transform to the squeezed picture by defining a transformed light-matter wavefunction
+|Ψ(s) (t)⟩ = Ŝ † (ξ) |Ψ(t)⟩ [27], which leads to the transformation on operators Ô(s) = Ŝ † (ξ)ÔŜ(ξ). Consequently, the
+Hamiltonian in Eq. (2) becomes
+
+                                 h                                                                                   i
+               (s)
+             Ĥdriv (t) = κσ̂x        âL cosh |ξ| − eiφ â†L sinh |ξ| e−iωL t + â†L cosh |ξ| − e−iφ âL sinh |ξ| eiωL t ,   (4)
+
+                                                           (†)
+where the creation and annihilation operators âL now act on a squeezed-Fock Hilbert space rather than ordinary
+Fock Hilbert
+        p      space, |ξ| and φ are the complex amplitude and phase of the initial squeezing parameter ξ, and
+κ = λ ωL /2 simply agglutinates all prefactors for the driving coupling. Note that the transformation only
+affects the operators for the driving mode and leaves any of the continuum modes unchanged. Moreover, the
+advantage of this picture is that the initial state of light remains a (squeezed-photon) vacuum regardless of the ini-
+tial squeezing ξ, |Ψ(s) (t = 0)⟩ = |0⟩TLS ⊗|0⟩L ⊗η |0⟩η , as the squeezing strength is now in the transformed Hamiltonian.
+
+The transformed Hamiltonian of Eq. (4) allows us to consider the physically relevant regime of a strongly squeezed
+driving while keeping the initial state fixed. In particular, the limit of large squeezing, |ξ| → ∞ [25, 38], corresponds
+to an increasing number of photons in the initial state of√the original unsqueezed representation. Simultaneously, the
+continuum limit can be taken, such that we make   √ κ ∝|ξ| ∆ω → 0. Taking simultaneously ∆ω → 0 and |ξ| → ∞ in
+Eq. (4) while retaining a finite driving strength ∆ωe gives
+
+
+                                 (s)          ΩR h                                              i
+                            Ĥdriv (t) →         σ̂x âL − eiφ â†L e−iωL t + â†L − e−iφ âL eiωL t ,                        (5)
+                                               2
+where all driving-intensity dependence is now captured by the bright-squeezed Rabi frequency ΩR = κe|ξ| . Equa-
+tion (5) makes explicit why ΩR is the relevant parameter in this limit: after taking |ξ| ≫ 1, the dependence on
+the initial squeezing and light-matter coupling appears only through the combination κe|ξ| . Consequently, different
+combinations of κ and ξ that give the same ΩR lead to the same limiting driving Hamiltonian. The limit is formally
+exact within the |ξ| → ∞ regime, since the terms proportional to e−|ξ| vanish in this limit. Although the full Hamil-
+tonian from Eq.(4) is employed in the simulations, Eq.(5) shows that, once the strongly squeezed regime is reached,
+the driving strength relevant to the TLS dynamics is characterized by ΩR , rather than by κ and ξ independently.
+Additionally, Eq. (5) demonstrates that the truncation of the squeezed-Fock Hilbert space required for convergence
+depends uniquely on ΩR , rather than on the squeezing parameter and light-matter coupling independently. Hence,
+we find that the limit ∆ω → 0 can be taken provided that  √ the mode is strongly squeezed (|ξ| ≫ 1) and the initial
+squeezing is captured through the Rabi frequency (ΩR ∝ ∆ω exp {|ξ|}). In other words, the continuum limit and
+infinite-photon limit can be taken jointly while keeping the physical driving strength finite, with the effect of the
+increasing photon number absorbed into ΩR .
+
+
+                                               III.   RESULTS AND DISCUSSION
+
+  Applying this approach, we take the driving frequency ωL as the reference unit. The relevant physical parameters
+are therefore the gap/driving frequency ratio ∆/ωL , and the Rabi/driving-frequency
+                                                                       q             ratio ΩR /ωL . The squeezing
+phase is set to zero, φ = 0, such that the field variance is initially off: µ ⟨ξ| ÊL2 (0) |ξ⟩ = ΩR |sin (−φ/2)| = 0. When
+emission is concerned, it is also physically relevant to specify the ratio associated with the dimensionless spectral
+                                                                                                                         4
+                                p
+light-matter coupling g = 2µ α/Aeff (see SI), where µ is the dipole transition amplitude between the two levels,
+Aeff is the effective area of the one-dimensional waveguide, and α is the fine-structure constant. Here, µ and Aeff are
+specified in physical atomic units (g is dimensionless). We choose Aeff ≈ 320 nm2 and µ ≈ 0.053 nm, which gives
+g ≈ 5 × 10−4 . The frequency spacing ∆ω is formally converged in every simulation. We consider two representative
+solid-state-inspired driving scenarios. The first is motivated by GaAs driven at a wavelength of 800 nm, which
+provides an example close to resonant interband excitation. The second is motivated by ZnO driven in the infrared,
+around 1900 nm, representative of an off-resonant multiphoton regime. To study these limits systematically within
+the TLS, we consider cases characterized by the ratio between the level separation and the photon energy, ∆/ωL .
+In particular, we analyze resonant driving with ∆/ωL = 1 and nonresonant driving with ∆/ωL = 5, approximately
+corresponding to the GaAs and ZnO examples, respectively.
+
+
+
+                                       A.    HHG emission and correlation spectra
+
+  We compare the HHG emission spectrum directly, the quantum optical way, i.e. by computing the quantized photon
+spectral occupation [39, 40] (not by calculating electronic dipoles [14, 19, 34]),
+
+
+                                                          dS(ωη )   ωη ⟨â†η âη ⟩
+                                                                  =                ,                                    (6)
+                                                            dω         ∆ω
+
+with η = ω/ωL . For both a BSV and coherent driving [41, 42], we evaluate the emission spectrum for difference
+values of the Rabi frequency ΩR . The results are presented in Fig. 2. The top panels show the emission spectra
+for coherent driving in the resonant (left) and nonresonant (right) regimes, while the bottom panels show the
+corresponding spectra for BSV driving with otherwise identical paramaters. In both case, the expectation values
+are obtained directly from the quantum state of the photon continuum given by Eq. (6), without relying on an
+additional reconstruction of the emitted field. One prominent feature of the coherent-driving spectra is the oscillatory
+structure associated with the Floquet eigenenergies in the resonant regime (left panels), which is absent under
+BSV driving [41, 42]. In addition, the cutoff energy exhibits a stronger dependence on the Rabi frequency in
+the BSV case. This enhanced cutoff dependence is consistent with previous studies in atoms and solids [25, 43],
+where such cutoff dependence was identified through an analysis of the Husimi distribution of the BSV. We
+suspect that the blurred-out spectral features in the BSV case are a result of its broad photon statistics. This essen-
+tially applies something akin to an effective intensity and phase averaging in every spectral point, masking finer details.
+
+Next, we compute the second- and third-order correlation spectra given by
+
+
+                                                           d2 Corr(ω1 , ω2 )   ⟨â†η1 â†η2 âη1 âη2 ⟩
+                                     C (2) (ω1 , ω2 ) =                      ≈                          ,               (7)
+                                                               dω1 dω2                  ∆ω 2
+
+
+                                                       d2 Corr(ω1 , ω2 , ω3 )   ⟨â†η1 â†η2 â†η3 âη1 âη2 âη3 ⟩
+                             C (3) (ω1 , ω2 , ω3 ) =                          ≈                                     ,   (8)
+                                                           dω1 dω2 dω3                         ∆ω 3
+
+with ηk = ωk /ωL . Figs. 3 and 4 show second- and third-order correlations spectra (for every simulation three-
+cycle pulses were used and the Rabi intensity was ΩR /ωL = 2). Such correlation measurements are emerging as
+promising tools for quantum metrology [20, 21] and quantum spectroscopy based on HHG [44, 45], yet their theoretical
+characterization in this regime remains largely unexplored. As in the intensity spectra of Fig.2, both odd and even
+harmonics are present owing to the broken axial symmetry of the TLS. Their correlation signatures, however, are
+strikingly different. In Fig. 3, odd harmonics exhibit predominantly ring-like resonance structures, whereas even
+harmonics develop characteristic star-like patterns. The third-order correlations in Fig. 4 reveal an even richer
+landscape, with pronounced symmetry-broken structures and no simple universal pattern across harmonic orders. A
+complete map of the relevant third-order mode correlations is provided in the Supplementary Information, offering
+concrete predictions for future experiments. These results suggest that higher-order photon correlations encode
+information inaccessible to intensity or second-order measurements, potentially providing a more sensitive probe of
+light–matter dynamics and symmetry in quantum HHG.
+                                                                                                                                     5
+
+
+
+
+FIG. 2. Emission specturm S(ω) of a two-level system in and out of resonance (left and right panels, respectively) driven by
+coherent and squeezed vacuum (top and bottom panels respectively) for different Rabi intensities ΩR . The bottom panels are
+analog to those of [41].
+
+
+                                             B.    Wigner negativities and back-action
+
+  Figure 5 presents the quantum state of the driving mode through the Wigner distribution in the squeezed-interaction
+picture
+
+                                       Z ∞
+                                   1                     (s)
+                                                                                            X          (s)
+           W (s) (qL , pL ; t) ≡             ⟨qL − yL | ρ̂L (t) |qL + yL ⟩ e2ipL yL dyL =         ⟨n| ρ̂L (t) |m⟩ wnm (qL , pL ),   (9)
+                                   π   −∞                                                   n,m
+
+where (qL , pL ) denotes the Wigner phase-space coordinate of the driver in the squeezed-interaction picture,
+  (s)                
+ρ̂L (t) = TrTLS,cont |Ψ(s) (t)⟩ ⟨Ψ(s) (t)| is the traced density matrix of the driver (tracing out the degrees of freedom
+of the electronc and the continuum of modes), n and m are Fock state indices in the squeezed-interaction picture,
+and wnm (qL , pL ) is the Wigner distribution for the Fock matrix element |n⟩ ⟨m|. Additionally, Fig. 6 presents the
+time evolution of the Wigner distribution in slices of position and momentum, W (s) (qL , 0, t) and W (s) (0, pL , t),
+respectively (see SI for full movie with attosecond temporal resolution). Notably, we observe the emergence of
+Wigner-negative regions as the squeezed intense laser drives the TLS. By contrast, a semiclassical treatment of the
+squeezed driving field preserves a positive Wigner distribution by construction and therefore cannot capture these
+features. The emergence of Wigner negativity thus provides a direct signature of genuinely quantum light–matter
+dynamics, beyond descriptions based solely on semiclassical phase-space statistics, and offers an experimentally
+accessible probe of quantum back-action. We note that, although the distribution deviates significantly from bare
+BSV as time progresses, the driving mode remains strongly squeezed throughout the evolution. This apparent
+discrepancy arises because the phase-space coordinates are defined in the squeezed picture and therefore already
+incorporate the squeezing transformation.
+                                                                                                                               6
+
+
+
+
+             FIG. 3. Second-order photon correlation spectrum for the continuum of emission modes C (2) (ω, ω ′ ).
+
+
+
+
+FIG. 4. Exemplary panels of the third-order photon correlation spectrum of the continuum of emission modes C (3) (ω1 , ω2 , ω3 ).
+The third frequency is fixed to the kth harmonic frequency, ω3 = kωL , while each panel shows the correlation spectrum as a
+function of the first and second frequencies, ω1 and ω2 , in the vicinity of the ith and the jth harmonics.
+
+
+To quantify the degree of nonclassicality generated during the evolution, especially its temporal dynamics, we employ
+the negativity volume measure [46], which is invariant under the squeezeing transformation (see SI for details),
+
+                                                          Z
+                                             V− (t) = −        W (qL , pL ; t)dqL dpL ,                                     (10)
+                                                          D−
+
+where D− denotes the region of phase space in which the Wigner distribution is negative. Figure 7 shows the
+resulting Wigner negativity volume as a function of time (top
+                                                            qpanel), as well as the time-dependent Rabi frequency
+defined as the instantaneous electric field variance Ω(t) = µ ⟨ξ| ÊL2 (t) |ξ⟩ = ΩR |sin (ωL t)|. The negativity volume
+exhibits pronounced local maxima at half-cycle intervals, which coincide with the minimal field variance of the
+driver. This correlation indicates that the strongest nonclassical features of the driving mode are generated at
+the end of the strong-interaction periods, phase shifted from the peak electric field (and following the vector potential).
+
+Notably, the Wigner negativity develops on attosecond timescales and exhibits a strongly nonlinear temporal evo-
+lution, highlighting the nonperturbative character of the quantum back-action. As shown in Fig. 7, this dynamics
+contains contributions across multiple harmonic orders, reflecting the nonlinear response of the driven system. The
+nonclassicality also accumulates with interaction time: the full temporal evolution in the Supplementary Information
+shows that each additional laser half-cycle generates a new negative lobe in the Wigner distribution of the driving
+mode. This suggests that the emergence of quantum features is governed not only by the strength and nonlinearity of
+                                                                                                                         7
+
+
+
+
+FIG. 5. Wigner distribution in the squeezed picture W (s) (xL ; t) for the driving mode over time. Snapshots of at
+t = 0, τL , 2τL , 3τL are shown. The black lines represent transitions from positive to negatives values of the Wigner dis-
+tribution.
+
+
+the light–matter interaction, but also by its spatiotemporal extent. Resolving this ultrafast buildup of nonclassicality
+therefore calls for quantum-optical probes with attosecond temporal resolution.
+
+
+                                      IV.   CONCLUSIONS AND OUTLOOK
+
+   In this work, we fully propagate the coupled light–matter wavefunction of a two-level system driven by bright
+squeezed vacuum and interacting with a continuum of quantized emission modes. A squeezed-frame transformation
+greatly accelerates convergence of the driving-field Hilbert space, enabling access to the large-photon-number regime.
+We compute the resulting HHG spectrum and benchmark it against coherent driving. Bright-squeezed-vacuum
+excitation produces a markedly stronger dependence of the HHG cutoff on Rabi intensity, while other spectral
+features are broadened or washed out by the intrinsic phase and intensity fluctuations of the squeezed field.
+
+Furthermore, our method enables the direct calculation of second- and third-order photon-field correlations, revealing
+distinct resonances in the vicinity of the emitted harmonics. We also reconstruct the Wigner distribution of the
+driver and show that back-action causes: (i) negative-valued regions to emerge naturally from the self-consistent
+coupling between light and matter; (ii) The negativity volume reaches its maximum at half-cycles, coinciding with
+the vector potential maxima; (iii) The negativity evolves on attosecond timescales, and truly quantum features
+generally increase substantially over interaction time; (iv) The effect is highly nonlinear and the back-action develops
+harmonics of the drive.
+
+This work provides the first fully self-consistent propagation of a matter system coupled simultaneously to a quantized
+                                                                                                                          8
+
+
+
+
+FIG. 6. Time evolution of the position (left) and momentum (right) slices of the Wigner distribution in the squeezed picture
+W (s) (xL ; t) for the driving mode over time, W (s) (qL , 0; t) and W (s) (0, pL ; t), respectively.
+
+
+
+
+FIG. 7. Wigner-negative volume V− (t) over time (top panel) and time-dependent Rabi amplitude of the driver, Ω(t) =
+ΩR |sin (ωL t)|.
+
+
+driver and fully quantized spectrum of emission modes. The framework can potentially be extended to more complex
+matter systems and to other nonclassical quantum drivers. Moreover, the analysis of the backaction of matter on
+the driver may provide a pathway toward the development of experimental techniques for characterizing squeezed
+pulses. While we employed here TLS as a more phenomenological model that enables to tractably propagate the
+electron-photon system, we expect that it might find direct usage in analogous nearly-TLS such as diamond NV
+centers, excitons, systems with spatially-localized flat bands, etc.
+
+
+                                              ACKNOWLEDGEMENTS
+
+  This work was funded by the European Union under the ERC Synergy Grant UnMySt (HEU GA No. 101167294).
+Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the
+European Union or the European Research Council. Neither the European Union nor the European Research Council
+can be held responsible for them. This work was also supported by the Cluster of Excellence ‘Advanced Imaging of
+Matter’ (AIM), Grupos Consolidados (IT1453-22) and Deutsche Forschungsgemeinschaft (DFG) - SFB-925 - project
+170620586. The Flatiron Institute is a division of the Simons Foundation. We acknowledge support from the Max
+                                                                                                                           9
+
+Planck-New York City Center for Non-Equilibrium Quantum Phenomena. S.d.l.P. acknowledges support from Interna-
+tional Max Planck Research School. M.F.C. acknowledges support by the Quantum Science and Technology-National
+Science and Technology Major Project (Grant No. 2025ZD0301000), the National Key Research and Development
+Program of China (Grant No. 2023YFA1407100), the Guangdong Province Science and Technology Major Project
+(Future functional materials under extreme conditions - 2021B0301030005) and the National Natural Science Foun-
+dation of China (Grant No. 12574092). O.N. acknowledges support of the Young Faculty Award from the National
+Quantum Science and Technology program of Israel’s Council of Higher Education Planning and Budgeting Commit-
+tee and support from The Technion Helen Diller Quantum Center and RBNI through the Nevet grant. The authors
+are grateful to M.F.C. for hosting a research visit at the Guangdong Technion-Israel Institute of Technology during
+March 2026, where this project was conceived.
+
+
+
+
+ [1] M. Ferray, A. L’Huillier, X. F. Li, L. A. Lompre, G. Mainfray, and C. Manus, Journal of Physics B: Atomic, Molecular
+     and Optical Physics 21, L31–L35 (1988).
+ [2] A. McPherson, G. Gibson, H. Jara, U. Johann, T. S. Luk, I. A. McIntyre, K. Boyer, and C. K. Rhodes, Journal of the
+     Optical Society of America B 4, 595 (1987).
+ [3] T. T. Luu, Z. Yin, A. Jain, T. Gaumnitz, Y. Pertot, J. Ma, and H. J. Wörner, Nature Communications 9, 10.1038/s41467-
+     018-06040-4 (2018).
+ [4] A. Mondal, O. Neufeld, Z. Yin, Z. Nourbakhsh, V. Svoboda, A. Rubio, N. Tancogne-Dejean, and H. J. Wörner, Nature
+     Physics 19, 1813–1820 (2023).
+ [5] S. Ghimire, A. D. DiChiara, E. Sistrunk, P. Agostini, L. F. DiMauro, and D. A. Reis, Nature Physics 7, 138–141 (2010).
+ [6] M. Hentschel, R. Kienberger, C. Spielmann, G. A. Reider, N. Milosevic, T. Brabec, P. Corkum, U. Heinzmann, M. Drescher,
+     and F. Krausz, Nature 414, 509–513 (2001).
+ [7] F. Krausz and M. Ivanov, Reviews of Modern Physics 81, 163–234 (2009).
+ [8] P. B. Corkum, Physical Review Letters 71, 1994–1997 (1993).
+ [9] M. Lewenstein, P. Balcou, M. Y. Ivanov, A. L’Huillier, and P. B. Corkum, Physical Review A 49, 2117–2132 (1994).
+[10] P. Antoine, A. L’Huillier, M. Lewenstein, P. Salières, and B. Carré, Physical Review A 53, 1725–1745 (1996).
+[11] I. A. Gonoskov, N. Tsatrafyllis, I. K. Kominis, and P. Tzallas, Scientific Reports 6, 10.1038/srep32821 (2016).
+[12] N. Tsatrafyllis, I. K. Kominis, I. A. Gonoskov, and P. Tzallas, Nature Communications 8, 10.1038/ncomms15170 (2017).
+[13] M. Lewenstein, M. F. Ciappina, E. Pisanty, J. Rivera-Dean, P. Stammer, T. Lamprou, and P. Tzallas, Nature Physics 17,
+     1104–1108 (2021).
+[14] A. Gorlach, O. Neufeld, N. Rivera, O. Cohen, and I. Kaminer, Nature Communications 11, 10.1038/s41467-020-18218-w
+     (2020).
+[15] M. Gombkötő, P. Földi, and S. Varró, Physical Review A 104, 10.1103/physreva.104.033703 (2021).
+[16] P. Stammer, J. Rivera-Dean, T. Lamprou, E. Pisanty, M. F. Ciappina, P. Tzallas, and M. Lewenstein, Physical Review
+     Letters 128, 10.1103/physrevlett.128.123603 (2022).
+[17] P. Stammer, J. Rivera-Dean, A. Maxwell, T. Lamprou, A. Ordóñez, M. F. Ciappina, P. Tzallas, and M. Lewenstein, PRX
+     Quantum 4, 10.1103/prxquantum.4.010201 (2023).
+[18] A. Pizzi, A. Gorlach, N. Rivera, A. Nunnenkamp, and I. Kaminer, Nature Physics 19, 551–561 (2023).
+[19] P. Stammer, J. Rivera-Dean, A. S. Maxwell, T. Lamprou, J. Argüello-Luengo, P. Tzallas, M. F. Ciappina, and M. Lewen-
+     stein, Physical Review Letters 132, 10.1103/physrevlett.132.143603 (2024).
+[20] D. Theidel, V. Cotte, R. Sondenheimer, V. Shiriaeva, M. Froidevaux, V. Severin, A. Merdji-Larue, P. Mosel, S. Fröhlich,
+     K.-A. Weber, U. Morgner, M. Kovacev, J. Biegert, and H. Merdji, PRX Quantum 5, 10.1103/prxquantum.5.040319 (2024).
+[21] D. Theidel, V. Cotte, P. Heinzel, H. Griguer, M. Weis, R. Sondenheimer, and H. Merdji, Physical Review Research 7,
+     10.1103/6r6n-pxfp (2025).
+[22] S. de-la Peña, H. Appel, A. Rubio, and O. Neufeld, Second-quantized numerical simulations of tunable entanglement in
+     quantum high harmonic generation (2025).
+[23] M. E. Tzur, O. Neufeld, E. Bordo, A. Fleischer, and O. Cohen, Nature Communications 13, 10.1038/s41467-022-29080-3
+     (2022).
+[24] M. Even Tzur, M. Birk, A. Gorlach, M. Krüger, I. Kaminer, and O. Cohen, Nature Photonics 17, 501–509 (2023).
+[25] A. Gorlach, M. E. Tzur, M. Birk, M. Krüger, N. Rivera, O. Cohen, and I. Kaminer, Nature Physics 19, 1689–1696 (2023).
+[26] M. E. Tzur, M. Birk, A. Gorlach, I. Kaminer, M. Krüger, and O. Cohen, Physical Review Research 6, 10.1103/physrevre-
+     search.6.033079 (2024).
+[27] M. Even Tzur and O. Cohen, Light: Science &; Applications 13, 10.1038/s41377-024-01381-w (2024).
+[28] S. de-la Peña, O. Neufeld, M. Even Tzur, O. Cohen, H. Appel, and A. Rubio, Journal of Chemical Theory and Computation
+     21, 283–290 (2024).
+[29] A. Rasputnyi, Z. Chen, M. Birk, O. Cohen, I. Kaminer, M. Krüger, D. Seletskiy, M. Chekhova, and F. Tani, Nature Physics
+     20, 1960–1965 (2024).
+[30] M. E. Tzur, C. Mor, N. Yaffe, M. Birk, A. Rasputnyi, O. Kneller, I. Nisim, I. Kaminer, M. Chekhova, M. Krueger,
+     M. Ivanov, N. Dudovich, and O. Cohen, Attosecond-resolved quantum fluctuations of light and matter (2025).
+                                                                                                                       10
+
+[31] S. Yi, N. D. Klimkin, G. G. Brown, O. Smirnova, S. Patchkovskii, I. Babushkin, and M. Ivanov, Physical Review X 15,
+     10.1103/physrevx.15.011023 (2025).
+[32] J. Rivera-Dean, P. Stammer, M. Ciappina, and M. Lewenstein, Physical Review Letters 135, 10.1103/4hdl-bdwj (2025).
+[33] N. D. Klimkin and M. Ivanov, Spontaneous symmetry breaking in nonlinear superradiance (2025).
+[34] H. Liu, H. Zhang, X. Wang, and J. Yuan, Physical Review Research 8, 10.1103/y3gr-tsns (2026).
+[35] J. Rivera-Dean, M. Even-Tzur, M. F. Ciappina, C. Granados, O. Cohen, and P. Stammer, Emergence of gaussian entan-
+     glement and non-gaussianity in high-harmonic generation driven by bright squeezed light (2026).
+[36] I. Gonoskov, C. Hünecke, and S. Gräfe, Emergence of nonclassical radiation in strongly laser-driven quantum systems
+     (2025).
+[37] H. Barhum, C. McDonnell, A. Izheman, T. Amro, I. Simanovsky, N. Bar-Gill, G. Marcus, A. Blank, P. Ginzburg, and
+     M. Attrash, Carbon 252, 121368 (2026).
+[38] J. Rivera-Dean, L. Petrovic, M. Lewenstein, and P. Stammer, Reports on Progress in Physics 89, 047901 (2026).
+[39] R. Loudon, The Quantum Theory of Light (Oxford University PressOxford, 2000).
+[40] M. O. Scully and M. S. Zubairy, Quantum Optics (Cambridge University Press, 1997).
+[41] T. Tritschler, O. D. Mücke, and M. Wegener, Physical Review A 68, 10.1103/physreva.68.033404 (2003).
+[42] S. Hazanov, A. Gorlach, R. Ruimy, D. Yakushevskiy, M. Even Tzur, M. F. Ciappina, and I. Kaminer, ACS Photonics 12,
+     2440–2448 (2025).
+[43] R. V. Gothelf, C. S. Lange, and L. B. Madsen, Physical Review A 111, 10.1103/physreva.111.063105 (2025).
+[44] S. Lemieux, S. A. Jalil, D. N. Purschke, N. Boroumand, T. J. Hammond, D. Villeneuve, A. Naumov, T. Brabec, and
+     G. Vampa, Nature Photonics 19, 767–771 (2025).
+[45] Z. Lyu, F. Sun, S. Yi, J. Li, H. Liu, Q. He, Q. Gong, M. Ivanov, and Y. Liu, Attosecond quantum spectroscopy with
+     entangled photon pairs (2026).
+[46] I. I. Arkhipov, A. Barasiński, and J. Svozilı́k, Scientific Reports 8, 10.1038/s41598-018-35330-6 (2018).
+                                                                                                                     11
+
+                      Appendix A: Light-matter coupling for a one-dimensional waveguide
+
+For a one-dimensional model of light and matter there is an ambiguity in the way the problem is phrased. Given a
+waveguide of sectional area Aeff , the light-matter coupling would be given by
+
+                                                                   h                              i
+                                                               gk,s âk,s e−iωk t + â†k,s eiωk t
+                                                       X
+                                    Ĥcont (t) = σ̂x                                                               (A1)
+                                                         k,s
+
+
+                                                         r                              r
+                                                                 ℏωk                        2πωk
+                                      gk,s = µ · e k,s                   = µ · e k,s                               (A2)
+                                                               2Aeff Lϵ0                    Aeff L
+where L is the length of the waveguide (which we orient to the z-direction) which we will take to be infinite at the
+end of our calculation, µ = µeex is the dipole moment of matter and is fixed in the x-direction as it is the orientation
+of the driver. Also, since we only consider the modes propagation in the longitudinal direction of the waveguide, we
+have that ωk = |k| c = |k| /α, where α is the fine structure constant and k is an integer. From the two-polarizations
+                                                                                                         p µ · e y = 0,
+of light, oriented in x and y, only those that match the x-direction are coupled to the matter system since
+thus gk,y = 0 and we only consider those polarizations oriented in the x-direction, which have gk,x = µ 2πωk /Aeff L.
+The mode volume element is therefore given by vm = 2π/L, the frequency spacing is ∆ω = vm c = vm /α, and we can
+integrate over the wavenumber in continuum for L large enough to obtain an effective coupling to frequency modes,
+gη , each labeled by η = ω/ωL :
+
+                                                          X
+                                                                 gη âη e−iωη t + â†η eiωη t ,
+                                                                                            
+                                      Ĥcont (t) = σ̂x                                                             (A3)
+                                                          η∈D
+
+
+                    s                              s
+                                                     2π ∞ ω                           α √
+                                                                                 r         r
+                                      |k|
+                                                       Z
+                     X
+                           2                                                                   ωη
+             gη =         gk,x δ ωη −       ∆ω ≈ µ             δ (ωη − |ω|) dω = 2µ       ∆ω      .                (A4)
+                                       α             L −∞ Aeff                       Aeff      2
+                      k
+                        √                                               p
+Now we can take λ = g ∆ω as the light-matter coupling, and g = 2µ α/Aeff is the spectral light matter coupling
+strength. The factor g contains the effective coupling of matter with the energy mode.
+
+                                                                r
+                                                       X          ωη  −iωη t
+                                                                              + â†η eiωη t
+                                                                                            
+                                    Ĥcont (t) = σ̂x           λ      âη e                                        (A5)
+                                                                  2
+                                                       η∈D
+
+where Equation (A5) is the continuum interaction Hamiltonian from Eq. (3).
+
+To minimize computational cost, we restrict the spectral domain D, that is, the set of quantized continuum
+modes in Eq. (3), to the smallest mode space required for convergence in each calculation. Consequently, to
+compute spectra such as those in Figs. 2, S4, and 4, we isolate only the relevant harmonic windows. For in-
+stance, to calculate the correlation bewteen the nth and mth harmonics we restrict the spectral domain to
+D = {η | η ∈ (n − 0.5, n + 0.5) ∪ (m − 0.5, m + 0.5)}. This makes the calculations faster and avoids the need for
+renormalization of the TLS gap energy ∆. Including a larger range of continuum modes or enhancing the light-matter
+coupling by modifying the mode structure would require a more careful treatment of gap renormalization.
+
+
+                          Appendix B: Rabi frequency for coherent and squeezed states
+
+In order to compare coherent and squeezed driving using a√  consistent definition of Rabi frequency we will associate it
+directly with the laser power for both states, that is ΩR ∼ Ilaser . Hence, we define the Rabi frequency of a quantum
+laser with period T as
+
+                                                                     s
+                                               √                         2
+                                                                             Z
+                                       ΩR ≡        2µErms = µ                    ⟨: ÊL2 (t) :⟩ dt                 (B1)
+                                                                         T
+                                                                                                                            12
+                   h                       i
+with ÊL (t) = E0 âL e−iωL t + â†L eiωL t the interaction picture quantum electric field operator, and E0 =
+p
+  2αωL ∆ω/Aeff = κ/µ is the electric field of a single driving-mode photon. The definition from Eq. (B1) can be
+employed for any quantum state of light. Since the integral over time removes any time-dependent term, we end up
+with the time-independent terms containing âL and â†L , such that
+
+                                       Z
+                                   1                             h                   i
+                                           : ÊL2 (t) : dt = κ2 : âL â†L + â†L âL := 2E02 â†L âL .                  (B2)
+                                   T
+
+                                                                 q
+                                                          ΩR = 2κ ⟨â†L âL ⟩                                             (B3)
+
+For a non-interacting electromagnetic field, the photon number ⟨â†L âL ⟩ is a constant of motion representing the
+energy of the field. Now, we can define the Rabi frequency for coherent, BSV and Fock drivings: |α⟩L , |ξ⟩L , and |n⟩L ,
+respectively; employing ⟨α|L â†L âL |α⟩L = |α| , ⟨ξ|L â†L âL |ξ⟩L = sinh2 |ξ|, ⟨n|L â†L âL |n⟩L = n.
+                                                2
+
+
+
+
+                                                         ΩR [|α⟩L ] = 2κ |α| ,                                            (B4)
+
+
+
+                                                       ΩR [|ξ⟩L ] = 2κ sinh |ξ|,                                          (B5)
+
+
+                                                                        √
+                                                         ΩR [|n⟩L ] = 2κ n.                                               (B6)
+
+Note that for |ξ| → ∞, the BSV-associated Rabi frequency is ΩR [|ξ⟩L ] → κ exp (|ξ|). Equation (5) represents the
+effective squeezed-picture driving Hamiltonian where the Rabi frequency just defined carries the information about
+the strength of the driving.
+
+
+                                           Appendix C: Mode continuum spacing
+
+One of the most essential convergence parameters of this work is the mode spacing ∆ω = ωL ∆η, which in Fig. S4 was
+picked to be ∆η = 0.05. One can run the same calculation with ∆η = 0.1 and one gets the following result.
+
+
+
+
+FIG. S1. Photon correlation spectrum for the continuum of emission modes C (2) (ω, ω ′ ) with frequency spacing ∆η = 0.1 (left)
+and ∆η = 0.05 (right).
+                                                                                                                      13
+
+                                   Appendix D: Strong coherent driving Hamiltonian
+
+Eq. (5) is analogous to the displacement transformation of the driving Hamiltonian from Eq. (2),
+
+                                                            h                         i
+                 Ĥdriv (t) = D̂† (α)Ĥdriv (t)D̂(α) = µκσ̂x âL e−iωL t + â†L eiωL t + ΩR σ̂x cos (ωL t − φ),
+                   (d)
+                                                                                                                    (D1)
+
+with ΩR [|α⟩L ] = 2κ |α| as the Rabi frequency and φ the phase of the complex displacement α. Note that in the limit of
+κ → 0 and |α| → ∞ (infinite-photon limit) such that ΩR remains constant, then the quantized field in the Hamiltonian
+(carrying the back-action information) can be neglected and only the external driving remains non-negligible:
+
+                                                   (d)
+                                                Ĥdriv (t) → ΩR σ̂x cos (ωL t − φ).                                 (D2)
+
+Eq. (D2) constrasts with Eq. (5) as in the latter case (BSV driving) the quantum back-action cannot be neglected,
+whereas in the former case (strong coherent driving) the external driving is completely inert to the emission of matter
+into the same driving mode.
+
+
+                                Appendix E: Semiclassical methods for BSV driving
+
+In semiclassical methods to run BSV calculations one can either employ the Wigner or the Husimi    n     distribution
+                                                                                                          o
+                                                                                                     j
+and sample from it points in phase-space that act as initial conditions for different trajectories, αL (0) , where j
+represents the trajectory label and αL is the
+                                            n phase-space ovariable of the driving mode. The equations of motion for
+                                               j
+the light-matter system on each trajectory αL (t), |ψj (t)⟩ are
+
+                              (                h                                    i
+                                  i |ψ̇j (t)⟩ = ĤTLS + κσ̂x ℜ {αL (t) exp (−iωL t)} |ψj (t)⟩ ,
+                                     j
+                                                                                                                    (E1)
+                                  iα̇L (t) = κ ⟨ψj (t)| σ̂x |ψj (t)⟩ exp (iωL t)/2,
+             √
+where κ = λ ωL combines all the prefactors for the light-matter coupling. Defining E(t) = κα(t) as the field
+phase-space variable and taking the limit κ → 0 while preserving a distribution in E that is finite, we have
+
+                               (             h                                   i
+                                i |ψ̇j (t)⟩ = ĤTLS + σ̂x ℜ {Ej (t) exp (−iωL t)} |ψj (t)⟩ ,
+                                                                                                                    (E2)
+                                   iĖLj (t) = κ2 ⟨ψj (t)| σ̂x |ψj (t)⟩ exp (iωL t)/2 → 0,
+
+which amounts to saying that the field can be treated as an external fixed amplitude and phase: Ėj (t) = 0 → Ej (t) =
+Ej (0) = |Ej | eiφj , such that the equations of motion simplify to
+
+                                                  h                                  i
+                                     i |ψ̇j (t)⟩ = ĤTLS + σ̂x |Ej | cos (ωL t − φj ) |ψj (t)⟩ ,                    (E3)
+
+
+which basically means that the external driver is sampled from a probability distribution at initial time. Now, BSV
+has a preculiar shape in phase space when one represents is through the Wigner or the Husimi distribution.   √ They√are
+both Gaussian distributions centered at zero with squeezed-antisqueezed quadrature widths given by e−ξ / 2, eξ / 2
+                                                                                                     
+                √            √
+and 1 + e−ξ / 2, 1 + eξ / 2 , respectively for Wigner and Husimi distributions. In the limit of |ξ| → ∞ (and
+      
+simultaneously
+     √         λ → 0) we find that the phase-space field coordinates E tend for both Wigner and Husimi distributions,
+to 0, 2ΩR . Therefore, all semiclassical phase-space methods lead to the same numerical result in the infinite-photon
+limit. We numerically confirmed this result by comparing the excited state population over time, pe (t), employing the
+four methods: (i) Husimi sampling with back-action propagation, (ii) Wigner sampling with back-action propagation,
+(iii) Husimi sampling as external driving, and (iv) Wigner sampling as external driving. The results of such test can
+be found on Fig. S2. We compare such result with the exact calculation when computing the quantum state of the
+two-level system, which is completely defined by its excited-state occupation pe (t) ≡ ⟨Ψ(t)| (1 − σ̂x ) |Ψ(t)⟩ since the
+density matrix is exactly given by
+                                                                                                                             14
+
+
+
+
+FIG. S2. Occupation of the excited state over time, pe (t), employing different semiclassical methods: (i) Husimi sampling with
+back-action propagation, (ii) Wigner sampling with back-action propagation, (iii) Husimi sampling as external driving, and
+(iv) Wigner sampling as external driving.
+
+
+
+
+FIG. S3. Occupation of the excited state over time, pe (t), employing exact propagation (QED, blue) and semiclassical propaga-
+tion (SC, red). Note that the semiclassical propagation leads to the same result regardless of the specific method, as evidenced
+in Fig. S2.
+
+
+
+                                                                                
+                                                                 1 − pe (t) 0
+                                               ρ̂TLS (t) =                         ,                                       (E4)
+                                                                     0     pe (t)
+
+as correlations in the matter state remain zero throughout its evolution due to the symmetry of the BSV driver.
+Figure S3 shows pe (t) employing both the exact calculation and the semiclassical phase-space methods (see SI for a
+further discussion on the different semiclassical methods). The simulation parameters are a Rabi frequency employed
+was ΩR /ωL = 3.0 and a resonant condition ∆/ωL = 1. The light-matter was checked for values below κ/ωL < 10−7 .
+
+
+                          Appendix F: Wigner distribution in the squeezed representation
+
+To reconstruct the Wigner distribution of the driving mode in the squeezed picture, one must realize that the squeezing
+transformation in Eq. (4) means an implicit symplectic transformation (rotation and shearing) in the Wigner phase-
+space: W (s) (xL ) = W (S −1 (ξ)xL ) with xL = (qL , pL )T being the phase-space coordinate
+
+                                                              −|ξ|    
+                                                              e     0
+                                           S(ξ) = R(φ/2)                 R(−φ/2)                                           (F1)
+                                                                0 e|ξ|
+                                                                                                                           15
+
+
+                                                                             
+                                                                cos θ − sin θ
+                                                  R(θ) =                                                                  (F2)
+                                                                 sin θ cos θ
+
+Hence, one can always easily recover the Wigner distribution in the original representation W (xL ) from the Wigner
+distribution in the squeezed representation W (s) (xL ) by rotating and rescaling the axis. The Wigner distribution in
+the squeezed representation is reconstructed via the squeezed-Fock basis representation of its traced density operator
+  (s)               
+ρ̂L (t) = TrTLS,cont |Ψ(s) (t)⟩ ⟨Ψ(s) (t)| where TrTLS,cont represents the trace over the two-level system and the mode-
+continuum subspaces. The Wigner distribution is computed using the Wigner function of the Fock basis |n⟩ ⟨m|,
+wnm (x), such that:
+
+                                                                     (s)
+                                                         X
+                                      W (s) (xL ; t) =         ⟨n|L ρ̂L (t) |m⟩L wnm (xL ).                               (F3)
+                                                         n,m
+
+Therefore, the Wigner distribution will always be expressed in the squeezed representation. Additionally, the Wigner
+negative volume V− defined as the proportion of the phase space whose Wigner distribution is negative weighted by
+the distribution itself transforms trivially with the squeezing transformation since it is a symplectic transformation.
+Hence:
+
+                                      Z                                    Z
+                         V− (t) = −        W (qL , pL ; t)dqL dpL = −                W (s) (qL , pL ; t)dqL dpL ,         (F4)
+                                                                               (s)
+                                      D−                                   D−
+
+                                                                                                                    (s)
+where D− is the region of phase-space where the Wigner distribution is negative and D− is the region of the
+squeezed-phase-space with negative Wigner distribution. The negative volume is hence preserved in the squeezing
+transformation and we can compute it directly from the calculated Wigner distribution.
+                                                                                                              16
+
+                  Appendix G: Complete figure of the third-order correlation
+
+
+
+
+FIG. S4. Third-order photon correlation spectrum for the continuum of emission modes C (3) (ω1 , ω2 , ω3 ).
+

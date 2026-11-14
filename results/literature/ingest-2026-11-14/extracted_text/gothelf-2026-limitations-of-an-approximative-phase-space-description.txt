@@ -1,0 +1,1253 @@
+                                               Limitations of an approximative phase-space description in strong-field quantum
+                                                                                   optics
+                                                             Rasmus Vesterager Gothelf, Lars Bojer Madsen, and Christian Saugbjerg Lange
+                                                                           Department of Physics and Astronomy, Aarhus University,
+                                                                              Ny Munkegade 120, DK-8000 Aarhus C, Denmark
+                                                                                          (Dated: February 5, 2026)
+                                                           In recent years, strong-field processes such as high-order harmonic generation (HHG) and above-
+                                                        threshold ionization driven by nonclassical states of light have become an increasingly popular field
+                                                        of study. The theoretical modeling of these processes often applies an approximate phase-space
+                                                        expansion of the nonclassical driving field in terms of coherent states, which has been shown to
+                                                        accurately predict the harmonic spectrum. However, its accuracy for the computation of quan-
+                                                        tum optical observables like the degree of squeezing and photon statistics has not been thoroughly
+                                                        considered. In this work, we introduce this approximative phase-space description and discuss its
+                                                        accuracy, and we find that it mischaracterizes the quantum optical properties of the driving laser by
+arXiv:2602.04370v1 [quant-ph] 4 Feb 2026
+
+
+
+
+                                                        making it an incoherent mixture of classical states. We further show that this error in the driving
+                                                        field description maps onto the light emitted from HHG, as neither sub-Poissonian photon statistics
+                                                        nor quadrature squeezing below vacuum fluctuations can be captured by the approximative phase-
+                                                        space description. Lastly, to benchmark the approximative phase-space description, we consider the
+                                                        quantum HHG from a one-band model, which yields an exact analytical solution. Using the approx-
+                                                        imative phase-space representation with this specific model, we find a small quantitative error in the
+                                                        quadrature variance of the emitted field that scales with pulse duration and emitter density. Our
+                                                        results show that using this approximative phase-space description can mischaracterize quantum
+                                                        optical observables. Attributing physical meaning to such results should therefore be accompanied
+                                                        by a quantitative analysis of the error.
+
+
+                                                            I.   INTRODUCTION                                ing with quantum states of light. However, the accuracy
+                                                                                                             of the APP representation has not been verified for all
+                                              Strong-field quantum optics is a field in rapid develop-       relevant observables. Although the APP representation
+                                           ment. Following recent work on the quantum optical as-            accurately predicts HHG spectra [18, 21, 34], its accuracy
+                                           pects of strong-field processes such as high-harmonic gen-        for quantum optical observables such as photon statistics
+                                           eration (HHG) [1–9] alongside advancements in the pro-            and squeezing [18, 19, 21], as well as the electron-photon
+                                           duction of high-intensity quantum fields, called bright-          joint energy spectrum [35], is questioned.
+                                           squeezed vacuum (BSV) [10–16], studies of driving HHG                As more interest in the field develops and this approx-
+                                           with quantum states of light have received much interest.         imation finds more use, it is therefore relevant to analyze
+                                           Specifically, the effects of squeezed driving fields are of       the accuracy of the APP representation, in particular its
+                                           interest both theoretically [17–22] and in various strong-        predictions of quantum optical observables from HHG,
+                                           field experiments [23–26].                                        such that results obtained through it are interpreted with
+                                              One of the central theoretical methods applied in these        fitting skepticism.
+                                           studies using nonclassical driving fields is a coherent-             In this work, we demonstrate how the APP represen-
+                                           state expansion [17], where the quantum state of a gen-           tation cannot capture the quantum optical properties
+                                           eral driving field is expressed in terms of coherent states,      of quadrature squeezing below vacuum fluctuations and
+                                           motivated by previous works on coherently driven strong-          sub-Poissonian photon statistics for both the driving field
+                                           field processes [1]. Such an expansion maps the case of a         and the emitted HHG field, whether these properties are
+                                           general driving field onto the well-known case of a coher-        physically present or not, when considering an electronic
+                                           ent driving field. This method has proven to effectively          model in which the dipole correlations are neglected. We
+                                           predict the HHG spectra for nonclassical driving fields           quantify this error introduced by the APP representation
+                                           [17–21].                                                          for a coherently driven one-band model of a solid, which
+                                              However, for this method to be computationally fea-            yields an analytic solution.
+                                           sible in most cases, an approximation is applied [17, 18,            The paper is organized as follows: In Sec. II, to aid the
+                                           21, 27, 28], which we call the approximative positive P           discussion of the APP representation and for complete-
+                                           (APP) representation [18]. This approximation assumes             ness, we present the general derivation for HHG driven by
+                                           the coherent state expansion to be diagonal in a multi-           quantum light using phase-space expansions, and we dis-
+                                           dimensional phase space and the associated distribution           cuss the choice of representation, including an introduc-
+                                           function to be positive and smooth.                               tion and discussion of the APP representation. In Sec.
+                                              The APP representation has proved useful in comput-            III, we show that in the absence of dipole correlations
+                                           ing the spectra from HHG [17, 18, 21], ATI [29–33], and           in the electronic system, no quadrature squeezing below
+                                           for interpreting results of experiments [24] when driv-           vacuum fluctuations or sub-Poissonian photon statistics
+                                                                                                                                           2
+
+can be found. We also analyze the error introduced by                  glecting an Â2 term [1, 3])
+the APP in the driving field and in the HHG light emit-
+ted from a one-dimensional single-band solid driven by                                 ∂ α                    α
+                                                                                       i |ψ̃ (t)⟩ = Â(t) · ĵsc,I (t)|ψ̃ α (t)⟩,         (2)
+coherent light. Lastly, in Sec. IV we give a conclusion                               ∂t
+and an outlook. In Appendices A and B, we show that
+                                                                                             α†
+                                                                               α
+                                                                                                   P                   α
+the Wigner function is nonnegative when calculated us-                 where ĵsc,I (t) = Ûsc  (t) j p̂j +Aα    cl (t) Ûsc (t) is the semi-
+ing the APP, and we provide details on calculations for                classical current in the interaction picture, and where the
+the one-band model.                                                    quantized vector potential has gained a time dependence
+  Atomic units (ℏ = me = 4πϵ0 = e = 1) are used                        via Â(t) = ÛF† (t)ÂÛF (t).
+throughout the paper unless otherwise stated.                             To solve Eq. (2) one typically expands the combined
+                                                                       light-matter state in thePset of electronic eigenstates
+                                                                       {|ϕn ⟩} so that |ψ̃ α (t)⟩ = n |ϕn ⟩ ⊗ |χα       n (t)⟩, leaving the
+                                                                       photonic wave packets {|χα      n (t)⟩}   unknown.         Projecting
+                        II.   THEORY
+                                                                       onto the electronic state ⟨ϕn |, an equation of motion for
+                                                                       the photonic wave packets is obtained
+  We first present a derivation of the generated light from
+HHG with a general driving field, as also found in Refs.                              ∂ α                   X
+                                                                                                               α
+                                                                                  i      |χm (t)⟩ = Â(t) ·   jm,n (t)|χα
+                                                                                                                        n (t)⟩,          (3)
+[17, 18]. Here, we discuss the different choices of represen-                         ∂t                    n
+tation and formally introduce the APP representation.
+                                                                                 α
+                                                                       where jm,n    (t) = ⟨ϕm |ĵsc,I (t)|ϕn ⟩ are the so-called transi-
+                                                                       tion currents, as they connect, in general, two different
+                  A.   General formulation                             electronic states. The off-diagonal transition currents ac-
+                                                                       count for the time correlations in the dipole operator as
+  We consider the Hamiltonian for a general electronic                 seen in Refs. [4, 9, 36, 37].
+system driven by a quantum field                                           Solving Eq. (3) specifies the state of the entire system
+                                                                       as |ψ α (t)⟩ = ÛF (t)D̂(α)Ûsc α
+                                                                                                         (t) n |ϕn ⟩ ⊗ |χα
+                                                                                                            P
+                                                                                                                          n (t)⟩. An an-
+                     1X          2                                    alytic solution is given in Sec. II C for a system without
+              Ĥ =       p̂j + Â + Û + ĤF ,                  (1)                                            α
+                     2 j                                               dipole correlations, i.e., where jm,n      (t) = 0 for m ̸= n.
+                                                                           We now turn our attention to a general driving field.
+                                                                       The initial state of the density operator of the system is
+where p̂j is the momentum of electron j, Â =                          written as
+                         †
+        √g0                 ∗
+P                             
+    kσ ωk âkσ eσ + âkσ eσ is the quantized vector poten-                                  Z
+tial in the dipole approximation with ωk being the fre-                                            P (α, β)              O
+                                                                        ρ̂(0) = |ϕi ⟩⟨ϕi | ⊗ dµ ∗             |α⟩⟨β|              |0⟩⟨0|,
+quency corresponding to the wavevector k, and eσ being                                              ⟨β |α⟩
+                                                                                                                     (k,σ)̸=(kL ,σL )
+the polarization unit vector corresponding to polarization                                                                               (4)
+σ. The annihilation (creation) operator of the spectral
+mode (k, σ) is denoted âk,σ (â†k,σ ), and g0 =
+                                                          p
+                                                             2π/V      where we have expanded the driving field mode in terms
+is the coupling constant determined by the quantization                of coherent states [17] using a generalized P represen-
+volume V . Furthermore, Û is the electron potential and               tation [18, 38, 39]. Due to the overcompleteness of the
+ĤF = kσ ωk â†k,σ âk,σ is the free-field Hamiltonian.
+         P
+                                                                       coherent states, this expansion is not unique [38]. Hence,
+    First, we solve the Schrödinger equation for the Hamil-           for generality of notation, the integration measure dµ is
+tonian of Eq. (1) with a coherent driving field as in Refs.            not specified, thereby retaining this degree of freedom.
+[1, 3]. This is done by assuming the initial condition to be           Once such a measure is chosen, the state of the driving
+in the electronic groundstate, |ϕi ⟩, with a coherent state            laser is described by a unique P function (if one exists).
+|α⟩ in the laser mode (kL , σL ) and with the vacuum state                The density operator of the system has to fulfill the
+|0⟩ in all other photonic modes.NWe thus write the initial             von Neumann equation of motion i∂t ρ̂(t) = [Ĥ, ρ̂(t)] with
+state as |ψ α (0)⟩ = |ϕi ⟩ ⊗ |α⟩ (k,σ)̸=(kL ,σL ) |0⟩, letting         the Hamiltonian given in Eq. (1) along with the initial
+the initial state be prepared at time t = 0 for simplicity.            condition specified in Eq. (4). It is then simple to check
+In Ref. [34], this initial state was considered in terms of            that the density operator
+temporal mode quantum states.                                                             Z
+                                                                                               P (α, β) α         ∗
+    Switching to a displaced interaction picture with                              ρ̂(t) = dµ ∗        |ψ (t)⟩⟨ψ β (t)|        (5)
+                                                                                                ⟨β |α⟩
+|ψ̃ α (t)⟩ = Ûsc
+               α†
+                  (t)D̂† (α)ÛF† (t)|ψ(t)⟩, where ÛF (t) is the
+time-evolution operator of ĤF , D̂(α) is the displacement             indeed fulfills both, as i∂t |ψ α (t)⟩ = Ĥ|ψ α (t)⟩. Equation
+                                         α
+operator in the laser mode, and Ûsc       (t) is the semiclassi-      (5) is thus the general state of a system driven by a single-
+cal time-evolution operator for the system driven by the               mode quantum field.
+                              g0       −iωL t
+                                              eσL + α∗ eiωL t e∗σL ,
+                                                                  
+classical laser Aα cl (t) = √ωkL αe                                      The strength of this coherent phase-space expansion
+we obtain the time-dependent Schrödinger equation (ne-                [Eq. (5)] is apparent. By framing the problem in terms
+                                                                                                                                   3
+
+of coherent states, we map it onto a semiclassical prob-                    B.    The approximative positive P (APP)
+                                                   α                                      representation
+lem: First, the semiclassical transition currents jm,n (t)
+are computed using semiclassical methods. The emitted
+photonic state for a system driven by a coherent state is               To overcome the challenges presented above, an ap-
+then found using Eq. (3). Lastly, the quantum state of                proximate representation was first introduced in Ref.
+the driving field is accounted for by integrating the co-             [17]. This approximation uses the relation between the
+herent solutions with the distribution function P (α, β),             positive P distribution function and the Husimi function
+as given by Eq. (5).                                                  Q(α) [39, 40]
+   In the context of strong-field quantum optics, the
+                                                                                                                α + β∗
+                                                                                                                      
+utilized representations are typically the Glauber-                                             1 − |α−β∗ |2
+                                                                               P (PP) (α, β) =    e    4     Q           , (8)
+Sudarshan (GS) and the positive P (PP) representation.                                         4π                 2
+   The GS representation chooses dµ = d2 αd2 βδ (2) (α −              where the Husimi function is defined as
+  ∗
+β ) and the state of the system becomes
+                                                                                                    1
+                                                                                          Q(α) =      ⟨α|ρ̂L |α⟩,                (9)
+                                                                                                    π
+                     Z
+          ρ̂(t) =        d2 αP (GS) (α)|ψ α (t)⟩⟨ψ α (t)|,      (6)
+                                                                      for the density operator of the driving field ρ̂L .
+                                                                         To make the PP function diagonal, the Gaussian func-
+with a driving-field-specific distribution P (GS) (α). This           tion in Eq. (8) is approximated as a delta function.
+representation is diagonal in the coherent states; how-
+                                                                                                                           α + β∗
+                                                                                                                                 
+ever, the distribution function can be highly singular for             P (PP) (α, β) ≈ P (APP) (α, β) = δ (2) (α − β ∗ )Q           ,
+nonclassical fields. Indeed, a way to define a nonclassical                                                                  2
+field is a state for which the GS distribution is nega-                                                                         (10)
+tive or more singular than a delta function [40]. For this
+reason, the GS representation is not practical for compu-             where δ (2) denotes the two-dimensional Dirac delta dis-
+tation when driving with nonclassical fields such as BSV              tribution. We call the function in Eq. (10) the approxi-
+or Fock states.                                                       mative positive P (APP) function.
+   On the other hand, the PP representation chooses                      By substituting Eq. (10) into Eq. (7), we get an ap-
+dµ = d2 αd2 β, yielding the expression for the system state           proximate representation, where the system state is ex-
+                                                                      pressed as
+                               P (PP) (α, β) α
+                Z                                                                              Z
+                                                       ∗
+      ρ̂(t) =       d2 αd2 β        ∗
+                                            |ψ (t)⟩⟨ψ β (t)|,   (7)       ρ̂(t) ≈ ρ̂(APP) (t) = d2 αQ(α)|ψ α (t)⟩⟨ψ α (t)|, (11)
+                                  ⟨β |α⟩
+                                                                      which we call the APP representation of the system
+with a driving-field-specific distribution P (PP) (α, β). As          state. We note that the state of the driving laser and
+opposed to the GS representation, the PP distribution is              the laser parameters enter Eq. (11) through the field-
+positive and smooth for all states. However, it is not diag-
+                                                         ∗            specific Husimi function, Q(α).
+onal, in the sense that the outer products |ψ α (t)⟩⟨ψ β (t)|            The Husimi function exists and is smooth and positive
+in the integrand consist of two separate states, which                for all driving fields [38, 40]. Thus, the APP representa-
+again leaves this approximation impractical for compu-                tion is both diagonal and has a well-defined distribution
+tation. This impracticality stems from the high dimen-                function, overcoming the limitations of the GS and PP
+sionality of the integral, and from∗ the nontriviality of the         representations, and making it convenient for numerical
+inner product of |ψ α (t)⟩ and |ψ β (t)⟩: When calculating            computation of observables.
+                           ∗
+the matrix element ⟨ψ β (t)|Ôk,σ |ψ α (t)⟩ of a single-mode             The approximation of Eq. (10) has been reasoned in
+operator Ôkσ , the inner products of the two states in               different ways. In the original introduction in Ref. [17],
+the remaining modes are not trivially 1 and all photonic              it is argued under a coordinate transform to field ampli-
+modes would therefore need to be considered in the cal-               tudes ϵα = 2g0 α, which are held constant while taking
+culation. Though an expression for this overlap has been              the limit g0 → 0, corresponding to assuming an infinite
+considered in the continuum limit of g0 → 0 in Ref. [34],             quantization volume. In Ref. [27], this limit is further
+it is, in general, difficult to address and numerically de-           justified by keeping the product of g0 and the number of
+manding.                                                              emitters constant while taking the limit of g0 → 0. In
+   As is apparent, though this coherent phase-space ex-               Ref. [34], it is introduced as a lowest order expansion of
+pansion is attractive for its relation to coherently driven           Eq. (7) in a relative coordinate α−β
+                                                                                                         α+β , and in Ref. [18], it
+(and therefore also semiclassical) dynamics, both repre-              was justified under geometric arguments for the specific
+sentations prohibit explicit computation of observables               positive P distributions in question. In the present work,
+for certain driving fields of interest, such as BSV. We               we do not further consider the justification for using the
+stress, however, that if computation is possible in either            APP, but instead focus on its accuracy for computing
+representation, the presented theory is exact.                        quantum optical observables.
+                                                                                                                                  4
+
+                                                                       In Sec. III A, we show that quantum optical observ-
+                                                                    ables, such as quadrature squeezing and sub-Poissonian
+                                                                    photon statistics, of the generated field are not cap-
+                                                                    tured if present. Indeed, one might expect this already
+                                                                    from Eq. (11). If an operator Ô, for which the ex-
+                                                                    pectation value for a coherent driving field is denoted
+                                                                    ⟨Ô⟩α = ⟨ψ α |Ô|ψ α ⟩, is considered in the APP representa-
+                                                                    tion, its expectation value for a general field would be
+                                                                                                Z
+                                                                                       ⟨Ô⟩ = d2 αQ(α)⟨Ô⟩α ,               (13)
+
+                                                                    where Q(α) represents the distribution of the driving
+                                                                    field state in terms of coherent states, which is a clas-
+                                                                    sical mixture due to the nonnegativity and smoothness
+                                                                    of the Husimi function, and is determined from Eq. (9).
+                                                                       The measurement described in Eq. (13) can be re-
+                                                                    produced in an experiment with a classical (coherent)
+                                                                    laser: We could let the phase and amplitude of a co-
+FIG. 1. Illustration of (a) a pulse of BSV and (b) multiple         herent driver (captured by the complex number α) be
+shots of a classical laser with stochastic amplitude and phase.     chosen stochastically in each shot of the experiment ac-
+Comparing the electric fields that would be measured for both       cording to a classical probability distribution Pcl (α). The
+fields, both have no mean field and an uncertainty that os-         multi-shot average of the studied observable Ô would, by
+cillates in time. The uncertainties are similar when intensity      classical probability theory, be
+is large, but the minimum uncertainty in the stochastic laser
+(b) is bounded from below by 1/4, whereas the BSV field (a)
+                                                                                            Z
+is not. As discussed in the main text, using the APP repre-                          ⟨Ô⟩ = d2 αPcl (α)⟨Ô⟩α .               (14)
+sentation is equivalent to approximating (a) as (b).
+                                                                     As the Husimi function Q(α) is a smooth and positive
+                                                                     function, i.e., a classical distribution, we could choose
+   At this point, we may discuss some physical implica-              Pcl (α) = Q(α), and Eqs. (13) and (14) would be equal.
+tions of the APP representation. Firstly, we note that               Thus, we see that in a multi-shot experiment, this ap-
+though the applicability of the APP representation might             proximation for a quantum driving field is indistinguish-
+in some works be argued under properties of the HHG                  able from a classical driving field with stochastically de-
+target, such as having a large amount of HHG emitters                termined parameters. As a classically driven experiment
+in the target [27, 28], the approximation is essentially an          would not exhibit quantum optical features, we do not
+approximation on the driving field state, as the initial             expect the APP representation to capture these features
+condition of the system becomes                                      either due to this equivalence.
+                           Z                       O                    In Fig. 1, an illustration of a BSV field [Fig. 1(a)] and
+ρ̂(APP) (0) = |ϕi ⟩⟨ϕi | ⊗ d2 αQ(α)|α⟩⟨α|                    |0⟩⟨0|, a stochastic classical laser [Fig. 1(b)] is depicted. The un-
+                                             (k,σ)̸=(kL ,σL )        certainties in the electric field in multi-shot experiments
+                                                             (12)    are similar for the two fields, though the classical field
+                                                                     cannot exhibit a minimum variance below 1/4. In using
+meaning    that the state of the driving field is ρ̂L
+                                                      (APP)
+                                                               =     the APP, the BSV field in Fig. 1(a) is approximated as
+R 2
+   d αQ(α)|α⟩⟨α|. We note that since the laser field                 the classical stochastic field in Fig. 1(b).
+state has been put on a diagonal form with a positive
+and smooth distribution function, we have effectively as-
+                                                                          C. Analytical solution for coherently driven
+sumed the laser to be an incoherent mixture of coherent
+                                                                                systems with no dipole correlations
+states, i.e., a classical field, independent of the nature of
+the driving field, classical or nonclassical. In Sec. III B we
+show examples of how this mixed-state description leads                 For use in Secs. III A and III C, we present the ana-
+to a mischaracterization of the quantum optical aspects              lytic solution of Eq. (3) for a system where the current
+                                                                                                        α
+of the driving field.                                                operator   is diagonal, i.e., if jm,n  (t) ∝ δm,n . Physically,
+   Nevertheless, while the APP representation may fail               this condition  states that  there   are no dipole correlations
+to capture quantum optical aspects of the driving field,             [3, 9]. If we assume that this is the case, the solution is
+one might expect it to still capture the relevant features           a multimode coherent state [1, 3, 40, 41]
+of the generated field [27]. It has already been seen that                                          O 
+                                                                                   |χα                        α
+                                                                                                                    
+the APP representation captures the HHG spectrum well                                m (t)⟩ = δm,i       D γk,σ  (t) |0⟩,       (15)
+[18, 21], validating results studying HHG spectra [17, 18].                                         k,σ
+                                                                                                                                             5
+
+                                                                                      (2)
+where the subscript i denotes the initial electronic state,                  where gk,σ (0) = 1 signifies Poissonian statistics, found
+and where                                                                                                         (2)
+                                                                             in, e.g., coherent states, while gk,σ (0) < 1 signifies sub-
+                        Z t
+                    g0       α ′                 ′                           Poissonian statistics, found in, e.g., Fock states and
+       α
+     γk,σ (t) = −i √        ji,i (t ) · eσ eiωk t dt′ , (16)                  (2)
+                     ωk 0                                                    gk,σ (0) > 1 signifies super-Poissonian statistics, found
+                                                                             in, e.g., thermal and BSV states [40].
+is the coherent state parameter for the emitted light in                        For clarity, we distinguish between exact expectation
+mode (k, σ). Again, the driving field is assumed to turn                     values and expectation values calculated using the APP
+on at time t = 0 for simplicity, and therefore the lower                     representation by denoting the latter by ⟨·⟩(APP) .
+bound on the integral in Eq. (16) is 0.
+   For some systems, such as, e.g., a one-band model of
+a solid [3, 18], which is considered in Sec. III C, Eqs.                                        A.   General statements
+(15) and (16) are exact, but we emphasize that for most
+systems, such as atomic systems, multi-band models, or                         We start by proving that squeezing below vacuum fluc-
+models with electron correlations, this is not the case                      tuations and sub-Poissonian photon statistics cannot be
+[1, 3, 5], though it is often assumed for simplicity [17, 19,                found for nonclassically driven HHG when using the APP
+21, 27, 28, 34, 36].                                                         representation under the assumption that driving the sys-
+                                                                             tem with a coherent state generates a coherent state from
+                                                                             HHG. As discussed in Sec. II C, although the coherent-in-
+            III.      ACCURACY OF THE APP
+                      REPRESENTATION                                         coherent-out assumption is not exact for most electronic
+                                                                             systems, it is widely adopted [17, 19, 21, 27, 28, 34, 36]
+                                                                             and therefore relevant to the present work.
+   We now present an analysis and discussion of the accu-                      Together, the APP representation and the coherent-in-
+racy of the APP representation, by first showing a general                   coherent-out assumption yield expressions via Eqs. (13)
+proof that quantum optical features are not present under                    and (16) for the relevant expectation values [using the
+the APP representation when driving a system without                         shorthand notation n = (k, σ) for a general mode] that
+dipole correlations with nonclassical light in Sec. III A.                   read
+For a quantitative benchmark, we consider the error in-                                                           Z
+troduced by the APP representation in (i) the driving                                         ⟨â†n ân ⟩(APP) = d2 αQ(α)|γnα |2     (20a)
+field in Sec. III B and (ii) in an example of the field                                                           Z
+generated from HHG in a single-band solid driven by co-                          2 (APP) ∗
+herent light in Sec. III C.                                                      ⟨ân ⟩       = ⟨â2n ⟩(APP) = d2 αQ(α)γnα 2         (20b)
+   For convenience, we state mathematically the observ-                           (APP) ∗
+                                                                                                                  Z
+ables of interest: The spectrum is given by [1, 3, 17, 18]                         ⟨â⟩       = ⟨ân ⟩(APP) = d2 αQ(α)γnα            (20c)
+                            X †                                                                                   Z
+                  S(ωk ) ∝    ⟨âk,σ âk,σ ⟩.         (17)                                   ⟨â†n 2 â2n ⟩(APP) = d2 αQ(α)|γnα |4 . (20d)
+                                     σ
+
+As stated previously, multiple previous works have found                       First, we consider quadrature squeezing. From Eq.
+that the spectrum is well captured by the APP represen-                      (18), it is apparent that the minimum quadrature vari-
+tation [18, 21, 34], which we again find in Sec. III C.                      ance is given by
+   Quadrature squeezing is quantified by the variance                                                    
+of the quadrature with angle θ, defined as X̂k,σ (θ) =                                             1 1  †                           
+                                                                                 min ⟨∆X̂n2 (θ)⟩ = +       ⟨ân ân ⟩ − ⟨ân ⟩⟨â†n ⟩
+1
+2 (âk,σ e
+           −iθ
+               + â†k,σ eiθ ), and is given as                                  θ∈[0,π)            4 2
+                                                                                                                                    
+                                                                                                              − ⟨â2n ⟩ − ⟨ân ⟩2 . (21)
+                         
+                       1                                          
+         2
+  ⟨∆X̂k,σ (θ)⟩ =          1 + 2 ⟨â†k,σ âk,σ ⟩ − ⟨â†k,σ ⟩⟨âk,σ ⟩
+                       4
+                                            
+                                                   †2         †
+                                                                           Hence, the condition for squeezing below vacuum fluctu-
+       −2iθ       2               2       2iθ                       2
+   +e          ⟨âk,σ ⟩ − ⟨âk,σ ⟩ + e          ⟨âk,σ ⟩ − ⟨âk,σ ⟩      ,   ations, which signifies a quantum optical squeezed state,
+                                                                    (18)     is ⟨â2n ⟩ − ⟨ân ⟩2 > ⟨â†n ân ⟩ − ⟨ân ⟩⟨â†n ⟩. However in the
+                                                                             APP representation using Eq. (20) we find that
+with a minimum variance below 1/4 signifying a quantum
+optical squeezed state, as it has a lower variance in one                           ⟨â2n ⟩(APP) − ⟨ân ⟩(APP) 2
+quadrature than the vacuum state.
+                                                                                                                          2
+  Lastly, the photon statistics are quantified by the                                     Z                    Z
+second-order normalized coherence function                                          =        d2 αQ(α) γnα 2 − d2 βQ(β)γnβ
+
+                    (2)       ⟨â†k,σ â†k,σ âk,σ âk,σ ⟩                              Z               Z          2
+                   gk,σ (0) =                              ,        (19)            ≤       2         α2   2      β
+                                                                                            d α Q(α) γn − d βQ(β)γn ,                     (22)
+                                    ⟨â†k,σ âk,σ ⟩2
+                                                                                                                                            6
+
+where the inequality is a standard result of integrals. We                         Combining these findings, we draw a physical picture
+can use the fact that Q(α) is a nonnegative function to                         of the APP representation: By approximating the driv-
+pull it outside the absolute value in Eq. (22) and obtain                       ing field as a statistical mixture, the nonclassicality of the
+                                                                                driving field is neglected. This maps onto the generated
+         ⟨â2n ⟩(APP) − ⟨ân ⟩(APP) 2                                           field state, which also lacks these quantum optical fea-
+                                                                                tures (quadrature squeezing below vacuum fluctuations,
+                                        2
+                                                                                sub-Poissonian photon statistics, and negativity of the
+             Z                    Z
+         ≤ d2 αQ(α) γnα 2 − d2 βQ(β)γnβ                                         Wigner Function), and points to the generated field also
+             Z                             Z                  2                 being approximated as a statistical mixture of classical
+                              2                                                 fields, as is consistent with the expectations discussed in
+         =         d αQ(α) γnα +
+                    2
+                                   d2 βQ(β)γnβ
+                                                                                Sec. II B.
+                       Z           Z             
+                 − 2Re     2      α     2
+                          d αQ(α)γn d βQ(β)γn  β∗                                  Hence, by assuming that driving HHG with a coher-
+                                                                                ent state generates a coherent state and by using the
+             Z
+                                   2
+                                           Z                  2                 APP representation, the quantum optical features are
+         =         d2 αQ(α) γnα        −       d2 βQ(β)γnβ                      neglected, and one can therefore not look for such quan-
+                                                                                tum optical features in the generated light (or driving
+         = ⟨â†n ân ⟩(APP) − ⟨ân ⟩(APP) ⟨â†n ⟩(APP) ,                 (23)   field) using these two approximations.
+
+which      shows          that    ⟨â2n ⟩(APP) − ⟨ân ⟩(APP) 2             ≤
+⟨â†n ân ⟩(APP)
+              − ⟨ân ⟩        (APP)
+                                      ⟨â†n ⟩(APP) .
+                                         Thus, we have
+proved that from the expectation values in Eq. (20),
+squeezing below vacuum fluctuations is unattainable in                                          B.    Example: Driving field
+the APP representation, independent of the quantum
+optical nature of the driving field.                                               To see an example of the statements presented in Sec.
+   In contrast, works have already predicted small but                          III A, and to obtain a quantitative estimate of the error
+definite squeezing in the emitted field without using the                       introduced by the APP, we now apply the APP repre-
+APP representation for both a coherent driving field [1,                        sentation to the driving field and compare the predicted
+3, 5, 7] and for a displaced squeezed driving field [42],                       expressions for the photonic observables against exact ex-
+which would not be captured using the APP.                                      pressions. This case was already considered in Ref. [18],
+   Using the APP representation, squeezing below vac-                           but is stated more generally in this work. We shall de-
+uum fluctuations cannot be found, and one can there-                            note the driving field with the density operator ρ̂L , and
+fore not discern whether the absence hereof is physical or                      the APP representation as
+a consequence of using the APP representation. Thus,
+physical meaning cannot be attributed to the absence                                                          Z
+of squeezing below vacuum fluctuations when using the                                              (APP)
+                                                                                                 ρ̂L     =          d2 αQ(α)|α⟩⟨α|.       (25)
+APP representation.
+   We can likewise consider the photon statistics. Rewrit-
+ing Eq. (19) and evaluating in the APP representation,
+we see that                                                                       Using the optical equivalence theorem for anti-
+                                                                                normally ordered operators [38], we find expressions for
+                              ⟨â†n 2 â2n ⟩(APP) − ⟨â†n ân ⟩(APP) 2          the exact expectation values
+  g (2)(APP) (0) = 1 +
+                                        ⟨â†n ân ⟩(APP) 2
+                                                          2
+                        d2 αQ(α) |γnα |2 − d2 βQ(β)|γnβ |2
+                   R                          R                                                                     Z
+        =1+                                                          , (24)                          ⟨ââ† ⟩ =         d2 αQ(α)|α|2     (26a)
+                                  ⟨â†n ân ⟩(APP) 2                                                                Z
+where the numerator is the integral over a product of                                                  ⟨â2 ⟩ =         d2 αQ(α)α2       (26b)
+two nonnegative functions [the Husimi function Q(α) and                                                             Z
+the square of a real-valued function], which implies that                                                ⟨â⟩ =         d2 αQ(α)α        (26c)
+g (2)(APP) (0) ≥ 1, meaning that sub-Poissonian photon                                                              Z
+statistics cannot be predicted by the APP representation.                                        ⟨âââ† â† ⟩ =       d2 αQ(α)|α|4 ,   (26d)
+Discussion of this result mirrors that of squeezing.
+   Similarly, we show in App. A that the Wigner func-
+tion, when computed using the APP, is nonnegative,
+                                                                                and ⟨â† ⟩ = ⟨â⟩∗ and ⟨â†2 ⟩ = ⟨â2 ⟩∗ .
+which, together with the fact that there is no squeez-
+ing, implies that the state is either coherent or a mixed                         Meanwhile, to find expectation values of normally or-
+state [43].                                                                     dered operators using the APP representation, we evalu-
+                                                                                                                                                          7
+
+ate the traces                                                                    by inserting Eq. (28) into Eq. (19).
+
+                                                                                                                 ⟨â† â† ââ⟩(APP)   ⟨âââ† â† ⟩
+                                                                                              g (2) (APP) (0) =                      =
+                                                         Z
+                                           (APP)
+          ⟨â† â⟩(APP) = Tr â† âρ̂L                 =       d2 αQ(α)|α|2                                       [⟨â† â⟩(APP) ]2     ⟨ââ† ⟩2
+                                                                                               † †              †
+                                                                                            ⟨â â ââ⟩ + 4⟨â â⟩ + 2
+                                                                        (27a)             =                      2
+                                                         Z                                        ⟨â† â⟩ + 1
+                                           (APP)
+             ⟨â2 ⟩(APP) = Tr â2 ρ̂L                  =       d2 αQ(α)α2
+                                                                                              ⟨â† â† ââ⟩ ⟨â† â⟩2     4⟨â† â⟩ + 2
+                                                                                          =                              +
+                                                                                               ⟨â† â⟩2 ⟨â† â⟩ + 1 2
+                                                                                                                                        2
+                                                                        (27b)
+                                                                                                                       
+                                                                                                                         ⟨â† â⟩ + 1
+                                                           Z
+               ⟨â⟩(APP) = Tr âρ̂L
+                                           (APP)
+                                                       =       d2 αQ(α)α                                  ⟨â† â⟩2           4⟨â† â⟩ + 2
+                                                                                          = g (2) (0)                  2 +                2 ,         (30)
+                                                                                                        ⟨â† â⟩ + 1          ⟨â† â⟩ + 1
+                                                                        (27c)
+                                                  
+                                                                                  where we have used the standard commutation relation
+                                                           Z
+                                           (APP)
+ ⟨â† â† ââ⟩(APP) = Tr â† â† ââρ̂L              =       d2 αQ(α)|α|4 ,     of â and â† to rewrite the expression.
+                                                                        (27d)        The error in this expression goes to zero as the driv-
+                                                                                                                              †
+                                                                                                                                â⟩2
+                                                                                  ing field becomes strong, since (⟨â⟨â  † â⟩+1)2 → 1 and
+                                                                                   4⟨â† â⟩+2
+                             ∗                         ∗                                        → 0 as ⟨a† a⟩ → ∞. Specifically, for a Fock
+and ⟨â†2 ⟩(APP)= ⟨â2 ⟩(APP) and ⟨â† ⟩(APP)= ⟨â⟩(APP) .
+                                             
+                                                                                  (⟨â† â⟩+1)2
+                                                                                                                                1
+We note that Eq. (27) is equivalent to Eq. (20) using the                         state we find that g (2) (APP) (0) = 1 + ⟨a† a⟩+1  > 1, as is
+function γnα = α, and the statements about the quantum                            also predicted by Sec. III A. Comparing this to the exact
+optical observables from Sec. III A thus apply to the                             result g (2) (0) = 1 − 1/⟨a† a⟩, we see that both expressions
+driving field as well.                                                            go to 1 for ⟨a† a⟩ → ∞. Hence the absolute error goes to
+                                                                                  zero, but as g (2) (APP) (0) approaches 1 from above while
+  Comparing Eqs. (26) and (27) we find that
+                                                                                  g (2) (0) approaches 1 from below, we see for all Fock states
+                                                                                  that though the error becomes small, the physical nature
+                  ⟨â† â⟩(APP) = ⟨ââ† ⟩ = ⟨â† â⟩ + 1               (28a)     of the Fock state is mischaracterized as having super-
+                                                                                  Poissonian photon statistics, rather than the exact sub-
+                    ⟨â2 ⟩(APP) = ⟨â2 ⟩                                (28b)     Poissonian statistics. This discussion is consistent with
+                          (APP)
+                       ⟨â⟩           = ⟨â⟩                            (28c)     the discussion of the Mandel parameter in the appendix
+                 † †      (APP)                † †
+                                                                                  of Ref. [18], which further illustrates the mischaracter-
+              ⟨â â ââ⟩            = ⟨âââ â ⟩.                   (28d)     ization of the photon statistics for a Fock state driving
+                                                                                  field when using the APP.
+                                                                                     Thus, the intensity of the driving field in the APP
+                                                                                  representation contains a small error compared to exact
+   First, we see that the photon number ⟨â† â⟩(APP) differs                     predictions, but the quantum optical characteristics, i.e.,
+from the exact result by a constant value of 1. For intense                       the degree of squeezing and photon statistics, are not
+fields, the mean photon number is very large, and the                             accurately captured.
+error introduced by the APP is therefore small.
+   However, for squeezing we see by inserting Eq. (28)                                  C.        Example: HHG from a one-band model
+into Eq. (18) that
+                                                                                                             1.   Exact results
+                                               1
+               ⟨∆X̂ 2 (θ)⟩(APP) = ⟨∆X̂ 2 (θ)⟩ + ,                          (29)
+                                               2                                     In Sec. III A, we showed that the APP representation
+                                                                                  does not capture the nonclassical properties of light, if
+                                                                                  present, and in Sec. III B, we considered the quantitative
+which has multiple consequences: In the APP represen-
+                                                                                  error this introduces to the driving field. However, as
+tation, the quadrature variance is bounded from below
+                                                                                  argued in Ref. [27], this does not immediately imply
+by 1/2, independent of the quantum nature of the field.
+                                                                                  that the error in the observables of the generated field is
+Thus, quadrature squeezing cannot be found in the driv-
+                                                                                  of significant magnitude.
+ing field when using the APP representation, as is con-
+                                                                                     For this reason, we now consider an example of the field
+sistent with Sec. III A. Furthermore, as a coherent state
+                                                                                  generated from HHG in a one-dimensional single-band
+has ⟨∆X̂ 2 (θ)⟩ = 1/4 for all θ, we find that the APP rep-
+                                                                                  model of a solid driven by coherent light as considered in
+resentation approximates a coherent state as a state that
+                                                                                  Ref. [18]. As shown in Refs. [3, 18] there are no dipole
+is not of minimum quadrature variance, i.e., a state that
+                                                                                  fluctuations, and Eq. (15) is therefore exact, i.e., the
+is not a coherent state.
+                                                                                  exact quantum state of the emitted light is a multi-mode
+  Likewise, the second-order coherence function is found                          coherent state. Furthermore, the analytical solutions for
+                                                                                                                                                   8
+
+the electronic dynamics are obtainable, which allows us                       where n is an odd integer and Gn = 4πag √ 0 δ(ωn − nωL ) is
+                                                                                                                       ωn
+to obtain analytical expressions for the quantum optical                      a coefficient determining the amplitude of the coherent
+observables of the emitted field.                                             state in harmonic n.
+   The Hamiltonian for the one-dimensional, one-band                             We note that the presence of a delta function in Gn
+model driven by a classical field with vector potential                       is due to the infinite nature of the time-periodic pulse.
+Aαcl (t) (polarized along the direction of the chain and with                 Renormalization is therefore done for numerical purposes
+α again being the corresponding coherent state parame-                        by matching the amplitude to a simulation of a pulse with
+ter) is, in crystal momentum space, given as [18]                             finite duration [18].
+                α
+                         X                †                                    Equation (36) is exact and can be used to compute
+              Ĥsc (t) =   E q + Aα cl (t) ĉq,µ ĉq,µ , (31)                 observables of interest exactly. Specifically, the spectrum
+                            q,µ                                               is
+with ĉq,µ being the annihilation operator of the electron
+                                                                                                    S(ωn ) ∝ ⟨â†n ân ⟩ = |γnα |2 ,           (37)
+Bloch state with crystal momentum q in the direction of
+the chain and spin µ, and with                                                which can be evaluated using Eq. (36), and where the
+                         X                                                    sum over σ is neglected, as only the polarization direction
+                  E(q) =      bl cos(alq),            (32)
+                                                                              along the lattice contributes [18].
+                                  l
+                                                                                For the consideration of quantum optical observables
+being the dispersion relation of the material with lattice                    in the presented one-band model, we choose to consider
+constant a and the l’th Fourier coefficient bl .                              only the quadrature squeezing for simplicity. The exact
+  In this system, the current operator is given as [3, 18,                    value of the quadrature variance is
+44]
+                                                                                                                            1
+                          
+                      X ∂E q + Aα
+                                                                                                           ⟨∆X̂n2 (θ)⟩ =     ,                (38)
+             α                   cl (t) †                                                                                   4
+           ĵsc (t) =                    ĉq,µ ĉq,µ . (33)
+                      q,µ
+                              ∂q                                              as the state is a coherent state.
+                                                                                To be able to compare the exact expressions of this
+                                                         α        α
+From Eqs. (31) and (33), we see that [Ĥsc                 (t), ĵsc (t)] =   section against the expressions using the APP represen-
+   α         α
+[Ûsc (t), ĵsc (t)] = 0, allowing for a set of semiclassical so-             tation in Sec. III C 2 below, we expand Eq. (36) in terms
+lutions {|ϕα                           α         α       α
+                 n (t)⟩}, i.e., i∂t |ϕn (t)⟩ = Ĥsc (t)|ϕn (t)⟩ that are
+                                                                              of the driving field amplitude, |α|. Doing so yields the
+                                                         α
+                                                           (t)|ϕα             expression
+eigenstates of the current operator, i.e., ĵsc                   n (t)⟩ ∝
+   α                                     α     α       α
+|ϕn (t)⟩, which means that ⟨ϕm (t)|ĵsc (t)|ϕn (t)⟩ ∝ δm,n .                                                 ∞
+                                                                                                             X
+   Therefore, the solution is analytically given by Eq.                                      γnα = Gn              (n)
+                                                                                                                  Dm   |α|2m+n einφα ,         (39)
+(15), i.e., a multi-mode coherent state. We now go fur-                                                     m=0
+ther by assuming a time-periodic pulse, which allows the                                                   2m+n 2m+n
+current to be computed as [18]                                                        (n)
+                                                                              with Dm =
+                                                                                             P
+                                                                                                  (−1)m
+                                                                                                        C  g̃0      l
+                                                                                                l        l 2       m!(m+n)! being ex-
+                                                                              pansion coefficients, stemming from the power-series ex-
+                        X
+       α
+                                                             
+     ji,i (t) = −2a          Cl sin g̃0 l|α| sin(ωL t − φα ) ,         (34)
+                        l
+                                                                              pansions of the Bessel functions. From this expression,
+                   P                                                          we find that
+with Cl = lbl q cos(alq) being a crystal specific geo-
+                             √                                                                      ∞ ∞
+metric constant, g̃0 = 2ag0 / ωL being a lattice-modified                       ⟨â†n ân ⟩ = G2n
+                                                                                                    X X
+                                                                                                                   (n) (n)
+                                                                                                                  Dm   Dm2 |α|2m1 +2m2 +2n , (40)
+coupling constant and φα being the phase of α.                                                      m1 =0 m2 =0
+                                                                                                                     1
+
+  To compute the Fourier transform of Eq. (34), we
+apply the Jacobi-Anger expansion and obtain                                   with similar expressions for ⟨â2n ⟩ and ⟨ân ⟩ given in App.
+  Z ∞                         X      X∞                                       B.
+           α       iωt
+        dtji,i (t)e = −4iπa     Cl           Jn (lg̃0 |α|)
+     −∞                                l      n=1,3,5,...
+                                                                                                       2.     APP predictions
+                   × e−inϕ δ(ω + nωL ) − einϕ δ(ω − nωL ) ,
+                                                        
+
+                                                         (35)
+                                                                                We now calculate the same observables as considered
+where Jn denotes the n’th order Bessel function of the                        in Sec. III C 1 above for the coherently driven one-band
+first kind. Substituting Eq. (35) into Eq. (16) and only                      model using the APP representation and compare them
+considering positive frequencies, we obtain the analytical                    to the exact calculations.
+expression for the coherent amplitude of the odd harmon-                        In Eq. (40), the exact expression of the expectation
+ics                                                                           value ⟨â†n ân ⟩ = ⟨γnα |â†n ân |γnα ⟩ is given for a coherent driv-
+                       X                                                      ing field α. To obtain the APP expression for this expec-
+             γnα = Gn     Cl Jn (lg̃0 |α|)einφα ,    (36)                     tation value, we apply Eq. (13), i.e., we integrate the ex-
+                              l                                               act expression for a coherently driven system [Eq. (40)]
+                                                                                                                                9
+
+with the Husimi function of the driving field, which for a       expressions are vanishing, whereas the APP expressions
+coherent state |α⟩ is given as                                   are not. The error introduced by the APP is thus signif-
+                                                                 icant in this instance.
+                                  1 −|β−α|2                         A similar analysis could be considered for g (2) (0) by
+                      Q(β) =        e       ,             (41)
+                                  π                              considering higher moments of ân and â†n . We expect a
+where β is the phase-space coordinate for integration.           small positive error, though the scaling of the error with
+  Doing so, we find that                                         system size as seen for the squeezing is not expected for
+                                                                 g (2) (0) due to the division by ⟨â†n ân ⟩2 in Eq. (19), which
+                           ∞ ∞
+                           X X                                   acts a normalization. This expectation is consistent with
+  ⟨â†n ân ⟩(APP) = G2n                  (n) (n)
+                                         Dm 1
+                                              Dm2                the considerations for the driving field in Sec. III B.
+                           m1 =0 m2 =0
+         m1 +m
+            X2 +n               
+                      m1 + m2 + n (m1 + m2 + n)! 2q
+     ×                                          |α| ,                                 3.    Numerical results
+           q=0
+                           q            q!
+                                                          (42)      To estimate the error in the quadrature variance quan-
+with details on the calculations and similar expressions         titatively, we consider the highest-order nonvanishing
+for ⟨â2n ⟩(APP) and ⟨ân ⟩(APP) given in App. B.                terms in the quadrature squeezing calculated using the
+  Comparing the APP expression for the spectrum in               APP expressions. For the full expressions, see Eq. (42)
+Eq. (42) to the exact expression in Eq. (40) by terms in         and App. B. The highest-order nonvanishing term inside
+the sum over m1 and m2 , we see that the highest-order           the sum over m1 and m2 in the expansion of Eq. (45) is
+term in the sum over q in Eq. (42) matches Eq. (40).             of order |α|2(m1 +m2 +n−1) , and Eq. (45) is determined to
+Thus, the lower-order terms in Eq. (42) account for the          the highest order as
+error introduced by the APP representation.                            ⟨â†n ân ⟩(APP) − ⟨â†n ⟩(APP) ⟨ân ⟩(APP)
+  For the spectrum, the termwise relative error in the                                 ∞ X ∞
+sum over m1 and m2 is found by subtracting the terms                                  X
+                                                                                ≈ G2n           Dm(n) (n)
+                                                                                                      Dm2 |α|2(m1 +m2 +n−1)
+in Eqs. (40) and (42) and dividing by the term in the                                               1
+                                                                                     m1 m2
+exact expression [Eq. (40)], i.e.,
+                                                                                × n2 + 2m1 m2 + nm2 + nm2
+                                                                                                                    
+                                                                                                                              (46)
+Pm1 +m2 +n m1 +m2 +n (m1 +m2 +n)! 2q
+   q=0              q            q!    |α| − |α|2m1 +2m2 +2n
+                                                                 and
+                     |α|2m1 +2m2 +2n                                                           2
+                                                                    ⟨â2n ⟩(APP) − ⟨ân ⟩(APP)
+                                                                                    
+m1 +m 2 +n−1
+                        
+    X        m1 + m2 + n (m1 + m2 + n)! 2q−2(m1 +m2 +n)
+=                                      |α|                                                ∞ X∞
+                  q               q!
+                                                                                         X
+    q=0                                                                     ≈ G2n e2inφα          (n) (n)
+                                                                                                 Dm 1
+                                                                                                      Dm2 |α|2(m1 +m2 +n−1)
+                                                                                           m1 m2
+= O(1/|α|2 ).                                             (43)                                  
+                                                                            × 2m1 m2 + nm2 + nm2 .                            (47)
+We may therefore expect the relative error on the spec-
+trum to go approximately as O(1/|α|2 ), and since |α|2 is           As explained in detail in App. B, Eqs. (46) and (47)
+proportional to the driving field intensity, we see that the     have closed-form expressions in terms of Bessel functions.
+relative error on the spectrum vanishes for strong driving       Hence, numerical evaluation of the highest-order term for
+fields, which is consistent with results presented in Refs.      the quadrature variance in harmonic n is possible. Using
+[18, 21, 34], as previously stated.                              that the exact value of the squeezing is 1/4 [Eq. (38)],
+   For the quadrature squeezing, we saw for the exact            we compute the error from this highest-order expansion
+result, since the emitted state is coherent, that                as
+
+                   ⟨â†n ân ⟩ − ⟨â†n ⟩⟨ân ⟩ = 0                  ⟨∆X̂n2 (θ)⟩(APP) − ⟨∆X̂n2 (θ)⟩
+                                                                         
+                            ⟨â2n ⟩ − ⟨ân ⟩2 = 0,        (44)         1  †                                             
+                                                                     =      2 ⟨ân ân ⟩(APP) − ⟨â†n ⟩(APP) ⟨ân ⟩(APP)
+                                                                       4
+and by inserting Eq. (44) into Eq. (18), we recover the                  h                                             i
+result in Eq. (38).                                                    + e−2iθ ⟨â2n ⟩(APP) − ⟨ân ⟩(APP) 2 + c.c. .          (48)
+   Using the APP expressions, which are written in detail
+in App. B, we find that
+                                                                 Similarly, the next-highest-order terms in ⟨â†n ân ⟩(APP) −
+                                                                                                                        2
+             ⟨â†n ân ⟩(APP) − ⟨â†n ⟩⟨ân ⟩(APP) ̸= 0          ⟨â†n ⟩(APP) ⟨ân ⟩(APP) and ⟨â2n ⟩(APP) − ⟨ân ⟩(APP) can also
+                                                                                                            
+                                 h              i2               be expressed in terms of Bessel functions, which yields an
+                   ⟨â2n ⟩(APP) − ⟨ân ⟩(APP) ̸= 0,       (45)   estimate of the size of the terms below the highest-order
+                                                                 terms.
+which by insertion into Eq. (18) yields ⟨∆X̂n2 (θ)⟩(APP) ̸=          For the evaluation of Eq. (48), we use parameters sim-
+1
+4 . Comparing Eqs. (44) and (45), we see that the exact          ilar to Ref. [18], letting g0 = 4 × 10−8 , ωL = 0.005.
+                                                                                                                                                                                                                   10
+
+and ⟨â†kL ,σL âkL ,σL ⟩ = 7.35 × 1011 (corresponding to an                                                            
+                                                                                                                 
+intensity of I = 8.26 × 1011 W/cm2 ). The laser pulse                                                                   
+used for renormalization of Eq. (36) is modeled as a 20                                                          
+
+
+
+
+                                                                 5 H O D W L Y H  H U U R U  L Q  Xn2( )
+laser-cycle pulse with a sin2 envelope. For the one-band                                                         
+                                                                                                                        
+model, we use the lattice constant a = 5.32, and the
+                                                                                                                        
+Fourier coefficients of the dispersion in Eq. (32) are cho-                                                     
+sen to match a ZnO crystal along the Γ-M direction [45]                                                                 
+such that b1 = −0.0814, b2 = −0.0024, b3 = −0.0048,
+                                                                                                                
+                                                                                                                        
+b4 = −0.0003, and b5 = −0.0009. Periodic boundary                                                               
+conditions are applied with L lattice sites such that the                                                               
+discretization of the crystal momentum is ∆q = La    2π
+                                                        , and                                                                                                     + L J K H V W  R U G H U   = max
+                                                                                                                                                                  + L J K H V W  R U G H U   = min
+a half-filling arrangement is assumed, meaning that L                                                                                                              Q G  K L J K H V W  R U G H U   = max
+electrons are considered.
+                                                                                                                                                                                                             
+   In Fig. 2, we plot, for harmonic order n = 3, the                                                                                                                                            
+maximum (blue curve) and minimum (orange curve) er-                                                                                                               L
+ror in the quadrature variance over the     angle θ, i.e.,
+maxθ∈[0,π) ⟨∆X̂n2 (θ)⟩(APP) −⟨∆X̂n2 (θ)⟩ and likewise for       FIG. 2. Relative error in quadrature variance in harmonic
+the minimum, calculated using the highest-order expan-          order n = 3 introduced by the APP representation for a one-
+sion [Eqs. (46)-(47)], relative to the exact value of 1/4.      dimensional single-band solid as a function of the number
+This relative error is plotted as a function of the num-        of electrons in the material (L). Solid blue and dashed or-
+ber of electrons L (which is the same as the number of          ange curves denote the error at the maximizing (θmax ) and
+lattice sites) to illustrate the scaling of the error with      minimizing (θmin ) angles, respectively, calculated from the
+                                                                highest-order terms in driving field intensity. The green curve
+system size.
+                                                                is the second-highest-order term in the error at the maximiz-
+   We note that both the minimum and maximum errors             ing angle θmax , and is seen not to contribute significantly.
+are positive, and that the maximum and minimum are
+not exactly equal. Thus, the quadrature variance for a
+coherent state computed using the APP representation is         and emitter density.
+larger than the exact value and is dependent on the angle
+                                                                   For systems where the exact quadrature variance is not
+θ. As the minimum of the error in quadrature variance
+                                                                1/4, such as the atomic and solid state systems consid-
+is positive, we also see that the state is antisqueezed,
+                                                                ered in Refs. [1, 3, 5, 9], the exact squeezing is similarly
+as is consistent with Sec. III A, since the quadrature
+                                                                expected to scale with the coherent amplitudes [9]. The
+variance calculated using the APP is larger for all angles
+                                                                exact value and the error would therefore become larger
+θ compared with the exact value.
+                                                                in tandem as the coherent amplitudes become larger.
+   Furthermore, we plot in Fig. 2 the maximum error             The significance of the error for such systems would then
+in the quadrature variance (green curve) calculated us-         depend on the relative scaling between the exact value
+ing the second-highest-order expansion. We see that             and error, and whether the error and exact values are
+the error stemming from the second-highest-order is sev-        of the same orders of magnitude. Further analysis of
+eral orders of magnitude smaller than the error from the        such systems is left for future work, though we know
+highest-order term for the chosen parameters. Thus, we          that squeezing below quadrature fluctuations, as found
+conclude that the highest-order terms capture the error.        in these works, cannot be captured using the APP rep-
+   From Fig. 2, we see a scaling of the error in quadrature     resentation, as follows from Sec. III A.
+squeezing with the system size that is quadratic (notice           We have thus seen that the APP representation intro-
+the log-log scale in Fig. 2). As such, even though the          duces a relative error in the quadrature variance, which
+error is small for small systems, the error can become          is small for a few-emitter system. However, this error
+large if the system is large.                                   is amplified in larger electronic systems and by using a
+   Indeed, this scaling is consistent with what one would       driving pulse of longer duration. For a coherent state,
+expect from the expression for the quadrature variance          which should be a minimum quadrature variance state,
+[Eq. (18)]: If there is an error in squeezing and we am-        where the quadrature variance is uniform over the an-
+plify the coherent amplitudes by γnα 7→ Kγnα for some real      gle θ, the APP predicts a variance that is larger than
+number K, then there is a gain in the squeezing error by        the exact result, and depends on θ, i.e., antisqueezing is
+K 2 . The same scaling will therefore also be seen from         falsely predicted. For more complex systems and driving
+a longer pulse duration, as the harmonic peaks become           fields, the error introduced by the APP is not controlled.
+sharper.                                                        Hence, to use the APP to calculate quantum observables,
+   Even under the arguments for introducing the APP             such as squeezing in the quadrature variance, the error
+presented in Ref. [27, 28] of taking g0 → 0 while keeping       introduced by the APP in the specific system should be
+g0 |α| and N g0 constant, with N being the number of            assessed before physical meaning is attributed to the re-
+emitters, we see a scaling in the error with pulse duration     sults.
+                                                                                                                        11
+
+       IV.   CONCLUSION AND OUTLOOK                                             ACKNOWLEDGMENTS
+
+
+   In this paper, we investigated the accuracy of the ap-         This work is supported by the Independent Research
+proximative phase-space representation for driving HHG         Fund Denmark (Technology and Production Sciences
+with a general quantum state of light.                         10.46540/4286-00053B) and the Novo Nordisk Founda-
+                                                               tion Project Grants in the Natural and Technical Sciences
+   We have described the APP representation and applied        (0094623).
+it to compute relevant expectation values. We analyzed
+the error introduced by the APP with regard to the ob-
+servables of interest: The HHG spectrum, quadrature            Appendix A: Nonnegativity of the Wigner function
+squeezing, and photon statistics.
+   We have shown that if one assumes that the gen-                In this appendix, we support the discussion in Sec.
+erating electronic medium has no dipole correlations,          III A by showing that the Wigner function is nonnegative
+then quadrature squeezing below vacuum fluctuations            when calculated using the APP in the absence of dipole
+and sub-Poissonian photon statistics cannot be captured        correlations.
+by the APP representation, independent of the quantum             The Wigner function for a mode n is the quasi-
+nature of the driving field.                                   probability distribution for a photonic state, defined as
+   Examining the accuracy of the APP representation for        the two-dimensional Fourier transform of the expectation
+the driving field, we find that the relative error on the      value of the displacement operator [40]
+intensity is negligible at high intensity, while quadrature                           Z
+                                                                                    1          ∗    ∗
+squeezing is mischaracterized, and the photon statistics                 Wn (α) = 2      d2 λeλ α−λα ⟨D̂n (λ)⟩,     (A1)
+of Fock states are not captured.                                                   π
+                                                                                   †       ∗ †
+   Lastly, we also tested the APP representation on the        where D̂n (λ) = eλân −λ ân is the displacement operator in
+HHG field emitted from a one-band model driven by co-          mode n with complex displacement λ. The photonic state
+herent light. From this, we found that the relative er-        is specified by the state used to compute the expectation
+ror on the spectrum is diminishing for higher intensity        value of the displacement operator.
+driving fields, while for squeezing, the absolute error can       Negativity in the Wigner function signifies a nonclas-
+become significant, as it scales with pulse duration and       sical state [40]. Furthermore, Hudson’s theorem [43] says
+emitter density, though the error is small in small sys-       for pure states that the state is a displaced squeezed state
+tems.                                                          if and only if its Wigner function is nonnegative.
+   In conclusion, by introducing the APP representation,          In the APP representation, using the same assump-
+the driving field is approximated as a statistical mixture     tions as in Sec. III A, we find that
+of classical fields, and the field generated in the HHG                             Z
+process inherits this characteristic, i.e., any present non-       ⟨D̂n (λ)⟩(APP) = d2 βQ(β)⟨γnβ |D̂n (λ)|γnβ ⟩
+classical features are neglected.                                                   Z
+                                                                                                       β∗
+   Furthermore, an understanding of why an observable                             = d2 βQ(β)eiIm(γn λ) ⟨γnβ |γnβ + λ⟩
+may be captured in the APP or not can be drawn. For                                 Z
+                                                                                                        β∗     1 2
+classical measures like the spectrum, the relative error                          = d2 βQ(β)e2iIm(γn λ) e− 2 |λ| , (A2)
+diminishes with driving field intensity. However, for rela-
+tive measures such as fluctuations (quadrature squeezing       which is inserted into Eq. (A1) to get
+and photon statistics), in which expectation values are                     Z               Z
+compared by, e.g., subtraction, and which are used to                    1           ∗    ∗                  β∗      1     2
+                                                               Wn (α) = 2      d2 λeλ α−λα    d2 βQ(β)e2iIm(γn λ) e− 2 |λ|
+characterize nonclassical states of light, the error can be-             π
+come significant. For precise statements on the accuracy
+                                                                            Z           Z
+                                                                         1                      ∗     β∗       β∗ ∗    1     2
+
+of other observables, further analysis is needed.                     = 2      d βQ(β) d2 λeλ (α−γn )−λ(α−γn ) e− 2 |λ| .
+                                                                                2
+                                                                         π
+   Therefore, to study these observables, either the                                                                (A3)
+system-specific error has to be quantified and accounted
+for, or other methods than the APP need to be utilized.        The inner integral is of the type (letting λ = x + iy and
+Alternative methods have already been presented: In            η = a + ib)
+Ref. [21], a generalized von Neumann lattice basis was
+                                                                       Z
+                                                                                ∗     ∗    1    2
+
+used for the coherent state expansion. In Ref. [42], a per-               d2 λeλ η−λη e− 2 |λ|
+turbative approach was employed to consider the mixture                   Z ∞                   Z ∞
+                                                                                   2ibx − 12 x2                 1 2
+of a strong coherent and a perturbative squeezed field. In             =       dxe      e           dye−2iay e− 2 y
+Ref. [34], a correction term was considered in the con-                    −∞                      −∞
+tinuum limit, and in Ref. [35], a Feynman path integral                       − 21 (−2b)2 − 21 (2a)2
+                                                                        = 2πe              e
+approach was used to consider the joint electron-photon                       −2|η|2
+spectrum from above-threshold ionization.                               = 2πe          ,                              (A4)
+                                                                                                                                                                12
+
+where we have used the fact that the Fourier transform                 an integer m that
+of a Gaussian is also a Gaussian. Setting η = α − γnβ∗ we
+                                                                                      Z 2π
+find that
+                                                                                          dϕeimϕ e2r|α| cos(ϕ−φα )
+                          Z                                                            0
+                      2                        β∗ 2                                           Z π
+       Wn (α) =               d2 βQ(β)e−2|α−γn | ≥ 0,         (A5)                    = eimφα     dϕeimϕ e2r|α| cos(ϕ)
+                      π
+                                                                                               −π
+                                                                                               Z π
+                                                                                          imφα
+which is nonnegative, as both the Husimi function and                                 = 2e         dϕ cos(imϕ)e2r|α| cos(ϕ)
+the Gaussian function are nonnegative.                                                                     0
+
+  We have thus shown that using the APP representation                                = 2πeimφα Im (2r|α|),                                                    (B3)
+for a system that emits a coherent state when driven by a
+coherent state, negativity in the Wigner function cannot               where Im denotes the m’th order modified Bessel function
+be found.                                                              of the first kind.
+  Furthermore, as also stated in Sec. III A, due to Hud-                  From this we compute the APP expression for Eq.
+son’s theorem [43], we may therefore conclude that the                 (B1a) termwise in the sum over m1 , m2
+state in mode n is either a displaced squeezed state or a              Z
+mixed state. Since we showed in Sec. III A that it cannot                d2 βQ(β)|β|2m1 +2m2 +2n
+be a squeezed state, we must conclude that it is either a
+                                                                         1 −|α|2 ∞
+                                                                                   Z                          Z 2π
+coherent state or a mixed state.                                                          −r 2 2(m1 +m2 +n)+1
+                                                                       = e             dre r                       dϕe2r|α| cos(ϕ−φα )
+                                                                         π          0                          0
+                                                                                  Z ∞
+                                                                                2          2
+                                                                       = 2e−|α|       dre−r r2(m1 +m2 +n)+1 I0 (2r|α|)
+                                                                                       0
+Appendix B: Details on the APP considerations of a                                    ∞ Z ∞
+               single-band model                                                  2   X                        2                              (r|α|)2l
+                                                                       = 2e−|α|                        dre−r r2(m1 +m2 +n)+1
+                                                                                              0                                                 (l!)2
+                                                                                  l=0
+    In this appendix we show the details of the deriva-                           ∞
+                                                                              2   X                (l + m1 + m2 + n)!
+tion of the APP expressions for the expectation values                 = e−|α|             |α|2l                      .                                        (B4)
+                                                                                                          (l!)2
+⟨â†n ân ⟩(APP) , ⟨â2n ⟩(APP) and ⟨ân ⟩(APP) , to aid results and              l=0
+discussion in Sec. III C 2 of the main text.
+                                                                       To proceed, we consider the function
+    To find the APP expressions for the spectrum and
+squeezing, we begin by expressing the expectation val-
+                                                                                                                          dj x i+j
+ues of the relevant observable in the Taylor expanded                                         Si,j (x) = x−i                 (e x ),                           (B5)
+form using Eq. (39)                                                                                                      dxj
+                                                                       for a real number x and two natural numbers i and j.
+                     ∞ ∞
+                     X X                                               Taylor expanding the exponential, we find that
+ ⟨â†n ân ⟩ = G2n                  (n) (n)
+                                   Dm 1
+                                        Dm2 |α|2m1 +2m2 +2n (B1a)
+                     m1 =0 m2 =0                                                                                          ∞
+                                                                                                                  dj X xl+i+j
+                      ∞     ∞                                                          Si,j (x) = x−i
+                                                                                                                 dxj     l!
+                     X     X
+    ⟨â2n ⟩ = G2n                   (n) (n)
+                                   Dm 1
+                                        Dm2 |α|2m1 +2m2 +2n e2inφα                                                       l=0
+                     m1 =0 m2 =0                                                                                   ∞
+                                                                                                                   X (l + i + j)! xl+i
+                                                             (B1b)                                     = x−i
+                     ∞
+                                                                                                                           (l + i)!            l!
+                     X                                                                                             l=0
+    ⟨ân ⟩ = G2n            (n)
+                           Dm   |α|2m+n einφα .              (B1c)                                         ∞
+                                                                                                           X (l + i + j)! xl
+                     m=0                                                                               =                                  ,                    (B6)
+                                                                                                                     (l + i)!        l!
+                                                                                                           l=0
+
+ We integrate these expressions with the Husimi function
+of a coherent state [Eq. (41)]. First, we rewrite the                  while applying Leibniz rule to Eq. (B5), we find
+Husimi function for a coherent state                                                                    j   q
+                                                                                                        X  j  d                      dj−q                
+                                                                             Si,j (x) = x−i                                    ex                   xi+j
+                        1 −|α|2 −|β|2 +2Re(α∗ β)                                                                 q       dxq              dxj−q
+             Q(β) =       e                                                                             q=0
+                        π                                                                              j  
+                        1     2   2                                                                       j (i + j)!
+                       = e−|α| −r +2r|α| cos(ϕ−φα ) ,
+                                                                                                       X
+                                                                                                   x
+                                                              (B2)                         =e                                   xq ,                           (B7)
+                        π                                                                                      q (i + q)!
+                                                                                                       q=0
+
+where we have written β = reiϕ in polar form.                          which is a finite sum. We can thus convert infinite sums
+  We use the 2π periodicity of the integrand to see for                of the type in Eq. (B6) to finite sums.
+                                                                                                                                    13
+
+  This is applied to Eq. (B4), and we see                            Mirroring the discussion in Sec. III C 2, when comparing
+   Z                                                                Eqs. (B11) and (B1) termwise in the m1 , m2 sums, we
+     d2 βQ(β)|β|2m1 +2m2 +2n                                        see that for all three expectation values, the highest-order
+                                                                    term in the sum over q in Eq. (B11) corresponds to
+              2
+    = e−|α| S0,m1 +m2 +n (|α|2 )                                    Eq. (B1), and the lower-order terms are thus the error
+      m1 +m
+                                                                    introduced by the APP.
+         X2 +n m1 + m2 + n (m1 + m2 + n)!                             We also note that the highest orders of q in ⟨â2n ⟩(APP)
+    =                                       |α|2q ,
+                       q           q!                               and [⟨ân ⟩(APP) ]2 are equal. However, the lower-order
+         q=0
+                                                                    terms, which are the error introduced by the APP, are not
+                                                            (B8)
+                                                                    equal. Hence, when calculating the squeezing, the exact
+which is the termwise expression for ⟨â†n ân ⟩(APP) .             part of the APP expectation values cancel, but the error
+    Similarly, we can write the termwise expression for             does not, and the error therefore becomes significant, as
+⟨â2n ⟩(APP) as                                                     it is relative to zero.
+                                                                        To get a quantitative estimate of this error in the
+                                                                    quadrature variance, we consider the terms in the
+  Z
+       d2 βQ(β)|β|2m1 +2m2 +2n e2inφα                               sum over q for the expectation values ⟨â†n ân ⟩(APP) −
+                      Z ∞                                           ⟨â†n ⟩(APP) ⟨ân ⟩(APP) and ⟨â2n ⟩(APP) −[⟨ân ⟩(APP) ]2 that are
+          −|α|2 2inφα           2
+  = 2e         e          dre−r r2(m1 +m2 +n)+1 I2n (2r|α|)         of highest-order in |α| and are nonvanishing. This is the
+          2
+                          0                                         order |α|2(m1 +m2 +n−1) . Writing these terms out using
+ = e−|α| e2inφα |α|2n S2n,m1 +m2 (|α|2 )                            Eq. (B11) we find
+          mX1 +m2 
+                                                                           ⟨â†n ân ⟩(APP) − ⟨â†n ⟩(APP) ⟨ân ⟩(APP)
+                             
+    2inφα          m1 + m2 (m1 + m2 + 2n)! 2q+2n
+ =e                                           |α| ,                                        ∞ X ∞
+            q=0
+                        q           (q + 2n)!                                             X
+                                                                                    ≈ G2n           Dm(n) (n)
+                                                                                                          Dm2 |α|2(m1 +m2 +n−1)
+                                                            (B9)                                        1
+                                                                                        m1 m2
+
+                                                                                   × n2 + 2m1 m2 + nm2 + nm2
+                                                                                                                       
+and for ⟨ân ⟩    (APP)
+                  as                                                                                                              (B12)
+     Z                                                              and
+        d2 βQ(β)|β|2m+n einφα                                                                     2
+                                                                       ⟨â2n ⟩(APP) − ⟨ân ⟩(APP)
+                                                                                       
+                     Z ∞
+               2              2                                                              ∞ X∞
+      = 2e−|α| einφα     dre−r r2(m+n)+1 In (2r|α|)                            ≈ G2n e2inφα
+                                                                                            X
+                                                                                                     (n) (n)
+                                                                                                    Dm   Dm2 |α|2(m1 +m2 +n−1)
+                               0                                                                       1
+
+           −|α|2 inφα                                                                       m1 m2
+       =e          e|α| Sn,m (|α|2 )
+                               n                                                                    
+                                                                                × 2m1 m2 + nm2 + nm2 .                            (B13)
+               mX
+                1 +m2   
+                        m (m + n)! 2q+n
+       = einφα                       |α| .                 (B10)    To evaluate these, we introduce another function
+                q=0
+                        q (q + n)!
+                                                                                       ∞
+                                                                                     X     (−1)m mµ  x 2m+n
+                                                                          An,µ (x) =                          ,      (B14)
+Putting Eqs. (B8), (B9) and (B10) into their respective                                   m!(m + n)! 2
+                                                                                     m=0
+sums, we achieve the following expressions for the APP
+expectation values                                                  where x ∈ R, µ ∈ N, and we see that An,0 (x) = Jn (x).
+                                                                    We use that
+                          ∞ ∞                                                           x 2m+n       x 2m+n
+⟨â†n ân ⟩(APP) = G2n
+                          X X
+                                         (n) (n)
+                                        Dm   Dm2                           1 d
+                                           1                                  x    −n              =m             ,      (B15)
+                          m1 =0 m2 =0                                      2 dx           2              2
+       m1 +m
+          X2 +n                                                   which means that
+                       m1 + m2 + n (m1 + m2 + n)! 2q
+   ×                                             |α|                                        1 d        µ
+         q=0
+                            q            q!                                      An,µ (x) =    x    − n An,0 (x)
+                                                                                            2 dx
+                                                          (B11a)                              1 d       µ
+                       ∞ ∞                                                                 =    x    − n Jn (x).         (B16)
+                       X X                                                                    2 dx
+⟨â2n ⟩(APP) = G2n                    (n) (n) 2inφα
+                                     Dm   Dm2 e
+                                        1
+                                                                    From this, we get, by using identities for differentiation
+                       m1 =0 m2 =0
+       mX
+                                                                    of the Bessel functions, that
+        1 +m2            
+                   m1 + m2 (m1 + m2 + 2n)! 2q+2n                                   x
+   ×                                      |α|                         An,1 (x) = − Jn+1 (x)                              (B17)
+        q=0
+                      q       (q + 2n)!                                            2
+                                                          (B11b)                 1
+                                                                      An,2 (x) = x2 Jn+2 (x) − Jn+1 (x)
+                                                                                                         
+                                                                                                                         (B18)
+                       ∞                  m                                    4
+                       X                  X     m (m + n)! 2q+n                  1
+⟨ân ⟩(APP) = Gn               (n) inφα
+                              Dm  e                        |α|  .     An,3 (x) =    − x3 Jn+3 (x) + 3x2 Jn+2 (x) − Jn+1 (x) .
+                                                                                                                           
+                       m=0                q=0
+                                                q (q + n)!                       8
+                                                           (B11c)                                                        (B19)
+                                                                                                                                          14
+
+Using this, we see that                                                the expressions
+
+                                                                         ⟨â†n ân ⟩(APP) − ⟨â†n ⟩(APP) ⟨ân ⟩(APP)
+                                                                                      G2n X
+                                                                                                      
+                                                                                  ≈           Cl1 Cl2 n2 An,0 (g̃0 l1 |α|)An,0 (g̃0 l2 |α|)
+                                                                                     |α|2
+                                                                                        l1 ,l2
+
+                                                                                     + 2An,1 (g̃0 l1 |α|)An,1 (g̃0 l2 |α|)
+         ∞ X
+           ∞                                                                         + nAn,1 (g̃0 l1 |α|)An,0 (g̃0 l2 |α|)
+         X
+   G2n                    Dm2 |α|2(m1 +m2 +n) mµ1 mν2
+                      (n) (n)
+                                                                                                                           
+                     Dm 1
+                                                                                     + nAn,0 (g̃0 l1 |α|)An,1 (g̃0 l2 |α|)            (B21)
+         m1 m2
+                           ∞
+                                 (−1)m1 mµ1  g̃0 l1 |α| 2m1 +n
+            X             X                                       
+    = G2n            Cl1                                               and
+                           m1
+                                m1 !(m1 + n)!      2
+               l1                                                                                 2
+                                                                       ⟨â2n ⟩(APP) − ⟨ân ⟩(APP)
+                                                                                     
+                    ∞
+                         (−1)m2 mν2  g̃0 l2 |α| 2m2 +n
+            X     X                                     
+      ×        Cl2                                                              G2        X          
+           l2      m2
+                       m2 !(m2 + n)!         2                              ≈ n2 e2inφα       Cl1 Cl2 2An,1 (g̃0 l1 |α|)An,1 (g̃0 l2 |α|)
+                                                                               |α|
+          X                                                                                 l1 ,l2
+    = G2n
+                                                    
+              Cl1 Cl2 An,µ g̃0 l1 |α| An,ν g̃0 l2 |α| . (B20)
+                                                                                   + nAn,1 (g̃0 l1 |α|)An,0 (g̃0 l2 |α|)
+            l1 ,l2                                                                                                      
+                                                                                   + nAn,0 (g̃0 l1 |α|)An,1 (g̃0 l2 |α|) .            (B22)
+
+                                                                       These expressions are analytic expressions for the
+                                                                       highest-order error in the quadrature variance, allowing
+                                                                       for simple evaluation, which is shown in Fig. 2.
+                                                                         Likewise, the second-highest-order error can be com-
+Inserting Eq. (B20) into Eqs. (B12) and (B13), we get                  puted, which is also shown in Fig. 2.
+
+
+
+
+ [1] A. Gorlach, O. Neufeld, N. Rivera, O. Cohen, and                   [8] D. Theidel, V. Cotte, R. Sondenheimer, V. Shiriaeva,
+     I. Kaminer, The quantum-optical nature of high har-                    M. Froidevaux, V. Severin, A. Merdji-Larue, P. Mosel,
+     monic generation, Nature Communications 11, 4598                       S. Fröhlich, K.-A. Weber, U. Morgner, M. Kovacev,
+     (2020).                                                                J. Biegert, and H. Merdji, Evidence of the quantum opti-
+ [2] M. Lewenstein, M. F. Ciappina, E. Pisanty, J. Rivera-                  cal nature of high-harmonic generation, PRX Quantum
+     Dean, P. Stammer, T. Lamprou, and P. Tzallas, Gener-                   5, 040319 (2024).
+     ation of optical Schrödinger cat states in intense laser–         [9] C. S. Lange, E. E. Lassen, R. V. Gothelf, and
+     matter interactions, Nature Physics 17, 1104 (2021).                   L. B. Madsen, High-Order Harmonic Generation with
+ [3] C. S. Lange, T. Hansen, and L. B. Madsen, Electron-                    Beyond-Semiclassical Emitter Dynamics: A Strong-Field
+     correlation-induced nonclassicality of light from high-                Quantum Optical Heisenberg Picture Approach (2025),
+     order harmonic generation, Physical Review A 109,                      arXiv:2512.14174 [quant-ph].
+     033110 (2024).                                                    [10] M. Manceau, K. Y. Spasibko, G. Leuchs, R. Filip, and
+ [4] C. S. Lange and L. B. Madsen, Hierarchy of approxima-                  M. V. Chekhova, Indefinite-Mean Pareto Photon Distri-
+     tions for describing quantum light from high-harmonic                  bution from Amplified Quantum Noise, Physical Review
+     generation: A Fermi-Hubbard-model study, Phys. Rev.                    Letters 123, 123606 (2019).
+     A 111, 013113 (2025).                                             [11] I. N. Agafonov, M. V. Chekhova, and G. Leuchs, Two-
+ [5] C. S. Lange, T. Hansen, and L. B. Madsen, Excitonic                    color bright squeezed vacuum, Phys. Rev. A 82, 011801
+     enhancement of squeezed light in quantum-optical high-                 (2010).
+     harmonic generation from a Mott insulator, Phys. Rev.             [12] T. S. Iskhakov, A. M. Pérez, K. Y. Spasibko, M. V.
+     Lett. 135, 043603 (2025).                                              Chekhova, and G. Leuchs, Superbunched bright squeezed
+ [6] S. Yi, N. D. Klimkin, G. G. Brown, O. Smirnova,                        vacuum state, Opt. Lett. 37, 1919 (2012).
+     S. Patchkovskii, I. Babushkin, and M. Ivanov, Genera-             [13] A. M. Pérez, T. S. Iskhakov, P. Sharapova, S. Lemieux,
+     tion of massively entangled bright states of light during              O. V. Tikhonova, M. V. Chekhova, and G. Leuchs, Bright
+     harmonic generation in resonant media, Phys. Rev. X 15,                squeezed-vacuum source with 1.1 spatial mode, Opt.
+     011023 (2025).                                                         Lett. 39, 2403 (2014).
+ [7] P. Stammer, J. Rivera-Dean, T. Lamprou, E. Pisanty,               [14] M. Chekhova, G. Leuchs, and M. Żukowski, Bright
+     M. F. Ciappina, P. Tzallas, and M. Lewenstein, High                    squeezed vacuum: Entanglement of macroscopic light
+     Photon Number Entangled States and Coherent State                      beams, Optics Communications 337, 27 (2015), macro-
+     Superposition from the Extreme Ultraviolet to the Far                  scopic quantumness: theory and applications in optical
+     Infrared, Physical Review Letters 128, 123603 (2022).                  sciences.
+                                                                                                                             15
+
+[15] M. A. Finger, T. S. Iskhakov, N. Y. Joly, M. V.             [33] Z. Lyu, F. Sun, Y. Fang, Q. He, and Y. Liu, Effect of pho-
+     Chekhova, and P. S. J. Russell, Raman-free, noble-gas-           ton quantum statistics on electrons in above-threshold
+     filled photonic-crystal fiber source for ultrafast, very         ionization, Phys. Rev. Res. 7, L012072 (2025).
+     bright twin-beam squeezed vacuum, Phys. Rev. Lett.          [34] J. M. González-Monge and J. Feist, High-harmonic gen-
+     115, 143602 (2015).                                              eration driven by temporal-mode quantum states of light
+[16] P. R. Sharapova, G. Frascella, M. Riabinin, A. M. Pérez,        (2025), arXiv:2512.06602 [quant-ph].
+     O. V. Tikhonova, S. Lemieux, R. W. Boyd, G. Leuchs,         [35] Y.-J. Mao, E.-R. Zhou, Y. Li, P.-L. He, and F. He, Bench-
+     and M. V. Chekhova, Properties of bright squeezed vac-           marking Atomic Ionization Driven by Strong Quantum
+     uum at increasing brightness, Phys. Rev. Res. 2, 013371          Light (2025), arXiv:2512.15458 [quant-ph].
+     (2020).                                                     [36] P. Stammer, J. Rivera-Dean, A. S. Maxwell, T. Lam-
+[17] A. Gorlach, M. E. Tzur, M. Birk, M. Krüger, N. Rivera,          prou, J. Argüello-Luengo, P. Tzallas, M. F. Ciappina,
+     O. Cohen, and I. Kaminer, High-harmonic generation               and M. Lewenstein, Entanglement and Squeezing of the
+     driven by quantum light, Nature Physics 19, 1689 (2023).         Optical Field Modes in High Harmonic Generation, Phys-
+[18] R. V. Gothelf, C. S. Lange, and L. B. Madsen, High-order         ical Review Letters 132, 143603 (2024).
+     harmonic generation in a crystal driven by quantum light,   [37] P. Stammer, J. Rivera-Dean, and M. Lewenstein, Theory
+     Phys. Rev. A 111, 063105 (2025).                                 of quantum optics and optical coherence in high harmonic
+[19] P. Stammer, Absence of quantum optical coherence in              generation (2025), arXiv:2504.13287 [quant-ph].
+     high harmonic generation, Physical Review Research 6,       [38] D. Walls and G. J. Milburn, Quantum Optics (Springer
+     L032033 (2024).                                                  Berlin, Heidelberg, 2008).
+[20] M. Even Tzur, M. Birk, A. Gorlach, M. Krüger,              [39] P. D. Drummond and C. W. Gardiner, Generalised P-
+     I. Kaminer, and O. Cohen, Photon-statistics force in             representations in quantum optics, Journal of Physics A:
+     ultrafast electron dynamics, Nature Photonics 17, 501            Mathematical and General 13, 2353 (1980).
+     (2023).                                                     [40] C. Gerry and P. Knight, Introductory Quantum Optics
+[21] Y.-B. Wang and X.-B. Bian, High-order harmonic gen-              (Cambridge University Press, Cambridge, 2004).
+     eration in quantum light by a generalized von Neumann       [41] M. O. Scully and M. S. Zubairy, Quantum Optics (Cam-
+     lattice method, Phys. Rev. A 111, 043111 (2025).                 bridge University Press, Cambridge, 1997).
+[22] L. Petrovic, P. Stammer, M. Lewenstein, and J. Rivera-      [42] M. E. Tzur, M. Birk, A. Gorlach, I. Kaminer, M. Krüger,
+     Dean, Generation of circular polarized high-order                and O. Cohen, Generation of squeezed high-order har-
+     harmonics from single color quantum light (2026),                monics, Phys. Rev. Res. 6, 033079 (2024).
+     arXiv:2601.01611 [quant-ph].                                [43] R. L. Hudson, When is the Wigner quasi-probability den-
+[23] A. Rasputnyi, Z. Chen, M. Birk, O. Cohen, I. Kaminer,            sity non-negative?, Reports on Mathematical Physics 6,
+     M. Krüger, D. Seletskiy, M. Chekhova, and F. Tani, High-        249 (1974).
+     harmonic generation by a bright squeezed vacuum, Na-        [44] A. T. Andersen, S. V. B. Jensen, and L. B. Madsen, Intra-
+     ture Physics 20, 1960 (2024).                                    and intercycle analysis of intraband high-order harmonic
+[24] J. Heimerl, A. Mikhaylov, S. Meier, H. Höllerer,                generation, Physical Review A 109, 063109 (2024).
+     I. Kaminer, M. Chekhova, and P. Hommelhoff, Multi-          [45] G. Vampa, C. R. McDonald, G. Orlando, P. B. Corkum,
+     photon electron emission with non-classical light, Nature        and T. Brabec, Semiclassical analysis of high harmonic
+     Physics 20, 945 (2024).                                          generation in bulk crystals, Physical Review B 91, 064302
+[25] J. Heimerl, A. Rasputnyi, J. Pölloth, S. Meier,                 (2015).
+     M. Chekhova, and P. Hommelhoff, Quantum light drives
+     electrons strongly at metal needle tips, Nature Physics
+     (2025).
+[26] M. Sennary, J. Rivera-Dean, M. Lewenstein, and M. T.
+     Hassan, Ultrafast quantum optics with attosecond con-
+     trol (2026), arXiv:2601.08671 [physics].
+[27] P. Stammer, J. Rivera-Dean, M. F. Ciappina, and
+     M. Lewenstein, Weak measurement in strong laser field
+     physics (2025), arXiv:2508.09048 [quant-ph].
+[28] J. Rivera-Dean, L. Petrovic, M. Lewenstein, and P. Stam-
+     mer, Attosecond quantum optical interferometry (2025),
+     arXiv:2511.01097 [quant-ph].
+[29] S. Wang and X. Lai, High-order above-threshold ioniza-
+     tion of an atom in intense quantum light, Phys. Rev. A
+     108, 063101 (2023).
+[30] H. Liu, H. Zhang, X. Wang, and J. Yuan, Atomic dou-
+     ble ionization with quantum light, Phys. Rev. Lett. 134,
+     123202 (2025).
+[31] Y. Fang, F.-X. Sun, Q. He, and Y. Liu, Strong-field ion-
+     ization of hydrogen atoms with quantum light, Phys.
+     Rev. Lett. 130, 253201 (2023).
+[32] J. Rivera-Dean, P. Stammer, C. F. de Morisson Faria,
+     and M. Lewenstein, Microscopic analysis of above-
+     threshold ionization driven by squeezed light (2025),
+     arXiv:2508.01621 [quant-ph].
+

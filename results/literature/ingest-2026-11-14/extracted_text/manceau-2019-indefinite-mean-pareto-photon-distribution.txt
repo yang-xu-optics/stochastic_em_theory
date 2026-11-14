@@ -1,0 +1,681 @@
+                                                    Indefinite-mean Pareto photon distribution from amplified quantum noise
+
+                                               Mathieu Manceau,1, 2, ∗ Kirill Yu. Spasibko,1, 3, † Gerd Leuchs,1, 3 Radim Filip,4 and Maria V. Chekhova1, 3, 5
+                                                              1
+                                                                Max Planck Institute for the Science of Light, Staudtstraße 2, 91058 Erlangen, Germany
+                                                    2
+                                                        Université Paris 13, Sorbonne Paris Cité, Laboratoire de Physique des Lasers, 93430 Villetaneuse, France
+                                                                    3
+                                                                      University of Erlangen-Nürnberg, Staudtstraße 7/B2, 91058 Erlangen, Germany
+                                                                       4
+                                                                         Department of Optics, Palacky University, 77146 Olomouc, Czech Republic
+                                                                            5
+                                                                              Department of Physics, M.V.Lomonosov Moscow State University,
+                                                                                         Leninskie Gory, 119991 Moscow, Russia
+                                                              Extreme events appear in many physics phenomena, whenever the probability distribution has a
+                                                           ‘heavy tail’, differing very much from the equilibrium one. Most unusual are the cases of power-
+                                                           law (Pareto) probability distributions. Among their many manifestations in physics, from ‘rogue
+                                                           waves’ in the ocean to Lévy flights in random walks, Pareto dependences can follow very different
+arXiv:1807.11784v4 [quant-ph] 31 May 2019
+
+
+
+
+                                                           power laws. For some outstanding cases the power exponents are less than 2, leading to indefi-
+                                                           nite mean values, let alone higher moments. Here we present the first evidence of indefinite-mean
+                                                           Pareto distribution of photon numbers at the output of nonlinear effects pumped by parametrically
+                                                           amplified vacuum noise, known as bright squeezed vacuum (BSV). We observe a Pareto distribu-
+                                                           tion with power exponent 1.31 when BSV is used as a pump for supercontinuum generation, and
+                                                           other heavy-tailed distributions (however with definite moments) when it pumps optical harmonics
+                                                           generation. Unlike in other fields, we can flexibly control the Pareto exponent by changing the exper-
+                                                           imental parameters. This extremely fluctuating light is interesting for ghost imaging and quantum
+                                                           thermodynamics as a resource to produce more efficiently non-equilibrium states by single-photon
+                                                           subtraction, the latter we demonstrate experimentally.
+
+
+                                               ‘Common sense’ or, rather, the central limit theorem             ing, the quantum state of light produced through PDC
+                                            tells us that the probability distributions of random phys-         and FWM is called squeezed vacuum. This state man-
+                                            ical values tend to be Gaussian. The more surprising                ifests quadrature and photon-number squeezing [16–18],
+                                            are deviations from this tendency, from the behaviour of            but in the context of this work, its most important fea-
+                                            wave height in the ocean to the statistics of solar flares.         ture is superbunching [19, 20], i.e., photon-number fluc-
+                                            Examples are ‘rogue waves’ in the ocean [1] and their               tuations stronger than the ones of thermal light [21].
+                                            analogues in nonlinear optics [2, 3], Lévy flights [4, 5],
+                                            and other numerous examples in astrophysics [6], geo-
+                                            physics [7], condensed matter physics [8, 9], etc [10].             a
+                                                                                                                                           1,0
+                                                                                                                                                                                         b
+
+                                                                                                                                                                                             BSV energy, rel. units
+                                                                                                                    Normalized intensity
+
+
+
+
+                                                                                                                                                                                                                           103
+                                            Following oceanology, the term ‘rogue waves’ denotes                                                                                                                      600 102
+                                                                                                                                           0,8
+                                            events whose magnitude considerably exceeds the ones                                                                                                                           101
+                                                                                                                                           0,6                                                                        400 100
+                                            expected from Gaussian statistics [11]. A distribution                                                                                                                         10-1
+                                            with a high probability of such events is said to have a                                       0,4                                                                               -2
+
+                                                                                                                                                                                                                      200 10 0,2   0,3   0,4   0,5
+                                            ‘heavy tail’ [12].                                                                             0,2
+
+                                               An example of extreme heavy-tailed distribution is the                                      0,0
+                                                                                                                                                 1400     1600     1800
+                                                                                                                                                                                                                        0
+                                                                                                                                                                                                                        0,2     0,3      0,4      0,5
+                                            Pareto one, typically describing the statistics of income                                                   Wavelength, nm                                                    Pump energy per pulse, mJ
+                                            and wealth [13] and scaling as the power law with an                                                    c                 100
+                                            exponent 1 + k: P (x) ∝ x−(1+k) . For any k, certain sta-                                                                 10-1
+                                                                                                                                                        Probability
+
+
+
+
+                                            tistical moments of this distribution do not converge. At                                                                 10-2
+                                            k < 1, even the mean value diverges. A power-law distri-                                                                  10-3
+                                            bution can appear due to the exponential amplification                                                                    10-4
+                                            of an initially broad distribution [14]. As we show be-                                                                   10-5
+                                                                                                                                                                         0,0            5,0x105            1,0x106
+                                            low, a similar phenomenon occurs when the exponential                                                                              Number of photons per pulse
+                                            rate of frequency conversion is governed by the amplified
+                                            vacuum noise.                                                       FIG. 1. Bright squeezed vacuum we use in experiment: a, the
+                                               Vacuum noise, also called zero-point vacuum fluctu-              spectrum under pumping at 800 nm. b, exponential depen-
+                                                                                                                dence of the output energy per pulse on the input one in the
+                                            ations, originates from the non-commutativity of pho-
+                                                                                                                linear and log-linear scales (inset). The red line is the fit ac-
+                                            ton creation and annihilation operators [15]. It causes             cording to the corresponding hyperbolic dependence [17]. c,
+                                            spontaneous transitions in atoms as well as spontaneous             the probability distribution of the photon number per pulse,
+                                            parametric down-conversion (PDC) and four-wave mix-                 experimental (red points) and theoretical (Eq. (1), solid black
+                                            ing (FWM). In other words, PDC and FWM ‘visualize’                  line) compared to the thermal (dashed black line) and Pois-
+                                            the vacuum noise by parametrically amplifying it. Be-               sonian (blue line) distributions with the same mean value.
+                                            cause parametric amplification is accompanied by squeez-
+                                                                                                                                                                   2
+
+   Through PDC from strong picosecond pulses (see the               are plotted in Fig. 2b,c as solid black lines, after a con-
+Supplementary Information and Ref. [22]), we produce                volution with the detector noise probability distribution
+squeezed vacuum that is bright enough to pump nonlin-               (see Supplementary Information).
+ear effects such as the generation of optical harmonics
+or supercontinuum. The spectral width of the resulting                   a                                     BBO
+                                                                                                Laser                                             IR PD
+BSV exceeds 35 THz for pumping at 800 nm (Fig. 1a).                                                                   DM
+                                                                                                                                             4f
+Within this band, the vacuum noise is exponentially am-
+plified to a brightness of N = sinh2 (G) photons per                                                      PD
+                                                                                                                      LiNbO3
+                                                                                                                     SP
+mode, where the parametric gain G scales with the pump
+laser field amplitude. Figure 1b shows this exponential
+amplification, with G reaching 15.3 ± 0.5. As a result,                  b 10-1
+                                                                                                                                     200
+
+
+
+
+                                                                                                                             N/<N>
+even after a narrowband filtering the mean photon num-                                     10-2                                      100
+
+
+
+
+                                                                             Probability
+ber per pulse is still large. Around this mean, the photon                                 10-3                                        0
+                                                                                                                                        0           0.05    0.1
+number has a very broad distribution (Fig. 1c), whose                                      10-4   10-2                                            Time, s
+
+envelope is given by [23, 24]                                                              10-5
+                                                                                                  10-4
+                                                                                                  10-6
+                                                                                                      0                    1x105
+                                 1               N
+                                              − 2hNB i                                     10-6
+            PB (NB ) = p                  e          B   .    (1)        c
+                            2πhNB iNB                                                      10-1
+                                                                                                                                     600
+
+
+
+
+                                                                                                                             N/<N>
+                                                                                           10-2                                      400
+
+
+
+
+                                                                             Probability
+                                                                                                                                     200
+It is broader than not only a Poissonian distribution (blue                                10-3                                        0
+                                                                                                                                         0          0.05    0.1
+solid line), typical for a shot noise limited laser, but also                                       -2                                            Time, s
+                                                                                           10-4 10
+a negative-exponential one (dashed black line), typical                                           10-4
+                                                                                           10-5
+for light with thermal statistics.                                                                10-6
+                                                                                                      0                    1x105
+   We further use BSV to pump optical harmonic gener-                                      10-6 2
+                                                                                              10                103        104          105                  106
+ation (Fig. 2a). Panels b,c display the probability distri-                                                     Number of photons per pulse
+butions for the pulses of second harmonic (SH) and third
+harmonic (TH). The log-log scale stresses that within a             FIG. 2. Optical harmonics generated from squeezed vacuum.
+certain range, the scaling is close to a power law. How-            a, the experimental setup: after the BBO crystal, the pump
+ever, at large photon numbers the decay becomes faster              is cut off by a dichroic mirror (DM) and BSV is filtered spa-
+                                                                    tially by a slit and spectrally by a 4f system; its statistics are
+and, as a result, all moments of this distribution exist.
+                                                                    analyzed by an infrared photodetector (IR PD); optical har-
+The bottom-left insets show the same distribution in log-           monics are generated in a lithium niobate crystal (LiNbO3 ),
+linear scale, demonstrating a strong deviation from the             filtered with a short-pass filter (SP) and measured using a vis-
+thermal-light distribution (dashed line).                           ible photodetector (PD). b,c, experimental (red points) and
+   This behavior can be explained by the fact that the              theoretical (black lines) probability distributions of photon
+number of photons Nnω in the nth harmonic is a power                number per pulse for SH (b) and TH (c). Bottom-left insets:
+function of the number Nω of photons in the fundamental             the same distributions in log-linear scale highlight strong de-
+                                                                    viations from the thermal light distribution (dashed line) with
+radiation,
+                                                                    the same mean. Top-right insets: typical time traces showing
+                                                                    pulses with ‘extreme’ heights, normalized to the mean value.
+                        Nnω = KNωn ,                          (2)
+
+where K depends on the conversion efficiency. The prob-
+ability distribution Pnω (Nnω ) for the harmonic radiation             The top-right insets of Fig. 2b,c show the time traces
+can be obtained from the one for the fundamental radia-             of photon numbers per pulse normalized to their mean
+tion Pω (Nω ) as Pnω (Nnω )dNnω = Pω (Nω )dNω :                     values. We see ‘extreme events’: a SH pulse and a TH
+                               p                                  pulse exceeding their mean values more than 200 and 650
+                            Pω n Nnω /K                             times, respectively. Using the analogy of ‘rogue waves’
+               Pnω (Nnω ) =     √     1−1/n
+                                              .        (3)          in the ocean, this would correspond to a wave of about
+                             n n KNnω                               a kilometer height. This extremely ‘heavy-tailed’ be-
+Taking the photon-number distribution for BSV in the                haviour is because the number of photons in an opti-
+form (1), for its nth harmonic we get                               cal harmonic pulse scales as the power function of the
+                                                                    pump number of photons, which in our case already has
+      Pnω (Nnω ) =                                                  a very broad distribution. In the case of supercontinuum
+                                                                    generation, this tendency is even stronger because the
+              p
+             2n
+                 (2n − 1)!!
+                                        q
+                                                    Nnω
+                                   − 21 n (2n−1)!! hN
+          √ 2n p          1−1/2n
+                                 e                   nω i .   (4)   dependence on the pump is exponential.
+        n 2π      hNnω iNnω
+                                                                       To obtain supercontinuum, we use BSV centered at
+This is a heavy-tailed generalized Gamma distribution               800 nm. The initially 80-nm broad spectrum of BSV
+but all its moments are still finite. Eqs. (4) for n = 2, 3         is filtered to 10 nm before launching it into the stan-
+                                                                                                                                                                                                    3
+
+a                                                                        b                                                   d
+
+
+
+
+                                                                               Normalized intensity
+                                                                                                        1                                  10-4
+                         BBO                                      CCD                                 0.8                                  10-7
+
+
+
+
+                                                                                                                             P(N)
+ Laser
+                            DM BP      SMF                                                            0.6                                    -10
+                                                                                                                                           10
+                                                                                                      0.4                                    -13
+                                                                                                      0.2                                  10 2             4               6             8        10
+                                                                                                                                              10       10              10            10       10
+                                                             PD                                         0 760 800 840                                                   N
+                                                                                                           Wavelength, nm
+c              100
+                                                                             200
+                                                                                                                             e             100
+                    -1                                                                                                                          -1
+               10                                                            150                                                           10
+
+
+
+
+                                                                     N/<N>
+                    -2
+                                                                             100                                                                -2
+               10                                                                                                                          10
+
+
+
+
+                                                                                                                             Probability
+ Probability
+
+
+
+
+                                                                             50
+
+               10-3                                                            0
+                                                                                      0                                0.1                 10-3                                 P ~ N -1.64
+                                              -1.49
+                                                                                                             0.05
+                                        P~N                                                                 time, s
+               10-4                                                                                                                        10-4
+
+               10-5                                                                                                                        10-5                 P ~ N -1.31
+               10-6                                                                                                                        10-6 3
+                            104                        105                                                    106                            10          104          105                     106
+                                             Number of photons per pulse                                                                             Number of photons per pulse
+
+FIG. 3. Supercontinuum pumped by squeezed vacuum. a, the experimental setup: after BSV is generated in a BBO crystal,
+the pump is cut off by a dichroic mirror (DM) and BSV is filtered by a bandpass filter (BP) and coupled into a single-mode
+fibre (SMF); further, the supercontinuum is analyzed either by a CCD camera after a spectrometer or by a photodetector (PD)
+after a monochromator. b, the resulting average spectrum under pumping with 0.2 nJ pulses (grey) and 40 nJ pulses (pink).
+c, the probability distribution of photon number per pulse (points), for supercontinuum pumped with 48 nJ pulses, and its fit
+with a Pareto distribution with k = 0.49 (solid line). The inset shows a time trace for pulse height normalized to the mean.
+The effect of the brightness and bandwidth of BSV on the Pareto index k of the supercontinuum: d, calculated photon-number
+distribution for single-mode BSV with κhNB i = 0.5 (black) and 2.5 (red). The distribution for κhNB i = 2.5 and M = 5 modes
+(blue) has nearly the same scaling as the one for κhNB i = 0.5 and M = 1 (black). e, photon-number distributions for the
+supercontinuum pumped by 30 nJ pulses of BSV with bandwidth ∆λB = 10 nm (red points) and ∆λB = 3 nm (black points),
+and their Pareto fits (blue lines).
+
+
+
+dard single-mode fused silica fibre, where supercontin-                                                   where hNB i is the BSV mean photon number.
+uum is generated (Fig. 3a). The spectrum after the fibre                                                    For large N , Eq. (5) has asymptotic scaling typical for
+(Fig. 3b) is almost unchanged (grey contour) if BSV is                                                    the Pareto distribution [12],
+weak (energy per pulse 0.2 nJ), but it is considerably
+                                                                                                                                                         1
+broadened (pink contour) if the input energy per pulse is                                                                                   P (N ) ∝               ,                          (6)
+40 nJ.                                                                                                                                                 N 1+k
+   The experimentally obtained probability distribution                                                   with the Pareto index k ∝ M (κhNB i)−1 (see the Sup-
+of photon number per pulse at wavelength 770 nm under                                                     plementary Information), where M is the number of
+pumping with 48 nJ pulses is displayed in Fig. 3c (red                                                    modes in BSV. The Pareto index tends to zero for bright
+points). It has a Pareto scaling with k = 0.49 ± 0.02,                                                    (hNB i  1) squeezed vacuum but increases as the num-
+found from the fit of complementary cumulative distribu-                                                  ber of modes M grows, see Fig. 3d.
+tion function (CCDF) for more accurate determination,                                                        To test that the Pareto index k depends on both the
+see Supplementary Information for details.                                                                mean photon number and the number of modes (band-
+   This shape of the probability distribution can be well                                                 width) of BSV, we measure the probability distributions
+explained assuming that the ‘blue’ side of the super-                                                     for the supercontinuum with the BSV energy per pulse
+continuum is free of Raman processes and is generated                                                     reduced to 30 nJ. The results are shown in Fig. 3e.
+through high-gain FWM. The number of photons in the                                                       For bandwidths 10 and 3 nm, the CCDF analysis gives
+supercontinuum is then an exponential function of the                                                     k = 0.64 ± 0.02 and k = 0.31 ± 0.02, respectively [25].
+BSV photon number NB : NSC = sinh2 (κNB ), with κ                                                         Thus, the variation of BSV power and bandwidth are
+characterizing the interaction strength. Similar to the                                                   versatile instruments to control the index of the Pareto
+harmonics case, from the BSV photon-number distribu-                                                      distribution for supercontinuum.
+tion PB (NB ) we obtain the supercontinuum one:                                                              The power-law probability distributions shown in
+                                                      √
+                                                                                                          Fig. 3c,e have very unusual features. With k < 1, the
+                                          − arcsinh N
+                                                                                                          mean number of photons per pulse is not defined and
+                                         e   2κhN i   B
+               PSC (N ) = q                                √ ,                (5)                         depends on the time of observation; it makes our dis-
+                                  8πκhNB iN (1 + N )arcsinh N                                             tribution much different from the ones reported by the
+                                                                                                                                                                                4
+
+others [26–28]. This fractal-like behavior is typical for                                                      Maxwell’s demon in quantum thermodynamics [34]. In a
+Pareto distributions where the mean values do not con-                                                         photon subtraction experiment, a quantum state of light
+verge [29]. Similar to the ‘coastline paradox’ [30], where                                                     |ψi is fed to a beamsplitter, after which a single-photon
+the coastline appears the longer, the better one measures,                                                     detector can register a reflected photon. Provided that
+the mean photon number per pulse will be the higher,                                                           the detector registers a single photon, the state of light
+the more data are used to determine it, hN i ∝ s1/k−1 ,                                                        after the beamsplitter is photon-subtracted, |ψ 0 i ∝ â|ψi,
+where s is the dataset size [14]. In a real experiment the                                                     where â is the photon annihilation operator. Counter-
+distribution gets always truncated through some physical                                                       intuitively, the photon-subtracted state has the mean
+mechanisms. In our case, this occurs for photon numbers                                                        photon number increased by a factor g (2) compared to
+per pulse above 106 due to the detector saturation.                                                            the initial state [35, 36]. This energy enhancement ad-
+   The power-law behaviour is only present on the su-                                                          mits an interpretation similar to Maxwell’s demon exper-
+percontinuum spectra and gets suppressed in the mid-                                                           iment [34].
+dle (Fig. 4a,c). As the pulse energy increases, the spec-                                                         Our photon subtraction setup is shown in Fig. 5a. Af-
+trum broadens and the fluctuations get stronger but                                                            ter the spectral filtering of the supercontinuum down to
+they also move further from the initial central wave-                                                          a 1 nm bandwidth at wavelength 780 nm, the output of
+length. The reason is that at central frequencies, the                                                         the monochromator is attenuated with a neutral density
+supercontinuum is so bright that it itself generates new                                                       filter in order to obtain on average much less than one
+sidebands through FWM. But because FWM is equiv-                                                               photon (hNψ i  1) before the beamsplitter. The mean
+alent to two-photon loss, it leads to the depletion of                                                         number of photons hNψ0 i after the beamsplitter is mea-
+intensity fluctuations [31]. The same tendency is visi-                                                        sured with an avalanche photodiode (an N -meter) under
+ble in the second-order normalized correlation function                                                        the condition that a single photon is detected in the re-
+g (2) (λ, λ0 ) = hN (λ)N (λ0 )i/ [hN (λ)ihN (λ0 )i] (Fig. 4b,d),                                               flected arm by another avalanche photodiode (APD). As
+where N (λ) is the photon number at wavelength λ and                                                           a result of photon subtraction, the mean photon num-
+angle brackets denote statistical averaging. The value                                                         ber is increased up to 140 times (Fig. 5b), depending
+on the main diagonal has the meaning of the bunching                                                           on the bandwidth and the energy per pulse of the BSV
+parameter g (2) = h: N 2 :i/hN i2 , where the normal order-                                                    pumping the supercontinuum generation. This drastic
+ing can be omitted due to large N . In the right-bottom                                                        increase in the mean photon number shows that the su-
+panel, we see g (2) values as high as 170, which consid-                                                       percontinuum can be brought out of equilibrium by the
+erably exceeds the strongest superbunching reported to                                                         subtraction process much more efficiently than thermal
+date [22, 32]. Similarly to the mean, the measured value                                                       or BSV light. As a result, much more work could be,
+depends on the time of observation and is just the lower                                                       in principle, extracted, which makes the supercontinuum
+boundary of g (2) .                                                                                            a useful resource for proof-of-principle tests of quantum
+                                                                                                               thermodynamics [36].
+a                          100                            b
+    Normalized intensity
+
+
+
+
+                                                                                                               a                              b 160
+                                                                                                                   BP     SMF
+                                                          Wavelength, nm
+
+
+
+
+                                                                           840                       60
+                           10-1                                                                                                                   140
+                                                                                                                N-meter                           120
+                                                                           800                       40 g(2)
+                                                                                                                                                  100
+                           10-2
+                                                                                                                                  APD              80
+                                                                                                     20                                 ND
+                                -3
+                                                                           760                                                                     60
+                           10                                                                                                                      40
+                                                                                                     0                    click
+c                          100                            d                                                                                        20
+    Normalized intensity
+
+
+
+
+                                                                                                                                                    0
+                                                          Wavelength, nm
+
+
+
+
+                                                                           840                       160                                                2      3     4     5     6
+                           10-1                                                                                                                             Energy per pulse, nJ
+                                                                                                     120
+                                                                           800                          g(2)
+                           10-2                                                                      80        FIG. 5. Photon subtraction from supercontinuum. a, the ex-
+                                                                           760                       40        perimental setup: BSV is filtered from the pump by a band-
+                           10-3                                                                                pass filter (BP) and sent to the fibre. At the output, the su-
+                                                                                                     0
+                            740 760 780 800 820 840 860                          760   800     840             percontinuum is filtered by a monochromator, attenuated by a
+                                   Wavelength, nm                                 Wavelength, nm
+                                                                                                               neutral-density filter (ND) and sent to a beamsplitter. Only
+                                                                                                               if the avalanche photodiode (APD) registers a photon, the
+FIG. 4. Single-pulse spectra of supercontinuum for the input                                                   number of photons is measured at the output (N-meter). b,
+BSV energy per pulse 24 nJ (a) and 40 nJ (c) and the corre-                                                    the increase of the output mean photon number hNψ0 i/hNψ i
+sponding distributions of the normalized second-order corre-                                                   after the subtraction of a single photon (|ψ 0 i ∝ â|ψi), as a
+lation function (b and d, respectively).                                                                       function of the mean energy per pulse of the input BSV for
+                                                                                                               10 nm (blue) and 3 nm (red) bandwidth.
+
+  Superbunching has interesting consequences for pho-
+ton subtraction experiments [33], used for example to test                                                         This radiation with strong fluctuations in the photon
+                                                                                                                            5
+
+number can be also useful in ghost imaging [37, 38] where       [5] N. Mercadier, W. Guerin, M. Chevrollier, and R. Kaiser,
+the contrast of the image is given by the bunching pa-              Nat. Phys. 5, 602 (2009).
+rameter g (2) [39, 40]. In particular, recently time-domain     [6] E. T. Lu and R. J. Hamilton, Astrophys. J. 380, L89
+ghost imaging has been demonstrated with incoherent                 (1991).
+                                                                [7] F. Taubert, R. Fischer, J. Groeneveld, S. Lehmann,
+supercontinuum, although without high photon-number                 M. Mller, E. Rdig, T. Wiegand, and A. Huth, Nature
+fluctuations [41]. The use of supercontinuum with Pareto            554, 519 (2018).
+photon distribution will drastically increase the contrast.     [8] F. Stefani, J. Hoogenboom, and E. Barkai, Phys. Today
+                                                                    62, 34 (2009).
+   In conclusion, we have demonstrated heavy-tailed dis-
+                                                                [9] G. Campi, A. Bianconi, N. Poccia, G. Bianconi, L. Barba,
+tributions of photon numbers for nonlinear effects gener-           G. Arrighetti, D. Innocenti, J. Karpinski, N. Zhi-
+ated from BSV. In particular, supercontinuum generation             gadlo, S. Kazakov, M. Burghammer, M. Zimmermann,
+leads to an extremal Pareto photon-number distribution              M. Sprung, and A. Ricci, Nature 525, 359 (2015).
+with indefinite first and higher moments. The mechanism        [10] A. Clauset, C. Shalizi, and M. Newman, SIAM Review
+behind this phenomenon is the exponential dependence of             51, 661 (2009).
+the frequency conversion efficiency on the photon num-         [11] N. Akhmediev and E. Pelinovsky, Eur. Phys. J. ST 185,
+                                                                    1 (2010).
+ber of the pump, which has already a very broad dis-
+                                                               [12] S. Foss, D. Korshunov, and S. Zachary, An Introduc-
+tribution. Depending on the mean photon number and                  tion to Heavy-Tailed and Subexponential Distributions
+bandwidth of BSV, we obtain the Pareto index equal to               (Springer Science & Business Media, 2013).
+0.31, 0.49, and 0.64. All these values lead to a photon-       [13] V. M. Yakovenko and J. B. Rosser, Rev. Mod. Phys. 81,
+number (pulse-energy) probability distributions with di-            1703 (2009).
+verging mean value, which has been never observed be-          [14] M. Newman, Contemp. Phys. 46, 323 (2005).
+fore. The bunching parameter we observe in this case is        [15] D. Klyshko, Photons and Nonlinear Optics (CRC Press,
+                                                                    1988).
+as high as 170 and far exceeds the ones reported earlier
+                                                               [16] O. Jedrkiewicz, Y.-K. Jiang, E. Brambilla, A. Gatti,
+in the literature. The subtraction of a single photon from          M. Bache, L. A. Lugiato, and P. Di Trapani, Phys. Rev.
+the supercontinuum increases the mean number of pho-                Lett. 93, 243601 (2004).
+tons by more than two orders of magnitude, which can           [17] T. Iskhakov, M. V. Chekhova, and G. Leuchs, Phys. Rev.
+be further exploited to extract large amount of thermo-             Lett. 102, 183602 (2009).
+dynamical work.                                                [18] H. Vahlbruch, M. Mehmet, K. Danzmann, and R. Schn-
+                                                                    abel, Phys. Rev. Lett. 117, 110801 (2016).
+   We thank Felix Thoma and Denis Kopylov for help-            [19] F. Boitier, A. Godard, N. Dubreuil, P. Delaye, C. Fabre,
+ing with the experiment at early stages. R.F. thanks                and E. Rosencher, Nat. Commun. 2, 425 (2011).
+Éva Rácz and Lászlo Ruppert for helping with the tail       [20] T. S. Iskhakov, A. Pérez, K. Y. Spasibko, M. Chekhova,
+exponent methods. M.V.C. thanks Nail Akhmediev for                  and G. Leuchs, Opt. Lett. 37, 1919 (2012).
+helpful discussions. K.Yu.S. thanks Vera Beletckaia for        [21] Superbunching of BSV originates from the fact that its
+                                                                    Wigner function is stretched, one of the quadratures be-
+helpful discussions. We acknowledge the financial sup-
+                                                                    ing strongly anti-squeezed and the other one, squeezed.
+port of the joint DFG–RFBR (Deutsche Forschungsge-                  It is this antisqueezing that is responsible for enhanced
+meinschaft – Russian Foundation for Basic Research)                 intensity fluctuations.
+Project No. CH1591/2-1 – 16-52-12031 NNIOa and of              [22] K. Y. Spasibko, D. A. Kopylov, V. L. Krutyanskiy, T. V.
+DAAD (Deutsche Akademische Austauschdienst) PPP                     Murzina, G. Leuchs, and M. V. Chekhova, Phys. Rev.
+Tschechien 2017 Project No. 57319488. R.F. acknowl-                 Lett. 119, 223603 (2017).
+edges project GB14-36681G of the Czech Science Foun-           [23] S. A. Akhmanov, Y. E. Dyakov, and A. S. Chirkin,
+                                                                    Vvedinie v Statisticheskuyu Radiofiziku i Optiku (Nauka,
+dation and Bilateral research grant 7AMB17DE034 of
+                                                                    1981).
+the Czech Ministry of Education and German Academic            [24] G. Leuchs, R. J. Glauber, and W. P. Schleich, Phys.
+Exchange Service (DAAD).                                            Scripta 90, 074066 (2015).
+                                                               [25] The peak below 3 · 104 photons follows the exponential
+                                                                    distribution; we attribute it to the thermalization effect
+                                                                    in supercontinuum [42].
+                                                               [26] D. Borlaug, S. Fathpour, and B. Jalali, IEEE Photon.
+  ∗
+     K.Yu.S. and M.M. contributed equally.                          J. 1, 33 (2009).
+  †
+     kirill.spasibko@mpl.mpg.de                                [27] J. Kasparian, P. Béjot, J.-P. Wolf, and J. M. Dudley,
+ [1] C. Kharif and E. Pelinovsky, Eur. J. Mech. B-Fluid. 22,        Opt. Express 17, 12070 (2009).
+     603 (2003).                                               [28] S. B. Alves, H. L. D. d. S. Cavalcante, G. F. de Oliveira,
+ [2] D. Solli, C. Ropers, P. Koonath, and B. Jalali, Nature         T. P. de Silans, I. Vidal, M. Chevrollier, and M. Oriá,
+     450, 1054 (2007).                                              Phys. Rev. A 99, 033838 (2019).
+ [3] N. Akhmediev, B. Kibler, F. Baronio, M. Belić, W.-       [29] K. Park, G. Kim, and M. Crovella, in Proc. 4th Int.
+     P. Zhong, Y. Zhang, W. Chang, J. M. Soto-Crespo,               Conf. Network Protocols (ICNP’96) (1996) pp. 171–180.
+     P. Vouzas, P. Grelu, et al., J. Opt. 18, 063001 (2016).   [30] B. Mandelbrot, Science 156, 636 (1967).
+ [4] P. Barthelemy, J. Bertolotti, and D. S. Wiersma, Nature   [31] M. Finger, N. Joly, P. S. J. Russell, and M. Chekhova,
+     453, 495 (2008).                                               Phys. Rev. A 95, 053814 (2017).
+                                                                                                                           1
+
+[32] S. Meuret, T. Coenen, H. Zeijlemaker, M. Latzel,            the frequency doubled radiation of the same laser (wave-
+     S. Christiansen, S. Conesa-Boj, and A. Polman, Phys.        length 400 nm, energy per pulse up to 0.2 mJ). After cut-
+     Rev. B 96, 035308 (2017).                                   ting off the pump with a dichroic mirror, BSV is filtered
+[33] A. Zavatta, V. Parigi, M. Kim, and M. Bellini, New J.       spatially and spectrally: with a slit and 4f monochroma-
+     Phys. 10, 123006 (2008).
+[34] M. D. Vidrighin, O. Dahlsten, M. Barbieri, M. Kim,          tor down to a single mode (Fig. 2a) or with a bandpass
+     V. Vedral, and I. A. Walmsley, Phys. Rev. Lett. 116,        filter (Fig. 3a) to a few-mode case, respectively. In the
+     050401 (2016).                                              latter case the fibre itself provides single-mode spatial
+[35] Y. I. Bogdanov, K. G. Katamadze, G. V. Avosopiants,         filtering.
+     L. V. Belinsky, N. A. Bogdanova, A. A. Kalinkin, and
+     S. P. Kulik, Phys. Rev. A 96, 063803 (2017).                   Generation of optical harmonics. Second harmonic
+[36] J. Hloušek, M. Ježek, and R. Filip, Sci. Rep. 7, 13046    (SH) and third harmonic (TH) are generated by tightly
+     (2017).                                                     focusing BSV on the surface of a 1 mm slab of lithium
+[37] T. B. Pittman, Y. H. Shih, D. V. Strekalov, and A. V.       niobate crystal, with the z crystal axis in the plane of the
+     Sergienko, Phys. Rev. A 52, R3429 (1995).                   slab and the BSV polarized along z. Under this condi-
+[38] A. Gatti, E. Brambilla, M. Bache, and L. A. Lugiato,        tion, the largest components of second and third nonlin-
+     Phys. Rev. Lett. 93, 093602 (2004).
+[39] I. N. Agafonov, M. V. Chekhova, T. S. Iskhakov, and
+                                                                 ear susceptibilities are used, providing a high efficiency
+     L.-A. Wu, J. Mod. Opt. 56, 422 (2009).                      even though phase matching is not satisfied [22, 46]
+[40] K. W. C. Chan, M. N. O’Sullivan, and R. W. Boyd, Opt.       (Fig. 2a). The photon number distribution of BSV is
+     Lett. 34, 3343 (2009).                                      measured by a charge-integrating detector based on an
+[41] C. Amiot, P. Ryczkowski, A. T. Friberg, J. M. Dudley,       infrared p-i-n diode, providing a linear response up to 106
+     and G. Genty, Opt. Lett. 43, 5025 (2018).                   photons per pulse and noise equivalent to 1600 photons
+[42] A. Picozzi, J. Garnier, T. Hansson, P. Suret, S. Randoux,   per pulse. The photon number distribution for the har-
+     G. Millot, and D. Christodoulides, Phys. Rep. 542, 1
+     (2014).
+                                                                 monics is measured with a similar visible detector, with
+[43] K. Y. Spasibko, D. A. Kopylov, T. V. Murzina,               the noise equivalent to 270 photons per pulse [17]. After
+     G. Leuchs, and M. V. Chekhova, Opt. Lett. 41, 2827          cutting off BSV with a short-pass filter, each harmonic
+     (2016).                                                     is additionally filtered with bandpass filters at 800 nm
+[44] A. M. Pérez, K. Y. Spasibko, P. R. Sharapova, O. V.        (SH) or 532 nm (TH) to block the other one.
+     Tikhonova, G. Leuchs, and M. V. Chekhova, Nat. Com-
+     mun. 6, 7707 (2015).                                           Supercontinuum is generated in a 5 m single-mode
+[45] M. Manceau, G. Leuchs, F. Khalili, and M. Chekhova,         fused silica fibre and further, to achieve single-mode de-
+     Phys. Rev. Lett. 119, 223604 (2017).                        tection, spectrally filtered with a monochromator whose
+[46] D. A. Kopylov, K. Y. Spasibko, T. V. Murzina, and           resolution is 1 nm (Fig. 3a). The photon-number prob-
+     M. V. Chekhova, New J. Phys. 21, 033024 (2019).             ability distribution is measured by a visible charge-
+[47] J. Beirlant, Y. Goegebeur, J. Segers, and J. L. Teugels,
+                                                                 integrating detector (the same as in the case of opti-
+     Statistics of Extremes: Theory and Applications (Wiley,
+     2005).                                                      cal harmonics). The single-pulse spectra (Fig. 4a,c) are
+                                                                 recorded by a CCD camera at the output of a spec-
+                                                                 trometer and further processed to measure the second-
+                                                                 order normalized correlation function g (2) (λ, λ0 ) shown
+    SUPPLEMENTARY INFORMATION TO
+   “INDEFINITE-MEAN PARETO PHOTON                                in Fig. 4b,d.
+DISTRIBUTION FROM AMPLIFIED QUANTUM                                Taking detection noise into account. The dark noise of
+                NOISE”
+                                                                 charge-integrating photodetectors is well described by a
+                                                                 Gaussian distribution with zero mean,
+  Experimental details for the generation of BSV,
+     optical harmonics, and supercontinuum
+                                                                                                1   N2
+                                                                                   P (N ) =    √ e− 2σ2 ,                (7)
+   Generation of BSV. For the experiments with optical                                        σ 2π
+harmonics, BSV is generated in a 10 mm beta barium
+borate (BBO) crystal through type-I collinear frequency-
+                                                                 with the standard deviation σ. Because this noise is in-
+degenerate PDC [43] pumped by 1.6 ps pulses of regen-
+                                                                 dependent from the fluctuations of the detected light, it
+eratively amplified Ti-sapphire laser at 800 nm with a 5
+                                                                 just adds to the photon-number noise.
+kHz repetition rate and energy per pulse up to 0.5 mJ
+(Fig. 2a). To reduce the effect of spatial walk-off [44], the       The total probability distribution is given by the con-
+pump beam is focused into the crystal with a cylindrical         volution of the photon-number and dark noise proba-
+lens. The resulting BSV spectrum is centered at 1600             bility distributions. The convolution of Eq. (7) with
+nm (Fig. 1a). For the supercontinuum generation, BSV             Eq. (4), with no fitting parameters, perfectly coincides
+at 800 nm is used, generated through type-I collinear            with the experimental histograms for the generated har-
+degenerate PDC in two 3 mm BBO crystals [45] from                monics (Fig. 2b,c).
+                                                                                                                                                               2
+
+     Analysis of the complementary cumulative                    a 100
+               distribution functions                                   10-1
+                                                                        10-2
+
+
+
+
+                                                                 CCDF
+   The tails of probability distribution functions (PDFs)               10-3
+are usually analyzed through their complementary cumu-
+                                                                        10-4
+lative distribution functions (CCDFs) [47],
+                                                                        10-5
+                          Z ∞
+                                                                   10-6 2
+                 C̄(N ) =      P (N 0 )dN 0 ,         (8)             10                             103               104                105            106
+                           N
+                                                                 b 100
+whose analysis is possible even if the moments diverge.
+  The tail index of a PDF is defined as                                 10-1
+
+
+
+
+                                                                 CCDF
+                              H(N )                                     10-2
+                    α = lim         ,                   (9)
+                         N →∞  N
+                                                                        10-3
+where H(N ) = − log C̄(N ) is called the hazard function.
+If α = const, the distribution decays exponentially. For                10-4 3
+diverging α the tail decays faster than exponential, for                   10                         104           105          106
+                                                                                                     Number of photons per pulse
+α = 0 slower. The latter means a heavy-tailed distribu-
+tion [12].                                                     FIG. S1. (a) CCDFs for the data on optical harmonics from
+   For the nth optical harmonic of BSV, with the PDF           Fig. 2b,c: 2ω (black points) and 3ω (red points). The cor-
+given by (4), the CCDF is                                      responding theoretical distributions [(10) for n = 2, 3] are
+                          q                                  shown by gray and pink lines respectively. hNnω i are taken
+                                          Nnω
+                           2n
+                              (2n − 1)!! hNnω i
+                                                               from the experimental data. (b) CCDF for the data on the
+      C̄nω (Nnω ) = Erfc         √             ,   (10)      supercontinuum from Fig. 3c (red points), its fit (blue line)
+                                    2                          with Eq. (6) leading to ke = 0.49, and Eq. (6) with k = 0.53
+                                                               (black line) obtained from the maximum likelihood estima-
+where Erfc(x) is the complementary error function.             tor [10, 14].
+CCDFs for SH and TH, together with the experimental
+data, are presented in Fig. S1a. From these dependences
+and the corresponding H(N )/N dependences (Fig. S2),
+                                                                                    1 0 -3
+one can see that α tends fast to zero, therefore the dis-
+tributions are heavy-tailed.
+   In the case of supercontinuum generated from BSV,
+the PDF is given by (5), and the corresponding CCDF                                 1 0 -4
+                                                                         H (N )/N
+
+
+
+
+is
+                             s        √ 
+                                arcsinh  N
+            C̄SC (N ) = Erfc                .      (11)
+                                  2κhNB i                                           1 0 -5
+
+Similarly to the case of harmonics, α tends to zero,
+the distribution is heavy-tailed. However, it exhibits a                                     1 0 3        1 0 4               1 0 5              1 0 6
+faster tendency to zero than for any harmonic (Fig. S2).                                             N u m b e r o f p h o to n s p e r p u ls e
+The CCDF (11) is of the form N −k L(N ), where k is
+the tail exponent and L(N ) is a slowly varying func-          FIG. S2.     Experimental (points) and theoretical (lines)
+                                                               H(N )/N for second (black) and third (red) harmonics from
+tion (i.e. limN →∞ L(tN )/L(N ) = 1, for any t > 1 [12]).
+                                                               Fig. 2b,c and supercontinuum (blue) from Fig. 3c. For the
+Therefore distribution (5) belongs to regularly varying        latter, the theoretical values are calculated from a fit with
+distributions with a finite tail exponent. It is tail equiv-   the Pareto distribution (Fig. S1b).
+alent to the Pareto distribution with the same k. The
+tail exponent tends to (4κhNB i)−1 . For a sufficiently
+strong pump, k goes below unity and then, all moments
+are indefinite. It makes (5) very different from the other     where Γ(x) is the gamma function. The corresponding
+heavy-tailed distributions.                                    CCDF for supercontinuum is
+   The tail exponents linearly increase with the number                                             √ 
+of modes. Indeed, BSV with M modes has                                                  Γ M , arcsinh N
+                                                                                           2 2κhNB i/M
+                                                                          C̄SC,M (N ) =                  ,    (13)
+                     M/2−1          M/2                                                   Γ (M/2)
+                   NB           M             MN
+                                            − 2hN Bi
+    PB,M (NB ) =                          e      B ,    (12)
+                   Γ (M/2) 2hNB i                              where Γ(s, x) is the upper incomplete Gamma function.
+                                                                  3
+
+The latter leads to
+                               M
+                        k=           .                     (14)
+                             4κhNB i
+
+   Remarkably, the distribution (12) for M = 2 becomes
+exactly the exponential one. As a result, Eq. (14) imme-
+diately tells us that with a BSV pump, k < 1 is achieved
+with twice lower mean photon number than with a ther-
+mal pump.
+   Experimental tail exponents ke are derived from the
+fits of the linear part of CCDFs in the log-log scale. The
+error of the fit ∆ke = 0.02 is mainly caused by impre-
+cise estimation of the starting and ending points of this
+range. The other method, based on the calculation of
+the maximum likelihood estimator [10, 14], provides sim-
+ilar exponents in our case. An example of CCDF with
+both fits and the resulting exponents are presented in
+Supplementary Figure S1 and Table S1.
+
+              P , ∆λB        ke   kt hN i, photons/pulse
+    Fig. 3c 48 nJ, 10 nm 0.49 0.31        1.18 × 104
+    Fig. 3e 30 nJ, 10 nm 0.64 0.5         6.5 × 103
+            30 nJ, 3 nm 0.31 0.2          5.6 × 103
+
+TABLE S1. Characteristics of the supercontinuum photon-
+number distributions from Figs. 3c,e. P and ∆λB are BSV
+energy per pulse and bandwidth, respectively; ke and kt are
+experimental and theoretical tail exponents. Despite k being
+less than 1, the mean number of photons hN i exists for the
+measured distributions due to truncation.
+
+  The theoretical exponents kt , estimated from Eq. (14),
+are somewhat smaller than the experimental ones. We
+get the mean gain value (κhNB i = 4 ± 0.5 and 2.5 ± 0.5
+for P = 48 and 30 nJ, respectively) from the nonlinear
+dependence, similar to the one for BSV (Fig. 1b). The
+number M of modes (M = 5±1 and 2±0.2 for ∆λB = 10
+and 3 nm, respectively) is obtained from the g (2) value
+[20] for extremely weak BSV (P = 3 pJ) after the fi-
+bre. The uncertainties in both measurements result in
+the relative error δkt = 25%.
+

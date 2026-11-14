@@ -1,0 +1,1202 @@
+                                                           Estimation of heavy tails in optical non-linear processes
+
+                                                                              Éva Rácz1,2 , László Ruppert1 , and Radim Filip1
+                                                           1
+                                                               Department of Optics, Palacky University, 17. listopadu 12, 771 46 Olomouc, Czech Republic
+                                                  2
+                                                      Department of Theoretical Physics, Budapest University of Technology and Economics, Műegyetem rkp. 1.,
+                                                                                                1111 Budapest, Hungary
+arXiv:2011.04429v1 [physics.optics] 9 Nov 2020
+
+
+
+
+                                                                                                        Abstract
+                                                             In optical non-linear processes rogue waves can be observed, which can be mathematically de-
+                                                         scribed by heavy-tailed distributions. These distributions are special due to the fact that the proba-
+                                                         bility of registering extremely high intensities is significantly higher than for the exponential distri-
+                                                         bution, which is most commonly observed in statistical and quantum optics. The current manuscript
+                                                         gives a practical overview of the generic statistics toolkit concerning heavy-tailed distributions and
+                                                         proposes methods to deal with issues specific to non-linear optics. We take a closer look at super-
+                                                         continuum generation, where rogue waves were already observed. We propose modifications to the
+                                                         Hill estimator to deal with detector saturation as well as corrections introduced by pumping the
+                                                         process by bright squeezed vacuum. The suggested methodology facilitates statistically reliable ob-
+                                                         servation of heavy-tailed distribution in non-linear optics, nanooptics, atomic, solid-state processes
+                                                         and optomechanics.
+
+                                                 Keywords: non-linear optics, statistical optics, heavy-tailed distributions, rogue waves, supercontinuum
+                                                 generation
+
+
+                                                 1       Introduction
+                                                 Heavy-tailed distributions, and power-law (or Pareto) distributions in particular have been reported from
+                                                 a very broad range of areas, including earthquake intensities [1–3], avalanche sizes [4], solar flares [5],
+                                                 degree distributions of various social and biological networks [6–8], incomes [9, 10], insurance claims
+                                                 [11, 12], number of citations of scientific publications [13–15], and many more. For financial institutions,
+                                                 the importance of heavy-tailed behavior comes from the fact that a simple Gaussian model severely
+                                                 underestimates the risks associated with different products or investment strategies, which in turn results
+                                                 in considerable losses. This is why the mathematical background of heavy-tailed distributions and their
+                                                 estimation have been most extensively studied in this context ([16–19] and others).
+                                                      For physicists, in turn, the general fascination with power laws comes from the concept of univer-
+                                                 sality classes in statistical physics, which describe the behavior of various systems close to their critical
+                                                 points, irrespective of the details of the mechanisms of the systems [20]. Inspired by this, and using the
+                                                 increasing availability of good-quality data sets, many of the field have ventured into interdisciplinary
+                                                 waters where power-law behavior has been reported; thereby creating entirely new disciplines like econo-
+                                                 physics [21, 22]. In such investigations, the emphasis has been mostly on understanding the emergence
+                                                 of power-law behavior [23–25]. In contrast, the problem of practical estimation methods of the exponent
+                                                 associated with the power-law (or indeed the verification of power-law behavior) has received relatively
+                                                 little attention from the community. Notable exceptions are [8, 26], in which the power-law nature of
+                                                 numerous phenomena has been questioned.
+                                                      Turning to non-linear optics [27, 28], the problem formulation is, however, somewhat different. Op-
+                                                 tical experiments producing light with heavy-tail intensity distributions allow high repetition rates and
+                                                 large samples to study unstable non-linear phenomena and their sources [29, 30]. Moreover, unlike in
+                                                 social or financial contexts, experiments can be repeated. For intensive pumps, non-linear systems can
+                                                 produce bright signals with directly measurable intensity fluctuations. In statistical optics [31], coherence
+                                                 theory and quantum optics [32], the probability density function of intensities is a subject of investigation
+                                                 for intensive light beams. Remarkably, it allows a direct observation of macroscopic quantum phenom-
+                                                 ena [33–37]. Intensity distributions in supercontinuum generation setups [38–40] being heavy-tailed –
+
+
+                                                                                                            1
+hence the term rogue waves – does have a theoretical basis. So our aim is not to decide whether the
+observed distribution is heavy-tailed or not. We rather propose ways to estimate the tail exponent of
+the distribution in the presence of experimental imperfections, which can help in experimental control
+and design. The issue of detector saturation, for example, should be paid special attention to since
+for intensity distributions with extremely heavy tails, it cannot be solved by a simple re-calibration.
+There is always going to be some portion of the data that will be affected by saturation. Low-intensity
+statistics, on the other hand, are mostly determined by background noise. Consequently, there is only a
+limited interval of intensities within which the observations can be used for estimation purposes and this
+hugely affects the efficiency of any estimation procedure. If we are unlucky, the intervals affected by the
+background noise and detector saturation overlap, and the experiment cannot be salvaged. If, however,
+there is a portion that is useful, we propose ways to gain an initial estimate of the tail exponent (and by
+extension, higher quantiles) which helps design further measurement setups. The procedures presented
+in the current manuscript can be used to quantify the instabilities resulting in extreme events common in
+optical non-linear processes [41, 42], and potentially also in non-linear optomechanics [43, 44], four-wave
+mixing in atomic vapors [45, 46] and wave-mixing processes in superconducting circuits [47–49]. Be-
+yond fundamental interest, extreme events can be used to produce highly non-classical effects distillable
+to large squeezing and entanglement for quantum technology [50, 51]. In parallel, they also inspire an
+investigation of optical Maxwell demon principle [52] for heavy-tailed distributions.
+    The article is structured as follows: In Section 2, we give a brief overview of the mathematical
+background and clarify terminology. Section 3 describes a generic estimation toolkit with pointers
+to more sophisticated methods. Section 4 proposes variations of the generic methods for evaluating
+numerical data in non-linear optics specifically.
+
+
+2    Background and terminology
+Let us first provide an overview of the terminology and concepts concerning heavy-tailed distributions,
+used throughout this work.
+    In general, distributions that decay slower than exponential are referred to as heavy-tailed. To give
+a clear mathematical formulation of this concept, it is useful to introduce the tail function (also referred
+to as survival function, or complementary distribution function), defined for an arbitrary real-valued
+random variable X as
+                                            F (x) ≡ P (X ≥ x).
+In other words, this function describes the probability that the variable reaches or exceeds a threshold
+x. It is related to the more familiar distribution function (DF) F   R∞(x) through F (x) = 1 − F (x), and
+to the probability density function (PDF) f (x) through F (x) = x f (u) du. In what follows, we will
+only consider the right tail of distributions, that is, the behavior of the largest values, and for the sake
+of simplicity, suppose that we are dealing with positive-valued random variables like optical intensities.
+The whole treatment can be straightforwardly extended to the left tails of distributions.
+    Using the tail function (TF), a heavy-tailed distribution can be defined as a distribution for which
+                                                  − ln F (x)
+                                         C ≡ lim             = 0.                                        (1)
+                                              x→∞     x
+There are other equivalent definitions [53], we prefer the latter formulation since it is the one which
+is most in line with the somewhat vague notion of an “L-shaped” distribution used in connection with
+rogue waves ([54], for example). Note that if the limit C in (1) is a finite positive value, the distribution
+decays asymptotically at an exponential rate, while if it is infinity, the distribution decays faster than
+exponential. Definition (1) includes even distributions whose moments of any order are finite, for example
+the log-normal distribution and the Weibull distribution with a shape parameter lower than one [55].
+    Pareto-type distributions (or regularly-varying distributions) form a subset of heavy-tailed distribu-
+tions and are defined as
+                                            F (x) = x−α · L(x),                                           (2)
+with L(x) being a slowly-varying function (for any t > 0, limx→∞ L(tx)/L(x) = 1; slowly-varying
+functions include for example the logarithm function and functions that have a finite limit in infinity)
+and α > 0. For the Pareto distribution, L(x) = const, corresponding exact power-law behavior. The
+exponent α is referred to as the tail exponent. Note that this exponent describes the decay of the tail
+function, the exponent corresponding to the decay of the PDF is α + 1. The moments E (X a ) are finite
+for all a < α and infinite for all a > α. Whether E (X α ) itself is finite depends on the function L(x).
+
+                                                     2
+                                          C=∞                 0<C<∞                                                    Heavy-tailed: C = 0
+
+
+
+
+                                                                                                                         Pareto [9]
+                Uniform [62], Beta [63]
+
+
+
+
+                                                                 Exponential [41]
+
+
+
+
+                                                                                                     Log-normal [61]
+
+
+
+
+                                                                                                                                              Log-Pareto [60]
+                                                                                    Gamma [41]
+                                           Gaussian [62]
+                                                                                                                         Cauchy [64]
+
+                                                                                                                          Levy [65]
+
+                                                                                                                       Log-gamma [66]
+
+
+
+             γ<0                                                γ=0                                                      α = γ −1 > 0        α=0
+
+
+
+                                                           Max domain of attraction
+
+Figure 1: Categorization of univariate continuous distributions according to the properties of their right
+tails: speed of decay compared to exponential (C), tail exponent (α), and behavior of maxima (γ);
+including a few examples for each category.
+
+
+    What makes heavy-tailed distributions statistically special is the fact that many traditional proce-
+dures based on the mean and the variance are inapplicable if the first and second moments do not exist.
+It is possible, of course, to compute sample averages, but they are meaningless if the corresponding
+expected value is not finite for the underlying distribution. That is, as the number of observations is
+increased, such sample averages do not converge to a finite number. The lack of definite moments limits
+many evaluations in statistical optics [31], coherence optics and quantum optics [32]. One should not,
+for example, calculate second-order quantities like correlation [42, 56–58] for α < 2. Furthermore, the
+traditional central limit theorem, which lies at the heart of many applied models, is not applicable, either.
+    The question what can be said about the largest observations for such distributions arises quite
+naturally. There are limit laws concerning the maxima of samples and the distribution of threshold
+exceedances. Very simply stated, if a distribution has the form   (2), the distribution of sample maxima
+tends to an extreme value distribution described by the DF exp −(1 + γx)−1/γ , with 0 < γ = α−1 < ∞.
+The distribution of the exceedances of a sufficiently large threshold l (that is, the random variable
+X − l | X > l) tends in turn to a generalized Pareto distribution with DF 1 − (1 + γx)−1/γ , γ = α−1 .
+Both limit laws hold, of course, given proper normalizing constants, for details see [59]. These limit laws
+can be straightforwardly used to model the behavior of the underlying distribution beyond the largest
+observed value.
+    There are heavy-tailed distributions whose tails are heavier than (2) (for example the log-Pareto
+constructed by exponentiating a Pareto-distributed variable), these limit laws do not apply to them.
+There are also heavy-tailed distributions whose tail is lighter than (2), for these the DF of the maxima
+             −x
+tends to e−e , whereas threshold exceedances tend to an exponential distribution; these distributions
+arise as the natural limit for γ = 0. Distributions with a light, but infinite tail also belong to the γ = 0
+domain of attraction.
+                         The limit distribution of the maxima of random variables with a finite upper
+bound is also exp −(1 + γx)−1/γ , but with γ < 0. Figure 1 summarizes this categorization according
+to tail heaviness.
+    In what follows, we will deal with the extreme value index γ instead of the tail exponent α = γ −1 .
+This has two practical reasons: firstly, γ is the quantity that is used in all mathematical publications,
+so the quite extensive mathematical theory is based on that quantity; and secondly, in the context of
+supercontinuum generation, γ is the quantity proportional to the mean intensity of the pump, so it is in
+a way more handy than α.
+
+
+
+                                                                                                 3
+3     Basic tools for investigating power-law tails
+The purpose of this section is to show physicists some simple, visual tools for assessing power-law behavior
+and also give references on improving the behavior of the estimators. The reason why we have not picked
+a single favorite estimator is that in order to have a reliable assessment of power-law behavior, it is better
+to use more than one tool and see whether they produce consistent results.
+    Examples: For demonstration purposes we will use in the next sections computer-generated samples
+of different distributions; their properties are summarized in Table 1. The size of the generated samples
+was 104 . We did not use solely regularly-varying distributions (2) because we would also like to show
+what the tools produce when used with distributions that do not have a power-law tail. The exponential
+distribution is a standard thin-tailed distribution, compared to which the heavy-tailed property itself is
+defined. The log-normal distribution is, according to the definition (1) heavy-tailed, but it does not have
+a finite tail exponent. A log-gamma distributed variable can be created by exponentiating a gamma-
+distributed variable the same way one transforms a normally distributed variable into a log-normal; it is
+an example for a regularly-varying distribution with L(x) 6= const. The Pareto distribution corresponds
+to pure power-law behavior, and is used for demonstrating the best-case scenario (it is also the a = 1
+special case of the log-gamma distribution).
+
+
+                         Name                  PDF                Heavy-tailed?      γ
+
+                     Exponential              λe−λx                      N           0
+                                                             
+                                       1    1          ln2 x2
+                      Log-normal     √        exp −                      Y           0
+                                      2πσ 2 x           2σ 2
+                                         a
+                                       b
+                      Log-gamma            (ln x)a−1 · x−b−1             Y          b−1
+                                      Γ(a)
+                        Pareto               α · x−α−1                   Y          α−1
+
+                         Table 1: Distributions used for demonstration purposes.
+
+
+3.1     Histogram
+Preparing the histogram is probably the most wide-spread way to visualize random samples, and is
+definitely go-to tool for many physicists. This is why we devote more attention to it in this paper than
+it deserves from the mathematical point of view. It involves defining a discrete set of bins over the
+number line and then counting how many observations of the random variable fall in each bin. Given a
+linear set of bins, the histogram provides an estimate of the PDF of the underlying distribution. If this
+distribution is, at least approximately, Pareto, then the histogram should be linear on a log-log plot with
+the absolute value of the slope equal to the tail exponent plus one. One can even perform a least-squares
+fit to obtain the slope of the line to estimate the exponent. There are, however, three major problems
+with this approach:
+    1. Due to the power-law nature, there will be only a few observations (if any) on the right end of a
+       linear set of bins, meaning that exactly for large values, where the power-law property itself should
+       be more pronounced, there will be considerable variance.
+    2. As taking the logarithm and the expectation are not interchangeable, the expected value of the
+       logarithm of the frequencies is not equal to the logarithm of the PDF. Furthermore, the variance
+       of the frequencies depends on the location. So the basic prerequisites of an ordinary least squares
+       fit do not hold.
+
+    3. The choice of bins has a marked effect on the outcome.
+    To help with the first problem, one can use logarithmic bins instead of linear ones. However, it is
+important to be aware of the fact that using logarithmic bins, that is, bin sizes that are linear on a
+logarithmic scale is equivalent to preparing a linearly binned histogram of Y = ln X. Consequently,
+this version of the histogram approximates the probability density function of Y , g(y). This change of
+
+
+
+                                                      4
+            101                                                                102
+                                                 (a)                                                                  (b)
+            100
+
+
+
+
+                                                           Relative RMSE (%)
+            10−1
+Histogram
+
+
+
+
+            10−2                                                               101     2
+                                                                                       3, naive
+                                                                                       3, impr.
+            10−3                                                                       5, naive
+                   Log. bins
+                   Lin. bins                                                           5, impr.
+            10−4                                                                       9, naive
+                   Naive: 2.42 · x−2.82
+                   Impr.: 3.00 · x−3.00                                                9, impr.
+            10−5                                                               100 1
+                                          101                                    10          102             103        104
+                                                                                          # of largest observations
+                                    x
+                                                                                             taken into account
+
+Figure 2: (a) Linearly (filled circles) and logarithmically binned (empty circles) histograms for a single
+sample of Pareto (α = 3) data, sample size 105 , 100 bins. The dashed line shows the result of the naive
+estimator, the solid line shows the result of the improved version. For the linearly binned histogram,
+the analytic formula is 3 · x−4 , for the logarithmically binned 3 · x−3 . (b) Relative root mean squared
+error (RMSE) of the naive histogram estimator of α−1 and the improved version as a function of how
+many of the largest observations were taken into account. Values were calculated using 104 Pareto-
+distributed samples of √size 104 . The dotted black line corresponds to the Cramér–Rao bound for the
+Pareto distribution, 1/ k; the colored dashed lines show the performance of the naive estimator; and
+the colored solid lines correspond to the improved estimator. The different colors indicate how many
+bins were used to construct the histogram (see the legend).
+
+
+variables results in g(ln x) = x · f (x), meaning that the slope of the linearly binned histogram is α + 1,
+while the slope of the logarithmically binned version is α instead, see figure 2(a).
+      Concerning the second point, if one does not take the logarithm of the frequencies, there is no
+problem with expectations, and the variances can be calculated explicitly. A consistent version of the
+histogram approach is preparing the histogram of Y = ln X, and performing a weighted least-squares
+fit of A · e−By . The weights are needed to make the data homoscedastic [67], and can be calculated as
+                −1
+[p̂k (1 − p̂k )] , with p̂k denoting the fraction of observations within the k th bin. The choice of bins in
+this setting is especially problematic, since empty bins should to be avoided (or, alternatively, discarded
+when performing the fit).
+      The third issue cannot be completely eliminated, however, figure 2(b) shows the results of a small-
+scale simulation experiment based on purely power-law samples (corresponding to the best-case scenario).
+We have taken Nsamples = 104 samples, each consisting of N = 104 elements. For each sample, for
+k = 1, 2, . . . , N we have calculated the values of the estimators based on the top k observations and
+compared them to the known value of the extreme value index γ to obtain
+                                                  v
+                                                  u           Nsamples
+                                               1 u      1       X
+                            Rel. RMSEm (k) ≡ · t
+                                                                                      2
+                                                                       (γ̂m,i (k) − γ) ,
+                                               γ     Nsamples i=1
+
+with m denoting the method used. This means that for a given value of k, we prepared 4 histograms (2,
+3, 5, and 9 bins), and calculated the estimate using the naive (least-squares linear fit on log-log scale)
+and the improved version (weighted least squares exponential fit on lin-log scale) of the estimator as well
+for either. First of all, the simulation showed how bad the performance of the naive histogram estimator
+really is. Secondly, and probably a little counter-intuitively, it showed how few bins are required in
+order to minimize the error of either version of the estimator based on the histogram compared to how
+many bins one would use for visualization. Considering, however, that one only needs to estimate a
+single parameter, increasing the number of points does not necessarily help if these in turn become less
+accurate. To get an estimate of how many bins should be used for a given number of observations k,
+one can consider the Rényi representation theorem [68]. Using it, it is straightforward to show that
+the difference between the log-spacing between the largest and smallest element of a purely Pareto-
+distributed sample of size k is α−1 · [1 + 1/2 + . . .+ 1/(k − 1)] ≈ α−1 [γ ∗ + ln(k − 1)], with γ ∗ ≈ 0.5772 the
+
+
+                                                       5
+Euler–Mascheroni constant. Furthermore, supposing that there is an ideal (log) bin width that minimizes
+the RMSE of a histogram estimator independently of the sample size, it has to be proportional to α−1
+(since that is the scale parameter of the logarithmically transformed sample), so the total number of
+bins should be a linear function of ln(k − 1). Based on our simulations, for k = 100, 3 bins are ideal,
+for k = 104 5 bins produce the best results using the improved version of the histogram estimator (see
+figure 2(b)). Interestingly, for the naive version it seems to be always better to prepare just 2 bins.
+    All in all, the histogram need not be completely discarded as a tool even when working with heavy-
+tailed distributions, provided that certain changes are applied to the naive estimator: use logarithmic
+binning, use only a few bins (if the histogram resembles a broomstick-like in figure 2(a), reduce the
+number of bins), and use weighted least-squares to fit an exponential to the logarithmically transformed
+data. Nevertheless, the histogram remains first and foremost a visual tool in the heavy-tailed context.
+
+3.2    Empirical tail function and QQ estimator
+The empirical tail function (ETF) presents a simple alternative to histograms as a visual tool that does
+not depend on an arbitrary binning procedure. Given a sample of independent, identically distributed
+(iid) observations, {x1 , x2 , . . . , xN }, sorted in descending order x(1) ≥ x(2) ≥ . . . ≥ x(N ) , the empirical
+tail function is given as
+                                                      ∗         k
+                                                     F x(k) = ,                                                 (3)
+                                                                N
+or equivalently, for an arbitrary threshold l ∈ R,
+                                                          N
+                                             ∗     1 X
+                                           F (l) =       1 {xi ≥ l} ,
+                                                   N i=1
+
+with 1{·} denoting the indicator function. In other words, one has to check what proportion of the
+observations exceed the limit l; l = x(k) yields the first definition, equation (3). If the sample is power-
+law distributed (at least for the largest observations) the ETF should be linear on a log-log plot (again,
+for the largest observations), with the slope equal to −α (see figure 3). Since the TF is the integral of the
+PDF, the ETF is considerably smoother than the histogram, which makes it easier to detect deviations
+from power-law behavior visually.                                                                              k
+    As for a numerical estimate of α, it is, of course, possible to perform a least-squares fit on ln x(k) , ln N
+(and that also yields much better results than the naive histogram approach), however, it is better to do
+                                                         k
+this with the roles reversed, that is, by treating ln N    as the independent variable. The latter procedure
+is referred to as the QQ estimator [69], with QQ standing for quantile-quantile. The essential difference
+                                                                                              2
+is that in the ETF version, one divides by the sample average ln2 x(k) − ln x(k) , and in the QQ
+                                                      2
+version a deterministic number, ln2 N   k
+                                           − ln Nk
+                                                     . The QQ version is therefore more stable.
+    In general, a QQ plot is constructed by plotting the sorted observations against the matching quantiles
+of the theoretical distribution. If the underlying distribution matches the theoretical distribution (up to
+a linear transformation), then the QQ plot should be linear. In the specific case of a Pareto-distributed
+variable, one transforms it into an exponentially distributed variable by taking the logarithm and plots
+the sample as a function of the standard exponential quantiles, that is, the plot consists of the points
+      k
+  − ln N , ln x(k) and the slope of the line is α−1 . In essence, this corresponds to exchanging the two
+axes of the ETF plot on a log-log scale. The QQ estimator of γ = α−1 is then calculated as the slope of
+the LS fit on the QQ plot.
+    This is a very simple estimator, and it has been shown to be weakly consistent [70]. However, the
+issues present in the naive histogram estimator are present here, too. Namely the expected value of
+                          k
+ln X(k) is not −α−1 · ln N  , and the variance of ln X(k) depends on k. What is more, X(i) and X(j) are
+not independent. The problem has been addressed in [47] for purely Pareto distributed samples, taking
+into account both the issue of expectations and the covariance matrix of order statistics. The authors
+show that the solution of the generalized regression problem is equivalent to the Hill estimator discussed
+in section 3.3, which should not come as a surprise for since it is the maximum likelihood estimator. The
+same issue has been addressed in [71], under more general assumptions on the underlying distribution,
+yielding an improved regression estimator. Nevertheless, even the basic QQ estimator is also a viable,
+although usually inferior, alternative to the Hill estimator.
+
+
+
+
+                                                          6
+            100
+
+
+            10−1
+      ETF
+
+
+
+            10−2
+
+
+            10−3
+
+                       (a) Exponential                                      (b) Log-normal
+            10   −4
+                 100                101               102             100       101      102    103       104         105
+
+            100
+
+
+            10−1
+      ETF
+
+
+
+
+            10−2
+
+
+            10−3
+
+                       (c) Log-gamma                                        (d) Pareto
+            10   −4
+                 100        102      104        106      108     1010 100        102      104       106         108         1010
+                                            x                                                   x
+
+Figure 3: Empirical tail functions for 100 samples of length 104 , for the distributions: (a) Exponential
+(λ = 0.023), (b) Log-normal (σ = 2.8), (c) Log-gamma (a = b = 0.5), and (d) Pareto (α = 0.5). One
+of the ETF-s for each distribution is shown in black, the others in red. The dashed lines correspond to
+the tangent line to the analytic TF for the largest values. The slopes of the dashed lines are (a) -1.35,
+(b) -0.53, and (c) -0.5. Note that distinguishing a log-normal sample from a regularly varying one is
+non-trivial since the tangent of the ETF based on a finite sample is never vertical.
+
+
+3.3     Hill plot
+The Hill estimator can be obtained as the conditional maximum likelihood estimator of the reciprocal of
+the tail exponent α−1 for Pareto-distributed data [72]:
+                                                                   k
+                                           d−1 (k) ≡ γ̂ H (k) =
+                                                                1X
+                                           α                          ln x(i) − ln x(k+1) ,                                        (4)
+                                                                k i=1
+
+with x(i) , i = 1, 2, . . . , N denoting the ith largest element of the sample. In a more general setting,
+given a sufficiently large number of observations from a regularly-varying distribution, it converges to
+the extreme value index of the distribution
+                                                (the rate of convergence
+                                                                          depends
+                                                                             √      on the distribution) [73].
+For pure Pareto(α) data, E γ̂ H (k) = α−1 , and RMSE γ̂ H (k) = α−1 / k.
+    If a random variable has a power-law distribution, taking the logarithm of it transforms it into
+an exponentially distributed random variable, so another way of interpreting the Hill estimator is the
+following: it first transforms the power-law sample into an exponential one, and after that it estimates
+the parameter of this exponential by taking the sample average, using the fact that for X ∼ EXP(λ),
+E (X|X > l) = l + λ−1 for any l ∈ R+ , which is sometimes referred to as the ageless or memoryless
+property of the exponential distribution. A third interpretation was given in the context of generalized
+regression in [47].
+    The term Hill plot stands for plotting γ̂ H as a function of the tail length k. If we know that the data
+is exactly power-law, it is of course best to set k = N − 1, so the Hill plot does not make much sense.
+For real-life data, however, it is usually only the largest observations for which power-law behavior is a
+reasonable approximation. Consequently, one would normally look for a plateau in the Hill plot where
+
+
+                                                                  7
+            3
+                   (a) Exponential                             (b) Log-normal
+           2.5
+
+            2
+
+           1.5
+     γ̂H
+
+
+
+
+            1
+
+           0.5
+
+            0
+
+
+           4.5
+            4      (c) Log-gamma                               (d) Pareto
+
+           3.5
+            3
+     γ̂H
+
+
+
+
+           2.5
+            2
+           1.5
+            1
+           0.5 1
+             10               102        103         104 101                102       103            104
+                                     k                                            k
+
+Figure 4: Hill plot for 100 computer-generated data sets of length 104 for different distributions. The plot
+for a single realization is highlighted in black for each distribution. The parameters of the distributions
+were the following: (a) Exponential (λ = 0.023), (b) Log-normal µ = 0, σ = 2.8, (c) Log-gamma:
+a = b = 0.5, and (d) Pareto: α = 0.5. The true values for the extreme value index γ are indicated by
+dashed lines.
+
+the estimate is relatively stable, and choose the number of points to take into account based on that.
+Drees et al. [74] have shown that it is best practice to plot the Hill estimator as a function of ln k instead
+of k, for which they coined the phrase altHill plot (figure 4).
+    Taking a closer look, for a general regularly-varying distribution (2) the presence of the function L(x)
+complicates the situation in two ways:
+   • It introduces a non-zero bias which becomes zero only asymptotically. How fast it becomes zero
+     depends on the nature of corrections to the power-law behavior.
+   • The optimal tail length kopt which minimizes the mean squared error of the estimator becomes
+     (often considerably) smaller than the sample size.
+See for example figure 4(c), showing the Hill plots for log-gamma distributed samples, which have a
+logarithmic correction to the power-law. Having information about L(x) is therefore very useful: one
+can modify the Hill estimator to reduce its bias, and also estimate the optimal tail length kopt . The
+statistics literature contains several approaches to bias reduction as well as the choice of tail length
+(see section 4.4 or [59] and references therein), but in general, the more information one has about the
+higher-order behavior of the distribution the better, as estimating higher-order parameters is of course
+even more problematic than estimating the extreme value index γ itself.
+    Another issue with the Hill estimator is that it definitely produces a positive number, regardless of
+the underlying distribution, see for example figure 4(b), where the true extreme value index γ is zero
+for the log-normal distribution. Generally, the closer the estimate γ̂ is to zero, the less confident one
+should be in the results, even if the histogram seems straight at the end. As a rule of thumb, if one has
+an estimate γ̂ < 0.3, it is a good idea to consider alternative models for the data (unless the theoretical
+background is clear and indicates a power-law behavior without reason for doubt).
+
+                                                      8
+   There are further, still basic tools, like the mean excess plot [75, 76], which is quite popular in the
+actuarial field, however, but are not as well suited for estimating the value of the tail exponent.
+
+
+4     Parameter estimation for intensity measurements
+The previous section showed that in the ideal case, either approach yields results consistent with the true
+tail exponent. Actual experiments, however, are never that simple, the distortions and noise introduced
+by the apparatus require further considerations. There are two major effects that cannot be escaped:
+detector imperfections (limited linear response) and noise added by different experimental elements.
+We will use a very simplistic model of the experiments done in [41] in order to show how these affect
+estimation.
+
+4.1    Models used in simulations
+Manceau et al. [41] showed that for supercontinuum generation setups, the distribution of measured
+intensities has very heavy tails. Table 2 summarizes the types of experimental setups used by them from
+the mathematical point of view.
+
+           Source          Experiment            Idealized distribution    Heavy-tailed?     γ
+                                                                   n
+          Thermal     Optical harmonic gen.             [EXP(λ)]                 Y           0
+          Thermal     Supercontinuum gen.           sinh2 [EXP(λ)]               Y          2/λ
+                                                                       n
+            BSV       Optical harmonic gen.       [GAMMA(1/2, β)]                Y           0
+            BSV       Supercontinuum gen.       sinh2 [GAMMA(1/2, β)]            Y          2/β
+
+Table 2: Experimental setups in [41], BSV stands for bright squeezed vacuum. In effect we have differ-
+ent non-linear transformations of an exponential random variable for thermal pumping, and a gamma
+distributed variable for BSV pumping.
+
+    According to Equation (1), each experimental setup produces heavy-tailed observables, even though
+the pumps are not heavy-tailed (the gamma distribution also decays asymptotically at an exponential
+rate). Note that for optical harmonic generation, even though the decay is slower than exponential,
+each moment exists, meaning that there is no theoretical issue with calculating second (or higher) order
+correlations like g (2) [32], so we are not going to further concern ourselves with that case. For the
+supercontinuum setup, however, the situation is quite different: depending on the value of λ (or β), which
+is inversely proportional to the pump’s mean intensity, the highest existing moment can be arbitrarily
+small.
+    If the models in Table 2 were not only approximations of the reality, one would only need to take the
+inverse of the non-linear transformation involved in order to obtain a vanilla exponential or gamma sample
+and quite simply estimate the single free parameter of those distributions. Experimental imperfections
+do, however, complicate the situation. For illustration, let us consider the following simple model of the
+supercontinuum-generation process:
+                                                                   
+                                        X = D K · sinh2 (I + ω1 ) ,                                    (5)
+
+with I denoting the pump’s intensity (whose distribution is either EXP(λ) or GAMMA(1/2, b)) and X
+the detector’s output. The detector is modeled through
+                                          
+                                           l + ω2 if x < l,
+                                   D(x) =     x + ω2 if x ∈ [l, L],                            (6)
+                                          
+                                              L + ω2 if x > L,
+
+with ω1 , ω2 denoting independent Gaussian noises on the pump’s and the detector’s side, respectively
+(these can be aggregates of different types of noises); K is a constant factor. The value of l corresponds
+to the detector’s noise floor, the value of L to its saturation limit.
+    The effects of the different elements of the model are shown in figure 5(a). The dash-dotted light
+blue line shows the ideal case, i.e., the TF of X0 ≡ K · sinh2 I which is distorted in the following steps:
+Adding a Gaussian noise prior to the non-linear transformation (X1 ≡ K · sinh2 [I + ω1 ]) corresponds
+
+                                                    9
+       100                                                                      100                                                                    10−3
+                 (a)                                                                     (b)
+                                                                                                                                                       10−4
+      10   −1
+                                                                               10   −1
+
+
+                                                                                                                                                       10−5
+ETF
+
+
+
+
+      10−2                                                                     10−2
+                                                                                                                                                       10−6
+      10−3                                                                     10−3
+                                                                                                    ETF                                                10−7
+                                                                                                    Histogram
+      10−4                                                                     10−4                                                                    10−8
+         100           10   2
+                                10   4
+                                         10   6
+                                                  10   8
+                                                           10   10
+                                                                     10   12
+                                                                                  100      10   1
+                                                                                                    10   2
+                                                                                                             10   3
+                                                                                                                          10   4
+                                                                                                                                   10   5
+                                                                                                                                            10   6
+                                                                                                                                                     107
+                                          x                                                                           x
+
+Figure 5: a) Model behavior with thermal pumping. The light blue dash-dotted line shows the TF of X0 ,
+the dark blue dash-dotted line shows the TF of X1 . The red/light red lines show 100 simulated ETF-s
+with lower cutoff and detector noise (X2 ). The solid black line shows the TF of the model when an
+upper cutoff is also included. The lower and upper cutoffs are marked by black dotted lines. Parameters:
+I ∼ EXP(λ = 1), K = 200, ω1 ∼ N (0, σ12 = 1), l = 103 , ω2 ∼ N (0, σ22 = 106 ), L = 2 · 106 . (b) Histogram
+and ETF for a single sample of size 104 with the given parameters.
+
+                                                                    
+asymptotically only to a multiplication by a constant factor exp λσ12 (see dark blue dash-dotted line).
+Introducing a lower cutoff
+                           l introduces a discontinuity in the TF, which is smeared by the second Gaussian
+noise ω2 (X2 ≡ max K · sinh2 [I + ω1 ] , l + ω2 ). The upper cutoff in L introduces a sharp fall to zero in
+L, which could be smoothed by taking a more accurate      model of the saturation curve. However, for the
+sake of simplicity, the final step is just X = min max K · sinh2 [I + ω1 ] , l , L + ω2 . For the specific
+parameters used in figure 5, detector saturation essentially corresponds to discarding about the top 1%
+of observations, shown in the figure in light red. Note that out of the parameters of the model, only the
+pump’s mean intensity has an impact on the tail exponent (if there was a multiplicative distortion prior
+to the non-linear transformation, the situation would be different). Figure 5(b) illustrates how much
+easier it is to notice if the saturation limit of the detector was reached during the experiment if one
+uses the ETF instead of the histogram to visualize the data: while there is a very visible cut-off at the
+saturation limit for the former, the latter shows only a slight increase in the rightmost bin. Note that in
+this model, there is a non-zero probability of negative observations, which is why the ETF is not go to
+one as x goes to zero.
+    In the following sections, we will examine how the different estimation tools perform for the different
+versions of our model.
+
+4.2             Numerical results for supercontinuum generation
+Using figure 5(a), we have gained an insight into what the individual parameters of our model do. Now
+we are looking at the performance of the three basic estimators discussed in section 3, and how they are
+affected by model parameters.
+    Figure 6 shows the root mean square error of the different estimators for the thermal case, calculated
+using 103 simulated samples of size 104 . Clearly, in this case the convergence to power-law is quick, since
+the ideal RMSE (black dashed line) is reached easily by the Hill estimator, with the other two estimators
+performing only a little worse (the minimum is about 4% instead of 3%). This is easily understood when
+examining the asymptotic form of the TF (which has a closed analytic form for σ2 = 0),
+                                                                  − λ                
+                                                             2   4x 2       λK
+                                     F SCG,thermal (x) = e−λσ1 ·       · 1−    + O(x−2 ) ,                                                              (7)
+                                                                 K          4x
+which means that the convergence to the asymptotic behavior is also power-law. The divergence in the
+bias is caused by the fact that observations for this model can get arbitrarily close to zero (can even
+be negative), so the term − ln x(k+1) in (4) will dominate in the Hill estimator as k is increased. This
+divergence also introduces meaningless minima in the RMSE curve at k ≈ 8 · 103 , which is where the
+bias curves cross zero before diverging.
+   Figure 7 shows that varying the mean intensity of the source (λ−1 ) and the noise floor (l) changes
+the situation compared to figure 6. The best achievable error is essentially determined by how many
+
+                                                                           10
+                102                                                                       100
+                                                          (a)                                      Hill                (b)
+                                                                                          80       QQ
+Rel. RMSE (%)
+
+
+                                                                                          60       Hist
+
+
+
+
+                                                                          Rel. bias (%)
+                                                                                          40
+                101
+                                                                                          20
+                           Hill                                                             0
+                           QQ                                                             -20
+                           Hist
+                     0
+                10                                                                        -40
+                     101      102            103                104                          101      102        103         104
+                                        k                                                                    k
+
+Figure 6: Comparison of estimators, SCG setup, thermal source, without detector saturation.
+                                                                                          √ (a)
+Relative RMSE. The black dashed line shows the relative RMSE for the exact Pareto case, 1/ k. (b)
+Relative bias. (Parameters: λ = σ1 = 1, l = σ2 = 103 , L = ∞, K = 200.)
+
+                102                                                                       102
+                                                          (a)                                                          (b)
+Rel. RMSE (%)
+
+
+
+
+                                                                          Rel. RMSE (%)
+
+
+
+
+                101                                                                       101
+
+                           λ = 0.5                                                                 l = 102
+                           λ=1                                                                     l = 103
+                           λ=2                                                                     l = 104
+                100                                                                       100
+                   101        10   2
+                                             10   3
+                                                                10   4
+                                                                                             101      102        103         104
+                                        k                                                                    k
+
+Figure 7: Relative RMSE of the Hill estimator as a function of the number of points taken into account:
+(a) for different values of the parameter λ of the thermal pump; (b) for different values of the noise floor
+parameter l of the detector.
+
+
+observations are unaffected by experimental imperfections. If the mean intensity is increased (figure
+7(a)), more observations are above the noise floor of the detector, which ultimately means that one has
+to discard fewer observations when estimating the tail index. Note that the blue line in figure 7(a)
+corresponds to considerable pre-transformation noise: the typical scale of the signal (λ−1 = 1/2) is
+exceeded by the scale of the noise (σ1 = 1), resulting in oddly shaped profile. The same is true for the
+red line in figure 7(b): even though the noise floor is low (l = 102 ), it is exceeded by the scale of the
+additive noise ω2 (σ2 = 103 ).
+    If the process is pumped by bright squeezed vacuum, the problem becomes more technically involved.
+As figure 8 shows, the best achievable RMSE is significantly worse (10-20% instead of 3-4%), owing
+to the considerable bias of the estimators for this case. This is because the correction to power-law
+behavior decays as a power of ln x, and not x. It is therefore helpful if, after taking the logarithm of
+the observations, one uses the conditional maximum likelihood estimator for GAMMA(1/2, β) instead
+of the Hill estimator, which, as discussed before, is a conditional MLE for EXP(λ). That is, one should
+maximize the function
+                                                              k                  k
+                                                          α−1X                βX
+                                       ln L(α, β)     =          ln ln x(i) −       ln x(i)
+                                                           k i=1              k i=1
+                                                          +α ln β − ln Γ(α, β ln x(k+1) ),                                    (8)
+
+with Γ(s, z) denoting the upper incomplete gamma function. It is straightforward to show that asymp-
+totically, the value of β −1 that maximizes (8) is equal to the Hill estimator, and that the corrections are
+
+
+                                                                         11
+                102                                                               100
+                                                     (a)                                                           (b)
+Rel. RMSE (%)
+
+                                                                                   50
+
+
+
+
+                                                                  Rel. bias (%)
+                101                                                                  0
+                         Hill                                                               Hill
+                         QQ                                                        -50      QQ
+                         Hist                                                               Hist
+                         Hill+corr.                                                         Hill+corr.
+                100                                                               -100
+                   101      102           103              104                        101     102            103         104
+                                      k                                                                  k
+
+Figure 8: Comparison of estimators, BSV source, without detector saturation. (a) Relative RMSE. (b)
+Relative bias. (Parameters: β = σ1 = 1, l = σ2 = 103 , L = ∞, K = 200.)
+
+                                                                                                   −1
+O 1/ ln x(k+1) . The maximization can be done numerically using α = 1/2 = fixed, with β0 = γ̂ H
+as the starting point. As the dashed lines in figure 8 show, the estimator defined in (8) is indeed more
+efficient than the simple Hill estimator. The improvement is not as significant as one might hope for since
+the actual transformation applied to the input signal wasp  K · sinh2(·) and not exp(·). Thus, in theory,
+to get better results, one should change ln x(i) to asinh    x(i) /K ′ in (8), with K ′ = K · exp σ12 β ,
+                                       ′
+however, this is problematic since K depends on the unknown values of β (≡ 2/γ), σ1 , and K.
+
+4.3               Detector saturation
+If the observations during an experiment are distorted by detector saturation, one can try and recalibrate
+the equipment so that all observations fall within the linear range of the detector. However, this is not
+necessarily trivial to do if the process is indeed heavy-tailed, but even if this is not a problem, it is still
+a good practice to try and evaluate the original data set instead of throwing it away. This, however,
+requires modifying the basic estimators introduced in section 3, which were constructed supposing that
+the largest observations are (close to being) Pareto distributed. Figure 9(a) shows that, as expected, the
+basic approach fails if there is detector saturation.
+    The three basic techniques presented in section 3 are easily modified to work with discarding the
+largest observations which are affected by detector saturation. For the least squares approaches on
+either the histogram or the QQ plot, one quite straightforwardly has to omit observations above a
+certain threshold, but otherwise the optimization is exactly the same as without the upper cutoff.
+    For generalizing the Hill estimator, one has to take advantage of the Rényi representation theorem
+according to which the scaled spacings of the order statistics of an exponential sample are themselves
+exponentially distributed: that is, if Zi , i = 1, . . . , N is an i.i.d. EXP(λ) sample, then S(i) ≡ i · (Z(i) −
+Z(i+1) ), i = 1, . . . , N − 1 are also i.i.d. EXP(λ), with Z(i) denoting the ith largest observation in the
+sample. Knowing that if X is Pareto, then ln X is exponential, discarding the j largest observations
+results in the following estimator:
+
+                                                       Xk
+                                                  1                               
+                                  γ̂(k, j) :=               i ln x(i) − ln x(i+1)
+                                                k − j i=j+1
+
+                                                                        Xk
+                                                  j     x(j+1)     1           x(i)
+                                          =          ln        +            ln      .                                     (9)
+                                                k − j x(k+1)     k − j i=j+1 x(k+1)
+
+ Note that setting j = 0 does yield the standard Hill estimator, as expected. As figure 9(b) shows,
+our suggested generalization indeed significantly improves the performance. When choosing the value
+of j, one has to, of course, discard the values affected by detector saturation. However, √  discarding too
+many values increases the RMSE, which is in the best-case scenario proportional to 1/ k − j. If, in
+order to reduce the bias, one chooses to only keep the measurements within a shorter interval [x′LO , x′HI ]
+                                  ′        ′
+instead of [x
+             LO , xHI ] (xLO < xLO < x′ HI < xHI ), the
+                                                         number of measurements has to be multiplied by
+a factor of F (xLO ) − F (xHI ) / F (xLO ) − F (x′HI ) . This ensures that on average, the same number of
+
+
+                                                                 12
+                102                                                                                     102
+                                                                        (a)                                                                               (b)
+Rel. RMSE (%)
+
+
+
+
+                                                                                        Rel. RMSE (%)
+                101                                                                                     101
+                                   L = 106                                                                                 j=0
+                                   L = 107                                                                                 j = 50
+                                   L = 108                                                                                 j = 100
+                                   L=∞                                                                                     j = 150
+                100                                                                                     100
+                   101                10   2
+                                                        10   3
+                                                                              10   4
+                                                                                                           101               102             103                104
+                                               k                                                                                       k
+                                                                                                     √
+Figure 9: (a) Hill estimator performance for different values of detector saturation. Dashed line: 1/ k.
+                                                                    6
+(b) Generalized version (9) to compensate for
+                                          √ the saturation L = 10 and varying values of j, the number
+of discarded observations. Dashed line: 1/ k − 150.
+
+
+observations will fall in [x′LO , x′HI ] during the second experiment as in [xLO , xHI ] during the first one.
+The values of F (·) can be substituted by their empirical counterparts from the first experiment. This
+way one can check whether the new estimate γ̂ ′ gained from the second experiment is consistent with
+the old one. The figures for the QQ estimator are quite similar, whereas the histogram approach is not
+much improved by discarding the data affected by saturation.
+
+4.4               Choosing tail length
+Figures 6 - 9 show the best attainable performance of the basic estimators. The problem in practice
+is how to decide how many points to take into account for calculating the estimators (k), especially if
+there is a large number of samples and evaluating each one is not feasible without automation. If the
+higher-order behavior is known, or can be estimated with reasonable accuracy, the optimal tail length
+(minimizing the RMSE) can be estimated as well. This is the approach followed by most of the literature,
+however, due to the difficulty of estimating higher-order behavior, the resulting algorithms can be quite
+involved (requiring the tuning of nuisance parameters) and often do not outperform simpler, heuristic
+approaches.
+
+                                                                                                               Pareto        Log-gamma        Model
+                                                                                                                 γ                γ            γ
+                      Method           Based on                  Tail choice           Cost
+                                                                                                              2       1       2     1        2     1
+                      1.                  Hill            path stability                mid               0.04      0.02     0.46    0.22   0.08   0.15
+                      2.                  hist.           path stability                mid               0.16      0.09     0.45    0.20   0.27   0.22
+                      3.                  QQ              path stability                mid               0.30      0.16     0.52    0.23   0.24   0.22
+                      4. [26]             Hill             KS distance                  high              0.03      0.01     0.46    0.23   0.08   0.44
+                      5. [77]             Hill            aux. statistic                low               0.03      0.02     0.39    0.18   0.13   0.17
+                      6. [78]             Hill           higher-order p.                high              0.02      0.01     0.40    0.20   0.64   0.56
+                      7. [79]             Hill           higher-order p.                mid               0.15      0.09     0.46    0.23   0.25   0.61
+                      8. [80]/1           Hill           higher-order p.                mid               0.05      0.03     0.43    0.21   0.81   0.37
+                      9. [80]/3           Hill           higher-order p.                high              0.07      0.04     0.46    0.23   0.89   0.63
+                      10. [80]/3    reduced-bias Hill    higher-order p.                high              0.21      0.11     0.41    0.20   0.90   0.72
+
+Table 3: Empirical RMSE of different estimators applied to 100 samples of size 104 , for different types
+of distributions, all of which had a positive finite extreme value index (γ ≡ α−1 ∈ {2, 1}). The “Cost”
+column refers to CPU time and complexity. The column “Model” refers to the toy model with a thermal
+pump with (λ = γ/2, σ1 = 0, l = σ2 = 103 , L = ∞). The best three values were indicated in different
+shades of green for each distribution.
+
+   We have implemented the estimation procedures shown in Table 3. We proposed procedures 1-3
+in which a heuristic path stability approach was used to choose the tail length, mainly based on [81],
+and tweaked using [74] and [26] (for details, see A). This approach was included because it essentially
+emulates how one would choose a tail length from the Hill plot, and it also works with an arbitrary
+
+
+                                                                                       13
+estimator. Table 3 of course, is not an exhaustive study of these procedures, especially since procedures
+6-10 involve more than one nuisance parameter, which could have been used to fine-tune them. We did
+not do that, we used the default parameter values suggested in the sources to see how they perform
+“out of the box”. Based on our tests, the procedure introduced by Guillou et al. [77] provided the most
+reliable results and had the further advantage of simplicity and speed. Our suggested path stability
+approach, which mimics visual evaluation, also works reasonably well combined with the Hill estimator.
+
+
+5    Conclusion and Discussion
+In this work, we first gave a brief overview of a basic toolkit that may be used to estimate the tail
+exponent of associated with a heavy-tailed sample. We devoted more attention to histograms than it
+is justified from the mathematical point of view as they are the default tools for many physicists, and
+discussed how to use them more efficiently. Subsequently, we discussed two simple alternatives: the QQ
+estimator and the Hill estimator through examples.
+    We addressed the challenges specific to intensity measurements in supercontinuum generation exper-
+iments. In order to do that, we introduced a model for the observable intensity distribution. Firstly,
+if the source in the experiment is bright squeezed vacuum, the estimation becomes considerably more
+inefficient than in the thermal case. We suggest using a modified version of the Hill estimator, defined
+in (8) for BSV. If the pump is thermal the plain Hill estimator (4) is sufficient. Next, one should check
+whether the observations were affected by detector saturation. This is easily done by preparing the
+empirical tail function of the sample. If the answer is yes, one has to discard the affected observations
+and apply the estimator introduced in (9). Finally, we also included comparison of procedures which can
+choose how many observations to take into account in an automated fashion.
+    These results can be directly extended to investigate heavy tail distribution caused by three-wave
+and four-wave mixing in non-linear optics [41], atomic physics [82], superconducting circuits [48], and
+non-linear optomechanics [43, 44], and electromechanics [83].
+
+
+Acknowledgments
+É.R. and L.R. acknowledge the support of project 19-22950Y of the Czech Science Foundation. R.F.
+acknowledges the projects LTAUSA19099 and CZ.02.1.01/0.0/0.0/16 026/0008460 of MEYS CR.
+
+
+References
+ [1] B. Gutenberg and C. F. Richter, “Frequency of earthquakes in California*,” Bulletin of the Seismo-
+     logical Society of America, vol. 34, pp. 185–188, 10 1944.
+ [2] K. Christensen, L. Danon, T. Scanlon, and P. Bak, “Unified scaling law for earthquakes,” Proceedings
+     of the National Academy of Sciences, vol. 99, no. suppl 1, pp. 2509–2513, 2002.
+ [3] M. G. Newberry and V. M. Savage, “Self-similar processes follow a power law in discrete logarithmic
+     space,” Phys. Rev. Lett., vol. 122, p. 158303, Apr 2019.
+ [4] K. W. Birkeland and C. C. Landry, “Power-laws and snow avalanches,” Geophysical Research Letters,
+     vol. 29, no. 11, pp. 49–1–49–3, 2002.
+ [5] E. T. Lu and R. J. Hamilton, “Avalanches and the distribution of solar flares,” The astrophysical
+     journal, vol. 380, pp. L89–L92, 1991.
+ [6] R. Pastor-Satorras, A. Vázquez, and A. Vespignani, “Dynamical and correlation properties of the
+     internet,” Phys. Rev. Lett., vol. 87, p. 258701, Nov 2001.
+ [7] M. P. H. Stumpf and P. J. Ingram, “Probability models for degree distributions of protein interaction
+     networks,” Europhysics Letters (EPL), vol. 71, pp. 152–158, jul 2005.
+ [8] M. Newman, “Power laws, pareto distributions and zipf’s law,” Contemporary Physics, vol. 46,
+     no. 5, pp. 323–351, 2005.
+ [9] V. Pareto, Cours d’économie politique professé à l’Université de Lausanne. Lausanne; Paris: F.
+     Rouge; Pichon, 1896.
+
+                                                   14
+[10] V. M. Yakovenko and J. B. Rosser, “Colloquium: Statistical mechanics of money, wealth, and
+     income,” Rev. Mod. Phys., vol. 81, pp. 1703–1725, Dec 2009.
+[11] D. C. Shpilberg, “The probability distribution of fire loss amount,” The Journal of Risk and Insur-
+     ance, vol. 44, no. 1, pp. 103–115, 1977.
+[12] H. Rootzén and N. Tajvidi, “Extreme value statistics and wind storm losses: A case study,” Scand.
+     Actuarial J, vol. 1, pp. 70–94, 1995.
+[13] D. J. de Solla Price, “Networks of scientific papers,” Science, vol. 149, no. 3683, pp. 510–515, 1965.
+[14] S. Redner, “How popular is your paper? an empirical study of the citation distribution,” Eur. Phys.
+     J. B, vol. 4, pp. 131–134, 1998.
+[15] M. Golosovsky, “Power-law citation distributions are not scale-free,” Phys. Rev. E, vol. 96, p. 032306,
+     Sep 2017.
+[16] B. Mandelbrot, “The Pareto-Lévy law and the distribution of income,” International Economic
+     Review, vol. 1, no. 2, pp. 79–106, 1960.
+[17] B. Mandelbrot, “New methods in statistical economics,” The Journal of Political Economy, vol. 71,
+     no. 5, 1963.
+[18] S. Rachev, ed., Handbook of Heavy Tailed Distributions in Finance. No. 9780444508966 in Elsevier
+     Monographs, Elsevier, 2003.
+[19] P. Embrechts, S. I. Resnick, and G. Samorodnitsky, “Extreme value theory as a risk management
+     tool,” North American Actuarial Journal, vol. 3, no. 2, pp. 30–41, 1999.
+[20] K. G. Wilson, “The renormalization group and critical phenomena,” Reviews of Modern Physics,
+     vol. 55, no. 3, p. 583, 1983.
+[21] “Econophysics: An emergent science,” 1997.
+[22] C. Schinckus, “1996–2016: Two decades of econophysics: Between methodological diversification
+     and conceptual coherence,” The European Physical Journal Special Topics, vol. 225, pp. 3299–3311,
+     Dec 2016.
+[23] P. Bak and K. Chen, “Self-organized criticality,” Scientific American, vol. 264, no. 1, pp. 46–53,
+     1991.
+[24] R. Albert and A.-L. Barabási, “Statistical mechanics of complex networks,” Rev. Mod. Phys., vol. 74,
+     pp. 47–97, Jan 2002.
+[25] J. D. Farmer and F. Lillo, “On the origin of power-law tails in price fluctuations,” Quantitative
+     Finance, vol. 4, no. 1, pp. 7–11, 2004.
+[26] A. Clauset, C. R. Shalizi, and M. E. J. Newman, “Power-law distributions in empirical data,” SIAM
+     Review, vol. 51, no. 4, pp. 661–703, 2009.
+[27] R. W. Boyd, Nonlinear Optics, Third Edition. USA: Academic Press, Inc., 3rd ed., 2008.
+[28] C. Fabre, G. Grynberg, and A. Aspect, Introduction to Quantum Optics: From the Semi-classical
+     Approach to Quantized Light. 09 2010.
+[29] P. Barthelemy, J. Bertolotti, and D. S. Wiersma, “A lévy flight for light,” Nature, vol. 453, pp. 495–
+     498, May 2008.
+[30] N. Mercadier, W. Guerin, M. Chevrollier, and R. Kaiser, “Lévy flights of photons in hot atomic
+     vapours,” Nature Physics, vol. 5, pp. 602–605, Aug 2009.
+[31] J. Goodman, G. Skrockij, and A. Kokin, Statistical Optics. A Wiley-Interscience publication, Wiley,
+     1985.
+[32] L. Mandel, E. Wolf, and C. U. Press, Optical Coherence and Quantum Optics. EBL-Schweitzer,
+     Cambridge University Press, 1995.
+
+                                                    15
+[33] T. Iskhakov, M. V. Chekhova, and G. Leuchs, “Generation and direct detection of broadband
+     mesoscopic polarization-squeezed vacuum,” Phys. Rev. Lett., vol. 102, p. 183602, May 2009.
+[34] T. S. Iskhakov, M. V. Chekhova, G. O. Rytikov, and G. Leuchs, “Macroscopic pure state of light
+     free of polarization noise,” Phys. Rev. Lett., vol. 106, p. 113602, Mar 2011.
+[35] T. S. Iskhakov, I. N. Agafonov, M. V. Chekhova, and G. Leuchs, “Polarization-entangled light pulses
+     of 105 photons,” Phys. Rev. Lett., vol. 109, p. 150502, Oct 2012.
+[36] T. S. Iskhakov, V. C. Usenko, U. L. Andersen, R. Filip, M. V. Chekhova, and G. Leuchs, “Heralded
+     source of bright multi-mode mesoscopic sub-poissonian light,” Opt. Lett., vol. 41, pp. 2149–2152,
+     May 2016.
+[37] T. S. Iskhakov, V. C. Usenko, R. Filip, M. V. Chekhova, and G. Leuchs, “Low-noise macroscopic
+     twin beams,” Phys. Rev. A, vol. 93, p. 043849, Apr 2016.
+[38] D. R. Solli, C. Ropers, P. Koonath, and B. Jalali, “Optical rogue waves,” Nature, pp. 1054–1057,
+     12 2007.
+[39] V. Ruban, Y. Kodama, M. Ruderman, J. Dudley, R. Grimshaw, P. V. E. McClintock, M. Onorato,
+     C. Kharif, E. Pelinovsky, T. Soomere, G. Lindgren, N. Akhmediev, A. Slunyaev, D. Solli, C. Ropers,
+     B. Jalali, F. Dias, and A. Osborne, “Rogue waves – towards a unifying concept? discussions and
+     debates,” The European Physical Journal Special Topics, vol. 185, pp. 5–15, Jul 2010.
+[40] N. Akhmediev, B. Kibler, F. Baronio, M. Belić, W.-P. Zhong, Y. Zhang, W. Chang, J. M. Soto-
+     Crespo, P. Vouzas, P. Grelu, C. Lecaplain, K. Hammani, S. Rica, A. Picozzi, M. Tlidi, K. Pana-
+     jotov, A. Mussot, A. Bendahmane, P. Szriftgiser, G. Genty, J. Dudley, A. Kudlinski, A. Demir-
+     can, U. Morgner, S. Amiraranashvili, C. Bree, G. Steinmeyer, C. Masoller, N. G. R. Broderick,
+     A. F. J. Runge, M. Erkintalo, S. Residori, U. Bortolozzo, F. T. Arecchi, S. Wabnitz, C. G. Tio-
+     fack, S. Coulibaly, and M. Taki, “Roadmap on optical rogue waves and extreme events,” Journal of
+     Optics, vol. 18, p. 063001, apr 2016.
+[41] M. Manceau, K. Y. Spasibko, G. Leuchs, R. Filip, and M. V. Chekhova, “Indefinite-mean pareto
+     photon distribution from amplified quantum noise,” Phys. Rev. Lett., vol. 123, p. 123606, Sep 2019.
+[42] K. Y. Spasibko, D. A. Kopylov, V. L. Krutyanskiy, T. V. Murzina, G. Leuchs, and M. V. Chekhova,
+     “Multiphoton effects enhanced due to ultrafast photon-number fluctuations,” Phys. Rev. Lett.,
+     vol. 119, p. 223603, Nov 2017.
+[43] G. A. Brawley, M. R. Vanner, P. E. Larsen, S. Schmid, A. Boisen, and W. P. Bowen, “Nonlinear
+     optomechanical measurement of mechanical motion,” Nature Communications, vol. 7, p. 10988, Mar
+     2016.
+[44] M. Šiler, L. Ornigotti, O. Brzobohatý, P. Jákl, A. Ryabov, V. Holubec, P. Zemánek, and R. Filip,
+     “Diffusing up the hill: Dynamics and equipartition in highly unstable systems,” Phys. Rev. Lett.,
+     vol. 121, p. 230601, Dec 2018.
+[45] C. F. McCormick, V. Boyer, E. Arimondo, and P. D. Lett, “Strong relative intensity squeezing by
+     four-wave mixing in rubidium vapor,” Opt. Lett., vol. 32, pp. 178–180, Jan 2007.
+[46] A. M. n. Guerrero, P. Nussenzveig, M. Martinelli, A. M. Marino, and H. M. Florez, “Quantum noise
+     correlations of an optical parametric oscillator based on a nondegenerate four wave mixing process
+     in hot alkali atoms,” Phys. Rev. Lett., vol. 125, p. 083601, Aug 2020.
+[47] I. B. Aban and M. M. Meerschaert, “Generalized least-squares estimators for the thickness of heavy
+     tails,” Journal of Statistical Planning and Inference, vol. 119, no. 2, pp. 341 – 352, 2004.
+[48] V. Sivak, N. Frattini, V. Joshi, A. Lingenfelter, S. Shankar, and M. Devoret, “Kerr-free three-wave
+     mixing in superconducting quantum circuits,” Phys. Rev. Applied, vol. 11, p. 054060, May 2019.
+[49] S. Mundhada, A. Grimm, J. Venkatraman, Z. Minev, S. Touzard, N. Frattini, V. Sivak, K. Sliwa,
+     P. Reinhold, S. Shankar, M. Mirrahimi, and M. Devoret, “Experimental implementation of a raman-
+     assisted eight-wave mixing process,” Phys. Rev. Applied, vol. 12, p. 054051, Nov 2019.
+
+
+
+                                                   16
+[50] J. Heersink, C. Marquardt, R. Dong, R. Filip, S. Lorenz, G. Leuchs, and U. L. Andersen, “Distillation
+     of squeezing from non-gaussian quantum states,” Phys. Rev. Lett., vol. 96, p. 253601, Jun 2006.
+[51] R. Dong, M. Lassen, J. Heersink, C. Marquardt, R. Filip, G. Leuchs, and U. L. Andersen, “Experi-
+     mental entanglement distillation of mesoscopic quantum states,” Nature Physics, vol. 4, pp. 919–923,
+     Dec 2008.
+[52] M. D. Vidrighin, O. Dahlsten, M. Barbieri, M. S. Kim, V. Vedral, and I. A. Walmsley, “Photonic
+     maxwell’s demon,” Phys. Rev. Lett., vol. 116, p. 050401, Feb 2016.
+[53] S. Foss, D. Korshunov, and S. Zachary, An introduction to heavy-tailed and subexponential dis-
+     tributions. Springer Series in Operations Research and Financial Engineering, Springer, 2nd ed.,
+     2013.
+[54] S. Boscolo and C. Finot, eds., Shaping light in nonlinear optical fibers. Wiley, 4 2017.
+[55] G. Bohm and G. Zech, Introduction to statistics and data analysis for physicists. DESY, 2010.
+[56] F. Boitier, A. Godard, N. Dubreuil, P. Delaye, C. Fabre, and E. Rosencher, “Photon extrabunching
+     in ultrabright twin beams measured by two-photon counting in a semiconductor,” Nature Commu-
+     nications, vol. 2, p. 425, Aug 2011.
+[57] Y. Zhou, F.-l. Li, B. Bai, H. Chen, J. Liu, Z. Xu, and H. Zheng, “Superbunching pseudothermal
+     light,” Phys. Rev. A, vol. 95, p. 053809, May 2017.
+[58] L. Zhang, Y. Lu, D. Zhou, H. Zhang, L. Li, and G. Zhang, “Superbunching effect of classical light
+     with a digitally designed spatially phase-correlated wave front,” Phys. Rev. A, vol. 99, p. 063827,
+     Jun 2019.
+[59] J. Beirlant, Y. Goegebeur, and J. Segers, Statistics of extremes: theory and applications. Wiley
+     Series in Probability and Statistics, Chichester: Wiley, 2006.
+[60] U. Cormann and R.-D. Reiss, “Generalizing the pareto to the log-pareto model and statistical
+     inference,” Extremes, vol. 12, pp. 93–105, Mar 2009.
+[61] P. W. Milonni, J. H. Carter, C. G. Peterson, and R. J. Hughes, “Effects of propagation through
+     atmospheric turbulence on photon statistics,” Journal of Optics B: Quantum and Semiclassical
+     Optics, vol. 6, pp. S742–S745, jul 2004.
+[62] E. T. Jaynes, “Information theory and statistical mechanics,” Phys. Rev., vol. 106, pp. 620–630,
+     May 1957.
+[63] N. Dmitruk, A. Goncharenko, and E. Venger, Optics of Small Particles and Composite Media. 11
+     2009.
+[64] O. Svelto, Principles of Lasers. Springer US, 5 ed., 2010. p. 45.
+[65] S. Lepri, S. Cavalieri, G.-L. Oppo, and D. S. Wiersma, “Statistical regimes of random laser fluctu-
+     ations,” Phys. Rev. A, vol. 75, p. 063820, Jun 2007.
+[66] M. E. Ghitany, E. Gómez-Déniz, and S. Nadarajah, “A new generalization of the pareto distribution
+     and its application to insurance data,” J. Risk Financial Manag., vol. 11, no. 1, 2018.
+[67] A. Aitken, “On least squares and linear combination of observations,” vol. 55, pp. 42–48, 1934.
+[68] A. Rényi, “On the theory of order statistics,” Acta Mathematica Academiae Scientiarum Hungarica,
+     vol. 4, pp. 191–231, Sep 1953.
+[69] M. Kratz and S. I. Resnick, “The qq-estimator and heavy tails,” Communications in Statistics.
+     Stochastic Models, vol. 12, no. 4, pp. 699–724, 1996.
+[70] S. Resnick, T. Mikosch, and S. Robinson, Heavy-Tail Phenomena: Probabilistic and Statistical
+     Modeling. No. v. 10 in Heavy-tail phenomena: probabilistic and statistical modeling, Springer,
+     2007.
+
+
+
+                                                    17
+[71] J. Beirlant, G. Dierckx, Y. Goegebeur, and G. Matthys, “Tail index estimation and an exponential
+     regression model,” Extremes, vol. 2, pp. 177–200, 1999.
+[72] B. M. Hill, “A simple general approach to inference about the tail of a distribution,” Ann. Statist.,
+     vol. 3, pp. 1163–1174, 09 1975.
+[73] J. Beirlant, G. Dierckx, and A. Guillou, “Estimation of the extreme-value index and generalized
+     quantile plots,” Bernoulli, vol. 11, pp. 949–970, 12 2005.
+[74] H. Drees, L. de Haan, and S. Resnick, “How to make a Hill plot,” The Annals of Statistics, vol. 28,
+     no. 1, pp. 254–274, 2000.
+[75] S. Coles, An introduction to statistical modeling of extreme values. Springer Series in Statistics,
+     London: Springer-Verlag, 2001.
+[76] S. Ghosh and S. Resnick, “A discussion on mean excess plots,” Stochastic Processes and their
+     Applications, vol. 120, no. 8, pp. 1492 – 1517, 2010.
+[77] A. Guillou and P. Hall, “A diagnostic for selecting the threshold in extreme value analysis,” Journal
+     of the Royal Statistical Society: Series B (Statistical Methodology), vol. 63, no. 2, pp. 293–305, 2001.
+[78] J. Danielsson, L. de Haan, L. Peng, and C. de Vries, “Using a bootstrap method to choose the
+     sample fraction in tail index estimation,” J. Multivar. Anal., vol. 76, p. 226–248, Feb. 2001.
+[79] H. Drees and E. Kaufmann, “Selecting the optimal sample fraction in univariate extreme value
+     estimation,” Stochastic Processes and their Applications, vol. 75, no. 2, pp. 149 – 172, 1998.
+[80] F. Caeiro and M. Gomes, Threshold Selection in Extreme Value Analysis: Methods and Applications,
+     pp. 69–86. 12 2015.
+[81] M. M. Neves, M. I. Gomes, F. Figueiredo, and D. P. Gomes, “Modeling extreme events: Sample
+     fraction adaptive choice in parameter estimation,” Journal of Statistical Theory and Practice, vol. 9,
+     no. 1, pp. 184–199, 2015.
+[82] V. Boyer, A. M. Marino, R. C. Pooser, and P. D. Lett, “Entangled images from four-wave mixing,”
+     Science, vol. 321, no. 5888, pp. 544–547, 2008.
+[83] M. J. Seitner, M. Abdi, A. Ridolfo, M. J. Hartmann, and E. M. Weig, “Parametric oscillation,
+     frequency mixing, and injection locking of strongly coupled nanomechanical resonator modes,” Phys.
+     Rev. Lett., vol. 118, p. 254301, Jun 2017.
+
+
+
+Appendix
+
+A     Path stability approach to choosing tail length
+Procedures 1-3 in Table 3 use the following algorithm, which was adapted from [81], to select the tail
+length:
+  1. Calculate the value of the estimator for all applicable values of the tail length: γ̂(k) for k =
+     kmin , . . . , kmax .
+  2. For all kmin ≤ k ≤ kmax , perform a statistical test to see whether a power-law with the estimated
+     parameters can be rejected or not. Let K denote the uninterrupted interval of values of k which
+     does not include any rejected tail lengths and is to the leftmost. See the dashed portion in Figure
+     10 showing the rejected values. This addition was inspired by [26], although the KS statistic itself
+     is used in a much different manner.
+  3. For ∀k ∈ K, round the estimated value γ̂(k) to n decimal places. Choosing n = 1 is mostly
+     appropriate, the important thing is that the rounded values should not be constant within K.
+
+
+
+
+                                                     18
+                                2
+                                                             Rejected estimates
+                                                          Non-rejected estimates
+                                                                Rounded values
+                               1.5
+
+               Estimated EVI
+                                1
+
+
+
+                               0.5
+
+
+
+                                0
+                                     10   100                   1000
+                                                  Tail length
+
+Figure 10: Heuristic tail length selection algorithm. The thick black line corresponds to K, the green
+interval to I. The sample was created by taking applying sinh2 (·) to an exponential sample and adding
+a Gaussian noise. The true value of γ for this sample is one.
+
+
+  4. Identify the longest interval I, within which the rounded estimates are constant. The original
+     method suggests defining length as the number of elements (k2 − k1 + 1), we suggest per Drees et
+     al. [74] defining length on the log scale (log(k2 /k1 )).
+  5. Within I, calculate the estimates rounded to n + 2 digits, and identify the mode of these values,
+     denoted by m.
+  6. The estimate of the tail is then gained by choosing the shortest tail k̂ within I for which γ̂(k̂)
+     rounded to n + 2 decimal places is equal to m. The final estimate of γ is then γ̂(k̂).
+
+
+
+
+                                                 19
+

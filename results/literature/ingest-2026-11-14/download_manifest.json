@@ -1,0 +1,171 @@
+{
+ "generated": "2026-11-14",
+ "source": "arxiv.org/pdf",
+ "items": [
+  {
+   "arxiv_id": "2602.04370",
+   "group": "new-2026",
+   "pdf": "raw/sources/Gothelf et al. - 2026 - Limitations of an approximative phase-space description in strong-field quantum optics.pdf",
+   "extracted_text": "results/literature/ingest-2026-11-14/extracted_text/gothelf-2026-limitations-of-an-approximative-phase-space-description.txt",
+   "http": "200",
+   "is_pdf": true,
+   "pages": 15,
+   "words": 11777,
+   "sha256": "b9dc865536c520b2f5913980946cad87a9b8253bd0a7e0ea38349f941a7a1bbc"
+  },
+  {
+   "arxiv_id": "2605.31160",
+   "group": "new-2026",
+   "pdf": "raw/sources/Rivera-Dean et al. - 2026 - Erasing photons from bright squeezed vacuum light via above-threshold ionization.pdf",
+   "extracted_text": "results/literature/ingest-2026-11-14/extracted_text/rivera-dean-2026-erasing-photons-from-bsv-via-ati.txt",
+   "http": "200",
+   "is_pdf": true,
+   "pages": 31,
+   "words": 21617,
+   "sha256": "73a765a3d55ffd5936d14695197b29e40504d0cadfd3d1af048ff6342c4df7ac"
+  },
+  {
+   "arxiv_id": "2606.17620",
+   "group": "new-2026",
+   "pdf": "raw/sources/Stammer et al. - 2026 - Photon anti-bunching in high harmonic generation.pdf",
+   "extracted_text": "results/literature/ingest-2026-11-14/extracted_text/stammer-2026-photon-anti-bunching-in-hhg.txt",
+   "http": "200",
+   "is_pdf": true,
+   "pages": 9,
+   "words": 6999,
+   "sha256": "b5da979795cab9611bf1947e4f83d5ca91e231c332453e985ab4439225974536"
+  },
+  {
+   "arxiv_id": "2607.06395",
+   "group": "new-2026",
+   "pdf": "raw/sources/Stammer et al. - 2026 - Attosecond metrology of bright quantum light.pdf",
+   "extracted_text": "results/literature/ingest-2026-11-14/extracted_text/stammer-2026-attosecond-metrology-of-bright-quantum-light.txt",
+   "http": "200",
+   "is_pdf": true,
+   "pages": 7,
+   "words": 5967,
+   "sha256": "5fd88e9c1f7c8a75f32924c82101fb9423a1915d4da6b7739ebedd8decc58e8d"
+  },
+  {
+   "arxiv_id": "2607.20941",
+   "group": "new-2026",
+   "pdf": "raw/sources/Wang et al. - 2026 - Generation of bright quantum high-order harmonic driven by combined coherent and bright squeezed vacuum light.pdf",
+   "extracted_text": "results/literature/ingest-2026-11-14/extracted_text/wang-2026-bright-quantum-hhg-coherent-plus-bsv-propagation.txt",
+   "http": "200",
+   "is_pdf": true,
+   "pages": 14,
+   "words": 4996,
+   "sha256": "a57019913f88a04af6d009b3d86018732c29387554625b98546b3e693574122f"
+  },
+  {
+   "arxiv_id": "2608.16027",
+   "group": "new-2026",
+   "pdf": "raw/sources/Gholam-Mirzaei et al. - 2026 - Sub-cycle metrology of bright quantum light.pdf",
+   "extracted_text": "results/literature/ingest-2026-11-14/extracted_text/gholam-mirzaei-2026-sub-cycle-metrology-of-bright-quantum-light.txt",
+   "http": "200",
+   "is_pdf": true,
+   "pages": 55,
+   "words": 15077,
+   "sha256": "4bb927262ef37ca76250598b05c01c9a680b6ce78102f04899888c61d7f0324e"
+  },
+  {
+   "arxiv_id": "2609.20559",
+   "group": "new-2026",
+   "pdf": "raw/sources/de-la-Pena et al. - 2026 - High-order correlations and ultrafast Wigner negativities in bright-squeezed-vacuum-driven high-harmonic generation.pdf",
+   "extracted_text": "results/literature/ingest-2026-11-14/extracted_text/de-la-pena-2026-high-order-correlations-and-wigner-negativities-bsv-hhg.txt",
+   "http": "200",
+   "is_pdf": true,
+   "pages": 16,
+   "words": 7019,
+   "sha256": "d23f3b60409bbb057efbd1c0532bc10efff059d5b2fa3c9510c5514c3e168bb4"
+  },
+  {
+   "arxiv_id": "2509.17746",
+   "group": "new-2026",
+   "pdf": "raw/sources/Kern et al. - 2026 - Single-shot pulse retrieval of femtosecond bright squeezed vacuum.pdf",
+   "extracted_text": "results/literature/ingest-2026-11-14/extracted_text/kern-2026-single-shot-pulse-retrieval-of-femtosecond-bsv.txt",
+   "http": "200",
+   "is_pdf": true,
+   "pages": 5,
+   "words": 4445,
+   "sha256": "f13f1d97d2533ea74631d2c0783a31b955ae2e1deef84d5e6727691990bc4ca8"
+  },
+  {
+   "arxiv_id": "2211.03188",
+   "group": "supporting",
+   "pdf": "raw/sources/Gorlach et al. - 2023 - High harmonic generation driven by quantum light - main article arXiv 2211.03188v1.pdf",
+   "extracted_text": "results/literature/ingest-2026-11-14/extracted_text/gorlach-2023-hhg-driven-by-quantum-light-main-article.txt",
+   "http": "200",
+   "is_pdf": true,
+   "pages": 17,
+   "words": 6096,
+   "sha256": "221147b1026a1695bb9ff679c8a2565d8676f4721a92387e9e76bcb9dc89cbbf"
+  },
+  {
+   "arxiv_id": "1705.07159",
+   "group": "supporting",
+   "pdf": "raw/sources/Spasibko et al. - 2017 - Multiphoton effects enhanced due to ultrafast photon-number fluctuations.pdf",
+   "extracted_text": "results/literature/ingest-2026-11-14/extracted_text/spasibko-2017-multiphoton-effects-photon-number-fluctuations.txt",
+   "http": "200",
+   "is_pdf": true,
+   "pages": 8,
+   "words": 4720,
+   "sha256": "834772853a69c3c4ccf277230e65c7f2aa3ce7926672bb8b1f14f328aa58c902"
+  },
+  {
+   "arxiv_id": "1807.11784",
+   "group": "supporting",
+   "pdf": "raw/sources/Manceau et al. - 2019 - Indefinite-mean Pareto photon distribution from amplified quantum noise.pdf",
+   "extracted_text": "results/literature/ingest-2026-11-14/extracted_text/manceau-2019-indefinite-mean-pareto-photon-distribution.txt",
+   "http": "200",
+   "is_pdf": true,
+   "pages": 8,
+   "words": 5938,
+   "sha256": "51996ba61900217445691830f4f6a1a55629a9ecc57ac542f5ce2f167eed5b6e"
+  },
+  {
+   "arxiv_id": "2011.04429",
+   "group": "supporting",
+   "pdf": "raw/sources/Racz et al. - 2020 - Estimation of heavy tails in optical non-linear processes.pdf",
+   "extracted_text": "results/literature/ingest-2026-11-14/extracted_text/racz-2020-estimation-of-heavy-tails-in-optical-nonlinear-processes.txt",
+   "http": "200",
+   "is_pdf": true,
+   "pages": 19,
+   "words": 10925,
+   "sha256": "a6257d6cb89cbb58097859ef2f27db3407d5ce350cf1e99fb2a1e92c0e19ac2a"
+  },
+  {
+   "arxiv_id": "1508.06953",
+   "group": "supporting",
+   "pdf": "raw/sources/Moskalenko et al. - 2015 - Paraxial theory of direct electro-optic sampling of the quantum vacuum.pdf",
+   "extracted_text": "results/literature/ingest-2026-11-14/extracted_text/moskalenko-2015-paraxial-theory-of-electro-optic-sampling-quantum-vacuum.txt",
+   "http": "200",
+   "is_pdf": true,
+   "pages": 10,
+   "words": 7219,
+   "sha256": "e309ecbbed9bde53a81a0ebe77e22eb8933209cc23ac09c173e3ecc517844aa1"
+  },
+  {
+   "arxiv_id": "1611.06773",
+   "group": "supporting",
+   "pdf": "raw/sources/Riek et al. - 2017 - Subcycle quantum electrodynamics.pdf",
+   "extracted_text": "results/literature/ingest-2026-11-14/extracted_text/riek-2017-subcycle-quantum-electrodynamics.txt",
+   "http": "200",
+   "is_pdf": true,
+   "pages": 19,
+   "words": 5125,
+   "sha256": "8d46f2022e100ba2d4af259592615fdd17bc1e25ebfe79910267d630cc4cffe9"
+  },
+  {
+   "arxiv_id": "1807.10519",
+   "group": "supporting",
+   "pdf": "raw/sources/Kizmann et al. - 2019 - Subcycle squeezing of light from a time flow perspective.pdf",
+   "extracted_text": "results/literature/ingest-2026-11-14/extracted_text/kizmann-2019-subcycle-squeezing-time-flow-perspective.txt",
+   "http": "200",
+   "is_pdf": true,
+   "pages": 24,
+   "words": 9010,
+   "sha256": "eb82d4902239f0086d11d4c6c5a8fe15a6e7953fa3a4349c31e9f04f5dde32ef"
+  }
+ ]
+}

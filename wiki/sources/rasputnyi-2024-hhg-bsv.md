@@ -3,7 +3,7 @@ title: Rasputnyi Et Al 2024 HHG By Bright Squeezed Vacuum
 type: source-summary
 status: active
 created: 2026-06-06
-updated: 2026-06-06
+updated: 2026-11-14
 tags: [source, hhg, bsv, solids, superbunching]
 source_count: 1
 confidence: high
@@ -16,7 +16,9 @@ related:
 
 ## Bibliographic Metadata
 
-- Authors: Ivan Rasputnyi et al.
+- Authors: Andrei Rasputnyi, Zhaopin Chen, Michael Birk, Oren Cohen, Ido
+  Kaminer, Michael Krueger, Denis Seletskiy, Maria Chekhova, Francesco Tani.
+  (Corrected 2026-11-14 from the PDF title page; the first name was wrong.)
 - Year: 2024.
 - Identifier: arXiv:2403.15337v1.
 - Raw source: [Rasputnyi et al. - 2024 - High Harmonic Generation by Bright Squeezed Vacuum.pdf](<../../raw/sources/Rasputnyi et al. - 2024 - High Harmonic Generation by Bright Squeezed Vacuum.pdf>)

@@ -1,0 +1,2011 @@
+                                              Erasing photons from bright squeezed vacuum light via above-threshold ionization
+
+                                                                          J. Rivera-Dean,1, ∗ T. Rook,2 G. Singh,3, 4 P. Stammer,5, 6
+                                                                       M. Khokhlova,7 E. Pisanty,7 and C. Figueira de Morisson Faria1
+                                                    1
+                                                    Department of Physics and Astronomy, University College London, Gower Street, London WC1E 6BT, UK
+                                                           2
+                                                             Clarendon Laboratory, University of Oxford, Parks Road, Oxford OX1 3PU, United Kingdom
+                                                                 3
+                                                                   Perimeter Institute for Theoretical Physics, Waterloo, Ontario, N2L 2Y5, Canada
+                                                      4
+                                                        Department of Physics and Astronomy, University of Waterloo, Waterloo, Ontario, N2L 3G1, Canada
+                                            5
+                                              ICFO – Institut de Ciencies Fotoniques, The Barcelona Institute of Science and Technology, 08860 Castelldefels (Barcelona)
+                                                                         6
+                                                                           Atominstitut, Technische Universität Wien, 1020 Vienna, Austria
+                                                                         7
+                                                                           Attosecond Quantum Physics Laboratory, Department of Physics,
+                                                                          King’s College London, Strand Campus, London WC2R 2LS, UK
+                                                            While the interface between strong-field physics and quantum optics offers a unique regime
+                                                          for combining extreme nonlinearity with quantum optical resources, its potential for generating
+arXiv:2605.31160v1 [quant-ph] 29 May 2026
+
+
+
+
+                                                          non-classical states of light remains largely unexplored. Standard protocols for generating optical
+                                                          Schrödinger cat states, such as photon subtraction from squeezed light, are inherently limited in
+                                                          the achievable macroscopicity of the state and its scalability. In this work, we bridge this gap by
+                                                          demonstrating that above-threshold ionization driven by bright squeezed light provides a strong-field
+                                                          analogue of photon subtraction, where photoelectron detection acts as a high-intensity heralding
+                                                          mechanism, enabling the generation of large amplitude optical Schrödinger cat states. We char-
+                                                          acterize the resulting non-Gaussian features and show that they can be tuned via the detected
+                                                          photoelectron momentum, and study their robustness against the experimental imperfections aris-
+                                                          ing from finite momentum resolution at the heralding step. Despite the noise, we show that the
+                                                          generated states can be manipulated to violate a Bell inequality, thereby highlighting their po-
+                                                          tential for foundational and practical applications. Our results establish strong-field processes as a
+                                                          scalable platform for macroscopic quantum state engineering, opening a route to quantum optics in
+                                                          previously inaccessible regimes.
+
+
+                                                              I.   INTRODUCTION                                states [16–19], where reduced noise in selected quadra-
+                                                                                                               tures enhances measurement sensitivity [20–22]. Further-
+                                               The distinction between classical and quantum tech-             more, when combined with non-Gaussian operations [23–
+                                            nologies lies in our ability to generate, manipulate               27], nonlinear optics allows for engineering increasingly
+                                            and exploit non-classical states and their correlations—           complex, and more diverse, quantum light. A paradig-
+                                            properties of physical systems that require quantum me-            matic example is the optical Schrödinger cat state: a co-
+                                            chanics for description. Across applications ranging from          herent superposition of two coherent states with equal
+                                            computation and simulation [1], to sensing [2] and com-            amplitude but opposite phase. These states are of cen-
+                                            munication [3], resources such as entanglement and quan-           tral interest for a variety of applications in quantum in-
+                                            tum coherence enable capabilities beyond those achiev-             formation science [28–31] as well as from a more funda-
+                                            able within classical physics [4]. A central challenge,            mental perspective for probing the quantum-to-classical
+                                            therefore, is to identify physical platforms that permit           transition [32, 33], both of which frequently intersect in
+                                            these resources to be generated, engineered, and mea-              the study of nonlocal behaviors via Bell inequality vio-
+                                            sured with high levels of precision [5]. In this pursuit,          lations [34–36]. However, the feasibility of these demon-
+                                            photonics has emerged over the past few decades as a               strations, and the broader utility of optical cat states,
+                                            preeminent platform [6–11]. Owing to its intrinsic ro-             is crucially dictated by their size, defined by the separa-
+                                            bustness to decoherence and the sophisticated control af-          tion of the coherent state components in phase-space. As
+                                            forded by both linear and nonlinear optical operations,            current generation techniques typically yield only small-
+                                            photonic systems have demonstrated remarkable versa-               amplitude superpositions [24–27], scaling these states re-
+                                            tility in generating and manipulating a vast landscape of          mains a major outstanding challenge [37, 38].
+                                            non-classical states of light, both in purely optical setups
+                                            and within hybrid architectures [12, 13].                             To identify mechanisms capable of scaling such states,
+                                               In this regard, nonlinear optics stands as a cornerstone        it is natural to turn to physical regimes that inher-
+                                            for the generation of non-classical states of light, en-           ently operate at large field amplitudes. In this context,
+                                            abling the production of single-photon states and photon           strong-field physics provides a particularly promising set-
+                                            pairs [14, 15], foundational to discrete-variable protocols;       ting. Traditionally, this field explores light-matter inter-
+                                            as well as continuous-variable resources such as squeezed          actions driven by intense electromagnetic fields, giving
+                                                                                                               rise to highly nonlinear phenomena, such as exotic ion-
+                                                                                                               ization regimes [39–41] and the generation of ultrafast
+                                                                                                               pulses in extreme spectral regimes [42–44], that form the
+                                            ∗ physics.jriveradean@proton.me; javier.dean@ucl.ac.uk
+                                                                                                               foundation of attosecond science [45, 46]. Recently, the
+                                                                                                                             2
+
+                                                                   the robustness of these nonlocal correlations against im-
+                                                                   perfect heralding resolution. Taken together, our results
+                                                                   identify strong-field processes as a viable route to over-
+                                                                   coming the scaling limitations of conventional quantum
+                                                                   optical approaches, opening a pathway toward the gener-
+                                                                   ation of large optical Schrödinger cat states in previously
+                                                                   unexplored regimes.
+                                                                      The manuscript is organized as follows. In Sec. II,
+                                                                   we provide the mathematical foundation for our results
+                                                                   by first introducing photon subtraction and establishing
+                                                                   an analogy with the photoelectron heralding considered
+FIG. 1. Pictorial representation highlighting the similarities
+                                                                   here, and then presenting a more technical discussion of
+between photon subtraction and photoelectron heralding. In
+the first case (①), a low intensity squeezed vacuum state
+                                                                   the detailed form of the ATI-heralded state. Section III
+passes through a high transmissivity beam splitter; the de-        presents the main results of our analysis, including the
+tection of a single-photon state on the reflected mode heralds     non-Gaussian features of the generated state, their sen-
+the presence of a small optical Schrödinger cat state in the       sitivity to finite measurement resolution in the heralding
+transmitted one. In the second case (②), a bright squeezed         step, and their use for the violation of a Bell inequal-
+vacuum state interacts with an atomic system; the generation       ity. Finally, we conclude in Sec. IV, where we summarize
+of high-energy photoelectrons heralds the presence of a large      our results and provide an outlook for future research.
+optical Schrödinger cat state. In both cases, the detection of
+either a single photon on the reflected mode or high-energy
+electrons effectively induces a phase-space filter (highlighted               II.   THEORY BACKGROUND
+by the dashed blue and red regions respectively) which effec-
+tively removes part of the driving field, allowing the remaining
+components to coherently interfere and thus generate the de-          To provide a clear foundation for our results, this sec-
+sired superposition.                                               tion is organized in two parts. In Sec. II A, we revisit
+                                                                   the photon subtraction protocol theoretically proposed
+                                                                   in Ref. [23] and experimentally implemented in Ref. [24],
+convergence of this field with quantum optics has birthed          highlighting both its operational mechanism and its scal-
+the interdisciplinary frontier of strong-field quantum op-         ing bottlenecks. We then use these insights to provide the
+tics [47, 48], aiming to harness these extreme regimes for         physical picture motivating how the use of ATI driven
+ultrafast quantum optical applications [49–51]. Within             by bright squeezed light can provide a natural strong-
+this framework, leveraging either intrinsic light-matter           field alternative, a conceptual bridge that we formalize
+correlations or externally engineered resources, such as           in Sec. II B.
+bright squeezed fields [52–60], has enabled the uncov-
+ering of novel physics [61–67], the development of new
+                                                                      A.   From photon subtraction to photoelectron
+characterization methods [58, 68, 69], and the demon-
+                                                                                         heralding
+stration of non-classical states of light across a broad
+spectral range [70–74]. Critically, the integration of non-
+Gaussian operations has opened pathways toward more                   When discussing photon subtraction, we refer to the
+complex non-classical states of light [75–79], in some in-         operation in which a photon is extracted from a given
+stances producing states that share features with high-            quantum state of light after it passes through a beam
+photon number Schrödinger cat states, albeit with lim-             splitter, typically of low reflectivity. Since an ideal beam
+ited phase-space separation.                                       splitter conserves the total number of photonic exci-
+   In this work, we investigate the strong-field process           tations, it therefore redistributes all input excitations
+of above-threshold ionization (ATI) driven by a bright             between the reflected and transmitted modes accord-
+squeezed vacuum (BSV) field, casting it as a strong-field          ing to its reflectivity-transmissivity ratio. Conditioning
+analogue of standard quantum optical protocols in which            on the detection of a photon in the reflected mode in-
+small Schrödinger cat states are generated via single-             duces a transformation in the transmitted mode which,
+photon subtraction from weak squeezed states [23, 24]              in the Fock basis, maps each n-photon component onto a
+[Fig. 1]. By instead subtracting the high-energy photo-            (n−1)-photon component, that is, effectively subtracting
+electrons produced in the ATI process, we show that                a photon in the transmitted mode. This is seen explicitly
+this mechanism enables the generation of large ampli-              by expanding the input state |Φ⟩ in the Fock basis
+tude optical-like Schrödinger cat states with controllable                                    ∞
+                                                                                                 c
+                                                                                                 √n â†n
+                                                                                             X
+quantum features. We further analyze how resolution-                                 |Φ⟩ =            in |0⟩ ,             (1)
+limited photoelectron heralding impacts the purity and                                       n=0   n!
+non-classicality of the resulting states. Finally, we assess
+the capability of these states to violate a Bell inequality        where cn = ⟨n|Φ⟩ and â†in is the creation operator acting
+across different momentum values, specifically examining           on the input mode. After passing through a beam splitter
+                                                                                                                                            3
+
+of transmissivity t, the state becomes
+            ∞       n  
+               c X n (n−l)/2
+               √n
+           X
+   |Φ⟩ =                  t  (1 − t)l/2
+                n!     l                                                (2)
+           n=0     l=0
+
+                                   × (â†t )n−l (â†r )l |0t , 0r ⟩ ,
+
+where â†t and â†r represent the creation operators acting
+on the transmitted and reflected output ports, respec-
+tively. Projecting the reflected mode onto a single-photon
+state |1r ⟩ yields, up to a normalization factor,                             FIG. 2. Norm of the coherent state probability amplitudes
+                  ∞                                                           before [|c(α)|, panel (a)] and after [|ct (α)|, panel (b)] pho-
+                                                                              ton subtraction for a squeezed state input. Panel (c) shows
+                        cn t(n−1)/2 (1 − t)(â†t )n−1 |0t ⟩ ,
+                  X
+        |Φt ⟩ =                                                         (3)
+                                                                              the expectation value of different operators Ô with respect
+                  n=1
+                                                                              to ρ̂ = |Φ⟩⟨Φ| in Eq. (5). Specifically, we display the purity
+confirming that each n-photon component of the input                          (Ô = ρ̂, black curve with circular markers); the probability of
+mode is mapped onto a (n − 1)-photon component in the                         detecting a single photon in the reflected mode (Ô = |1⟩⟨1|,
+transmitted mode.                                                             red curve with upward triangles); and the probability of de-
+  Interestingly, this operation can also be interpreted as                    tecting any other state than a vacuum state in the reflected
+                                                                              mode (Ô = 1 − |0⟩⟨0|, blue curve with downward triangles).
+an erasure process acting on the input state. This be-
+comes more transparent when expanding |Φ⟩ in the over-
+complete basis of coherent states
+                                                                                  For a squeezed vacuum state, the c(α) probability
+                        Z                                                     amplitude (related to the Husimi Q-function [81] via
+                  |Φ⟩ = d2 α c(α) |α⟩ ,                (4)                                     2
+                                                                              Q(α) = π|c(α)| ) has the form of an elongated Gaus-
+                                                                              sian along one quadrature, while being squeezed along
+where c(α) = π −1 ⟨α|Φ⟩. After the beam splitter, the                         the orthogonal one [Fig. 2 (a)]. In this case, as seen from
+state is                                                                      Eq. (6), the heralding process breaks the Gaussian char-
+                                                                              acter through the additional linear factor α, enforcing
+                 Z           √      √
+         |ΦBS ⟩ = d2 α c(α)|α t, −α 1 − t⟩.       (5)                         ct (α) = 0 at α = 0 while leaving two symmetric regions
+                                                                              around the origin where |c(α)| > 0 [Fig. 2 (b)] which co-
+                                                                              herently interfere. In this context, Eq. (6) can be written
+Upon projecting the reflected mode onto a single-photon                       as
+state, we find, up to normalization,                                                      Z            √     Z                  √
+            √
+                   Z
+                                       2     √                                    |Φt ⟩ =   dα ct (α)|α t⟩ − dα ct (−α)|−α t⟩, (7)
+    |Φt ⟩ = 1 − t d2 α c(α)αe−(1−t)|α| /2 |α t⟩                                           C                     C
+                                                    (6)
+                          √                                                   where C := {αx ∈ R+ \{0}, αy ∈ R\{0}} with α =
+            Z
+                2
+          ≡ d α ct (α)|α t⟩.                                                  αx + iαy . The resulting state therefore bears a close re-
+                                                                              semblance to an odd optical Schrödinger cat state of the
+From this expression, it becomes clear that the coherent                      form |α⟩ − |−α⟩ [23, 24].
+state amplitude at the origin is suppressed: while initially                     Nonetheless, as with any heralding-based protocol, the
+the vacuum component |α = 0⟩ contributes with ampli-                          generation of Eq. (7) is inherently probabilistic, as it de-
+tude c(0), after conditioning one has ct (0) = 0 [case ①                      pends on the success rate of detecting a single-photon
+in Fig. 1]. In this sense, photon subtraction acts as an                      excitation in the reflected mode. This probabilistic na-
+erasure of the vacuum component in phase-space.                               ture is precisely what limits the scalability of the tech-
+   However, the extent to which operations performed in                       nique. While, in principle, the method remains applica-
+the reflected mode can modify the properties of the trans-                    ble to arbitrarily squeezed states, the probability of suc-
+mitted mode depends crucially on whether the two out-                         cessful single-photon heralding decreases as the squeez-
+put modes of the beam splitter are entangled. If, after                       ing parameter becomes sufficiently large [Fig. 3 (c), red
+the beam splitter, the state can be written as |Φt ⟩ ⊗ |Φr ⟩,                 curve]. To circumvent this, one might consider a broader
+measurements performed on the reflected mode do not                           heralding condition by projecting onto any non-vacuum
+alter the transmitted state. A necessary condition for                        excitation, an operation described by the measurement
+non-trivial backaction is therefore that the input state                      operator 1 − |0r ⟩⟨0r |. Although this approach success-
+be non-classical [80]. Nevertheless, even if this condition                   fully increases the heralding probability [Fig. 3 (c), blue
+is fulfilled, it does not guarantee that the post-selected                    curve] and effectively mimics single-photon subtraction
+state exhibits non-trivial features. This is precisely why                    for small squeezing parameters, as squeezing increases the
+squeezed vacuum states are particularly well suited in                        heralded state becomes increasingly mixed and rapidly
+this context.                                                                 loses its purity [Fig. 3 (c), black curve].
+                                                                                                                               4
+
+   It is within this context that we identify ATI as a          where âq,µ annihilates a photon in mode (q, µ), ϵµ de-
+strong-field analogue to the photon subtraction proto-          notes the polarization direction (µ =⊥, ∥), and g(ωq ) =
+                                                                p
+col. In ATI, atoms are ionized through the absorption of          ℏωq /(2ϵ0 V ) is the mode-dependent coupling constant,
+more photons than necessary to overcome their ioniza-           with V the quantization volume. Therefore, at any time
+tion potential [41, 82]. For low-frequency, intense driving     t ≥ t0 , the quantum state of the joint light-matter sys-
+fields, this can result in electrons with an energy excess of   tem is given by |Ψ(t)⟩ = Û (t, t0 ) |Ψ(t0 )⟩, with the initial
+dozens or even hundreds of photons [83–86]. Thus, gen-          state taken here as
+erating such high-energy photoelectrons necessitates in-
+tense driving fields, a situation that becomes particularly                        |Ψ(t0 )⟩ = |g⟩ ⊗ ŜL (r) |0⟩ ,           (10)
+relevant for our purposes when considering BSV fields as
+drivers [52–59]. From the perspective of Eq. (4), the ATI            |g⟩ denotes
+                                                                where              the atomic ground state and ŜL (r) =
+process is predominantly sensitive to the tails of the dis-     exp r(â2L − h.c.) the squeezing operator acting on the
+tribution c(α). In these regions, the coherent state ampli-     fundamental mode L ≡ {q = 1, ∥}, while all  Nother modes
+tudes are sufficiently large to trigger ionization, whereas     remain in a vacuum state, such that |0⟩ ≡ q,µ |0q,µ ⟩. In
+contributions from the central phase-space region remain        what follows, we take r ∈ R, which is physically sufficient
+negligible due to insufficient field strength [case ② in        since, in the absence of an external phase reference (such
+Fig. 1]. Consequently, ATI effectively selects phase-space      as a coherent displacement or a second driving field),
+components associated with large amplitudes. This ob-           the characteristics of the interaction depend only on the
+servation suggests a direct analogy with heralding in pho-      magnitude of the squeezing.
+ton subtraction protocols: the atom serves as the entan-           Following the intuition developed in the previous sub-
+gling medium, while the detection of photoelectrons acts        section, the role of photoelectron heralding in ATI is best
+as the heralding event. As a result, the post-selected opti-    understood when expressing the initial state [Eq. (10)] in
+cal state is expected to resemble the structure of Eq. (7),     the coherent state basis of the driving field mode,
+where the effective integration domain C is now defined                              Z
+by the regions of phase-space where the ionization proba-                 |Ψ(t0 )⟩ = d2 α c(α) |g⟩ ⊗ D̂L (α) |0⟩ ,     (11)
+bility is significant. In the following section, we formalize
+this connection.
+                                                                where D̂L (α) = exp[−αâL + h.c.] is the displacement op-
+                                                                erator acting on the fundamental mode. Within this rep-
+     B.   ATI driven by bright squeezed vacuum                  resentation, the time-evolved joint state is
+                                                                             Z
+   Having established the physical picture underlying our           |Ψ(t)⟩ = d2 α c(α)D̂L (α)Ûα (t, t0 ) |g⟩ ⊗ |0⟩ , (12)
+analysis, we now proceed to develop the mathematical
+framework. In particular, we focus on the fundamental           where we define Ûα (t, t0 ) ≡ D̂L (α)† Û (t, t0 )D̂L (α). From
+equations that establish the connection with the herald-        Eq. (8), it follows that Ûα (t, t0 ) satisfies
+ing mechanism, while a detailed, step-by-step derivation
+is provided in the Supplementary Material (Secs. A 1 to                ∂ Ûα (t) h                              i
+A 4). Atomic units are used throughout the text unless             i            = Ĥat + r̂ · Ê(t) + Ecl (t; α) Ûα (t),   (13)
+                                                                          ∂t
+otherwise specified.
+   We begin with the light-matter interaction between an        where Ecl (t; α) = ⟨α|ÊL (t)|α⟩ denotes the classical field
+atomic system, initially in its ground state, and a BSV         associated with the coherent state amplitude α.
+field. Working in the single-active electron and dipole ap-        To probe the formation of the desired non-classical op-
+proximations, and adopting the interaction picture with         tical states, we condition the joint state in Eq. (12) on
+respect to the free-field Hamiltonian, the time evolution       the detection of a photoelectron with final momentum
+operator Û (t, t0 ) describing the light-matter interaction    pf . The heralded optical state is then
+dynamics satisfies the Schrödinger equation
+                                                                   |Φ(pf , t)⟩ = ⟨pf |Ψ(t)⟩
+               ∂ Û (t)                                                        Z
+             i         = Ĥat + r̂ · Ê(t) Û (t).       (8)                   = d2 α c(α)D̂L (α) ⟨pf |Ûα (t, t0 )|g⟩ |0⟩ .
+                  ∂t
+                                                                                                                      (14)
+Here, Ĥat denotes the atomic Hamiltonian, while r̂ · Ê(t)     We emphasize that, unlike in semiclassical ap-
+describes the light-matter interaction in the length gauge.     proaches [87], the matrix element ⟨pf |Ûα (t, t0 )|g⟩ re-
+The electric field operator is given by                         mains an operator acting on the Hilbert space of the op-
+                    X                                           tical modes. To evaluate this term, we employ a combina-
+        Ê(t) = −i      ϵµ g(ωq )[âq,µ e−iωq t + h.c.]         tion of Dyson expansion and Feynman path-integral tech-
+                       µ,q=1
+                 X                                       (9)    niques [88], as commonly used in semiclassical strong-
+             ≡         Êq,µ (t),                               field theories [87, 89–91], and recently extended to the
+                 µ,q                                            quantum optical domain [92]. A detailed derivation is
+                                                                                                                                       5
+
+provided in the Supplementary Material (Secs. A 2 and
+A 3).
+  Restricting our analysis to direct ATI events [41], i.e.,
+neglecting rescattering contributions, we obtain,
+                           Z
+                                           ′
+   ⟨pf |Ûα (t, t0 )|g⟩ ≈ i dt′ eiS(pf ,t,t ;α)
+
+                    × ⟨p̃f (α) + Acl (t′ ; α)|r̂|g⟩ · Ê(t′ ),
+                                                           (15)
+where the semiclassical action is given by
+
+   S(pf , t, t′ ; α) = Ip (t′ − t0 )
+                          i t                          2 (16)
+                             Z
+                       −        dτ p̃f (α) + Acl (τ ; α) .
+                          2 t′
+                           R
+Here, Acl (t; α) = − dtEcl (t; α) is the classical vector
+potential and p̃f (α) = pf − Acl (t; α) is the canonical                 FIG. 3. Norm of the coherent state probability amplitudes
+                                                                         before [panel (a)] and after [panel (b), (c)] the ATI heralding.
+momentum. Notably, the canonical momentum depends
+                                                                         In panel (b), the heralding is performed for pf = 0, while in
+explicitly on α and, unlike in the semiclassical case, is not            panel (c) for pf = (0.5∥ , 0⊥ ). The vertical dashed lines high-
+globally conserved in general. It remains, however, locally              light the location of the ATI rings, computed as indicated in
+well-defined within each coherent state component of the                 the inset of panel (c). The numerical evaluation is carried out
+superposition.                                                           for r = 10 and g(ωL ) = 10−6 a.u., considering a light-matter
+   Equation 15 is derived under the assumption that the                  interaction lasting four optical cycles (ωL = 0.057 a.u.) and
+electronic backaction on the quantum optical modes is                    involving hydrogen atoms (Ip ≃ 0.5 a.u.). A discrete coher-
+negligible within the support of c(α), a condition typ-                  ent state expansion
+                                                                                          √ is employed on a rectangular lattice with
+ically satisfied for strong-field interactions in the near-              spacing k = 0.2 π (see Supplementary Material C).
+infrared regime [93]. We note, however, that strong
+squeezing can effectively enhance the light-matter cou-
+pling (with g(ωL ) ∼ 10−8 a.u.) and potentially lead to                     Prior to the interaction, the distribution |c(α)| exhibits
+non-negligible backaction in displaced squeezed states                   a Gaussian profile strongly squeezed along the y-axis
+with coherent state components intense enough to drive                   [Fig. 3 (a)]. Here, phase-space coordinates are expressed
+strong-field phenomena by themselves [94]. In contrast,                  in terms of the electric field strength ε(α) = 2g(ωL )α.
+for BSV drivers, this effect remains strongly suppressed                 Following ATI heralding for different final electron mo-
+due to the absence of a large coherent offset.                           menta [panels (b) and (c)], the structure of the effective
+   Combining Eqs. (14) and (15), and neglecting vacuum                   coefficient c̃(α) is fundamentally transformed. Two pro-
+excitation contributions proportional to g(ωL ), we arrive               nounced lobes emerge symmetrically around the origin,
+at                                                                       marking the phase-space regions where the ATI events
+                     Z        Z                                          for pf are most probable. Crucially for the generation
+                                                                         of optical Schrödinger cat-like states, the central region
+     |Φ(pf , t)⟩ = d2 α dt′ c(α)b(pf , t′ ; α) |α⟩ ,       (17)
+                                                                         (|εx | ≲ 0.01 a.u.) is strongly suppressed, while each lobe
+                              |         {z        }                      possesses a rich internal structure. Given the coherent
+                                       c̃(α)
+                                                                         superposition inherent to Eq. (17), one expects strong in-
+where we have defined                                                    terference not only between the contributions from lobes
+                                                                         placed at opposite sides of phase-space but also from the
+                             ′
+ b(pf , t′ ; α) = ieiS(pf ,t,t ;α)                                       fine structure within each lobe.
+                                                                  (18)      Interestingly, the fine structure within each lobe de-
+                  × ⟨p̃f (α) + Acl (t′ ; α)|r̂|g⟩ · Ecl (t′ ; α),
+                                                                         pends sensitively on pf , and is rooted in the energy con-
+corresponding to the semiclassical direct ATI probabil-                  servation of the ATI process, i.e., the formation of ATI
+ity amplitude when using the driving field Ecl (t; α).                   rings [96]. Specifically, ATI events occur at energies sat-
+Since these amplitudes become significant only for field                 isfying
+strengths |Ecl (t)| ≳ 10−2 a.u., corresponding to |α| ≳                               p̃2f               ε2
+                                                                                                           2 , n ∈ N,
+106 , while remaining negligible for smaller values, this                                  = nωL − Ip −                      (19)
+demonstrates that ATI acts as a phase-space filter that                                2                4ωL
+selectively weights large amplitude coherent state com-                                                        q
+ponents, providing a direct strong-field analogue of pho-                from which one obtains ε = ±2ωL nωL − Ip − p̃2f /2.
+ton subtraction. This behavior is explicitly illustrated in              These solutions, indicated by vertical dashed lines in
+Fig. 3, where we consider a squeezed state with r = 10                   Fig. 3 (b) and (c), coincide with the maxima of |c̃(α)|.
+and g(ωL ) = 10−6 a.u. [95].                                             This alignment confirms that ATI peaks determine the
+                                                                                                                                      6
+
+dominant contributions to the coherent-state superposi-
+tion, highlighting the tunability afforded by the detected
+electron momentum. Finally, for a temporally symmetric
+ionization process, as for pf = 0 where ionization occurs
+at intensity maxima separated by half a cycle, the spacing
+between consecutive peaks in phase-space corresponds to
+twice the photon energy of the driving field [panel (b)].
+
+
+                      III.   RESULTS
+
+   Having established the capability of ATI to act as a
+massive photon subtraction mechanism, we now turn to
+the quantum optical and quantum information properties             FIG. 4. Solutions to Eqs. (22) and (23) for (a) pf = 0 and
+of the resulting heralding states. In particular, we ana-          (b) pf = (0.5∥ , 0⊥ ). The real (blue circles) and imaginary (red
+lyze their non-Gaussian features, how these are affected           squares) parts of εx are shown as a function of the real part of
+by imperfect heralding, and their potential for violating          the ionization time, with the opacity indicating the squeezing
+                                                                   strength r. The electric field is depicted by the green curves:
+Bell inequalities, thereby highlighting both their founda-
+                                                                   the darker curve corresponds to α > 0, while the lighter one
+tional and practical relevance. However, we first discuss          to α < 0, highlighting the presence of two solutions associated
+some details about the numerical analysis and provide              with different regions of phase-space. In this analysis, we set
+some analytical insights regarding the large nature of the         g(ωL ) = 10−8 a.u., ωL = 0.057 a.u., and used hydrogen (Ip ≃
+generated coherent state superpositions.                           0.5 a.u.) as the atomic system.
+
+
+ A.   Numerical analysis and macroscopic nature of                 varying prefactor multiplied by a rapidly oscillating
+                        the state                                  phase, the second governed by the effective action
+                                                                                                                      iε2x
+   Before analyzing the quantum optical properties of the              SQO (p̃f , t′ , αx ) = Ip (t′ − t0 ) +                     ,
+generated states, we briefly outline the numerical ap-                                                        4g(ωL )2 er cosh(r)
+                                                                                             (                                    )
+proach employed (see Supplementary Material C for more                             1 t
+                                                                                       Z                                i2
+                                                                                               h           εx
+details). To numerically implement Eq. (17), we use a dis-                    −            dτ p̃f,∥ +         cos(ωL τ ) + p̃2f,⊥ ,
+                                                                                   2 t′                   ωL
+            √ state expansion on a lattice L = {|αm,n ⟩ :
+crete coherent
+                                                                                                                                    (21)
+αm,n = k π(m + in); m, n ∈ Z}, with k = 0.035, en-
+suring completeness of the representation [97, 98]. In             which contains both the semiclassical propagation phase
+this framework, a key numerical challenge arises from              of the electron and an additional contribution arising
+the large phase-space support of highly squeezed states,           from the quantum statistics of the driver. In analogy
+which leads to prohibitively large coefficients matrices           with stationary-phase arguments used in strong-field
+c(α). Interestingly, however, is that the physically rele-         physics [100, 101], we analyze the regions of parameter
+vant parameter governing the electron dynamics is the              space (x ≡ (αx , t′ )) where this phase becomes stationary,
+field strength ε(α). Therefore, to maintain the strong-            i.e., ∇x SQO (pf , x) = 0. These stationary configurations
+field regime while keeping the computation tractable, we           provide qualitative insight into the regions of parame-
+adopt a rescaling strategy [99], increasing g(ωL ) to the          ter space that may play a relevant role in shaping the
+order of 10−3 a.u., and correspondingly restricting the            coherent state superposition. Such configurations are de-
+sampled coherent state amplitudes to |α| ∼ 10, such that           termined by
+ε ∼ 10−2 a.u. remains unchanged. While this procedure                ∂SQO
+effectively rescales the phase-space structure of the opti-               =0⇒
+                                                                      ∂t′
+cal state, its qualitative features are preserved, which are                                        2                     (22)
+                                                                                                          p̃2f,⊥
+                                                                            
+                                                                          1          εx           ′
+the relevant aspects of our analysis.                                        p̃f,∥ +     cos(ωL t ) +            + Ip = 0,
+   Semiclassical-based methods may nevertheless provide                   2          ωL                      2
+analytical insight into the macroscopic character of the             ∂SQO
+                                                                          =0⇒
+generated states under more realistic conditions. Starting            ∂εx
+from Eq. (17) and noting that strong squeezing localized                  
+                                                                                1
+                                                                                   Z t h
+                                                                                                    εx            i
+c(α) in that direction, we approximate the state as                         −          dτ p̃f,∥ +      cos(ωL τ ) cos(ωL τ )
+                                                                               ω L t′               ωL
+                    Z            Z t                                                              
+                                                                                      iεx
+   |Φ(pf , t)⟩ ≃ −i dαx c(αx )       dt′ b(pf , t; α) |α⟩ . (20)          +                          = 0,
+                                   t0                                         2g(ωL )2 er cosh(r)
+                                                                                                                           (23)
+From the definition of both c(αx ) and b(pf , t; α)
+[Eq. (18)], their product can be expressed as a slowly             where we have made the substitution αx = εx /(2g(ωL )).
+                                                                                                                            7
+
+   Figure 4 shows the solutions to Eqs. (22) and (23)
+when setting g(ωL ) = 10−8 a.u., for two values of pf .
+Ionization times are found to occur around the extrema
+of the field, displayed in green color for both positive
+(light green) and negative (dark green) phase-space re-
+gions, with contributions arising from positive and nega-
+tive field configurations. For zero final momentum [panel
+(a)], the symmetry of the ionization process leads to de-
+generate solutions for each ionization time with opposite
+phase, whereas this symmetry is lifted for finite longitu-
+dinal momentum [panel (b)], for which the sign of the
+field affects when ionization happens. Importantly, these
+stationary configurations correspond to field strengths
+|ε| ∼ 10−2 a.u., which in turn correspond to coherent
+state amplitudes |α| ∼ 106 . This indicates that the rele-    FIG. 5. Non-Gaussian properties of the generated state,
+vant phase-space regions associated with the ATI ampli-       where each row presents a different measure. (a)-(c) Wigner
+tudes are located far from the origin and are distributed     functions of the ATI-heralded state for photoelectrons with
+on both sides of phase-space.                                 p∥ = 0, 0.1, 1.0 a.u., respectively, with p⊥ = 0 a.u. held fixed
+   We also observe a non-vanishing imaginary component        in all cases. (d)-(f) Photon number probability distributions
+of the field amplitude εx for these solutions, which van-     corresponding to the Wigner functions shown in the upper
+                                                              row, with the green (orange) curve connecting the even (odd)
+ishes only when the ionization time coincides with the
+                                                              photon numbers. (g) Wigner negativity (green curve) of the
+detection time or when squeezing is effectively absent        resulting states as a function of the photoelectron energy, with
+[Fig. 4 (a)]. Furthermore, this imaginary component in-       the dark curve showing the photoelectron probability (nor-
+creases with the squeezing strength, while at the same        malized to maximum), and the gray one the probability of
+time the corresponding ionization times shift away from       having even photon numbers in the state. In this analysis, we
+the extrema of the field towards earlier values. These ob-    fixed g(ωL ) = 5 × 10−3 a.u., considering a light-matter in-
+servations indicate that the presence of squeezing contin-    teraction lasting four optical cycles (ωL = 0.057 a.u.) with
+uously modifies the structure of the stationary solutions,    hydrogen (Ip ≃ 0.5 a.u.) as the atomic medium.
+in a manner consistent with previous studies showing
+that squeezing can influence the effective electron prop-
+agation dynamics [94].                                        stricted solely to classical states, for this class the Wigner
+   With this in mind, we emphasize that this analysis         function is non-negative and reduces to a Liouville proba-
+is intended to provide analytical intuition on the macro-     bility distribution. However, in general, the Wigner func-
+scopic character of the generated high-photon-number su-      tion does not satisfy all the axioms of a classical prob-
+perpositions. The numerical results presented hereupon        ability distribution, a primary reason it is categorized
+are instead obtained using the approach described at the      as a quasiprobability distribution. In particular, it can
+beginning of this section.                                    take negative values, an essential feature of any pure non-
+                                                              Gaussian state as established by Hudson’s theorem [107].
+                                                              This negativity constitutes a definite signature of non-
+  B.   Non-Gaussian features of the coherent state
+                                                              classicality that, in optical Schrödinger cat states, mani-
+                     superposition
+                                                              fests as characteristic interference fringes in phase-space,
+                                                              making it especially well-suited for describing the states
+   Optical Schrödinger cat states represent a paradig-        generated via our ATI protocol.
+matic class of non-Gaussian quantum states [102] and,
+                                                                 Figure 5 (a)-(c) displays the Wigner function of the
+as such, phase-space representations provide a natural
+                                                              heralded quantum optical states for various values of pf .
+framework for characterizing their properties. Among the
+                                                              As observed, the resulting states exhibit characteristic
+various representations available in the literature [81],
+                                                              features of large optical Schrödinger cat states, with two
+the Wigner function is particularly well-suited for non-
+                                                              pronounced lobes around X1 ≈ ±10 and a central in-
+Gaussian states, as it enables both the explicit resolution
+                                                              terference pattern reaching both positive and negative
+of their phase-space features [103], and the assessment of
+                                                              extremal values, as expected from the quantum superpo-
+their potential advantages in quantum information appli-
+                                                              sition of macroscopically distinct lobes. However, unlike
+cations over classical protocols [104, 105]. Formally, the
+                                                              standard even and odd optical cat states, the outer re-
+Wigner function is defined as [106]
+                                                              gions do not always correspond to well-defined Gaussian
+                       2                                    lobes, especially in Fig. 5 (c), displaying patterns with
+             W (β) = tr ρ̂D̂(β)Π̂D̂(−β) ,              (24)   both positive and negative regions, whose structure and
+                       π
+                                                              relative weight can be tuned by varying pf . This high-
+where Π̂ is the parity operator, and Re[β] ≡ X1 and           lights that the generated states do not generally corre-
+Im[β] ≡ X2 denote the optical quadratures. While not re-      spond to a simple superposition of two coherent states of
+                                                                                                                               8
+
+opposite phase, a |α⟩ + b |β⟩, but rather to the continuous        which becomes maximum at pf = 0, and diminishes
+superposition in Eq. (17), which we rewrite as                     as the symmetry of the state breaks, stabilizing at
+              Z                                                    Peven (pf,∥ ) = 0.5 for large values of momentum.
+ |Φ(pf , t)⟩ = d2 α a(pf ; α) |α⟩ + a(pf ; −α) |−α⟩ (25)
+                                                                   Finally, to emphasize the non-Gaussian nature of the
+                                                                   state, Fig. 5 (g) displays the Wigner negative volume
+                                                                   (green curve), defined as
+where we define
+                         Z                                                                Z       Z
+          a(pf ; ±α) =       dt′ c(±α)b(pf , t′ ; ±α).      (26)             N = −1 + dX1 dX2 |W (X1 , X2 )|,        (29)
+
+   The amplitudes and relative phases of the coefficients          together with the probability of detecting an electron
+a(pf ; ±α) determine the specific interference pattern             with the corresponding momentum (black curve). As ob-
+found in each lobe and between them, with the value                served, the negativity remains greater than zero across
+of pf strongly influencing these coefficients. In particu-         all momenta, highlighting the non-Gaussian character of
+lar, for pf = 0, the Wigner function is invariant under a          the generated states, while the photoelectron probability
+π-rotation in phase-space [panel (a)], while for pf,∥ ̸= 0         decreases and flattens compared to the case of coherent
+this symmetry is broken [panels (b) and (c)]. This behav-          states [64, 69, 92].
+ior is directly related to the ATI dynamics. For a given
+|α|, a(pf ; α) represents the ATI probability amplitude
+                                                                         C.    Effect of limited heralding resolution
+associated with a coherent field of strength ε(α). When
+pf = 0, ATI happens symmetrically along the time-
+duration of the driving field, specifically at each half-             One of the main mechanisms degrading non-classical
+cycle of the field, so that a(pf ; α) = a(pf ; −α). Thereby,       states of light is decoherence, whereby a pure state
+switching α → −α, i.e., rotating the state in phase-space          evolves into a statistical mixture with reduced coherence
+by an angle π, does not alter the process. In contrast,            and diminished non-classical features. In heralding-based
+for pf,∥ ̸= 0 the ATI response for a given |α| becomes             protocols, an important source of decoherence arises from
+time-asymmetric, as different half-cycles of the field con-        the finite resolution of the measurement used for condi-
+tribute unequally due to the introduced photoelectron              tioning. In our case, this conditioning relies on measuring
+momentum bias. Consequently, a(pf ; α) ̸= a(pf ; −α),              the final momentum of the photoelectron which, ideally,
+thus breaking the π-rotation symmetry, as reflected in             corresponds to a projective measurement described by
+panels (b) and (c).                                                the operator Π̂ideal (pf ) = |pf ⟩⟨pf |. In practice, however,
+   This breaking of the symmetry is further illustrated in         detectors possess finite resolution and cannot perfectly
+Fig. 5 (d)-(f), which display the photon number prob-              distinguish nearby outcomes pf and p′f . As a result, the
+ability P (n|pf ) = |⟨n|Φ(pf , t)⟩|2 for the same states as        reported measurement outcome pf may correspond to a
+in panels (a)-(c). For pf = 0 [panel (d)], the distribu-           range of true values {p′f } each of them appearing with
+tion is strongly peaked at photon numbers with even                some probability [Fig. 6 (a)].
+parity (connected with the green curve), while the odd-               To account for this effect, we model the measurement
+parity channels (connected with the orange curve) are              using the framework of approximate measurements [108],
+suppressed. When pf,∥ ̸= 0, this parity selection is bro-          described by positive operator valued measure (POVM)
+ken, and peaks and troughs appear with alternating par-            elements [109] given by
+ity [panels (e) and (f)]. This behavior can be explicitly                           Z
+understood from the Fock expansion of Eq. (25)                           Π̂(pf,µ ) = dp′f,µ w(pf,µ |p′f,µ )|p′f,µ ⟩⟨p′f,µ |, (30)
+                 ∞ Z
+                 X               2   αn
+                       d2 α e−|α| /2 √
+                                                                                                              R
+ |Φ(pf , t)⟩ =                                                     which satisfy the completeness    relation dpf,µ Π̂(pf,µ ) =
+                                       n!                   (27)   1, provided that dpf,µ w(pf,µ |p′f,µ ) = 1. Here,
+                                                                                           R
+                 n=0
+                  × a(pf ; α) + (−1)n a(pf ; −α) |n⟩ .             w(pf,µ |p′f,µ ) represents the conditional probability that
+                                               
+                                                                   the detector reports outcome pf,µ given a true value p′f,µ .
+When a(pf ; α) = a(pf ; −α), as for pf = 0, the fac-               We model this response function as a Gaussian function
+tor [1 + (−1)n ] vanishes for odd n, allowing only even                                             "                   #
+photon numbers [Fig. 5 (d)]. For pf,∥ ̸= 0 the coeffi-                            ′        1           (pf,µ − p′f,µ )2
+cients differ, lifting this parity restriction and produc-            w(pf,µ |pf,µ ) =     √ exp −                       , (31)
+                                                                                         σµ 2π              2σµ2
+ing the more complex photon-number distributions ob-
+served [Fig. 5 (e),(f)]. This is further highlighted in            where σµ characterizes the detector resolution, with
+Fig. 5 (g) with the light gray curve, displaying the prob-         σµ → 0 corresponding to the ideal limit of perfect reso-
+ability of having even photon numbers in the state, i.e.,          lution. For simplicity, we restrict the analysis to decoher-
+                             ∞                                     ence along a single momentum component µ, allowing us
+                             X                      2              to isolate the effect of measurement resolution along ei-
+           Peven (pf,∥ ) =         2n Φ(pf,∥ , t)       ,   (28)
+                             n=0                                   ther the parallel or perpendicular direction. Assuming a
+                                                                                                                                9
+
+                                                                      This saturation can be understood from the fact that,
+                                                                   although the detector may misidentify a momentum
+                                                                   value p′f,µ as pf,µ , contributions from |p′f,µ | ≫ |pf,µ | are
+                                                                   strongly suppressed due to the rapidly decreasing prob-
+                                                                   ability of generating electrons with large momenta. As
+                                                                   a result, the effective mixing by the detector becomes
+                                                                   bounded, leading to a stabilization of the Wigner fea-
+                                                                   tures. This also explains the stronger sensitivity to imper-
+                                                                   fections along the ∥-direction, as the linear polarization
+                                                                   of the driving field along that direction predominantly
+                                                                   accelerates electrons along µ =∥. Consequently, large mo-
+FIG. 6. Effect of finite resolution in the heralding step. (a)     mentum components are more likely along this direction
+Schematic illustration of the effect of finite resolution, with    than along µ =⊥, making the state more susceptible to
+the detector having the possibility of giving an outcome p′        resolution-induced mixing in the ∥-component.
+instead of p = 0.1 a.u. for the measured photoelectron mo-
+mentum according to the probability w(p|p′ ). (b)-(d) Wigner
+functions for different values of the detection resolution, with               D.    CHSH inequality violations
+the first showing the case of close-to-ideal measurement, while
+the other two of imperfect detection along the ∥- and ⊥-
+components. (e) Wigner negativity (light curves, left axis)           While experimental imperfections are inevitable, non-
+and minimum value of the Wigner function (solid curves,            Gaussian states remain a vital resource for both quantum
+right axis) as a function of σ. In this analysis, we fixed         information applications [104, 105] and foundational tests
+g(ωL ) = 5 × 10−3 a.u., considering a light-matter interaction     of quantum mechanics [32, 33]. At the nexus of these
+lasting four optical cycles (ωL = 0.057 a.u.) with hydrogen        two fields lie Bell inequalities, which provide a power-
+(Ip ≃ 0.5 a.u.) as the atomic medium.                              ful and rigorous tool to certify non-classical correlations
+                                                                   that cannot be explained by local-hidden variable mod-
+                                                                   els [36] (see Supplementary Material B 2). By demon-
+minimally disturbing measurement model, i.e., one that             strating that quantum correlations can transcend shared
+introduces classical uncertainty in the measurement out-           classical randomness while being independent of distant
+comes without additional unitary backaction [108], the             measurement choices, Bell tests provide a benchmark for
+post-selected optical state is given, up to a normaliza-           both the utility of quantum protocols [36, 110–112] and
+tion factor, by                                                    the nonlocal nature of reality [34, 35].
+              h                      i                                Here, we consider a Bell test based on the standard
+    ρ̂(p) = tr Π̂(pf,µ ) |Ψ(t)⟩⟨Ψ(t)|                              Clauser-Horne-Shimony-Holt (CHSH) scenario [113], us-
+            Z                                               (32)   ing the setup illustrated in Fig. 7 (a): the ATI-heralded
+          = dp′f,µ w(pf,µ |p′f,µ ) |Φ(p′ , t)⟩⟨Φ(p′ , t)| ,        state is first split by a 50:50 beam splitter, with the two
+                                                                   output modes sent to two parties, Alice and Bob. Each
+where p′ = (p′f,µ , pf,µ̄ ).                                       party independently performs one of two possible mea-
+                                                                                                                        (i)
+   One of the main effects of imperfect heralding on non-          surements, chosen at random, which we denote βA and
+                                                                     (j)
+Gaussian states is the degradation of Wigner negativ-              βB (i, j ∈ {0, 1}). Following Refs. [114, 115], we consider
+ity. This behavior is illustrated in Fig. 6 (b)-(d), which         displaced parity measurements of the form
+shows the Wigner functions obtained by post-selecting
+                                                                                                         †
+on a fixed momentum value pf = (0.1∥ , 0⊥ ), as a func-                             Π̂(β) = D̂(β)(−1)â â D̂† (β),          (33)
+tion of the detector resolution σµ . In the near-ideal case
+[panel (b)], the Wigner function exhibits pronounced neg-          which yield dichotomic outcomes ±1. Comparing with
+ative regions and, as the resolution parameter σµ in-              Eq. (24), the expectation value of this operator is di-
+creases, these negative features are progressively sup-            rectly proportional to the Wigner function evaluated at
+pressed. This degradation depends on the direction along           the phase-space point β. Thus, the underlying physical
+which the measurement is imperfect, with finite resolu-            picture of the considered protocol is that Alice and Bob
+tion along the ⊥-component [panel (c)] leading to an al-           effectively probe the Wigner function of their respective
+                                                                                                                  (i)    (j)
+most absent reduction of negativity, whereas imperfec-             share of the state at the phase-space points βA and βB ,
+tions along the ∥-component [panel (d)] result in a much           respectively. In terms of these measurement operators,
+stronger suppression. This behavior is quantified in panel         we introduce the CHSH functional
+(e), where we show both the Wigner negativity (light
+                                                                                                      (i)       (j)
+                                                                                       X
+curves) and the minimum value of the Wigner function                         ⟨B̂(β)⟩ =    (−1)ij ⟨Π̂(βA ) ⊗ Π̂(βB )⟩,   (34)
+(dark curves) as a function of σµ . Particularly for the ∥-                              i,j
+direction, a small increase in σ∥ with respect to the ideal
+scenario leads to a rapid decay of non-classical features,         which is bounded by |⟨B̂(β)⟩| ≤ 2 for correlations admit-
+followed by a saturation at larger values of σ∥ .                  ting a local-hidden variable description [35, 36], while
+                                                                                                                             10
+
+                                                                    lations.
+                                                                       We further assess the robustness of these violations
+                                                                    against imperfect heralding. As shown by the red down-
+                                                                    triangle curves, increasing the detector uncertainty σ∥
+                                                                    leads to a rapid degradation of the CHSH violation when
+                                                                    the measurement settings are kept fixed to their optimal
+                                                                    noiseless values. In contrast, imperfections along the ⊥-
+                                                                    direction have a significantly weaker impact, with the
+                                                                    corresponding violations remaining close to the ideal case
+                                                                    for values of σ⊥ for which σ∥ already suppresses the Bell
+                                                                    inequality violation. This asymmetry further highlights
+                                                                    the dominant role of the parallel momentum component
+FIG. 7. Analysis of the CHSH violation induced by the ATI-          in shaping the quantum state, and the weak influence of
+heralded states. (a) Schematic illustration of the setup con-       the perpendicular component.
+sidered here, in which the ATI-heralded state passes through
+a beam splitter and is distributed to two parties, Alice and
+Bob, each effectively probing the Wigner function of the state.                       IV.    DISCUSSION
+(b) Example of optimized measurements performed by Alice
+and Bob to violate a Bell inequality, probing the interference
+region arising from the superposition. (c) CHSH inequality vi-         Strong-field physics naturally operates in highly non-
+olation as a function of p∥ for different values of the detection   linear regimes requiring extreme intensities—conditions
+resolution σ, with the shaded green region indicating the Bell-     that have, until recently, remained largely unexplored
+nonlocal regime. In this analysis, we fixed g(ωL ) = 5 × 10−3       within the framework of standard quantum optics. With
+a.u., considering a light-matter interaction lasting four optical   the advent of bright squeezed sources [52, 53] capable of
+cycles (ωL = 0.057 a.u.) with hydrogen (Ip ≃ 0.5 a.u.) as the       driving strong-field processes [54–58], it is now possible
+atomic medium.                                                      to manipulate the extreme nonlinearities of strong-field
+                                                                    physics under the control of quantum states of light. This
+                                                                    work explores this interface, demonstrating that ATI can
+quantum√mechanics allows values up to the Tsirelson                 be harnessed as a powerful heralding mechanism, concep-
+bound 2 2 [116].                                                    tually analogous to photon subtraction protocols [Fig. 1],
+   Importantly, for the measurements considered here,               to generate optical Schrödinger-like cat states with ex-
+CHSH violations require two key ingredients. First, en-             ceptionally large amplitude [Figs. 3 to 5]. Beyond state
+tanglement between the modes distributed to Alice and               preparation, we have characterized the robustness of
+Bob is necessary to generate nonlocal correlations. Sec-            these states against finite heralding resolution [Fig. 6]
+ond, the presence of Wigner negativities enables nega-              and certified their non-classicality and potential founda-
+tive contributions to the measured correlators, which are           tional and practical capabilities through the violation of
+required to surpass the local bound in Eq. (34) when                a Bell inequality [Fig. 7]. Taken together, these results
+Alice and Bob properly select their measurement set-                highlight a core strength of Strong-field Quantum Op-
+tings [Fig. 7 (b)] (see Supplementary Material B 2). In             tics: the potential ability to translate standard quantum
+the present scenario, such contributions are provided by            optical approaches into the high-intensity regime to ac-
+the ATI-heralded state which, together with the beam                cess non-classical resources of unprecedented scale.
+splitter operation, yields an entangled state capable of               In the following, we discuss the main limitations of the
+correlating the measurement outcomes of Alice and Bob.              present approach and outline potential extensions from
+   Figure 7 (c) summarizes the results of our analysis. In          both theoretical and experimental perspectives.
+the absence of heralding imperfections, we find that it is
+possible to achieve clear violations of the CHSH inequal-
+ity across various values of pf,∥ , with values approaching                         A.   Theory perspective
+the Tsirelson bound after optimizing |⟨B̂⟩| over complex-
+valued displacements β [Fig. 7 (b)] (see Supplementary                 The theoretical analysis presented in this work relies
+Material C 3 for details). As the final momentum pf,∥ in-           on a coherent state expansion of the driving field [99],
+creases, the magnitude of the violation is reduced, despite         which we implement numerically using a discrete coher-
+the persistence of clear Wigner negativities [Fig. 5 (g)].          ent state lattice that preserves the (over)completeness
+This behavior reflects the strong sensitivity of the inter-         of the basis [97, 98]. For the high-intensity regimes rele-
+ference structure of the state to the electron momentum,            vant to strong-field physics, this approach requires han-
+which modifies its symmetry as well as the location and             dling large coefficient matrices and coherent states am-
+contrast of the negative regions in phase-space. Conse-             plitudes that, while allowing access to realistic parameter
+quently, the optimal measurement settings depend non-               regimes [Fig. 3], they often rely on renormalization pro-
+trivially on p∥,f , suggesting that more general measure-           cedures [99] to extract phase-space properties [Fig. 5]. Al-
+ment strategies could further enhance the observed vio-             though this strategy captures the qualitative features of
+                                                                                                                       11
+
+the generated optical Schrödinger-like cat states, it tends    these studies have also demonstrated that spatial and
+to underestimate their intrinsically large coherent state      spectral filtering can effectively reduce the number of
+nature. An alternative approach, used in Ref. [94], con-       relevant modes, yielding states that are well approxi-
+sists in effectively squeezing phase-space such that the       mated by a small number of Schmidt modes and, in some
+initial state looks as a coherent state. While this enables    cases, approach an effective single-mode description [55].
+calculations at realistic values of the light-matter cou-      Given that such sources have already been shown to drive
+pling, which gets exponentially enhanced by the amount         strong-field processes in matter, these developments sug-
+of squeezing in the initial state, and yields exact values     gest that the generation of the large optical Schrödinger
+for quantum optical measures invariant under Gaussian          cat-like states predicted here may be within experimental
+transformations (e.g., the Wigner negativity), it does not     reach.
+allow one to recover the true phase-space structure of the        A more significant challenge, however, lies in the char-
+generated states neither reduce their computational over-      acterization of these ATI-heralded states. The large co-
+head.                                                          herent amplitudes involved placed them deep in the high-
+   These limitations highlight the need for quantum opti-      photon number regime, where standard quantum opti-
+cal methods capable of faithfully capturing the large scale    cal tomography techniques become impractical [123]. In
+phase-space structures induced by strong-field dynamics.       this context, nonlinear and strong-field-based character-
+In this work, we observe that the energy conservation          ization methods may provide a viable alternative. For
+in ATI leading to the so-called ATI rings [96], trans-         instance, nonlinear frequency conversion processes have
+late into localized regions of enhanced weight in phase-       been shown to transfer statistical features of an optical
+space [Fig. 3]. This suggests that the ATI-heralded states     field to a higher harmonic mode, enabling indirect charac-
+can be effectively interpreted as superpositions of a finite   terization of the high-photon number driving field [124].
+set of coherent state components associated with these         Similarly, high-harmonic generation driven by a bichro-
+dominant regions. Such a picture naturally connects to         matic quantum field composed of a strong coherent field
+recent approaches based on finite Gaussian decomposi-          and a weaker bright squeezed field has been proposed [68]
+tions [117, 118], which may provide an efficient and ex-       and experimentally explored [58] as an attosecond ana-
+act representation for these large cat-like states [119]. A    logue of homodyne detection, capable of accessing phase-
+complementary direction, motivated by the analysis in          space information of the quantum states. Although such
+Sec. III A, is to explore whether the integration con-         approaches do not yet provide full quantum state to-
+tour defining the quantum optical state can be system-         mography, they offer high-fidelity qualitative evidence of
+atically deformed to better capture the dominant con-          their phase-space properties. Extending these techniques
+tributions. In this context, recently developed contour-       to the present setting, where the generated states ex-
+deformation techniques in semiclassical strong-field stud-     hibit both large and strong non-Gaussian features, there-
+ies [120] may offer a promising route toward more accu-        fore constitutes an important open challenge. Achieving
+rate and scalable descriptions.                                this would open the door to experimentally accessing ad-
+   Finally, in this work we have focused on the simplest       vanced protocols, such as the Bell inequality violations
+ATI configuration, namely a monochromatic, linearly po-        demonstrated here, in a quantitative and controlled man-
+larized driving field and direct ionization pathways. How-     ner.
+ever, strong-field physics offers a much richer landscape:
+at higher energies, additional processes such as rescatter-
+ing become relevant [41, 96], while more structured driv-                     ACKNOWLEDGMENTS
+ing fields are known to strongly shape the photoelectron
+spectra [85, 87, 121]. These additional degrees of free-          J. R.-D. gratefully acknowledges Paris Tzallas for in-
+dom provide powerful handles to engineer the structure         sightful discussions and his interest in this work, Anne
+of the emitted electrons and, consequently, the properties     Weber for stimulating discussions and her kind hospital-
+of the heralded state. Exploring how such control can be       ity at King’s College London, and Federico Centrone and
+leveraged to tailor non-classical features, enhance robust-    Alessio Serafini for insightful discussions.
+ness, or access new classes of quantum states in light and        J. R.-D. and C. F. M. F. acknowledge funding from
+matter [122] constitutes a promising direction for future      UK Engineering and Physical Sciences Research Council
+work.                                                          (EPSRC) Funding, Grant UKRI2300 - Attosecond Pho-
+                                                               toelectron Imaging with Quantum Light.
+                                                                  ICFO-QOT group acknowledges support from: Eu-
+             B.   Experiments perspective                      ropean Research Council AdG NOQIA; MCIN/AEI
+                                                               (PGC2018-0910.13039/501100011033,              CEX2019-
+  While in this work we have considered single-mode            000910-S/10.13039/501100011033,           Plan  National
+squeezed driving fields, current high-intensity BSV gen-       FIDEUA PID2019-106901GB-I00,               Plan National
+eration techniques are typically based on spontaneous          STAMEENA PID2022-139099NB, I00, project funded
+parametric down-conversion [52–59], which inherently           by MCIN/AEI/10.13039/501100011033 and by the
+produces broadband, multimode squeezing. Nevertheless,         “European Union NextGenerationEU/PRTR" (PRTR-
+                                                                                                                           12
+
+C17.I1), FPI); QUANTERA DYNAMITE PCI2022-                          [8] V. Giovannetti, S. Lloyd, and L. Maccone, Advances in
+132919, QuantERA II Programme co-funded by                             quantum metrology, Nature Photonics 5, 222 (2011).
+European Union’s Horizon 2020 program under Grant                  [9] A. Aspuru-Guzik and P. Walther, Photonic quantum
+Agreement No 101017733; Ministry for Digital Transfor-                 simulators, Nature Physics 8, 285 (2012).
+mation and of Civil Service of the Spanish Government             [10] S. Pirandola, B. R. Bardhan, T. Gehring, C. Weed-
+                                                                       brook, and S. Lloyd, Advances in photonic quantum
+through the QUANTUM ENIA project call - Quantum
+                                                                       sensing, Nature Photonics 12, 724 (2018).
+Spain project, and by the European Union through                  [11] V. C. Usenko, A. Acín, R. Alléaume, U. L. Andersen,
+the Recovery, Transformation and Resilience Plan                       E. Diamanti, T. Gehring, A. A. Hajomer, F. Kanitschar,
+- NextGenerationEU within the framework of the                         C. Pacher, S. Pirandola, and V. Pruneri, Continuous-
+Digital Spain 2026 Agenda; CEX2024-001490-S [MI-                       variable quantum communication, Reviews of Modern
+CIU/AEI/10.13039/501100011033]; Fundació Cellex;                       Physics 98, 015003 (2026).
+Fundació Mir-Puig; Generalitat de Catalunya (European             [12] P. van Loock, Optical hybrid approaches to quantum
+Social Fund FEDER and CERCA program; Barcelona                         information, Laser & Photonics Reviews 5, 167 (2011).
+Supercomputing Center MareNostrum (FI-2023-3-0024);               [13] U. L. Andersen, J. S. Neergaard-Nielsen, P. van Loock,
+Funded by the European Union. Views and opinions                       and A. Furusawa, Hybrid discrete- and continuous-
+expressed are however those of the author(s) only and do               variable quantum information, Nature Physics 11, 713
+                                                                       (2015).
+not necessarily reflect those of the European Union, Eu-          [14] D. C. Burnham and D. L. Weinberg, Observation of Si-
+ropean Commission, European Climate, Infrastructure                    multaneity in Parametric Production of Optical Photon
+and Environment Executive Agency (CINEA), or any                       Pairs, Physical Review Letters 25, 84 (1970).
+other granting authority. Neither the European Union              [15] C. K. Hong, Z. Y. Ou, and L. Mandel, Measurement of
+nor any granting authority can be held responsible                     subpicosecond time intervals between two photons by
+for them (HORIZON-CL4-2022-QUANTUM-02-SGA,                             interference, Physical Review Letters 59, 2044 (1987).
+PASQuanS2.1, 101113690, EU Horizon 2020 FET-OPEN                  [16] R. E. Slusher, L. W. Hollberg, B. Yurke, J. C. Mertz,
+OPTOlogic, Grant No 899794, QU-ATTO, 101168628),                       and J. F. Valley, Observation of Squeezed States Gener-
+EU Horizon Europe Program (This project has received                   ated by Four-Wave Mixing in an Optical Cavity, Phys-
+funding from the European Union’s Horizon Europe                       ical Review Letters 55, 2409 (1985).
+                                                                  [17] L.-A. Wu, M. Xiao, and H. J. Kimble, Squeezed states
+research and innovation program under grant agreement
+                                                                       of light from an optical parametric oscillator, JOSA B
+No 101080086 NeQSTGrant Agreement 101080086 —                          4, 1465 (1987).
+NeQST); ICFO Internal “QuantumGaudi” project.                     [18] K. Schneider, M. Lang, J. Mlynek, and S. Schiller, Gen-
+  E.P. acknowledges Royal Society funding under                        eration of strongly squeezed continuous-wave light at
+URF\R1\211390.                                                         1064 nm, Optics Express 2, 59 (1998).
+  M.K. acknowledges Royal Society funding under                   [19] P. K. Lam, T. C. Ralph, B. C. Buchler, D. E. Mc-
+URF\R1\231460.                                                         Clelland, H.-A. Bachor, and J. Gao, Optimization and
+                                                                       transfer of vacuum squeezing from an optical parametric
+                                                                       oscillator, Journal of Optics B: Quantum and Semiclas-
+                                                                       sical Optics 1, 469 (1999).
+                                                                  [20] D. F. Walls, Squeezed states of light, Nature 306, 141
+                        References
+                                                                       (1983).
+                                                                  [21] M. Xiao, L.-A. Wu, and H. J. Kimble, Precision mea-
+  [1] I. Georgescu, S. Ashhab, and F. Nori, Quantum simu-              surement beyond the shot-noise limit, Physical Review
+      lation, Reviews of Modern Physics 86, 153 (2014).                Letters 59, 278 (1987).
+  [2] C. Degen, F. Reinhard, and P. Cappellaro, Quantum           [22] The LIGO Scientific Collaboration, A gravitational
+      sensing, Reviews of Modern Physics 89, 035002 (2017).            wave observatory operating beyond the quantum shot-
+  [3] C. Portmann and R. Renner, Security in quantum                   noise limit, Nature Physics 7, 962 (2011).
+      cryptography, Reviews of Modern Physics 94, 025008          [23] M. Dakna, T. Anhut, T. Opatrný, L. Knöll, and D.-G.
+      (2022).                                                          Welsch, Generating Schödinger-cat-like states by means
+  [4] R. Horodecki, P. Horodecki, M. Horodecki, and                    of conditional measurements on a beam splitter, Physi-
+      K. Horodecki, Quantum entanglement, Reviews of Mod-              cal Review A 55, 3184 (1997).
+      ern Physics 81, 865 (2009).                                 [24] A. Ourjoumtsev, R. Tualle-Brouri, J. Laurat, and
+  [5] A. Acín, I. Bloch, H. Buhrman, T. Calarco, C. Eichler,           P. Grangier, Generating Optical Schrödinger Kittens
+      J. Eisert, D. Esteve, N. Gisin, S. J. Glaser, F. Jelezko,        for Quantum Information Processing, Science 312, 83
+      S. Kuhr, M. Lewenstein, M. F. Riedel, P. O. Schmidt,             (2006).
+      R. Thew, A. Wallraff, I. Walmsley, and F. K. Wilhelm,       [25] J. S. Neergaard-Nielsen, B. M. Nielsen, C. Hettich,
+      The quantum technologies roadmap: a European com-                K. Mølmer, and E. S. Polzik, Generation of a Superposi-
+      munity view, New Journal of Physics 20, 080201 (2018).           tion of Odd Photon Number States for Quantum Infor-
+  [6] N. Gisin and R. Thew, Quantum communication, Na-                 mation Networks, Physical Review Letters 97, 083604
+      ture Photonics 1, 165 (2007).                                    (2006).
+  [7] P. Kok, W. J. Munro, K. Nemoto, T. C. Ralph, J. P.          [26] A. Ourjoumtsev, H. Jeong, R. Tualle-Brouri, and
+      Dowling, and G. J. Milburn, Linear optical quantum               P. Grangier, Generation of optical ‘Schrödinger cats’
+      computing with photonic qubits, Reviews of Modern                from photon number states, Nature 448, 784 (2007),
+      Physics 79, 135 (2007).                                          number: 7155.
+                                                                                                                           13
+
+[27] B. Hacker, S. Welte, S. Daiss, A. Shaukat, S. Ritter,             Frontier, Science 291, 1923 (2001).
+     L. Li, and G. Rempe, Deterministic creation of entan-        [44] P. M. Paul, E. S. Toma, P. Breger, G. Mullot, F. Augé,
+     gled atom–light Schrödinger-cat states, Nature Photon-            P. Balcou, H. G. Muller, and P. Agostini, Observation
+     ics 13, 110 (2019).                                               of a Train of Attosecond Pulses from High Harmonic
+[28] S. J. van Enk and O. Hirota, Entangled coherent states:           Generation, Science 292, 1689 (2001).
+     Teleportation and decoherence, Physical Review A 64,         [45] P. B. Corkum and F. Krausz, Attosecond science, Na-
+     022313 (2001).                                                    ture Physics 3, 381 (2007).
+[29] A. Gilchrist, K. Nemoto, W. J. Munro, T. C. Ralph,           [46] F. Krausz and M. Ivanov, Attosecond physics, Reviews
+     S. Glancy, S. L. Braunstein, and G. J. Milburn,                   of Modern Physics 81, 163 (2009).
+     Schrödinger cats and their power for quantum infor-          [47] L. Cruz-Rodriguez, D. Dey, A. Freibert, and P. Stam-
+     mation processing, Journal of Optics B: Quantum and               mer, Quantum phenomena in attosecond science, Na-
+     Semiclassical Optics 6, S828 (2004).                              ture Reviews Physics 6, 691 (2024).
+[30] A. P. Lund, T. C. Ralph, and H. L. Haselgrove, Fault-        [48] P. Stammer, J. Rivera-Dean, P. Tzallas, M. F. Ciappina,
+     Tolerant Linear Optical Quantum Computing with                    and M. Lewenstein, Colloquium: Quantum optics of in-
+     Small-Amplitude Coherent States, Physical Review Let-             tense light–matter interaction (2025), arXiv:2510.19045
+     ters 100, 030503 (2008).                                          [quant-ph].
+[31] N. Lee, H. Benichi, Y. Takeno, S. Takeda, J. Webb,           [49] P. Stammer, T. F. Martos, M. Lewenstein, and
+     E. Huntington, and A. Furusawa, Teleportation of Non-             G. Rajchel-Mieldzioć, Metrological robustness of high
+     classical Wave Packets of Light, Science 332, 330 (2011).         photon number optical cat states, Quantum Science and
+[32] A. Zavatta, S. Viciani, and M. Bellini, Quantum-to-               Technology 9, 045047 (2024).
+     Classical Transition with Single-Photon-Added Coher-         [50] M. Sennary, J. Rivera-Dean, M. ElKabbash, V. Pervak,
+     ent States of Light, Science 306, 660 (2004).                     M. Lewenstein, and M. T. Hassan, Attosecond quantum
+[33] J. Paavola, M. J. W. Hall, M. G. A. Paris, and S. Man-            uncertainty dynamics and ultrafast squeezed light for
+     iscalco, Finite-time quantum-to-classical transition for          quantum communication, Light: Science & Applications
+     a Schrödinger-cat state, Physical Review A 84, 012121             14, 350 (2025).
+     (2011).                                                      [51] M. Sennary, J. Rivera-Dean, Y. Wange, M. Lewenstein,
+[34] A. Einstein, B. Podolsky, and N. Rosen, Can Quantum-              and M. T. Hassan, Attosecond quantum optics (2026),
+     Mechanical Description of Physical Reality Be Consid-             arXiv:2601.08671 [physics].
+     ered Complete?, Physical Review 47, 777 (1935).              [52] K. Y. Spasibko, D. A. Kopylov, V. L. Krutyanskiy,
+[35] J. S. Bell, On the Einstein Podolsky Rosen paradox,               T. V. Murzina, G. Leuchs, and M. V. Chekhova, Mul-
+     Physics Physique Fizika 1, 195 (1964).                            tiphoton Effects Enhanced due to Ultrafast Photon-
+[36] N. Brunner, D. Cavalcanti, S. Pironio, V. Scarani, and            Number Fluctuations, Physical Review Letters 119,
+     S. Wehner, Bell nonlocality, Reviews of Modern Physics            223603 (2017).
+     86, 419 (2014).                                              [53] M. Manceau, K. Y. Spasibko, G. Leuchs, R. Filip, and
+[37] A. Laghaout, J. S. Neergaard-Nielsen, I. Rigas,                   M. V. Chekhova, Indefinite-Mean Pareto Photon Distri-
+     C. Kragh, A. Tipsmark, and U. L. Andersen, Ampli-                 bution from Amplified Quantum Noise, Physical Review
+     fication of realistic Schrödinger-cat-state-like states by        Letters 123, 123606 (2019).
+     homodyne heralding, Physical Review A 87, 043826             [54] A. Rasputnyi, Z. Chen, M. Birk, O. Cohen, I. Kaminer,
+     (2013).                                                           M. Krüger, D. Seletskiy, M. Chekhova, and F. Tani,
+[38] D. V. Sychev, A. E. Ulanov, A. A. Pushkina, M. W.                 High-harmonic generation by a bright squeezed vacuum,
+     Richards, I. A. Fedorov, and A. I. Lvovsky, Enlargement           Nature Physics 10.1038/s41567-024-02659-x (2024).
+     of optical Schrödinger’s cat states, Nature Photonics 11,    [55] J. Heimerl, A. Mikhaylov, S. Meier, H. Höllerer,
+     379 (2017).                                                       I. Kaminer, M. Chekhova, and P. Hommelhoff, Multi-
+[39] L. V. Keldysh, Ionization of atoms in an alternating              photon electron emission with non-classical light, Na-
+     electric field, Sov. Phys. JETP 20, 1307 (1965).                  ture Physics 20, 945 (2024).
+[40] L. DiMauro, M. Frolov, K. L. Ishikawa, and M. Ivanov,        [56] J. Heimerl, A. Rasputnyi, J. Pölloth, S. Meier,
+     50 years of optical tunneling, Journal of Physics B:              M. Chekhova, and P. Hommelhoff, Quantum light drives
+     Atomic, Molecular and Optical Physics 47, 200301                  electrons strongly at metal needle tips, Nature Physics
+     (2014).                                                           21, 1899 (2025).
+[41] K. Amini, J. Biegert, F. Calegari, A. Chacón, M. F.          [57] S. Lemieux, S. A. Jalil, D. N. Purschke, N. Boroumand,
+     Ciappina, A. Dauphin, D. K. Efimov, C. F. d. M. Faria,            T. J. Hammond, D. Villeneuve, A. Naumov, T. Brabec,
+     K. Giergiel, P. Gniewek, A. S. Landsman, M. Lesiuk,               and G. Vampa, Photon bunching in high-harmonic emis-
+     M. Mandrysz, A. S. Maxwell, R. Moszyński, L. Ort-                 sion controlled by quantum light, Nature Photonics 19,
+     mann, J. A. Pérez-Hernández, A. Picón, E. Pisanty,                767 (2025).
+     J. Prauzner-Bechcicki, K. Sacha, N. Suárez, A. Zaïr,         [58] M. E. Tzur, C. Mor, N. Yaffe, M. Birk, A. Rasput-
+     J. Zakrzewski, and M. Lewenstein, Symphony on strong              nyi, O. Kneller, I. Nisim, I. Kaminer, M. Krüger,
+     field approximation, Reports on Progress in Physics 82,           N. Dudovich, and O. Cohen, Measuring and control-
+     116001 (2019).                                                    ling the birth of quantum attosecond pulses (2025),
+[42] P. Antoine, A. L’Huillier, and M. Lewenstein, Attosec-            arXiv:2502.09427 [physics].
+     ond Pulse Trains Using High–Order Harmonics, Physi-          [59] Y. Kern, I. Nisim, M. Birk, A. Rasputnyi, D. Behar,
+     cal Review Letters 77, 1234 (1996).                               Z. Chen, I. Kaminer, P. Sidorenko, O. Cohen, and
+[43] M. Drescher, M. Hentschel, R. Kienberger, G. Tem-                 M. Krüger, Single-shot pulse retrieval of femtosecond
+     pea, C. Spielmann, G. A. Reider, P. B. Corkum, and                bright squeezed vacuum, Optica 13, 395 (2026).
+     F. Krausz, X-ray Pulses Approaching the Attosecond           [60] Z. Lyu, F. Sun, S. Yi, J. Li, H. Liu, Q. He, Q. Gong,
+                                                                                                                           14
+
+     M. Ivanov, and Y. Liu, Attosecond quantum spec-                M. F. Ciappina, P. Tzallas, and M. Lewenstein, High
+     troscopy with entangled photon pairs (2026).                   Photon Number Entangled States and Coherent State
+[61] A. Gorlach, M. E. Tzur, M. Birk, M. Krüger, N. Rivera,         Superposition from the Extreme Ultraviolet to the Far
+     O. Cohen, and I. Kaminer, High-harmonic generation             Infrared, Physical Review Letters 128, 123603 (2022).
+     driven by quantum light, Nature Physics , 1 (2023).       [77] P. Stammer, J. Rivera-Dean, A. Maxwell, T. Lam-
+[62] M. Even Tzur, M. Birk, A. Gorlach, M. Krüger,                  prou, A. Ordóñez, M. F. Ciappina, P. Tzallas, and
+     I. Kaminer, and O. Cohen, Photon-statistics force in           M. Lewenstein, Quantum Electrodynamics of Intense
+     ultrafast electron dynamics, Nature Photonics 17, 501          Laser-Matter Interactions: A Tool for Quantum State
+     (2023).                                                        Engineering, PRX Quantum 4, 010201 (2023).
+[63] S. Wang and X. Lai, High-order above-threshold ion-       [78] P. Stammer, Information-theoretic perspective on en-
+     ization of an atom in intense quantum light, Physical          ergy conservation in high harmonic generation (2026),
+     Review A 108, 063101 (2023).                                   arXiv:2410.15503 [quant-ph] version: 2.
+[64] Z. Lyu, F. Sun, Y. Fang, Q. He, and Y. Liu, Ef-           [79] D. Theidel, M. Nahra, I. Karuseichyk, H. Griguer,
+     fect of photon quantum statistics on electrons in              M. Weis, and H. Merdji, Sub-Poissonian Statistics and
+     above-threshold ionization, Physical Review Research           Quantum Non-Gaussianity from High-Harmonic Gener-
+     7, L012072 (2025).                                             ation (2026), arXiv:2602.10882 [quant-ph].
+[65] H. Liu, H. Zhang, X. Wang, and J. Yuan, Atomic Double     [80] J. Rivera-Dean and P. Stammer, Non-classiality criteria
+     Ionization with Quantum Light, Physical Review Let-            using coherent state expansions (202X).
+     ters 134, 123202 (2025).                                  [81] W. P. Schleich, Phase Space Functions, in Quantum Op-
+[66] J. Rivera-Dean, P. Stammer, M. Ciappina, and                   tics in Phase Space (John Wiley & Sons, Berlin, Ger-
+     M. Lewenstein, Structured Squeezed Light Allows for            many, 2001) Chap. 12, pp. 321–348.
+     High-Harmonic Generation in Classical Forbidden Ge-       [82] P. Agostini, F. Fabre, G. Mainfray, G. Petite, and N. K.
+     ometries, Physical Review Letters 135, 013801 (2025).          Rahman, Free-Free Transitions Following Six-Photon
+[67] P. Stammer, C. Granados, and J. Rivera-Dean,                   Ionization of Xenon Atoms, Physical Review Letters 42,
+     Fluctuation-induced symmetry breaking in high har-             1127 (1979).
+     monic generation for bicircular quantum light (2026),     [83] S. L. Chin, G. Farkas, and F. Yergeau, Observation of
+     arXiv:2603.24377 [quant-ph].                                   Kr and Xe ions created by intense nanosecond CO2
+[68] J. Rivera-Dean, L. Petrovic, M. Lewenstein, and                laser pulses, Journal of Physics B: Atomic and Molecu-
+     P. Stammer, Attosecond quantum optical interferom-             lar Physics 16, L223 (1983).
+     etry, Reports on Progress in Physics 89, 047901 (2026).   [84] P. Hansch, M. A. Walker, and L. D. Van Woerkom, Res-
+[69] G. Singh, T. Rook, J. Rivera-Dean, and C. F.                   onant hot-electron production in above-threshold ion-
+     d. M. Faria, Interferometrically Enhanced Asymmetry            ization, Physical Review A 55, R2535 (1997).
+     in Strong-field Ionization with Bright Squeezed Vacuum    [85] D. B. Milošević, G. G. Paulus, D. Bauer, and W. Becker,
+     (2026), arXiv:2604.12646 [quant-ph].                           Above-threshold ionization by few-cycle pulses, Journal
+[70] C. S. Lange, T. Hansen, and L. B. Madsen, Electron-            of Physics B: Atomic, Molecular and Optical Physics
+     correlation-induced nonclassicality of light from high-        39, R203 (2006).
+     order harmonic generation, Physical Review A 109,         [86] W. Becker, S. P. Goreslavski, D. B. Milošević, and
+     033110 (2024).                                                 G. G. Paulus, The plateau in above-threshold ioniza-
+[71] P. Stammer, J. Rivera-Dean, A. S. Maxwell, T. Lam-             tion: the keystone of rescattering physics, Journal of
+     prou, J. Argüello-Luengo, P. Tzallas, M. F. Ciappina,          Physics B: Atomic, Molecular and Optical Physics 51,
+     and M. Lewenstein, Entanglement and Squeezing of               162002 (2018).
+     the Optical Field Modes in High Harmonic Generation,      [87] C. Figueira de Morisson Faria and A. S. Maxwell, It is all
+     Physical Review Letters 132, 143603 (2024).                    about phases: ultrafast holographic photoelectron imag-
+[72] D. Theidel, V. Cotte, R. Sondenheimer, V. Shiriaeva,           ing, Reports on Progress in Physics 83, 034401 (2020).
+     M. Froidevaux, V. Severin, A. Merdji-Larue, P. Mosel,     [88] H. Kleinert, Path Integrals in Quantum Mechanics,
+     S. Fröhlich, K.-A. Weber, U. Morgner, M. Kovacev,              Statistics, Polymer Physics, and Financial Markets, 5th
+     J. Biegert, and H. Merdji, Evidence of the Quantum Op-         ed. (World Scientific, 2009).
+     tical Nature of High-Harmonic Generation, PRX Quan-       [89] D. B. Milošević, Phase space path-integral formulation
+     tum 5, 040319 (2024).                                          of the above-threshold ionization, Journal of Mathemat-
+[73] D. Theidel, V. Cotte, P. Heinzel, H. Griguer, M. Weis,         ical Physics 54, 042101 (2013).
+     R. Sondenheimer, and H. Merdji, Observation of a          [90] X.-Y. Lai, C. Poli, H. Schomerus, and C. Figueira de
+     displaced squeezed state in high-harmonic generation,          Morisson Faria, Influence of the Coulomb potential on
+     Physical Review Research 7, 033223 (2025).                     above-threshold ionization: A quantum-orbit analysis
+[74] S. Yi, N. D. Klimkin, G. G. Brown, O. Smirnova,                beyond the strong-field approximation, Physical Review
+     S. Patchkovskii, I. Babushkin, and M. Ivanov, Genera-          A 92, 043407 (2015).
+     tion of Massively Entangled Bright States of Light dur-   [91] A. S. Maxwell, Strong-Field Interference of Quantum
+     ing Harmonic Generation in Resonant Media, Physical            Trajectories with Coulomb Distortion and Electron Cor-
+     Review X 15, 011023 (2025).                                    relation, Phd thesis, UCL (University College London)
+[75] M. Lewenstein, M. F. Ciappina, E. Pisanty, J. Rivera-          (2019).
+     Dean, P. Stammer, T. Lamprou, and P. Tzallas, Gen-        [92] Y.-J. Mao, E.-R. Zhou, Y. Li, P.-L. He, and F. He,
+     eration of optical Schrödinger cat states in intense           Benchmarking Atomic Ionization Driven by Strong
+     laser–matter interactions, Nature Physics 17, 1104             Quantum Light (2025), arXiv:2512.15458 [quant-ph].
+     (2021).                                                   [93] J. Rivera-Dean, P. Stammer, A. S. Maxwell, T. Lam-
+[76] P. Stammer, J. Rivera-Dean, T. Lamprou, E. Pisanty,            prou, P. Tzallas, M. Lewenstein, and M. F. Ciappina,
+                                                                                                                                  15
+
+      Light-matter entanglement after above-threshold ion-               L. Luo, T. A. Manning, and C. Monroe, Random
+      ization processes in atoms, Physical Review A 106,                 numbers certified by Bell’s theorem, Nature 464, 1021
+      063705 (2022).                                                     (2010).
+ [94] J. Rivera-Dean, P. Stammer, C. F. d. M. Faria, and           [112] I. Šupić and J. Bowles, Self-testing of quantum systems:
+      M. Lewenstein, Microscopic analysis of above-threshold             a review, Quantum 4, 337 (2020).
+      ionization driven by squeezed light, Physical Review A       [113] J. F. Clauser, M. A. Horne, A. Shimony, and R. A. Holt,
+      112, 063101 (2025).                                                Proposed Experiment to Test Local Hidden-Variable
+ [95] We numerically restrict to smaller values of g(ωL )                Theories, Physical Review Letters 23, 880 (1969).
+      than those typically estimated theoretically, as realistic   [114] K. Banaszek and K. Wódkiewicz, Nonlocality of the
+      values would lead to computational requirements be-                Einstein-Podolsky-Rosen state in the Wigner represen-
+      yond our current capabilities. This point is discussed in          tation, Physical Review A 58, 4345 (1998).
+      Sec. III and in Sec. C of the Supplementary Material.        [115] K. Banaszek and K. Wódkiewicz, Testing Quantum
+ [96] M. Lewenstein, K. C. Kulander, K. J. Schafer, and                  Nonlocality in Phase Space, Physical Review Letters 82,
+      P. H. Bucksbaum, Rings in above-threshold ionization:              2009 (1999).
+      A quasiclassical analysis, Physical Review A 51, 1495        [116] B. S. Cirel’son, Quantum generalizations of Bell’s in-
+      (1995).                                                            equality, Letters in Mathematical Physics 4, 93 (1980).
+ [97] V. Bargmann, P. Butera, L. Girardello, and J. R.             [117] L. Braccini, S. Bose, and A. Serafini, Superpositions of
+      Klauder, On the completeness of the coherent states,               Quantum Gaussian Processes (2025), arXiv:2510.01156
+      Reports on Mathematical Physics 2, 221 (1971).                     [quant-ph].
+ [98] A. M. Perelomov, On the completeness of a system of          [118] O. Hahn, R. Takagi, G. Ferrini, and H. Yamasaki, Clas-
+      coherent states, Theoretical and Mathematical Physics              sical simulation and quantum resource theory of non-
+      6, 156 (1971).                                                     Gaussian optics, Quantum 9, 1881 (2025).
+ [99] Y.-B. Wang and X.-B. Bian, High-order harmonic gen-          [119] F. Centrone, J. P. Paz, and A. Roncaglia, Gaus-
+      eration in quantum light by a generalized von Neumann              sian superpositions for bosonic encodings (2026),
+      lattice method, Physical Review A 111, 043111 (2025).              arXiv:2603.15258 [quant-ph].
+[100] M. Lewenstein, P. Balcou, M. Y. Ivanov, A. L’Huillier,       [120] A. Weber, J. Feldbrugge, and E. Pisanty, A universal
+      and P. B. Corkum, Theory of high-harmonic genera-                  approach to saddle-point methods in attosecond science
+      tion by low-frequency laser fields, Physical Review A              (2025), arXiv:2510.12545 [quant-ph].
+      49, 2117 (1994).                                             [121] T. Rook and C. Figueira de Morisson Faria, Exploring
+[101] O. Smirnova and M. Ivanov, Multielectron high har-                 symmetries in photoelectron holography with two-color
+      monic generation: Simple man on a complex plane, in                linearly polarized fields, Journal of Physics B: Atomic,
+      Attosecond and XUV Physics (John Wiley & Sons, Ltd,                Molecular and Optical Physics 55, 165601 (2022).
+      2014) Chap. 7, pp. 201–256.                                  [122] S. Imai, Heralded ultrafast generation of macroscopic
+[102] M. Walschaers, Non-Gaussian Quantum States and                     quantum states in matter with bright squeezed vacuum
+      Where to Find Them, PRX Quantum 2, 030204 (2021).                  light (2026), version Number: 1.
+[103] W. P. Schleich, Wigner Function, in Quantum Optics           [123] A. I. Lvovsky and M. G. Raymer, Continuous-variable
+      in Phase Space (John Wiley & Sons, Berlin, Germany,                optical quantum-state tomography, Reviews of Modern
+      2001) Chap. 3, pp. 67–98.                                          Physics 81, 299 (2009).
+[104] A. Mari and J. Eisert, Positive Wigner Functions Ren-        [124] T. Lamprou, J. Rivera-Dean, P. Stammer, M. Lewen-
+      der Classical Simulation of Quantum Computation Ef-                stein, and P. Tzallas, Nonlinear Optics Using Intense
+      ficient, Physical Review Letters 109, 230503 (2012).               Optical Coherent State Superpositions, Physical Review
+[105] S. Rahimi-Keshari, T. C. Ralph, and C. M. Caves, Suf-              Letters 134, 013601 (2025).
+      ficient Conditions for Efficient Classical Simulation of     [125] J. Rivera-Dean, Role of short and long trajectories on
+      Quantum Optics, Physical Review X 6, 021039 (2016).                the quantum-optical state after high-order harmonic
+[106] A. Royer, Wigner function as the expectation value of              generation, Physical Review A 110, 063704 (2024).
+      a parity operator, Physical Review A 15, 449 (1977).         [126] J. Rivera-Dean, Quantum-optical analysis of high-order
+[107] R. L. Hudson, When is the wigner quasi-probability den-            harmonic generation, Master thesis, Universitat Politèc-
+      sity non-negative?, Reports on Mathematical Physics 6,             nica de Catalunya (2019).
+      249 (1974).                                                  [127] O. Smirnova, M. Spanner, and M. Ivanov, Anatomy of
+[108] H.-P. Breuer and F. Petruccione, Quantum Probability,              strong field ionization II: to dress or not to dress?, Jour-
+      in The Theory of Open Quantum Systems, edited by H.-               nal of Modern Optics 54, 1019 (2007).
+      P. Breuer and F. Petruccione (Oxford University Press,       [128] A. Lohr, M. Kleber, R. Kopold, and W. Becker, Above-
+      2007) pp. 59–105.                                                  threshold ionization in the tunneling regime, Physical
+[109] M. A. Nielsen and I. L. Chuang, Introduction to quan-              Review A 55, R4003 (1997).
+      tum mechanics, in Quantum Computation and Quantum            [129] W. Magnus, On the exponential solution of differen-
+      Information: 10th Anniversary Edition (Cambridge                   tial equations for a linear operator, Communications on
+      University Press, Cambridge, UK, 2010) Chap. 2, pp.                Pure and Applied Mathematics 7, 649 (1954).
+      60–119.                                                      [130] P. D. Drummond and C. W. Gardiner, Generalised P-
+[110] A. Acín, N. Brunner, N. Gisin, S. Massar, S. Pironio,              representations in quantum optics, Journal of Physics
+      and V. Scarani, Device-Independent Security of Quan-               A: Mathematical and General 13, 2353 (1980).
+      tum Cryptography against Collective Attacks, Physical        [131] M. Born, Zur Quantenmechanik der Stoßvorgänge,
+      Review Letters 98, 230501 (2007).                                  Zeitschrift für Physik 37, 863 (1926).
+[111] S. Pironio, A. Acín, S. Massar, A. B. de la Giroday,         [132] I. Pitowsky, The range of quantum probability, Journal
+      D. N. Matsukevich, P. Maunz, S. Olmschenk, D. Hayes,               of Mathematical Physics 27, 1556 (1986).
+                                                               16
+
+[133] J. R. Johansson, P. D. Nation, and F. Nori, QuTiP: An
+      open-source Python framework for the dynamics of open
+      quantum systems, Computer Physics Communications
+      183, 1760 (2012).
+[134] J. R. Johansson, P. D. Nation, and F. Nori, QuTiP 2: A
+      Python framework for the dynamics of open quantum
+      systems, Computer Physics Communications 184, 1234
+      (2013).
+                                                                                                                                  17
+
+                                            Supplementary Material
+
+                                               A.      THEORETICAL ANALYSIS
+
+                                                             1.    Preliminaries
+
+   In this work, we describe the light-matter interaction dynamics between an atomic system and a strong driving
+field within the single-active-electron and dipole approximations. In the following, we work with SI units, and retake
+atomic units in Sec. A 5. The dynamics are governed by the time-dependent Schrödinger equation (TDSE)
+
+                                               ∂|Ψ̃(t)⟩                          
+                                          iℏ           = Ĥat + er̂ · Ê + Ĥfield |Ψ̃(t)⟩,                                    (A1)
+                                                  ∂t
+where Ĥat denotes the atomic Hamiltonian and er̂ · Ê describes the light-matter interaction in the length gauge. The
+electric field operator is given by
+                                            X                             X
+                                              ϵµ g(ωq ) âq,µ − â†q,µ ≡
+                                                                     
+                                    Ê = −i                                   Êq,µ                               (A2)
+                                                     µ,q=1                              µ,q=1
+                                                                            p
+where ϵµ denotes the polarization direction (µ =⊥, ∥), and g(ωq ) = ℏωq /(2ϵ0 V ) is a mode-dependent coupling
+constant arising from the quantization of the electric field operator, with V denoting the quantization volume. Finally,
+                      †
+          P
+Ĥfield =   q,µ ℏωq âq,µ âq,µ is the free-field Hamiltonian. For convenience, we move to the interaction picture with
+respect to Ĥfield , i.e., |Ψ̃(t)⟩ = e−iĤfield t/ℏ |Ψ(t)⟩, such that the annihilation operators transform as âq,µ → âq,µ e−iωq t .
+As a consequence, the electric field operator becomes explicitly time dependent, Ê → Ê(t), and Eq. (A1) then takes
+the form
+                                                     ∂ |Ψ(t)⟩                
+                                                iℏ           = Ĥat + er̂ · Ê |Ψ(t)⟩ .                                        (A3)
+                                                        ∂t
+   As the initial condition for Eq. (A3), we consider an atomic system initially prepared in its ground state |g⟩, while
+the field is initialized in a linearly polarized bright-squeezed  vacuum (BSV) state ŜL (r)|0L ⟩ for the fundamental mode
+({q = 1, ∥} ≡ L), with Ŝq,µ (r) = exp r(â2q,µ − â†2
+                                                                                                              N
+                                                      q,µ ) , and in the vacuum state for all remaining modes      q>2 |0q ⟩.
+In the following, we restrict to real squeezing parameters r ∈ R which, in the absence of a phase reference such as
+a coherent displacement or an additional non-vacuum field, does not affect the generality of our results. The initial
+joint light-matter state thus reads
+
+                                                       |Ψ(t0 )⟩ = |g⟩ ⊗ ŜL (r) |0⟩ ,                                          (A4)
+
+where |0⟩ = q=1 |0q ⟩. Using the resolution of the identity in the coherent state basis, 1 = π               −1
+                                                                                                      d2 α |α⟩⟨α|, with
+              N                                                                                                 R
+α ∈ C, we may express the initial state equivalently in the coherent state representation by inserting the identity for
+the fundamental mode only,
+                                                Z                                O
+                                             −1
+                                |Ψ(t0 )⟩ = π      d2 α ⟨α|ŜL (r)|0L ⟩ |g⟩ ⊗ |α⟩   |0q ⟩ .                         (A5)
+                                                                                             q>2
+
+Employing the expansion of the BSV state in the Fock basis, we obtain
+                                      ∞               p                    2     ∞                     n
+                                                                      e−|α| /2 X 1         α∗2 tanh(r)
+                                                                                       
+                               1     X             n (2n)!
+         ⟨α|ŜL (r)|0L ⟩ = p               − tanh(r)         ⟨α|2n⟩ = p                  −
+                             cosh(r) n=0               2n n!            cosh(r) n=0 n!          2
+                                                                                                                             (A6)
+                               1             1h 2              i
+                         =p          exp − |α| + α∗2 tanh(r) ≡ πc(α),
+                             cosh(r)         2
+
+which allows us to rewrite Eq. (A5) as
+                                                             Z
+                                            |Ψ(t0 )⟩ =            d2 α c(α) |g⟩ ⊗ D̂L (α) |0⟩ ,                                (A7)
+
+where D̂q,µ (α) = exp αâ†q,µ − αâq,µ is the displacement operator acting on the optical mode {q, µ}.
+                                     
+                                                                                                                                   18
+
+   At any later time t ≥ t0 , the state of the joint system can be written as |Ψ(t)⟩ = Û (t, t0 ) |Ψ(t0 )⟩, where Û (t, t0 ) is
+the time-evolution operator, also referred to as propagator, connecting the initial and final times. From Eq. (A3), it
+follows that this operator satisfies
+
+                                                           ∂ Û (t)                   
+                                                      iℏ           = Ĥat + er̂ · Ê(t) Û (t).                                 (A8)
+                                                              ∂t
+Acting on the initial state in Eq. (A7), this evolution can be equivalently expressed as
+                            Z                                    Z
+                 |Ψ(t)⟩ = d α c(α)Û (t, t0 )D̂L (α) |g⟩ ⊗ |0⟩ = d2 α c(α)D̂L (α)Ûα (t, t0 ) |g⟩ ⊗ |0⟩ ,
+                                2
+                                                                                                                                (A9)
+
+                                          †
+where we have defined Ûα (t, t0 ) ≡ D̂L    (α)Û (t, t0 )D̂L (α) as a displaced version of the propagator. Using the identity
+  †
+D̂L (α)ÊL (t)D̂L (α) = ÊL (t) + Ecl (t), where Ecl (t) = ⟨α|ÊL (t)|α⟩, it follows from Eq. (A8) that
+
+                                                  ∂ Ûα (t) h                            i
+                                             iℏ            = Ĥat + er̂ · Ê(t) + Ecl (t) Ûα (t).                              (A10)
+                                                     ∂t
+In the following subsections, we solve this differential equation explicitly, thereby justifying the expressions employed
+in the main text. We further compare our results with those obtained in related scenarios previously discussed in the
+literature [92–94, 125].
+
+
+                                       2.    Dyson expansion of the time-evolution operator
+
+   To solve Eq. (A10), we adopt a strategy similar to that of Refs. [94, 126], where a Dyson expansion [127] of the
+propagator Ûα (t, t0 ) is employed to solve the corresponding differential equation. In general, given a Hamiltonian
+decomposed as the sum of two contributions Ĥ0 (t) and V̂ (t), the time-evolution operator can be written in the
+integral Dyson form
+                                                               i t ′
+                                                                Z
+                                   Û (t, t0 ) = U0 (t, t0 ) −      dt Û (t, t′ )V̂ (t′ )Û0 (t′ , t0 ),       (A11)
+                                                               ℏ t0
+
+where Û0 (t, t0 ) denotes the propagator generated by Ĥ0 (t), satisfying iℏ∂ Û0 (t)/∂t = Ĥ0 (t)Û (t, t0 ). Equation (A11)
+provides the basis for a recursive expansion, since the propagator Û (t, t′ ) appearing inside the integral governs the
+full dynamics generated by Ĥ0 (t) + V̂ (t). Following Refs. [94, 126, 128], we exploit this structure by adopting different
+partitions of the Hamiltonian at successive stages of the recursive procedure.
+   For the first iteration, leading explicitly to Eq. (A11), we choose Ĥ0 (t) = Ĥat and V̂ (t) = er̂ · Ê(t; α) where for
+notational convenience, we define Ê(t; α) ≡ Ê(t) + Ecl (t). With this choice, Eq. (A11) yields
+
+                                                             ie t
+                                                               Z
+                              Ûα (t, t0 ) = Ûat (t, t0 ) −      dt1 Ûα (t, t1 )r̂ · Ê(t1 ; α)Ûat (t1 , t0 ).        (A12)
+                                                             ℏ t0
+However, since the total Hamiltonian reads
+                                                                 p̂2
+                                                     Ĥ(t) =         + Vat (r̂) + er̂ · Ê(t; α),                               (A13)
+                                                                2me
+
+an equally valid choice consists in taking Ĥ0 (t) = p̂2 /(2me ) + er̂ · Ê(t; α) ≡ ĤL (t) and V̂ (t) = V̂at , which allows the
+propagator to be expressed as
+                                                               i t
+                                                                Z
+                                 Ûα (t, t0 ) = ÛL (t, t0 ) −      dt1 Ûα (t, t1 )V̂at ÛL (t1 , t0 ).                  (A14)
+                                                               ℏ t0
+For the second iteration, we substitute Eq. (A14) into (A12), leading to the combined expression
+
+                                                      ie t
+                                                         Z
+                      Ûα (t, t0 ) = Ûat (t, t0 ) −         dt1 ÛL (t, t1 )r̂ · Ê(t1 ; α)Ûat (t1 , t0 )
+                                                      ℏ t0
+                                            Z t       Z t                                                                       (A15)
+                                         e
+                                     − 2          dt1      dt2 Ûα (t, t2 )V̂at ÛL (t2 , t1 )r̂ · Ê(t1 ; α)Ûat (t1 , t0 ).
+                                        ℏ t0            t1
+                                                                                                                                                       19
+
+  In this expression, the first term describes unperturbed propagation governed solely by the atomic Hamiltonian.
+The second term accounts for ionization at time t1 , followed by Coulomb-free propagation in the continuum driven
+by the laser field, while the third term incorporates rescattering processes [96, 128]. When applied to the initial state,
+this yields
+                            Z
+       |Ψ(t)⟩ = eiIp (t−t0 ) d2 α c(α) |g⟩ ⊗ D̂L (α) |0⟩
+                       Z       Z t
+                    ie
+                 −        d2 α      dt1 c(α)D̂L (α)ÛL (t, t1 )r̂ · Ê(t1 ; α)eiIp (t1 −t0 )/ℏ |g⟩ ⊗ |α⟩                              (A16)
+                    ℏ            t0
+                       Z      Z t       Z t
+                     e
+                 − 2       dα       dt1     dt2 c(α)D̂L (α)Ûα (t, t2 )V̂at ÛL (t2 , t1 )r̂ · Ê(t1 ; α)eiIp (t1 −t0 )/ℏ |g⟩ ⊗ |0⟩ ,
+                    ℏ           t0       t1
+
+where Ip denotes the atomic ionization potential. Projecting onto a final photoelectron momentum |pf ⟩, we can
+approximately write
+                                                   Z          Z t
+                                              ie
+      |Φ(pf , t)⟩ ≡ ⟨pf |Ψ(t)⟩ ≃ −                     d2 α         dt1 c(α)D̂L (α) ⟨pf | ÛL (t, t1 )r̂ · Ê(t1 ; α)eiIp (t1 −t0 )/ℏ |g⟩ ⊗ |α⟩ ,   (A17)
+                                              ℏ                t0
+
+where we have assumed that, for the considered values of pf , rescattering contributions are negligible compared to
+thoseR obtained through direct ATI processes. Introducing the identity in the electronic momentum representation,
+1 = dp0 |p0 ⟩⟨p0 |, to the right of ÛL (t, t1 ), we obtain
+                             Z          Z t            Z
+                        ie
+      |Φ(pf , t)⟩ = −            d2 α         dt1          dp0 c(α)D̂L (α) ⟨pf |ÛL (t, t1 )|p0 ⟩ ⟨p0 |r̂|g⟩ · Ê(t1 ; α)eiIp (t1 −t0 )/ℏ |α⟩ .     (A18)
+                        ℏ                t0
+
+
+In what follows, we focus on describing the structure of the propagator matrix element ⟨pf |ÛL (t, t1 )|p0 ⟩.
+
+
+                                 3.     Path-integral derivation of the Coulomb-free propagator
+
+
+   Unlike in classical analysis, it is important to emphasize that the matrix element ⟨pf |ÛL (t, t1 )|p0 ⟩ remains a
+quantum optical operator acting on the Hilbert space of the radiation modes, with only the electronic degrees of
+freedom projected onto momentum eigenstates. To evaluate this quantity, we make use of Feynman path-integral
+formalisms [88], a common practice in semiclassical strong-field approaches [87, 89–91]. We note, however, that this
+formalism has also been recently formulated within fully quantum optical treatments [92].
+   Path-integral formalisms rely on the fact that any unitary time-propagator operator can be expressed as a product
+of infinitesimal time slices,
+                                                                                     N
+                                                                                     Y +1
+                                                                    ÛL (t, t0 ) =          ÛL (ti , ti−1 ),                                       (A19)
+                                                                                     i=1
+
+
+where Û (ti , ti−1 ) = exp[−iϵĤL (ti )/ℏ], and ϵ denotes an infinitesimal time step. For each of these single-time-step
+propagators, we apply the Zassenhaus formula [129]
+                                                                           2                 3
+                                      eδ(X̂+Ŷ ) = eδX̂ eδŶ e−δ [X̂,Ŷ ]/2 e−δ (2[Ŷ ,[X̂,Ŷ ]]+[X̂,[X̂,Ŷ ]])/6 · · · ,                           (A20)
+
+where the ellipsis denotes exponentials involving higher-order nested commutators. Identifying in our case δ = −iϵ/ℏ,
+X̂ = p̂2 /(2me ) and Ŷ = er̂ · Ê(t; α), we obtain
+
+                                                        e                              iℏe
+                                      [X̂, Ŷ ] =         [p̂2 , r̂] · Ê(t; α) = −         p̂ · Ê(t; α)                                           (A21)
+                                                     2me                                me
+                                                               iℏe
+                                        X̂, [X̂, Ŷ ] = − 2 [p̂2 , p̂ · Ê(t; α)] = 0
+                                                     
+                                                                                                                                                    (A22)
+                                                              2me
+                                                           iℏe2                                       ℏ2 e 2 2
+                                        Ŷ , [X̂, Ŷ ] = −           [r̂ · Ê(t; α), p̂ · Ê(t; α)] =         Ê (t; α),                            (A23)
+                                                              me                                         me
+                                                                                                                                           20
+
+with all higher-order nested commutators vanishing identically due to the above commutation relations. Substituting
+these results into Eq. (A20), the single time-step propagator can be written as
+                                                                   iϵ2 e                         ϵ3 e 2 2
+                                                                                                           
+                               iϵ 2         iϵe
+      Û (ti , ti−1 ) = exp −       p̂ exp − r̂ · Ê(ti ; α) exp −       p̂ · Ê(ti ; α) exp −i        Ê (ti ; α) . (A24)
+                              2me ℏ          ℏ                     me ℏ                         3me ℏ
+  To proceed further, between each time-slice of Eq. (A19) we insert the identity in the momentum representation,
+yielding
+                                                       N Z
+                                                      Y        NY
+                                                                  +1
+                           ⟨pf | ÛL (t, t0 ) |p0 ⟩ =      dpi       ⟨pi | ÛL (ti , ti−1 ) |pi−1 ⟩ ,      (A25)
+                                                                        i=1   i=1
+
+where we identify pf ≡ pN and t = tN +1 . This expression can be further expanded by introducing the identity in the
+position representation between the first pair of exponentials in Eq. (A24), that is,
+                                   N Z
+                                  Y               NY
+                                                      +1 Z          NY
+                                                                     +1                               
+                                                                         iϵ 2               iϵe
+   ⟨pf | ÛL (t, t0 ) |p0 ⟩ =               dpi             ⟨pi |exp −
+                                                             dri              p̂ exp − r̂ · Ê(ti ; α) |ri ⟩
+                          i=1           i=1           i=1
+                                                                       2me ℏ                 ℏ
+                                                                         2
+                                                                                                    ϵ3 e 2 2
+                                                                                                                          
+                                                                       iϵ e
+                                                          × ⟨ri |exp −      p̂ · Ê(ti ; α) exp −i        Ê (ti ; α) |pi−1 ⟩ .
+                                                                       me ℏ                        3me ℏ
+                                                                                                                             (A26)
+Using ⟨pi |ri ⟩ = (2πℏ)−3/2 exp[−ipi · ri /ℏ], this expression can be written as the following quantum optical operator
+                                  N Z
+                                 Y               NY
+                                                     +1 Z               
+                                                               dri
+  ⟨pf | ÛL (t, t0 ) |p0 ⟩ =               dpi
+                                   i=1              i=1
+                                                             (2πℏ)3
+                                   N +1 
+                                                                                         iϵ2
+                                                                                                                                    
+                                   Y               iϵ 2 iϵ                                                          i
+                               ×         exp −          pi − eri · Ê(ti ; α) −               epi−1 · Ê(ti ; α) − ri · (pi − pi−1 )     (A27)
+                                  i=1
+                                                 2me ℏ         ℏ                       me ℏ                         ℏ
+                                                       ϵ3 2 2
+                                                                         
+                                         × exp −i           e Ê (ti ; α) .
+                                                     3me ℏ
+                               Y N Z        NY+1 Z            
+                                                           dri
+                             =          dpi
+                                 i=1            i=1
+                                                        (2πℏ)3
+                                  N +1 
+                                                                                           iϵ2
+                                                                                                                                      
+                                  Y                iϵ 2 iϵ                                                            i
+                               ×         exp −          p − eri · Ecl (ti ; α) −               epi−1 · Ecl (ti ; α) − ri · (pi − pi−1 ) (A28)
+                                  i=1
+                                                 2me ℏ i       ℏ                          me ℏ                        ℏ
+                                                                        3
+                                                                                           
+                                                                      ϵ
+                                                                           e2 Ê 2 (ti ; α) ,
+                                                         
+                                         × D̂ f (ti ; α) exp −i
+                                                                   3me ℏ
+where we have explicitly separated between the classical and quantum optical components of the electric field operator.
+Furthermore,
+        N we have collected all linear terms in the field operators, yielding a multimode displacement operator
+D̂(α) ≡ q=1,µ D̂q,µ (αq,µ ), with
+
+                                                                         ϵ2
+                                                                                
+                                                                 ϵ
+                                    fq,µ (ti ; α) = g(ωq )ϵµ ·     ri +      pi−1 eiωq t .                       (A29)
+                                                                 ℏ      me ℏ
+   From this expression it becomes clear that, during each propagation step, the electron acquires a phase due to its
+motion and, as consequence of the light-matter interaction, the electromagnetic field modes are in principle displaced
+and squeezed. The multimode squeezing contribution originates from the quadratic field term and typically becomes
+relevant in the moderate-depletion regime, where the applied laser field significantly depletes the atomic ground
+state [71]. In the following, we therefore neglect this contribution and approximate
+                              N Z
+                             Y                 NY
+                                                   +1 Z             
+                                                            dri
+⟨pf | ÛL (t, t0 ) |p0 ⟩ ≈               dpi
+                                 i=1              i=1
+                                                          (2πℏ)3
+                                 N +1
+                                                                             iϵ2
+                                                                                                                                        
+                                 Y              iϵ 2 iϵ                                                                                  
+                             ×           exp −      p − eri · Ecl (ti ; α) −      epi−1 · Ecl (ti ; α) − iri · (pi − pi−1 ) D̂ f (ti ; α) .
+                                 i=1
+                                               2me ℏ i ℏ                     me ℏ
+                                                                                                                                  (A30)
+                                                                                                                                                                        21
+
+Thus, when inserting this expression inside Eq. (A18), we get
+                          Z                            Z t            Z           N Z
+                                                                                 Y                NY
+                                                                                                      +1 Z               
+                     ie        2                                  ′                                               dri
+     |Φ(pf , t)⟩ ≈ −          d α c(α)D̂L (α)                dt            dp0              dpi
+                     ℏ                                  t0                         i=1                 i=1
+                                                                                                                (2πℏ)3
+                                                                                                       NY                                                           (A31)
+                                                                                                         +1                       
+                                                                                 iAN +iIp (t′ −t0 )                                                    ′
+                                                                                                                              
+                                                                           ×e                                 D̂ f (ti ; α)           ⟨p0 |r̂|g⟩ · Ê(t ; α) |0⟩ ,
+                                                                                                       i=1
+
+where we have defined
+                               N +1 
+                             ϵ X p2i
+                                                                                                       
+                                                               e
+                      AN ≡ −           + eri · Ecl (ti , α) + ϵ pi−1 · Ecl (ti ; α) + ri · (pi − pi−1 ) .                                                            (A32)
+                             ℏ i=1 2me                         me
+
+  Before proceeding further, it turns convenient to recall the following property of the displacement operator
+                                                                         
+                                                         1     ∗    ∗
+                                                                        
+                                  D̂(α2 )D̂(α1 ) = exp     α2 α1 − α2 α1 D̂(α2 + α1 ),                         (A33)
+                                                         2
+which allows us to express
+                                                                                                              
+         N +1                                           N X
+                                                       X N                                                          NX
+                                                                                                                        +1              
+         Y                                        1                                      ∗
+                D̂q,µ fq,µ (ti ; α) = exp                                fq,µ (tj+1 ; α)fq,µ (ti ; α) − c.c. D̂q,µ       fq,µ (ti ; α) .                           (A34)
+         i=1
+                                                   2    i=1 j=1                                                                         i=1
+
+Then, when taking the continuous limit ϵ → 0, the resulting quantum optical state reads
+                                         Z t         Z pf
+                                                                     Dr
+                      Z                         Z              Z
+                   ie
+   |Φ(pf , t)⟩ = −      d2 α c(α)D̂L (α)     dt′ dp0      D′ p             exp[iA(p.r) + Ip (t′ − t0 )/ℏ + iφ(t′ )]
+                   ℏ                      t0          p0           (2πℏ)3                                                                                            (A35)
+                                                     × D̂ F (t′ ; α) ⟨p0 |r̂|g⟩ · Ê(t′ ; α) |0⟩ ,
+                                                                    
+
+where we have defined
+                                                 Z t        h p(τ )2
+                                             1                                                   i
+                          A(r, p) = −                  dτ + er(τ ) · Ecl (τ ; α) + r(τ ) · ṗ(τ ) ,
+                                             ℏ
+                                            t′       2me
+                                                     Z t               
+                          Fq,µ (t′ ; α) = g(ωq )ϵµ ·      dτ r(τ )eiωq τ ,                                                                                           (A36)
+                                                                      t′
+                                       X                Z t                Z t
+                          φ(t′ ) =           2g(ωq )2
+                                                                                                           
+                                                                  dτ1            dτ2 r(τ2 ) · ϵµ r(τ1 ) · ϵµ sin(ωq (τ2 − τ1 )).
+                                       q,µ                   t′             τ1
+
+
+   It is worth noting that the obtained results bears similarities with those recently reported in the literature using
+Feynmann path-integral formalisms as well [92]. To the best of our knowledge and understanding, the main difference
+lies in the fact that, in our case, we keep the quantum optical degrees of freedom in fully operational form, whereas in
+Ref. [92] the authors introduce identity operators in the coherent state basis, in a manner analogous to how we have
+introduced here position- and momentum-resolved identity operators for the electronic degrees of freedom.
+   When restricting our analysis to the case of coherent state driving fields and set all quantum optical terms to zero,
+we find that the obtained expressions reduce to those commonly encountered in semiclassical analyses within the
+Feynmann-path integral formalism [87, 89–91]. The main difference from these approaches is that, on top of the semi-
+classical phase acquired by the electron, it induces a displacement on the optical degrees of freedom. In the following,
+we take into account that, within this coherent state expansion picture, the magnitude of this displacement for typical
+strong-field parameters (I = 1014 W/cm2 and λ = 800 nm) is very small, namely |F (t′ ; α)| ∝ 10−4 [93]. We therefore
+approximate the resulting quantum optical state by approximating this displacement by the identity operator. Under
+this approximation, we obtain
+                                       Z t         Z pf
+                                                                 Dr
+                    Z                         Z              Z
+                 ie
+|Φ(pf , t)⟩ ≈ −       d2 α c(α)D̂L (α)     dt′ dp0      D′ p        3
+                                                                      exp[iA(p.r) + Ip (t′ − t0 )/ℏ] ⟨p0 |r̂|g⟩ · Ê(t′ ; α) |0⟩ .
+                 ℏ                      t0           p0        (2πℏ)
+                                                                                                                          (A37)
+   Recently, it has been shown that driving ATI with bright squeezed light can magnify the laser-matter interaction,
+yielding non-Gaussian states of light upon post-selection on the final electron momentum [94]. While the underlying
+                                                                                                                                                    22
+
+mechanism explored in that work is analogous to the one considered here, the theoretical framework differs substan-
+tially. In particular, Ref. [94] considered displaced squeezed states and introduced a transformation to a displaced and
+squeezed frame of reference, whereby the field quadratures are rescaled by factor e±r , allowing the initial squeezed
+state to be mapped onto an unsqueezed one. In contrast, here we work entirely within the unsqueezed frame of ref-
+erence and instead employ a decomposition of the initial states in terms of coherent states. This approach is more
+convenient in the present context, as our driving field is a bright squeezed vacuum. In such scenario, the approach
+considered in Ref. [94] to introduce strong-field approximations is not applicable here, as they relied on the presence
+of a large coherent displacement capable of inducing strong-field phenomena even in the absence of squeezing.
+   Within our framework, the strong-field approximation corresponds to the regime in which the coherent field contri-
+bution Ecl (t; α) dominates over the contribution arising from vacuum fluctuations, whose typical amplitude satisfies
+∥Ê(t′ )∥ ∼ 10−8 . While this condition is not satisfied for all values of α—in particular α = 0 where Ecl (t; α) = 0—the
+probability amplitude c(α) is broad due to the bright squeezed nature of the field. As a consequence, the tails of the
+distribution contribute more strongly to strong-field ionization than its center, and therefore dominate the strong-field
+response. Under these conditions, the SFA-version of the state becomes
+                                 Z t            Z pf
+                                                               Dr
+                     Z                   Z                Z
+                  ie
+ |Φ(pf , t)⟩ ≈ −       d2 α c(α)      dt′ dp0        D′ p          3
+                                                                     exp[iA(p, r) + Ip (t′ − t0 )/ℏ] ⟨p0 |r̂|g⟩ · Ecl (t′ ; α) |α⟩ ,
+                  ℏ                t0            p0         (2πℏ)
+                                                                                                                                (A38)
+where, in what follows, we omit the contribution of all harmonic-field modes, as they remain in the vacuum state
+throughout the interaction.
+   As written in Eq. (A38), the path-integrals with respect to the electronic position and momentum, which we
+collectively denote as Ipath , can be evaluated analytically. These integrals act only the exponential containing the
+action eiA(r,p) , and in the following we proceed to solve them explicitly. More specifically, we obtain
+                           Z pf
+                                                        i t h p(τ )2
+                                                                                                                i
+                                           Dr
+                                      Z                   Z
+                                   ′
+                   Ipath =       Dp             exp −        dτ          + er(τ ) · Ecl (τ ; α) + r(τ ) · ṗ(τ )
+                             p0          (2πℏ)3         ℏ t′       2me
+                           Z pf                                                                                                 (A39)
+                                             i t p(τ )2 
+                                              Z                                    
+                                   ′
+                         =       D p exp −         dτ         δ ṗ(τ ) + eEcl (τ ; α) .
+                             p0              ℏ t′     2me
+
+The delta functional constrains the electronic momentum to satisfy the classical equation of motion
+
+                                     ṗ(τ ) = −eEcl (τ ; α) ⇒ p(τ ) − eAcl (τ ; α) = p0 − eAcl (t′ ; α),                                       (A40)
+
+which, evaluated at the final time t yields p0 = pf − eAcl (t; α) + eAcl (t′ ; α). Defining the canonical final momentum
+p̃f (α) = pf − eAcl (t; α), we can express the quantum state in Eq. (A38) after performing the path integrals as
+                       Z           Z t           i Rt
+                    ie                      −
+                                                                                      I
+                                                          dτ [p̃f (α)+eAcl (τ ;α)]2 +i ℏp (t′ −t0 )
+    |Φ(pf , t)⟩ = −       2
+                         d α c(α)      dt′ e 2me ℏ t′                                               ⟨p̃f (α) + eAcl (t′ ; α)|r̂|g⟩ · Ecl (t′ ; α) |α⟩
+                    ℏ               t0
+                       Z           Z t
+                    ie
+                ≡−       d2 α c(α)     dt′ b(p̃f , t′ ; α) |α⟩ .
+                    ℏ               t0
+                                                                                                                                                  (A41)
+For convenience, we express all quantities in terms of the canonical momentum p̃f (α). This is the state we explicitly
+evaluate in our analysis. It is important to highlight that, here, the canonical momentum explicitly depends on α and,
+unlike the classical scenario, ceases to be a constant of the motion. It remains, however, locally constant within each
+realization α of the driving field in the coherent state superposition, while not globally constant between different
+realizations. When considering pulsed fields, however, A(t → ∞; α) = 0 such that kinetic and canonical momentum
+asymptotically coincide, therefore making p̃f (α) = pf .
+
+
+                                              4.    Relation to Husimi-averaged methods
+
+  Based on a generalized positive-P representation [130] of the driving field, it has been shown that photoelectron
+observables driven by BSV, as well as other quantum light sources, can be written as [63–65]
+                                                   Z
+                                          P (pf ) = d2 α Q0 (α)P (pf ; α),                                   (A42)
+
+                                                                           2
+where P (pf ; α) = | dt′ b(p̃f , t′ ; α)|2 , and Q0 (α) = π −1 |⟨α|Φ(t0 )⟩| is the Husimi function of the initial field state.
+                    R
+                                                                                                                                                      23
+
+  We now show that this expression can be recovered directly from Eq. (A41). From that equation, the photoelectron
+probability can be written (up to normalization) as
+                            Z      Z                    Z t                       Z t                    ∗
+                   P (pf ) = d2 α d2 β c(α)c∗ (β) ⟨β|α⟩       dt′ b(p̃f , t′ ; α)        dt′ b(p̃f , t′ ; β) , (A43)
+                                                                                     t0                          t0
+                                                                                                             2
+where the magnitude of the coherent state overlap decays as |⟨β|α⟩| ∝ e−|β−α| /2 . This Gaussian suppression ensures
+that the double integral is effectively dominated by regions where β ≈ α. For instance, already for |β − α| = 5, the
+overlap is suppressed by more than six orders of magnitude. In the regime relevant to strong-field physics, variations
+of this magnitude in coherent state amplitudes correspond to field strength changes of εα ∼ 10−7 a.u., that are several
+orders of magnitude smaller than those required to significantly modify the electron dynamics. Consequently, within
+the regime where ⟨β|α⟩ is appreciable, the ionization probability amplitudes barely change, and one may approximate
+b(p̃f , t′ ; β) ≃ b(p̃f , t′ ; α). Under this controlled diagonal approximation, the probability becomes
+                                         Z       Z t                     2Z
+                                P (pf ) = d2 α       dt′ b(p̃f , t′ ; α)    d2 β π −2 ⟨α|Φ(t0 )⟩ ⟨Φ(t0 )|β⟩ ⟨β|α⟩
+                                                          t0
+                                         Z                                     Z t                     2                                           (A44)
+                                                          −1              2
+                                     =           2
+                                             d α π             |⟨α|Φ(t0 )⟩|          dt′ b(p̃f , t′ ; α) ,
+                                                 |                {z       }    t0
+                                                                Q0 (α)
+
+where in transitioning from the first to the second equality we have used the resolution of the identity in the coherent
+state basis. It is worth noting that an expression formallyRidentical to Eq. (A44) can also be obtained if the driving
+field is initially prepared in the incoherent mixture ρ̂mix = dα Q(α) |α⟩⟨α|. In that case, the photoelectron spectrum
+would be described by the same statistical average over coherent state contributions. However, the physical origin
+of this averaging is fundamentally different. When starting from Eq. (A41), the effective mixture arises from the
+entanglement generated between the light and matter degrees of freedom during the interaction, and the loss of
+information induced by tracing out one of the subsystems. By contrast, for the state ρ̂mix the averaging simply reflects
+the intrinsic mixedness of the initial driving field.
+   As a consequence, the two scenarios can be distinguished by observables or operations that are sensitive to quantum
+coherences in the optical subsystem. In particular, after considering the heralding protocol used in this work, phase-
+space observables such as the Wigner function retain interference features when the state originates from Eq. (A41),
+giving rise to the negative regions reported in the main text. In contrast, the absence of coherences in ρ̂mix prevents
+the appearance of such non-classical features.
+
+
+                                                     5.    Semiclassical saddle-point analysis
+
+   There are several ways in which one can evaluate the probability amplitudes weighting each of the coherent states in
+Eq. (A41). Perhaps the more straightforward approach would involve a direct time integration evaluated at each value
+of α. Here, instead, we employ the standard semiclassical saddle-point approximation and express the time-integral
+as a sum over stationary points of the action
+                                                                    Z t
+                                         ′             ′          1                         2
+                             S(p̃f , t, t ; α) = −Ip (t − t0 ) +        dτ p̃f + eAcl (τ ; α) ,                  (A45)
+                                                                 2me t′
+that yields
+                            Z         "          s                                                            #             Z
+                       ie        2
+                                          X                      2πi                                                   ie
+       |Φ(pf , t)⟩ ≈ −          d α                                                c(α)b(pf , tion ; α) |α⟩       ≡−            d2 α c̃(α) |α⟩ .   (A46)
+                       ℏ                  tion
+                                                      ∂t2′ S(p̃f , t, t′ ; α)|tion                                     ℏ
+
+From Eq. (A45), the saddle-point equation reads
+                                                                  2
+                                                                     p̃2f,⊥
+                                    
+                                 1             εα
+                                     p̃f,∥ + e    cos(ωL tion − θ) +        + Ip = 0,                                                              (A47)
+                               2me             ωL                    2me
+where we have explicitly expanded the vector potential, and introduced the field strength εα = 2g(ωL )|α|, such that
+α = |α|eiθ . Using atomic units (ℏ = |e| = me = 1), it follows that the saddle-point admits the solutions
+                                                                         q
+                                                               −p̃ ∓ i p̃2 + 2Ip 
+                                         2πk   θ     1             f,∥      f,⊥
+                                tion,± =     + ± arccos                  p             ,                      (A48)
+                                          ω    ω ω                      2 Up
+                                                                                                                                24
+
+where Up = ε2α /(4ωL
+                   2
+                     ) the ponderomotive energy and k ∈ Z.
+
+
+
+
+FIG. 8. (a) Absolute value of the coefficient function c(α) before the ATI process. (b)-(q) Absolute value of the effective coeffi-
+cient function c̃(α) after post-selection on various electron momenta pf (shown as inset). Here, we have fixed the measurement
+                                                                                                      −3
+time to t = 2πncyc /ω + π/(2ω), with ωL = 0.057 a.u. (λL = 800 nm).  √ Here, we have set g(ωL ) = 10 and r = 3, setting the
+lattice constant for the discrete coherent state expansion to k = 0.2 π.
+
+   Strictly speaking, the saddle-point approximation is valid when the phase factor e−iS/ℏ oscillates rapidly, which
+depends sensitively on the field amplitude εα . In the weak-field limit εα → 0, the action varies more slowly and
+the approximation formally deteriorates. However, in this regime the imaginary part of the action evaluated at the
+saddle-point increases substantially, leading to e−iIm[S]/ℏ → 0, that is, an exponential suppression of the ionization
+probability. This has been further benchmarked using exact numerical integration of b(p̃f , t′ ; α). For the photoelectron
+momenta considered here, the ionization yield becomes significant for field amplitudes of order ε ∼ 10−2 a.u., which
+lie within the regime where both the saddle-point and strong-field approximations remains reliable.
+   Figure 8 compares |c(α)| (prior to the interaction) with |c̃(α)| for various values of the final momentum pf and
+different optical-cycle durations of the driving field. Comparing these effective coefficients, we observe that their
+values are not fully rotationally invariant in phase-space. This lack of fully rotationally invariance is a necessary
+and sufficient condition for non-classicality in single-mode pure states [80]. Therefore, both before and after the
+light-matter interaction—and subsequent electronic heralding—the resulting quantum optical states are intrinsically
+non-classical. Despite this shared non-classical character, important differences emerge between the pre- and post-
+interaction states. Before the interaction, the coefficient function is squeezed in space, as expected for a bright squeezed
+input. After the heralding, however, two pronounced lobes appear around the origin, each displaying clear interference
+patterns. The structure in the interference patterns within each lobe depends on both the number of cycles considered
+                                                                                                                             25
+
+
+
+
+FIG. 9. Effective distribution |c̃(α)| obtained after heralding on the electron momentum (a) pf = (p∥ , 0) and (b) pf = (0, p⊥ )
+for ncyc = 4. The dashed white lines indicate the ATI ring positions defined by Eq. (A49). (c)-(e) Logarithmic-scale view
+of |c̃(α)| for pf = (p∥ , 0) and increasing ncyc . In these panels, the ATI rings are indicated with the black dashed lines. The
+white region near εx ≃ 0 arises from the logarithmic representation combined with the exponential suppression of the ionization
+probability at low field amplitudes. Values of |c̃(α)| are numerically rounded to 10−13 for visualization purposes. The same
+parameters as those used in Fig. 8 are used.
+
+
+
+and the post-selected final electron momentum. In particular, the momentum component pf,∥ plays a more prominent
+role than pf,⊥ in shaping the intralobe structure and the symmetry between the two lobes. For a fixed value of pf ,
+increasing the number of optical cycles leads to sharper interference fringes [96]. This behavior indicates that the
+emergence of well-defined peaks is associated with an increasing number of interfering electron trajectories as the
+interaction duration grows.
+   One can nevertheless identify a form of periodicity in the peaks observed within the intralobe structures of c̄(α).
+The presence of these peaks can be related to the ATI energy conservation, provided that ATI peaks occur at energies
+given by [96]
+
+                                                    p̃2f             ε2
+                                                         = nω − Ip − α2 .                                                (A49)
+                                                     2              4ω
+                                                                                                                            26
+
+where the last term corresponds to the ponderomotive energy Up .
+   Figure 9 displays |c̃(α)| when considering cuts along the εy = 0 in Fig. 8, after post-selection on (a) pf = (p∥ , 0)
+and (b) pf = (0, p⊥ ). The dashed white lines, correspond to the energy conservation dictated by Eq. (A49), which
+defines the location of the so-called ATI rings along which |c̃(α)| is distributed. The distribution along these rings
+differs for pf = (p∥ , 0) and pf = (0, p⊥ ): in the former case, pronounced peaks appear along each ATI ring, whereas
+in the latter the structure is more continuous. This difference can be attributed to stronger intracycle interference
+along the electric field polarization axis; indeed, within each optical cycle two complex saddle-point solutions exist,
+corresponding to ionization events near consecutive extrema of the driving field. The interference between these two
+trajectories produces intracycle modulation, which becomes particularly visible along the polarization direction.
+   To make this more explicit, Fig. 9 (c)-(e) displays |c̃(α)| for pf = (p∥ , 0) and increasing number of optical cycles,
+shown on a logarithmic scale. For ncyc = 1, intercycle interference is absent and therefore ATI rings do not form.
+Instead, the observed beatings are only due to intracycle interference from the two saddle-points within a single optical
+cycle. As ncyc increases, the intracycle modulation persists but becomes combined with intercycle interference, giving
+rise to ATI rings that sharpen progressively with increasing values of ncyc . Along the p⊥ direction, the final momentum
+does not acquire a drift from the field’s vector potential and, consequently, the modulation along the ATI rings becomes
+absent, resulting in cleaner ring structures.
+
+
+                                      6.        Dominant phase-space contributions
+
+   In the numerical analysis presented in this work, the parameter g(ωL ) (and therefore α) is restricted to values
+that allow for a tractable Hilbert-space representation of the generated states, involving on the order of hundreds
+of photons (see Sec. C for a more detailed discussion). While this regime suffices to characterize their phase-space
+structure and nonclassical properties, direct numerical access to the experimentally relevant high-photon number limit
+is computationally prohibitive.
+   To assess the macroscopic nature of the generated states, we therefore turn to semiclassical methods. Specifically,
+we analyze the stationary configurations of the phase of the integrand in a saddle-point approximation manner [100]
+by looking at regions where the phase of the probability amplitudes c̃(α) remain stationary [69]. This would allow us
+to identify the parameter-space regions where such contributions are dominant. Thus, finding saddle-points at large
+values of |α| and symmetrically distributed around the origin, would provide analytical insight into the regions of
+parameter space where the phase of the probability amplitude becomes stationary, and which are expected to play a
+relevant role in shaping the coherent state superposition.
+   To this end, starting from Eq. (A41), we note that when strong squeezing is applied along the αy quadrature, the
+c(α) coefficient becomes extremely localized in that direction, allowing us to effectively reduce the integral to a single
+quadrature
+                                            Z                Z t                                  Z
+                         |Φ(pf , t)⟩ ≃ −i       dαx c(αx )         dt′ b(p̃f , t′ ; α) |α⟩ ≡ −i       dx c̃(x) |x0 ⟩ .   (A50)
+                                                              t0                                  C
+
+
+where we have introduced the joint variable x = (α, t′ ), and C ⊂ R2 denoting the original integration domain. To
+analyze the structure of this integral, we expand in the coherent states in the Fock basis,
+                                                         ∞ Z
+                                                         X                       2    xn
+                                      |Φ(pf , t)⟩ = −i                dx c̃(x)e−x0 /2 √0 |n⟩ ,                           (A51)
+                                                         n=0        C                  n!
+
+such that each coefficient of this expansion is expressed as a scalar integral whose integrand admits analytic continu-
+ation in the variables (αx , t′ ), provided that c̃(x) is analytic. Under this condition, the integration domain C0 may be
+continuously deformed within C2 without crossing singularities, leaving the value of the integral invariant.
+   Motivated by semiclassical strong-field methods, we introduce the decomposition of the c̃(x) contribution to the
+integrand into a slowly varying prefactor and a rapidly oscillating phase c̃(x) = g(x)eiSQO (p̃f ,x) where
+
+                                       g(x) ∝ ⟨p̃f (α) + eAcl (t′ ; α)|r̂|g⟩ · Ecl (t′ ; α),                             (A52)
+
+while for the highly oscillatory exponent is given by
+                                     (                              )
+                              1 t                                                             iε2x
+                               Z                            i2
+                                      h        εx
+            SQO (p̃f , x) = −      dτ p̃f,∥ +     cos(ωL τ ) + p̃f,⊥ + Ip (t′ − t0 ) +
+                                                                 2
+                                                                                                           ,             (A53)
+                              2 t′             ω                                       4g(ωL )2 er cosh(r)
+                                                                                                                               27
+
+
+
+
+FIG. 10. Saddle-point solutions for εy = 0. (a)-(d) real and imaginary part of εx as a function of the real part of the ionization
+time for various values of p. (a)-(h) eigenvalues of the Hessian matrix—note the difference in orders of magnitude between the
+two sets of eigenvalues. (i) Imaginary part of the ionization time as a function of the squeezing strength r for the case p = 0.
+Here, we have considered hydrogen for the atomic system (Ip ≃ 0.5 a.u.), ω = 0.057 a.u. and set g(ωL ) = 10−8 a.u. [93]. We
+note that, under the present case, pf = p̃f .
+
+
+that is, an effective action incorporating the both the semiclassical propagation phase and corrections arising from
+the field statistics of the driver. In this representation, we analyze the regions of parameter space where the phase
+of the probability amplitudes becomes stationary, i.e., ∇x SQO (p̃f , x) = 0. Such stationary configurations provide an
+indication, in analogy to stationary-phase arguments, of regions that may play a relevant role in shaping the coherent
+state-superposition. Importantly, we do not explicitly evaluate the resulting saddle-point approximation; rather, we
+use the structure of these stationary points to identify regions of parameter space that contribute most significantly
+to the state. The corresponding stationary points read
+                                                          2
+                                                               p̃2f,⊥
+                                
+                   ∂SQO       1           εx          ′
+                        = 0 ⇒    p̃ f,∥ +    cos(ω L t  )    +         + Ip = 0,                                           (A54)
+                    ∂t′       2           ω                       2
+                                1 t h
+                                    Z
+                   ∂SQO                            εx                i                  iεx
+                        =0⇒−            dτ p̃f,∥ +       cos(ωL τ ) cos(ωL τ ) +                    = 0,                   (A55)
+                    ∂εx         ω t′               ωL                            2g(ωL ) er cosh(r)
+                                                                                        2
+
+
+where αx = εx /(2g(ωL )), and which determine the relevant stationary configurations in the joint parameter space
+(αx , t′ ) for c̃(x).
+   Figure 10 shows the solutions to the saddle-point equations (A54) and (A55). In this case, and for the evaluated
+times, we have that pf = p̃f . Under this condition, the fields parametrized by Re[εx ] reach their maximum amplitude
+at t ≃ 27.5, 82.7 and 137.8 a.u., and we thus find for p = 0 and p = (0.5⊥ , 0∥ ) [Fig. 10 (a)-(b)] that ionization takes
+place at the two later times when looking for saddle points within the interval Re[tion ] ∈ [0, 2π/ωL +π/(2ωL )]. For each
+of these times, there exist two solutions of equal amplitude but opposite sign, corresponding to maxima and minimum
+of the field amplitude, i.e., the intensity maxima. As p∥ increases, this symmetry begins to break, and ionization no
+longer occurs exactly at the field extrema [Fig. 10 (c)-(d)]. Instead, the ionization times shift to the left or right of the
+extremum depending on the sign of Re[εx ]. These two solutions intrinsically reflect the generation of large coherent
+state superpositions in our state, with positive and negative values of α = εα /[2g(ωL )]. Since εα ∝ ±10−2 , we thus
+get α ∝ ±5 × 105 .
+   We also observe a non-vanishing imaginary component of the field amplitude εx for these solutions, which vanishes
+only when the ionization time coincides with the detection time or when squeezing is effectively absent [Fig. 4 (a)].
+Furthermore, this imaginary component increases with the squeezing strength, while at the same time the correspond-
+ing ionization times shift away from the extrema of the field towards earlier values. These observations indicate that
+the presence of squeezing continuously modifies the structure of the stationary solutions, in a manner consistent with
+                                                                                                                      28
+
+previous studies showing that squeezing can influence the effective electron propagation dynamics [94].
+  We further evaluate how bona fide the obtained saddle-points are, with Fig. 10 (e)-(h) displaying the eigenvalues of
+the real part of the Hessian for each case shown in panels (a)-(d). In absolute value, the eigenvalues appear in pairs of
+opposite sign, confirming the presence of true saddle points. However, their magnitudes differ significantly, and only
+become more comparable as the squeezing strength increases. This suggests, consistent with physical intuition, that
+applying contour deformations as discussed here might become more effective as r grows. Conversely, the limit r → 0
+corresponds to fields with vanishing mean intensity. The behavior is further illustrated in Fig. 10 (i), which shows
+the imaginary part of the ionization time as a function of the squeezing parameter. As expected, the imaginary part
+increases as the squeezing strength decreases, indicating that ionization becomes progressively less probable.
+
+
+                       B.   About the quantum optics and quantum information measures
+
+  The main objective of this section is to provide some analytical background to some of the quantum optics and
+quantum information measures considered in the main text.
+
+
+                                            1.   Approximate measurements
+
+  The analysis presented thus far has implicitly assumed an ideal detector for heralding the coherent state super-
+position. In practice, however, detectors possess a finite momentum resolution and may not perfectly distinguish
+outcomes pf and pf + δ. Within quantum measurement theory, such finite-resolution measurements are described as
+approximate measurements [108].
+  To model this effect, we introduce a conditional probability density w(pf,µ |p′f,µ ), representing the probability that
+the detector reports outcome pf,µ when the true value is p′f,µ . This function satisfies the normalization condition
+  dpf,µ w(pf,µ |p′f,µ ) = 1, and we model it by a Gaussian function
+R
+
+                                                                    "                #
+                                                          1         (pf,µ − p′f,µ )2
+                                      w(pf,µ |p′f,µ ) = p     exp −                   ,                             (B1)
+                                                         2πσµ            2σµ2
+
+where σµ characterizes the detector resolution along direction µ. For simplicity, we restrict the discussion to a single
+momentum component µ to gain better understanding of how the electron propagation direction affects the final
+state. Nevertheless, the extension to higher dimensions is straightforward and does not modify the structure of our
+argument, but only of the conditional probability w(·|·).
+  In this context, the measurement is described by the POVM elements
+                                                 Z
+                                      Π̂(pf,µ ) = dp′f,µ w(pf,µ |p′f,µ ) p′f,µ p′f,µ ,                             (B2)
+
+
+which satisfy the completeness relation dpf,µ Π̂(pf,µ ) = 1̂. Assuming a minimally disturbing measurement model
+                                         R
+in which the detector introduces only finite classical resolution but no additional unitary operations [108], the post-
+selected state conditioned on outcome pf,µ is, up to normalization,
+                                h                       i Z
+                   ρ̂(pf,µ ) = tr Π̂(pf,µ ) |Ψ(t)⟩⟨Ψ(t)| ≈ dp′f,µ w(pf,µ |p′f,µ ) Φ(p′f,µ , t) Φ(p′f,µ , t) ,       (B3)
+
+where p′f,µ = (p′f,µ , pf,µ̄ ). The approximation arises from the strong-field approximations used in deriving Eq. (A41),
+and is independent of the measurement model itself.
+
+
+                                                    2.   Bell nonlocality
+
+   The concept of nonlocality arises in the context of measurements and the structure of joint probability distribu-
+tions. We consider two initially separate parties, Alice and Bob, who perform measurements labeled x and y on their
+respective subsytems of a bipartite physical system, upon which they obtain outcomes a and b, respectively. The
+statistics of the experiment are described by conditional probabilities P (a, b|x, y), which define the probability of
+                                                                                                                            29
+
+obtaining outcomes (a, b) given measurement choices (x, y). A behavior is said to admit a local hidden-variable model
+if it can be written as [36]
+                                                   Z
+                                    P (a, b|x, y) = dλ q(λ)P (a|x, λ)P (b|y, λ),                                 (B4)
+
+where λ denotes hidden variable distributed accordingly to a probability density q(λ). The hidden variable represents
+shared classical randomness, which may influence the outcomes locally but is assumed to be independent of the
+measurement choices x and y. Behaviors satisfying Eq. (B4) are termed local.
+   In quantum mechanics, if Alice and Bob share a bipartite system ρ̂ and perform measurements described by POVM
+elements {M̂a|x } and {M̂b|x }, the corresponding conditional probabilities are given by Born’s rule [109, 131]
+                                                                              
+                                             P (a, b|x, y) = tr ρ̂M̂a|x ⊗ M̂b|y .                                         (B5)
+
+We denote by L the set of local behaviors satisfying Eq. (B4), and by Q the set of behavior achievable within quantum
+mechanics via Eq. (B5). Both sets are closed, bounded and convex [36] and, moreover, the inclusion L ⊂ Q holds [132],
+meaning that all local behaviors can be realized within quantum theory. The set of nonlocal behaviors is therefore
+defined as N L = Q\L, and it can be shown that entanglement is a necessary but not sufficient condition for a behavior
+to be nonlocal. This is where Bell inequalities arise.
+  A powerful way to distinguish local from nonlocal behaviors is through Bell inequalities, which formally delimit the
+extension of the local set in the P-space. These are linear constraints of the form [35, 36]
+                                                X
+                                                     sa,b
+                                                       x,y P (a, b|x, y) ≤ S,                                     (B6)
+                                                 a,b,x,y
+
+
+while are satisfied by all behaviors in L but not by those in L; a violation of Eq. (B6) certifies nonlocality. In the scenario
+where Alice and Bob each choose between two dichotomic measurements, the Clauser-Horne-Shimony-Holt (CHSH)
+inequalities completely characterize the local set. In our work, we consider this scenario, where the measurements
+performed by Alice and Bob correspond to [114, 115]
+
+                                                 Π̂(β) = D̂(β)(−1)n̂ D̂† (β),                                             (B7)
+
+where D̂(β) is the displacement operator and (−1)n̂ is the parity operator. Measuring Π̂(β) corresponds to probing
+the Wigner function at the phase-space point β. The measurement settings x and y introduced earlier, are therefore
+                                        (j)    (j)
+identified with the phase-space points βA and βB (with j = 1, 2) chosen by Alice and Bob. The corresponding CHSH
+operator reads
+                           (1)        (1)          (1)        (2)          (2)        (1)          (2)        (2)
+           ⟨B̂(β)⟩ = ⟨Π̂(βA ) ⊗ Π̂(βB )⟩ + ⟨Π̂(βA ) ⊗ Π̂(βB )⟩ + ⟨Π̂(βA ) ⊗ Π̂(βB )⟩ − ⟨Π̂(βA ) ⊗ Π̂(βB )⟩,               (B8)
+
+                        behaviors 2 < |⟨B̂(β)⟩| ≤ 2 while quantum mechanics allows violations up to the Tsirelson
+such that for all local √
+bound 2 < |⟨B̂(β)⟩|≤ 2 2. Thus, observing |⟨B̂(β)⟩| > 2 certifies Bell nonlocality.
+
+
+
+
+        FIG. 11. Maximum value of Eq. (B8) when optimized with respect to βA and βB for the state in Eq. (B10).
+                                                                                                                        30
+
+  Demonstrating the local bound is straightforward when considering deterministic local strategies. In this case, the
+correlators factorize, such that
+                          (1)          (1)            (1)     (2)        (2)       (1)       (2)       (2)
+              ⟨B̂⟩ = ⟨Π̂(βA )⟩⟨Π̂(βB )⟩ + ⟨Π̂(βA )⟩⟨Π̂(βB )⟩ + ⟨Π̂(βA )⟩⟨Π̂(βB )⟩ − ⟨Π̂(βA )⟩⟨Π̂(βB )⟩.               (B9)
+
+Since the displaced parity operator has eigenvalues ±1, it then follows that the maximum value one can find for the
+                                                                    (1)         (1)         (2)               (1)
+quantity above is |⟨B̂⟩| = 2, obtained for instance by setting ⟨Π̂(βA )⟩ = ⟨Π̂(βB )⟩ = ⟨Π̂(βB )⟩ = 1 and ⟨Π̂(βA )⟩ = −1,
+or any possible combination. We note that such factorization of the correlators occurs when considering separable
+states. On the other hand, Fig. 11 shows that by employing entangled states of the form
+                                                         1                   
+                                                  |ψ⟩ = √    |α, α⟩ − |−α, −α⟩ ,                                     (B10)
+                                                          N
+one can obtain violations of the Bell inequality, with the Tsirelson bound approaches in the limit α → ∞. Given the
+structural similarity between these entangled coherent states and the states obtained in our analysis, we employ the
+same measurement scheme to investigate whether a Bell inequality violation can be achieved using the measurement
+configuration depicted in Fig. 7(a).
+
+
+                                                 C.   NUMERICAL ANALYSIS
+
+ This section details the numerical procedures used to evaluate the quantum optical and quantum information
+measures presented in the main text. We also discuss the choice of numerical parameters.
+
+
+                                                 1.   Coherent state expansions
+
+  The numerical implementation of the state in Eq. (A41), or analogously under the saddle-point approximation
+Eq. (A46), requires discretizing the integral over the coherent state amplitudes α, which arises due to the continuous
+nature of the coherent state representation. Since coherent states are parameterized by a complex number α = x + iy,
+a natural discretization consists of introducing a square lattice in phase-space
+
+                                  L = {|αm,n ⟩ : αm,n = γ(m + in); m, n ∈ Z; γ ∈ R+ }                                 (C1)
+
+where γ > 0 denotes the lattice spacing. By setting γ → 0, we recover the continuous nature of the coherent state
+basis, rendering the state exact. A fundamental requirement of such discretization is therefore that it preserves the
+representability of the state, i.e., that the discretized expansion retains the properties of the continuous one. In the
+context of the lattice L, this translates into studying its sparsity, namely whether one can define an upper bound on the
+lattice spacing γ beyond which the discretized set no longer reproduces the continuous coherent state representation.
+   This question was addressed independently in Refs. [97, 98], which investigated the overcompleteness of coherent
+states and the conditions under which a discrete subset remains total. More precisely, they determined when the set
+L spans a dense subspace of the Hilbert space, allowing any quantum state to be approximated arbitrarily√well by
+linear combinations of states in L. The conclusion of these studies is that the lattice L is total whenever γ ≤ π, with
+the equality case √ marking the threshold of completeness and corresponds to the so-called von Neumann lattice. In
+contrast, for γ ≥ π the lattice becomes too    √ sparse and fails to be total.
+   In our simulations, we choose γ = 0.035 π, ensuring that L is well within the completeness regime, while keeping
+it sufficiently large to maintain computational feasibility. The bounds imposed on m and n in Eq. (C1) are deter-
+mined dynamically according to the support of the Husimi function of the state under consideration, ensuring that
+contributions outside the truncated region are numerically negligible.
+
+
+                                  2.         Fock state truncation and parameter scaling
+
+   All quantum optical quantities were computed using QuTiP [133, 134], which represents quantum states in a trun-
+cated Fock basis, therefore requiring to introduce a dimensional cutoff ncutoff . In strong-field scenarios, typical param-
+eters may reach r ∼ 10 and g(ωL ) ∼ 10−8 , leading to coherent state amplitudes as large as α ∼ 106 . Direct numerical
+simulation in this regime would require prohibitively large lattice sizes and Fock cutoffs.
+   However, the physically relevant parameter governing the electron dynamics if εα = 2g(ωL )α, which determines the
+strength of the light-matter interaction. Thus, in order to maintain the system within the strong-field regime while
+                                                                                                                      31
+
+rendering treatment feasible, we adopt a rescaling strategy similar to that in previous HHG studies [99], whereby
+g(ωL ) is increased and the corresponding coherent amplitudes (or effectively the squeezing parameter r) is reduced
+such that εα ∼ 10−2 a.u. remains unchanged.
+   We emphasize, however, that modifying α alters the structure of the optical quantum state itself. While qualitative
+features remain, such as the position of maxima in |c̃(α)| which are determined by εα , the separation between coherent
+state components in phase-space and the detailed interference features of the Wigner function depend on α. This effect
+can be seen by comparing Fig. 3 and Fig. 8, with the former computed with g(ωL ) = 10−6 a.u. and r = 10. While the
+qualitative features are the same, larger coherent state amplitudes related to each peak would produce more widely
+separated intralobe structures in phase-space.
+   In particular, for the evaluation of the quantum optical and quantum information measures considered here, we
+set g(ωL ) = 5 × 10−3 a.u. that keep α ∼ 10, allowing accurate simulations with ncutoff = 200. Convergence was
+verified by showing that for higher values of ncutoff = 300, the photon number statistics of the generated states
+remained the same. In comparison, more realistic parameters with a smaller g(ωL ) are expected to result in Wigner
+functions exhibiting more widely separated intralobe structures and sharper interference regions, while preserving the
+qualitative interlobe interference pattern arising from the coherent superposition between both lobes at each side of
+the phase-space origin.
+
+
+                                     3.   Optimization of the CHSH inequality
+
+  As discussed in Sec. B 2, we consider a nonlocality probe based on displaced parity measurements, whereby Alice
+and Bob sample both positive and negative regions of the Wigner functions in order to maximize the CHSH score. The
+measurement settings are parametrized by complex displacements β, with X1 = Re[β] and X2 = Im[β]. Since each
+party chooses two measurement settings, the optimization of Eq. (B8) involves eight real variables in total. Performing
+a global optimization based on local optimizations in this parameter space is numerically demanding, particularly as
+the CHSH landscape may contain multiple local maxima, as they depend on the number of interference fringes in the
+generated states.
+  To reduce the computational cost, we restrict our analysis to displacements satisfying X1 = 0, and optimize only
+over X2 , as here lie the maximum CHSH score for the ideal optical cat states considered in Fig. 11. This reduces the
+dimensionality of the optimization problem from eight to four real variables. Consequently, the CHSH values reported
+here should be interpreted as lower bounds on the true maximal violation attainable with unrestricted displacements.
+  The optimization procedure for each value of the final momentum pf is as follows:
+   1. Initial sampling. For a given state ρ̂(pf ), we generate 1000 random initial configurations of measurement
+      settings {β0 (pf )}, evaluate the corresponding CHSH scores, and retain the configuration yielding the largest
+      absolute value. This configuration serves as the initial guess β0 (pf ).
+   2. First local refinement. Starting from β0 (pf ), we perform a local optimization using the Nelder-Mead algo-
+      rithm, obtaining an improved set of settings denoted β0∗ (pf ).
+   3. Momentum sweep. Steps 1 and 2 are repeated for all values in the momentum range {pf }, producing a set
+      of locally optimized configurations {β0∗ (pf )}.
+   4. Global reseeding across momentum. Among the configurations β0∗ (pf ) ∈ {β0∗ (pf )}, we identify the one
+      yielding the largest CHSH value within the selected momentum range. This configuration is then used as an
+      initial condition for a second optimization sweep across the full momentum range, producing a new set {β1∗ (pf )}.
+      For each momentum value, we retain the better configuration between the first and second sweeps
+                                    β2∗ (pf ) = arg max B̂ β0∗ (pf ) , B̂ β1∗ (pf )
+                                                                                  
+                                                                                      .                           (C2)
+
+   5. Sequential continuation. Finally, we perform a third sweep in which the optimized configuration at momen-
+      tum pf,i−1 is used as the initial guess for the neighboring point pf,i . This produces the new set {β3∗ (pf )} with
+      the final measurement settings used in Fig. 7 (c) defined as
+                                   β4∗ (pf ) = arg max B̂ β2∗ (pf ) , B̂ β3∗ (pf )
+                                                                                 
+                                                                                      .                              (C3)
+
+   We emphasize that the reported CHSH values correspond to local maxima within the constrained optimization
+landscape. Since the procedure relies on local optimization methods, global optimality cannot be guaranteed. Improved
+violations may in principle be obtained using more sophisticated global-search strategies or alternative initialization
+schemes. Furthermore, allowing displacements with X1 ̸= 0 would enlarge the accessible parameter space and could
+lead to higher CHSH values, albeit at substantially increased computational cost.
+

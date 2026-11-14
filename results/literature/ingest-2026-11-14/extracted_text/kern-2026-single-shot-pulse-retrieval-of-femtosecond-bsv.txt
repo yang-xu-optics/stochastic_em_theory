@@ -1,0 +1,416 @@
+                                                    Research Article                                                                                                                                 1
+
+
+
+
+                                                  Single-shot pulse retrieval of femtosecond bright
+                                                  squeezed vacuum
+                                                  Y UVAL K ERN1,2 , I DO N ISIM1,2 , M ICHAEL B IRK3,2 , A NDREI R ASPUTNYI4,5 , D ORON B EHAR1,2 , Z HAOPIN
+                                                  C HEN1,2 , I DO K AMINER6,2 , PAVEL S IDORENKO6,2 , O REN C OHEN1,2,7 , AND M ICHAEL K RÜGER1,2,*
+arXiv:2509.17746v1 [physics.optics] 22 Sep 2025
+
+
+
+
+                                                  1 Department of Physics, Technion – Israel Institute of Technology, 32000 Haifa, Israel
+                                                  2 Solid State Institute and Helen Diller Quantum Center, Technion – Israel Institute of Technology, 32000 Haifa, Israel
+                                                  3 The Russell Berrie Nanotechnology Institute, Technion – Israel Institute of Technology, 32000 Haifa, Israel
+                                                  4 Max Planck Institute for the Science of Light, 91058 Erlangen, Germany
+                                                  5 Friedrich–Alexander Universität Erlangen–Nürnberg, 91058 Erlangen, Germany
+                                                  6 Electrical and Computer Engineering, Technion – Israel Institute of Technology, 32000 Haifa, Israel
+                                                  7 Department of Physics, Guangdong Technion – Israel Institute of Technology, Shantou 515063, Guangdong, China
+                                                  * krueger@technion.ac.il
+
+
+                                                  Compiled September 23, 2025
+
+
+
+                                                         Bright squeezed vacuum (BSV) is an intense quantum state of light with zero mean electric field and
+                                                         huge photon number fluctuations, sufficiently intense to drive extreme nonlinear processes and imprint
+                                                         nonclassical statistics. However, the temporal structure of single BSV shots has not been fully characterized.
+                                                         Here, we retrieve the spectral and temporal pulse characteristics of a set of single-peak BSV shots. It
+                                                         is obtained by realizing a femtosecond BSV source at 1040 nm with a single spatial mode and perform
+                                                         single-shot spectral interferometry with a fully characterized coherent-state reference pulse. Our approach
+                                                         reveals that the group delay is consistent between the various shots, resulting in an average pulse duration
+                                                         of 27.2 fs, much shorter than the pump pulse, and a variation of 5.5 fs (standard deviation). We also observe
+                                                         a characteristic nodal structure in the spectral interferograms, demonstrating the BSV’s random phase
+                                                         ambiguity of π rad. Our approach demonstrates that BSV is a viable source of femtosecond light pulses for
+                                                         attosecond sub-cycle metrology of ultrafast electron dynamics.
+
+
+
+                                                  1. INTRODUCTION                                                                    with the squeezed nature of BSV (see Figure 1(a) and (b) for an
+                                                                                                                                     illustration). The BSV photon statistics support a plethora of
+                                                  Ultrafast science in the attosecond temporal regime is based                       different realizations of pulse shapes. Individual BSV shots can
+                                                  on extremely nonlinear sub-cycle processes driven by intense                       reach extremely high photon numbers of up to 1013 within a
+                                                  laser pulses, with each driving laser pulse containing 107 -1015                   single BSV pulse due to antisqueezing [15–17]. Notable is also a
+                                                  photons [1–10]. This is in stark contrast to quantum optics with                   phase ambiguity of π rad and the nodal structure of the statistics
+                                                  nonclassical light, which is commonly associated with photon                       at the field zero crossings, which follows from the oscillations of
+                                                  statistics of up to 102 photons [11, 12]. Introducing concepts                     the fluctuations at twice the BSV light frequency. Average pulse
+                                                  of quantum optics in ultrafast science, such as squeezing [13],                    durations down to 25 fs in BSV at 1600 nm have recently been
+                                                  needs to bridge this stark intensity gap. Recently, the develop-                   reported [17].
+                                                  ment of intense sources of nonclassical light, particularly pulses                     Femtosecond BSV pulses have been shown to drive nonlin-
+                                                  of bright squeezed vacuum (BSV) [14–16], has demonstrated                          ear processes with higher efficiency than coherent light with
+                                                  that this gap can be overcome. BSV pulses possesses fascinat-                      the same mean intensity, due to the fact that the nonlinearity
+                                                  ing quantum properties, which distinguishes it strongly from                       of those processes enhances the statistical contribution of the
+                                                  “classical” (coherent-state) laser pulses used in ultrafast science.               BSV shots with high photon numbers, though those shots are
+                                                  In the time domain, ideal coherent-state classical laser pulses                    rare. Perturbative nonlinear effects, such as low-order harmonic
+                                                  exhibit oscillations of the electric field with the fundamental                    generation [15] and multiphoton electron emission from nan-
+                                                  frequency with small fluctuations due to the quantum vacuum,                       otips [18] have been driven solely by BSV, resulting in increased
+                                                  characterized by Poissonian photon statistics. In BSV, however,                    efficiency. BSV has also been applied as a perturbation field for
+                                                  the average electric field is zero, in line with its character as                  high-harmonic generation (HHG) from solids [19] and gases [20]
+                                                  a vacuum state, whereas the electric field fluctuations are ex-                    as a route to imprint non-classical photon statistics on the re-
+                                                  tremely large and oscillate at twice the light frequency, in line                  sulting harmonics in the UV and extreme UV spectral regions.
+        Research Article                                                                                                                                  2
+
+
+(a)
+Electric field (arb. u.)                    (b)                                          2. RESULTS
+
+
+
+
+                                             Electric field (arb. u.)
+                                                                                         A. Bright-squeezed-vacuum source at 1040 nm
+                                                                                         In this section, we introduce our BSV source with a central wave-
+                                                                                         length of 1040 nm. This is a shorter wavelength than 1600 nm
+                                                                                         that has been used for previous ultrafast light-matter-interaction
+                                                                                         BSV experiments [17, 19–21] and aligns with the ubiquitous
+                                                                                         use of Yb-based laser systems in ultrafast science [35]. The ex-
+                           Time (arb. u.)                               Time (arb. u.)   perimental approach to produce BSV is to strongly pump an
+                                                                                         unseeded optical parametric amplifier (OPA) phase-matched for
+Fig. 1. Illustration of bright squeezed vacuum (BSV). (a) Illus-                         a collinear frequency-degenerate mode. Due to the absence of
+tration of the electric field and its fluctuations for a “classical”                     seed light, fluctuations of the quantum vacuum are amplified
+(coherent-state) state laser pulse. Red curve: Average electric                          by the OPA, starting with photon-pair generation leading to the
+field. (b) The same for BSV. While any single realization of BSV                         emission of extremely bright light pulses. In our experiment,
+field (dotted black curve) has a defined waveform, the field                             we employ the 515-nm second harmonic (SH) of 1030 nm, 178 fs
+fluctuations across many possible pulses can be positive or                              pulses from an Yb-based amplified laser system as a pump (see
+negative with equal probability, resulting in an average electric                        Figure 1(b) for a sketch of the setup). The collimated SH pump
+field of zero (red line).                                                                pulses (∼ 125 fs pulse duration, 121 µJ pulse energy, 1 kHz repeti-
+                                                                                         tion rate) is sent into a 1 mm thick β-barium borate (BBO) crystal
+                                                                                         for Type I phase-matching cut at θ = 23.4◦ . With no seed present,
+                                                                                         a weak BSV beam is generated. Since the BSV beam possesses
+                                                                                         many spatial modes, a filtering approach needs to be applied.
+                                                                                         Here we apply the second stage of amplification by placing the
+Nonperturbative HHG from solids [17] and strong-field pho-                               second identical BBO crystal in the beam path at a distance of
+toemission from nanotips [21] solely driven by BSV open up                               22.8 cm (cf. [36]). This distance ensures that the higher-order
+interesting effects in the sub-cycle strong-field regime of light-                       spatial modes of the BSV are not amplified in the second BBO
+matter interactions, as predicted by theory [22]. The use of                             crystal. Only the fundamental Gaussian spatial mode overlaps
+BSV to introduce nonclassicality is part of a larger experimen-                          well with the collimated 515-nm pump beam and is amplified.
+tal and theoretical effort to bridge ultrafast science and quan-                         The distance also guarantees that the relative phase between 515-
+tum optics through different pathways, such as electro-optic                             nm light and BSV is such that the amplification in the second
+approaches [23–26], HHG interactions [20, 27–31] and photoion-                           BBO crystal is constructive. We obtain spatially single-mode
+ization experiments [32, 33].                                                            BSV light at a central wavelength of 1040 nm. This wavelength
+                                                                                         is consistently obtained when optimizing the power of the BSV
+                                                                                         through tuning the phase-matching angles of both crystals. We
+    While BSV is well-established and can be characterized us-                           observe a nonlinear frequency shift of the 515-nm light to longer
+ing quantum optical methods (see, e.g., [14–16, 34]), sub-cycle                          wavelength, consistent with the observation of 1040 nm BSV
+ultrafast studies require a complete characterization of the elec-                       light (see Supplementary Material). The BSV possesses extreme
+tric field in time for each shot of femtosecond BSV. Each shot                           intensity fluctuations and an average pulse energy of ∼ 100 nJ,
+is a different realization of the statistical quantum properties                         corresponding to 5 × 1011 photons on average. A gain curve
+of BSV, i.e., it corresponds to a femtosecond light pulse with                           measurement shows the absence of saturation of the parametric
+well-defined spectral intensity and phase. Although the spec-                            amplification (see Supplementary Material).
+tral intensity can be easily measured with a spectrometer with                              We measure the spectrum of each individual femtosecond
+single-shot capability, the spectral phase is challenging to mea-                        BSV pulse using a near-infrared InGaAs-based spectrometer.
+sure, particularly in a single-shot measurement together with                            Normalizing the spectra, we find three characteristic spectral
+the intensity. In [17], frequency-resolved optical gating (FROG)                         shapes, a single peak centered at ∼ 1040 nm (Figure 2(b)), a two-
+was applied to femtosecond BSV pulses at 1600 nm wavelength                              peak structure with a minimum at ∼ 1040 nm (Figure 2(c)) and
+but could only reveal an average pulse shape with a duration                             mixtures of the two (not shown). Single-peak spectra indicate the
+of about 25 fs. Here, we introduce a conceptually simple yet                             fundamental spectral mode of the BSV with a roughly Gaussian
+powerful approach to measure the spectral phase of single shots                          shape, whereas the double-peak structures correspond to the
+of BSV – single-shot spectral interferometry. We implement a                             next higher spectral mode. The double-peak structure indicates
+femtosecond BSV source at a wavelength of 1040 nm with a sin-                            the generation of a higher-order Hermite-Gaussian frequency
+gle spatial mode and interfere it with a broadband synchronized                          mode.
+classical laser pulse that has been fully characterized. We ana-
+lyze the spectral interference fringes and retrieve the spectral                             In the next step, we characterize the intensity statistics of our
+phase of each BSV shot, which enables us, for the first time, to                         1040-nm BSV pulses. We record 40,000 single-shot BSV spectra
+characterize BSV in pulse duration and its shot-to-shot varia-                           using a laser-triggered Si-based spectrometer and determine
+tions. Our measurements reveal that the average pulse duration                           g(2) (0), normalized second-order correlation function at zero
+of the shots corresponding to the fundamental spectral mode                              time delay, as a function of wavelength λ. For large intensities,
+of the BSV is around 27.2 fs. We choose to use spectral interfer-                        it is given by g(2) (0) ≈ N 2 (λ) / ⟨ N (λ)⟩2 where N (λ) is the
+ometry because it is simple and has the advantage that it does                           (shot-resolved) spectral intensity at a given λ and ⟨. . .⟩ indicates
+not require a numerical iterative algorithm and can handle low                           the statistical mean. Figure 2(d) shows that g(2) (0) approaches 3
+light intensities in contrast to nonlinear approaches to measure                         at ∼ 1040 nm in the center of the BSV spectrum as expected for
+pulses.                                                                                  degenerate squeezed vacuum [37]. Further away from the center,
+ Research Article                                                                                                                                                                                                                                                              3
+
+
+ (a)                                                SHG
+                                                                                                                      Dichroic Beam                               reveals the presence of 1.62 spectral modes.
+                                                             BBO                                               BBO     mirror dump
+                          1030nm, 178fs
+                                                       515nm
+                           femtosecond
+                           laser system                     SH                                                                                                    B. Single-shot spectral interferometry
+                                                                                                                              1040nm
+                                                                          Multi-mode                                        single-mode                           Here we focus on the ultrashort spectro-temporal properties
+                                                                            BSV                                                 BSV
+                                     Time
+                                                                                                                                                                  of each individual BSV shot. Our measurement focuses solely
+                                     delay              Spectral broadening                                                        Spectro-                       on classical properties, like the variance of the anti-squeezed
+                                                        in single-mode fiber                                                        meter
+                                                                                                                      Beam                                        quadrature, while the variance of the squeezed quadrature can
+                                                        Coherent reference                                           combiner                                     not be resolved due to the lack of the dynamical range of spec-
+ (b) 1                                                                          (c)                     1                                                         trometer. In order to be able to obtain the spectral phase and
+  Normalized intensity
+
+
+
+
+                                                                                Normalized intensity
+                         0.8                                                                           0.8                                                        amplitude for each shot, we implement spectral interferometry
+                         0.6                                                                           0.6
+                                                                                                                                                                  between the unknown BSV pulses and a stable, fully character-
+                                                                                                                                                                  ized coherent-state light pulse as a reference (see Supplementary
+                         0.4                                                                           0.4
+                                                                                                                                                                  Material). To this end, we split off a part of the fundamental laser
+                         0.2                                                                           0.2                                                        light at 1030 nm and spectrally broaden it through self-phase
+                          0                                                                             0                                                         modulation (SPM) in 4.2 cm of a standard single-mode fiber
+                               900    1000   1100    1200                                                    900    1000    1100    1200
+                                     Wavelength (nm)                                                               Wavelength (nm)                                (PM980) [38, 39]. The spectral broadening stage is necessary
+ (d)                                                                                                                                                              because we need to cover the bandwidth of the BSV spectra as
+                         10-1
+                                                                                                                                                                  much as possible. At a pulse energy of 45 nJ, the resulting refer-
+                                                                                                                                                                  ence pulse covers 960-1100 nm which is slightly narrower than
+                         10-2
+       Probability
+
+
+
+
+                                                                                                                                                                  the bandwidth of the single-peak spectral mode. We recorded
+                                                                                                                                                                  the reference pulse with a commercial frequency-resolved op-
+                         10-3
+                                                                                                                                                                  tical gating (FROG) device and determined its spectral phase
+                         10-4                                                                                                                                     (see Supplementary Material). We interfere the reference pulse
+                                                                                                                                                                  with the BSV using a 20:80 beam recombiner and record their
+                               0      1000   2000     3000 4000 5000                                                 6000   7000      8000                        interferogram with the Si-based spectrometer with single-shot
+                                                       Intensity (arb. u.)                                                                                        capability (see Fig. 2(a) for an illustration). A temporal delay
+ (e)                                                        (f) 1200
+                          3                                                                                                                                       of ∼3.05 ps leads to a dense spectral interference fringe pattern
+                                                                                                                                           6                      (see Fig. 3(b) for an example).
+                                                                                                                                           Covariance (arb. u.)
+                                                            Wavelength (nm)
+
+
+
+
+                         2.8
+                                                                              1100
+                         2.6
+ g(2)(0)
+
+
+
+
+                                                                                                                                           4                      (a)
+                         2.4
+                                                                                                                                                                                    Intensity (arb. u.)
+
+
+
+
+                                                                              1000
+                         2.2                                                                                                               2                                                              10
+                          2
+                         1.8                                                   900                                                         0                                                               5
+                           980 1000 1020 1040 1060 1080                           900                         1000      1100        1200
+                                   Wavelength (nm)                                                           Wavelength (nm)
+                                                                                                                                                                                                           0
+                                                                                                                                                                                                           275   280   285     290    295               300      305    310
+Fig. 2. Generation and characteristics of 1040-nm BSV. (a) Ex-                                                                                                                                                               Frequency (THz)
+perimental setup. SH and SHG: second harmonic and second                                                                                                          (b) 1                                                                 (c)                                    1
+harmonic generation, respectively; BBO: β-barium borate crys-                                                                                                                                                                                          390
+                                                                                                                                                                  Modulation (arb. u.)
+
+
+
+
+tal. (b) Normalized spectra of BSV shots with the fundamental
+                                                                                                                                                                                                                                         Shot number
+
+spectral mode (blue) and their average (red). (c) The same, but                                                                                                                                                                                        380
+for the double-peak spectral mode. (d) Intensity statistics at                                                                                                                                0                                                                                0
+1040 nm (red curve: Fit with BSV photon statistics). (e) Second-                                                                                                                                                                                       370
+order correlation parameter g(2) (0) of the generated BSV light
+as a function of wavelength. (f) Spectral covariance plot.                                                                                                                                                                                             360
+                                                                                                                                                                                           -1                                                                                  -1
+                                                                                                                                                                                                           285   286   287     288    289                    285 286 287 288
+                                                                                                                                                                                                                 Frequency (THz)                             Frequency (THz)
+g(2) (0) decreases to ∼2 which is consistent with a thermal light
+state resulting from the fact that the nondegenerate double-peak                                                                                                  Fig. 3. Single-shot spectral interferometry with BSV. (a) Typi-
+spectral mode starts to contribute.                                                                                                                               cal single-shot spectral interferogram at a delay of 3.05 ps. (b)
+    We shed more light on the properties of our BSV source by                                                                                                     Modulation spectrum displaying the interference fringes and
+determining its spectral intensity correlations. We employ the                                                                                                    the BSV’s nodal structure plotted for a sequence of 200 shots.
+InGaAs-based spectrometer and record 4 × 104 single-shot spec-                                                                                                    We normalized the fringes and subtracted the DC offset at a
+tra. Figure 2(f) shows the resulting spectral intensity covariance                                                                                                frequency of 286 THz. (c) Color plot of the modulation spec-
+Cov(λ1 , λ2 ) = ⟨ N (λ1 ) N (λ2 )⟩ − ⟨ N (λ1 )⟩ ⟨ N (λ2 )⟩. In addition                                                                                           trum as a function of shot number for a sequence of 35 shots.
+to the trivial auto-correlation on the rising diagonal, we also find
+a cross-correlation and a strong central peak where both overlap                                                                                                     The single-shot spectral interference fringes directly reveal
+at ∼ 1040 nm. The orthogonal component nicely visualizes the                                                                                                      the π phase ambiguity, an important property of the BSV. The
+correlation of signal and idler photons in our vacuum-seeded                                                                                                      quantum vacuum that we amplify through the unseeded OPA
+OPA. The central peak indicates the spectral range in which                                                                                                       process initially contains all phases. However, according to
+photons can be considered indistinguishable, in agreement with                                                                                                    the classical and quantum understanding of the phase-sensitive
+the g(2) (0) measurement in Fig. 2(e). A comparison of the con-                                                                                                   OPA, the amplification process in degeneracy can occur both
+ditional spectral width with the unconditional spectral width                                                                                                     in 0 and π phase difference between the pump and the down-
+ Research Article                                                                                                                                                                       4
+
+
+converted light [40]. This leads to the π phase ambiguity, which             (a)
+                                                                                                                     1
+
+
+
+
+                                                                                   Normalized intensity (arb. u.)
+manifests itself directly in the fringe pattern recorded in our ex-
+                                                                                                                                                              500
+periment. Figure 3(b) shows the fringe pattern after subtraction
+
+
+
+
+                                                                                                                                                                     Group delay (fs)
+and normalization for a sequence of 200 pulses. We observe a                                                                                                  250
+pronounced nodal structure due to the fact that the zero cross-
+ing occurs at the same frequencies for each shot. The relative                                                                                                0
+                                                                                                                    0.5
+distribution of the two phases is 105:95, corresponding to a bi-                                                                                              -250
+nary random distribution with probability 0.525 ± 0.035, which
+is compatible with randomness in the phase of the quantum                                                                                                     -500
+vacuum. Our measurement is limited here by the fact that the
+interferometric delay in our setup is not stabilized. A differ-                                                      0
+                                                                                                                           280      290       300       310
+ent visualization of this effect is depicted in Fig. 3(c) where a                                                                Frequency (THz)
+checkerboard pattern emerges in some instances.                              (b)                                     1
+
+
+
+
+                                                                                   Normalized intensity (arb. u.)
+C. Single-shot BSV pulse reconstruction
+Our measurement of single-shot spectral interferograms allows
+for a full reconstruction of the spectro-temporal properties of                                                     0.5
+each BSV shot. Here we focus on 1009 single-peak spectra out of
+16,000 recorded shots due to their excellent spectral overlap with
+the reference pulse. Criteria for selecting single-peak spectra
+include the number of peaks, peak wavelength and spectral
+width (for details see the Supplementary Material). Calculating                                                      0
+                                                                                                                          -150 -100 -50   0   50    100 150
+the Fourier transform of the interferograms allows us to isolate                                                                      Time (fs)
+DC and AC terms, which give us access to the spectrum of each
+BSV shot and its relative phase with respect to the reference           Fig. 4. Reconstruction of single-peak BSV shots. (a) Retrieved
+pulse, respectively [41] (see Supplementary Material).                  normalized spectral intensity (blue-grey) and group delay
+    Figure 4(a) shows the results of our reconstruction in the spec-    (light orange) as a function of frequency. The black curve and
+tral domain. We find that the normalized single-peak spectra            the orange curve represent the average of the spectral intensity
+differ in both peak position and spectral width. More important         and group delay, respectively. (b) Time-domain reconstruc-
+is the reconstructed group delay of the BSV shots, also plotted in      tion of the intensity profile of the shots (blue-grey). The black
+Fig. 4(a). On top of the average group delay we find little varia-      curve and dashed orange curve are the average pulse profile
+tion between the individual shots near the central frequency of         and the transform-limited pulse profile calculated from the
+288 THz, with increasing noise at the edges of our measurement          average spectrum from (a).
+range. The average group delay exhibits fine oscillations and
+peaks which we attribute to imperfections in the FROG recon-
+struction of the reference pulse. We also note that the interfero-      has been shown to enable measurements of electron dynamics
+grams are recorded at the spectrometer, which means that the            beyond the conventional damage threshold [17]. Here we envi-
+dispersion effects of optical elements on the beam path between         sion that BSV will be at the heart of a sub-cycle spectroscopic
+BSV generation and detection are included in the measurement.           scheme where it interacts strongly with matter and we retrieve
+    In the time domain, we find an average pulse duration               the shot-resolved waveform after the interactions, detecting the
+of 27.2 fs (full width at half maximum intensity), while the            temporal imprints of nonlinear polarization [42], photoioniza-
+transform-limited pulse duration corresponding to the aver-             tion and dielectric breakdown [43], and phase transitions [44].
+age spectrum is 19.3 fs. Remarkably, this is much shorter than          Funding.     This work has received funding from the Israel Science
+the pulse duration of 178 fs delivered by the laser system at its       Foundation under grant no. 1315/24. We acknowledge partial financial
+output or the estimated pulse duration of 126 fs of its second          support through the Quantum Flagship program of the Helen Diller
+harmonic, which serves as the pump. The exponential scaling             Quantum Center at the Technion and through the collaborative quantum
+of BSV with pump intensity concentrates the emission in time,           research program at University of Toronto and the Technion.
+causing it to occur predominantly at the peak of the field’s pulse
+                                                                        Acknowledgment. We thank Maria V. Chekhova and Barak Dayan
+envelope. The standard deviation of the pulse duration of the
+                                                                        for insightful discussions.
+analyzed set of BSV shots is 5.5 fs, reflecting the variations in
+spectral width and group delay. The side peaks are likely due           Disclosures. The authors declare no conflicts of interest.
+to to imperfections in the FROG reconstruction of the reference
+pulse.                                                                  Data availability. Data underlying the results presented in this
+                                                                        paper are not publicly available at this time but may be obtained from
+                                                                        the authors upon reasonable request.
+3. CONCLUSION
+                                                                        Supplemental document. See Supplement 1 for supporting con-
+In conclusion, we have demonstrated a single-shot resolved              tent.
+retrieval of the spectro-temporal profile of a femtosecond BSV
+source at 1040 nm. We obtain an average pulse duration of 27.2 fs,
+much shorter than pump pulse. We also observe a π rad phase             REFERENCES
+ambiguity, in line with the classical properties of BSV. The capa-      1.      M. Ferray, A. L’Huillier, X. F. Li, et al., “Multiple-harmonic conversion of
+bility to retrieve the temporal structure of the electric field is an           1064 nm radiation in rare gases,” J. Phys. B: At. Mol. Opt. Phys. 21,
+important prerequisite for attosecond science experiments. BSV                  L31 (1988).
+     Research Article                                                                                                                                          5
+
+
+2.      P. B. Corkum, “Plasma perspective on strong field multiphoton ioniza-            phenomena in attosecond science,” Nat. Rev. Phys. 6, 691–704 (2024).
+        tion,” Phys. Rev. Lett. 71, 1994–1997 (1993).                                32. L.-M. Koll, L. Maikowski, L. Drescher, et al., “Experimental control
+3.      M. Lewenstein, P. Balcou, M. Y. Ivanov, et al., “Theory of high-harmonic         of quantum-mechanical entanglement in an attosecond pump-probe
+        generation by low-frequency laser fields,” Phys. Rev. A 49, 2117–2132            experiment,” Phys. Rev. Lett. 128, 043201 (2022).
+        (1994).                                                                      33. H. Laurell, S. Luo, R. Weissenbilder, et al., “Measuring the quantum
+4.      M. Hentschel, R. Kienberger, C. Spielmann, et al., “Attosecond metrol-           state of photoelectrons,” Nat. Photon. 19, 352–357 (2025).
+        ogy,” Nature 414, 509 (2001).                                                34. T. S. Iskhakov, I. N. Agafonov, M. V. Chekhova, and G. Leuchs,
+5.      P. M. Paul, E. S. Toma, P. Breger, et al., “Observation of a train of            “Polarization-entangled light pulses of 105 photons,” Phys. Rev. Lett.
+        attosecond pulses from high harmonic generation,” Science 292, 1689–             109, 150502 (2012).
+        1692 (2001).                                                                 35. T.-C. Truong, D. Khatri, C. Lantigua, et al., “Few-cycle Yb-doped laser
+6.      P. B. Corkum and F. Krausz, “Attosecond science,” Nat. Phys. 3, 381–             sources for attosecond science and strong-field physics,” APL Photon.
+        387 (2007).                                                                      10, 040902 (2025).
+7.      M. Krüger, M. Schenk, and P. Hommelhoff, “Attosecond control of              36. A. M. Pérez, T. S. Iskhakov, P. Sharapova, et al., “Bright squeezed-
+        electrons emitted from a nanoscale metal tip,” Nature 475, 78–81                 vacuum source with 1.1 spatial mode,” Opt. Lett. 39, 2403–2406 (2014).
+        (2011).                                                                      37. G. Breitenbach, S. Schiller, and J. Mlynek, “Measurement of the quan-
+8.      S. Ghimire, A. D. DiChiara, E. Sistrunk, et al., “Observation of high-           tum states of squeezed light,” Nature 387, 471–475 (1997).
+        order harmonic generation in a bulk crystal,” Nat. Phys. 7, 138–141          38. R. H. Stolen and C. Lin, “Self-phase-modulation in silica optical fibers,”
+        (2011).                                                                          Phys. Rev. A 17, 1448–1453 (1978).
+9.      G. Vampa, T. J. Hammond, N. Thiré, et al., “Linking high harmonics           39. W. Liu, C. Li, Z. Zhang, et al., “Self-phase modulation enabled,
+        from gases and solids,” Nature 522, 462–464 (2015).                              wavelength-tunable ultrafast fiber laser sources: an energy scalable
+10.     C. Heide, Y. Kobayashi, S. R. U. Haque, and S. Ghimire, “Ultrafast high-         approach,” Opt. Express 24, 15328–15340 (2016).
+        harmonic spectroscopy of solids,” Nat. Phys. 20, 1546–1557 (2024).           40. A. Yariv, Quantum Electronics (John Wiley & Sons, 1991).
+11.     R. Boyd, S. Lukishova, and V. Zadkov, Quantum Photonics: Pioneer-            41. M. Takeda, H. Ina, and S. Kobayashi, “Fourier-transform method of
+        ing Advances and Emerging Applications, Springer Series in Optical               fringe-pattern analysis for computer-based topography and interferom-
+        Sciences (Springer International Publishing, 2019).                              etry,” J. Opt. Soc. Am. 72, 156–160 (1982).
+12.     M. Erhard, M. Krenn, and A. Zeilinger, “Advances in high-dimensional         42. A. Sommer, E. M. Bothschafter, S. A. Sato, et al., “Attosecond nonlinear
+        quantum entanglement,” Nat. Rev. Mat. 2, 365–381 (2020).                         polarization and light-matter energy transfer in solids,” Nature 534, 86–
+13.     M. C. Teich and B. E. A. Saleh, “Squeezed state of light,” Quantum Opt.          90 (2016).
+        1, 153 (1989).                                                               43. A. Husakou, F. Morales, M. Richter, et al., “Benchmarking of analyt-
+14.     T. S. Iskhakov, A. M. Pérez, K. Y. Spasibko, et al., “Superbunched               ical photoionization models for solids using photoionization-induced
+        bright squeezed vacuum state,” Opt. Lett. 37, 1919–1921 (2012).                  reflection,” Phys. Rev. A 110, 063511 (2024).
+15.     K. Y. Spasibko, D. A. Kopylov, V. L. Krutyanskiy, et al., “Multiphoton       44. V. N. Valmispild, E. Gorelov, M. Eckstein, et al., “Sub-cycle multidimen-
+        effects enhanced due to ultrafast photon-number fluctuations,” Phys.             sional spectroscopy of strongly correlated materials,” Nat. Photon. 18,
+        Rev. Lett. 119, 223603 (2017).                                                   432–439 (2024).
+16.     M. Manceau, K. Y. Spasibko, G. Leuchs, et al., “Indefinite-mean Pareto
+        photon distribution from amplified quantum noise,” Phys. Rev. Lett. 123,
+        123606 (2019).
+17.     A. Rasputnyi, Z. Chen, M. Birk, et al., “High-harmonic generation by a
+        bright squeezed vacuum,” Nat. Phys. 20, 1960–1965 (2024).
+18.     J. Heimerl, A. Mikhaylov, S. Meier, et al., “Multiphoton electron emission
+        with non-classical light,” Nat. Phys. 20, 945–950 (2024).
+19.     S. Lemieux, S. A. Jalil, D. Purschke, et al., “Photon bunching in high-
+        harmonic emission controlled by quantum light,” Nat. Photon. 19, 767–
+        771 (2025).
+20.     M. E. Tzur, C. Mor, N. Yaffe, et al., “Measuring and controlling the birth
+        of quantum attosecond pulses,” arXiv p. 2502.09427 (2025).
+21.     J. Heimerl, A. Rasputnyi, J. Pölloth, et al., “Driving electrons at needle
+        tips strongly with quantum light,” arXiv p. 2503.22464 (2025).
+22.     A. Gorlach, M. E. Tzur, M. Birk, et al., “High-harmonic generation
+        driven by quantum light,” Nat. Phys. 19, 1689–1696 (2023).
+23.     C. Riek, D. V. Seletskiy, A. S. Moskalenko, et al., “Direct sampling of
+        electric-field vacuum fluctuations,” Science 350, 420–423 (2015).
+24.     C. Riek, P. Sulzer, M. Seeger, et al., “Subcycle quantum electrodynam-
+        ics,” Nature 541, 376–379 (2017).
+25.     S. Virally, P. Cusson, and D. V. Seletskiy, “Enhanced electro-optic
+        sampling with quantum probes,” Phys. Rev. Lett. 127, 270504 (2021).
+26.     I.-C. Benea-Chelmus, J. Faist, A. Leitenstorfer, et al., “Electro-optic
+        sampling of classical and quantum light,” Optica 12, 546–563 (2025).
+27.     A. Gorlach, O. Neufeld, N. Rivera, et al., “The quantum-optical nature
+        of high harmonic generation,” Nat. Commun. 11, 4598 (2020).
+28.     M. Lewenstein, M. F. Ciappina, E. Pisanty, et al., “Generation of optical
+        Schrödinger cat states in intense laser–matter interactions,” Nat. Phys.
+        17, 1104–1108 (2021).
+29.     M. Even Tzur, M. Birk, A. Gorlach, et al., “Photon-statistics force in
+        ultrafast electron dynamics,” Nat. Photon. 17, 501–509 (2023).
+30.     M. Even Tzur and O. Cohen, “Motion of charged particles in bright
+        squeezed vacuum,” Light. Sci. & Appl. 13, 41 (2024).
+31.     L. Cruz-Rodriguez, D. Dey, A. Freibert, and P. Stammer, “Quantum
+
