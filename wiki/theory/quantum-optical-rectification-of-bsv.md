@@ -12,6 +12,7 @@ related:
   - stochastic-quantum-optics-correspondence
   - ../models/thz-optical-rectification-model
   - ../simulations/bsv-optical-rectification-thz-statistics
+  - ../simulations/thz-waveform-noise-against-delay
   - ../prl-restructuring-plan
   - ../sources/moskalenko-2015-paraxial-theory-of-electro-optic-sampling-quantum-vacuum
   - ../sources/kizmann-2019-subcycle-squeezing-time-flow-perspective
@@ -307,6 +308,38 @@ K = sqrt(8 k1^3 / k3) = cbrt(48 k1^4 / k4)                          (12)
 
 Two independent estimates of `K` from the THz field that must agree with each
 other and with `K = 2 / (g2 - 1)` measured on the pump.
+
+## Waveform Noise And Temporal Moments Of The Photon Flux
+
+Away from the low-frequency limit the single-shot field is the filtered flux,
+`E_j(t) = integral g(t - t') I_j(t') dt'`, and its shot-to-shot variance is a
+filtered intensity covariance. For Gaussian pump statistics in the bright
+limit `Cov(I(t1), I(t2)) = |G1(t1, t2)|^2 + |M(t1, t2)|^2`, with `G1` the
+normal and `M` the anomalous field correlation; for BSV with a common phase
+the two are equal, for thermal light `M = 0`:
+
+```text
+Var E(t) = (2 / M_s) double-integral g(t - t1) g(t - t2) |G1(t1, t2)|^2   (13)
+```
+
+`M_s` spatial modes, units of `g` squared times flux squared. Expanding in
+the temporal moments of the flux, `N`, `M1 = integral t' I`, `M2 = integral
+t'^2 I`, to second order in pulse duration over THz period:
+
+```text
+Var E(t) / <N>^2 = A gbar^2 + B (gbar'^2 - gbar gbar'') + 2 C gbar gbar'   (14)
+A = Var N / <N>^2,  B = Var M1 / <N>^2,  C = -Cov(N, M1) / <N>^2
+Gaussian Schell-model pulse, rms duration T, K_t temporal modes:
+A = 2 / K,   B = (2 / K)(T^2 / 2)(1 - 1 / K_t^2),   C = 0
+```
+
+`gbar = <E> / <N>` is the measured mean waveform per photon. The single-shot
+THz waveform therefore carries the photon number of each pump pulse in its
+amplitude and the arrival time of its photon flux in its zero crossings. One
+temporal mode gives `B = 0` and noise that vanishes at the zero crossings;
+the noise there measures `K_t`. Derivation of the `gbar gbar''` term,
+numerical checks, and numbers:
+[[../simulations/thz-waveform-noise-against-delay]].
 
 ## What Is Genuinely Quantum Here
 

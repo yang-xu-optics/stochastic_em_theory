@@ -1,0 +1,19 @@
+run_id: 20261114-thz-waveform-noise-against-delay
+created: '2026-11-14'
+claim_level: validated_stochastic_simulation
+mechanism: optical_rectification_of_bsv
+code_entrypoint: code/scripts/run_thz_waveform_noise.py
+git_commit: 6047d2f669e5febeba2d763c428fd8c4542eb9c9
+parameter_file: parameters.yaml
+random_seeds:
+- 20261114
+observable: mean and rms THz field against delay; number and timing noise coefficients;
+  single-shot arrival time
+units: fs for times; field and flux in arbitrary units, normalized to the peak of
+  the mean field
+notes: Bright classical-noise limit, Gaussian Schell-model pump, model THz response.
+  No instrument timing jitter and no technical pump noise.
+outputs:
+  curves_csv: waveform_noise_against_delay.csv
+  summary_json: waveform_noise_summary.json
+  figure_png: thz_waveform_noise.png

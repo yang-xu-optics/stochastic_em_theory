@@ -1,0 +1,15 @@
+seed: 20261114
+shots: 20000
+pump_fwhm_fs: 100.0
+pump_rms_duration_fs: 42.466090014400955
+response: first derivative of a Gaussian, rms 150.0 fs (model, not a crystal response)
+dt_pump_fs: 4.0
+dt_thz_fs: 10.0
+cases_spatial_temporal:
+- - 10
+  - 1.0
+- - 5
+  - 2.0
+- - 2
+  - 5.0
+single_shot_snr_at_mean_peak: 30.0

@@ -152,15 +152,36 @@ Core: the demonstration.
 
 What only a field measurement can show.
 
-4. Noise against delay across the waveform. For pure photon-number noise the
-   rms follows the mean field, `rms(t) = sqrt(g2 - 1) |<E(t)>|`, and vanishes
-   at the zero crossings. Timing jitter of the BSV bursts inside the pump
-   envelope adds a term proportional to the slope, `<E'(t)> delta_t`, which is
-   largest at the zero crossings: 25 fs of jitter gives 0.31 of the peak field
-   at 2 THz, 0.16 at 1 THz. The map separates the two, and the node noise
-   measures the arrival-time fluctuation of the quantum light. With a
-   single-shot signal-to-noise ratio of 30 the timing resolution per shot is
-   about 3 fs at 2 THz.
+4. Noise against delay across the waveform. Derived and simulated in
+   [[../simulations/thz-waveform-noise-against-delay]]; the numbers first
+   given here (25 fs of jitter) were an illustration and are replaced by the
+   model values. With `g(t) = <E(t)> / <N>`:
+
+```text
+Var E(t) / <N>^2 = A g^2 + B (g'^2 - g g'') + 2 C g g'
+A = g2 - 1 = 2 / K = 0.2
+B = (2 / K)(T^2 / 2)(1 - 1 / K_t^2),   T = 42.5 fs for a 100 fs pulse
+```
+
+   One temporal mode: the rms is `0.45 |<E(t)>|` at every delay and vanishes
+   at the zero crossings. More than one: the photon flux arrives at a
+   fluctuating time, at most `T / sqrt(K)` = 13 fs rms for this source, and
+   the zero crossings carry noise `sqrt(B) |g'|`. For a model waveform
+   peaked near 1.1 THz that is 0.13 of the peak field for two temporal modes
+   and 0.15 for five; it scales with the THz frequency. The peak noise is the
+   same for every split of `K`, so the map splits `K = 10` into temporal and
+   spatial parts. At a zero crossing each shot's reading divided by its pulse
+   energy is the arrival time of that pulse; with a single-shot
+   signal-to-noise ratio of 30 the error is about 4 fs.
+
+   What mimics the timing term: timing jitter between pump and probe, which
+   has the same signature and must be measured with the coherent laser; and
+   anything that changes the waveform shape with pulse energy. What mimics
+   the number term: energy noise of the 800 nm laser, amplified by the
+   parametric gain. With `sinh^2 G` = 2.4e12 photons per mode, `G` is about
+   15, and `dW / W = G dI_p / I_p`: half a percent of pump noise becomes 7 %
+   of BSV energy noise. Record the 800 nm energy per shot and regress it
+   out.
 
 Control of the statistics.
 

@@ -539,3 +539,28 @@ Append-only chronological record. New entries should use:
 - Assessment recorded: Nature Photonics is a long shot for this physics; the
   same data set supports Optica or Physical Review Letters.
 
+## [2026-11-14] simulation | THz Waveform Noise Against Delay
+
+- Added the spec [[simulations/thz-waveform-noise-against-delay]], the module
+  `code/src/stochastic_em_theory/thz_waveform_noise.py`, 11 tests, and the
+  run `results/runs/20261114-thz-waveform-noise-against-delay/`.
+- Result: `Var E(t) / <N>^2 = A gbar^2 + B (gbar'^2 - gbar gbar'') +
+  2 C gbar gbar'` with `A = 2 / K` and, for a Gaussian Schell-model pulse,
+  `B = (2 / K)(T^2 / 2)(1 - 1 / K_t^2)`. Exact form: a filtered `|G1|^2`.
+  Added to [[theory/quantum-optical-rectification-of-bsv]] as equations (13)
+  and (14).
+- Correction recorded: the first form of the expansion, written into
+  [[experiments/bsv-or-thz-dast-znte-setup]] earlier the same day, had
+  `B gbar'^2` only and quoted 25 fs of jitter as an illustration. A template
+  fit test failed by 5 % in `A`, which exposed the missing `gbar gbar''`
+  term. The zero-crossing noise is unchanged by the correction; the model
+  value of the arrival-time jitter for the author's source is at most 13 fs,
+  not 25 fs. Setup page updated.
+- For `K = 10` and a 100 fs pump: rms at the waveform peak 0.45 to 0.47 of
+  the peak field for every split of `K`; rms at the zero crossing 0, 0.13,
+  and 0.15 for one, two, and five temporal modes; single-shot arrival time
+  recovered with 3.7 fs rms error at a signal-to-noise ratio of 30.
+- Practical cautions recorded: pump-probe timing jitter has the same
+  signature as the timing term; 800 nm energy noise is amplified by the
+  parametric gain, about fifteenfold.
+

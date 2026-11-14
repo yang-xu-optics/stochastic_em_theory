@@ -76,6 +76,10 @@ before answering project questions or changing wiki pages.
 - [[simulations/bsv-optical-rectification-thz-statistics]]: spec and first
   run for the optical-rectification THz statistics: exact cumulants, energy
   enhancement and fluctuation ratio, amplitude distributions, spectrum terms.
+- [[simulations/thz-waveform-noise-against-delay]]: noise of the THz
+  waveform against delay for multimode pumps; photon-number noise against
+  arrival-time noise; how the zero-crossing noise measures the temporal mode
+  number.
 - [[simulations/machine-learning-integration-roadmap]]: physics-separated ML
   roadmap for response surrogates, tail-aware active learning, and joint
   HHG-THz inference of squeezed-field parameters.
