@@ -3,7 +3,7 @@ title: THz Plasma Emission Model
 type: model
 status: active
 created: 2026-06-06
-updated: 2026-06-06
+updated: 2026-11-14
 tags: [thz, plasma, photocurrent, ionization, squeezed-vacuum]
 source_count: 6
 confidence: high
@@ -14,6 +14,7 @@ related:
   - ../sources/schuh-2013-thz-ionization-gases
   - ../sources/sun-2022-thz-laser-induced-plasma
   - ../sources/wang-2026-quantum-thz-plasma-bsv
+  - ../theory/bsv-even-order-response-moment-scaling
 ---
 
 # THz Plasma Emission Model
@@ -131,3 +132,21 @@ Start with a local-current model before macroscopic propagation:
 3. Scan the BSV squeezing angle and mean intensity.
 4. Only after that, test pure zero-mean BSV and document whether symmetry
    forces `<E_THz(t)>` to vanish.
+
+## Update 2026-11-14: Parity Rule
+
+The symmetry check above can be made specific. For single-mode BSV in the
+macroscopic limit the only random variable is a real amplitude `X` with a
+symmetric distribution, so the ensemble-mean THz field is the part of the
+response that is even in `X`
+([[../theory/bsv-even-order-response-moment-scaling]]):
+
+- coherent `omega` plus BSV `2 omega` (Wang 2026, the notebook): odd in `X`,
+  zero mean field;
+- BSV `omega` plus coherent `2 omega`, or BSV `omega` plus its own second
+  harmonic: even in `X`, nonzero mean field, because `X -> -X` on the
+  fundamental is a half-cycle time shift of the whole waveform.
+
+Checked numerically in `results/runs/20261114-thz-two-color-parity-check/`.
+Item 4 of the implementation order ("test pure zero-mean BSV") should be read
+with this in mind: the outcome depends on which colour carries the BSV.

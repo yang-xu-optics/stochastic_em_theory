@@ -3,12 +3,13 @@ title: Project Overview
 type: synthesis
 status: active
 created: 2026-06-06
-updated: 2026-06-06
+updated: 2026-11-14
 tags: [overview, thesis]
 source_count: 54
 confidence: high
 related:
   - research-agenda
+  - project-status-review
   - theory/stochastic-quantum-optics-correspondence
   - simulations/simulation-roadmap
 ---
@@ -37,14 +38,26 @@ nonlinear source terms for:
 
 ## Milestones
 
+Status as of 2026-11-14; evidence and caveats are in
+[[project-status-review]].
+
 1. Define the squeezed-vacuum stochastic ensemble and detection model.
+   *Done for one mode; no loss or temporal-gate model.*
 2. Prove the `g^{(2)}(0)` correspondence for the simplest single-mode case.
+   *Done.*
 3. Extend the characterization to multimode bright squeezed vacuum.
+   *Partial: equal independent modes only.*
 4. Build a reusable stochastic-field sampler with convergence tests.
+   *Done for one mode.*
 5. Drive HHG gas response models with sampled squeezed fields.
+   *Partial: qualitative reproductions of Gorlach 2023; not converged.*
 6. Drive THz optical rectification models with sampled squeezed fields.
+   *Not started; seed derivation in
+   [[theory/bsv-even-order-response-moment-scaling]].*
 7. Drive plasma THz emission models and identify required symmetry breaking.
+   *Partial: one notebook configuration; parity rule identified.*
 8. Assemble manuscript figures, limitations, and comparison baselines.
+   *Not started.*
 
 ## Current Source Status
 
@@ -85,3 +98,9 @@ The optical rectification branch now has a strong classical propagation source,
 but still needs a dedicated squeezed-vacuum OR source or an explicit derivation
 for stochastic/quantum-light pump statistics. The new search did not close that
 gap.
+
+Update 2026-11-14: no source has been ingested since 2026-06-06. Several
+directly relevant papers have appeared since, including a critique of the
+coherent-state phase-space approximation that this project relies on. They
+are listed in [[project-status-review]] and must be ingested before the
+manuscript is positioned.

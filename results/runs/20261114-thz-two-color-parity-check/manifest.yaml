@@ -1,0 +1,15 @@
+run_id: 20261114-thz-two-color-parity-check
+created: '2026-11-14'
+code_entrypoint: code/scripts/check_thz_two_color_parity.py
+git_commit: f8a5065471a9de3c9e72c72c148f0faf0f6ad559
+parameter_file: parameters.yaml
+random_seeds:
+- 20261114
+observable: ensemble-mean THz field, its standard error, sign fractions, classical
+  energy g2
+units: atomic units internally; W/cm^2 for intensities; THz field in arbitrary units
+notes: 'Symmetry check, not a quantitative prediction: local current model, ADK-form
+  rate proxy, no ionization-saturation or propagation physics, single-quadrature Gaussian
+  BSV amplitude.'
+outputs:
+  results_json: thz_two_color_parity.json

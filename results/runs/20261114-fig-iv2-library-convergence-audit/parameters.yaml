@@ -1,0 +1,27 @@
+seed: 20230604
+shots: 50000
+intensities_w_cm2:
+- 10000000000000.0
+- 20000000000000.0
+tail_quantile: 0.999
+library_node_counts:
+- 13
+- 25
+- 49
+- 97
+peak_window_half_width: 0.35
+tdse:
+  omega_au: 0.057
+  max_order: 40
+  x_min: -100.0
+  x_max: 100.0
+  grid_points: 2048
+  softening: 0.816
+  dt_au: 0.05
+  ramp_cycles: 5.0
+  flat_cycles: 15.0
+  ground_state_iterations: 220
+  ground_state_dt_au: 0.08
+  carrier_phase: 0.0
+  absorber_start_au: 75.0
+  absorber_strength: 0.0005

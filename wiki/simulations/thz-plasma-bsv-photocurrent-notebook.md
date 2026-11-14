@@ -3,7 +3,7 @@ title: THz Plasma Photocurrent Notebook With BSV Driving
 type: simulation
 status: draft
 created: 2026-06-10
-updated: 2026-06-10
+updated: 2026-11-14
 tags: [simulation, thz, plasma, photocurrent, bsv, husimi-q, notebook]
 source_count: 4
 confidence: medium
@@ -14,6 +14,8 @@ related:
   - ../sources/wang-2026-quantum-thz-plasma-bsv
   - ../sources/sun-2022-thz-laser-induced-plasma
   - ../sources/schuh-2013-thz-ionization-gases
+  - ../theory/bsv-even-order-response-moment-scaling
+  - ../project-status-review
 ---
 
 # THz Plasma Photocurrent Notebook With BSV Driving
@@ -111,7 +113,7 @@ E_THz,j(t) propto [dJ/dt](t) band-limited to nu < nu_max
 ## Outputs
 
 Figures and a manifest are written to
-`results/<YYYYMMDD>-thz-plasma-bsv-notebook/` (manifest with seed, parameters,
+`results/runs/<YYYYMMDD>-thz-plasma-bsv-notebook/` (manifest with seed, parameters,
 entry point, commit hash if available).
 
 ## Out Of Scope
@@ -121,3 +123,23 @@ entry point, commit hash if available).
 - Quantum state claims for the emitted THz mode (a positive stochastic
   ensemble cannot certify nonclassicality; see
   [[../theory/stochastic-quantum-optics-correspondence]]).
+
+## Audit 2026-11-14
+
+- The ensemble is a finite-photon-number Husimi-Q distribution (`r = 1`,
+  `<n> = 1.38`) rescaled to 2 % of `1e14 W/cm^2`. At that brightness the
+  physical photon number is of order `1e12`, where the squeezed quadrature is
+  negligible. In the notebook it carries 12 % of the sampled second-harmonic
+  intensity.
+- `g2_THz = 20.2` (bootstrap interval 10.4 to 28.1, 400 shots) is not
+  established. The same model with a single-quadrature Gaussian amplitude and
+  4,000 shots gives 44.1
+  (`results/runs/20261114-thz-two-color-parity-check/`, case A).
+- The vanishing mean THz field is specific to placing the BSV on the second
+  harmonic. With the BSV on the fundamental and a coherent second harmonic the
+  mean field is nonzero (case B of the same run: mean over standard error
+  -22.7). Derivation: [[../theory/bsv-even-order-response-moment-scaling]].
+- The symmetry check in the notebook compares `max|<E>| / max sigma = 0.008`
+  with `1/sqrt(N) = 0.05`. Report the mean with its standard error instead.
+
+See [[../project-status-review]].

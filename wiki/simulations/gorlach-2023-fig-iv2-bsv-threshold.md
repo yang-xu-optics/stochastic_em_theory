@@ -3,7 +3,7 @@ title: Gorlach 2023 Fig IV.2 BSV Threshold TDSE Reproduction
 type: simulation
 status: active
 created: 2026-06-06
-updated: 2026-06-06
+updated: 2026-11-14
 tags: [hhg, bsv, tdse, neon, threshold]
 source_count: 1
 confidence: medium
@@ -11,6 +11,7 @@ related:
   - ../sources/gorlach-2023-hhg-driven-quantum-light-supplement
   - ../models/hhg-gas-model
   - gorlach-2023-fig3b-proxy-reproduction
+  - ../project-status-review
 ---
 
 # Gorlach 2023 Fig IV.2 BSV Threshold TDSE Reproduction
@@ -134,7 +135,7 @@ Each result directory must contain:
 Result directory:
 
 ```text
-results/gorlach-2023-fig-iv2-bsv-threshold-20260606/
+results/runs/gorlach-2023-fig-iv2-bsv-threshold-20260606/
 ```
 
 Run parameters:
@@ -171,7 +172,7 @@ the late-harmonic plateau look too flat compared with Fig. IV.2.
 Updated result directory:
 
 ```text
-results/gorlach-2023-fig-iv2-bsv-threshold-tailcap-20260606/
+results/runs/gorlach-2023-fig-iv2-bsv-threshold-tailcap-20260606/
 ```
 
 Changes relative to the first local run:
@@ -195,3 +196,42 @@ the 30th harmonic, and the `1e13 W/cm^2` case collapses earlier. The result is
 still not an exact source-grid reproduction because `dx = 0.09765625 bohr` and
 the ground state is obtained by imaginary-time propagation rather than
 Hamiltonian diagonalization.
+
+## Audit 2026-11-14
+
+Run: `results/runs/20261114-fig-iv2-library-convergence-audit/`
+(`code/scripts/audit_fig_iv2_library_convergence.py`). Same seed, shots, grid,
+pulse, and absorber as the first local TDSE run; nested amplitude libraries of
+13, 25, 49, and 97 nodes; common random numbers. Observable: ensemble-mean
+peak yield in a window of half-width 0.35 around each odd order.
+
+```text
+deviation from the 97-node result, harmonics 7 to 39
+                         1e13 W/cm^2      2e13 W/cm^2
+13 nodes  median factor      1.8              2.2
+13 nodes  largest factor     38               12
+49 nodes  median factor      1.3              1.3
+49 nodes  largest factor     6.9              2.5
+```
+
+Findings:
+
+- The expected limiting case "increasing the TDSE amplitude-library resolution
+  should not change the qualitative threshold ordering" was never tested
+  before this audit. The ordering between the two intensities survives, but
+  individual harmonic yields do not: the 13-node library used in both
+  committed runs is not converged, and the result is still moving at 97 nodes.
+- At the 97-node library, the 0.999 tail cap removes 14 % to 80 % of the
+  yield of harmonics 7 to 31 at `1e13 W/cm^2` and nearly all of it from order
+  33 up. The cap is therefore a change of the physical ensemble, not a display
+  choice.
+- The `(9/q)^4` display rolloff has no physical basis. The tail-capped run is
+  marked "do not use" in `results/runs/README.md`.
+- The imaginary-time ground state is fine: energy `-0.79253` hartree after 220
+  steps, unchanged after 2,000.
+
+Required before this simulation supports a manuscript figure: integrate over
+the BSV amplitude by quadrature on a dense, adaptively refined amplitude grid;
+state where the integration is cut off and why; show grid and time-step
+convergence toward the source values (`dx = 0.06` bohr, `dt = 0.02` a.u.).
+See [[../project-status-review]].

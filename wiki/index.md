@@ -3,7 +3,7 @@ title: Wiki Index
 type: synthesis
 status: active
 created: 2026-06-06
-updated: 2026-08-26
+updated: 2026-11-14
 tags: [index]
 source_count: 54
 confidence: high
@@ -17,6 +17,9 @@ before answering project questions or changing wiki pages.
 
 ## Core
 
+- [[project-status-review]]: 2026-11-14 evaluation of progress, result
+  quality, literature position, and publication strategy. Read this before
+  planning new work.
 - [[overview]]: project thesis, architecture, and milestone structure.
 - [[research-agenda]]: research questions, deliverables, risks, and next steps.
 - [[log]]: chronological record of setup, ingests, decisions, and durable
@@ -31,6 +34,9 @@ before answering project questions or changing wiki pages.
   squeezed-vacuum `g^{(2)}(0)` value.
 - [[theory/non-gaussian-output-novelty]]: source-backed novelty map for what
   could become non-Gaussian in HHG or THz generation.
+- [[theory/bsv-even-order-response-moment-scaling]]: seed derivation of the
+  parity rule for ensemble-mean fields under BSV driving and of closed-form
+  THz statistics for optical rectification. Not yet source-backed.
 
 ## Physical Models
 
@@ -68,7 +74,18 @@ before answering project questions or changing wiki pages.
 - [paper/outline.md](../paper/outline.md): linear manuscript structure and
   figure plan.
 
+## Results
+
+- [results/runs/README.md](../results/runs/README.md): index of simulation
+  runs with status and whether each may be used in the manuscript.
+
 ## Source Summaries
+
+54 pages for 55 PDFs (one duplicate). 19 are full summaries with equations
+(`status: active`). 35 are first-pass stubs written from metadata
+(`status: draft`); upgrade a stub before citing it quantitatively. Nothing
+published after 2026-06-06 has been ingested; the papers to add are listed in
+[[project-status-review]].
 
 ### Quantum Optics And Stochastic Squeezed Vacuum
 

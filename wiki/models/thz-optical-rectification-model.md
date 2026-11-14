@@ -3,7 +3,7 @@ title: THz Optical Rectification Model
 type: model
 status: active
 created: 2026-06-06
-updated: 2026-06-06
+updated: 2026-11-14
 tags: [thz, optical-rectification, nonlinear-optics, squeezed-vacuum]
 source_count: 6
 confidence: high
@@ -15,6 +15,7 @@ related:
   - ../sources/sun-2022-thz-laser-induced-plasma
   - ../sources/ravi-2014-thz-generation-optical-rectification
   - ../sources/jankowski-2024-ultrafast-chi2-nonlinear-photonics
+  - ../theory/bsv-even-order-response-moment-scaling
 ---
 
 # THz Optical Rectification Model
@@ -153,3 +154,24 @@ For a zero-mean squeezed-vacuum drive, track both:
 
 A zero mean emitted field with nonzero emitted intensity is a possible outcome,
 not a failure.
+
+## Update 2026-11-14: First Answer To The Key Questions
+
+Seed derivation in [[../theory/bsv-even-order-response-moment-scaling]]
+(single mode, macroscopic limit, undepleted, not yet source-backed). Optical
+rectification is even in the pump amplitude, so the sign randomness of BSV
+does not cancel it:
+
+```text
+E_THz,j(t) = I_j g(t),    I_j = shot intensity / mean intensity
+<E_THz(t)> = g(t)                      (same as a coherent pump)
+<U_THz> = 3 U_coherent                 (thermal pump: 2)
+<U^2> / <U>^2 = 35/3                   (thermal pump: 6)
+```
+
+`g(t)` is the deterministic THz response to the mean intensity envelope, in
+field units. The measurable object is therefore both the mean THz field and
+its single-shot amplitude distribution (one-sided chi-squared). Multimode
+corrections, vacuum-term subtraction for the THz intensity, and depletion are
+open. The source gap stated above remains: two web searches on 2026-11-14
+found no paper on BSV-pumped optical rectification.

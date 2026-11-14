@@ -1,0 +1,30 @@
+{
+ "A_coherent_w_plus_bsv_2w": {
+  "probe_time_fs": -0.7676893893440101,
+  "mean_field": 2.3232294487632065e-09,
+  "standard_error": 2.7500646629324495e-08,
+  "mean_over_standard_error": 0.08447908444036004,
+  "fraction_positive": 0.5,
+  "fraction_negative": 0.5,
+  "split_half_means": [
+   5.1627996371253875e-08,
+   -4.698153747372746e-08
+  ],
+  "energy_g2_classical": 44.143054376620206,
+  "coherent_energy_fraction": 2.0834097712519896e-06
+ },
+ "B_bsv_w_plus_coherent_2w": {
+  "probe_time_fs": -8.566172458005157,
+  "mean_field": -1.7455846109188634e-05,
+  "standard_error": 7.677309325175668e-07,
+  "mean_over_standard_error": -22.736932133171823,
+  "fraction_positive": 0.0105,
+  "fraction_negative": 0.79275,
+  "split_half_means": [
+   -1.739069247467973e-05,
+   -1.7520999743697538e-05
+  ],
+  "energy_g2_classical": 9.016815687557793,
+  "coherent_energy_fraction": 0.10068118609527307
+ }
+}

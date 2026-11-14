@@ -3,12 +3,13 @@ title: Research Agenda
 type: synthesis
 status: active
 created: 2026-06-06
-updated: 2026-06-06
+updated: 2026-11-14
 tags: [agenda, planning]
 source_count: 54
 confidence: high
 related:
   - overview
+  - project-status-review
   - theory/squeezed-vacuum-g2-proof-plan
   - simulations/simulation-roadmap
 ---
@@ -112,22 +113,43 @@ related:
 - A clear manuscript convention for whether "classical stochastic EM" means
   Wigner sampling, Husimi sampling, Positive P sampling, or SED-like
   zero-point fields in each section.
+- Everything published after 2026-06-06. See the table in
+  [[project-status-review]].
+- The main Gorlach 2023 article. Only its supplement is in `raw/sources/`,
+  twice.
 
 ## Next Actions
 
+The current list, in priority order, is the "Suggested order of work" table in
+[[project-status-review]] (2026-11-14). In short: refresh the literature and
+fix the headline claim; rebuild the drive ensemble in the macroscopic limit
+and integrate by quadrature; compare with the published source data; promote
+the parity-rule and optical-rectification derivation; cross-check against a
+full quantum calculation; draft.
+
+## Status Of The June 2026 Action List
+
 1. Turn [[theory/squeezed-vacuum-g2-proof-plan]] into a complete derivation and
-   simulation spec.
+   simulation spec. *Done: the page contains the derivation;
+   [[simulations/paper-one-correspondence-hhg-simulation-spec]] is the spec.*
 2. Implement a single-mode squeezed-vacuum sampler and Monte Carlo validation.
+   *Done.*
 3. Add a broadband BSV validation matching Raymer/Landes assumptions.
+   *Not started.*
 4. Decide the first HHG model fidelity level: classical trajectory,
    Lewenstein-like semiclassical response, or propagation-first source model.
+   *Decided in practice: 1D soft-core TDSE with an amplitude library.*
 5. Build a minimal two-color plasma THz model before testing pure BSV symmetry.
+   *Done as a notebook; pure-BSV test not run.*
 6. Add a non-Gaussian diagnostics spec: cumulants, mode selection, conditional
-   bins, and candidate phase-space witnesses.
+   bins, and candidate phase-space witnesses. *Not started.*
 7. Prioritize an HHG pilot before THz OR because the HHG literature now offers
    specific stochastic-driver observables: bunching, symmetry leakage, cutoff
    fluctuations, ionization/tunneling distributions, and harmonic quadrature
-   reconstruction.
+   reconstruction. *Done as a pilot; see the review for its numerical state.
+   The priority argument is reversed in the review: THz OR is now the less
+   crowded direction.*
 8. Add an ATI/ionization validation notebook before full HHG: compare coherent,
    thermal, and BSV sampled-field ensembles against the qSFA/ADK observables in
-   Lyu 2025.
+   Lyu 2025. *Partial: an ionization-rate proxy exists (`ati.py`); no qSFA
+   comparison.*

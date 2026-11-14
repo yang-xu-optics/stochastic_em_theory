@@ -3,7 +3,7 @@ title: Wiki Log
 type: synthesis
 status: active
 created: 2026-06-06
-updated: 2026-08-26
+updated: 2026-11-14
 tags: [log]
 source_count: 54
 confidence: high
@@ -332,3 +332,56 @@ Append-only chronological record. New entries should use:
   symmetry.
 - Recorded data-splitting, ensemble-closure, uncertainty-calibration, and claim
   boundary requirements for ML-assisted simulations.
+
+## [2026-11-14] lint | Project Review, Numerical Audit, And Repository Cleanup
+
+- Added [[project-status-review]]: milestone status, ranked quality problems,
+  literature published since the last ingest, and publication
+  recommendations. Main findings: no result in the repository is new yet; the
+  `3 + 1/<n>` benchmark and the strong-field applications are in different
+  photon-number regimes; the HHG spectra are not converged; the tail-capped
+  Fig. IV.2 run uses display processing that changes the result.
+- Simulation audit
+  `results/runs/20261114-fig-iv2-library-convergence-audit/`: with the
+  13-node TDSE amplitude library of the committed Fig. IV.2 runs, harmonic
+  yields differ from a 97-node library by a median factor of 1.8 to 2.2 and by
+  up to 38; 49 versus 97 nodes still differ by a median factor of 1.3. The
+  0.999 tail cap removes 14 % to 80 % of the yield of harmonics 7 to 31 at
+  `1e13 W/cm^2`. Ground-state energy confirmed at `-0.79253` hartree.
+- Added the seed page [[theory/bsv-even-order-response-moment-scaling]]:
+  ensemble-mean fields under single-mode BSV driving are nonzero exactly for
+  responses even in the BSV amplitude; optical rectification gives a nonzero
+  mean THz field, three times the coherent THz energy, and an energy `g2` of
+  35/3. Symmetry check
+  `results/runs/20261114-thz-two-color-parity-check/`: mean THz field is 0.08
+  standard errors with the BSV on the second harmonic and -22.7 standard
+  errors with the BSV on the fundamental.
+- Contradiction recorded: [[models/thz-plasma-emission-model]] and
+  [[simulations/thz-plasma-bsv-photocurrent-notebook]] presented the vanishing
+  mean THz field as the expected result for zero-mean BSV. It holds only when
+  the BSV is on the second harmonic. Both pages now say so.
+- Web searches found papers published since the 2026-06-06 ingest that are not
+  in `raw/sources/`, including Gothelf, Madsen, and Lange on the limits of the
+  coherent-state phase-space approximation (arXiv:2602.04370). Listed in the
+  review; not yet ingested.
+- Lint result: 70 wiki pages, no broken links, no orphan pages, no missing
+  frontmatter; 35 of 54 source summaries are first-pass stubs; the two Gorlach
+  2023 PDFs are byte-identical copies of the supplement and the main article
+  is missing.
+- Updated status statements in [[overview]], [[research-agenda]], and
+  [[simulations/simulation-roadmap]]; appended dated audit sections to the two
+  Gorlach simulation pages, the THz notebook page, and both THz model pages.
+- Repository reorganization. Path changes, old to new:
+  - `results/<run>/` to `results/runs/<run>/` for all seven run directories;
+  - `results/literature-search-2026-06-06/` and
+    `results/ingest-2026-06-06-missing-aps/` to `results/literature/`;
+  - `docs/superpowers/` to `archive/superpowers-2026-06-06/`;
+  - `Untitled.md` (an unrelated SiN resonator design brief) to
+    `archive/unrelated/`.
+  Earlier entries in this log keep the old paths.
+- `AGENTS.md` is now the single schema and `CLAUDE.md` imports it. Removed
+  `*.egg-info` and `.obsidian/workspace.json` from version control.
+  Consolidated `paper/outline.md` (two section lists and three figure lists
+  merged, no content removed). Added `results/runs/README.md` as the run
+  index. `raw/` was not modified.
+

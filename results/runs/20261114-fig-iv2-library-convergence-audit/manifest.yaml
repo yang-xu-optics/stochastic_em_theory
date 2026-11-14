@@ -1,0 +1,14 @@
+run_id: 20261114-fig-iv2-library-convergence-audit
+created: '2026-11-14'
+code_entrypoint: code/scripts/audit_fig_iv2_library_convergence.py
+git_commit: f8a5065471a9de3c9e72c72c148f0faf0f6ad559
+parameter_file: parameters.yaml
+random_seeds:
+- 20230604
+observable: ensemble-mean odd-harmonic peak yield versus TDSE amplitude-library size
+units: atomic units for fields and energies; W/cm^2 for mean peak intensity
+notes: Convergence audit of gorlach-2023-fig-iv2-bsv-threshold-20260606. Nested node
+  sets; common random numbers. The tail-capped ensemble is interpolated on the uncapped
+  node set, so its nodes differ from those of the committed tail-capped run.
+outputs:
+  results_json: library_convergence.json

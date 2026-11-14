@@ -1,0 +1,11 @@
+seed: 20261114
+shots: 4000
+lambda_w_nm: 800.0
+mean_intensity_w_W_cm2: 100000000000000.0
+intensity_ratio_2w: 0.02
+fwhm_fs: 35.0
+Ip_au: 0.579
+nu_coll_au: 0.0005
+t_span_fs: 200.0
+dt_au: 0.4
+thz_cut_THz: 60.0

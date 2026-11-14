@@ -3,7 +3,7 @@ title: Simulation Roadmap
 type: simulation
 status: active
 created: 2026-06-06
-updated: 2026-06-06
+updated: 2026-11-14
 tags: [simulation, roadmap, validation]
 source_count: 54
 confidence: high
@@ -243,6 +243,12 @@ Implementation rules:
 
 ## Cross-Cutting Numerical Rules
 
+- Added in the 2026-11-14 review: do not apply display transforms that change
+  the plotted physics (rolloffs, tail caps, background subtraction). One
+  stated normalization only.
+- Added in the 2026-11-14 review: prefer quadrature over a single Gaussian
+  amplitude to Monte Carlo plus interpolation, and show convergence in node
+  count, grid, and time step before a run is used.
 - Store every random seed used for source-term ensembles.
 - Report convergence versus sample count because rare BSV outliers can dominate
   nonlinear observables.
@@ -251,26 +257,34 @@ Implementation rules:
 - Keep coherent, thermal, and BSV baselines matched by mean energy and stated
   mode definition.
 
-## Suggested Code Layout
+## Code Layout
 
-```text
-code/
-  src/
-    stochastic_em_theory/
-      fields.py
-      observables.py
-      hhg.py
-      thz_or.py
-      thz_plasma.py
-  notebooks/
-  tests/
-```
+The package exists; `code/README.md` has the module table. Relative to the
+layout planned in June, HHG lives in `tdse1d.py`, `fig3b.py`, `fig_iv2.py`,
+`hhg_proxy.py`, and `ensemble.py`; plasma THz lives only in
+`code/notebooks/thz_plasma_bsv_photocurrent.ipynb`; there is no optical
+rectification code.
 
-This layout is a target, not yet implemented.
+## Stage Status (2026-11-14)
+
+| Stage | Status |
+| --- | --- |
+| 0 Conventions | units and seeds recorded per run; field normalization differs between runs (finite-`n` Husimi-Q versus macroscopic limit) |
+| 1A Single-mode validation | done |
+| 1B Broadband Raymer/Landes validation | not started |
+| 2 Time-domain multimode BSV | not started |
+| 3 HHG in gas | targets 1 to 3 run once, not converged; 4 partly (no uncertainty); 5 to 7 exist only as proxies or a toy |
+| 4 THz optical rectification | not started |
+| 5 THz plasma emission | targets 1 to 3 run once at 400 shots; 4 and 5 not started |
+| 6 Non-Gaussian output diagnostics | not started |
+
+Run-level detail: `results/runs/README.md`. Assessment:
+[[../project-status-review]].
 
 ## Result Manifest Template
 
-Each completed run should include a small manifest:
+Each completed run goes in `results/runs/YYYYMMDD-short-name/`, gets a row in
+`results/runs/README.md`, and includes a small manifest:
 
 ```yaml
 run_id: YYYYMMDD-short-name

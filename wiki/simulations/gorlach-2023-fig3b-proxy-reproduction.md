@@ -3,13 +3,15 @@ title: Gorlach 2023 Fig 3b TDSE Reproduction
 type: simulation
 status: active
 created: 2026-06-06
-updated: 2026-06-06
+updated: 2026-11-14
 tags: [hhg, quantum-light, husimi-q, fig3b, tdse]
 source_count: 2
 confidence: medium
 related:
   - ../sources/gorlach-2023-hhg-driven-quantum-light-supplement
   - paper-one-correspondence-hhg-simulation-spec
+  - gorlach-2023-fig-iv2-bsv-threshold
+  - ../project-status-review
 ---
 
 # Gorlach 2023 Fig 3b TDSE Reproduction
@@ -176,16 +178,45 @@ hash if available, TDSE grid and pulse parameters, amplitude-library metadata,
 and the approximation caveat.
 
 The first full-frequency upgraded local run is stored at
-`results/gorlach-2023-fig3b-tdse-fullfreq-20260606/`. It uses 50,000
+`results/runs/gorlach-2023-fig3b-tdse-fullfreq-20260606/`. It uses 50,000
 stochastic shots, 11 TDSE amplitude bins, a `[-80, 80]` bohr grid with 768
 points, `dt = 0.08` a.u., a 5-cycle ramp / 15-cycle flat-top / 5-cycle ramp
 pulse, a complex absorber starting at 75 bohr, 3,650 harmonic-order FFT
 points per driver state, and decade-separated display offsets.
 
 The lower-field finer-grid rerun is stored at
-`results/gorlach-2023-fig3b-tdse-sharednorm-e006-finegrid-20260606/`. It uses
+`results/runs/gorlach-2023-fig3b-tdse-sharednorm-e006-finegrid-20260606/`. It uses
 the shared all-driver-state normalization benchmark, `E0 = 0.06` a.u.,
 50,000 stochastic shots, 11 TDSE amplitude bins, a `[-80, 80]` bohr grid with
 1,024 points, `dt = 0.06` a.u., the same 5-cycle ramp / 15-cycle flat-top /
 5-cycle ramp pulse, the same complex absorber parameters, and the harmonic-yield
 display processing described above.
+
+## Audit 2026-11-14
+
+No new Fig. 3b run was made. From the committed run summaries and the
+Fig. IV.2 library audit ([[gorlach-2023-fig-iv2-bsv-threshold]]):
+
+- Driver ensemble. `mean_photon_number = 100`, `fock_n = 100`, `bsv_r = 2`
+  give the coherent and Fock drivers shot-to-shot intensity noise of 14.0 %
+  and 9.9 % (`normalized_intensity_cv`). That is Husimi-Q vacuum noise at 100
+  photons. At the photon numbers needed for `E0 = 0.06` a.u. it is zero, and
+  the Gorlach supplement works in that limit. The convergence check "coherent
+  and Fock spectra remain close" passes only because both carry similar
+  artificial noise.
+- Library range. The top library amplitude is 0.256 a.u. in the latest run and
+  0.341 a.u. in the full-frequency run, i.e. `2.3e15` and `4.1e15 W/cm^2`.
+  The quiver radius `E / omega^2` is 79 and 105 bohr on a grid of half-width
+  80 bohr with the absorber at 75 bohr. The flat BSV and thermal spectra out
+  to order 150 are dominated by these nodes.
+- Library density. 11 nodes with log-linear interpolation. The Fig. IV.2 audit
+  found factor-of-two typical errors with 13 nodes over a narrower amplitude
+  range.
+- Reference data. `SourceData_3b.mat` in
+  `raw/assets/gorlach-2023-fig3-source-data/` has not been compared with any
+  run.
+- The main PNG is background-subtracted and floored; it is a display product
+  and not a candidate manuscript figure.
+
+All four Fig. 3b runs are marked not usable for the paper in
+`results/runs/README.md`. See [[../project-status-review]].
