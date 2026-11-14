@@ -521,3 +521,21 @@ Append-only chronological record. New entries should use:
   paper; Physical Review A, Optics Letters, or JOSA B for the theory. Based on
   the journal's criteria pages as returned by a web search on this date.
 
+## [2026-11-14] query | Measurement Programme For The Experimental Paper
+
+- Question: which practical measurements to make for a high-impact
+  experimental paper (Nature Photonics as the reach target). Answer filed in
+  [[experiments/bsv-or-thz-dast-znte-setup]], section "Measurement
+  Programme": core demonstration (averaged waveform, field against shot
+  energy, histogram and cumulants); noise against delay across the waveform,
+  separating photon-number noise from burst timing jitter; mode-number scan
+  with predicted values for `K` of 10, 2, and 1; squeezed against thermal
+  statistics from the same source; classical emulator; twin-beam heralding;
+  one use of the source.
+- New prediction recorded: for pure photon-number noise the rms THz field
+  follows the mean waveform and vanishes at its zero crossings; burst timing
+  jitter adds a term proportional to the slope (25 fs gives 0.31 of the peak
+  field at 2 THz).
+- Assessment recorded: Nature Photonics is a long shot for this physics; the
+  same data set supports Optica or Physical Review Letters.
+

@@ -130,6 +130,86 @@ energies: `B N` between 0.008 and 0.08, and an ideal photon-number resolution
 here reaches that; it says how far the first-order description is from the
 regime where back-action matters.
 
+## Measurement Programme For A High-Impact Experimental Paper
+
+Asked by the author on 2026-11-14 with Nature Photonics in mind. Honest
+position: that journal is a long shot for this physics, because the
+description is classical and the energy statistics are known for harmonics.
+The measurements below are the ones that give it a chance; the same data set
+supports Optica or Physical Review Letters. Predicted values are bright-limit
+results of [[../theory/quantum-optical-rectification-of-bsv]] for equal
+modes; `K` is the pump mode number.
+
+Core: the demonstration.
+
+1. Averaged THz waveform from the BSV pump, with the usual controls. Shows a
+   fixed-polarity transient from zero-mean light. Needs no single-shot system.
+2. Single-shot field at the waveform peak against shot energy from a pickoff.
+   Prediction: a straight line through the origin, one sign.
+3. Field histogram and cumulants. Prediction for `K = 10`: Gamma shape 5,
+   fluctuation 45 %, skewness 0.89; mode number from the THz cumulants equal
+   to `2 / (g2 - 1)` from the pump.
+
+What only a field measurement can show.
+
+4. Noise against delay across the waveform. For pure photon-number noise the
+   rms follows the mean field, `rms(t) = sqrt(g2 - 1) |<E(t)>|`, and vanishes
+   at the zero crossings. Timing jitter of the BSV bursts inside the pump
+   envelope adds a term proportional to the slope, `<E'(t)> delta_t`, which is
+   largest at the zero crossings: 25 fs of jitter gives 0.31 of the peak field
+   at 2 THz, 0.16 at 1 THz. The map separates the two, and the node noise
+   measures the arrival-time fluctuation of the quantum light. With a
+   single-shot signal-to-noise ratio of 30 the timing resolution per shot is
+   about 3 fs at 2 THz.
+
+Control of the statistics.
+
+5. Mode-number scan by spatial filtering, then spectral filtering or
+   post-selection on per-shot spectra. Prediction, pump `g2` to THz:
+
+```text
+K     pump g2   field fluctuation   THz energy / coherent   <U^2>/<U>^2
+10    1.2       0.45                1.2                     1.87
+2     2.0       1.00                2.0                     6.0
+1     3.0       1.41                3.0                     11.67
+```
+
+   Budget: one mode of ten carries a few tenths of a microjoule; the THz
+   field falls in proportion and should stay above single-shot noise
+   (estimate). Tail shots matter: for `K = 1`, 2.5 % of shots exceed five
+   times the mean energy and 0.16 % exceed ten times, so DAST and the ZnTe
+   sampling must stay linear that far.
+6. Squeezed against thermal statistics from the same source: tune the
+   down-conversion off degeneracy and keep one beam. Prediction at the same
+   `K`: field fluctuation `sqrt(1/K)` instead of `sqrt(2/K)` (0.32 against
+   0.45 for `K = 10`; 1.00 against 1.41 for one mode); energy ratio 6 instead
+   of 11.67 for one mode. The difference is the phase-sensitive term (6b) of
+   the theory page, the one contribution specific to squeezed vacuum.
+
+Tests of the description.
+
+7. Classical emulator, if a coherent 1.6 micrometre pulse is available (a
+   seeded parametric amplifier): impose a programmed random attenuation shot
+   by shot with the Gamma distribution of step 3 and repeat steps 2 to 4.
+   Prediction: indistinguishable from BSV within error.
+8. Twin beams: off degeneracy, send the signal to DAST and record the idler
+   energy. Prediction: the THz field is linear in the idler energy, so
+   selecting idler energies in a narrow window gives THz pulses of known
+   amplitude from a beam that never reached the crystal. The correlation
+   demonstrated this way is far above shot noise and is reproducible by
+   classically correlated beams; say so.
+
+Use.
+
+9. One measurement that uses the source: sort shots by amplitude to obtain
+   the field dependence of a THz response from a single run, starting with
+   the sampling nonlinearity itself, or a time-domain spectrum taken with the
+   averaged waveform.
+
+Not practical with a 100 fs probe: the spontaneous term, any sub-shot-noise
+correlation, and the change of statistics with THz frequency, which needs a
+detection band well beyond 3 THz.
+
 ## Open Items
 
 - A shot-energy histogram of the BSV, to check the Gamma shape directly and
