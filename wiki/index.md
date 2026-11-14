@@ -80,10 +80,19 @@ before answering project questions or changing wiki pages.
   roadmap for response surrogates, tail-aware active learning, and joint
   HHG-THz inference of squeezed-field parameters.
 
+## Experiment
+
+- [[experiments/bsv-or-thz-dast-znte-setup]]: the author's source and
+  detection as stated (1600 nm, 3 microjoules, 100 fs, 1 kHz, `g2` 1.2; DAST
+  and ZnTe) and the predicted single-shot THz statistics for them.
+
 ## Manuscript
 
 - [paper/outline.md](../paper/outline.md): outline of the Letter on optical
   rectification of BSV, with the figure plan.
+- [paper/theory-paper-outline.md](../paper/theory-paper-outline.md): option
+  of a theory paper ahead of the experimental one: framing, venue, claims,
+  section and figure plan, timing.
 - [paper/companion-outline.md](../paper/companion-outline.md): outline of the
   companion paper on HHG and plasma THz emission (the outline until
   2026-11-14).

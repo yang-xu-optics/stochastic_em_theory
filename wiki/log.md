@@ -484,3 +484,26 @@ Append-only chronological record. New entries should use:
 - Sampler cross-check, 200,000 shots, seed 20261114: no negative amplitudes;
   mode number recovered from skewness and kurtosis within 2 %.
 
+## [2026-11-14] query | Source Parameters And Framing Of A Theory Paper
+
+- The author stated the source and detection: BSV at 1600 nm, about 3
+  microjoules, about 100 fs, 1 kHz, `g2` about 1.2 unfiltered; THz from DAST,
+  sampled in ZnTe with an 800 nm, 100 fs probe; single-shot acquisition being
+  built. Recorded in [[experiments/bsv-or-thz-dast-znte-setup]] with the
+  predictions of [[theory/quantum-optical-rectification-of-bsv]] for them:
+  `K = 10`; THz field fluctuation 45 %, Gamma shape 5, skewness 0.89, excess
+  kurtosis 1.2; mean THz energy 1.2 times the coherent-pump value; energy
+  fluctuation ratio 1.87; ordering corrections of order `4e-13`.
+- Noted that the higher cumulants depend on the distribution of Schmidt
+  weights, not only on `K`: geometric weights with the same `K` give
+  skewness 1.19 and excess kurtosis 2.38.
+- Question: how to frame a theory paper that precedes the experimental one.
+  Answer filed as `paper/theory-paper-outline.md`: lead with the exactly
+  solvable model and the closed-form comparison of descriptions, not with
+  the effect; Physical Review A regular article recommended over Applied
+  Physics Letters; leave the observation, emulator, and parity demonstration
+  to the experimental paper; submit without posting to arXiv or secure the
+  averaged trace first. Recorded as an undecided option in
+  [[prl-restructuring-plan]].
+- Added `wiki/experiments/` to the directory contract in `AGENTS.md`.
+

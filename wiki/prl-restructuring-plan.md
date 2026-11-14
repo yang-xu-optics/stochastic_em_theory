@@ -14,6 +14,7 @@ related:
   - theory/bsv-even-order-response-moment-scaling
   - simulations/bsv-optical-rectification-thz-statistics
   - models/thz-optical-rectification-model
+  - experiments/bsv-or-thz-dast-znte-setup
 ---
 
 # PRL Restructuring Plan
@@ -287,9 +288,9 @@ ingested.
 
 To do: `or_response.py`, `eos.py`, an `analysis/` entry point for shot
 records (binning, cumulants, heavy-tail estimators, bootstrap) with tests on
-synthetic data before any real data arrives; a `wiki/experiments/` page for
-the setup once the parameters below are known; move publication figures to
-`results/figures/` only after the gates in `results/runs/README.md`.
+synthetic data before any real data arrives; move publication figures to
+`results/figures/` only after the gates in `results/runs/README.md`. The
+setup page exists: [[experiments/bsv-or-thz-dast-znte-setup]].
 
 ## Timeline And Gates
 
@@ -313,18 +314,55 @@ Fallbacks:
 - Scooped on the experiment: submit theory plus data quickly to Physical
   Review A Letters or Optica Quantum.
 
-## Inputs Needed From The Author
+## Source And Setup, As Stated On 2026-11-14
 
-These fix the numbers in the prediction and the acquisition mode.
+Recorded with derived numbers in [[experiments/bsv-or-thz-dast-znte-setup]].
 
-1. BSV source: centre wavelength, pulse energy (mean and shot histogram if
-   available), pulse duration, repetition rate, spatial mode quality.
-2. Mode content: measured `g2`, or how the source is filtered.
-3. Whether the BSV is degenerate (one beam) or twin-beam.
-4. THz crystals on hand and their thickness; EOS crystal; probe pulse
-   duration and its timing lock to the BSV.
-5. Whether single-shot acquisition of the balanced signal and of the pump
-   energy at the full repetition rate is available.
+| Input | Stated |
+| --- | --- |
+| BSV source | 1600 nm, about 3 microjoules, about 100 fs or shorter, 1 kHz |
+| Mode content | `g2` about 1.2, unfiltered: `K` about 10 |
+| THz generation and sampling | DAST; ZnTe with an 800 nm, 100 fs probe |
+| Single-shot acquisition | being built |
+
+What this changes in the plan:
+
+- The realistic prediction is not the single-mode one. For `K = 10` the THz
+  field fluctuates by 45 % from shot to shot with a one-sided Gamma
+  distribution of shape 5 (skewness 0.89), and the mean THz energy is 1.2
+  times the coherent-pump value. Gate G1 is passed: `K` is below 20.
+- Signal level should not be the problem. At microjoule pump energy on DAST
+  the THz field is expected to be far above single-shot detection noise
+  (order-of-magnitude estimate, efficiency assumed). The care goes into
+  keeping the sampling linear up to three times the mean field.
+- The ZnTe band integrates over the 100 fs pulse, so the simple law "field
+  equals pulse energy times a fixed waveform" should hold well below 2 THz.
+- Skewness is detectable with a few hundred shots. The demanding part is the
+  single-mode limit, which needs filtering or per-shot spectra.
+
+Still needed: what the stated `g2` refers to (detector area and bandwidth);
+whether the source is degenerate and collinear; crystal thicknesses and pump
+spot size; a measured THz energy or field with the coherent laser.
+
+## Option: Theory Paper First
+
+Raised by the author on 2026-11-14 and not yet decided: publish the theory
+as its own paper (Physical Review A or similar) ahead of the experimental
+paper. Framing, claims, section plan, figure plan, and timing are in
+[paper/theory-paper-outline.md](../paper/theory-paper-outline.md). Effects on
+this plan if adopted:
+
+- Workstream A becomes the theory paper and gains the multimode waveform
+  calculation and the comparison figure; A6 (independent re-derivation)
+  moves to before its submission.
+- The Letter becomes the experimental paper: observation, emulator
+  comparison, parity in one data set. Its theory section shrinks to a
+  paragraph and a citation.
+- The PRL case for the experimental paper then rests on the observation
+  alone. A joint submission of both keeps more of it.
+- Publishing the theory early exposes the experiment to being done by
+  others. Submit without posting to arXiv, or have the averaged THz trace in
+  hand first.
 
 ## Risks
 

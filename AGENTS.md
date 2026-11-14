@@ -60,6 +60,8 @@ built on the original three claims:
   validation criteria.
 - `wiki/sources/`: one source-summary page per unique document in
   `raw/sources/`.
+- `wiki/experiments/`: the author's experimental setups, with stated or
+  measured parameters and the predictions computed for them.
 - `code/`: implementation workspace for samplers, simulations, notebooks, and
   tests.
 - `results/`: generated outputs.
@@ -71,8 +73,9 @@ built on the original three claims:
   text extracted from source PDFs.
 - `results/tmp/`: scratch outputs; ignored by git.
 - `paper/`: manuscript outline, drafts, figure plans, and submission notes.
-  `paper/outline.md` is the Letter; `paper/companion-outline.md` is the
-  companion paper.
+  `paper/outline.md` is the Letter; `paper/theory-paper-outline.md` is the
+  option of a theory paper that precedes it; `paper/companion-outline.md` is
+  the companion paper on HHG and plasma THz.
 - `archive/`: historical planning documents and notes that do not belong to
   this project. Nothing here is maintained; do not treat it as current.
 
