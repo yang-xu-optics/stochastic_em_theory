@@ -8,6 +8,7 @@ tags: [overview, thesis]
 source_count: 54
 confidence: high
 related:
+  - prl-restructuring-plan
   - research-agenda
   - project-status-review
   - theory/stochastic-quantum-optics-correspondence
@@ -15,6 +16,16 @@ related:
 ---
 
 # Project Overview
+
+> **Headline claim since 2026-11-14.** Optical rectification turns a
+> zero-mean bright squeezed vacuum pulse into a phase-stable THz transient
+> whose single-shot field is proportional to the pump photon number, so the
+> THz field carries the photon-number statistics of squeezed vacuum. Exact
+> quantum model: [[theory/quantum-optical-rectification-of-bsv]]. Plan for a
+> Physical Review Letters submission with a measurement on the author's BSV
+> source: [[prl-restructuring-plan]]. What follows on this page is the
+> original framing. It now describes the companion paper on HHG and plasma
+> THz emission, which is frozen until the Letter is submitted.
 
 This workspace supports a paper on classical stochastic electromagnetic theory
 for strong-field and THz processes driven by squeezed vacuum light.
@@ -52,8 +63,9 @@ Status as of 2026-11-14; evidence and caveats are in
 5. Drive HHG gas response models with sampled squeezed fields.
    *Partial: qualitative reproductions of Gorlach 2023; not converged.*
 6. Drive THz optical rectification models with sampled squeezed fields.
-   *Not started; seed derivation in
-   [[theory/bsv-even-order-response-moment-scaling]].*
+   *Now the main line: quantum derivation, code, tests, and a first run exist
+   ([[simulations/bsv-optical-rectification-thz-statistics]]); crystal
+   response, detection model, and measurement are next.*
 7. Drive plasma THz emission models and identify required symmetry breaking.
    *Partial: one notebook configuration; parity rule identified.*
 8. Assemble manuscript figures, limitations, and comparison baselines.
@@ -99,8 +111,10 @@ but still needs a dedicated squeezed-vacuum OR source or an explicit derivation
 for stochastic/quantum-light pump statistics. The new search did not close that
 gap.
 
-Update 2026-11-14: no source has been ingested since 2026-06-06. Several
-directly relevant papers have appeared since, including a critique of the
-coherent-state phase-space approximation that this project relies on. They
-are listed in [[project-status-review]] and must be ingested before the
-manuscript is positioned.
+Update 2026-11-14: 15 sources were ingested on this date, bringing the total
+to 69 summaries for 70 PDFs. They include the 2026 critique of the
+coherent-state phase-space approximation
+([[sources/gothelf-2026-limitations-of-approximative-phase-space-description]]),
+field-resolved measurements of BSV itself, and the earlier experiments on
+harmonics of BSV that the new headline claim must be positioned against. Two
+papers found by search could not be downloaded; see [[prl-restructuring-plan]].

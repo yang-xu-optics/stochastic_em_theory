@@ -16,6 +16,9 @@ related:
   - ../sources/ravi-2014-thz-generation-optical-rectification
   - ../sources/jankowski-2024-ultrafast-chi2-nonlinear-photonics
   - ../theory/bsv-even-order-response-moment-scaling
+  - ../theory/quantum-optical-rectification-of-bsv
+  - ../simulations/bsv-optical-rectification-thz-statistics
+  - ../prl-restructuring-plan
 ---
 
 # THz Optical Rectification Model
@@ -175,3 +178,35 @@ its single-shot amplitude distribution (one-sided chi-squared). Multimode
 corrections, vacuum-term subtraction for the THz intensity, and depletion are
 open. The source gap stated above remains: two web searches on 2026-11-14
 found no paper on BSV-pumped optical rectification.
+
+## Update 2026-11-14 (2): Main Result Of The Project
+
+Optical rectification of BSV is now the headline result
+([[../prl-restructuring-plan]]). The seed answer above has been replaced by a
+fully quantum derivation, [[../theory/quantum-optical-rectification-of-bsv]]:
+
+```text
+b_out(Omega) = b_in(Omega) - i zeta(Omega) N(Omega)
+N(Omega) = integral domega a^dagger(omega) a(omega + Omega)
+```
+
+The THz field operator is the vacuum input plus a linear filter of the pump
+photon-flux operator. This answers the "Key Questions" and the "Source Gap"
+items as follows.
+
+- Ensemble mean: nonzero for any pulsed pump, for any number of modes.
+- Measurable objects: the mean THz waveform, the single-shot field
+  distribution (Gamma with shape `K/2` in the bright limit), and its
+  cumulants.
+- Ordering: THz normally ordered moments are ordinary moments of the pump
+  photon number. `N` is normally ordered, so no vacuum subtraction is needed
+  in the quantum description; a Wigner sampling of the pump would need it.
+- Vacuum-only terms: the spontaneous term, linear in pump photon number, is
+  the one contribution a classical-noise model misses.
+
+Implementation and first run:
+[[../simulations/bsv-optical-rectification-thz-statistics]]. Still open and
+now on the critical path: `zeta(Omega)` for a specific crystal with phase
+matching and absorption, depletion and cascading at the planned pump energy,
+and the measured Schmidt modes of the source.
+

@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-11-14
 tags: [log]
-source_count: 54
+source_count: 69
 confidence: high
 related: [overview]
 ---
@@ -384,4 +384,103 @@ Append-only chronological record. New entries should use:
   Consolidated `paper/outline.md` (two section lists and three figure lists
   merged, no content removed). Added `results/runs/README.md` as the run
   index. `raw/` was not modified.
+
+## [2026-11-14] decision | Headline Claim Changed To Optical Rectification Of BSV
+
+- Decided by the author after [[project-status-review]]: optical
+  rectification of BSV becomes the main result, with a fully quantum
+  description and a measurement on the author's BSV source; target Physical
+  Review Letters. HHG and plasma THz emission move to a companion paper and
+  are frozen until the Letter is submitted.
+- New claim: optical rectification turns a zero-mean BSV pulse into a
+  phase-stable THz transient whose single-shot field is proportional to the
+  pump photon number, so the THz field carries the photon-number statistics
+  of squeezed vacuum.
+- Added [[prl-restructuring-plan]]: assessment of the PRL case, workstreams,
+  self-referenced experiment protocol, week-by-week gates, fallbacks, and the
+  inputs needed from the author.
+- Added [[theory/quantum-optical-rectification-of-bsv]]: input-output relation
+  `b_out = b_in - i zeta N(Omega)`, Wick decomposition with a spontaneous
+  term linear in pump photon number, counting statistics for `K` modes,
+  solvable single-mode model (photon-number QND structure, back-action
+  strength), and a closed-form comparison of the exact result
+  (`3 nbar^2 + 2 nbar`), the Husimi-Q mixture (`3 nbar^2 + 6 nbar + 3`), and
+  the classical-noise model (`3 nbar^2`).
+- `paper/outline.md` is now the Letter outline; the previous outline is
+  `paper/companion-outline.md`. `AGENTS.md` mission, directory contract
+  (`raw/data/` for shot records), and guardrails updated.
+- Contradictions recorded. (1) [[theory/bsv-even-order-response-moment-scaling]]
+  gave single-mode numbers (3, 35/3) without saying that a low-frequency THz
+  field follows pulse-energy statistics; for real femtosecond BSV with about
+  two temporal modes the factor is `1 + 2/K`, about 2. Page updated. (2)
+  [[project-status-review]] described arXiv:2605.31160 as back-action on the
+  pump; it is conditional heralding with back-action neglected. Corrected in
+  place. (3) [[theory/stochastic-quantum-optics-correspondence]] called
+  Husimi-Q decompositions representations of a quantum state; the diagonal
+  form is a different, classical state (Gothelf 2026). Guardrail added. (4)
+  [[project-status-review]] called arXiv:2609.20559 a converged multimode
+  benchmark; it reports no basis sizes and no normalized correlation values.
+  Corrected in place.
+
+## [2026-11-14] ingest | 2026 Quantum-Light Papers And Prior Work For Optical Rectification
+
+- Network: arXiv was not reachable from the session; a personal cloud
+  environment `stochastic_em_theory` allowing `arxiv.org` and
+  `export.arxiv.org` was created with the author's approval.
+- Downloaded 15 PDFs into `raw/sources/`, extracted text into
+  `results/literature/ingest-2026-11-14/extracted_text/`, recorded
+  identifiers and hashes in `download_manifest.json`, and the arXiv queries
+  for the scoop watch in that folder's README.
+- New 2026 sources: [[sources/gothelf-2026-limitations-of-approximative-phase-space-description]],
+  [[sources/de-la-pena-2026-high-order-correlations-wigner-negativities-bsv-hhg]],
+  [[sources/stammer-2026-photon-anti-bunching-in-hhg]],
+  [[sources/stammer-2026-attosecond-metrology-of-bright-quantum-light]],
+  [[sources/rivera-dean-2026-erasing-photons-from-bsv-via-ati]],
+  [[sources/wang-2026-bright-quantum-hhg-coherent-plus-bsv-propagation]],
+  [[sources/gholam-mirzaei-2026-sub-cycle-metrology-of-bright-quantum-light]],
+  [[sources/kern-2026-single-shot-pulse-retrieval-of-femtosecond-bsv]].
+- Supporting sources for the new claim:
+  [[sources/gorlach-2023-hhg-driven-by-quantum-light-main-article]] (closes
+  the gap noted since June),
+  [[sources/spasibko-2017-multiphoton-effects-photon-number-fluctuations]],
+  [[sources/manceau-2019-indefinite-mean-pareto-photon-distribution]],
+  [[sources/racz-2020-estimation-of-heavy-tails-in-optical-nonlinear-processes]],
+  [[sources/moskalenko-2015-paraxial-theory-of-electro-optic-sampling-quantum-vacuum]],
+  [[sources/riek-2017-subcycle-quantum-electrodynamics]],
+  [[sources/kizmann-2019-subcycle-squeezing-time-flow-perspective]].
+- Rewrote the stub
+  [[sources/rivera-dean-2025-propagation-of-intense-squeezed-vacuum-light-in-non]]
+  as a full summary.
+- Not obtained: "Theory of high-harmonic generation with quantum light"
+  (Phys. Rev. Research, doi 10.1103/y3gr-tsns) and the Nature Communications
+  version of the Rivera-Dean propagation paper.
+- Findings that shaped the plan: the second-harmonic enhancement by BSV was
+  measured as 2.86 +- 0.08 and harmonic energy distributions were recorded
+  shot by shot (Spasibko 2017, Manceau 2019), so the new part of the claim is
+  the field, not the energy; real femtosecond BSV has about 1.5 to 2 temporal
+  modes (Gholam-Mirzaei 2026, Kern 2026); a rectified transient from a 3.5 nJ
+  coherent pump was read with a single-shot signal-to-noise ratio near 12
+  (Riek 2017); the classical-mixture description cannot give squeezing or
+  antibunching of the output when the response to a coherent driver is
+  coherent (Gothelf 2026).
+- Updated [[index]], [[overview]], [[research-agenda]],
+  [[theory/bsv-even-order-response-moment-scaling]], and
+  [[models/thz-optical-rectification-model]].
+- Corrected an error from the June ingest found by cross-reading:
+  [[sources/rasputnyi-2024-hhg-bsv]] named the first author "Ivan"; the PDF
+  says Andrei Rasputnyi. Full author list added.
+
+## [2026-11-14] simulation | BSV Optical Rectification THz Statistics
+
+- Added the spec [[simulations/bsv-optical-rectification-thz-statistics]],
+  the module `code/src/stochastic_em_theory/optical_rectification.py`, and 21
+  tests, including an explicit two-mode Fock-space check of the Wick
+  decomposition and a Husimi-Q sampling check of the phase-space comparison.
+- Run `results/runs/20261114-bsv-or-thz-statistics/`: one bright mode gives
+  THz energy 3 times the coherent-pump value and an energy fluctuation ratio
+  of 35/3; `K` equal modes give `1 + 2/K` and Gamma-distributed single-shot
+  amplitudes with shape `K/2`; the spontaneous term overtakes the
+  classical-noise terms at `Omega / sigma = 7.7` for `nbar = 1e6`.
+- Sampler cross-check, 200,000 shots, seed 20261114: no negative amplitudes;
+  mode number recovered from skewness and kurtosis within 2 %.
 

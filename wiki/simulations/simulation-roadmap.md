@@ -262,8 +262,8 @@ Implementation rules:
 The package exists; `code/README.md` has the module table. Relative to the
 layout planned in June, HHG lives in `tdse1d.py`, `fig3b.py`, `fig_iv2.py`,
 `hhg_proxy.py`, and `ensemble.py`; plasma THz lives only in
-`code/notebooks/thz_plasma_bsv_photocurrent.ipynb`; there is no optical
-rectification code.
+`code/notebooks/thz_plasma_bsv_photocurrent.ipynb`; optical rectification
+statistics live in `optical_rectification.py`.
 
 ## Stage Status (2026-11-14)
 
@@ -274,7 +274,7 @@ rectification code.
 | 1B Broadband Raymer/Landes validation | not started |
 | 2 Time-domain multimode BSV | not started |
 | 3 HHG in gas | targets 1 to 3 run once, not converged; 4 partly (no uncertainty); 5 to 7 exist only as proxies or a toy |
-| 4 THz optical rectification | not started |
+| 4 THz optical rectification | statistics level done ([[bsv-optical-rectification-thz-statistics]]); crystal response, detection model, and measured mode structure not started. This is now the main line of the project |
 | 5 THz plasma emission | targets 1 to 3 run once at 400 shots; 4 and 5 not started |
 | 6 Non-Gaussian output diagnostics | not started |
 

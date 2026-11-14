@@ -1,0 +1,22 @@
+run_id: 20261114-bsv-or-thz-statistics
+created: '2026-11-14'
+claim_level: exact_input_correspondence
+mechanism: optical_rectification_of_bsv
+code_entrypoint: code/scripts/run_or_thz_statistics.py
+git_commit: f3332d3a2bbf0cda7c040c8c5d193530d45d4c26
+parameter_file: parameters.yaml
+random_seeds:
+- 20261114
+observable: THz field cumulants, energy enhancement, energy fluctuation ratio, amplitude
+  density, spectrum terms
+units: 'dimensionless: photon numbers; THz amplitude per pump photon; frequency over
+  pump spectral width'
+notes: First-order, undepleted, no propagation. Exact photon-number statistics of
+  independent squeezed-vacuum modes; the sampler is the classical Gaussian amplitude-noise
+  model and is a cross-check only.
+outputs:
+  statistics_csv: or_statistics_vs_nbar.csv
+  distribution_csv: or_amplitude_distribution.csv
+  spectrum_csv: or_spectrum_terms.csv
+  summary_json: or_summary.json
+  figure_png: or_thz_statistics.png

@@ -8,6 +8,7 @@ tags: [agenda, planning]
 source_count: 54
 confidence: high
 related:
+  - prl-restructuring-plan
   - overview
   - project-status-review
   - theory/squeezed-vacuum-g2-proof-plan
@@ -104,28 +105,33 @@ related:
 
 ## Current Source Gaps
 
-- A dedicated source or derivation for optical rectification driven directly by
-  squeezed vacuum. The new literature search did not close this gap; Ravi 2014
-  covers classical tilted-pulse-front OR, not quantum-light OR.
+- A dedicated source for optical rectification driven directly by squeezed
+  vacuum. None was found in June or in November 2026. The derivation now
+  exists in the wiki ([[theory/quantum-optical-rectification-of-bsv]]) but is
+  the project's own; Ravi 2014 covers classical tilted-pulse-front OR only.
 - A foundational stochastic electrodynamics source beyond the Raymer/Landes
   stochastic-field construction.
 - A gas-phase BSV HHG experiment analogous to the solid and metal-tip sources.
 - A clear manuscript convention for whether "classical stochastic EM" means
   Wigner sampling, Husimi sampling, Positive P sampling, or SED-like
   zero-point fields in each section.
-- Everything published after 2026-06-06. See the table in
-  [[project-status-review]].
-- The main Gorlach 2023 article. Only its supplement is in `raw/sources/`,
-  twice.
+- Two papers found by search on 2026-11-14 but not obtained: "Theory of
+  high-harmonic generation with quantum light" (Phys. Rev. Research) and the
+  Nature Communications version of the Rivera-Dean propagation paper.
+- For the optical-rectification claim: the cavity electro-optics papers for
+  the `n (b + b^dagger)` Hamiltonian, a THz parametric down-conversion
+  review for the spontaneous term, and a paper on THz spectroscopy with
+  incoherent light as classical precedent.
 
 ## Next Actions
 
-The current list, in priority order, is the "Suggested order of work" table in
-[[project-status-review]] (2026-11-14). In short: refresh the literature and
-fix the headline claim; rebuild the drive ensemble in the macroscopic limit
-and integrate by quadrature; compare with the published source data; promote
-the parity-rule and optical-rectification derivation; cross-check against a
-full quantum calculation; draft.
+The current list is [[prl-restructuring-plan]] (2026-11-14): workstreams,
+week-by-week gates, and the inputs needed from the author. In short: crystal
+response and detection model for the optical-rectification theory; source
+characterization, calibration, averaged trace, and shot-resolved statistics
+on the BSV source; Letter drafted in parallel. The HHG and plasma work
+(rebuild the drive ensemble, quadrature, comparison with source data) moves
+to the companion paper and waits.
 
 ## Status Of The June 2026 Action List
 

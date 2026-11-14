@@ -6,14 +6,29 @@ workspace. This file is the single canonical copy; `CLAUDE.md` only imports it.
 This project follows the LLM Wiki pattern described by Andrej Karpathy:
 https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 
-The aim is to maintain a persistent, compounding research wiki for a paper on
-classical stochastic electrodynamics descriptions of high harmonic generation
-and THz emission driven by squeezed vacuum fields.
+The aim is to maintain a persistent, compounding research wiki for papers on
+emission driven by bright squeezed vacuum (BSV): first a Letter on THz
+generation by optical rectification of BSV, then a companion paper on
+stochastic-field descriptions of high harmonic generation and plasma THz
+emission.
 
 ## Mission
 
-Develop a paper and reproducible numerical simulations around three linked
-claims:
+Headline claim since 2026-11-14 (Letter, target Physical Review Letters):
+
+> Optical rectification turns a zero-mean bright squeezed vacuum pulse into a
+> phase-stable THz transient whose single-shot field is proportional to the
+> pump photon number. The THz field therefore carries the photon-number
+> statistics of squeezed vacuum. A fully quantum model gives this exactly; a
+> classical Gaussian amplitude-noise model reproduces it up to corrections of
+> order `1/<n>`; a single-shot electro-optic-sampling experiment tests it.
+
+The Letter has three parts: the quantum description, its classical-noise limit
+with an error bound, and the measurement on the author's BSV source. The plan
+is `wiki/prl-restructuring-plan.md`; the linear argument is `paper/outline.md`.
+
+Companion paper (after the Letter; plan in `paper/companion-outline.md`),
+built on the original three claims:
 
 1. Stochastic electromagnetic field theory can reproduce standard quantum
    optics diagnostics of squeezed vacuum when the stochastic variables,
@@ -30,6 +45,9 @@ claims:
   rename, or delete source files once added.
 - `raw/sources/`: source documents, preferably with stable filenames.
 - `raw/assets/`: figures and other downloaded media referenced by sources.
+- `raw/data/`: experimental shot records from the BSV source, one dated
+  folder per acquisition with a README of the acquisition settings. Immutable
+  once added, like every other file under `raw/`.
 - `wiki/`: agent-maintained knowledge layer. This is the working synthesis.
 - `wiki/index.md`: content index. Read this first for research queries.
 - `wiki/log.md`: append-only chronological work log.
@@ -53,6 +71,8 @@ claims:
   text extracted from source PDFs.
 - `results/tmp/`: scratch outputs; ignored by git.
 - `paper/`: manuscript outline, drafts, figure plans, and submission notes.
+  `paper/outline.md` is the Letter; `paper/companion-outline.md` is the
+  companion paper.
 - `archive/`: historical planning documents and notes that do not belong to
   this project. Nothing here is maintained; do not treat it as current.
 
@@ -165,6 +185,14 @@ wiki page becomes part of the manuscript, link it from `paper/outline.md`.
   matching, ionization depletion, and detector averaging.
 - For optical rectification, track whether the low-frequency polarization comes
   from `chi^(2)`, cascaded effects, or effective symmetry breaking.
+- For optical rectification of BSV, state the Schmidt number `K` of the pump
+  with every statistic, say whether a moment is of the THz field or of the THz
+  energy, and say whether a photon-number moment is ordinary or normally
+  ordered. Bright-limit values (`1 + 2/K`, `35/3`) are limits, not identities.
+- Do not call the generated THz field nonclassical because it is bunched or
+  non-Gaussian. In the first-order model its P function is positive.
+- For experimental statistics with heavy tails, report the estimator and its
+  uncertainty; do not quote a bare sample `g2`.
 - For plasma THz emission, check symmetry carefully. A zero-mean stochastic
   optical field may produce zero ensemble-averaged current unless a mechanism
   breaks temporal or inversion symmetry.

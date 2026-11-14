@@ -3,11 +3,13 @@ title: Stochastic Quantum Optics Correspondence
 type: concept
 status: active
 created: 2026-06-06
-updated: 2026-06-06
+updated: 2026-11-14
 tags: [theory, stochastic-fields, quantum-optics, ordering]
 source_count: 10
 confidence: high
 related:
+  - quantum-optical-rectification-of-bsv
+  - ../sources/gothelf-2026-limitations-of-approximative-phase-space-description
   - squeezed-vacuum-g2-proof-plan
   - non-gaussian-output-novelty
   - ../overview
@@ -99,6 +101,21 @@ P_SF(omega) = 1/2
 - Gorlach/Tzur-style HHG papers often use Positive P or Husimi Q coherent-state
   decompositions. Those are phase-space representations of a quantum state,
   not a blanket statement that all output observables are classical.
+- Correction 2026-11-14. The diagonal Husimi-Q form used in practice (and by
+  this project's samplers) is not a representation of the same state. It is
+  the classical mixture `int d^2 alpha Q(alpha) |alpha><alpha|`, a different
+  state whose photon number is `<n> + 1` and whose quadrature variances are
+  larger by 1/2. Gothelf 2026 calls it the approximative phase-space
+  description and proves that, when a coherent driver gives coherent output,
+  it can never yield output squeezing below vacuum, `g2 < 1`, or Wigner
+  negativity. Spectra and intensity-type observables are right to relative
+  order `1/<n>`; fluctuation observables carry an error that grows with
+  emitter number and pulse duration. See
+  [[../sources/gothelf-2026-limitations-of-approximative-phase-space-description]].
+- For optical rectification the comparison can be done in closed form:
+  exact, Husimi-Q mixture, and classical Gaussian noise give THz energies
+  `3 nbar^2 + 2 nbar`, `3 nbar^2 + 6 nbar + 3`, and `3 nbar^2`. See
+  [[quantum-optical-rectification-of-bsv]].
 - Yanagimoto/Jankowski-style mesoscopic nonlinear optics adds a stricter
   boundary: a positive stochastic ensemble can guide Gaussian and intensity
   observables, but Wigner-negative or otherwise quantum non-Gaussian output

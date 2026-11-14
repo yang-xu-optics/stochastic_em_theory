@@ -15,6 +15,7 @@ used as evidence in the manuscript as it stands. Reasons are given in
 | `gorlach-2023-fig-iv2-bsv-threshold-tailcap-20260606` | Same, with a 0.999 intensity-tail cap and a `(9/q)^4` display rolloff | do not use | no: both steps were added to make the plot resemble the published one and change the result |
 | `20260610-thz-plasma-bsv-notebook` | Plasma photocurrent THz, coherent 800 nm plus BSV 400 nm, 400 shots, `r = 1` | latest THz run | no: 400 shots, energy `g2` interval 10 to 28, finite-`n` Husimi-Q ensemble |
 | `20261114-fig-iv2-library-convergence-audit` | Fig. IV.2 peak yields for 13, 25, 49, 97 library nodes, with and without the tail cap; ground-state energy check | review evidence | supporting only |
+| `20261114-bsv-or-thz-statistics` | Optical rectification of BSV: exact THz field statistics versus photon number and mode number, bright-limit amplitude distributions, spectrum split into classical-noise and spontaneous terms | current; first Letter theory run | draft: closed-form within the first-order model, no convergence issue; needs the crystal response and the measured mode structure before it is final |
 | `20261114-thz-two-color-parity-check` | Mean THz field with the BSV on the second harmonic versus on the fundamental, 4,000 shots each | review evidence | supporting only: symmetry check, not a quantitative prediction |
 
 ## Before a run may be copied to `../figures/`

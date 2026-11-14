@@ -1,0 +1,14 @@
+seed: 20261114
+sampler_shots: 200000
+mode_numbers:
+- 1
+- 2
+- 5
+- 20
+nbar_grid:
+  min: 0.01
+  max: 1000000.0
+  points: 81
+  spacing: log
+spectrum_nbar: 1000000.0
+spectrum_mode: one Gaussian mode, |c|^2 = exp(-Omega^2 / (4 sigma^2))

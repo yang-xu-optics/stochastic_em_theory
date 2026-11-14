@@ -5,7 +5,7 @@ status: active
 created: 2026-06-06
 updated: 2026-11-14
 tags: [index]
-source_count: 54
+source_count: 69
 confidence: high
 related: []
 ---
@@ -17,9 +17,12 @@ before answering project questions or changing wiki pages.
 
 ## Core
 
+- [[prl-restructuring-plan]]: the current plan. Headline claim (optical
+  rectification of BSV), honest assessment of the PRL case, workstreams,
+  experiment protocol, timeline with gates, inputs needed. Read this first.
 - [[project-status-review]]: 2026-11-14 evaluation of progress, result
-  quality, literature position, and publication strategy. Read this before
-  planning new work.
+  quality, literature position, and publication strategy that led to the
+  plan. Still the reference for the state of the HHG and plasma material.
 - [[overview]]: project thesis, architecture, and milestone structure.
 - [[research-agenda]]: research questions, deliverables, risks, and next steps.
 - [[log]]: chronological record of setup, ingests, decisions, and durable
@@ -34,9 +37,14 @@ before answering project questions or changing wiki pages.
   squeezed-vacuum `g^{(2)}(0)` value.
 - [[theory/non-gaussian-output-novelty]]: source-backed novelty map for what
   could become non-Gaussian in HHG or THz generation.
-- [[theory/bsv-even-order-response-moment-scaling]]: seed derivation of the
-  parity rule for ensemble-mean fields under BSV driving and of closed-form
-  THz statistics for optical rectification. Not yet source-backed.
+- [[theory/quantum-optical-rectification-of-bsv]]: fully quantum description
+  of THz generation by optical rectification of BSV. Input-output relation,
+  Wick decomposition with the spontaneous term, counting statistics for `K`
+  modes, solvable single-mode model, comparison of exact, phase-space, and
+  classical-noise descriptions. The theory core of the Letter.
+- [[theory/bsv-even-order-response-moment-scaling]]: parity rule for
+  ensemble-mean fields under BSV driving, single-mode moment scaling, and the
+  plasma two-colour check.
 
 ## Physical Models
 
@@ -65,14 +73,20 @@ before answering project questions or changing wiki pages.
   photocurrent notebook spec for coherent-plus-BSV THz generation with
   driving-field `g^(2)(0)` validation, ensemble mean/fluctuation THz
   waveforms, and ensemble-averaged spectra.
+- [[simulations/bsv-optical-rectification-thz-statistics]]: spec and first
+  run for the optical-rectification THz statistics: exact cumulants, energy
+  enhancement and fluctuation ratio, amplitude distributions, spectrum terms.
 - [[simulations/machine-learning-integration-roadmap]]: physics-separated ML
   roadmap for response surrogates, tail-aware active learning, and joint
   HHG-THz inference of squeezed-field parameters.
 
 ## Manuscript
 
-- [paper/outline.md](../paper/outline.md): linear manuscript structure and
-  figure plan.
+- [paper/outline.md](../paper/outline.md): outline of the Letter on optical
+  rectification of BSV, with the figure plan.
+- [paper/companion-outline.md](../paper/companion-outline.md): outline of the
+  companion paper on HHG and plasma THz emission (the outline until
+  2026-11-14).
 
 ## Results
 
@@ -81,11 +95,11 @@ before answering project questions or changing wiki pages.
 
 ## Source Summaries
 
-54 pages for 55 PDFs (one duplicate). 19 are full summaries with equations
-(`status: active`). 35 are first-pass stubs written from metadata
-(`status: draft`); upgrade a stub before citing it quantitatively. Nothing
-published after 2026-06-06 has been ingested; the papers to add are listed in
-[[project-status-review]].
+69 pages for 70 PDFs (one duplicate). 35 are full summaries with equations
+(`status: active`), including the 15 added on 2026-11-14. 34 are first-pass
+stubs written from metadata (`status: draft`); upgrade a stub before citing
+it quantitatively. Two papers found by search are not yet in `raw/`; see
+[[prl-restructuring-plan]].
 
 ### Quantum Optics And Stochastic Squeezed Vacuum
 
@@ -106,6 +120,20 @@ published after 2026-06-06 has been ingested; the papers to add are listed in
   nonlinear-interferometer tailoring of the BSV frequency spectrum.
 - [[sources/sharapova-2020-properties-of-bsv-at-increasing-brightness]]:
   gain-dependent BSV modal properties and Schmidt-mode behavior.
+- [[sources/spasibko-2017-multiphoton-effects-photon-number-fluctuations]]:
+  second to fourth harmonics of BSV; enhancement by `g^(n)`, measured 2.86,
+  13.6, 71; the `(2n - 1)!!` rule. Closest prior art for the moment scaling.
+- [[sources/manceau-2019-indefinite-mean-pareto-photon-distribution]]:
+  single-shot photon-number distributions of BSV harmonics and of
+  supercontinuum; power-law tails with undefined mean.
+- [[sources/racz-2020-estimation-of-heavy-tails-in-optical-nonlinear-processes]]:
+  estimators for heavy-tailed shot statistics with a BSV pump.
+- [[sources/kern-2026-single-shot-pulse-retrieval-of-femtosecond-bsv]]:
+  femtosecond BSV at 1040 nm, about 100 nJ, 27 fs, one spatial mode; random
+  pi phase seen shot by shot.
+- [[sources/gholam-mirzaei-2026-sub-cycle-metrology-of-bright-quantum-light]]:
+  field-resolved single shots of BSV; time-localized bursts with random
+  sign; shot-energy `g2` 2.08 against burst `g2` 2.94.
 
 ### Non-Gaussian Quantum Nonlinear Optics
 
@@ -131,6 +159,18 @@ published after 2026-06-06 has been ingested; the papers to add are listed in
 - [[sources/rasputnyi-2025-kerr-induced-nongaussianity-of-ultrafast-bsv]]:
   Kerr-induced non-Gaussianity in ultrafast BSV.
 
+### Electro-Optic Sampling And Quantum THz Fields
+
+- [[sources/moskalenko-2015-paraxial-theory-of-electro-optic-sampling-quantum-vacuum]]:
+  operator theory of electro-optic sampling: signal operator, response
+  function, shot-noise and vacuum terms.
+- [[sources/riek-2017-subcycle-quantum-electrodynamics]]: optical
+  rectification of a 12 fs coherent pump and subcycle squeezing of the
+  mid-infrared vacuum, read by electro-optic sampling; field and noise scales.
+- [[sources/kizmann-2019-subcycle-squeezing-time-flow-perspective]]:
+  time-domain operator theory of a classical THz drive acting on the quantum
+  field in a `chi^(2)` crystal.
+
 ### HHG And Strong-Field Quantum Light
 
 - [[sources/gorlach-2020-quantum-optical-nature-hhg]]: quantum-optical HHG
@@ -139,6 +179,9 @@ published after 2026-06-06 has been ingested; the papers to add are listed in
   entanglement and measurement framing for HHG.
 - [[sources/gorlach-2023-hhg-driven-quantum-light-supplement]]: coherent-state
   phase-space sampling for quantum-light-driven HHG and a 1D gas baseline.
+- [[sources/gorlach-2023-hhg-driven-by-quantum-light-main-article]]: the main
+  article; scaling limit in which the expansion becomes a Husimi-Q average,
+  and the cutoff laws for thermal and BSV drivers.
 - [[sources/rasputnyi-2024-hhg-bsv]]: experimental BSV-driven HHG in solids and
   coherent-response averaging.
 - [[sources/stammer-2024-entanglement-and-squeezing-of-the-optical-field-modes]]:
@@ -168,7 +211,9 @@ published after 2026-06-06 has been ingested; the papers to add are listed in
 - [[sources/theidel-2025-observation-of-a-displaced-squeezed-state-in-hhg]]:
   observation of displaced squeezed-state signatures in HHG.
 - [[sources/rivera-dean-2025-propagation-of-intense-squeezed-vacuum-light-in-non]]:
-  propagation of intense BSV through nonlinear media.
+  BSV in an ionizing gas: ionization as loss, maximum medium length, yield
+  against a coherent driver; linear loss leaves normalized moments unchanged
+  (full summary since 2026-11-14).
 - [[sources/wang-2025-quantum-dial-for-hhg]]: tuning HHG with the quantum state
   of the driving field.
 - [[sources/ciappina-2025-solid-state-hhg-emerging-frontiers-in-ultrafast-and]]:
@@ -199,6 +244,24 @@ published after 2026-06-06 has been ingested; the papers to add are listed in
   strong-field ionization of atoms driven by BSV light.
 - [[sources/stammer-2026-symmetry-breaking-by-quantum-light-in-solid-state]]:
   symmetry breaking by quantum light in solid-state HHG.
+- [[sources/gothelf-2026-limitations-of-approximative-phase-space-description]]:
+  what the Husimi-Q classical-mixture description gets right and wrong;
+  no-go statements for squeezing and antibunching; exactly solvable one-band
+  benchmark.
+- [[sources/de-la-pena-2026-high-order-correlations-wigner-negativities-bsv-hhg]]:
+  two-level emitter with quantized BSV driver and emission modes; driver
+  becomes Wigner-negative; semiclassical ensembles reproduce the emitter.
+- [[sources/stammer-2026-photon-anti-bunching-in-hhg]]: antibunching of single
+  harmonics for a coherent driver; vanishes for many emitters.
+- [[sources/stammer-2026-attosecond-metrology-of-bright-quantum-light]]:
+  streaking with a quantized infrared field; proposal to read squeezing from
+  the delay-dependent width.
+- [[sources/rivera-dean-2026-erasing-photons-from-bsv-via-ati]]: photoelectron
+  detection heralds cat-like states of BSV; unconditional spectra equal the
+  classical-mixture average.
+- [[sources/wang-2026-bright-quantum-hhg-coherent-plus-bsv-propagation]]: HHG
+  in krypton with coherent 800 nm plus weak BSV; pressure dependence and
+  propagation; simulated harmonic statistics.
 
 ### THz And Plasma Emission
 

@@ -8,6 +8,7 @@ tags: [review, status, quality, publication-strategy]
 source_count: 54
 confidence: medium
 related:
+  - prl-restructuring-plan
   - overview
   - research-agenda
   - simulations/simulation-roadmap
@@ -16,6 +17,19 @@ related:
 ---
 
 # Project Status Review
+
+> **Follow-up, same day.** The author accepted the main recommendations with
+> one change: optical rectification of BSV is the main result, with a fully
+> quantum description and a measurement on the author's BSV source, aimed at
+> Physical Review Letters. The plan is [[prl-restructuring-plan]]. Since this
+> review was written: 15 sources were ingested (the 2026 papers in the table
+> below that are on arXiv, the main Gorlach 2023 article, and the prior work
+> on BSV harmonics and on electro-optic sampling); the quantum derivation is
+> [[theory/quantum-optical-rectification-of-bsv]]; the first Letter run is
+> `results/runs/20261114-bsv-or-thz-statistics/`. Corrections to this review
+> that came out of reading the papers are marked "Correction" below. The rest
+> of the page is the review as written and still describes the HHG and plasma
+> material, which is now the companion paper.
 
 Review date: 2026-11-14. Scope: everything in the repository at commit
 `f8a5065`, plus two checks run during the review. Statements about papers
@@ -181,7 +195,9 @@ The published Fig. 3b source data has been in
 `raw/assets/gorlach-2023-fig3-source-data/` since 2026-06-06 and has never
 been loaded. "Reproduction" currently means visual resemblance. The wiki
 notes the main Gorlach 2023 article is not in `raw/sources/`: the two Gorlach
-2023 PDFs are byte-identical copies of the supplement.
+2023 PDFs are byte-identical copies of the supplement. (Correction: the main
+article was added on 2026-11-14;
+[[sources/gorlach-2023-hhg-driven-by-quantum-light-main-article]].)
 
 ### 6. The plasma THz result is one unconverged configuration
 
@@ -211,11 +227,15 @@ notes the main Gorlach 2023 article is not in `raw/sources/`: the two Gorlach
 | "Propagation effects in high harmonic generation media driven by bright squeezed vacuum light", Nature Communications 2026 | Macroscopic propagation with BSV; probably the published version of the Rivera-Dean 2025 preprint |
 | arXiv:2607.20941, "Generation of bright quantum high-order harmonic driven by combined coherent and bright squeezed vacuum light" | Phase matching and pressure dependence with coherent plus BSV drive |
 | arXiv:2609.20559, "High-order correlations and ultrafast Wigner negativities in bright-squeezed-vacuum-driven high-harmonic generation" | Converged multimode quantum calculation; a benchmark the stochastic model could be tested against |
-| arXiv:2605.31160, "Erasing photons from bright squeezed vacuum light via above-threshold ionization" | Back-action on the pump, which the frozen-pump stochastic model omits |
-| arXiv:2607.06395 and arXiv:2608.16027, attosecond and sub-cycle metrology of bright quantum light | Describe the random pi phase flips of BSV, the basis of the parity rule |
+| arXiv:2605.31160, "Erasing photons from bright squeezed vacuum light via above-threshold ionization" | Correction: not dynamical back-action, which the paper neglects. It is conditioning: detecting the photoelectron heralds a cat-like state of the light. Unconditional spectra equal the classical-mixture average |
+| arXiv:2607.06395 and arXiv:2608.16027, attosecond and sub-cycle metrology of bright quantum light | Describe the random pi phase flips of BSV, the basis of the parity rule. Correction: only 2608.16027 (an experiment) does; 2607.06395 is a streaking theory and does not discuss the flips |
 
 - Two searches found no paper on optical rectification or THz generation with
-  a BSV pump. That direction still looks open.
+  a BSV pump. That direction still looks open. (Later the same day: arXiv
+  title and abstract queries also found none. But the energy statistics of
+  second-order processes driven by BSV were measured for the second harmonic
+  in 2017 and 2019, so the open part is the field-level result; see
+  [[prl-restructuring-plan]].)
 
 ### 8. Manuscript and scope
 
@@ -314,7 +334,12 @@ the main Gorlach 2023 article to `raw/sources/`.
 The claim "classical model with known error" needs at least one case where
 the error is measured. arXiv:2609.20559 (two-level emitter, converged
 multimode quantum treatment) and the Phys. Rev. Research quantum-light theory
-are candidates. Agreement on intensity observables plus a clear failure on a
+are candidates. (Correction after reading it: that paper gives no basis
+sizes and no `g2` or `g3` values, only unnormalized correlation maps; its
+appendix shows semiclassical ensembles reproducing the exact emitter
+population, and the one demonstrated failure of a classical mixture is the
+driver's own Wigner negativity. For optical rectification the cross-check
+now exists in closed form, [[theory/quantum-optical-rectification-of-bsv]].) Agreement on intensity observables plus a clear failure on a
 nonclassical observable would be the strongest figure in the paper.
 
 ### R7. Publication mechanics

@@ -1,13 +1,14 @@
 ---
 title: BSV Even-Order Response And Moment Scaling
 type: concept
-status: seed
+status: draft
 created: 2026-11-14
 updated: 2026-11-14
 tags: [theory, bsv, symmetry, optical-rectification, thz, moments]
-source_count: 0
+source_count: 3
 confidence: low
 related:
+  - quantum-optical-rectification-of-bsv
   - stochastic-quantum-optics-correspondence
   - ../models/thz-optical-rectification-model
   - ../models/thz-plasma-emission-model
@@ -15,6 +16,20 @@ related:
 ---
 
 # BSV Even-Order Response And Moment Scaling
+
+> Update 2026-11-14 (later the same day). The optical-rectification part of
+> this page now has a fully quantum derivation with multimode formulas and
+> exact finite-photon-number corrections:
+> [[quantum-optical-rectification-of-bsv]]. The `(2n - 1)!!` rule is sourced:
+> [[../sources/spasibko-2017-multiphoton-effects-photon-number-fluctuations]]
+> measured 2.86 +- 0.08 for second-harmonic generation against the ideal 3.
+> The shot-to-shot sign flip is measured directly in
+> [[../sources/kern-2026-single-shot-pulse-retrieval-of-femtosecond-bsv]].
+> Real femtosecond BSV has about 1.5 to 2 temporal modes
+> ([[../sources/gholam-mirzaei-2026-sub-cycle-metrology-of-bright-quantum-light]]),
+> so use the `K`-mode formulas of the quantum page, not the single-mode
+> numbers below, when comparing with a source. This page remains the
+> statement of the parity rule and of the plasma two-colour check.
 
 Seed derivation written during the 2026-11-14 project review. It is not backed
 by an ingested source. It answers two questions that the model pages leave
@@ -135,13 +150,19 @@ The remaining 20 % of case-B shots have negligible ionization and emit
 nothing. This confirms the symmetry statement. It is not a quantitative
 prediction: the model has an ADK-form rate without saturation physics, no
 propagation, and case B asks for a BSV fundamental at `1e14 W/cm^2` mean
-intensity, which is probably above what current BSV sources deliver (to be
-checked against Rasputnyi 2024 and later source papers).
+intensity. Rivera-Dean 2025 estimate that `1e13` BSV photons in 60 fs on
+`2.5e-7 cm^2` reach about that value, where roughly half the atoms ionize,
+so case B would sit in the depleted regime
+([[../sources/rivera-dean-2025-propagation-of-intense-squeezed-vacuum-light-in-non]]).
 
 ## Open Points
 
 - Multimode BSV. With `M` comparable temporal modes inside the pulse the
-  intensity statistics move toward `g2 = 1 + 2/M` and the factors above shrink.
+  pulse-energy statistics move toward `g2 = 1 + 2/M`, and the factors above
+  shrink for any response that integrates over the pulse, such as a
+  low-frequency THz field. They do not shrink for the mean yield of a fast
+  process such as harmonic generation, which follows the instantaneous
+  intensity (Spasibko 2017, Fig. 3).
   The mean OR field should still follow the mean intensity envelope. Needs
   the Schmidt-mode sampler that `source_models.py` only describes.
 - Vacuum terms. In Wigner sampling the mean OR polarization contains
@@ -153,7 +174,11 @@ checked against Rasputnyi 2024 and later source papers).
   envelope, so the mean OR field vanishes at `Omega != 0` and only the
   fluctuation spectrum remains.
 - Pump depletion and cascading (Ravi 2014) are ignored.
-- Prior art. Two web searches on 2026-11-14 found no paper on OR or THz
+- Prior art. Web and arXiv searches on 2026-11-14 found no paper on OR or THz
   generation with a BSV pump. The enhancement factor `(2n - 1)!!` for
-  `n`-photon processes driven by BSV is known from the multiphoton literature
-  and should be cited; find and ingest the source.
+  `n`-photon processes driven by BSV is Spasibko 2017 (now ingested). One
+  difference from harmonic generation matters: a harmonic responds to the
+  instantaneous intensity, so its mean yield follows the single-mode
+  `g^(n)` even for broadband BSV, whereas a low-frequency THz field
+  integrates the intensity over the pulse and follows the pulse-energy
+  statistics, `1 + 2/K`.

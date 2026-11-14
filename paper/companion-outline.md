@@ -1,14 +1,17 @@
-# Manuscript Outline
+# Companion Paper Outline: HHG And Plasma THz Framework
+
+This was `paper/outline.md` until 2026-11-14. On that date the headline claim
+of the project changed to optical rectification of bright squeezed vacuum,
+aimed at a Letter; see [outline.md](outline.md) and
+[[wiki/prl-restructuring-plan]]. The material below is kept as the plan for a
+longer companion paper (Physical Review A or Physical Review Research) on the
+stochastic-field framework for HHG and plasma THz emission. Nothing in it has
+been removed. It is not being worked on until the Letter is submitted, and its
+numerical results still have the problems listed in
+[[wiki/project-status-review]].
 
 Working title: Classical stochastic electrodynamics theory of high harmonic
 generation and THz emission driven by squeezed vacuum.
-
-> **Status (2026-11-14).** Outline only: no draft text and no paper-ready
-> figures yet. This file was consolidated on 2026-11-14 from two overlapping
-> section lists and three figure lists; no planned content was removed. The
-> framing below is the one decided on 2026-06-18. An evaluation of that
-> framing against work published since, and a recommended change of headline
-> claim, are in [[wiki/project-status-review]]. Decide that before drafting.
 
 ## Framing
 
