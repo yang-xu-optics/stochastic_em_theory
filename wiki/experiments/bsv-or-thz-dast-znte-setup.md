@@ -33,7 +33,7 @@ marked as such.
 | Pulse energy | about 3 microjoules | stated |
 | Pulse duration | about 100 fs, possibly shorter | stated |
 | Repetition rate | 1 kHz | stated |
-| `g2` | about 1.2, source not filtered | stated; which detector area and bandwidth it refers to is not yet recorded |
+| `g2` | about 1.2, source not filtered | stated; confirmed by the author on 2026-11-14 to be the full-beam value |
 | THz generation crystal | DAST | stated; thickness not given |
 | Sampling crystal | ZnTe | stated; thickness not given |
 | Probe | 800 nm, 100 fs | stated |
@@ -54,11 +54,13 @@ ordering corrections     1 / nbar = 4e-13           (negligible)
 envelope overlap |c|^2   0.93, 0.75, 0.53 at 1, 2, 3 THz   (100 fs Gaussian)
 ```
 
-Assumption for everything below: the stated `g2` is that of the whole pulse
-energy reaching the DAST crystal. A THz field measured at a focus is the
-coherent sum over the emitting area, so it follows the total pulse energy and
-counts spatial as well as temporal modes. If `g2` was measured through an
-aperture or a filter, `K` at the crystal is larger than 10.
+The stated `g2` is the full-beam value (confirmed by the author), so it is
+the pulse-energy statistic that matters here: a THz field measured at a focus
+is the coherent sum over the emitting area, follows the total pulse energy,
+and counts spatial as well as temporal modes. `K = 10` therefore applies at
+the crystal, provided the whole beam reaches it. Remaining assumption: the
+modes are taken as equal; unequal weights change the higher cumulants (see
+below) but not the 45 % fluctuation.
 
 The ZnTe band with a 100 fs probe ends near 3 THz, where the overlap is still
 above one half. The detected THz therefore integrates the intensity over the
@@ -130,7 +132,8 @@ regime where back-action matters.
 
 ## Open Items
 
-- What the stated `g2` refers to; a shot-energy histogram of the BSV.
+- A shot-energy histogram of the BSV, to check the Gamma shape directly and
+  to see whether the mode weights are far from equal.
 - Whether the source is degenerate and collinear; the spectrum; an estimate
   of the spatial mode number.
 - DAST and ZnTe thicknesses; pump spot size on DAST; THz collection optics.

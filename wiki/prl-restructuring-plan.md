@@ -340,9 +340,11 @@ What this changes in the plan:
 - Skewness is detectable with a few hundred shots. The demanding part is the
   single-mode limit, which needs filtering or per-shot spectra.
 
-Still needed: what the stated `g2` refers to (detector area and bandwidth);
-whether the source is degenerate and collinear; crystal thicknesses and pump
-spot size; a measured THz energy or field with the coherent laser.
+The author confirmed on 2026-11-14 that `g2` is the full-beam value, so
+`K` about 10 applies at the crystal. Still needed: whether the source is
+degenerate and collinear; crystal thicknesses and pump spot size; a
+shot-energy histogram of the BSV; a measured THz energy or field with the
+coherent laser.
 
 ## Option: Theory Paper First
 

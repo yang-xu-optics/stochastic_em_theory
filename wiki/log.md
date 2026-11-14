@@ -507,3 +507,17 @@ Append-only chronological record. New entries should use:
   [[prl-restructuring-plan]].
 - Added `wiki/experiments/` to the directory contract in `AGENTS.md`.
 
+## [2026-11-14] query | Full-Beam g2 Confirmed; Optica As Venue For The Theory Paper
+
+- The author confirmed that the stated `g2` of about 1.2 is the full-beam
+  value. [[experiments/bsv-or-thz-dast-znte-setup]] and
+  [[prl-restructuring-plan]] updated: `K` about 10 applies at the crystal and
+  the 45 % field fluctuation no longer rests on an assumption about the
+  detector. Equal mode weights remain an assumption for the higher cumulants.
+- Question: is the theory paper suitable for Optica. Answer recorded in
+  `paper/theory-paper-outline.md`: not recommended for the theory alone;
+  Optica's published criteria accept theory but require broad interest and
+  high impact; keep Optica (or Physical Review Letters) for the experimental
+  paper; Physical Review A, Optics Letters, or JOSA B for the theory. Based on
+  the journal's criteria pages as returned by a web search on this date.
+

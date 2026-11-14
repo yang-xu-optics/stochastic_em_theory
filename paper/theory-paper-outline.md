@@ -42,6 +42,19 @@ realistic predictions that the experimental paper will cite.
   one prediction figure. Faster, but the detection model and estimators would
   move to the experimental paper's supplement.
 - Physical Review Research: same framing, open access.
+- Optica (the flagship): not recommended for the theory alone. Its criteria
+  accept theory but ask for broad interest, a title and abstract a general
+  optics reader follows, and high impact, and it is highly selective. The
+  specialist framing above does not meet that; a broad reframing would lean on
+  an effect that is expected once stated, classical in description, and whose
+  energy statistics are known for harmonics. Optica is a strong target for
+  the experimental paper instead: the single-shot BSV characterization of
+  Kern 2026 appeared there.
+- Optica Quantum: scope is quantum information science and technology
+  enabled by optics. A paper whose message is that a classical-noise
+  description suffices is a poor match.
+- Optics Letters or JOSA B: the natural Optica Publishing Group homes for
+  the theory, as a four-page prediction paper or a full article.
 - Applied Physics Letters: a weaker fit. A theory-only prediction about
   photon statistics is outside what APL usually takes. It would need the
   applied framing below and loses the benchmark.
