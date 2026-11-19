@@ -717,3 +717,13 @@ Append-only chronological record. New entries should use:
 - The note's abstract was brought in line with its introduction: the model
   "belongs to a class of exactly solvable models known from the quantum
   theory of self-phase modulation".
+
+## [2026-11-19] decision | Venue Ranking For The Theory Paper
+
+- Question from the author: PRL, PRX Quantum, Optica Quantum, Optics Letters,
+  JOSA, or another venue.
+- Recommendation recorded in `paper/theory-paper-outline.md`, "Venue":
+  Physical Review A (Letter if cut to about five pages, otherwise the regular
+  article as drafted); Optics Letters as the alternative; JOSA B as fallback;
+  not PRL, PRX Quantum, or Optica Quantum for the theory alone. PRL or Optica
+  stays the target for the experimental paper. The author has not decided.

@@ -116,6 +116,25 @@ realistic predictions that the experimental paper will cite.
   photon statistics is outside what APL usually takes. It would need the
   applied framing below and loses the benchmark.
 
+Update 2026-11-19, after the prior-art search and the author's question about
+PRL, PRX Quantum, Optica Quantum, Optics Letters, and JOSA. Odds are
+estimates, not data; word and page limits are from memory and must be checked
+against current author guidelines.
+
+| Venue | Verdict for the theory alone | Reason |
+| --- | --- | --- |
+| Physical Review A, regular article | first choice | the draft fits as written; the benchmark answers a paper published there (Gothelf 2026); the closest THz-with-BSV theory (Wang 2026) appeared there as a Letter |
+| Physical Review A, Letter | worth trying first if a cut to about five pages is acceptable | same readership, faster, more visible; if judged not a Letter it can continue as a regular article |
+| Optics Letters | alternative, if the THz community and a four-page priority claim matter more than the benchmark | prediction letters are common; the benchmark and detection model go to a supplement |
+| JOSA B | fallback | certain fit, low visibility; the 1991 and 2017 precedents for the solvable class appeared there |
+| Optica Quantum | not recommended | selective and aimed at quantum information science; the message "classical in description" works against it |
+| Physical Review Letters | not recommended for the theory | known mechanism, known energy statistics, no data; keep PRL for the experiment |
+| PRX Quantum | no | outside scope: no quantum-information advance, and the output state is classical |
+
+Order of action: post on arXiv at submission for priority; submit to Physical
+Review A; keep PRL or Optica for the experimental paper, which can then cite
+the theory.
+
 Applied framing, if APL or an optics journal is preferred:
 
 ```text
