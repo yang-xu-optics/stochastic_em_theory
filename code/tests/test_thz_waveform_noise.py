@@ -10,6 +10,7 @@ from stochastic_em_theory.thz_waveform_noise import (
     exact_variance,
     fit_noise_templates,
     gaussian_schell_covariance,
+    gaussian_schell_flux_spectrum,
     model_response_matrix,
     sample_photon_flux,
     temporal_mode_number,
@@ -93,3 +94,22 @@ def test_thermal_light_has_half_the_variance_of_bsv() -> None:
     flux = sample_photon_flux(covariance, spatial_modes=5, shots=40_000, rng=rng, statistics="thermal")
     noise = waveform_noise(flux, RESPONSE, T_PUMP)
     assert noise.number_coefficient == pytest.approx(0.1, rel=0.05)
+
+
+@pytest.mark.parametrize(("spatial", "temporal"), [(10, 1.0), (5, 2.0), (2, 5.0)])
+def test_closed_form_flux_spectrum_matches_discretized_covariance(spatial: int, temporal: float) -> None:
+    covariance = gaussian_schell_covariance(T_PUMP, rms_duration=T_RMS, temporal_modes=temporal)
+    dt = 4.0
+    mean_number = float(np.diag(covariance).sum() * dt)
+    omega = np.array([0.0, 0.006, 0.0126, 0.025])  # rad/fs: 0, 1, 2, 4 THz
+    phases = np.exp(1j * omega[:, None] * T_PUMP[None, :])
+    mean_numeric = np.abs(phases @ np.diag(covariance) * dt) ** 2
+    fluctuation_numeric = (2.0 / spatial) * np.real(
+        np.einsum("ik,kl,il->i", phases, covariance**2, np.conj(phases))
+    ) * dt**2
+    closed = gaussian_schell_flux_spectrum(
+        omega, rms_duration=T_RMS, temporal_modes=temporal, spatial_modes=spatial, mean_photon_number=mean_number
+    )
+    assert np.allclose(mean_numeric, closed["mean"], rtol=2e-3)
+    assert np.allclose(fluctuation_numeric, closed["fluctuation"], rtol=5e-3)
+    assert np.allclose(closed["shot_noise"], mean_number)

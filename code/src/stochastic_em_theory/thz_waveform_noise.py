@@ -169,3 +169,32 @@ def fit_noise_templates(
     target = (variance - detection_variance) / mean_photon_number**2
     coefficients, *_ = np.linalg.lstsq(design, target, rcond=None)
     return float(coefficients[0]), float(coefficients[1]), float(coefficients[2])
+
+
+def gaussian_schell_flux_spectrum(
+    omega: FloatArray,
+    *,
+    rms_duration: float,
+    temporal_modes: float,
+    spatial_modes: float,
+    mean_photon_number: float,
+    statistics: str = "bsv",
+) -> dict[str, FloatArray]:
+    """Closed-form <N^dagger(Omega) N(Omega)> for a Gaussian Schell-model pump.
+
+    ``omega`` in rad/fs. Three parts, all in photons squared:
+
+    - ``mean``: |<N(Omega)>|^2 = Nbar^2 exp(-Omega^2 T^2), the mean waveform;
+    - ``fluctuation``: (2 Nbar^2 / K) exp(-Omega^2 T^2 / K_t^2) for BSV (1 in
+      place of 2 for thermal light), wider than the mean part by K_t;
+    - ``shot_noise``: Nbar, flat: the rectified shot noise of the photon flux
+      (spontaneous difference-frequency generation).
+    """
+
+    w = np.asarray(omega, dtype=np.float64)
+    prefactor = 2.0 if statistics == "bsv" else 1.0
+    total_modes = spatial_modes * temporal_modes
+    mean = mean_photon_number**2 * np.exp(-(w**2) * rms_duration**2)
+    fluctuation = (prefactor * mean_photon_number**2 / total_modes) * np.exp(-(w**2) * rms_duration**2 / temporal_modes**2)
+    shot = np.full_like(w, mean_photon_number)
+    return {"mean": mean, "fluctuation": fluctuation, "shot_noise": shot, "total": mean + fluctuation + shot}

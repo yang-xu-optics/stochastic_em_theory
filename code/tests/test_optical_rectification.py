@@ -180,3 +180,162 @@ def test_husimi_q_mixture_overestimates_thz_energy_by_the_stated_amount() -> Non
     exact = moments_from_cumulants(squeezed_vacuum_photon_number_cumulants(nbar))[1]
     assert exact == pytest.approx(3 * nbar**2 + 2 * nbar)
     assert app - exact == pytest.approx(4 * nbar + 3, rel=0.08)
+
+
+def _pump_ladder_basis(bins: int, photons: int) -> list[tuple[int, ...]]:
+    """All occupation tuples of `photons` photons in `bins` frequency bins."""
+
+    if bins == 1:
+        return [(photons,)]
+    states: list[tuple[int, ...]] = []
+    for first in range(photons + 1):
+        states.extend((first, *rest) for rest in _pump_ladder_basis(bins - 1, photons - first))
+    return states
+
+
+@pytest.mark.parametrize(("coupling_time", "bins"), [(0.3, 13), (0.6, 15)])
+def test_rectification_is_an_exact_displacement_by_the_flux_operator(coupling_time: float, bins: int) -> None:
+    """Beyond first order: b_out = b_in - i zeta N holds exactly.
+
+    Frequency-bin model H = g (b^dagger N + b N^dagger), N = sum_j a_j^dagger a_{j+1},
+    two pump photons in a three-bin wave packet at the centre of a ladder of
+    frequency bins, evolved with a full matrix exponential. The relation is exact
+    while the edge bins stay empty, because [N, N^dagger] = n_first - n_last.
+    A scan (9, 13, 17 bins at coupling 0.6) gave residuals 3e-4, 1e-6, 3e-9,
+    equal to the edge-bin population times a number of order one and
+    independent of the THz cutoff.
+    """
+
+    from scipy.linalg import expm
+
+    photons, thz_cutoff = 2, 26
+    basis = _pump_ladder_basis(bins, photons)
+    index = {state: k for k, state in enumerate(basis)}
+    flux = np.zeros((len(basis), len(basis)))
+    for state, column in index.items():
+        for j in range(bins - 1):
+            if state[j + 1] == 0:
+                continue
+            moved = list(state)
+            amplitude = np.sqrt(state[j + 1] * (state[j] + 1))
+            moved[j + 1] -= 1
+            moved[j] += 1
+            flux[index[tuple(moved)], column] += amplitude
+
+    centre = bins // 2
+    weights = {centre - 1: 0.5, centre: 1.0, centre + 1: 0.5j}
+    pump = np.zeros(len(basis), dtype=np.complex128)
+    for state, k in index.items():
+        occupied = [j for j, n in enumerate(state) for _ in range(n)]
+        if all(j in weights for j in occupied):
+            amplitude = weights[occupied[0]] * weights[occupied[1]]
+            pump[k] = amplitude * (np.sqrt(2.0) if occupied[0] == occupied[1] else 2.0) / np.sqrt(2.0)
+    pump /= np.linalg.norm(pump)
+
+    b = _ladder(thz_cutoff)
+    hamiltonian = np.kron(flux, b.T) + np.kron(flux.T, b)
+    vacuum = np.zeros(thz_cutoff)
+    vacuum[0] = 1.0
+    state_out = expm(-1j * coupling_time * hamiltonian) @ np.kron(pump, vacuum)
+
+    b_full = np.kron(np.eye(len(basis)), b)
+    flux_full = np.kron(flux, np.eye(thz_cutoff))
+    mean_field = np.vdot(state_out, b_full @ state_out)
+    thz_photons = np.vdot(state_out, b_full.T @ b_full @ state_out).real
+    mean_flux = np.vdot(pump, flux @ pump)
+    flux_second = np.vdot(flux @ pump, flux @ pump).real
+
+    assert abs(mean_flux) > 0.3  # the wave packet has a pulsed mean intensity
+    # Tolerance 1e-6: the finite ladder leaves residuals below 1e-7 for these
+    # sizes. A relation valid only to first order would be off by terms of
+    # relative order coupling_time^2, i.e. several percent here.
+    assert mean_field == pytest.approx(-1j * coupling_time * mean_flux, abs=1e-6)
+    assert thz_photons == pytest.approx(coupling_time**2 * flux_second, rel=1e-6)
+    # the flux itself is a constant of the motion
+    assert np.vdot(state_out, flux_full @ state_out) == pytest.approx(mean_flux, abs=1e-6)
+
+
+@pytest.mark.parametrize(("coupling_time", "bins", "tolerance"), [(0.3, 13, 1e-8), (0.6, 15, 1e-6)])
+def test_pump_is_phase_modulated_by_the_mean_of_input_and_output_thz_fields(
+    coupling_time: float, bins: int, tolerance: float
+) -> None:
+    """a_out(tau) = exp(-i [F_in(tau) + F_out(tau)] / 2) a_in(tau), same ladder model.
+
+    With F_out - F_in = 2 int dtau' I(tau') S(tau' - tau) and S(x) = (g t)^2 sin x,
+    the output coherence of a pump with two photons in the wave packet phi is
+
+        G(t1, t2) = 2 phi*(t1) phi(t2) exp[-i S(t1 - t2)] exp[-(g t)^2 (1 - cos(t1 - t2))]
+                    * int dt' |phi(t')|^2 exp{i [S(t' - t1) - S(t' - t2)]}.
+
+    Compared with <a_j^dagger a_k> from the full matrix exponential. Leaving out
+    the flux-dependent phase (the int I S term) changes the result by 0.03 and
+    0.09 for the two couplings, so the tolerance tests that term.
+    """
+
+    from scipy.linalg import expm
+
+    thz_cutoff = 26
+    basis = _pump_ladder_basis(bins, 2)
+    index = {state: k for k, state in enumerate(basis)}
+
+    def hop(j: int, k: int) -> np.ndarray:
+        matrix = np.zeros((len(basis), len(basis)))
+        for state, column in index.items():
+            if state[k] == 0:
+                continue
+            moved = list(state)
+            amplitude = np.sqrt(moved[k])
+            moved[k] -= 1
+            amplitude *= np.sqrt(moved[j] + 1)
+            moved[j] += 1
+            matrix[index[tuple(moved)], column] += amplitude
+        return matrix
+
+    flux = sum(hop(j, j + 1) for j in range(bins - 1))
+    centre = bins // 2
+    weights = {centre - 1: 0.5, centre: 1.0, centre + 1: 0.5j}
+    norm = np.sqrt(sum(abs(value) ** 2 for value in weights.values()))
+    weights = {j: value / norm for j, value in weights.items()}
+    pump = np.zeros(len(basis), dtype=np.complex128)
+    for state, k in index.items():
+        occupied = [j for j, n in enumerate(state) for _ in range(n)]
+        if all(j in weights for j in occupied):
+            pump[k] = weights[occupied[0]] * weights[occupied[1]] * (1.0 if occupied[0] == occupied[1] else np.sqrt(2.0))
+    assert np.linalg.norm(pump) == pytest.approx(1.0, abs=1e-12)
+
+    b = _ladder(thz_cutoff)
+    hamiltonian = np.kron(flux, b.T) + np.kron(flux.T, b)
+    vacuum = np.zeros(thz_cutoff)
+    vacuum[0] = 1.0
+    state_out = expm(-1j * coupling_time * hamiltonian) @ np.kron(pump, vacuum)
+    identity = np.eye(thz_cutoff)
+    exact = np.array(
+        [[np.vdot(state_out, np.kron(hop(j, k), identity) @ state_out) for k in range(bins)] for j in range(bins)]
+    )
+
+    points = 256
+    tau = 2.0 * np.pi * np.arange(points) / points
+    dtau = 2.0 * np.pi / points
+    phi = sum(value * np.exp(-1j * j * tau) for j, value in weights.items()) / np.sqrt(2.0 * np.pi)
+    lag = tau[:, None] - tau[None, :]  # t1 - t2, also used as t - t'
+    back_action = np.exp(-1j * coupling_time**2 * np.sin(lag))  # exp[i S(t' - t)] as a matrix in (t, t')
+    inner = (back_action * np.abs(phi)[None, :] ** 2) @ back_action.conj().T * dtau
+    coherence = (
+        2.0
+        * np.conj(phi)[:, None]
+        * phi[None, :]
+        * inner
+        * np.exp(-1j * coupling_time**2 * np.sin(lag))
+        * np.exp(-(coupling_time**2) * (1.0 - np.cos(lag)))
+    )
+    mode = np.arange(bins)[:, None] * tau[None, :]
+    predicted = (np.exp(-1j * mode) @ coherence @ np.exp(1j * mode).T) * dtau**2 / (2.0 * np.pi)
+
+    assert np.abs(exact - predicted).max() < tolerance
+    # photon number is conserved and the mean frequency drops by one bin per THz photon
+    assert np.trace(exact).real == pytest.approx(2.0, abs=1e-9)
+    thz_photons = np.vdot(state_out, np.kron(np.eye(len(basis)), b.T @ b) @ state_out).real
+    shift = float(np.sum(np.arange(bins) * np.diag(exact).real)) - float(
+        np.sum([j * 2.0 * abs(value) ** 2 for j, value in weights.items()])
+    )
+    assert shift == pytest.approx(-thz_photons, abs=1e-9)
