@@ -13,6 +13,17 @@ abstract lead with the general solution and treat BSV as its main
 application. Sections and figures of the draft differ from the plan below
 where noted in that README; this outline is kept as the planning record.
 
+Correction 2026-11-19, after a prior-art search: the solvability mechanism is
+not new. It is the one behind the exact quantum theory of self-phase
+modulation (1991, 1994) and of continuous-time cross-phase modulation (2007).
+The framing below still holds, with one change of emphasis: the paper should
+not present "exactly solvable" as its discovery. It should say that optical
+rectification belongs to that known class with the emitted THz field as the
+oscillators, and put its weight on what follows from that: the exact state of
+the emitted field, the BSV statistics, the benchmark of approximate
+descriptions, and the predictions. Search record:
+`results/literature/prior-art-2026-11-19/README.md`.
+
 ## Recommended Framing
 
 Frame it as a quantum-optics theory paper with one model, one benchmark, and

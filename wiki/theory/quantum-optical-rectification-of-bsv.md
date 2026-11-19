@@ -35,7 +35,8 @@ page is not yet backed by a published derivation of the same result.
 
 Update 2026-11-19: the model is exactly solvable for an arbitrary multimode
 pump, not only to first order in the coupling (section "Exact Solution For A
-Multimode Pump"). The statements below that say "first order" or "undepleted
+Multimode Pump"). The mechanism of the solution is known from earlier work on
+other systems; see "Prior Art For The Exact Solution". The statements below that say "first order" or "undepleted
 pump" are kept as written on 2026-11-14 and are superseded where that section
 says so. The linear argument is the manuscript draft in
 `paper/theory-note/theory-note.tex`.
@@ -241,6 +242,74 @@ What changes relative to the 2026-11-14 text:
   [[../sources/ravi-2014-thz-generation-optical-rectification]]).
 - The single-mode model below is the special case with one occupied mode and
   scattering into empty modes dropped.
+
+## Prior Art For The Exact Solution
+
+Added 2026-11-19 after the author asked whether this had been shown before.
+Search record, with scope and limits:
+`results/literature/prior-art-2026-11-19/README.md`. None of the papers below
+is in `raw/sources/`; statements rest on abstracts unless marked.
+
+The mechanism is known. A dispersionless field whose photon flux couples
+linearly to harmonic oscillators is exactly solvable, because the flux is
+conserved:
+
+- Quantum self-phase modulation, instantaneous response: Blow, Loudon,
+  Phoenix, J. Opt. Soc. Am. B 8, 1750 (1991). Exact, no linearization about a
+  classical pump.
+- Self-phase modulation with a finite response time: Boivin, Kaertner, Haus,
+  Phys. Rev. Lett. 73, 240 (1994). Abstract: "The quantum theory of a field in
+  1+1 dimensions coupled to localized oscillators is developed. The solution
+  to the Heisenberg equation for the field is given in closed form." This is
+  the same model structure as (E12). The oscillators there are the medium.
+- Continuous-time cross-phase modulation: Shapiro and Razavi, New J. Phys. 9,
+  16 (2007). Phase proportional to the photon flux of the other beam, plus
+  phase noise. Same form as (E7).
+- Single mode: optomechanics and cavity electro-optics (Bose, Jacobs, Knight
+  1997; Tsang 2010, 2011).
+- Radiation by a prescribed classical source gives a coherent state (Glauber
+  1963, from memory); linear coupling of a conserved quantity to bosons is
+  the independent-boson model of condensed-matter theory (textbook, from
+  memory).
+
+Close in physics, perturbative in method:
+
+- Guedes et al., arXiv:2202.03353 (2022): back action of a coherent probe in
+  electro-optic sampling of the vacuum, cascaded treatment to fourth order;
+  the paper itself draws the comparison with optomechanics (introduction
+  read). (E7) is the non-perturbative form of that back action.
+- Glerean et al., J. Phys. B 52, 145502 (2019): quantum model of impulsive
+  stimulated Raman scattering on a frequency ladder, coherent pulses, to
+  second order (keyword scan of the text). Rectification in an electro-optic
+  crystal is the same process with a phonon-polariton, i.e. a propagating THz
+  field, in place of the vibration.
+- Miroshnichenko et al., J. Opt. Soc. Am. B 34, 1177 (2017): electro-optic
+  modulation among a finite number of cavity modes; exact for a classical
+  microwave field; quantized microwave field by deformed Lie algebras. This
+  is the finite-ladder case, where `[N, N^dagger] != 0`.
+
+Not found: an exact treatment of optical rectification or THz emission with a
+quantized pump that gives the state of the emitted field; any treatment of
+rectification of squeezed light. Absence in this search is not proof; see the
+limits in the search record.
+
+Consequence for the claim. Wrong as written earlier on this page and in the
+first draft of the note: that the exact solvability is a new result of this
+project. Correct: optical rectification belongs to a known solvable class.
+New, as far as the search goes: (1) noticing that it belongs there, with the
+emitted THz field as the oscillators, so that the oscillator side of the
+solution is the measured output; (2) the exact THz state for an arbitrary
+multimode pump as a mixture over photon arrival times; (3) the evaluation for
+BSV, the comparison of approximate descriptions, and the predictions. The
+note's introduction was rewritten accordingly on 2026-11-19.
+
+Physical picture recorded with the answer: the THz field responds only to
+when pump photons arrive; emitting a THz photon changes a pump photon's
+colour, not its arrival time, as long as there is no dispersion. The source
+of the THz field is therefore not changed by its own radiation, which makes
+it a classical antenna with a random waveform. Dispersion converts the colour
+change into a timing change and closes the feedback loop; that is where the
+solvability ends.
 
 ## Schmidt-Mode Form
 

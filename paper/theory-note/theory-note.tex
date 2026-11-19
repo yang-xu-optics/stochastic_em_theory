@@ -118,14 +118,36 @@ classical counterpart is rectified shot noise (Sec.~\ref{sec:accuracy}).
 (v) We evaluate these results for parameters of existing sources and for
 detection by single-shot electro-optic sampling (Sec.~\ref{sec:predictions}).
 
-Two elements are not new, and we do not claim them. The single-mode form of
-the interaction, $\hbar g\,\hat a^\dagger\hat a(\hat b+\hat b^\dagger)$, is
-the Hamiltonian of cavity electro-optics \cite{tsang2010,tsang2011} and of
-optomechanics, where its exact solution is well known \cite{bose1997}. The
-enhancement of a second-order yield by $g^{(2)}$ of the pump is the result of
-Ref.~\cite{spasibko2017}. What rectification adds is a field: the emitted
-transient is phase stable and can be sampled in the time domain, so that
-photon statistics appear in a field amplitude and not only in an energy.
+Three elements are not new, and we do not claim them. The first is the
+reason the model is solvable. A field without dispersion whose photon flux
+couples linearly to harmonic oscillators has been solved in closed form in
+the quantum theory of self-phase modulation in fibers, for an instantaneous
+response \cite{blow1991} and for a response of finite duration, modeled by
+oscillators of the medium \cite{boivin1994}. The resulting input-output
+relation, a phase proportional to the photon flux plus a phase-noise
+operator, underlies continuous-time treatments of cross-phase modulation
+\cite{shapirorazavi2007}. The single-mode form of the interaction,
+$\hbar g\,\hat a^\dagger\hat a(\hat b+\hat b^\dagger)$, is the Hamiltonian of
+cavity electro-optics \cite{tsang2010,tsang2011} and of optomechanics, where
+its exact solution is well known \cite{bose1997}, and electro-optic
+modulation among a finite number of cavity modes has been solved for a
+classical microwave field \cite{miroshnichenko2017}. In those works the
+oscillators are a reservoir or a single resonator mode, and the object of
+study is the light. The second element is perturbative: the back action of a
+coherent optical probe on a sampled mid-infrared field through this
+interaction has been evaluated order by order \cite{guedes2022}, and a quantum
+model of impulsive stimulated Raman scattering, the same process with a
+lattice vibration in place of the THz field, has been developed to second
+order for coherent pulses \cite{glerean2019}. The third is the enhancement of
+a second-order yield by $g^{(2)}$ of the pump \cite{spasibko2017}.
+
+What we add is the observation that optical rectification belongs to this
+solvable class with the emitted THz field in the role of the oscillators, so
+that the oscillators are the measured output; the exact state of that field
+for an arbitrary multimode pump; and its evaluation for BSV. Physically,
+rectification adds a field: the emitted transient is phase stable and can be
+sampled in the time domain, so that photon statistics appear in a field
+amplitude and not only in an energy.
 
 \section{Model and exact solution}
 \label{sec:model}
@@ -241,7 +263,13 @@ modulated by the THz field it travels with, the average of the input field,
 which includes the vacuum, and the output field, which includes the field the
 pump has itself generated. This is how the energy of the THz field is drawn
 from the pump, by a red shift of its spectrum, while the number of pump
-photons and their arrival times stay fixed. Equations
+photons and their arrival times stay fixed. Equation~\eqref{eq:phasemod} has
+the form known for self- and cross-phase modulation with a response of finite
+duration \cite{boivin1994,shapirorazavi2007}, a phase proportional to the flux
+plus a phase-noise operator, with the THz field in the role of the medium;
+here the response function is fixed by $|\zeta(\Omega)|^2$ and the noise
+operator is the THz vacuum field. To lowest orders it is the back action
+studied for electro-optic sampling in Ref.~\cite{guedes2022}. Equations
 \eqref{eq:inout}--\eqref{eq:phasemod} hold for any pump state and any
 conversion efficiency as long as the broadened pump spectrum remains inside
 the band where assumption (a) holds. A numerical check in a frequency-ladder
@@ -252,8 +280,9 @@ model is described in Appendix~\ref{app:check}.
 The joint eigenstates of the commuting operators $\Iop(\tau)$ are states with
 photons at definite times, $|\tau_1,\dots,\tau_n\rangle\propto\prod_i\hat
 a^\dagger(\tau_i)|0\rangle$, with eigenvalue $I(\tau)=\sum_i\delta(\tau-\tau_i)$.
-On such a state $\hat D$ displaces the THz vacuum to a multimode coherent
-state with amplitude $\beta(\Omega)=-\ii\zeta(\Omega)\sum_i\ee^{\ii\Omega\tau_i}$.
+On such a state the THz field is driven by a prescribed classical source, and
+$\hat D$ displaces the THz vacuum to a multimode coherent state
+\cite{glauber1963} with amplitude $\beta(\Omega)=-\ii\zeta(\Omega)\sum_i\ee^{\ii\Omega\tau_i}$.
 Expanding an arbitrary pump state in this basis and tracing over the pump
 gives the THz output for vacuum input,
 \begin{equation}
@@ -373,7 +402,8 @@ $\hbar g(\hat a_1^\dagger\hat a_2\hat b^\dagger+\mathrm{H.c.})$ has
 $[\hat a_1^\dagger\hat a_2,\hat a_2^\dagger\hat a_1]=\hat n_1-\hat n_2$ and no
 solution in elementary closed form, because the pump is depleted. In a ladder
 of $D$ optical modes the commutator is $\hat n_1-\hat n_D$
-(Appendix~\ref{app:check}); rectification is the limit in which the ends of
+(Appendix~\ref{app:check}), the case treated with deformed Lie algebras in
+Ref.~\cite{miroshnichenko2017}; rectification is the limit in which the ends of
 the ladder are empty, so that photons are shifted in frequency without any
 mode being depleted. Third, without gain the emission for vacuum THz input is
 the shot-noise term of Eq.~\eqref{eq:shot}. It equals the low-gain limit of

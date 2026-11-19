@@ -1,7 +1,7 @@
 # Theory Note: Quantum Theory Of Optical Rectification With A Quantized Pump
 
 Draft of 2026-11-19, Physical Review A style (REVTeX 4.2, two columns,
-11 pages, 3 figures, 1 table, 30 references). Written at the author's
+11 pages, 3 figures, 1 table, 37 references). Written at the author's
 request as the theory paper that precedes the experimental one; the framing
 follows [../theory-paper-outline.md](../theory-paper-outline.md). Derivations
 and checks are recorded in
@@ -13,7 +13,7 @@ and checks are recorded in
 | --- | --- |
 | `theory-note.tex` | manuscript source |
 | `theory-note.pdf` | compiled draft |
-| `derivation.tex`, `derivation.pdf` | step-by-step derivation of the exact solution from the Hamiltonian (9 pages, one column): fields, interaction Hamiltonian with the explicit coupling constant, the two commutators, input-output relation, evolution operator, pump transformation, THz state, check against the classical formula, list of assumptions and checks |
+| `derivation.tex`, `derivation.pdf` | step-by-step derivation of the exact solution from the Hamiltonian (10 pages, one column): fields, interaction Hamiltonian with the explicit coupling constant, the two commutators, input-output relation, evolution operator, pump transformation, THz state, check against the classical formula, list of assumptions and checks |
 | `refs.bib` | bibliography |
 | `figures/` | three vector figures and `manifest.yaml` (commit, seed, parameters, quoted values) |
 
@@ -98,6 +98,13 @@ References:
   et al. (DOI from arXiv metadata).
 - Gothelf et al. 2026 journal reference was supplied with the ingest request
   and not checked against the journal.
+- Blow et al. 1991 and Boivin et al. 1994 are cited for the solvability
+  mechanism on the basis of their abstracts and index records only. Their
+  full texts must be read before submission, both to confirm the comparison
+  and to check whether they state anything about the oscillator side of the
+  solution. The author list of Boivin et al. is from memory.
+- Guedes et al. 2022 is cited as an arXiv preprint; a journal version may
+  exist.
 - Rivera-Dean et al. 2025 is cited as an arXiv preprint; a web search
   reported a journal version, not verified.
 
@@ -108,6 +115,14 @@ Form:
   `B_T` for the measurement strength; consider renaming one.
 
 ## Corrections Made While Writing
+
+- Novelty of the exact solution (2026-11-19, after a prior-art search): the
+  first draft presented the exact solvability as new and credited only the
+  single-mode optomechanical model. The mechanism is known from the quantum
+  theory of self-phase modulation (Blow, Loudon, Phoenix 1991; Boivin,
+  Kaertner, Haus 1994) and of cross-phase modulation (Shapiro and Razavi
+  2007). The introduction now says so and states what is added. Search
+  record: `results/literature/prior-art-2026-11-19/README.md`.
 
 - Pump phase: a first version had `theta = F_in + (Kerr term)`. The correct
   phase at perfect phase matching is `(F_in + F_out)/2`; the flux-dependent

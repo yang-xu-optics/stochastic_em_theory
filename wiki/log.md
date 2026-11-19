@@ -675,3 +675,33 @@ Append-only chronological record. New entries should use:
   generator and the ordering remark (Appendix A), and the mismatch check
   (Appendix E).
 - All five references of the derivation are from memory and marked so.
+
+## [2026-11-19] query | Prior Art And Physical Picture For The Exact Solution
+
+- Questions from the author: a physical intuition for the exact
+  solvability, and whether anyone has shown it before.
+- Search: 26 arXiv queries and 9 web searches; record with scope and limits
+  in `results/literature/prior-art-2026-11-19/README.md`. No paper found on
+  optical rectification or THz emission with a quantized pump that gives the
+  state of the emitted field.
+- Contradiction with earlier project statements, recorded on
+  [[theory/quantum-optical-rectification-of-bsv]] ("Prior Art For The Exact
+  Solution") and in the note's README: the exact solvability was presented
+  as a new result. The mechanism is known: Blow, Loudon, Phoenix 1991 (exact
+  quantum self-phase modulation); Boivin, Kaertner, Haus 1994 (field coupled
+  to localized oscillators, closed-form Heisenberg solution); Shapiro and
+  Razavi 2007 (continuous-time cross-phase modulation); single-mode
+  optomechanics. Close perturbative work: Guedes et al. 2022 (back action in
+  electro-optic sampling), Glerean et al. 2019 (quantum impulsive stimulated
+  Raman scattering); finite-ladder electro-optic model: Miroshnichenko et
+  al. 2017.
+- Changed: introduction of `paper/theory-note/theory-note.tex` ("Three
+  elements are not new"), Sec. II B and II C citations, seven references
+  added; a section on known exact solutions in `derivation.tex`; a
+  correction note in `paper/theory-paper-outline.md`.
+- Limits: the 1991 and 1994 papers were seen as abstracts only; none of the
+  papers is ingested. Reading the two full texts is listed as a task before
+  submission.
+- Physical picture recorded on the theory page: the THz field depends only
+  on photon arrival times, which its emission does not change without
+  dispersion.
