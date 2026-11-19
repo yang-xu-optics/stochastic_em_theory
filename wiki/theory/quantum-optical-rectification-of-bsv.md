@@ -474,6 +474,70 @@ the noise there measures `K_t`. Derivation of the `gbar gbar''` term,
 numerical checks, and numbers:
 [[../simulations/thz-waveform-noise-against-delay]].
 
+## Relation To Quantized DFG, SFG And Parametric Down-Conversion
+
+Added 2026-11-19 in answer to the author's question. Same trilinear
+`chi^(2)` Hamiltonian; the difference is the regime, and it is decided by one
+commutator: that of the operator that drives the generated field with its
+conjugate.
+
+Linearize around a classical line `alpha` at `omega_0` (units `s^(-1/2)`):
+
+```text
+N(Omega) ~ alpha^* a(omega_0 + Omega) + alpha a^dagger(omega_0 - Omega) = C(Omega)      (R1)
+            anti-Stokes: b^dagger a        Stokes: b^dagger a^dagger
+            beam splitter                  two-mode squeezer
+```
+
+| Phase matching couples | `[C, C^dagger]` | THz field against length | Name |
+| --- | --- | --- | --- |
+| Stokes sideband only | `-abs(alpha)^2 delta` | exponential gain | DFG, parametric amplifier, parametric down-conversion |
+| anti-Stokes sideband only | `+abs(alpha)^2 delta` | periodic exchange | SFG, frequency conversion |
+| both, equal weight | 0 | linear growth; `C` conserved | optical rectification (this page) |
+
+The same three cases in cavity electro-optics and optomechanics: blue
+sideband (parametric amplification, entanglement), red sideband (beam
+splitter, cooling), both (back-action-evading measurement). Source: abstracts
+of Tsang, Phys. Rev. A 81, 063837 (2010), arXiv:1003.0116, and Phys. Rev. A
+84, 043845 (2011), arXiv:1105.2336, read through the arXiv API on 2026-11-19;
+the papers are not in `raw/sources/`.
+
+Consequences:
+
+1. What the generated field copies. Parametric relations with one classical
+   field are linear in the quantum field (Bogoliubov or beam splitter):
+   Gaussian in, Gaussian out; the output copies a field amplitude. DFG of BSV
+   with a coherent beam gives a zero-mean field with a random sign. In (E5)
+   the source is bilinear, `a^dagger a`: the THz field copies the photon
+   flux, has a fixed sign, and is non-Gaussian for a Gaussian pump.
+2. Solvability with a quantized pump. Three modes,
+   `g (a_1^dagger a_2 b^dagger + h.c.)`:
+   `[a_1^dagger a_2, a_2^dagger a_1] = n_1 - n_2`, pump depletion, no
+   elementary closed form. Ladder of `D` modes: `[N, N^dagger] = n_1 - n_D`
+   (the edge term of the numerical check). OR is the limit of empty ladder
+   ends: photons are shifted without any mode being depleted, and (E2) holds.
+   For comparison, the SHG source `integral a a` has a commutator of order
+   `2 N + 1` and depletes the pump; its mean depends on the anomalous moment
+   `M`, i.e. on the squeezing phase, where the OR mean depends on `G1` only.
+   (Project reasoning, not checked against a source.)
+3. Emission from vacuum THz input. Parametric amplifier: `sinh^2` growth,
+   two-mode squeezed vacuum, entangled THz-optical pairs (the regime of
+   Kutas et al., Sci. Adv. 6, eaaz8065 (2020); bibliographic data from the
+   arXiv API, paper not ingested). OR: the shot-noise
+   term `Nbar` of (6d) and (E10), which equals the low-gain limit of
+   down-conversion and stays linear in pump energy; the reduced THz state is
+   classical.
+4. Conserved quantities. DFG and SFG: the Manley-Rowe combinations only. OR:
+   the flux `I(tau)` at every instant, an infinite set.
+
+Where one becomes the other: pump group-velocity dispersion `k''`. Stokes and
+anti-Stokes mismatches differ by `k'' Omega^2`; photons at opposite ends of a
+bandwidth `Delta omega` differ by `k'' Omega Delta omega`. OR regime:
+`k'' Omega Delta omega L << 1`. The DAST value at 1.6 micrometres is still
+missing (open item). The DFG source term is also contained in (E5): split the
+field into a coherent part and the rest, and the cross term of `N` is the
+linear DFG source.
+
 ## What Is Genuinely Quantum Here
 
 - The spontaneous term (6d): THz-optical photon pairs with the BSV as pump.

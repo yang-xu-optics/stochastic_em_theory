@@ -1,7 +1,7 @@
 # Theory Note: Quantum Theory Of Optical Rectification With A Quantized Pump
 
 Draft of 2026-11-19, Physical Review A style (REVTeX 4.2, two columns,
-10 pages, 3 figures, 1 table, 30 references). Written at the author's
+11 pages, 3 figures, 1 table, 30 references). Written at the author's
 request as the theory paper that precedes the experimental one; the framing
 follows [../theory-paper-outline.md](../theory-paper-outline.md). Derivations
 and checks are recorded in
@@ -48,7 +48,10 @@ uv run python scripts/make_theory_note_figures.py
 
 It does not claim that the THz field is nonclassical, and it states that the
 single-mode Hamiltonian and the `g2` enhancement of second-order yields are
-known.
+known. Section II D (added 2026-11-19) states how the model differs from the
+quantum theory of difference- and sum-frequency generation: same Hamiltonian,
+both sidebands coupled with equal weight, hence no gain and a conserved
+source operator.
 
 ## Open Items Before Submission
 
@@ -98,7 +101,7 @@ Form:
   part is required by energy conservation and confirmed numerically.
 - Shots needed to resolve the third cumulant: the estimate used in the wiki
   since 2026-11-14 kept only the Gaussian part of the sampling variance. The
-  full expression is Eq. (32) of the note; for `K = 10` at `5 sigma` it is
+  full expression is Eq. (33) of the note; for `K = 10` at `5 sigma` it is
   900 shots without detection noise, not about 200.
 - Photon-number resolution by the THz field is `1/(2 sqrt(B_T))`, not
   `1/sqrt(B_T)`.

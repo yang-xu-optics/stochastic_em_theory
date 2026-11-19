@@ -624,3 +624,25 @@ Append-only chronological record. New entries should use:
 - No new run directory under `results/runs/`: the figures restate results of
   the two 2026-11-14 optical-rectification runs with the closed-form
   spectrum added.
+
+## [2026-11-19] query | Rectification Against Quantized DFG And SFG Theory
+
+- Question from the author: what is the key difference between the quantized
+  rectification theory and the quantized DFG/SFG theory.
+- Answer filed in [[theory/quantum-optical-rectification-of-bsv]], section
+  "Relation To Quantized DFG, SFG And Parametric Down-Conversion": same
+  trilinear Hamiltonian, different regime, decided by the commutator of the
+  source operator with its conjugate. Stokes only: negative, exponential gain
+  (parametric amplifier). Anti-Stokes only: positive, periodic exchange
+  (frequency conversion). Both with equal weight: zero, the source is
+  conserved, linear growth (rectification). Rectification of a femtosecond
+  pulse is the unresolved-sideband case; the condition is
+  `k'' Omega Delta omega L << 1`.
+- Consequences recorded: the THz field copies the photon flux and not a field
+  amplitude; Gaussian in gives non-Gaussian out; exact solution with a
+  quantized pump because no mode is depleted; no parametric gain, so vacuum
+  emission is the shot-noise term only.
+- The note gained Sec. II D with the same content
+  (`paper/theory-note/theory-note.tex`).
+- Source check: the sideband classification in cavity electro-optics was read
+  from the arXiv abstracts of Tsang 2010 and 2011, not from the papers.

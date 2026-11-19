@@ -319,6 +319,64 @@ function, $p_n$ is a Poisson transform of the classical intensity (Mandel's
 formula \cite{mandelwolf1995}), and Eq.~\eqref{eq:rhoT} then states that the
 THz field is the classical rectified field plus rectified shot noise.
 
+\subsection{Relation to parametric three-wave mixing}
+\label{sec:dfg}
+
+Equation~\eqref{eq:G} is the trilinear $\chi^{(2)}$ coupling that also
+underlies the quantum theory of difference-frequency generation, parametric
+down-conversion, and sum-frequency conversion. The theories differ in which
+optical frequencies the phase matching couples. To see this, take the optical
+field as a classical amplitude $\alpha$ at frequency $\omega_0$ plus quantum
+sidebands. To first order in the sidebands and for $\Omega\neq0$,
+\begin{equation}
+\Nop(\Omega)\simeq\alpha^*\hat a(\omega_0+\Omega)
++\alpha\,\hat a^\dagger(\omega_0-\Omega)\equiv\hat C(\Omega),
+\label{eq:sidebands}
+\end{equation}
+so the THz mode couples to the anti-Stokes sideband through
+$\hat b^\dagger\hat a(\omega_0+\Omega)$, a beam-splitter term, and to the
+Stokes sideband through $\hat b^\dagger\hat a^\dagger(\omega_0-\Omega)$, a
+two-mode-squeezing term. The dynamics is set by the commutator of the source
+operator with its conjugate. If phase matching selects the Stokes term alone,
+$[\hat C(\Omega),\hat C^\dagger(\Omega')]=-|\alpha|^2\delta(\Omega-\Omega')$
+and the THz field grows exponentially: this is the parametric amplifier,
+which emits entangled THz-optical photon pairs from vacuum
+\cite{kutas2020}. If it selects the anti-Stokes term alone, the commutator is
+$+|\alpha|^2\delta(\Omega-\Omega')$ and the two fields exchange their states
+periodically: this is frequency conversion. Under assumption (a) both terms
+enter with equal weight, the commutator vanishes, $\hat C$ is a constant of
+the motion, gain and loss cancel, and the THz amplitude grows linearly with
+the crystal length. The same three cases are known in cavity electro-optics
+and optomechanics as blue-sideband pumping, red-sideband pumping, and
+back-action-evading measurement \cite{tsang2010,tsang2011}. Optical
+rectification of a femtosecond pulse is the third case, because the THz
+frequency lies inside the pump bandwidth and the two sidebands are not
+resolved.
+
+Three differences from the parametric theories follow. First, with one
+optical field classical the parametric relations are linear in the quantum
+fields: a Gaussian input gives a Gaussian output, and the generated field
+copies a field amplitude. Difference-frequency mixing of BSV with a coherent
+beam therefore gives a field of zero mean and random sign. Equation
+\eqref{eq:inout} is quadratic in the quantum field: the THz field copies the
+photon flux, has a fixed sign, and is not Gaussian. Second, with all fields
+quantized, the three-mode Hamiltonian
+$\hbar g(\hat a_1^\dagger\hat a_2\hat b^\dagger+\mathrm{H.c.})$ has
+$[\hat a_1^\dagger\hat a_2,\hat a_2^\dagger\hat a_1]=\hat n_1-\hat n_2$ and no
+solution in elementary closed form, because the pump is depleted. In a ladder
+of $D$ optical modes the commutator is $\hat n_1-\hat n_D$
+(Appendix~\ref{app:check}); rectification is the limit in which the ends of
+the ladder are empty, so that photons are shifted in frequency without any
+mode being depleted. Third, without gain the emission for vacuum THz input is
+the shot-noise term of Eq.~\eqref{eq:shot}. It equals the low-gain limit of
+parametric down-conversion and stays linear in the pump energy.
+
+Pump dispersion separates the regimes. With $k''$ the group-velocity
+dispersion of the pump, the mismatches of the Stokes and anti-Stokes
+processes differ by $k''\Omega^2$, and those of pump photons at opposite ends
+of a bandwidth $\Delta\omega$ by $k''\Omega\,\Delta\omega$. Assumption (a)
+requires $k''\Omega\,\Delta\omega\,L\ll1$.
+
 \section{Bright squeezed vacuum}
 \label{sec:bsv}
 
