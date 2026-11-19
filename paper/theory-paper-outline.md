@@ -24,6 +24,44 @@ the emitted field, the BSV statistics, the benchmark of approximate
 descriptions, and the predictions. Search record:
 `results/literature/prior-art-2026-11-19/README.md`.
 
+## What Is New, After The Prior-Art Search (2026-11-19)
+
+Ranked by how much of the paper's case each item carries. "Search" refers to
+`results/literature/prior-art-2026-11-19/README.md` and the 2026-11-14
+searches; none found a paper on rectification of squeezed light or on THz
+emission with a quantized pump.
+
+1. The effect and its field-level statistics. A pump with zero mean field
+   gives a phase-stable THz transient; the single-shot THz field is
+   proportional to the pump photon number, one-sided, gamma-distributed with
+   shape `K/2`. Known before: the same factors for harmonic energies
+   (Spasibko 2017). New: a field that carries them and can be sampled in
+   time.
+2. Noise against delay. Photon-number noise at the peaks, arrival-time noise
+   at the zero crossings; the zero-crossing noise measures the temporal mode
+   number; closed-form spectrum with mean, fluctuation, and shot-noise parts
+   and their crossovers. No counterpart in harmonic generation.
+3. Multimode rule. Rectification integrates the intensity, so the factor is
+   `1 + 2/K`, not 3; THz-field cumulants give the power sums of the Schmidt
+   spectrum.
+4. Exact benchmark for a BSV driver. Errors `-2/(3 nbar)` (classical noise)
+   and `+4/(3 nbar)` (Husimi-weighted), and an emitted state that is exactly
+   a classical mixture. The 2026 critique of phase-space descriptions has no
+   BSV case; this is one.
+5. The exact state of an emitted, measurable field for any multimode pump,
+   with the coupling constant in crystal parameters; the non-perturbative
+   form of the back action treated perturbatively for electro-optic sampling.
+6. Numbers and a detection model for existing sources.
+
+Not new: the solvability mechanism; the single-mode Hamiltonian; the
+enhancement of second-order yields by `g2`.
+
+Assessment: items 1 to 3 are predictions that only an experiment makes
+valuable; item 4 is the part a theory reader cannot get elsewhere. Without
+"exactly solvable" as a discovery the paper is a sound Physical Review A
+article, not more. Lead the title and abstract with the THz physics and the
+benchmark, and use the solvable class as the tool.
+
 ## Recommended Framing
 
 Frame it as a quantum-optics theory paper with one model, one benchmark, and

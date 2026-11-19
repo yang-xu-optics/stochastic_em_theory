@@ -705,3 +705,15 @@ Append-only chronological record. New entries should use:
 - Physical picture recorded on the theory page: the THz field depends only
   on photon arrival times, which its emission does not change without
   dispersion.
+
+## [2026-11-19] query | What Is New In The THz Paper
+
+- Question from the author after the prior-art correction. Ranked answer
+  filed in `paper/theory-paper-outline.md`, section "What Is New, After The
+  Prior-Art Search": the effect and its field-level statistics; noise
+  against delay and the temporal mode number; the multimode rule; the exact
+  benchmark for a BSV driver; the exact emitted state with the coupling in
+  crystal parameters; numbers for existing sources.
+- The note's abstract was brought in line with its introduction: the model
+  "belongs to a class of exactly solvable models known from the quantum
+  theory of self-phase modulation".
