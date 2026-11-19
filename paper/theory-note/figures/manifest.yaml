@@ -1,0 +1,46 @@
+created: '2026-11-19'
+code_entrypoint: code/scripts/make_theory_note_figures.py
+git_commit: f6556abedcb803f1187d44e330b86e0bdf492b05
+random_seeds:
+- 20261119
+parameters:
+  pump_fwhm_fs: 100.0
+  pump_rms_duration_fs: 42.466090014400955
+  total_modes: 10.0
+  photons_per_pulse: 24000000000000.0
+  thz_response: first derivative of a Gaussian, rms 150.0 fs (model, not a crystal
+    response)
+units: fs, THz; fields normalized to the peak of the mean waveform
+notes: Closed forms and the exact variance formula; five sampled shots in fig_waveform_noise
+  (a) only.
+values:
+  fig_statistics:
+    panel_a_modes:
+    - 1
+    - 2
+    - 10
+    panel_b: exact 3n^2+2n; APP 3n^2+6n+3; classical 3n^2
+  fig_spectrum:
+    mean_fluctuation_crossover_THz:
+      Kt2: 5.4901516111982405
+      Kt5: 4.852654292525657
+    photons_per_pulse: 24000000000000.0
+  fig_waveform_noise:
+    Kt1:
+      rms_at_zero_crossing_over_peak: 5.281127514829603e-10
+      rms_at_peak_over_peak: 0.44721359549995815
+      A: 0.2
+      B_fs2: 0.0
+      arrival_time_jitter_fs: 0.0
+    Kt2:
+      rms_at_zero_crossing_over_peak: 0.12848021438804227
+      rms_at_peak_over_peak: 0.4604736834256752
+      A: 0.2
+      B_fs2: 135.25266008334034
+      arrival_time_jitter_fs: 11.629817714966144
+    Kt5:
+      rms_at_zero_crossing_over_peak: 0.14718404426640522
+      rms_at_peak_over_peak: 0.4645380357984592
+      A: 0.2
+      B_fs2: 173.12340490667563
+      arrival_time_jitter_fs: 13.1576367523456

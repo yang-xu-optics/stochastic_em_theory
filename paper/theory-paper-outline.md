@@ -5,6 +5,14 @@ paper that precedes the main experimental paper. Not yet decided. If adopted,
 the Letter in [outline.md](outline.md) becomes the experimental paper and
 cites this one. Plan context: [[wiki/prl-restructuring-plan]].
 
+Draft written 2026-11-19: [theory-note/README.md](theory-note/README.md)
+(`theory-note/theory-note.tex` and PDF). It follows the framing below with
+one change that strengthens it: the model turned out to be exactly solvable
+for an arbitrary multimode pump, not only for one mode, so the title and
+abstract lead with the general solution and treat BSV as its main
+application. Sections and figures of the draft differ from the plan below
+where noted in that README; this outline is kept as the planning record.
+
 ## Recommended Framing
 
 Frame it as a quantum-optics theory paper with one model, one benchmark, and

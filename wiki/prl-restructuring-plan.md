@@ -236,10 +236,25 @@ Shots needed for the cumulant test when detection noise dominates: with
 the wanted significance of the third cumulant,
 
 ```text
-N = 0.75 z^2 K (1 + 1/rho^2)^3
+N = 0.75 z^2 K (1 + 1/rho^2)^3                    detection noise dominates
 ```
 
-For `K = 5`, `z = 5`: 750 shots at `rho = 1`; about 170,000 at `rho = 0.3`.
+For `K = 5`, `z = 5`: about 170,000 shots at `rho = 0.3`.
+
+Correction 2026-11-19: the line above keeps only the Gaussian part of the
+sampling variance of the third central moment. The full variance is
+`(k6 + 9 k4 k2 + 9 k3^2 + 6 k2^3) / N`; for a gamma-distributed signal
+(shape `K/2`) with Gaussian detection noise, with `u = 1 + 1/rho^2`,
+
+```text
+N = z^2 [ 0.75 K u^3 + 13.5 u + 9 + 60 / K ]
+```
+
+Checked by Monte Carlo (within 3 % for `K = 5, 10`; 6 % for `K = 1`). The
+example given here on 2026-11-14, "750 shots at `rho = 1`" for `K = 5`,
+`z = 5`, should read about 1,950. For `K = 10`, `z = 5`: 900 shots without
+detection noise, 2,550 at `rho = 1`. Still seconds at 1 kHz; the conclusion
+does not change.
 When the signal dominates, sample moments converge slowly: for one mode the
 sample energy ratio `<U^2>/<U>^2` has relative variance `97.5 / N`, so 10 %
 needs about 1e4 shots and 3 % about 1e5. All moments are finite here, so
@@ -337,7 +352,8 @@ What this changes in the plan:
   keeping the sampling linear up to three times the mean field.
 - The ZnTe band integrates over the 100 fs pulse, so the simple law "field
   equals pulse energy times a fixed waveform" should hold well below 2 THz.
-- Skewness is detectable with a few hundred shots. The demanding part is the
+- Skewness is detectable with about a thousand shots (900 at `5 sigma` for
+  `K = 10` without detection noise; corrected 2026-11-19). The demanding part is the
   single-mode limit, which needs filtering or per-shot spectra.
 
 The author confirmed on 2026-11-14 that `g2` is the full-beam value, so

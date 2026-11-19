@@ -564,3 +564,63 @@ Append-only chronological record. New entries should use:
   signature as the timing term; 800 nm energy noise is amplified by the
   parametric gain, about fifteenfold.
 
+
+## [2026-11-19] paper | PRA-Style Theory Note Drafted
+
+- Request: write a Physical Review A style theory note of the project based
+  on the new assessment.
+- Written: `paper/theory-note/theory-note.tex` (REVTeX 4.2; 10 pages, 3
+  figures, 1 table, 30 references), compiled PDF, `refs.bib`, figures with a
+  manifest, and [paper/theory-note/README.md](../paper/theory-note/README.md)
+  with the open items. Title: "Quantum theory of optical rectification with a
+  quantized pump: terahertz fields driven by bright squeezed vacuum".
+- New result found while writing, now the first claim of the note: for a
+  coupling that is flat across the pump band and negligible pump dispersion,
+  the model is exactly solvable for any multimode pump state. The photon flux
+  commutes with itself at different times, the Magnus series ends at second
+  order, `b_out = b_in - i zeta N` holds to all orders, the flux is conserved,
+  and the THz state is a mixture of coherent states weighted by the pump's
+  photon arrival-time distribution. Recorded in
+  [[theory/quantum-optical-rectification-of-bsv]], section "Exact Solution For
+  A Multimode Pump".
+- Also new: spontaneous difference-frequency term identified as rectified
+  photon shot noise; closed-form flux spectrum for a Gaussian Schell-model
+  pump; pump phase modulation by the mean of input and output THz fields.
+- Corrections to earlier wiki statements, made on the pages concerned:
+  1. "Two small parameters, `1/nbar` and `B nbar`" was wrong for the THz
+     statistics, which are exact in the coupling; `B nbar` governs the pump
+     back-action only (theory page, "Validity").
+  2. Photon-number resolution by the THz field is `1/(2 sqrt(B))`, not
+     `1/sqrt(B)` (theory page).
+  3. Shots for the third-cumulant test: the formula of 2026-11-14 kept only
+     the Gaussian part of the sampling variance. Full form
+     `N = z^2 [0.75 K u^3 + 13.5 u + 9 + 60/K]`, `u = 1 + 1/rho^2`, checked by
+     Monte Carlo; "a few hundred shots" becomes about a thousand
+     ([[prl-restructuring-plan]]).
+  4. A first version of the pump phase relation, written and corrected within
+     this session, lacked the flux-dependent term; the numerical check fails
+     by 0.03 to 0.09 without it.
+- Citations in the note were checked against the source pages. Two were
+  reworded because the source did not support the first wording: the Ravi
+  2014 thesis is about cascading limits, not thin-crystal assumptions; the
+  Wang 2026 harmonic paper is not a source for published BSV pulse energies.
+- Not done, listed in the README: crystal-specific THz response, independent
+  re-derivation, numerical check with a phase mismatch, seven references with
+  incomplete or unchecked bibliographic data.
+
+## [2026-11-19] simulation | Exactness Checks And Theory-Note Figures
+
+- Tests added to `code/tests/test_optical_rectification.py`: input-output
+  relation and flux conservation beyond first order, and the pump
+  phase-modulation relation, both against a full matrix exponential in a
+  frequency-ladder model with two pump photons. Test added to
+  `code/tests/test_thz_waveform_noise.py` for the closed-form flux spectrum.
+  Suite: 94 passed.
+- `code/scripts/make_theory_note_figures.py` writes
+  `paper/theory-note/figures/` with `manifest.yaml` (commit f6556ab, seed
+  20261119). Closed forms and the exact variance formula only; five sampled
+  shots in one panel. The THz response is the model response of
+  [[simulations/thz-waveform-noise-against-delay]], not a crystal response.
+- No new run directory under `results/runs/`: the figures restate results of
+  the two 2026-11-14 optical-rectification runs with the closed-form
+  spectrum added.

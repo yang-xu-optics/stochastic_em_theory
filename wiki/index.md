@@ -97,6 +97,11 @@ before answering project questions or changing wiki pages.
 - [paper/theory-paper-outline.md](../paper/theory-paper-outline.md): option
   of a theory paper ahead of the experimental one: framing, venue, claims,
   section and figure plan, timing.
+- [paper/theory-note/README.md](../paper/theory-note/README.md): draft of
+  that theory paper in Physical Review A style (2026-11-19), with the
+  compiled PDF, the figure manifest, and the list of open items. Its main
+  result, the exact solution for a multimode pump, is in
+  [[theory/quantum-optical-rectification-of-bsv]].
 - [paper/companion-outline.md](../paper/companion-outline.md): outline of the
   companion paper on HHG and plasma THz emission (the outline until
   2026-11-14).

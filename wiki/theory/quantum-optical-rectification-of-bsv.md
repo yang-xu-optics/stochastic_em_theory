@@ -3,8 +3,8 @@ title: Quantum Optical Rectification Of BSV
 type: concept
 status: draft
 created: 2026-11-14
-updated: 2026-11-14
-tags: [theory, quantum, optical-rectification, thz, bsv, photon-number, qnd]
+updated: 2026-11-19
+tags: [theory, quantum, optical-rectification, thz, bsv, photon-number, qnd, exact-solution]
 source_count: 8
 confidence: medium
 related:
@@ -14,6 +14,7 @@ related:
   - ../simulations/bsv-optical-rectification-thz-statistics
   - ../simulations/thz-waveform-noise-against-delay
   - ../prl-restructuring-plan
+  - ../../paper/theory-note/README
   - ../sources/moskalenko-2015-paraxial-theory-of-electro-optic-sampling-quantum-vacuum
   - ../sources/kizmann-2019-subcycle-squeezing-time-flow-perspective
   - ../sources/spasibko-2017-multiphoton-effects-photon-number-fluctuations
@@ -31,6 +32,13 @@ Both the pump and the THz field are quantized. No phase-space sampling and no
 coherent-state expansion of the pump is used. The derivation is this
 project's own; the algebra is checked numerically (see "Checks"), but the
 page is not yet backed by a published derivation of the same result.
+
+Update 2026-11-19: the model is exactly solvable for an arbitrary multimode
+pump, not only to first order in the coupling (section "Exact Solution For A
+Multimode Pump"). The statements below that say "first order" or "undepleted
+pump" are kept as written on 2026-11-14 and are superseded where that section
+says so. The linear argument is the manuscript draft in
+`paper/theory-note/theory-note.tex`.
 
 ## Representation
 
@@ -74,6 +82,8 @@ the pump photon-flux operator.
 
 Two consequences follow before any state is chosen.
 
+(For the exact status of (1), see the next section.)
+
 1. `N` is normally ordered. Pump vacuum fluctuations do not rectify. A Wigner
    sampling of the pump would need the `1/2` per mode subtracted; here it
    never appears.
@@ -83,6 +93,121 @@ Two consequences follow before any state is chosen.
    definite phase. This is the operator form of the parity rule in
    [[bsv-even-order-response-moment-scaling]], and it holds for any number of
    modes.
+
+## Exact Solution For A Multimode Pump
+
+Added 2026-11-19. Representation: operators, Heisenberg and Schroedinger
+pictures; no phase-space sampling. Pump envelope operator `a(tau)` in the
+frame moving with the pump group velocity, `tau = t - z/v_g`,
+`[a(tau), a^dagger(tau')] = delta(tau - tau')`. Photon flux
+`I(tau) = a^dagger(tau) a(tau)` (photons per second),
+`N(Omega) = integral dtau e^{i Omega tau} I(tau)` (dimensionless).
+
+Generator of propagation along `z` (interaction picture), with `kappa(Omega)`
+real, units `s^(1/2) m^-1`, and `Delta k = k_T(Omega) - Omega / v_g`:
+
+```text
+G(z) = hbar integral dOmega kappa [ e^{-i Delta k z} b^dagger(Omega) N(Omega) + h.c. ]   (E1)
+```
+
+Assumptions: (a) `kappa` and `Delta k` independent of pump frequency across
+the pump band, i.e. no pump group-velocity dispersion in the crystal; (b) one
+transverse mode; (c) no pump absorption; (d) no sum-frequency generation and
+no coupling among THz modes.
+
+The key fact is that the flux commutes with itself at different times:
+
+```text
+[I(tau), I(tau')] = 0,   so  [N(Omega), N(Omega')] = [N(Omega), N^dagger(Omega')] = 0     (E2)
+[G(z), G(z')] = 2 i hbar^2 integral dOmega kappa^2 sin[Delta k (z - z')] N^dagger N       (E3)
+```
+
+(E3) commutes with `G`, so the Magnus series ends at its second term:
+
+```text
+U     = exp(i Phi) D                                                                      (E4)
+D     = exp{ -i integral dOmega [ zeta b^dagger N + h.c. ] }
+zeta  = kappa L exp(-i Delta k L / 2) sinc(Delta k L / 2)          units s^(1/2)
+Phi   = - integral dOmega phi(Omega) N^dagger N
+phi   = kappa^2 [Delta k L - sin(Delta k L)] / Delta k^2            -> 0 at Delta k = 0
+```
+
+No expansion in the coupling. Consequences, for any pump state:
+
+```text
+b_out(Omega) = b_in(Omega) - i zeta(Omega) N(Omega)          exact, not first order       (E5)
+I_out(tau)   = I_in(tau)                                     flux conserved at each instant (E6)
+a_out(tau)   = exp[-i theta_tot(tau)] a_in(tau)              pump is only phase modulated (E7)
+theta_tot    = [F_in(tau) + F_out(tau)] / 2 + theta(tau)
+F(tau)       = integral dOmega [ zeta b^dagger e^{i Omega tau} + h.c. ]
+F_out - F_in = 2 integral dtau' S(tau' - tau) I(tau'),   S(x) = integral dOmega |zeta|^2 sin(Omega x)
+theta(tau)   = 2 integral dtau' V(tau - tau') I(tau') + V(0),   V(x) = integral dOmega phi cos(Omega x)
+```
+
+(E7) is the electro-optic effect: the pump is phase modulated by the THz
+field it travels with, the average of input (vacuum) and output (generated)
+fields for perfect phase matching, plus the cascaded Kerr phase `theta` for a
+mismatch. The pump energy drops by `hbar integral Omega |zeta|^2 <N^dagger N>`
+through a red shift; photon number and arrival times do not change.
+
+Correction 2026-11-19: a first version of (E7) had only `F_in + theta`. The
+flux-dependent part `integral S I` comes from `[F(tau'), F(tau)] = -2 i
+S(tau' - tau)` and is required by energy conservation. The numerical check
+below fails by 0.03 to 0.09 without it.
+
+THz state. The joint eigenstates of the flux are photon-arrival
+configurations `|tau_1 .. tau_n>` with `I(tau) = sum_i delta(tau - tau_i)`.
+On each, `D` displaces the THz vacuum to a coherent state, so for vacuum THz
+input
+
+```text
+rho_THz = sum_n integral d^n tau  p_n(tau_1..tau_n) |beta><beta|,
+beta(Omega) = -i zeta(Omega) sum_i e^{i Omega tau_i}                                      (E8)
+E_THz(t) = E_vac(t) + sum_i g(t - tau_i)                                                  (E9)
+```
+
+`p_n` is the outcome distribution of ideal time-resolved photon counting on
+the pump, and `g(t)` the THz transient per pump photon. This generalizes
+(10) below from the photon-number distribution of one mode to the
+arrival-time distribution of any pump. The THz Glauber-Sudarshan P function
+is non-negative for every pump state. (E9) is a filtered point process (Rice
+shot noise; from memory: S. O. Rice, Bell Syst. Tech. J. 23, 282 (1944), not
+ingested).
+
+Shot-noise identity. From the commutator,
+
+```text
+<I(tau) I(tau')> = <: I(tau) I(tau') :> + delta(tau - tau') <I(tau)>                      (E10)
+```
+
+The last term, filtered by `g`, is Campbell's theorem for (E9) and equals the
+"spontaneous" term (6d): spontaneous difference-frequency generation and
+rectified photon shot noise are the same thing.
+
+Closed-form spectrum for a Gaussian Schell-model pump (rms duration `T` of
+the mean intensity, `K_t` temporal modes, `K = K_s K_t` modes in total,
+bright limit, common squeezing phase):
+
+```text
+<N^dagger N> / Nbar^2 = exp(-Omega^2 T^2) + (2/K) exp(-Omega^2 T^2 / K_t^2) + 1/Nbar      (E11)
+mean/fluctuation crossover  Omega_x = (1/T) sqrt[ ln(K/2) / (1 - 1/K_t^2) ]   (K > 2)
+```
+
+Mean field, fluctuation (wider by `K_t`), shot noise. For 100 fs FWHM,
+`K = 10`, `K_t = 2`, `Nbar = 2.4e13`: crossover 5.5 THz; shot noise exceeds
+the fluctuation above about 40 THz. Implemented as
+`gaussian_schell_flux_spectrum` in `code/src/stochastic_em_theory/thz_waveform_noise.py`.
+
+What changes relative to the 2026-11-14 text:
+
+- (1) is exact in the coupling under assumptions (a) to (d). The THz
+  statistics do not need `N_THz << N_pump` or `B nbar << 1`.
+- The conversion strength enters only through the pump phase (E7). The
+  model fails when that phase modulation broadens the pump spectrum until
+  pump dispersion matters (the cascading limit analysed classically in
+  [[../sources/ravi-2014-thz-generation-optical-rectification]]).
+- The single-mode model below is the special case with one occupied mode and
+  scattering into empty modes dropped.
 
 ## Schmidt-Mode Form
 
@@ -281,6 +406,14 @@ negligible, the THz field resolves the pump photon number to
 quantum-limited photon-number readout would need `B nbar` of order one, that
 is, more THz photons than pump photons, which is the cascading regime.
 
+Correction 2026-11-19: with the matched THz mode `b_m = integral zeta^* b /
+sqrt(B)`, the displacement is `sqrt(B) n` and the vacuum variance of the
+measured quadrature is 1/2, so homodyne detection resolves `n` to
+`1 / (2 sqrt(B))`, half the value above. Shot-noise resolution needs
+`B nbar = 1/4`. For the user's source (`Nbar = 2.4e13`, `K = 10`) and an
+assumed 1 nJ at 2 THz: THz/pump photon ratio 3 %, `B Nbar = 0.026`,
+resolution about 3 times the pump shot noise.
+
 ## What Electro-Optic Sampling Returns
 
 Single-shot electro-optic sampling at delay `t_d` returns, per shot `j`,
@@ -356,15 +489,21 @@ numerical checks, and numbers:
 
 ## Validity
 
-Two small parameters control the classical description, not one: `1/nbar`
-and `B nbar`, which is about a third of the ratio of emitted THz photons to
-pump photons. This matches the scaling of the phase-space error with emitted
-photon number found for harmonics in
-[[../sources/gothelf-2026-limitations-of-approximative-phase-space-description]].
+Statement of 2026-11-14, superseded: "Two small parameters control the
+classical description, not one: `1/nbar` and `B nbar`."
+
+Corrected 2026-11-19: the classical description of the THz statistics is
+controlled by `1/nbar` alone. `B nbar` (about the ratio of emitted THz photons
+to pump photons, divided by `1 + 2/K`) controls the pump back-action (E7) and
+with it the validity of the flat-coupling assumption, not the THz statistics.
+The comparison with the scaling of the phase-space error with emitted photon
+number in
+[[../sources/gothelf-2026-limitations-of-approximative-phase-space-description]]
+therefore does not carry over.
 
 ```text
-N_THz << N_pump                    undepleted pump, first order
-B nbar << 1                        negligible back-action
+pump spectrum stays inside the band where kappa is flat   (replaces "N_THz << N_pump")
+B nbar << 1                        negligible pump back-action only
 Omega << mode bandwidth            for the counting statistics (8)
 one spatial mode                   otherwise K counts spatial modes too
 no absorption or two-photon loss   otherwise n is not conserved
@@ -399,13 +538,31 @@ is small; with a fluctuating pump it would also vary from shot to shot.
 - All in `code/tests/test_optical_rectification.py`; run in
   `results/runs/20261114-bsv-or-thz-statistics/`. Spec:
   [[../simulations/bsv-optical-rectification-thz-statistics]].
+- Added 2026-11-19, same test file. Frequency-ladder model
+  `H = g (b^dagger N + b N^dagger)`, `N = sum_j a_j^dagger a_{j+1}`, one THz
+  mode, two pump photons in a three-bin wave packet, full matrix exponential:
+  - (E5), (E6): `<b>`, `<b^dagger b>` and `<N>` agree with the exact relations
+    at `g t = 0.3` and `0.6` to better than 1e-6. In a finite ladder
+    `[N, N^dagger] = n_first - n_last`; residuals 3e-4, 1e-6, 3e-9 for 9, 13,
+    17 bins track the edge-bin population. A first-order relation would be
+    off by order `(g t)^2`.
+  - (E7): the output pump coherence `<a_j^dagger a_k>` from the closed-form
+    kernel agrees with the matrix exponential to 7e-10 (`g t = 0.3`) and 2e-7
+    (`g t = 0.6`); without the flux-dependent phase the difference is 0.03
+    and 0.09. The mean pump frequency drops by one bin per THz photon.
+  - (E11) against the discretized covariance:
+    `code/tests/test_thz_waveform_noise.py`.
+- Not checked numerically: (E4) with a phase mismatch (`Phi`, `theta`), which
+  needs a `z`-dependent generator; analytic only.
 
 ## Open Points
 
 - Derive `zeta(Omega)` and `g(t)` for a specific crystal with phase matching
   and absorption, and `c_kl(Omega)` for the measured Schmidt modes.
-- Second order in `kappa`: cascading and the Kerr-like phase, to fix where
-  first order fails for the planned pump energy.
+- Done 2026-11-19 for flat coupling: all orders in `kappa` (section "Exact
+  Solution For A Multimode Pump"). Still open: pump group-velocity dispersion
+  and absorption, which break (E2) to (E6); an independent re-derivation of
+  (E3) to (E8); a numerical check with `Delta k != 0`.
 - Spatial modes and focusing.
 - Find and ingest the cavity electro-optics papers for the Hamiltonian, the
   THz parametric down-conversion literature for the spontaneous term, and

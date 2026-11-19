@@ -25,7 +25,8 @@ python3 -m pip install -e ".[dev]"
 python3 -m pytest
 ```
 
-Python 3.11 or newer. The suite has 87 tests and runs in about ten seconds.
+Python 3.11 or newer. The suite has 94 tests and runs in under a minute; most
+of that is three matrix-exponential checks of the optical-rectification model.
 
 ## What is where
 
@@ -38,8 +39,8 @@ Python 3.11 or newer. The suite has 87 tests and runs in about ten seconds.
 | `tdse1d.py` | 1D soft-core split-operator TDSE, dipole-acceleration spectrum | physics model; see convergence caveats in the run index |
 | `fig3b.py`, `fig_iv2.py` | Gorlach 2023 Fig. 3b and supplementary Fig. IV.2 reproductions | TDSE amplitude library plus interpolation; not converged |
 | `hhg_proxy.py`, `ensemble.py` | Smooth cutoff-law HHG proxy and labelled ensemble runner | pipeline development only, not physics |
-| `optical_rectification.py` | THz field statistics for optical rectification of BSV: exact photon-number cumulants, Wick decomposition of the photon-flux spectrum, bright-limit formulas, classical-noise sampler | exact within the first-order model; Fock-space cross-check in the tests |
-| `thz_waveform_noise.py` | Shot-to-shot noise of the rectified THz waveform against delay for a multimode pump: Gaussian Schell-model sampler, exact variance, moment coefficients, template fit | exact formula checked against sampling; model THz response |
+| `optical_rectification.py` | THz field statistics for optical rectification of BSV: exact photon-number cumulants, Wick decomposition of the photon-flux spectrum, bright-limit formulas, classical-noise sampler | exact for flat coupling and no pump dispersion (all orders in the coupling); Fock-space and matrix-exponential cross-checks in the tests |
+| `thz_waveform_noise.py` | Shot-to-shot noise of the rectified THz waveform against delay for a multimode pump: Gaussian Schell-model sampler, exact variance, moment coefficients, template fit, closed-form flux spectrum | exact formula checked against sampling; model THz response |
 | `ati.py`, `ionization.py` | ADK-like ionization-rate proxy under coherent, thermal, BSV statistics | proxy, not a qSFA solver |
 | `emission_environment.py` | Wang 2024 squeezed emitted-mode `mu_k(t)` toy model | toy; result is analytic |
 | `claim_ladder.py`, `mechanisms.py`, `shot_records.py`, `io.py`, `plotting.py`, `cli.py` | Labels, per-shot records, manifests, plots, CLI | infrastructure |
@@ -56,6 +57,7 @@ Python 3.11 or newer. The suite has 87 tests and runs in about ten seconds.
 | `uv run python scripts/run_thz_waveform_noise.py` | `results/runs/20261114-thz-waveform-noise-against-delay/` |
 | `uv run python scripts/audit_fig_iv2_library_convergence.py` | `results/runs/20261114-fig-iv2-library-convergence-audit/` (about seven minutes on four cores) |
 | `uv run python scripts/check_thz_two_color_parity.py` | `results/runs/20261114-thz-two-color-parity-check/` |
+| `uv run python scripts/make_theory_note_figures.py` | `paper/theory-note/figures/` (three figures of the theory note and their manifest) |
 
 Every run writes a `manifest.yaml` with the commit hash, seed, parameters, and
 entry point. Add each new run to `../results/runs/README.md`.
