@@ -13,6 +13,7 @@ and checks are recorded in
 | --- | --- |
 | `theory-note.tex` | manuscript source |
 | `theory-note.pdf` | compiled draft |
+| `derivation.tex`, `derivation.pdf` | step-by-step derivation of the exact solution from the Hamiltonian (9 pages, one column): fields, interaction Hamiltonian with the explicit coupling constant, the two commutators, input-output relation, evolution operator, pump transformation, THz state, check against the classical formula, list of assumptions and checks |
 | `refs.bib` | bibliography |
 | `figures/` | three vector figures and `manifest.yaml` (commit, seed, parameters, quoted values) |
 
@@ -60,9 +61,19 @@ Physics:
 - The derivation is this project's own and has not been re-derived
   independently. Checked numerically: the input-output relation and flux
   conservation beyond first order, the pump phase-modulation relation at
-  perfect phase matching, the four-term second moment, the cumulants, the
-  closed-form spectrum. Not checked numerically: the phase operator for a
-  phase mismatch (Appendix A), which is analytic only.
+  perfect phase matching, the evolution operator with a phase mismatch
+  (added 2026-11-19 with the derivation), the four-term second moment, the
+  cumulants, the closed-form spectrum. The coupling constant is checked
+  analytically against the classical rectification formula. The numerical
+  model has one THz mode, so integrals over the THz frequency are not tested.
+- Ordering: the Hamiltonian ordered in time and the generator ordered in `z`
+  give the same displacement operator and differ in the kernel of the flux
+  phase by a term local in time (an instantaneous Kerr-type phase). Shown
+  analytically for a dispersionless THz index only; see `derivation.pdf`,
+  Sec. VI B. It affects the pump phase, not the THz field.
+- The field normalization is evaluated at the carrier frequency; keeping its
+  frequency dependence gives corrections of relative order `Omega/omega_0`
+  to the commutation of the flux, about one percent.
 - The THz response `g(t)` in Fig. 3 is a model (derivative of a Gaussian,
   rms 150 fs), not a DAST generation response or a ZnTe detection response.
   Section VI gives statistics in units of the mean field for that reason; no
@@ -80,7 +91,9 @@ References:
 
 - Entered from memory, not checked against the publication: Blow et al. 1990,
   Blanes et al. 2009, Rice 1944, Iskhakov et al. 2012 (journal reference
-  missing). These print "[to be checked]" in the reference list.
+  missing). These print "[to be checked]" in the reference list. In
+  `derivation.pdf` all five references are from memory and marked so
+  (Blow 1990, Quesada and Sipe 2017, Blanes 2009, Glauber 1963, Caumes 2002).
 - Volume and page missing: Rasputnyi et al. 2024, Heimerl et al. 2025, Racz
   et al. (DOI from arXiv metadata).
 - Gothelf et al. 2026 journal reference was supplied with the ingest request
@@ -101,7 +114,7 @@ Form:
   part is required by energy conservation and confirmed numerically.
 - Shots needed to resolve the third cumulant: the estimate used in the wiki
   since 2026-11-14 kept only the Gaussian part of the sampling variance. The
-  full expression is Eq. (33) of the note; for `K = 10` at `5 sigma` it is
+  full expression is Eq. (34) of the note; for `K = 10` at `5 sigma` it is
   900 shots without detection noise, not about 200.
 - Photon-number resolution by the THz field is `1/(2 sqrt(B_T))`, not
   `1/sqrt(B_T)`.

@@ -646,3 +646,32 @@ Append-only chronological record. New entries should use:
   (`paper/theory-note/theory-note.tex`).
 - Source check: the sideband classification in cavity electro-optics was read
   from the arXiv abstracts of Tsang 2010 and 2011, not from the papers.
+
+## [2026-11-19] query | Exact Solution Derived From The Hamiltonian
+
+- Request from the author: derive the exact solution from the Hamiltonian.
+- Written: `paper/theory-note/derivation.tex` and PDF (9 pages), each step
+  marked as identity or approximation. Starting point: interaction energy
+  `-integral P_OR E_T dV` with continuum field operators; result (E12), (E13)
+  on [[theory/quantum-optical-rectification-of-bsv]].
+- New in the derivation: the explicit coupling constant
+  `kappa = (chi2 omega_0 / (n_o c)) sqrt[hbar Omega / (4 pi eps0 c n_T A)]`,
+  checked against the classical rectification formula (magnitude and phase);
+  a two-line Heisenberg derivation of `b_out = b_in - i zeta N`; the same
+  result from the classical-source (driven-oscillator) argument in each
+  photon-arrival sector.
+- Finding recorded: time ordering of `H_int(t)` and `z` ordering of `G(z)`
+  give the same displacement operator; the kernel of the flux phase differs
+  by a term local in time (instantaneous Kerr type), shown for a
+  dispersionless THz index. The note's results for the THz field do not
+  depend on it.
+- Limitation recorded: the field normalization at the carrier is needed for
+  the flux to commute with itself; corrections are of order
+  `Omega / omega_0`.
+- Test added: evolution operator with a phase mismatch against the exact
+  `z`-ordered evolution (closes the open item of the same day). Suite: 95
+  passed.
+- The note gained the explicit `kappa` (Sec. II A), a derivation of the
+  generator and the ordering remark (Appendix A), and the mismatch check
+  (Appendix E).
+- All five references of the derivation are from memory and marked so.

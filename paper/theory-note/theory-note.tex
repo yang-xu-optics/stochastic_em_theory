@@ -1,6 +1,6 @@
 % Theory note, Physical Review A style (REVTeX 4.2).
 % Draft of 2026-11-19. Status and open items: see README.md in this folder.
-\documentclass[aps,pra,reprint,superscriptaddress,amsmath,amssymb]{revtex4-2}
+\documentclass[aps,pra,reprint,superscriptaddress,amsmath,amssymb,floatfix]{revtex4-2}
 
 \usepackage{graphicx}
 \usepackage{bm}
@@ -159,8 +159,16 @@ interaction picture is
 \end{equation}
 with $\Delta k(\Omega)=k_T(\Omega)-\Omega/v_g$ the mismatch between the THz
 wave number and the pump group delay, and $\kappa(\Omega)$ a real coupling per
-unit length (units $\mathrm{s}^{1/2}\,\mathrm{m}^{-1}$) that contains the
-effective nonlinearity and the field normalizations. The assumptions are:
+unit length (units $\mathrm{s}^{1/2}\,\mathrm{m}^{-1}$). For plane waves over
+an area $A$ (Appendix~\ref{app:magnus}),
+\begin{equation}
+\kappa(\Omega)=\frac{\chi^{(2)}\omega_0}{n_oc}
+\left[\frac{\hbar\Omega}{4\pi\varepsilon_0c\,n_T(\Omega)A}\right]^{1/2},
+\label{eq:kappa}
+\end{equation}
+with $\omega_0$ the carrier frequency of the pump, $n_o$ and $n_T$ the optical
+and THz refractive indices, and $\chi^{(2)}$ the susceptibility for
+rectification. The assumptions are:
 (a) $\kappa$ and $\Delta k$ do not depend on the pump frequency across the
 pump band, which neglects pump group-velocity dispersion within the crystal;
 (b) one transverse mode; (c) no pump absorption; (d) no sum-frequency
@@ -418,6 +426,20 @@ occupied or not. We verified Eq.~\eqref{eq:four} against an explicit
 Fock-space calculation for two squeezed modes with a random complex overlap
 matrix.
 
+\begin{figure*}
+\includegraphics[width=\textwidth]{figures/fig_statistics.pdf}
+\caption{(a) Probability density of the single-shot THz field in the bright
+limit for $K=1$, $2$, and $10$ pump modes (gamma distributions of shape
+$K/2$). The dotted curve is a Gaussian with the mean and variance of the
+$K=10$ case; it puts $1.3\%$ of shots at negative field, where the exact
+distribution has none. (b) Relative error of the mean THz energy for one
+squeezed mode in two approximate descriptions of the pump, against the exact
+value $3\nbar^2+2\nbar$: the Husimi-$Q$ weighted mixture of coherent drivers
+overestimates it and the classical Gaussian-noise model underestimates it.
+Dotted lines are the asymptotes $4/(3\nbar)$ and $2/(3\nbar)$.}
+\label{fig:stats}
+\end{figure*}
+
 \subsection{Counting statistics in the detection band}
 
 When the detected THz frequencies are small compared with the inverse
@@ -443,7 +465,7 @@ $\langle\hat n^4\rangle=105\nbar^4+180\nbar^3+84\nbar^2+8\nbar$. Cumulants of
 independent modes add. Table~\ref{tab:stats} collects the resulting
 statistics of the THz field and of the THz pulse energy $U\propto E_T^2$.
 
-\begin{table}[b]
+\begin{table}[tb]
 \caption{Statistics of the single-shot THz field $E$ and energy $U$ in the
 detection band. ``Coherent'' is a coherent pump with the same mean photon
 number. The last column is the bright limit for $K$ equally populated modes.}
@@ -489,20 +511,6 @@ so the cumulants of the single-shot THz field measure the power sums of the
 Schmidt spectrum. Two sources with the same $g^{(2)}$ but different mode
 weights are distinguished by the skewness of the THz field: for $K=10$ it is
 $0.89$ for equal weights and $1.19$ for geometrically decreasing weights.
-
-\begin{figure*}
-\includegraphics[width=\textwidth]{figures/fig_statistics.pdf}
-\caption{(a) Probability density of the single-shot THz field in the bright
-limit for $K=1$, $2$, and $10$ pump modes (gamma distributions of shape
-$K/2$). The dotted curve is a Gaussian with the mean and variance of the
-$K=10$ case; it puts $1.3\%$ of shots at negative field, where the exact
-distribution has none. (b) Relative error of the mean THz energy for one
-squeezed mode in two approximate descriptions of the pump, against the exact
-value $3\nbar^2+2\nbar$: the Husimi-$Q$ weighted mixture of coherent drivers
-overestimates it and the classical Gaussian-noise model underestimates it.
-Dotted lines are the asymptotes $4/(3\nbar)$ and $2/(3\nbar)$.}
-\label{fig:stats}
-\end{figure*}
 
 \subsection{Rectification integrates; harmonic generation does not}
 
@@ -835,7 +843,34 @@ existing sources.
 \section{Magnus expansion and the phase operator}
 \label{app:magnus}
 
-For $\partial_z\hat U=-(\ii/\hbar)\hat G(z)\hat U$ the first two Magnus terms
+\emph{Generator.} With continuum operators for a beam of area $A$
+\cite{blow1990}, and a phase convention for $\hat b$ that makes $\kappa$ real,
+the THz field in the crystal is
+$\hat E_T=-\int\!\dd\Omega\,s(\Omega)[\hat b(\Omega)\ee^{\ii(k_Tz-\Omega t)}
++\mathrm{H.c.}]$ with $s=[\hbar\Omega/(4\pi\varepsilon_0cn_TA)]^{1/2}$. The
+rectified polarization of the pump is
+$\hat P_{\rm OR}=2\varepsilon_0\chi^{(2)}\hat E_o^{(-)}\hat E_o^{(+)}
+=\chi^{(2)}\hbar\omega_0\,\Iop(\tau)/(n_ocA)$, and the interaction energy
+$-A\int_0^L\!\dd z\,\hat P_{\rm OR}\hat E_T$ gives the Hamiltonian in the
+interaction picture,
+\begin{equation}
+\hat H_{\rm int}(t)=\hbar\!\int_0^L\!\!\dd z\!\int_0^\infty\!\!\dd\Omega\,
+\kappa\,\Iop\!\left(t-\frac{z}{v_g}\right)
+\big[\hat b\,\ee^{\ii(k_Tz-\Omega t)}+\mathrm{H.c.}\big],
+\label{eq:Hint}
+\end{equation}
+with $\kappa$ of Eq.~\eqref{eq:kappa}. Its time integral is
+$\int\!\dd t\,\hat H_{\rm int}=\int_0^L\!\dd z\,\hat G(z)$. With this $\kappa$
+the mean of Eq.~\eqref{eq:inout} coincides, in magnitude and phase, with the
+classical solution of the THz wave equation driven by $P_{\rm OR}$. The
+Heisenberg equation that follows from Eq.~\eqref{eq:Hint},
+$\partial_t\hat b(\Omega)=-\ii\kappa\int_0^L\!\dd z\,\Iop(t-z/v_g)\,
+\ee^{-\ii(k_Tz-\Omega t)}$, has a source that is a constant of the motion by
+Eq.~\eqref{eq:commute}, and it integrates to Eq.~\eqref{eq:inout} without
+approximation.
+
+\emph{Evolution operator.} For
+$\partial_z\hat U=-(\ii/\hbar)\hat G(z)\hat U$ the first two Magnus terms
 are $\Omega_1=-(\ii/\hbar)\int_0^L\!\dd z\,\hat G(z)$ and
 $\Omega_2=-(2\hbar^2)^{-1}\int_0^L\!\dd z\int_0^z\!\dd z'\,[\hat G(z),\hat
 G(z')]$. All higher terms are nested commutators of $\Omega_2$-type
@@ -852,7 +887,12 @@ which vanishes as $\kappa^2\Delta kL^3/6$ for $\Delta k\to0$. In the time
 domain $\hat\Phi=-\iint\!\dd\tau\,\dd\tau'\,V(\tau-\tau')\Iop(\tau)\Iop(\tau')$
 with $V(\tau)=\int_0^\infty\!\dd\Omega\,\varphi(\Omega)\cos\Omega\tau$: an
 effective Kerr interaction mediated by the THz field, the quantum form of
-cascaded rectification and electro-optic modulation.
+cascaded rectification and electro-optic modulation. Ordering the evolution
+in time with $\hat H_{\rm int}(t)$, instead of in $z$ with $\hat G(z)$, gives
+the same $\Omega_1$ and hence the same $\hat D$. It changes $V$ by a term
+local in $\tau$, an instantaneous Kerr-type phase proportional to
+$L\int\!\dd\tau\,\Iop(\tau)^2$, which a forward-wave model does not determine.
+That term affects only the phase $\hat\theta$ of the pump.
 
 For the pump we write $\hat D=\exp[-\ii\!\int\!\dd\tau'\,\Iop(\tau')\hat
 F_{\rm in}(\tau')]$ and use
@@ -971,6 +1011,14 @@ Leaving out the flux-dependent part of the phase, that is, using
 $\hat F_{\rm in}$ in place of
 $\tfrac12(\hat F_{\rm in}+\hat F_{\rm out})$, changes the result by $0.03$ and
 $0.09$.
+
+Finally we tested Eq.~\eqref{eq:U} with a phase mismatch, for the generator
+$g(\ee^{-\ii\Delta kz}\hat b^\dagger\Nop+\mathrm{H.c.})$ with $gL=0.6$ and
+$\Delta kL=2.4$, for which $|\zeta|=0.47$ and $\varphi=0.11$. The state
+$\ee^{\ii\hat\Phi}\hat D|\psi\rangle$ differs in norm from the exact
+$z$-ordered evolution by $1\times10^{-4}$, $2\times10^{-5}$, and
+$4\times10^{-6}$ for $D=13$, $15$, and $17$, and by $0.30$ when $\hat\Phi$ is
+left out.
 
 \bibliography{refs}
 

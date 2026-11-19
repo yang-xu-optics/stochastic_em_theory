@@ -198,6 +198,39 @@ Mean field, fluctuation (wider by `K_t`), shot noise. For 100 fs FWHM,
 the fluctuation above about 40 THz. Implemented as
 `gaussian_schell_flux_spectrum` in `code/src/stochastic_em_theory/thz_waveform_noise.py`.
 
+Derivation from the Hamiltonian (added 2026-11-19, on the author's request;
+step by step in `paper/theory-note/derivation.pdf`). One transverse mode of
+area `A`, plane waves, field normalization at the carrier `omega_0`,
+`chi2 = chi^(2)(Omega; omega_0, -omega_0)`, optical and THz indices `n_o`,
+`n_T`:
+
+```text
+E_T(z,t)   = - integral dOmega s(Omega) [ b e^{i(k_T z - Omega t)} + h.c. ],
+             s = sqrt[ hbar Omega / (4 pi eps0 c n_T A) ]            (phase of b chosen so that kappa is real)
+P_OR(z,t)  = 2 eps0 chi2 E_o^(-) E_o^(+) = chi2 hbar omega_0 I(t - z/v_g) / (n_o c A)
+H_int(t)   = - A integral_0^L dz P_OR E_T
+           = hbar integral dz integral dOmega kappa I(t - z/v_g) [ b e^{i(k_T z - Omega t)} + h.c. ]   (E12)
+kappa      = (chi2 omega_0 / (n_o c)) sqrt[ hbar Omega / (4 pi eps0 c n_T A) ]     units s^(1/2) m^-1     (E13)
+integral dt H_int(t) = integral dz G(z)                               G(z) as in (E1)
+d b(Omega)/dt = -i kappa integral dz I(t - z/v_g) e^{-i(k_T z - Omega t)}   source conserved -> (E5)
+```
+
+- (E13) is checked analytically: the mean of (E5) equals the classical
+  solution of the slowly varying THz wave equation driven by `P_OR`, in
+  magnitude and phase.
+- `|chi2| = n_o^4 r / 2` with `r` the electro-optic coefficient (standard
+  relation, not taken from a source in `raw/`).
+- Ordering: the Magnus series ends at second order for the time-ordered
+  `H_int(t)` as well. The first term, hence `D`, is the same. The kernel of
+  `Phi` becomes `W(x) = (1/2) double-integral dz dz' sgn(x + (z - z')/v_g)
+  integral dOmega kappa^2 sin[Delta k (z - z') - Omega x]` in place of `V`;
+  for a dispersionless THz index and `kappa^2 = c_k Omega`,
+  `W - V = -pi c_k (c L / n_T) delta(x)`: an instantaneous Kerr-type phase
+  proportional to `L integral I(tau)^2`, which a forward-wave model does not
+  fix. It enters `theta` only.
+- The normalization at the carrier is needed for (E2); keeping the frequency
+  dependence gives corrections of relative order `Omega / omega_0`.
+
 What changes relative to the 2026-11-14 text:
 
 - (1) is exact in the coupling under assumptions (a) to (d). The THz
@@ -616,8 +649,13 @@ is small; with a fluctuating pump it would also vary from shot to shot.
     and 0.09. The mean pump frequency drops by one bin per THz photon.
   - (E11) against the discretized covariance:
     `code/tests/test_thz_waveform_noise.py`.
-- Not checked numerically: (E4) with a phase mismatch (`Phi`, `theta`), which
-  needs a `z`-dependent generator; analytic only.
+- (E4) with a phase mismatch, added 2026-11-19 with the derivation:
+  `G(z) = g (e^{-i dk z} b^dagger N + h.c.)`, `g L = 0.6`, `dk L = 2.4`
+  (`abs(zeta) = 0.47`, `phi = 0.11`). The state `exp(i Phi) D psi` differs in
+  norm from the exact `z`-ordered evolution by 1e-4, 2e-5, 4e-6 for 13, 15,
+  17 bins, and by 0.30 without `Phi`.
+- Not checked numerically: the time-ordered kernel `W` and its relation to
+  `V`; integrals over the THz frequency (the model has one THz mode).
 
 ## Open Points
 
@@ -626,7 +664,8 @@ is small; with a fluctuating pump it would also vary from shot to shot.
 - Done 2026-11-19 for flat coupling: all orders in `kappa` (section "Exact
   Solution For A Multimode Pump"). Still open: pump group-velocity dispersion
   and absorption, which break (E2) to (E6); an independent re-derivation of
-  (E3) to (E8); a numerical check with `Delta k != 0`.
+  (E3) to (E8). The numerical check with `Delta k != 0` was done on
+  2026-11-19.
 - Spatial modes and focusing.
 - Find and ingest the cavity electro-optics papers for the Hamiltonian, the
   THz parametric down-conversion literature for the spontaneous term, and

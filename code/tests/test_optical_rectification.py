@@ -339,3 +339,58 @@ def test_pump_is_phase_modulated_by_the_mean_of_input_and_output_thz_fields(
         np.sum([j * 2.0 * abs(value) ** 2 for j, value in weights.items()])
     )
     assert shift == pytest.approx(-thz_photons, abs=1e-9)
+
+
+def test_evolution_with_phase_mismatch_is_displacement_times_flux_phase() -> None:
+    """U = exp(i Phi) D for a z-dependent generator, same ladder model.
+
+    G(z) = g (exp(-i dk z) b^dagger N + h.c.); the z-ordered evolution is
+    computed exactly as exp(i H0 L) exp(-i (H0 + V) L) with H0 = -dk b^dagger b.
+    Prediction: D = exp{-i (zeta b^dagger N + h.c.)},
+    zeta = g L exp(-i dk L / 2) sinc(dk L / 2), and Phi = -phi N^dagger N,
+    phi = g^2 (dk L - sin dk L) / dk^2. The state-vector distance is 2e-5 for
+    15 bins (1e-4 for 13, 4e-6 for 17: the ladder edge again) and 0.30 when
+    the flux phase Phi is left out.
+    """
+
+    from scipy.linalg import expm
+
+    coupling, length, mismatch, bins, thz_cutoff = 1.0, 0.6, 4.0, 15, 26
+    basis = _pump_ladder_basis(bins, 2)
+    index = {state: k for k, state in enumerate(basis)}
+    flux = np.zeros((len(basis), len(basis)))
+    for state, column in index.items():
+        for j in range(bins - 1):
+            if state[j + 1] == 0:
+                continue
+            moved = list(state)
+            amplitude = np.sqrt(state[j + 1] * (state[j] + 1))
+            moved[j + 1] -= 1
+            moved[j] += 1
+            flux[index[tuple(moved)], column] += amplitude
+
+    centre = bins // 2
+    weights = {centre - 1: 0.5, centre: 1.0, centre + 1: 0.5j}
+    pump = np.zeros(len(basis), dtype=np.complex128)
+    for state, k in index.items():
+        occupied = [j for j, n in enumerate(state) for _ in range(n)]
+        if all(j in weights for j in occupied):
+            pump[k] = weights[occupied[0]] * weights[occupied[1]] * (1.0 if occupied[0] == occupied[1] else np.sqrt(2.0))
+    pump /= np.linalg.norm(pump)
+
+    b = _ladder(thz_cutoff)
+    interaction = coupling * (np.kron(flux, b.T) + np.kron(flux.T, b))
+    free = -mismatch * np.kron(np.eye(len(basis)), b.T @ b)
+    vacuum = np.zeros(thz_cutoff)
+    vacuum[0] = 1.0
+    state_in = np.kron(pump, vacuum)
+    exact = expm(1j * free * length) @ (expm(-1j * (free + interaction) * length) @ state_in)
+
+    half = 0.5 * mismatch * length
+    zeta = coupling * length * np.exp(-1j * half) * np.sin(half) / half
+    phi = coupling**2 * (mismatch * length - np.sin(mismatch * length)) / mismatch**2
+    displaced = expm(-1j * (zeta * np.kron(flux, b.T) + np.conj(zeta) * np.kron(flux.T, b))) @ state_in
+    flux_phase = expm(-1j * phi * np.kron(flux.T @ flux, np.eye(thz_cutoff)))
+
+    assert np.linalg.norm(exact - flux_phase @ displaced) < 1e-4
+    assert np.linalg.norm(exact - displaced) > 0.1
