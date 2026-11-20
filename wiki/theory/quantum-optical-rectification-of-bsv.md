@@ -232,6 +232,29 @@ d b(Omega)/dt = -i kappa integral dz I(t - z/v_g) e^{-i(k_T z - Omega t)}   sour
 - The normalization at the carrier is needed for (E2); keeping the frequency
   dependence gives corrections of relative order `Omega / omega_0`.
 
+Order of presentation, changed 2026-11-20 on the author's advice. The
+note (Sec. II) and `paper/theory-note/derivation-exact-solution.pdf` now go:
+Hamiltonian, Heisenberg equations of motion, their solution, evolution
+operator. Schroedinger picture, `H = H_0 + H_int`,
+`H_int = hbar integral_0^L dz I(-z/v_g) Theta(z)`,
+`Theta(z) = integral dOmega kappa [b e^{i k_T z} + h.c.]`:
+
+```text
+d I_H(tau,t)/dt = d I_H/d tau                                   flux: rigid translation, I_H = I(tau + t)   (E14)
+d b_H(Omega,t)/dt = -i Omega b_H - i kappa integral dz I(t - z/v_g) e^{-i k_T z}    linear, source known        (E15)
+d a(tau,t)/dt = -i v_g Theta_H(z,t) a(tau,t),  z = v_g (t - tau) inside the crystal   electro-optic effect     (E16)
+theta_tot(tau) = integral_0^L dz Theta_H(z, tau + z/v_g) + V(0)      THz field along the path of the slice    (E17)
+              = F_in + integral S(tau'-tau) I(tau') dtau' + 2 integral W(tau-tau') I(tau') dtau' + W(0)
+```
+
+(E15) integrates to (E5) because its source does not evolve; (E16) with the
+retarded response of the THz field to the flux gives (E7) with the
+time-ordered kernel `W` of the ordering remark above. The step function of
+the retarded response splits as 1/2 + (1/2) sgn: the constant half gives the
+term with `S`, which is half the generated field, and the sign half gives
+`W`. The evolution operator (E4) follows by the Magnus expansion in time, or
+is verified by differentiation, and reproduces the three solutions.
+
 What changes relative to the 2026-11-14 text:
 
 - (1) is exact in the coupling under assumptions (a) to (d). The THz

@@ -1,7 +1,7 @@
 # Theory Note: Quantum Theory Of Optical Rectification With A Quantized Pump
 
 Draft of 2026-11-19, Physical Review A style (REVTeX 4.2, two columns,
-11 pages, 3 figures, 1 table, 37 references). Written at the author's
+12 pages, 3 figures, 1 table, 37 references). Written at the author's
 request as the theory paper that precedes the experimental one; the framing
 follows [../theory-paper-outline.md](../theory-paper-outline.md). Derivations
 and checks are recorded in
@@ -14,7 +14,7 @@ and checks are recorded in
 | `theory-note.tex` | manuscript source |
 | `theory-note.pdf` | compiled draft |
 | `derivation.tex`, `derivation.pdf` | step-by-step derivation of the exact solution from the Hamiltonian (10 pages, one column): fields, interaction Hamiltonian with the explicit coupling constant, the two commutators, input-output relation, evolution operator, pump transformation, THz state, check against the classical formula, list of assumptions and checks |
-| `derivation-eq7-14.tex`, `derivation-eq7-14.pdf` | detailed derivation of Eqs. (7) to (14) of the note (evolution operator, output THz field, flux conservation, pump phase modulation), every step written out (13 pages, one column). Equation numbers refer to the note as of 2026-11-19, commit b27e52b. Adds three checks that are not in the note: commutators of the output operators, energy balance, one pump photon |
+| `derivation-exact-solution.tex`, `derivation-exact-solution.pdf` | detailed derivation of the exact solution, Sec. II B of the note, in the order Hamiltonian, Heisenberg equations of motion, their solution, evolution operator (15 pages, one column). Target equations carry the note's numbers of 2026-11-20, (6) to (15); in the version of 2026-11-19 the same results were Eqs. (7) to (14), and the file was called `derivation-eq7-14`. Adds checks that are not in the note: commutators of the output operators, energy balance, one pump photon |
 | `refs.bib` | bibliography |
 | `figures/` | three vector figures and `manifest.yaml` (commit, seed, parameters, quoted values) |
 
@@ -117,6 +117,21 @@ Form:
 
 ## Corrections Made While Writing
 
+- Order of the derivation (2026-11-20, on the author's advice): Sec. II of
+  the note and the detailed derivation now start from the Hamiltonian,
+  construct the Heisenberg equations of motion of the flux, the THz operator
+  and the pump operator, and solve them; the evolution operator comes last.
+  Before, they started from the generator of propagation in `z` and the
+  Magnus expansion. Equation numbers changed: the block that was (7) to (14)
+  is now (6) to (15); everything after Sec. II B moved up by one.
+- Consequence of working with the time-ordered Hamiltonian: the pump phase is
+  the THz field integrated along the path of the slice, and the
+  flux-dependent remainder has the kernel `W` (time ordering) in place of
+  `V` (ordering in `z`). The statement "for perfect phase matching the phase
+  is the average of the input and output fields" now carries the qualifier
+  "up to an instantaneous Kerr-type term that the model does not determine".
+  The THz field and the flux are unaffected.
+
 - Novelty of the exact solution (2026-11-19, after a prior-art search): the
   first draft presented the exact solvability as new and credited only the
   single-mode optomechanical model. The mechanism is known from the quantum
@@ -130,7 +145,7 @@ Form:
   part is required by energy conservation and confirmed numerically.
 - Shots needed to resolve the third cumulant: the estimate used in the wiki
   since 2026-11-14 kept only the Gaussian part of the sampling variance. The
-  full expression is Eq. (34) of the note; for `K = 10` at `5 sigma` it is
+  full expression is Eq. (35) of the note; for `K = 10` at `5 sigma` it is
   900 shots without detection noise, not about 200.
 - Photon-number resolution by the THz field is `1/(2 sqrt(B_T))`, not
   `1/sqrt(B_T)`.

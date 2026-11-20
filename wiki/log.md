@@ -749,3 +749,37 @@ Append-only chronological record. New entries should use:
   photons on average whatever its duration.
 - No new numerical work; the note lists the four existing tests against the
   equations they check.
+
+## [2026-11-20] paper | Derivation Reordered: Hamiltonian, Equations Of Motion, Heisenberg Solution
+
+- Advice from the author: start with the Hamiltonian, construct the equation
+  of motion of the THz field operator, solve it in the Heisenberg picture;
+  update the derivation if necessary.
+- Changed, theory note (`paper/theory-note/theory-note.tex`): Sec. II A now
+  states the interaction Hamiltonian `H_int(t)` (Eq. 3) in place of the
+  generator of propagation in `z`. Sec. II B is "Equations of motion and
+  exact solution": flux conserved (6); Heisenberg equation of the THz
+  operator (7) and its solution (8), (9); Heisenberg equation of the pump
+  operator (10) and its solution (11) to (13); evolution operator last (14),
+  (15). Appendix A rewritten: Hamiltonian, phase of the pump, evolution
+  operator, propagation picture. Equation numbers after Sec. II B moved up
+  by one; the shot-count formula is now Eq. (35).
+- Changed, detailed derivation: rewritten in the same order and renamed
+  from `derivation-eq7-14` to `derivation-exact-solution` (15 pages). It
+  starts from `H = H_0 + H_int` in the Schroedinger picture and derives the
+  three Heisenberg equations (flux, THz operator, pump operator), solves them
+  in turn, and constructs the evolution operator at the end. Target
+  equations are tagged with the note's new numbers; a table maps them to the
+  numbers of 2026-11-19.
+- New statement obtained on the way: the phase of the pump is the THz field
+  integrated along the path of the slice through the crystal, plus a
+  constant; recorded as (E17) on
+  [[theory/quantum-optical-rectification-of-bsv]].
+- Qualification now explicit in the note: with the time-ordered Hamiltonian
+  the remainder of the pump phase has the kernel `W`, not `V`; at perfect
+  phase matching the phase is the average of input and output fields up to
+  an instantaneous Kerr-type term that the model does not determine. The
+  numerical test of the phase-mismatched evolution operator is for the
+  propagation picture (kernel `V`).
+- No change to the THz results, the statistics, the figures, or the tests
+  (95 passed, unchanged).

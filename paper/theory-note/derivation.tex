@@ -17,7 +17,8 @@
 
 \title{Optical rectification with a quantized pump:\\
 derivation of the exact solution from the Hamiltonian}
-\author{Working notes to accompany the theory note, 19 November 2026}
+\author{Working notes to accompany the theory note, 19 November 2026
+(cross-references updated 20 November)}
 \noaffiliation
 
 \begin{abstract}
@@ -165,7 +166,7 @@ electro-optic coefficient by $|\chi^{(2)}|=n_o^4r/2$; it is taken independent
 of the optical frequency across the pump band (A5). Assumptions (A2) and (A5)
 together are the ``flat coupling'' of the note.
 
-\emph{Relation to the generator of the note.} Integrating
+\emph{Relation to the generator of the propagation picture.} Integrating
 Eq.~\eqref{eq:Hint} over time with
 $\int\dd t\,\Iop(t-z/v_g)\,\ee^{-\ii\Omega t}
 =\ee^{-\ii\Omega z/v_g}\Nop^\dagger(\Omega)$ gives
@@ -176,8 +177,9 @@ $\int\dd t\,\Iop(t-z/v_g)\,\ee^{-\ii\Omega t}
 \Big[\ee^{-\ii\Delta k\,z}\,\hat b^\dagger(\Omega)\Nop(\Omega)+\mathrm{H.c.}\Big],
 \label{eq:G}
 \end{equation}
-with $\Delta k(\Omega)=k_T(\Omega)-\Omega/v_g$. $\hat G(z)$ is Eq.~(3) of the
-note. The time integral selects the energy-conserving combinations
+with $\Delta k(\Omega)=k_T(\Omega)-\Omega/v_g$. Equation~\eqref{eq:Hint} is
+Eq.~(3) of the theory note, and $\hat G(z)$ is Eq.~(A6) of its Appendix~A
+(numbers of the version of 20 November 2026). The time integral selects the energy-conserving combinations
 $\hat b^\dagger\Nop$ (a pump photon is shifted down by $\Omega$ and a THz
 photon is created) and $\hat b\,\Nop^\dagger$; no rotating-wave approximation
 is needed for the THz field.
@@ -310,9 +312,9 @@ Together: $\hat U=\ee^{\ii\hat\Phi}\hat D$, Eq.~\eqref{eq:result}.
 
 \subsection{Ordering in $z$ and the kernel of $\hat\Phi$}
 
-The note orders the evolution in $z$ with the generator $\hat G(z)$,
-$\partial_z\hat U=-(\ii/\hbar)\hat G(z)\hat U$, which is the usual
-description of forward propagation. The first Magnus term is the same,
+Forward propagation is often described by ordering the evolution in $z$ with
+the generator $\hat G(z)$, $\partial_z\hat U=-(\ii/\hbar)\hat G(z)\hat U$; the
+theory note gives this form in its Appendix~A. The first Magnus term is the same,
 $\int\dd z\,\hat G=\int\dd t\,\hat H_{\rm int}$. In the second term the sign
 function in Eq.~\eqref{eq:W} is replaced by $\sgn(z-z')$, and the integral can
 then be done:

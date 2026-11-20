@@ -1,0 +1,917 @@
+% Detailed derivation of the exact solution, Sec. II B of theory-note.tex.
+% Draft of 2026-11-20 (second version of the same day: restructured to start
+% from the Hamiltonian and solve the Heisenberg equations of motion).
+% Equation numbers of the theory note refer to its version of 2026-11-20.
+\documentclass[aps,pra,onecolumn,notitlepage,11pt,amsmath,amssymb,nofootinbib]{revtex4-2}
+
+\usepackage{bm}
+\usepackage{array}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\newcolumntype{R}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\newcommand{\Nop}{\hat N}
+\newcommand{\Iop}{\hat I}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ee}{\mathrm{e}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\sinc}{\operatorname{sinc}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\TN}[1]{\text{TN\,#1}}
+
+\begin{document}
+
+\title{Exact solution of optical rectification with a quantized pump:\\
+detailed derivation in the Heisenberg picture}
+\author{Working notes, 20 November 2026}
+\noaffiliation
+
+\begin{abstract}
+These notes derive the exact solution stated in Sec.~II\,B of the theory note
+``Quantum theory of optical rectification with a quantized pump'', with every
+intermediate step written out. The order is: the Hamiltonian; the Heisenberg
+equations of motion of the photon flux, the THz field operator, and the pump
+operator; their solution; and last the evolution operator that generates the
+solution. The target equations carry the tags (TN\,6) to (TN\,15), the
+numbers they have in the theory note of 20 November 2026; in the version of
+19 November the same results were Eqs.~(7)--(14). All other equation numbers
+are local. Section~\ref{sec:checks} contains consistency checks that are not
+in the theory note.
+\end{abstract}
+
+\maketitle
+
+\section{What is derived}
+
+\begin{center}
+\begin{tabular}{R{0.11\textwidth}R{0.47\textwidth}R{0.14\textwidth}R{0.16\textwidth}}
+\hline\hline
+Tag & Statement & 19 Nov.\ number & Derived in\\
+\hline
+(TN\,6) & flux conserved, $\Iop_{\rm out}(\tau)=\Iop_{\rm in}(\tau)$ & (11) & Sec.~\ref{sec:flux}\\
+(TN\,7) & equation of motion of the THz operator & new & Sec.~\ref{sec:thz}\\
+(TN\,8) & $\hat b_{\rm out}=\hat b_{\rm in}-\ii\zeta\Nop$ & (10) & Sec.~\ref{sec:thz}\\
+(TN\,9) & $\zeta=\kappa L\,\ee^{-\ii\Delta kL/2}\sinc(\Delta kL/2)$ & (9) & Sec.~\ref{sec:thz}\\
+(TN\,10) & equation of motion of the pump operator & new & Sec.~\ref{sec:pumpeom}\\
+(TN\,11) & $\hat a_{\rm out}(\tau)=\ee^{-\ii\hat\vartheta(\tau)}\hat a_{\rm in}(\tau)$ & (12) & Sec.~\ref{sec:pumpresult}\\
+(TN\,12) & $\hat\vartheta=\tfrac12[\hat F_{\rm in}+\hat F_{\rm out}]+\hat\theta$ & (13) & Sec.~\ref{sec:pumpresult}\\
+(TN\,13) & $\hat F(\tau)=\int\dd\Omega\,[\zeta\,\hat b^\dagger\ee^{\ii\Omega\tau}+\mathrm{H.c.}]$ & (14) & Sec.~\ref{sec:pumpeval}\\
+(TN\,14) & $\hat U=\ee^{\ii\hat\Phi}\hat D$ & (7) & Sec.~\ref{sec:U}\\
+(TN\,15) & $\hat D=\exp\{-\ii\int\dd\Omega\,[\zeta\,\hat b^\dagger\Nop+\mathrm{H.c.}]\}$ & (8) & Sec.~\ref{sec:U}\\
+\hline\hline
+\end{tabular}
+\end{center}
+
+\section{Hamiltonian}
+\label{sec:H}
+
+\subsection{Operators and free Hamiltonian}
+
+All operators in this section are in the Schr\"odinger picture. The pump has
+mode operators $\hat a(\omega)$ with
+$[\hat a(\omega),\hat a^\dagger(\omega')]=\delta(\omega-\omega')$, and the
+envelope operator
+\begin{equation}
+\hat a(\tau)=\frac{1}{\sqrt{2\pi}}\int\!\dd\omega\;\hat a(\omega)\,\ee^{-\ii(\omega-\omega_0)\tau},
+\qquad[\hat a(\tau),\hat a^\dagger(\tau')]=\delta(\tau-\tau').
+\label{eq:env}
+\end{equation}
+The label $\tau$ is the retarded time of a slice of the pulse: with the pump
+wave number $k(\omega)=k_0+(\omega-\omega_0)/v_g$ (no group-velocity
+dispersion), the pump field at position $z$ is
+\begin{equation}
+\hat E_o^{(+)}(z)=\ii\sqrt{\frac{\hbar\omega_0}{2\varepsilon_0cn_oA}}\;
+\hat a\!\left(-\frac{z}{v_g}\right)\ee^{\ii k_0z},
+\label{eq:Eo}
+\end{equation}
+so that at time $t=0$ the slice $\tau$ is at $z=-v_g\tau$. The photon flux and
+its Fourier transform are
+\begin{equation}
+\Iop(\tau)=\hat a^\dagger(\tau)\hat a(\tau),\qquad
+\Nop(\Omega)=\int\!\dd\tau\,\ee^{\ii\Omega\tau}\,\Iop(\tau),\qquad
+\Nop^\dagger(\Omega)=\Nop(-\Omega).
+\label{eq:Ndef}
+\end{equation}
+The THz field has operators $\hat b(\Omega)$, $\Omega>0$, with
+$[\hat b(\Omega),\hat b^\dagger(\Omega')]=\delta(\Omega-\Omega')$, and in the
+crystal
+\begin{equation}
+\hat E_T(z)=-\int_0^\infty\!\!\dd\Omega\;s(\Omega)\Big[\hat b(\Omega)\,\ee^{\ii k_T(\Omega)z}
++\mathrm{H.c.}\Big],\qquad
+s(\Omega)=\sqrt{\frac{\hbar\Omega}{4\pi\varepsilon_0c\,n_T(\Omega)A}} .
+\label{eq:ET}
+\end{equation}
+Pump and THz operators commute with each other. The free Hamiltonian is
+\begin{equation}
+\hat H_0=\hbar\int_0^\infty\!\!\dd\Omega\;\Omega\,\hat b^\dagger(\Omega)\hat b(\Omega)
++\hbar\int\!\dd\omega\;\omega\,\hat a^\dagger(\omega)\hat a(\omega).
+\label{eq:H0}
+\end{equation}
+
+\subsection{Interaction Hamiltonian}
+
+The pump produces the rectified polarization
+\begin{equation}
+\hat P_{\rm OR}(z)=2\varepsilon_0\chi^{(2)}\hat E_o^{(-)}(z)\hat E_o^{(+)}(z)
+=\frac{\chi^{(2)}\hbar\omega_0}{n_ocA}\;\Iop\!\left(-\frac{z}{v_g}\right),
+\end{equation}
+where Eq.~\eqref{eq:Eo} was used. It couples to the THz field with the energy
+$-\hat P_{\rm OR}\hat E_T$ per unit volume. Integrating over the crystal,
+$0<z<L$, and the beam area $A$, and inserting Eq.~\eqref{eq:ET},
+\begin{equation}
+\boxed{\;\hat H_{\rm int}=\hbar\int_0^L\!\!\dd z\;\Iop\!\left(-\frac{z}{v_g}\right)\hat\Theta(z),\qquad
+\hat\Theta(z)=\int_0^\infty\!\!\dd\Omega\;\kappa(\Omega)\Big[\hat b(\Omega)\,\ee^{\ii k_Tz}
++\hat b^\dagger(\Omega)\,\ee^{-\ii k_Tz}\Big]\;}
+\label{eq:Hint}
+\end{equation}
+\begin{equation}
+\kappa(\Omega)=\frac{\chi^{(2)}\omega_0}{n_oc}\,s(\Omega)
+=\frac{\chi^{(2)}\omega_0}{n_oc}\sqrt{\frac{\hbar\Omega}{4\pi\varepsilon_0c\,n_T(\Omega)A}} .
+\label{eq:kappa}
+\end{equation}
+$\hat\Theta(z)$ is the THz field at $z$ in units of phase per unit length.
+The total Hamiltonian is $\hat H=\hat H_0+\hat H_{\rm int}$. The construction
+of Eq.~\eqref{eq:Hint} from the $\chi^{(2)}$ energy density, with the
+approximations it involves and the check of $\kappa$ against the classical
+rectification formula, is in the companion notes (\texttt{derivation.pdf},
+Secs.~II, III, and IX). The assumptions are summarized in
+Sec.~\ref{sec:assume}.
+
+\section{Commutators}
+\label{sec:comm}
+
+\emph{(L1) The flux commutes with itself.} Moving $\hat a(\tau)$ to the right
+of $\hat a^\dagger(\tau')$,
+\begin{equation}
+\Iop(\tau)\Iop(\tau')
+=\hat a^\dagger(\tau)\hat a^\dagger(\tau')\hat a(\tau)\hat a(\tau')
++\delta(\tau-\tau')\,\hat a^\dagger(\tau)\hat a(\tau').
+\end{equation}
+The first term is symmetric under $\tau\leftrightarrow\tau'$. In the second,
+the delta function allows $\tau'$ to be replaced by $\tau$, so it equals
+$\delta(\tau-\tau')\Iop(\tau)$ and is symmetric too. Hence
+\begin{equation}
+[\Iop(\tau),\Iop(\tau')]=0,\qquad
+\Iop(\tau)\Iop(\tau')={:}\Iop(\tau)\Iop(\tau'){:}+\delta(\tau-\tau')\Iop(\tau),
+\label{eq:L1}
+\end{equation}
+and therefore
+$[\Nop(\Omega),\Nop(\Omega')]=[\Nop(\Omega),\Nop^\dagger(\Omega')]=0$.
+
+\emph{(L2) Flux and envelope.} From
+$\hat a^\dagger(\tau')\hat a(\tau)=\hat a(\tau)\hat a^\dagger(\tau')-\delta(\tau-\tau')$,
+\begin{equation}
+\Iop(\tau')\hat a(\tau)=\hat a^\dagger(\tau')\hat a(\tau)\hat a(\tau')
+=\hat a(\tau)\Iop(\tau')-\delta(\tau-\tau')\hat a(\tau')
+\;\;\Longrightarrow\;\;
+[\Iop(\tau'),\hat a(\tau)]=-\delta(\tau-\tau')\,\hat a(\tau).
+\label{eq:L2}
+\end{equation}
+For a linear functional of the flux this gives
+\begin{equation}
+\hat\Lambda=\int\!\dd\tau'\,\lambda(\tau')\Iop(\tau')+\text{const}:\qquad
+\hat a(\tau)\,f(\hat\Lambda)=f\big(\hat\Lambda+\lambda(\tau)\big)\,\hat a(\tau),
+\qquad
+f(\hat\Lambda)\,\hat a^\dagger(\tau)=\hat a^\dagger(\tau)\,f\big(\hat\Lambda+\lambda(\tau)\big)
+\label{eq:shift}
+\end{equation}
+for any function $f$: annihilating a photon at $\tau$ lowers the flux by
+$\delta(\tau'-\tau)$.
+
+\emph{(L3) Free evolution.} From Eq.~\eqref{eq:H0},
+$[\hat H_0,\hat b(\Omega)]=-\hbar\Omega\,\hat b(\Omega)$ and
+$[\hat H_0,\hat a(\omega)]=-\hbar\omega\,\hat a(\omega)$. Inserting the latter
+in Eq.~\eqref{eq:env} and writing $\omega=\omega_0+(\omega-\omega_0)$,
+\begin{equation}
+\frac{\ii}{\hbar}[\hat H_0,\hat b(\Omega)]=-\ii\Omega\,\hat b(\Omega),\qquad
+\frac{\ii}{\hbar}[\hat H_0,\hat a(\tau)]=\Big(\frac{\partial}{\partial\tau}-\ii\omega_0\Big)\hat a(\tau),\qquad
+\frac{\ii}{\hbar}[\hat H_0,\Iop(\tau)]=\frac{\partial\Iop(\tau)}{\partial\tau}.
+\label{eq:L3}
+\end{equation}
+The free Hamiltonian oscillates the THz modes and translates the pump
+envelope.
+
+\emph{(L4) Interaction.} The flux commutes with $\hat H_{\rm int}$ by (L1).
+For the THz operator,
+$[\hat\Theta(z),\hat b(\Omega)]=\int\dd\Omega'\,\kappa(\Omega')\,\ee^{-\ii k_T(\Omega')z}\,
+[\hat b^\dagger(\Omega'),\hat b(\Omega)]=-\kappa(\Omega)\,\ee^{-\ii k_T(\Omega)z}$.
+For the pump operator, (L2) with $\tau'=-z/v_g$ and
+$\int\dd z\,\delta(\tau+z/v_g)f(z)=v_gf(-v_g\tau)$. Hence
+\begin{align}
+[\hat H_{\rm int},\Iop(\tau)]&=0,\label{eq:L4a}\\
+\frac{\ii}{\hbar}[\hat H_{\rm int},\hat b(\Omega)]
+&=\ii\int_0^L\!\!\dd z\;\Iop\!\left(-\frac{z}{v_g}\right)[\hat\Theta(z),\hat b(\Omega)]
+=-\ii\kappa(\Omega)\int_0^L\!\!\dd z\;\Iop\!\left(-\frac{z}{v_g}\right)\ee^{-\ii k_Tz},
+\label{eq:L4b}\\
+\frac{\ii}{\hbar}[\hat H_{\rm int},\hat a(\tau)]
+&=\ii\int_0^L\!\!\dd z\;\Big[\Iop\!\left(-\frac{z}{v_g}\right),\hat a(\tau)\Big]\hat\Theta(z)
+=-\ii v_g\,c_L(\tau)\,\hat\Theta(-v_g\tau)\,\hat a(\tau),
+\label{eq:L4c}
+\end{align}
+where $c_L(\tau)=1$ if the slice is inside the crystal, $0<-v_g\tau<L$, and
+$0$ otherwise.
+
+\emph{(L5) THz field at two events.} For free THz operators,
+$\hat\Theta_0(z,t)=\int\dd\Omega\,\kappa\,[\hat b\,\ee^{\ii(k_Tz-\Omega t)}+\mathrm{H.c.}]$,
+\begin{equation}
+[\hat\Theta_0(z,t),\hat\Theta_0(z',t')]=2\ii\,K(z-z',t-t'),\qquad
+K(\Delta z,\Delta t)=\int_0^\infty\!\!\dd\Omega\,\kappa^2\sin\!\big[k_T\Delta z-\Omega\Delta t\big].
+\label{eq:L5}
+\end{equation}
+
+\emph{(L6)} For the Hermitian operator
+$\hat F(\tau)=\int\dd\Omega\,[\zeta\,\hat b^\dagger\ee^{\ii\Omega\tau}+\zeta^*\hat b\,\ee^{-\ii\Omega\tau}]$
+of (TN\,13),
+\begin{equation}
+[\hat F(\tau'),\hat F(\tau)]
+=\int\!\dd\Omega\,|\zeta|^2\Big\{-\ee^{\ii\Omega(\tau'-\tau)}+\ee^{-\ii\Omega(\tau'-\tau)}\Big\}
+=-2\ii\,S(\tau'-\tau),
+\label{eq:L6}
+\end{equation}
+with $S(x)=\int_0^\infty\dd\Omega\,|\zeta(\Omega)|^2\sin\Omega x$.
+$S$ is real and odd, $S(0)=0$, and $S'(0)=\int\dd\Omega\,\Omega|\zeta|^2$.
+
+\section{Operator identities}
+\label{sec:ident}
+
+\emph{(I1)} $\ee^{\hat A}\hat B\,\ee^{-\hat A}=\hat B+[\hat A,\hat B]
++\frac{1}{2!}[\hat A,[\hat A,\hat B]]+\dots$; if
+$[\hat A,[\hat A,\hat B]]=0$ the series ends after the second term.
+
+\emph{(I2)} For an operator $\hat M(s)$ that depends on a parameter, with
+$\hat M'=\partial_s\hat M$,
+\begin{equation}
+\frac{\partial}{\partial s}\ee^{\hat M}
+=\ee^{\hat M}\!\int_0^1\!\dd\lambda\;\ee^{-\lambda\hat M}\,\hat M'\,\ee^{\lambda\hat M}
+=\Big(\hat M'+\tfrac12[\hat M,\hat M']\Big)\,\ee^{\hat M}
+\qquad\text{if }[\hat M,[\hat M,\hat M']]=0 .
+\label{eq:I2}
+\end{equation}
+Proof of the first equality:
+$\hat K(\lambda)=\ee^{-\lambda\hat M}\partial_s\ee^{\lambda\hat M}$ obeys
+$\hat K(0)=0$ and
+$\partial_\lambda\hat K=\ee^{-\lambda\hat M}\hat M'\ee^{\lambda\hat M}$. For
+the second, (I1) gives
+$\ee^{-\lambda\hat M}\hat M'\ee^{\lambda\hat M}=\hat M'-\lambda[\hat M,\hat M']$,
+the integral is $\hat M'-\tfrac12[\hat M,\hat M']$, and
+$\ee^{\hat M}\hat M'=(\hat M'+[\hat M,\hat M'])\ee^{\hat M}$.
+
+\emph{(I3)} If $[\hat A,\hat B]$ commutes with $\hat A$ and $\hat B$, then
+$\ee^{\hat A}\ee^{\hat B}=\ee^{\hat B}\ee^{\hat A}\,\ee^{[\hat A,\hat B]}$.
+
+\section{Heisenberg equations of motion}
+\label{sec:eom}
+
+Heisenberg operators are $\hat O_H(t)=\hat U^\dagger(t)\hat O\,\hat U(t)$, with
+$\hat U(t)$ the evolution from the remote past, when the pulse has not yet
+reached the crystal, to time $t$. They obey
+$\partial_t\hat O_H=(\ii/\hbar)[\hat H,\hat O]_H$. With (L3) and (L4), the
+three equations of motion are
+\begin{align}
+\frac{\partial\Iop_H(\tau,t)}{\partial t}
+&=\frac{\partial\Iop_H(\tau,t)}{\partial\tau},
+\label{eq:E1}\\
+\frac{\partial\hat b_H(\Omega,t)}{\partial t}
+&=-\ii\Omega\,\hat b_H(\Omega,t)
+-\ii\kappa(\Omega)\int_0^L\!\!\dd z\;\Iop_H\!\left(-\frac{z}{v_g},t\right)\ee^{-\ii k_Tz},
+\label{eq:E2}\\
+\frac{\partial\hat a_H(\tau,t)}{\partial t}
+&=\Big(\frac{\partial}{\partial\tau}-\ii\omega_0\Big)\hat a_H(\tau,t)
+-\ii v_g\,c_L(\tau)\,\hat\Theta_H(-v_g\tau,t)\,\hat a_H(\tau,t),
+\label{eq:E3}
+\end{align}
+with
+$\hat\Theta_H(z,t)=\int\dd\Omega\,\kappa\,[\hat b_H(\Omega,t)\ee^{\ii k_Tz}+\mathrm{H.c.}]$.
+The initial condition is free evolution in the remote past:
+\begin{equation}
+t\to-\infty:\qquad\hat b_H(\Omega,t)\to\hat b(\Omega)\,\ee^{-\ii\Omega t},\qquad
+\hat a_H(\tau,t)\to\ee^{-\ii\omega_0t}\,\hat a(\tau+t),
+\label{eq:past}
+\end{equation}
+which follows from (L3). The Schr\"odinger operators are therefore the input
+operators, $\hat b_{\rm in}=\hat b$ and $\hat a_{\rm in}=\hat a$. The output
+operators are defined by the same form in the remote future,
+$\hat b_H(\Omega,t)\to\hat b_{\rm out}(\Omega)\,\ee^{-\ii\Omega t}$ and
+$\hat a_H(\tau,t)\to\ee^{-\ii\omega_0t}\,\hat a_{\rm out}(\tau+t)$.
+
+The structure of the three equations decides everything that follows.
+Equation~\eqref{eq:E1} is closed: the flux does not feel the crystal.
+Equation~\eqref{eq:E2} is linear in $\hat b_H$ with a source that contains
+only the flux. Equation~\eqref{eq:E3} is linear in $\hat a_H$ with a
+coefficient that contains only the THz field. They can be solved one after
+the other.
+
+\section{Solution for the flux: Eq.~(6)}
+\label{sec:flux}
+
+Equation~\eqref{eq:E1} is a transport equation. Its solution with the initial
+condition \eqref{eq:past} is a rigid translation,
+\begin{equation}
+\Iop_H(\tau,t)=\Iop(\tau+t)\qquad\text{for all }t.
+\label{eq:fluxsol}
+\end{equation}
+The flux through the plane at $z$ at time $t$ is
+$\Iop_H(-z/v_g,t)=\Iop(t-z/v_g)$, the input flux at the retarded time, before,
+inside, and after the crystal. In terms of input and output operators,
+\begin{equation}
+\boxed{\;\Iop_{\rm out}(\tau)=\Iop_{\rm in}(\tau)\;}
+\tag{\TN{6}}
+\end{equation}
+The same holds for $\Nop(\Omega)$ at every $\Omega$, for the photon number
+$\Nop(0)$, and for every function of the flux. The reason is
+Eq.~\eqref{eq:L4a}: the interaction contains the pump only through the flux,
+and the flux commutes with itself.
+
+\section{Solution for the THz field: Eqs.~(7)--(9)}
+\label{sec:thz}
+
+Inserting Eq.~\eqref{eq:fluxsol} in Eq.~\eqref{eq:E2},
+\begin{equation}
+\frac{\partial\hat b_H(\Omega,t)}{\partial t}
+=-\ii\Omega\,\hat b_H(\Omega,t)
+-\ii\kappa(\Omega)\int_0^L\!\!\dd z\;\Iop\!\left(t-\frac{z}{v_g}\right)\ee^{-\ii k_Tz}.
+\end{equation}
+The source is now a known operator: the input flux. Nothing in it depends on
+the THz field or on the coupling. The free oscillation is removed with
+$\hat b(\Omega,t)\equiv\ee^{\ii\Omega t}\hat b_H(\Omega,t)$:
+\begin{equation}
+\boxed{\;\frac{\partial\hat b(\Omega,t)}{\partial t}
+=-\ii\kappa(\Omega)\int_0^L\!\!\dd z\;\Iop\!\left(t-\frac{z}{v_g}\right)
+\ee^{-\ii(k_Tz-\Omega t)}\;}
+\tag{\TN{7}}
+\end{equation}
+This is a first-order equation with a prescribed right-hand side, and it is
+integrated directly. With Eq.~\eqref{eq:past},
+\begin{equation}
+\hat b(\Omega,t)=\hat b_{\rm in}(\Omega)
+-\ii\kappa(\Omega)\int_{-\infty}^{t}\!\!\dd t'\int_0^L\!\!\dd z\;
+\Iop\!\left(t'-\frac{z}{v_g}\right)\ee^{-\ii(k_Tz-\Omega t')} .
+\label{eq:bt}
+\end{equation}
+For $t\to\infty$ the time integral is done first. Substituting
+$t'=\tau'+z/v_g$ and using Eq.~\eqref{eq:Ndef},
+\begin{equation}
+\int_{-\infty}^{\infty}\!\!\dd t'\;\Iop\!\left(t'-\frac{z}{v_g}\right)\ee^{\ii\Omega t'}
+=\ee^{\ii\Omega z/v_g}\int\!\dd\tau'\,\Iop(\tau')\,\ee^{\ii\Omega\tau'}
+=\ee^{\ii\Omega z/v_g}\,\Nop(\Omega).
+\end{equation}
+What remains is the integral over the crystal with the mismatch
+$\Delta k(\Omega)=k_T(\Omega)-\Omega/v_g$:
+\begin{equation}
+\int_0^L\!\!\dd z\,\ee^{-\ii\Delta kz}=\frac{1-\ee^{-\ii\Delta kL}}{\ii\Delta k}
+=\ee^{-\ii\Delta kL/2}\,\frac{\ee^{\ii\Delta kL/2}-\ee^{-\ii\Delta kL/2}}{\ii\Delta k}
+=L\,\ee^{-\ii\Delta kL/2}\,\frac{\sin(\Delta kL/2)}{\Delta kL/2}.
+\label{eq:zint}
+\end{equation}
+Therefore
+\begin{equation}
+\boxed{\;\hat b_{\rm out}(\Omega)=\hat b_{\rm in}(\Omega)-\ii\,\zeta(\Omega)\,\Nop(\Omega)\;}
+\tag{\TN{8}}
+\end{equation}
+\begin{equation}
+\boxed{\;\zeta(\Omega)=\kappa(\Omega)\,L\,\ee^{-\ii\Delta kL/2}\,
+\sinc\!\Big(\frac{\Delta kL}{2}\Big),\qquad\sinc x=\frac{\sin x}{x}\;}
+\tag{\TN{9}}
+\end{equation}
+
+Three remarks. (i) The result is exact. Perturbation theory arrives at the
+same expression by replacing the source in Eq.~\eqref{eq:E2} with its input
+value, as an approximation of first order; here the replacement is the exact
+solution \eqref{eq:fluxsol}. (ii) For perfect phase matching $\zeta=\kappa L$
+and the THz amplitude grows linearly with the crystal length; for a large
+mismatch $|\zeta|\le2\kappa/|\Delta k|$. (iii) $\hat b(\Omega,t)$ is the
+Heisenberg operator in the interaction picture with respect to $\hat H_0$.
+In that picture the Hamiltonian is
+$\ee^{\ii\hat H_0t/\hbar}\hat H_{\rm int}\ee^{-\ii\hat H_0t/\hbar}$, which by (L3)
+is
+\begin{equation}
+\hat H_{\rm int}(t)=\hbar\int_0^L\!\!\dd z\!\int_0^\infty\!\!\dd\Omega\;\kappa(\Omega)\,
+\Iop\!\left(t-\frac{z}{v_g}\right)\Big[\hat b(\Omega)\,\ee^{\ii(k_Tz-\Omega t)}+\mathrm{H.c.}\Big],
+\label{eq:HintI}
+\end{equation}
+Eq.~(3) of the theory note, and (TN\,7) is
+$\partial_t\hat b(\Omega,t)=(\ii/\hbar)[\hat H_{\rm int}(t),\hat b(\Omega,t)]$.
+
+\section{Solution for the pump: Eqs.~(10)--(13)}
+\label{sec:a}
+
+\subsection{Equation of motion along the path of a slice}
+\label{sec:pumpeom}
+
+Equation~\eqref{eq:E3} contains the free translation of the envelope. It is
+removed by following a slice: define
+\begin{equation}
+\tilde a(\tau,t)\equiv\ee^{\ii\omega_0t}\,\hat a_H(\tau-t,t),
+\end{equation}
+the operator of the slice with retarded time $\tau$, which at time $t$ is at
+$z_\tau(t)=v_g(t-\tau)$. The theory note writes $\hat a(\tau,t)$ for it. By
+Eq.~\eqref{eq:past}, $\tilde a(\tau,t)\to\hat a_{\rm in}(\tau)$ in the past and
+$\tilde a(\tau,t)\to\hat a_{\rm out}(\tau)$ in the future. Differentiating and
+inserting Eq.~\eqref{eq:E3} at the argument $\tau-t$, the terms
+$\ii\omega_0$ and $\partial_\tau$ cancel:
+\begin{equation}
+\boxed{\;\frac{\partial\tilde a(\tau,t)}{\partial t}
+=-\ii v_g\,\hat\Theta_H\big(z_\tau(t),t\big)\,\tilde a(\tau,t)
+\quad\text{for }0<z_\tau(t)<L,\qquad z_\tau(t)=v_g(t-\tau)\;}
+\tag{\TN{10}}
+\end{equation}
+and $\partial_t\tilde a=0$ outside the crystal. The pump operator is
+multiplied by a phase factor at a rate given by the THz field at its own
+position: the electro-optic effect. With $z$ instead of $t$ as the variable
+along the path, $t=\tau+z/v_g$,
+\begin{equation}
+\frac{\partial\tilde a}{\partial z}=-\ii\,\hat\Xi(z)\,\tilde a,\qquad
+\hat\Xi(z)\equiv\hat\Theta_H\!\left(z,\tau+\frac{z}{v_g}\right),\qquad
+\tilde a\big|_{z=0}=\hat a_{\rm in}(\tau).
+\label{eq:pathode}
+\end{equation}
+
+\subsection{The THz field on the path}
+
+$\hat\Theta_H$ is known from Sec.~\ref{sec:thz}. With
+$\hat b_H=\hat b(\Omega,t)\ee^{-\ii\Omega t}$ and Eq.~\eqref{eq:bt},
+\begin{align}
+\hat\Theta_H(z,t)&=\int\!\dd\Omega\,\kappa\Big[\hat b(\Omega,t)\,\ee^{\ii(k_Tz-\Omega t)}+\mathrm{H.c.}\Big]
+=\hat\Theta_{\rm in}(z,t)+\hat\Theta_{\rm gen}(z,t),\\
+\hat\Theta_{\rm gen}(z,t)&=\int\!\dd\Omega\,\kappa^2\int_{-\infty}^{t}\!\!\dd t'\!\int_0^L\!\!\dd z'\;
+\Iop\!\left(t'-\frac{z'}{v_g}\right)
+\Big[-\ii\,\ee^{\ii[k_T(z-z')-\Omega(t-t')]}+\mathrm{c.c.}\Big]\nonumber\\
+&=2\int_{-\infty}^{t}\!\!\dd t'\!\int_0^L\!\!\dd z'\;K(z-z',t-t')\;
+\Iop\!\left(t'-\frac{z'}{v_g}\right),
+\label{eq:gen}
+\end{align}
+with $K$ of Eq.~\eqref{eq:L5}. $\hat\Theta_{\rm in}$ is the free field built
+from $\hat b_{\rm in}$. $\hat\Theta_{\rm gen}$ is the field radiated by the
+pump: a retarded, linear response to the flux at earlier times.
+
+\subsection{Integration along the path}
+
+The operators $\hat\Xi(z)$ at different points of the path do not commute, so
+Eq.~\eqref{eq:pathode} is solved by an ordered exponential. The commutator is
+a number: $\hat\Theta_{\rm gen}$ is a functional of the flux and commutes with
+everything in $\hat\Xi$, and for the free part (L5) with
+$\Delta t=\Delta z/v_g$ gives
+\begin{equation}
+[\hat\Xi(z_1),\hat\Xi(z_2)]=2\ii\,K\Big(z_1-z_2,\frac{z_1-z_2}{v_g}\Big)
+=2\ii\,\eta(z_1-z_2),\qquad
+\eta(\Delta z)=\int_0^\infty\!\!\dd\Omega\,\kappa^2\sin[\Delta k\,\Delta z].
+\end{equation}
+Claim: the solution of Eq.~\eqref{eq:pathode} is
+\begin{equation}
+\tilde a(z)=\exp\!\Big\{-\ii\int_0^z\!\!\dd z_1\,\hat\Xi(z_1)-\ii\,c(z)\Big\}\,\hat a_{\rm in}(\tau),
+\qquad c(z)=\int_0^z\!\!\dd z_1\!\int_0^{z_1}\!\!\dd z_2\;\eta(z_1-z_2).
+\end{equation}
+Proof: let $\hat M(z)=-\ii\int_0^z\dd z_1\,\hat\Xi(z_1)$. Then
+$\hat M'=-\ii\hat\Xi(z)$ and
+$[\hat M,\hat M']=-\int_0^z\dd z_2\,[\hat\Xi(z_2),\hat\Xi(z)]
+=2\ii\int_0^z\dd z_2\,\eta(z-z_2)=2\ii c'(z)$, a number, so (I2) applies:
+$\partial_z\ee^{\hat M}=(-\ii\hat\Xi(z)+\ii c'(z))\ee^{\hat M}$. The factor
+$\ee^{-\ii c(z)}$ contributes $-\ii c'(z)$, which cancels the second term, and
+$\partial_z\tilde a=-\ii\hat\Xi(z)\tilde a$ as required. The operator
+$\hat a_{\rm in}(\tau)$ stays on the right throughout, so it does not matter
+that $\hat\Xi$ does not commute with it. At $z=L$, with
+$\int_0^L\dd z_1\int_0^{z_1}\dd z_2\sin[\Delta k(z_1-z_2)]
+=(\Delta kL-\sin\Delta kL)/\Delta k^2$,
+\begin{equation}
+\hat a_{\rm out}(\tau)=\ee^{-\ii\hat\vartheta(\tau)}\hat a_{\rm in}(\tau),\qquad
+\hat\vartheta(\tau)=\int_0^L\!\!\dd z\;\hat\Theta_H\!\left(z,\tau+\frac{z}{v_g}\right)+V(0),
+\label{eq:path}
+\end{equation}
+\begin{equation}
+V(0)=c(L)=\int_0^\infty\!\!\dd\Omega\;\varphi(\Omega),\qquad
+\varphi(\Omega)=\kappa^2\,\frac{\Delta kL-\sin\Delta kL}{\Delta k^2}.
+\label{eq:varphi}
+\end{equation}
+\emph{The phase of the pump is the THz field integrated along the path of the
+slice through the crystal, plus a constant.} The constant is the phase a
+single photon acquires from the THz field it has itself emitted.
+
+\subsection{Evaluation of the phase}
+\label{sec:pumpeval}
+
+\emph{Input field.} With $t=\tau+z/v_g$ the exponent is
+$k_Tz-\Omega t=\Delta kz-\Omega\tau$, and by the conjugate of
+Eq.~\eqref{eq:zint}, $\kappa\int_0^L\dd z\,\ee^{\ii\Delta kz}=\zeta^*$:
+\begin{equation}
+\int_0^L\!\!\dd z\;\hat\Theta_{\rm in}\!\left(z,\tau+\frac{z}{v_g}\right)
+=\int\!\dd\Omega\,\Big[\zeta^*\hat b_{\rm in}\,\ee^{-\ii\Omega\tau}+\zeta\,\hat b_{\rm in}^\dagger\,\ee^{\ii\Omega\tau}\Big]
+=\hat F_{\rm in}(\tau),
+\end{equation}
+\begin{equation}
+\boxed{\;\hat F(\tau)=\int_0^\infty\!\!\dd\Omega\,
+\big[\zeta(\Omega)\,\hat b^\dagger(\Omega)\,\ee^{\ii\Omega\tau}+\mathrm{H.c.}\big]\;}
+\tag{\TN{13}}
+\end{equation}
+$\hat F$ is dimensionless: the THz field in the units in which it acts as a
+phase on the pump. Its vacuum variance is
+$\langle\hat F^2\rangle=\int\dd\Omega\,|\zeta|^2\equiv B_T$.
+
+\emph{Generated field.} In Eq.~\eqref{eq:gen} on the path, substitute
+$t'=\tau'+z'/v_g$. Then $t-t'=x+(z-z')/v_g$ with $x=\tau-\tau'$, the argument
+of $K$ becomes $\Delta k(z-z')-\Omega x$, and the condition $t'<t$ becomes a
+step function:
+\begin{equation}
+\int_0^L\!\!\dd z\;\hat\Theta_{\rm gen}\!\left(z,\tau+\frac{z}{v_g}\right)
+=2\int\!\dd\tau'\;\Iop(\tau')\int_0^L\!\!\dd z\!\int_0^L\!\!\dd z'\;
+\theta\Big(x+\frac{z-z'}{v_g}\Big)\int\!\dd\Omega\,\kappa^2\sin[\Delta k(z-z')-\Omega x].
+\end{equation}
+Write the step function as $\theta=\tfrac12+\tfrac12\sgn$. For the constant
+half the two $z$ integrals factorize,
+\begin{equation}
+\int_0^L\!\!\dd z\!\int_0^L\!\!\dd z'\,\sin[\Delta k(z-z')-\Omega x]
+=\mathrm{Im}\Big\{\ee^{-\ii\Omega x}\Big|\int_0^L\!\!\dd z\,\ee^{\ii\Delta kz}\Big|^2\Big\}
+=-\frac{|\zeta|^2}{\kappa^2}\,\sin\Omega x,
+\end{equation}
+so this half gives $-\int\dd\tau'\,S(\tau-\tau')\Iop(\tau')$, that is,
+\begin{equation}
+\hat\Sigma(\tau)\equiv\int\!\dd\tau'\,S(\tau'-\tau)\,\Iop(\tau'),
+\end{equation}
+with $S$ of (L6). The half with the sign function gives
+$2\int\dd\tau'\,W(\tau-\tau')\Iop(\tau')$ with the even kernel
+\begin{equation}
+W(x)=\frac12\int_0^L\!\!\dd z\!\int_0^L\!\!\dd z'\;\sgn\Big(x+\frac{z-z'}{v_g}\Big)
+\int_0^\infty\!\!\dd\Omega\,\kappa^2\sin[\Delta k(z-z')-\Omega x],\qquad W(0)=V(0).
+\label{eq:W}
+\end{equation}
+Altogether
+\begin{equation}
+\hat\vartheta(\tau)=\hat F_{\rm in}(\tau)+\hat\Sigma(\tau)+\hat\theta(\tau),\qquad
+\hat\theta(\tau)=2\int\!\dd\tau'\,W(\tau-\tau')\,\Iop(\tau')+W(0).
+\label{eq:three}
+\end{equation}
+
+\emph{Output field.} $\hat F_{\rm out}$ is (TN\,13) with $\hat b_{\rm out}$.
+Inserting (TN\,8) and its adjoint
+$\hat b_{\rm out}^\dagger=\hat b_{\rm in}^\dagger+\ii\zeta^*\Nop^\dagger$,
+\begin{align}
+\hat F_{\rm out}(\tau)-\hat F_{\rm in}(\tau)
+&=\ii\int\!\dd\Omega\,|\zeta|^2\Big[\Nop^\dagger(\Omega)\,\ee^{\ii\Omega\tau}
+-\Nop(\Omega)\,\ee^{-\ii\Omega\tau}\Big]\nonumber\\
+&=\ii\int\!\dd\Omega\,|\zeta|^2\int\!\dd\tau'\,
+\Big[\ee^{-\ii\Omega(\tau'-\tau)}-\ee^{\ii\Omega(\tau'-\tau)}\Big]\Iop(\tau')
+=2\hat\Sigma(\tau).
+\label{eq:Fdiff}
+\end{align}
+
+\subsection{Result}
+\label{sec:pumpresult}
+
+From Eqs.~\eqref{eq:path}, \eqref{eq:three}, and \eqref{eq:Fdiff},
+\begin{equation}
+\boxed{\;\hat a_{\rm out}(\tau)=\ee^{-\ii\hat\vartheta(\tau)}\,\hat a_{\rm in}(\tau)\;}
+\tag{\TN{11}}
+\end{equation}
+\begin{equation}
+\boxed{\;\hat\vartheta(\tau)=\tfrac12\big[\hat F_{\rm in}(\tau)+\hat F_{\rm out}(\tau)\big]
++\hat\theta(\tau)\;}
+\tag{\TN{12}}
+\end{equation}
+$\hat\vartheta$ is Hermitian, so
+$\hat a_{\rm out}^\dagger\hat a_{\rm out}=\hat a_{\rm in}^\dagger\hat a_{\rm in}$,
+which is (TN\,6) again. The three parts of Eq.~\eqref{eq:three} have distinct
+origins. $\hat F_{\rm in}$ is the incoming THz field; for a vacuum input it
+has zero mean and variance $B_T$, a phase noise. $\hat\Sigma$ is half the THz
+field that the pump has radiated. The factor $\tfrac12$ comes from the
+constant half of the step function: averaged over the crystal, a slice sees
+half of the field that all slices together generate, because the field is
+built up along the way. $\hat\theta$ depends on the order of emission and
+passage, through the sign function in $W$.
+
+\subsection{The kernel \texorpdfstring{$W$}{W}, and perfect phase matching}
+
+If the sign function in Eq.~\eqref{eq:W} is replaced by $\sgn(z-z')$, the
+integrals can be done. Only the part of the sine that is odd in $z-z'$
+survives, and with the integral of Eq.~\eqref{eq:varphi}
+\begin{equation}
+V(x)=\int_0^\infty\!\!\dd\Omega\;\varphi(\Omega)\cos\Omega x .
+\label{eq:V}
+\end{equation}
+This replacement is what the description of propagation by ordering in $z$
+amounts to (Sec.~\ref{sec:prop}): the field at $z$ is taken to come from
+upstream positions only. $V$ vanishes for perfect phase matching,
+$\varphi\simeq\kappa^2\Delta kL^3/6$, and grows as $\kappa^2L/\Delta k$ for a
+large mismatch; it describes the slip of the THz wave with respect to the
+pump. The difference
+\begin{equation}
+W(x)-V(x)=\frac12\int_0^L\!\!\dd z\!\int_0^L\!\!\dd z'\,
+\Big[\sgn\Big(x+\frac{z-z'}{v_g}\Big)-\sgn(z-z')\Big]
+\int\!\dd\Omega\,\kappa^2\sin[\Delta k(z-z')-\Omega x]
+\end{equation}
+has support only for $|z-z'|<v_g|x|$, that is, for pairs of events in which
+the later one lies upstream of the earlier one. A forward-propagating THz
+wave gives no contribution there except at coincidence. For a dispersionless
+THz index and $\kappa^2=c_\kappa\Omega$ this is explicit:
+$K=-\pi c_\kappa\,\delta'(n_T\Delta z/c-\Delta t)$ is supported on the THz
+light cone, where the two sign functions agree, and
+\begin{equation}
+W(x)-V(x)=-\pi c_\kappa\,\frac{cL}{n_T}\,\delta(x).
+\end{equation}
+The difference is an instantaneous Kerr-type phase, proportional to
+$L\,\Iop(\tau)$. With a finite THz bandwidth it has a range of the inverse
+bandwidth, and relative to $\hat\Sigma$ it is of order $v_g/(\Omega L)$, a few
+percent for a crystal of $0.5$~mm at $2$~THz and a group index near $2$. Its
+coefficient depends on
+parts of the THz response that a model with forward waves only does not
+contain, so the model does not determine it. \emph{For perfect phase
+matching, $\hat\vartheta=\tfrac12[\hat F_{\rm in}+\hat F_{\rm out}]$ up to
+this term.} The results for the flux and the THz field, (TN\,6)--(TN\,9), do
+not involve $W$ at all.
+
+\section{Evolution operator: Eqs.~(14) and (15)}
+\label{sec:U}
+
+The Heisenberg solutions above are complete. The evolution operator is needed
+in addition for the state of the THz field (Sec.~II\,C of the theory note).
+
+\subsection{Interaction picture}
+
+Write $\hat U(t)=\ee^{-\ii\hat H_0t/\hbar}\hat U_I(t)$. Then
+$\partial_t\hat U_I=-(\ii/\hbar)\hat H_{\rm int}(t)\hat U_I$ with
+$\hat H_{\rm int}(t)$ of Eq.~\eqref{eq:HintI} and $\hat U_I(-\infty)=1$, and
+$\hat O_{\rm out}=\hat U_I^\dagger\hat O_{\rm in}\hat U_I$ with
+$\hat U_I\equiv\hat U_I(\infty)$; this $\hat U_I$ is the $\hat U$ of the theory
+note. Writing
+$\hat H_{\rm int}(t)=\hbar\int\dd z\,\Iop(t-z/v_g)\hat\Theta_0(z,t)$, (L1) and
+(L5) give
+\begin{equation}
+[\hat H_{\rm int}(t),\hat H_{\rm int}(t')]
+=2\ii\hbar^2\!\int_0^L\!\!\dd z\!\int_0^L\!\!\dd z'\;
+\Iop\!\left(t-\frac{z}{v_g}\right)\Iop\!\left(t'-\frac{z'}{v_g}\right)K(z-z',t-t').
+\label{eq:HH}
+\end{equation}
+It contains flux operators only and commutes with $\hat H_{\rm int}$ at any
+third time.
+
+\subsection{Proof of the two-factor form}
+
+Let
+\begin{equation}
+\hat\Omega_1(t)=-\frac{\ii}{\hbar}\int_{-\infty}^t\!\!\dd t_1\,\hat H_{\rm int}(t_1),\qquad
+\hat\Omega_2(t)=-\frac{1}{2\hbar^2}\int_{-\infty}^t\!\!\dd t_1\!\int_{-\infty}^{t_1}\!\!\dd t_2\,
+[\hat H_{\rm int}(t_1),\hat H_{\rm int}(t_2)] .
+\end{equation}
+These are the first two terms of the Magnus expansion \cite{blanes2009}; all
+higher terms are nested commutators that vanish by Eq.~\eqref{eq:HH}. We
+verify directly that $\hat U_I(t)=\ee^{\hat\Omega_2(t)}\ee^{\hat\Omega_1(t)}$.
+$\hat\Omega_2$ is a function of the flux and commutes with
+$\hat H_{\rm int}$. The commutator
+\begin{equation}
+[\hat\Omega_1(t),\hat\Omega_1'(t)]
+=\frac{1}{\hbar^2}\int_{-\infty}^t\!\!\dd t_2\,[\hat H_{\rm int}(t),\hat H_{\rm int}(t_2)]
+\end{equation}
+is a function of the flux too, so (I2) applies, and
+\begin{equation}
+\frac{\partial\hat U_I}{\partial t}
+=\Big(\hat\Omega_2'+\hat\Omega_1'+\tfrac12[\hat\Omega_1,\hat\Omega_1']\Big)\hat U_I
+=\hat\Omega_1'(t)\,\hat U_I=-\frac{\ii}{\hbar}\hat H_{\rm int}(t)\,\hat U_I ,
+\end{equation}
+because
+$\hat\Omega_2'(t)=-(2\hbar^2)^{-1}\int_{-\infty}^t\dd t_2\,[\hat H_{\rm int}(t),\hat H_{\rm int}(t_2)]
+=-\tfrac12[\hat\Omega_1,\hat\Omega_1']$. The solution of a first-order linear
+equation with a given initial value is unique.
+
+\subsection{The two factors}
+
+\emph{First factor.} The time integral of Eq.~\eqref{eq:HintI} is done as in
+Sec.~\ref{sec:thz}, with
+$\int\dd t\,\Iop(t-z/v_g)\ee^{-\ii\Omega t}=\ee^{-\ii\Omega z/v_g}\Nop^\dagger(\Omega)$:
+\begin{equation}
+\hat\Omega_1(\infty)=-\ii\int\!\dd\Omega\;\kappa\Big[\hat b\,\Nop^\dagger\int_0^L\!\!\dd z\,\ee^{\ii\Delta kz}
++\mathrm{H.c.}\Big]
+=-\ii\int\!\dd\Omega\,\Big[\zeta^*\,\hat b\,\Nop^\dagger+\zeta\,\hat b^\dagger\Nop\Big],
+\end{equation}
+\begin{equation}
+\boxed{\;\hat D\equiv\ee^{\hat\Omega_1(\infty)}
+=\exp\!\Big\{-\ii\int_0^\infty\!\!\dd\Omega\,
+\big[\zeta(\Omega)\,\hat b^\dagger(\Omega)\Nop(\Omega)+\mathrm{H.c.}\big]\Big\}
+=\exp\!\Big\{-\ii\int\!\dd\tau\,\Iop(\tau)\,\hat F(\tau)\Big\}\;}
+\tag{\TN{15}}
+\end{equation}
+The second form follows by inserting Eq.~\eqref{eq:Ndef}. The exponent is
+$-\ii$ times a Hermitian operator, so $\hat D$ is unitary.
+
+\emph{Second factor.} Inserting Eq.~\eqref{eq:HH}, substituting
+$\tau=t_1-z/v_g$, $\tau'=t_2-z'/v_g$, and using that the integrand changes
+sign when the two events are exchanged, so that
+$\theta(t_1-t_2)$ can be replaced by $\tfrac12\sgn(t_1-t_2)$,
+\begin{equation}
+\hat\Omega_2(\infty)=\ii\hat\Phi,\qquad
+\hat\Phi=-\iint\!\dd\tau\,\dd\tau'\;W(\tau-\tau')\,\Iop(\tau)\Iop(\tau'),
+\label{eq:Phi}
+\end{equation}
+with the same kernel $W$ as in Eq.~\eqref{eq:W}. $\hat\Phi$ is Hermitian.
+Hence
+\begin{equation}
+\boxed{\;\hat U=\ee^{\ii\hat\Phi}\,\hat D\;}
+\tag{\TN{14}}
+\end{equation}
+
+\subsection{Agreement with the Heisenberg solutions}
+
+\emph{Flux.} Both exponents are built from $\Iop$ and THz operators, and
+commute with $\Iop(\tau)$ by (L1): (TN\,6).
+
+\emph{THz field.} $\hat\Phi$ commutes with $\hat b$. With
+$\hat D=\ee^{-\ii\hat Y}$,
+$\hat Y=\int\dd\Omega'\,[\zeta'\hat b'^\dagger\Nop'+\mathrm{H.c.}]$:
+$[\hat Y,\hat b(\Omega)]=-\zeta(\Omega)\Nop(\Omega)$ and
+$[\hat Y,[\hat Y,\hat b]]=0$, so by (I1)
+$\hat D^\dagger\hat b\hat D=\hat b+\ii[\hat Y,\hat b]=\hat b-\ii\zeta\Nop$:
+(TN\,8).
+
+\emph{Pump.} From Eq.~\eqref{eq:Phi} and (L2),
+$[\hat\Phi,\hat a(\tau)]=\hat\theta(\tau)\hat a(\tau)$ with $\hat\theta$ of
+Eq.~\eqref{eq:three}; the constant $W(0)$ arises when $\hat a(\tau)$ is moved
+to the right of $\Iop(\tau)$. Since $\hat\theta$ commutes with $\hat\Phi$, (I1)
+sums to
+$\ee^{-\ii\hat\Phi}\hat a(\tau)\ee^{\ii\hat\Phi}=\ee^{-\ii\hat\theta(\tau)}\hat a(\tau)$.
+For $\hat D$, with $\hat Y=\int\dd\tau'\,\Iop(\tau')\hat F(\tau')$, let
+$\hat A(\lambda)=\ee^{\ii\lambda\hat Y}\hat a(\tau)\ee^{-\ii\lambda\hat Y}$.
+Then $\partial_\lambda\hat A=-\ii\hat F_\lambda(\tau)\hat A$ with
+\begin{equation}
+\hat F_\lambda(\tau)=\ee^{\ii\lambda\hat Y}\hat F(\tau)\ee^{-\ii\lambda\hat Y}
+=\hat F(\tau)+\ii\lambda[\hat Y,\hat F(\tau)]=\hat F(\tau)+2\lambda\,\hat\Sigma(\tau),
+\end{equation}
+by (L6). The $\hat F_\lambda$ at different $\lambda$ commute, so
+$\hat A(1)=\exp\{-\ii[\hat F_{\rm in}(\tau)+\hat\Sigma(\tau)]\}\hat a(\tau)$.
+Together: (TN\,11) with Eq.~\eqref{eq:three}. The two routes agree, including
+the constant.
+
+\subsection{Propagation picture}
+\label{sec:prop}
+
+Unidirectional propagation is often described by ordering the evolution in
+$z$ instead of $t$: $\partial_z\hat U=-(\ii/\hbar)\hat G(z)\hat U$ with
+\begin{equation}
+\hat G(z)=\hbar\int_0^\infty\!\!\dd\Omega\,\kappa
+\Big[\ee^{-\ii\Delta kz}\,\hat b^\dagger\Nop+\mathrm{H.c.}\Big],\qquad
+\int_0^L\!\!\dd z\,\hat G(z)=\int\!\dd t\,\hat H_{\rm int}(t).
+\end{equation}
+The same proof applies with $z$ in place of $t$, using
+$[\hat G(z),\hat G(z')]=2\ii\hbar^2\int\dd\Omega\,\kappa^2\sin[\Delta k(z-z')]\Nop^\dagger\Nop$.
+The first factor is the same $\hat D$, because the first Magnus term does not
+depend on the ordering. In the second, $W$ is replaced by $V$ of
+Eq.~\eqref{eq:V}, so that
+$\hat\Phi=-\int\dd\Omega\,\varphi\,\Nop^\dagger\Nop$. This is the form given
+in Appendix~A of the theory note, and the one tested numerically.
+
+\section{Consistency checks}
+\label{sec:checks}
+
+\subsection{Commutators of the output operators}
+
+For the THz field, from (TN\,8) and (L1),
+$[\hat b_{\rm out}(\Omega),\hat b_{\rm out}^\dagger(\Omega')]
+=\delta(\Omega-\Omega')+\zeta\zeta'^*[\Nop(\Omega),\Nop^\dagger(\Omega')]
+=\delta(\Omega-\Omega')$. For the pump the check tests the coefficient of the
+flux-dependent phase. Write $\hat\vartheta(\tau)=\hat F_{\rm in}(\tau)+\hat\Lambda_\tau$,
+where $\hat\Lambda_\tau$ is the functional of the flux in Eq.~\eqref{eq:three},
+with kernel $\lambda_\tau(\tau')=S(\tau'-\tau)+2W(\tau-\tau')$. Then
+\begin{equation}
+\hat a_{\rm out}(\tau)\hat a_{\rm out}^\dagger(\tau')
+=\ee^{-\ii\hat\vartheta(\tau)}\big[\delta(\tau-\tau')+\hat a^\dagger(\tau')\hat a(\tau)\big]\ee^{\ii\hat\vartheta(\tau')}.
+\end{equation}
+The first term is $\delta(\tau-\tau')$. In the second, the phases are moved to
+the middle with Eq.~\eqref{eq:shift}:
+$\ee^{-\ii\hat\vartheta(\tau)}\hat a^\dagger(\tau')
+=\hat a^\dagger(\tau')\ee^{-\ii[\hat\vartheta(\tau)+\lambda_\tau(\tau')]}$ and
+$\hat a(\tau)\ee^{\ii\hat\vartheta(\tau')}
+=\ee^{\ii[\hat\vartheta(\tau')+\lambda_{\tau'}(\tau)]}\hat a(\tau)$. The numbers
+combine to $\lambda_\tau(\tau')-\lambda_{\tau'}(\tau)=2S(\tau'-\tau)$, because
+$S$ is odd and $W$ is even. The operator phases are exchanged with (I3) and
+(L6): $[\hat\vartheta(\tau),\hat\vartheta(\tau')]=[\hat F(\tau),\hat F(\tau')]
+=2\ii S(\tau'-\tau)$. Altogether
+\begin{equation}
+\hat a_{\rm out}(\tau)\hat a_{\rm out}^\dagger(\tau')
+=\delta(\tau-\tau')+\hat a^\dagger(\tau')\,\ee^{\ii\hat\vartheta(\tau')}\ee^{-\ii\hat\vartheta(\tau)}\,\hat a(\tau)\;
+\ee^{2\ii S(\tau'-\tau)}\,\ee^{-2\ii S(\tau'-\tau)}
+=\delta(\tau-\tau')+\hat a_{\rm out}^\dagger(\tau')\hat a_{\rm out}(\tau).
+\end{equation}
+The phase from the noncommuting field operators is cancelled by the phase
+from $\hat\Sigma$. With any other coefficient in front of $\hat\Sigma$ the
+cancellation would fail: the noise operator $\hat F_{\rm in}$ and the
+flux-dependent phase are tied to each other by unitarity, as in the theories
+of phase modulation with a non-instantaneous response
+\cite{boivin1994,shapirorazavi2007}.
+
+\subsection{Energy balance}
+
+The pump energy relative to the carrier is
+$\hat W=\hbar\int\dd\tau\,\hat a^\dagger(\tau)\,\ii\partial_\tau\hat a(\tau)$.
+With (TN\,11),
+$\hat W_{\rm out}-\hat W_{\rm in}
+=\hbar\int\dd\tau\,\hat a^\dagger[\ee^{\ii\hat\vartheta}\,\ii\partial_\tau\ee^{-\ii\hat\vartheta}]\hat a$.
+By (I2) with $\hat M=-\ii\hat\vartheta(\tau)$ and (I1),
+\begin{equation}
+\ee^{\ii\hat\vartheta}\,\ii\partial_\tau\ee^{-\ii\hat\vartheta}
+=\hat\vartheta'+\tfrac{\ii}{2}[\hat\vartheta,\hat\vartheta']=\hat\vartheta'(\tau)-S'(0),
+\qquad
+[\hat\vartheta(\tau),\hat\vartheta'(\tau)]
+=\partial_{\tau'}[\hat F(\tau),\hat F(\tau')]\big|_{\tau'=\tau}=2\ii\,S'(0).
+\end{equation}
+In $\hat\vartheta'=\hat F_{\rm in}'+\hat\Sigma'+\hat\theta'$ the three terms
+give: (i) $\int\dd\tau\,\Iop\,\hat F_{\rm in}'$, the work done by the incoming
+THz field, with zero mean for a vacuum input; (ii) with
+$\hat a^\dagger(\tau)\Iop(\tau')\hat a(\tau)={:}\Iop(\tau)\Iop(\tau'){:}$,
+$\int\dd\tau\,\hat a^\dagger\hat\Sigma'\hat a
+=-\int\dd\Omega\,\Omega|\zeta|^2\,{:}\Nop^\dagger\Nop{:}$; (iii) zero, because
+$W'$ is odd and ${:}\Iop\Iop{:}$ is symmetric. With
+$\Nop^\dagger\Nop={:}\Nop^\dagger\Nop{:}+\Nop(0)$ from Eq.~\eqref{eq:L1}, for a
+vacuum THz input
+\begin{equation}
+\langle\hat W_{\rm out}\rangle-\langle\hat W_{\rm in}\rangle
+=-\hbar\int_0^\infty\!\!\dd\Omega\;\Omega\,|\zeta(\Omega)|^2\,
+\langle\Nop^\dagger(\Omega)\Nop(\Omega)\rangle ,
+\end{equation}
+minus the energy of the emitted THz field according to (TN\,8). The pump pays
+for the THz radiation by a red shift, with its photon number unchanged. The
+part $-\hbar S'(0)\langle\Nop(0)\rangle$, linear in the photon number, came
+from the commutator of the THz field with itself: it is the energy of the
+spontaneously emitted THz photons, the rectified shot noise of the theory
+note.
+
+\subsection{One pump photon}
+
+For a single pump photon with wave function $\psi(\tau)$ and a vacuum THz
+input,
+\begin{equation}
+\hat U|\psi\rangle|0\rangle=\ee^{-\ii W(0)}\int\!\dd\tau\,\psi(\tau)\,|\tau\rangle\,|\beta_\tau\rangle,
+\qquad\beta_\tau(\Omega)=-\ii\zeta(\Omega)\,\ee^{\ii\Omega\tau}.
+\end{equation}
+The number of THz photons is Poisson distributed with mean $B_T$ whatever
+$\psi$ is. The mean THz field,
+$-\ii\zeta\int\dd\tau\,|\psi|^2\ee^{\ii\Omega\tau}$, is appreciable only at
+frequencies below the inverse duration of the photon. A photon much longer
+than the THz period radiates no mean field but the same $B_T$ photons:
+spontaneous emission, contained in the solution without separate treatment.
+
+\subsection{Numerical tests}
+
+The tests are in the repository under \texttt{code/tests}, in the file for
+optical rectification. They use a ladder of $D$ optical frequency bins with
+$\Nop=\sum_j\hat a_j^\dagger\hat a_{j+1}$, one THz mode, two pump photons, and
+full matrix exponentials. In a finite ladder
+$[\Nop,\Nop^\dagger]=\hat n_1-\hat n_D$, so (L1) holds only while the end bins
+are empty; the residuals track their population.
+
+\begin{center}
+\begin{tabular}{R{0.24\textwidth}R{0.38\textwidth}R{0.30\textwidth}}
+\hline\hline
+Equations & Test & Result\\
+\hline
+(TN\,6), (TN\,8) & $\langle\hat b\rangle$, $\langle\hat b^\dagger\hat b\rangle$, and $\langle\Nop\rangle$ at $|\zeta|=0.3$ and $0.6$ &
+ better than $10^{-6}$\\[4pt]
+(TN\,11)--(TN\,13), with $\Delta k=0$ & pump coherence $\langle\hat a_j^\dagger\hat a_k\rangle$ at $|\zeta|=0.3$ and $0.6$ &
+ $7\times10^{-10}$ and $2\times10^{-7}$; $0.03$ and $0.09$ without $\hat\Sigma$\\[4pt]
+(TN\,14), (TN\,15), (TN\,9), with $\Delta kL=2.4$, propagation picture & state $\ee^{\ii\hat\Phi}\hat D|\psi\rangle$ against the exact $z$-ordered evolution &
+ $2\times10^{-5}$ in norm for $D=15$; $0.30$ without $\hat\Phi$\\[4pt]
+Energy balance & shift of the mean pump frequency against the THz photon number &
+ better than $10^{-9}$\\
+\hline\hline
+\end{tabular}
+\end{center}
+
+Not tested numerically: the equations of motion in the time domain as such
+(the model has a single generator, with no separate $z$ and $t$); the kernel
+$W$ and its difference from $V$; integrals over the THz frequency, since the
+model has one THz mode.
+
+\section{Where each assumption enters}
+\label{sec:assume}
+
+\begin{center}
+\begin{tabular}{R{0.36\textwidth}R{0.57\textwidth}}
+\hline\hline
+Assumption & Used in\\
+\hline
+$\chi^{(2)}$ independent of the optical frequency; field normalization at the carrier & the interaction contains the pump only through the flux, Eq.~\eqref{eq:Hint}\\[4pt]
+no pump dispersion & the envelope depends on $z$ only through $\tau$, Eq.~\eqref{eq:Eo}; the flux equation \eqref{eq:E1} is a rigid translation\\[4pt]
+flux commutes with itself, (L1) & the source of Eq.~\eqref{eq:E2} does not evolve; every later step\\[4pt]
+unbounded band of flat coupling & (L1) in the frequency domain; a band edge gives $[\Nop,\Nop^\dagger]\neq0$\\[4pt]
+no pump absorption & unitarity; conservation of $\Iop$\\[4pt]
+no coupling among THz modes & $\hat H_{\rm int}$ is linear in $\hat b$ and $\hat b^\dagger$: Eq.~\eqref{eq:E2} is linear, and the field commutators (L5), (L6) are numbers\\[4pt]
+forward THz waves only & the kernel $W$ of $\hat\theta$ and $\hat\Phi$; not (TN\,6)--(TN\,9)\\
+\hline\hline
+\end{tabular}
+\end{center}
+
+The form of (TN\,11) with a flux-dependent phase and a noise operator is the
+one known for self- and cross-phase modulation with a response of finite
+duration \cite{boivin1994,shapirorazavi2007}. What is specific here is that
+the medium is the THz field, that the phase is the THz field along the path
+of the pump, Eq.~\eqref{eq:path}, and that its main part is the average of
+the fields at the input and the output of the crystal.
+
+\begin{thebibliography}{9}
+\bibitem{blanes2009} S. Blanes, F. Casas, J. A. Oteo, and J. Ros, The Magnus
+expansion and some of its applications, Phys. Rep. \textbf{470}, 151 (2009)
+[entered from memory, to be checked].
+\bibitem{boivin1994} L. Boivin, F. X. K\"artner, and H. A. Haus, Analytical
+solution to the quantum field theory of self-phase modulation with a finite
+response time, Phys. Rev. Lett. \textbf{73}, 240 (1994) [abstract read; full
+text not available; author list from memory].
+\bibitem{shapirorazavi2007} J. H. Shapiro and M. Razavi, Continuous-time
+cross-phase modulation and quantum computation, New J. Phys. \textbf{9}, 16
+(2007) [abstract read].
+\end{thebibliography}
+
+\end{document}
