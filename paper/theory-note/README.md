@@ -14,6 +14,7 @@ and checks are recorded in
 | `theory-note.tex` | manuscript source |
 | `theory-note.pdf` | compiled draft |
 | `derivation.tex`, `derivation.pdf` | step-by-step derivation of the exact solution from the Hamiltonian (10 pages, one column): fields, interaction Hamiltonian with the explicit coupling constant, the two commutators, input-output relation, evolution operator, pump transformation, THz state, check against the classical formula, list of assumptions and checks |
+| `derivation-eq7-14.tex`, `derivation-eq7-14.pdf` | detailed derivation of Eqs. (7) to (14) of the note (evolution operator, output THz field, flux conservation, pump phase modulation), every step written out (13 pages, one column). Equation numbers refer to the note as of 2026-11-19, commit b27e52b. Adds three checks that are not in the note: commutators of the output operators, energy balance, one pump photon |
 | `refs.bib` | bibliography |
 | `figures/` | three vector figures and `manifest.yaml` (commit, seed, parameters, quoted values) |
 

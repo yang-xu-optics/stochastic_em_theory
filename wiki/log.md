@@ -727,3 +727,25 @@ Append-only chronological record. New entries should use:
   article as drafted); Optics Letters as the alternative; JOSA B as fallback;
   not PRL, PRX Quantum, or Optica Quantum for the theory alone. PRL or Optica
   stays the target for the experimental paper. The author has not decided.
+
+## [2026-11-20] paper | Detailed Derivation Of Eqs. (7) To (14) Of The Theory Note
+
+- Request from the author: a note with the detailed derivation of
+  Eqs. (7) to (14). Read as the equations of the theory note (version of
+  2026-11-19, commit b27e52b): evolution operator `U = exp(i Phi) D`, `D`,
+  `zeta`, `b_out`, flux conservation, `a_out = exp(-i theta_tot) a_in`, the
+  phase at perfect phase matching, and the THz phase operator `F`.
+- Written: `paper/theory-note/derivation-eq7-14.tex` and PDF (13 pages).
+  Starts from the generator, proves eight commutator lemmas and three
+  operator identities, and derives each target equation with all
+  intermediate steps. The evolution operator is proved by differentiation,
+  without relying on the Magnus theorem.
+- Three checks added that were not written down before: (1) the canonical
+  commutator of the output pump operators, which holds only because the
+  flux-dependent phase has the coefficient that cancels the commutator of
+  the noise operator; (2) the energy balance, pump red shift equal to the
+  THz energy, with the shot-noise part arising from the commutator of the
+  THz field with itself; (3) one pump photon, which radiates `B_T` THz
+  photons on average whatever its duration.
+- No new numerical work; the note lists the four existing tests against the
+  equations they check.
