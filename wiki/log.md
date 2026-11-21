@@ -810,3 +810,31 @@ Append-only chronological record. New entries should use:
 - The theory note itself was not changed. Recommendation recorded in the
   new document: start Sec. II in the frequency domain and change to the time
   domain after the THz output. The author has not decided.
+
+## [2026-11-21] paper | Theory Note Sec. II Rewritten In The Hybrid Form
+
+- Decision by the author: adopt the recommended hybrid presentation.
+- Changed, `paper/theory-note/theory-note.tex` (13 pages): Sec. II A is the
+  three-wave-mixing Hamiltonian in the frequency domain, Eqs. (1) to (6),
+  with the flat-coupling assumption as Eq. (4). Sec. II B: commutation of
+  `N(Omega)` (7), conservation (8), THz equation of motion as a driven
+  oscillator (9), output (10) with `zeta = 2 pi g(Omega, Omega)` (11); then
+  the envelope and flux in the time domain (12), (13), pump equation and
+  phase (14) to (17); evolution operator (18), (19) described as on-shell
+  displacement plus off-shell phase. Sec. II C unchanged. Sec. II D now
+  refers to the coupling function. Appendix A rewritten: time-domain
+  Hamiltonian (A1), sideband ladder (A2), path integral of the THz field
+  (A3) to (A5), principal-value form of the flux phase (A6), on-shell
+  approximation and propagation picture (A7) to (A9). Appendix E mentions
+  the numerical evaluation of (A6).
+- Equation numbers: solution block (8) to (19); later equations moved up by
+  four; shot-count formula is Eq. (39).
+- Companion derivations retagged to the new numbers
+  (`derivation-exact-solution`, `derivation-frequency-domain`), with a table
+  of the numbers in the versions of 2026-11-20 and 2026-11-19;
+  cross-references in `derivation.tex` updated.
+- Added to the frequency-domain derivation and recorded on
+  [[theory/quantum-optical-rectification-of-bsv]]: an estimate of the
+  backward-wave contribution to the Kerr-type phase, about half the forward
+  constant, not checked numerically.
+- No change to results, figures, or tests (96 passed).

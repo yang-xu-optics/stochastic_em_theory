@@ -255,6 +255,11 @@ term with `S`, which is half the generated field, and the sign half gives
 `W`. The evolution operator (E4) follows by the Magnus expansion in time, or
 is verified by differentiation, and reproduces the three solutions.
 
+Presentation adopted in the note on 2026-11-21, with the author's agreement:
+frequency domain for the Hamiltonian, the solvability condition and the THz
+output, (E18) to (E20); time domain for the pump phase and the THz state,
+(E16), (E17), (E8), (E9). The note's solution block is now Eqs. (8) to (19).
+
 Frequency-domain form, added 2026-11-21 after the author asked whether the
 theory can be derived starting in the frequency domain
 (`paper/theory-note/derivation-frequency-domain.pdf`). Mode operators
@@ -297,6 +302,13 @@ Phi = integral dOmega' N^dagger(Omega') N(Omega') 2 pi P integral dOmega abs(g(O
   (`code/tests/test_optical_rectification.py`, test on the off-shell phase):
   principal-value identity to 1e-4; full coefficient `-phi + L` to 4e-6
   relative in units `c_k = n_T/c = 1`.
+- Backward THz waves, which the model omits, are wave-number matched only for
+  `Omega' < 0`. Estimate for a dispersionless index and `kappa^2 = c_k Omega`:
+  they add `c_k (c L/n_T) n_g/(n_g + n_T)` to the coefficient of
+  `N^dagger N`, about half the forward Kerr-type constant. Analytic estimate
+  made on 2026-11-21, not checked numerically. It is the reason for the
+  statement that the model does not determine the instantaneous Kerr-type
+  phase.
 - The pump equation in the frequency domain is a ladder of coupled sidebands
   (a convolution); it becomes (E16) after a Fourier transform. The pump and
   the THz state are simpler in the time domain.

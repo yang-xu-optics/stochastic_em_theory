@@ -156,38 +156,32 @@ amplitude and not only in an energy.
 
 \subsection{Hamiltonian}
 
-We describe the pump by a slowly varying envelope operator $\hat a(\tau)$ in
-the frame moving with its group velocity $v_g$, $\tau=t-z/v_g$, with
-$[\hat a(\tau),\hat a^\dagger(\tau')]=\delta(\tau-\tau')$ \cite{blow1990}. The
-photon-flux operator and its Fourier transform are
-\begin{align}
-\Iop(\tau)&=\hat a^\dagger(\tau)\hat a(\tau),\\
-\Nop(\Omega)&=\int\!\dd\tau\,\ee^{\ii\Omega\tau}\,\Iop(\tau)
- =\int\!\dd\omega\,\hat a^\dagger(\omega)\hat a(\omega+\Omega),
-\label{eq:Ndef}
-\end{align}
-with $\Nop^\dagger(\Omega)=\Nop(-\Omega)$ and $\Nop(0)=\Nop_{\rm tot}$ the
-total photon number. $\Iop$ has units of photons per unit time and $\Nop$ is
-dimensionless. The THz field has operators $\hat b(\Omega)$, $\Omega>0$, with
-$[\hat b(\Omega),\hat b^\dagger(\Omega')]=\delta(\Omega-\Omega')$.
-
-In a crystal with a second-order nonlinearity the pump produces a
-low-frequency polarization proportional to its intensity,
+The pump has mode operators $\hat a(\omega)$ and the THz field
+$\hat b(\Omega)$, $\Omega>0$, with
+$[\hat a(\omega),\hat a^\dagger(\omega')]=\delta(\omega-\omega')$ and
+$[\hat b(\Omega),\hat b^\dagger(\Omega')]=\delta(\Omega-\Omega')$
+\cite{blow1990}. In a crystal with a second-order nonlinearity the pump
+produces a low-frequency polarization proportional to its intensity,
 $\hat P_{\rm OR}=2\varepsilon_0\chi^{(2)}\hat E_o^{(-)}\hat E_o^{(+)}$, which
 couples to the THz field $\hat E_T$ with the energy
 $-\int\!\dd V\,\hat P_{\rm OR}\hat E_T$. This is the difference-frequency part
-of the $\chi^{(2)}$ interaction. In the interaction picture with respect to
-the free propagation of both fields, the Hamiltonian of a crystal that
-extends from $z=0$ to $z=L$ is (Appendix~\ref{app:magnus})
+of the $\chi^{(2)}$ interaction. For a crystal that extends from $z=0$ to
+$z=L$ it gives (Appendix~\ref{app:magnus})
 \begin{align}
-\hat H_{\rm int}(t)={}&\hbar\!\int_0^L\!\!\dd z\!\int_0^\infty\!\!\dd\Omega\,
-\kappa(\Omega)\,\Iop\!\left(t-\frac{z}{v_g}\right)\nonumber\\
-&\times\left[\hat b(\Omega)\,\ee^{\ii(k_Tz-\Omega t)}+\mathrm{H.c.}\right],
-\label{eq:Hint}
+\hat H_{\rm int}={}&\hbar\!\int_0^\infty\!\!\dd\Omega\!\iint\!\dd\omega\,\dd\omega'\;
+\Gamma(\Omega;\omega,\omega')\nonumber\\
+&\times\hat b^\dagger(\Omega)\,\hat a^\dagger(\omega)\,\hat a(\omega')+\mathrm{H.c.},
+\label{eq:Hgen}\\
+\Gamma={}&\frac{\kappa(\Omega)L}{2\pi}\,\ee^{-\ii\Delta L/2}\,
+\sinc\frac{\Delta L}{2},
+\label{eq:Gamma}
 \end{align}
-with $k_T(\Omega)$ the THz wave number and $\kappa(\Omega)$ a real coupling per
-unit length (units $\mathrm{s}^{1/2}\,\mathrm{m}^{-1}$). For plane waves over
-an area $A$,
+with $\sinc x=\sin x/x$. Each term converts a pump photon at $\omega'$ into a
+pump photon at $\omega$ and a THz photon at $\Omega$, and
+$\Delta=k_T(\Omega)+k(\omega)-k(\omega')$ is the wave-number mismatch of that
+process, with $k_T$ and $k$ the THz and pump wave numbers. $\kappa(\Omega)$ is
+a real coupling per unit length (units
+$\mathrm{s}^{1/2}\,\mathrm{m}^{-1}$); for plane waves over an area $A$,
 \begin{equation}
 \kappa(\Omega)=\frac{\chi^{(2)}\omega_0}{n_oc}
 \left[\frac{\hbar\Omega}{4\pi\varepsilon_0c\,n_T(\Omega)A}\right]^{1/2},
@@ -195,71 +189,120 @@ an area $A$,
 \end{equation}
 with $\omega_0$ the carrier frequency of the pump, $n_o$ and $n_T$ the optical
 and THz refractive indices, and $\chi^{(2)}$ the susceptibility for
-rectification. In Eq.~\eqref{eq:Hint} the pump enters only through its photon
-flux: the slice of the pulse with retarded time $\tau$ is at $z=v_g(t-\tau)$
-at time $t$ and drives the THz modes there. In this picture $\hat b(\Omega)$
-and $\hat a(\tau)$ are constant in the absence of the interaction, so that
-their time dependence below is due to the interaction alone. The assumptions
-are: (a) the coupling does not depend on the pump frequency across the pump
-band, and the pump has no group-velocity dispersion within the crystal, so
-that it enters through $\Iop(t-z/v_g)$ alone;
+rectification. Equation~\eqref{eq:Hgen} is the three-wave-mixing Hamiltonian
+in its usual form. It does not impose $\omega'=\omega+\Omega$; energy
+conservation results from the time evolution.
+
+Our central assumption is that the coupling function depends on the two
+optical frequencies only through their difference $\Omega'=\omega'-\omega$,
+$\Gamma(\Omega;\omega,\omega+\Omega')=g(\Omega,\Omega')$ with
+\begin{equation}
+g(\Omega,\Omega')=\frac{\kappa(\Omega)L}{2\pi}\,\ee^{-\ii\delta L/2}\,
+\sinc\frac{\delta L}{2},\quad
+\delta=k_T(\Omega)-\frac{\Omega'}{v_g}.
+\label{eq:g}
+\end{equation}
+This holds when $\chi^{(2)}$ does not depend on the optical frequency across
+the pump band and the pump has no group-velocity dispersion within the
+crystal, $k(\omega')-k(\omega)=(\omega'-\omega)/v_g$ with $v_g$ the group
+velocity. The pump then enters only through the operators
+\begin{equation}
+\Nop(\Omega)=\int\!\dd\omega\;\hat a^\dagger(\omega)\,\hat a(\omega+\Omega),
+\label{eq:Ndef}
+\end{equation}
+and the Hamiltonian is
+\begin{align}
+\hat H_{\rm int}={}&\hbar\!\int_0^\infty\!\!\dd\Omega\!\int_{-\infty}^{\infty}\!\!\dd\Omega'\,
+\big[g(\Omega,\Omega')\,\hat b^\dagger(\Omega)\Nop(\Omega')\nonumber\\
+&+g^*(\Omega,\Omega')\,\hat b(\Omega)\Nop^\dagger(\Omega')\big].
+\label{eq:Hint}
+\end{align}
+$\Nop(\Omega)$ is the autocorrelation of the pump spectrum at the lag
+$\Omega$, the operator form of the classical source of rectification,
+$\int\!\dd\omega\,E^*(\omega)E(\omega+\Omega)$. It is dimensionless,
+$\Nop^\dagger(\Omega)=\Nop(-\Omega)$, and $\Nop(0)=\Nop_{\rm tot}$ is the
+photon number. It is normally ordered: the symmetric product of the pump
+fields differs from it by a term proportional to $\delta(\Omega)$, which
+radiates nothing at $\Omega\neq0$.
+
+The assumptions are: (a) flat coupling, Eq.~\eqref{eq:g};
 (b) one transverse mode; (c) no pump absorption; (d) no sum-frequency
 generation and no interaction among THz modes. Linear THz absorption and
 dispersion can be included afterwards, as discussed below
 Eq.~\eqref{eq:field}. Assumption (a) is the usual envelope treatment of
 rectification in thin crystals. It fails when cascading broadens the pump
 spectrum until pump dispersion matters, which is what limits high-efficiency
-generation in long crystals \cite{ravi2014}. The flux in
-Eq.~\eqref{eq:Hint} is normally ordered: the symmetric product of pump fields
-differs from it by a constant that does not depend on time in the moving
-frame and so radiates nothing at $\Omega\neq0$.
+generation in long crystals \cite{ravi2014}.
 
 \subsection{Equations of motion and exact solution}
 
-The flux operators at different times commute,
-\begin{equation}
-[\Iop(\tau),\Iop(\tau')]=0,
+The operators $\Nop(\Omega)$ commute with one another,
+\begin{align}
+[\Nop(\Omega),\Nop(\Omega')]={}&\int\!\dd\omega\;\hat a^\dagger(\omega)\,\hat a(\omega+\Omega+\Omega')\nonumber\\
+&-\int\!\dd\omega\;\hat a^\dagger(\omega)\,\hat a(\omega+\Omega'+\Omega)=0,
 \label{eq:commute}
-\end{equation}
-so that $[\Nop(\Omega),\Nop(\Omega')]=[\Nop(\Omega),\Nop^\dagger(\Omega')]=0$,
-and they commute with $\hat b$. The Hamiltonian \eqref{eq:Hint} therefore
-commutes with the flux at every instant, and
+\end{align}
+for all real $\Omega$ and $\Omega'$, and they commute with $\hat b$. Two
+properties are used: every pair of frequencies $(\omega,\omega+\Omega)$ has
+the same weight in $\Nop$, which is assumption (a), and the integration has
+no edge. The Hamiltonian \eqref{eq:Hint} therefore commutes with
+$\Nop(\Omega)$, whose only time dependence is the free oscillation
+$\ee^{-\ii\Omega t}$, and
 \begin{equation}
-\Iop_{\rm out}(\tau)=\Iop_{\rm in}(\tau).
+\Nop_{\rm out}(\Omega)=\Nop_{\rm in}(\Omega).
 \label{eq:fluxconserved}
 \end{equation}
-The photon flux of the pump, and with it the photon number and every
-intensity correlation function, is a constant of the motion.
+Every Fourier component of the pump intensity is a constant of the motion.
+The pump spectrum is reshaped by the interaction; its autocorrelation is not.
 
-The Heisenberg equation for the THz operator is
-\begin{align}
+The Heisenberg equation for the THz operator, with the free oscillation
+removed, is
+\begin{equation}
 \frac{\partial\hat b(\Omega,t)}{\partial t}
-&=\frac{\ii}{\hbar}\big[\hat H_{\rm int}(t),\hat b(\Omega,t)\big]\nonumber\\
-&=-\ii\kappa(\Omega)\!\int_0^L\!\!\dd z\;\Iop\!\left(t-\frac{z}{v_g}\right)
-\ee^{-\ii(k_Tz-\Omega t)} .
+=-\ii\!\int_{-\infty}^{\infty}\!\!\dd\Omega'\,g(\Omega,\Omega')\,\Nop(\Omega')\,
+\ee^{\ii(\Omega-\Omega')t} .
 \label{eq:eomb}
-\end{align}
-Its source contains the flux only. Because the flux is a constant of the
-motion, the source is the input operator, and Eq.~\eqref{eq:eomb} is a linear
-equation with a prescribed source. Integrating it over the passage of the
-pulse, with
-$\int\!\dd t\,\Iop(t-z/v_g)\,\ee^{\ii\Omega t}=\ee^{\ii\Omega z/v_g}\Nop(\Omega)$,
-gives
+\end{equation}
+Each THz mode is a harmonic oscillator driven by the beat notes of the pump.
+By Eq.~\eqref{eq:fluxconserved} the source is the input operator, so
+Eq.~\eqref{eq:eomb} is a linear equation with a prescribed source. Integrated
+over the passage of the pulse, the oscillating factor gives
+$2\pi\delta(\Omega-\Omega')$ and selects the beat note at the frequency of the
+mode:
 \begin{align}
 \hat b_{\rm out}(\Omega)&=\hat b_{\rm in}(\Omega)-\ii\,\zeta(\Omega)\,\Nop(\Omega),
 \label{eq:inout}\\
-\zeta(\Omega)&=\kappa(\Omega)L\,\ee^{-\ii\Delta kL/2}\,\sinc(\Delta kL/2),
+\zeta(\Omega)&=2\pi g(\Omega,\Omega)
+=\kappa(\Omega)L\,\ee^{-\ii\Delta kL/2}\,\sinc\frac{\Delta kL}{2},
 \label{eq:zeta}
 \end{align}
-with $\sinc x=\sin x/x$ and $\Delta k(\Omega)=k_T(\Omega)-\Omega/v_g$ the
-mismatch between the THz wave number and the pump group delay. The THz field
-is displaced by the Fourier transform of the photon flux. No approximation in
-the coupling strength has been made: perturbation theory replaces the source
-in Eq.~\eqref{eq:eomb} by its input value as a first-order approximation, and
+with $\Delta k(\Omega)=k_T(\Omega)-\Omega/v_g$ the mismatch between the THz
+wave number and the pump group delay. The amplitude $\zeta$ is $2\pi$ times
+the coupling function on the energy shell. No approximation in the coupling
+strength has been made: perturbation theory replaces the source in
+Eq.~\eqref{eq:eomb} by its input value as a first-order approximation, and
 here that replacement is exact.
 
-The Heisenberg equation for the pump operator of the slice $\tau$ is, while
-the slice is inside the crystal at $z=v_g(t-\tau)$,
+For the pump, the Heisenberg equation in the frequency domain is a ladder of
+coupled sidebands: the amplitude at $\omega$ is fed from $\omega\pm\Omega'$
+with the emission or absorption of a THz photon
+(Appendix~\ref{app:magnus}). This convolution becomes a product in the time
+domain. We introduce the envelope operator and the photon flux,
+\begin{align}
+\hat a(\tau)&=\frac{1}{\sqrt{2\pi}}\int\!\dd\omega\;\hat a(\omega)\,
+\ee^{-\ii(\omega-\omega_0)\tau},
+\label{eq:envelope}\\
+\Iop(\tau)&=\hat a^\dagger(\tau)\hat a(\tau),\qquad
+\Nop(\Omega)=\int\!\dd\tau\,\ee^{\ii\Omega\tau}\,\Iop(\tau),
+\label{eq:flux}
+\end{align}
+with $[\hat a(\tau),\hat a^\dagger(\tau')]=\delta(\tau-\tau')$. Here
+$\tau=t-z/v_g$ is the retarded time of a slice of the pulse, which at time
+$t$ is at $z=v_g(t-\tau)$, and $\Iop$ has units of photons per unit time. In
+these variables Eqs.~\eqref{eq:commute} and \eqref{eq:fluxconserved} read
+$[\Iop(\tau),\Iop(\tau')]=0$ and $\Iop_{\rm out}(\tau)=\Iop_{\rm in}(\tau)$: the
+photon flux is conserved at every instant. While a slice is inside the
+crystal its operator obeys
 \begin{align}
 \frac{\partial\hat a(\tau,t)}{\partial t}&=-\ii v_g\,\hat\Theta(z,t)\,\hat a(\tau,t),
 \label{eq:eoma}\\
@@ -305,15 +348,19 @@ The solutions \eqref{eq:fluxconserved}, \eqref{eq:inout}, and
 \begin{align}
 \hat U&=\ee^{\ii\hat\Phi}\,\hat D,\label{eq:U}\\
 \hat D&=\exp\!\left\{-\ii\!\int_0^\infty\!\!\dd\Omega\,
-\left[\zeta(\Omega)\,\hat b^\dagger(\Omega)\Nop(\Omega)+\mathrm{H.c.}\right]\right\},
+\left[\zeta(\Omega)\,\hat b^\dagger(\Omega)\Nop(\Omega)+\mathrm{H.c.}\right]\right\}.
 \label{eq:D}
 \end{align}
-where $\hat\Phi$ is a Hermitian quadratic form in the flux
-(Appendix~\ref{app:magnus}). $\hat D$ is a displacement of the THz modes by an
-amount that depends on commuting pump operators. The time-ordered exponential
-of $\hat H_{\rm int}$ reduces to this product because the commutator of
-$\hat H_{\rm int}$ at two times contains flux operators only, so that the
-Magnus expansion \cite{blanes2009} ends at its second term. Equations
+$\hat D$ comes from the coupling on the energy shell. It is a displacement of
+the THz modes by an amount that depends on commuting pump operators, and it
+describes the emission. $\hat\Phi$ comes from the coupling off the shell: it
+is a Hermitian quadratic form in $\Nop$, a principal-value integral over
+$|g|^2$ (Appendix~\ref{app:magnus}), and describes the virtual emission and
+reabsorption of THz photons by the pump, the cascaded Kerr effect of
+rectification and electro-optic modulation. The time-ordered exponential of
+$\hat H_{\rm int}$ reduces to this product because the commutator of
+$\hat H_{\rm int}$ at two times contains the operators $\Nop$ only, so that
+the Magnus expansion \cite{blanes2009} ends at its second term. Equations
 \eqref{eq:fluxconserved}--\eqref{eq:D} hold for any pump state and any
 conversion efficiency as long as the broadened pump spectrum remains inside
 the band where assumption (a) holds. A numerical check in a frequency-ladder
@@ -417,10 +464,11 @@ Dotted lines are the asymptotes $4/(3\nbar)$ and $2/(3\nbar)$.}
 \subsection{Relation to parametric three-wave mixing}
 \label{sec:dfg}
 
-Equation~\eqref{eq:Hint} is the trilinear $\chi^{(2)}$ coupling that also
-underlies the quantum theory of difference-frequency generation, parametric
-down-conversion, and sum-frequency conversion. The theories differ in which
-optical frequencies the phase matching couples. To see this, take the optical
+Equation~\eqref{eq:Hgen} also underlies the quantum theory of
+difference-frequency generation, parametric down-conversion, and
+sum-frequency conversion. The theories differ in the coupling function
+$\Gamma$, that is, in which optical frequencies the phase matching couples.
+To see this, take the optical
 field as a classical amplitude $\alpha$ at frequency $\omega_0$ plus quantum
 sidebands. To first order in the sidebands and for $\Omega\neq0$,
 \begin{equation}
@@ -918,32 +966,52 @@ existing sources.
 \label{app:magnus}
 
 \emph{Hamiltonian.} With continuum operators for a beam of area $A$
-\cite{blow1990}, and a phase convention for $\hat b$ that makes $\kappa$ real,
-the THz field in the crystal is
-$\hat E_T=-\int\!\dd\Omega\,s(\Omega)[\hat b(\Omega)\ee^{\ii(k_Tz-\Omega t)}
+\cite{blow1990}, the pump field in the crystal is
+$\hat E_o^{(+)}(z)=\ii[\hbar\omega_0/(4\pi\varepsilon_0cn_oA)]^{1/2}
+\int\!\dd\omega\,\hat a(\omega)\ee^{\ii k(\omega)z}$, and with a phase
+convention for $\hat b$ that makes $\kappa$ real the THz field is
+$\hat E_T(z)=-\int\!\dd\Omega\,s(\Omega)[\hat b(\Omega)\ee^{\ii k_Tz}
 +\mathrm{H.c.}]$ with $s=[\hbar\Omega/(4\pi\varepsilon_0cn_TA)]^{1/2}$. The
-rectified polarization of the pump is
-$\hat P_{\rm OR}=2\varepsilon_0\chi^{(2)}\hat E_o^{(-)}\hat E_o^{(+)}
-=\chi^{(2)}\hbar\omega_0\,\Iop(t-z/v_g)/(n_ocA)$, and the interaction energy
-$-A\int_0^L\!\dd z\,\hat P_{\rm OR}\hat E_T$ is Eq.~\eqref{eq:Hint} with
-$\kappa$ of Eq.~\eqref{eq:kappa}. With this $\kappa$ the mean of
-Eq.~\eqref{eq:inout} coincides, in magnitude and phase, with the classical
-solution of the THz wave equation driven by $P_{\rm OR}$.
+rectified polarization $\hat P_{\rm OR}$ contains all pairs of pump
+frequencies, and the interaction energy
+$-A\int_0^L\!\dd z\,\hat P_{\rm OR}\hat E_T$ is Eq.~\eqref{eq:Hgen}: the
+integral of $\ee^{-\ii\Delta z}$ over the crystal gives
+Eq.~\eqref{eq:Gamma}, with $\kappa$ of Eq.~\eqref{eq:kappa}. With this
+$\kappa$ the mean of Eq.~\eqref{eq:inout} coincides, in magnitude and phase,
+with the classical solution of the THz wave equation driven by $P_{\rm OR}$.
+In the time domain, with Eqs.~\eqref{eq:envelope} and \eqref{eq:flux}, the
+Hamiltonian \eqref{eq:Hint} in the interaction picture with respect to the
+free propagation of both fields is
+\begin{align}
+\hat H_{\rm int}(t)={}&\hbar\!\int_0^L\!\!\dd z\!\int_0^\infty\!\!\dd\Omega\,
+\kappa(\Omega)\,\Iop\!\left(t-\frac{z}{v_g}\right)\nonumber\\
+&\times\left[\hat b(\Omega)\,\ee^{\ii(k_Tz-\Omega t)}+\mathrm{H.c.}\right],
+\label{eq:Htime}
+\end{align}
+the flux of the slice that is at $z$ at time $t$ times the THz field there.
 
-\emph{Phase of the pump.} Equation~\eqref{eq:eoma} follows from
-$[\Iop(\tau'),\hat a(\tau)]=-\delta(\tau-\tau')\hat a(\tau)$. Along the path of
-the slice, $t=\tau+z/v_g$, it reads
+\emph{Phase of the pump.} With
+$[\Nop(\Omega'),\hat a(\omega)]=-\hat a(\omega+\Omega')$, the Heisenberg
+equation of a pump mode is
+\begin{align}
+\frac{\partial\hat a(\omega)}{\partial t}={}&-\ii\omega\,\hat a(\omega)
+-\ii\!\int_0^\infty\!\!\dd\Omega\!\int_{-\infty}^{\infty}\!\!\dd\Omega'\,
+\big[g\,\hat b^\dagger(\Omega)\,\hat a(\omega+\Omega')\nonumber\\
+&+g^*\,\hat b(\Omega)\,\hat a(\omega-\Omega')\big],
+\label{eq:ladder}
+\end{align}
+with $g=g(\Omega,\Omega')$ and all operators at time $t$: a ladder of coupled
+sidebands. The Fourier transform \eqref{eq:envelope} turns the convolution
+into a product and gives Eq.~\eqref{eq:eoma}. Along the path of the slice,
+$t=\tau+z/v_g$, it reads
 $\partial_z\hat a=-\ii\hat\Theta(z,\tau+z/v_g)\hat a$. The field operators at
 two points of the path have the commutator
 $2\ii\int\!\dd\Omega\,\kappa^2\sin[\Delta k(z-z')]$, a number, so the ordered
 exponential equals an ordinary one times a constant phase:
-\begin{align}
-\hat\vartheta(\tau)&=\int_0^L\!\!\dd z\;\hat\Theta\!\left(z,\tau+\frac{z}{v_g}\right)+V(0),
-\label{eq:path}\\
-V(0)&=\int_0^\infty\!\!\dd\Omega\,\varphi(\Omega),\quad
-\varphi=\kappa^2\,\frac{\Delta kL-\sin\Delta kL}{\Delta k^2}.
-\label{eq:varphi}
-\end{align}
+\begin{equation}
+\hat\vartheta(\tau)=\int_0^L\!\!\dd z\;\hat\Theta\!\left(z,\tau+\frac{z}{v_g}\right)+W(0).
+\label{eq:path}
+\end{equation}
 By Eq.~\eqref{eq:eomb} the field on the path is the input field plus the
 retarded response to the flux,
 \begin{align}
@@ -965,29 +1033,45 @@ The second half and the constant are
 \hat\theta(\tau)={}&2\!\int\!\dd\tau'\,W(\tau-\tau')\,\Iop(\tau')+W(0),\nonumber\\
 W(x)={}&\frac12\!\int_0^L\!\!\dd z\!\int_0^L\!\!\dd z'\,
 \mathrm{sgn}\!\Big(x+\frac{z-z'}{v_g}\Big)\nonumber\\
-&\times\int_0^\infty\!\!\dd\Omega\,\kappa^2\sin[\Delta k(z-z')-\Omega x],
+&\times\int_0^\infty\!\!\dd\Omega\,\kappa^2\sin[\Delta k(z-z')-\Omega x].
 \label{eq:W}
 \end{align}
-with $W(0)=V(0)$. This is Eq.~\eqref{eq:theta}. There is no ordering
-ambiguity because $S(0)=0$.
+This is Eq.~\eqref{eq:theta}. There is no ordering ambiguity because
+$S(0)=0$.
 
-\emph{Evolution operator.} The commutator of $\hat H_{\rm int}$ at two times
-is $2\ii\hbar^2\!\iint\!\dd z\,\dd z'\,\Iop(t-z/v_g)\Iop(t'-z'/v_g)K(z-z',t-t')$.
-It contains flux operators only and commutes with $\hat H_{\rm int}$ at any
-third time, so the Magnus expansion ends at its second term. The first term,
-$-(\ii/\hbar)\int\!\dd t\,\hat H_{\rm int}$, is the exponent of $\hat D$ in
-Eq.~\eqref{eq:D}. The second is $\ii\hat\Phi$ with
+\emph{Evolution operator.} In the interaction picture the terms of
+Eq.~\eqref{eq:Hint} acquire the factors $\ee^{\pm\ii(\Omega-\Omega')t}$. The
+commutator of $\hat H_{\rm int}$ at two times contains the operators $\Nop$
+only and commutes with $\hat H_{\rm int}$ at any third time, so the Magnus
+expansion ends at its second term. In the first term the time integral gives
+$2\pi\delta(\Omega-\Omega')$: it is the exponent of $\hat D$ in
+Eq.~\eqref{eq:D}, with the coupling on the energy shell. In the second term
+the delta-function parts cancel and the principal values add; it is
+$\ii\hat\Phi$ with
 \begin{equation}
-\hat\Phi=-\iint\!\dd\tau\,\dd\tau'\;W(\tau-\tau')\,\Iop(\tau)\Iop(\tau'),
+\hat\Phi=\!\int_{-\infty}^{\infty}\!\!\dd\Omega'\,\Nop^\dagger(\Omega')\Nop(\Omega')\;
+2\pi\,\mathcal P\!\!\int_0^\infty\!\!\dd\Omega\,\frac{|g(\Omega,\Omega')|^2}{\Omega-\Omega'} .
 \label{eq:Phi}
 \end{equation}
-an effective interaction between the flux at two times mediated by the THz
-field, the quantum form of cascaded rectification and electro-optic
-modulation. Conjugating $\hat a(\tau)$ with $\hat U$ reproduces
+In the time domain,
+$\hat\Phi=-\iint\!\dd\tau\,\dd\tau'\,W(\tau-\tau')\Iop(\tau)\Iop(\tau')$: an
+effective interaction between the flux at two times mediated by the THz
+field. Conjugating $\hat a(\tau)$ with $\hat U$ reproduces
 Eqs.~\eqref{eq:phasemod}--\eqref{eq:Fdef}.
 
-\emph{Propagation picture.} Unidirectional propagation is often described by
-ordering the evolution in $z$ instead of $t$,
+\emph{On-shell coupling and the propagation picture.} The function
+$|g(\Omega,\Omega')|^2$ has a width $2\pi/L$ in the wave number $\delta$. If
+$\kappa^2$ is evaluated on the energy shell, the principal value is
+elementary and
+\begin{equation}
+\hat\Phi\simeq-\!\int_0^\infty\!\!\dd\Omega\,\varphi(\Omega)\,\Nop^\dagger\Nop,
+\quad
+\varphi=\kappa^2\,\frac{\Delta kL-\sin\Delta kL}{\Delta k^2},
+\label{eq:varphi}
+\end{equation}
+which vanishes for perfect phase matching as $\kappa^2\Delta kL^3/6$. The
+same result follows when unidirectional propagation is described by ordering
+the evolution in $z$ instead of $t$,
 $\partial_z\hat U=-(\ii/\hbar)\hat G(z)\hat U$, with the generator
 \begin{equation}
 \hat G(z)=\hbar\!\int_0^\infty\!\!\dd\Omega\,\kappa(\Omega)
@@ -995,24 +1079,22 @@ $\partial_z\hat U=-(\ii/\hbar)\hat G(z)\hat U$, with the generator
 +\mathrm{H.c.}\right],
 \label{eq:G}
 \end{equation}
-which satisfies
-$\int_0^L\!\dd z\,\hat G(z)=\int\!\dd t\,\hat H_{\rm int}(t)$.
-This gives the same $\hat D$, hence the same Eqs.~\eqref{eq:fluxconserved} and
-\eqref{eq:inout}, and $\hat\Phi$ with $W$ replaced by
+which contains the coupling on the shell only and satisfies
+$\int_0^L\!\dd z\,\hat G(z)=\int\!\dd t\,\hat H_{\rm int}(t)$. In the time
+domain this replaces $W$ by
 \begin{equation}
-V(x)=\int_0^\infty\!\!\dd\Omega\;\varphi(\Omega)\cos\Omega x,
+V(x)=\int_0^\infty\!\!\dd\Omega\;\varphi(\Omega)\cos\Omega x .
 \label{eq:V}
 \end{equation}
-that is, $\hat\Phi=-\int\!\dd\Omega\,\varphi\,\Nop^\dagger\Nop$, which
-vanishes for perfect phase matching as $\varphi\simeq\kappa^2\Delta kL^3/6$.
-The two kernels differ only where the later of two events lies upstream of
-the earlier one. A forward-propagating wave contributes nothing there except
-at coincidence: for a dispersionless THz index and $\kappa^2=c_\kappa\Omega$,
-$W(x)-V(x)=-\pi c_\kappa(cL/n_T)\delta(x)$, an instantaneous Kerr-type phase
-proportional to $L\int\!\dd\tau\,\Iop(\tau)^2$. Its coefficient depends on
-parts of the THz response that a forward-wave model does not contain, so the
-model does not determine it. It affects only $\hat\theta$; the THz field, the
-flux, and the THz state do not depend on it.
+The variation of $\kappa^2\propto\Omega$ across the width of the coupling
+function adds a constant to $\varphi$: for a dispersionless THz index and
+$\kappa^2=c_\kappa\Omega$,
+$\hat\Phi=-\int\!\dd\Omega\,[\varphi-c_\kappa cL/n_T]\Nop^\dagger\Nop$, that
+is, $W(x)-V(x)=-\pi c_\kappa(cL/n_T)\delta(x)$, an instantaneous Kerr-type
+phase proportional to $L\int\!\dd\tau\,\Iop(\tau)^2$. Backward THz waves,
+which the model omits, give a term of the same form and order, so the model
+does not determine this phase. It affects only $\hat\theta$; the THz field,
+the flux, and the THz state do not depend on it.
 
 \emph{Energy.} All parts of $\hat\vartheta$ commute with the flux. The pump
 energy changes by
@@ -1117,6 +1199,13 @@ $\ee^{\ii\hat\Phi}\hat D|\psi\rangle$ differs in norm from the exact
 $z$-ordered evolution by $1\times10^{-4}$, $2\times10^{-5}$, and
 $4\times10^{-6}$ for $D=13$, $15$, and $17$, and by $0.30$ when $\hat\Phi$ is
 left out.
+
+The principal-value form \eqref{eq:Phi} was evaluated by numerical
+integration for a dispersionless THz index. With $\kappa^2$ on the shell it
+reproduces Eq.~\eqref{eq:varphi}, and with $\kappa^2=c_\kappa\Omega$ it gives
+$-\varphi+c_\kappa cL/n_T$ to a relative accuracy of about $10^{-5}$; the terms of
+Eq.~\eqref{eq:Hint} with $\Omega'<0$ contribute an amount that does not grow
+with $L$.
 
 \bibliography{refs}
 

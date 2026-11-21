@@ -1,7 +1,7 @@
 # Theory Note: Quantum Theory Of Optical Rectification With A Quantized Pump
 
 Draft of 2026-11-19, Physical Review A style (REVTeX 4.2, two columns,
-12 pages, 3 figures, 1 table, 37 references). Written at the author's
+13 pages, 3 figures, 1 table, 37 references). Written at the author's
 request as the theory paper that precedes the experimental one; the framing
 follows [../theory-paper-outline.md](../theory-paper-outline.md). Derivations
 and checks are recorded in
@@ -14,8 +14,8 @@ and checks are recorded in
 | `theory-note.tex` | manuscript source |
 | `theory-note.pdf` | compiled draft |
 | `derivation.tex`, `derivation.pdf` | step-by-step derivation of the exact solution from the Hamiltonian (10 pages, one column): fields, interaction Hamiltonian with the explicit coupling constant, the two commutators, input-output relation, evolution operator, pump transformation, THz state, check against the classical formula, list of assumptions and checks |
-| `derivation-exact-solution.tex`, `derivation-exact-solution.pdf` | detailed derivation of the exact solution, Sec. II B of the note, in the order Hamiltonian, Heisenberg equations of motion, their solution, evolution operator (15 pages, one column). Target equations carry the note's numbers of 2026-11-20, (6) to (15); in the version of 2026-11-19 the same results were Eqs. (7) to (14), and the file was called `derivation-eq7-14`. Adds checks that are not in the note: commutators of the output operators, energy balance, one pump photon |
-| `derivation-frequency-domain.tex`, `derivation-frequency-domain.pdf` | the same solution derived starting in the frequency domain (9 pages): three-wave-mixing Hamiltonian with a coupling function, solvability as a one-line condition on that function, THz mode as a driven oscillator with `zeta = 2 pi g` on the energy shell, evolution operator as on-shell displacement plus off-shell phase (principal-value integral). The pump is handed to the time-domain derivation, where it is simpler |
+| `derivation-exact-solution.tex`, `derivation-exact-solution.pdf` | detailed derivation of the exact solution, Sec. II B of the note, in the order Hamiltonian, Heisenberg equations of motion, their solution, evolution operator (15 pages, one column), all in the time domain. Target equations carry the note's numbers of 2026-11-21, (8) to (19); a table maps them to the numbers of 2026-11-20 and 2026-11-19, when the file was called `derivation-eq7-14`. Adds checks that are not in the note: commutators of the output operators, energy balance, one pump photon |
+| `derivation-frequency-domain.tex`, `derivation-frequency-domain.pdf` | the same solution derived starting in the frequency domain (9 pages): three-wave-mixing Hamiltonian with a coupling function, solvability as a one-line condition on that function, THz mode as a driven oscillator with `zeta = 2 pi g` on the energy shell, evolution operator as on-shell displacement plus off-shell phase (principal-value integral). The pump is handed to the time-domain derivation, where it is simpler. Sec. II of the note follows this document up to the THz output |
 | `refs.bib` | bibliography |
 | `figures/` | three vector figures and `manifest.yaml` (commit, seed, parameters, quoted values) |
 
@@ -124,6 +124,20 @@ Form:
 
 ## Corrections Made While Writing
 
+- Presentation of Sec. II (2026-11-21, agreed with the author): hybrid.
+  Sec. II A states the three-wave-mixing Hamiltonian in the frequency domain
+  with its coupling function, and the flat-coupling assumption as one line.
+  Sec. II B derives the conservation of `N(Omega)` and the THz output in the
+  frequency domain (driven oscillator, amplitude on the energy shell), then
+  changes to the time domain for the pump phase; the evolution operator is
+  described as on-shell displacement plus off-shell phase. Sec. II C (THz
+  state) stays in the time domain. Appendix A gives the time-domain
+  Hamiltonian, the sideband ladder of the pump, the principal-value form of
+  the flux phase, and the propagation picture as its on-shell approximation.
+  Equation numbers moved again: the solution block is now (8) to (19), and
+  everything after Sec. II B moved up by four. The two companion derivations
+  were retagged.
+
 - Order of the derivation (2026-11-20, on the author's advice): Sec. II of
   the note and the detailed derivation now start from the Hamiltonian,
   construct the Heisenberg equations of motion of the flux, the THz operator
@@ -152,7 +166,7 @@ Form:
   part is required by energy conservation and confirmed numerically.
 - Shots needed to resolve the third cumulant: the estimate used in the wiki
   since 2026-11-14 kept only the Gaussian part of the sampling variance. The
-  full expression is Eq. (35) of the note; for `K = 10` at `5 sigma` it is
+  full expression is Eq. (39) of the note; for `K = 10` at `5 sigma` it is
   900 shots without detection noise, not about 200.
 - Photon-number resolution by the THz field is `1/(2 sqrt(B_T))`, not
   `1/sqrt(B_T)`.
