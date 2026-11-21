@@ -25,8 +25,9 @@ python3 -m pip install -e ".[dev]"
 python3 -m pytest
 ```
 
-Python 3.11 or newer. The suite has 95 tests and runs in about a minute; most
-of that is four matrix-exponential checks of the optical-rectification model.
+Python 3.11 or newer. The suite has 96 tests and runs in about a minute and a
+half; most of that is four matrix-exponential checks of the
+optical-rectification model.
 
 ## What is where
 

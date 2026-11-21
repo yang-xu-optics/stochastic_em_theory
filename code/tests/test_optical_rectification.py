@@ -394,3 +394,49 @@ def test_evolution_with_phase_mismatch_is_displacement_times_flux_phase() -> Non
 
     assert np.linalg.norm(exact - flux_phase @ displaced) < 1e-4
     assert np.linalg.norm(exact - displaced) > 0.1
+
+
+def test_off_shell_phase_reduces_to_the_propagation_form_plus_a_kerr_term() -> None:
+    """Frequency-domain form of the flux phase (paper/theory-note/derivation-frequency-domain).
+
+    Phi = int dOmega' N^dagger N C(Omega'), with
+    C(Omega') = 2 pi P int_0^inf dOmega |g(Omega, Omega')|^2 / (Omega - Omega')  (+ the Omega' < 0 term),
+    |g|^2 = kappa^2 (L / 2 pi)^2 sinc^2(delta L / 2), delta = k_T(Omega) - Omega' / v_g.
+
+    (1) With kappa^2 on the energy shell the principal value is elementary:
+        P int du sinc^2((u + dk) L / 2) / u = -(2 pi / L^2) (dk L - sin dk L) / dk^2,
+        which gives C = -phi, the phase of the propagation picture.
+    (2) With kappa^2 = Omega and a dispersionless THz index (units n_T / c = 1,
+        1 / v_g = 1 - eps), the full coefficient is -phi + L: the extra term is
+        the instantaneous Kerr-type phase. Units: frequency 1, length c / n_T.
+    """
+
+    def sinc_squared(x: np.ndarray | float) -> np.ndarray | float:
+        return np.sinc(np.asarray(x) / np.pi) ** 2
+
+    for length, mismatch in [(2.0, 1.3), (5.0, -0.4)]:
+        # symmetric midpoint grid without a point at u = 0: the principal value by symmetry
+        step = 2.0e-3 / length
+        u = (np.arange(-200_000, 200_000) + 0.5) * step
+        principal_value = float(np.sum(sinc_squared((u + mismatch) * length / 2.0) / u) * step)
+        closed_form = -(2.0 * np.pi / length**2) * (mismatch * length - np.sin(mismatch * length)) / mismatch**2
+        assert principal_value == pytest.approx(closed_form, abs=2e-4)
+
+    length, eps, shell = 100.0, 0.05, 1.0
+    omega = np.linspace(0.0, shell + 8000.0 / length, 1_000_001)
+    coupling = omega * (length / (2.0 * np.pi)) ** 2 * sinc_squared((omega - shell * (1.0 - eps)) * length / 2.0)
+    on_shell = shell * (length / (2.0 * np.pi)) ** 2 * float(sinc_squared(shell * eps * length / 2.0))
+    detuning = omega - shell
+    with np.errstate(divide="ignore", invalid="ignore"):
+        regular = np.where(np.abs(detuning) > 1e-12, (coupling - on_shell) / detuning, 0.0)
+    pole = int(np.argmin(np.abs(detuning)))
+    regular[pole] = 0.5 * (regular[pole - 1] + regular[pole + 1])
+    rotating = 2.0 * np.pi * (np.trapezoid(regular, omega) + on_shell * np.log((omega[-1] - shell) / shell))
+    counter = omega * (length / (2.0 * np.pi)) ** 2 * sinc_squared((omega + shell * (1.0 - eps)) * length / 2.0)
+    counter_rotating = 2.0 * np.pi * np.trapezoid(counter / (omega + shell), omega)
+
+    dk = eps * shell
+    phi = shell * (dk * length - np.sin(dk * length)) / dk**2
+    assert rotating + counter_rotating == pytest.approx(-phi + length, abs=0.05)
+    assert abs(counter_rotating) < 0.5  # does not grow with the crystal length
+    assert abs(rotating - (-phi)) > 50.0  # the Kerr-type term is not small in absolute size

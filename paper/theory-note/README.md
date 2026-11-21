@@ -15,6 +15,7 @@ and checks are recorded in
 | `theory-note.pdf` | compiled draft |
 | `derivation.tex`, `derivation.pdf` | step-by-step derivation of the exact solution from the Hamiltonian (10 pages, one column): fields, interaction Hamiltonian with the explicit coupling constant, the two commutators, input-output relation, evolution operator, pump transformation, THz state, check against the classical formula, list of assumptions and checks |
 | `derivation-exact-solution.tex`, `derivation-exact-solution.pdf` | detailed derivation of the exact solution, Sec. II B of the note, in the order Hamiltonian, Heisenberg equations of motion, their solution, evolution operator (15 pages, one column). Target equations carry the note's numbers of 2026-11-20, (6) to (15); in the version of 2026-11-19 the same results were Eqs. (7) to (14), and the file was called `derivation-eq7-14`. Adds checks that are not in the note: commutators of the output operators, energy balance, one pump photon |
+| `derivation-frequency-domain.tex`, `derivation-frequency-domain.pdf` | the same solution derived starting in the frequency domain (9 pages): three-wave-mixing Hamiltonian with a coupling function, solvability as a one-line condition on that function, THz mode as a driven oscillator with `zeta = 2 pi g` on the energy shell, evolution operator as on-shell displacement plus off-shell phase (principal-value integral). The pump is handed to the time-domain derivation, where it is simpler |
 | `refs.bib` | bibliography |
 | `figures/` | three vector figures and `manifest.yaml` (commit, seed, parameters, quoted values) |
 
@@ -67,6 +68,12 @@ Physics:
   cumulants, the closed-form spectrum. The coupling constant is checked
   analytically against the classical rectification formula. The numerical
   model has one THz mode, so integrals over the THz frequency are not tested.
+- Frequency-domain result of 2026-11-21: the propagation picture (ordering in
+  `z`) is the approximation in which the coupling strength is evaluated on
+  the energy shell; the instantaneous Kerr-type term comes from the variation
+  of `kappa^2` across the phase-matching width, not from the terms that do
+  not conserve energy. Checked numerically for a dispersionless THz index
+  (in the test suite). This replaces "analytic only" in the next item.
 - Ordering: the Hamiltonian ordered in time and the generator ordered in `z`
   give the same displacement operator and differ in the kernel of the flux
   phase by a term local in time (an instantaneous Kerr-type phase). Shown

@@ -783,3 +783,30 @@ Append-only chronological record. New entries should use:
   propagation picture (kernel `V`).
 - No change to the THz results, the statistics, the figures, or the tests
   (95 passed, unchanged).
+
+## [2026-11-21] query | Derivation Starting In The Frequency Domain
+
+- Question from the author: can the theory be derived starting in the
+  frequency domain, so that it becomes more tractable.
+- Answer: yes for the Hamiltonian, the solvability condition, the THz field,
+  and the evolution operator; no for the pump and the THz state, which are
+  simpler in the time domain. Written as
+  `paper/theory-note/derivation-frequency-domain.tex` and PDF (9 pages);
+  formulas (E18) to (E21) on
+  [[theory/quantum-optical-rectification-of-bsv]].
+- New in this form: the amplitude is the coupling function on the energy
+  shell, `zeta = 2 pi g(Omega, Omega)`; the flux phase is a principal-value
+  integral over the off-shell coupling; the propagation picture is the
+  approximation that evaluates the coupling strength on the shell.
+- Correction recorded: the instantaneous Kerr-type term (the difference
+  between time ordering and ordering in `z`) comes from the frequency
+  dependence of `kappa^2` across the phase-matching width, not from the
+  terms that do not conserve energy. A first guess in the session attributed
+  it to the latter; the numerical integration showed their contribution is
+  small and independent of the crystal length.
+- Test added (off-shell phase; principal-value identity and the full
+  coefficient for a dispersionless THz index). Suite: 96 passed. This is the
+  first numerical check of the time-ordered form, which was analytic only.
+- The theory note itself was not changed. Recommendation recorded in the
+  new document: start Sec. II in the frequency domain and change to the time
+  domain after the THz output. The author has not decided.

@@ -255,6 +255,52 @@ term with `S`, which is half the generated field, and the sign half gives
 `W`. The evolution operator (E4) follows by the Magnus expansion in time, or
 is verified by differentiation, and reproduces the three solutions.
 
+Frequency-domain form, added 2026-11-21 after the author asked whether the
+theory can be derived starting in the frequency domain
+(`paper/theory-note/derivation-frequency-domain.pdf`). Mode operators
+`a(omega)`, `b(Omega)`; Schroedinger picture:
+
+```text
+H_int = hbar integral dOmega double-integral domega domega'
+          [ Gamma(Omega; omega, omega') b^dagger(Omega) a^dagger(omega) a(omega') + h.c. ]            (E18)
+Gamma = (kappa L / 2 pi) e^{-i Delta L/2} sinc(Delta L/2),  Delta = k_T(Omega) + k(omega) - k(omega')
+flat coupling:  Gamma(Omega; omega, omega + Omega') = g(Omega, Omega'),
+                g = (kappa L / 2 pi) e^{-i delta L/2} sinc(delta L/2),  delta = k_T(Omega) - Omega'/v_g  (E19)
+H_int = hbar integral dOmega integral dOmega' [ g(Omega, Omega') b^dagger(Omega) N(Omega') + h.c. ]
+[N(Omega), a(omega)] = -a(omega + Omega);   [N(Omega), N(Omega_1)] = 0 by a shift of the integration variable
+N_H(Omega', t) = N(Omega') e^{-i Omega' t}                                                        flux conserved
+d b(Omega,t)/dt = -i integral dOmega' g(Omega, Omega') N(Omega') e^{i (Omega - Omega') t}            driven oscillator
+b_out = b_in - i zeta N,   zeta(Omega) = 2 pi g(Omega, Omega)                                     energy shell   (E20)
+U = exp(i Phi) D;   D from the on-shell coupling;
+Phi = integral dOmega' N^dagger(Omega') N(Omega') 2 pi P integral dOmega abs(g(Omega, Omega'))^2 / (Omega - Omega')   (E21)
+```
+
+- The assumption of the theory is one line: the coupling function depends on
+  the two optical frequencies only through their difference. With pump
+  dispersion `Gamma` depends on `omega` as well, the source operator is
+  `integral Gamma a^dagger a`, and its components do not commute.
+- (E21): on-shell coupling gives real emission (the displacement); off-shell
+  coupling gives a flux-dependent phase, a principal-value integral as for a
+  level shift.
+- Evaluating `kappa^2` on the shell in (E21) gives
+  `Phi = -integral phi N^dagger N` with the closed form `phi` of the
+  propagation picture, by
+  `P integral du sinc^2((u + dk) L/2)/u = -(2 pi/L^2)(dk L - sin dk L)/dk^2`.
+  So ordering in `z` is the on-shell-coupling approximation.
+- For `kappa^2 = c_k Omega` and a dispersionless THz index the full (E21) is
+  `-integral [phi - c_k c L/n_T] N^dagger N`: the extra term is the
+  instantaneous Kerr-type phase, equal to the `W - V` contact term found in
+  the time domain. It comes from the variation of `kappa^2` across the
+  phase-matching width. Correction to the project's earlier reading: it does
+  not come from the terms with `Omega' < 0` (not energy conserving), whose
+  contribution does not grow with `L`. Checked numerically
+  (`code/tests/test_optical_rectification.py`, test on the off-shell phase):
+  principal-value identity to 1e-4; full coefficient `-phi + L` to 4e-6
+  relative in units `c_k = n_T/c = 1`.
+- The pump equation in the frequency domain is a ladder of coupled sidebands
+  (a convolution); it becomes (E16) after a Fourier transform. The pump and
+  the THz state are simpler in the time domain.
+
 What changes relative to the 2026-11-14 text:
 
 - (1) is exact in the coupling under assumptions (a) to (d). The THz
