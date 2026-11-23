@@ -838,3 +838,19 @@ Append-only chronological record. New entries should use:
   backward-wave contribution to the Kerr-type phase, about half the forward
   constant, not checked numerically.
 - No change to results, figures, or tests (96 passed).
+
+## [2026-11-23] query | Photon-Arrival Picture: What It Is And Why The Note Needs It
+
+- Question from the author. Answer given in the session; the note's
+  Sec. II C gained a lead-in that states its purpose: the input-output
+  relation gives all moments, and the state is needed for three statements,
+  the THz waveform of a single shot, the classicality of the emitted field,
+  and the meaning of the noise term linear in the photon number.
+- Also added there: the picture is a choice of basis (outcomes of ideal
+  time-resolved photon counting), not an assignment of arrival times to
+  photons; the superposition becomes a mixture because the interaction
+  leaves the configuration unchanged.
+- Recorded assessment: the picture is not needed for the Hamiltonian, the
+  THz output relation, or the moments, cumulants and spectrum of Secs. III
+  and IV; it is needed for the state, the single-shot distribution and the
+  detection model, and the identification of rectified shot noise.

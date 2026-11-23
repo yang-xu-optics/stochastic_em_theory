@@ -368,9 +368,19 @@ model is described in Appendix~\ref{app:check}.
 
 \subsection{Photon-arrival picture and the THz state}
 
+Equation~\eqref{eq:inout} gives every moment of the THz field in terms of
+moments of $\Nop$. Three statements of this paper need more than moments:
+what the THz waveform of a single shot is, whether the emitted field is
+classical, and what the noise term that is linear in the photon number
+means. For these we need the state of the THz field. It is obtained in the
+basis in which the flux is diagonal.
+
 The joint eigenstates of the commuting operators $\Iop(\tau)$ are states with
 photons at definite times, $|\tau_1,\dots,\tau_n\rangle\propto\prod_i\hat
 a^\dagger(\tau_i)|0\rangle$, with eigenvalue $I(\tau)=\sum_i\delta(\tau-\tau_i)$.
+They are the possible outcomes of ideal time-resolved photon counting on the
+pump. A general pump state is a superposition of them; the picture is a
+choice of basis and does not assign arrival times to the photons.
 On such a state the THz field is driven by a prescribed classical source, and
 $\hat D$ displaces the THz vacuum to a multimode coherent state
 \cite{glauber1963} with amplitude $\beta(\Omega)=-\ii\zeta(\Omega)\sum_i\ee^{\ii\Omega\tau_i}$.
@@ -384,7 +394,9 @@ gives the THz output for vacuum input,
 where $p_n$ is the joint probability density of finding $n$ pump photons at
 times $\tau_1<\dots<\tau_n$, that is, the outcome distribution of ideal
 time-resolved photon counting on the pump. The phase operator $\hat\Phi$ is
-diagonal in this basis and drops out.
+diagonal in this basis and drops out. The superposition has become a mixture
+because the interaction does not change the configuration: the pump states
+that accompany different THz coherent states remain orthogonal.
 
 For the field at a detector, with a linear and deterministic THz response
 $\varepsilon(\Omega)$ between crystal and detector,
@@ -397,7 +409,9 @@ g(t)&=2\,\mathrm{Re}\!\int_0^\infty\!\!\dd\Omega\,
 The real function $g(t)$ is the THz transient emitted per pump photon, in
 field units. In a photon-arrival configuration the field is
 $\sum_i g(t-\tau_i)$: every pump photon contributes one elementary transient
-at its arrival time. The THz field is a filtered point process in the sense
+at its arrival time. A single shot samples one configuration, so its THz
+waveform is a definite classical waveform plus the vacuum noise of a coherent
+state. The THz field is a filtered point process in the sense
 of Rice's theory of shot noise \cite{rice1944}, with the photon arrival times
 of the pump as the underlying points. Linear THz loss maps coherent states to
 coherent states, so absorption and dispersion of the THz wave only change
